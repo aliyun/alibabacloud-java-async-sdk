@@ -250,6 +250,60 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
      *
      * <p>DescribeInstanceTypesResponseBody</p>
      */
+    public static class Clock extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PtpSupport")
+        private String ptpSupport;
+
+        private Clock(Builder builder) {
+            this.ptpSupport = builder.ptpSupport;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Clock create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ptpSupport
+         */
+        public String getPtpSupport() {
+            return this.ptpSupport;
+        }
+
+        public static final class Builder {
+            private String ptpSupport; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clock model) {
+                this.ptpSupport = model.ptpSupport;
+            } 
+
+            /**
+             * PtpSupport.
+             */
+            public Builder ptpSupport(String ptpSupport) {
+                this.ptpSupport = ptpSupport;
+                return this;
+            }
+
+            public Clock build() {
+                return new Clock(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceTypesResponseBody</p>
+     */
     public static class SupportedTopologyTypes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedTopologyType")
         private java.util.List<String> supportedTopologyType;
@@ -740,6 +794,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BaselineCredit")
         private Integer baselineCredit;
 
+        @com.aliyun.core.annotation.NameInMap("Clock")
+        private Clock clock;
+
         @com.aliyun.core.annotation.NameInMap("CpuArchitecture")
         private String cpuArchitecture;
 
@@ -866,6 +923,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         private InstanceType(Builder builder) {
             this.attributes = builder.attributes;
             this.baselineCredit = builder.baselineCredit;
+            this.clock = builder.clock;
             this.cpuArchitecture = builder.cpuArchitecture;
             this.cpuCoreCount = builder.cpuCoreCount;
             this.cpuOptions = builder.cpuOptions;
@@ -929,6 +987,13 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
          */
         public Integer getBaselineCredit() {
             return this.baselineCredit;
+        }
+
+        /**
+         * @return clock
+         */
+        public Clock getClock() {
+            return this.clock;
         }
 
         /**
@@ -1221,6 +1286,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
         public static final class Builder {
             private Attributes attributes; 
             private Integer baselineCredit; 
+            private Clock clock; 
             private String cpuArchitecture; 
             private Integer cpuCoreCount; 
             private CpuOptions cpuOptions; 
@@ -1269,6 +1335,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             private Builder(InstanceType model) {
                 this.attributes = model.attributes;
                 this.baselineCredit = model.baselineCredit;
+                this.clock = model.clock;
                 this.cpuArchitecture = model.cpuArchitecture;
                 this.cpuCoreCount = model.cpuCoreCount;
                 this.cpuOptions = model.cpuOptions;
@@ -1328,6 +1395,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              */
             public Builder baselineCredit(Integer baselineCredit) {
                 this.baselineCredit = baselineCredit;
+                return this;
+            }
+
+            /**
+             * Clock.
+             */
+            public Builder clock(Clock clock) {
+                this.clock = clock;
                 return this;
             }
 
