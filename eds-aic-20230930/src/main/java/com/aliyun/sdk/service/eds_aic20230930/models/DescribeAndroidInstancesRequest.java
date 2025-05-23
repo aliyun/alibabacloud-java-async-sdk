@@ -26,6 +26,10 @@ public class DescribeAndroidInstancesRequest extends Request {
     private String androidInstanceName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppManagePolicyId")
+    private String appManagePolicyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthorizedUserId")
     private String authorizedUserId;
 
@@ -74,6 +78,10 @@ public class DescribeAndroidInstancesRequest extends Request {
     private java.util.List<String> officeSiteIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QosRuleIds")
+    private java.util.List<String> qosRuleIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaleMode")
     private String saleMode;
 
@@ -89,6 +97,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         super(builder);
         this.androidInstanceIds = builder.androidInstanceIds;
         this.androidInstanceName = builder.androidInstanceName;
+        this.appManagePolicyId = builder.appManagePolicyId;
         this.authorizedUserId = builder.authorizedUserId;
         this.bizRegionId = builder.bizRegionId;
         this.chargeType = builder.chargeType;
@@ -101,6 +110,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         this.nodeId = builder.nodeId;
         this.nodeName = builder.nodeName;
         this.officeSiteIds = builder.officeSiteIds;
+        this.qosRuleIds = builder.qosRuleIds;
         this.saleMode = builder.saleMode;
         this.status = builder.status;
         this.tag = builder.tag;
@@ -131,6 +141,13 @@ public class DescribeAndroidInstancesRequest extends Request {
      */
     public String getAndroidInstanceName() {
         return this.androidInstanceName;
+    }
+
+    /**
+     * @return appManagePolicyId
+     */
+    public String getAppManagePolicyId() {
+        return this.appManagePolicyId;
     }
 
     /**
@@ -218,6 +235,13 @@ public class DescribeAndroidInstancesRequest extends Request {
     }
 
     /**
+     * @return qosRuleIds
+     */
+    public java.util.List<String> getQosRuleIds() {
+        return this.qosRuleIds;
+    }
+
+    /**
      * @return saleMode
      */
     public String getSaleMode() {
@@ -241,6 +265,7 @@ public class DescribeAndroidInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAndroidInstancesRequest, Builder> {
         private java.util.List<String> androidInstanceIds; 
         private String androidInstanceName; 
+        private String appManagePolicyId; 
         private String authorizedUserId; 
         private String bizRegionId; 
         private String chargeType; 
@@ -253,6 +278,7 @@ public class DescribeAndroidInstancesRequest extends Request {
         private String nodeId; 
         private String nodeName; 
         private java.util.List<String> officeSiteIds; 
+        private java.util.List<String> qosRuleIds; 
         private String saleMode; 
         private String status; 
         private java.util.List<Tag> tag; 
@@ -265,6 +291,7 @@ public class DescribeAndroidInstancesRequest extends Request {
             super(request);
             this.androidInstanceIds = request.androidInstanceIds;
             this.androidInstanceName = request.androidInstanceName;
+            this.appManagePolicyId = request.appManagePolicyId;
             this.authorizedUserId = request.authorizedUserId;
             this.bizRegionId = request.bizRegionId;
             this.chargeType = request.chargeType;
@@ -277,6 +304,7 @@ public class DescribeAndroidInstancesRequest extends Request {
             this.nodeId = request.nodeId;
             this.nodeName = request.nodeName;
             this.officeSiteIds = request.officeSiteIds;
+            this.qosRuleIds = request.qosRuleIds;
             this.saleMode = request.saleMode;
             this.status = request.status;
             this.tag = request.tag;
@@ -300,6 +328,15 @@ public class DescribeAndroidInstancesRequest extends Request {
         public Builder androidInstanceName(String androidInstanceName) {
             this.putQueryParameter("AndroidInstanceName", androidInstanceName);
             this.androidInstanceName = androidInstanceName;
+            return this;
+        }
+
+        /**
+         * AppManagePolicyId.
+         */
+        public Builder appManagePolicyId(String appManagePolicyId) {
+            this.putQueryParameter("AppManagePolicyId", appManagePolicyId);
+            this.appManagePolicyId = appManagePolicyId;
             return this;
         }
 
@@ -440,6 +477,15 @@ public class DescribeAndroidInstancesRequest extends Request {
         public Builder officeSiteIds(java.util.List<String> officeSiteIds) {
             this.putQueryParameter("OfficeSiteIds", officeSiteIds);
             this.officeSiteIds = officeSiteIds;
+            return this;
+        }
+
+        /**
+         * QosRuleIds.
+         */
+        public Builder qosRuleIds(java.util.List<String> qosRuleIds) {
+            this.putQueryParameter("QosRuleIds", qosRuleIds);
+            this.qosRuleIds = qosRuleIds;
             return this;
         }
 

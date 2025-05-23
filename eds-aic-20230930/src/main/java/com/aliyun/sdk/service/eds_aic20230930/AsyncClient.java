@@ -233,6 +233,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCloudPhoneNodesResponse> describeCloudPhoneNodes(DescribeCloudPhoneNodesRequest request);
 
     /**
+     * @param request the request parameters of DescribeDisplayConfig  DescribeDisplayConfigRequest
+     * @return DescribeDisplayConfigResponse
+     */
+    CompletableFuture<DescribeDisplayConfigResponse> describeDisplayConfig(DescribeDisplayConfigRequest request);
+
+    /**
      * @param request the request parameters of DescribeImageList  DescribeImageListRequest
      * @return DescribeImageListResponse
      */
@@ -387,6 +393,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyCloudPhoneNodeResponse
      */
     CompletableFuture<ModifyCloudPhoneNodeResponse> modifyCloudPhoneNode(ModifyCloudPhoneNodeRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDisplayConfig  ModifyDisplayConfigRequest
+     * @return ModifyDisplayConfigResponse
+     */
+    CompletableFuture<ModifyDisplayConfigResponse> modifyDisplayConfig(ModifyDisplayConfigRequest request);
 
     /**
      * @param request the request parameters of ModifyInstanceChargeType  ModifyInstanceChargeTypeRequest

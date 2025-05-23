@@ -145,6 +145,81 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeAndroidInstancesResponseBody</p>
      */
+    public static class AppManagePolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AppManagePolicyId")
+        private String appManagePolicyId;
+
+        @com.aliyun.core.annotation.NameInMap("AppManagePolicyName")
+        private String appManagePolicyName;
+
+        private AppManagePolicy(Builder builder) {
+            this.appManagePolicyId = builder.appManagePolicyId;
+            this.appManagePolicyName = builder.appManagePolicyName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AppManagePolicy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return appManagePolicyId
+         */
+        public String getAppManagePolicyId() {
+            return this.appManagePolicyId;
+        }
+
+        /**
+         * @return appManagePolicyName
+         */
+        public String getAppManagePolicyName() {
+            return this.appManagePolicyName;
+        }
+
+        public static final class Builder {
+            private String appManagePolicyId; 
+            private String appManagePolicyName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppManagePolicy model) {
+                this.appManagePolicyId = model.appManagePolicyId;
+                this.appManagePolicyName = model.appManagePolicyName;
+            } 
+
+            /**
+             * AppManagePolicyId.
+             */
+            public Builder appManagePolicyId(String appManagePolicyId) {
+                this.appManagePolicyId = appManagePolicyId;
+                return this;
+            }
+
+            /**
+             * AppManagePolicyName.
+             */
+            public Builder appManagePolicyName(String appManagePolicyName) {
+                this.appManagePolicyName = appManagePolicyName;
+                return this;
+            }
+
+            public AppManagePolicy build() {
+                return new AppManagePolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAndroidInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAndroidInstancesResponseBody</p>
+     */
     public static class Disks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
@@ -467,6 +542,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppInstanceId")
         private String appInstanceId;
 
+        @com.aliyun.core.annotation.NameInMap("AppManagePolicy")
+        private AppManagePolicy appManagePolicy;
+
         @com.aliyun.core.annotation.NameInMap("AuthorizedUserId")
         private String authorizedUserId;
 
@@ -533,6 +611,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PublicIpv6Address")
         private String publicIpv6Address;
 
+        @com.aliyun.core.annotation.NameInMap("QosRuleId")
+        private String qosRuleId;
+
         @com.aliyun.core.annotation.NameInMap("Rate")
         private Integer rate;
 
@@ -556,6 +637,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.androidInstanceStatus = builder.androidInstanceStatus;
             this.appInstanceGroupId = builder.appInstanceGroupId;
             this.appInstanceId = builder.appInstanceId;
+            this.appManagePolicy = builder.appManagePolicy;
             this.authorizedUserId = builder.authorizedUserId;
             this.bindUserId = builder.bindUserId;
             this.chargeType = builder.chargeType;
@@ -578,6 +660,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.policyGroupId = builder.policyGroupId;
             this.publicIpAddress = builder.publicIpAddress;
             this.publicIpv6Address = builder.publicIpv6Address;
+            this.qosRuleId = builder.qosRuleId;
             this.rate = builder.rate;
             this.regionId = builder.regionId;
             this.renderingType = builder.renderingType;
@@ -640,6 +723,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
          */
         public String getAppInstanceId() {
             return this.appInstanceId;
+        }
+
+        /**
+         * @return appManagePolicy
+         */
+        public AppManagePolicy getAppManagePolicy() {
+            return this.appManagePolicy;
         }
 
         /**
@@ -797,6 +887,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return qosRuleId
+         */
+        public String getQosRuleId() {
+            return this.qosRuleId;
+        }
+
+        /**
          * @return rate
          */
         public Integer getRate() {
@@ -839,6 +936,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String androidInstanceStatus; 
             private String appInstanceGroupId; 
             private String appInstanceId; 
+            private AppManagePolicy appManagePolicy; 
             private String authorizedUserId; 
             private String bindUserId; 
             private String chargeType; 
@@ -861,6 +959,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String policyGroupId; 
             private String publicIpAddress; 
             private String publicIpv6Address; 
+            private String qosRuleId; 
             private Integer rate; 
             private String regionId; 
             private String renderingType; 
@@ -878,6 +977,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
                 this.androidInstanceStatus = model.androidInstanceStatus;
                 this.appInstanceGroupId = model.appInstanceGroupId;
                 this.appInstanceId = model.appInstanceId;
+                this.appManagePolicy = model.appManagePolicy;
                 this.authorizedUserId = model.authorizedUserId;
                 this.bindUserId = model.bindUserId;
                 this.chargeType = model.chargeType;
@@ -900,6 +1000,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
                 this.policyGroupId = model.policyGroupId;
                 this.publicIpAddress = model.publicIpAddress;
                 this.publicIpv6Address = model.publicIpv6Address;
+                this.qosRuleId = model.qosRuleId;
                 this.rate = model.rate;
                 this.regionId = model.regionId;
                 this.renderingType = model.renderingType;
@@ -981,6 +1082,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder appInstanceId(String appInstanceId) {
                 this.appInstanceId = appInstanceId;
+                return this;
+            }
+
+            /**
+             * AppManagePolicy.
+             */
+            public Builder appManagePolicy(AppManagePolicy appManagePolicy) {
+                this.appManagePolicy = appManagePolicy;
                 return this;
             }
 
@@ -1218,6 +1327,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder publicIpv6Address(String publicIpv6Address) {
                 this.publicIpv6Address = publicIpv6Address;
+                return this;
+            }
+
+            /**
+             * QosRuleId.
+             */
+            public Builder qosRuleId(String qosRuleId) {
+                this.qosRuleId = qosRuleId;
                 return this;
             }
 
