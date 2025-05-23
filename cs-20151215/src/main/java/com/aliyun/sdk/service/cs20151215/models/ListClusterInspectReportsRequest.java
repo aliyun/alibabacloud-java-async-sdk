@@ -88,6 +88,7 @@ public class ListClusterInspectReportsRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -100,7 +101,10 @@ public class ListClusterInspectReportsRequest extends Request {
         }
 
         /**
-         * maxResults.
+         * <p>The maximum number of returned results. Maximum value: 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -109,7 +113,10 @@ public class ListClusterInspectReportsRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * <p>The pagination token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AK8uQQrxgFKsI3OiS5TbhUQ9R3kPme4I3</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);

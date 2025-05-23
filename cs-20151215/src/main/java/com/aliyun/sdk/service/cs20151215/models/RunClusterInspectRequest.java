@@ -74,6 +74,7 @@ public class RunClusterInspectRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,10 @@ public class RunClusterInspectRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * <p>The idempotency token that ensures an API request completes no more than one time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c82e6987e2961451182edacd74faf</p>
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);

@@ -101,12 +101,12 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to obtain the kubeconfig file that is used to connect to the cluster over the internal network. Valid values:</p>
+         * <p>Specifies whether to obtain the kubeconfig file that is used to connect to the cluster over the internal network. You can obtain the terminal ID by calling one of the following operations:</p>
          * <ul>
          * <li><code>true</code>: obtains the kubeconfig file that is used to connect to the master instance over the internal network.</li>
          * <li><code>false</code>: obtains the kubeconfig file that is used to connect to the master instance over the Internet.</li>
          * </ul>
-         * <p>Default value: <code>false</code>.</p>
+         * <p>Default value: <code>false</code></p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -118,10 +118,9 @@ public class DescribeClusterUserKubeconfigRequest extends Request {
         }
 
         /**
-         * <p>The validity period of a temporary kubeconfig file. Unit: minutes. Valid values: 15 to 4320 (3 days).</p>
-         * <blockquote>
-         * <p> If you do not specify this parameter, the system specifies a longer validity period. The validity period is returned in the <code>expiration</code> parameter.</p>
-         * </blockquote>
+         * <p>The validity period of the temporary kubeconfig file. Unit: minutes. Valid values: 15 to 4320 (3 days).</p>
+         * <p>**</p>
+         * <p><strong>Usage notes</strong> If you do not specify this parameter, the system specifies a longer validity period. The validity period is returned in the <code>expiration</code> parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>

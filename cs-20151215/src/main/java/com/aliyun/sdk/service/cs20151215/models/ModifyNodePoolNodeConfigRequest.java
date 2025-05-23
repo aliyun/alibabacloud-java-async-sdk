@@ -157,7 +157,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * containerd_config.
+         * <p>The containerd runtime configuration.</p>
          */
         public Builder containerdConfig(ContainerdConfig containerdConfig) {
             this.putBodyParameter("containerd_config", containerdConfig);
@@ -166,7 +166,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * <p>The kubelet configuration.</p>
+         * <p>The kubelet configurations.</p>
          */
         public Builder kubeletConfig(KubeletConfig kubeletConfig) {
             this.putBodyParameter("kubelet_config", kubeletConfig);
@@ -184,7 +184,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * <p>The rolling update configuration.</p>
+         * <p>The rolling policy configuration.</p>
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);
@@ -239,7 +239,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             } 
 
             /**
-             * <p>Configuration for sysctl kernel parameters.</p>
+             * <p>The sysctl configuration.</p>
              */
             public Builder sysctl(java.util.Map<String, ?> sysctl) {
                 this.sysctl = sysctl;

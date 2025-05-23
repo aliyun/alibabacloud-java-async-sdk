@@ -102,6 +102,7 @@ public class UpdateClusterInspectConfigRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,7 @@ public class UpdateClusterInspectConfigRequest extends Request {
         }
 
         /**
-         * disabledCheckItems.
+         * <p>The list of disabled inspection check items.</p>
          */
         public Builder disabledCheckItems(java.util.List<String> disabledCheckItems) {
             this.putBodyParameter("disabledCheckItems", disabledCheckItems);
@@ -123,7 +124,10 @@ public class UpdateClusterInspectConfigRequest extends Request {
         }
 
         /**
-         * enabled.
+         * <p>Specifies whether to enable cluster inspection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.putBodyParameter("enabled", enabled);
@@ -132,7 +136,10 @@ public class UpdateClusterInspectConfigRequest extends Request {
         }
 
         /**
-         * scheduleTime.
+         * <p>The inspection period defined using RFC5545 Recurrence Rule. You must specify BYHOUR and BYMINUTE. Only FREQ=DAILY is supported. COUNT or UNTIL is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FREQ=DAILY;BYHOUR=10;BYMINUTE=15</p>
          */
         public Builder scheduleTime(String scheduleTime) {
             this.putBodyParameter("scheduleTime", scheduleTime);

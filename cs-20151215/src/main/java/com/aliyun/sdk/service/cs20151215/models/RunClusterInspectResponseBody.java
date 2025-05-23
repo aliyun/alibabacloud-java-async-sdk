@@ -80,7 +80,10 @@ public class RunClusterInspectResponseBody extends TeaModel {
         } 
 
         /**
-         * reportId.
+         * <p>The inspection report ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5d6557c983064c45bed62ab2a2119cc7</p>
          */
         public Builder reportId(String reportId) {
             this.reportId = reportId;
@@ -88,7 +91,10 @@ public class RunClusterInspectResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0AB4D067-4DD7-5471-B90A-FCC564BC3337</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +102,10 @@ public class RunClusterInspectResponseBody extends TeaModel {
         }
 
         /**
-         * taskId.
+         * <p>The inspection task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T-67d7ec016ce37c0106000***</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

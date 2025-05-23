@@ -54,7 +54,10 @@ public class UpdateClusterInspectConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * requestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49511F2D-D56A-5C24-B9AE-C8491E09B***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

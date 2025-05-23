@@ -103,10 +103,8 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         }
 
         /**
-         * <p>The validity period of the kubeconfig file. Unit: hours.</p>
-         * <blockquote>
-         * <p>The value of expire_hour must be greater than 0 and equal to or smaller than 876000 (100 years).</p>
-         * </blockquote>
+         * <p>Specifies the expiration time of the kubeconfig file. Unit: hours.</p>
+         * <p>Valid values: [1, 1876000]. The maximum value is 100 years.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,7 +117,7 @@ public class UpdateK8sClusterUserConfigExpireRequest extends Request {
         }
 
         /**
-         * <p>The user ID.</p>
+         * <p>The RAM user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

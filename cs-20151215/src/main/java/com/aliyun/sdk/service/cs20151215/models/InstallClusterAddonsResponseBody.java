@@ -80,7 +80,7 @@ public class InstallClusterAddonsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>集群ID。</p>
          * 
          * <strong>example:</strong>
          * <p>c82e6987e2961451182edacd74faf****</p>
@@ -91,10 +91,10 @@ public class InstallClusterAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>请求ID。</p>
          * 
          * <strong>example:</strong>
-         * <p>48BD70F6-A7E6-543D-9F23-08DEB764C92E</p>
+         * <p>687C5BAA-D103-4993-884B-C35E4314****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -102,10 +102,10 @@ public class InstallClusterAddonsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The task ID.</p>
+         * <p>任务ID。</p>
          * 
          * <strong>example:</strong>
-         * <p>T-5a54309c80282e39ea00002f</p>
+         * <p>T-5a54309c80282e39ea0****</p>
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

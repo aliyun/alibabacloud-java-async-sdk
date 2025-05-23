@@ -54,7 +54,7 @@ public class DescribeClusterVulsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array of vulnerabilities.</p>
+         * <p>The list of vulnerabilities.</p>
          */
         public Builder vulRecords(java.util.List<VulRecords> vulRecords) {
             this.vulRecords = vulRecords;

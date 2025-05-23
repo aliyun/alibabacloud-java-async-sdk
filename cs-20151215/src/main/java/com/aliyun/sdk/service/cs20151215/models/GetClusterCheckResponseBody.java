@@ -143,7 +143,7 @@ public class GetClusterCheckResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of check items.</p>
+         * <p>A list of check items.</p>
          */
         public Builder checkItems(java.util.Map<String, java.util.List<java.util.Map<String, ?>>> checkItems) {
             this.checkItems = checkItems;

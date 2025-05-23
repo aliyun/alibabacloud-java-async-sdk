@@ -60,7 +60,7 @@ public class DeleteTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the orchestration template.</p>
+         * <p>The orchestration template ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

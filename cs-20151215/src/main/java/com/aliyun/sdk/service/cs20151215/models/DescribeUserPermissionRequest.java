@@ -61,9 +61,10 @@ public class DescribeUserPermissionRequest extends Request {
 
         /**
          * <p>The ID of the RAM user or RAM role.</p>
-         * <blockquote>
-         * <p> If you want to grant permissions to a RAM role, enter the ID of the RAM role.</p>
-         * </blockquote>
+         * <ul>
+         * <li>If you query RAM user permissions, the UID of the RAM user is used.</li>
+         * <li>If you query the permissions of a RAM role, the ID of the RAM role is used.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

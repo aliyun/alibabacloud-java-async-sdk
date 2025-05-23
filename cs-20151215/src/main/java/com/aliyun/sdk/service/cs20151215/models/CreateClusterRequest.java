@@ -30,6 +30,10 @@ public class CreateClusterRequest extends Request {
     private String apiAudiences;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("audit_log_config")
+    private AuditLogConfig auditLogConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("auto_renew")
     @Deprecated
     private Boolean autoRenew;
@@ -469,6 +473,7 @@ public class CreateClusterRequest extends Request {
         this.accessControlList = builder.accessControlList;
         this.addons = builder.addons;
         this.apiAudiences = builder.apiAudiences;
+        this.auditLogConfig = builder.auditLogConfig;
         this.autoRenew = builder.autoRenew;
         this.autoRenewPeriod = builder.autoRenewPeriod;
         this.chargeType = builder.chargeType;
@@ -598,6 +603,13 @@ public class CreateClusterRequest extends Request {
      */
     public String getApiAudiences() {
         return this.apiAudiences;
+    }
+
+    /**
+     * @return auditLogConfig
+     */
+    public AuditLogConfig getAuditLogConfig() {
+        return this.auditLogConfig;
     }
 
     /**
@@ -1269,6 +1281,7 @@ public class CreateClusterRequest extends Request {
         private java.util.List<String> accessControlList; 
         private java.util.List<Addon> addons; 
         private String apiAudiences; 
+        private AuditLogConfig auditLogConfig; 
         private Boolean autoRenew; 
         private Long autoRenewPeriod; 
         private String chargeType; 
@@ -1374,6 +1387,7 @@ public class CreateClusterRequest extends Request {
             this.accessControlList = request.accessControlList;
             this.addons = request.addons;
             this.apiAudiences = request.apiAudiences;
+            this.auditLogConfig = request.auditLogConfig;
             this.autoRenew = request.autoRenew;
             this.autoRenewPeriod = request.autoRenewPeriod;
             this.chargeType = request.chargeType;
@@ -1519,6 +1533,15 @@ public class CreateClusterRequest extends Request {
         public Builder apiAudiences(String apiAudiences) {
             this.putBodyParameter("api_audiences", apiAudiences);
             this.apiAudiences = apiAudiences;
+            return this;
+        }
+
+        /**
+         * audit_log_config.
+         */
+        public Builder auditLogConfig(AuditLogConfig auditLogConfig) {
+            this.putBodyParameter("audit_log_config", auditLogConfig);
+            this.auditLogConfig = auditLogConfig;
             return this;
         }
 
@@ -2917,6 +2940,81 @@ public class CreateClusterRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
+    public static class AuditLogConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("sls_project_name")
+        private String slsProjectName;
+
+        private AuditLogConfig(Builder builder) {
+            this.enabled = builder.enabled;
+            this.slsProjectName = builder.slsProjectName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AuditLogConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return slsProjectName
+         */
+        public String getSlsProjectName() {
+            return this.slsProjectName;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+            private String slsProjectName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuditLogConfig model) {
+                this.enabled = model.enabled;
+                this.slsProjectName = model.slsProjectName;
+            } 
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * sls_project_name.
+             */
+            public Builder slsProjectName(String slsProjectName) {
+                this.slsProjectName = slsProjectName;
+                return this;
+            }
+
+            public AuditLogConfig build() {
+                return new AuditLogConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateClusterRequest} extends {@link TeaModel}

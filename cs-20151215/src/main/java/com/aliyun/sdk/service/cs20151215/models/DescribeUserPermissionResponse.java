@@ -253,7 +253,7 @@ public class DescribeUserPermissionResponse extends Response {
              * <ul>
              * <li><code>cluster</code>: indicates that the permissions are scoped to a cluster.</li>
              * <li><code>namespace</code>: indicates that the permissions are scoped to a namespace of a cluster.</li>
-             * <li><code>console</code>: indicates that the permissions are scoped to all clusters. This value was displayed only in the console.</li>
+             * <li><code>console</code>: indicates that the permissions are scoped to all clusters.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -158,11 +158,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Architectures supported by the component. Valid values:</p>
-         * <ul>
-         * <li>amd64</li>
-         * <li>arm64</li>
-         * </ul>
+         * <p>The CPU architecture supported by the component.</p>
          */
         public Builder architecture(java.util.List<String> architecture) {
             this.architecture = architecture;
@@ -225,7 +221,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The latest version of the component.</p>
+         * <p>The latest version information of the component.</p>
          */
         public Builder newerVersions(java.util.List<NewerVersions> newerVersions) {
             this.newerVersions = newerVersions;
@@ -233,13 +229,7 @@ public class DescribeAddonResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Operations supported by the component. Valid values:</p>
-         * <ul>
-         * <li>Install</li>
-         * <li>Upgrade</li>
-         * <li>Modify</li>
-         * <li>Uninstall</li>
-         * </ul>
+         * <p>The operations supported by the component.</p>
          */
         public Builder supportedActions(java.util.List<String> supportedActions) {
             this.supportedActions = supportedActions;
@@ -341,6 +331,10 @@ public class DescribeAddonResponseBody extends TeaModel {
 
             /**
              * <p>Indicates whether the component can be updated to the version.</p>
+             * <ul>
+             * <li>true: yes</li>
+             * <li>false: no</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -351,7 +345,7 @@ public class DescribeAddonResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version number.</p>
+             * <p>The latest version number of the component.</p>
              * 
              * <strong>example:</strong>
              * <p>v1.9.3.10-7dfca203-aliyun</p>

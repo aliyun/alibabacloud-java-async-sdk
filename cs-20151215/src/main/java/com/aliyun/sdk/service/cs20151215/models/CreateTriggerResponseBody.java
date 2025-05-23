@@ -106,7 +106,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The action that the trigger performs. For example, a value of <code>redeploy</code> indicates that the trigger redeploys the application.</p>
+         * <p>The actions performed by the trigger.</p>
          * 
          * <strong>example:</strong>
          * <p>redeploy</p>
@@ -128,7 +128,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the trigger.</p>
+         * <p>The trigger ID.</p>
          * 
          * <strong>example:</strong>
          * <p>102536</p>
@@ -150,7 +150,7 @@ public class CreateTriggerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The type of trigger. Default value: deployment.</p>
+         * <p>The trigger type.</p>
          * 
          * <strong>example:</strong>
          * <p>deployment</p>

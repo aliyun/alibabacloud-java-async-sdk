@@ -67,7 +67,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The node pool vulnerabilities.</p>
+         * <p>The vulnerability list of all node pools.</p>
          */
         public Builder vulRecords(java.util.List<VulRecords> vulRecords) {
             this.vulRecords = vulRecords;
@@ -75,7 +75,11 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the Cloud Security CVE Remediation Service has been purchased</p>
+         * <p>Indicates whether the CVE vulnerability patching service provided by Security Center is purchased.</p>
+         * <ul>
+         * <li>true: yes</li>
+         * <li>false: no</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -335,7 +339,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of vulnerabilities.</p>
+             * <p>The list of vulnerabilities.</p>
              */
             public Builder vulList(java.util.List<VulList> vulList) {
                 this.vulList = vulList;
