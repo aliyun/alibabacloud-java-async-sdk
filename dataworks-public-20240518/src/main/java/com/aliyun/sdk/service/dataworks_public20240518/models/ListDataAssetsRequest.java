@@ -35,6 +35,7 @@ public class ListDataAssetsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query

@@ -64,6 +64,10 @@ public class ListTaskInstancesRequest extends Request {
     private String sortBy;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
@@ -112,6 +116,7 @@ public class ListTaskInstancesRequest extends Request {
         this.projectId = builder.projectId;
         this.runtimeResource = builder.runtimeResource;
         this.sortBy = builder.sortBy;
+        this.status = builder.status;
         this.taskId = builder.taskId;
         this.taskIds = builder.taskIds;
         this.taskName = builder.taskName;
@@ -214,6 +219,13 @@ public class ListTaskInstancesRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return taskId
      */
     public Long getTaskId() {
@@ -288,6 +300,7 @@ public class ListTaskInstancesRequest extends Request {
         private Long projectId; 
         private String runtimeResource; 
         private String sortBy; 
+        private String status; 
         private Long taskId; 
         private java.util.List<Long> taskIds; 
         private String taskName; 
@@ -315,6 +328,7 @@ public class ListTaskInstancesRequest extends Request {
             this.projectId = request.projectId;
             this.runtimeResource = request.runtimeResource;
             this.sortBy = request.sortBy;
+            this.status = request.status;
             this.taskId = request.taskId;
             this.taskIds = request.taskIds;
             this.taskName = request.taskName;
@@ -469,6 +483,15 @@ public class ListTaskInstancesRequest extends Request {
         public Builder sortBy(String sortBy) {
             this.putBodyParameter("SortBy", sortBy);
             this.sortBy = sortBy;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.putBodyParameter("Status", status);
+            this.status = status;
             return this;
         }
 

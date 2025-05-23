@@ -83,6 +83,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAlertRuleResponse> createAlertRule(CreateAlertRuleRequest request);
 
     /**
+     * @param request the request parameters of CreateBusiness  CreateBusinessRequest
+     * @return CreateBusinessResponse
+     */
+    CompletableFuture<CreateBusinessResponse> createBusiness(CreateBusinessRequest request);
+
+    /**
      * @param request the request parameters of CreateDIAlarmRule  CreateDIAlarmRuleRequest
      * @return CreateDIAlarmRuleResponse
      */
@@ -165,6 +171,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateDataSourceSharedRuleResponse
      */
     CompletableFuture<CreateDataSourceSharedRuleResponse> createDataSourceSharedRule(CreateDataSourceSharedRuleRequest request);
+
+    /**
+     * @param request the request parameters of CreateFile  CreateFileRequest
+     * @return CreateFileResponse
+     */
+    CompletableFuture<CreateFileResponse> createFile(CreateFileRequest request);
+
+    /**
+     * @param request the request parameters of CreateFolder  CreateFolderRequest
+     * @return CreateFolderResponse
+     */
+    CompletableFuture<CreateFolderResponse> createFolder(CreateFolderRequest request);
 
     /**
      * <b>description</b> :
@@ -257,6 +275,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRouteResponse> createRoute(CreateRouteRequest request);
 
     /**
+     * @param request the request parameters of CreateUdfFile  CreateUdfFileRequest
+     * @return CreateUdfFileResponse
+     */
+    CompletableFuture<CreateUdfFileResponse> createUdfFile(CreateUdfFileRequest request);
+
+    /**
      * <b>description</b> :
      * <blockquote>
      * <p>You cannot use this API operation to create multiple workflows at a time. If you specify multiple workflows by using FlowSpec, the system creates only the first specified workflow. Other specified workflows and the nodes in the workflows are ignored. You can call the CreateNode operation to create a node.</p>
@@ -278,6 +302,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAlertRuleResponse
      */
     CompletableFuture<DeleteAlertRuleResponse> deleteAlertRule(DeleteAlertRuleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteBusiness  DeleteBusinessRequest
+     * @return DeleteBusinessResponse
+     */
+    CompletableFuture<DeleteBusinessResponse> deleteBusiness(DeleteBusinessRequest request);
 
     /**
      * <b>description</b> :
@@ -362,6 +392,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDataSourceSharedRuleResponse
      */
     CompletableFuture<DeleteDataSourceSharedRuleResponse> deleteDataSourceSharedRule(DeleteDataSourceSharedRuleRequest request);
+
+    /**
+     * @param request the request parameters of DeleteFile  DeleteFileRequest
+     * @return DeleteFileResponse
+     */
+    CompletableFuture<DeleteFileResponse> deleteFile(DeleteFileRequest request);
+
+    /**
+     * @param request the request parameters of DeleteFolder  DeleteFolderRequest
+     * @return DeleteFolderResponse
+     */
+    CompletableFuture<DeleteFolderResponse> deleteFolder(DeleteFolderRequest request);
 
     /**
      * <b>description</b> :
@@ -486,6 +528,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteWorkflowDefinitionResponse> deleteWorkflowDefinition(DeleteWorkflowDefinitionRequest request);
 
     /**
+     * @param request the request parameters of DeployFile  DeployFileRequest
+     * @return DeployFileResponse
+     */
+    CompletableFuture<DeployFileResponse> deployFile(DeployFileRequest request);
+
+    /**
      * @param request the request parameters of DetachDataQualityRulesFromEvaluationTask  DetachDataQualityRulesFromEvaluationTaskRequest
      * @return DetachDataQualityRulesFromEvaluationTaskResponse
      */
@@ -505,6 +553,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DissociateProjectFromResourceGroupResponse
      */
     CompletableFuture<DissociateProjectFromResourceGroupResponse> dissociateProjectFromResourceGroup(DissociateProjectFromResourceGroupRequest request);
+
+    /**
+     * @param request the request parameters of EstablishRelationTableToBusiness  EstablishRelationTableToBusinessRequest
+     * @return EstablishRelationTableToBusinessResponse
+     */
+    CompletableFuture<EstablishRelationTableToBusinessResponse> establishRelationTableToBusiness(EstablishRelationTableToBusinessRequest request);
 
     /**
      * <b>description</b> :
@@ -532,6 +586,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetAlertRuleResponse
      */
     CompletableFuture<GetAlertRuleResponse> getAlertRule(GetAlertRuleRequest request);
+
+    /**
+     * @param request the request parameters of GetBusiness  GetBusinessRequest
+     * @return GetBusinessResponse
+     */
+    CompletableFuture<GetBusinessResponse> getBusiness(GetBusinessRequest request);
 
     /**
      * @param request the request parameters of GetCatalog  GetCatalogRequest
@@ -636,10 +696,40 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDatabaseResponse> getDatabase(GetDatabaseRequest request);
 
     /**
+     * @param request the request parameters of GetDeploymentPackage  GetDeploymentPackageRequest
+     * @return GetDeploymentPackageResponse
+     */
+    CompletableFuture<GetDeploymentPackageResponse> getDeploymentPackage(GetDeploymentPackageRequest request);
+
+    /**
+     * @param request the request parameters of GetFile  GetFileRequest
+     * @return GetFileResponse
+     */
+    CompletableFuture<GetFileResponse> getFile(GetFileRequest request);
+
+    /**
+     * @param request the request parameters of GetFileVersion  GetFileVersionRequest
+     * @return GetFileVersionResponse
+     */
+    CompletableFuture<GetFileVersionResponse> getFileVersion(GetFileVersionRequest request);
+
+    /**
+     * @param request the request parameters of GetFolder  GetFolderRequest
+     * @return GetFolderResponse
+     */
+    CompletableFuture<GetFolderResponse> getFolder(GetFolderRequest request);
+
+    /**
      * @param request the request parameters of GetFunction  GetFunctionRequest
      * @return GetFunctionResponse
      */
     CompletableFuture<GetFunctionResponse> getFunction(GetFunctionRequest request);
+
+    /**
+     * @param request the request parameters of GetIDEEventDetail  GetIDEEventDetailRequest
+     * @return GetIDEEventDetailResponse
+     */
+    CompletableFuture<GetIDEEventDetailResponse> getIDEEventDetail(GetIDEEventDetailRequest request);
 
     /**
      * @param request the request parameters of GetJobStatus  GetJobStatusRequest
@@ -827,6 +917,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAlertRulesResponse> listAlertRules(ListAlertRulesRequest request);
 
     /**
+     * @param request the request parameters of ListBusiness  ListBusinessRequest
+     * @return ListBusinessResponse
+     */
+    CompletableFuture<ListBusinessResponse> listBusiness(ListBusinessRequest request);
+
+    /**
      * @param request the request parameters of ListCatalogs  ListCatalogsRequest
      * @return ListCatalogsResponse
      */
@@ -995,6 +1091,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request);
 
     /**
+     * @param request the request parameters of ListDeploymentPackageFiles  ListDeploymentPackageFilesRequest
+     * @return ListDeploymentPackageFilesResponse
+     */
+    CompletableFuture<ListDeploymentPackageFilesResponse> listDeploymentPackageFiles(ListDeploymentPackageFilesRequest request);
+
+    /**
+     * @param request the request parameters of ListDeploymentPackages  ListDeploymentPackagesRequest
+     * @return ListDeploymentPackagesResponse
+     */
+    CompletableFuture<ListDeploymentPackagesResponse> listDeploymentPackages(ListDeploymentPackagesRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -1014,6 +1122,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListEntitiesInMetaCollectionResponse
      */
     CompletableFuture<ListEntitiesInMetaCollectionResponse> listEntitiesInMetaCollection(ListEntitiesInMetaCollectionRequest request);
+
+    /**
+     * @param request the request parameters of ListFileVersions  ListFileVersionsRequest
+     * @return ListFileVersionsResponse
+     */
+    CompletableFuture<ListFileVersionsResponse> listFileVersions(ListFileVersionsRequest request);
+
+    /**
+     * @param request the request parameters of ListFiles  ListFilesRequest
+     * @return ListFilesResponse
+     */
+    CompletableFuture<ListFilesResponse> listFiles(ListFilesRequest request);
+
+    /**
+     * @param request the request parameters of ListFolders  ListFoldersRequest
+     * @return ListFoldersResponse
+     */
+    CompletableFuture<ListFoldersResponse> listFolders(ListFoldersRequest request);
 
     /**
      * @param request the request parameters of ListFunctions  ListFunctionsRequest
@@ -1065,6 +1191,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPartitionsResponse
      */
     CompletableFuture<ListPartitionsResponse> listPartitions(ListPartitionsRequest request);
+
+    /**
+     * @param request the request parameters of ListPipelineRunItems  ListPipelineRunItemsRequest
+     * @return ListPipelineRunItemsResponse
+     */
+    CompletableFuture<ListPipelineRunItemsResponse> listPipelineRunItems(ListPipelineRunItemsRequest request);
 
     /**
      * @param request the request parameters of ListPipelineRuns  ListPipelineRunsRequest
@@ -1348,6 +1480,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopWorkflowInstancesResponse> stopWorkflowInstances(StopWorkflowInstancesRequest request);
 
     /**
+     * @param request the request parameters of SubmitFile  SubmitFileRequest
+     * @return SubmitFileResponse
+     */
+    CompletableFuture<SubmitFileResponse> submitFile(SubmitFileRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation is available for all DataWorks editions.</p>
      * 
@@ -1400,6 +1538,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAlertRuleResponse
      */
     CompletableFuture<UpdateAlertRuleResponse> updateAlertRule(UpdateAlertRuleRequest request);
+
+    /**
+     * @param request the request parameters of UpdateBusiness  UpdateBusinessRequest
+     * @return UpdateBusinessResponse
+     */
+    CompletableFuture<UpdateBusinessResponse> updateBusiness(UpdateBusinessRequest request);
 
     /**
      * @param request the request parameters of UpdateColumnBusinessMetadata  UpdateColumnBusinessMetadataRequest
@@ -1468,10 +1612,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateDataSourceResponse> updateDataSource(UpdateDataSourceRequest request);
 
     /**
+     * @param request the request parameters of UpdateFile  UpdateFileRequest
+     * @return UpdateFileResponse
+     */
+    CompletableFuture<UpdateFileResponse> updateFile(UpdateFileRequest request);
+
+    /**
+     * @param request the request parameters of UpdateFolder  UpdateFolderRequest
+     * @return UpdateFolderResponse
+     */
+    CompletableFuture<UpdateFolderResponse> updateFolder(UpdateFolderRequest request);
+
+    /**
      * @param request the request parameters of UpdateFunction  UpdateFunctionRequest
      * @return UpdateFunctionResponse
      */
     CompletableFuture<UpdateFunctionResponse> updateFunction(UpdateFunctionRequest request);
+
+    /**
+     * @param request the request parameters of UpdateIDEEventResult  UpdateIDEEventResultRequest
+     * @return UpdateIDEEventResultResponse
+     */
+    CompletableFuture<UpdateIDEEventResultResponse> updateIDEEventResult(UpdateIDEEventResultRequest request);
 
     /**
      * @param request the request parameters of UpdateMetaCollection  UpdateMetaCollectionRequest
@@ -1529,6 +1691,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateTaskInstancesResponse
      */
     CompletableFuture<UpdateTaskInstancesResponse> updateTaskInstances(UpdateTaskInstancesRequest request);
+
+    /**
+     * @param request the request parameters of UpdateUdfFile  UpdateUdfFileRequest
+     * @return UpdateUdfFileResponse
+     */
+    CompletableFuture<UpdateUdfFileResponse> updateUdfFile(UpdateUdfFileRequest request);
 
     /**
      * <b>description</b> :
