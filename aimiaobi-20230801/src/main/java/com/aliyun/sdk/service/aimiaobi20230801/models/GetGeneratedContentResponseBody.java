@@ -200,6 +200,9 @@ public class GetGeneratedContentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("IgnoreContentAuditWords")
+        private String ignoreContentAuditWords;
+
         @com.aliyun.core.annotation.NameInMap("KeywordList")
         private java.util.List<String> keywordList;
 
@@ -232,6 +235,7 @@ public class GetGeneratedContentResponseBody extends TeaModel {
             this.createUser = builder.createUser;
             this.deviceId = builder.deviceId;
             this.id = builder.id;
+            this.ignoreContentAuditWords = builder.ignoreContentAuditWords;
             this.keywordList = builder.keywordList;
             this.keywords = builder.keywords;
             this.prompt = builder.prompt;
@@ -300,6 +304,13 @@ public class GetGeneratedContentResponseBody extends TeaModel {
         }
 
         /**
+         * @return ignoreContentAuditWords
+         */
+        public String getIgnoreContentAuditWords() {
+            return this.ignoreContentAuditWords;
+        }
+
+        /**
          * @return keywordList
          */
         public java.util.List<String> getKeywordList() {
@@ -363,6 +374,7 @@ public class GetGeneratedContentResponseBody extends TeaModel {
             private String createUser; 
             private String deviceId; 
             private Long id; 
+            private String ignoreContentAuditWords; 
             private java.util.List<String> keywordList; 
             private String keywords; 
             private String prompt; 
@@ -383,6 +395,7 @@ public class GetGeneratedContentResponseBody extends TeaModel {
                 this.createUser = model.createUser;
                 this.deviceId = model.deviceId;
                 this.id = model.id;
+                this.ignoreContentAuditWords = model.ignoreContentAuditWords;
                 this.keywordList = model.keywordList;
                 this.keywords = model.keywords;
                 this.prompt = model.prompt;
@@ -446,6 +459,14 @@ public class GetGeneratedContentResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * IgnoreContentAuditWords.
+             */
+            public Builder ignoreContentAuditWords(String ignoreContentAuditWords) {
+                this.ignoreContentAuditWords = ignoreContentAuditWords;
                 return this;
             }
 
