@@ -27,6 +27,10 @@ public class ListCategoryRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CategoryName")
+    private String categoryName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CategoryType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String categoryType;
@@ -48,6 +52,7 @@ public class ListCategoryRequest extends Request {
         super(builder);
         this.workspaceId = builder.workspaceId;
         this.regionId = builder.regionId;
+        this.categoryName = builder.categoryName;
         this.categoryType = builder.categoryType;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -82,6 +87,13 @@ public class ListCategoryRequest extends Request {
     }
 
     /**
+     * @return categoryName
+     */
+    public String getCategoryName() {
+        return this.categoryName;
+    }
+
+    /**
      * @return categoryType
      */
     public String getCategoryType() {
@@ -112,6 +124,7 @@ public class ListCategoryRequest extends Request {
     public static final class Builder extends Request.Builder<ListCategoryRequest, Builder> {
         private String workspaceId; 
         private String regionId; 
+        private String categoryName; 
         private String categoryType; 
         private Integer maxResults; 
         private String nextToken; 
@@ -125,6 +138,7 @@ public class ListCategoryRequest extends Request {
             super(request);
             this.workspaceId = request.workspaceId;
             this.regionId = request.regionId;
+            this.categoryName = request.categoryName;
             this.categoryType = request.categoryType;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -149,6 +163,15 @@ public class ListCategoryRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CategoryName.
+         */
+        public Builder categoryName(String categoryName) {
+            this.putBodyParameter("CategoryName", categoryName);
+            this.categoryName = categoryName;
             return this;
         }
 
