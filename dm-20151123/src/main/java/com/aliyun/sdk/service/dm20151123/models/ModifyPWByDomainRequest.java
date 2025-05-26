@@ -56,7 +56,7 @@ public class ModifyPWByDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -117,10 +117,11 @@ public class ModifyPWByDomainRequest extends Request {
         } 
 
         /**
+         * <p>Domain name, length 1-50, can include numbers, uppercase letters, lowercase letters, ., and -.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>abc.com</p>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -138,10 +139,18 @@ public class ModifyPWByDomainRequest extends Request {
         }
 
         /**
+         * <ul>
+         * <li><p>Length should be between 10 to 20 characters, and must contain numbers, uppercase letters, and lowercase letters.</p>
+         * </li>
+         * <li><p>At least 2 digits, 2 uppercase letters, and 2 lowercase letters are required, and neither digits nor letters can consist of a single character repeated.</p>
+         * </li>
+         * <li><p>Cannot be the same as the last set password.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>pwd</p>
+         * <p>DM1mail1234</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);

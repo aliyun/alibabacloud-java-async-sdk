@@ -200,6 +200,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryDomainByParamResponse> queryDomainByParam(QueryDomainByParamRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Retrieve deduplicated invalid address information. If an email is sent to the same invalid address multiple times, only the first occurrence will be recorded. The query should be based on the time when the address was first classified as invalid.</p>
+     * 
      * @param request the request parameters of QueryInvalidAddress  QueryInvalidAddressRequest
      * @return QueryInvalidAddressResponse
      */

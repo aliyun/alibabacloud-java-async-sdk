@@ -60,7 +60,7 @@ public class CheckReplyToMailAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -130,7 +130,11 @@ public class CheckReplyToMailAddressRequest extends Request {
         } 
 
         /**
-         * Lang.
+         * <p>Language.</p>
+         * <p>en is English, and any other value or an empty value defaults to Chinese.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -139,6 +143,7 @@ public class CheckReplyToMailAddressRequest extends Request {
         }
 
         /**
+         * <p>Sender Address ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +165,10 @@ public class CheckReplyToMailAddressRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>Region</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

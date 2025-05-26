@@ -49,7 +49,7 @@ public class DeleteInvalidAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -128,7 +128,10 @@ public class DeleteInvalidAddressRequest extends Request {
         }
 
         /**
-         * ToAddress.
+         * <p>Target address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test1***@example.net</p>
          */
         public Builder toAddress(String toAddress) {
             this.putQueryParameter("ToAddress", toAddress);

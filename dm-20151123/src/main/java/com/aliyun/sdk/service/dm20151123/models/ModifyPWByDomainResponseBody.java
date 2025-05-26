@@ -44,6 +44,10 @@ public class ModifyPWByDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class ModifyPWByDomainResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyPWByDomainResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * Code.
+         * <p>Status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -87,7 +104,10 @@ public class ModifyPWByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Description of the status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -95,7 +115,10 @@ public class ModifyPWByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>02B2A890-CBD8-4806-9BCA-C93190CE7EF6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +126,10 @@ public class ModifyPWByDomainResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Whether it was successful</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

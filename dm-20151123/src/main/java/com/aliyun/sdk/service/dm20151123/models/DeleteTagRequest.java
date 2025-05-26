@@ -50,7 +50,7 @@ public class DeleteTagRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,7 +129,7 @@ public class DeleteTagRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tag.</p>
+         * <p>The ID of the tag</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

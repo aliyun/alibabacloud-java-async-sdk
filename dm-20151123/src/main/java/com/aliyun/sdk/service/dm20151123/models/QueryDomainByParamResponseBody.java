@@ -48,6 +48,10 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -90,8 +94,22 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         private Integer totalCount; 
         private Data data; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryDomainByParamResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.data = model.data;
+        } 
+
         /**
-         * PageNumber.
+         * <p>Current page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -99,7 +117,10 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -107,7 +128,10 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8C90CCD3-627C-4F87-AD8C-2F03146071EB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,7 +139,10 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -123,7 +150,7 @@ public class QueryDomainByParamResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>List of domains</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -288,8 +315,28 @@ public class QueryDomainByParamResponseBody extends TeaModel {
             private String spfAuthStatus; 
             private Long utcCreateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Domain model) {
+                this.cnameAuthStatus = model.cnameAuthStatus;
+                this.confirmStatus = model.confirmStatus;
+                this.createTime = model.createTime;
+                this.domainId = model.domainId;
+                this.domainName = model.domainName;
+                this.domainRecord = model.domainRecord;
+                this.domainStatus = model.domainStatus;
+                this.icpStatus = model.icpStatus;
+                this.mxAuthStatus = model.mxAuthStatus;
+                this.spfAuthStatus = model.spfAuthStatus;
+                this.utcCreateTime = model.utcCreateTime;
+            } 
+
             /**
-             * CnameAuthStatus.
+             * <p>Track verification</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder cnameAuthStatus(String cnameAuthStatus) {
                 this.cnameAuthStatus = cnameAuthStatus;
@@ -297,7 +344,10 @@ public class QueryDomainByParamResponseBody extends TeaModel {
             }
 
             /**
-             * ConfirmStatus.
+             * <p>CName verification status, success: 0; failure: 1</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder confirmStatus(String confirmStatus) {
                 this.confirmStatus = confirmStatus;
@@ -305,7 +355,10 @@ public class QueryDomainByParamResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-29T13:28Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -313,7 +366,10 @@ public class QueryDomainByParamResponseBody extends TeaModel {
             }
 
             /**
-             * DomainId.
+             * <p>Domain ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>158923</p>
              */
             public Builder domainId(String domainId) {
                 this.domainId = domainId;
@@ -321,7 +377,10 @@ public class QueryDomainByParamResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>Domain name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -329,7 +388,10 @@ public class QueryDomainByParamResponseBody extends TeaModel {
             }
 
             /**
-             * DomainRecord.
+             * <p>Domain record</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6bd86901b9fe4618a046</p>
              */
             public Builder domainRecord(String domainRecord) {
                 this.domainRecord = domainRecord;
@@ -337,7 +399,14 @@ public class QueryDomainByParamResponseBody extends TeaModel {
             }
 
             /**
-             * DomainStatus.
+             * <p>Domain status.</p>
+             * <ul>
+             * <li>0: Available, verified</li>
+             * <li>1: Unavailable, verification failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -345,7 +414,14 @@ public class QueryDomainByParamResponseBody extends TeaModel {
             }
 
             /**
-             * IcpStatus.
+             * <p>ICP filing status.</p>
+             * <ul>
+             * <li>1 indicates filed</li>
+             * <li>0 indicates not filed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder icpStatus(String icpStatus) {
                 this.icpStatus = icpStatus;
@@ -353,7 +429,10 @@ public class QueryDomainByParamResponseBody extends TeaModel {
             }
 
             /**
-             * MxAuthStatus.
+             * <p>MX authentication status, success: 0, failure: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder mxAuthStatus(String mxAuthStatus) {
                 this.mxAuthStatus = mxAuthStatus;
@@ -361,7 +440,10 @@ public class QueryDomainByParamResponseBody extends TeaModel {
             }
 
             /**
-             * SpfAuthStatus.
+             * <p>SPF authentication status, success: 0, failure: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder spfAuthStatus(String spfAuthStatus) {
                 this.spfAuthStatus = spfAuthStatus;
@@ -369,7 +451,10 @@ public class QueryDomainByParamResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreateTime.
+             * <p>Creation time in UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1569734892</p>
              */
             public Builder utcCreateTime(Long utcCreateTime) {
                 this.utcCreateTime = utcCreateTime;
@@ -414,6 +499,13 @@ public class QueryDomainByParamResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Domain> domain; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.domain = model.domain;
+            } 
 
             /**
              * domain.

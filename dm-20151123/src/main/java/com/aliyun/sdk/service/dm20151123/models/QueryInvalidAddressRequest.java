@@ -70,7 +70,7 @@ public class QueryInvalidAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -158,7 +158,10 @@ public class QueryInvalidAddressRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * <p>End time, with a span from the start time that cannot exceed 30 days, in the format yyyy-MM-dd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-29</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -167,7 +170,10 @@ public class QueryInvalidAddressRequest extends Request {
         }
 
         /**
-         * KeyWord.
+         * <p>Keyword. If not provided, it represents all invalid addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>info</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -176,7 +182,10 @@ public class QueryInvalidAddressRequest extends Request {
         }
 
         /**
-         * Length.
+         * <p>Number of items per request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder length(Integer length) {
             this.putQueryParameter("Length", length);
@@ -185,7 +194,10 @@ public class QueryInvalidAddressRequest extends Request {
         }
 
         /**
-         * NextStart.
+         * <p>Request starting position.</p>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder nextStart(String nextStart) {
             this.putQueryParameter("NextStart", nextStart);
@@ -221,7 +233,10 @@ public class QueryInvalidAddressRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>Start time, which cannot be earlier than 30 days ago, in the format yyyy-MM-dd.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2019-09-29</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

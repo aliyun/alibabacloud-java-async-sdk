@@ -61,7 +61,7 @@ public class CreateReceiverRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -131,7 +131,10 @@ public class CreateReceiverRequest extends Request {
         } 
 
         /**
-         * Desc.
+         * <p>List description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>the description</p>
          */
         public Builder desc(String desc) {
             this.putQueryParameter("Desc", desc);
@@ -149,10 +152,11 @@ public class CreateReceiverRequest extends Request {
         }
 
         /**
+         * <p>List alias, an email address less than 30 characters long.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vme</p>
+         * <p>a***@example.net</p>
          */
         public Builder receiversAlias(String receiversAlias) {
             this.putQueryParameter("ReceiversAlias", receiversAlias);
@@ -161,10 +165,11 @@ public class CreateReceiverRequest extends Request {
         }
 
         /**
+         * <p>List name, must be unique, with a length of 1-30 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xme</p>
+         * <p>test</p>
          */
         public Builder receiversName(String receiversName) {
             this.putQueryParameter("ReceiversName", receiversName);

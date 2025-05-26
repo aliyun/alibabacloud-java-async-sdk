@@ -36,6 +36,10 @@ public class AddIpfilterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipFilterId
      */
@@ -54,8 +58,19 @@ public class AddIpfilterResponseBody extends TeaModel {
         private String ipFilterId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AddIpfilterResponseBody model) {
+            this.ipFilterId = model.ipFilterId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * IpFilterId.
+         * <p>ID corresponding to the IP</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10795</p>
          */
         public Builder ipFilterId(String ipFilterId) {
             this.ipFilterId = ipFilterId;
@@ -63,7 +78,10 @@ public class AddIpfilterResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0E9282E8-DC08-5445-8FB0-B9F0CA28B249</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

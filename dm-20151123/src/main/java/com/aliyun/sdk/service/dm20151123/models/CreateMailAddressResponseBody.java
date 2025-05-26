@@ -36,6 +36,10 @@ public class CreateMailAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mailAddressId
      */
@@ -54,8 +58,19 @@ public class CreateMailAddressResponseBody extends TeaModel {
         private String mailAddressId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateMailAddressResponseBody model) {
+            this.mailAddressId = model.mailAddressId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * MailAddressId.
+         * <p>Mail address ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15123</p>
          */
         public Builder mailAddressId(String mailAddressId) {
             this.mailAddressId = mailAddressId;
@@ -63,7 +78,10 @@ public class CreateMailAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95A7D497-F8DD-4834-B81E-C1783236E55F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

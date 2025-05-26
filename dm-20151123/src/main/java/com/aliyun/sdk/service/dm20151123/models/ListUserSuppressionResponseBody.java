@@ -48,6 +48,10 @@ public class ListUserSuppressionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListUserSuppressionResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserSuppressionResponseBody model) {
+            this.data = model.data;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Returned results.</p>
@@ -228,6 +243,17 @@ public class ListUserSuppressionResponseBody extends TeaModel {
             private Integer suppressionId; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserSuppressions model) {
+                this.address = model.address;
+                this.createTime = model.createTime;
+                this.lastBounceTime = model.lastBounceTime;
+                this.suppressionId = model.suppressionId;
+                this.type = model.type;
+            } 
+
             /**
              * <p>Email address or domain name</p>
              * 
@@ -325,6 +351,13 @@ public class ListUserSuppressionResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<UserSuppressions> userSuppressions; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.userSuppressions = model.userSuppressions;
+            } 
 
             /**
              * UserSuppressions.

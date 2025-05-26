@@ -48,6 +48,10 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextStart
      */
@@ -90,8 +94,22 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
         private Integer totalCount; 
         private Data data; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryReceiverByParamResponseBody model) {
+            this.nextStart = model.nextStart;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.data = model.data;
+        } 
+
         /**
-         * NextStart.
+         * <p>Used for pagination. If there are more results, set this returned value to the NextStart in the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6aec200853#102#1638894326#<a href="mailto:test@example.com">test@example.com</a></p>
          */
         public Builder nextStart(String nextStart) {
             this.nextStart = nextStart;
@@ -99,7 +117,10 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items displayed per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -107,7 +128,10 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,7 +139,10 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -123,7 +150,7 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Detailed information of the recipient list</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -252,8 +279,25 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
             private String receiversStatus; 
             private Long utcCreateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Receiver model) {
+                this.count = model.count;
+                this.createTime = model.createTime;
+                this.desc = model.desc;
+                this.receiverId = model.receiverId;
+                this.receiversAlias = model.receiversAlias;
+                this.receiversName = model.receiversName;
+                this.receiversStatus = model.receiversStatus;
+                this.utcCreateTime = model.utcCreateTime;
+            } 
+
             /**
-             * Count.
+             * <p>Total number of recipient addresses</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(String count) {
                 this.count = count;
@@ -261,7 +305,10 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-29T13:28Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -269,7 +316,10 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
             }
 
             /**
-             * Desc.
+             * <p>Description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -277,7 +327,10 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiverId.
+             * <p>Recipient list ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0c910a7143044b1e116719eb678907b3</p>
              */
             public Builder receiverId(String receiverId) {
                 this.receiverId = receiverId;
@@ -285,7 +338,10 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiversAlias.
+             * <p>Recipient list alias</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10***@example.com</p>
              */
             public Builder receiversAlias(String receiversAlias) {
                 this.receiversAlias = receiversAlias;
@@ -293,7 +349,10 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiversName.
+             * <p>Recipient list name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TKP000442-333</p>
              */
             public Builder receiversName(String receiversName) {
                 this.receiversName = receiversName;
@@ -301,7 +360,14 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiversStatus.
+             * <p>List status. Values:</p>
+             * <ul>
+             * <li>0: Uploading</li>
+             * <li>1: Upload completed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder receiversStatus(String receiversStatus) {
                 this.receiversStatus = receiversStatus;
@@ -309,7 +375,10 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreateTime.
+             * <p>UTC formatted creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1569734892</p>
              */
             public Builder utcCreateTime(Long utcCreateTime) {
                 this.utcCreateTime = utcCreateTime;
@@ -354,6 +423,13 @@ public class QueryReceiverByParamResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Receiver> receiver; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.receiver = model.receiver;
+            } 
 
             /**
              * receiver.

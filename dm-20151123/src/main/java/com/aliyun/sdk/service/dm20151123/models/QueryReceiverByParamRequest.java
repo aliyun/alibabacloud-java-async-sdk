@@ -66,7 +66,7 @@ public class QueryReceiverByParamRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,7 +145,10 @@ public class QueryReceiverByParamRequest extends Request {
         } 
 
         /**
-         * KeyWord.
+         * <p>Keyword, defaults to all information if not specified</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mesh-notification</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -163,7 +166,10 @@ public class QueryReceiverByParamRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>Current page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -172,7 +178,10 @@ public class QueryReceiverByParamRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page, default: 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +208,16 @@ public class QueryReceiverByParamRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Delivery result. If not filled, it represents all statuses. Values:</p>
+         * <ul>
+         * <li>0: Success</li>
+         * <li>2: Invalid address</li>
+         * <li>3: Spam</li>
+         * <li>4: Failure</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

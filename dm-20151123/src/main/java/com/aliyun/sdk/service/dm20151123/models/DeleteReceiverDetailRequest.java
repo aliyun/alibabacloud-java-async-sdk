@@ -55,7 +55,7 @@ public class DeleteReceiverDetailRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,7 +116,10 @@ public class DeleteReceiverDetailRequest extends Request {
         } 
 
         /**
-         * Email.
+         * <p>The single recipient to be deleted from the recipient list</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.com">test@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -134,10 +137,11 @@ public class DeleteReceiverDetailRequest extends Request {
         }
 
         /**
+         * <p>Recipient list ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123534</p>
+         * <p>53228b7d80c36257927ecd029ccd3c9a</p>
          */
         public Builder receiverId(String receiverId) {
             this.putQueryParameter("ReceiverId", receiverId);

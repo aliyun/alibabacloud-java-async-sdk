@@ -40,6 +40,10 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -66,8 +70,20 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
         private Integer totalCount; 
         private Data data; 
 
+        private Builder() {
+        } 
+
+        private Builder(SenderStatisticsByTagNameAndBatchIDResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.data = model.data;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +91,10 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -83,7 +102,7 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Data records</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -200,8 +219,24 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
             private String unavailableCount; 
             private String unavailablePercent; 
 
+            private Builder() {
+            } 
+
+            private Builder(Stat model) {
+                this.createTime = model.createTime;
+                this.faildCount = model.faildCount;
+                this.requestCount = model.requestCount;
+                this.succeededPercent = model.succeededPercent;
+                this.successCount = model.successCount;
+                this.unavailableCount = model.unavailableCount;
+                this.unavailablePercent = model.unavailablePercent;
+            } 
+
             /**
-             * CreateTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-02</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -209,7 +244,10 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
             }
 
             /**
-             * faildCount.
+             * <p>Failure count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder faildCount(String faildCount) {
                 this.faildCount = faildCount;
@@ -217,7 +255,10 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
             }
 
             /**
-             * requestCount.
+             * <p>Request count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder requestCount(String requestCount) {
                 this.requestCount = requestCount;
@@ -225,7 +266,10 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
             }
 
             /**
-             * succeededPercent.
+             * <p>Success rate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100.00%</p>
              */
             public Builder succeededPercent(String succeededPercent) {
                 this.succeededPercent = succeededPercent;
@@ -233,7 +277,10 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
             }
 
             /**
-             * successCount.
+             * <p>Success count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder successCount(String successCount) {
                 this.successCount = successCount;
@@ -241,7 +288,10 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
             }
 
             /**
-             * unavailableCount.
+             * <p>Invalid count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder unavailableCount(String unavailableCount) {
                 this.unavailableCount = unavailableCount;
@@ -249,7 +299,10 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
             }
 
             /**
-             * unavailablePercent.
+             * <p>Unavailability rate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0%</p>
              */
             public Builder unavailablePercent(String unavailablePercent) {
                 this.unavailablePercent = unavailablePercent;
@@ -294,6 +347,13 @@ public class SenderStatisticsByTagNameAndBatchIDResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Stat> stat; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.stat = model.stat;
+            } 
 
             /**
              * stat.

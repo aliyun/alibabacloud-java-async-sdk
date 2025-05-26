@@ -32,6 +32,10 @@ public class ApproveReplyMailAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,18 @@ public class ApproveReplyMailAddressResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ApproveReplyMailAddressResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

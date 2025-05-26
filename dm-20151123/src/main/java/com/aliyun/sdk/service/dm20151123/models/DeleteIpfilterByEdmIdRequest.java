@@ -55,7 +55,7 @@ public class DeleteIpfilterByEdmIdRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,7 +116,10 @@ public class DeleteIpfilterByEdmIdRequest extends Request {
         } 
 
         /**
-         * FromType.
+         * <p>Deprecated, kept for historical compatibility.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder fromType(Integer fromType) {
             this.putQueryParameter("FromType", fromType);
@@ -125,7 +128,10 @@ public class DeleteIpfilterByEdmIdRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>Record ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10120</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);

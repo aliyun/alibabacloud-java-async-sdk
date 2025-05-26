@@ -86,7 +86,7 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -201,7 +201,10 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         } 
 
         /**
-         * <p>Sending address. Not filled in represents all addresses.</p>
+         * <p>Sending address. If not filled, it represents all addresses.</p>
+         * <blockquote>
+         * <p><strong>AccountName</strong>, <strong>TagName</strong>, and <strong>ToAddress</strong> can all be left unfilled. If any are filled, only one of these parameters can be passed; you cannot pass a combination of two or more.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>s***@example.net</p>
@@ -213,7 +216,7 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
-         * <p>The end time. The difference between the start time and the end time cannot exceed 30 days. Format: yyyy-MM-dd.</p>
+         * <p>End time. The span between start and end times cannot exceed 30 days, format: yyyy-MM-dd HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-04-29 00:00</p>
@@ -225,7 +228,7 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return in the request. Valid values: 1 to 100.</p>
+         * <p>Specifies the number of results to return in this request. Range is 1~100.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -237,7 +240,7 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
-         * <p>The start position of the next page. The offset for the request. If you want to obtain more records, specify the return value of the NextStart parameter for this parameter.</p>
+         * <p>Used for pagination. Specifies the offset for this request. If there are more results, set this returned value to the NextStart in the next request.</p>
          * 
          * <strong>example:</strong>
          * <p>90f0243616#203#a***@example.net-1658817837#a***@example.net.247475288187</p>
@@ -276,7 +279,7 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
-         * <p>The start time. The start time can be up to 30 days earlier than the current time. Format: yyyy-MM-dd.</p>
+         * <p>Start time. The span between start and end times cannot exceed 30 days, format: yyyy-MM-dd HH:mm</p>
          * 
          * <strong>example:</strong>
          * <p>2021-04-28 00:00</p>
@@ -288,7 +291,13 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
-         * <p>The delivery status. If you leave this parameter empty, all states are included. Valid values: 0: successful, 2 invalid email address, 3: spam, and 4: failed.</p>
+         * <p>Delivery result. If not filled, it represents all statuses. Values:</p>
+         * <ul>
+         * <li>0: Success</li>
+         * <li>2: Invalid Address</li>
+         * <li>3: Spam</li>
+         * <li>4: Failure</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -300,7 +309,7 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
-         * <p>The email tag. If you leave this parameter empty, all email tags are included.</p>
+         * <p>Email tag. If not filled, it represents all tags.</p>
          * 
          * <strong>example:</strong>
          * <p>EmailQuestionnaireHelioscam</p>
@@ -312,7 +321,7 @@ public class SenderStatisticsDetailByParamRequest extends Request {
         }
 
         /**
-         * <p>The recipient address. If you leave this parameter empty, all recipient addresses are included.</p>
+         * <p>Recipient address. If not filled, it represents all recipient addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>b***@example.net</p>

@@ -48,6 +48,10 @@ public class QueryTagByParamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -90,8 +94,22 @@ public class QueryTagByParamResponseBody extends TeaModel {
         private Integer totalCount; 
         private Data data; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryTagByParamResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.data = model.data;
+        } 
+
         /**
-         * PageNumber.
+         * <p>Current page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -99,7 +117,10 @@ public class QueryTagByParamResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -107,7 +128,10 @@ public class QueryTagByParamResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,7 +139,10 @@ public class QueryTagByParamResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -123,7 +150,7 @@ public class QueryTagByParamResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Data records</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -192,8 +219,20 @@ public class QueryTagByParamResponseBody extends TeaModel {
             private String tagId; 
             private String tagName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagDescription = model.tagDescription;
+                this.tagId = model.tagId;
+                this.tagName = model.tagName;
+            } 
+
             /**
-             * TagDescription.
+             * <p>Tag description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test description</p>
              */
             public Builder tagDescription(String tagDescription) {
                 this.tagDescription = tagDescription;
@@ -201,7 +240,10 @@ public class QueryTagByParamResponseBody extends TeaModel {
             }
 
             /**
-             * TagId.
+             * <p>Tag ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52366</p>
              */
             public Builder tagId(String tagId) {
                 this.tagId = tagId;
@@ -209,7 +251,10 @@ public class QueryTagByParamResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>Tag name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hellopal</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -254,6 +299,13 @@ public class QueryTagByParamResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * tag.

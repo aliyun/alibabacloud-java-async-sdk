@@ -36,6 +36,10 @@ public class CreateReceiverResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return receiverId
      */
@@ -54,8 +58,19 @@ public class CreateReceiverResponseBody extends TeaModel {
         private String receiverId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateReceiverResponseBody model) {
+            this.receiverId = model.receiverId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * ReceiverId.
+         * <p>Receiver list ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7312e09b8fffc5c7b2e2fbf5b6dc2073</p>
          */
         public Builder receiverId(String receiverId) {
             this.receiverId = receiverId;
@@ -63,7 +78,10 @@ public class CreateReceiverResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

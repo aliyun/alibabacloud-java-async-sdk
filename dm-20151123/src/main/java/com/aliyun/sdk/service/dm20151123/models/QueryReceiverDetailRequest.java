@@ -66,7 +66,7 @@ public class QueryReceiverDetailRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,7 +145,10 @@ public class QueryReceiverDetailRequest extends Request {
         } 
 
         /**
-         * KeyWord.
+         * <p>Recipient address, length 0-50</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b***@example.net</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -154,7 +157,10 @@ public class QueryReceiverDetailRequest extends Request {
         }
 
         /**
-         * NextStart.
+         * <p>Starting position for the next item, default: 0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder nextStart(String nextStart) {
             this.putQueryParameter("NextStart", nextStart);
@@ -172,7 +178,10 @@ public class QueryReceiverDetailRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page, default: 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -181,6 +190,7 @@ public class QueryReceiverDetailRequest extends Request {
         }
 
         /**
+         * <p>Recipient list ID (returned when creating a recipient list using the CreateReceiver API).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

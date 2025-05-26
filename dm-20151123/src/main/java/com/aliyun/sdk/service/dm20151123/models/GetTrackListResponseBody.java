@@ -56,6 +56,10 @@ public class GetTrackListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return offsetCreateTime
      */
@@ -114,8 +118,24 @@ public class GetTrackListResponseBody extends TeaModel {
         private Integer total; 
         private Data data; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetTrackListResponseBody model) {
+            this.offsetCreateTime = model.offsetCreateTime;
+            this.offsetCreateTimeDesc = model.offsetCreateTimeDesc;
+            this.pageNo = model.pageNo;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+            this.data = model.data;
+        } 
+
         /**
-         * OffsetCreateTime.
+         * <p>Used for pagination. Not set for the first query, but for subsequent queries, it should be set to the value of OffsetCreateTime from the previous response. (This field is deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(This field is deprecated)</p>
          */
         public Builder offsetCreateTime(String offsetCreateTime) {
             this.offsetCreateTime = offsetCreateTime;
@@ -123,7 +143,10 @@ public class GetTrackListResponseBody extends TeaModel {
         }
 
         /**
-         * OffsetCreateTimeDesc.
+         * <p>(This field is deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(This field is deprecated)</p>
          */
         public Builder offsetCreateTimeDesc(String offsetCreateTimeDesc) {
             this.offsetCreateTimeDesc = offsetCreateTimeDesc;
@@ -131,7 +154,10 @@ public class GetTrackListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>Current page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -139,7 +165,10 @@ public class GetTrackListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -147,7 +176,10 @@ public class GetTrackListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -155,7 +187,10 @@ public class GetTrackListResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>Total number of items</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -163,7 +198,7 @@ public class GetTrackListResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Tracking data records</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -316,8 +351,27 @@ public class GetTrackListResponseBody extends TeaModel {
             private String rcptUniqueOpenRate; 
             private String totalNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(Stat model) {
+                this.createTime = model.createTime;
+                this.rcptClickCount = model.rcptClickCount;
+                this.rcptClickRate = model.rcptClickRate;
+                this.rcptOpenCount = model.rcptOpenCount;
+                this.rcptOpenRate = model.rcptOpenRate;
+                this.rcptUniqueClickCount = model.rcptUniqueClickCount;
+                this.rcptUniqueClickRate = model.rcptUniqueClickRate;
+                this.rcptUniqueOpenCount = model.rcptUniqueOpenCount;
+                this.rcptUniqueOpenRate = model.rcptUniqueOpenRate;
+                this.totalNumber = model.totalNumber;
+            } 
+
             /**
-             * CreateTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-29T13:28Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -325,7 +379,10 @@ public class GetTrackListResponseBody extends TeaModel {
             }
 
             /**
-             * RcptClickCount.
+             * <p>Click count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rcptClickCount(String rcptClickCount) {
                 this.rcptClickCount = rcptClickCount;
@@ -333,7 +390,10 @@ public class GetTrackListResponseBody extends TeaModel {
             }
 
             /**
-             * RcptClickRate.
+             * <p>Click rate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rcptClickRate(String rcptClickRate) {
                 this.rcptClickRate = rcptClickRate;
@@ -341,7 +401,10 @@ public class GetTrackListResponseBody extends TeaModel {
             }
 
             /**
-             * RcptOpenCount.
+             * <p>Number of Opens</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rcptOpenCount(String rcptOpenCount) {
                 this.rcptOpenCount = rcptOpenCount;
@@ -349,7 +412,10 @@ public class GetTrackListResponseBody extends TeaModel {
             }
 
             /**
-             * RcptOpenRate.
+             * <p>Open rate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rcptOpenRate(String rcptOpenRate) {
                 this.rcptOpenRate = rcptOpenRate;
@@ -357,7 +423,10 @@ public class GetTrackListResponseBody extends TeaModel {
             }
 
             /**
-             * RcptUniqueClickCount.
+             * <p>Unique click count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rcptUniqueClickCount(String rcptUniqueClickCount) {
                 this.rcptUniqueClickCount = rcptUniqueClickCount;
@@ -365,7 +434,10 @@ public class GetTrackListResponseBody extends TeaModel {
             }
 
             /**
-             * RcptUniqueClickRate.
+             * <p>Unique click rate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rcptUniqueClickRate(String rcptUniqueClickRate) {
                 this.rcptUniqueClickRate = rcptUniqueClickRate;
@@ -373,7 +445,10 @@ public class GetTrackListResponseBody extends TeaModel {
             }
 
             /**
-             * RcptUniqueOpenCount.
+             * <p>Unique open count</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rcptUniqueOpenCount(String rcptUniqueOpenCount) {
                 this.rcptUniqueOpenCount = rcptUniqueOpenCount;
@@ -381,7 +456,10 @@ public class GetTrackListResponseBody extends TeaModel {
             }
 
             /**
-             * RcptUniqueOpenRate.
+             * <p>Unique open rate</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder rcptUniqueOpenRate(String rcptUniqueOpenRate) {
                 this.rcptUniqueOpenRate = rcptUniqueOpenRate;
@@ -389,7 +467,10 @@ public class GetTrackListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNumber.
+             * <p>Total number</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder totalNumber(String totalNumber) {
                 this.totalNumber = totalNumber;
@@ -434,6 +515,13 @@ public class GetTrackListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Stat> stat; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.stat = model.stat;
+            } 
 
             /**
              * stat.

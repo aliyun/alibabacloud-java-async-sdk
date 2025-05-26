@@ -66,7 +66,7 @@ public class QueryTaskByParamRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,7 +145,10 @@ public class QueryTaskByParamRequest extends Request {
         } 
 
         /**
-         * KeyWord.
+         * <p>Keyword, defaults to all information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mesh-notification-788717</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -163,7 +166,10 @@ public class QueryTaskByParamRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>Current page number, default is 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -172,7 +178,10 @@ public class QueryTaskByParamRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size, default is 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +208,10 @@ public class QueryTaskByParamRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>Status, defaults to all statuses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

@@ -55,7 +55,7 @@ public class CreateTagRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,7 +143,10 @@ public class CreateTagRequest extends Request {
         }
 
         /**
-         * TagDescription.
+         * <p>Tag description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test description</p>
          */
         public Builder tagDescription(String tagDescription) {
             this.putQueryParameter("TagDescription", tagDescription);
@@ -152,10 +155,11 @@ public class CreateTagRequest extends Request {
         }
 
         /**
+         * <p>Tag name. Limitations: 1-50 characters, allowing English letters, numbers, and underscores.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vme</p>
+         * <p>test</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

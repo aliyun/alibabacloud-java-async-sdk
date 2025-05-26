@@ -96,7 +96,7 @@ public class GetTrackListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -229,7 +229,13 @@ public class GetTrackListRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>Sender address.</p>
+         * <blockquote>
+         * <p>If not filled, it represents all addresses; if TagName is provided, this parameter must not be empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.com">test@example.com</a></p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -238,6 +244,7 @@ public class GetTrackListRequest extends Request {
         }
 
         /**
+         * <p>End time, the span between start and end time cannot exceed 7 days. Format: yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +257,10 @@ public class GetTrackListRequest extends Request {
         }
 
         /**
-         * Offset.
+         * <p>For the first query, set to 0; for subsequent queries, fixed at 1. 1 indicates pagination in ascending order by time. (This field is deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(This field is deprecated)</p>
          */
         public Builder offset(String offset) {
             this.putQueryParameter("Offset", offset);
@@ -259,7 +269,10 @@ public class GetTrackListRequest extends Request {
         }
 
         /**
-         * OffsetCreateTime.
+         * <p>Used for pagination. Not set for the first query, but for subsequent queries, it should be set to the value of OffsetCreateTime from the previous response. (This field is deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(This field is deprecated)</p>
          */
         public Builder offsetCreateTime(String offsetCreateTime) {
             this.putQueryParameter("OffsetCreateTime", offsetCreateTime);
@@ -268,7 +281,10 @@ public class GetTrackListRequest extends Request {
         }
 
         /**
-         * OffsetCreateTimeDesc.
+         * <p>(This field is deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(This field is deprecated)</p>
          */
         public Builder offsetCreateTimeDesc(String offsetCreateTimeDesc) {
             this.putQueryParameter("OffsetCreateTimeDesc", offsetCreateTimeDesc);
@@ -286,7 +302,10 @@ public class GetTrackListRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>Page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(String pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -295,7 +314,10 @@ public class GetTrackListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -322,6 +344,7 @@ public class GetTrackListRequest extends Request {
         }
 
         /**
+         * <p>Start time, which cannot be earlier than 30 days. Format: yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -334,7 +357,10 @@ public class GetTrackListRequest extends Request {
         }
 
         /**
-         * TagName.
+         * <p>Tag name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tagname</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);
@@ -343,7 +369,10 @@ public class GetTrackListRequest extends Request {
         }
 
         /**
-         * Total.
+         * <p>(This field is deprecated)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>(This field is deprecated)</p>
          */
         public Builder total(String total) {
             this.putQueryParameter("Total", total);

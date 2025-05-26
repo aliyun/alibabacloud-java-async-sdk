@@ -32,6 +32,10 @@ public class DeleteInvalidAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,18 @@ public class DeleteInvalidAddressResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteInvalidAddressResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2D086F6-xxxx-xxxx-xxxx-006DED011A85</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

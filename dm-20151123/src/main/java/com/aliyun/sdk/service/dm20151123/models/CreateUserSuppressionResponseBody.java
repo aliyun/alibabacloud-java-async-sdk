@@ -36,6 +36,10 @@ public class CreateUserSuppressionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateUserSuppressionResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String suppressionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateUserSuppressionResponseBody model) {
+            this.requestId = model.requestId;
+            this.suppressionId = model.suppressionId;
+        } 
 
         /**
          * <p>Request ID</p>

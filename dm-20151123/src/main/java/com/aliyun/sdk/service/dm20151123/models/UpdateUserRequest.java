@@ -39,7 +39,7 @@ public class UpdateUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,6 +129,13 @@ public class UpdateUserRequest extends Request {
 
         public static final class Builder {
             private Boolean enableEventbridge; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.enableEventbridge = model.enableEventbridge;
+            } 
 
             /**
              * <p>Whether EventBridge is enabled</p>

@@ -65,7 +65,7 @@ public class QueryMailAddressByParamRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -144,7 +144,10 @@ public class QueryMailAddressByParamRequest extends Request {
         } 
 
         /**
-         * KeyWord.
+         * <p>Email address, length 1-60, supports numbers, letters, ., -, @.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>账号+@+域名</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -162,7 +165,10 @@ public class QueryMailAddressByParamRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>Current page number, default: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -171,7 +177,10 @@ public class QueryMailAddressByParamRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size, default: 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -198,7 +207,14 @@ public class QueryMailAddressByParamRequest extends Request {
         }
 
         /**
-         * Sendtype.
+         * <p>Type of sending address. Values:</p>
+         * <ul>
+         * <li>batch: bulk email</li>
+         * <li>trigger: triggered email</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>batch</p>
          */
         public Builder sendtype(String sendtype) {
             this.putQueryParameter("Sendtype", sendtype);

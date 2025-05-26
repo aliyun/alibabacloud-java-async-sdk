@@ -48,6 +48,10 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -90,8 +94,22 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         private Integer totalCount; 
         private Data data; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryTaskByParamResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.data = model.data;
+        } 
+
         /**
-         * PageNumber.
+         * <p>Current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -99,7 +117,10 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -107,7 +128,10 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,7 +139,10 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -123,7 +150,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Returned results.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -264,8 +291,26 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             private String templateName; 
             private Long utcCreateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.addressType = model.addressType;
+                this.createTime = model.createTime;
+                this.receiversName = model.receiversName;
+                this.requestCount = model.requestCount;
+                this.tagName = model.tagName;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+                this.templateName = model.templateName;
+                this.utcCreateTime = model.utcCreateTime;
+            } 
+
             /**
-             * AddressType.
+             * <p>Address type, sending address: 1; random address: 0;</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
@@ -273,7 +318,10 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-18T10:36Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -281,7 +329,10 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * ReceiversName.
+             * <p>Receiver&quot;s name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TKP000442-333</p>
              */
             public Builder receiversName(String receiversName) {
                 this.receiversName = receiversName;
@@ -289,7 +340,10 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * RequestCount.
+             * <p>Request count.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder requestCount(String requestCount) {
                 this.requestCount = requestCount;
@@ -297,7 +351,10 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * TagName.
+             * <p>Tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>202201</p>
              */
             public Builder tagName(String tagName) {
                 this.tagName = tagName;
@@ -305,7 +362,10 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Task ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1054296</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -313,7 +373,10 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * TaskStatus.
+             * <p>Task status, sent successfully: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder taskStatus(String taskStatus) {
                 this.taskStatus = taskStatus;
@@ -321,7 +384,10 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * <p>Template name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Short Simple</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -329,7 +395,10 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreateTime.
+             * <p>Creation time in UTC format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1569734892</p>
              */
             public Builder utcCreateTime(Long utcCreateTime) {
                 this.utcCreateTime = utcCreateTime;
@@ -374,6 +443,13 @@ public class QueryTaskByParamResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Task> task; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.task = model.task;
+            } 
 
             /**
              * task.

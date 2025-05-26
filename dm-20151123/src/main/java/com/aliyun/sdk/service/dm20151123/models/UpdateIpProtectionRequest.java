@@ -49,7 +49,7 @@ public class UpdateIpProtectionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +101,10 @@ public class UpdateIpProtectionRequest extends Request {
         } 
 
         /**
-         * IpProtection.
+         * <p>IP protection switch, On: 1 Off: 0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ipProtection(String ipProtection) {
             this.putQueryParameter("IpProtection", ipProtection);

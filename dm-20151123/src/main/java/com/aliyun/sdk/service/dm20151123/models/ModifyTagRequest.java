@@ -61,7 +61,7 @@ public class ModifyTagRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -158,7 +158,10 @@ public class ModifyTagRequest extends Request {
         }
 
         /**
-         * TagDescription.
+         * <p>Tag Description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test description</p>
          */
         public Builder tagDescription(String tagDescription) {
             this.putQueryParameter("TagDescription", tagDescription);
@@ -167,11 +170,11 @@ public class ModifyTagRequest extends Request {
         }
 
         /**
-         * <p>The ID of the tag.</p>
+         * <p>Tag ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123</p>
+         * <p>100674</p>
          */
         public Builder tagId(Integer tagId) {
             this.putQueryParameter("TagId", tagId);
@@ -180,11 +183,11 @@ public class ModifyTagRequest extends Request {
         }
 
         /**
-         * <p>The name of the tag.</p>
+         * <p>Tag Name</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>vme</p>
+         * <p>test</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

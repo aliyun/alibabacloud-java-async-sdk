@@ -48,6 +48,10 @@ public class GetIpfilterListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -90,8 +94,22 @@ public class GetIpfilterListResponseBody extends TeaModel {
         private Integer totalCount; 
         private Data data; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetIpfilterListResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.data = model.data;
+        } 
+
         /**
-         * PageNumber.
+         * <p>Current page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -99,7 +117,10 @@ public class GetIpfilterListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -107,7 +128,10 @@ public class GetIpfilterListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>84DD77C7-A091-5139-9530-2D1F7CCE59E0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,7 +139,10 @@ public class GetIpfilterListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -123,7 +150,7 @@ public class GetIpfilterListResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Data records</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -192,8 +219,20 @@ public class GetIpfilterListResponseBody extends TeaModel {
             private String id; 
             private String ipAddress; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipfilters model) {
+                this.createTime = model.createTime;
+                this.id = model.id;
+                this.ipAddress = model.ipAddress;
+            } 
+
             /**
-             * CreateTime.
+             * <p>timestamp</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1653547140</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -201,7 +240,10 @@ public class GetIpfilterListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>Record ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10083</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -209,7 +251,12 @@ public class GetIpfilterListResponseBody extends TeaModel {
             }
 
             /**
-             * IpAddress.
+             * <p>IP address/IP range/IP segment</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx.xxx.xxx.xxx
+             * xxx.xxx.xxx.xxx-xxx.xxx.xxx.xxx
+             * xxx.xxx.xxx.xxx/xxx</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -254,6 +301,13 @@ public class GetIpfilterListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Ipfilters> ipfilters; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.ipfilters = model.ipfilters;
+            } 
 
             /**
              * ipfilters.

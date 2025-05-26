@@ -48,6 +48,10 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -90,8 +94,22 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         private Integer totalCount; 
         private Data data; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryMailAddressByParamResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.data = model.data;
+        } 
+
         /**
-         * PageNumber.
+         * <p>Current page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -99,7 +117,10 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>Page size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -107,7 +128,10 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95A7D497-F8DD-4834-B81E-C1783236E55F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,7 +139,10 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -123,7 +150,7 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>List of mail addresses</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -300,8 +327,29 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             private String replyStatus; 
             private String sendtype; 
 
+            private Builder() {
+            } 
+
+            private Builder(MailAddress model) {
+                this.accountName = model.accountName;
+                this.accountStatus = model.accountStatus;
+                this.createTime = model.createTime;
+                this.dailyCount = model.dailyCount;
+                this.dailyReqCount = model.dailyReqCount;
+                this.domainStatus = model.domainStatus;
+                this.mailAddressId = model.mailAddressId;
+                this.monthCount = model.monthCount;
+                this.monthReqCount = model.monthReqCount;
+                this.replyAddress = model.replyAddress;
+                this.replyStatus = model.replyStatus;
+                this.sendtype = model.sendtype;
+            } 
+
             /**
-             * AccountName.
+             * <p>Sending address</p>
+             * 
+             * <strong>example:</strong>
+             * <p>账户+@+域名</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -309,7 +357,10 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             }
 
             /**
-             * AccountStatus.
+             * <p>Account status, frozen: 1, normal: 0.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder accountStatus(String accountStatus) {
                 this.accountStatus = accountStatus;
@@ -317,7 +368,10 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Creation time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-29T13:28Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -325,7 +379,10 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             }
 
             /**
-             * DailyCount.
+             * <p>Daily quota limit</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10000</p>
              */
             public Builder dailyCount(String dailyCount) {
                 this.dailyCount = dailyCount;
@@ -333,7 +390,10 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             }
 
             /**
-             * DailyReqCount.
+             * <p>Daily quota</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder dailyReqCount(String dailyReqCount) {
                 this.dailyReqCount = dailyReqCount;
@@ -341,7 +401,10 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             }
 
             /**
-             * DomainStatus.
+             * <p>Domain status, 0 indicates normal, 1 indicates abnormal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder domainStatus(String domainStatus) {
                 this.domainStatus = domainStatus;
@@ -349,7 +412,10 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             }
 
             /**
-             * MailAddressId.
+             * <p>Mail address ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12122</p>
              */
             public Builder mailAddressId(String mailAddressId) {
                 this.mailAddressId = mailAddressId;
@@ -357,7 +423,10 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             }
 
             /**
-             * MonthCount.
+             * <p>Monthly quota limit</p>
+             * 
+             * <strong>example:</strong>
+             * <p>300000</p>
              */
             public Builder monthCount(String monthCount) {
                 this.monthCount = monthCount;
@@ -365,7 +434,10 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             }
 
             /**
-             * MonthReqCount.
+             * <p>Monthly quota</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20000</p>
              */
             public Builder monthReqCount(String monthReqCount) {
                 this.monthReqCount = monthReqCount;
@@ -373,7 +445,10 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             }
 
             /**
-             * ReplyAddress.
+             * <p>Reply address</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@example.com">test@example.com</a></p>
              */
             public Builder replyAddress(String replyAddress) {
                 this.replyAddress = replyAddress;
@@ -381,7 +456,10 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             }
 
             /**
-             * ReplyStatus.
+             * <p>Reply address status</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder replyStatus(String replyStatus) {
                 this.replyStatus = replyStatus;
@@ -389,7 +467,14 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             }
 
             /**
-             * Sendtype.
+             * <p>Type of sending address. Values:</p>
+             * <ul>
+             * <li>batch: bulk email</li>
+             * <li>trigger: triggered email</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>batch</p>
              */
             public Builder sendtype(String sendtype) {
                 this.sendtype = sendtype;
@@ -434,6 +519,13 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MailAddress> mailAddress; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.mailAddress = model.mailAddress;
+            } 
 
             /**
              * mailAddress.

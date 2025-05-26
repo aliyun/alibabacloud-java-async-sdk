@@ -36,6 +36,10 @@ public class CreateDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainId
      */
@@ -54,8 +58,19 @@ public class CreateDomainResponseBody extends TeaModel {
         private String domainId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateDomainResponseBody model) {
+            this.domainId = model.domainId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * DomainId.
+         * <p>Domain ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>158910</p>
          */
         public Builder domainId(String domainId) {
             this.domainId = domainId;
@@ -63,7 +78,10 @@ public class CreateDomainResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B49AD828-25D1-488C-90B7-8853C1944486</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -44,6 +44,10 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextStart
      */
@@ -78,8 +82,21 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
         private Integer totalCount; 
         private Data data; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryInvalidAddressResponseBody model) {
+            this.nextStart = model.nextStart;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.data = model.data;
+        } 
+
         /**
-         * NextStart.
+         * <p>Next request starting position.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder nextStart(String nextStart) {
             this.nextStart = nextStart;
@@ -87,7 +104,10 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95A7D497-F8DD-4834-B81E-C1783236E55F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -95,7 +115,10 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -103,7 +126,7 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Records.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -172,8 +195,20 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
             private String toAddress; 
             private Long utcLastUpdateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(MailDetail model) {
+                this.lastUpdateTime = model.lastUpdateTime;
+                this.toAddress = model.toAddress;
+                this.utcLastUpdateTime = model.utcLastUpdateTime;
+            } 
+
             /**
-             * LastUpdateTime.
+             * <p>Update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-04-28T17:11Z</p>
              */
             public Builder lastUpdateTime(String lastUpdateTime) {
                 this.lastUpdateTime = lastUpdateTime;
@@ -181,7 +216,10 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
             }
 
             /**
-             * ToAddress.
+             * <p>Recipient address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:toaddress@example.com">toaddress@example.com</a></p>
              */
             public Builder toAddress(String toAddress) {
                 this.toAddress = toAddress;
@@ -189,7 +227,10 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
             }
 
             /**
-             * UtcLastUpdateTime.
+             * <p>Update time (in timestamp format).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1619601108</p>
              */
             public Builder utcLastUpdateTime(Long utcLastUpdateTime) {
                 this.utcLastUpdateTime = utcLastUpdateTime;
@@ -234,6 +275,13 @@ public class QueryInvalidAddressResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MailDetail> mailDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.mailDetail = model.mailDetail;
+            } 
 
             /**
              * mailDetail.

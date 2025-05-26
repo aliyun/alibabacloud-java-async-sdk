@@ -66,7 +66,7 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,7 +145,10 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
         } 
 
         /**
-         * AccountName.
+         * <p>Sending address. If not filled, it represents all addresses.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -154,6 +157,7 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
         }
 
         /**
+         * <p>End time, which cannot exceed 7 days from the start time, in the format yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -193,6 +197,7 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
         }
 
         /**
+         * <p>Start time, in the format yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -205,7 +210,10 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
         }
 
         /**
-         * TagName.
+         * <p>Email tag. If not filled, it represents all tags.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxx</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);

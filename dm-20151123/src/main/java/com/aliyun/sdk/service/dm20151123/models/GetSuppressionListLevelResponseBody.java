@@ -36,6 +36,10 @@ public class GetSuppressionListLevelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSuppressionListLevelResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String suppressionListLevel; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSuppressionListLevelResponseBody model) {
+            this.requestId = model.requestId;
+            this.suppressionListLevel = model.suppressionListLevel;
+        } 
 
         /**
          * RequestId.

@@ -36,6 +36,10 @@ public class GetIpProtectionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipProtection
      */
@@ -54,8 +58,19 @@ public class GetIpProtectionResponseBody extends TeaModel {
         private String ipProtection; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetIpProtectionResponseBody model) {
+            this.ipProtection = model.ipProtection;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * IpProtection.
+         * <p>IP protection switch, On: 1 Off: 0</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder ipProtection(String ipProtection) {
             this.ipProtection = ipProtection;
@@ -63,7 +78,10 @@ public class GetIpProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B30E5A62-2E64-577D-A70E-8C6781D6C975</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

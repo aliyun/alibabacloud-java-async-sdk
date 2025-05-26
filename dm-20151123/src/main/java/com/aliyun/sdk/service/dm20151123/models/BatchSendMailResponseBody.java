@@ -36,6 +36,10 @@ public class BatchSendMailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return envId
      */
@@ -54,8 +58,19 @@ public class BatchSendMailResponseBody extends TeaModel {
         private String envId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(BatchSendMailResponseBody model) {
+            this.envId = model.envId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * EnvId.
+         * <p>Event ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600000136562052858</p>
          */
         public Builder envId(String envId) {
             this.envId = envId;
@@ -63,7 +78,10 @@ public class BatchSendMailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12D086F6-8F31-4658-84C1-006DED011A85</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

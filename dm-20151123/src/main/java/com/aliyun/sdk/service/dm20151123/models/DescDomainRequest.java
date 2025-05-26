@@ -55,7 +55,7 @@ public class DescDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -116,7 +116,7 @@ public class DescDomainRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the domain name.</p>
+         * <p>Domain ID. Can be obtained through QueryDomainByParam.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -138,7 +138,7 @@ public class DescDomainRequest extends Request {
         }
 
         /**
-         * <p>Determine whether to perform real-time DNS resolution</p>
+         * <p>Determines whether to perform real-time DNS resolution</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

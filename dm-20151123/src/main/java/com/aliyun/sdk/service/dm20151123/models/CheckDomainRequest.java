@@ -50,7 +50,7 @@ public class CheckDomainRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -102,7 +102,7 @@ public class CheckDomainRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the domain name.</p>
+         * <p>Domain ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

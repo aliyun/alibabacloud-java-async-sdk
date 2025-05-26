@@ -61,7 +61,7 @@ public class CreateMailAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -131,7 +131,11 @@ public class CreateMailAddressRequest extends Request {
         } 
 
         /**
+         * <p>Sender&quot;s email address</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test1@example.com">test1@example.com</a></p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -149,7 +153,10 @@ public class CreateMailAddressRequest extends Request {
         }
 
         /**
-         * ReplyAddress.
+         * <p>Reply-to address</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test2@example.com">test2@example.com</a></p>
          */
         public Builder replyAddress(String replyAddress) {
             this.putQueryParameter("ReplyAddress", replyAddress);
@@ -176,6 +183,13 @@ public class CreateMailAddressRequest extends Request {
         }
 
         /**
+         * <p>Type of sending. Values:</p>
+         * <ul>
+         * <li><p>batch: Bulk emails</p>
+         * </li>
+         * <li><p>trigger: Triggered emails</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

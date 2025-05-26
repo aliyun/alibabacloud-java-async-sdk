@@ -100,6 +100,10 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dailyQuota
      */
@@ -245,6 +249,30 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         private Integer tags; 
         private Integer templates; 
         private Integer userStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescAccountSummaryResponseBody model) {
+            this.dailyQuota = model.dailyQuota;
+            this.dailyRemainFreeQuota = model.dailyRemainFreeQuota;
+            this.dayuStatus = model.dayuStatus;
+            this.domains = model.domains;
+            this.enableTimes = model.enableTimes;
+            this.mailAddresses = model.mailAddresses;
+            this.maxQuotaLevel = model.maxQuotaLevel;
+            this.monthQuota = model.monthQuota;
+            this.quotaLevel = model.quotaLevel;
+            this.receivers = model.receivers;
+            this.remainFreeQuota = model.remainFreeQuota;
+            this.requestId = model.requestId;
+            this.smsRecord = model.smsRecord;
+            this.smsSign = model.smsSign;
+            this.smsTemplates = model.smsTemplates;
+            this.tags = model.tags;
+            this.templates = model.templates;
+            this.userStatus = model.userStatus;
+        } 
 
         /**
          * <p>Daily quota</p>

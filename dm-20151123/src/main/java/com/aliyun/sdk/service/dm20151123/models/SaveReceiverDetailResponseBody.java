@@ -44,6 +44,10 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -78,8 +82,18 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
         private String requestId; 
         private Integer successCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(SaveReceiverDetailResponseBody model) {
+            this.data = model.data;
+            this.errorCount = model.errorCount;
+            this.requestId = model.requestId;
+            this.successCount = model.successCount;
+        } 
+
         /**
-         * Data.
+         * <p>List of recipient addresses that failed to upload.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -87,7 +101,10 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCount.
+         * <p>Number of errors.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>638</p>
          */
         public Builder errorCount(Integer errorCount) {
             this.errorCount = errorCount;
@@ -95,7 +112,10 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +123,10 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
         }
 
         /**
-         * SuccessCount.
+         * <p>Number of successes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>274</p>
          */
         public Builder successCount(Integer successCount) {
             this.successCount = successCount;
@@ -148,8 +171,18 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String email; 
 
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.email = model.email;
+            } 
+
             /**
-             * Email.
+             * <p>Recipient address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:test@example.com">test@example.com</a></p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -194,6 +227,13 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Detail> detail; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.detail = model.detail;
+            } 
 
             /**
              * Detail.

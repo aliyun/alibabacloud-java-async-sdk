@@ -48,6 +48,10 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataSchema
      */
@@ -90,8 +94,22 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         private Integer totalCount; 
         private Data data; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryReceiverDetailResponseBody model) {
+            this.dataSchema = model.dataSchema;
+            this.nextStart = model.nextStart;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.data = model.data;
+        } 
+
         /**
-         * DataSchema.
+         * <p>Field name for the Data of recipients</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UserName,NickName,Gender,Birthday,Mobile</p>
          */
         public Builder dataSchema(String dataSchema) {
             this.dataSchema = dataSchema;
@@ -99,7 +117,10 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         }
 
         /**
-         * NextStart.
+         * <p>Used for pagination. If there are more results, set this returned value to the NextStart in the next request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90f0243616#<a href="mailto:40test@example.com">40test@example.com</a></p>
          */
         public Builder nextStart(String nextStart) {
             this.nextStart = nextStart;
@@ -107,7 +128,10 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -115,7 +139,10 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>Total count (deprecated field, kept for historical compatibility)</p>
+         * 
+         * <strong>example:</strong>
+         * <p>361</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -123,7 +150,7 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * <p>Detailed information</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -204,8 +231,21 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
             private String email; 
             private Long utcCreateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Detail model) {
+                this.createTime = model.createTime;
+                this.data = model.data;
+                this.email = model.email;
+                this.utcCreateTime = model.utcCreateTime;
+            } 
+
             /**
-             * CreateTime.
+             * <p>Creation Time</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-09-29T13:28Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -213,7 +253,10 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>Content</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Domains&quot;: [&quot;a.example.net&quot;, &quot;b.example.net&quot;, &quot;c.example.net&quot;, &quot;d.example.net&quot;]}</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -221,7 +264,10 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * <p>Recipient address</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a***@example.net</p>
              */
             public Builder email(String email) {
                 this.email = email;
@@ -229,7 +275,10 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
             }
 
             /**
-             * UtcCreateTime.
+             * <p>Creation time in UTC format</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1569734892</p>
              */
             public Builder utcCreateTime(Long utcCreateTime) {
                 this.utcCreateTime = utcCreateTime;
@@ -274,6 +323,13 @@ public class QueryReceiverDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Detail> detail; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.detail = model.detail;
+            } 
 
             /**
              * detail.

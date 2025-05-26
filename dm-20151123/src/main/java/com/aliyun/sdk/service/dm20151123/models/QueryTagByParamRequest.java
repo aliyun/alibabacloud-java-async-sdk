@@ -60,7 +60,7 @@ public class QueryTagByParamRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -130,7 +130,10 @@ public class QueryTagByParamRequest extends Request {
         } 
 
         /**
-         * KeyWord.
+         * <p>Tag name, length 1-50, defaults to all tags if not specified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1aTag</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -148,7 +151,10 @@ public class QueryTagByParamRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>Page number</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -157,7 +163,10 @@ public class QueryTagByParamRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Page size</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

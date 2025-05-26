@@ -103,7 +103,7 @@ public class BatchSendMailRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -245,6 +245,7 @@ public class BatchSendMailRequest extends Request {
         } 
 
         /**
+         * <p>The sending address configured in the management console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -257,6 +258,10 @@ public class BatchSendMailRequest extends Request {
         }
 
         /**
+         * <ul>
+         * <li>0: Random account</li>
+         * <li>1: Sending address</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -269,7 +274,13 @@ public class BatchSendMailRequest extends Request {
         }
 
         /**
-         * ClickTrace.
+         * <ul>
+         * <li>1: Enable data tracking function</li>
+         * <li>0 (default): Disable data tracking function</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder clickTrace(String clickTrace) {
             this.putQueryParameter("ClickTrace", clickTrace);
@@ -278,7 +289,14 @@ public class BatchSendMailRequest extends Request {
         }
 
         /**
-         * Headers.
+         * <p>Currently, the standard fields that can be added to the email header are Message-ID, List-Unsubscribe, and List-Unsubscribe-Post. Standard fields will overwrite the existing values in the email header, while non-standard fields need to start with X-User- and will be appended to the email header. Currently, up to 10 headers can be passed in JSON format, and both standard and non-standard fields must comply with the syntax requirements for headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;Message-ID&quot;: &quot;<a href="mailto:msg0001@example.com">msg0001@example.com</a>&quot;,
+         *   &quot;X-User-UID1&quot;: &quot;UID-1-000001&quot;,
+         *   &quot;X-User-UID2&quot;: &quot;UID-2-000001&quot;
+         * }</p>
          */
         public Builder headers(String headers) {
             this.putQueryParameter("Headers", headers);
@@ -296,6 +314,7 @@ public class BatchSendMailRequest extends Request {
         }
 
         /**
+         * <p>The name of the recipient list that has been created and uploaded. Note: The recipient list should not be deleted until at least 10 minutes after the task is triggered, otherwise it may cause sending failure.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -308,7 +327,10 @@ public class BatchSendMailRequest extends Request {
         }
 
         /**
-         * ReplyAddress.
+         * <p>Reply address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test2***@example.net</p>
          */
         public Builder replyAddress(String replyAddress) {
             this.putQueryParameter("ReplyAddress", replyAddress);
@@ -317,7 +339,10 @@ public class BatchSendMailRequest extends Request {
         }
 
         /**
-         * ReplyAddressAlias.
+         * <p>Alias for the reply address</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Lucy</p>
          */
         public Builder replyAddressAlias(String replyAddressAlias) {
             this.putQueryParameter("ReplyAddressAlias", replyAddressAlias);
@@ -344,7 +369,10 @@ public class BatchSendMailRequest extends Request {
         }
 
         /**
-         * TagName.
+         * <p>Email tag name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test3</p>
          */
         public Builder tagName(String tagName) {
             this.putQueryParameter("TagName", tagName);
@@ -353,6 +381,7 @@ public class BatchSendMailRequest extends Request {
         }
 
         /**
+         * <p>The name of a pre-created and approved template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -365,7 +394,17 @@ public class BatchSendMailRequest extends Request {
         }
 
         /**
-         * UnSubscribeFilterLevel.
+         * <p>Filter level. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</p>
+         * <ul>
+         * <li>disabled: No filtering</li>
+         * <li>default: Use the default strategy, bulk addresses use sender address level filtering</li>
+         * <li>mailfrom: Sender address level filtering</li>
+         * <li>mailfrom_domain: Sender domain level filtering</li>
+         * <li>edm_id: Account level filtering</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>mailfrom_domain</p>
          */
         public Builder unSubscribeFilterLevel(String unSubscribeFilterLevel) {
             this.putQueryParameter("UnSubscribeFilterLevel", unSubscribeFilterLevel);
@@ -374,7 +413,18 @@ public class BatchSendMailRequest extends Request {
         }
 
         /**
-         * UnSubscribeLinkType.
+         * <p>Type of generated unsubscribe link. Refer to the <a href="https://help.aliyun.com/document_detail/2689048.html">Unsubscribe Function Link Generation and Filtering Mechanism</a> document.</p>
+         * <ul>
+         * <li>disabled: Not generated</li>
+         * <li>default: Use the default strategy: Generate an unsubscribe link when sending from a bulk email address to specific domains, such as those containing keywords like &quot;gmail&quot;, &quot;yahoo&quot;,
+         * &quot;google&quot;, &quot;aol.com&quot;, &quot;hotmail&quot;,
+         * &quot;outlook&quot;, &quot;ymail.com&quot;, etc.</li>
+         * <li>zh-cn: Generated, for future content preparation</li>
+         * <li>en-us: Generated, for future content preparation</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder unSubscribeLinkType(String unSubscribeLinkType) {
             this.putQueryParameter("UnSubscribeLinkType", unSubscribeLinkType);

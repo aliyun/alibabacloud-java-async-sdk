@@ -50,7 +50,7 @@ public class DeleteReceiverRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -111,11 +111,11 @@ public class DeleteReceiverRequest extends Request {
         }
 
         /**
-         * <p>The ID of the recipient list.</p>
+         * <p>Receiver list ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1453</p>
+         * <p>144adfa772cfe47631de7e86d7da13ae</p>
          */
         public Builder receiverId(String receiverId) {
             this.putQueryParameter("ReceiverId", receiverId);

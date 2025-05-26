@@ -66,7 +66,7 @@ public class QueryDomainByParamRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,7 +145,10 @@ public class QueryDomainByParamRequest extends Request {
         } 
 
         /**
-         * KeyWord.
+         * <p>Domain name, length 1-50, can include numbers, uppercase and lowercase letters, ., -.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -163,7 +166,10 @@ public class QueryDomainByParamRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>Current page number. Default: 1</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -172,7 +178,10 @@ public class QueryDomainByParamRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of items per page, default: 10</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,7 +208,13 @@ public class QueryDomainByParamRequest extends Request {
         }
 
         /**
-         * Status.
+         * <ul>
+         * <li>0 indicates normal</li>
+         * <li>1 indicates abnormal</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

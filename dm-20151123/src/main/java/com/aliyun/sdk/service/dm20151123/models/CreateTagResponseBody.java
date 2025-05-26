@@ -36,6 +36,10 @@ public class CreateTagResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,19 @@ public class CreateTagResponseBody extends TeaModel {
         private String requestId; 
         private String tagId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateTagResponseBody model) {
+            this.requestId = model.requestId;
+            this.tagId = model.tagId;
+        } 
+
         /**
-         * RequestId.
+         * <p>Request ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +78,10 @@ public class CreateTagResponseBody extends TeaModel {
         }
 
         /**
-         * TagId.
+         * <p>Tag ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91141</p>
          */
         public Builder tagId(String tagId) {
             this.tagId = tagId;

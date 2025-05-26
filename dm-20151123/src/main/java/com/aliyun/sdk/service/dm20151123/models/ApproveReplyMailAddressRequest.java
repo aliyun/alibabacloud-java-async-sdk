@@ -50,7 +50,7 @@ public class ApproveReplyMailAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,7 +129,11 @@ public class ApproveReplyMailAddressRequest extends Request {
         }
 
         /**
+         * <p>Email address Ticket credential, part of the string in the verification email&quot;s URL.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a724068dac9a45d19574375adeca0d7d</p>
          */
         public Builder ticket(String ticket) {
             this.putQueryParameter("Ticket", ticket);

@@ -40,6 +40,10 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextStart
      */
@@ -66,8 +70,17 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         private String requestId; 
         private Data data; 
 
+        private Builder() {
+        } 
+
+        private Builder(SenderStatisticsDetailByParamResponseBody model) {
+            this.nextStart = model.nextStart;
+            this.requestId = model.requestId;
+            this.data = model.data;
+        } 
+
         /**
-         * <p>The start position of the next page. The return value of the NextStart parameter indicates the start position of the next page. If you want to obtain more records, specify the return value in the next request.</p>
+         * <p>Used for pagination. If there are more results, set this returned value to the NextStart in the next request.</p>
          * 
          * <strong>example:</strong>
          * <p>90f0243616#203#a***@example.net-1658817689#a***@example.net.247141122178</p>
@@ -78,7 +91,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Request ID</p>
          * 
          * <strong>example:</strong>
          * <p>B5AB8EBB-EE64-4BB2-B085-B92CC5DEDC41</p>
@@ -89,7 +102,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response parameters.</p>
+         * <p>Detailed records</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -218,8 +231,22 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             private String toAddress; 
             private String utcLastUpdateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(MailDetail model) {
+                this.accountName = model.accountName;
+                this.errorClassification = model.errorClassification;
+                this.lastUpdateTime = model.lastUpdateTime;
+                this.message = model.message;
+                this.status = model.status;
+                this.subject = model.subject;
+                this.toAddress = model.toAddress;
+                this.utcLastUpdateTime = model.utcLastUpdateTime;
+            } 
+
             /**
-             * <p>The sender address.</p>
+             * <p>Sending address</p>
              * 
              * <strong>example:</strong>
              * <p>s***@example.net</p>
@@ -230,12 +257,8 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Detailed classification of error causes:</p>
-             * <ul>
-             * <li>SendOk</li>
-             * <li>SmtpNxBox</li>
-             * </ul>
-             * <p>etc.</p>
+             * <p>Detailed classification of error reasons: - SendOk - SmtpNxBox
+             * etc.</p>
              * 
              * <strong>example:</strong>
              * <p>SendOk</p>
@@ -246,7 +269,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent update time.</p>
+             * <p>Update time</p>
              * 
              * <strong>example:</strong>
              * <p>2021-04-28T17:11Z</p>
@@ -257,7 +280,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the email.</p>
+             * <p>Delivery detail information</p>
              * 
              * <strong>example:</strong>
              * <p>250 Send Mail OK</p>
@@ -268,7 +291,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The delivery status. Valid values: 0: successful, 2 invalid email address, 3: spam, and 4: failed.</p>
+             * <p>Delivery status: 0 Success, 2 Invalid Address, 3 Spam, 4 Other Failures</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -279,7 +302,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>the subject of email.</p>
+             * <p>Email subject</p>
              * 
              * <strong>example:</strong>
              * <p>test subject</p>
@@ -290,7 +313,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The recipient address.</p>
+             * <p>Recipient address</p>
              * 
              * <strong>example:</strong>
              * <p>b***@example.net</p>
@@ -301,7 +324,7 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The most recent update time (timestamp format)</p>
+             * <p>UTC formatted update time</p>
              * 
              * <strong>example:</strong>
              * <p>1619601108</p>
@@ -349,6 +372,13 @@ public class SenderStatisticsDetailByParamResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MailDetail> mailDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.mailDetail = model.mailDetail;
+            } 
 
             /**
              * mailDetail.

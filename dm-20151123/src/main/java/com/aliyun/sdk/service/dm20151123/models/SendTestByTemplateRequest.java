@@ -87,7 +87,7 @@ public class SendTestByTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -202,7 +202,11 @@ public class SendTestByTemplateRequest extends Request {
         } 
 
         /**
+         * <p>Sender address, with a maximum length of 60 characters</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test@example.com">test@example.com</a></p>
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -211,7 +215,10 @@ public class SendTestByTemplateRequest extends Request {
         }
 
         /**
-         * Birthday.
+         * <p>Birthday, with a maximum length of 30 characters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000/01/01</p>
          */
         public Builder birthday(String birthday) {
             this.putQueryParameter("Birthday", birthday);
@@ -220,7 +227,11 @@ public class SendTestByTemplateRequest extends Request {
         }
 
         /**
+         * <p>Recipient address, with a maximum length of 60 characters</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="mailto:test1@example.com">test1@example.com</a></p>
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -229,7 +240,10 @@ public class SendTestByTemplateRequest extends Request {
         }
 
         /**
-         * Gender.
+         * <p>Gender, with a maximum length of 30 characters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>doctor</p>
          */
         public Builder gender(String gender) {
             this.putQueryParameter("Gender", gender);
@@ -238,7 +252,10 @@ public class SendTestByTemplateRequest extends Request {
         }
 
         /**
-         * Mobile.
+         * <p>Mobile, with a maximum length of 30 characters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1380000****</p>
          */
         public Builder mobile(String mobile) {
             this.putQueryParameter("Mobile", mobile);
@@ -247,7 +264,10 @@ public class SendTestByTemplateRequest extends Request {
         }
 
         /**
-         * NickName.
+         * <p>NickName, with a maximum length of 30 characters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LC</p>
          */
         public Builder nickName(String nickName) {
             this.putQueryParameter("NickName", nickName);
@@ -283,6 +303,7 @@ public class SendTestByTemplateRequest extends Request {
         }
 
         /**
+         * <p>Template ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +316,10 @@ public class SendTestByTemplateRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>UserName, with a maximum length of 30 characters</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Lucy</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
