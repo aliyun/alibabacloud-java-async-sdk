@@ -50,6 +50,10 @@ public class DescribeBackupsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remote")
+    private Boolean remote;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -71,6 +75,7 @@ public class DescribeBackupsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.remote = builder.remote;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.startTime = builder.startTime;
@@ -139,6 +144,13 @@ public class DescribeBackupsRequest extends Request {
     }
 
     /**
+     * @return remote
+     */
+    public Boolean getRemote() {
+        return this.remote;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -167,6 +179,7 @@ public class DescribeBackupsRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Boolean remote; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String startTime; 
@@ -184,6 +197,7 @@ public class DescribeBackupsRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.remote = request.remote;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.startTime = request.startTime;
@@ -275,6 +289,15 @@ public class DescribeBackupsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * Remote.
+         */
+        public Builder remote(Boolean remote) {
+            this.putQueryParameter("Remote", remote);
+            this.remote = remote;
             return this;
         }
 

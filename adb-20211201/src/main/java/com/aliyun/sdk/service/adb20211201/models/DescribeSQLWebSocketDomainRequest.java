@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeResourceGroupSpecRequest} extends {@link RequestModel}
+ * {@link DescribeSQLWebSocketDomainRequest} extends {@link RequestModel}
  *
- * <p>DescribeResourceGroupSpecRequest</p>
+ * <p>DescribeSQLWebSocketDomainRequest</p>
  */
-public class DescribeResourceGroupSpecRequest extends Request {
+public class DescribeSQLWebSocketDomainRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -24,25 +24,20 @@ public class DescribeResourceGroupSpecRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceGroupType")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String resourceGroupType;
-
-    private DescribeResourceGroupSpecRequest(Builder builder) {
+    private DescribeSQLWebSocketDomainRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.regionId = builder.regionId;
-        this.resourceGroupType = builder.resourceGroupType;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeResourceGroupSpecRequest create() {
+    public static DescribeSQLWebSocketDomainRequest create() {
         return builder().build();
     }
 
@@ -65,35 +60,25 @@ public class DescribeResourceGroupSpecRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return resourceGroupType
-     */
-    public String getResourceGroupType() {
-        return this.resourceGroupType;
-    }
-
-    public static final class Builder extends Request.Builder<DescribeResourceGroupSpecRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeSQLWebSocketDomainRequest, Builder> {
         private String DBClusterId; 
         private String regionId; 
-        private String resourceGroupType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeResourceGroupSpecRequest request) {
+        private Builder(DescribeSQLWebSocketDomainRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.regionId = request.regionId;
-            this.resourceGroupType = request.resourceGroupType;
         } 
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>amv-8vbo40tl1dxxxxxx</p>
+         * <p>amv-bp1lw6g669zpi660</p>
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -102,10 +87,7 @@ public class DescribeResourceGroupSpecRequest extends Request {
         }
 
         /**
-         * <p>The region ID of the cluster.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
-         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -116,22 +98,9 @@ public class DescribeResourceGroupSpecRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>The type of the resource group.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>ai</p>
-         */
-        public Builder resourceGroupType(String resourceGroupType) {
-            this.putQueryParameter("ResourceGroupType", resourceGroupType);
-            this.resourceGroupType = resourceGroupType;
-            return this;
-        }
-
         @Override
-        public DescribeResourceGroupSpecRequest build() {
-            return new DescribeResourceGroupSpecRequest(this);
+        public DescribeSQLWebSocketDomainRequest build() {
+            return new DescribeSQLWebSocketDomainRequest(this);
         } 
 
     } 

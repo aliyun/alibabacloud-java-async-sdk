@@ -67,7 +67,7 @@ public class DescribeResourceGroupSpecResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>requestId</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>10226189-4391-5B10-97AF-5CA5XXXXXXX</p>
@@ -78,7 +78,7 @@ public class DescribeResourceGroupSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Specs.
+         * <p>The queried specifications.</p>
          */
         public Builder specs(java.util.List<Specs> specs) {
             this.specs = specs;
@@ -170,7 +170,7 @@ public class DescribeResourceGroupSpecResponseBody extends TeaModel {
             } 
 
             /**
-             * AllocateUnits.
+             * <p>The allocation units supported by this specification.</p>
              */
             public Builder allocateUnits(java.util.List<String> allocateUnits) {
                 this.allocateUnits = allocateUnits;
@@ -178,7 +178,10 @@ public class DescribeResourceGroupSpecResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQuantity.
+             * <p>The maximum number of resource groups that can be used with this specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder maxQuantity(Integer maxQuantity) {
                 this.maxQuantity = maxQuantity;
@@ -186,7 +189,10 @@ public class DescribeResourceGroupSpecResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the specification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xlarge</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +200,10 @@ public class DescribeResourceGroupSpecResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GPU</p>
              */
             public Builder type(String type) {
                 this.type = type;

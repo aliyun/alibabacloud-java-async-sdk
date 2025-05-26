@@ -224,6 +224,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupMethod")
         private String backupMethod;
 
+        @com.aliyun.core.annotation.NameInMap("BackupRegion")
+        private String backupRegion;
+
         @com.aliyun.core.annotation.NameInMap("BackupSize")
         private Integer backupSize;
 
@@ -236,15 +239,20 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBClusterId")
         private String DBClusterId;
 
+        @com.aliyun.core.annotation.NameInMap("ParentBackupId")
+        private String parentBackupId;
+
         private Backup(Builder builder) {
             this.backupEndTime = builder.backupEndTime;
             this.backupExpiredTime = builder.backupExpiredTime;
             this.backupId = builder.backupId;
             this.backupMethod = builder.backupMethod;
+            this.backupRegion = builder.backupRegion;
             this.backupSize = builder.backupSize;
             this.backupStartTime = builder.backupStartTime;
             this.backupType = builder.backupType;
             this.DBClusterId = builder.DBClusterId;
+            this.parentBackupId = builder.parentBackupId;
         }
 
         public static Builder builder() {
@@ -284,6 +292,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return backupRegion
+         */
+        public String getBackupRegion() {
+            return this.backupRegion;
+        }
+
+        /**
          * @return backupSize
          */
         public Integer getBackupSize() {
@@ -311,15 +326,24 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.DBClusterId;
         }
 
+        /**
+         * @return parentBackupId
+         */
+        public String getParentBackupId() {
+            return this.parentBackupId;
+        }
+
         public static final class Builder {
             private String backupEndTime; 
             private String backupExpiredTime; 
             private String backupId; 
             private String backupMethod; 
+            private String backupRegion; 
             private Integer backupSize; 
             private String backupStartTime; 
             private String backupType; 
             private String DBClusterId; 
+            private String parentBackupId; 
 
             private Builder() {
             } 
@@ -329,10 +353,12 @@ public class DescribeBackupsResponseBody extends TeaModel {
                 this.backupExpiredTime = model.backupExpiredTime;
                 this.backupId = model.backupId;
                 this.backupMethod = model.backupMethod;
+                this.backupRegion = model.backupRegion;
                 this.backupSize = model.backupSize;
                 this.backupStartTime = model.backupStartTime;
                 this.backupType = model.backupType;
                 this.DBClusterId = model.DBClusterId;
+                this.parentBackupId = model.parentBackupId;
             } 
 
             /**
@@ -373,6 +399,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
              */
             public Builder backupMethod(String backupMethod) {
                 this.backupMethod = backupMethod;
+                return this;
+            }
+
+            /**
+             * BackupRegion.
+             */
+            public Builder backupRegion(String backupRegion) {
+                this.backupRegion = backupRegion;
                 return this;
             }
 
@@ -421,6 +455,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
              */
             public Builder DBClusterId(String DBClusterId) {
                 this.DBClusterId = DBClusterId;
+                return this;
+            }
+
+            /**
+             * ParentBackupId.
+             */
+            public Builder parentBackupId(String parentBackupId) {
+                this.parentBackupId = parentBackupId;
                 return this;
             }
 
