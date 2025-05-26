@@ -1733,6 +1733,9 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SlsConfigs")
         private String slsConfigs;
 
+        @com.aliyun.core.annotation.NameInMap("StartupProbe")
+        private String startupProbe;
+
         @com.aliyun.core.annotation.NameInMap("SwimlanePvtzDiscovery")
         private String swimlanePvtzDiscovery;
 
@@ -1837,6 +1840,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.serviceTags = builder.serviceTags;
             this.sidecarContainersConfig = builder.sidecarContainersConfig;
             this.slsConfigs = builder.slsConfigs;
+            this.startupProbe = builder.startupProbe;
             this.swimlanePvtzDiscovery = builder.swimlanePvtzDiscovery;
             this.tags = builder.tags;
             this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
@@ -2369,6 +2373,13 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return startupProbe
+         */
+        public String getStartupProbe() {
+            return this.startupProbe;
+        }
+
+        /**
          * @return swimlanePvtzDiscovery
          */
         public String getSwimlanePvtzDiscovery() {
@@ -2512,6 +2523,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private java.util.Map<String, String> serviceTags; 
             private java.util.List<SidecarContainersConfig> sidecarContainersConfig; 
             private String slsConfigs; 
+            private String startupProbe; 
             private String swimlanePvtzDiscovery; 
             private java.util.List<Tags> tags; 
             private Integer terminationGracePeriodSeconds; 
@@ -2600,6 +2612,7 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 this.serviceTags = model.serviceTags;
                 this.sidecarContainersConfig = model.sidecarContainersConfig;
                 this.slsConfigs = model.slsConfigs;
+                this.startupProbe = model.startupProbe;
                 this.swimlanePvtzDiscovery = model.swimlanePvtzDiscovery;
                 this.tags = model.tags;
                 this.terminationGracePeriodSeconds = model.terminationGracePeriodSeconds;
@@ -3485,6 +3498,14 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder slsConfigs(String slsConfigs) {
                 this.slsConfigs = slsConfigs;
+                return this;
+            }
+
+            /**
+             * StartupProbe.
+             */
+            public Builder startupProbe(String startupProbe) {
+                this.startupProbe = startupProbe;
                 return this;
             }
 

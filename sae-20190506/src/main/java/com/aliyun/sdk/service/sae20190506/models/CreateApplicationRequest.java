@@ -293,6 +293,10 @@ public class CreateApplicationRequest extends Request {
     private String slsConfigs;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartupProbe")
+    private String startupProbe;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TerminationGracePeriodSeconds")
     @com.aliyun.core.annotation.Validation(maximum = 6000)
     private Integer terminationGracePeriodSeconds;
@@ -391,6 +395,7 @@ public class CreateApplicationRequest extends Request {
         this.serviceTags = builder.serviceTags;
         this.sidecarContainersConfig = builder.sidecarContainersConfig;
         this.slsConfigs = builder.slsConfigs;
+        this.startupProbe = builder.startupProbe;
         this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
         this.timezone = builder.timezone;
         this.tomcatConfig = builder.tomcatConfig;
@@ -890,6 +895,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return startupProbe
+     */
+    public String getStartupProbe() {
+        return this.startupProbe;
+    }
+
+    /**
      * @return terminationGracePeriodSeconds
      */
     public Integer getTerminationGracePeriodSeconds() {
@@ -1007,6 +1019,7 @@ public class CreateApplicationRequest extends Request {
         private String serviceTags; 
         private java.util.List<SidecarContainerConfig> sidecarContainersConfig; 
         private String slsConfigs; 
+        private String startupProbe; 
         private Integer terminationGracePeriodSeconds; 
         private String timezone; 
         private String tomcatConfig; 
@@ -1089,6 +1102,7 @@ public class CreateApplicationRequest extends Request {
             this.serviceTags = request.serviceTags;
             this.sidecarContainersConfig = request.sidecarContainersConfig;
             this.slsConfigs = request.slsConfigs;
+            this.startupProbe = request.startupProbe;
             this.terminationGracePeriodSeconds = request.terminationGracePeriodSeconds;
             this.timezone = request.timezone;
             this.tomcatConfig = request.tomcatConfig;
@@ -1829,6 +1843,15 @@ public class CreateApplicationRequest extends Request {
         public Builder slsConfigs(String slsConfigs) {
             this.putQueryParameter("SlsConfigs", slsConfigs);
             this.slsConfigs = slsConfigs;
+            return this;
+        }
+
+        /**
+         * StartupProbe.
+         */
+        public Builder startupProbe(String startupProbe) {
+            this.putQueryParameter("StartupProbe", startupProbe);
+            this.startupProbe = startupProbe;
             return this;
         }
 

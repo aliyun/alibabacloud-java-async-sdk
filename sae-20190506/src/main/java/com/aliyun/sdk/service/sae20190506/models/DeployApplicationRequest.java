@@ -278,6 +278,10 @@ public class DeployApplicationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SlsConfigs")
     private String slsConfigs;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartupProbe")
+    private String startupProbe;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SwimlanePvtzDiscoverySvc")
     private String swimlanePvtzDiscoverySvc;
@@ -378,6 +382,7 @@ public class DeployApplicationRequest extends Request {
         this.serviceTags = builder.serviceTags;
         this.sidecarContainersConfig = builder.sidecarContainersConfig;
         this.slsConfigs = builder.slsConfigs;
+        this.startupProbe = builder.startupProbe;
         this.swimlanePvtzDiscoverySvc = builder.swimlanePvtzDiscoverySvc;
         this.terminationGracePeriodSeconds = builder.terminationGracePeriodSeconds;
         this.timezone = builder.timezone;
@@ -857,6 +862,13 @@ public class DeployApplicationRequest extends Request {
     }
 
     /**
+     * @return startupProbe
+     */
+    public String getStartupProbe() {
+        return this.startupProbe;
+    }
+
+    /**
      * @return swimlanePvtzDiscoverySvc
      */
     public String getSwimlanePvtzDiscoverySvc() {
@@ -978,6 +990,7 @@ public class DeployApplicationRequest extends Request {
         private String serviceTags; 
         private java.util.List<SidecarContainerConfig> sidecarContainersConfig; 
         private String slsConfigs; 
+        private String startupProbe; 
         private String swimlanePvtzDiscoverySvc; 
         private Integer terminationGracePeriodSeconds; 
         private String timezone; 
@@ -1058,6 +1071,7 @@ public class DeployApplicationRequest extends Request {
             this.serviceTags = request.serviceTags;
             this.sidecarContainersConfig = request.sidecarContainersConfig;
             this.slsConfigs = request.slsConfigs;
+            this.startupProbe = request.startupProbe;
             this.swimlanePvtzDiscoverySvc = request.swimlanePvtzDiscoverySvc;
             this.terminationGracePeriodSeconds = request.terminationGracePeriodSeconds;
             this.timezone = request.timezone;
@@ -1952,6 +1966,15 @@ public class DeployApplicationRequest extends Request {
         public Builder slsConfigs(String slsConfigs) {
             this.putQueryParameter("SlsConfigs", slsConfigs);
             this.slsConfigs = slsConfigs;
+            return this;
+        }
+
+        /**
+         * StartupProbe.
+         */
+        public Builder startupProbe(String startupProbe) {
+            this.putQueryParameter("StartupProbe", startupProbe);
+            this.startupProbe = startupProbe;
             return this;
         }
 
