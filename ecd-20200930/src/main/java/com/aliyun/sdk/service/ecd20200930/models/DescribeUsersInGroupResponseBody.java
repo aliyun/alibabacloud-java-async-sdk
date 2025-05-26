@@ -29,6 +29,9 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("UserGroupName")
+    private String userGroupName;
+
     @com.aliyun.core.annotation.NameInMap("UserOuPath")
     private String userOuPath;
 
@@ -40,6 +43,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         this.nextToken = builder.nextToken;
         this.onlineUsersCount = builder.onlineUsersCount;
         this.requestId = builder.requestId;
+        this.userGroupName = builder.userGroupName;
         this.userOuPath = builder.userOuPath;
         this.usersCount = builder.usersCount;
     }
@@ -85,6 +89,13 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
     }
 
     /**
+     * @return userGroupName
+     */
+    public String getUserGroupName() {
+        return this.userGroupName;
+    }
+
+    /**
      * @return userOuPath
      */
     public String getUserOuPath() {
@@ -103,6 +114,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
         private String nextToken; 
         private Integer onlineUsersCount; 
         private String requestId; 
+        private String userGroupName; 
         private String userOuPath; 
         private Integer usersCount; 
 
@@ -114,6 +126,7 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
             this.nextToken = model.nextToken;
             this.onlineUsersCount = model.onlineUsersCount;
             this.requestId = model.requestId;
+            this.userGroupName = model.userGroupName;
             this.userOuPath = model.userOuPath;
             this.usersCount = model.usersCount;
         } 
@@ -156,6 +169,14 @@ public class DescribeUsersInGroupResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * UserGroupName.
+         */
+        public Builder userGroupName(String userGroupName) {
+            this.userGroupName = userGroupName;
             return this;
         }
 

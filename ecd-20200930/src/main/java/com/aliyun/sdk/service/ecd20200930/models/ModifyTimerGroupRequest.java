@@ -180,6 +180,270 @@ public class ModifyTimerGroupRequest extends Request {
      *
      * <p>ModifyTimerGroupRequest</p>
      */
+    public static class SegmentTimers extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EndCronExpression")
+        private String endCronExpression;
+
+        @com.aliyun.core.annotation.NameInMap("Enforce")
+        private Boolean enforce;
+
+        @com.aliyun.core.annotation.NameInMap("Interval")
+        private Integer interval;
+
+        @com.aliyun.core.annotation.NameInMap("NotificationTime")
+        private Integer notificationTime;
+
+        @com.aliyun.core.annotation.NameInMap("OperationType")
+        private String operationType;
+
+        @com.aliyun.core.annotation.NameInMap("ProcessWhitelist")
+        private java.util.List<String> processWhitelist;
+
+        @com.aliyun.core.annotation.NameInMap("ResetType")
+        private String resetType;
+
+        @com.aliyun.core.annotation.NameInMap("StartCronExpression")
+        private String startCronExpression;
+
+        @com.aliyun.core.annotation.NameInMap("TimerOrder")
+        private Integer timerOrder;
+
+        @com.aliyun.core.annotation.NameInMap("Timezone")
+        private String timezone;
+
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
+        private String triggerType;
+
+        private SegmentTimers(Builder builder) {
+            this.endCronExpression = builder.endCronExpression;
+            this.enforce = builder.enforce;
+            this.interval = builder.interval;
+            this.notificationTime = builder.notificationTime;
+            this.operationType = builder.operationType;
+            this.processWhitelist = builder.processWhitelist;
+            this.resetType = builder.resetType;
+            this.startCronExpression = builder.startCronExpression;
+            this.timerOrder = builder.timerOrder;
+            this.timezone = builder.timezone;
+            this.triggerType = builder.triggerType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SegmentTimers create() {
+            return builder().build();
+        }
+
+        /**
+         * @return endCronExpression
+         */
+        public String getEndCronExpression() {
+            return this.endCronExpression;
+        }
+
+        /**
+         * @return enforce
+         */
+        public Boolean getEnforce() {
+            return this.enforce;
+        }
+
+        /**
+         * @return interval
+         */
+        public Integer getInterval() {
+            return this.interval;
+        }
+
+        /**
+         * @return notificationTime
+         */
+        public Integer getNotificationTime() {
+            return this.notificationTime;
+        }
+
+        /**
+         * @return operationType
+         */
+        public String getOperationType() {
+            return this.operationType;
+        }
+
+        /**
+         * @return processWhitelist
+         */
+        public java.util.List<String> getProcessWhitelist() {
+            return this.processWhitelist;
+        }
+
+        /**
+         * @return resetType
+         */
+        public String getResetType() {
+            return this.resetType;
+        }
+
+        /**
+         * @return startCronExpression
+         */
+        public String getStartCronExpression() {
+            return this.startCronExpression;
+        }
+
+        /**
+         * @return timerOrder
+         */
+        public Integer getTimerOrder() {
+            return this.timerOrder;
+        }
+
+        /**
+         * @return timezone
+         */
+        public String getTimezone() {
+            return this.timezone;
+        }
+
+        /**
+         * @return triggerType
+         */
+        public String getTriggerType() {
+            return this.triggerType;
+        }
+
+        public static final class Builder {
+            private String endCronExpression; 
+            private Boolean enforce; 
+            private Integer interval; 
+            private Integer notificationTime; 
+            private String operationType; 
+            private java.util.List<String> processWhitelist; 
+            private String resetType; 
+            private String startCronExpression; 
+            private Integer timerOrder; 
+            private String timezone; 
+            private String triggerType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SegmentTimers model) {
+                this.endCronExpression = model.endCronExpression;
+                this.enforce = model.enforce;
+                this.interval = model.interval;
+                this.notificationTime = model.notificationTime;
+                this.operationType = model.operationType;
+                this.processWhitelist = model.processWhitelist;
+                this.resetType = model.resetType;
+                this.startCronExpression = model.startCronExpression;
+                this.timerOrder = model.timerOrder;
+                this.timezone = model.timezone;
+                this.triggerType = model.triggerType;
+            } 
+
+            /**
+             * EndCronExpression.
+             */
+            public Builder endCronExpression(String endCronExpression) {
+                this.endCronExpression = endCronExpression;
+                return this;
+            }
+
+            /**
+             * Enforce.
+             */
+            public Builder enforce(Boolean enforce) {
+                this.enforce = enforce;
+                return this;
+            }
+
+            /**
+             * Interval.
+             */
+            public Builder interval(Integer interval) {
+                this.interval = interval;
+                return this;
+            }
+
+            /**
+             * NotificationTime.
+             */
+            public Builder notificationTime(Integer notificationTime) {
+                this.notificationTime = notificationTime;
+                return this;
+            }
+
+            /**
+             * OperationType.
+             */
+            public Builder operationType(String operationType) {
+                this.operationType = operationType;
+                return this;
+            }
+
+            /**
+             * ProcessWhitelist.
+             */
+            public Builder processWhitelist(java.util.List<String> processWhitelist) {
+                this.processWhitelist = processWhitelist;
+                return this;
+            }
+
+            /**
+             * ResetType.
+             */
+            public Builder resetType(String resetType) {
+                this.resetType = resetType;
+                return this;
+            }
+
+            /**
+             * StartCronExpression.
+             */
+            public Builder startCronExpression(String startCronExpression) {
+                this.startCronExpression = startCronExpression;
+                return this;
+            }
+
+            /**
+             * TimerOrder.
+             */
+            public Builder timerOrder(Integer timerOrder) {
+                this.timerOrder = timerOrder;
+                return this;
+            }
+
+            /**
+             * Timezone.
+             */
+            public Builder timezone(String timezone) {
+                this.timezone = timezone;
+                return this;
+            }
+
+            /**
+             * TriggerType.
+             */
+            public Builder triggerType(String triggerType) {
+                this.triggerType = triggerType;
+                return this;
+            }
+
+            public SegmentTimers build() {
+                return new SegmentTimers(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyTimerGroupRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyTimerGroupRequest</p>
+     */
     public static class ConfigTimers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AllowClientSetting")
         private Boolean allowClientSetting;
@@ -205,6 +469,9 @@ public class ModifyTimerGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ResetType")
         private String resetType;
 
+        @com.aliyun.core.annotation.NameInMap("SegmentTimers")
+        private java.util.List<SegmentTimers> segmentTimers;
+
         @com.aliyun.core.annotation.NameInMap("TimerType")
         private String timerType;
 
@@ -220,6 +487,7 @@ public class ModifyTimerGroupRequest extends Request {
             this.operationType = builder.operationType;
             this.processWhitelist = builder.processWhitelist;
             this.resetType = builder.resetType;
+            this.segmentTimers = builder.segmentTimers;
             this.timerType = builder.timerType;
             this.triggerType = builder.triggerType;
         }
@@ -289,6 +557,13 @@ public class ModifyTimerGroupRequest extends Request {
         }
 
         /**
+         * @return segmentTimers
+         */
+        public java.util.List<SegmentTimers> getSegmentTimers() {
+            return this.segmentTimers;
+        }
+
+        /**
          * @return timerType
          */
         public String getTimerType() {
@@ -311,6 +586,7 @@ public class ModifyTimerGroupRequest extends Request {
             private String operationType; 
             private java.util.List<String> processWhitelist; 
             private String resetType; 
+            private java.util.List<SegmentTimers> segmentTimers; 
             private String timerType; 
             private String triggerType; 
 
@@ -326,6 +602,7 @@ public class ModifyTimerGroupRequest extends Request {
                 this.operationType = model.operationType;
                 this.processWhitelist = model.processWhitelist;
                 this.resetType = model.resetType;
+                this.segmentTimers = model.segmentTimers;
                 this.timerType = model.timerType;
                 this.triggerType = model.triggerType;
             } 
@@ -423,6 +700,14 @@ public class ModifyTimerGroupRequest extends Request {
              */
             public Builder resetType(String resetType) {
                 this.resetType = resetType;
+                return this;
+            }
+
+            /**
+             * SegmentTimers.
+             */
+            public Builder segmentTimers(java.util.List<SegmentTimers> segmentTimers) {
+                this.segmentTimers = segmentTimers;
                 return this;
             }
 

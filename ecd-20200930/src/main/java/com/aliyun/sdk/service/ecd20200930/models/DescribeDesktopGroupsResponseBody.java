@@ -480,6 +480,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
+        @com.aliyun.core.annotation.NameInMap("UserGroupName")
+        private String userGroupName;
+
         @com.aliyun.core.annotation.NameInMap("UserOuPath")
         private String userOuPath;
 
@@ -539,6 +542,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskSize = builder.systemDiskSize;
             this.tags = builder.tags;
+            this.userGroupName = builder.userGroupName;
             this.userOuPath = builder.userOuPath;
             this.version = builder.version;
             this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
@@ -876,6 +880,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return userGroupName
+         */
+        public String getUserGroupName() {
+            return this.userGroupName;
+        }
+
+        /**
          * @return userOuPath
          */
         public String getUserOuPath() {
@@ -950,6 +961,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String systemDiskCategory; 
             private Integer systemDiskSize; 
             private java.util.List<Tags> tags; 
+            private String userGroupName; 
             private String userOuPath; 
             private Integer version; 
             private Boolean volumeEncryptionEnabled; 
@@ -1005,6 +1017,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
                 this.systemDiskCategory = model.systemDiskCategory;
                 this.systemDiskSize = model.systemDiskSize;
                 this.tags = model.tags;
+                this.userGroupName = model.userGroupName;
                 this.userOuPath = model.userOuPath;
                 this.version = model.version;
                 this.volumeEncryptionEnabled = model.volumeEncryptionEnabled;
@@ -1593,6 +1606,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * UserGroupName.
+             */
+            public Builder userGroupName(String userGroupName) {
+                this.userGroupName = userGroupName;
                 return this;
             }
 

@@ -39,6 +39,10 @@ public class AddUserToDesktopGroupRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupName")
+    private String userGroupName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserOuPath")
     private String userOuPath;
 
@@ -49,6 +53,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         this.desktopGroupIds = builder.desktopGroupIds;
         this.endUserIds = builder.endUserIds;
         this.regionId = builder.regionId;
+        this.userGroupName = builder.userGroupName;
         this.userOuPath = builder.userOuPath;
     }
 
@@ -101,6 +106,13 @@ public class AddUserToDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return userGroupName
+     */
+    public String getUserGroupName() {
+        return this.userGroupName;
+    }
+
+    /**
      * @return userOuPath
      */
     public String getUserOuPath() {
@@ -113,6 +125,7 @@ public class AddUserToDesktopGroupRequest extends Request {
         private java.util.List<String> desktopGroupIds; 
         private java.util.List<String> endUserIds; 
         private String regionId; 
+        private String userGroupName; 
         private String userOuPath; 
 
         private Builder() {
@@ -126,6 +139,7 @@ public class AddUserToDesktopGroupRequest extends Request {
             this.desktopGroupIds = request.desktopGroupIds;
             this.endUserIds = request.endUserIds;
             this.regionId = request.regionId;
+            this.userGroupName = request.userGroupName;
             this.userOuPath = request.userOuPath;
         } 
 
@@ -181,6 +195,15 @@ public class AddUserToDesktopGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * UserGroupName.
+         */
+        public Builder userGroupName(String userGroupName) {
+            this.putQueryParameter("UserGroupName", userGroupName);
+            this.userGroupName = userGroupName;
             return this;
         }
 

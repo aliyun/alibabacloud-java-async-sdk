@@ -23,6 +23,10 @@ public class CreateDesktopsRequest extends Request {
     private Integer amount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppRuleId")
+    private String appRuleId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
@@ -162,6 +166,7 @@ public class CreateDesktopsRequest extends Request {
     private CreateDesktopsRequest(Builder builder) {
         super(builder);
         this.amount = builder.amount;
+        this.appRuleId = builder.appRuleId;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.bundleId = builder.bundleId;
@@ -216,6 +221,13 @@ public class CreateDesktopsRequest extends Request {
      */
     public Integer getAmount() {
         return this.amount;
+    }
+
+    /**
+     * @return appRuleId
+     */
+    public String getAppRuleId() {
+        return this.appRuleId;
     }
 
     /**
@@ -458,6 +470,7 @@ public class CreateDesktopsRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDesktopsRequest, Builder> {
         private Integer amount; 
+        private String appRuleId; 
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private String bundleId; 
@@ -500,6 +513,7 @@ public class CreateDesktopsRequest extends Request {
         private Builder(CreateDesktopsRequest request) {
             super(request);
             this.amount = request.amount;
+            this.appRuleId = request.appRuleId;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.bundleId = request.bundleId;
@@ -545,6 +559,15 @@ public class CreateDesktopsRequest extends Request {
         public Builder amount(Integer amount) {
             this.putQueryParameter("Amount", amount);
             this.amount = amount;
+            return this;
+        }
+
+        /**
+         * AppRuleId.
+         */
+        public Builder appRuleId(String appRuleId) {
+            this.putQueryParameter("AppRuleId", appRuleId);
+            this.appRuleId = appRuleId;
             return this;
         }
 

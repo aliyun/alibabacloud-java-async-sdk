@@ -243,6 +243,10 @@ public class CreateDesktopGroupRequest extends Request {
     private String timerGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGroupName")
+    private String userGroupName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserOuPath")
     private String userOuPath;
 
@@ -314,6 +318,7 @@ public class CreateDesktopGroupRequest extends Request {
         this.systemDiskSize = builder.systemDiskSize;
         this.tag = builder.tag;
         this.timerGroupId = builder.timerGroupId;
+        this.userGroupName = builder.userGroupName;
         this.userOuPath = builder.userOuPath;
         this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
         this.volumeEncryptionKey = builder.volumeEncryptionKey;
@@ -712,6 +717,13 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return userGroupName
+     */
+    public String getUserGroupName() {
+        return this.userGroupName;
+    }
+
+    /**
      * @return userOuPath
      */
     public String getUserOuPath() {
@@ -794,6 +806,7 @@ public class CreateDesktopGroupRequest extends Request {
         private Integer systemDiskSize; 
         private java.util.List<Tag> tag; 
         private String timerGroupId; 
+        private String userGroupName; 
         private String userOuPath; 
         private Boolean volumeEncryptionEnabled; 
         private String volumeEncryptionKey; 
@@ -859,6 +872,7 @@ public class CreateDesktopGroupRequest extends Request {
             this.systemDiskSize = request.systemDiskSize;
             this.tag = request.tag;
             this.timerGroupId = request.timerGroupId;
+            this.userGroupName = request.userGroupName;
             this.userOuPath = request.userOuPath;
             this.volumeEncryptionEnabled = request.volumeEncryptionEnabled;
             this.volumeEncryptionKey = request.volumeEncryptionKey;
@@ -1664,6 +1678,15 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder timerGroupId(String timerGroupId) {
             this.putQueryParameter("TimerGroupId", timerGroupId);
             this.timerGroupId = timerGroupId;
+            return this;
+        }
+
+        /**
+         * UserGroupName.
+         */
+        public Builder userGroupName(String userGroupName) {
+            this.putQueryParameter("UserGroupName", userGroupName);
+            this.userGroupName = userGroupName;
             return this;
         }
 

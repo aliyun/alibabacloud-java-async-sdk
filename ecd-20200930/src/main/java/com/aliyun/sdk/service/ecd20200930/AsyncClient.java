@@ -408,6 +408,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request);
 
     /**
+     * @param request the request parameters of CreateTemplate  CreateTemplateRequest
+     * @return CreateTemplateResponse
+     */
+    CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request);
+
+    /**
      * @param request the request parameters of DeleteAutoSnapshotPolicy  DeleteAutoSnapshotPolicyRequest
      * @return DeleteAutoSnapshotPolicyResponse
      */
@@ -558,6 +564,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteSnapshotResponse
      */
     CompletableFuture<DeleteSnapshotResponse> deleteSnapshot(DeleteSnapshotRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>Deleting a template does not affect cloud computers created from it or the associated resources.</p>
+     * 
+     * @param request the request parameters of DeleteTemplates  DeleteTemplatesRequest
+     * @return DeleteTemplatesResponse
+     */
+    CompletableFuture<DeleteTemplatesResponse> deleteTemplates(DeleteTemplatesRequest request);
 
     /**
      * <b>description</b> :
@@ -911,6 +926,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeSnapshotsResponse
      */
     CompletableFuture<DescribeSnapshotsResponse> describeSnapshots(DescribeSnapshotsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeTemplates  DescribeTemplatesRequest
+     * @return DescribeTemplatesResponse
+     */
+    CompletableFuture<DescribeTemplatesResponse> describeTemplates(DescribeTemplatesRequest request);
 
     /**
      * @param request the request parameters of DescribeTimerGroup  DescribeTimerGroupRequest
@@ -1456,6 +1477,21 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyResourceCenterPolicyResponse
      */
     CompletableFuture<ModifyResourceCenterPolicyResponse> modifyResourceCenterPolicy(ModifyResourceCenterPolicyRequest request);
+
+    /**
+     * @param request the request parameters of ModifyTemplate  ModifyTemplateRequest
+     * @return ModifyTemplateResponse
+     */
+    CompletableFuture<ModifyTemplateResponse> modifyTemplate(ModifyTemplateRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="~~ModifyTemplate~~">ModifyTemplate</a> operation.</p>
+     * 
+     * @param request the request parameters of ModifyTemplateBaseInfo  ModifyTemplateBaseInfoRequest
+     * @return ModifyTemplateBaseInfoResponse
+     */
+    CompletableFuture<ModifyTemplateBaseInfoResponse> modifyTemplateBaseInfo(ModifyTemplateBaseInfoRequest request);
 
     /**
      * @param request the request parameters of ModifyTimerGroup  ModifyTimerGroupRequest
