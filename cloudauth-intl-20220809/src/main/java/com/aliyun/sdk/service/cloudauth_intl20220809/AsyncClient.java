@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of BankMetaVerifyIntl  BankMetaVerifyIntlRequest
+     * @return BankMetaVerifyIntlResponse
+     */
+    CompletableFuture<BankMetaVerifyIntlResponse> bankMetaVerifyIntl(BankMetaVerifyIntlRequest request);
+
+    /**
      * @deprecated OpenAPI CardOcr is deprecated, please use Cloudauth-intl::2022-08-09::DocOcr instead.  * @param request  the request parameters of CardOcr  CardOcrRequest
      * @return CardOcrResponse
      */
