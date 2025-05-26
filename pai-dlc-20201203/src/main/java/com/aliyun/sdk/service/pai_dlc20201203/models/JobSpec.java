@@ -36,7 +36,11 @@ public class JobSpec extends TeaModel {
     private ImageConfig imageConfig;
 
     @com.aliyun.core.annotation.NameInMap("IsCheif")
+    @Deprecated
     private Boolean isCheif;
+
+    @com.aliyun.core.annotation.NameInMap("IsChief")
+    private Boolean isChief;
 
     @com.aliyun.core.annotation.NameInMap("LocalMountSpecs")
     private java.util.List<LocalMountSpec> localMountSpecs;
@@ -71,6 +75,7 @@ public class JobSpec extends TeaModel {
         this.image = builder.image;
         this.imageConfig = builder.imageConfig;
         this.isCheif = builder.isCheif;
+        this.isChief = builder.isChief;
         this.localMountSpecs = builder.localMountSpecs;
         this.podCount = builder.podCount;
         this.resourceConfig = builder.resourceConfig;
@@ -143,6 +148,13 @@ public class JobSpec extends TeaModel {
     }
 
     /**
+     * @return isChief
+     */
+    public Boolean getIsChief() {
+        return this.isChief;
+    }
+
+    /**
      * @return localMountSpecs
      */
     public java.util.List<LocalMountSpec> getLocalMountSpecs() {
@@ -206,6 +218,7 @@ public class JobSpec extends TeaModel {
         private String image; 
         private ImageConfig imageConfig; 
         private Boolean isCheif; 
+        private Boolean isChief; 
         private java.util.List<LocalMountSpec> localMountSpecs; 
         private Long podCount; 
         private ResourceConfig resourceConfig; 
@@ -226,6 +239,7 @@ public class JobSpec extends TeaModel {
             this.image = model.image;
             this.imageConfig = model.imageConfig;
             this.isCheif = model.isCheif;
+            this.isChief = model.isChief;
             this.localMountSpecs = model.localMountSpecs;
             this.podCount = model.podCount;
             this.resourceConfig = model.resourceConfig;
@@ -289,6 +303,14 @@ public class JobSpec extends TeaModel {
          */
         public Builder isCheif(Boolean isCheif) {
             this.isCheif = isCheif;
+            return this;
+        }
+
+        /**
+         * IsChief.
+         */
+        public Builder isChief(Boolean isChief) {
+            this.isChief = isChief;
             return this;
         }
 
