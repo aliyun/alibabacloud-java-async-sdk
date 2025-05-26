@@ -316,6 +316,231 @@ public class TargetVideo extends TeaModel {
      *
      * <p>TargetVideo</p>
      */
+    public static class Face extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Confidence")
+        private Float confidence;
+
+        @com.aliyun.core.annotation.NameInMap("MinSize")
+        private Integer minSize;
+
+        private Face(Builder builder) {
+            this.confidence = builder.confidence;
+            this.minSize = builder.minSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Face create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidence
+         */
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        /**
+         * @return minSize
+         */
+        public Integer getMinSize() {
+            return this.minSize;
+        }
+
+        public static final class Builder {
+            private Float confidence; 
+            private Integer minSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(Face model) {
+                this.confidence = model.confidence;
+                this.minSize = model.minSize;
+            } 
+
+            /**
+             * Confidence.
+             */
+            public Builder confidence(Float confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * MinSize.
+             */
+            public Builder minSize(Integer minSize) {
+                this.minSize = minSize;
+                return this;
+            }
+
+            public Face build() {
+                return new Face(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link TargetVideo} extends {@link TeaModel}
+     *
+     * <p>TargetVideo</p>
+     */
+    public static class LicensePlate extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Confidence")
+        private Float confidence;
+
+        @com.aliyun.core.annotation.NameInMap("MinSize")
+        private Integer minSize;
+
+        private LicensePlate(Builder builder) {
+            this.confidence = builder.confidence;
+            this.minSize = builder.minSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LicensePlate create() {
+            return builder().build();
+        }
+
+        /**
+         * @return confidence
+         */
+        public Float getConfidence() {
+            return this.confidence;
+        }
+
+        /**
+         * @return minSize
+         */
+        public Integer getMinSize() {
+            return this.minSize;
+        }
+
+        public static final class Builder {
+            private Float confidence; 
+            private Integer minSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(LicensePlate model) {
+                this.confidence = model.confidence;
+                this.minSize = model.minSize;
+            } 
+
+            /**
+             * Confidence.
+             */
+            public Builder confidence(Float confidence) {
+                this.confidence = confidence;
+                return this;
+            }
+
+            /**
+             * MinSize.
+             */
+            public Builder minSize(Integer minSize) {
+                this.minSize = minSize;
+                return this;
+            }
+
+            public LicensePlate build() {
+                return new LicensePlate(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link TargetVideo} extends {@link TeaModel}
+     *
+     * <p>TargetVideo</p>
+     */
+    public static class Desensitization extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Face")
+        private Face face;
+
+        @com.aliyun.core.annotation.NameInMap("LicensePlate")
+        private LicensePlate licensePlate;
+
+        private Desensitization(Builder builder) {
+            this.face = builder.face;
+            this.licensePlate = builder.licensePlate;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Desensitization create() {
+            return builder().build();
+        }
+
+        /**
+         * @return face
+         */
+        public Face getFace() {
+            return this.face;
+        }
+
+        /**
+         * @return licensePlate
+         */
+        public LicensePlate getLicensePlate() {
+            return this.licensePlate;
+        }
+
+        public static final class Builder {
+            private Face face; 
+            private LicensePlate licensePlate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Desensitization model) {
+                this.face = model.face;
+                this.licensePlate = model.licensePlate;
+            } 
+
+            /**
+             * Face.
+             */
+            public Builder face(Face face) {
+                this.face = face;
+                return this;
+            }
+
+            /**
+             * LicensePlate.
+             */
+            public Builder licensePlate(LicensePlate licensePlate) {
+                this.licensePlate = licensePlate;
+                return this;
+            }
+
+            public Desensitization build() {
+                return new Desensitization(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link TargetVideo} extends {@link TeaModel}
+     *
+     * <p>TargetVideo</p>
+     */
     public static class Watermarks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BorderColor")
         private String borderColor;
@@ -689,11 +914,19 @@ public class TargetVideo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Delogos")
         private java.util.List<Delogos> delogos;
 
+        @com.aliyun.core.annotation.NameInMap("Desensitization")
+        private Desensitization desensitization;
+
+        @com.aliyun.core.annotation.NameInMap("Speed")
+        private Float speed;
+
         @com.aliyun.core.annotation.NameInMap("Watermarks")
         private java.util.List<Watermarks> watermarks;
 
         private FilterVideo(Builder builder) {
             this.delogos = builder.delogos;
+            this.desensitization = builder.desensitization;
+            this.speed = builder.speed;
             this.watermarks = builder.watermarks;
         }
 
@@ -713,6 +946,20 @@ public class TargetVideo extends TeaModel {
         }
 
         /**
+         * @return desensitization
+         */
+        public Desensitization getDesensitization() {
+            return this.desensitization;
+        }
+
+        /**
+         * @return speed
+         */
+        public Float getSpeed() {
+            return this.speed;
+        }
+
+        /**
          * @return watermarks
          */
         public java.util.List<Watermarks> getWatermarks() {
@@ -721,6 +968,8 @@ public class TargetVideo extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Delogos> delogos; 
+            private Desensitization desensitization; 
+            private Float speed; 
             private java.util.List<Watermarks> watermarks; 
 
             private Builder() {
@@ -728,6 +977,8 @@ public class TargetVideo extends TeaModel {
 
             private Builder(FilterVideo model) {
                 this.delogos = model.delogos;
+                this.desensitization = model.desensitization;
+                this.speed = model.speed;
                 this.watermarks = model.watermarks;
             } 
 
@@ -736,6 +987,22 @@ public class TargetVideo extends TeaModel {
              */
             public Builder delogos(java.util.List<Delogos> delogos) {
                 this.delogos = delogos;
+                return this;
+            }
+
+            /**
+             * Desensitization.
+             */
+            public Builder desensitization(Desensitization desensitization) {
+                this.desensitization = desensitization;
+                return this;
+            }
+
+            /**
+             * Speed.
+             */
+            public Builder speed(Float speed) {
+                this.speed = speed;
                 return this;
             }
 
