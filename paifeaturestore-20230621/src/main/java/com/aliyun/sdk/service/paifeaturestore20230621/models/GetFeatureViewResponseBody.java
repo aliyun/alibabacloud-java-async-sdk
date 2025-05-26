@@ -756,7 +756,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Transform")
-        private Transform transform;
+        private java.util.List<Transform> transform;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -793,7 +793,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         /**
          * @return transform
          */
-        public Transform getTransform() {
+        public java.util.List<Transform> getTransform() {
             return this.transform;
         }
 
@@ -807,7 +807,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> attributes; 
             private String name; 
-            private Transform transform; 
+            private java.util.List<Transform> transform; 
             private String type; 
 
             private Builder() {
@@ -839,7 +839,7 @@ public class GetFeatureViewResponseBody extends TeaModel {
             /**
              * Transform.
              */
-            public Builder transform(Transform transform) {
+            public Builder transform(java.util.List<Transform> transform) {
                 this.transform = transform;
                 return this;
             }
