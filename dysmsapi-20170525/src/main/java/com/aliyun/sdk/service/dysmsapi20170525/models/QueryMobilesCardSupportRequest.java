@@ -18,6 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryMobilesCardSupportRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptType")
+    @com.aliyun.core.annotation.Validation(maxLength = 100)
+    private String encryptType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Mobiles")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<java.util.Map<String, ?>> mobiles;
@@ -29,6 +34,7 @@ public class QueryMobilesCardSupportRequest extends Request {
 
     private QueryMobilesCardSupportRequest(Builder builder) {
         super(builder);
+        this.encryptType = builder.encryptType;
         this.mobiles = builder.mobiles;
         this.templateCode = builder.templateCode;
     }
@@ -47,6 +53,13 @@ public class QueryMobilesCardSupportRequest extends Request {
     }
 
     /**
+     * @return encryptType
+     */
+    public String getEncryptType() {
+        return this.encryptType;
+    }
+
+    /**
      * @return mobiles
      */
     public java.util.List<java.util.Map<String, ?>> getMobiles() {
@@ -61,6 +74,7 @@ public class QueryMobilesCardSupportRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryMobilesCardSupportRequest, Builder> {
+        private String encryptType; 
         private java.util.List<java.util.Map<String, ?>> mobiles; 
         private String templateCode; 
 
@@ -70,9 +84,19 @@ public class QueryMobilesCardSupportRequest extends Request {
 
         private Builder(QueryMobilesCardSupportRequest request) {
             super(request);
+            this.encryptType = request.encryptType;
             this.mobiles = request.mobiles;
             this.templateCode = request.templateCode;
         } 
+
+        /**
+         * EncryptType.
+         */
+        public Builder encryptType(String encryptType) {
+            this.putQueryParameter("EncryptType", encryptType);
+            this.encryptType = encryptType;
+            return this;
+        }
 
         /**
          * <p>The list of mobile phone numbers.</p>
