@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eduembed20240101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PageListLabSessionsResponseBody} extends {@link TeaModel}
  *
  * <p>PageListLabSessionsResponseBody</p>
@@ -15,7 +21,7 @@ public class PageListLabSessionsResponseBody extends TeaModel {
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("LabSessions")
-    private java.util.List < LabSessions> labSessions;
+    private java.util.List<LabSessions> labSessions;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -54,6 +60,10 @@ public class PageListLabSessionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -64,7 +74,7 @@ public class PageListLabSessionsResponseBody extends TeaModel {
     /**
      * @return labSessions
      */
-    public java.util.List < LabSessions> getLabSessions() {
+    public java.util.List<LabSessions> getLabSessions() {
         return this.labSessions;
     }
 
@@ -112,13 +122,27 @@ public class PageListLabSessionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List < LabSessions> labSessions; 
+        private java.util.List<LabSessions> labSessions; 
         private String message; 
         private Long page; 
         private Long pageSize; 
         private String requestId; 
         private Boolean success; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(PageListLabSessionsResponseBody model) {
+            this.code = model.code;
+            this.labSessions = model.labSessions;
+            this.message = model.message;
+            this.page = model.page;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Code.
@@ -131,7 +155,7 @@ public class PageListLabSessionsResponseBody extends TeaModel {
         /**
          * LabSessions.
          */
-        public Builder labSessions(java.util.List < LabSessions> labSessions) {
+        public Builder labSessions(java.util.List<LabSessions> labSessions) {
             this.labSessions = labSessions;
             return this;
         }
@@ -190,6 +214,12 @@ public class PageListLabSessionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PageListLabSessionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>PageListLabSessionsResponseBody</p>
+     */
     public static class LabSessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -263,6 +293,17 @@ public class PageListLabSessionsResponseBody extends TeaModel {
             private String id; 
             private Long labId; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabSessions model) {
+                this.createTime = model.createTime;
+                this.finished = model.finished;
+                this.id = model.id;
+                this.labId = model.labId;
+                this.url = model.url;
+            } 
 
             /**
              * CreateTime.

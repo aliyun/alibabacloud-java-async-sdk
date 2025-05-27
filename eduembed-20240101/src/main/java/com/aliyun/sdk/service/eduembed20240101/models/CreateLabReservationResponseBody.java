@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eduembed20240101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLabReservationResponseBody} extends {@link TeaModel}
  *
  * <p>CreateLabReservationResponseBody</p>
@@ -40,6 +46,10 @@ public class CreateLabReservationResponseBody extends TeaModel {
 
     public static CreateLabReservationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -83,6 +93,17 @@ public class CreateLabReservationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateLabReservationResponseBody model) {
+            this.code = model.code;
+            this.labReservation = model.labReservation;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -130,6 +151,12 @@ public class CreateLabReservationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateLabReservationResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateLabReservationResponseBody</p>
+     */
     public static class LabReservation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
@@ -155,6 +182,13 @@ public class CreateLabReservationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabReservation model) {
+                this.id = model.id;
+            } 
 
             /**
              * Id.

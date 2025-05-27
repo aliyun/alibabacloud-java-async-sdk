@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eduembed20240101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLabReservationRequest} extends {@link RequestModel}
  *
  * <p>CreateLabReservationRequest</p>
@@ -53,7 +59,7 @@ public class CreateLabReservationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,7 +120,10 @@ public class CreateLabReservationRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16600</p>
          */
         public Builder accountId(Long accountId) {
             this.putBodyParameter("AccountId", accountId);
@@ -123,7 +132,10 @@ public class CreateLabReservationRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-29 18:00:00</p>
          */
         public Builder endTime(String endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -132,7 +144,10 @@ public class CreateLabReservationRequest extends Request {
         }
 
         /**
-         * LabId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>875</p>
          */
         public Builder labId(Long labId) {
             this.putBodyParameter("LabId", labId);
@@ -141,7 +156,10 @@ public class CreateLabReservationRequest extends Request {
         }
 
         /**
-         * MemberCount.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder memberCount(Long memberCount) {
             this.putBodyParameter("MemberCount", memberCount);
@@ -150,7 +168,10 @@ public class CreateLabReservationRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-04-29 16:00:00</p>
          */
         public Builder startTime(String startTime) {
             this.putBodyParameter("StartTime", startTime);

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateLabReservationResponse} extends {@link TeaModel}
+ * {@link DescribeCourseLessonResponse} extends {@link TeaModel}
  *
- * <p>CreateLabReservationResponse</p>
+ * <p>DescribeCourseLessonResponse</p>
  */
-public class CreateLabReservationResponse extends Response {
+public class DescribeCourseLessonResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class CreateLabReservationResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private CreateLabReservationResponseBody body;
+    private DescribeCourseLessonResponseBody body;
 
-    private CreateLabReservationResponse(BuilderImpl builder) {
+    private DescribeCourseLessonResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static CreateLabReservationResponse create() {
+    public static DescribeCourseLessonResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class CreateLabReservationResponse extends Response {
     /**
      * @return body
      */
-    public CreateLabReservationResponseBody getBody() {
+    public DescribeCourseLessonResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<CreateLabReservationResponse, Builder> {
+    public interface Builder extends Response.Builder<DescribeCourseLessonResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(CreateLabReservationResponseBody body);
+        Builder body(DescribeCourseLessonResponseBody body);
 
         @Override
-        CreateLabReservationResponse build();
+        DescribeCourseLessonResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateLabReservationResponse, Builder>
+            extends Response.BuilderImpl<DescribeCourseLessonResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private CreateLabReservationResponseBody body; 
+        private DescribeCourseLessonResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateLabReservationResponse response) {
+        private BuilderImpl(DescribeCourseLessonResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class CreateLabReservationResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(CreateLabReservationResponseBody body) {
+        public Builder body(DescribeCourseLessonResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public CreateLabReservationResponse build() {
-            return new CreateLabReservationResponse(this);
+        public DescribeCourseLessonResponse build() {
+            return new DescribeCourseLessonResponse(this);
         } 
 
     } 

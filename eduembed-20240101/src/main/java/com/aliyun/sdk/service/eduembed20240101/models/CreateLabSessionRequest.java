@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eduembed20240101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLabSessionRequest} extends {@link RequestModel}
  *
  * <p>CreateLabSessionRequest</p>
@@ -41,7 +47,7 @@ public class CreateLabSessionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +90,12 @@ public class CreateLabSessionRequest extends Request {
         } 
 
         /**
-         * AccountId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder accountId(Long accountId) {
             this.putBodyParameter("AccountId", accountId);
@@ -93,7 +104,10 @@ public class CreateLabSessionRequest extends Request {
         }
 
         /**
-         * LabId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>875</p>
          */
         public Builder labId(Long labId) {
             this.putBodyParameter("LabId", labId);
@@ -102,7 +116,12 @@ public class CreateLabSessionRequest extends Request {
         }
 
         /**
-         * RamAccountId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         public Builder ramAccountId(Long ramAccountId) {
             this.putBodyParameter("RamAccountId", ramAccountId);

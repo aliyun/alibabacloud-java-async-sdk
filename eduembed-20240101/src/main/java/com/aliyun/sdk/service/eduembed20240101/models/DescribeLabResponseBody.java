@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eduembed20240101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLabResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLabResponseBody</p>
@@ -40,6 +46,10 @@ public class DescribeLabResponseBody extends TeaModel {
 
     public static DescribeLabResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -83,6 +93,17 @@ public class DescribeLabResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLabResponseBody model) {
+            this.code = model.code;
+            this.lab = model.lab;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -130,6 +151,12 @@ public class DescribeLabResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLabResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLabResponseBody</p>
+     */
     public static class Lab extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
@@ -203,6 +230,17 @@ public class DescribeLabResponseBody extends TeaModel {
             private String introduction; 
             private String subTitle; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Lab model) {
+                this.duration = model.duration;
+                this.id = model.id;
+                this.introduction = model.introduction;
+                this.subTitle = model.subTitle;
+                this.title = model.title;
+            } 
 
             /**
              * Duration.

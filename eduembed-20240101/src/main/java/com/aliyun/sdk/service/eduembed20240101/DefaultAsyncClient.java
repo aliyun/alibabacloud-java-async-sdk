@@ -39,6 +39,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+     * @param request the request parameters of CreateLabReservation  CreateLabReservationRequest
+     * @return CreateLabReservationResponse
+     */
     @Override
     public CompletableFuture<CreateLabReservationResponse> createLabReservation(CreateLabReservationRequest request) {
         try {
@@ -53,6 +57,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of CreateLabSession  CreateLabSessionRequest
+     * @return CreateLabSessionResponse
+     */
     @Override
     public CompletableFuture<CreateLabSessionResponse> createLabSession(CreateLabSessionRequest request) {
         try {
@@ -67,6 +75,46 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeCourse  DescribeCourseRequest
+     * @return DescribeCourseResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCourseResponse> describeCourse(DescribeCourseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCourse").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCourseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCourseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeCourseLesson  DescribeCourseLessonRequest
+     * @return DescribeCourseLessonResponse
+     */
+    @Override
+    public CompletableFuture<DescribeCourseLessonResponse> describeCourseLesson(DescribeCourseLessonRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeCourseLesson").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeCourseLessonResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeCourseLessonResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeLab  DescribeLabRequest
+     * @return DescribeLabResponse
+     */
     @Override
     public CompletableFuture<DescribeLabResponse> describeLab(DescribeLabRequest request) {
         try {
@@ -81,6 +129,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeLabReservation  DescribeLabReservationRequest
+     * @return DescribeLabReservationResponse
+     */
     @Override
     public CompletableFuture<DescribeLabReservationResponse> describeLabReservation(DescribeLabReservationRequest request) {
         try {
@@ -95,6 +147,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of DescribeLabSession  DescribeLabSessionRequest
+     * @return DescribeLabSessionResponse
+     */
     @Override
     public CompletableFuture<DescribeLabSessionResponse> describeLabSession(DescribeLabSessionRequest request) {
         try {
@@ -109,6 +165,28 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of ListCourses  ListCoursesRequest
+     * @return ListCoursesResponse
+     */
+    @Override
+    public CompletableFuture<ListCoursesResponse> listCourses(ListCoursesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListCourses").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListCoursesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListCoursesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PageListLabReservations  PageListLabReservationsRequest
+     * @return PageListLabReservationsResponse
+     */
     @Override
     public CompletableFuture<PageListLabReservationsResponse> pageListLabReservations(PageListLabReservationsRequest request) {
         try {
@@ -123,6 +201,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PageListLabSessions  PageListLabSessionsRequest
+     * @return PageListLabSessionsResponse
+     */
     @Override
     public CompletableFuture<PageListLabSessionsResponse> pageListLabSessions(PageListLabSessionsRequest request) {
         try {
@@ -137,6 +219,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of PageListLabs  PageListLabsRequest
+     * @return PageListLabsResponse
+     */
     @Override
     public CompletableFuture<PageListLabsResponse> pageListLabs(PageListLabsRequest request) {
         try {
@@ -151,6 +237,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+     * @param request the request parameters of RemoveLabReservation  RemoveLabReservationRequest
+     * @return RemoveLabReservationResponse
+     */
     @Override
     public CompletableFuture<RemoveLabReservationResponse> removeLabReservation(RemoveLabReservationRequest request) {
         try {

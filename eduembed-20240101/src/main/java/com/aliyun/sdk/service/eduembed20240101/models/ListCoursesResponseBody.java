@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link PageListLabsResponseBody} extends {@link TeaModel}
+ * {@link ListCoursesResponseBody} extends {@link TeaModel}
  *
- * <p>PageListLabsResponseBody</p>
+ * <p>ListCoursesResponseBody</p>
  */
-public class PageListLabsResponseBody extends TeaModel {
+public class ListCoursesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @com.aliyun.core.annotation.NameInMap("Labs")
-    private java.util.List<Labs> labs;
+    @com.aliyun.core.annotation.NameInMap("Courses")
+    private java.util.List<Courses> courses;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -41,9 +41,9 @@ public class PageListLabsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    private PageListLabsResponseBody(Builder builder) {
+    private ListCoursesResponseBody(Builder builder) {
         this.code = builder.code;
-        this.labs = builder.labs;
+        this.courses = builder.courses;
         this.message = builder.message;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
@@ -56,7 +56,7 @@ public class PageListLabsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static PageListLabsResponseBody create() {
+    public static ListCoursesResponseBody create() {
         return builder().build();
     }
 
@@ -72,10 +72,10 @@ public class PageListLabsResponseBody extends TeaModel {
     }
 
     /**
-     * @return labs
+     * @return courses
      */
-    public java.util.List<Labs> getLabs() {
-        return this.labs;
+    public java.util.List<Courses> getCourses() {
+        return this.courses;
     }
 
     /**
@@ -122,7 +122,7 @@ public class PageListLabsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private java.util.List<Labs> labs; 
+        private java.util.List<Courses> courses; 
         private String message; 
         private Long page; 
         private Long pageSize; 
@@ -133,9 +133,9 @@ public class PageListLabsResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(PageListLabsResponseBody model) {
+        private Builder(ListCoursesResponseBody model) {
             this.code = model.code;
-            this.labs = model.labs;
+            this.courses = model.courses;
             this.message = model.message;
             this.page = model.page;
             this.pageSize = model.pageSize;
@@ -153,10 +153,10 @@ public class PageListLabsResponseBody extends TeaModel {
         }
 
         /**
-         * Labs.
+         * Courses.
          */
-        public Builder labs(java.util.List<Labs> labs) {
-            this.labs = labs;
+        public Builder courses(java.util.List<Courses> courses) {
+            this.courses = courses;
             return this;
         }
 
@@ -208,39 +208,47 @@ public class PageListLabsResponseBody extends TeaModel {
             return this;
         }
 
-        public PageListLabsResponseBody build() {
-            return new PageListLabsResponseBody(this);
+        public ListCoursesResponseBody build() {
+            return new ListCoursesResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link PageListLabsResponseBody} extends {@link TeaModel}
+     * {@link ListCoursesResponseBody} extends {@link TeaModel}
      *
-     * <p>PageListLabsResponseBody</p>
+     * <p>ListCoursesResponseBody</p>
      */
-    public static class Labs extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Duration")
-        private Long duration;
+    public static class Courses extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Category")
+        private String category;
 
         @com.aliyun.core.annotation.NameInMap("Id")
-        private Long id;
+        private String id;
 
         @com.aliyun.core.annotation.NameInMap("Introduction")
         private String introduction;
 
-        @com.aliyun.core.annotation.NameInMap("SubTitle")
-        private String subTitle;
+        @com.aliyun.core.annotation.NameInMap("LessonNum")
+        private Integer lessonNum;
+
+        @com.aliyun.core.annotation.NameInMap("PictureUrl")
+        private String pictureUrl;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private String tags;
 
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        private Labs(Builder builder) {
-            this.duration = builder.duration;
+        private Courses(Builder builder) {
+            this.category = builder.category;
             this.id = builder.id;
             this.introduction = builder.introduction;
-            this.subTitle = builder.subTitle;
+            this.lessonNum = builder.lessonNum;
+            this.pictureUrl = builder.pictureUrl;
+            this.tags = builder.tags;
             this.title = builder.title;
         }
 
@@ -248,21 +256,21 @@ public class PageListLabsResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Labs create() {
+        public static Courses create() {
             return builder().build();
         }
 
         /**
-         * @return duration
+         * @return category
          */
-        public Long getDuration() {
-            return this.duration;
+        public String getCategory() {
+            return this.category;
         }
 
         /**
          * @return id
          */
-        public Long getId() {
+        public String getId() {
             return this.id;
         }
 
@@ -274,10 +282,24 @@ public class PageListLabsResponseBody extends TeaModel {
         }
 
         /**
-         * @return subTitle
+         * @return lessonNum
          */
-        public String getSubTitle() {
-            return this.subTitle;
+        public Integer getLessonNum() {
+            return this.lessonNum;
+        }
+
+        /**
+         * @return pictureUrl
+         */
+        public String getPictureUrl() {
+            return this.pictureUrl;
+        }
+
+        /**
+         * @return tags
+         */
+        public String getTags() {
+            return this.tags;
         }
 
         /**
@@ -288,35 +310,39 @@ public class PageListLabsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long duration; 
-            private Long id; 
+            private String category; 
+            private String id; 
             private String introduction; 
-            private String subTitle; 
+            private Integer lessonNum; 
+            private String pictureUrl; 
+            private String tags; 
             private String title; 
 
             private Builder() {
             } 
 
-            private Builder(Labs model) {
-                this.duration = model.duration;
+            private Builder(Courses model) {
+                this.category = model.category;
                 this.id = model.id;
                 this.introduction = model.introduction;
-                this.subTitle = model.subTitle;
+                this.lessonNum = model.lessonNum;
+                this.pictureUrl = model.pictureUrl;
+                this.tags = model.tags;
                 this.title = model.title;
             } 
 
             /**
-             * Duration.
+             * Category.
              */
-            public Builder duration(Long duration) {
-                this.duration = duration;
+            public Builder category(String category) {
+                this.category = category;
                 return this;
             }
 
             /**
              * Id.
              */
-            public Builder id(Long id) {
+            public Builder id(String id) {
                 this.id = id;
                 return this;
             }
@@ -330,10 +356,26 @@ public class PageListLabsResponseBody extends TeaModel {
             }
 
             /**
-             * SubTitle.
+             * LessonNum.
              */
-            public Builder subTitle(String subTitle) {
-                this.subTitle = subTitle;
+            public Builder lessonNum(Integer lessonNum) {
+                this.lessonNum = lessonNum;
+                return this;
+            }
+
+            /**
+             * PictureUrl.
+             */
+            public Builder pictureUrl(String pictureUrl) {
+                this.pictureUrl = pictureUrl;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(String tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -345,8 +387,8 @@ public class PageListLabsResponseBody extends TeaModel {
                 return this;
             }
 
-            public Labs build() {
-                return new Labs(this);
+            public Courses build() {
+                return new Courses(this);
             } 
 
         } 

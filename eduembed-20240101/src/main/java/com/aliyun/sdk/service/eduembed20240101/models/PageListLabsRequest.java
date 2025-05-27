@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eduembed20240101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PageListLabsRequest} extends {@link RequestModel}
  *
  * <p>PageListLabsRequest</p>
@@ -13,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class PageListLabsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Id")
-    private java.util.List < Long > id;
+    private java.util.List<Long> id;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Page")
@@ -38,7 +44,7 @@ public class PageListLabsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -46,7 +52,7 @@ public class PageListLabsRequest extends Request {
     /**
      * @return id
      */
-    public java.util.List < Long > getId() {
+    public java.util.List<Long> getId() {
         return this.id;
     }
 
@@ -65,7 +71,7 @@ public class PageListLabsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<PageListLabsRequest, Builder> {
-        private java.util.List < Long > id; 
+        private java.util.List<Long> id; 
         private Long page; 
         private Long pageSize; 
 
@@ -83,7 +89,7 @@ public class PageListLabsRequest extends Request {
         /**
          * Id.
          */
-        public Builder id(java.util.List < Long > id) {
+        public Builder id(java.util.List<Long> id) {
             this.putQueryParameter("Id", id);
             this.id = id;
             return this;

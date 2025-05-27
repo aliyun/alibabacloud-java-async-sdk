@@ -12,14 +12,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link PageListLabReservationsRequest} extends {@link RequestModel}
+ * {@link ListCoursesRequest} extends {@link RequestModel}
  *
- * <p>PageListLabReservationsRequest</p>
+ * <p>ListCoursesRequest</p>
  */
-public class PageListLabReservationsRequest extends Request {
+public class ListCoursesRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AccountId")
-    private Long accountId;
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private java.util.List<Long> id;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Page")
@@ -29,9 +29,9 @@ public class PageListLabReservationsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    private PageListLabReservationsRequest(Builder builder) {
+    private ListCoursesRequest(Builder builder) {
         super(builder);
-        this.accountId = builder.accountId;
+        this.id = builder.id;
         this.page = builder.page;
         this.pageSize = builder.pageSize;
     }
@@ -40,7 +40,7 @@ public class PageListLabReservationsRequest extends Request {
         return new Builder();
     }
 
-    public static PageListLabReservationsRequest create() {
+    public static ListCoursesRequest create() {
         return builder().build();
     }
 
@@ -50,10 +50,10 @@ public class PageListLabReservationsRequest extends Request {
     }
 
     /**
-     * @return accountId
+     * @return id
      */
-    public Long getAccountId() {
-        return this.accountId;
+    public java.util.List<Long> getId() {
+        return this.id;
     }
 
     /**
@@ -70,8 +70,8 @@ public class PageListLabReservationsRequest extends Request {
         return this.pageSize;
     }
 
-    public static final class Builder extends Request.Builder<PageListLabReservationsRequest, Builder> {
-        private Long accountId; 
+    public static final class Builder extends Request.Builder<ListCoursesRequest, Builder> {
+        private java.util.List<Long> id; 
         private Long page; 
         private Long pageSize; 
 
@@ -79,19 +79,19 @@ public class PageListLabReservationsRequest extends Request {
             super();
         } 
 
-        private Builder(PageListLabReservationsRequest request) {
+        private Builder(ListCoursesRequest request) {
             super(request);
-            this.accountId = request.accountId;
+            this.id = request.id;
             this.page = request.page;
             this.pageSize = request.pageSize;
         } 
 
         /**
-         * AccountId.
+         * Id.
          */
-        public Builder accountId(Long accountId) {
-            this.putQueryParameter("AccountId", accountId);
-            this.accountId = accountId;
+        public Builder id(java.util.List<Long> id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
             return this;
         }
 
@@ -114,8 +114,8 @@ public class PageListLabReservationsRequest extends Request {
         }
 
         @Override
-        public PageListLabReservationsRequest build() {
-            return new PageListLabReservationsRequest(this);
+        public ListCoursesRequest build() {
+            return new ListCoursesRequest(this);
         } 
 
     } 

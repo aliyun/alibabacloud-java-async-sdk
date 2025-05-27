@@ -12,26 +12,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeLabRequest} extends {@link RequestModel}
+ * {@link DescribeCourseLessonRequest} extends {@link RequestModel}
  *
- * <p>DescribeLabRequest</p>
+ * <p>DescribeCourseLessonRequest</p>
  */
-public class DescribeLabRequest extends Request {
+public class DescribeCourseLessonRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("LabId")
+    @com.aliyun.core.annotation.NameInMap("LessonId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private Long labId;
+    private Long lessonId;
 
-    private DescribeLabRequest(Builder builder) {
+    private DescribeCourseLessonRequest(Builder builder) {
         super(builder);
-        this.labId = builder.labId;
+        this.lessonId = builder.lessonId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeLabRequest create() {
+    public static DescribeCourseLessonRequest create() {
         return builder().build();
     }
 
@@ -41,39 +41,36 @@ public class DescribeLabRequest extends Request {
     }
 
     /**
-     * @return labId
+     * @return lessonId
      */
-    public Long getLabId() {
-        return this.labId;
+    public Long getLessonId() {
+        return this.lessonId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeLabRequest, Builder> {
-        private Long labId; 
+    public static final class Builder extends Request.Builder<DescribeCourseLessonRequest, Builder> {
+        private Long lessonId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeLabRequest request) {
+        private Builder(DescribeCourseLessonRequest request) {
             super(request);
-            this.labId = request.labId;
+            this.lessonId = request.lessonId;
         } 
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>875</p>
          */
-        public Builder labId(Long labId) {
-            this.putQueryParameter("LabId", labId);
-            this.labId = labId;
+        public Builder lessonId(Long lessonId) {
+            this.putQueryParameter("LessonId", lessonId);
+            this.lessonId = lessonId;
             return this;
         }
 
         @Override
-        public DescribeLabRequest build() {
-            return new DescribeLabRequest(this);
+        public DescribeCourseLessonRequest build() {
+            return new DescribeCourseLessonRequest(this);
         } 
 
     } 

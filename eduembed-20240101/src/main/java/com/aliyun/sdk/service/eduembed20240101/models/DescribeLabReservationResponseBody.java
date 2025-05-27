@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eduembed20240101.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLabReservationResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLabReservationResponseBody</p>
@@ -40,6 +46,10 @@ public class DescribeLabReservationResponseBody extends TeaModel {
 
     public static DescribeLabReservationResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -83,6 +93,17 @@ public class DescribeLabReservationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLabReservationResponseBody model) {
+            this.code = model.code;
+            this.labReservation = model.labReservation;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * Code.
@@ -130,6 +151,12 @@ public class DescribeLabReservationResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLabReservationResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLabReservationResponseBody</p>
+     */
     public static class LabReservation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -203,6 +230,17 @@ public class DescribeLabReservationResponseBody extends TeaModel {
             private String id; 
             private Long memberCount; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabReservation model) {
+                this.accountId = model.accountId;
+                this.endTime = model.endTime;
+                this.id = model.id;
+                this.memberCount = model.memberCount;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * AccountId.

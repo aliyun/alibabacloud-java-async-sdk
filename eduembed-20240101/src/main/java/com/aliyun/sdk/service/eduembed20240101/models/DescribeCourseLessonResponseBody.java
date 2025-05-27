@@ -12,16 +12,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeLabSessionResponseBody} extends {@link TeaModel}
+ * {@link DescribeCourseLessonResponseBody} extends {@link TeaModel}
  *
- * <p>DescribeLabSessionResponseBody</p>
+ * <p>DescribeCourseLessonResponseBody</p>
  */
-public class DescribeLabSessionResponseBody extends TeaModel {
+public class DescribeCourseLessonResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @com.aliyun.core.annotation.NameInMap("LabSession")
-    private LabSession labSession;
+    @com.aliyun.core.annotation.NameInMap("CourseLesson")
+    private CourseLesson courseLesson;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -32,9 +32,9 @@ public class DescribeLabSessionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private DescribeLabSessionResponseBody(Builder builder) {
+    private DescribeCourseLessonResponseBody(Builder builder) {
         this.code = builder.code;
-        this.labSession = builder.labSession;
+        this.courseLesson = builder.courseLesson;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -44,7 +44,7 @@ public class DescribeLabSessionResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DescribeLabSessionResponseBody create() {
+    public static DescribeCourseLessonResponseBody create() {
         return builder().build();
     }
 
@@ -60,10 +60,10 @@ public class DescribeLabSessionResponseBody extends TeaModel {
     }
 
     /**
-     * @return labSession
+     * @return courseLesson
      */
-    public LabSession getLabSession() {
-        return this.labSession;
+    public CourseLesson getCourseLesson() {
+        return this.courseLesson;
     }
 
     /**
@@ -89,7 +89,7 @@ public class DescribeLabSessionResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
-        private LabSession labSession; 
+        private CourseLesson courseLesson; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -97,9 +97,9 @@ public class DescribeLabSessionResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(DescribeLabSessionResponseBody model) {
+        private Builder(DescribeCourseLessonResponseBody model) {
             this.code = model.code;
-            this.labSession = model.labSession;
+            this.courseLesson = model.courseLesson;
             this.message = model.message;
             this.requestId = model.requestId;
             this.success = model.success;
@@ -114,10 +114,10 @@ public class DescribeLabSessionResponseBody extends TeaModel {
         }
 
         /**
-         * LabSession.
+         * CourseLesson.
          */
-        public Builder labSession(LabSession labSession) {
-            this.labSession = labSession;
+        public Builder courseLesson(CourseLesson courseLesson) {
+            this.courseLesson = courseLesson;
             return this;
         }
 
@@ -145,39 +145,27 @@ public class DescribeLabSessionResponseBody extends TeaModel {
             return this;
         }
 
-        public DescribeLabSessionResponseBody build() {
-            return new DescribeLabSessionResponseBody(this);
+        public DescribeCourseLessonResponseBody build() {
+            return new DescribeCourseLessonResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link DescribeLabSessionResponseBody} extends {@link TeaModel}
+     * {@link DescribeCourseLessonResponseBody} extends {@link TeaModel}
      *
-     * <p>DescribeLabSessionResponseBody</p>
+     * <p>DescribeCourseLessonResponseBody</p>
      */
-    public static class LabSession extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("CreateTime")
-        private String createTime;
-
-        @com.aliyun.core.annotation.NameInMap("Finished")
-        private Boolean finished;
-
-        @com.aliyun.core.annotation.NameInMap("Id")
-        private String id;
-
-        @com.aliyun.core.annotation.NameInMap("LabId")
-        private Long labId;
+    public static class CourseLesson extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
 
         @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        private LabSession(Builder builder) {
-            this.createTime = builder.createTime;
-            this.finished = builder.finished;
-            this.id = builder.id;
-            this.labId = builder.labId;
+        private CourseLesson(Builder builder) {
+            this.content = builder.content;
             this.url = builder.url;
         }
 
@@ -185,36 +173,15 @@ public class DescribeLabSessionResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static LabSession create() {
+        public static CourseLesson create() {
             return builder().build();
         }
 
         /**
-         * @return createTime
+         * @return content
          */
-        public String getCreateTime() {
-            return this.createTime;
-        }
-
-        /**
-         * @return finished
-         */
-        public Boolean getFinished() {
-            return this.finished;
-        }
-
-        /**
-         * @return id
-         */
-        public String getId() {
-            return this.id;
-        }
-
-        /**
-         * @return labId
-         */
-        public Long getLabId() {
-            return this.labId;
+        public String getContent() {
+            return this.content;
         }
 
         /**
@@ -225,52 +192,22 @@ public class DescribeLabSessionResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String createTime; 
-            private Boolean finished; 
-            private String id; 
-            private Long labId; 
+            private String content; 
             private String url; 
 
             private Builder() {
             } 
 
-            private Builder(LabSession model) {
-                this.createTime = model.createTime;
-                this.finished = model.finished;
-                this.id = model.id;
-                this.labId = model.labId;
+            private Builder(CourseLesson model) {
+                this.content = model.content;
                 this.url = model.url;
             } 
 
             /**
-             * CreateTime.
+             * Content.
              */
-            public Builder createTime(String createTime) {
-                this.createTime = createTime;
-                return this;
-            }
-
-            /**
-             * Finished.
-             */
-            public Builder finished(Boolean finished) {
-                this.finished = finished;
-                return this;
-            }
-
-            /**
-             * Id.
-             */
-            public Builder id(String id) {
-                this.id = id;
-                return this;
-            }
-
-            /**
-             * LabId.
-             */
-            public Builder labId(Long labId) {
-                this.labId = labId;
+            public Builder content(String content) {
+                this.content = content;
                 return this;
             }
 
@@ -282,8 +219,8 @@ public class DescribeLabSessionResponseBody extends TeaModel {
                 return this;
             }
 
-            public LabSession build() {
-                return new LabSession(this);
+            public CourseLesson build() {
+                return new CourseLesson(this);
             } 
 
         } 
