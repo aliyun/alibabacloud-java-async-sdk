@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccountAccessIdResponseBody} extends {@link TeaModel}
  *
  * <p>ListAccountAccessIdResponseBody</p>
@@ -15,7 +21,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -42,6 +48,10 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -52,7 +62,7 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,13 +89,27 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAccountAccessIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,15 +117,18 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +136,10 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +147,14 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +167,12 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccountAccessIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccountAccessIdResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessId")
         private String accessId;
@@ -232,8 +271,24 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             private String cloudCode; 
             private Long subUserId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessId = model.accessId;
+                this.accessIdMd5 = model.accessIdMd5;
+                this.accountId = model.accountId;
+                this.accountStr = model.accountStr;
+                this.bound = model.bound;
+                this.cloudCode = model.cloudCode;
+                this.subUserId = model.subUserId;
+            } 
+
             /**
-             * The AccessKey ID of the cloud account that is added to the threat analysis feature.
+             * <p>The AccessKey ID of the cloud account that is added to the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ABCXXXXXXXX</p>
              */
             public Builder accessId(String accessId) {
                 this.accessId = accessId;
@@ -241,7 +296,10 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * The MD5 hash value of the AccessKey ID.
+             * <p>The MD5 hash value of the AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>abcXXXXXXXX</p>
              */
             public Builder accessIdMd5(String accessIdMd5) {
                 this.accessIdMd5 = accessIdMd5;
@@ -249,7 +307,10 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cloud account.
+             * <p>The ID of the cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123xxxxxxx</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -257,7 +318,10 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the cloud account to which the AccessKey ID belongs. The value is in the following format: Alibaba Cloud account ID|Alibaba Cloud account username|AccessKey ID.
+             * <p>The information about the cloud account to which the AccessKey ID belongs. The value is in the following format: Alibaba Cloud account ID|Alibaba Cloud account username|AccessKey ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123xxxxxx|xxxx|ABCXXXXX</p>
              */
             public Builder accountStr(String accountStr) {
                 this.accountStr = accountStr;
@@ -265,11 +329,14 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cloud account to which the AccessKey ID belongs is added to the threat analysis feature. Valid values:
-             * <p>
+             * <p>Indicates whether the cloud account to which the AccessKey ID belongs is added to the threat analysis feature. Valid values:</p>
+             * <ul>
+             * <li>0: no</li>
+             * <li>1: yes</li>
+             * </ul>
              * 
-             * *   0: no
-             * *   1: yes
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder bound(Integer bound) {
                 this.bound = bound;
@@ -277,7 +344,10 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the cloud service provider.
+             * <p>The code of the cloud service provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hcloud</p>
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -285,7 +355,10 @@ public class ListAccountAccessIdResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to add the third-party cloud account.
+             * <p>The ID of the Alibaba Cloud account that is used to add the third-party cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ABCXXXXXXXX</p>
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;

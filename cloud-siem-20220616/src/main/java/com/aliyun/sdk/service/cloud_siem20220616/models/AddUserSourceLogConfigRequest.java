@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUserSourceLogConfigRequest} extends {@link RequestModel}
  *
  * <p>AddUserSourceLogConfigRequest</p>
@@ -60,7 +66,7 @@ public class AddUserSourceLogConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,11 +145,14 @@ public class AddUserSourceLogConfigRequest extends Request {
         } 
 
         /**
-         * Specifies whether to add logs or delete added logs. Valid values:
-         * <p>
+         * <p>Specifies whether to add logs or delete added logs. Valid values:</p>
+         * <ul>
+         * <li>-1: deletes added logs.</li>
+         * <li>0: adds logs.</li>
+         * </ul>
          * 
-         * *   \-1: deletes added logs.
-         * *   0: adds logs.
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder deleted(Integer deleted) {
             this.putBodyParameter("Deleted", deleted);
@@ -152,7 +161,10 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * The display details of the Logstore.
+         * <p>The display details of the Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai.siem-project.siem-logstore</p>
          */
         public Builder disPlayLine(String disPlayLine) {
             this.putBodyParameter("DisPlayLine", disPlayLine);
@@ -161,11 +173,14 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
-         * <p>
+         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * </ul>
          * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -174,7 +189,10 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * The log code.
+         * <p>The log code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_siem_aegis_proc</p>
          */
         public Builder sourceLogCode(String sourceLogCode) {
             this.putBodyParameter("SourceLogCode", sourceLogCode);
@@ -183,7 +201,11 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * The details of the Logstore that you want to use in the JSON string format.
+         * <p>The details of the Logstore that you want to use in the JSON string format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;project&quot;:&quot;wafnew-project-1335759343513432-cn-hangzhou&quot;,&quot;logStore&quot;:&quot;wafnew-logstore&quot;,&quot;regionCode&quot;:&quot;cn-hangzhou&quot;,&quot;prodCode&quot;:&quot;waf&quot;}</p>
          */
         public Builder sourceLogInfo(String sourceLogInfo) {
             this.putBodyParameter("SourceLogInfo", sourceLogInfo);
@@ -192,7 +214,10 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * The code of the cloud service.
+         * <p>The code of the cloud service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas</p>
          */
         public Builder sourceProdCode(String sourceProdCode) {
             this.putBodyParameter("SourceProdCode", sourceProdCode);
@@ -201,7 +226,11 @@ public class AddUserSourceLogConfigRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account.
+         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123XXXXXX</p>
          */
         public Builder subUserId(Long subUserId) {
             this.putBodyParameter("SubUserId", subUserId);

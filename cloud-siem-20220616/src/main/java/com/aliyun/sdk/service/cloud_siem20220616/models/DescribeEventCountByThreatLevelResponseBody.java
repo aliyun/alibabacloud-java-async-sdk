@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventCountByThreatLevelResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventCountByThreatLevelResponseBody</p>
@@ -40,6 +46,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
 
     public static DescribeEventCountByThreatLevelResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventCountByThreatLevelResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +117,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +128,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +170,12 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventCountByThreatLevelResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventCountByThreatLevelResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventNum")
         private Long eventNum;
@@ -208,8 +250,22 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             private Long mediumLevelEventNum; 
             private Long undealEventNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.eventNum = model.eventNum;
+                this.highLevelEventNum = model.highLevelEventNum;
+                this.lowLevelEventNum = model.lowLevelEventNum;
+                this.mediumLevelEventNum = model.mediumLevelEventNum;
+                this.undealEventNum = model.undealEventNum;
+            } 
+
             /**
-             * The total number of events.
+             * <p>The total number of events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder eventNum(Long eventNum) {
                 this.eventNum = eventNum;
@@ -217,7 +273,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk events.
+             * <p>The number of high-risk events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder highLevelEventNum(Long highLevelEventNum) {
                 this.highLevelEventNum = highLevelEventNum;
@@ -225,7 +284,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk events.
+             * <p>The number of low-risk events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>52</p>
              */
             public Builder lowLevelEventNum(Long lowLevelEventNum) {
                 this.lowLevelEventNum = lowLevelEventNum;
@@ -233,7 +295,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk events.
+             * <p>The number of medium-risk events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder mediumLevelEventNum(Long mediumLevelEventNum) {
                 this.mediumLevelEventNum = mediumLevelEventNum;
@@ -241,7 +306,10 @@ public class DescribeEventCountByThreatLevelResponseBody extends TeaModel {
             }
 
             /**
-             * The number of unhandled events.
+             * <p>The number of unhandled events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75</p>
              */
             public Builder undealEventNum(Long undealEventNum) {
                 this.undealEventNum = undealEventNum;

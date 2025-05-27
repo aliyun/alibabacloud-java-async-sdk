@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataSourceParametersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataSourceParametersResponseBody</p>
  */
 public class DescribeDataSourceParametersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,19 +55,30 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataSourceParametersResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataSourceParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataSourceParametersResponseBody</p>
+     */
     public static class ParamValue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
@@ -108,8 +135,19 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             private String label; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ParamValue model) {
+                this.label = model.label;
+                this.value = model.value;
+            } 
+
             /**
-             * The display value.
+             * <p>The display value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>guangzhou</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -117,7 +155,10 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The actual value.
+             * <p>The actual value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-guangzhou</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -131,6 +172,12 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataSourceParametersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataSourceParametersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanEditted")
         private Integer canEditted;
@@ -166,7 +213,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         private String paraType;
 
         @com.aliyun.core.annotation.NameInMap("ParamValue")
-        private java.util.List < ParamValue> paramValue;
+        private java.util.List<ParamValue> paramValue;
 
         @com.aliyun.core.annotation.NameInMap("Required")
         private Integer required;
@@ -279,7 +326,7 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
         /**
          * @return paramValue
          */
-        public java.util.List < ParamValue> getParamValue() {
+        public java.util.List<ParamValue> getParamValue() {
             return this.paramValue;
         }
 
@@ -309,16 +356,39 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             private Integer paraLevel; 
             private String paraName; 
             private String paraType; 
-            private java.util.List < ParamValue> paramValue; 
+            private java.util.List<ParamValue> paramValue; 
             private Integer required; 
             private String title; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.canEditted = model.canEditted;
+                this.cloudCode = model.cloudCode;
+                this.dataSourceType = model.dataSourceType;
+                this.defaultValue = model.defaultValue;
+                this.disabled = model.disabled;
+                this.formatCheck = model.formatCheck;
+                this.hit = model.hit;
+                this.paraCode = model.paraCode;
+                this.paraLevel = model.paraLevel;
+                this.paraName = model.paraName;
+                this.paraType = model.paraType;
+                this.paramValue = model.paramValue;
+                this.required = model.required;
+                this.title = model.title;
+            } 
+
             /**
-             * Indicates whether the edit operation is supported. Valid values:
-             * <p>
+             * <p>Indicates whether the edit operation is supported. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong></li>
+             * <li><strong>1</strong></li>
+             * </ul>
              * 
-             * *   **0**
-             * *   **1**
+             * <strong>example:</strong>
+             * <p>wafApi</p>
              */
             public Builder canEditted(Integer canEditted) {
                 this.canEditted = canEditted;
@@ -326,12 +396,15 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the cloud service provider. Valid values:
-             * <p>
+             * <p>The code of the cloud service provider. Valid values:</p>
+             * <ul>
+             * <li><strong>qcloud</strong>: Tencent Cloud</li>
+             * <li><strong>aliyun</strong>: Alibaba Cloud</li>
+             * <li><strong>hcloud</strong>: Huawei Cloud</li>
+             * </ul>
              * 
-             * *   **qcloud**: Tencent Cloud
-             * *   **aliyun**: Alibaba Cloud
-             * *   **hcloud**: Huawei Cloud
+             * <strong>example:</strong>
+             * <p>hcloud</p>
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -339,12 +412,15 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li><strong>obs</strong>: Huawei Cloud Object Storage Service (OBS)</li>
+             * <li><strong>wafApi</strong>: download API of Tencent Cloud Web Application Firewall (WAF)</li>
+             * <li><strong>ckafka</strong>: Tencent Cloud TDMQ for CKafka</li>
+             * </ul>
              * 
-             * *   **obs**: Huawei Cloud Object Storage Service (OBS)
-             * *   **wafApi**: download API of Tencent Cloud Web Application Firewall (WAF)
-             * *   **ckafka**: Tencent Cloud TDMQ for CKafka
+             * <strong>example:</strong>
+             * <p>obs</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -352,7 +428,10 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The default value of the parameter.
+             * <p>The default value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wafApi</p>
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
@@ -360,11 +439,14 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the modification operation is forbidden. Valid values:
-             * <p>
+             * <p>Indicates whether the modification operation is forbidden. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
              * 
-             * *   **true**
-             * *   **false**
+             * <strong>example:</strong>
+             * <p>wafApi</p>
              */
             public Builder disabled(Boolean disabled) {
                 this.disabled = disabled;
@@ -372,7 +454,10 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to check the parameter format.
+             * <p>The method that is used to check the parameter format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>email</p>
              */
             public Builder formatCheck(String formatCheck) {
                 this.formatCheck = formatCheck;
@@ -380,7 +465,10 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The additional information.
+             * <p>The additional information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>obs docment</p>
              */
             public Builder hit(String hit) {
                 this.hit = hit;
@@ -388,7 +476,10 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the parameter.
+             * <p>The code of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region_code</p>
              */
             public Builder paraCode(String paraCode) {
                 this.paraCode = paraCode;
@@ -396,11 +487,14 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter level. Valid values:
-             * <p>
+             * <p>The parameter level. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: the parameters of the data source</li>
+             * <li><strong>2</strong>: the parameters of the log</li>
+             * </ul>
              * 
-             * *   **1**: the parameters of the data source
-             * *   **2**: the parameters of the log
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder paraLevel(Integer paraLevel) {
                 this.paraLevel = paraLevel;
@@ -408,7 +502,10 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the parameter.
+             * <p>The name of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region local</p>
              */
             public Builder paraName(String paraName) {
                 this.paraName = paraName;
@@ -416,7 +513,10 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The data type of the parameter.
+             * <p>The data type of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder paraType(String paraType) {
                 this.paraType = paraType;
@@ -424,19 +524,22 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
              */
-            public Builder paramValue(java.util.List < ParamValue> paramValue) {
+            public Builder paramValue(java.util.List<ParamValue> paramValue) {
                 this.paramValue = paramValue;
                 return this;
             }
 
             /**
-             * Indicates whether the parameter is required. Valid values:
-             * <p>
+             * <p>Indicates whether the parameter is required. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: required</li>
+             * <li><strong>0</strong>: optional</li>
+             * </ul>
              * 
-             * *   **1**: required
-             * *   **0**: optional
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder required(Integer required) {
                 this.required = required;
@@ -444,7 +547,10 @@ public class DescribeDataSourceParametersResponseBody extends TeaModel {
             }
 
             /**
-             * The note for the parameter value.
+             * <p>The note for the parameter value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>obs bucket name</p>
              */
             public Builder title(String title) {
                 this.title = title;

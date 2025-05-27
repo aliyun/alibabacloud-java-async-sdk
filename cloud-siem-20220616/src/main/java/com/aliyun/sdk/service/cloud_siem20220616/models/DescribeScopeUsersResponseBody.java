@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeScopeUsersResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeScopeUsersResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -42,6 +48,10 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -52,7 +62,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,13 +89,27 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeScopeUsersResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,15 +117,21 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +170,12 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeScopeUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScopeUsersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
@@ -142,7 +184,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         private String cloudCode;
 
         @com.aliyun.core.annotation.NameInMap("Domains")
-        private java.util.List < String > domains;
+        private java.util.List<String> domains;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -187,7 +229,7 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         /**
          * @return domains
          */
-        public java.util.List < String > getDomains() {
+        public java.util.List<String> getDomains() {
             return this.domains;
         }
 
@@ -215,13 +257,28 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
         public static final class Builder {
             private Long aliUid; 
             private String cloudCode; 
-            private java.util.List < String > domains; 
+            private java.util.List<String> domains; 
             private String instanceId; 
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliUid = model.aliUid;
+                this.cloudCode = model.cloudCode;
+                this.domains = model.domains;
+                this.instanceId = model.instanceId;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
-             * The ID of the security information and event management (SIEM) user.
+             * <p>The ID of the security information and event management (SIEM) user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -229,10 +286,14 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 云code。  取值：
-             * <p>
-             * - qcloud：腾讯云
-             * - hcloud：华为云
+             * <p>云code。  取值：</p>
+             * <ul>
+             * <li>qcloud：腾讯云</li>
+             * <li>hcloud：华为云</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>qcloud</p>
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -240,15 +301,21 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the domain names that are protected by the WAF instance.
+             * <p>An array consisting of the domain names that are protected by the WAF instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[123.com, 456.com]</p>
              */
-            public Builder domains(java.util.List < String > domains) {
+            public Builder domains(java.util.List<String> domains) {
                 this.domains = domains;
                 return this;
             }
 
             /**
-             * The ID of the Web Application Firewall (WAF) instance.
+             * <p>The ID of the Web Application Firewall (WAF) instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf-cn-tl123ast****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -256,7 +323,10 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * 多云用户ID。
+             * <p>多云用户ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -264,7 +334,10 @@ public class DescribeScopeUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The username.
+             * <p>The username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test001</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

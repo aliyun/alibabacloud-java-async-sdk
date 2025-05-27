@@ -12,14 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeDisposeAndPlaybookRequest} extends {@link RequestModel}
+ * {@link ListEntitiesRequest} extends {@link RequestModel}
  *
- * <p>DescribeDisposeAndPlaybookRequest</p>
+ * <p>ListEntitiesRequest</p>
  */
-public class DescribeDisposeAndPlaybookRequest extends Request {
+public class ListEntitiesRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Integer currentPage;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EntityName")
+    private String entityName;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EntityType")
@@ -31,10 +36,20 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("IncidentUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String incidentUuid;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsMalwareEntity")
+    private String isMalwareEntity;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MalwareType")
+    private String malwareType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Body
@@ -49,12 +64,15 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RoleType")
     private Integer roleType;
 
-    private DescribeDisposeAndPlaybookRequest(Builder builder) {
+    private ListEntitiesRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
+        this.entityName = builder.entityName;
         this.entityType = builder.entityType;
         this.entityUuid = builder.entityUuid;
         this.incidentUuid = builder.incidentUuid;
+        this.isMalwareEntity = builder.isMalwareEntity;
+        this.malwareType = builder.malwareType;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.roleFor = builder.roleFor;
@@ -65,7 +83,7 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeDisposeAndPlaybookRequest create() {
+    public static ListEntitiesRequest create() {
         return builder().build();
     }
 
@@ -79,6 +97,13 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
      */
     public Integer getCurrentPage() {
         return this.currentPage;
+    }
+
+    /**
+     * @return entityName
+     */
+    public String getEntityName() {
+        return this.entityName;
     }
 
     /**
@@ -100,6 +125,20 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
      */
     public String getIncidentUuid() {
         return this.incidentUuid;
+    }
+
+    /**
+     * @return isMalwareEntity
+     */
+    public String getIsMalwareEntity() {
+        return this.isMalwareEntity;
+    }
+
+    /**
+     * @return malwareType
+     */
+    public String getMalwareType() {
+        return this.malwareType;
     }
 
     /**
@@ -130,11 +169,14 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         return this.roleType;
     }
 
-    public static final class Builder extends Request.Builder<DescribeDisposeAndPlaybookRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListEntitiesRequest, Builder> {
         private Integer currentPage; 
+        private String entityName; 
         private String entityType; 
         private String entityUuid; 
         private String incidentUuid; 
+        private String isMalwareEntity; 
+        private String malwareType; 
         private Integer pageSize; 
         private String regionId; 
         private Long roleFor; 
@@ -144,12 +186,15 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDisposeAndPlaybookRequest request) {
+        private Builder(ListEntitiesRequest request) {
             super(request);
             this.currentPage = request.currentPage;
+            this.entityName = request.entityName;
             this.entityType = request.entityType;
             this.entityUuid = request.entityUuid;
             this.incidentUuid = request.incidentUuid;
+            this.isMalwareEntity = request.isMalwareEntity;
+            this.malwareType = request.malwareType;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.roleFor = request.roleFor;
@@ -157,7 +202,7 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         } 
 
         /**
-         * <p>The page number. Pages start from page 1.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -169,15 +214,16 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         }
 
         /**
-         * <p>The entity type. Valid values:</p>
-         * <ul>
-         * <li>ip</li>
-         * <li>process</li>
-         * <li>file</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>ip</p>
+         * EntityName.
+         */
+        public Builder entityName(String entityName) {
+            this.putBodyParameter("EntityName", entityName);
+            this.entityName = entityName;
+            return this;
+        }
+
+        /**
+         * EntityType.
          */
         public Builder entityType(String entityType) {
             this.putBodyParameter("EntityType", entityType);
@@ -195,7 +241,7 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         }
 
         /**
-         * <p>The UUID of the event.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
@@ -207,7 +253,25 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page. Maximum value: 100.</p>
+         * IsMalwareEntity.
+         */
+        public Builder isMalwareEntity(String isMalwareEntity) {
+            this.putBodyParameter("IsMalwareEntity", isMalwareEntity);
+            this.isMalwareEntity = isMalwareEntity;
+            return this;
+        }
+
+        /**
+         * MalwareType.
+         */
+        public Builder malwareType(String malwareType) {
+            this.putBodyParameter("MalwareType", malwareType);
+            this.malwareType = malwareType;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -219,14 +283,7 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         }
 
         /**
-         * <p>The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:</p>
-         * <ul>
-         * <li>cn-hangzhou: Your assets reside in regions inside China.</li>
-         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -235,10 +292,7 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         }
 
         /**
-         * <p>The ID of the account that you switch from the management account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>113091674488****</p>
+         * RoleFor.
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -247,14 +301,7 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         }
 
         /**
-         * <p>The type of the view. Valid values:</p>
-         * <ul>
-         * <li>0: the current Alibaba Cloud account</li>
-         * <li>1: the global account</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>1</p>
+         * RoleType.
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -263,8 +310,8 @@ public class DescribeDisposeAndPlaybookRequest extends Request {
         }
 
         @Override
-        public DescribeDisposeAndPlaybookRequest build() {
-            return new DescribeDisposeAndPlaybookRequest(this);
+        public ListEntitiesRequest build() {
+            return new ListEntitiesRequest(this);
         } 
 
     } 

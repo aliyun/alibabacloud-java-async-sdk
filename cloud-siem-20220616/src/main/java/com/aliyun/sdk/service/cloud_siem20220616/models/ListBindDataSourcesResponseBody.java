@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBindDataSourcesResponseBody} extends {@link TeaModel}
  *
  * <p>ListBindDataSourcesResponseBody</p>
  */
 public class ListBindDataSourcesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,19 +55,30 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListBindDataSourcesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListBindDataSourcesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBindDataSourcesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -192,8 +219,26 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             private Integer logCount; 
             private Integer taskCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.cloudCode = model.cloudCode;
+                this.dataSourceInstanceId = model.dataSourceInstanceId;
+                this.dataSourceName = model.dataSourceName;
+                this.dataSourceRemark = model.dataSourceRemark;
+                this.dataSourceType = model.dataSourceType;
+                this.logCount = model.logCount;
+                this.taskCount = model.taskCount;
+            } 
+
             /**
-             * The ID of the cloud account.
+             * <p>The ID of the cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123xxxxxxx</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -201,7 +246,10 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the cloud account.
+             * <p>The username of the cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas_tq_account_xxxx</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -209,12 +257,15 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the cloud service provider. Valid values:
-             * <p>
+             * <p>The code of the cloud service provider. Valid values:</p>
+             * <ul>
+             * <li>qcloud: Tencent Cloud</li>
+             * <li>aliyun: Alibaba Cloud</li>
+             * <li>hcloud: Huawei Cloud</li>
+             * </ul>
              * 
-             * *   qcloud: Tencent Cloud
-             * *   aliyun: Alibaba Cloud
-             * *   hcloud: Huawei Cloud
+             * <strong>example:</strong>
+             * <p>hcloud</p>
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -222,7 +273,10 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.
+             * <p>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>220ba97c9d1fdb0b9c7e8c7ca328d7ea</p>
              */
             public Builder dataSourceInstanceId(String dataSourceInstanceId) {
                 this.dataSourceInstanceId = dataSourceInstanceId;
@@ -230,7 +284,10 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * <p>The name of the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_kafka</p>
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -238,7 +295,10 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks on the data source.
+             * <p>The remarks on the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_kafka</p>
              */
             public Builder dataSourceRemark(String dataSourceRemark) {
                 this.dataSourceRemark = dataSourceRemark;
@@ -246,12 +306,15 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li>obs: Huawei Cloud Object Storage Service (OBS)</li>
+             * <li>wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</li>
+             * <li>ckafka: Tencent Cloud Kafka (CKafka)</li>
+             * </ul>
              * 
-             * *   obs: Huawei Cloud Object Storage Service (OBS)
-             * *   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)
-             * *   ckafka: Tencent Cloud Kafka (CKafka)
+             * <strong>example:</strong>
+             * <p>obs</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -259,7 +322,10 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of logs that are added within the data source.
+             * <p>The number of logs that are added within the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder logCount(Integer logCount) {
                 this.logCount = logCount;
@@ -267,7 +333,10 @@ public class ListBindDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of existing tasks that are created to add logs within the data source.
+             * <p>The number of existing tasks that are created to add logs within the data source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder taskCount(Integer taskCount) {
                 this.taskCount = taskCount;

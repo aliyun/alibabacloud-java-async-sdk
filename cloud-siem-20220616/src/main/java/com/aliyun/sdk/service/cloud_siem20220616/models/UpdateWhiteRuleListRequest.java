@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateWhiteRuleListRequest} extends {@link RequestModel}
  *
  * <p>UpdateWhiteRuleListRequest</p>
@@ -55,7 +61,7 @@ public class UpdateWhiteRuleListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -125,7 +131,33 @@ public class UpdateWhiteRuleListRequest extends Request {
         } 
 
         /**
-         * The alert whitelist rule. The value is a JSON object.
+         * <p>The alert whitelist rule. The value is a JSON object.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;alertName&quot;: &quot;webshell&quot;,
+         *             &quot;alertNameId&quot;: &quot;webshell&quot;,
+         *             &quot;alertType&quot;: &quot;command&quot;,
+         *             &quot;alertTypeId&quot;: &quot;command&quot;,
+         *             &quot;expression&quot;: {
+         *                   &quot;status&quot;: 1,
+         *                   &quot;conditions&quot;: [
+         *                         {
+         *                               &quot;isNot&quot;: false,
+         *                               &quot;left&quot;: {
+         *                                     &quot;value&quot;: &quot;file_path&quot;
+         *                               },
+         *                               &quot;operator&quot;: &quot;gt&quot;,
+         *                               &quot;right&quot;: {
+         *                                     &quot;value&quot;: &quot;cp&quot;
+         *                               }
+         *                         }
+         *                   ]
+         *             }
+         *       }
+         * ]</p>
          */
         public Builder expression(String expression) {
             this.putBodyParameter("Expression", expression);
@@ -134,7 +166,10 @@ public class UpdateWhiteRuleListRequest extends Request {
         }
 
         /**
-         * The UUID of the event.
+         * <p>The UUID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
@@ -143,11 +178,14 @@ public class UpdateWhiteRuleListRequest extends Request {
         }
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
-         * <p>
+         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * </ul>
          * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -174,7 +212,11 @@ public class UpdateWhiteRuleListRequest extends Request {
         }
 
         /**
-         * The unique ID of the whitelist rule.
+         * <p>The unique ID of the whitelist rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder whiteRuleId(Long whiteRuleId) {
             this.putBodyParameter("WhiteRuleId", whiteRuleId);

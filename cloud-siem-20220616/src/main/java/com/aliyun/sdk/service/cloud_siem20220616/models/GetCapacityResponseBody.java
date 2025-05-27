@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCapacityResponseBody} extends {@link TeaModel}
  *
  * <p>GetCapacityResponseBody</p>
@@ -30,6 +36,10 @@ public class GetCapacityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,8 +58,16 @@ public class GetCapacityResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetCapacityResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The information about the storage capacity.
+         * <p>The information about the storage capacity.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +75,10 @@ public class GetCapacityResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>27D27DCB-D76B-5064-8B3B-0900DEF7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class GetCapacityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetCapacityResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetCapacityResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExistLogStore")
         private Boolean existLogStore;
@@ -120,12 +147,24 @@ public class GetCapacityResponseBody extends TeaModel {
             private Long preservedCapacity; 
             private Double usedCapacity; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.existLogStore = model.existLogStore;
+                this.preservedCapacity = model.preservedCapacity;
+                this.usedCapacity = model.usedCapacity;
+            } 
+
             /**
-             * Indicates whether the Logstores for the threat analysis feature exist on the user side. Valid values:
-             * <p>
+             * <p>Indicates whether the Logstores for the threat analysis feature exist on the user side. Valid values:</p>
+             * <ul>
+             * <li>true: The logs are in the normal state. The log analysis feature is available.</li>
+             * <li>false: The logs are being cleared. The log analysis feature is unavailable.</li>
+             * </ul>
              * 
-             * *   true: The logs are in the normal state. The log analysis feature is available.
-             * *   false: The logs are being cleared. The log analysis feature is unavailable.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder existLogStore(Boolean existLogStore) {
                 this.existLogStore = existLogStore;
@@ -133,7 +172,10 @@ public class GetCapacityResponseBody extends TeaModel {
             }
 
             /**
-             * The purchased storage capacity of the threat analysis feature. Unit: GB.
+             * <p>The purchased storage capacity of the threat analysis feature. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9000</p>
              */
             public Builder preservedCapacity(Long preservedCapacity) {
                 this.preservedCapacity = preservedCapacity;
@@ -141,7 +183,10 @@ public class GetCapacityResponseBody extends TeaModel {
             }
 
             /**
-             * The billable storage capacity of the threat analysis feature. Unit: GB.
+             * <p>The billable storage capacity of the threat analysis feature. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder usedCapacity(Double usedCapacity) {
                 this.usedCapacity = usedCapacity;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlertSceneByEventResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAlertSceneByEventResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -42,6 +48,10 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -52,7 +62,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,13 +89,27 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAlertSceneByEventResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,15 +117,21 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +170,12 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAlertSceneByEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertSceneByEventResponseBody</p>
+     */
     public static class Targets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -145,7 +187,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
         private String value;
 
         @com.aliyun.core.annotation.NameInMap("Values")
-        private java.util.List < String > values;
+        private java.util.List<String> values;
 
         private Targets(Builder builder) {
             this.name = builder.name;
@@ -186,7 +228,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
         /**
          * @return values
          */
-        public java.util.List < String > getValues() {
+        public java.util.List<String> getValues() {
             return this.values;
         }
 
@@ -194,10 +236,23 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             private String name; 
             private String type; 
             private String value; 
-            private java.util.List < String > values; 
+            private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Targets model) {
+                this.name = model.name;
+                this.type = model.type;
+                this.value = model.value;
+                this.values = model.values;
+            } 
 
             /**
-             * The display name of the entity attribute field that can be added to the whitelist.
+             * <p>The display name of the entity attribute field that can be added to the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host uuid</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -205,7 +260,10 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * The entity attribute field that can be added to the whitelist.
+             * <p>The entity attribute field that can be added to the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>host_uuid</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -213,7 +271,10 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * The right operand that is displayed by default in the whitelist rule.
+             * <p>The right operand that is displayed by default in the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>441862da-a539-4cc0-a00d-47395582****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -221,9 +282,12 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * The supported right operands of the whitelist rule.
+             * <p>The supported right operands of the whitelist rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;441862da-a539-4cc0-a00d-473955826881&quot;]</p>
              */
-            public Builder values(java.util.List < String > values) {
+            public Builder values(java.util.List<String> values) {
                 this.values = values;
                 return this;
             }
@@ -235,6 +299,12 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAlertSceneByEventResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertSceneByEventResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
@@ -255,7 +325,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
         private String alertTypeId;
 
         @com.aliyun.core.annotation.NameInMap("Targets")
-        private java.util.List < Targets> targets;
+        private java.util.List<Targets> targets;
 
         private Data(Builder builder) {
             this.alertName = builder.alertName;
@@ -320,7 +390,7 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
         /**
          * @return targets
          */
-        public java.util.List < Targets> getTargets() {
+        public java.util.List<Targets> getTargets() {
             return this.targets;
         }
 
@@ -331,10 +401,26 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             private String alertTileId; 
             private String alertType; 
             private String alertTypeId; 
-            private java.util.List < Targets> targets; 
+            private java.util.List<Targets> targets; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alertName = model.alertName;
+                this.alertNameId = model.alertNameId;
+                this.alertTile = model.alertTile;
+                this.alertTileId = model.alertTileId;
+                this.alertType = model.alertType;
+                this.alertTypeId = model.alertTypeId;
+                this.targets = model.targets;
+            } 
 
             /**
-             * The alert name. The display name of the alert name varies based on the language of the system, such as Chinese and English.
+             * <p>The alert name. The display name of the alert name varies based on the language of the system, such as Chinese and English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>login_common_ip</p>
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -342,7 +428,10 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert name.
+             * <p>The ID of the alert name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>login_common_ip</p>
              */
             public Builder alertNameId(String alertNameId) {
                 this.alertNameId = alertNameId;
@@ -350,7 +439,10 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * The alert title. The display name of the alert title varies based on the language of the system, such as Chinese and English.
+             * <p>The alert title. The display name of the alert title varies based on the language of the system, such as Chinese and English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual Logon-login_common_ip</p>
              */
             public Builder alertTile(String alertTile) {
                 this.alertTile = alertTile;
@@ -358,7 +450,10 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert title.
+             * <p>The ID of the alert title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual Logon-login_common_ip</p>
              */
             public Builder alertTileId(String alertTileId) {
                 this.alertTileId = alertTileId;
@@ -366,7 +461,10 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * The alert type. The display name of the alert type varies based on the language of the system, such as Chinese and English.
+             * <p>The alert type. The display name of the alert type varies based on the language of the system, such as Chinese and English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual Logon</p>
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -374,7 +472,10 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert type.
+             * <p>The ID of the alert type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Unusual Logon</p>
              */
             public Builder alertTypeId(String alertTypeId) {
                 this.alertTypeId = alertTypeId;
@@ -382,9 +483,12 @@ public class DescribeAlertSceneByEventResponseBody extends TeaModel {
             }
 
             /**
-             * The objects that can be added to the whitelist.
+             * <p>The objects that can be added to the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;Type&quot;: &quot;host_uuid&quot;,&quot;Value&quot;: &quot;441862da-a539-4cc0-a00d-473955826881&quot;,&quot;Values&quot;: [&quot;441862da-a539-4cc0-a00d-473955826881&quot;],&quot;Name&quot;: &quot;${aliyun.siem.entity.host_uuid}&quot;}]</p>
              */
-            public Builder targets(java.util.List < Targets> targets) {
+            public Builder targets(java.util.List<Targets> targets) {
                 this.targets = targets;
                 return this;
             }

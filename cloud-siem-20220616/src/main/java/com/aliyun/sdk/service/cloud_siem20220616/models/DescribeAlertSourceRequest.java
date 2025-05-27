@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlertSourceRequest} extends {@link RequestModel}
  *
  * <p>DescribeAlertSourceRequest</p>
@@ -17,7 +23,7 @@ public class DescribeAlertSourceRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Level")
-    private java.util.List < String > level;
+    private java.util.List<String> level;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -53,7 +59,7 @@ public class DescribeAlertSourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +74,7 @@ public class DescribeAlertSourceRequest extends Request {
     /**
      * @return level
      */
-    public java.util.List < String > getLevel() {
+    public java.util.List<String> getLevel() {
         return this.level;
     }
 
@@ -102,7 +108,7 @@ public class DescribeAlertSourceRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeAlertSourceRequest, Builder> {
         private Long endTime; 
-        private java.util.List < String > level; 
+        private java.util.List<String> level; 
         private String regionId; 
         private Long roleFor; 
         private Integer roleType; 
@@ -123,7 +129,10 @@ public class DescribeAlertSourceRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Unit: milliseconds.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1577808000000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -132,25 +141,31 @@ public class DescribeAlertSourceRequest extends Request {
         }
 
         /**
-         * The risk levels. The value is a JSON array. Valid values:
-         * <p>
+         * <p>The risk levels. The value is a JSON array. Valid values:</p>
+         * <ul>
+         * <li>serious: high</li>
+         * <li>suspicious: medium</li>
+         * <li>remind: low</li>
+         * </ul>
          * 
-         * *   serious: high
-         * *   suspicious: medium
-         * *   remind: low
+         * <strong>example:</strong>
+         * <p>[&quot;serious&quot;,&quot;suspicious&quot;,&quot;remind&quot;]</p>
          */
-        public Builder level(java.util.List < String > level) {
+        public Builder level(java.util.List<String> level) {
             this.putBodyParameter("Level", level);
             this.level = level;
             return this;
         }
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
-         * <p>
+         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * </ul>
          * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -159,7 +174,10 @@ public class DescribeAlertSourceRequest extends Request {
         }
 
         /**
-         * The ID of the account that you switch from the management account.
+         * <p>The ID of the account that you switch from the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -168,10 +186,14 @@ public class DescribeAlertSourceRequest extends Request {
         }
 
         /**
-         * The type of the view. Valid values:
-         * <p>
-         * - 0: the current Alibaba Cloud account
-         * - 1: the global account
+         * <p>The type of the view. Valid values:</p>
+         * <ul>
+         * <li>0: the current Alibaba Cloud account</li>
+         * <li>1: the global account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -180,7 +202,10 @@ public class DescribeAlertSourceRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Unit: milliseconds.
+         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1577808000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

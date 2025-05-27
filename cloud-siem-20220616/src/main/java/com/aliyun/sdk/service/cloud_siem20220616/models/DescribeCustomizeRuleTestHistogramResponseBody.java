@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomizeRuleTestHistogramResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomizeRuleTestHistogramResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -42,6 +48,10 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -52,7 +62,7 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,13 +89,27 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomizeRuleTestHistogramResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,15 +117,21 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The return value for the request.
+         * <p>The return value for the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +170,12 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomizeRuleTestHistogramResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomizeRuleTestHistogramResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
@@ -184,8 +226,20 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
             private Long from; 
             private Long to; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.count = model.count;
+                this.from = model.from;
+                this.to = model.to;
+            } 
+
             /**
-             * The number of alerts that are generated in the query time range.
+             * <p>The number of alerts that are generated in the query time range.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>125</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -193,7 +247,10 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * The start of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The start of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1599897188</p>
              */
             public Builder from(Long from) {
                 this.from = from;
@@ -201,7 +258,10 @@ public class DescribeCustomizeRuleTestHistogramResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.
+             * <p>The end of the time range for querying alerts. The value is a UNIX timestamp. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1599997188</p>
              */
             public Builder to(Long to) {
                 this.to = to;

@@ -1,37 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link AddUserResponse} extends {@link TeaModel}
+ * 
+ * {@link ListEntitiesResponse} extends {@link TeaModel}
  *
- * <p>AddUserResponse</p>
+ * <p>ListEntitiesResponse</p>
  */
-public class AddUserResponse extends Response {
+public class ListEntitiesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
-    private java.util.Map < String, String > headers;
+    private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private AddUserResponseBody body;
+    private ListEntitiesResponseBody body;
 
-    private AddUserResponse(BuilderImpl builder) {
+    private ListEntitiesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static AddUserResponse create() {
+    public static ListEntitiesResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -39,7 +45,7 @@ public class AddUserResponse extends Response {
     /**
      * @return headers
      */
-    public java.util.Map < String, String > getHeaders() {
+    public java.util.Map<String, String> getHeaders() {
         return this.headers;
     }
 
@@ -53,35 +59,35 @@ public class AddUserResponse extends Response {
     /**
      * @return body
      */
-    public AddUserResponseBody getBody() {
+    public ListEntitiesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<AddUserResponse, Builder> {
+    public interface Builder extends Response.Builder<ListEntitiesResponse, Builder> {
 
-        Builder headers(java.util.Map < String, String > headers);
+        Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(AddUserResponseBody body);
+        Builder body(ListEntitiesResponseBody body);
 
         @Override
-        AddUserResponse build();
+        ListEntitiesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<AddUserResponse, Builder>
+            extends Response.BuilderImpl<ListEntitiesResponse, Builder>
             implements Builder {
-        private java.util.Map < String, String > headers; 
+        private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private AddUserResponseBody body; 
+        private ListEntitiesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(AddUserResponse response) {
+        private BuilderImpl(ListEntitiesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -92,7 +98,7 @@ public class AddUserResponse extends Response {
          * headers.
          */
         @Override
-        public Builder headers(java.util.Map < String, String > headers) {
+        public Builder headers(java.util.Map<String, String> headers) {
             this.headers = headers;
             return this;
         }
@@ -110,14 +116,14 @@ public class AddUserResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(AddUserResponseBody body) {
+        public Builder body(ListEntitiesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public AddUserResponse build() {
-            return new AddUserResponse(this);
+        public ListEntitiesResponse build() {
+            return new ListEntitiesResponse(this);
         } 
 
     } 

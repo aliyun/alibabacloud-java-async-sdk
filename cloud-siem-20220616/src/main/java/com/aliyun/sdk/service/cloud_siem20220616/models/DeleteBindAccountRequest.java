@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteBindAccountRequest} extends {@link RequestModel}
  *
  * <p>DeleteBindAccountRequest</p>
@@ -61,7 +67,7 @@ public class DeleteBindAccountRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -140,7 +146,11 @@ public class DeleteBindAccountRequest extends Request {
         } 
 
         /**
-         * The AccessKey ID of the cloud account.
+         * <p>The AccessKey ID of the cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ABCXXXXXXXX</p>
          */
         public Builder accessId(String accessId) {
             this.putBodyParameter("AccessId", accessId);
@@ -149,7 +159,11 @@ public class DeleteBindAccountRequest extends Request {
         }
 
         /**
-         * The ID of the cloud account.
+         * <p>The ID of the cloud account.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxxxx</p>
          */
         public Builder accountId(String accountId) {
             this.putBodyParameter("AccountId", accountId);
@@ -158,7 +172,10 @@ public class DeleteBindAccountRequest extends Request {
         }
 
         /**
-         * The ID generated when the account is added to the threat analysis feature. You can call the [ListBindAccount](https://api.aliyun-inc.com/#/publishment/document/cloud-siem/863fdf54478f4cc5877e27c2a5fe9e44?tenantUuid=f382fccd88b94c5c8c864def6815b854\&activeTabKey=api%7CListBindAccount) operation to query the ID.
+         * <p>The ID generated when the account is added to the threat analysis feature. You can call the <a href="https://api.aliyun-inc.com/#/publishment/document/cloud-siem/863fdf54478f4cc5877e27c2a5fe9e44?tenantUuid=f382fccd88b94c5c8c864def6815b854&activeTabKey=api%7CListBindAccount">ListBindAccount</a> operation to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder bindId(Long bindId) {
             this.putBodyParameter("BindId", bindId);
@@ -167,12 +184,16 @@ public class DeleteBindAccountRequest extends Request {
         }
 
         /**
-         * The code of the cloud service provider. Valid values:
-         * <p>
+         * <p>The code of the cloud service provider. Valid values:</p>
+         * <ul>
+         * <li>qcloud: Tencent Cloud</li>
+         * <li>aliyun: Alibaba Cloud</li>
+         * <li>hcloud: Huawei Cloud</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   qcloud: Tencent Cloud
-         * *   aliyun: Alibaba Cloud
-         * *   hcloud: Huawei Cloud
+         * <strong>example:</strong>
+         * <p>hcloud</p>
          */
         public Builder cloudCode(String cloudCode) {
             this.putBodyParameter("CloudCode", cloudCode);
@@ -181,11 +202,14 @@ public class DeleteBindAccountRequest extends Request {
         }
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
-         * <p>
+         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * </ul>
          * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

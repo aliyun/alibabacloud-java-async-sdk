@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitImportLogTasksRequest} extends {@link RequestModel}
  *
  * <p>SubmitImportLogTasksRequest</p>
@@ -65,7 +71,7 @@ public class SubmitImportLogTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -153,15 +159,20 @@ public class SubmitImportLogTasksRequest extends Request {
         } 
 
         /**
-         * The accounts that you want to add. The value is a JSON array. Valid values:
-         * <p>
+         * <p>The accounts that you want to add. The value is a JSON array. Valid values:</p>
+         * <ul>
+         * <li><p>AccountId: the IDs of the accounts.</p>
+         * </li>
+         * <li><p>Imported: specifies whether to add the accounts. Valid values:</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: yes</li>
+         * </ul>
+         * </li>
+         * </ul>
          * 
-         * *   AccountId: the IDs of the accounts.
-         * 
-         * *   Imported: specifies whether to add the accounts. Valid values:
-         * 
-         *     *   0: no
-         *     *   1: yes
+         * <strong>example:</strong>
+         * <p>[{&quot;AccountId&quot;:&quot;123123&quot;,&quot;Imported&quot;:1}]</p>
          */
         public Builder accounts(String accounts) {
             this.putBodyParameter("Accounts", accounts);
@@ -170,11 +181,14 @@ public class SubmitImportLogTasksRequest extends Request {
         }
 
         /**
-         * Specifies whether to automatically add the account for which the logging feature is configured. Valid values:
-         * <p>
+         * <p>Specifies whether to automatically add the account for which the logging feature is configured. Valid values:</p>
+         * <ul>
+         * <li>1: yes</li>
+         * <li>0: no</li>
+         * </ul>
          * 
-         * *   1: yes
-         * *   0: no
+         * <strong>example:</strong>
+         * <p>[&quot;cloud_siem_qcloud_cfw_alert_log&quot;]</p>
          */
         public Builder autoImported(Integer autoImported) {
             this.putBodyParameter("AutoImported", autoImported);
@@ -183,12 +197,16 @@ public class SubmitImportLogTasksRequest extends Request {
         }
 
         /**
-         * The code that is used for multi-cloud environments. Valid values:
-         * <p>
+         * <p>The code that is used for multi-cloud environments. Valid values:</p>
+         * <ul>
+         * <li>qcloud: Tencent Cloud</li>
+         * <li>aliyun: Alibaba Cloud</li>
+         * <li>hcloud: Huawei Cloud</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   qcloud: Tencent Cloud
-         * *   aliyun: Alibaba Cloud
-         * *   hcloud: Huawei Cloud
+         * <strong>example:</strong>
+         * <p>hcloud</p>
          */
         public Builder cloudCode(String cloudCode) {
             this.putBodyParameter("CloudCode", cloudCode);
@@ -197,7 +215,10 @@ public class SubmitImportLogTasksRequest extends Request {
         }
 
         /**
-         * The logs that you want to collect. The value is a JSON array.
+         * <p>The logs that you want to collect. The value is a JSON array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;cloud_siem_qcloud_cfw_alert_log&quot;]</p>
          */
         public Builder logCodes(String logCodes) {
             this.putBodyParameter("LogCodes", logCodes);
@@ -206,7 +227,11 @@ public class SubmitImportLogTasksRequest extends Request {
         }
 
         /**
-         * The code of the service.
+         * <p>The code of the service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qcloud_waf</p>
          */
         public Builder prodCode(String prodCode) {
             this.putBodyParameter("ProdCode", prodCode);
@@ -215,11 +240,14 @@ public class SubmitImportLogTasksRequest extends Request {
         }
 
         /**
-         * The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:
-         * <p>
+         * <p>The data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in regions inside China.</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * </ul>
          * 
-         * *   cn-hangzhou: Your assets reside in regions inside China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -228,7 +256,10 @@ public class SubmitImportLogTasksRequest extends Request {
         }
 
         /**
-         * The ID of the account that you switch from the management account.
+         * <p>The ID of the account that you switch from the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -237,10 +268,14 @@ public class SubmitImportLogTasksRequest extends Request {
         }
 
         /**
-         * The type of the view. Valid values:
-         * <p>
-         * - 0: the current Alibaba Cloud account
-         * - 1: the global account
+         * <p>The type of the view. Valid values:</p>
+         * <ul>
+         * <li>0: the current Alibaba Cloud account</li>
+         * <li>1: the global account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);

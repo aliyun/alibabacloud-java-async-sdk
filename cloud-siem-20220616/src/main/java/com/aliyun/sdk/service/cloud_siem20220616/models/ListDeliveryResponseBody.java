@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDeliveryResponseBody} extends {@link TeaModel}
  *
  * <p>ListDeliveryResponseBody</p>
@@ -30,6 +36,10 @@ public class ListDeliveryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,8 +58,16 @@ public class ListDeliveryResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListDeliveryResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The response parameters.
+         * <p>The response parameters.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +75,10 @@ public class ListDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-58D4-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class ListDeliveryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDeliveryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeliveryResponseBody</p>
+     */
     public static class ExtraParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -108,8 +135,19 @@ public class ListDeliveryResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtraParameters model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The ID of the extended parameter.
+             * <p>The ID of the extended parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flag</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -117,7 +155,10 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the extended parameter.
+             * <p>The value of the extended parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -131,12 +172,18 @@ public class ListDeliveryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDeliveryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeliveryResponseBody</p>
+     */
     public static class LogList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanOperateOrNot")
         private Boolean canOperateOrNot;
 
         @com.aliyun.core.annotation.NameInMap("ExtraParameters")
-        private java.util.List < ExtraParameters> extraParameters;
+        private java.util.List<ExtraParameters> extraParameters;
 
         @com.aliyun.core.annotation.NameInMap("LogCode")
         private String logCode;
@@ -185,7 +232,7 @@ public class ListDeliveryResponseBody extends TeaModel {
         /**
          * @return extraParameters
          */
-        public java.util.List < ExtraParameters> getExtraParameters() {
+        public java.util.List<ExtraParameters> getExtraParameters() {
             return this.extraParameters;
         }
 
@@ -233,7 +280,7 @@ public class ListDeliveryResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean canOperateOrNot; 
-            private java.util.List < ExtraParameters> extraParameters; 
+            private java.util.List<ExtraParameters> extraParameters; 
             private String logCode; 
             private String logName; 
             private String logNameEn; 
@@ -241,12 +288,29 @@ public class ListDeliveryResponseBody extends TeaModel {
             private Boolean status; 
             private String topic; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogList model) {
+                this.canOperateOrNot = model.canOperateOrNot;
+                this.extraParameters = model.extraParameters;
+                this.logCode = model.logCode;
+                this.logName = model.logName;
+                this.logNameEn = model.logNameEn;
+                this.logNameKey = model.logNameKey;
+                this.status = model.status;
+                this.topic = model.topic;
+            } 
+
             /**
-             * Indicates whether the log delivery feature can be enabled or disabled. The feature can be enabled or disabled only by the administrator of the threat analysis feature. Valid values:
-             * <p>
+             * <p>Indicates whether the log delivery feature can be enabled or disabled. The feature can be enabled or disabled only by the administrator of the threat analysis feature. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canOperateOrNot(Boolean canOperateOrNot) {
                 this.canOperateOrNot = canOperateOrNot;
@@ -254,15 +318,18 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The extended parameter.
+             * <p>The extended parameter.</p>
              */
-            public Builder extraParameters(java.util.List < ExtraParameters> extraParameters) {
+            public Builder extraParameters(java.util.List<ExtraParameters> extraParameters) {
                 this.extraParameters = extraParameters;
                 return this;
             }
 
             /**
-             * The code of the log.
+             * <p>The code of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_siem_config_log</p>
              */
             public Builder logCode(String logCode) {
                 this.logCode = logCode;
@@ -270,7 +337,10 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audit log</p>
              */
             public Builder logName(String logName) {
                 this.logName = logName;
@@ -278,7 +348,10 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>audit log</p>
              */
             public Builder logNameEn(String logNameEn) {
                 this.logNameEn = logNameEn;
@@ -286,7 +359,10 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The language code of the log that is used to indicate the language in which the log is displayed.
+             * <p>The language code of the log that is used to indicate the language in which the log is displayed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${sas.cloudsiem.prod.cloud_siem_aegis_crack_from_beaver}</p>
              */
             public Builder logNameKey(String logNameKey) {
                 this.logNameKey = logNameKey;
@@ -294,11 +370,14 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the log delivery. Valid values:
-             * <p>
+             * <p>The status of the log delivery. Valid values:</p>
+             * <ul>
+             * <li>true: The logs are being delivered.</li>
+             * <li>false: The log delivery feature is disabled.</li>
+             * </ul>
              * 
-             * *   true: The logs are being delivered.
-             * *   false: The log delivery feature is disabled.
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder status(Boolean status) {
                 this.status = status;
@@ -306,7 +385,10 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The topic of the log in the Logstore. The value is an index field in the Logstore that can be used to distinguish different logs.
+             * <p>The topic of the log in the Logstore. The value is an index field in the Logstore that can be used to distinguish different logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas_login_event</p>
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -320,12 +402,18 @@ public class ListDeliveryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDeliveryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeliveryResponseBody</p>
+     */
     public static class ProductList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogList")
-        private java.util.List < LogList> logList;
+        private java.util.List<LogList> logList;
 
         @com.aliyun.core.annotation.NameInMap("LogMap")
-        private java.util.Map < String, java.util.List<DataProductListLogMapValue>> logMap;
+        private java.util.Map<String, java.util.List<DataProductListLogMapValue>> logMap;
 
         @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
@@ -351,14 +439,14 @@ public class ListDeliveryResponseBody extends TeaModel {
         /**
          * @return logList
          */
-        public java.util.List < LogList> getLogList() {
+        public java.util.List<LogList> getLogList() {
             return this.logList;
         }
 
         /**
          * @return logMap
          */
-        public java.util.Map < String, java.util.List<DataProductListLogMapValue>> getLogMap() {
+        public java.util.Map<String, java.util.List<DataProductListLogMapValue>> getLogMap() {
             return this.logMap;
         }
 
@@ -377,54 +465,67 @@ public class ListDeliveryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < LogList> logList; 
-            private java.util.Map < String, java.util.List<DataProductListLogMapValue>> logMap; 
+            private java.util.List<LogList> logList; 
+            private java.util.Map<String, java.util.List<DataProductListLogMapValue>> logMap; 
             private String productCode; 
             private String productName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProductList model) {
+                this.logList = model.logList;
+                this.logMap = model.logMap;
+                this.productCode = model.productCode;
+                this.productName = model.productName;
+            } 
+
             /**
-             * The logs of the cloud services.
+             * <p>The logs of the cloud services.</p>
              */
-            public Builder logList(java.util.List < LogList> logList) {
+            public Builder logList(java.util.List<LogList> logList) {
                 this.logList = logList;
                 return this;
             }
 
             /**
-             * The log group. For example, in Security Center, the logs of hosts and networks are stored in different groups. Key indicates the group information, and value indicates the logs in the group.
+             * <p>The log group. For example, in Security Center, the logs of hosts and networks are stored in different groups. Key indicates the group information, and value indicates the logs in the group.</p>
              */
-            public Builder logMap(java.util.Map < String, java.util.List<DataProductListLogMapValue>> logMap) {
+            public Builder logMap(java.util.Map<String, java.util.List<DataProductListLogMapValue>> logMap) {
                 this.logMap = logMap;
                 return this;
             }
 
             /**
-             * The code of the cloud service. Valid values:
-             * <p>
+             * <p>The code of the cloud service. Valid values:</p>
+             * <ul>
+             * <li>qcloud_waf</li>
+             * <li>qlcoud_cfw</li>
+             * <li>hcloud_waf</li>
+             * <li>hcloud_cfw</li>
+             * <li>ddos</li>
+             * <li>sas</li>
+             * <li>cfw</li>
+             * <li>config</li>
+             * <li>csk</li>
+             * <li>fc</li>
+             * <li>rds</li>
+             * <li>nas</li>
+             * <li>apigateway</li>
+             * <li>cdn</li>
+             * <li>mongodb</li>
+             * <li>eip</li>
+             * <li>slb</li>
+             * <li>vpc</li>
+             * <li>actiontrail</li>
+             * <li>waf</li>
+             * <li>bastionhost</li>
+             * <li>oss</li>
+             * <li>polardb</li>
+             * </ul>
              * 
-             * *   qcloud_waf
-             * *   qlcoud_cfw
-             * *   hcloud_waf
-             * *   hcloud_cfw
-             * *   ddos
-             * *   sas
-             * *   cfw
-             * *   config
-             * *   csk
-             * *   fc
-             * *   rds
-             * *   nas
-             * *   apigateway
-             * *   cdn
-             * *   mongodb
-             * *   eip
-             * *   slb
-             * *   vpc
-             * *   actiontrail
-             * *   waf
-             * *   bastionhost
-             * *   oss
-             * *   polardb
+             * <strong>example:</strong>
+             * <p>sas</p>
              */
             public Builder productCode(String productCode) {
                 this.productCode = productCode;
@@ -432,7 +533,10 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * This parameter is deprecated.
+             * <p>This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Security Center</p>
              */
             public Builder productName(String productName) {
                 this.productName = productName;
@@ -446,6 +550,12 @@ public class ListDeliveryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListDeliveryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeliveryResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DashboardUrl")
         private String dashboardUrl;
@@ -457,7 +567,7 @@ public class ListDeliveryResponseBody extends TeaModel {
         private String logStoreName;
 
         @com.aliyun.core.annotation.NameInMap("ProductList")
-        private java.util.List < ProductList> productList;
+        private java.util.List<ProductList> productList;
 
         @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
@@ -506,7 +616,7 @@ public class ListDeliveryResponseBody extends TeaModel {
         /**
          * @return productList
          */
-        public java.util.List < ProductList> getProductList() {
+        public java.util.List<ProductList> getProductList() {
             return this.productList;
         }
 
@@ -528,12 +638,28 @@ public class ListDeliveryResponseBody extends TeaModel {
             private String dashboardUrl; 
             private Boolean displaySwitchOrNot; 
             private String logStoreName; 
-            private java.util.List < ProductList> productList; 
+            private java.util.List<ProductList> productList; 
             private String projectName; 
             private String searchUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dashboardUrl = model.dashboardUrl;
+                this.displaySwitchOrNot = model.displaySwitchOrNot;
+                this.logStoreName = model.logStoreName;
+                this.productList = model.productList;
+                this.projectName = model.projectName;
+                this.searchUrl = model.searchUrl;
+            } 
+
             /**
-             * The URL that is displayed in charts.
+             * <p>The URL that is displayed in charts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai">https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai</a>
+             * /dashboard/cloud-siem?isShare=true&amp;hideTopbar=true&amp;hideSidebar=true&amp;ignoreTabLocalStorage=true</p>
              */
             public Builder dashboardUrl(String dashboardUrl) {
                 this.dashboardUrl = dashboardUrl;
@@ -541,11 +667,14 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the log delivery switch is displayed. Default value: true. Valid values:
-             * <p>
+             * <p>Indicates whether the log delivery switch is displayed. Default value: true. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder displaySwitchOrNot(Boolean displaySwitchOrNot) {
                 this.displaySwitchOrNot = displaySwitchOrNot;
@@ -553,7 +682,10 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Logstore for the threat analysis feature on the user side. The value is in the cloud_siem format.
+             * <p>The name of the Logstore for the threat analysis feature on the user side. The value is in the cloud_siem format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud-siem</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -561,15 +693,18 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud services.
+             * <p>The cloud services.</p>
              */
-            public Builder productList(java.util.List < ProductList> productList) {
+            public Builder productList(java.util.List<ProductList> productList) {
                 this.productList = productList;
                 return this;
             }
 
             /**
-             * The name of the project for the threat analysis feature in Simple Log service on the user side. The value is in the aliyun-cloudsiem-data-${aliUid}-${region} format.
+             * <p>The name of the project for the threat analysis feature in Simple Log service on the user side. The value is in the aliyun-cloudsiem-data-${aliUid}-${region} format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun-cloudsiem-data-127608589417****-cn-shanghai</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -577,7 +712,11 @@ public class ListDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used for log analysis.
+             * <p>The URL that is used for log analysis.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai">https://sls4service.console.aliyun.com/lognext/project/aliyun-cloudsiem-data-127608589417****-cn-shanghai</a>
+             * /logsearch/cloud-siem?isShare=true&amp;hideTopbar=true&amp;hideSidebar=true&amp;ignoreTabLocalStorage=true</p>
              */
             public Builder searchUrl(String searchUrl) {
                 this.searchUrl = searchUrl;

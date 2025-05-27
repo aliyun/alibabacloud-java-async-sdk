@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAllProdsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAllProdsResponseBody</p>
@@ -30,6 +36,10 @@ public class ListAllProdsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,8 +58,16 @@ public class ListAllProdsResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAllProdsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +75,10 @@ public class ListAllProdsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class ListAllProdsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAllProdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAllProdsResponseBody</p>
+     */
     public static class ProdList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
@@ -144,13 +171,27 @@ public class ListAllProdsResponseBody extends TeaModel {
             private String prodCode; 
             private Integer totalLogCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProdList model) {
+                this.cloudCode = model.cloudCode;
+                this.importedLogCount = model.importedLogCount;
+                this.modifyTime = model.modifyTime;
+                this.prodCode = model.prodCode;
+                this.totalLogCount = model.totalLogCount;
+            } 
+
             /**
-             * The code of the cloud service provider. Valid values:
-             * <p>
+             * <p>The code of the cloud service provider. Valid values:</p>
+             * <ul>
+             * <li>qcloud: Tencent Cloud.</li>
+             * <li>aliyun: Alibaba Cloud.</li>
+             * <li>hcloud: Huawei Cloud.</li>
+             * </ul>
              * 
-             * *   qcloud: Tencent Cloud.
-             * *   aliyun: Alibaba Cloud.
-             * *   hcloud: Huawei Cloud.
+             * <strong>example:</strong>
+             * <p>hcloud</p>
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -158,7 +199,10 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of logs within the cloud service that are added to the threat analysis feature.
+             * <p>The number of logs within the cloud service that are added to the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder importedLogCount(Integer importedLogCount) {
                 this.importedLogCount = importedLogCount;
@@ -166,7 +210,10 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the logs within the cloud service were last added to the threat analysis feature.
+             * <p>The time when the logs within the cloud service were last added to the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-23 12:12:12</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -174,7 +221,10 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the cloud service.
+             * <p>The code of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas</p>
              */
             public Builder prodCode(String prodCode) {
                 this.prodCode = prodCode;
@@ -182,7 +232,10 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of logs within the cloud service.
+             * <p>The total number of logs within the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder totalLogCount(Integer totalLogCount) {
                 this.totalLogCount = totalLogCount;
@@ -196,6 +249,12 @@ public class ListAllProdsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAllProdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAllProdsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -204,7 +263,7 @@ public class ListAllProdsResponseBody extends TeaModel {
         private Integer pageSize;
 
         @com.aliyun.core.annotation.NameInMap("ProdList")
-        private java.util.List < ProdList> prodList;
+        private java.util.List<ProdList> prodList;
 
         @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
@@ -241,7 +300,7 @@ public class ListAllProdsResponseBody extends TeaModel {
         /**
          * @return prodList
          */
-        public java.util.List < ProdList> getProdList() {
+        public java.util.List<ProdList> getProdList() {
             return this.prodList;
         }
 
@@ -255,11 +314,24 @@ public class ListAllProdsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer currentPage; 
             private Integer pageSize; 
-            private java.util.List < ProdList> prodList; 
+            private java.util.List<ProdList> prodList; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.prodList = model.prodList;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * The page number.
+             * <p>The page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -267,7 +339,10 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -275,15 +350,21 @@ public class ListAllProdsResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud services.
+             * <p>The cloud services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
-            public Builder prodList(java.util.List < ProdList> prodList) {
+            public Builder prodList(java.util.List<ProdList> prodList) {
                 this.prodList = prodList;
                 return this;
             }
 
             /**
-             * The total number of logs.
+             * <p>The total number of logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

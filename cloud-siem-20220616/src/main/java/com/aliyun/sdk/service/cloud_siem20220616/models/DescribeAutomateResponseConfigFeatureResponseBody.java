@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutomateResponseConfigFeatureResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutomateResponseConfigFeatureResponseBody</p>
@@ -15,7 +21,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -42,6 +48,10 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -52,7 +62,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -79,13 +89,27 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
 
     public static final class Builder {
         private Integer code; 
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutomateResponseConfigFeatureResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,15 +117,21 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +170,12 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutomateResponseConfigFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutomateResponseConfigFeatureResponseBody</p>
+     */
     public static class RightValueEnums extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
@@ -172,8 +214,19 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             private String value; 
             private String valueMds; 
 
+            private Builder() {
+            } 
+
+            private Builder(RightValueEnums model) {
+                this.value = model.value;
+                this.valueMds = model.valueMds;
+            } 
+
             /**
-             * The enumerated value of the right operand.
+             * <p>The enumerated value of the right operand.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>serious</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -181,7 +234,10 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * The internal code of the enumerated value.
+             * <p>The internal code of the enumerated value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun.siem.automate.feature.alert_level.serious</p>
              */
             public Builder valueMds(String valueMds) {
                 this.valueMds = valueMds;
@@ -195,6 +251,12 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutomateResponseConfigFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutomateResponseConfigFeatureResponseBody</p>
+     */
     public static class SupportOperators extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HasRightValue")
         private Boolean hasRightValue;
@@ -218,7 +280,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         private String supportDataType;
 
         @com.aliyun.core.annotation.NameInMap("SupportTag")
-        private java.util.List < String > supportTag;
+        private java.util.List<String> supportTag;
 
         private SupportOperators(Builder builder) {
             this.hasRightValue = builder.hasRightValue;
@@ -291,7 +353,7 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         /**
          * @return supportTag
          */
-        public java.util.List < String > getSupportTag() {
+        public java.util.List<String> getSupportTag() {
             return this.supportTag;
         }
 
@@ -303,14 +365,31 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             private String operatorDescEn; 
             private String operatorName; 
             private String supportDataType; 
-            private java.util.List < String > supportTag; 
+            private java.util.List<String> supportTag; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportOperators model) {
+                this.hasRightValue = model.hasRightValue;
+                this.index = model.index;
+                this.operator = model.operator;
+                this.operatorDescCn = model.operatorDescCn;
+                this.operatorDescEn = model.operatorDescEn;
+                this.operatorName = model.operatorName;
+                this.supportDataType = model.supportDataType;
+                this.supportTag = model.supportTag;
+            } 
 
             /**
-             * Indicates whether the right operand is required. Valid values:
-             * <p>
+             * <p>Indicates whether the right operand is required. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasRightValue(Boolean hasRightValue) {
                 this.hasRightValue = hasRightValue;
@@ -318,7 +397,10 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * The position of the operator in the operator list.
+             * <p>The position of the operator in the operator list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -326,7 +408,10 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * The operator.
+             * <p>The operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&lt;=</p>
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -334,7 +419,10 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * The description of the operator in Chinese.
+             * <p>The description of the operator in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>larger than or equal to</p>
              */
             public Builder operatorDescCn(String operatorDescCn) {
                 this.operatorDescCn = operatorDescCn;
@@ -342,7 +430,10 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * The description of the operator in English.
+             * <p>The description of the operator in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>larger than or equal to</p>
              */
             public Builder operatorDescEn(String operatorDescEn) {
                 this.operatorDescEn = operatorDescEn;
@@ -350,7 +441,10 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * The name of the operator.
+             * <p>The name of the operator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&lt;=</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -358,7 +452,10 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * The data types that are supported by the operator. The data types are separated by commas (,).
+             * <p>The data types that are supported by the operator. The data types are separated by commas (,).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder supportDataType(String supportDataType) {
                 this.supportDataType = supportDataType;
@@ -366,9 +463,12 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as aggregation scenarios. By default, this parameter is empty.
+             * <p>The scenarios that are supported by the operator. Multiple scenarios are separated by commas (,), such as aggregation scenarios. By default, this parameter is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[AGGREGATE]</p>
              */
-            public Builder supportTag(java.util.List < String > supportTag) {
+            public Builder supportTag(java.util.List<String> supportTag) {
                 this.supportTag = supportTag;
                 return this;
             }
@@ -380,6 +480,12 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAutomateResponseConfigFeatureResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutomateResponseConfigFeatureResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
@@ -388,10 +494,10 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         private String feature;
 
         @com.aliyun.core.annotation.NameInMap("RightValueEnums")
-        private java.util.List < RightValueEnums> rightValueEnums;
+        private java.util.List<RightValueEnums> rightValueEnums;
 
         @com.aliyun.core.annotation.NameInMap("SupportOperators")
-        private java.util.List < SupportOperators> supportOperators;
+        private java.util.List<SupportOperators> supportOperators;
 
         private Data(Builder builder) {
             this.dataType = builder.dataType;
@@ -425,25 +531,38 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
         /**
          * @return rightValueEnums
          */
-        public java.util.List < RightValueEnums> getRightValueEnums() {
+        public java.util.List<RightValueEnums> getRightValueEnums() {
             return this.rightValueEnums;
         }
 
         /**
          * @return supportOperators
          */
-        public java.util.List < SupportOperators> getSupportOperators() {
+        public java.util.List<SupportOperators> getSupportOperators() {
             return this.supportOperators;
         }
 
         public static final class Builder {
             private String dataType; 
             private String feature; 
-            private java.util.List < RightValueEnums> rightValueEnums; 
-            private java.util.List < SupportOperators> supportOperators; 
+            private java.util.List<RightValueEnums> rightValueEnums; 
+            private java.util.List<SupportOperators> supportOperators; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataType = model.dataType;
+                this.feature = model.feature;
+                this.rightValueEnums = model.rightValueEnums;
+                this.supportOperators = model.supportOperators;
+            } 
 
             /**
-             * The data type of the condition field in the automated response rule.
+             * <p>The data type of the condition field in the automated response rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder dataType(String dataType) {
                 this.dataType = dataType;
@@ -451,7 +570,10 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * The name of the condition field in the automated response rule.
+             * <p>The name of the condition field in the automated response rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alert_desc</p>
              */
             public Builder feature(String feature) {
                 this.feature = feature;
@@ -459,17 +581,17 @@ public class DescribeAutomateResponseConfigFeatureResponseBody extends TeaModel 
             }
 
             /**
-             * The enumerated values of the right operand for the field.
+             * <p>The enumerated values of the right operand for the field.</p>
              */
-            public Builder rightValueEnums(java.util.List < RightValueEnums> rightValueEnums) {
+            public Builder rightValueEnums(java.util.List<RightValueEnums> rightValueEnums) {
                 this.rightValueEnums = rightValueEnums;
                 return this;
             }
 
             /**
-             * The operators that are supported for the condition field.
+             * <p>The operators that are supported for the condition field.</p>
              */
-            public Builder supportOperators(java.util.List < SupportOperators> supportOperators) {
+            public Builder supportOperators(java.util.List<SupportOperators> supportOperators) {
                 this.supportOperators = supportOperators;
                 return this;
             }

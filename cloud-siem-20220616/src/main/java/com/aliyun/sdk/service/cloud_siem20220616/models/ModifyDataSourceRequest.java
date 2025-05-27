@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyDataSourceRequest} extends {@link RequestModel}
  *
  * <p>ModifyDataSourceRequest</p>
@@ -66,7 +72,7 @@ public class ModifyDataSourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -154,7 +160,10 @@ public class ModifyDataSourceRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud account.
+         * <p>The ID of the cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxxx</p>
          */
         public Builder accountId(String accountId) {
             this.putBodyParameter("AccountId", accountId);
@@ -163,12 +172,16 @@ public class ModifyDataSourceRequest extends Request {
         }
 
         /**
-         * The code of the cloud service provider. Valid values:
-         * <p>
+         * <p>The code of the cloud service provider. Valid values:</p>
+         * <ul>
+         * <li>qcloud: Tencent Cloud</li>
+         * <li>aliyun: Alibaba Cloud</li>
+         * <li>hcloud: Huawei Cloud</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   qcloud: Tencent Cloud
-         * *   aliyun: Alibaba Cloud
-         * *   hcloud: Huawei Cloud
+         * <strong>example:</strong>
+         * <p>hcloud</p>
          */
         public Builder cloudCode(String cloudCode) {
             this.putBodyParameter("CloudCode", cloudCode);
@@ -177,7 +190,11 @@ public class ModifyDataSourceRequest extends Request {
         }
 
         /**
-         * The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters. You can call the [DescribeDataSourceInstance](https://api.aliyun-inc.com/#/publishment/document/cloud-siem/863fdf54478f4cc5877e27c2a5fe9e44?tenantUuid=f382fccd88b94c5c8c864def6815b854\&activeTabKey=api%7CDescribeDataSourceInstance) operation to query the IDs of data sources.
+         * <p>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters. You can call the <a href="https://api.aliyun-inc.com/#/publishment/document/cloud-siem/863fdf54478f4cc5877e27c2a5fe9e44?tenantUuid=f382fccd88b94c5c8c864def6815b854&activeTabKey=api%7CDescribeDataSourceInstance">DescribeDataSourceInstance</a> operation to query the IDs of data sources.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>220ba97c9d1fdb0b9c7e8c7ca328d7ea</p>
          */
         public Builder dataSourceInstanceId(String dataSourceInstanceId) {
             this.putBodyParameter("DataSourceInstanceId", dataSourceInstanceId);
@@ -186,7 +203,10 @@ public class ModifyDataSourceRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>beijing_waf_kafka</p>
          */
         public Builder dataSourceInstanceName(String dataSourceInstanceName) {
             this.putBodyParameter("DataSourceInstanceName", dataSourceInstanceName);
@@ -195,7 +215,10 @@ public class ModifyDataSourceRequest extends Request {
         }
 
         /**
-         * The parameters of the data source in the JSON string format.
+         * <p>The parameters of the data source in the JSON string format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;paraCode&quot;:&quot;region_code&quot;,&quot;paraValue&quot;:&quot;ap-guangzhou&quot;}]</p>
          */
         public Builder dataSourceInstanceParams(String dataSourceInstanceParams) {
             this.putBodyParameter("DataSourceInstanceParams", dataSourceInstanceParams);
@@ -204,7 +227,10 @@ public class ModifyDataSourceRequest extends Request {
         }
 
         /**
-         * The remarks on the data source.
+         * <p>The remarks on the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_alert_log</p>
          */
         public Builder dataSourceInstanceRemark(String dataSourceInstanceRemark) {
             this.putBodyParameter("DataSourceInstanceRemark", dataSourceInstanceRemark);
@@ -213,12 +239,16 @@ public class ModifyDataSourceRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li>ckafka: Tencent Cloud Kafka (CKafka)</li>
+         * <li>obs: Huawei Cloud Object Storage Service (OBS)</li>
+         * <li>wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   ckafka: Tencent Cloud Kafka (CKafka)
-         * *   obs: Huawei Cloud Object Storage Service (OBS)
-         * *   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)
+         * <strong>example:</strong>
+         * <p>obs</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putBodyParameter("DataSourceType", dataSourceType);
@@ -227,11 +257,14 @@ public class ModifyDataSourceRequest extends Request {
         }
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
-         * <p>
+         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * </ul>
          * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

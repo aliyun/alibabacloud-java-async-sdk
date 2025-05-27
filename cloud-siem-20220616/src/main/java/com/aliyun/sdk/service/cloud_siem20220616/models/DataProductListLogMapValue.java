@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DataProductListLogMapValue} extends {@link TeaModel}
  *
  * <p>DataProductListLogMapValue</p>
@@ -33,7 +39,7 @@ public class DataProductListLogMapValue extends TeaModel {
     private String topic;
 
     @com.aliyun.core.annotation.NameInMap("ExtraParameters")
-    private java.util.List < ExtraParameters> extraParameters;
+    private java.util.List<ExtraParameters> extraParameters;
 
     private DataProductListLogMapValue(Builder builder) {
         this.logCode = builder.logCode;
@@ -52,6 +58,10 @@ public class DataProductListLogMapValue extends TeaModel {
 
     public static DataProductListLogMapValue create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -106,7 +116,7 @@ public class DataProductListLogMapValue extends TeaModel {
     /**
      * @return extraParameters
      */
-    public java.util.List < ExtraParameters> getExtraParameters() {
+    public java.util.List<ExtraParameters> getExtraParameters() {
         return this.extraParameters;
     }
 
@@ -118,10 +128,27 @@ public class DataProductListLogMapValue extends TeaModel {
         private Boolean status; 
         private Boolean canOperateOrNot; 
         private String topic; 
-        private java.util.List < ExtraParameters> extraParameters; 
+        private java.util.List<ExtraParameters> extraParameters; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataProductListLogMapValue model) {
+            this.logCode = model.logCode;
+            this.logName = model.logName;
+            this.logNameEn = model.logNameEn;
+            this.logNameKey = model.logNameKey;
+            this.status = model.status;
+            this.canOperateOrNot = model.canOperateOrNot;
+            this.topic = model.topic;
+            this.extraParameters = model.extraParameters;
+        } 
 
         /**
-         * The code of the log.
+         * <p>The code of the log.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_siem_config_log</p>
          */
         public Builder logCode(String logCode) {
             this.logCode = logCode;
@@ -129,7 +156,10 @@ public class DataProductListLogMapValue extends TeaModel {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit log</p>
          */
         public Builder logName(String logName) {
             this.logName = logName;
@@ -137,7 +167,10 @@ public class DataProductListLogMapValue extends TeaModel {
         }
 
         /**
-         * This parameter is deprecated.
+         * <p>This parameter is deprecated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>audit log</p>
          */
         public Builder logNameEn(String logNameEn) {
             this.logNameEn = logNameEn;
@@ -145,7 +178,10 @@ public class DataProductListLogMapValue extends TeaModel {
         }
 
         /**
-         * The language code of the log that is used to indicate the language in which the log is displayed.
+         * <p>The language code of the log that is used to indicate the language in which the log is displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>${sas.cloudsiem.prod.cloud_siem_aegis_crack_from_beaver}</p>
          */
         public Builder logNameKey(String logNameKey) {
             this.logNameKey = logNameKey;
@@ -153,11 +189,14 @@ public class DataProductListLogMapValue extends TeaModel {
         }
 
         /**
-         * The status of the log delivery. Valid values:
-         * <p>
+         * <p>The status of the log delivery. Valid values:</p>
+         * <ul>
+         * <li>true: The logs are being delivered.</li>
+         * <li>false: The log delivery feature is disabled.</li>
+         * </ul>
          * 
-         * *   true: The logs are being delivered.
-         * *   false: The log delivery feature is disabled.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder status(Boolean status) {
             this.status = status;
@@ -165,11 +204,14 @@ public class DataProductListLogMapValue extends TeaModel {
         }
 
         /**
-         * Indicates whether the log delivery feature can be enabled or disabled. The feature can be enabled or disabled only by the administrator of the threat analysis feature. Valid values:
-         * <p>
+         * <p>Indicates whether the log delivery feature can be enabled or disabled. The feature can be enabled or disabled only by the administrator of the threat analysis feature. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder canOperateOrNot(Boolean canOperateOrNot) {
             this.canOperateOrNot = canOperateOrNot;
@@ -177,7 +219,10 @@ public class DataProductListLogMapValue extends TeaModel {
         }
 
         /**
-         * The topic of the log in the Logstore. The value is an index field in the Logstore that can be used to distinguish different logs.
+         * <p>The topic of the log in the Logstore. The value is an index field in the Logstore that can be used to distinguish different logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sas_login_event</p>
          */
         public Builder topic(String topic) {
             this.topic = topic;
@@ -185,9 +230,9 @@ public class DataProductListLogMapValue extends TeaModel {
         }
 
         /**
-         * The extended parameter.
+         * <p>The extended parameter.</p>
          */
-        public Builder extraParameters(java.util.List < ExtraParameters> extraParameters) {
+        public Builder extraParameters(java.util.List<ExtraParameters> extraParameters) {
             this.extraParameters = extraParameters;
             return this;
         }
@@ -198,6 +243,12 @@ public class DataProductListLogMapValue extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DataProductListLogMapValue} extends {@link TeaModel}
+     *
+     * <p>DataProductListLogMapValue</p>
+     */
     public static class ExtraParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -236,8 +287,19 @@ public class DataProductListLogMapValue extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtraParameters model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * The ID of the extended parameter.
+             * <p>The ID of the extended parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flag</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -245,7 +307,10 @@ public class DataProductListLogMapValue extends TeaModel {
             }
 
             /**
-             * The value of the extended parameter.
+             * <p>The value of the extended parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder value(String value) {
                 this.value = value;

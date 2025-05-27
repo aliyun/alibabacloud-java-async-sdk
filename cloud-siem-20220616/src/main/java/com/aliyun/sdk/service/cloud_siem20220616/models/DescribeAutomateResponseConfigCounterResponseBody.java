@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutomateResponseConfigCounterResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutomateResponseConfigCounterResponseBody</p>
@@ -40,6 +46,10 @@ public class DescribeAutomateResponseConfigCounterResponseBody extends TeaModel 
 
     public static DescribeAutomateResponseConfigCounterResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class DescribeAutomateResponseConfigCounterResponseBody extends TeaModel 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutomateResponseConfigCounterResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +117,10 @@ public class DescribeAutomateResponseConfigCounterResponseBody extends TeaModel 
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +128,10 @@ public class DescribeAutomateResponseConfigCounterResponseBody extends TeaModel 
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class DescribeAutomateResponseConfigCounterResponseBody extends TeaModel 
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class DescribeAutomateResponseConfigCounterResponseBody extends TeaModel 
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +170,12 @@ public class DescribeAutomateResponseConfigCounterResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAutomateResponseConfigCounterResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAutomateResponseConfigCounterResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("All")
         private Long all;
@@ -172,8 +214,19 @@ public class DescribeAutomateResponseConfigCounterResponseBody extends TeaModel 
             private Long all; 
             private Long online; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.all = model.all;
+                this.online = model.online;
+            } 
+
             /**
-             * The total number of rules.
+             * <p>The total number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder all(Long all) {
                 this.all = all;
@@ -181,7 +234,10 @@ public class DescribeAutomateResponseConfigCounterResponseBody extends TeaModel 
             }
 
             /**
-             * The number of enabled rules.
+             * <p>The number of enabled rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder online(Long online) {
                 this.online = online;

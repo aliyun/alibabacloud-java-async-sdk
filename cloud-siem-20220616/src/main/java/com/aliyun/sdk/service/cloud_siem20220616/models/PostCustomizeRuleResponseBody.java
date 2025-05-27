@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PostCustomizeRuleResponseBody} extends {@link TeaModel}
  *
  * <p>PostCustomizeRuleResponseBody</p>
@@ -40,6 +46,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
 
     public static PostCustomizeRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(PostCustomizeRuleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +117,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +128,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +170,12 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link PostCustomizeRuleResponseBody} extends {@link TeaModel}
+     *
+     * <p>PostCustomizeRuleResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
@@ -436,8 +478,41 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             private Integer status; 
             private String threatLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alertType = model.alertType;
+                this.alertTypeMds = model.alertTypeMds;
+                this.aliuid = model.aliuid;
+                this.attCk = model.attCk;
+                this.dataType = model.dataType;
+                this.eventTransferExt = model.eventTransferExt;
+                this.eventTransferSwitch = model.eventTransferSwitch;
+                this.eventTransferType = model.eventTransferType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.logSource = model.logSource;
+                this.logSourceMds = model.logSourceMds;
+                this.logType = model.logType;
+                this.logTypeMds = model.logTypeMds;
+                this.queryCycle = model.queryCycle;
+                this.ruleCondition = model.ruleCondition;
+                this.ruleDesc = model.ruleDesc;
+                this.ruleGroup = model.ruleGroup;
+                this.ruleName = model.ruleName;
+                this.ruleThreshold = model.ruleThreshold;
+                this.ruleType = model.ruleType;
+                this.status = model.status;
+                this.threatLevel = model.threatLevel;
+            } 
+
             /**
-             * The risk type.
+             * <p>The risk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WEBSHELL</p>
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -445,7 +520,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The internal code of the risk type.
+             * <p>The internal code of the risk type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${siem_rule_type_process_abnormal_command}</p>
              */
             public Builder alertTypeMds(String alertTypeMds) {
                 this.alertTypeMds = alertTypeMds;
@@ -453,7 +531,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
+             * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127608589417****</p>
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
@@ -461,7 +542,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 告警附加字段attck
+             * <p>告警附加字段attck</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1595.002 Vulnerability Scanning</p>
              */
             public Builder attCk(String attCk) {
                 this.attCk = attCk;
@@ -469,7 +553,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * 自动化响应规则条件字段数据类型。
+             * <p>自动化响应规则条件字段数据类型。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>varchar</p>
              */
             public Builder dataType(Integer dataType) {
                 this.dataType = dataType;
@@ -477,7 +564,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.
+             * <p>The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window. The HTML escape characters are reversed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;MINUTE&quot;}</p>
              */
             public Builder eventTransferExt(String eventTransferExt) {
                 this.eventTransferExt = eventTransferExt;
@@ -485,11 +575,14 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the system generates an event for the alert. Valid values:
-             * <p>
+             * <p>Indicates whether the system generates an event for the alert. Valid values:</p>
+             * <ul>
+             * <li>0: no</li>
+             * <li>1: yes</li>
+             * </ul>
              * 
-             * *   0: no
-             * *   1: yes
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder eventTransferSwitch(Integer eventTransferSwitch) {
                 this.eventTransferSwitch = eventTransferSwitch;
@@ -497,12 +590,15 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The event generation method. Valid values:
-             * <p>
+             * <p>The event generation method. Valid values:</p>
+             * <ul>
+             * <li>default: The default method is used.</li>
+             * <li>singleToSingle: The system generates an event for each alert.</li>
+             * <li>allToSingle: The system generates an event for alerts within a period of time.</li>
+             * </ul>
              * 
-             * *   default: The default method is used.
-             * *   singleToSingle: The system generates an event for each alert.
-             * *   allToSingle: The system generates an event for alerts within a period of time.
+             * <strong>example:</strong>
+             * <p>allToSingle</p>
              */
             public Builder eventTransferType(String eventTransferType) {
                 this.eventTransferType = eventTransferType;
@@ -510,7 +606,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the custom rule was created.
+             * <p>The time when the custom rule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -518,7 +617,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the custom rule was last updated.
+             * <p>The time when the custom rule was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -526,7 +628,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the custom rule.
+             * <p>The ID of the custom rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -534,7 +639,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The log source of the rule.
+             * <p>The log source of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_siem_aegis_sas_alert</p>
              */
             public Builder logSource(String logSource) {
                 this.logSource = logSource;
@@ -542,7 +650,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The internal code of the log source.
+             * <p>The internal code of the log source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${sas.cloudsiem.prod.cloud_siem_aegis_sas_alert}</p>
              */
             public Builder logSourceMds(String logSourceMds) {
                 this.logSourceMds = logSourceMds;
@@ -550,7 +661,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The log type of the rule.
+             * <p>The log type of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ALERT_ACTIVITY</p>
              */
             public Builder logType(String logType) {
                 this.logType = logType;
@@ -558,7 +672,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The internal code of the log type.
+             * <p>The internal code of the log type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${security_event_config.event_name.webshellName_clientav}</p>
              */
             public Builder logTypeMds(String logTypeMds) {
                 this.logTypeMds = logTypeMds;
@@ -566,7 +683,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The window length of the rule. The HTML escape characters are reversed.
+             * <p>The window length of the rule. The HTML escape characters are reversed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;HOUR&quot;}</p>
              */
             public Builder queryCycle(String queryCycle) {
                 this.queryCycle = queryCycle;
@@ -574,7 +694,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The query condition of the rule. The value is in the JSON format. The HTML escape characters are reversed.
+             * <p>The query condition of the rule. The value is in the JSON format. The HTML escape characters are reversed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[[{&quot;not&quot;:false,&quot;left&quot;:&quot;alert_name&quot;,&quot;operator&quot;:&quot;=&quot;,&quot;right&quot;:&quot;WEBSHELL&quot;}]]</p>
              */
             public Builder ruleCondition(String ruleCondition) {
                 this.ruleCondition = ruleCondition;
@@ -582,7 +705,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the rule.
+             * <p>The description of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>this rule is for waf scan</p>
              */
             public Builder ruleDesc(String ruleDesc) {
                 this.ruleDesc = ruleDesc;
@@ -590,7 +716,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The log aggregation field of the rule. The value is a JSON string. The HTML escape characters are reversed.
+             * <p>The log aggregation field of the rule. The value is a JSON string. The HTML escape characters are reversed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;asset_id&quot;]</p>
              */
             public Builder ruleGroup(String ruleGroup) {
                 this.ruleGroup = ruleGroup;
@@ -598,7 +727,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf_scan</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -606,7 +738,10 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The threshold configuration of the rule. The value is in the JSON format. The HTML escape characters are reversed.
+             * <p>The threshold configuration of the rule. The value is in the JSON format. The HTML escape characters are reversed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;aggregateFunction&quot;:&quot;count&quot;,&quot;aggregateFunctionName&quot;:&quot;count&quot;,&quot;field&quot;:&quot;activity_name&quot;,&quot;operator&quot;:&quot;&lt;=&quot;,&quot;value&quot;:1}</p>
              */
             public Builder ruleThreshold(String ruleThreshold) {
                 this.ruleThreshold = ruleThreshold;
@@ -614,11 +749,14 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the rule. Valid values:
-             * <p>
+             * <p>The type of the rule. Valid values:</p>
+             * <ul>
+             * <li>predefine</li>
+             * <li>customize</li>
+             * </ul>
              * 
-             * *   predefine
-             * *   customize
+             * <strong>example:</strong>
+             * <p>customize</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -626,14 +764,17 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The rule status. Valid values:
-             * <p>
+             * <p>The rule status. Valid values:</p>
+             * <ul>
+             * <li>0: The rule is in the initial state.</li>
+             * <li>10: The simulation data is tested.</li>
+             * <li>15: The business data is being tested.</li>
+             * <li>20: The business data test ends.</li>
+             * <li>100: The rule takes effect.</li>
+             * </ul>
              * 
-             * *   0: The rule is in the initial state.
-             * *   10: The simulation data is tested.
-             * *   15: The business data is being tested.
-             * *   20: The business data test ends.
-             * *   100: The rule takes effect.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -641,12 +782,15 @@ public class PostCustomizeRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li>serious: high</li>
+             * <li>suspicious: medium</li>
+             * <li>remind: low</li>
+             * </ul>
              * 
-             * *   serious: high
-             * *   suspicious: medium
-             * *   remind: low
+             * <strong>example:</strong>
+             * <p>remind</p>
              */
             public Builder threatLevel(String threatLevel) {
                 this.threatLevel = threatLevel;

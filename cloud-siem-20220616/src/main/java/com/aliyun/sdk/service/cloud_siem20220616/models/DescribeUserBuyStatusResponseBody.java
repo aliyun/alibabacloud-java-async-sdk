@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUserBuyStatusResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUserBuyStatusResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,8 +58,16 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserBuyStatusResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +75,10 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>81D8EC0C-0804-51AD-8C38-17ED0BC74892</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUserBuyStatusResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUserBuyStatusResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanBuy")
         private Boolean canBuy;
@@ -228,12 +255,33 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             private Long subUserId; 
             private String subUserName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.canBuy = model.canBuy;
+                this.capacity = model.capacity;
+                this.durationDays = model.durationDays;
+                this.endTime = model.endTime;
+                this.mainUserId = model.mainUserId;
+                this.mainUserName = model.mainUserName;
+                this.masterUserId = model.masterUserId;
+                this.masterUserName = model.masterUserName;
+                this.rdOrder = model.rdOrder;
+                this.sasInstanceId = model.sasInstanceId;
+                this.subUserId = model.subUserId;
+                this.subUserName = model.subUserName;
+            } 
+
             /**
-             * Indicates whether the logon Alibaba Cloud account can be used to place orders for the threat analysis feature, such as purchase, upgrade, and specifications change orders. Valid values:
-             * <p>
+             * <p>Indicates whether the logon Alibaba Cloud account can be used to place orders for the threat analysis feature, such as purchase, upgrade, and specifications change orders. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canBuy(Boolean canBuy) {
                 this.canBuy = canBuy;
@@ -241,7 +289,10 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The log storage capacity that is purchased for the threat analysis feature. Unit: GB.
+             * <p>The log storage capacity that is purchased for the threat analysis feature. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1024</p>
              */
             public Builder capacity(Integer capacity) {
                 this.capacity = capacity;
@@ -249,7 +300,10 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days before the expiration time of the threat analysis feature.
+             * <p>The number of days before the expiration time of the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder durationDays(Long durationDays) {
                 this.durationDays = durationDays;
@@ -257,7 +311,10 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the threat analysis feature expires. Unit: milliseconds.
+             * <p>The timestamp when the threat analysis feature expires. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1669823999000</p>
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -265,7 +322,10 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
+             * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123XXXXXX</p>
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -273,7 +333,10 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the Alibaba Cloud account that is used to purchase the threat analysis feature.
+             * <p>The username of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas_account_xxx</p>
              */
             public Builder mainUserName(String mainUserName) {
                 this.mainUserName = mainUserName;
@@ -281,7 +344,10 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the management account of the resource directory.
+             * <p>The ID of the management account of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123XXXXXX</p>
              */
             public Builder masterUserId(Long masterUserId) {
                 this.masterUserId = masterUserId;
@@ -289,7 +355,10 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the management account of the resource directory.
+             * <p>The display name of the management account of the resource directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rd_master_xxx</p>
              */
             public Builder masterUserName(String masterUserName) {
                 this.masterUserName = masterUserName;
@@ -305,7 +374,10 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID of Security Center.
+             * <p>The instance ID of Security Center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas-instance-xxxxx</p>
              */
             public Builder sasInstanceId(String sasInstanceId) {
                 this.sasInstanceId = sasInstanceId;
@@ -313,7 +385,10 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the logon Alibaba Cloud account.
+             * <p>The ID of the logon Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123XXXXXX</p>
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -321,7 +396,10 @@ public class DescribeUserBuyStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the logon Alibaba Cloud account.
+             * <p>The username of the logon Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas_account_xxx</p>
              */
             public Builder subUserName(String subUserName) {
                 this.subUserName = subUserName;

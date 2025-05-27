@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeCloudSiemAssetsResponseBody} extends {@link TeaModel}
+ * {@link ListEntitiesResponseBody} extends {@link TeaModel}
  *
- * <p>DescribeCloudSiemAssetsResponseBody</p>
+ * <p>ListEntitiesResponseBody</p>
  */
-public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
+public class ListEntitiesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -32,7 +32,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private DescribeCloudSiemAssetsResponseBody(Builder builder) {
+    private ListEntitiesResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -44,7 +44,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DescribeCloudSiemAssetsResponseBody create() {
+    public static ListEntitiesResponseBody create() {
         return builder().build();
     }
 
@@ -97,7 +97,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(DescribeCloudSiemAssetsResponseBody model) {
+        private Builder(ListEntitiesResponseBody model) {
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
@@ -106,10 +106,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The HTTP status code.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -117,10 +114,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>123456</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -128,10 +122,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -139,10 +130,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,31 +138,24 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public DescribeCloudSiemAssetsResponseBody build() {
-            return new DescribeCloudSiemAssetsResponseBody(this);
+        public ListEntitiesResponseBody build() {
+            return new ListEntitiesResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link DescribeCloudSiemAssetsResponseBody} extends {@link TeaModel}
+     * {@link ListEntitiesResponseBody} extends {@link TeaModel}
      *
-     * <p>DescribeCloudSiemAssetsResponseBody</p>
+     * <p>ListEntitiesResponseBody</p>
      */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
@@ -236,10 +217,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The current page number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * CurrentPage.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -247,10 +225,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of entries per page.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>10</p>
+             * PageSize.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -258,10 +233,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of entries returned.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
+             * TotalCount.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -277,136 +249,40 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link DescribeCloudSiemAssetsResponseBody} extends {@link TeaModel}
+     * {@link ListEntitiesResponseBody} extends {@link TeaModel}
      *
-     * <p>DescribeCloudSiemAssetsResponseBody</p>
-     */
-    public static class AssetInfo extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Key")
-        private String key;
-
-        @com.aliyun.core.annotation.NameInMap("KeyName")
-        private String keyName;
-
-        @com.aliyun.core.annotation.NameInMap("Values")
-        private String values;
-
-        private AssetInfo(Builder builder) {
-            this.key = builder.key;
-            this.keyName = builder.keyName;
-            this.values = builder.values;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static AssetInfo create() {
-            return builder().build();
-        }
-
-        /**
-         * @return key
-         */
-        public String getKey() {
-            return this.key;
-        }
-
-        /**
-         * @return keyName
-         */
-        public String getKeyName() {
-            return this.keyName;
-        }
-
-        /**
-         * @return values
-         */
-        public String getValues() {
-            return this.values;
-        }
-
-        public static final class Builder {
-            private String key; 
-            private String keyName; 
-            private String values; 
-
-            private Builder() {
-            } 
-
-            private Builder(AssetInfo model) {
-                this.key = model.key;
-                this.keyName = model.keyName;
-                this.values = model.values;
-            } 
-
-            /**
-             * <p>The attribute key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>suspicious.wbd.wb.trojanpath</p>
-             */
-            public Builder key(String key) {
-                this.key = key;
-                return this;
-            }
-
-            /**
-             * <p>The name of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Trojan Path</p>
-             */
-            public Builder keyName(String keyName) {
-                this.keyName = keyName;
-                return this;
-            }
-
-            /**
-             * <p>The value of the key.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>/root/test33.php</p>
-             */
-            public Builder values(String values) {
-                this.values = values;
-                return this;
-            }
-
-            public AssetInfo build() {
-                return new AssetInfo(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link DescribeCloudSiemAssetsResponseBody} extends {@link TeaModel}
-     *
-     * <p>DescribeCloudSiemAssetsResponseBody</p>
+     * <p>ListEntitiesResponseBody</p>
      */
     public static class ResponseData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlertNum")
+        private Integer alertNum;
+
         @com.aliyun.core.annotation.NameInMap("AlertUuid")
         private String alertUuid;
 
         @com.aliyun.core.annotation.NameInMap("Aliuid")
         private Long aliuid;
 
-        @com.aliyun.core.annotation.NameInMap("AssetId")
-        private String assetId;
-
-        @com.aliyun.core.annotation.NameInMap("AssetInfo")
-        private java.util.List<AssetInfo> assetInfo;
-
-        @com.aliyun.core.annotation.NameInMap("AssetName")
-        private String assetName;
-
-        @com.aliyun.core.annotation.NameInMap("AssetType")
-        private String assetType;
-
         @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
+
+        @com.aliyun.core.annotation.NameInMap("EntityId")
+        private String entityId;
+
+        @com.aliyun.core.annotation.NameInMap("EntityInfo")
+        private String entityInfo;
+
+        @com.aliyun.core.annotation.NameInMap("EntityName")
+        private String entityName;
+
+        @com.aliyun.core.annotation.NameInMap("EntityType")
+        private String entityType;
+
+        @com.aliyun.core.annotation.NameInMap("EntityUuid")
+        private String entityUuid;
+
+        @com.aliyun.core.annotation.NameInMap("EventNum")
+        private Integer eventNum;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
@@ -420,21 +296,28 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IncidentUuid")
         private String incidentUuid;
 
+        @com.aliyun.core.annotation.NameInMap("MalwareType")
+        private String malwareType;
+
         @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
         private ResponseData(Builder builder) {
+            this.alertNum = builder.alertNum;
             this.alertUuid = builder.alertUuid;
             this.aliuid = builder.aliuid;
-            this.assetId = builder.assetId;
-            this.assetInfo = builder.assetInfo;
-            this.assetName = builder.assetName;
-            this.assetType = builder.assetType;
             this.cloudCode = builder.cloudCode;
+            this.entityId = builder.entityId;
+            this.entityInfo = builder.entityInfo;
+            this.entityName = builder.entityName;
+            this.entityType = builder.entityType;
+            this.entityUuid = builder.entityUuid;
+            this.eventNum = builder.eventNum;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
             this.incidentUuid = builder.incidentUuid;
+            this.malwareType = builder.malwareType;
             this.subUserId = builder.subUserId;
         }
 
@@ -444,6 +327,13 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
 
         public static ResponseData create() {
             return builder().build();
+        }
+
+        /**
+         * @return alertNum
+         */
+        public Integer getAlertNum() {
+            return this.alertNum;
         }
 
         /**
@@ -461,38 +351,52 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         }
 
         /**
-         * @return assetId
-         */
-        public String getAssetId() {
-            return this.assetId;
-        }
-
-        /**
-         * @return assetInfo
-         */
-        public java.util.List<AssetInfo> getAssetInfo() {
-            return this.assetInfo;
-        }
-
-        /**
-         * @return assetName
-         */
-        public String getAssetName() {
-            return this.assetName;
-        }
-
-        /**
-         * @return assetType
-         */
-        public String getAssetType() {
-            return this.assetType;
-        }
-
-        /**
          * @return cloudCode
          */
         public String getCloudCode() {
             return this.cloudCode;
+        }
+
+        /**
+         * @return entityId
+         */
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        /**
+         * @return entityInfo
+         */
+        public String getEntityInfo() {
+            return this.entityInfo;
+        }
+
+        /**
+         * @return entityName
+         */
+        public String getEntityName() {
+            return this.entityName;
+        }
+
+        /**
+         * @return entityType
+         */
+        public String getEntityType() {
+            return this.entityType;
+        }
+
+        /**
+         * @return entityUuid
+         */
+        public String getEntityUuid() {
+            return this.entityUuid;
+        }
+
+        /**
+         * @return eventNum
+         */
+        public Integer getEventNum() {
+            return this.eventNum;
         }
 
         /**
@@ -524,6 +428,13 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         }
 
         /**
+         * @return malwareType
+         */
+        public String getMalwareType() {
+            return this.malwareType;
+        }
+
+        /**
          * @return subUserId
          */
         public Long getSubUserId() {
@@ -531,42 +442,55 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer alertNum; 
             private String alertUuid; 
             private Long aliuid; 
-            private String assetId; 
-            private java.util.List<AssetInfo> assetInfo; 
-            private String assetName; 
-            private String assetType; 
             private String cloudCode; 
+            private String entityId; 
+            private String entityInfo; 
+            private String entityName; 
+            private String entityType; 
+            private String entityUuid; 
+            private Integer eventNum; 
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
             private String incidentUuid; 
+            private String malwareType; 
             private Long subUserId; 
 
             private Builder() {
             } 
 
             private Builder(ResponseData model) {
+                this.alertNum = model.alertNum;
                 this.alertUuid = model.alertUuid;
                 this.aliuid = model.aliuid;
-                this.assetId = model.assetId;
-                this.assetInfo = model.assetInfo;
-                this.assetName = model.assetName;
-                this.assetType = model.assetType;
                 this.cloudCode = model.cloudCode;
+                this.entityId = model.entityId;
+                this.entityInfo = model.entityInfo;
+                this.entityName = model.entityName;
+                this.entityType = model.entityType;
+                this.entityUuid = model.entityUuid;
+                this.eventNum = model.eventNum;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
                 this.id = model.id;
                 this.incidentUuid = model.incidentUuid;
+                this.malwareType = model.malwareType;
                 this.subUserId = model.subUserId;
             } 
 
             /**
-             * <p>The UUID of the alert associated with the event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>sas_71e24437d2797ce8fc59692905a4****</p>
+             * AlertNum.
+             */
+            public Builder alertNum(Integer alertNum) {
+                this.alertNum = alertNum;
+                return this;
+            }
+
+            /**
+             * AlertUuid.
              */
             public Builder alertUuid(String alertUuid) {
                 this.alertUuid = alertUuid;
@@ -574,10 +498,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the Alibaba Cloud account in SIEM.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1276085894174392</p>
+             * Aliuid.
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
@@ -585,67 +506,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logical ID of the asset.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0616caeb-acb8-45e0-8520-4ee5fbe251f0</p>
-             */
-            public Builder assetId(String assetId) {
-                this.assetId = assetId;
-                return this;
-            }
-
-            /**
-             * <p>The display information of the asset is in the JSON format.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>[{&quot;KeyName&quot;: &quot;${aliyun.siem.asset.asset_name}&quot;,&quot;Values&quot;: &quot;zsw-agentless-ubuntu20&quot;,&quot;Key&quot;: &quot;asset_name&quot;}]</p>
-             */
-            public Builder assetInfo(java.util.List<AssetInfo> assetInfo) {
-                this.assetInfo = assetInfo;
-                return this;
-            }
-
-            /**
-             * <p>The name of the asset.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>zsw-agentless-centos****</p>
-             */
-            public Builder assetName(String assetName) {
-                this.assetName = assetName;
-                return this;
-            }
-
-            /**
-             * <p>The type of the asset. Valid values:</p>
-             * <ul>
-             * <li>ip</li>
-             * <li>domain</li>
-             * <li>url</li>
-             * <li>process</li>
-             * <li>file</li>
-             * <li>host</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>domain</p>
-             */
-            public Builder assetType(String assetType) {
-                this.assetType = assetType;
-                return this;
-            }
-
-            /**
-             * <p>The cloud code of the entity. Valid values:</p>
-             * <ul>
-             * <li>aliyun: Alibaba Cloud</li>
-             * <li>qcloud: Tencent Cloud</li>
-             * <li>hcloud: Huawei Cloud</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>aliyun</p>
+             * CloudCode.
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -653,10 +514,55 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the asset was synchronized.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-01-06 16:37:29</p>
+             * EntityId.
+             */
+            public Builder entityId(String entityId) {
+                this.entityId = entityId;
+                return this;
+            }
+
+            /**
+             * EntityInfo.
+             */
+            public Builder entityInfo(String entityInfo) {
+                this.entityInfo = entityInfo;
+                return this;
+            }
+
+            /**
+             * EntityName.
+             */
+            public Builder entityName(String entityName) {
+                this.entityName = entityName;
+                return this;
+            }
+
+            /**
+             * EntityType.
+             */
+            public Builder entityType(String entityType) {
+                this.entityType = entityType;
+                return this;
+            }
+
+            /**
+             * EntityUuid.
+             */
+            public Builder entityUuid(String entityUuid) {
+                this.entityUuid = entityUuid;
+                return this;
+            }
+
+            /**
+             * EventNum.
+             */
+            public Builder eventNum(Integer eventNum) {
+                this.eventNum = eventNum;
+                return this;
+            }
+
+            /**
+             * GmtCreate.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -664,10 +570,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the asset was last updated.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2021-01-06 16:37:29</p>
+             * GmtModified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -675,10 +578,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the asset.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123</p>
+             * Id.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -686,10 +586,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The UUID of the event.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
+             * IncidentUuid.
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
@@ -697,10 +594,15 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the associated account to which the asset belongs.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>176555323***</p>
+             * MalwareType.
+             */
+            public Builder malwareType(String malwareType) {
+                this.malwareType = malwareType;
+                return this;
+            }
+
+            /**
+             * SubUserId.
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -716,9 +618,9 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link DescribeCloudSiemAssetsResponseBody} extends {@link TeaModel}
+     * {@link ListEntitiesResponseBody} extends {@link TeaModel}
      *
-     * <p>DescribeCloudSiemAssetsResponseBody</p>
+     * <p>ListEntitiesResponseBody</p>
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageInfo")
@@ -767,7 +669,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The pagination information.</p>
+             * PageInfo.
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -775,7 +677,7 @@ public class DescribeCloudSiemAssetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The detailed data.</p>
+             * ResponseData.
              */
             public Builder responseData(java.util.List<ResponseData> responseData) {
                 this.responseData = responseData;

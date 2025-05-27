@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SubmitImportLogTasksResponseBody} extends {@link TeaModel}
  *
  * <p>SubmitImportLogTasksResponseBody</p>
@@ -30,6 +36,10 @@ public class SubmitImportLogTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,8 +58,16 @@ public class SubmitImportLogTasksResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(SubmitImportLogTasksResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +75,10 @@ public class SubmitImportLogTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class SubmitImportLogTasksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SubmitImportLogTasksResponseBody} extends {@link TeaModel}
+     *
+     * <p>SubmitImportLogTasksResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -96,8 +123,18 @@ public class SubmitImportLogTasksResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.count = model.count;
+            } 
+
             /**
-             * The number of log collection tasks that are submitted.
+             * <p>The number of log collection tasks that are submitted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder count(Integer count) {
                 this.count = count;

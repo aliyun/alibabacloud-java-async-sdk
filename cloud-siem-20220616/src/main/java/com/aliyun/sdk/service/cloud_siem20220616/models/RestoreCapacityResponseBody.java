@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestoreCapacityResponseBody} extends {@link TeaModel}
  *
  * <p>RestoreCapacityResponseBody</p>
@@ -30,6 +36,10 @@ public class RestoreCapacityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,12 +58,23 @@ public class RestoreCapacityResponseBody extends TeaModel {
         private Boolean data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(RestoreCapacityResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Indicates whether the release command has been sent. Valid values:
-         * <p>
+         * <p>Indicates whether the release command has been sent. Valid values:</p>
+         * <ul>
+         * <li>true: The command has been sent and the storage space is being released.</li>
+         * <li>false: The command failed to be sent.</li>
+         * </ul>
          * 
-         * *   true: The command has been sent and the storage space is being released.
-         * *   false: The command failed to be sent.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -61,7 +82,10 @@ public class RestoreCapacityResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-58D4-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

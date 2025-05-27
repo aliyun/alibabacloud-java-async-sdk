@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeImportedLogCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeImportedLogCountResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,8 +58,16 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeImportedLogCountResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +75,10 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeImportedLogCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeImportedLogCountResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImportedLogCount")
         private Integer importedLogCount;
@@ -120,8 +147,20 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
             private Integer totalLogCount; 
             private Integer unImportedLogCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.importedLogCount = model.importedLogCount;
+                this.totalLogCount = model.totalLogCount;
+                this.unImportedLogCount = model.unImportedLogCount;
+            } 
+
             /**
-             * The number of logs that are added.
+             * <p>The number of logs that are added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder importedLogCount(Integer importedLogCount) {
                 this.importedLogCount = importedLogCount;
@@ -129,7 +168,10 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of logs.
+             * <p>The total number of logs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>59</p>
              */
             public Builder totalLogCount(Integer totalLogCount) {
                 this.totalLogCount = totalLogCount;
@@ -137,7 +179,10 @@ public class DescribeImportedLogCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of logs that are not added.
+             * <p>The number of logs that are not added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>49</p>
              */
             public Builder unImportedLogCount(Integer unImportedLogCount) {
                 this.unImportedLogCount = unImportedLogCount;

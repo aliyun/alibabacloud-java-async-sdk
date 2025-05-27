@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListProjectLogStoresResponseBody} extends {@link TeaModel}
  *
  * <p>ListProjectLogStoresResponseBody</p>
  */
 public class ListProjectLogStoresResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,19 +55,30 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListProjectLogStoresResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListProjectLogStoresResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListProjectLogStoresResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndPoint")
         private String endPoint;
@@ -180,8 +207,25 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             private Long subUserId; 
             private String subUserName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.endPoint = model.endPoint;
+                this.localName = model.localName;
+                this.logStore = model.logStore;
+                this.mainUserId = model.mainUserId;
+                this.project = model.project;
+                this.regionId = model.regionId;
+                this.subUserId = model.subUserId;
+                this.subUserName = model.subUserName;
+            } 
+
             /**
-             * The endpoint of the Simple Log Service project.
+             * <p>The endpoint of the Simple Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou.log.aliyuncs.com</p>
              */
             public Builder endPoint(String endPoint) {
                 this.endPoint = endPoint;
@@ -189,7 +233,10 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the region in which the Simple Log Service project resides.
+             * <p>The name of the region in which the Simple Log Service project resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hangzhou</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -197,7 +244,10 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Simple Log Service Logstore.
+             * <p>The name of the Simple Log Service Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud-siem-logstore</p>
              */
             public Builder logStore(String logStore) {
                 this.logStore = logStore;
@@ -205,7 +255,10 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
+             * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123XXXXXXXXX</p>
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -213,7 +266,10 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the Simple Log Service project.
+             * <p>The name of the Simple Log Service project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud-siem-project</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -221,7 +277,10 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the Simple Log Service project resides.
+             * <p>The ID of the region in which the Simple Log Service project resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -229,7 +288,10 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
+             * <p>The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123XXXXXXXX</p>
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -237,7 +299,10 @@ public class ListProjectLogStoresResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
+             * <p>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas_account_xxxx</p>
              */
             public Builder subUserName(String subUserName) {
                 this.subUserName = subUserName;

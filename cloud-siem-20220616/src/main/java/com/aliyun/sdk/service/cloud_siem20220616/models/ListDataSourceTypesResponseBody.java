@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDataSourceTypesResponseBody} extends {@link TeaModel}
  *
  * <p>ListDataSourceTypesResponseBody</p>
  */
 public class ListDataSourceTypesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,19 +55,30 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListDataSourceTypesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListDataSourceTypesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDataSourceTypesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CloudCode")
         private String cloudCode;
@@ -108,8 +135,19 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
             private String cloudCode; 
             private String dataSourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cloudCode = model.cloudCode;
+                this.dataSourceType = model.dataSourceType;
+            } 
+
             /**
-             * The code of the third-party cloud service.
+             * <p>The code of the third-party cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hcloud</p>
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -117,12 +155,15 @@ public class ListDataSourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the data source. Valid values:
-             * <p>
+             * <p>The type of the data source. Valid values:</p>
+             * <ul>
+             * <li>obs: Huawei Cloud Object Storage Service (OBS)</li>
+             * <li>wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</li>
+             * <li>ckafka: Tencent Cloud Kafka (CKafka)</li>
+             * </ul>
              * 
-             * *   obs: Huawei Cloud Object Storage Service (OBS)
-             * *   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)
-             * *   ckafka: Tencent Cloud Kafka (CKafka)
+             * <strong>example:</strong>
+             * <p>obs</p>
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;

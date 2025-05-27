@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudSiemEventDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCloudSiemEventDetailResponseBody</p>
@@ -40,6 +46,10 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
 
     public static DescribeCloudSiemEventDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudSiemEventDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +117,10 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +128,10 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +170,108 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCloudSiemEventDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudSiemEventDetailResponseBody</p>
+     */
+    public static class AttckStages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AlertNum")
+        private Integer alertNum;
+
+        @com.aliyun.core.annotation.NameInMap("TacticId")
+        private String tacticId;
+
+        @com.aliyun.core.annotation.NameInMap("TacticName")
+        private String tacticName;
+
+        private AttckStages(Builder builder) {
+            this.alertNum = builder.alertNum;
+            this.tacticId = builder.tacticId;
+            this.tacticName = builder.tacticName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AttckStages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alertNum
+         */
+        public Integer getAlertNum() {
+            return this.alertNum;
+        }
+
+        /**
+         * @return tacticId
+         */
+        public String getTacticId() {
+            return this.tacticId;
+        }
+
+        /**
+         * @return tacticName
+         */
+        public String getTacticName() {
+            return this.tacticName;
+        }
+
+        public static final class Builder {
+            private Integer alertNum; 
+            private String tacticId; 
+            private String tacticName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AttckStages model) {
+                this.alertNum = model.alertNum;
+                this.tacticId = model.tacticId;
+                this.tacticName = model.tacticName;
+            } 
+
+            /**
+             * AlertNum.
+             */
+            public Builder alertNum(Integer alertNum) {
+                this.alertNum = alertNum;
+                return this;
+            }
+
+            /**
+             * TacticId.
+             */
+            public Builder tacticId(String tacticId) {
+                this.tacticId = tacticId;
+                return this;
+            }
+
+            /**
+             * TacticName.
+             */
+            public Builder tacticName(String tacticName) {
+                this.tacticName = tacticName;
+                return this;
+            }
+
+            public AttckStages build() {
+                return new AttckStages(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCloudSiemEventDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudSiemEventDetailResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertNum")
         private Integer alertNum;
@@ -145,10 +283,13 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         private Integer assetNum;
 
         @com.aliyun.core.annotation.NameInMap("AttCkLabels")
-        private java.util.List < String > attCkLabels;
+        private java.util.List<String> attCkLabels;
+
+        @com.aliyun.core.annotation.NameInMap("AttckStages")
+        private java.util.List<AttckStages> attckStages;
 
         @com.aliyun.core.annotation.NameInMap("DataSources")
-        private java.util.List < String > dataSources;
+        private java.util.List<String> dataSources;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -171,6 +312,9 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IncidentNameEn")
         private String incidentNameEn;
 
+        @com.aliyun.core.annotation.NameInMap("IncidentType")
+        private String incidentType;
+
         @com.aliyun.core.annotation.NameInMap("IncidentUuid")
         private String incidentUuid;
 
@@ -179,6 +323,9 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
+
+        @com.aliyun.core.annotation.NameInMap("RuleId")
+        private String ruleId;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
@@ -194,6 +341,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             this.aliuid = builder.aliuid;
             this.assetNum = builder.assetNum;
             this.attCkLabels = builder.attCkLabels;
+            this.attckStages = builder.attckStages;
             this.dataSources = builder.dataSources;
             this.description = builder.description;
             this.descriptionEn = builder.descriptionEn;
@@ -202,9 +350,11 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.incidentName = builder.incidentName;
             this.incidentNameEn = builder.incidentNameEn;
+            this.incidentType = builder.incidentType;
             this.incidentUuid = builder.incidentUuid;
             this.referAccount = builder.referAccount;
             this.remark = builder.remark;
+            this.ruleId = builder.ruleId;
             this.status = builder.status;
             this.threatLevel = builder.threatLevel;
             this.threatScore = builder.threatScore;
@@ -242,14 +392,21 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         /**
          * @return attCkLabels
          */
-        public java.util.List < String > getAttCkLabels() {
+        public java.util.List<String> getAttCkLabels() {
             return this.attCkLabels;
+        }
+
+        /**
+         * @return attckStages
+         */
+        public java.util.List<AttckStages> getAttckStages() {
+            return this.attckStages;
         }
 
         /**
          * @return dataSources
          */
-        public java.util.List < String > getDataSources() {
+        public java.util.List<String> getDataSources() {
             return this.dataSources;
         }
 
@@ -303,6 +460,13 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return incidentType
+         */
+        public String getIncidentType() {
+            return this.incidentType;
+        }
+
+        /**
          * @return incidentUuid
          */
         public String getIncidentUuid() {
@@ -321,6 +485,13 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
          */
         public String getRemark() {
             return this.remark;
+        }
+
+        /**
+         * @return ruleId
+         */
+        public String getRuleId() {
+            return this.ruleId;
         }
 
         /**
@@ -348,8 +519,9 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             private Integer alertNum; 
             private Long aliuid; 
             private Integer assetNum; 
-            private java.util.List < String > attCkLabels; 
-            private java.util.List < String > dataSources; 
+            private java.util.List<String> attCkLabels; 
+            private java.util.List<AttckStages> attckStages; 
+            private java.util.List<String> dataSources; 
             private String description; 
             private String descriptionEn; 
             private String extContent; 
@@ -357,15 +529,47 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             private String gmtModified; 
             private String incidentName; 
             private String incidentNameEn; 
+            private String incidentType; 
             private String incidentUuid; 
             private String referAccount; 
             private String remark; 
+            private String ruleId; 
             private Integer status; 
             private String threatLevel; 
             private Float threatScore; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alertNum = model.alertNum;
+                this.aliuid = model.aliuid;
+                this.assetNum = model.assetNum;
+                this.attCkLabels = model.attCkLabels;
+                this.attckStages = model.attckStages;
+                this.dataSources = model.dataSources;
+                this.description = model.description;
+                this.descriptionEn = model.descriptionEn;
+                this.extContent = model.extContent;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.incidentName = model.incidentName;
+                this.incidentNameEn = model.incidentNameEn;
+                this.incidentType = model.incidentType;
+                this.incidentUuid = model.incidentUuid;
+                this.referAccount = model.referAccount;
+                this.remark = model.remark;
+                this.ruleId = model.ruleId;
+                this.status = model.status;
+                this.threatLevel = model.threatLevel;
+                this.threatScore = model.threatScore;
+            } 
+
             /**
-             * The number of alerts that are associated with the event.
+             * <p>The number of alerts that are associated with the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder alertNum(Integer alertNum) {
                 this.alertNum = alertNum;
@@ -373,7 +577,10 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the event belongs.
+             * <p>The ID of the Alibaba Cloud account to which the event belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127608589417****</p>
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
@@ -381,7 +588,10 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The number of assets that are associated with the event.
+             * <p>The number of assets that are associated with the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder assetNum(Integer assetNum) {
                 this.assetNum = assetNum;
@@ -389,23 +599,40 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the ATT\&CK attacks.
+             * <p>The tags of the ATT&amp;CK attacks.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&quot;T1595.002 Vulnerability Scanning&quot;]</p>
              */
-            public Builder attCkLabels(java.util.List < String > attCkLabels) {
+            public Builder attCkLabels(java.util.List<String> attCkLabels) {
                 this.attCkLabels = attCkLabels;
                 return this;
             }
 
             /**
-             * The source of the alert.
+             * AttckStages.
              */
-            public Builder dataSources(java.util.List < String > dataSources) {
+            public Builder attckStages(java.util.List<AttckStages> attckStages) {
+                this.attckStages = attckStages;
+                return this;
+            }
+
+            /**
+             * <p>The source of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[sas,waf]</p>
+             */
+            public Builder dataSources(java.util.List<String> dataSources) {
                 this.dataSources = dataSources;
                 return this;
             }
 
             /**
-             * The description of the event.
+             * <p>The description of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The threat event contains 13 Miner Network,1 Execute suspicious encoded commands on Linux, etc</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -413,7 +640,10 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the event in English.
+             * <p>The description of the event in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The threat event contains 13 Miner Network,1 Execute suspicious encoded commands on Linux, etc</p>
              */
             public Builder descriptionEn(String descriptionEn) {
                 this.descriptionEn = descriptionEn;
@@ -421,7 +651,10 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information of the event in the JSON format.
+             * <p>The extended information of the event in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;event_transfer_type&quot;:&quot;customize_rule&quot;}</p>
              */
             public Builder extContent(String extContent) {
                 this.extContent = extContent;
@@ -429,7 +662,10 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event occurred.
+             * <p>The time when the event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -437,7 +673,10 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the event was last updated.
+             * <p>The time when the event was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -445,7 +684,10 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event.
+             * <p>The name of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Multiple type of alerts, including Miner Network, Command line download and run malicious files, Backdoor Process, etc</p>
              */
             public Builder incidentName(String incidentName) {
                 this.incidentName = incidentName;
@@ -453,7 +695,10 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the event in English.
+             * <p>The name of the event in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Multiple type of alerts, including Miner Network, Command line download and run malicious files, Backdoor Process, etc</p>
              */
             public Builder incidentNameEn(String incidentNameEn) {
                 this.incidentNameEn = incidentNameEn;
@@ -461,7 +706,18 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the event.
+             * IncidentType.
+             */
+            public Builder incidentType(String incidentType) {
+                this.incidentType = incidentType;
+                return this;
+            }
+
+            /**
+             * <p>The UUID of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
@@ -469,7 +725,7 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Users associated with the event.
+             * <p>Users associated with the event.</p>
              */
             public Builder referAccount(String referAccount) {
                 this.referAccount = referAccount;
@@ -477,7 +733,10 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks of the event.
+             * <p>The remarks of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dealed</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -485,13 +744,24 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event. Valid values:
-             * <p>
+             * RuleId.
+             */
+            public Builder ruleId(String ruleId) {
+                this.ruleId = ruleId;
+                return this;
+            }
+
+            /**
+             * <p>The status of the event. Valid values:</p>
+             * <ul>
+             * <li>0: not handled</li>
+             * <li>1: handing</li>
+             * <li>5: handling failed</li>
+             * <li>10: handled</li>
+             * </ul>
              * 
-             * *   0: not handled
-             * *   1: handing
-             * *   5: handling failed
-             * *   10: handled
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -499,12 +769,15 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li>serious: high</li>
+             * <li>suspicious: medium</li>
+             * <li>remind: low</li>
+             * </ul>
              * 
-             * *   serious: high
-             * *   suspicious: medium
-             * *   remind: low
+             * <strong>example:</strong>
+             * <p>remind</p>
              */
             public Builder threatLevel(String threatLevel) {
                 this.threatLevel = threatLevel;
@@ -512,7 +785,10 @@ public class DescribeCloudSiemEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The risk score of the event. The score ranges from 0 to 100. A higher score indicates a higher risk level.
+             * <p>The risk score of the event. The score ranges from 0 to 100. A higher score indicates a higher risk level.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90.2</p>
              */
             public Builder threatScore(Float threatScore) {
                 this.threatScore = threatScore;

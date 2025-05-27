@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListRdUsersResponseBody} extends {@link TeaModel}
  *
  * <p>ListRdUsersResponseBody</p>
  */
 public class ListRdUsersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class ListRdUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,19 +55,30 @@ public class ListRdUsersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListRdUsersResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class ListRdUsersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListRdUsersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListRdUsersResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DelegatedOrNot")
         private Boolean delegatedOrNot;
@@ -156,8 +183,23 @@ public class ListRdUsersResponseBody extends TeaModel {
             private Long subUserId; 
             private String subUserName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.delegatedOrNot = model.delegatedOrNot;
+                this.joined = model.joined;
+                this.joinedTime = model.joinedTime;
+                this.mainUserId = model.mainUserId;
+                this.subUserId = model.subUserId;
+                this.subUserName = model.subUserName;
+            } 
+
             /**
-             * Indicates whether the account can be used to view the logs and alerts within the account.
+             * <p>Indicates whether the account can be used to view the logs and alerts within the account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder delegatedOrNot(Boolean delegatedOrNot) {
                 this.delegatedOrNot = delegatedOrNot;
@@ -165,11 +207,14 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account is added to the threat analysis feature for centralized management. Valid values:
-             * <p>
+             * <p>Indicates whether the account is added to the threat analysis feature for centralized management. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder joined(Boolean joined) {
                 this.joined = joined;
@@ -177,7 +222,10 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the account was added to the threat analysis feature.
+             * <p>The time when the account was added to the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2013-10-01 00:00:00</p>
              */
             public Builder joinedTime(String joinedTime) {
                 this.joinedTime = joinedTime;
@@ -185,7 +233,10 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
+             * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123XXXXXXXXX</p>
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -193,7 +244,10 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to perform operations supported by the threat analysis feature.
+             * <p>The ID of the Alibaba Cloud account that is used to perform operations supported by the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123XXXXXXXX</p>
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -201,7 +255,10 @@ public class ListRdUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
+             * <p>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas_account_xxx</p>
              */
             public Builder subUserName(String subUserName) {
                 this.subUserName = subUserName;

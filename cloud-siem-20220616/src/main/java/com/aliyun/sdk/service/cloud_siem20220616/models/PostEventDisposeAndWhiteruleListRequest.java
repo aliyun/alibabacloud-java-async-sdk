@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PostEventDisposeAndWhiteruleListRequest} extends {@link RequestModel}
  *
  * <p>PostEventDisposeAndWhiteruleListRequest</p>
@@ -43,6 +49,10 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThreatLevel")
+    private String threatLevel;
+
     private PostEventDisposeAndWhiteruleListRequest(Builder builder) {
         super(builder);
         this.eventDispose = builder.eventDispose;
@@ -53,6 +63,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         this.roleFor = builder.roleFor;
         this.roleType = builder.roleType;
         this.status = builder.status;
+        this.threatLevel = builder.threatLevel;
     }
 
     public static Builder builder() {
@@ -63,7 +74,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -124,6 +135,13 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return threatLevel
+     */
+    public String getThreatLevel() {
+        return this.threatLevel;
+    }
+
     public static final class Builder extends Request.Builder<PostEventDisposeAndWhiteruleListRequest, Builder> {
         private String eventDispose; 
         private String incidentUuid; 
@@ -133,6 +151,7 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         private Long roleFor; 
         private Integer roleType; 
         private Integer status; 
+        private String threatLevel; 
 
         private Builder() {
             super();
@@ -148,10 +167,38 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
             this.roleFor = request.roleFor;
             this.roleType = request.roleType;
             this.status = request.status;
+            this.threatLevel = request.threatLevel;
         } 
 
         /**
-         * The configuration of event handling. The value is a JSON object.
+         * <p>The configuration of event handling. The value is a JSON object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;playbookName&quot;: &quot;WafBlockIP&quot;,
+         *             &quot;entityId&quot;: &quot;104466118&quot;,
+         *             &quot;scope&quot;: [
+         *                   &quot;176618589410****&quot;
+         *             ],
+         *             &quot;startTime&quot;: 1604168946281,
+         *             &quot;endTime&quot;: 1614168946281
+         *       },
+         *       {
+         *             &quot;playbookName&quot;: &quot;WafBlockIP&quot;,
+         *             &quot;entityId&quot;: &quot;104466118&quot;,
+         *             &quot;scope&quot;: [
+         *                   {
+         *                         &quot;instanceId&quot;: &quot;waf-cn-n6w1oy1****&quot;,
+         *                         &quot;domains&quot;: [
+         *                               &quot;lmfip.wafqax.***&quot;
+         *                         ]
+         *                   }
+         *             ],
+         *             &quot;startTime&quot;: 1604168946281,
+         *             &quot;endTime&quot;: 1614168946281
+         *       }
+         * ]</p>
          */
         public Builder eventDispose(String eventDispose) {
             this.putBodyParameter("EventDispose", eventDispose);
@@ -160,7 +207,10 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * The UUID of the event.
+         * <p>The UUID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
@@ -169,7 +219,14 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * The configuration of the alert recipient. The value is a JSON object.
+         * <p>The configuration of the alert recipient. The value is a JSON object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *       &quot;messageTitle&quot;: &quot;test&quot;,
+         *       &quot;receiver&quot;: &quot;xiaowang&quot;,
+         *       &quot;channel&quot;: &quot;message&quot;
+         * }</p>
          */
         public Builder receiverInfo(String receiverInfo) {
             this.putBodyParameter("ReceiverInfo", receiverInfo);
@@ -178,11 +235,14 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
-         * <p>
+         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * </ul>
          * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -191,7 +251,10 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * The remarks of the event.
+         * <p>The remarks of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dealed</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("Remark", remark);
@@ -200,7 +263,10 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * The ID of the account that you switch from the management account.
+         * <p>The ID of the account that you switch from the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -209,10 +275,14 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * The type of the view. Valid values:
-         * <p>
-         * - 0: the current Alibaba Cloud account
-         * - 1: the global account
+         * <p>The type of the view. Valid values:</p>
+         * <ul>
+         * <li>0: the current Alibaba Cloud account</li>
+         * <li>1: the global account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -221,17 +291,29 @@ public class PostEventDisposeAndWhiteruleListRequest extends Request {
         }
 
         /**
-         * The status of the event. Valid values:
-         * <p>
+         * <p>The status of the event. Valid values:</p>
+         * <ul>
+         * <li>0: unhandled</li>
+         * <li>1: handing</li>
+         * <li>5: handling failed</li>
+         * <li>10: handled</li>
+         * </ul>
          * 
-         * *   0: unhandled
-         * *   1: handing
-         * *   5: handling failed
-         * *   10: handled
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * ThreatLevel.
+         */
+        public Builder threatLevel(String threatLevel) {
+            this.putBodyParameter("ThreatLevel", threatLevel);
+            this.threatLevel = threatLevel;
             return this;
         }
 

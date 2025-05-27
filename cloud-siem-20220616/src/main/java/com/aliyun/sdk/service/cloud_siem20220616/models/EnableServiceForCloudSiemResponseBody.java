@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableServiceForCloudSiemResponseBody} extends {@link TeaModel}
  *
  * <p>EnableServiceForCloudSiemResponseBody</p>
@@ -30,6 +36,10 @@ public class EnableServiceForCloudSiemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,12 +58,23 @@ public class EnableServiceForCloudSiemResponseBody extends TeaModel {
         private Boolean data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(EnableServiceForCloudSiemResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Indicates whether the threat analysis feature is authorized to access the resource directory. Valid values:
-         * <p>
+         * <p>Indicates whether the threat analysis feature is authorized to access the resource directory. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -61,7 +82,10 @@ public class EnableServiceForCloudSiemResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

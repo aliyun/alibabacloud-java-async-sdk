@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomizeRuleCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomizeRuleCountResponseBody</p>
@@ -40,6 +46,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
 
     public static DescribeCustomizeRuleCountResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomizeRuleCountResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +117,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +128,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +170,12 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomizeRuleCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomizeRuleCountResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AggregationRuleNum")
         private Integer aggregationRuleNum;
@@ -292,8 +334,29 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             private Integer totalRuleNum; 
             private Integer unEventRuleNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aggregationRuleNum = model.aggregationRuleNum;
+                this.customizeRuleNum = model.customizeRuleNum;
+                this.expertRuleNum = model.expertRuleNum;
+                this.graphComputingRuleNum = model.graphComputingRuleNum;
+                this.highRuleNum = model.highRuleNum;
+                this.inUseRuleNum = model.inUseRuleNum;
+                this.lowRuleNum = model.lowRuleNum;
+                this.mediumRuleNum = model.mediumRuleNum;
+                this.predefinedRuleNum = model.predefinedRuleNum;
+                this.singleAlertRuleNum = model.singleAlertRuleNum;
+                this.totalRuleNum = model.totalRuleNum;
+                this.unEventRuleNum = model.unEventRuleNum;
+            } 
+
             /**
-             * 同类聚合规则数。
+             * <p>同类聚合规则数。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder aggregationRuleNum(Integer aggregationRuleNum) {
                 this.aggregationRuleNum = aggregationRuleNum;
@@ -301,7 +364,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * 自定义规则数。
+             * <p>自定义规则数。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder customizeRuleNum(Integer customizeRuleNum) {
                 this.customizeRuleNum = customizeRuleNum;
@@ -309,7 +375,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * 专家规则数。
+             * <p>专家规则数。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder expertRuleNum(Integer expertRuleNum) {
                 this.expertRuleNum = expertRuleNum;
@@ -317,7 +386,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * 图计算规则数。
+             * <p>图计算规则数。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder graphComputingRuleNum(Integer graphComputingRuleNum) {
                 this.graphComputingRuleNum = graphComputingRuleNum;
@@ -325,7 +397,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rules that are used to identify high-risk threats.
+             * <p>The number of rules that are used to identify high-risk threats.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder highRuleNum(Integer highRuleNum) {
                 this.highRuleNum = highRuleNum;
@@ -333,7 +408,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of rules.
+             * <p>The total number of rules.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder inUseRuleNum(Integer inUseRuleNum) {
                 this.inUseRuleNum = inUseRuleNum;
@@ -341,7 +419,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rules that are used to identify low-risk threats.
+             * <p>The number of rules that are used to identify low-risk threats.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder lowRuleNum(Integer lowRuleNum) {
                 this.lowRuleNum = lowRuleNum;
@@ -349,7 +430,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rules that are used to identify medium-risk threats.
+             * <p>The number of rules that are used to identify medium-risk threats.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder mediumRuleNum(Integer mediumRuleNum) {
                 this.mediumRuleNum = mediumRuleNum;
@@ -357,7 +441,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * 预定义规则数。
+             * <p>预定义规则数。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder predefinedRuleNum(Integer predefinedRuleNum) {
                 this.predefinedRuleNum = predefinedRuleNum;
@@ -365,7 +452,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * 告警透传规则数。
+             * <p>告警透传规则数。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder singleAlertRuleNum(Integer singleAlertRuleNum) {
                 this.singleAlertRuleNum = singleAlertRuleNum;
@@ -373,7 +463,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * 总规则数。
+             * <p>总规则数。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder totalRuleNum(Integer totalRuleNum) {
                 this.totalRuleNum = totalRuleNum;
@@ -381,7 +474,10 @@ public class DescribeCustomizeRuleCountResponseBody extends TeaModel {
             }
 
             /**
-             * 不产生事件规则数。
+             * <p>不产生事件规则数。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder unEventRuleNum(Integer unEventRuleNum) {
                 this.unEventRuleNum = unEventRuleNum;

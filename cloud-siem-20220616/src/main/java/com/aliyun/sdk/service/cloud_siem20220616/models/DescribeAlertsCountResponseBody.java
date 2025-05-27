@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlertsCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAlertsCountResponseBody</p>
@@ -40,6 +46,10 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
 
     public static DescribeAlertsCountResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAlertsCountResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +117,10 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +128,10 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,9 +170,18 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAlertsCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertsCountResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("All")
         private Long all;
+
+        @com.aliyun.core.annotation.NameInMap("CountMap")
+        private java.util.Map<String, Long> countMap;
 
         @com.aliyun.core.annotation.NameInMap("High")
         private Long high;
@@ -152,6 +197,7 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.all = builder.all;
+            this.countMap = builder.countMap;
             this.high = builder.high;
             this.low = builder.low;
             this.medium = builder.medium;
@@ -171,6 +217,13 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
          */
         public Long getAll() {
             return this.all;
+        }
+
+        /**
+         * @return countMap
+         */
+        public java.util.Map<String, Long> getCountMap() {
+            return this.countMap;
         }
 
         /**
@@ -203,13 +256,29 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long all; 
+            private java.util.Map<String, Long> countMap; 
             private Long high; 
             private Long low; 
             private Long medium; 
             private Integer productNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.all = model.all;
+                this.countMap = model.countMap;
+                this.high = model.high;
+                this.low = model.low;
+                this.medium = model.medium;
+                this.productNum = model.productNum;
+            } 
+
             /**
-             * The total number of alerts.
+             * <p>The total number of alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>75</p>
              */
             public Builder all(Long all) {
                 this.all = all;
@@ -217,7 +286,18 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of high-risk alerts.
+             * CountMap.
+             */
+            public Builder countMap(java.util.Map<String, Long> countMap) {
+                this.countMap = countMap;
+                return this;
+            }
+
+            /**
+             * <p>The number of high-risk alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder high(Long high) {
                 this.high = high;
@@ -225,7 +305,10 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of low-risk alerts.
+             * <p>The number of low-risk alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder low(Long low) {
                 this.low = low;
@@ -233,7 +316,10 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of medium-risk alerts.
+             * <p>The number of medium-risk alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder medium(Long medium) {
                 this.medium = medium;
@@ -241,7 +327,10 @@ public class DescribeAlertsCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of connected services.
+             * <p>The number of connected services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder productNum(Integer productNum) {
                 this.productNum = productNum;

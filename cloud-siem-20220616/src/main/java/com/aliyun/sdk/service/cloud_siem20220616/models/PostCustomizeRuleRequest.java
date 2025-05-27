@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PostCustomizeRuleRequest} extends {@link RequestModel}
  *
  * <p>PostCustomizeRuleRequest</p>
@@ -128,7 +134,7 @@ public class PostCustomizeRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -333,7 +339,10 @@ public class PostCustomizeRuleRequest extends Request {
         } 
 
         /**
-         * The risk type.
+         * <p>The risk type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WEBSHELL</p>
          */
         public Builder alertType(String alertType) {
             this.putBodyParameter("AlertType", alertType);
@@ -342,7 +351,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The internal code of the risk type.
+         * <p>The internal code of the risk type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>${siem_rule_type_process_abnormal_command}</p>
          */
         public Builder alertTypeMds(String alertTypeMds) {
             this.putBodyParameter("AlertTypeMds", alertTypeMds);
@@ -351,7 +363,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * att&ck.
+         * <p>att&amp;ck.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>T1595.002 Vulnerability Scanning</p>
          */
         public Builder attCk(String attCk) {
             this.putBodyParameter("AttCk", attCk);
@@ -360,7 +375,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window.
+         * <p>The extended information about event generation. If eventTransferType is set to allToSingle, the value of this parameter indicates the length and unit of the alert aggregation window.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;MINUTE&quot;}</p>
          */
         public Builder eventTransferExt(String eventTransferExt) {
             this.putBodyParameter("EventTransferExt", eventTransferExt);
@@ -369,11 +387,14 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * Specifies whether to convert an alert to an event. Valid values:
-         * <p>
+         * <p>Specifies whether to convert an alert to an event. Valid values:</p>
+         * <ul>
+         * <li>0: no</li>
+         * <li>1: yes</li>
+         * </ul>
          * 
-         * *   0: no
-         * *   1: yes
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder eventTransferSwitch(Integer eventTransferSwitch) {
             this.putBodyParameter("EventTransferSwitch", eventTransferSwitch);
@@ -382,12 +403,15 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The event generation method. Valid values:
-         * <p>
+         * <p>The event generation method. Valid values:</p>
+         * <ul>
+         * <li>default: The default method is used.</li>
+         * <li>singleToSingle: The system generates an event for each alert.</li>
+         * <li>allToSingle: The system generates an event for alerts within a period of time.</li>
+         * </ul>
          * 
-         * *   default: The default method is used.
-         * *   singleToSingle: The system generates an event for each alert.
-         * *   allToSingle: The system generates an event for alerts within a period of time.
+         * <strong>example:</strong>
+         * <p>allToSingle</p>
          */
         public Builder eventTransferType(String eventTransferType) {
             this.putBodyParameter("EventTransferType", eventTransferType);
@@ -396,7 +420,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
+         * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -405,7 +432,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The log source of the rule.
+         * <p>The log source of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cloud_siem_aegis_sas_alert</p>
          */
         public Builder logSource(String logSource) {
             this.putBodyParameter("LogSource", logSource);
@@ -414,7 +444,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The internal code of the log source.
+         * <p>The internal code of the log source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>${sas.cloudsiem.prod.cloud_siem_aegis_sas_alert}</p>
          */
         public Builder logSourceMds(String logSourceMds) {
             this.putBodyParameter("LogSourceMds", logSourceMds);
@@ -423,7 +456,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The log type of the rule.
+         * <p>The log type of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALERT_ACTIVITY</p>
          */
         public Builder logType(String logType) {
             this.putBodyParameter("LogType", logType);
@@ -432,7 +468,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The internal code of the log type.
+         * <p>The internal code of the log type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>${security_event_config.event_name.webshellName_clientav}</p>
          */
         public Builder logTypeMds(String logTypeMds) {
             this.putBodyParameter("LogTypeMds", logTypeMds);
@@ -441,7 +480,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The window length of the rule.
+         * <p>The window length of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;time&quot;:&quot;1&quot;,&quot;unit&quot;:&quot;HOUR&quot;}</p>
          */
         public Builder queryCycle(String queryCycle) {
             this.putBodyParameter("QueryCycle", queryCycle);
@@ -450,11 +492,14 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
-         * <p>
+         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * </ul>
          * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -463,7 +508,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The ID of the account that you switch from the management account.
+         * <p>The ID of the account that you switch from the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -472,10 +520,14 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The type of the view. Valid values:
-         * <p>
-         * - 0: the current Alibaba Cloud account
-         * - 1: the global account
+         * <p>The type of the view. Valid values:</p>
+         * <ul>
+         * <li>0: the current Alibaba Cloud account</li>
+         * <li>1: the global account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -484,7 +536,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The query condition of the rule. The value is in the JSON format.
+         * <p>The query condition of the rule. The value is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[[{&quot;not&quot;:false,&quot;left&quot;:&quot;alert_name&quot;,&quot;operator&quot;:&quot;=&quot;,&quot;right&quot;:&quot;WEBSHELL&quot;}]]</p>
          */
         public Builder ruleCondition(String ruleCondition) {
             this.putBodyParameter("RuleCondition", ruleCondition);
@@ -493,7 +548,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The description of the rule.
+         * <p>The description of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this rule is for waf scan</p>
          */
         public Builder ruleDesc(String ruleDesc) {
             this.putBodyParameter("RuleDesc", ruleDesc);
@@ -502,7 +560,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The log aggregation field of the rule. The value is a JSON string.
+         * <p>The log aggregation field of the rule. The value is a JSON string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;asset_id&quot;]</p>
          */
         public Builder ruleGroup(String ruleGroup) {
             this.putBodyParameter("RuleGroup", ruleGroup);
@@ -511,7 +572,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The name of the rule.
+         * <p>The name of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_scan</p>
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("RuleName", ruleName);
@@ -520,7 +584,10 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The threshold configuration of the rule. The value is in the JSON format.
+         * <p>The threshold configuration of the rule. The value is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;aggregateFunction&quot;:&quot;count&quot;,&quot;aggregateFunctionName&quot;:&quot;count&quot;,&quot;field&quot;:&quot;activity_name&quot;,&quot;operator&quot;:&quot;&lt;=&quot;,&quot;value&quot;:1}</p>
          */
         public Builder ruleThreshold(String ruleThreshold) {
             this.putBodyParameter("RuleThreshold", ruleThreshold);
@@ -529,12 +596,15 @@ public class PostCustomizeRuleRequest extends Request {
         }
 
         /**
-         * The risk level. Valid values:
-         * <p>
+         * <p>The risk level. Valid values:</p>
+         * <ul>
+         * <li>serious: high</li>
+         * <li>suspicious: medium</li>
+         * <li>remind: low</li>
+         * </ul>
          * 
-         * *   serious: high
-         * *   suspicious: medium
-         * *   remind: low
+         * <strong>example:</strong>
+         * <p>remind</p>
          */
         public Builder threatLevel(String threatLevel) {
             this.putBodyParameter("ThreatLevel", threatLevel);

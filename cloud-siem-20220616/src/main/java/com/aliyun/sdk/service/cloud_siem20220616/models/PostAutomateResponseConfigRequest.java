@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PostAutomateResponseConfigRequest} extends {@link RequestModel}
  *
  * <p>PostAutomateResponseConfigRequest</p>
@@ -73,7 +79,7 @@ public class PostAutomateResponseConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -179,7 +185,16 @@ public class PostAutomateResponseConfigRequest extends Request {
         } 
 
         /**
-         * The action configuration of the automated response rule. The value is in the JSON format.
+         * <p>The action configuration of the automated response rule. The value is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[
+         *       {
+         *             &quot;actionType&quot;: &quot;doPlaybook&quot;,
+         *             &quot;playbookName&quot;: &quot;WafBlockIP&quot;,
+         *             &quot;playbookUuid&quot;: &quot;bdad6220-6584-41b2-9704-fc6584568758&quot;
+         *       }
+         * ]</p>
          */
         public Builder actionConfig(String actionConfig) {
             this.putBodyParameter("ActionConfig", actionConfig);
@@ -188,12 +203,15 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The type of the handling action. Multiple types are separated by commas (,). Valid values:
-         * <p>
+         * <p>The type of the handling action. Multiple types are separated by commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>doPlaybook</strong>: runs the playbook.</li>
+         * <li><strong>changeEventStatus</strong>: changes the event status.</li>
+         * <li><strong>changeThreatLevel</strong>: changes the threat level of the event.</li>
+         * </ul>
          * 
-         * *   **doPlaybook**: runs the playbook.
-         * *   **changeEventStatus**: changes the event status.
-         * *   **changeThreatLevel**: changes the threat level of the event.
+         * <strong>example:</strong>
+         * <p>doPlaybook,changeEventStatus</p>
          */
         public Builder actionType(String actionType) {
             this.putBodyParameter("ActionType", actionType);
@@ -202,11 +220,14 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The type of the automated response rule. Valid values:
-         * <p>
+         * <p>The type of the automated response rule. Valid values:</p>
+         * <ul>
+         * <li><strong>event</strong></li>
+         * <li><strong>alert</strong></li>
+         * </ul>
          * 
-         * *   **event**
-         * *   **alert**
+         * <strong>example:</strong>
+         * <p>event</p>
          */
         public Builder autoResponseType(String autoResponseType) {
             this.putBodyParameter("AutoResponseType", autoResponseType);
@@ -215,7 +236,10 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The trigger condition of the automated response rule. The value is in the JSON format.
+         * <p>The trigger condition of the automated response rule. The value is in the JSON format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;left&quot;:{&quot;value&quot;:&quot;alert_name&quot;},&quot;operator&quot;:&quot;containsString&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;webshell_online&quot;}}]</p>
          */
         public Builder executionCondition(String executionCondition) {
             this.putBodyParameter("ExecutionCondition", executionCondition);
@@ -224,7 +248,10 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The rule ID.
+         * <p>The rule ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -233,11 +260,14 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The data management center of the threat analysis feature. Specify this parameter based on the regions in which your assets reside. Valid values:
-         * <p>
+         * <p>The data management center of the threat analysis feature. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <ul>
+         * <li><strong>cn-hangzhou</strong>: Your assets reside in regions in China.</li>
+         * <li><strong>ap-southeast-1</strong>: Your assets reside in regions outside China.</li>
+         * </ul>
          * 
-         * *   **cn-hangzhou**: Your assets reside in regions in China.
-         * *   **ap-southeast-1**: Your assets reside in regions outside China.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -246,7 +276,10 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The ID of the account that you switch from the management account.
+         * <p>The ID of the account that you switch from the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -255,10 +288,14 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The type of the view. Valid values:
-         * <p>
-         * - 0: the current Alibaba Cloud account
-         * - 1: the global account
+         * <p>The type of the view. Valid values:</p>
+         * <ul>
+         * <li>0: the current Alibaba Cloud account</li>
+         * <li>1: the global account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -267,7 +304,10 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The rule name.
+         * <p>The rule name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cfw kill quara book</p>
          */
         public Builder ruleName(String ruleName) {
             this.putBodyParameter("RuleName", ruleName);
@@ -276,7 +316,10 @@ public class PostAutomateResponseConfigRequest extends Request {
         }
 
         /**
-         * The ID of the user who created the rule.
+         * <p>The ID of the user who created the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17108579417****</p>
          */
         public Builder subUserId(Long subUserId) {
             this.putBodyParameter("SubUserId", subUserId);

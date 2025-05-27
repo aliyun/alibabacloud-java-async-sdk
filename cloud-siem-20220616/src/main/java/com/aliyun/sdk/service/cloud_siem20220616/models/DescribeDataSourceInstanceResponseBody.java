@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDataSourceInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDataSourceInstanceResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,8 +58,16 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataSourceInstanceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +75,10 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDataSourceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataSourceInstanceResponseBody</p>
+     */
     public static class DataSourceInstanceParams extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParaCode")
         private String paraCode;
@@ -108,8 +135,19 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             private String paraCode; 
             private String paraValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataSourceInstanceParams model) {
+                this.paraCode = model.paraCode;
+                this.paraValue = model.paraValue;
+            } 
+
             /**
-             * The code of the parameter.
+             * <p>The code of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>region_code</p>
              */
             public Builder paraCode(String paraCode) {
                 this.paraCode = paraCode;
@@ -117,7 +155,10 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the parameter.
+             * <p>The value of the parameter.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-guangzhou</p>
              */
             public Builder paraValue(String paraValue) {
                 this.paraValue = paraValue;
@@ -131,6 +172,12 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDataSourceInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDataSourceInstanceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -142,7 +189,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
         private String dataSourceInstanceId;
 
         @com.aliyun.core.annotation.NameInMap("DataSourceInstanceParams")
-        private java.util.List < DataSourceInstanceParams> dataSourceInstanceParams;
+        private java.util.List<DataSourceInstanceParams> dataSourceInstanceParams;
 
         private Data(Builder builder) {
             this.accountId = builder.accountId;
@@ -183,7 +230,7 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
         /**
          * @return dataSourceInstanceParams
          */
-        public java.util.List < DataSourceInstanceParams> getDataSourceInstanceParams() {
+        public java.util.List<DataSourceInstanceParams> getDataSourceInstanceParams() {
             return this.dataSourceInstanceParams;
         }
 
@@ -191,10 +238,23 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             private String accountId; 
             private String cloudCode; 
             private String dataSourceInstanceId; 
-            private java.util.List < DataSourceInstanceParams> dataSourceInstanceParams; 
+            private java.util.List<DataSourceInstanceParams> dataSourceInstanceParams; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountId = model.accountId;
+                this.cloudCode = model.cloudCode;
+                this.dataSourceInstanceId = model.dataSourceInstanceId;
+                this.dataSourceInstanceParams = model.dataSourceInstanceParams;
+            } 
 
             /**
-             * The ID of the cloud account.
+             * <p>The ID of the cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123xxxxxxx</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -202,12 +262,15 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the cloud service provider. Valid values:
-             * <p>
+             * <p>The code of the cloud service provider. Valid values:</p>
+             * <ul>
+             * <li>qcloud: Tencent Cloud</li>
+             * <li>aliyun: Alibaba Cloud</li>
+             * <li>hcloud: Huawei Cloud</li>
+             * </ul>
              * 
-             * *   qcloud: Tencent Cloud
-             * *   aliyun: Alibaba Cloud
-             * *   hcloud: Huawei Cloud
+             * <strong>example:</strong>
+             * <p>hcloud</p>
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -215,7 +278,10 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.
+             * <p>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>220ba97c9d1fdb0b9c7e8c7ca328d7ea</p>
              */
             public Builder dataSourceInstanceId(String dataSourceInstanceId) {
                 this.dataSourceInstanceId = dataSourceInstanceId;
@@ -223,9 +289,9 @@ public class DescribeDataSourceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The parameters of the data source.
+             * <p>The parameters of the data source.</p>
              */
-            public Builder dataSourceInstanceParams(java.util.List < DataSourceInstanceParams> dataSourceInstanceParams) {
+            public Builder dataSourceInstanceParams(java.util.List<DataSourceInstanceParams> dataSourceInstanceParams) {
                 this.dataSourceInstanceParams = dataSourceInstanceParams;
                 return this;
             }

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAutomateResponseConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>ListAutomateResponseConfigsResponseBody</p>
@@ -40,6 +46,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
 
     public static ListAutomateResponseConfigsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAutomateResponseConfigsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +117,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +128,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +170,12 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAutomateResponseConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAutomateResponseConfigsResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -184,8 +226,20 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             private Integer pageSize; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * The current page number.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -193,7 +247,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -201,7 +258,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -215,6 +275,12 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAutomateResponseConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAutomateResponseConfigsResponseBody</p>
+     */
     public static class ResponseData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActionConfig")
         private String actionConfig;
@@ -373,8 +439,35 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             private Integer status; 
             private Long subUserId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResponseData model) {
+                this.actionConfig = model.actionConfig;
+                this.actionType = model.actionType;
+                this.aliuid = model.aliuid;
+                this.autoResponseType = model.autoResponseType;
+                this.dataType = model.dataType;
+                this.executionCondition = model.executionCondition;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.ruleName = model.ruleName;
+                this.status = model.status;
+                this.subUserId = model.subUserId;
+            } 
+
             /**
-             * The configuration of the action that is performed after the automated response rule is hit. The value is in the JSON format.
+             * <p>The configuration of the action that is performed after the automated response rule is hit. The value is in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *       {
+             *             &quot;actionType&quot;: &quot;doPlaybook&quot;,
+             *             &quot;playbookName&quot;: &quot;WafBlockIP&quot;,
+             *             &quot;playbookUuid&quot;: &quot;bdad6220-6584-41b2-9704-fc6584568758&quot;
+             *       }
+             * ]</p>
              */
             public Builder actionConfig(String actionConfig) {
                 this.actionConfig = actionConfig;
@@ -382,12 +475,15 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the handling action. Multiple types are separated by commas (,). Valid values:
-             * <p>
+             * <p>The type of the handling action. Multiple types are separated by commas (,). Valid values:</p>
+             * <ul>
+             * <li><strong>doPlaybook</strong>: runs the playbook.</li>
+             * <li><strong>changeEventStatus</strong>: changes the event status.</li>
+             * <li><strong>changeThreatLevel</strong>: changes the risk level of the event.</li>
+             * </ul>
              * 
-             * *   **doPlaybook**: runs the playbook.
-             * *   **changeEventStatus**: changes the event status.
-             * *   **changeThreatLevel**: changes the risk level of the event.
+             * <strong>example:</strong>
+             * <p>doPlaybook,changeEventStatus</p>
              */
             public Builder actionType(String actionType) {
                 this.actionType = actionType;
@@ -395,7 +491,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is associated with the rule in SIEM.
+             * <p>The ID of the Alibaba Cloud account that is associated with the rule in SIEM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127608589417****</p>
              */
             public Builder aliuid(Long aliuid) {
                 this.aliuid = aliuid;
@@ -403,11 +502,14 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the automated response rule. Valid values:
-             * <p>
+             * <p>The type of the automated response rule. Valid values:</p>
+             * <ul>
+             * <li><strong>event</strong></li>
+             * <li><strong>alert</strong></li>
+             * </ul>
              * 
-             * *   **event**
-             * *   **alert**
+             * <strong>example:</strong>
+             * <p>event</p>
              */
             public Builder autoResponseType(String autoResponseType) {
                 this.autoResponseType = autoResponseType;
@@ -415,11 +517,12 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the view. Valid values:
-             * <p>
+             * <p>The type of the view. Valid values:</p>
+             * <p>0: the current Alibaba Cloud account
+             * 1: the global account</p>
              * 
-             * 0: the current Alibaba Cloud account
-             * 1: the global account
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dataType(Integer dataType) {
                 this.dataType = dataType;
@@ -427,7 +530,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The trigger condition of the automated response rule. The value is in the JSON format.
+             * <p>The trigger condition of the automated response rule. The value is in the JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;left&quot;:{&quot;value&quot;:&quot;alert_name&quot;},&quot;operator&quot;:&quot;containsString&quot;,&quot;right&quot;:{&quot;value&quot;:&quot;webshell_online&quot;}}]</p>
              */
             public Builder executionCondition(String executionCondition) {
                 this.executionCondition = executionCondition;
@@ -435,7 +541,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -443,7 +552,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * <p>The update time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -451,7 +563,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the automated response rule.
+             * <p>The ID of the automated response rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -459,7 +574,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the automated response rule.
+             * <p>The name of the automated response rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cfw kill quara book</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -467,11 +585,14 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the rule. Valid values:
-             * <p>
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled.</li>
+             * <li><strong>100</strong>: enabled.</li>
+             * </ul>
              * 
-             * *   **0**: disabled.
-             * *   **100**: enabled.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -479,7 +600,10 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the user who created the rule.
+             * <p>The ID of the user who created the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>17108579417****</p>
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -493,12 +617,18 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAutomateResponseConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAutomateResponseConfigsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
         @com.aliyun.core.annotation.NameInMap("ResponseData")
-        private java.util.List < ResponseData> responseData;
+        private java.util.List<ResponseData> responseData;
 
         private Data(Builder builder) {
             this.pageInfo = builder.pageInfo;
@@ -523,16 +653,24 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         /**
          * @return responseData
          */
-        public java.util.List < ResponseData> getResponseData() {
+        public java.util.List<ResponseData> getResponseData() {
             return this.responseData;
         }
 
         public static final class Builder {
             private PageInfo pageInfo; 
-            private java.util.List < ResponseData> responseData; 
+            private java.util.List<ResponseData> responseData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageInfo = model.pageInfo;
+                this.responseData = model.responseData;
+            } 
 
             /**
-             * The pagination information.
+             * <p>The pagination information.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -540,9 +678,9 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed data.
+             * <p>The detailed data.</p>
              */
-            public Builder responseData(java.util.List < ResponseData> responseData) {
+            public Builder responseData(java.util.List<ResponseData> responseData) {
                 this.responseData = responseData;
                 return this;
             }

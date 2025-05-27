@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeEventDisposeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeEventDisposeResponseBody</p>
@@ -40,6 +46,10 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
 
     public static DescribeEventDisposeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeEventDisposeResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code that is returned.
+         * <p>The HTTP status code that is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +117,10 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +128,10 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +170,12 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeEventDisposeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventDisposeResponseBody</p>
+     */
     public static class ReceiverInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Channel")
         private String channel;
@@ -244,12 +286,29 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             private String receiver; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReceiverInfo model) {
+                this.channel = model.channel;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.incidentUuid = model.incidentUuid;
+                this.messageTitle = model.messageTitle;
+                this.receiver = model.receiver;
+                this.status = model.status;
+            } 
+
             /**
-             * The channel of the contact information. Valid values:
-             * <p>
+             * <p>The channel of the contact information. Valid values:</p>
+             * <ul>
+             * <li>message</li>
+             * <li>mail</li>
+             * </ul>
              * 
-             * *   message
-             * *   mail
+             * <strong>example:</strong>
+             * <p>message</p>
              */
             public Builder channel(String channel) {
                 this.channel = channel;
@@ -257,7 +316,10 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time.
+             * <p>The creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -265,7 +327,10 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * The modification time.
+             * <p>The modification time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -273,7 +338,10 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the recipient who receives the event handling result.
+             * <p>The ID of the recipient who receives the event handling result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -281,7 +349,10 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the event.
+             * <p>The UUID of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
@@ -289,7 +360,10 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * The message title.
+             * <p>The message title.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>siem event dealed message</p>
              */
             public Builder messageTitle(String messageTitle) {
                 this.messageTitle = messageTitle;
@@ -297,7 +371,10 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * The contact information of the recipient.
+             * <p>The contact information of the recipient.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>138xxxxxx</p>
              */
             public Builder receiver(String receiver) {
                 this.receiver = receiver;
@@ -305,11 +382,14 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the message is sent. Valid values:
-             * <p>
+             * <p>Indicates whether the message is sent. Valid values:</p>
+             * <ul>
+             * <li>0: not sent</li>
+             * <li>1: sent</li>
+             * </ul>
              * 
-             * *   0: not sent
-             * *   1: sent
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -323,9 +403,15 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeEventDisposeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeEventDisposeResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventDispose")
-        private java.util.List < ? > eventDispose;
+        private java.util.List<?> eventDispose;
 
         @com.aliyun.core.annotation.NameInMap("ReceiverInfo")
         private ReceiverInfo receiverInfo;
@@ -354,7 +440,7 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         /**
          * @return eventDispose
          */
-        public java.util.List < ? > getEventDispose() {
+        public java.util.List<?> getEventDispose() {
             return this.eventDispose;
         }
 
@@ -380,21 +466,34 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ? > eventDispose; 
+            private java.util.List<?> eventDispose; 
             private ReceiverInfo receiverInfo; 
             private String remark; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.eventDispose = model.eventDispose;
+                this.receiverInfo = model.receiverInfo;
+                this.remark = model.remark;
+                this.status = model.status;
+            } 
+
             /**
-             * An array consisting of JSON objects that are configured for event handling.
+             * <p>An array consisting of JSON objects that are configured for event handling.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{ playbookName: &quot;使用安全组封禁入方向IP&quot;, sophonTaskId: &quot;400442a5-4f98-45ed-97db-5ab117eb0b8f&quot;, … }</p>
              */
-            public Builder eventDispose(java.util.List < ? > eventDispose) {
+            public Builder eventDispose(java.util.List<?> eventDispose) {
                 this.eventDispose = eventDispose;
                 return this;
             }
 
             /**
-             * The JSON object that is configured for an alert recipient.
+             * <p>The JSON object that is configured for an alert recipient.</p>
              */
             public Builder receiverInfo(ReceiverInfo receiverInfo) {
                 this.receiverInfo = receiverInfo;
@@ -402,7 +501,10 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the event.
+             * <p>The description of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dealed</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -410,13 +512,16 @@ public class DescribeEventDisposeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the event. Valid values:
-             * <p>
+             * <p>The status of the event. Valid values:</p>
+             * <ul>
+             * <li>0: not handled</li>
+             * <li>1: handing</li>
+             * <li>5: handling failed</li>
+             * <li>10: handled</li>
+             * </ul>
              * 
-             * *   0: not handled
-             * *   1: handing
-             * *   5: handling failed
-             * *   10: handled
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

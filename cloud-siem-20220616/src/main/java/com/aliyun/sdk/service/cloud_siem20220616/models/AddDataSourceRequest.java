@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDataSourceRequest} extends {@link RequestModel}
  *
  * <p>AddDataSourceRequest</p>
@@ -59,7 +65,7 @@ public class AddDataSourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -138,7 +144,10 @@ public class AddDataSourceRequest extends Request {
         } 
 
         /**
-         * The ID of the cloud account.
+         * <p>The ID of the cloud account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123xxxxxxxx</p>
          */
         public Builder accountId(String accountId) {
             this.putBodyParameter("AccountId", accountId);
@@ -147,14 +156,17 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * The code of the cloud service provider.
-         * <p>
+         * <p>The code of the cloud service provider.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>qcloud</li>
+         * <li>hcloud</li>
+         * <li>aliyun</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   qcloud
-         * *   hcloud
-         * *   aliyun
+         * <strong>example:</strong>
+         * <p>hcloud</p>
          */
         public Builder cloudCode(String cloudCode) {
             this.putBodyParameter("CloudCode", cloudCode);
@@ -163,7 +175,10 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * The name of the data source.
+         * <p>The name of the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>beijing_waf_kafka</p>
          */
         public Builder dataSourceInstanceName(String dataSourceInstanceName) {
             this.putBodyParameter("DataSourceInstanceName", dataSourceInstanceName);
@@ -172,7 +187,10 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * The parameters of the data source. Set this parameter to a JSON array.
+         * <p>The parameters of the data source. Set this parameter to a JSON array.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;paraCode&quot;:&quot;region_code&quot;,&quot;paraValue&quot;:&quot;ap-guangzhou&quot;}]</p>
          */
         public Builder dataSourceInstanceParams(String dataSourceInstanceParams) {
             this.putBodyParameter("DataSourceInstanceParams", dataSourceInstanceParams);
@@ -181,7 +199,10 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * The remarks on the data source.
+         * <p>The remarks on the data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>waf_alert_log</p>
          */
         public Builder dataSourceInstanceRemark(String dataSourceInstanceRemark) {
             this.putBodyParameter("DataSourceInstanceRemark", dataSourceInstanceRemark);
@@ -190,12 +211,15 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values:
-         * <p>
+         * <p>The type of the data source. Valid values:</p>
+         * <ul>
+         * <li>obs: Huawei Cloud Object Storage Service (OBS)</li>
+         * <li>wafApi: download API of Tencent Cloud Web Application Firewall (WAF)</li>
+         * <li>ckafka: Tencent Cloud Kafka (CKafka)</li>
+         * </ul>
          * 
-         * *   obs: Huawei Cloud Object Storage Service (OBS)
-         * *   wafApi: download API of Tencent Cloud Web Application Firewall (WAF)
-         * *   ckafka: Tencent Cloud Kafka (CKafka)
+         * <strong>example:</strong>
+         * <p>obs</p>
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putBodyParameter("DataSourceType", dataSourceType);
@@ -204,11 +228,14 @@ public class AddDataSourceRequest extends Request {
         }
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
-         * <p>
+         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * </ul>
          * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

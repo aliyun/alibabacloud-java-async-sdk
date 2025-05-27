@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImportedLogsByProdResponseBody} extends {@link TeaModel}
  *
  * <p>ListImportedLogsByProdResponseBody</p>
  */
 public class ListImportedLogsByProdResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,19 +55,30 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListImportedLogsByProdResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListImportedLogsByProdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImportedLogsByProdResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoImported")
         private Integer autoImported;
@@ -216,12 +243,32 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             private Integer totalUserCount; 
             private Integer unImportedUserCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.autoImported = model.autoImported;
+                this.cloudCode = model.cloudCode;
+                this.imported = model.imported;
+                this.importedUserCount = model.importedUserCount;
+                this.logCode = model.logCode;
+                this.logMdsCode = model.logMdsCode;
+                this.logType = model.logType;
+                this.modifyTime = model.modifyTime;
+                this.prodCode = model.prodCode;
+                this.totalUserCount = model.totalUserCount;
+                this.unImportedUserCount = model.unImportedUserCount;
+            } 
+
             /**
-             * Indicates whether the log is automatically added to the threat analysis feature within newly added accounts. Valid values:
-             * <p>
+             * <p>Indicates whether the log is automatically added to the threat analysis feature within newly added accounts. Valid values:</p>
+             * <ul>
+             * <li>1: yes.</li>
+             * <li>0: no.</li>
+             * </ul>
              * 
-             * *   1: yes.
-             * *   0: no.
+             * <strong>example:</strong>
+             * <p>2023-11-23 12:30:00</p>
              */
             public Builder autoImported(Integer autoImported) {
                 this.autoImported = autoImported;
@@ -229,12 +276,15 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the cloud service provider. Valid values:
-             * <p>
+             * <p>The code of the cloud service provider. Valid values:</p>
+             * <ul>
+             * <li>qcloud: Tencent Cloud.</li>
+             * <li>aliyun: Alibaba Cloud.</li>
+             * <li>hcloud: Huawei Cloud.</li>
+             * </ul>
              * 
-             * *   qcloud: Tencent Cloud.
-             * *   aliyun: Alibaba Cloud.
-             * *   hcloud: Huawei Cloud.
+             * <strong>example:</strong>
+             * <p>hcloud</p>
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -242,11 +292,14 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the log is added to the threat analysis feature. Valid values:
-             * <p>
+             * <p>Indicates whether the log is added to the threat analysis feature. Valid values:</p>
+             * <ul>
+             * <li>1: yes.</li>
+             * <li>0: no.</li>
+             * </ul>
              * 
-             * *   1: yes.
-             * *   0: no.
+             * <strong>example:</strong>
+             * <p>2023-11-23 12:30:00</p>
              */
             public Builder imported(Integer imported) {
                 this.imported = imported;
@@ -254,7 +307,10 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of users who have added the log.
+             * <p>The number of users who have added the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder importedUserCount(Integer importedUserCount) {
                 this.importedUserCount = importedUserCount;
@@ -262,7 +318,10 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the log.
+             * <p>The code of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_siem_waf_xxxxx</p>
              */
             public Builder logCode(String logCode) {
                 this.logCode = logCode;
@@ -270,7 +329,10 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             }
 
             /**
-             * The display code of the log.
+             * <p>The display code of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${siem.prod. cloud_siem_waf_xxxxx}</p>
              */
             public Builder logMdsCode(String logMdsCode) {
                 this.logMdsCode = logMdsCode;
@@ -278,11 +340,15 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             }
 
             /**
-             * The type of log. Valid values:
-             * <p>
-             *  - 1: the log produced by other product
-             *  - 2: the predefined log
-             *  - 3: the custom log
+             * <p>The type of log. Valid values:</p>
+             * <ul>
+             * <li>1: the log produced by other product</li>
+             * <li>2: the predefined log</li>
+             * <li>3: the custom log</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder logType(Integer logType) {
                 this.logType = logType;
@@ -290,7 +356,10 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the log was last added.
+             * <p>The time when the log was last added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-11-23 12:30:00</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -298,7 +367,10 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the cloud service to which the log belongs.
+             * <p>The code of the cloud service to which the log belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qcloud_waf</p>
              */
             public Builder prodCode(String prodCode) {
                 this.prodCode = prodCode;
@@ -306,7 +378,10 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of users who have the log.
+             * <p>The total number of users who have the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder totalUserCount(Integer totalUserCount) {
                 this.totalUserCount = totalUserCount;
@@ -314,7 +389,10 @@ public class ListImportedLogsByProdResponseBody extends TeaModel {
             }
 
             /**
-             * The number of users who have not added the log.
+             * <p>The number of users who have not added the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder unImportedUserCount(Integer unImportedUserCount) {
                 this.unImportedUserCount = unImportedUserCount;

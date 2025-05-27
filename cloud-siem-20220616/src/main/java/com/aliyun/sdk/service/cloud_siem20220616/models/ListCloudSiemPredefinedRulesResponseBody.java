@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListCloudSiemPredefinedRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListCloudSiemPredefinedRulesResponseBody</p>
@@ -40,6 +46,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
 
     public static ListCloudSiemPredefinedRulesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListCloudSiemPredefinedRulesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +117,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +128,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +170,12 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListCloudSiemPredefinedRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudSiemPredefinedRulesResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -184,8 +226,20 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             private Integer pageSize; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * The current page number.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -193,7 +247,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -201,7 +258,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -215,6 +275,12 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudSiemPredefinedRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudSiemPredefinedRulesResponseBody</p>
+     */
     public static class ResponseData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertType")
         private String alertType;
@@ -397,8 +463,31 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             private Integer status; 
             private String threatLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResponseData model) {
+                this.alertType = model.alertType;
+                this.attCk = model.attCk;
+                this.eventTransferType = model.eventTransferType;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.ruleDescMds = model.ruleDescMds;
+                this.ruleName = model.ruleName;
+                this.ruleNameCn = model.ruleNameCn;
+                this.ruleNameEn = model.ruleNameEn;
+                this.ruleNameMds = model.ruleNameMds;
+                this.source = model.source;
+                this.status = model.status;
+                this.threatLevel = model.threatLevel;
+            } 
+
             /**
-             * The type of the risk.
+             * <p>The type of the risk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WEBSHELL</p>
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -406,7 +495,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The alert additional field for ATT\&CK.
+             * <p>The alert additional field for ATT&amp;CK.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1595.002 Vulnerability Scanning</p>
              */
             public Builder attCk(String attCk) {
                 this.attCk = attCk;
@@ -414,12 +506,15 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to generate an event. Valid values:
-             * <p>
+             * <p>The method that is used to generate an event. Valid values:</p>
+             * <ul>
+             * <li>default: built-in method.</li>
+             * <li>singleToSingle: The system generates an event for each alert.</li>
+             * <li>allToSingle: The system generates an event for alerts within a period of time.</li>
+             * </ul>
              * 
-             * *   default: built-in method.
-             * *   singleToSingle: The system generates an event for each alert.
-             * *   allToSingle: The system generates an event for alerts within a period of time.
+             * <strong>example:</strong>
+             * <p>allToSingle</p>
              */
             public Builder eventTransferType(String eventTransferType) {
                 this.eventTransferType = eventTransferType;
@@ -427,7 +522,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the rule was created.
+             * <p>The time when the rule was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -435,7 +533,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the rule was modified.
+             * <p>The time when the rule was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -443,7 +544,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the predefined rule.
+             * <p>The ID of the predefined rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -451,7 +555,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The internal code of the rule description.
+             * <p>The internal code of the rule description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${siem_rule_description_siem_cfw-attack-count-level-up_cfw-attack}</p>
              */
             public Builder ruleDescMds(String ruleDescMds) {
                 this.ruleDescMds = ruleDescMds;
@@ -459,7 +566,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * <p>The name of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>siem_base64-command-exec_aegis-proc</p>
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;
@@ -467,7 +577,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rule name in Chinese.
+             * <p>The rule name in Chinese.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>siem_base64-command-exec_aegis-proc</p>
              */
             public Builder ruleNameCn(String ruleNameCn) {
                 this.ruleNameCn = ruleNameCn;
@@ -475,7 +588,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rule name in English.
+             * <p>The rule name in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>siem_base64-command-exec_aegis-proc</p>
              */
             public Builder ruleNameEn(String ruleNameEn) {
                 this.ruleNameEn = ruleNameEn;
@@ -483,7 +599,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The internal code of the rule name.
+             * <p>The internal code of the rule name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${siem_rule_name_siem_cfw-attack-count-level-up_cfw-attack}</p>
              */
             public Builder ruleNameMds(String ruleNameMds) {
                 this.ruleNameMds = ruleNameMds;
@@ -491,7 +610,10 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The log source of the rule.
+             * <p>The log source of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_siem_aegis_proc</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -499,11 +621,14 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the predefined rule. Valid values:
-             * <p>
+             * <p>The status of the predefined rule. Valid values:</p>
+             * <ul>
+             * <li>0: The rule is in the initial state.</li>
+             * <li>100: The rule takes effect.</li>
+             * </ul>
              * 
-             * *   0: The rule is in the initial state.
-             * *   100: The rule takes effect.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -511,12 +636,15 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level. Valid values:
-             * <p>
+             * <p>The risk level. Valid values:</p>
+             * <ul>
+             * <li>serious: high.</li>
+             * <li>suspicious: medium.</li>
+             * <li>remind: low.</li>
+             * </ul>
              * 
-             * *   serious: high.
-             * *   suspicious: medium.
-             * *   remind: low.
+             * <strong>example:</strong>
+             * <p>remind</p>
              */
             public Builder threatLevel(String threatLevel) {
                 this.threatLevel = threatLevel;
@@ -530,12 +658,18 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListCloudSiemPredefinedRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCloudSiemPredefinedRulesResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
         @com.aliyun.core.annotation.NameInMap("ResponseData")
-        private java.util.List < ResponseData> responseData;
+        private java.util.List<ResponseData> responseData;
 
         private Data(Builder builder) {
             this.pageInfo = builder.pageInfo;
@@ -560,16 +694,24 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
         /**
          * @return responseData
          */
-        public java.util.List < ResponseData> getResponseData() {
+        public java.util.List<ResponseData> getResponseData() {
             return this.responseData;
         }
 
         public static final class Builder {
             private PageInfo pageInfo; 
-            private java.util.List < ResponseData> responseData; 
+            private java.util.List<ResponseData> responseData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageInfo = model.pageInfo;
+                this.responseData = model.responseData;
+            } 
 
             /**
-             * The pagination information.
+             * <p>The pagination information.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -577,9 +719,9 @@ public class ListCloudSiemPredefinedRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed data.
+             * <p>The detailed data.</p>
              */
-            public Builder responseData(java.util.List < ResponseData> responseData) {
+            public Builder responseData(java.util.List<ResponseData> responseData) {
                 this.responseData = responseData;
                 return this;
             }

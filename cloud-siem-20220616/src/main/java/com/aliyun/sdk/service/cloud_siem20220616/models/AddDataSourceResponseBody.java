@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddDataSourceResponseBody} extends {@link TeaModel}
  *
  * <p>AddDataSourceResponseBody</p>
@@ -30,6 +36,10 @@ public class AddDataSourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,8 +58,16 @@ public class AddDataSourceResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AddDataSourceResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +75,10 @@ public class AddDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class AddDataSourceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddDataSourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddDataSourceResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
@@ -108,8 +135,19 @@ public class AddDataSourceResponseBody extends TeaModel {
             private Integer count; 
             private String dataSourceInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.count = model.count;
+                this.dataSourceInstanceId = model.dataSourceInstanceId;
+            } 
+
             /**
-             * The number of data sources that are added. The value 1 indicates that data source is added, and a value less than or equal to 0 indicates that the data source failed to be added.
+             * <p>The number of data sources that are added. The value 1 indicates that data source is added, and a value less than or equal to 0 indicates that the data source failed to be added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -117,7 +155,10 @@ public class AddDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.
+             * <p>The ID of the data source. The ID is an MD5 hash value that is calculated by the threat analysis feature based on specific parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>220ba97c9d1fdb0b9c7e8c7ca328d7ea</p>
              */
             public Builder dataSourceInstanceId(String dataSourceInstanceId) {
                 this.dataSourceInstanceId = dataSourceInstanceId;

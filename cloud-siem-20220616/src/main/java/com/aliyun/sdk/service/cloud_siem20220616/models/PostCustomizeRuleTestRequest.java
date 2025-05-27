@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PostCustomizeRuleTestRequest} extends {@link RequestModel}
  *
  * <p>PostCustomizeRuleTestRequest</p>
@@ -53,7 +59,7 @@ public class PostCustomizeRuleTestRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -123,7 +129,10 @@ public class PostCustomizeRuleTestRequest extends Request {
         } 
 
         /**
-         * The ID of the rule.
+         * <p>The ID of the rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456789</p>
          */
         public Builder id(Long id) {
             this.putBodyParameter("Id", id);
@@ -132,11 +141,14 @@ public class PostCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:
-         * <p>
+         * <p>The data management center of the threat analysis feature. Specify this parameter based on the region in which your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in regions inside China.</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * </ul>
          * 
-         * *   cn-hangzhou: Your assets reside in regions inside China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -145,7 +157,10 @@ public class PostCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * The ID of the account that you switch from the management account.
+         * <p>The ID of the account that you switch from the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -154,10 +169,14 @@ public class PostCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * The type of the view. Valid values:
-         * <p>
-         * - 0: the current Alibaba Cloud account
-         * - 1: the global account
+         * <p>The type of the view. Valid values:</p>
+         * <ul>
+         * <li>0: the current Alibaba Cloud account</li>
+         * <li>1: the global account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -166,7 +185,10 @@ public class PostCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * The simulation data for the test. This parameter is available only when TestType is set to simulate.
+         * <p>The simulation data for the test. This parameter is available only when TestType is set to simulate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;,&quot;key3&quot;:&quot;value3&quot;,&quot;key4&quot;:&quot;value4&quot;,&quot;key5&quot;:&quot;value5&quot;}]</p>
          */
         public Builder simulatedData(String simulatedData) {
             this.putBodyParameter("SimulatedData", simulatedData);
@@ -175,11 +197,14 @@ public class PostCustomizeRuleTestRequest extends Request {
         }
 
         /**
-         * The test type. Valid values:
-         * <p>
+         * <p>The test type. Valid values:</p>
+         * <ul>
+         * <li>simulate: simulation data test</li>
+         * <li>business: business data test</li>
+         * </ul>
          * 
-         * *   simulate: simulation data test
-         * *   business: business data test
+         * <strong>example:</strong>
+         * <p>simulate</p>
          */
         public Builder testType(String testType) {
             this.putBodyParameter("TestType", testType);

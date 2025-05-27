@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCloudSiemEventsRequest} extends {@link RequestModel}
  *
  * <p>DescribeCloudSiemEventsRequest</p>
@@ -23,6 +29,10 @@ public class DescribeCloudSiemEventsRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EntityUuid")
+    private String entityUuid;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EventName")
@@ -67,13 +77,14 @@ public class DescribeCloudSiemEventsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ThreadLevel")
-    private java.util.List < String > threadLevel;
+    private java.util.List<String> threadLevel;
 
     private DescribeCloudSiemEventsRequest(Builder builder) {
         super(builder);
         this.assetId = builder.assetId;
         this.currentPage = builder.currentPage;
         this.endTime = builder.endTime;
+        this.entityUuid = builder.entityUuid;
         this.eventName = builder.eventName;
         this.incidentUuid = builder.incidentUuid;
         this.order = builder.order;
@@ -95,7 +106,7 @@ public class DescribeCloudSiemEventsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -119,6 +130,13 @@ public class DescribeCloudSiemEventsRequest extends Request {
      */
     public Long getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return entityUuid
+     */
+    public String getEntityUuid() {
+        return this.entityUuid;
     }
 
     /**
@@ -194,7 +212,7 @@ public class DescribeCloudSiemEventsRequest extends Request {
     /**
      * @return threadLevel
      */
-    public java.util.List < String > getThreadLevel() {
+    public java.util.List<String> getThreadLevel() {
         return this.threadLevel;
     }
 
@@ -202,6 +220,7 @@ public class DescribeCloudSiemEventsRequest extends Request {
         private String assetId; 
         private Integer currentPage; 
         private Long endTime; 
+        private String entityUuid; 
         private String eventName; 
         private String incidentUuid; 
         private String order; 
@@ -212,7 +231,7 @@ public class DescribeCloudSiemEventsRequest extends Request {
         private Integer roleType; 
         private Long startTime; 
         private Integer status; 
-        private java.util.List < String > threadLevel; 
+        private java.util.List<String> threadLevel; 
 
         private Builder() {
             super();
@@ -223,6 +242,7 @@ public class DescribeCloudSiemEventsRequest extends Request {
             this.assetId = request.assetId;
             this.currentPage = request.currentPage;
             this.endTime = request.endTime;
+            this.entityUuid = request.entityUuid;
             this.eventName = request.eventName;
             this.incidentUuid = request.incidentUuid;
             this.order = request.order;
@@ -237,7 +257,10 @@ public class DescribeCloudSiemEventsRequest extends Request {
         } 
 
         /**
-         * The ID of the asset that is associated with the event.
+         * <p>The ID of the asset that is associated with the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6c740667-80b2-476d-8924-2e706feb****</p>
          */
         public Builder assetId(String assetId) {
             this.putBodyParameter("AssetId", assetId);
@@ -246,7 +269,11 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -255,7 +282,10 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Unit: milliseconds.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1577808000000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -264,7 +294,19 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * The name of the event.
+         * EntityUuid.
+         */
+        public Builder entityUuid(String entityUuid) {
+            this.putBodyParameter("EntityUuid", entityUuid);
+            this.entityUuid = entityUuid;
+            return this;
+        }
+
+        /**
+         * <p>The name of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ECS unusual log in</p>
          */
         public Builder eventName(String eventName) {
             this.putBodyParameter("EventName", eventName);
@@ -273,7 +315,10 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * The ID of the event.
+         * <p>The ID of the event.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
          */
         public Builder incidentUuid(String incidentUuid) {
             this.putBodyParameter("IncidentUuid", incidentUuid);
@@ -282,11 +327,14 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * The sort order. Valid values:
-         * <p>
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>desc: descending order</li>
+         * <li>asc: ascending order</li>
+         * </ul>
          * 
-         * *   desc: descending order
-         * *   asc: ascending order
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putBodyParameter("Order", order);
@@ -295,11 +343,14 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * The sort field. Valid values:
-         * <p>
+         * <p>The sort field. Valid values:</p>
+         * <ul>
+         * <li>GmtModified: sorts the events by creation time. This is the default value.</li>
+         * <li>ThreatScore: sorts the events by risk score.</li>
+         * </ul>
          * 
-         * *   GmtModified: sorts the events by creation time. This is the default value.
-         * *   ThreatScore: sorts the events by risk score.
+         * <strong>example:</strong>
+         * <p>ThreatScore</p>
          */
         public Builder orderField(String orderField) {
             this.putBodyParameter("OrderField", orderField);
@@ -308,7 +359,11 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -317,11 +372,14 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
-         * <p>
+         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * </ul>
          * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -330,7 +388,10 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * The ID of the account that you switch from the management account.
+         * <p>The ID of the account that you switch from the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -339,10 +400,14 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * The type of the view. Valid values:
-         * <p>
-         * - 0: the current Alibaba Cloud account
-         * - 1: the global account
+         * <p>The type of the view. Valid values:</p>
+         * <ul>
+         * <li>0: the current Alibaba Cloud account</li>
+         * <li>1: the global account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -351,7 +416,10 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Unit: milliseconds.
+         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1577808000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -360,13 +428,16 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * The status of the event. Valid values:
-         * <p>
+         * <p>The status of the event. Valid values:</p>
+         * <ul>
+         * <li>0: unhandled</li>
+         * <li>1: handling</li>
+         * <li>5: handling failed</li>
+         * <li>10: handled</li>
+         * </ul>
          * 
-         * *   0: unhandled
-         * *   1: handling
-         * *   5: handling failed
-         * *   10: handled
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putBodyParameter("Status", status);
@@ -375,14 +446,17 @@ public class DescribeCloudSiemEventsRequest extends Request {
         }
 
         /**
-         * The risk levels of the events. The value is a JSON array. Valid values:
-         * <p>
+         * <p>The risk levels of the events. The value is a JSON array. Valid values:</p>
+         * <ul>
+         * <li>serious: high</li>
+         * <li>suspicious: medium</li>
+         * <li>remind: low</li>
+         * </ul>
          * 
-         * *   serious: high
-         * *   suspicious: medium
-         * *   remind: low
+         * <strong>example:</strong>
+         * <p>[&quot;serious&quot;,&quot;suspicious&quot;,&quot;remind&quot;]</p>
          */
-        public Builder threadLevel(java.util.List < String > threadLevel) {
+        public Builder threadLevel(java.util.List<String> threadLevel) {
             this.putBodyParameter("ThreadLevel", threadLevel);
             this.threadLevel = threadLevel;
             return this;

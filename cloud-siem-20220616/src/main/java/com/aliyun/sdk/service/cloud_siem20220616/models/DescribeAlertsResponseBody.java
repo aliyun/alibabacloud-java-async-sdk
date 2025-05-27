@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAlertsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAlertsResponseBody</p>
@@ -40,6 +46,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
 
     public static DescribeAlertsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class DescribeAlertsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAlertsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +117,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +128,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class DescribeAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +170,12 @@ public class DescribeAlertsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeAlertsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertsResponseBody</p>
+     */
     public static class PageInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentPage")
         private Integer currentPage;
@@ -184,8 +226,20 @@ public class DescribeAlertsResponseBody extends TeaModel {
             private Integer pageSize; 
             private Long totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
-             * The current page number.
+             * <p>The current page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -193,7 +247,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries per page.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -201,7 +258,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -215,6 +275,12 @@ public class DescribeAlertsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAlertsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertsResponseBody</p>
+     */
     public static class AlertInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -265,8 +331,20 @@ public class DescribeAlertsResponseBody extends TeaModel {
             private String keyName; 
             private String values; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertInfoList model) {
+                this.key = model.key;
+                this.keyName = model.keyName;
+                this.values = model.values;
+            } 
+
             /**
-             * The attribute key.
+             * <p>The attribute key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>suspicious.wbd.wb.trojanpath</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -274,7 +352,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the key.
+             * <p>The name of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Trojan Path</p>
              */
             public Builder keyName(String keyName) {
                 this.keyName = keyName;
@@ -282,7 +363,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the key.
+             * <p>The value of the key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/root/test33.php</p>
              */
             public Builder values(String values) {
                 this.values = values;
@@ -296,6 +380,12 @@ public class DescribeAlertsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAlertsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertsResponseBody</p>
+     */
     public static class ResponseData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AlertDesc")
         private String alertDesc;
@@ -310,7 +400,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
         private String alertDetail;
 
         @com.aliyun.core.annotation.NameInMap("AlertInfoList")
-        private java.util.List < AlertInfoList> alertInfoList;
+        private java.util.List<AlertInfoList> alertInfoList;
 
         @com.aliyun.core.annotation.NameInMap("AlertLevel")
         private String alertLevel;
@@ -360,6 +450,12 @@ public class DescribeAlertsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
+        @com.aliyun.core.annotation.NameInMap("EntityList")
+        private String entityList;
+
+        @com.aliyun.core.annotation.NameInMap("ExtendContent")
+        private String extendContent;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
@@ -393,6 +489,9 @@ public class DescribeAlertsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
 
+        @com.aliyun.core.annotation.NameInMap("SubUserName")
+        private String subUserName;
+
         private ResponseData(Builder builder) {
             this.alertDesc = builder.alertDesc;
             this.alertDescCode = builder.alertDescCode;
@@ -415,6 +514,8 @@ public class DescribeAlertsResponseBody extends TeaModel {
             this.attCk = builder.attCk;
             this.cloudCode = builder.cloudCode;
             this.endTime = builder.endTime;
+            this.entityList = builder.entityList;
+            this.extendContent = builder.extendContent;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
@@ -426,6 +527,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
             this.occurTime = builder.occurTime;
             this.startTime = builder.startTime;
             this.subUserId = builder.subUserId;
+            this.subUserName = builder.subUserName;
         }
 
         public static Builder builder() {
@@ -467,7 +569,7 @@ public class DescribeAlertsResponseBody extends TeaModel {
         /**
          * @return alertInfoList
          */
-        public java.util.List < AlertInfoList> getAlertInfoList() {
+        public java.util.List<AlertInfoList> getAlertInfoList() {
             return this.alertInfoList;
         }
 
@@ -584,6 +686,20 @@ public class DescribeAlertsResponseBody extends TeaModel {
         }
 
         /**
+         * @return entityList
+         */
+        public String getEntityList() {
+            return this.entityList;
+        }
+
+        /**
+         * @return extendContent
+         */
+        public String getExtendContent() {
+            return this.extendContent;
+        }
+
+        /**
          * @return gmtCreate
          */
         public String getGmtCreate() {
@@ -660,12 +776,19 @@ public class DescribeAlertsResponseBody extends TeaModel {
             return this.subUserId;
         }
 
+        /**
+         * @return subUserName
+         */
+        public String getSubUserName() {
+            return this.subUserName;
+        }
+
         public static final class Builder {
             private String alertDesc; 
             private String alertDescCode; 
             private String alertDescEn; 
             private String alertDetail; 
-            private java.util.List < AlertInfoList> alertInfoList; 
+            private java.util.List<AlertInfoList> alertInfoList; 
             private String alertLevel; 
             private String alertName; 
             private String alertNameCode; 
@@ -682,6 +805,8 @@ public class DescribeAlertsResponseBody extends TeaModel {
             private String attCk; 
             private String cloudCode; 
             private String endTime; 
+            private String entityList; 
+            private String extendContent; 
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
@@ -693,9 +818,54 @@ public class DescribeAlertsResponseBody extends TeaModel {
             private String occurTime; 
             private String startTime; 
             private Long subUserId; 
+            private String subUserName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResponseData model) {
+                this.alertDesc = model.alertDesc;
+                this.alertDescCode = model.alertDescCode;
+                this.alertDescEn = model.alertDescEn;
+                this.alertDetail = model.alertDetail;
+                this.alertInfoList = model.alertInfoList;
+                this.alertLevel = model.alertLevel;
+                this.alertName = model.alertName;
+                this.alertNameCode = model.alertNameCode;
+                this.alertNameEn = model.alertNameEn;
+                this.alertSrcProd = model.alertSrcProd;
+                this.alertSrcProdModule = model.alertSrcProdModule;
+                this.alertTitle = model.alertTitle;
+                this.alertTitleEn = model.alertTitleEn;
+                this.alertType = model.alertType;
+                this.alertTypeCode = model.alertTypeCode;
+                this.alertTypeEn = model.alertTypeEn;
+                this.alertUuid = model.alertUuid;
+                this.assetList = model.assetList;
+                this.attCk = model.attCk;
+                this.cloudCode = model.cloudCode;
+                this.endTime = model.endTime;
+                this.entityList = model.entityList;
+                this.extendContent = model.extendContent;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.incidentUuid = model.incidentUuid;
+                this.isDefend = model.isDefend;
+                this.logTime = model.logTime;
+                this.logUuid = model.logUuid;
+                this.mainUserId = model.mainUserId;
+                this.occurTime = model.occurTime;
+                this.startTime = model.startTime;
+                this.subUserId = model.subUserId;
+                this.subUserName = model.subUserName;
+            } 
 
             /**
-             * The description of the alert.
+             * <p>The description of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The detection model found a suspicious Webshell file on your server, which may be a backdoor file implanted to maintain permissions after the attacker successfully invaded the website.</p>
              */
             public Builder alertDesc(String alertDesc) {
                 this.alertDesc = alertDesc;
@@ -703,7 +873,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The internal code of the alert description.
+             * <p>The internal code of the alert description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>security_event_config.event_name.webshell</p>
              */
             public Builder alertDescCode(String alertDescCode) {
                 this.alertDescCode = alertDescCode;
@@ -711,7 +884,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the alert in English.
+             * <p>The description of the alert in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The detection model found a suspicious Webshell file on your server, which may be a backdoor file implanted to maintain permissions after the attacker successfully invaded the website.</p>
              */
             public Builder alertDescEn(String alertDescEn) {
                 this.alertDescEn = alertDescEn;
@@ -719,7 +895,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the alert.
+             * <p>The details of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;main_user_id&quot;: &quot;165295629792****&quot;;&quot;log_uuid_count&quot;: &quot;99&quot;;&quot;attack_ip&quot;: &quot;21.92.<em>.</em>&quot;}</p>
              */
             public Builder alertDetail(String alertDetail) {
                 this.alertDetail = alertDetail;
@@ -727,20 +906,26 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The displayed details of the alert.
+             * <p>The displayed details of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
-            public Builder alertInfoList(java.util.List < AlertInfoList> alertInfoList) {
+            public Builder alertInfoList(java.util.List<AlertInfoList> alertInfoList) {
                 this.alertInfoList = alertInfoList;
                 return this;
             }
 
             /**
-             * The threat level. Valid values:
-             * <p>
+             * <p>The threat level. Valid values:</p>
+             * <ul>
+             * <li>serious: high</li>
+             * <li>suspicious: medium</li>
+             * <li>remind: low</li>
+             * </ul>
              * 
-             * *   serious: high
-             * *   suspicious: medium
-             * *   remind: low
+             * <strong>example:</strong>
+             * <p>remind</p>
              */
             public Builder alertLevel(String alertLevel) {
                 this.alertLevel = alertLevel;
@@ -748,7 +933,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert.
+             * <p>The name of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Try SNMP weak password</p>
              */
             public Builder alertName(String alertName) {
                 this.alertName = alertName;
@@ -756,7 +944,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The internal code of the alert name.
+             * <p>The internal code of the alert name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>security_event_config.event_name.webshell</p>
              */
             public Builder alertNameCode(String alertNameCode) {
                 this.alertNameCode = alertNameCode;
@@ -764,7 +955,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the alert in English.
+             * <p>The name of the alert in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Try SNMP weak password</p>
              */
             public Builder alertNameEn(String alertNameEn) {
                 this.alertNameEn = alertNameEn;
@@ -772,7 +966,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The service for which the alert associated with the event is generated.
+             * <p>The service for which the alert associated with the event is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas</p>
              */
             public Builder alertSrcProd(String alertSrcProd) {
                 this.alertSrcProd = alertSrcProd;
@@ -780,7 +977,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The sub-module of ther alert source.
+             * <p>The sub-module of ther alert source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>waf</p>
              */
             public Builder alertSrcProdModule(String alertSrcProdModule) {
                 this.alertSrcProdModule = alertSrcProdModule;
@@ -788,7 +988,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the alert.
+             * <p>The title of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scan-Try SNMP weak password</p>
              */
             public Builder alertTitle(String alertTitle) {
                 this.alertTitle = alertTitle;
@@ -796,7 +999,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The title of the alert in English.
+             * <p>The title of the alert in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scan-Try SNMP weak password</p>
              */
             public Builder alertTitleEn(String alertTitleEn) {
                 this.alertTitleEn = alertTitleEn;
@@ -804,7 +1010,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The alert type.
+             * <p>The alert type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scan</p>
              */
             public Builder alertType(String alertType) {
                 this.alertType = alertType;
@@ -812,7 +1021,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The internal code of the alert type.
+             * <p>The internal code of the alert type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>security_event_config.event_name.webshellName</p>
              */
             public Builder alertTypeCode(String alertTypeCode) {
                 this.alertTypeCode = alertTypeCode;
@@ -820,7 +1032,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the alert in English.
+             * <p>The type of the alert in English.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Scan</p>
              */
             public Builder alertTypeEn(String alertTypeEn) {
                 this.alertTypeEn = alertTypeEn;
@@ -828,7 +1043,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the alert.
+             * <p>The UUID of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas_71e24437d2797ce8fc59692905a4****</p>
              */
             public Builder alertUuid(String alertUuid) {
                 this.alertUuid = alertUuid;
@@ -836,7 +1054,21 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the asset.
+             * <p>The details of the asset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *       {
+             *             &quot;is_main_asset&quot;: &quot;1&quot;,
+             *             &quot;asset_name&quot;: &quot;47.245.<em>&quot;,
+             *             &quot;port&quot;: &quot;22&quot;,
+             *             &quot;ip&quot;: &quot;47.245.</em>&quot;,
+             *             &quot;asset_type&quot;: &quot;ip&quot;,
+             *             &quot;location&quot;: &quot;ap-southeast-1&quot;,
+             *             &quot;asset_id&quot;: &quot;47.245.*&quot;,
+             *             &quot;net_connect_dir&quot;: &quot;in&quot;
+             *       }
+             * ]</p>
              */
             public Builder assetList(String assetList) {
                 this.assetList = assetList;
@@ -844,7 +1076,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag of the ATT\&CK attack.
+             * <p>The tag of the ATT&amp;CK attack.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>T1595.002 Vulnerability Scanning</p>
              */
             public Builder attCk(String attCk) {
                 this.attCk = attCk;
@@ -852,12 +1087,15 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud code. Valid values:
-             * <p>
+             * <p>The cloud code. Valid values:</p>
+             * <ul>
+             * <li>aliyun: Alibaba Cloud</li>
+             * <li>qcloud: Tencent Cloud</li>
+             * <li>hcloud: Huawei Cloud</li>
+             * </ul>
              * 
-             * *   aliyun: Alibaba Cloud
-             * *   qcloud: Tencent Cloud
-             * *   hcloud: Huawei Cloud
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder cloudCode(String cloudCode) {
                 this.cloudCode = cloudCode;
@@ -865,7 +1103,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert was closed.
+             * <p>The time when the alert was closed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -873,7 +1114,26 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert was received.
+             * EntityList.
+             */
+            public Builder entityList(String entityList) {
+                this.entityList = entityList;
+                return this;
+            }
+
+            /**
+             * ExtendContent.
+             */
+            public Builder extendContent(String extendContent) {
+                this.extendContent = extendContent;
+                return this;
+            }
+
+            /**
+             * <p>The time when the alert was received.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -881,7 +1141,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert was last updated.
+             * <p>The time when the alert was last updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -889,7 +1152,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The unique ID of the alert.
+             * <p>The unique ID of the alert.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -897,7 +1163,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the event.
+             * <p>The UUID of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>85ea4241-798f-4684-a876-65d4f0c3****</p>
              */
             public Builder incidentUuid(String incidentUuid) {
                 this.incidentUuid = incidentUuid;
@@ -905,11 +1174,14 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an attack is defended. Valid values:
-             * <p>
+             * <p>Indicates whether an attack is defended. Valid values:</p>
+             * <ul>
+             * <li>0: detected.</li>
+             * <li>1: blocked.</li>
+             * </ul>
              * 
-             * *   0: detected.
-             * *   1: blocked.
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder isDefend(String isDefend) {
                 this.isDefend = isDefend;
@@ -917,7 +1189,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert was recorded.
+             * <p>The time when the alert was recorded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder logTime(String logTime) {
                 this.logTime = logTime;
@@ -925,7 +1200,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the alert log.
+             * <p>The UUID of the alert log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cfw_d12e285a-a042-4d7e-be89-f8a795ef****</p>
              */
             public Builder logUuid(String logUuid) {
                 this.logUuid = logUuid;
@@ -933,7 +1211,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is associated with the alert in SIEM.
+             * <p>The ID of the Alibaba Cloud account that is associated with the alert in SIEM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>127608589417****</p>
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -941,7 +1222,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the alert is triggered.
+             * <p>The time when the alert is triggered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder occurTime(String occurTime) {
                 this.occurTime = occurTime;
@@ -949,7 +1233,10 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The time at which the alert was first generated.
+             * <p>The time at which the alert was first generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-01-06 16:37:29</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -957,10 +1244,21 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account within which the alert is generated.
+             * <p>The ID of the Alibaba Cloud account within which the alert is generated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>176555323***</p>
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
+                return this;
+            }
+
+            /**
+             * SubUserName.
+             */
+            public Builder subUserName(String subUserName) {
+                this.subUserName = subUserName;
                 return this;
             }
 
@@ -971,12 +1269,18 @@ public class DescribeAlertsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeAlertsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAlertsResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PageInfo")
         private PageInfo pageInfo;
 
         @com.aliyun.core.annotation.NameInMap("ResponseData")
-        private java.util.List < ResponseData> responseData;
+        private java.util.List<ResponseData> responseData;
 
         private Data(Builder builder) {
             this.pageInfo = builder.pageInfo;
@@ -1001,16 +1305,24 @@ public class DescribeAlertsResponseBody extends TeaModel {
         /**
          * @return responseData
          */
-        public java.util.List < ResponseData> getResponseData() {
+        public java.util.List<ResponseData> getResponseData() {
             return this.responseData;
         }
 
         public static final class Builder {
             private PageInfo pageInfo; 
-            private java.util.List < ResponseData> responseData; 
+            private java.util.List<ResponseData> responseData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.pageInfo = model.pageInfo;
+                this.responseData = model.responseData;
+            } 
 
             /**
-             * The pagination information.
+             * <p>The pagination information.</p>
              */
             public Builder pageInfo(PageInfo pageInfo) {
                 this.pageInfo = pageInfo;
@@ -1018,9 +1330,9 @@ public class DescribeAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed data.
+             * <p>The detailed data.</p>
              */
-            public Builder responseData(java.util.List < ResponseData> responseData) {
+            public Builder responseData(java.util.List<ResponseData> responseData) {
                 this.responseData = responseData;
                 return this;
             }

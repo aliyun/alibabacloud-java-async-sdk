@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddUserSourceLogConfigResponseBody} extends {@link TeaModel}
  *
  * <p>AddUserSourceLogConfigResponseBody</p>
@@ -30,6 +36,10 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,8 +58,16 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AddUserSourceLogConfigResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +75,10 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddUserSourceLogConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddUserSourceLogConfigResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiplayLine")
         private String diplayLine;
@@ -180,8 +207,25 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             private Long subUserId; 
             private String subUserName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.diplayLine = model.diplayLine;
+                this.displayed = model.displayed;
+                this.imported = model.imported;
+                this.mainUserId = model.mainUserId;
+                this.sourceLogCode = model.sourceLogCode;
+                this.sourceProdCode = model.sourceProdCode;
+                this.subUserId = model.subUserId;
+                this.subUserName = model.subUserName;
+            } 
+
             /**
-             * The display details of the Logstore.
+             * <p>The display details of the Logstore.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai.siem-project.siem-logstore</p>
              */
             public Builder diplayLine(String diplayLine) {
                 this.diplayLine = diplayLine;
@@ -189,7 +233,10 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the details of added logs are returned. Valid values: true false
+             * <p>Indicates whether the details of added logs are returned. Valid values: true false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder displayed(Boolean displayed) {
                 this.displayed = displayed;
@@ -197,7 +244,10 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the logs are added to the threat analysis feature. Valid values: true false
+             * <p>Indicates whether the logs are added to the threat analysis feature. Valid values: true false</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder imported(Boolean imported) {
                 this.imported = imported;
@@ -205,7 +255,10 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
+             * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123XXXXXXXXX</p>
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -213,7 +266,10 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The log code.
+             * <p>The log code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_siem_aegis_proc</p>
              */
             public Builder sourceLogCode(String sourceLogCode) {
                 this.sourceLogCode = sourceLogCode;
@@ -221,7 +277,10 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the cloud service.
+             * <p>The code of the cloud service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas</p>
              */
             public Builder sourceProdCode(String sourceProdCode) {
                 this.sourceProdCode = sourceProdCode;
@@ -229,7 +288,10 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
+             * <p>The ID of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123XXXXXXXX</p>
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
@@ -237,7 +299,10 @@ public class AddUserSourceLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.
+             * <p>The username of the Alibaba Cloud account that can be used to perform operations supported by the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas_account_xxx</p>
              */
             public Builder subUserName(String subUserName) {
                 this.subUserName = subUserName;

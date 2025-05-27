@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeProdCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeProdCountResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeProdCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -48,8 +58,16 @@ public class DescribeProdCountResponseBody extends TeaModel {
         private Data data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeProdCountResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +75,10 @@ public class DescribeProdCountResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class DescribeProdCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeProdCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProdCountResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliyunImportedCount")
         private Integer aliyunImportedCount;
@@ -180,6 +207,20 @@ public class DescribeProdCountResponseBody extends TeaModel {
             private Integer qcloudImportedCount; 
             private Integer qcloudProdCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.aliyunImportedCount = model.aliyunImportedCount;
+                this.aliyunProdCount = model.aliyunProdCount;
+                this.hcloudImportedCount = model.hcloudImportedCount;
+                this.hcloudProdCount = model.hcloudProdCount;
+                this.idcImportedCount = model.idcImportedCount;
+                this.idcProdCount = model.idcProdCount;
+                this.qcloudImportedCount = model.qcloudImportedCount;
+                this.qcloudProdCount = model.qcloudProdCount;
+            } 
+
             /**
              * AliyunImportedCount.
              */
@@ -189,7 +230,10 @@ public class DescribeProdCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of Alibaba Cloud services.
+             * <p>The number of Alibaba Cloud services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>19</p>
              */
             public Builder aliyunProdCount(Integer aliyunProdCount) {
                 this.aliyunProdCount = aliyunProdCount;
@@ -205,7 +249,10 @@ public class DescribeProdCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of Huawei Cloud services.
+             * <p>The number of Huawei Cloud services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder hcloudProdCount(Integer hcloudProdCount) {
                 this.hcloudProdCount = hcloudProdCount;
@@ -237,7 +284,10 @@ public class DescribeProdCountResponseBody extends TeaModel {
             }
 
             /**
-             * The number of Tencent Cloud services.
+             * <p>The number of Tencent Cloud services.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder qcloudProdCount(Integer qcloudProdCount) {
                 this.qcloudProdCount = qcloudProdCount;

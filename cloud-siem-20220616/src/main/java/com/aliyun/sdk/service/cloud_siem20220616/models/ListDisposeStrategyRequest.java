@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListDisposeStrategyRequest} extends {@link RequestModel}
  *
  * <p>ListDisposeStrategyRequest</p>
@@ -32,6 +38,10 @@ public class ListDisposeStrategyRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EntityType")
     private String entityType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IncidentUuid")
+    private String incidentUuid;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Order")
@@ -86,6 +96,7 @@ public class ListDisposeStrategyRequest extends Request {
         this.endTime = builder.endTime;
         this.entityIdentity = builder.entityIdentity;
         this.entityType = builder.entityType;
+        this.incidentUuid = builder.incidentUuid;
         this.order = builder.order;
         this.orderField = builder.orderField;
         this.pageSize = builder.pageSize;
@@ -107,7 +118,7 @@ public class ListDisposeStrategyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,6 +156,13 @@ public class ListDisposeStrategyRequest extends Request {
      */
     public String getEntityType() {
         return this.entityType;
+    }
+
+    /**
+     * @return incidentUuid
+     */
+    public String getIncidentUuid() {
+        return this.incidentUuid;
     }
 
     /**
@@ -230,6 +248,7 @@ public class ListDisposeStrategyRequest extends Request {
         private Long endTime; 
         private String entityIdentity; 
         private String entityType; 
+        private String incidentUuid; 
         private String order; 
         private String orderField; 
         private Integer pageSize; 
@@ -253,6 +272,7 @@ public class ListDisposeStrategyRequest extends Request {
             this.endTime = request.endTime;
             this.entityIdentity = request.entityIdentity;
             this.entityType = request.entityType;
+            this.incidentUuid = request.incidentUuid;
             this.order = request.order;
             this.orderField = request.orderField;
             this.pageSize = request.pageSize;
@@ -267,7 +287,11 @@ public class ListDisposeStrategyRequest extends Request {
         } 
 
         /**
-         * The page number. Pages start from page 1.
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("CurrentPage", currentPage);
@@ -276,11 +300,14 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The status of the policy. Valid values:
-         * <p>
+         * <p>The status of the policy. Valid values:</p>
+         * <ul>
+         * <li>0: invalid</li>
+         * <li>1: valid</li>
+         * </ul>
          * 
-         * *   0: invalid
-         * *   1: valid
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder effectiveStatus(Integer effectiveStatus) {
             this.putBodyParameter("EffectiveStatus", effectiveStatus);
@@ -289,7 +316,11 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. Unit: milliseconds.
+         * <p>The end of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1577808000000</p>
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -298,7 +329,10 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The feature value of the entity. Fuzzy match is supported.
+         * <p>The feature value of the entity. Fuzzy match is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test22.php</p>
          */
         public Builder entityIdentity(String entityIdentity) {
             this.putBodyParameter("EntityIdentity", entityIdentity);
@@ -307,12 +341,15 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The entity type of the playbook. Valid values:
-         * <p>
+         * <p>The entity type of the playbook. Valid values:</p>
+         * <ul>
+         * <li>ip</li>
+         * <li>process</li>
+         * <li>file</li>
+         * </ul>
          * 
-         * *   ip
-         * *   process
-         * *   file
+         * <strong>example:</strong>
+         * <p>ip</p>
          */
         public Builder entityType(String entityType) {
             this.putBodyParameter("EntityType", entityType);
@@ -321,11 +358,23 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The sort order. Valid values:
-         * <p>
+         * IncidentUuid.
+         */
+        public Builder incidentUuid(String incidentUuid) {
+            this.putBodyParameter("IncidentUuid", incidentUuid);
+            this.incidentUuid = incidentUuid;
+            return this;
+        }
+
+        /**
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>desc: descending order.</li>
+         * <li>asc: ascending order.</li>
+         * </ul>
          * 
-         * *   desc: descending order.
-         * *   asc: ascending order.
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.putBodyParameter("Order", order);
@@ -334,12 +383,15 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The sort field. Valid values:
-         * <p>
+         * <p>The sort field. Valid values:</p>
+         * <ul>
+         * <li>GmtModified: sorts the policies by update time.</li>
+         * <li>GmtCreate: sorts the policies by creation time.</li>
+         * <li>FinishTime: sorts the policies by end time.</li>
+         * </ul>
          * 
-         * *   GmtModified: sorts the policies by update time.
-         * *   GmtCreate: sorts the policies by creation time.
-         * *   FinishTime: sorts the policies by end time.
+         * <strong>example:</strong>
+         * <p>GmtModified</p>
          */
         public Builder orderField(String orderField) {
             this.putBodyParameter("OrderField", orderField);
@@ -348,7 +400,11 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value: 100.
+         * <p>The number of entries per page. Maximum value: 100.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -357,7 +413,10 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The name of the playbook, which is the unique identifier of the playbook.
+         * <p>The name of the playbook, which is the unique identifier of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WafBlockIP</p>
          */
         public Builder playbookName(String playbookName) {
             this.putBodyParameter("PlaybookName", playbookName);
@@ -366,14 +425,17 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The type of the playbook. Valid values:
-         * <p>
+         * <p>The type of the playbook. Valid values:</p>
+         * <ul>
+         * <li>system: user-triggered playbook</li>
+         * <li>custom: event-triggered playbook</li>
+         * <li>custom_alert: alert-triggered playbook</li>
+         * <li>soar-manual: user-run playbook</li>
+         * <li>soar-mdr: MDR-run playbook</li>
+         * </ul>
          * 
-         * *   system: user-triggered playbook
-         * *   custom: event-triggered playbook
-         * *   custom_alert: alert-triggered playbook
-         * *   soar-manual: user-run playbook
-         * *   soar-mdr: MDR-run playbook
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder playbookTypes(String playbookTypes) {
             this.putBodyParameter("PlaybookTypes", playbookTypes);
@@ -382,7 +444,10 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The UUID of the playbook.
+         * <p>The UUID of the playbook.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>system_aliyun_clb_process_book</p>
          */
         public Builder playbookUuid(String playbookUuid) {
             this.putBodyParameter("PlaybookUuid", playbookUuid);
@@ -391,11 +456,14 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:
-         * <p>
+         * <p>The region in which the data management center of the threat analysis feature resides. Specify this parameter based on the regions in which your assets reside. Valid values:</p>
+         * <ul>
+         * <li>cn-hangzhou: Your assets reside in regions in China.</li>
+         * <li>ap-southeast-1: Your assets reside in regions outside China.</li>
+         * </ul>
          * 
-         * *   cn-hangzhou: Your assets reside in regions in China.
-         * *   ap-southeast-1: Your assets reside in regions outside China.
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -404,7 +472,10 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the account that you switch from the management account.
+         * <p>The ID of the account that you switch from the management account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>113091674488****</p>
          */
         public Builder roleFor(Long roleFor) {
             this.putBodyParameter("RoleFor", roleFor);
@@ -413,10 +484,14 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The type of the view. Valid values:
-         * <p>
-         * - 0: the current Alibaba Cloud account
-         * - 1: the global account
+         * <p>The type of the view. Valid values:</p>
+         * <ul>
+         * <li>0: the current Alibaba Cloud account</li>
+         * <li>1: the global account</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
@@ -425,7 +500,10 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The ID of the SOAR handling policy.
+         * <p>The ID of the SOAR handling policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a50a49b7-6044-4593-ab15-2b46567caadd</p>
          */
         public Builder sophonTaskId(String sophonTaskId) {
             this.putBodyParameter("SophonTaskId", sophonTaskId);
@@ -434,7 +512,11 @@ public class ListDisposeStrategyRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Unit: milliseconds.
+         * <p>The beginning of the time range to query. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1577808000000</p>
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);

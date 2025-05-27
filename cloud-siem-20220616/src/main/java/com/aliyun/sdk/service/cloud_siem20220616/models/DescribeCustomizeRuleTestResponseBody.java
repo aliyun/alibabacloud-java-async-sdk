@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCustomizeRuleTestResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCustomizeRuleTestResponseBody</p>
@@ -40,6 +46,10 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
 
     public static DescribeCustomizeRuleTestResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomizeRuleTestResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * The HTTP status code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +117,10 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
         }
 
         /**
-         * The data returned.
+         * <p>The data returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +128,10 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +139,10 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9AAA9ED9-78F4-5021-86DC-D51C7511****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +150,14 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -134,6 +170,12 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCustomizeRuleTestResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCustomizeRuleTestResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -184,8 +226,20 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
             private String simulateData; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.id = model.id;
+                this.simulateData = model.simulateData;
+                this.status = model.status;
+            } 
+
             /**
-             * The ID of the rule.
+             * <p>The ID of the rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456789</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -193,7 +247,10 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
             }
 
             /**
-             * The historical data that is used in the simulation test.
+             * <p>The historical data that is used in the simulation test.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;,&quot;key3&quot;:&quot;value3&quot;,&quot;key4&quot;:&quot;value4&quot;,&quot;key5&quot;:&quot;value5&quot;}]</p>
              */
             public Builder simulateData(String simulateData) {
                 this.simulateData = simulateData;
@@ -201,14 +258,17 @@ public class DescribeCustomizeRuleTestResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the rule. Valid values:
-             * <p>
+             * <p>The status of the rule. Valid values:</p>
+             * <ul>
+             * <li>0: The rule is in the initial state.</li>
+             * <li>10: The simulation data is tested.</li>
+             * <li>15: The business data is being tested.</li>
+             * <li>20: The business data test ends.</li>
+             * <li>100: The rule takes effect.</li>
+             * </ul>
              * 
-             * *   0: The rule is in the initial state.
-             * *   10: The simulation data is tested.
-             * *   15: The business data is being tested.
-             * *   20: The business data test ends.
-             * *   100: The rule takes effect.
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

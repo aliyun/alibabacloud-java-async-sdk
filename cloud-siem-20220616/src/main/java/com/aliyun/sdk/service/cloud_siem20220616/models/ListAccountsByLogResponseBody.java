@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloud_siem20220616.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAccountsByLogResponseBody} extends {@link TeaModel}
  *
  * <p>ListAccountsByLogResponseBody</p>
  */
 public class ListAccountsByLogResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class ListAccountsByLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -45,19 +55,30 @@ public class ListAccountsByLogResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAccountsByLogResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The data returned.
+         * <p>The data returned.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6276D891-*****-55B2-87B9-74D413F7****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class ListAccountsByLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAccountsByLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccountsByLogResponseBody</p>
+     */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
@@ -168,8 +195,24 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             private String prodCode; 
             private Long subUserId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountId = model.accountId;
+                this.accountName = model.accountName;
+                this.imported = model.imported;
+                this.logCode = model.logCode;
+                this.mainUserId = model.mainUserId;
+                this.prodCode = model.prodCode;
+                this.subUserId = model.subUserId;
+            } 
+
             /**
-             * The ID of the cloud account.
+             * <p>The ID of the cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123xxxxxxx</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -177,7 +220,10 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cloud account.
+             * <p>The name of the cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sas_account_xxx</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -185,7 +231,10 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the account is added. Valid values: -1: yes -0: no
+             * <p>Indicates whether the account is added. Valid values: -1: yes -0: no</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123xxxxxxx</p>
              */
             public Builder imported(Integer imported) {
                 this.imported = imported;
@@ -193,7 +242,10 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the log.
+             * <p>The code of the log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_siem_waf_xxxxx</p>
              */
             public Builder logCode(String logCode) {
                 this.logCode = logCode;
@@ -201,7 +253,10 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.
+             * <p>The ID of the Alibaba Cloud account that is used to purchase the threat analysis feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123XXXXXXXXX</p>
              */
             public Builder mainUserId(Long mainUserId) {
                 this.mainUserId = mainUserId;
@@ -209,7 +264,10 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service.
+             * <p>The code of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qcloud_waf</p>
              */
             public Builder prodCode(String prodCode) {
                 this.prodCode = prodCode;
@@ -217,7 +275,10 @@ public class ListAccountsByLogResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account for which the threat analysis feature is enabled.
+             * <p>The ID of the Alibaba Cloud account for which the threat analysis feature is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123XXXXXXXX</p>
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
