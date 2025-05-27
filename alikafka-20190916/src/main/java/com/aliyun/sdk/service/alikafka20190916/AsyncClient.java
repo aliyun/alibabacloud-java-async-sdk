@@ -249,6 +249,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTopicSubscribeStatusResponse> getTopicSubscribeStatus(GetTopicSubscribeStatusRequest request);
 
     /**
+     * @param request the request parameters of ListRebalanceInfo  ListRebalanceInfoRequest
+     * @return ListRebalanceInfoResponse
+     */
+    CompletableFuture<ListRebalanceInfoResponse> listRebalanceInfo(ListRebalanceInfoRequest request);
+
+    /**
      * @param request the request parameters of ListTagResources  ListTagResourcesRequest
      * @return ListTagResourcesResponse
      */
