@@ -514,12 +514,16 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RetryStrategy")
         private RetryStrategy retryStrategy;
 
+        @com.aliyun.core.annotation.NameInMap("Throttling")
+        private Integer throttling;
+
         private RunOptions(Builder builder) {
             this.batchWindow = builder.batchWindow;
             this.deadLetterQueue = builder.deadLetterQueue;
             this.errorsTolerance = builder.errorsTolerance;
             this.maximumTasks = builder.maximumTasks;
             this.retryStrategy = builder.retryStrategy;
+            this.throttling = builder.throttling;
         }
 
         public static Builder builder() {
@@ -565,12 +569,20 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return this.retryStrategy;
         }
 
+        /**
+         * @return throttling
+         */
+        public Integer getThrottling() {
+            return this.throttling;
+        }
+
         public static final class Builder {
             private BatchWindow batchWindow; 
             private DeadLetterQueue deadLetterQueue; 
             private String errorsTolerance; 
             private Integer maximumTasks; 
             private RetryStrategy retryStrategy; 
+            private Integer throttling; 
 
             private Builder() {
             } 
@@ -581,6 +593,7 @@ public class ListEventStreamingsResponseBody extends TeaModel {
                 this.errorsTolerance = model.errorsTolerance;
                 this.maximumTasks = model.maximumTasks;
                 this.retryStrategy = model.retryStrategy;
+                this.throttling = model.throttling;
             } 
 
             /**
@@ -626,6 +639,14 @@ public class ListEventStreamingsResponseBody extends TeaModel {
              */
             public Builder retryStrategy(RetryStrategy retryStrategy) {
                 this.retryStrategy = retryStrategy;
+                return this;
+            }
+
+            /**
+             * Throttling.
+             */
+            public Builder throttling(Integer throttling) {
+                this.throttling = throttling;
                 return this;
             }
 

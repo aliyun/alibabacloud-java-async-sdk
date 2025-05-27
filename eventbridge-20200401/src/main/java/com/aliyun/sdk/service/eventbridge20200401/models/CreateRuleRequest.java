@@ -273,8 +273,24 @@ public class CreateRuleRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
+        @com.aliyun.core.annotation.NameInMap("Network")
+        private String network;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private String vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
         private DeadLetterQueue(Builder builder) {
             this.arn = builder.arn;
+            this.network = builder.network;
+            this.securityGroupId = builder.securityGroupId;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -292,14 +308,50 @@ public class CreateRuleRequest extends Request {
             return this.arn;
         }
 
+        /**
+         * @return network
+         */
+        public String getNetwork() {
+            return this.network;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private String arn; 
+            private String network; 
+            private String securityGroupId; 
+            private String vSwitchIds; 
+            private String vpcId; 
 
             private Builder() {
             } 
 
             private Builder(DeadLetterQueue model) {
                 this.arn = model.arn;
+                this.network = model.network;
+                this.securityGroupId = model.securityGroupId;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
             } 
 
             /**
@@ -310,6 +362,38 @@ public class CreateRuleRequest extends Request {
              */
             public Builder arn(String arn) {
                 this.arn = arn;
+                return this;
+            }
+
+            /**
+             * Network.
+             */
+            public Builder network(String network) {
+                this.network = network;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(String vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 
