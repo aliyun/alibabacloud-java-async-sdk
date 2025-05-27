@@ -30,6 +30,10 @@ public class CreateTaskRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("callBackUrl")
+    private String callBackUrl;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("categoryTags")
     private java.util.List<CategoryTags> categoryTags;
 
@@ -88,6 +92,7 @@ public class CreateTaskRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.appId = builder.appId;
         this.regionId = builder.regionId;
+        this.callBackUrl = builder.callBackUrl;
         this.categoryTags = builder.categoryTags;
         this.customPrompt = builder.customPrompt;
         this.dialogue = builder.dialogue;
@@ -135,6 +140,13 @@ public class CreateTaskRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return callBackUrl
+     */
+    public String getCallBackUrl() {
+        return this.callBackUrl;
     }
 
     /**
@@ -232,6 +244,7 @@ public class CreateTaskRequest extends Request {
         private String workspaceId; 
         private String appId; 
         private String regionId; 
+        private String callBackUrl; 
         private java.util.List<CategoryTags> categoryTags; 
         private String customPrompt; 
         private Dialogue dialogue; 
@@ -255,6 +268,7 @@ public class CreateTaskRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.appId = request.appId;
             this.regionId = request.regionId;
+            this.callBackUrl = request.callBackUrl;
             this.categoryTags = request.categoryTags;
             this.customPrompt = request.customPrompt;
             this.dialogue = request.dialogue;
@@ -294,6 +308,15 @@ public class CreateTaskRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("regionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * callBackUrl.
+         */
+        public Builder callBackUrl(String callBackUrl) {
+            this.putBodyParameter("callBackUrl", callBackUrl);
+            this.callBackUrl = callBackUrl;
             return this;
         }
 
