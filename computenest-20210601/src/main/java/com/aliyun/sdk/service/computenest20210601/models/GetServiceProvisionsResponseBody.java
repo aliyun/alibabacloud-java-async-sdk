@@ -97,6 +97,102 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
      *
      * <p>GetServiceProvisionsResponseBody</p>
      */
+    public static class CommodityProvisions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
+        private String commodityCode;
+
+        @com.aliyun.core.annotation.NameInMap("EnableURL")
+        private String enableURL;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private CommodityProvisions(Builder builder) {
+            this.commodityCode = builder.commodityCode;
+            this.enableURL = builder.enableURL;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CommodityProvisions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return commodityCode
+         */
+        public String getCommodityCode() {
+            return this.commodityCode;
+        }
+
+        /**
+         * @return enableURL
+         */
+        public String getEnableURL() {
+            return this.enableURL;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String commodityCode; 
+            private String enableURL; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommodityProvisions model) {
+                this.commodityCode = model.commodityCode;
+                this.enableURL = model.enableURL;
+                this.status = model.status;
+            } 
+
+            /**
+             * CommodityCode.
+             */
+            public Builder commodityCode(String commodityCode) {
+                this.commodityCode = commodityCode;
+                return this;
+            }
+
+            /**
+             * EnableURL.
+             */
+            public Builder enableURL(String enableURL) {
+                this.enableURL = enableURL;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public CommodityProvisions build() {
+                return new CommodityProvisions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetServiceProvisionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceProvisionsResponseBody</p>
+     */
     public static class ApiForCreation extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
@@ -445,6 +541,9 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoEnableService")
         private Boolean autoEnableService;
 
+        @com.aliyun.core.annotation.NameInMap("CommodityProvisions")
+        private java.util.List<CommodityProvisions> commodityProvisions;
+
         @com.aliyun.core.annotation.NameInMap("EnableURL")
         private String enableURL;
 
@@ -462,6 +561,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
         private ServiceProvisions(Builder builder) {
             this.autoEnableService = builder.autoEnableService;
+            this.commodityProvisions = builder.commodityProvisions;
             this.enableURL = builder.enableURL;
             this.roleProvision = builder.roleProvision;
             this.serviceName = builder.serviceName;
@@ -482,6 +582,13 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
          */
         public Boolean getAutoEnableService() {
             return this.autoEnableService;
+        }
+
+        /**
+         * @return commodityProvisions
+         */
+        public java.util.List<CommodityProvisions> getCommodityProvisions() {
+            return this.commodityProvisions;
         }
 
         /**
@@ -521,6 +628,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean autoEnableService; 
+            private java.util.List<CommodityProvisions> commodityProvisions; 
             private String enableURL; 
             private RoleProvision roleProvision; 
             private String serviceName; 
@@ -532,6 +640,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
 
             private Builder(ServiceProvisions model) {
                 this.autoEnableService = model.autoEnableService;
+                this.commodityProvisions = model.commodityProvisions;
                 this.enableURL = model.enableURL;
                 this.roleProvision = model.roleProvision;
                 this.serviceName = model.serviceName;
@@ -551,6 +660,14 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
              */
             public Builder autoEnableService(Boolean autoEnableService) {
                 this.autoEnableService = autoEnableService;
+                return this;
+            }
+
+            /**
+             * CommodityProvisions.
+             */
+            public Builder commodityProvisions(java.util.List<CommodityProvisions> commodityProvisions) {
+                this.commodityProvisions = commodityProvisions;
                 return this;
             }
 
