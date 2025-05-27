@@ -1,3 +1,6 @@
+2025-05-27 Version: 5.0.4
+- Generated java-async 2020-04-01 for eventbridge.
+
 2025-05-27 Version: 5.0.3
 - Generated java-async 2020-04-01 for eventbridge.
 

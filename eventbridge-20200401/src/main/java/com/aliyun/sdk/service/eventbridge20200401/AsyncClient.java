@@ -161,6 +161,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DisableRuleResponse> disableRule(DisableRuleRequest request);
 
     /**
+     * @param request the request parameters of DiscoverEventSource  DiscoverEventSourceRequest
+     * @return DiscoverEventSourceResponse
+     */
+    CompletableFuture<DiscoverEventSourceResponse> discoverEventSource(DiscoverEventSourceRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this API operation to enable an event rule.</p>
      * 
@@ -360,6 +366,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TestEventPatternResponse
      */
     CompletableFuture<TestEventPatternResponse> testEventPattern(TestEventPatternRequest request);
+
+    /**
+     * @param request the request parameters of TestEventSourceConfig  TestEventSourceConfigRequest
+     * @return TestEventSourceConfigResponse
+     */
+    CompletableFuture<TestEventSourceConfigResponse> testEventSourceConfig(TestEventSourceConfigRequest request);
 
     /**
      * <b>description</b> :
