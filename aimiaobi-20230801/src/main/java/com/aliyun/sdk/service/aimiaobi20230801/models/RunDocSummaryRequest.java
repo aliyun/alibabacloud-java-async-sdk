@@ -30,6 +30,10 @@ public class RunDocSummaryRequest extends Request {
     private String docId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelName")
+    private String modelName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Query")
     private String query;
 
@@ -52,6 +56,7 @@ public class RunDocSummaryRequest extends Request {
         this.regionId = builder.regionId;
         this.cleanCache = builder.cleanCache;
         this.docId = builder.docId;
+        this.modelName = builder.modelName;
         this.query = builder.query;
         this.recommendContent = builder.recommendContent;
         this.sessionId = builder.sessionId;
@@ -93,6 +98,13 @@ public class RunDocSummaryRequest extends Request {
     }
 
     /**
+     * @return modelName
+     */
+    public String getModelName() {
+        return this.modelName;
+    }
+
+    /**
      * @return query
      */
     public String getQuery() {
@@ -124,6 +136,7 @@ public class RunDocSummaryRequest extends Request {
         private String regionId; 
         private Boolean cleanCache; 
         private String docId; 
+        private String modelName; 
         private String query; 
         private String recommendContent; 
         private String sessionId; 
@@ -138,6 +151,7 @@ public class RunDocSummaryRequest extends Request {
             this.regionId = request.regionId;
             this.cleanCache = request.cleanCache;
             this.docId = request.docId;
+            this.modelName = request.modelName;
             this.query = request.query;
             this.recommendContent = request.recommendContent;
             this.sessionId = request.sessionId;
@@ -168,6 +182,15 @@ public class RunDocSummaryRequest extends Request {
         public Builder docId(String docId) {
             this.putBodyParameter("DocId", docId);
             this.docId = docId;
+            return this;
+        }
+
+        /**
+         * ModelName.
+         */
+        public Builder modelName(String modelName) {
+            this.putBodyParameter("ModelName", modelName);
+            this.modelName = modelName;
             return this;
         }
 
