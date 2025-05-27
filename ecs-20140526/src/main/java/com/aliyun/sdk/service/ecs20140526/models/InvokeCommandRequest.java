@@ -747,7 +747,14 @@ public class InvokeCommandRequest extends Request {
         }
 
         /**
-         * WorkingDir.
+         * <p>The execution path of the command on ECS instances. The value can be up to 200 characters in length.</p>
+         * <ul>
+         * <li>If you do not specify this parameter, the execution path specified when the command is created is used.</li>
+         * <li>This execution path is applicable only to this task. The execution path of the command is not changed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>/home/user</p>
          */
         public Builder workingDir(String workingDir) {
             this.putQueryParameter("WorkingDir", workingDir);

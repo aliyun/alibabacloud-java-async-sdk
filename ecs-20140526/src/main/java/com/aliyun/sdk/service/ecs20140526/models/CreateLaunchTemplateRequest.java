@@ -1581,6 +1581,9 @@ public class CreateLaunchTemplateRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Iops")
         private Integer iops;
 
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
@@ -1599,6 +1602,7 @@ public class CreateLaunchTemplateRequest extends Request {
             this.diskName = builder.diskName;
             this.encrypted = builder.encrypted;
             this.iops = builder.iops;
+            this.KMSKeyId = builder.KMSKeyId;
             this.performanceLevel = builder.performanceLevel;
             this.provisionedIops = builder.provisionedIops;
             this.size = builder.size;
@@ -1669,6 +1673,13 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
          * @return performanceLevel
          */
         public String getPerformanceLevel() {
@@ -1698,6 +1709,7 @@ public class CreateLaunchTemplateRequest extends Request {
             private String diskName; 
             private String encrypted; 
             private Integer iops; 
+            private String KMSKeyId; 
             private String performanceLevel; 
             private Long provisionedIops; 
             private Integer size; 
@@ -1714,6 +1726,7 @@ public class CreateLaunchTemplateRequest extends Request {
                 this.diskName = model.diskName;
                 this.encrypted = model.encrypted;
                 this.iops = model.iops;
+                this.KMSKeyId = model.KMSKeyId;
                 this.performanceLevel = model.performanceLevel;
                 this.provisionedIops = model.provisionedIops;
                 this.size = model.size;
@@ -1836,6 +1849,14 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
+             * KMSKeyId.
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
+                return this;
+            }
+
+            /**
              * <p>The performance level of the ESSD to use as the system disk. Default value: PL0. Valid values:</p>
              * <ul>
              * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
@@ -1922,6 +1943,9 @@ public class CreateLaunchTemplateRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Encrypted")
         private String encrypted;
 
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
@@ -1943,6 +1967,7 @@ public class CreateLaunchTemplateRequest extends Request {
             this.device = builder.device;
             this.diskName = builder.diskName;
             this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
             this.performanceLevel = builder.performanceLevel;
             this.provisionedIops = builder.provisionedIops;
             this.size = builder.size;
@@ -2014,6 +2039,13 @@ public class CreateLaunchTemplateRequest extends Request {
         }
 
         /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
          * @return performanceLevel
          */
         public String getPerformanceLevel() {
@@ -2050,6 +2082,7 @@ public class CreateLaunchTemplateRequest extends Request {
             private String device; 
             private String diskName; 
             private String encrypted; 
+            private String KMSKeyId; 
             private String performanceLevel; 
             private Long provisionedIops; 
             private Integer size; 
@@ -2067,6 +2100,7 @@ public class CreateLaunchTemplateRequest extends Request {
                 this.device = model.device;
                 this.diskName = model.diskName;
                 this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
                 this.performanceLevel = model.performanceLevel;
                 this.provisionedIops = model.provisionedIops;
                 this.size = model.size;
@@ -2183,6 +2217,14 @@ public class CreateLaunchTemplateRequest extends Request {
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * KMSKeyId.
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
                 return this;
             }
 

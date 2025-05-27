@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-ecs20140526</artifactId>
-  <version>8.0.6</version>
+  <version>8.0.7</version>
   <packaging>jar</packaging>
   <name>alibabacloud-ecs20140526</name>
   <description>Alibaba Cloud Ecs (20140526) Async SDK for Java

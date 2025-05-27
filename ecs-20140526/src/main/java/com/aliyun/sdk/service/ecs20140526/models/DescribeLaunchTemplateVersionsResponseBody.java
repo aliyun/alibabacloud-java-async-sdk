@@ -194,6 +194,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Encrypted")
         private String encrypted;
 
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
+        private String KMSKeyId;
+
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
@@ -215,6 +218,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             this.device = builder.device;
             this.diskName = builder.diskName;
             this.encrypted = builder.encrypted;
+            this.KMSKeyId = builder.KMSKeyId;
             this.performanceLevel = builder.performanceLevel;
             this.provisionedIops = builder.provisionedIops;
             this.size = builder.size;
@@ -286,6 +290,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return KMSKeyId
+         */
+        public String getKMSKeyId() {
+            return this.KMSKeyId;
+        }
+
+        /**
          * @return performanceLevel
          */
         public String getPerformanceLevel() {
@@ -322,6 +333,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String device; 
             private String diskName; 
             private String encrypted; 
+            private String KMSKeyId; 
             private String performanceLevel; 
             private Long provisionedIops; 
             private Integer size; 
@@ -339,6 +351,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
                 this.device = model.device;
                 this.diskName = model.diskName;
                 this.encrypted = model.encrypted;
+                this.KMSKeyId = model.KMSKeyId;
                 this.performanceLevel = model.performanceLevel;
                 this.provisionedIops = model.provisionedIops;
                 this.size = model.size;
@@ -441,6 +454,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              */
             public Builder encrypted(String encrypted) {
                 this.encrypted = encrypted;
+                return this;
+            }
+
+            /**
+             * KMSKeyId.
+             */
+            public Builder KMSKeyId(String KMSKeyId) {
+                this.KMSKeyId = KMSKeyId;
                 return this;
             }
 
@@ -1267,6 +1288,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SystemDisk.Iops")
         private Integer systemDisk_iops;
 
+        @com.aliyun.core.annotation.NameInMap("SystemDisk.KMSKeyId")
+        private String systemDisk_kMSKeyId;
+
         @com.aliyun.core.annotation.NameInMap("SystemDisk.PerformanceLevel")
         private String systemDisk_performanceLevel;
 
@@ -1338,6 +1362,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             this.systemDisk_diskName = builder.systemDisk_diskName;
             this.systemDisk_encrypted = builder.systemDisk_encrypted;
             this.systemDisk_iops = builder.systemDisk_iops;
+            this.systemDisk_kMSKeyId = builder.systemDisk_kMSKeyId;
             this.systemDisk_performanceLevel = builder.systemDisk_performanceLevel;
             this.systemDisk_provisionedIops = builder.systemDisk_provisionedIops;
             this.systemDisk_size = builder.systemDisk_size;
@@ -1679,6 +1704,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return systemDisk_kMSKeyId
+         */
+        public String getSystemDisk_kMSKeyId() {
+            return this.systemDisk_kMSKeyId;
+        }
+
+        /**
          * @return systemDisk_performanceLevel
          */
         public String getSystemDisk_performanceLevel() {
@@ -1781,6 +1813,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private String systemDisk_diskName; 
             private String systemDisk_encrypted; 
             private Integer systemDisk_iops; 
+            private String systemDisk_kMSKeyId; 
             private String systemDisk_performanceLevel; 
             private Long systemDisk_provisionedIops; 
             private Integer systemDisk_size; 
@@ -1840,6 +1873,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
                 this.systemDisk_diskName = model.systemDisk_diskName;
                 this.systemDisk_encrypted = model.systemDisk_encrypted;
                 this.systemDisk_iops = model.systemDisk_iops;
+                this.systemDisk_kMSKeyId = model.systemDisk_kMSKeyId;
                 this.systemDisk_performanceLevel = model.systemDisk_performanceLevel;
                 this.systemDisk_provisionedIops = model.systemDisk_provisionedIops;
                 this.systemDisk_size = model.systemDisk_size;
@@ -2391,6 +2425,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              */
             public Builder systemDisk_iops(Integer systemDisk_iops) {
                 this.systemDisk_iops = systemDisk_iops;
+                return this;
+            }
+
+            /**
+             * SystemDisk.KMSKeyId.
+             */
+            public Builder systemDisk_kMSKeyId(String systemDisk_kMSKeyId) {
+                this.systemDisk_kMSKeyId = systemDisk_kMSKeyId;
                 return this;
             }
 
