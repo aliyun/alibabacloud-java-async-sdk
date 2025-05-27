@@ -312,10 +312,14 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("originResponse")
         private String originResponse;
 
+        @com.aliyun.core.annotation.NameInMap("sourceList")
+        private java.util.List<String> sourceList;
+
         private Data(Builder builder) {
             this.content = builder.content;
             this.contentTags = builder.contentTags;
             this.originResponse = builder.originResponse;
+            this.sourceList = builder.sourceList;
         }
 
         public static Builder builder() {
@@ -347,10 +351,18 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
             return this.originResponse;
         }
 
+        /**
+         * @return sourceList
+         */
+        public java.util.List<String> getSourceList() {
+            return this.sourceList;
+        }
+
         public static final class Builder {
             private String content; 
             private java.util.List<ContentTags> contentTags; 
             private String originResponse; 
+            private java.util.List<String> sourceList; 
 
             private Builder() {
             } 
@@ -359,6 +371,7 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
                 this.content = model.content;
                 this.contentTags = model.contentTags;
                 this.originResponse = model.originResponse;
+                this.sourceList = model.sourceList;
             } 
 
             /**
@@ -382,6 +395,14 @@ public class ListAnalysisTagDetailByTaskIdResponseBody extends TeaModel {
              */
             public Builder originResponse(String originResponse) {
                 this.originResponse = originResponse;
+                return this;
+            }
+
+            /**
+             * sourceList.
+             */
+            public Builder sourceList(java.util.List<String> sourceList) {
+                this.sourceList = sourceList;
                 return this;
             }
 

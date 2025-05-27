@@ -431,11 +431,15 @@ public class RunEnterpriseVocAnalysisResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("filterResult")
         private FilterResult filterResult;
 
+        @com.aliyun.core.annotation.NameInMap("reasonContent")
+        private String reasonContent;
+
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
 
         private Output(Builder builder) {
             this.filterResult = builder.filterResult;
+            this.reasonContent = builder.reasonContent;
             this.text = builder.text;
         }
 
@@ -455,6 +459,13 @@ public class RunEnterpriseVocAnalysisResponseBody extends TeaModel {
         }
 
         /**
+         * @return reasonContent
+         */
+        public String getReasonContent() {
+            return this.reasonContent;
+        }
+
+        /**
          * @return text
          */
         public String getText() {
@@ -463,6 +474,7 @@ public class RunEnterpriseVocAnalysisResponseBody extends TeaModel {
 
         public static final class Builder {
             private FilterResult filterResult; 
+            private String reasonContent; 
             private String text; 
 
             private Builder() {
@@ -470,6 +482,7 @@ public class RunEnterpriseVocAnalysisResponseBody extends TeaModel {
 
             private Builder(Output model) {
                 this.filterResult = model.filterResult;
+                this.reasonContent = model.reasonContent;
                 this.text = model.text;
             } 
 
@@ -478,6 +491,14 @@ public class RunEnterpriseVocAnalysisResponseBody extends TeaModel {
              */
             public Builder filterResult(FilterResult filterResult) {
                 this.filterResult = filterResult;
+                return this;
+            }
+
+            /**
+             * reasonContent.
+             */
+            public Builder reasonContent(String reasonContent) {
+                this.reasonContent = reasonContent;
                 return this;
             }
 
