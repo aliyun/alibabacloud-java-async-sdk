@@ -30,6 +30,10 @@ public class DescribeDBClustersRequest extends Request {
     private String DBClusterStatus;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBClusterVersion")
+    private String DBClusterVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBVersion")
     private String DBVersion;
 
@@ -75,6 +79,7 @@ public class DescribeDBClustersRequest extends Request {
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterIds = builder.DBClusterIds;
         this.DBClusterStatus = builder.DBClusterStatus;
+        this.DBClusterVersion = builder.DBClusterVersion;
         this.DBVersion = builder.DBVersion;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -119,6 +124,13 @@ public class DescribeDBClustersRequest extends Request {
      */
     public String getDBClusterStatus() {
         return this.DBClusterStatus;
+    }
+
+    /**
+     * @return DBClusterVersion
+     */
+    public String getDBClusterVersion() {
+        return this.DBClusterVersion;
     }
 
     /**
@@ -195,6 +207,7 @@ public class DescribeDBClustersRequest extends Request {
         private String DBClusterDescription; 
         private String DBClusterIds; 
         private String DBClusterStatus; 
+        private String DBClusterVersion; 
         private String DBVersion; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -215,6 +228,7 @@ public class DescribeDBClustersRequest extends Request {
             this.DBClusterDescription = request.DBClusterDescription;
             this.DBClusterIds = request.DBClusterIds;
             this.DBClusterStatus = request.DBClusterStatus;
+            this.DBClusterVersion = request.DBClusterVersion;
             this.DBVersion = request.DBVersion;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -277,6 +291,15 @@ public class DescribeDBClustersRequest extends Request {
         public Builder DBClusterStatus(String DBClusterStatus) {
             this.putQueryParameter("DBClusterStatus", DBClusterStatus);
             this.DBClusterStatus = DBClusterStatus;
+            return this;
+        }
+
+        /**
+         * DBClusterVersion.
+         */
+        public Builder DBClusterVersion(String DBClusterVersion) {
+            this.putQueryParameter("DBClusterVersion", DBClusterVersion);
+            this.DBClusterVersion = DBClusterVersion;
             return this;
         }
 
