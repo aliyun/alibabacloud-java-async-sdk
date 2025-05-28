@@ -227,6 +227,9 @@ public class UpdateConsumerGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("deadLetterTargetTopic")
         private String deadLetterTargetTopic;
 
+        @com.aliyun.core.annotation.NameInMap("fixedIntervalRetryTime")
+        private Integer fixedIntervalRetryTime;
+
         @com.aliyun.core.annotation.NameInMap("maxRetryTimes")
         private Integer maxRetryTimes;
 
@@ -236,6 +239,7 @@ public class UpdateConsumerGroupRequest extends Request {
 
         private ConsumeRetryPolicy(Builder builder) {
             this.deadLetterTargetTopic = builder.deadLetterTargetTopic;
+            this.fixedIntervalRetryTime = builder.fixedIntervalRetryTime;
             this.maxRetryTimes = builder.maxRetryTimes;
             this.retryPolicy = builder.retryPolicy;
         }
@@ -256,6 +260,13 @@ public class UpdateConsumerGroupRequest extends Request {
         }
 
         /**
+         * @return fixedIntervalRetryTime
+         */
+        public Integer getFixedIntervalRetryTime() {
+            return this.fixedIntervalRetryTime;
+        }
+
+        /**
          * @return maxRetryTimes
          */
         public Integer getMaxRetryTimes() {
@@ -271,6 +282,7 @@ public class UpdateConsumerGroupRequest extends Request {
 
         public static final class Builder {
             private String deadLetterTargetTopic; 
+            private Integer fixedIntervalRetryTime; 
             private Integer maxRetryTimes; 
             private String retryPolicy; 
 
@@ -279,6 +291,7 @@ public class UpdateConsumerGroupRequest extends Request {
 
             private Builder(ConsumeRetryPolicy model) {
                 this.deadLetterTargetTopic = model.deadLetterTargetTopic;
+                this.fixedIntervalRetryTime = model.fixedIntervalRetryTime;
                 this.maxRetryTimes = model.maxRetryTimes;
                 this.retryPolicy = model.retryPolicy;
             } 
@@ -292,6 +305,14 @@ public class UpdateConsumerGroupRequest extends Request {
              */
             public Builder deadLetterTargetTopic(String deadLetterTargetTopic) {
                 this.deadLetterTargetTopic = deadLetterTargetTopic;
+                return this;
+            }
+
+            /**
+             * fixedIntervalRetryTime.
+             */
+            public Builder fixedIntervalRetryTime(Integer fixedIntervalRetryTime) {
+                this.fixedIntervalRetryTime = fixedIntervalRetryTime;
                 return this;
             }
 
