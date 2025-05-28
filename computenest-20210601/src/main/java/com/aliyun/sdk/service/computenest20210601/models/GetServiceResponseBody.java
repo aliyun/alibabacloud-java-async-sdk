@@ -26,6 +26,9 @@ public class GetServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Commodity")
     private Commodity commodity;
 
+    @com.aliyun.core.annotation.NameInMap("ComplianceMetadata")
+    private ComplianceMetadata complianceMetadata;
+
     @com.aliyun.core.annotation.NameInMap("DeployFrom")
     private String deployFrom;
 
@@ -126,6 +129,7 @@ public class GetServiceResponseBody extends TeaModel {
         this.alarmMetadata = builder.alarmMetadata;
         this.categories = builder.categories;
         this.commodity = builder.commodity;
+        this.complianceMetadata = builder.complianceMetadata;
         this.deployFrom = builder.deployFrom;
         this.deployMetadata = builder.deployMetadata;
         this.deployType = builder.deployType;
@@ -191,6 +195,13 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public Commodity getCommodity() {
         return this.commodity;
+    }
+
+    /**
+     * @return complianceMetadata
+     */
+    public ComplianceMetadata getComplianceMetadata() {
+        return this.complianceMetadata;
     }
 
     /**
@@ -421,6 +432,7 @@ public class GetServiceResponseBody extends TeaModel {
         private String alarmMetadata; 
         private String categories; 
         private Commodity commodity; 
+        private ComplianceMetadata complianceMetadata; 
         private String deployFrom; 
         private String deployMetadata; 
         private String deployType; 
@@ -461,6 +473,7 @@ public class GetServiceResponseBody extends TeaModel {
             this.alarmMetadata = model.alarmMetadata;
             this.categories = model.categories;
             this.commodity = model.commodity;
+            this.complianceMetadata = model.complianceMetadata;
             this.deployFrom = model.deployFrom;
             this.deployMetadata = model.deployMetadata;
             this.deployType = model.deployType;
@@ -525,6 +538,14 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder commodity(Commodity commodity) {
             this.commodity = commodity;
+            return this;
+        }
+
+        /**
+         * ComplianceMetadata.
+         */
+        public Builder complianceMetadata(ComplianceMetadata complianceMetadata) {
+            this.complianceMetadata = complianceMetadata;
             return this;
         }
 
@@ -1557,6 +1578,60 @@ public class GetServiceResponseBody extends TeaModel {
 
             public Commodity build() {
                 return new Commodity(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetServiceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceResponseBody</p>
+     */
+    public static class ComplianceMetadata extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CompliancePacks")
+        private java.util.List<String> compliancePacks;
+
+        private ComplianceMetadata(Builder builder) {
+            this.compliancePacks = builder.compliancePacks;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ComplianceMetadata create() {
+            return builder().build();
+        }
+
+        /**
+         * @return compliancePacks
+         */
+        public java.util.List<String> getCompliancePacks() {
+            return this.compliancePacks;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> compliancePacks; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComplianceMetadata model) {
+                this.compliancePacks = model.compliancePacks;
+            } 
+
+            /**
+             * CompliancePacks.
+             */
+            public Builder compliancePacks(java.util.List<String> compliancePacks) {
+                this.compliancePacks = compliancePacks;
+                return this;
+            }
+
+            public ComplianceMetadata build() {
+                return new ComplianceMetadata(this);
             } 
 
         } 
