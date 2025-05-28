@@ -80,7 +80,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>685072a0-1fd5-40ef-ae6b-cf94e79e718f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Array of report objects</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -409,7 +419,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             } 
 
             /**
-             * CacheCostTimeAvg.
+             * <p>The average duration of cache hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cacheCostTimeAvg(Double cacheCostTimeAvg) {
                 this.cacheCostTimeAvg = cacheCostTimeAvg;
@@ -417,7 +430,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * CacheQueryCount.
+             * <p>The number of cache hits.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder cacheQueryCount(Integer cacheQueryCount) {
                 this.cacheQueryCount = cacheQueryCount;
@@ -425,7 +441,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * CostTimeAvg.
+             * <p>The average query duration associated with the SQL pattern.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder costTimeAvg(Double costTimeAvg) {
                 this.costTimeAvg = costTimeAvg;
@@ -433,7 +452,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * CubeId.
+             * <p>The dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7c7223ae-****-3c744528014b</p>
              */
             public Builder cubeId(String cubeId) {
                 this.cubeId = cubeId;
@@ -441,7 +463,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * CubeName.
+             * <p>The name of the dataset.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder cubeName(String cubeName) {
                 this.cubeName = cubeName;
@@ -449,7 +474,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryCount.
+             * <p>The number of queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder queryCount(Integer queryCount) {
                 this.queryCount = queryCount;
@@ -457,7 +485,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryCountAvg.
+             * <p>The average number of queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder queryCountAvg(Double queryCountAvg) {
                 this.queryCountAvg = queryCountAvg;
@@ -465,7 +496,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryOverFivePercentNum.
+             * <p>The percentage of the number of queries that exceed the 5S.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder queryOverFivePercentNum(Double queryOverFivePercentNum) {
                 this.queryOverFivePercentNum = queryOverFivePercentNum;
@@ -473,7 +507,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryOverFiveSecPercent.
+             * <p>Query the proportion of more than 5S.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder queryOverFiveSecPercent(String queryOverFiveSecPercent) {
                 this.queryOverFiveSecPercent = queryOverFiveSecPercent;
@@ -481,7 +518,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryOverTenSecPercent.
+             * <p>The percentage of queries that exceed 10s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder queryOverTenSecPercent(String queryOverTenSecPercent) {
                 this.queryOverTenSecPercent = queryOverTenSecPercent;
@@ -489,7 +529,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryOverTenSecPercentNum.
+             * <p>The percentage of queries that exceed 10s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder queryOverTenSecPercentNum(Double queryOverTenSecPercentNum) {
                 this.queryOverTenSecPercentNum = queryOverTenSecPercentNum;
@@ -497,7 +540,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimeoutCount.
+             * <p>The number of times that the chart query times out.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder queryTimeoutCount(Integer queryTimeoutCount) {
                 this.queryTimeoutCount = queryTimeoutCount;
@@ -505,7 +551,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTimeoutCountPercent.
+             * <p>The percentage of timeout times for chart queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder queryTimeoutCountPercent(Double queryTimeoutCountPercent) {
                 this.queryTimeoutCountPercent = queryTimeoutCountPercent;
@@ -513,7 +562,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QuickIndexCostTimeAvg.
+             * <p>The average time consumed by the Quick engine query.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder quickIndexCostTimeAvg(Double quickIndexCostTimeAvg) {
                 this.quickIndexCostTimeAvg = quickIndexCostTimeAvg;
@@ -521,7 +573,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * QuickIndexQueryCount.
+             * <p>The number of times that the Quick engine is hit.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder quickIndexQueryCount(Integer quickIndexQueryCount) {
                 this.quickIndexQueryCount = quickIndexQueryCount;
@@ -529,7 +584,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatQueryPercent.
+             * <p>The proportion of duplicate queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
             public Builder repeatQueryPercent(String repeatQueryPercent) {
                 this.repeatQueryPercent = repeatQueryPercent;
@@ -537,7 +595,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatQueryPercentNum.
+             * <p>The number of duplicate queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder repeatQueryPercentNum(Double repeatQueryPercentNum) {
                 this.repeatQueryPercentNum = repeatQueryPercentNum;
@@ -545,7 +606,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatSqlQueryCount.
+             * <p>The number of times the query is repeated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder repeatSqlQueryCount(Integer repeatSqlQueryCount) {
                 this.repeatSqlQueryCount = repeatSqlQueryCount;
@@ -553,7 +617,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatSqlQueryPercent.
+             * <p>The proportion of duplicate queries.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder repeatSqlQueryPercent(String repeatSqlQueryPercent) {
                 this.repeatSqlQueryPercent = repeatSqlQueryPercent;
@@ -561,7 +628,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The ID of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>87c6b145-090c-43e1-9426-8f93be23****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -569,7 +639,10 @@ public class QueryCubePerformanceResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>taascontainerprod</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

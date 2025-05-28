@@ -60,6 +60,7 @@ public class QueryLlmCubeWithThemeListByUserIdRequest extends Request {
         } 
 
         /**
+         * <p>User ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

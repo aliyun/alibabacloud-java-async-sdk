@@ -89,7 +89,10 @@ public class QueryUserListRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>The keyword of the username or nickname of the organization member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test user</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -98,7 +101,14 @@ public class QueryUserListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Current page number for organization member list:</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -107,7 +117,14 @@ public class QueryUserListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page in a paged query.</p>
+         * <ul>
+         * <li>Default value: 10.</li>
+         * <li>Maximum value: 1,000.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

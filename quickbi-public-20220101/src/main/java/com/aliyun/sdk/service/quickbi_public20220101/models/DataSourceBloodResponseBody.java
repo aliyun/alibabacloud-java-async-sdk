@@ -80,7 +80,10 @@ public class DataSourceBloodResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46e537a5****,3dadsu****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class DataSourceBloodResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Array of dataset IDs.</p>
          */
         public Builder result(java.util.List<String> result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class DataSourceBloodResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful</li>
+         * <li>false: The request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

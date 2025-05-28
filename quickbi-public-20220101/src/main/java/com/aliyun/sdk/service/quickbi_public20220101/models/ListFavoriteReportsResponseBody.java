@@ -80,7 +80,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns the query result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -318,7 +328,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * Favorite.
+             * <p>Indicates whether the user has favorited the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder favorite(Boolean favorite) {
                 this.favorite = favorite;
@@ -326,7 +339,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * FavoriteDate.
+             * <p>The timestamp when the work was favorited.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640088615000</p>
              */
             public Builder favoriteDate(String favoriteDate) {
                 this.favoriteDate = favoriteDate;
@@ -334,7 +350,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>Timestamp of the work creation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640088615000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -342,7 +361,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>Timestamp of the work modification.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640595729000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -350,7 +372,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * HasEditAuth.
+             * <p>Indicates whether the user has edit permission for the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasEditAuth(Boolean hasEditAuth) {
                 this.hasEditAuth = hasEditAuth;
@@ -358,7 +383,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * HasViewAuth.
+             * <p>Check if the user has the permission to view the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasViewAuth(Boolean hasViewAuth) {
                 this.hasViewAuth = hasViewAuth;
@@ -366,7 +394,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -374,7 +405,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>Alibaba Cloud account name of the work owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -382,7 +416,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerNum.
+             * <p>UserID of the work owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1365*****238860</p>
              */
             public Builder ownerNum(String ownerNum) {
                 this.ownerNum = ownerNum;
@@ -390,7 +427,16 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStatus.
+             * <p>Publication status of the work. Value range:</p>
+             * <ul>
+             * <li>0: Not published</li>
+             * <li>1: Published</li>
+             * <li>2: Saved with modifications, not published</li>
+             * <li>3: Offline</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder publishStatus(Integer publishStatus) {
                 this.publishStatus = publishStatus;
@@ -398,7 +444,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * TreeId.
+             * <p>Work ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>977c7698-<strong><strong>-</strong></strong>-****-44b7304d20fc</p>
              */
             public Builder treeId(String treeId) {
                 this.treeId = treeId;
@@ -406,7 +455,15 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>Type of the work. Value range:</p>
+             * <ul>
+             * <li>DATAPRODUCT: Data Portal</li>
+             * <li>PAGE: Dashboard</li>
+             * <li>REPORT: Spreadsheet</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PAGE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -414,7 +471,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The ID of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>523793cb-<strong><strong>-</strong></strong>-****-aa71c65ffa39</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -422,7 +482,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The name of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -528,7 +591,7 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>List of works queried.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -536,7 +599,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -544,7 +610,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Number of rows per page set when requesting the interface.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -552,7 +621,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>Total number of rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -560,7 +632,10 @@ public class ListFavoriteReportsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>Total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

@@ -80,11 +80,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
-         * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
-         * </ul>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -95,7 +91,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>List of work blood information.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -103,7 +99,11 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The response.</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -250,8 +250,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Indices whether the metric. Valid values:</p>
-             * <p>true false</p>
+             * <p>The ID of the owning location.</p>
              * 
              * <strong>example:</strong>
              * <p>area_column</p>
@@ -262,10 +261,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the owning location.</p>
+             * <p>The name of the owning location.</p>
              * 
              * <strong>example:</strong>
-             * <p>The name of the owning location.</p>
+             * <p>Column (Measure)</p>
              */
             public Builder areaName(String areaName) {
                 this.areaName = areaName;
@@ -273,32 +272,13 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The globally unique PathId.</p>
+             * <p>The display name of the field.</p>
              * 
              * <strong>example:</strong>
              * <p>order_number</p>
              */
             public Builder caption(String caption) {
                 this.caption = caption;
-                return this;
-            }
-
-            /**
-             * <p>The display name of the field.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>number</p>
-             */
-            public Builder dataType(String dataType) {
-                this.dataType = dataType;
-                return this;
-            }
-
-            /**
-             * Expression.
-             */
-            public Builder expression(String expression) {
-                this.expression = expression;
                 return this;
             }
 
@@ -318,6 +298,29 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
+             * <p>number</p>
+             */
+            public Builder dataType(String dataType) {
+                this.dataType = dataType;
+                return this;
+            }
+
+            /**
+             * <p>Calculate field expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>BI_DATEADD([date], 100, &quot;day&quot;)</p>
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
+
+            /**
+             * <p>Indices whether the metric. Valid values:</p>
+             * <p>true false</p>
+             * 
+             * <strong>example:</strong>
              * <p>true</p>
              */
             public Builder isMeasure(Boolean isMeasure) {
@@ -326,7 +329,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the field.</p>
+             * <p>The globally unique PathId.</p>
              * 
              * <strong>example:</strong>
              * <p>schema7d1944eb-443e-48c6-8123-bf45a99e7e74.dc78a4ed-880d-452e-b017-90cfc10c83e5_company_sales_record.[Ndc78a4_order_level].[Ndc78a4_order_level].[Ndc78a4_order_level]</p>
@@ -337,7 +340,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * <p>A list of query parameter reference columns.</p>
+             * <p>The unique ID of the field.</p>
              * 
              * <strong>example:</strong>
              * <p>Ndc78a4_order_number</p>
@@ -472,7 +475,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>List of work blood information.</p>
+             * <p>The ID of the component that you want to modify.</p>
              * 
              * <strong>example:</strong>
              * <p>0696083a-ca72-4d89-8e7a-c017910e0***</p>
@@ -483,10 +486,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the component that you want to modify.</p>
+             * <p>The name of the component.</p>
              * 
              * <strong>example:</strong>
-             * <p>The name of the component.</p>
+             * <p>Line</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -494,7 +497,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Line</p>
+             * <p>The type of the image component.</p>
              * 
              * <strong>example:</strong>
              * <p>3</p>
@@ -505,7 +508,10 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentTypeCnName.
+             * <p>Chinese name of the component type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddd</p>
              */
             public Builder componentTypeCnName(String componentTypeCnName) {
                 this.componentTypeCnName = componentTypeCnName;
@@ -513,7 +519,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The type of the image component.</p>
+             * <p>The name of the component type.</p>
              * 
              * <strong>example:</strong>
              * <p>LINE</p>
@@ -524,7 +530,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Column (Measure)</p>
+             * <p>The ID of the training dataset that you want to remove from the specified custom linguistic model.</p>
              * 
              * <strong>example:</strong>
              * <p>dc78a4ed-880d-452e-b017-90cfc10c83e5_company_sales_record</p>
@@ -535,7 +541,7 @@ public class QueryWorksBloodRelationshipResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the component type.</p>
+             * <p>A list of query parameter reference columns.</p>
              */
             public Builder queryParams(java.util.List<QueryParams> queryParams) {
                 this.queryParams = queryParams;

@@ -75,6 +75,7 @@ public class UpdateTicketNumRequest extends Request {
         } 
 
         /**
+         * <p>The value of the third-party embedded ticket, that is, the accessTicket value in the URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,10 @@ public class UpdateTicketNumRequest extends Request {
         }
 
         /**
+         * <p>The number of bills.</p>
+         * <ul>
+         * <li>Valid values: 1 to 99998. Recommended value: 1.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

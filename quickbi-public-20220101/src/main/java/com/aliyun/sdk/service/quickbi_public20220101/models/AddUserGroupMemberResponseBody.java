@@ -80,7 +80,10 @@ public class AddUserGroupMemberResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B6141A5A-A9EF-5F16-BF34-EFB9C1CCE4F3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,14 @@ public class AddUserGroupMemberResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result of adding members to a user group is returned. Valid values:</p>
+         * <ul>
+         * <li>true: The task is added.</li>
+         * <li>false: The tag failed to be added.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -96,7 +106,14 @@ public class AddUserGroupMemberResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

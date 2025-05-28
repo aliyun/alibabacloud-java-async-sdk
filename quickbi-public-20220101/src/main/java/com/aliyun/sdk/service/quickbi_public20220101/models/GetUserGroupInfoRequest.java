@@ -60,11 +60,11 @@ public class GetUserGroupInfoRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the user group.</p>
+         * <p>Keyword of the user group name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>The user group modifier. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

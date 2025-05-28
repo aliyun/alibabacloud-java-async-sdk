@@ -80,7 +80,10 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Preset space role information of the user.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request succeeded.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +185,10 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * RoleCode.
+             * <p>Preset role code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>role_workspace_admin</p>
              */
             public Builder roleCode(String roleCode) {
                 this.roleCode = roleCode;
@@ -183,7 +196,16 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>Preset role ID. Possible values:</p>
+             * <ul>
+             * <li>25: Space Administrator</li>
+             * <li>26: Space Developer</li>
+             * <li>27: Space Analyst</li>
+             * <li>30: Space Viewer</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder roleId(Long roleId) {
                 this.roleId = roleId;
@@ -191,7 +213,10 @@ public class QueryUserRoleInfoInWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>Preset role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;

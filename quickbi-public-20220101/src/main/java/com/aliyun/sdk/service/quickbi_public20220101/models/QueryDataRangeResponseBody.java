@@ -80,7 +80,10 @@ public class QueryDataRangeResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-****-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Data range object.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryDataRangeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +185,10 @@ public class QueryDataRangeResponseBody extends TeaModel {
             } 
 
             /**
-             * Alias.
+             * <p>Alias of the LlmCube resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -183,7 +196,10 @@ public class QueryDataRangeResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>Nickname of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhuge</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -191,7 +207,10 @@ public class QueryDataRangeResponseBody extends TeaModel {
             }
 
             /**
-             * LlmCubeId.
+             * <p>LlmCube resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sdasdafas23342342342</p>
              */
             public Builder llmCubeId(String llmCubeId) {
                 this.llmCubeId = llmCubeId;
@@ -271,7 +290,10 @@ public class QueryDataRangeResponseBody extends TeaModel {
             } 
 
             /**
-             * Alias.
+             * <p>Alias of the LLM cube resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -279,7 +301,10 @@ public class QueryDataRangeResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>Nickname of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhuge</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -287,7 +312,10 @@ public class QueryDataRangeResponseBody extends TeaModel {
             }
 
             /**
-             * LlmCubeId.
+             * <p>LlmCube resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1231242231asdasda</p>
              */
             public Builder llmCubeId(String llmCubeId) {
                 this.llmCubeId = llmCubeId;
@@ -380,7 +408,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiCopilotLlmCubeModels.
+             * <p>Array of LlmCube resources.</p>
              */
             public Builder apiCopilotLlmCubeModels(java.util.List<ApiCopilotThemeModelsApiCopilotLlmCubeModels> apiCopilotLlmCubeModels) {
                 this.apiCopilotLlmCubeModels = apiCopilotLlmCubeModels;
@@ -388,7 +416,10 @@ public class QueryDataRangeResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>Nickname of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhuge</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -396,7 +427,10 @@ public class QueryDataRangeResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeId.
+             * <p>Analysis theme ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36631232342312312</p>
              */
             public Builder themeId(String themeId) {
                 this.themeId = themeId;
@@ -404,7 +438,10 @@ public class QueryDataRangeResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeName.
+             * <p>Nickname of the analysis theme.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test theme</p>
              */
             public Builder themeName(String themeName) {
                 this.themeName = themeName;
@@ -471,7 +508,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
             } 
 
             /**
-             * ApiCopilotLlmCubeModels.
+             * <p>Array of LlmCube resources.</p>
              */
             public Builder apiCopilotLlmCubeModels(java.util.List<ApiCopilotLlmCubeModels> apiCopilotLlmCubeModels) {
                 this.apiCopilotLlmCubeModels = apiCopilotLlmCubeModels;
@@ -479,7 +516,7 @@ public class QueryDataRangeResponseBody extends TeaModel {
             }
 
             /**
-             * ApiCopilotThemeModels.
+             * <p>Array of analysis themes.</p>
              */
             public Builder apiCopilotThemeModels(java.util.List<ApiCopilotThemeModels> apiCopilotThemeModels) {
                 this.apiCopilotThemeModels = apiCopilotThemeModels;

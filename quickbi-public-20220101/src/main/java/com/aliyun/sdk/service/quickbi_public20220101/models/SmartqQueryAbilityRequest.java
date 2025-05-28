@@ -89,6 +89,7 @@ public class SmartqQueryAbilityRequest extends Request {
         } 
 
         /**
+         * <p>Dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +102,13 @@ public class SmartqQueryAbilityRequest extends Request {
         }
 
         /**
-         * UserId.
+         * <p>User ID.</p>
+         * <blockquote>
+         * <p>Notice: If this field is not filled, the data will be queried by default as the organization owner.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>7c7223ae-****-3c744528014b</p>
          */
         public Builder userId(String userId) {
             this.putQueryParameter("UserId", userId);
@@ -110,7 +117,11 @@ public class SmartqQueryAbilityRequest extends Request {
         }
 
         /**
+         * <p>Question text.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>This year&quot;s sales data</p>
          */
         public Builder userQuestion(String userQuestion) {
             this.putQueryParameter("UserQuestion", userQuestion);

@@ -102,7 +102,10 @@ public class ModifyCopilotEmbedConfigRequest extends Request {
         } 
 
         /**
-         * AgentName.
+         * <p>Agent nickname.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>smartq</p>
          */
         public Builder agentName(String agentName) {
             this.putQueryParameter("AgentName", agentName);
@@ -111,6 +114,7 @@ public class ModifyCopilotEmbedConfigRequest extends Request {
         }
 
         /**
+         * <p>Embedding ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +127,18 @@ public class ModifyCopilotEmbedConfigRequest extends Request {
         }
 
         /**
-         * DataRange.
+         * <p>Data range.</p>
+         * <blockquote>
+         * <p>Notice: The parameter type is jsonString, and only one switch between analysis themes and query resources can be effective. When the all-select switch is true, it takes precedence. It is recommended to pass only one parameter, with other notes</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Map&lt;String,Object&gt; data=new HashMap&lt;&gt;();
+         *         data.put(&quot;allTheme&quot;,true);
+         *         //data.put(&quot;allCube&quot;,true);
+         *         //data.put(&quot;themes&quot;,Lists.newArrayList(&quot;1111&quot;,&quot;22222&quot;));
+         *         //data.put(&quot;llmCubes&quot;,Lists.newArrayList(&quot;33333&quot;,&quot;44444&quot;));
+         *         request.setDataRange(JSON.toJSONString(data));</p>
          */
         public Builder dataRange(String dataRange) {
             this.putQueryParameter("DataRange", dataRange);
@@ -132,7 +147,10 @@ public class ModifyCopilotEmbedConfigRequest extends Request {
         }
 
         /**
-         * ModuleName.
+         * <p>Module name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>smartq</p>
          */
         public Builder moduleName(String moduleName) {
             this.putQueryParameter("ModuleName", moduleName);

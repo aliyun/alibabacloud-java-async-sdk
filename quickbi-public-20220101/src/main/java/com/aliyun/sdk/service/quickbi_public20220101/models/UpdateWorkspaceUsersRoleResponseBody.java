@@ -80,7 +80,10 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7AAB95D7-2E11-4FE2-94BC-858E4FC0C976</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns the result of the interface execution.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Value range:</p>
+         * <ul>
+         * <li>true: The request was successful, some members may have been updated successfully while others failed, refer to FailureDetail in the response for reasons of failure</li>
+         * <li>false: The request failed, no data will be persisted</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,7 +198,10 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
             } 
 
             /**
-             * Failure.
+             * <p>Number of users that failed to update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder failure(Integer failure) {
                 this.failure = failure;
@@ -196,7 +209,7 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
             }
 
             /**
-             * FailureDetail.
+             * <p>Reasons for the update failures.</p>
              */
             public Builder failureDetail(java.util.Map<String, ?> failureDetail) {
                 this.failureDetail = failureDetail;
@@ -204,7 +217,10 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Number of users that were updated successfully.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder success(Integer success) {
                 this.success = success;
@@ -212,7 +228,10 @@ public class UpdateWorkspaceUsersRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>Modify the total number of users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

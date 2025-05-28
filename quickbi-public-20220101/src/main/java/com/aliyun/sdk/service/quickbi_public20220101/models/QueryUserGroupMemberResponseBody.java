@@ -80,7 +80,10 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>48C930FF-DFCF-5986-902B-E24C202E2443</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result of the request for the user group member list.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -201,7 +211,10 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>ID of the user group or the user group member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3d2c23d4-2b41-4af8-a1f5-f6390f32****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -209,7 +222,14 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
             }
 
             /**
-             * IsUserGroup.
+             * <p>Indicates whether it is a user group. Possible values:</p>
+             * <ul>
+             * <li>true: It is a user group.</li>
+             * <li>false: It is a user.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isUserGroup(Boolean isUserGroup) {
                 this.isUserGroup = isUserGroup;
@@ -217,7 +237,10 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Name or nickname of the user group or its member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -225,7 +248,10 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
             }
 
             /**
-             * ParentUserGroupId.
+             * <p>ID of the parent user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2fe4fbd8-588f-489a-b3e1-e92c7af0****</p>
              */
             public Builder parentUserGroupId(String parentUserGroupId) {
                 this.parentUserGroupId = parentUserGroupId;
@@ -233,7 +259,10 @@ public class QueryUserGroupMemberResponseBody extends TeaModel {
             }
 
             /**
-             * ParentUserGroupName.
+             * <p>Name of the parent user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder parentUserGroupName(String parentUserGroupName) {
                 this.parentUserGroupName = parentUserGroupName;

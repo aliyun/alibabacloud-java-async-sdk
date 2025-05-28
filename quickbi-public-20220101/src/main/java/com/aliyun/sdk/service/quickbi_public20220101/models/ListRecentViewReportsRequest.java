@@ -130,7 +130,10 @@ public class ListRecentViewReportsRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>Keyword of the name of the work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Financial Statements</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -139,7 +142,10 @@ public class ListRecentViewReportsRequest extends Request {
         }
 
         /**
-         * OffsetDay.
+         * <p>The number of days to query data in the last few days. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder offsetDay(Integer offsetDay) {
             this.putQueryParameter("OffsetDay", offsetDay);
@@ -148,7 +154,14 @@ public class ListRecentViewReportsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Query the number of rows in the work list:</p>
+         * <ul>
+         * <li>Default value: 10.</li>
+         * <li>Maximum value: 9999</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -157,7 +170,14 @@ public class ListRecentViewReportsRequest extends Request {
         }
 
         /**
-         * QueryMode.
+         * <p>The query mode. Valid values:</p>
+         * <ul>
+         * <li>1: Sort by number of visits</li>
+         * <li>2: Sort by Last Access Time</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder queryMode(String queryMode) {
             this.putQueryParameter("QueryMode", queryMode);
@@ -166,7 +186,15 @@ public class ListRecentViewReportsRequest extends Request {
         }
 
         /**
-         * TreeType.
+         * <p>Query the type of the work (fill in the blank to query all types). Valid values:</p>
+         * <ul>
+         * <li>DATAPRODUCT: BI portal</li>
+         * <li>PAGE: Dashboard</li>
+         * <li>REPORT: workbook</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PAGE</p>
          */
         public Builder treeType(String treeType) {
             this.putQueryParameter("TreeType", treeType);
@@ -175,6 +203,7 @@ public class ListRecentViewReportsRequest extends Request {
         }
 
         /**
+         * <p>The UserID of the user in the Quick BI.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

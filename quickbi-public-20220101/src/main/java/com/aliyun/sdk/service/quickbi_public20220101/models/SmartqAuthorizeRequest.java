@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class SmartqAuthorizeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CubeIds")
+    private String cubeIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExpireDay")
     private String expireDay;
 
@@ -41,6 +45,7 @@ public class SmartqAuthorizeRequest extends Request {
 
     private SmartqAuthorizeRequest(Builder builder) {
         super(builder);
+        this.cubeIds = builder.cubeIds;
         this.expireDay = builder.expireDay;
         this.llmCubeThemes = builder.llmCubeThemes;
         this.llmCubes = builder.llmCubes;
@@ -59,6 +64,13 @@ public class SmartqAuthorizeRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cubeIds
+     */
+    public String getCubeIds() {
+        return this.cubeIds;
     }
 
     /**
@@ -97,6 +109,7 @@ public class SmartqAuthorizeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SmartqAuthorizeRequest, Builder> {
+        private String cubeIds; 
         private String expireDay; 
         private String llmCubeThemes; 
         private String llmCubes; 
@@ -109,6 +122,7 @@ public class SmartqAuthorizeRequest extends Request {
 
         private Builder(SmartqAuthorizeRequest request) {
             super(request);
+            this.cubeIds = request.cubeIds;
             this.expireDay = request.expireDay;
             this.llmCubeThemes = request.llmCubeThemes;
             this.llmCubes = request.llmCubes;
@@ -117,7 +131,20 @@ public class SmartqAuthorizeRequest extends Request {
         } 
 
         /**
-         * ExpireDay.
+         * CubeIds.
+         */
+        public Builder cubeIds(String cubeIds) {
+            this.putQueryParameter("CubeIds", cubeIds);
+            this.cubeIds = cubeIds;
+            return this;
+        }
+
+        /**
+         * <p>Expiration time, with a default of seven days.
+         * Format: 2099-12-31</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2099-12-31</p>
          */
         public Builder expireDay(String expireDay) {
             this.putQueryParameter("ExpireDay", expireDay);
@@ -126,7 +153,10 @@ public class SmartqAuthorizeRequest extends Request {
         }
 
         /**
-         * LlmCubeThemes.
+         * <p>Array of analysis theme IDs, separated by English commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wasdasd<em><strong><strong><strong>1235235sd,ASDAS</strong></strong></strong></em>**ASDAW123</p>
          */
         public Builder llmCubeThemes(String llmCubeThemes) {
             this.putQueryParameter("LlmCubeThemes", llmCubeThemes);
@@ -135,7 +165,10 @@ public class SmartqAuthorizeRequest extends Request {
         }
 
         /**
-         * LlmCubes.
+         * <p>Array of Q&amp;A resource IDs, separated by English commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>wasdasd<em><strong><strong><strong>1235235sd,ASDAS</strong></strong></strong></em>**ASDAW123</p>
          */
         public Builder llmCubes(String llmCubes) {
             this.putQueryParameter("LlmCubes", llmCubes);
@@ -144,6 +177,11 @@ public class SmartqAuthorizeRequest extends Request {
         }
 
         /**
+         * <p>Operation type. The values are as follows:</p>
+         * <ul>
+         * <li>0: Add authorization</li>
+         * <li>1: Remove authorization</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +194,10 @@ public class SmartqAuthorizeRequest extends Request {
         }
 
         /**
+         * <p>Array of user IDs, separated by English commas.</p>
+         * <blockquote>
+         * <p>Notice: The number of user IDs per request * (number of Q&amp;A resources + number of analysis themes) cannot exceed 100.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

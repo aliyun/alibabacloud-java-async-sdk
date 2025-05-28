@@ -12,21 +12,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link AllotDatasetAccelerationTaskResponseBody} extends {@link TeaModel}
+ * {@link DataInterpretationResponseBody} extends {@link TeaModel}
  *
- * <p>AllotDatasetAccelerationTaskResponseBody</p>
+ * <p>DataInterpretationResponseBody</p>
  */
-public class AllotDatasetAccelerationTaskResponseBody extends TeaModel {
+public class DataInterpretationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Result")
-    private Boolean result;
+    private String result;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private AllotDatasetAccelerationTaskResponseBody(Builder builder) {
+    private DataInterpretationResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.result = builder.result;
         this.success = builder.success;
@@ -36,7 +36,7 @@ public class AllotDatasetAccelerationTaskResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static AllotDatasetAccelerationTaskResponseBody create() {
+    public static DataInterpretationResponseBody create() {
         return builder().build();
     }
 
@@ -54,7 +54,7 @@ public class AllotDatasetAccelerationTaskResponseBody extends TeaModel {
     /**
      * @return result
      */
-    public Boolean getResult() {
+    public String getResult() {
         return this.result;
     }
 
@@ -67,23 +67,20 @@ public class AllotDatasetAccelerationTaskResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private Boolean result; 
+        private String result; 
         private Boolean success; 
 
         private Builder() {
         } 
 
-        private Builder(AllotDatasetAccelerationTaskResponseBody model) {
+        private Builder(DataInterpretationResponseBody model) {
             this.requestId = model.requestId;
             this.result = model.result;
             this.success = model.success;
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,37 +88,23 @@ public class AllotDatasetAccelerationTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the IP address whitelist is updated. Valid values:</p>
-         * <ul>
-         * <li>true: The task is triggered.</li>
-         * <li>false: The task fails to be triggered.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Result.
          */
-        public Builder result(Boolean result) {
+        public Builder result(String result) {
             this.result = result;
             return this;
         }
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
-         * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public AllotDatasetAccelerationTaskResponseBody build() {
-            return new AllotDatasetAccelerationTaskResponseBody(this);
+        public DataInterpretationResponseBody build() {
+            return new DataInterpretationResponseBody(this);
         } 
 
     } 

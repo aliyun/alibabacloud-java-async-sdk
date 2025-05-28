@@ -59,7 +59,10 @@ public class QueryCopilotEmbedConfigRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>Name of the embedded configuration module, supports fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>06-ELive</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);

@@ -131,7 +131,10 @@ public class QueryCubePerformanceRequest extends Request {
         } 
 
         /**
-         * CostTimeAvgMin.
+         * <p>The average duration (minutes).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder costTimeAvgMin(Integer costTimeAvgMin) {
             this.putQueryParameter("CostTimeAvgMin", costTimeAvgMin);
@@ -140,7 +143,10 @@ public class QueryCubePerformanceRequest extends Request {
         }
 
         /**
-         * CubeId.
+         * <p>The dataset ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7c7223ae-****-3c744528014b</p>
          */
         public Builder cubeId(String cubeId) {
             this.putQueryParameter("CubeId", cubeId);
@@ -149,7 +155,14 @@ public class QueryCubePerformanceRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The current page number of the workspace member list:</p>
+         * <ul>
+         * <li>Pages start from page 1.</li>
+         * <li>Default value: 1.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -158,7 +171,14 @@ public class QueryCubePerformanceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows per page in a paged query.</p>
+         * <ul>
+         * <li>Default value: 10.</li>
+         * <li>Maximum value: 1,000.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -167,6 +187,12 @@ public class QueryCubePerformanceRequest extends Request {
         }
 
         /**
+         * <p>The query type. Valid values:</p>
+         * <ul>
+         * <li><strong>lastDay</strong>: Yesterday</li>
+         * <li><strong>sevenDays</strong>: Within seven days</li>
+         * <li><strong>thirtyDays</strong>: Within 30 days</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,6 +205,7 @@ public class QueryCubePerformanceRequest extends Request {
         }
 
         /**
+         * <p>The workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

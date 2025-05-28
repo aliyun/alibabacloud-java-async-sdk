@@ -91,7 +91,7 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned results.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -712,6 +712,9 @@ public class QueryReportPerformanceResponseBody extends TeaModel {
 
             /**
              * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

@@ -80,7 +80,10 @@ public class QueryWorksResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryWorksResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The details of the work.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryWorksResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,7 +198,10 @@ public class QueryWorksResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83d37ba6-d909-48a2-a517-f4d05c3a****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -196,7 +209,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test directory</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -204,7 +220,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * PathId.
+             * <p>The hierarchical structure of the directory ID to which the directory belongs. Separate the hierarchical structure with a /.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83d37ba6-d909-48a2-a517-f4d05c3a****</p>
              */
             public Builder pathId(String pathId) {
                 this.pathId = pathId;
@@ -212,7 +231,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * PathName.
+             * <p>The hierarchical structure of the directory to which the directory belongs. Separate the hierarchical structure with a (/).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test directory</p>
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -474,7 +496,14 @@ public class QueryWorksResponseBody extends TeaModel {
             } 
 
             /**
-             * Auth3rdFlag.
+             * <p>Third-party embedding status. Valid values:</p>
+             * <ul>
+             * <li>0: The embed service is not enabled.</li>
+             * <li>1: Embed is enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder auth3rdFlag(Integer auth3rdFlag) {
                 this.auth3rdFlag = auth3rdFlag;
@@ -482,7 +511,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Remarks on the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -490,7 +522,7 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>The directory to which the work belongs.</p>
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
@@ -498,7 +530,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The timestamp of the creation of the work in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1496651577000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -506,7 +541,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModify.
+             * <p>The timestamp of the modification of the work in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1496651577000</p>
              */
             public Builder gmtModify(String gmtModify) {
                 this.gmtModify = gmtModify;
@@ -514,7 +552,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyName.
+             * <p>The Alibaba Cloud account name of the person who modified the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tom</p>
              */
             public Builder modifyName(String modifyName) {
                 this.modifyName = modifyName;
@@ -522,7 +563,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The user ID of the work owner in the Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9187a612aa474e2a8ac1414d5529****</p>
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
@@ -530,7 +574,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The Alibaba Cloud account name of the work owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tom</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -538,7 +585,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * PublicFlag.
+             * <p>Is it public</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder publicFlag(Boolean publicFlag) {
                 this.publicFlag = publicFlag;
@@ -546,7 +596,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * PublicInvalidTime.
+             * <p>Deadline for the public release of the report</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1721366354000</p>
              */
             public Builder publicInvalidTime(Long publicInvalidTime) {
                 this.publicInvalidTime = publicInvalidTime;
@@ -554,7 +607,23 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityLevel.
+             * <p>Security policies for collaborative authorization of works. Valid values:</p>
+             * <ul>
+             * <li>0: private</li>
+             * <li>12: Authorize specified members</li>
+             * <li>1 or 11: Authorize all workspace members</li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>If you use legacy permissions, the return value is 1.</p>
+             * </li>
+             * <li><p>If you use the new permissions, the return value is 11.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder securityLevel(String securityLevel) {
                 this.securityLevel = securityLevel;
@@ -562,7 +631,16 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the report. Valid values:</p>
+             * <ul>
+             * <li>0: unpublished</li>
+             * <li>1: published</li>
+             * <li>2: modified but not published</li>
+             * <li>3: unpublished</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -570,7 +648,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * WorkName.
+             * <p>The name of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test report</p>
              */
             public Builder workName(String workName) {
                 this.workName = workName;
@@ -578,7 +659,17 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * WorkType.
+             * <p>Queries the types of works. Fill in the blanks to query all types. Valid values:</p>
+             * <ul>
+             * <li>DATAPRODUCT: BI portal</li>
+             * <li>PAGE: Dashboard</li>
+             * <li>FULLPAGE: full-screen dashboards</li>
+             * <li>REPORT: workbook</li>
+             * <li>dashboardOfflineQuery: self-service data retrieval</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PAGE</p>
              */
             public Builder workType(String workType) {
                 this.workType = workType;
@@ -586,7 +677,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * WorksId.
+             * <p>The ID of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
              */
             public Builder worksId(String worksId) {
                 this.worksId = worksId;
@@ -594,7 +688,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The ID of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>87c6b145-090c-43e1-9426-8f93be23****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -602,7 +699,10 @@ public class QueryWorksResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The name of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Space</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

@@ -90,6 +90,13 @@ public class AddUserToWorkspaceRequest extends Request {
         } 
 
         /**
+         * <p>The preset space role ID. Value range:</p>
+         * <ul>
+         * <li>25: Space Administrator</li>
+         * <li>26: Space Developer</li>
+         * <li>27: Space Analyst</li>
+         * <li>30: Space Viewer</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +109,7 @@ public class AddUserToWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Quick BI user to be added.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +122,7 @@ public class AddUserToWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

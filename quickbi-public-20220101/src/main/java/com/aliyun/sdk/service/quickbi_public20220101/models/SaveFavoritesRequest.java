@@ -75,7 +75,7 @@ public class SaveFavoritesRequest extends Request {
         } 
 
         /**
-         * <p>The user ID of the collection. The user ID is the UserID of the Quick BI, not the UID of Alibaba Cloud.</p>
+         * <p>The user ID of the person who favorites the work. This user ID is the UserID of Quick BI, not the UID of Alibaba Cloud.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class SaveFavoritesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the collection.</p>
+         * <p>The ID of the work being favorited.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

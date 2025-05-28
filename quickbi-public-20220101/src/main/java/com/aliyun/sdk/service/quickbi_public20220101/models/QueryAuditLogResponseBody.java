@@ -80,7 +80,10 @@ public class QueryAuditLogResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>78C1AA2D-9201-599E-A0BA-6FC462E57A95</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Array of logs.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryAuditLogResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values: </p>
+         * <ul>
+         * <li>true: The request succeeded </li>
+         * <li>false: The request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -240,7 +250,10 @@ public class QueryAuditLogResponseBody extends TeaModel {
             } 
 
             /**
-             * GmtCreate.
+             * <p>Log time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-04-16 13:17:39</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -248,7 +261,10 @@ public class QueryAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorAccountName.
+             * <p>Operator account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wukaibis</p>
              */
             public Builder operatorAccountName(String operatorAccountName) {
                 this.operatorAccountName = operatorAccountName;
@@ -256,7 +272,10 @@ public class QueryAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorName.
+             * <p>Operator&quot;s nickname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>buc_344078</p>
              */
             public Builder operatorName(String operatorName) {
                 this.operatorName = operatorName;
@@ -264,7 +283,10 @@ public class QueryAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * OperatorType.
+             * <p>Operation type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATE</p>
              */
             public Builder operatorType(String operatorType) {
                 this.operatorType = operatorType;
@@ -272,7 +294,10 @@ public class QueryAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * TargetId.
+             * <p>Target ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1113***************8500</p>
              */
             public Builder targetId(String targetId) {
                 this.targetId = targetId;
@@ -280,7 +305,10 @@ public class QueryAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * TargetName.
+             * <p>Target name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;
@@ -288,7 +316,10 @@ public class QueryAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * <p>Target type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>USER</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -296,7 +327,10 @@ public class QueryAuditLogResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>Workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>87c6b145-090c-43e1-9426-8f93be23****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

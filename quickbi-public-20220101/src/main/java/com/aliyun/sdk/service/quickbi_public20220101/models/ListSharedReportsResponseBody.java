@@ -80,7 +80,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListSharedReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The query results are returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class ListSharedReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -305,7 +315,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * Favorite.
+             * <p>Queries whether the user has collected the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder favorite(Boolean favorite) {
                 this.favorite = favorite;
@@ -313,7 +326,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The timestamp when the work was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640088615000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -321,7 +337,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The timestamp when the work was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1644373980000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -329,7 +348,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * HasEditAuth.
+             * <p>The query user has the editing rights of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasEditAuth(Boolean hasEditAuth) {
                 this.hasEditAuth = hasEditAuth;
@@ -337,7 +359,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * HasViewAuth.
+             * <p>The query user has the permission to view the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasViewAuth(Boolean hasViewAuth) {
                 this.hasViewAuth = hasViewAuth;
@@ -345,7 +370,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test report</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -353,7 +381,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The Alibaba Cloud account name of the work owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test account</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -361,7 +392,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerNum.
+             * <p>The UserID of the work owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1365*****238860</p>
              */
             public Builder ownerNum(String ownerNum) {
                 this.ownerNum = ownerNum;
@@ -369,7 +403,16 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStatus.
+             * <p>The publication status of the work. Valid values:</p>
+             * <ul>
+             * <li>0: unpublished</li>
+             * <li>1: published</li>
+             * <li>2: modified and saved but not published.</li>
+             * <li>3: unpublished</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder publishStatus(Integer publishStatus) {
                 this.publishStatus = publishStatus;
@@ -377,7 +420,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * TreeId.
+             * <p>The ID of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>977c7698-<strong><strong>-</strong></strong>-****-44b7304d20fc</p>
              */
             public Builder treeId(String treeId) {
                 this.treeId = treeId;
@@ -385,7 +431,15 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the work. Valid values:</p>
+             * <ul>
+             * <li>DATAPRODUCT: BI portal</li>
+             * <li>PAGE: Dashboard</li>
+             * <li>REPORT: workbook</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PAGE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -393,7 +447,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The ID of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>gfidm145-<strong><strong>-</strong></strong>-9426-8f93be23****</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -401,7 +458,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The name of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Workspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -507,7 +567,7 @@ public class ListSharedReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>The list of queried works.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -515,7 +575,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -523,7 +586,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of rows per page set when the interface is requested.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -531,7 +597,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>The total number of rows in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -539,7 +608,10 @@ public class ListSharedReportsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>The total number of pages returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

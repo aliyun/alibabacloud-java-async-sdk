@@ -177,7 +177,14 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * IsDeleted.
+         * <p>User status: </p>
+         * <ul>
+         * <li><strong>false</strong>: Active</li>
+         * <li><strong>true</strong>: Inactive</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder isDeleted(Boolean isDeleted) {
             this.putQueryParameter("IsDeleted", isDeleted);
@@ -202,7 +209,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * RoleIds.
+         * <p>The IDs of the preset or custom organization roles bound to the user, separated by English commas &quot;,&quot;, with a maximum of 3. The value range is as follows: - Organization Administrator (preset role): 111111111 - Permission Administrator (preset role): 111111112 - Regular User (preset role): 111111113</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111111111,456</p>
          */
         public Builder roleIds(String roleIds) {
             this.putQueryParameter("RoleIds", roleIds);
@@ -224,7 +234,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * <p>The role type of the organization member. Valid values:</p>
+         * <p>The type of user who is a member of the organization. Valid values:</p>
          * <ul>
          * <li>1 : developer</li>
          * <li>2 : visitors</li>

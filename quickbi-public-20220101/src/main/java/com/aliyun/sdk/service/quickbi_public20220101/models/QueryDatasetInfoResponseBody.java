@@ -377,6 +377,9 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
+        @com.aliyun.core.annotation.NameInMap("ExpressionV2")
+        private String expressionV2;
+
         @com.aliyun.core.annotation.NameInMap("FactColumn")
         private String factColumn;
 
@@ -400,6 +403,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             this.dataType = builder.dataType;
             this.dimensionType = builder.dimensionType;
             this.expression = builder.expression;
+            this.expressionV2 = builder.expressionV2;
             this.factColumn = builder.factColumn;
             this.fieldDescription = builder.fieldDescription;
             this.granularity = builder.granularity;
@@ -442,6 +446,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
          */
         public String getExpression() {
             return this.expression;
+        }
+
+        /**
+         * @return expressionV2
+         */
+        public String getExpressionV2() {
+            return this.expressionV2;
         }
 
         /**
@@ -491,6 +502,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String dataType; 
             private String dimensionType; 
             private String expression; 
+            private String expressionV2; 
             private String factColumn; 
             private String fieldDescription; 
             private String granularity; 
@@ -506,6 +518,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
                 this.dataType = model.dataType;
                 this.dimensionType = model.dimensionType;
                 this.expression = model.expression;
+                this.expressionV2 = model.expressionV2;
                 this.factColumn = model.factColumn;
                 this.fieldDescription = model.fieldDescription;
                 this.granularity = model.granularity;
@@ -560,6 +573,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
              */
             public Builder expression(String expression) {
                 this.expression = expression;
+                return this;
+            }
+
+            /**
+             * ExpressionV2.
+             */
+            public Builder expressionV2(String expressionV2) {
+                this.expressionV2 = expressionV2;
                 return this;
             }
 
@@ -783,6 +804,9 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Expression")
         private String expression;
 
+        @com.aliyun.core.annotation.NameInMap("ExpressionV2")
+        private String expressionV2;
+
         @com.aliyun.core.annotation.NameInMap("FactColumn")
         private String factColumn;
 
@@ -802,6 +826,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             this.caption = builder.caption;
             this.dataType = builder.dataType;
             this.expression = builder.expression;
+            this.expressionV2 = builder.expressionV2;
             this.factColumn = builder.factColumn;
             this.fieldDescription = builder.fieldDescription;
             this.measureType = builder.measureType;
@@ -836,6 +861,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
          */
         public String getExpression() {
             return this.expression;
+        }
+
+        /**
+         * @return expressionV2
+         */
+        public String getExpressionV2() {
+            return this.expressionV2;
         }
 
         /**
@@ -877,6 +909,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String caption; 
             private String dataType; 
             private String expression; 
+            private String expressionV2; 
             private String factColumn; 
             private String fieldDescription; 
             private String measureType; 
@@ -890,6 +923,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
                 this.caption = model.caption;
                 this.dataType = model.dataType;
                 this.expression = model.expression;
+                this.expressionV2 = model.expressionV2;
                 this.factColumn = model.factColumn;
                 this.fieldDescription = model.fieldDescription;
                 this.measureType = model.measureType;
@@ -932,6 +966,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
              */
             public Builder expression(String expression) {
                 this.expression = expression;
+                return this;
+            }
+
+            /**
+             * ExpressionV2.
+             */
+            public Builder expressionV2(String expressionV2) {
+                this.expressionV2 = expressionV2;
                 return this;
             }
 

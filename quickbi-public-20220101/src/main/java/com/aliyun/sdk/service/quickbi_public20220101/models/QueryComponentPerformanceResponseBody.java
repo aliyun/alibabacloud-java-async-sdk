@@ -91,7 +91,7 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result returned.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -492,6 +492,9 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
 
             /**
              * <p>The name of the add-on.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -709,6 +712,9 @@ public class QueryComponentPerformanceResponseBody extends TeaModel {
 
             /**
              * <p>The name of the group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;

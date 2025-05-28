@@ -80,7 +80,10 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns the paginated result of the member list, with detailed information about the members stored in the Data parameter of the response.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +185,10 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             } 
 
             /**
-             * RoleCode.
+             * <p>Code corresponding to the preset role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>role_workspace_admin</p>
              */
             public Builder roleCode(String roleCode) {
                 this.roleCode = roleCode;
@@ -183,7 +196,16 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * <p>Preset role ID. Possible values:</p>
+             * <ul>
+             * <li>25: Workspace Administrator</li>
+             * <li>26: Workspace Developer</li>
+             * <li>27: Workspace Analyst</li>
+             * <li>30: Workspace Viewer</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>25</p>
              */
             public Builder roleId(Long roleId) {
                 this.roleId = roleId;
@@ -191,7 +213,10 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * <p>Name of the preset role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -297,7 +322,10 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>Alibaba Cloud account ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16020915****8429</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -305,7 +333,10 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * <p>Alibaba Cloud account name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pop****@aliyunid.test</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -313,7 +344,10 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * <p>Nickname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -321,7 +355,7 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * <p>Preset role information for the workspace member.</p>
              */
             public Builder role(Role role) {
                 this.role = role;
@@ -329,7 +363,10 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>Quick BI user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>de4bc5f9429141cc8091cdd1c15b****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -435,7 +472,7 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>Information about the workspace members.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -443,7 +480,10 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>Page number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -451,7 +491,10 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>Number of rows per page as set in the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -459,7 +502,10 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>Total number of rows.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -467,7 +513,10 @@ public class QueryWorkspaceUserListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>Total number of pages.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

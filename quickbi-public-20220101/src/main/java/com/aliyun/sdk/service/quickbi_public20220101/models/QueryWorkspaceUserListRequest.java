@@ -104,7 +104,10 @@ public class QueryWorkspaceUserListRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>Keyword for the username of the workspace member.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -113,7 +116,14 @@ public class QueryWorkspaceUserListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>Current page number of the workspace member list:</p>
+         * <ul>
+         * <li>Starting value: 1</li>
+         * <li>Default value: 1</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -122,7 +132,14 @@ public class QueryWorkspaceUserListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of rows per page in a paginated query:</p>
+         * <ul>
+         * <li>Default value: 10</li>
+         * <li>Maximum value: 1000</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -131,6 +148,7 @@ public class QueryWorkspaceUserListRequest extends Request {
         }
 
         /**
+         * <p>Workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

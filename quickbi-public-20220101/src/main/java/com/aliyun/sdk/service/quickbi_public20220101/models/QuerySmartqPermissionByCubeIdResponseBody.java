@@ -80,7 +80,10 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>617277******************ABA47E31</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Basic information of the dataset.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -175,7 +185,10 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
             } 
 
             /**
-             * CubeId.
+             * <p>Dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7c7223ae-****-3c744528014b</p>
              */
             public Builder cubeId(String cubeId) {
                 this.cubeId = cubeId;
@@ -183,7 +196,10 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * CubeName.
+             * <p>Dataset name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder cubeName(String cubeName) {
                 this.cubeName = cubeName;
@@ -191,7 +207,7 @@ public class QuerySmartqPermissionByCubeIdResponseBody extends TeaModel {
             }
 
             /**
-             * HasPerssion.
+             * <p>Whether the current user has permission for the smart question. Note: &quot;HasPerssion&quot; seems to be a typo, it should probably be &quot;HasPermission&quot;.</p>
              */
             public Builder hasPerssion(Boolean hasPerssion) {
                 this.hasPerssion = hasPerssion;

@@ -80,7 +80,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The query results are returned.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -331,7 +341,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * Favorite.
+             * <p>Queries whether the user has collected the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder favorite(Boolean favorite) {
                 this.favorite = favorite;
@@ -339,7 +352,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * <p>The timestamp when the work was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1496651577000</p>
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -347,7 +363,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * <p>The timestamp when the work was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640595729000</p>
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -355,7 +374,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * HasEditAuth.
+             * <p>The query user has the editing rights of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasEditAuth(Boolean hasEditAuth) {
                 this.hasEditAuth = hasEditAuth;
@@ -363,7 +385,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * HasViewAuth.
+             * <p>The query user has the permission to view the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasViewAuth(Boolean hasViewAuth) {
                 this.hasViewAuth = hasViewAuth;
@@ -371,7 +396,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * LatestViewTime.
+             * <p>The timestamp when the work was last accessed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1642067498000</p>
              */
             public Builder latestViewTime(String latestViewTime) {
                 this.latestViewTime = latestViewTime;
@@ -379,7 +407,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test report</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -387,7 +418,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerName.
+             * <p>The Alibaba Cloud account name of the work owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
@@ -395,7 +429,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerNum.
+             * <p>The UserID of the work owner.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1365*****238860</p>
              */
             public Builder ownerNum(String ownerNum) {
                 this.ownerNum = ownerNum;
@@ -403,7 +440,16 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStatus.
+             * <p>The publication status of the work. Valid values:</p>
+             * <ul>
+             * <li>0: unpublished</li>
+             * <li>1: published</li>
+             * <li>2: modified and saved but not published.</li>
+             * <li>3: unpublished</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder publishStatus(Integer publishStatus) {
                 this.publishStatus = publishStatus;
@@ -411,7 +457,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * TreeId.
+             * <p>The ID of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>977c7698-<strong><strong>-</strong></strong>-****-44b7304d20fc</p>
              */
             public Builder treeId(String treeId) {
                 this.treeId = treeId;
@@ -419,7 +468,15 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the work. Valid values:</p>
+             * <ul>
+             * <li>DATAPRODUCT: BI portal</li>
+             * <li>PAGE: Dashboard</li>
+             * <li>REPORT: workbook</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PAGE</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -427,7 +484,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * ViewCount.
+             * <p>The number of times the work was accessed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder viewCount(Long viewCount) {
                 this.viewCount = viewCount;
@@ -435,7 +495,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceId.
+             * <p>The ID of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>523793cb-<strong><strong>-</strong></strong>-****-aa71c65ffa39</p>
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -443,7 +506,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * WorkspaceName.
+             * <p>The name of the workspace to which the work belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Workspace</p>
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -562,7 +628,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             } 
 
             /**
-             * Attention.
+             * <p>Attention</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder attention(String attention) {
                 this.attention = attention;
@@ -570,7 +639,7 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * Data.
+             * <p>The list of queried works.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -578,7 +647,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -586,7 +658,14 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries returned per page.</p>
+             * <ul>
+             * <li>Default value: 10.</li>
+             * <li>Maximum of 100 articles</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -594,7 +673,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>The total number of rows in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -602,7 +684,10 @@ public class ListRecentViewReportsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>The total number of pages returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

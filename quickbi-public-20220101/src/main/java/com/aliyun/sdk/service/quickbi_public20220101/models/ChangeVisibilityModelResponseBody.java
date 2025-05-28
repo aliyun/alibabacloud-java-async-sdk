@@ -80,7 +80,10 @@ public class ChangeVisibilityModelResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class ChangeVisibilityModelResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The number of menus that are successfully modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder result(Integer result) {
             this.result = result;
@@ -96,7 +102,14 @@ public class ChangeVisibilityModelResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

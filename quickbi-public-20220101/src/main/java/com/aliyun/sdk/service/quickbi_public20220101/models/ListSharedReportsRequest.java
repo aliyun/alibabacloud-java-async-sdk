@@ -102,7 +102,10 @@ public class ListSharedReportsRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>Keyword of the name of the work.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test report</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -111,7 +114,14 @@ public class ListSharedReportsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Query the number of rows in the work list:</p>
+         * <ul>
+         * <li>Default value: 10.</li>
+         * <li>Maximum value: 9999</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -120,7 +130,15 @@ public class ListSharedReportsRequest extends Request {
         }
 
         /**
-         * TreeType.
+         * <p>Query the type of the work (fill in the blank to query all types). Valid values:</p>
+         * <ul>
+         * <li>DATAPRODUCT: BI portal</li>
+         * <li>PAGE: Dashboard</li>
+         * <li>REPORT: workbook</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PAGE</p>
          */
         public Builder treeType(String treeType) {
             this.putQueryParameter("TreeType", treeType);
@@ -129,6 +147,7 @@ public class ListSharedReportsRequest extends Request {
         }
 
         /**
+         * <p>The UserID of the user to be queried in the Quick BI.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

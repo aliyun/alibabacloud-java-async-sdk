@@ -80,7 +80,10 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7AAB95D7-2E11-4FE2-94BC-858E4FC0C976</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns the result of the API execution.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Value range:</p>
+         * <ul>
+         * <li>true: The request was successful. There may be cases where some members are added successfully and others fail. For the reasons of failure, refer to the FailureDetail in the response.</li>
+         * <li>false: The request failed, and no data will be persisted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,7 +198,10 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
             } 
 
             /**
-             * Failure.
+             * <p>Number of users that failed to be added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder failure(Integer failure) {
                 this.failure = failure;
@@ -196,7 +209,10 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
             }
 
             /**
-             * FailureDetail.
+             * <p>Reasons for the failures.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;2046274934845893&quot; : &quot;AE0150010001: This user already exists.&quot;, &quot;1213444447906552&quot; : &quot;AE0150010001: This user already exists.&quot;}</p>
              */
             public Builder failureDetail(java.util.Map<String, ?> failureDetail) {
                 this.failureDetail = failureDetail;
@@ -204,7 +220,10 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * <p>Number of users that were added successfully.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder success(Integer success) {
                 this.success = success;
@@ -212,7 +231,10 @@ public class AddWorkspaceUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>Total number of users being added.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder total(Integer total) {
                 this.total = total;

@@ -198,7 +198,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>83d37ba6-d909-48a2-a517-f4d05c3a****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -206,7 +209,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The name of the directory.</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -579,7 +585,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * PublicFlag.
+             * <p>Is it public</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder publicFlag(Boolean publicFlag) {
                 this.publicFlag = publicFlag;
@@ -587,7 +596,10 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             }
 
             /**
-             * PublicInvalidTime.
+             * <p>Deadline for the public release of the report</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1721366354000</p>
              */
             public Builder publicInvalidTime(Long publicInvalidTime) {
                 this.publicInvalidTime = publicInvalidTime;

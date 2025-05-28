@@ -80,7 +80,10 @@ public class ModifyCopilotEmbedConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4BAA469******A9289FEE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,14 @@ public class ModifyCopilotEmbedConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns the result of the API execution. Possible values:</p>
+         * <ul>
+         * <li>true: Execution succeeded</li>
+         * <li>false: Execution failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -96,7 +106,14 @@ public class ModifyCopilotEmbedConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful</li>
+         * <li>false: The request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

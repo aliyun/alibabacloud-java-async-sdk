@@ -60,6 +60,7 @@ public class QueryDatasetSmartqStatusRequest extends Request {
         } 
 
         /**
+         * <p>Dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -60,6 +60,7 @@ public class DataSourceBloodRequest extends Request {
         } 
 
         /**
+         * <p>Data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

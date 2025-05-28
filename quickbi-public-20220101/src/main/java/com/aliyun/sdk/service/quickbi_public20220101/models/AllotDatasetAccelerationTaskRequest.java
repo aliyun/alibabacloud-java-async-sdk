@@ -60,6 +60,7 @@ public class AllotDatasetAccelerationTaskRequest extends Request {
         } 
 
         /**
+         * <p>The dataset ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

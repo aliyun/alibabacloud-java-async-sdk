@@ -80,7 +80,10 @@ public class UpdateEmbeddedStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D78*********DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class UpdateEmbeddedStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The number of works that are opened or closed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder result(Integer result) {
             this.result = result;
@@ -96,7 +102,14 @@ public class UpdateEmbeddedStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

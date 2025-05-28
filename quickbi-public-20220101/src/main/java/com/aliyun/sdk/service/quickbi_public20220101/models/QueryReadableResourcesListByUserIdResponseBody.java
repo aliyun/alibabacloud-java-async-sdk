@@ -198,7 +198,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             } 
 
             /**
-             * Id.
+             * <p>The ID of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e4276ea5-b232-4fb1-8f0f-efcee4a2****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -206,7 +209,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the directory.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test directory</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -214,7 +220,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * PathId.
+             * <p>The hierarchical structure of the directory ID, which is separated with &quot;/&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e4276ea5-b232-4fb1-8f0f-efcee4a2****</p>
              */
             public Builder pathId(String pathId) {
                 this.pathId = pathId;
@@ -222,7 +231,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * PathName.
+             * <p>The hierarchical structure of the directory name, which is separated with &quot;/&quot;.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test directory</p>
              */
             public Builder pathName(String pathName) {
                 this.pathName = pathName;
@@ -480,7 +492,7 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * Directory.
+             * <p>The directory structure in which the work is located.</p>
              */
             public Builder directory(Directory directory) {
                 this.directory = directory;
@@ -499,7 +511,10 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The timestamp of the modification time in milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1611023338000</p>
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -586,6 +601,9 @@ public class QueryReadableResourcesListByUserIdResponseBody extends TeaModel {
 
             /**
              * <p>The name of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Company Region Table</p>
              */
             public Builder workName(String workName) {
                 this.workName = workName;

@@ -80,7 +80,10 @@ public class QueryLlmCubeWithThemeListByUserIdResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2EE822B***************F-F5B42DDADC12</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryLlmCubeWithThemeListByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>List of datasets and analysis themes.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryLlmCubeWithThemeListByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful</li>
+         * <li>false: The request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +172,11 @@ public class QueryLlmCubeWithThemeListByUserIdResponseBody extends TeaModel {
             } 
 
             /**
-             * CubeIds.
+             * <p>Dataset map.</p>
+             * <ul>
+             * <li>key - Dataset ID</li>
+             * <li>value - Dataset name</li>
+             * </ul>
              */
             public Builder cubeIds(java.util.Map<String, String> cubeIds) {
                 this.cubeIds = cubeIds;
@@ -170,7 +184,11 @@ public class QueryLlmCubeWithThemeListByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * ThemeIds.
+             * <p>Analysis theme map.</p>
+             * <ul>
+             * <li>key - Analysis theme ID </li>
+             * <li>value - Analysis theme name</li>
+             * </ul>
              */
             public Builder themeIds(java.util.Map<String, String> themeIds) {
                 this.themeIds = themeIds;

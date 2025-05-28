@@ -80,7 +80,10 @@ public class QueryShareListResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC4E1E63-B337-44F8-8C22-6F00DF67E2C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryShareListResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns the list of objects to which the work has been shared.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryShareListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -240,7 +250,14 @@ public class QueryShareListResponseBody extends TeaModel {
             } 
 
             /**
-             * AuthPoint.
+             * <p>Sharing permissions. Possible values:</p>
+             * <ul>
+             * <li>1: View only</li>
+             * <li>3: View and export</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder authPoint(Integer authPoint) {
                 this.authPoint = authPoint;
@@ -248,7 +265,10 @@ public class QueryShareListResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * <p>The timestamp in milliseconds indicating the expiration time of the authorization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1640102400000</p>
              */
             public Builder expireDate(Long expireDate) {
                 this.expireDate = expireDate;
@@ -256,7 +276,10 @@ public class QueryShareListResponseBody extends TeaModel {
             }
 
             /**
-             * ReportId.
+             * <p>The ID of the work.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6b407e50-e774-406b-9956-da2425c2****</p>
              */
             public Builder reportId(String reportId) {
                 this.reportId = reportId;
@@ -264,7 +287,10 @@ public class QueryShareListResponseBody extends TeaModel {
             }
 
             /**
-             * ShareId.
+             * <p>The ID of the sharing configuration.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0ab9659e-29cf-47d7-a364-3a91553b****</p>
              */
             public Builder shareId(String shareId) {
                 this.shareId = shareId;
@@ -272,7 +298,13 @@ public class QueryShareListResponseBody extends TeaModel {
             }
 
             /**
-             * ShareToId.
+             * <p>The ID of the sharing target, which could be a user ID or a group ID in Quick BI.</p>
+             * <ul>
+             * <li>When ShareToType=2 (all members within an organization), ShareToId is the organization ID.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
              */
             public Builder shareToId(String shareToId) {
                 this.shareToId = shareToId;
@@ -280,7 +312,10 @@ public class QueryShareListResponseBody extends TeaModel {
             }
 
             /**
-             * ShareToName.
+             * <p>The name of the sharing target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder shareToName(String shareToName) {
                 this.shareToName = shareToName;
@@ -288,7 +323,16 @@ public class QueryShareListResponseBody extends TeaModel {
             }
 
             /**
-             * ShareToType.
+             * <p>The type of sharing. Possible values:</p>
+             * <ul>
+             * <li>0: User</li>
+             * <li>1: Group</li>
+             * <li>2: Organization</li>
+             * <li>3: Space</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder shareToType(Integer shareToType) {
                 this.shareToType = shareToType;
@@ -296,7 +340,19 @@ public class QueryShareListResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * <p>The type of the shared work. The value range includes: </p>
+             * <ul>
+             * <li>dataProduct: Data Portal </li>
+             * <li>dashboard: Dashboard </li>
+             * <li>report: Spreadsheet </li>
+             * <li>dashboardOfflineQuery: Self-service Data Extraction </li>
+             * <li>ANALYSIS: Ad-hoc Analysis </li>
+             * <li>DATAFORM: Data Entry </li>
+             * <li>SCREEN: Data Visualization Screen</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>dashboard</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;

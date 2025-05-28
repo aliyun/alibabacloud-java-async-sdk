@@ -80,7 +80,10 @@ public class CreateTicket4CopilotResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787************05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class CreateTicket4CopilotResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>ID of the Smart Q module to be embedded.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f5eeb52e-d9c2-4a8b-80e3-47ab55c2****</p>
          */
         public Builder result(String result) {
             this.result = result;
@@ -96,7 +102,14 @@ public class CreateTicket4CopilotResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request succeeded</li>
+         * <li>false: The request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

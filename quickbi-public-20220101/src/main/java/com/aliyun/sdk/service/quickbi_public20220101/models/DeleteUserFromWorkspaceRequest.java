@@ -75,6 +75,7 @@ public class DeleteUserFromWorkspaceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the user to be deleted. Note that this UserID is for Quick BI, not the Alibaba Cloud UID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,6 +88,7 @@ public class DeleteUserFromWorkspaceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

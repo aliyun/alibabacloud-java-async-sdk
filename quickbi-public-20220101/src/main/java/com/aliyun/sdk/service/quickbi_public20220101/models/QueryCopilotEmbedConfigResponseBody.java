@@ -80,7 +80,10 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1FC71085-D5FD-08E0-813A-4D4BD1031BC5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>List of embedded configurations.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,7 +198,10 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AllCube.
+             * <p>Whether all question resources are selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true/false</p>
              */
             public Builder allCube(Boolean allCube) {
                 this.allCube = allCube;
@@ -196,7 +209,10 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * AllTheme.
+             * <p>Whether all analysis themes are selected.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true/false</p>
              */
             public Builder allTheme(Boolean allTheme) {
                 this.allTheme = allTheme;
@@ -204,7 +220,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * LlmCubes.
+             * <p>Collection of question resource IDs.</p>
              */
             public Builder llmCubes(java.util.List<String> llmCubes) {
                 this.llmCubes = llmCubes;
@@ -212,7 +228,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Themes.
+             * <p>Collection of analysis theme IDs.</p>
              */
             public Builder themes(java.util.List<String> themes) {
                 this.themes = themes;
@@ -357,7 +373,10 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * AgentName.
+             * <p>Robot&quot;s nickname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>little Q</p>
              */
             public Builder agentName(String agentName) {
                 this.agentName = agentName;
@@ -365,7 +384,10 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CopilotId.
+             * <p>Embedding ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9c079710-ddbe-48b3-b495-7c83c8d57cc4</p>
              */
             public Builder copilotId(String copilotId) {
                 this.copilotId = copilotId;
@@ -373,7 +395,10 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>ID of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qweqw12312423521</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -381,7 +406,10 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUserName.
+             * <p>Nickname of the creator.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>zhangsan</p>
              */
             public Builder createUserName(String createUserName) {
                 this.createUserName = createUserName;
@@ -389,7 +417,7 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DataRange.
+             * <p>Data range (analysis themes and question resources).</p>
              */
             public Builder dataRange(DataRange dataRange) {
                 this.dataRange = dataRange;
@@ -397,7 +425,10 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>ID of the modifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asda1231231dfs</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -405,7 +436,10 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * <p>Module name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>little Q</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -413,7 +447,10 @@ public class QueryCopilotEmbedConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ShowName.
+             * <p>Name of the embedded module.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0327</p>
              */
             public Builder showName(String showName) {
                 this.showName = showName;

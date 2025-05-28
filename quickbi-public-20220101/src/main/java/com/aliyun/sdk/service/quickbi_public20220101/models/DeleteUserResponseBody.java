@@ -80,7 +80,10 @@ public class DeleteUserResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DC4E1E63-B337-44F8-8C22-6F00DF67E2C3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,14 @@ public class DeleteUserResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns the execution result of the interface. Possible values:</p>
+         * <ul>
+         * <li>true: Execution succeeded</li>
+         * <li>false: Execution failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -96,7 +106,13 @@ public class DeleteUserResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful - false: The request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

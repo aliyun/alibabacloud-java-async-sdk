@@ -356,7 +356,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>For detailed usage, please refer to the <a href="https://help.aliyun.com/document_detail/391291.html">Report Embedding Data Permission Control and Parameter Passing Security Enhancement Solution</a>.</p>
+     * <p>For detailed usage, please refer to <a href="https://help.aliyun.com/document_detail/391291.html">Report Embedding Data Permission Control and Parameter Passing Security Enhancement Solution</a>.</p>
      * 
      * @param request the request parameters of CreateTicket  CreateTicketRequest
      * @return CreateTicketResponse
@@ -406,6 +406,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateUserGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DataInterpretation  DataInterpretationRequest
+     * @return DataInterpretationResponse
+     */
+    @Override
+    public CompletableFuture<DataInterpretationResponse> dataInterpretation(DataInterpretationRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DataInterpretation").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DataInterpretationResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DataInterpretationResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -786,6 +804,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p>This API only supports the new row and column permission model of Quick BI. If you are still using the old row and column permissions, please migrate to the new row and column permission model before calling this interface. To migrate to the new row and column permission model, follow these steps: In Organization Management -&gt; Security Configuration -&gt; Upgrade Row and Column Permissions, click <strong>One-Click Upgrade</strong> to upgrade to the new row-level permissions.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of ListDataLevelPermissionWhiteList  ListDataLevelPermissionWhiteListRequest
      * @return ListDataLevelPermissionWhiteListResponse
      */
@@ -1913,6 +1936,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Used for batch management of smart Q&amp;A authorizations. Repeatedly adding an authorization will be treated as a new addition; repeatedly deleting an authorization will be skipped by default and will not be recorded in the audit log.</p>
+     * 
      * @param request the request parameters of SmartqAuthorize  SmartqAuthorizeRequest
      * @return SmartqAuthorizeResponse
      */
@@ -1931,6 +1957,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Special Note: When a user is authorized to call this API, it is assumed that the user has the permission to query the corresponding data by passing in the userId as that user.</p>
+     * 
      * @param request the request parameters of SmartqQueryAbility  SmartqQueryAbilityRequest
      * @return SmartqQueryAbilityResponse
      */

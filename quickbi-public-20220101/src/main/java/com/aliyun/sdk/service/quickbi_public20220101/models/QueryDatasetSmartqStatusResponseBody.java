@@ -80,7 +80,10 @@ public class QueryDatasetSmartqStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7c7223ae-****-3c744528014b</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,14 @@ public class QueryDatasetSmartqStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Result of the API execution. Possible values:</p>
+         * <ul>
+         * <li>true: Request succeeded</li>
+         * <li>false: Request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder result(Boolean result) {
             this.result = result;
@@ -96,7 +106,14 @@ public class QueryDatasetSmartqStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>是否请求成功。取值范围：</p>
+         * <ul>
+         * <li>true：请求成功</li>
+         * <li>false：请求失败</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

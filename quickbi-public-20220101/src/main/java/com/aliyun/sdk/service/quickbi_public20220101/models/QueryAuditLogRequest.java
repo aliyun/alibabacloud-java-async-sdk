@@ -146,10 +146,11 @@ public class QueryAuditLogRequest extends Request {
         } 
 
         /**
+         * <p>End date of the query, format (&quot;yyyyMMdd&quot;).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1715856218001</p>
+         * <p>20240604</p>
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -158,6 +159,12 @@ public class QueryAuditLogRequest extends Request {
         }
 
         /**
+         * <p>Log type:</p>
+         * <ul>
+         * <li>dataView - Access</li>
+         * <li>function - Operation</li>
+         * <li>permission - Permission</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +177,10 @@ public class QueryAuditLogRequest extends Request {
         }
 
         /**
-         * OperatorId.
+         * <p>Operator&quot;s user ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95296e95-ca89-4c7d-8af9-dedf0ad0***</p>
          */
         public Builder operatorId(String operatorId) {
             this.putQueryParameter("OperatorId", operatorId);
@@ -179,7 +189,11 @@ public class QueryAuditLogRequest extends Request {
         }
 
         /**
-         * OperatorTypes.
+         * <p>Permission/Access/Operation type, empty - default all;</p>
+         * <p>Refer to the audit log code values, send multiple values separated by English commas.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MODIFY</p>
          */
         public Builder operatorTypes(String operatorTypes) {
             this.putQueryParameter("OperatorTypes", operatorTypes);
@@ -188,7 +202,10 @@ public class QueryAuditLogRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>Resource type, refer to the work type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cube</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -197,10 +214,11 @@ public class QueryAuditLogRequest extends Request {
         }
 
         /**
+         * <p>Start date of the query, format (&quot;yyyyMMdd&quot;), cannot be earlier than 90 days from the current time.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1715856218001</p>
+         * <p>20240504</p>
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -209,7 +227,10 @@ public class QueryAuditLogRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>Workspace ID, the ID of the workspace to which the logs to be queried belong.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>95296e95-ca89-4c7d-8af9-dedf0ad0****</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putQueryParameter("WorkspaceId", workspaceId);

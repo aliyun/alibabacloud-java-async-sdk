@@ -90,7 +90,7 @@ public class ChangeVisibilityModelRequest extends Request {
         } 
 
         /**
-         * <p>The number of menus that are successfully modified.</p>
+         * <p>The ID of the BI portal.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,10 +103,10 @@ public class ChangeVisibilityModelRequest extends Request {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>The menu ID of the BI portal leaf node.</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
+         * <li>The directory menu cannot be authorized.</li>
+         * <li>You can upload multiple parameters at a time. Separate multiple IDs with commas (,). The maximum number of parameters that can be modified at a time is 100.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -120,6 +120,11 @@ public class ChangeVisibilityModelRequest extends Request {
         }
 
         /**
+         * <p>Whether only authorization is visible. Valid values:</p>
+         * <ul>
+         * <li>true: Only the authorization is visible.</li>
+         * <li>false: Both are visible.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

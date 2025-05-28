@@ -80,7 +80,10 @@ public class CancelAuthorizationMenuResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class CancelAuthorizationMenuResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Number of menus successfully unauthorized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder result(Integer result) {
             this.result = result;
@@ -96,7 +102,14 @@ public class CancelAuthorizationMenuResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -80,7 +80,7 @@ public class SaveFavoritesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
@@ -91,10 +91,10 @@ public class SaveFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The execution result of the interface is returned. Valid values:</p>
+         * <p>Returns the result of the interface execution. Possible values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request fails.</li>
+         * <li>true: Execution successful</li>
+         * <li>false: Execution failed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,10 +106,10 @@ public class SaveFavoritesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <p>Indicates whether the request was successful. Possible values:</p>
          * <ul>
-         * <li>true: The request was successful.</li>
-         * <li>false: The request failed.</li>
+         * <li>true: Request successful</li>
+         * <li>false: Request failed</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -80,7 +80,10 @@ public class QueryUserListResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryUserListResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The pagination result of the user list is returned. The detailed information list of organization members is stored in the response parameter Data.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryUserListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -279,7 +289,10 @@ public class QueryUserListResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountId.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1355********</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -287,7 +300,10 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * AccountName.
+             * <p>The name of the Alibaba Cloud account that corresponds to the member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test user</p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -295,7 +311,14 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * AdminUser.
+             * <p>Indicates whether the organization administrator. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder adminUser(Boolean adminUser) {
                 this.adminUser = adminUser;
@@ -303,7 +326,14 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * AuthAdminUser.
+             * <p>Indicate whether the RAM user is a permission administrator. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder authAdminUser(Boolean authAdminUser) {
                 this.authAdminUser = authAdminUser;
@@ -311,7 +341,14 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * IsDeleted.
+             * <p>User status: </p>
+             * <ul>
+             * <li>Active - false </li>
+             * <li>Inactive - true</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isDeleted(Boolean isDeleted) {
                 this.isDeleted = isDeleted;
@@ -319,7 +356,10 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * JoinedDate.
+             * <p>Join Date</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1718691704000</p>
              */
             public Builder joinedDate(Long joinedDate) {
                 this.joinedDate = joinedDate;
@@ -327,7 +367,10 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * LastLoginTime.
+             * <p>Last login time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1718761320681</p>
              */
             public Builder lastLoginTime(Long lastLoginTime) {
                 this.lastLoginTime = lastLoginTime;
@@ -335,7 +378,10 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * <p>The nickname of the organization member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test user</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -343,7 +389,7 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * RoleIdList.
+             * <p>List of organization role IDs bound to the user.</p>
              */
             public Builder roleIdList(java.util.List<Long> roleIdList) {
                 this.roleIdList = roleIdList;
@@ -351,7 +397,10 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The UserID in the Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fe67f61a35a94b7da1a34ba174a7****</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -359,7 +408,15 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * UserType.
+             * <p>The role type of the organization member. Valid values:</p>
+             * <ul>
+             * <li>1 : developer</li>
+             * <li>2 : visitors</li>
+             * <li>3 : Analyst</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userType(Integer userType) {
                 this.userType = userType;
@@ -465,7 +522,7 @@ public class QueryUserListResponseBody extends TeaModel {
             } 
 
             /**
-             * Data.
+             * <p>Returns the list of requested users.</p>
              */
             public Builder data(java.util.List<Data> data) {
                 this.data = data;
@@ -473,7 +530,10 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * PageNum.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNum(Integer pageNum) {
                 this.pageNum = pageNum;
@@ -481,7 +541,10 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of rows per page set when the interface is requested.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -489,7 +552,10 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalNum.
+             * <p>The total number of rows in the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalNum(Integer totalNum) {
                 this.totalNum = totalNum;
@@ -497,7 +563,10 @@ public class QueryUserListResponseBody extends TeaModel {
             }
 
             /**
-             * TotalPages.
+             * <p>The total number of pages returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder totalPages(Integer totalPages) {
                 this.totalPages = totalPages;

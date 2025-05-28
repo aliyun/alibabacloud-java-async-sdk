@@ -80,7 +80,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The details of the generated ticket.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class QueryTicketInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -279,7 +289,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * AccessTicket.
+             * <p>Notes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a27a9aec-<strong><strong>-</strong></strong>-bd40-1a21ea41d7c5</p>
              */
             public Builder accessTicket(String accessTicket) {
                 this.accessTicket = accessTicket;
@@ -287,7 +300,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CmptId.
+             * <p>The ID of the component in the report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sfdgsds-<strong><strong>-</strong></strong>-a608-mghdgd</p>
              */
             public Builder cmptId(String cmptId) {
                 this.cmptId = cmptId;
@@ -295,7 +311,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GlobalParam.
+             * <p>Global parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[&amp;{quot;paramKey&amp;quot;:&amp;quot;price&amp;quot;,&amp;quot;joinType&amp;quot;and&amp;quot;,&amp;quot;conditionList&amp;quot;:[{&amp;quot; operation&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;value ;&amp; quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot;&amp;quot product_type&amp;quot;,&amp;quot;joinType&amp;quot;:&amp;quot;and &quot;;,&amp; quot;conditionList&amp;quot;, the conditions must be:[{&amp;quot;operate&quot; ;:&amp; quot;in&amp;quot;,&amp;quot;value&amp;quot;, the conditions must be:[&amp;quot; office supplies&amp;quot;,&amp;quot; furniture products&amp;quot;]}]}]\n</p>
              */
             public Builder globalParam(String globalParam) {
                 this.globalParam = globalParam;
@@ -303,7 +322,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InvalidTime.
+             * <p>Expiration time of the note.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-30 03:03:49</p>
              */
             public Builder invalidTime(String invalidTime) {
                 this.invalidTime = invalidTime;
@@ -311,7 +333,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTicketNum.
+             * <p>The maximum number of supported bills.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9999</p>
              */
             public Builder maxTicketNum(Integer maxTicketNum) {
                 this.maxTicketNum = maxTicketNum;
@@ -319,7 +344,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OrganizationId.
+             * <p>The ID of the organization.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2fe4fbd8-<strong><strong>-</strong></strong>-b3e1-e92c7af083ea</p>
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;
@@ -327,7 +355,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RegisterTime.
+             * <p>The registration time of the ticket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-01-09 22:23:49</p>
              */
             public Builder registerTime(String registerTime) {
                 this.registerTime = registerTime;
@@ -335,7 +366,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UsedTicketNum.
+             * <p>The number of bills that have been consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47</p>
              */
             public Builder usedTicketNum(Integer usedTicketNum) {
                 this.usedTicketNum = usedTicketNum;
@@ -343,7 +377,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The user ID of the Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>974e50**********9033f46</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -351,7 +388,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WatermarkParam.
+             * <p>Set the watermarking parameters.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Tripartite embedding of Ticket</p>
              */
             public Builder watermarkParam(String watermarkParam) {
                 this.watermarkParam = watermarkParam;
@@ -359,7 +399,10 @@ public class QueryTicketInfoResponseBody extends TeaModel {
             }
 
             /**
-             * WorksId.
+             * <p>The ID of the operations report.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ccd3428c-<strong><strong>-</strong></strong>-a608-26bae29dffee</p>
              */
             public Builder worksId(String worksId) {
                 this.worksId = worksId;

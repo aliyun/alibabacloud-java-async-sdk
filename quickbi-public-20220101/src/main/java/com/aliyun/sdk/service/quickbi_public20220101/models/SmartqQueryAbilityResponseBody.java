@@ -81,7 +81,10 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A************2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +92,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Return result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -97,6 +100,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         }
 
         /**
+         * <p>Whether the operation was successful.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,11 +127,15 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private MetaType(Builder builder) {
             this.key = builder.key;
+            this.type = builder.type;
             this.value = builder.value;
         }
 
@@ -147,6 +155,13 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
         }
 
         /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
          * @return value
          */
         public String getValue() {
@@ -155,6 +170,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
 
         public static final class Builder {
             private String key; 
+            private String type; 
             private String value; 
 
             private Builder() {
@@ -162,11 +178,15 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
 
             private Builder(MetaType model) {
                 this.key = model.key;
+                this.type = model.type;
                 this.value = model.value;
             } 
 
             /**
-             * Key.
+             * <p>Column tuple name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Polar***STPS</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -174,7 +194,18 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * <p>Column tuple type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>string</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -228,7 +259,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             } 
 
             /**
-             * Row.
+             * <p>Data values for each row.</p>
              */
             public Builder row(java.util.List<String> row) {
                 this.row = row;
@@ -334,7 +365,10 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             } 
 
             /**
-             * ChartType.
+             * <p>Suggested chart type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NEW_TABLE</p>
              */
             public Builder chartType(String chartType) {
                 this.chartType = chartType;
@@ -342,7 +376,10 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             }
 
             /**
-             * ConclusionText.
+             * <p>Summary information.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Schedule</p>
              */
             public Builder conclusionText(String conclusionText) {
                 this.conclusionText = conclusionText;
@@ -350,7 +387,10 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             }
 
             /**
-             * LogicSql.
+             * <p>Visualized logical SQL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * ****</p>
              */
             public Builder logicSql(String logicSql) {
                 this.logicSql = logicSql;
@@ -358,7 +398,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             }
 
             /**
-             * MetaType.
+             * <p>List of column tuple types.</p>
              */
             public Builder metaType(java.util.List<MetaType> metaType) {
                 this.metaType = metaType;
@@ -366,7 +406,7 @@ public class SmartqQueryAbilityResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * <p>Array of data value lists.</p>
              */
             public Builder values(java.util.List<Values> values) {
                 this.values = values;

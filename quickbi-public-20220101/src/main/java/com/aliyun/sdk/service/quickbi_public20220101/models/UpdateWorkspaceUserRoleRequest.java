@@ -105,7 +105,16 @@ public class UpdateWorkspaceUserRoleRequest extends Request {
         } 
 
         /**
-         * RoleId.
+         * <p>Preset workspace role ID, existing roles will be overwritten. Value range:</p>
+         * <ul>
+         * <li>25: Workspace Administrator</li>
+         * <li>26: Workspace Developer</li>
+         * <li>27: Workspace Analyst</li>
+         * <li>30: Workspace Viewer</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>25</p>
          */
         public Builder roleId(Long roleId) {
             this.putQueryParameter("RoleId", roleId);
@@ -114,7 +123,13 @@ public class UpdateWorkspaceUserRoleRequest extends Request {
         }
 
         /**
-         * RoleIds.
+         * <p>Multiple workspace role IDs, separated by commas. If this value is provided, it takes precedence.</p>
+         * <blockquote>
+         * <p>Notice: roleId and roleIds cannot both be empty</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>25,26</p>
          */
         public Builder roleIds(String roleIds) {
             this.putQueryParameter("RoleIds", roleIds);
@@ -123,6 +138,7 @@ public class UpdateWorkspaceUserRoleRequest extends Request {
         }
 
         /**
+         * <p>Quick BI user ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -135,6 +151,7 @@ public class UpdateWorkspaceUserRoleRequest extends Request {
         }
 
         /**
+         * <p>Workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -102,7 +102,10 @@ public class ListFavoriteReportsRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>Keyword of the work name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -111,7 +114,12 @@ public class ListFavoriteReportsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>Number of rows in the work list to be queried:
+         * Default value: 10
+         * Maximum value: 9999</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -120,7 +128,15 @@ public class ListFavoriteReportsRequest extends Request {
         }
 
         /**
-         * TreeType.
+         * <p>Type of the work to be queried (leave blank to query all types). Value range:</p>
+         * <ul>
+         * <li>DATAPRODUCT: Data Portal</li>
+         * <li>PAGE: Dashboard</li>
+         * <li>REPORT: Spreadsheet</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PAGE</p>
          */
         public Builder treeType(String treeType) {
             this.putQueryParameter("TreeType", treeType);
@@ -129,6 +145,7 @@ public class ListFavoriteReportsRequest extends Request {
         }
 
         /**
+         * <p>The UserID of the user in Quick BI to be queried.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

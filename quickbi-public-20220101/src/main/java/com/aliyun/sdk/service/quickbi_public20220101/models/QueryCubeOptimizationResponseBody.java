@@ -91,7 +91,7 @@ public class QueryCubeOptimizationResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The query results are returned.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;

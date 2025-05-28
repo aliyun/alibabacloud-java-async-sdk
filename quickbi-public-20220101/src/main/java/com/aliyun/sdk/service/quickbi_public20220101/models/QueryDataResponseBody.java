@@ -262,14 +262,7 @@ public class QueryDataResponseBody extends TeaModel {
             }
 
             /**
-             * <p>字段的数据类型。一般有：</p>
-             * <ul>
-             * <li>number：数值</li>
-             * <li>string：字符串</li>
-             * <li>date：日期</li>
-             * <li>time：时间</li>
-             * <li>datetime：日期时间</li>
-             * </ul>
+             * <p>The keyword of the sensitive field type.</p>
              * 
              * <strong>example:</strong>
              * <p>string</p>
@@ -410,7 +403,7 @@ public class QueryDataResponseBody extends TeaModel {
              * </blockquote>
              * 
              * <strong>example:</strong>
-             * <p>SELECT COMPANY_T_1_.<code>area</code> AS D_AREA_2_, COMPANY_T_1_.<code>city</code> AS D_CITY_3_, SUM(COMPANY_T_1_.<code>profit_amt</code>) AS D_PROFIT_4_ FROM <code>quickbi_test</code>.<code>company_sales_record_copy</code> AS COMPANY_T_1_ WHERE COMPANY_T_1_.<code>area</code> LIKE &quot;%华东%&quot; GROUP BY COMPANY_T_1_.<code>area</code>, COMPANY_T_1_.<code>city</code> HAVING SUM(COMPANY_T_1_.<code>order_amt</code>) &gt; 1 LIMIT 0, 10</p>
+             * <p>test</p>
              */
             public Builder sql(String sql) {
                 this.sql = sql;

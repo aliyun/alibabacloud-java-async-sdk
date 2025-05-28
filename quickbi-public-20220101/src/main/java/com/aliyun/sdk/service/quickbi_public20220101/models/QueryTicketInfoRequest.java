@@ -60,7 +60,7 @@ public class QueryTicketInfoRequest extends Request {
         } 
 
         /**
-         * <p>Obtains the details of a specified ticket for a report that is not embedded in the report.</p>
+         * <p>The value of the bill.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

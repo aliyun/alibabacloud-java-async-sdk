@@ -80,7 +80,10 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>617277C****************ABA47E31</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Array of failed user information.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. The value range is as follows:</p>
+         * <ul>
+         * <li>true: Request succeeded</li>
+         * <li>false: Request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -188,7 +198,10 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
             } 
 
             /**
-             * DetailMessage.
+             * <p>Reason for failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>INVALID_FILE_FORMAT</p>
              */
             public Builder detailMessage(String detailMessage) {
                 this.detailMessage = detailMessage;
@@ -196,7 +209,10 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
             }
 
             /**
-             * LlmCube.
+             * <p>Q&amp;A resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>617277C****************ABA47E31</p>
              */
             public Builder llmCube(String llmCube) {
                 this.llmCube = llmCube;
@@ -204,7 +220,10 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
             }
 
             /**
-             * LlmCubeTheme.
+             * <p>Analysis theme ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>617277C****************ABA47E31</p>
              */
             public Builder llmCubeTheme(String llmCubeTheme) {
                 this.llmCubeTheme = llmCubeTheme;
@@ -212,7 +231,10 @@ public class SmartqAuthorizeResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>User ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>617277C****************ABA47E31</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

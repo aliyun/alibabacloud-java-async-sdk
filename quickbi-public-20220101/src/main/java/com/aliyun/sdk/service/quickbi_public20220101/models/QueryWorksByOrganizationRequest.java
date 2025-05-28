@@ -117,7 +117,10 @@ public class QueryWorksByOrganizationRequest extends Request {
         } 
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>Page number.</p>
+         * <ul>
+         * <li>Default value is 1.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -129,7 +132,10 @@ public class QueryWorksByOrganizationRequest extends Request {
         }
 
         /**
-         * <p>The number of rows per page set when the interface is requested.</p>
+         * <p>Number of items per page.</p>
+         * <ul>
+         * <li>Default value is 10.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -141,7 +147,13 @@ public class QueryWorksByOrganizationRequest extends Request {
         }
 
         /**
-         * <p>Returns a list of all works in the organization that meet the requested criteria.</p>
+         * <p>The status of the work to query. Possible values:</p>
+         * <ul>
+         * <li>0: Unpublished</li>
+         * <li>1: Published</li>
+         * <li>2: Modified but not published</li>
+         * <li>3: Offline</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -153,7 +165,11 @@ public class QueryWorksByOrganizationRequest extends Request {
         }
 
         /**
-         * <p>The total number of pages returned.</p>
+         * <p>Third-party embedding status. Possible values:</p>
+         * <ul>
+         * <li>0: Embedding not enabled</li>
+         * <li>1: Embedding enabled</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -165,7 +181,13 @@ public class QueryWorksByOrganizationRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The type of work to query. Leave blank to query all types. Possible values:</p>
+         * <ul>
+         * <li>DATAPRODUCT: Data Portal</li>
+         * <li>PAGE: Dashboard</li>
+         * <li>REPORT: Spreadsheet</li>
+         * <li>dashboardOfflineQuery: Self-service Data Retrieval</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>PAGE</p>

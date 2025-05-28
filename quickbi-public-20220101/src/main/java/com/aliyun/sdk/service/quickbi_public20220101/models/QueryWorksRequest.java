@@ -60,6 +60,7 @@ public class QueryWorksRequest extends Request {
         } 
 
         /**
+         * <p>Report ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

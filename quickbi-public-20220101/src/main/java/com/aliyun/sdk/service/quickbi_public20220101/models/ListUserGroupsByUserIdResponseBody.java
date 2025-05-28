@@ -80,7 +80,10 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E2440604-3059-561A-AD68-DEDBC870EB2B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The information about the group.</p>
          */
         public Builder result(java.util.List<Result> result) {
             this.result = result;
@@ -96,7 +99,11 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The user group modifier. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -256,7 +263,10 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the user group was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-15 17:13:55</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -264,7 +274,10 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * CreateUser.
+             * <p>The user group creator. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46e5374665ba4b679ee22e2a2927****</p>
              */
             public Builder createUser(String createUser) {
                 this.createUser = createUser;
@@ -272,7 +285,7 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * IdentifiedPath.
+             * <p>Directory level of the user group.</p>
              */
             public Builder identifiedPath(String identifiedPath) {
                 this.identifiedPath = identifiedPath;
@@ -280,7 +293,10 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the user group was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-15 20:36:40</p>
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -288,7 +304,10 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyUser.
+             * <p>The user group modifier. The UserID of the Quick BI is used instead of the UID of Alibaba Cloud.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>46e5374665ba4b679ee22e2a2927****</p>
              */
             public Builder modifyUser(String modifyUser) {
                 this.modifyUser = modifyUser;
@@ -296,7 +315,10 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * ParentUsergroupId.
+             * <p>The ID of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2fe4fbd8-588f-489a-b3e1-e92c7af0****</p>
              */
             public Builder parentUsergroupId(String parentUsergroupId) {
                 this.parentUsergroupId = parentUsergroupId;
@@ -304,7 +326,10 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * UsergroupDesc.
+             * <p>The description of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Description</p>
              */
             public Builder usergroupDesc(String usergroupDesc) {
                 this.usergroupDesc = usergroupDesc;
@@ -312,7 +337,10 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * UsergroupId.
+             * <p>The ID of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34fd141d-4598-4093-8c33-8e066dcb****</p>
              */
             public Builder usergroupId(String usergroupId) {
                 this.usergroupId = usergroupId;
@@ -320,7 +348,10 @@ public class ListUserGroupsByUserIdResponseBody extends TeaModel {
             }
 
             /**
-             * UsergroupName.
+             * <p>The name of the user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test user group</p>
              */
             public Builder usergroupName(String usergroupName) {
                 this.usergroupName = usergroupName;

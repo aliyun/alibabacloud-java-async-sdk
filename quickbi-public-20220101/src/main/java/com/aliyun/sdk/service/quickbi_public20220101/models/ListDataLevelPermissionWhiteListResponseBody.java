@@ -80,7 +80,10 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D8749D65-E80A-433C-AF1B-CE9C180FF3B4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Whitelist for the specified row-level permission type.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: Request succeeded</li>
+         * <li>false: Request failed</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -162,7 +172,7 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
             } 
 
             /**
-             * UserGroups.
+             * <p>UserGroups.</p>
              */
             public Builder userGroups(java.util.List<String> userGroups) {
                 this.userGroups = userGroups;
@@ -170,7 +180,7 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * Users.
+             * <p>Users.</p>
              */
             public Builder users(java.util.List<String> users) {
                 this.users = users;
@@ -250,7 +260,10 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
             } 
 
             /**
-             * CubeId.
+             * <p>Dataset ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7c7223ae-****-3c744528014b</p>
              */
             public Builder cubeId(String cubeId) {
                 this.cubeId = cubeId;
@@ -258,7 +271,14 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * RuleType.
+             * <p>Type of dataset row and column permissions. Possible values:</p>
+             * <ul>
+             * <li>ROW_LEVEL: Row-level permission</li>
+             * <li>COLUMN_LEVEL: Column-level permission</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ROW_LEVEL</p>
              */
             public Builder ruleType(String ruleType) {
                 this.ruleType = ruleType;
@@ -266,7 +286,7 @@ public class ListDataLevelPermissionWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * UsersModel.
+             * <p>Whitelist information.</p>
              */
             public Builder usersModel(UsersModel usersModel) {
                 this.usersModel = usersModel;

@@ -421,7 +421,7 @@ public class ListByUserGroupIdResponseBody extends TeaModel {
             } 
 
             /**
-             * FailedUserGroupIds.
+             * <p>List of failed user groups.</p>
              */
             public Builder failedUserGroupIds(java.util.List<String> failedUserGroupIds) {
                 this.failedUserGroupIds = failedUserGroupIds;

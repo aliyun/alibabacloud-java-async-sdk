@@ -90,6 +90,13 @@ public class UpdateWorkspaceUsersRoleRequest extends Request {
         } 
 
         /**
+         * <p>Preset space role ID, existing roles will be overwritten. Value range:</p>
+         * <ul>
+         * <li>25: Space Administrator</li>
+         * <li>26: Space Developer</li>
+         * <li>27: Space Analyst</li>
+         * <li>30: Space Viewer</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +109,10 @@ public class UpdateWorkspaceUsersRoleRequest extends Request {
         }
 
         /**
+         * <p>User ID. This is the UserID for Quick BI, not the UID for Alibaba Cloud.</p>
+         * <ul>
+         * <li>Supports batch parameters, separate user IDs with a comma (,).</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +125,7 @@ public class UpdateWorkspaceUsersRoleRequest extends Request {
         }
 
         /**
+         * <p>Workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

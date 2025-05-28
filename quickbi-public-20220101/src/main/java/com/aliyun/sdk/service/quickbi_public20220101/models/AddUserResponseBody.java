@@ -80,7 +80,10 @@ public class AddUserResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class AddUserResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>Returns detailed information about the newly added Aliyun user.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -96,7 +99,14 @@ public class AddUserResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Possible values:</p>
+         * <ul>
+         * <li>true: The request was successful.</li>
+         * <li>false: The request failed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -227,7 +237,10 @@ public class AddUserResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountName.
+             * <p>Aliyun account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="mailto:xxxxxx@163.com">xxxxxx@163.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -235,7 +248,15 @@ public class AddUserResponseBody extends TeaModel {
             }
 
             /**
-             * AdminUser.
+             * <p>Whether the organization administrator role is assigned. Value range: </p>
+             * <ul>
+             * <li>true: Yes</li>
+             * <li>false: No</li>
+             * </ul>
+             * <p><notice>This parameter is deprecated and not recommended for use. It is invalid when RoleIdList is provided.</notice></p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder adminUser(Boolean adminUser) {
                 this.adminUser = adminUser;
@@ -243,7 +264,15 @@ public class AddUserResponseBody extends TeaModel {
             }
 
             /**
-             * AuthAdminUser.
+             * <p>Whether the permission administrator role is assigned. Value range: </p>
+             * <ul>
+             * <li>true: Yes</li>
+             * <li>false: No</li>
+             * </ul>
+             * <p><notice>This parameter is deprecated and not recommended for use. It is invalid when RoleIdList is provided.</notice></p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder authAdminUser(Boolean authAdminUser) {
                 this.authAdminUser = authAdminUser;
@@ -251,7 +280,10 @@ public class AddUserResponseBody extends TeaModel {
             }
 
             /**
-             * NickName.
+             * <p>Aliyun account nickname.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ddd</p>
              */
             public Builder nickName(String nickName) {
                 this.nickName = nickName;
@@ -259,7 +291,7 @@ public class AddUserResponseBody extends TeaModel {
             }
 
             /**
-             * RoleIdList.
+             * <p>List of organization role IDs bound to the user.</p>
              */
             public Builder roleIdList(java.util.List<Long> roleIdList) {
                 this.roleIdList = roleIdList;
@@ -267,7 +299,10 @@ public class AddUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>UserID in Quick BI.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b5d8fd9348cc4327****afb604</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -275,7 +310,15 @@ public class AddUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserType.
+             * <p>User type of the organization member. Value range: </p>
+             * <ul>
+             * <li>1: Developer </li>
+             * <li>2: Visitor </li>
+             * <li>3: Analyst</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userType(Integer userType) {
                 this.userType = userType;

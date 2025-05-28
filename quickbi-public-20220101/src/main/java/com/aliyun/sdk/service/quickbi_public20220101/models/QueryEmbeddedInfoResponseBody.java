@@ -80,7 +80,10 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D787E1A3-A93C-424A-B626-C2B05DF8D885</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,7 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The embedded information of the reports under the organization.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -182,7 +185,10 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * DashboardOfflineQuery.
+             * <p>The number of embedded self-service fetching.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder dashboardOfflineQuery(Integer dashboardOfflineQuery) {
                 this.dashboardOfflineQuery = dashboardOfflineQuery;
@@ -190,7 +196,10 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Page.
+             * <p>The number of embedded dashboards.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder page(Integer page) {
                 this.page = page;
@@ -198,7 +207,10 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Report.
+             * <p>The number of embedded spreadsheets.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder report(Integer report) {
                 this.report = report;
@@ -278,7 +290,7 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * Detail.
+             * <p>Embed the statistics of the work.</p>
              */
             public Builder detail(Detail detail) {
                 this.detail = detail;
@@ -286,7 +298,10 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EmbeddedCount.
+             * <p>The number of reports that are currently embedded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder embeddedCount(Integer embeddedCount) {
                 this.embeddedCount = embeddedCount;
@@ -294,7 +309,10 @@ public class QueryEmbeddedInfoResponseBody extends TeaModel {
             }
 
             /**
-             * MaxCount.
+             * <p>The maximum number of reports that can be embedded.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder maxCount(Integer maxCount) {
                 this.maxCount = maxCount;

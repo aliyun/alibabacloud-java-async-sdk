@@ -74,7 +74,10 @@ public class QueryDataRangeRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * <p>Name, for fuzzy search.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -83,6 +86,11 @@ public class QueryDataRangeRequest extends Request {
         }
 
         /**
+         * <p>Data range type:</p>
+         * <ul>
+         * <li>llmCube: LlmCube resource.</li>
+         * <li>llmCubeTheme: Analysis theme.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
