@@ -32,16 +32,46 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelFundAccountLowAvailableAmountAlarmResponse> cancelFundAccountLowAvailableAmountAlarm(CancelFundAccountLowAvailableAmountAlarmRequest request);
 
     /**
+     * @param request the request parameters of CreateCostCenter  CreateCostCenterRequest
+     * @return CreateCostCenterResponse
+     */
+    CompletableFuture<CreateCostCenterResponse> createCostCenter(CreateCostCenterRequest request);
+
+    /**
+     * @param request the request parameters of CreateFundAccountPayRelation  CreateFundAccountPayRelationRequest
+     * @return CreateFundAccountPayRelationResponse
+     */
+    CompletableFuture<CreateFundAccountPayRelationResponse> createFundAccountPayRelation(CreateFundAccountPayRelationRequest request);
+
+    /**
      * @param request the request parameters of CreateFundAccountTransfer  CreateFundAccountTransferRequest
      * @return CreateFundAccountTransferResponse
      */
     CompletableFuture<CreateFundAccountTransferResponse> createFundAccountTransfer(CreateFundAccountTransferRequest request);
 
     /**
+     * @param request the request parameters of CreateReportDefinition  CreateReportDefinitionRequest
+     * @return CreateReportDefinitionResponse
+     */
+    CompletableFuture<CreateReportDefinitionResponse> createReportDefinition(CreateReportDefinitionRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCostCenter  DeleteCostCenterRequest
+     * @return DeleteCostCenterResponse
+     */
+    CompletableFuture<DeleteCostCenterResponse> deleteCostCenter(DeleteCostCenterRequest request);
+
+    /**
      * @param request the request parameters of DeleteCouponDeductTag  DeleteCouponDeductTagRequest
      * @return DeleteCouponDeductTagResponse
      */
     CompletableFuture<DeleteCouponDeductTagResponse> deleteCouponDeductTag(DeleteCouponDeductTagRequest request);
+
+    /**
+     * @param request the request parameters of DeleteReportDefinition  DeleteReportDefinitionRequest
+     * @return DeleteReportDefinitionResponse
+     */
+    CompletableFuture<DeleteReportDefinitionResponse> deleteReportDefinition(DeleteReportDefinitionRequest request);
 
     /**
      * @param request the request parameters of DescribeCoupon  DescribeCouponRequest
@@ -138,6 +168,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListFundAccountPayRelationResponse
      */
     CompletableFuture<ListFundAccountPayRelationResponse> listFundAccountPayRelation(ListFundAccountPayRelationRequest request);
+
+    /**
+     * @param request the request parameters of ListReportDefinitions  ListReportDefinitionsRequest
+     * @return ListReportDefinitionsResponse
+     */
+    CompletableFuture<ListReportDefinitionsResponse> listReportDefinitions(ListReportDefinitionsRequest request);
+
+    /**
+     * @param request the request parameters of ModifyCostCenter  ModifyCostCenterRequest
+     * @return ModifyCostCenterResponse
+     */
+    CompletableFuture<ModifyCostCenterResponse> modifyCostCenter(ModifyCostCenterRequest request);
+
+    /**
+     * @param request the request parameters of QueryCostCenter  QueryCostCenterRequest
+     * @return QueryCostCenterResponse
+     */
+    CompletableFuture<QueryCostCenterResponse> queryCostCenter(QueryCostCenterRequest request);
+
+    /**
+     * @param request the request parameters of QueryCostCenterResource  QueryCostCenterResourceRequest
+     * @return QueryCostCenterResourceResponse
+     */
+    CompletableFuture<QueryCostCenterResourceResponse> queryCostCenterResource(QueryCostCenterResourceRequest request);
 
     /**
      * @param request the request parameters of SetFundAccountCreditAmount  SetFundAccountCreditAmountRequest
