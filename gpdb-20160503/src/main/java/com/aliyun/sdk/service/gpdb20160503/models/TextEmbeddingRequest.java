@@ -22,6 +22,10 @@ public class TextEmbeddingRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimension")
+    private Integer dimension;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Input")
     private java.util.List<String> input;
@@ -42,6 +46,7 @@ public class TextEmbeddingRequest extends Request {
     private TextEmbeddingRequest(Builder builder) {
         super(builder);
         this.DBInstanceId = builder.DBInstanceId;
+        this.dimension = builder.dimension;
         this.input = builder.input;
         this.model = builder.model;
         this.ownerId = builder.ownerId;
@@ -66,6 +71,13 @@ public class TextEmbeddingRequest extends Request {
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return dimension
+     */
+    public Integer getDimension() {
+        return this.dimension;
     }
 
     /**
@@ -98,6 +110,7 @@ public class TextEmbeddingRequest extends Request {
 
     public static final class Builder extends Request.Builder<TextEmbeddingRequest, Builder> {
         private String DBInstanceId; 
+        private Integer dimension; 
         private java.util.List<String> input; 
         private String model; 
         private Long ownerId; 
@@ -110,6 +123,7 @@ public class TextEmbeddingRequest extends Request {
         private Builder(TextEmbeddingRequest request) {
             super(request);
             this.DBInstanceId = request.DBInstanceId;
+            this.dimension = request.dimension;
             this.input = request.input;
             this.model = request.model;
             this.ownerId = request.ownerId;
@@ -125,6 +139,15 @@ public class TextEmbeddingRequest extends Request {
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * Dimension.
+         */
+        public Builder dimension(Integer dimension) {
+            this.putQueryParameter("Dimension", dimension);
+            this.dimension = dimension;
             return this;
         }
 

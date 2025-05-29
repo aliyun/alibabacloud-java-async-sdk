@@ -49,6 +49,10 @@ public class UpsertChunksRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShouldReplaceFile")
+    private Boolean shouldReplaceFile;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TextChunks")
     private java.util.List<TextChunks> textChunks;
@@ -62,6 +66,7 @@ public class UpsertChunksRequest extends Request {
         this.namespacePassword = builder.namespacePassword;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
+        this.shouldReplaceFile = builder.shouldReplaceFile;
         this.textChunks = builder.textChunks;
     }
 
@@ -128,6 +133,13 @@ public class UpsertChunksRequest extends Request {
     }
 
     /**
+     * @return shouldReplaceFile
+     */
+    public Boolean getShouldReplaceFile() {
+        return this.shouldReplaceFile;
+    }
+
+    /**
      * @return textChunks
      */
     public java.util.List<TextChunks> getTextChunks() {
@@ -142,6 +154,7 @@ public class UpsertChunksRequest extends Request {
         private String namespacePassword; 
         private Long ownerId; 
         private String regionId; 
+        private Boolean shouldReplaceFile; 
         private java.util.List<TextChunks> textChunks; 
 
         private Builder() {
@@ -157,6 +170,7 @@ public class UpsertChunksRequest extends Request {
             this.namespacePassword = request.namespacePassword;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
+            this.shouldReplaceFile = request.shouldReplaceFile;
             this.textChunks = request.textChunks;
         } 
 
@@ -261,6 +275,15 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
+         * ShouldReplaceFile.
+         */
+        public Builder shouldReplaceFile(Boolean shouldReplaceFile) {
+            this.putQueryParameter("ShouldReplaceFile", shouldReplaceFile);
+            this.shouldReplaceFile = shouldReplaceFile;
+            return this;
+        }
+
+        /**
          * <p>List of split documents.</p>
          */
         public Builder textChunks(java.util.List<TextChunks> textChunks) {
@@ -288,11 +311,19 @@ public class UpsertChunksRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String content;
 
+        @com.aliyun.core.annotation.NameInMap("Filter")
+        private String filter;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
         @com.aliyun.core.annotation.NameInMap("Metadata")
         private java.util.Map<String, ?> metadata;
 
         private TextChunks(Builder builder) {
             this.content = builder.content;
+            this.filter = builder.filter;
+            this.id = builder.id;
             this.metadata = builder.metadata;
         }
 
@@ -312,6 +343,20 @@ public class UpsertChunksRequest extends Request {
         }
 
         /**
+         * @return filter
+         */
+        public String getFilter() {
+            return this.filter;
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
          * @return metadata
          */
         public java.util.Map<String, ?> getMetadata() {
@@ -320,6 +365,8 @@ public class UpsertChunksRequest extends Request {
 
         public static final class Builder {
             private String content; 
+            private String filter; 
+            private String id; 
             private java.util.Map<String, ?> metadata; 
 
             private Builder() {
@@ -327,6 +374,8 @@ public class UpsertChunksRequest extends Request {
 
             private Builder(TextChunks model) {
                 this.content = model.content;
+                this.filter = model.filter;
+                this.id = model.id;
                 this.metadata = model.metadata;
             } 
 
@@ -339,6 +388,22 @@ public class UpsertChunksRequest extends Request {
              */
             public Builder content(String content) {
                 this.content = content;
+                return this;
+            }
+
+            /**
+             * Filter.
+             */
+            public Builder filter(String filter) {
+                this.filter = filter;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
                 return this;
             }
 

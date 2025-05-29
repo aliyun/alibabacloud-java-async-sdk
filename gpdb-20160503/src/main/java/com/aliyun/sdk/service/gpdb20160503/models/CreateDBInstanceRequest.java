@@ -26,6 +26,10 @@ public class CreateDBInstanceRequest extends Request {
     private String backupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CacheStorageSize")
+    private String cacheStorageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -206,6 +210,7 @@ public class CreateDBInstanceRequest extends Request {
         super(builder);
         this.AINodeSpecInfos = builder.AINodeSpecInfos;
         this.backupId = builder.backupId;
+        this.cacheStorageSize = builder.cacheStorageSize;
         this.clientToken = builder.clientToken;
         this.createSampleData = builder.createSampleData;
         this.DBInstanceCategory = builder.DBInstanceCategory;
@@ -276,6 +281,13 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getBackupId() {
         return this.backupId;
+    }
+
+    /**
+     * @return cacheStorageSize
+     */
+    public String getCacheStorageSize() {
+        return this.cacheStorageSize;
     }
 
     /**
@@ -582,6 +594,7 @@ public class CreateDBInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDBInstanceRequest, Builder> {
         private java.util.List<AINodeSpecInfos> AINodeSpecInfos; 
         private String backupId; 
+        private String cacheStorageSize; 
         private String clientToken; 
         private Boolean createSampleData; 
         private String DBInstanceCategory; 
@@ -634,6 +647,7 @@ public class CreateDBInstanceRequest extends Request {
             super(request);
             this.AINodeSpecInfos = request.AINodeSpecInfos;
             this.backupId = request.backupId;
+            this.cacheStorageSize = request.cacheStorageSize;
             this.clientToken = request.clientToken;
             this.createSampleData = request.createSampleData;
             this.DBInstanceCategory = request.DBInstanceCategory;
@@ -700,6 +714,15 @@ public class CreateDBInstanceRequest extends Request {
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
             this.backupId = backupId;
+            return this;
+        }
+
+        /**
+         * CacheStorageSize.
+         */
+        public Builder cacheStorageSize(String cacheStorageSize) {
+            this.putQueryParameter("CacheStorageSize", cacheStorageSize);
+            this.cacheStorageSize = cacheStorageSize;
             return this;
         }
 

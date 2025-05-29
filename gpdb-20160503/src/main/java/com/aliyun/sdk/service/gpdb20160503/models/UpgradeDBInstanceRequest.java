@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpgradeDBInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CacheStorageSize")
+    private String cacheStorageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceClass")
     private String DBInstanceClass;
 
@@ -67,6 +71,10 @@ public class UpgradeDBInstanceRequest extends Request {
     private String segStorageType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerlessResource")
+    private String serverlessResource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageSize")
     private String storageSize;
 
@@ -76,6 +84,7 @@ public class UpgradeDBInstanceRequest extends Request {
 
     private UpgradeDBInstanceRequest(Builder builder) {
         super(builder);
+        this.cacheStorageSize = builder.cacheStorageSize;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceGroupCount = builder.DBInstanceGroupCount;
         this.DBInstanceId = builder.DBInstanceId;
@@ -88,6 +97,7 @@ public class UpgradeDBInstanceRequest extends Request {
         this.segDiskPerformanceLevel = builder.segDiskPerformanceLevel;
         this.segNodeNum = builder.segNodeNum;
         this.segStorageType = builder.segStorageType;
+        this.serverlessResource = builder.serverlessResource;
         this.storageSize = builder.storageSize;
         this.upgradeType = builder.upgradeType;
     }
@@ -103,6 +113,13 @@ public class UpgradeDBInstanceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cacheStorageSize
+     */
+    public String getCacheStorageSize() {
+        return this.cacheStorageSize;
     }
 
     /**
@@ -190,6 +207,13 @@ public class UpgradeDBInstanceRequest extends Request {
     }
 
     /**
+     * @return serverlessResource
+     */
+    public String getServerlessResource() {
+        return this.serverlessResource;
+    }
+
+    /**
      * @return storageSize
      */
     public String getStorageSize() {
@@ -204,6 +228,7 @@ public class UpgradeDBInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpgradeDBInstanceRequest, Builder> {
+        private String cacheStorageSize; 
         private String DBInstanceClass; 
         private String DBInstanceGroupCount; 
         private String DBInstanceId; 
@@ -216,6 +241,7 @@ public class UpgradeDBInstanceRequest extends Request {
         private String segDiskPerformanceLevel; 
         private String segNodeNum; 
         private String segStorageType; 
+        private String serverlessResource; 
         private String storageSize; 
         private Long upgradeType; 
 
@@ -225,6 +251,7 @@ public class UpgradeDBInstanceRequest extends Request {
 
         private Builder(UpgradeDBInstanceRequest request) {
             super(request);
+            this.cacheStorageSize = request.cacheStorageSize;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceGroupCount = request.DBInstanceGroupCount;
             this.DBInstanceId = request.DBInstanceId;
@@ -237,9 +264,19 @@ public class UpgradeDBInstanceRequest extends Request {
             this.segDiskPerformanceLevel = request.segDiskPerformanceLevel;
             this.segNodeNum = request.segNodeNum;
             this.segStorageType = request.segStorageType;
+            this.serverlessResource = request.serverlessResource;
             this.storageSize = request.storageSize;
             this.upgradeType = request.upgradeType;
         } 
+
+        /**
+         * CacheStorageSize.
+         */
+        public Builder cacheStorageSize(String cacheStorageSize) {
+            this.putQueryParameter("CacheStorageSize", cacheStorageSize);
+            this.cacheStorageSize = cacheStorageSize;
+            return this;
+        }
 
         /**
          * <p>This parameter is no longer used.</p>
@@ -399,6 +436,15 @@ public class UpgradeDBInstanceRequest extends Request {
         public Builder segStorageType(String segStorageType) {
             this.putQueryParameter("SegStorageType", segStorageType);
             this.segStorageType = segStorageType;
+            return this;
+        }
+
+        /**
+         * ServerlessResource.
+         */
+        public Builder serverlessResource(String serverlessResource) {
+            this.putQueryParameter("ServerlessResource", serverlessResource);
+            this.serverlessResource = serverlessResource;
             return this;
         }
 

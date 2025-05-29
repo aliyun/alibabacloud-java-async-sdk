@@ -236,6 +236,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailabilityValue")
         private String availabilityValue;
 
+        @com.aliyun.core.annotation.NameInMap("CacheStorageSize")
+        private String cacheStorageSize;
+
         @com.aliyun.core.annotation.NameInMap("ConnectionMode")
         private String connectionMode;
 
@@ -436,6 +439,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         private DBInstanceAttribute(Builder builder) {
             this.availabilityValue = builder.availabilityValue;
+            this.cacheStorageSize = builder.cacheStorageSize;
             this.connectionMode = builder.connectionMode;
             this.connectionString = builder.connectionString;
             this.coreVersion = builder.coreVersion;
@@ -517,6 +521,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getAvailabilityValue() {
             return this.availabilityValue;
+        }
+
+        /**
+         * @return cacheStorageSize
+         */
+        public String getCacheStorageSize() {
+            return this.cacheStorageSize;
         }
 
         /**
@@ -983,6 +994,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String availabilityValue; 
+            private String cacheStorageSize; 
             private String connectionMode; 
             private String connectionString; 
             private String coreVersion; 
@@ -1055,6 +1067,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
             private Builder(DBInstanceAttribute model) {
                 this.availabilityValue = model.availabilityValue;
+                this.cacheStorageSize = model.cacheStorageSize;
                 this.connectionMode = model.connectionMode;
                 this.connectionString = model.connectionString;
                 this.coreVersion = model.coreVersion;
@@ -1134,6 +1147,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder availabilityValue(String availabilityValue) {
                 this.availabilityValue = availabilityValue;
+                return this;
+            }
+
+            /**
+             * CacheStorageSize.
+             */
+            public Builder cacheStorageSize(String cacheStorageSize) {
+                this.cacheStorageSize = cacheStorageSize;
                 return this;
             }
 
