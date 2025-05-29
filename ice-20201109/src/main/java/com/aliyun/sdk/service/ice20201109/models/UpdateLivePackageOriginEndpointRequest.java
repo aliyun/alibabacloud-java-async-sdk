@@ -49,6 +49,10 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
     private String ipWhitelist;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LivePackagingConfig")
+    private LivePackagingConfig livePackagingConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ManifestName")
     private String manifestName;
 
@@ -70,6 +74,7 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
         this.groupName = builder.groupName;
         this.ipBlacklist = builder.ipBlacklist;
         this.ipWhitelist = builder.ipWhitelist;
+        this.livePackagingConfig = builder.livePackagingConfig;
         this.manifestName = builder.manifestName;
         this.protocol = builder.protocol;
         this.timeshiftVision = builder.timeshiftVision;
@@ -138,6 +143,13 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
     }
 
     /**
+     * @return livePackagingConfig
+     */
+    public LivePackagingConfig getLivePackagingConfig() {
+        return this.livePackagingConfig;
+    }
+
+    /**
      * @return manifestName
      */
     public String getManifestName() {
@@ -166,6 +178,7 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
         private String groupName; 
         private String ipBlacklist; 
         private String ipWhitelist; 
+        private LivePackagingConfig livePackagingConfig; 
         private String manifestName; 
         private String protocol; 
         private Integer timeshiftVision; 
@@ -183,6 +196,7 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
             this.groupName = request.groupName;
             this.ipBlacklist = request.ipBlacklist;
             this.ipWhitelist = request.ipWhitelist;
+            this.livePackagingConfig = request.livePackagingConfig;
             this.manifestName = request.manifestName;
             this.protocol = request.protocol;
             this.timeshiftVision = request.timeshiftVision;
@@ -269,6 +283,16 @@ public class UpdateLivePackageOriginEndpointRequest extends Request {
         public Builder ipWhitelist(String ipWhitelist) {
             this.putBodyParameter("IpWhitelist", ipWhitelist);
             this.ipWhitelist = ipWhitelist;
+            return this;
+        }
+
+        /**
+         * LivePackagingConfig.
+         */
+        public Builder livePackagingConfig(LivePackagingConfig livePackagingConfig) {
+            String livePackagingConfigShrink = shrink(livePackagingConfig, "LivePackagingConfig", "json");
+            this.putBodyParameter("LivePackagingConfig", livePackagingConfigShrink);
+            this.livePackagingConfig = livePackagingConfig;
             return this;
         }
 

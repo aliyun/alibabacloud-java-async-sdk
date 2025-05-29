@@ -18,12 +18,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateAIAgentInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentConfig")
+    private AIAgentConfig agentConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+    @Deprecated
     private AIAgentTemplateConfig templateConfig;
 
     @com.aliyun.core.annotation.Query
@@ -32,6 +37,7 @@ public class UpdateAIAgentInstanceRequest extends Request {
 
     private UpdateAIAgentInstanceRequest(Builder builder) {
         super(builder);
+        this.agentConfig = builder.agentConfig;
         this.instanceId = builder.instanceId;
         this.templateConfig = builder.templateConfig;
         this.userData = builder.userData;
@@ -48,6 +54,13 @@ public class UpdateAIAgentInstanceRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentConfig
+     */
+    public AIAgentConfig getAgentConfig() {
+        return this.agentConfig;
     }
 
     /**
@@ -72,6 +85,7 @@ public class UpdateAIAgentInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateAIAgentInstanceRequest, Builder> {
+        private AIAgentConfig agentConfig; 
         private String instanceId; 
         private AIAgentTemplateConfig templateConfig; 
         private String userData; 
@@ -82,10 +96,21 @@ public class UpdateAIAgentInstanceRequest extends Request {
 
         private Builder(UpdateAIAgentInstanceRequest request) {
             super(request);
+            this.agentConfig = request.agentConfig;
             this.instanceId = request.instanceId;
             this.templateConfig = request.templateConfig;
             this.userData = request.userData;
         } 
+
+        /**
+         * AgentConfig.
+         */
+        public Builder agentConfig(AIAgentConfig agentConfig) {
+            String agentConfigShrink = shrink(agentConfig, "AgentConfig", "json");
+            this.putQueryParameter("AgentConfig", agentConfigShrink);
+            this.agentConfig = agentConfig;
+            return this;
+        }
 
         /**
          * <p>The ID of the AI agent that you want to update.</p>

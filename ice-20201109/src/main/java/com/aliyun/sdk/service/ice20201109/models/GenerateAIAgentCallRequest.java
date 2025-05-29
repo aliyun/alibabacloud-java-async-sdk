@@ -23,6 +23,10 @@ public class GenerateAIAgentCallRequest extends Request {
     private String AIAgentId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AgentConfig")
+    private AIAgentConfig agentConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChatSyncConfig")
     private ChatSyncConfig chatSyncConfig;
 
@@ -36,6 +40,7 @@ public class GenerateAIAgentCallRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+    @Deprecated
     private AIAgentTemplateConfig templateConfig;
 
     @com.aliyun.core.annotation.Query
@@ -49,6 +54,7 @@ public class GenerateAIAgentCallRequest extends Request {
     private GenerateAIAgentCallRequest(Builder builder) {
         super(builder);
         this.AIAgentId = builder.AIAgentId;
+        this.agentConfig = builder.agentConfig;
         this.chatSyncConfig = builder.chatSyncConfig;
         this.expire = builder.expire;
         this.sessionId = builder.sessionId;
@@ -75,6 +81,13 @@ public class GenerateAIAgentCallRequest extends Request {
      */
     public String getAIAgentId() {
         return this.AIAgentId;
+    }
+
+    /**
+     * @return agentConfig
+     */
+    public AIAgentConfig getAgentConfig() {
+        return this.agentConfig;
     }
 
     /**
@@ -121,6 +134,7 @@ public class GenerateAIAgentCallRequest extends Request {
 
     public static final class Builder extends Request.Builder<GenerateAIAgentCallRequest, Builder> {
         private String AIAgentId; 
+        private AIAgentConfig agentConfig; 
         private ChatSyncConfig chatSyncConfig; 
         private Long expire; 
         private String sessionId; 
@@ -135,6 +149,7 @@ public class GenerateAIAgentCallRequest extends Request {
         private Builder(GenerateAIAgentCallRequest request) {
             super(request);
             this.AIAgentId = request.AIAgentId;
+            this.agentConfig = request.agentConfig;
             this.chatSyncConfig = request.chatSyncConfig;
             this.expire = request.expire;
             this.sessionId = request.sessionId;
@@ -153,6 +168,16 @@ public class GenerateAIAgentCallRequest extends Request {
         public Builder AIAgentId(String AIAgentId) {
             this.putQueryParameter("AIAgentId", AIAgentId);
             this.AIAgentId = AIAgentId;
+            return this;
+        }
+
+        /**
+         * AgentConfig.
+         */
+        public Builder agentConfig(AIAgentConfig agentConfig) {
+            String agentConfigShrink = shrink(agentConfig, "AgentConfig", "json");
+            this.putQueryParameter("AgentConfig", agentConfigShrink);
+            this.agentConfig = agentConfig;
             return this;
         }
 

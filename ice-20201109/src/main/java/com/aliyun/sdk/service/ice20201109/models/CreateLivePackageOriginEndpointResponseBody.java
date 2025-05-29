@@ -128,6 +128,9 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LastModified")
         private String lastModified;
 
+        @com.aliyun.core.annotation.NameInMap("LivePackagingConfig")
+        private LivePackagingConfig livePackagingConfig;
+
         @com.aliyun.core.annotation.NameInMap("ManifestName")
         private String manifestName;
 
@@ -148,6 +151,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
             this.ipBlacklist = builder.ipBlacklist;
             this.ipWhitelist = builder.ipWhitelist;
             this.lastModified = builder.lastModified;
+            this.livePackagingConfig = builder.livePackagingConfig;
             this.manifestName = builder.manifestName;
             this.protocol = builder.protocol;
             this.timeshiftVision = builder.timeshiftVision;
@@ -232,6 +236,13 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         }
 
         /**
+         * @return livePackagingConfig
+         */
+        public LivePackagingConfig getLivePackagingConfig() {
+            return this.livePackagingConfig;
+        }
+
+        /**
          * @return manifestName
          */
         public String getManifestName() {
@@ -263,6 +274,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
             private String ipBlacklist; 
             private String ipWhitelist; 
             private String lastModified; 
+            private LivePackagingConfig livePackagingConfig; 
             private String manifestName; 
             private String protocol; 
             private Integer timeshiftVision; 
@@ -281,6 +293,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
                 this.ipBlacklist = model.ipBlacklist;
                 this.ipWhitelist = model.ipWhitelist;
                 this.lastModified = model.lastModified;
+                this.livePackagingConfig = model.livePackagingConfig;
                 this.manifestName = model.manifestName;
                 this.protocol = model.protocol;
                 this.timeshiftVision = model.timeshiftVision;
@@ -390,6 +403,14 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
              */
             public Builder lastModified(String lastModified) {
                 this.lastModified = lastModified;
+                return this;
+            }
+
+            /**
+             * LivePackagingConfig.
+             */
+            public Builder livePackagingConfig(LivePackagingConfig livePackagingConfig) {
+                this.livePackagingConfig = livePackagingConfig;
                 return this;
             }
 

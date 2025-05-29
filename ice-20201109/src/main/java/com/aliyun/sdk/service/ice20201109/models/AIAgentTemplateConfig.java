@@ -191,6 +191,9 @@ public class AIAgentTemplateConfig extends TeaModel {
      * <p>AIAgentTemplateConfig</p>
      */
     public static class AvatarChat3D extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsrHotWords")
+        private java.util.List<String> asrHotWords;
+
         @com.aliyun.core.annotation.NameInMap("AsrLanguageId")
         private String asrLanguageId;
 
@@ -202,6 +205,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("BailianAppParams")
         private String bailianAppParams;
+
+        @com.aliyun.core.annotation.NameInMap("CharBreak")
+        private Boolean charBreak;
 
         @com.aliyun.core.annotation.NameInMap("EnableIntelligentSegment")
         private Boolean enableIntelligentSegment;
@@ -264,10 +270,12 @@ public class AIAgentTemplateConfig extends TeaModel {
         private String workflowOverrideParams;
 
         private AvatarChat3D(Builder builder) {
+            this.asrHotWords = builder.asrHotWords;
             this.asrLanguageId = builder.asrLanguageId;
             this.asrMaxSilence = builder.asrMaxSilence;
             this.avatarId = builder.avatarId;
             this.bailianAppParams = builder.bailianAppParams;
+            this.charBreak = builder.charBreak;
             this.enableIntelligentSegment = builder.enableIntelligentSegment;
             this.enablePushToTalk = builder.enablePushToTalk;
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
@@ -299,6 +307,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return asrHotWords
+         */
+        public java.util.List<String> getAsrHotWords() {
+            return this.asrHotWords;
+        }
+
+        /**
          * @return asrLanguageId
          */
         public String getAsrLanguageId() {
@@ -324,6 +339,13 @@ public class AIAgentTemplateConfig extends TeaModel {
          */
         public String getBailianAppParams() {
             return this.bailianAppParams;
+        }
+
+        /**
+         * @return charBreak
+         */
+        public Boolean getCharBreak() {
+            return this.charBreak;
         }
 
         /**
@@ -467,10 +489,12 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> asrHotWords; 
             private String asrLanguageId; 
             private Integer asrMaxSilence; 
             private String avatarId; 
             private String bailianAppParams; 
+            private Boolean charBreak; 
             private Boolean enableIntelligentSegment; 
             private Boolean enablePushToTalk; 
             private Boolean enableVoiceInterrupt; 
@@ -496,10 +520,12 @@ public class AIAgentTemplateConfig extends TeaModel {
             } 
 
             private Builder(AvatarChat3D model) {
+                this.asrHotWords = model.asrHotWords;
                 this.asrLanguageId = model.asrLanguageId;
                 this.asrMaxSilence = model.asrMaxSilence;
                 this.avatarId = model.avatarId;
                 this.bailianAppParams = model.bailianAppParams;
+                this.charBreak = model.charBreak;
                 this.enableIntelligentSegment = model.enableIntelligentSegment;
                 this.enablePushToTalk = model.enablePushToTalk;
                 this.enableVoiceInterrupt = model.enableVoiceInterrupt;
@@ -521,6 +547,14 @@ public class AIAgentTemplateConfig extends TeaModel {
                 this.wakeUpQuery = model.wakeUpQuery;
                 this.workflowOverrideParams = model.workflowOverrideParams;
             } 
+
+            /**
+             * AsrHotWords.
+             */
+            public Builder asrHotWords(java.util.List<String> asrHotWords) {
+                this.asrHotWords = asrHotWords;
+                return this;
+            }
 
             /**
              * AsrLanguageId.
@@ -551,6 +585,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder bailianAppParams(String bailianAppParams) {
                 this.bailianAppParams = bailianAppParams;
+                return this;
+            }
+
+            /**
+             * CharBreak.
+             */
+            public Builder charBreak(Boolean charBreak) {
+                this.charBreak = charBreak;
                 return this;
             }
 
@@ -803,6 +845,9 @@ public class AIAgentTemplateConfig extends TeaModel {
      * <p>AIAgentTemplateConfig</p>
      */
     public static class VisionChat extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsrHotWords")
+        private java.util.List<String> asrHotWords;
+
         @com.aliyun.core.annotation.NameInMap("AsrLanguageId")
         private String asrLanguageId;
 
@@ -811,6 +856,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("BailianAppParams")
         private String bailianAppParams;
+
+        @com.aliyun.core.annotation.NameInMap("CharBreak")
+        private Boolean charBreak;
 
         @com.aliyun.core.annotation.NameInMap("EnableIntelligentSegment")
         private Boolean enableIntelligentSegment;
@@ -873,9 +921,11 @@ public class AIAgentTemplateConfig extends TeaModel {
         private String workflowOverrideParams;
 
         private VisionChat(Builder builder) {
+            this.asrHotWords = builder.asrHotWords;
             this.asrLanguageId = builder.asrLanguageId;
             this.asrMaxSilence = builder.asrMaxSilence;
             this.bailianAppParams = builder.bailianAppParams;
+            this.charBreak = builder.charBreak;
             this.enableIntelligentSegment = builder.enableIntelligentSegment;
             this.enablePushToTalk = builder.enablePushToTalk;
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
@@ -907,6 +957,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         /**
+         * @return asrHotWords
+         */
+        public java.util.List<String> getAsrHotWords() {
+            return this.asrHotWords;
+        }
+
+        /**
          * @return asrLanguageId
          */
         public String getAsrLanguageId() {
@@ -925,6 +982,13 @@ public class AIAgentTemplateConfig extends TeaModel {
          */
         public String getBailianAppParams() {
             return this.bailianAppParams;
+        }
+
+        /**
+         * @return charBreak
+         */
+        public Boolean getCharBreak() {
+            return this.charBreak;
         }
 
         /**
@@ -1068,9 +1132,11 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> asrHotWords; 
             private String asrLanguageId; 
             private Integer asrMaxSilence; 
             private String bailianAppParams; 
+            private Boolean charBreak; 
             private Boolean enableIntelligentSegment; 
             private Boolean enablePushToTalk; 
             private Boolean enableVoiceInterrupt; 
@@ -1096,9 +1162,11 @@ public class AIAgentTemplateConfig extends TeaModel {
             } 
 
             private Builder(VisionChat model) {
+                this.asrHotWords = model.asrHotWords;
                 this.asrLanguageId = model.asrLanguageId;
                 this.asrMaxSilence = model.asrMaxSilence;
                 this.bailianAppParams = model.bailianAppParams;
+                this.charBreak = model.charBreak;
                 this.enableIntelligentSegment = model.enableIntelligentSegment;
                 this.enablePushToTalk = model.enablePushToTalk;
                 this.enableVoiceInterrupt = model.enableVoiceInterrupt;
@@ -1122,6 +1190,14 @@ public class AIAgentTemplateConfig extends TeaModel {
             } 
 
             /**
+             * AsrHotWords.
+             */
+            public Builder asrHotWords(java.util.List<String> asrHotWords) {
+                this.asrHotWords = asrHotWords;
+                return this;
+            }
+
+            /**
              * AsrLanguageId.
              */
             public Builder asrLanguageId(String asrLanguageId) {
@@ -1142,6 +1218,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder bailianAppParams(String bailianAppParams) {
                 this.bailianAppParams = bailianAppParams;
+                return this;
+            }
+
+            /**
+             * CharBreak.
+             */
+            public Builder charBreak(Boolean charBreak) {
+                this.charBreak = charBreak;
                 return this;
             }
 
@@ -1394,6 +1478,9 @@ public class AIAgentTemplateConfig extends TeaModel {
      * <p>AIAgentTemplateConfig</p>
      */
     public static class VoiceChat extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AsrHotWords")
+        private java.util.List<String> asrHotWords;
+
         @com.aliyun.core.annotation.NameInMap("AsrLanguageId")
         private String asrLanguageId;
 
@@ -1408,6 +1495,9 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("BailianAppParams")
         private String bailianAppParams;
+
+        @com.aliyun.core.annotation.NameInMap("CharBreak")
+        private Boolean charBreak;
 
         @com.aliyun.core.annotation.NameInMap("EnableIntelligentSegment")
         private Boolean enableIntelligentSegment;
@@ -1470,11 +1560,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         private String workflowOverrideParams;
 
         private VoiceChat(Builder builder) {
+            this.asrHotWords = builder.asrHotWords;
             this.asrLanguageId = builder.asrLanguageId;
             this.asrMaxSilence = builder.asrMaxSilence;
             this.avatarUrl = builder.avatarUrl;
             this.avatarUrlType = builder.avatarUrlType;
             this.bailianAppParams = builder.bailianAppParams;
+            this.charBreak = builder.charBreak;
             this.enableIntelligentSegment = builder.enableIntelligentSegment;
             this.enablePushToTalk = builder.enablePushToTalk;
             this.enableVoiceInterrupt = builder.enableVoiceInterrupt;
@@ -1503,6 +1595,13 @@ public class AIAgentTemplateConfig extends TeaModel {
 
         public static VoiceChat create() {
             return builder().build();
+        }
+
+        /**
+         * @return asrHotWords
+         */
+        public java.util.List<String> getAsrHotWords() {
+            return this.asrHotWords;
         }
 
         /**
@@ -1538,6 +1637,13 @@ public class AIAgentTemplateConfig extends TeaModel {
          */
         public String getBailianAppParams() {
             return this.bailianAppParams;
+        }
+
+        /**
+         * @return charBreak
+         */
+        public Boolean getCharBreak() {
+            return this.charBreak;
         }
 
         /**
@@ -1681,11 +1787,13 @@ public class AIAgentTemplateConfig extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<String> asrHotWords; 
             private String asrLanguageId; 
             private Integer asrMaxSilence; 
             private String avatarUrl; 
             private String avatarUrlType; 
             private String bailianAppParams; 
+            private Boolean charBreak; 
             private Boolean enableIntelligentSegment; 
             private Boolean enablePushToTalk; 
             private Boolean enableVoiceInterrupt; 
@@ -1711,11 +1819,13 @@ public class AIAgentTemplateConfig extends TeaModel {
             } 
 
             private Builder(VoiceChat model) {
+                this.asrHotWords = model.asrHotWords;
                 this.asrLanguageId = model.asrLanguageId;
                 this.asrMaxSilence = model.asrMaxSilence;
                 this.avatarUrl = model.avatarUrl;
                 this.avatarUrlType = model.avatarUrlType;
                 this.bailianAppParams = model.bailianAppParams;
+                this.charBreak = model.charBreak;
                 this.enableIntelligentSegment = model.enableIntelligentSegment;
                 this.enablePushToTalk = model.enablePushToTalk;
                 this.enableVoiceInterrupt = model.enableVoiceInterrupt;
@@ -1737,6 +1847,14 @@ public class AIAgentTemplateConfig extends TeaModel {
                 this.wakeUpQuery = model.wakeUpQuery;
                 this.workflowOverrideParams = model.workflowOverrideParams;
             } 
+
+            /**
+             * AsrHotWords.
+             */
+            public Builder asrHotWords(java.util.List<String> asrHotWords) {
+                this.asrHotWords = asrHotWords;
+                return this;
+            }
 
             /**
              * AsrLanguageId.
@@ -1775,6 +1893,14 @@ public class AIAgentTemplateConfig extends TeaModel {
              */
             public Builder bailianAppParams(String bailianAppParams) {
                 this.bailianAppParams = bailianAppParams;
+                return this;
+            }
+
+            /**
+             * CharBreak.
+             */
+            public Builder charBreak(Boolean charBreak) {
+                this.charBreak = charBreak;
                 return this;
             }
 

@@ -98,6 +98,9 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
      * <p>ListAIAgentInstanceResponseBody</p>
      */
     public static class Instances extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AgentConfig")
+        private AIAgentConfig agentConfig;
+
         @com.aliyun.core.annotation.NameInMap("CallLogUrl")
         private String callLogUrl;
 
@@ -108,12 +111,14 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+        @Deprecated
         private AIAgentTemplateConfig templateConfig;
 
         @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private Instances(Builder builder) {
+            this.agentConfig = builder.agentConfig;
             this.callLogUrl = builder.callLogUrl;
             this.runtimeConfig = builder.runtimeConfig;
             this.status = builder.status;
@@ -127,6 +132,13 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
 
         public static Instances create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentConfig
+         */
+        public AIAgentConfig getAgentConfig() {
+            return this.agentConfig;
         }
 
         /**
@@ -165,6 +177,7 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AIAgentConfig agentConfig; 
             private String callLogUrl; 
             private AIAgentRuntimeConfig runtimeConfig; 
             private String status; 
@@ -175,12 +188,21 @@ public class ListAIAgentInstanceResponseBody extends TeaModel {
             } 
 
             private Builder(Instances model) {
+                this.agentConfig = model.agentConfig;
                 this.callLogUrl = model.callLogUrl;
                 this.runtimeConfig = model.runtimeConfig;
                 this.status = model.status;
                 this.templateConfig = model.templateConfig;
                 this.userData = model.userData;
             } 
+
+            /**
+             * AgentConfig.
+             */
+            public Builder agentConfig(AIAgentConfig agentConfig) {
+                this.agentConfig = agentConfig;
+                return this;
+            }
 
             /**
              * <p>The URL of the call log file for the AI agent. The structure of the file is CallLog in the JSON format.</p>

@@ -17,17 +17,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AIAgentRuntimeConfig</p>
  */
 public class AIAgentRuntimeConfig extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AgentUserId")
+    private String agentUserId;
+
+    @com.aliyun.core.annotation.NameInMap("AuthToken")
+    private String authToken;
+
     @com.aliyun.core.annotation.NameInMap("AvatarChat3D")
+    @Deprecated
     private AvatarChat3D avatarChat3D;
 
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    private String channelId;
+
     @com.aliyun.core.annotation.NameInMap("VisionChat")
+    @Deprecated
     private VisionChat visionChat;
 
     @com.aliyun.core.annotation.NameInMap("VoiceChat")
+    @Deprecated
     private VoiceChat voiceChat;
 
     private AIAgentRuntimeConfig(Builder builder) {
+        this.agentUserId = builder.agentUserId;
+        this.authToken = builder.authToken;
         this.avatarChat3D = builder.avatarChat3D;
+        this.channelId = builder.channelId;
         this.visionChat = builder.visionChat;
         this.voiceChat = builder.voiceChat;
     }
@@ -45,10 +60,31 @@ public class AIAgentRuntimeConfig extends TeaModel {
     }
 
     /**
+     * @return agentUserId
+     */
+    public String getAgentUserId() {
+        return this.agentUserId;
+    }
+
+    /**
+     * @return authToken
+     */
+    public String getAuthToken() {
+        return this.authToken;
+    }
+
+    /**
      * @return avatarChat3D
      */
     public AvatarChat3D getAvatarChat3D() {
         return this.avatarChat3D;
+    }
+
+    /**
+     * @return channelId
+     */
+    public String getChannelId() {
+        return this.channelId;
     }
 
     /**
@@ -66,7 +102,10 @@ public class AIAgentRuntimeConfig extends TeaModel {
     }
 
     public static final class Builder {
+        private String agentUserId; 
+        private String authToken; 
         private AvatarChat3D avatarChat3D; 
+        private String channelId; 
         private VisionChat visionChat; 
         private VoiceChat voiceChat; 
 
@@ -74,16 +113,43 @@ public class AIAgentRuntimeConfig extends TeaModel {
         } 
 
         private Builder(AIAgentRuntimeConfig model) {
+            this.agentUserId = model.agentUserId;
+            this.authToken = model.authToken;
             this.avatarChat3D = model.avatarChat3D;
+            this.channelId = model.channelId;
             this.visionChat = model.visionChat;
             this.voiceChat = model.voiceChat;
         } 
+
+        /**
+         * AgentUserId.
+         */
+        public Builder agentUserId(String agentUserId) {
+            this.agentUserId = agentUserId;
+            return this;
+        }
+
+        /**
+         * AuthToken.
+         */
+        public Builder authToken(String authToken) {
+            this.authToken = authToken;
+            return this;
+        }
 
         /**
          * AvatarChat3D.
          */
         public Builder avatarChat3D(AvatarChat3D avatarChat3D) {
             this.avatarChat3D = avatarChat3D;
+            return this;
+        }
+
+        /**
+         * ChannelId.
+         */
+        public Builder channelId(String channelId) {
+            this.channelId = channelId;
             return this;
         }
 

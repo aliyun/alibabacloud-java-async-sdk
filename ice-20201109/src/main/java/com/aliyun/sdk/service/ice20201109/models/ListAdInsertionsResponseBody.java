@@ -323,10 +323,14 @@ public class ListAdInsertionsResponseBody extends TeaModel {
      * <p>ListAdInsertionsResponseBody</p>
      */
     public static class ManifestEndpointConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DashPrefix")
+        private String dashPrefix;
+
         @com.aliyun.core.annotation.NameInMap("HlsPrefix")
         private String hlsPrefix;
 
         private ManifestEndpointConfig(Builder builder) {
+            this.dashPrefix = builder.dashPrefix;
             this.hlsPrefix = builder.hlsPrefix;
         }
 
@@ -339,6 +343,13 @@ public class ListAdInsertionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return dashPrefix
+         */
+        public String getDashPrefix() {
+            return this.dashPrefix;
+        }
+
+        /**
          * @return hlsPrefix
          */
         public String getHlsPrefix() {
@@ -346,14 +357,24 @@ public class ListAdInsertionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String dashPrefix; 
             private String hlsPrefix; 
 
             private Builder() {
             } 
 
             private Builder(ManifestEndpointConfig model) {
+                this.dashPrefix = model.dashPrefix;
                 this.hlsPrefix = model.hlsPrefix;
             } 
+
+            /**
+             * <p>DASH清单播放端点前缀</p>
+             */
+            public Builder dashPrefix(String dashPrefix) {
+                this.dashPrefix = dashPrefix;
+                return this;
+            }
 
             /**
              * <p>The prefix of the playback endpoint for HLS manifests.</p>

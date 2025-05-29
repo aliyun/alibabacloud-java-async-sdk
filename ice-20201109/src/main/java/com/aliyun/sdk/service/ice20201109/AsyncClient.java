@@ -1263,6 +1263,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAIAgentInstanceResponse> listAIAgentInstance(ListAIAgentInstanceRequest request);
 
     /**
+     * @param request the request parameters of ListAIAgentPhoneNumber  ListAIAgentPhoneNumberRequest
+     * @return ListAIAgentPhoneNumberResponse
+     */
+    CompletableFuture<ListAIAgentPhoneNumberResponse> listAIAgentPhoneNumber(ListAIAgentPhoneNumberRequest request);
+
+    /**
      * @param request the request parameters of ListAdInsertions  ListAdInsertionsRequest
      * @return ListAdInsertionsResponse
      */
@@ -1911,6 +1917,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartAIAgentInstanceResponse> startAIAgentInstance(StartAIAgentInstanceRequest request);
 
     /**
+     * @param request the request parameters of StartAIAgentOutboundCall  StartAIAgentOutboundCallRequest
+     * @return StartAIAgentOutboundCallResponse
+     */
+    CompletableFuture<StartAIAgentOutboundCallResponse> startAIAgentOutboundCall(StartAIAgentOutboundCallRequest request);
+
+    /**
      * @param request the request parameters of StartChannel  StartChannelRequest
      * @return StartChannelResponse
      */
@@ -1979,6 +1991,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopRtcRobotInstanceResponse
      */
     CompletableFuture<StopRtcRobotInstanceResponse> stopRtcRobotInstance(StopRtcRobotInstanceRequest request);
+
+    /**
+     * @param request the request parameters of SubmitAIAgentVideoAuditTask  SubmitAIAgentVideoAuditTaskRequest
+     * @return SubmitAIAgentVideoAuditTaskResponse
+     */
+    CompletableFuture<SubmitAIAgentVideoAuditTaskResponse> submitAIAgentVideoAuditTask(SubmitAIAgentVideoAuditTaskRequest request);
 
     /**
      * @param request the request parameters of SubmitASRJob  SubmitASRJobRequest
