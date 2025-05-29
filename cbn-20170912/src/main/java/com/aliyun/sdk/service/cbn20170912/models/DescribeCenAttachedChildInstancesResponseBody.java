@@ -188,6 +188,9 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChildInstanceType")
         private String childInstanceType;
 
+        @com.aliyun.core.annotation.NameInMap("ManagedService")
+        private String managedService;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -198,6 +201,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             this.childInstanceOwnerId = builder.childInstanceOwnerId;
             this.childInstanceRegionId = builder.childInstanceRegionId;
             this.childInstanceType = builder.childInstanceType;
+            this.managedService = builder.managedService;
             this.status = builder.status;
         }
 
@@ -252,6 +256,13 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return managedService
+         */
+        public String getManagedService() {
+            return this.managedService;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -265,6 +276,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
             private Long childInstanceOwnerId; 
             private String childInstanceRegionId; 
             private String childInstanceType; 
+            private String managedService; 
             private String status; 
 
             private Builder() {
@@ -277,6 +289,7 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
                 this.childInstanceOwnerId = model.childInstanceOwnerId;
                 this.childInstanceRegionId = model.childInstanceRegionId;
                 this.childInstanceType = model.childInstanceType;
+                this.managedService = model.managedService;
                 this.status = model.status;
             } 
 
@@ -349,6 +362,14 @@ public class DescribeCenAttachedChildInstancesResponseBody extends TeaModel {
              */
             public Builder childInstanceType(String childInstanceType) {
                 this.childInstanceType = childInstanceType;
+                return this;
+            }
+
+            /**
+             * ManagedService.
+             */
+            public Builder managedService(String managedService) {
+                this.managedService = managedService;
                 return this;
             }
 

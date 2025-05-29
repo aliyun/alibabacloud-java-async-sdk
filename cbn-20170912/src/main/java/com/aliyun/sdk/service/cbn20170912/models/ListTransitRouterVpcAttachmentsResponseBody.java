@@ -372,6 +372,9 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
+        @com.aliyun.core.annotation.NameInMap("ManagedService")
+        private String managedService;
+
         @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
@@ -416,6 +419,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             this.cenId = builder.cenId;
             this.chargeType = builder.chargeType;
             this.creationTime = builder.creationTime;
+            this.managedService = builder.managedService;
             this.orderType = builder.orderType;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
@@ -465,6 +469,13 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return managedService
+         */
+        public String getManagedService() {
+            return this.managedService;
         }
 
         /**
@@ -563,6 +574,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
             private String cenId; 
             private String chargeType; 
             private String creationTime; 
+            private String managedService; 
             private String orderType; 
             private String resourceType; 
             private String status; 
@@ -585,6 +597,7 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
                 this.cenId = model.cenId;
                 this.chargeType = model.chargeType;
                 this.creationTime = model.creationTime;
+                this.managedService = model.managedService;
                 this.orderType = model.orderType;
                 this.resourceType = model.resourceType;
                 this.status = model.status;
@@ -647,6 +660,14 @@ public class ListTransitRouterVpcAttachmentsResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * ManagedService.
+             */
+            public Builder managedService(String managedService) {
+                this.managedService = managedService;
                 return this;
             }
 

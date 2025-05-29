@@ -190,7 +190,14 @@ public class DeleteTrafficMarkingPolicyRequest extends Request {
         }
 
         /**
-         * Force.
+         * <p>Whether to force delete the traffic marking policy. Valid values:</p>
+         * <ul>
+         * <li><strong>false</strong> (default): checks whether there is a traffic classification rule before deleting the traffic marking policy. If there is, the traffic marking policy cannot be deleted and an error is returned.</li>
+         * <li><strong>true</strong>: When you delete a traffic marking policy, all traffic classification rules are deleted by default.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);

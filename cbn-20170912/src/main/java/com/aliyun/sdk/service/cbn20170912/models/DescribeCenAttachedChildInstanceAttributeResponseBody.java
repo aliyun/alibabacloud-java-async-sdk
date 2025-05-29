@@ -41,6 +41,9 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     @com.aliyun.core.annotation.NameInMap("ChildInstanceType")
     private String childInstanceType;
 
+    @com.aliyun.core.annotation.NameInMap("ManagedService")
+    private String managedService;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -56,6 +59,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         this.childInstanceOwnerId = builder.childInstanceOwnerId;
         this.childInstanceRegionId = builder.childInstanceRegionId;
         this.childInstanceType = builder.childInstanceType;
+        this.managedService = builder.managedService;
         this.requestId = builder.requestId;
         this.status = builder.status;
     }
@@ -129,6 +133,13 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
     }
 
     /**
+     * @return managedService
+     */
+    public String getManagedService() {
+        return this.managedService;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -151,6 +162,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
         private Long childInstanceOwnerId; 
         private String childInstanceRegionId; 
         private String childInstanceType; 
+        private String managedService; 
         private String requestId; 
         private String status; 
 
@@ -166,6 +178,7 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
             this.childInstanceOwnerId = model.childInstanceOwnerId;
             this.childInstanceRegionId = model.childInstanceRegionId;
             this.childInstanceType = model.childInstanceType;
+            this.managedService = model.managedService;
             this.requestId = model.requestId;
             this.status = model.status;
         } 
@@ -258,6 +271,14 @@ public class DescribeCenAttachedChildInstanceAttributeResponseBody extends TeaMo
          */
         public Builder childInstanceType(String childInstanceType) {
             this.childInstanceType = childInstanceType;
+            return this;
+        }
+
+        /**
+         * ManagedService.
+         */
+        public Builder managedService(String managedService) {
+            this.managedService = managedService;
             return this;
         }
 
