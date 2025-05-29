@@ -233,6 +233,9 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreatedAt")
         private String createdAt;
 
+        @com.aliyun.core.annotation.NameInMap("CustomerClassification")
+        private String customerClassification;
+
         @com.aliyun.core.annotation.NameInMap("DeductedAmountByCoupons")
         private Double deductedAmountByCoupons;
 
@@ -276,6 +279,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             this.amountDiscount = builder.amountDiscount;
             this.amountDue = builder.amountDue;
             this.createdAt = builder.createdAt;
+            this.customerClassification = builder.customerClassification;
             this.deductedAmountByCoupons = builder.deductedAmountByCoupons;
             this.discountedPrice = builder.discountedPrice;
             this.orderId = builder.orderId;
@@ -318,6 +322,13 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
          */
         public String getCreatedAt() {
             return this.createdAt;
+        }
+
+        /**
+         * @return customerClassification
+         */
+        public String getCustomerClassification() {
+            return this.customerClassification;
         }
 
         /**
@@ -415,6 +426,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
             private Double amountDiscount; 
             private Double amountDue; 
             private String createdAt; 
+            private String customerClassification; 
             private Double deductedAmountByCoupons; 
             private Double discountedPrice; 
             private Long orderId; 
@@ -436,6 +448,7 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
                 this.amountDiscount = model.amountDiscount;
                 this.amountDue = model.amountDue;
                 this.createdAt = model.createdAt;
+                this.customerClassification = model.customerClassification;
                 this.deductedAmountByCoupons = model.deductedAmountByCoupons;
                 this.discountedPrice = model.discountedPrice;
                 this.orderId = model.orderId;
@@ -472,6 +485,14 @@ public class GetSubPartnerOrderListResponseBody extends TeaModel {
              */
             public Builder createdAt(String createdAt) {
                 this.createdAt = createdAt;
+                return this;
+            }
+
+            /**
+             * CustomerClassification.
+             */
+            public Builder customerClassification(String customerClassification) {
+                this.customerClassification = customerClassification;
                 return this;
             }
 
