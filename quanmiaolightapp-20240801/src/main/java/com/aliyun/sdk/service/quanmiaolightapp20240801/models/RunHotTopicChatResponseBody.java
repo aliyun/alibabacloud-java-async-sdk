@@ -647,8 +647,14 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("news")
         private java.util.List<News> news;
 
+        @com.aliyun.core.annotation.NameInMap("pubTime")
+        private String pubTime;
+
         @com.aliyun.core.annotation.NameInMap("textSummary")
         private String textSummary;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
 
         private HotTopicSummaries(Builder builder) {
             this.customHotValue = builder.customHotValue;
@@ -658,7 +664,9 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             this.hotValue = builder.hotValue;
             this.images = builder.images;
             this.news = builder.news;
+            this.pubTime = builder.pubTime;
             this.textSummary = builder.textSummary;
+            this.url = builder.url;
         }
 
         public static Builder builder() {
@@ -719,10 +727,24 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         }
 
         /**
+         * @return pubTime
+         */
+        public String getPubTime() {
+            return this.pubTime;
+        }
+
+        /**
          * @return textSummary
          */
         public String getTextSummary() {
             return this.textSummary;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
         }
 
         public static final class Builder {
@@ -733,7 +755,9 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             private Double hotValue; 
             private java.util.List<Images> images; 
             private java.util.List<News> news; 
+            private String pubTime; 
             private String textSummary; 
+            private String url; 
 
             private Builder() {
             } 
@@ -746,7 +770,9 @@ public class RunHotTopicChatResponseBody extends TeaModel {
                 this.hotValue = model.hotValue;
                 this.images = model.images;
                 this.news = model.news;
+                this.pubTime = model.pubTime;
                 this.textSummary = model.textSummary;
+                this.url = model.url;
             } 
 
             /**
@@ -806,10 +832,26 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             }
 
             /**
+             * pubTime.
+             */
+            public Builder pubTime(String pubTime) {
+                this.pubTime = pubTime;
+                return this;
+            }
+
+            /**
              * textSummary.
              */
             public Builder textSummary(String textSummary) {
                 this.textSummary = textSummary;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
                 return this;
             }
 
@@ -926,8 +968,17 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("articles")
         private java.util.List<Articles> articles;
 
+        @com.aliyun.core.annotation.NameInMap("category")
+        private String category;
+
         @com.aliyun.core.annotation.NameInMap("hotTopicSummaries")
         private java.util.List<HotTopicSummaries> hotTopicSummaries;
+
+        @com.aliyun.core.annotation.NameInMap("keyword")
+        private String keyword;
+
+        @com.aliyun.core.annotation.NameInMap("location")
+        private String location;
 
         @com.aliyun.core.annotation.NameInMap("multimodalMedias")
         private java.util.List<MultimodalMedias> multimodalMedias;
@@ -943,7 +994,10 @@ public class RunHotTopicChatResponseBody extends TeaModel {
 
         private Output(Builder builder) {
             this.articles = builder.articles;
+            this.category = builder.category;
             this.hotTopicSummaries = builder.hotTopicSummaries;
+            this.keyword = builder.keyword;
+            this.location = builder.location;
             this.multimodalMedias = builder.multimodalMedias;
             this.recommendQueries = builder.recommendQueries;
             this.searchQuery = builder.searchQuery;
@@ -966,10 +1020,31 @@ public class RunHotTopicChatResponseBody extends TeaModel {
         }
 
         /**
+         * @return category
+         */
+        public String getCategory() {
+            return this.category;
+        }
+
+        /**
          * @return hotTopicSummaries
          */
         public java.util.List<HotTopicSummaries> getHotTopicSummaries() {
             return this.hotTopicSummaries;
+        }
+
+        /**
+         * @return keyword
+         */
+        public String getKeyword() {
+            return this.keyword;
+        }
+
+        /**
+         * @return location
+         */
+        public String getLocation() {
+            return this.location;
         }
 
         /**
@@ -1002,7 +1077,10 @@ public class RunHotTopicChatResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Articles> articles; 
+            private String category; 
             private java.util.List<HotTopicSummaries> hotTopicSummaries; 
+            private String keyword; 
+            private String location; 
             private java.util.List<MultimodalMedias> multimodalMedias; 
             private java.util.List<String> recommendQueries; 
             private String searchQuery; 
@@ -1013,7 +1091,10 @@ public class RunHotTopicChatResponseBody extends TeaModel {
 
             private Builder(Output model) {
                 this.articles = model.articles;
+                this.category = model.category;
                 this.hotTopicSummaries = model.hotTopicSummaries;
+                this.keyword = model.keyword;
+                this.location = model.location;
                 this.multimodalMedias = model.multimodalMedias;
                 this.recommendQueries = model.recommendQueries;
                 this.searchQuery = model.searchQuery;
@@ -1029,10 +1110,34 @@ public class RunHotTopicChatResponseBody extends TeaModel {
             }
 
             /**
+             * category.
+             */
+            public Builder category(String category) {
+                this.category = category;
+                return this;
+            }
+
+            /**
              * hotTopicSummaries.
              */
             public Builder hotTopicSummaries(java.util.List<HotTopicSummaries> hotTopicSummaries) {
                 this.hotTopicSummaries = hotTopicSummaries;
+                return this;
+            }
+
+            /**
+             * keyword.
+             */
+            public Builder keyword(String keyword) {
+                this.keyword = keyword;
+                return this;
+            }
+
+            /**
+             * location.
+             */
+            public Builder location(String location) {
+                this.location = location;
                 return this;
             }
 
