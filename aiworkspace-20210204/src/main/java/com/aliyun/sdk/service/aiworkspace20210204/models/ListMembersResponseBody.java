@@ -125,6 +125,9 @@ public class ListMembersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
+        @com.aliyun.core.annotation.NameInMap("AccountType")
+        private String accountType;
+
         @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
@@ -145,6 +148,7 @@ public class ListMembersResponseBody extends TeaModel {
 
         private Members(Builder builder) {
             this.accountName = builder.accountName;
+            this.accountType = builder.accountType;
             this.displayName = builder.displayName;
             this.gmtCreateTime = builder.gmtCreateTime;
             this.memberId = builder.memberId;
@@ -166,6 +170,13 @@ public class ListMembersResponseBody extends TeaModel {
          */
         public String getAccountName() {
             return this.accountName;
+        }
+
+        /**
+         * @return accountType
+         */
+        public String getAccountType() {
+            return this.accountType;
         }
 
         /**
@@ -212,6 +223,7 @@ public class ListMembersResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountName; 
+            private String accountType; 
             private String displayName; 
             private String gmtCreateTime; 
             private String memberId; 
@@ -224,6 +236,7 @@ public class ListMembersResponseBody extends TeaModel {
 
             private Builder(Members model) {
                 this.accountName = model.accountName;
+                this.accountType = model.accountType;
                 this.displayName = model.displayName;
                 this.gmtCreateTime = model.gmtCreateTime;
                 this.memberId = model.memberId;
@@ -237,6 +250,14 @@ public class ListMembersResponseBody extends TeaModel {
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
+                return this;
+            }
+
+            /**
+             * AccountType.
+             */
+            public Builder accountType(String accountType) {
+                this.accountType = accountType;
                 return this;
             }
 

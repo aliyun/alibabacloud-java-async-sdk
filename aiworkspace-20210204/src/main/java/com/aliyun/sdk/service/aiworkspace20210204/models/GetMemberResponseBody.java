@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMemberResponseBody</p>
  */
 public class GetMemberResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccountType")
+    private String accountType;
+
     @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
@@ -39,6 +42,7 @@ public class GetMemberResponseBody extends TeaModel {
     private String userId;
 
     private GetMemberResponseBody(Builder builder) {
+        this.accountType = builder.accountType;
         this.displayName = builder.displayName;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.memberId = builder.memberId;
@@ -58,6 +62,13 @@ public class GetMemberResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountType
+     */
+    public String getAccountType() {
+        return this.accountType;
     }
 
     /**
@@ -110,6 +121,7 @@ public class GetMemberResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accountType; 
         private String displayName; 
         private String gmtCreateTime; 
         private String memberId; 
@@ -122,6 +134,7 @@ public class GetMemberResponseBody extends TeaModel {
         } 
 
         private Builder(GetMemberResponseBody model) {
+            this.accountType = model.accountType;
             this.displayName = model.displayName;
             this.gmtCreateTime = model.gmtCreateTime;
             this.memberId = model.memberId;
@@ -130,6 +143,14 @@ public class GetMemberResponseBody extends TeaModel {
             this.roles = model.roles;
             this.userId = model.userId;
         } 
+
+        /**
+         * AccountType.
+         */
+        public Builder accountType(String accountType) {
+            this.accountType = accountType;
+            return this;
+        }
 
         /**
          * <p>The display name of the member.</p>
