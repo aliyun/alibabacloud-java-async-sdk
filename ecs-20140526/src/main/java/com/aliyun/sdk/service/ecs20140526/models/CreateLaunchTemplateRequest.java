@@ -1849,7 +1849,10 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * KMSKeyId.
+             * <p>The ID of the KMS key to use for the system disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e478b7a-4262-4802-b8cb-00d3fb40****</p>
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -2119,7 +2122,7 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the performance burst feature for data disk N. Valid values:</p>
+             * <p>Specifies whether to enable the performance burst feature for the system disk. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>
@@ -2136,12 +2139,12 @@ public class CreateLaunchTemplateRequest extends Request {
             /**
              * <p>The category of data disk N. Valid values:</p>
              * <ul>
-             * <li>cloud: basic disk.</li>
-             * <li>cloud_efficiency: ultra disk.</li>
-             * <li>cloud_ssd: standard SSD.</li>
-             * <li>cloud_essd: ESSD.</li>
+             * <li>cloud: basic disk</li>
+             * <li>cloud_efficiency: utra disk</li>
+             * <li>cloud_ssd: standard SSD</li>
+             * <li>cloud_essd: ESSD</li>
              * <li>cloud_auto: ESSD AutoPL disk</li>
-             * <li>cloud_essd_entry: ESSD Entry disk.</li>
+             * <li>cloud_essd_entry: ESSD Entry disk</li>
              * </ul>
              * <p>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.</p>
              * 
@@ -2154,7 +2157,7 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to release data disk N when the instance is released. Valid values:</p>
+             * <p>Specifies whether to release data disk N when the associated instance is released. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>
@@ -2199,7 +2202,7 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, letters, colons (:), underscores (_), and hyphens (-).</p>
+             * <p>The name of data disk N. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
              * 
              * <strong>example:</strong>
              * <p>testDataDiskName</p>
@@ -2221,7 +2224,10 @@ public class CreateLaunchTemplateRequest extends Request {
             }
 
             /**
-             * KMSKeyId.
+             * <p>The ID of the KMS key used for the data disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0e478b7a-4262-4802-b8cb-00d****</p>
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -2231,10 +2237,10 @@ public class CreateLaunchTemplateRequest extends Request {
             /**
              * <p>The performance level of the ESSD to use as data disk N. The value of N must be the same as that in <code>DataDisk.N.Category</code> when DataDisk.N.Category is set to cloud_essd. Valid values:</p>
              * <ul>
-             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-             * <li>PL1 (default): A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
-             * <li>PL2: A single ESSD can deliver up to 100,000 random read/write IOPS.</li>
-             * <li>PL3: A single ESSD can deliver up to 1,000,000 random read/write IOPS.</li>
+             * <li>PL0: A single ESSD can deliver up to 10000 random read/write IOPS.</li>
+             * <li>PL1 (default): A single ESSD can deliver up to 50000 random read/write IOPS.</li>
+             * <li>PL2: A single ESSD can deliver up to 100000 random read/write IOPS.</li>
+             * <li>PL3: A single ESSD can deliver up to 1000000 random read/write IOPS.</li>
              * </ul>
              * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
              * 
@@ -2272,9 +2278,9 @@ public class CreateLaunchTemplateRequest extends Request {
              * </li>
              * <li><p>Valid values if you set DataDisk.N.Category to cloud_essd: vary based on the value of <code>DataDisk.N.PerformanceLevel</code>.</p>
              * <ul>
-             * <li>Valid values if you set DataDisk.N.PerformanceLevel to PL0: 1 to 32768.</li>
-             * <li>Valid values if you set DataDisk.N.PerformanceLevel to PL1: 20 to 32768.</li>
-             * <li>Valid values if you set DataDisk.N.PerformanceLevel to PL2: 461 to 32768.</li>
+             * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL0: 1 to 32768.</li>
+             * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL1: 20 to 32768.</li>
+             * <li>Valid values if DataDisk.N.PerformanceLevel is set to PL2: 461 to 32768.</li>
              * <li>Valid values if you set DataDisk.N.PerformanceLevel to PL3: 1261 to 32768.</li>
              * </ul>
              * </li>

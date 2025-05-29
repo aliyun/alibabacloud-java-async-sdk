@@ -86,6 +86,9 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Memory")
     private Integer memory;
 
+    @com.aliyun.core.annotation.NameInMap("NetworkOptions")
+    private NetworkOptions networkOptions;
+
     @com.aliyun.core.annotation.NameInMap("OperationLocks")
     private OperationLocks operationLocks;
 
@@ -143,6 +146,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
         this.ioOptimized = builder.ioOptimized;
         this.memory = builder.memory;
+        this.networkOptions = builder.networkOptions;
         this.operationLocks = builder.operationLocks;
         this.publicIpAddress = builder.publicIpAddress;
         this.regionId = builder.regionId;
@@ -330,6 +334,13 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return networkOptions
+     */
+    public NetworkOptions getNetworkOptions() {
+        return this.networkOptions;
+    }
+
+    /**
      * @return operationLocks
      */
     public OperationLocks getOperationLocks() {
@@ -430,6 +441,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
         private Integer internetMaxBandwidthOut; 
         private String ioOptimized; 
         private Integer memory; 
+        private NetworkOptions networkOptions; 
         private OperationLocks operationLocks; 
         private PublicIpAddress publicIpAddress; 
         private String regionId; 
@@ -469,6 +481,7 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
             this.internetMaxBandwidthOut = model.internetMaxBandwidthOut;
             this.ioOptimized = model.ioOptimized;
             this.memory = model.memory;
+            this.networkOptions = model.networkOptions;
             this.operationLocks = model.operationLocks;
             this.publicIpAddress = model.publicIpAddress;
             this.regionId = model.regionId;
@@ -751,6 +764,14 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder memory(Integer memory) {
             this.memory = memory;
+            return this;
+        }
+
+        /**
+         * NetworkOptions.
+         */
+        public Builder networkOptions(NetworkOptions networkOptions) {
+            this.networkOptions = networkOptions;
             return this;
         }
 
@@ -1160,6 +1181,89 @@ public class DescribeInstanceAttributeResponseBody extends TeaModel {
 
             public InnerIpAddress build() {
                 return new InnerIpAddress(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstanceAttributeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstanceAttributeResponseBody</p>
+     */
+    public static class NetworkOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableJumboFrame")
+        private Boolean enableJumboFrame;
+
+        @com.aliyun.core.annotation.NameInMap("EnableNetworkEncryption")
+        private Boolean enableNetworkEncryption;
+
+        private NetworkOptions(Builder builder) {
+            this.enableJumboFrame = builder.enableJumboFrame;
+            this.enableNetworkEncryption = builder.enableNetworkEncryption;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableJumboFrame
+         */
+        public Boolean getEnableJumboFrame() {
+            return this.enableJumboFrame;
+        }
+
+        /**
+         * @return enableNetworkEncryption
+         */
+        public Boolean getEnableNetworkEncryption() {
+            return this.enableNetworkEncryption;
+        }
+
+        public static final class Builder {
+            private Boolean enableJumboFrame; 
+            private Boolean enableNetworkEncryption; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkOptions model) {
+                this.enableJumboFrame = model.enableJumboFrame;
+                this.enableNetworkEncryption = model.enableNetworkEncryption;
+            } 
+
+            /**
+             * <p>Indicates whether the Jumbo Frame feature is enabled for the instance. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/200512.html">MTUs</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder enableJumboFrame(Boolean enableJumboFrame) {
+                this.enableJumboFrame = enableJumboFrame;
+                return this;
+            }
+
+            /**
+             * EnableNetworkEncryption.
+             */
+            public Builder enableNetworkEncryption(Boolean enableNetworkEncryption) {
+                this.enableNetworkEncryption = enableNetworkEncryption;
+                return this;
+            }
+
+            public NetworkOptions build() {
+                return new NetworkOptions(this);
             } 
 
         } 

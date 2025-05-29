@@ -168,7 +168,11 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag value. A prefix list can have 1 to 20 tags. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http:// or https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -176,7 +180,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag key. A prefix list can have 1 to 20 tags. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -469,7 +476,10 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the prefix list belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-bp67acfmxazb4p****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -477,7 +487,7 @@ public class DescribePrefixListsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags of the prefix list.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

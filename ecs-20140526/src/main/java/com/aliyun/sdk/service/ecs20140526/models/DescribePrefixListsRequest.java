@@ -336,7 +336,10 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the prefix list belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-bp67acfmxazb4p****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -363,7 +366,7 @@ public class DescribePrefixListsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags of the prefix list.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -431,7 +434,10 @@ public class DescribePrefixListsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of tag N of the prefix list. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <code>http:// or https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -439,7 +445,11 @@ public class DescribePrefixListsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of tag N of the prefix list. Valid values of N: 1 to 20. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http:// or https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
