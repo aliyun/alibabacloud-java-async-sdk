@@ -1589,6 +1589,12 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Envs")
         private String envs;
 
+        @com.aliyun.core.annotation.NameInMap("GpuCount")
+        private String gpuCount;
+
+        @com.aliyun.core.annotation.NameInMap("GpuType")
+        private String gpuType;
+
         @com.aliyun.core.annotation.NameInMap("ImagePullSecrets")
         private String imagePullSecrets;
 
@@ -1792,6 +1798,8 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             this.enableIdle = builder.enableIdle;
             this.enableNewArms = builder.enableNewArms;
             this.envs = builder.envs;
+            this.gpuCount = builder.gpuCount;
+            this.gpuType = builder.gpuType;
             this.imagePullSecrets = builder.imagePullSecrets;
             this.imageUrl = builder.imageUrl;
             this.initContainersConfig = builder.initContainersConfig;
@@ -2034,6 +2042,20 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
          */
         public String getEnvs() {
             return this.envs;
+        }
+
+        /**
+         * @return gpuCount
+         */
+        public String getGpuCount() {
+            return this.gpuCount;
+        }
+
+        /**
+         * @return gpuType
+         */
+        public String getGpuType() {
+            return this.gpuType;
         }
 
         /**
@@ -2475,6 +2497,8 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
             private Boolean enableIdle; 
             private Boolean enableNewArms; 
             private String envs; 
+            private String gpuCount; 
+            private String gpuType; 
             private String imagePullSecrets; 
             private String imageUrl; 
             private java.util.List<InitContainersConfig> initContainersConfig; 
@@ -2564,6 +2588,8 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
                 this.enableIdle = model.enableIdle;
                 this.enableNewArms = model.enableNewArms;
                 this.envs = model.envs;
+                this.gpuCount = model.gpuCount;
+                this.gpuType = model.gpuType;
                 this.imagePullSecrets = model.imagePullSecrets;
                 this.imageUrl = model.imageUrl;
                 this.initContainersConfig = model.initContainersConfig;
@@ -2911,6 +2937,22 @@ public class DescribeApplicationConfigResponseBody extends TeaModel {
              */
             public Builder envs(String envs) {
                 this.envs = envs;
+                return this;
+            }
+
+            /**
+             * GpuCount.
+             */
+            public Builder gpuCount(String gpuCount) {
+                this.gpuCount = gpuCount;
+                return this;
+            }
+
+            /**
+             * GpuType.
+             */
+            public Builder gpuType(String gpuType) {
+                this.gpuType = gpuType;
                 return this;
             }
 

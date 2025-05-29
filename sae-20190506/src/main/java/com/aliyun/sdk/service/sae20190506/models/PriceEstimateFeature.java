@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PriceEstimateFeature</p>
  */
 public class PriceEstimateFeature extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AppCount")
+    private Long appCount;
+
     @com.aliyun.core.annotation.NameInMap("AppType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appType;
@@ -96,6 +99,7 @@ public class PriceEstimateFeature extends TeaModel {
     private String resourceType;
 
     private PriceEstimateFeature(Builder builder) {
+        this.appCount = builder.appCount;
         this.appType = builder.appType;
         this.cpuCore = builder.cpuCore;
         this.cpuStrategy = builder.cpuStrategy;
@@ -132,6 +136,13 @@ public class PriceEstimateFeature extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return appCount
+     */
+    public Long getAppCount() {
+        return this.appCount;
     }
 
     /**
@@ -303,6 +314,7 @@ public class PriceEstimateFeature extends TeaModel {
     }
 
     public static final class Builder {
+        private Long appCount; 
         private String appType; 
         private Float cpuCore; 
         private String cpuStrategy; 
@@ -332,6 +344,7 @@ public class PriceEstimateFeature extends TeaModel {
         } 
 
         private Builder(PriceEstimateFeature model) {
+            this.appCount = model.appCount;
             this.appType = model.appType;
             this.cpuCore = model.cpuCore;
             this.cpuStrategy = model.cpuStrategy;
@@ -357,6 +370,14 @@ public class PriceEstimateFeature extends TeaModel {
             this.regionId = model.regionId;
             this.resourceType = model.resourceType;
         } 
+
+        /**
+         * AppCount.
+         */
+        public Builder appCount(Long appCount) {
+            this.appCount = appCount;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
