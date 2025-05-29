@@ -272,6 +272,9 @@ public class ListArtifactsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("PermissionType")
+        private String permissionType;
+
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
@@ -289,6 +292,7 @@ public class ListArtifactsResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.maxVersion = builder.maxVersion;
             this.name = builder.name;
+            this.permissionType = builder.permissionType;
             this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -352,6 +356,13 @@ public class ListArtifactsResponseBody extends TeaModel {
         }
 
         /**
+         * @return permissionType
+         */
+        public String getPermissionType() {
+            return this.permissionType;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -380,6 +391,7 @@ public class ListArtifactsResponseBody extends TeaModel {
             private String gmtModified; 
             private String maxVersion; 
             private String name; 
+            private String permissionType; 
             private String resourceGroupId; 
             private String status; 
             private java.util.List<Tags> tags; 
@@ -395,6 +407,7 @@ public class ListArtifactsResponseBody extends TeaModel {
                 this.gmtModified = model.gmtModified;
                 this.maxVersion = model.maxVersion;
                 this.name = model.name;
+                this.permissionType = model.permissionType;
                 this.resourceGroupId = model.resourceGroupId;
                 this.status = model.status;
                 this.tags = model.tags;
@@ -474,6 +487,21 @@ public class ListArtifactsResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * <p>Permission fields are applicable to container image artifact and Helm Chart artifact They can only change from Automatic to Public. Options:</p>
+             * <ul>
+             * <li>Public</li>
+             * <li>Automatic</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Public</p>
+             */
+            public Builder permissionType(String permissionType) {
+                this.permissionType = permissionType;
                 return this;
             }
 

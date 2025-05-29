@@ -250,7 +250,10 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
             } 
 
             /**
-             * ErrorCode.
+             * <p>Mock error code.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EntityNotExist.Service</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -258,7 +261,10 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
             }
 
             /**
-             * ErrorMessage.
+             * <p>Mock error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The provided parameter &quot;ServiceId&quot; is invalid.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -266,7 +272,10 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
             }
 
             /**
-             * UpdateResponse.
+             * <p>if you want mock response, please open this option.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder updateResponse(Boolean updateResponse) {
                 this.updateResponse = updateResponse;
@@ -344,7 +353,7 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
             }
 
             /**
-             * ResponseInfo.
+             * <p>Mock response info.</p>
              */
             public Builder responseInfo(ResponseInfo responseInfo) {
                 this.responseInfo = responseInfo;
