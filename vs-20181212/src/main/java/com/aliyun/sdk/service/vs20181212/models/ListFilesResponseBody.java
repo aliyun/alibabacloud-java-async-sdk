@@ -48,6 +48,10 @@ public class ListFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return files
      */
@@ -89,6 +93,17 @@ public class ListFilesResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFilesResponseBody model) {
+            this.files = model.files;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Files.
@@ -251,6 +266,20 @@ public class ListFilesResponseBody extends TeaModel {
             private String targetPath; 
             private String updateTime; 
             private String uploadTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Files model) {
+                this.description = model.description;
+                this.fileId = model.fileId;
+                this.fileName = model.fileName;
+                this.status = model.status;
+                this.statusDescription = model.statusDescription;
+                this.targetPath = model.targetPath;
+                this.updateTime = model.updateTime;
+                this.uploadTime = model.uploadTime;
+            } 
 
             /**
              * Description.

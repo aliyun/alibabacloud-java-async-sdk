@@ -36,6 +36,10 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bindings
      */
@@ -53,6 +57,14 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Bindings> bindings; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchUnbindTemplateResponseBody model) {
+            this.bindings = model.bindings;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Bindings.
@@ -143,6 +155,16 @@ public class BatchUnbindTemplateResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceType; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Bindings model) {
+                this.error = model.error;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * Error.

@@ -120,6 +120,10 @@ public class DescribeTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callback
      */
@@ -305,6 +309,35 @@ public class DescribeTemplateResponseBody extends TeaModel {
         private java.util.List<TransConfigs> transConfigs; 
         private String trigger; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTemplateResponseBody model) {
+            this.callback = model.callback;
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.fileFormat = model.fileFormat;
+            this.flv = model.flv;
+            this.hlsM3u8 = model.hlsM3u8;
+            this.hlsTs = model.hlsTs;
+            this.id = model.id;
+            this.interval = model.interval;
+            this.jpgOnDemand = model.jpgOnDemand;
+            this.jpgOverwrite = model.jpgOverwrite;
+            this.jpgSequence = model.jpgSequence;
+            this.mp4 = model.mp4;
+            this.name = model.name;
+            this.ossBucket = model.ossBucket;
+            this.ossEndpoint = model.ossEndpoint;
+            this.ossFilePrefix = model.ossFilePrefix;
+            this.region = model.region;
+            this.requestId = model.requestId;
+            this.retention = model.retention;
+            this.transConfigs = model.transConfigs;
+            this.trigger = model.trigger;
+            this.type = model.type;
+        } 
 
         /**
          * Callback.
@@ -611,6 +644,20 @@ public class DescribeTemplateResponseBody extends TeaModel {
             private Long videoBitrate; 
             private String videoCodec; 
             private Long width; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransConfigs model) {
+                this.fps = model.fps;
+                this.gop = model.gop;
+                this.height = model.height;
+                this.id = model.id;
+                this.name = model.name;
+                this.videoBitrate = model.videoBitrate;
+                this.videoCodec = model.videoCodec;
+                this.width = model.width;
+            } 
 
             /**
              * Fps.

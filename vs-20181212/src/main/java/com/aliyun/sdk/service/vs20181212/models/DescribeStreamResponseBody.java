@@ -84,6 +84,10 @@ public class DescribeStreamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return app
      */
@@ -197,6 +201,26 @@ public class DescribeStreamResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
         private Integer width; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStreamResponseBody model) {
+            this.app = model.app;
+            this.createdTime = model.createdTime;
+            this.deviceId = model.deviceId;
+            this.enabled = model.enabled;
+            this.groupId = model.groupId;
+            this.height = model.height;
+            this.id = model.id;
+            this.name = model.name;
+            this.playDomain = model.playDomain;
+            this.protocol = model.protocol;
+            this.pushDomain = model.pushDomain;
+            this.requestId = model.requestId;
+            this.status = model.status;
+            this.width = model.width;
+        } 
 
         /**
          * App.

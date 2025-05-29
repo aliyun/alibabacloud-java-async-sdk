@@ -116,6 +116,10 @@ public class DescribeGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aliasId
      */
@@ -293,6 +297,34 @@ public class DescribeGroupResponseBody extends TeaModel {
         private String requestId; 
         private Stats stats; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeGroupResponseBody model) {
+            this.aliasId = model.aliasId;
+            this.app = model.app;
+            this.callback = model.callback;
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.enabled = model.enabled;
+            this.gbId = model.gbId;
+            this.gbIp = model.gbIp;
+            this.gbPort = model.gbPort;
+            this.gbTcpPorts = model.gbTcpPorts;
+            this.gbUdpPorts = model.gbUdpPorts;
+            this.id = model.id;
+            this.inProtocol = model.inProtocol;
+            this.lazyPull = model.lazyPull;
+            this.name = model.name;
+            this.outProtocol = model.outProtocol;
+            this.playDomain = model.playDomain;
+            this.pushDomain = model.pushDomain;
+            this.region = model.region;
+            this.requestId = model.requestId;
+            this.stats = model.stats;
+            this.status = model.status;
+        } 
 
         /**
          * AliasId.
@@ -543,6 +575,16 @@ public class DescribeGroupResponseBody extends TeaModel {
             private Long iedNum; 
             private Long ipcNum; 
             private Long platformNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Stats model) {
+                this.deviceNum = model.deviceNum;
+                this.iedNum = model.iedNum;
+                this.ipcNum = model.ipcNum;
+                this.platformNum = model.platformNum;
+            } 
 
             /**
              * DeviceNum.

@@ -36,6 +36,10 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return records
      */
@@ -53,6 +57,14 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Records> records; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStreamVodListResponseBody model) {
+            this.records = model.records;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Records.
@@ -119,6 +131,14 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
         public static final class Builder {
             private Long endTime; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * EndTime.

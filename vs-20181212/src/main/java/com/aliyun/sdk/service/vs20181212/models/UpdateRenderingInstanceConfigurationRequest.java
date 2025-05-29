@@ -41,7 +41,7 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -149,6 +149,14 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
             private String name; 
             private Object value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attributes model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>This parameter is required.</p>
              * 
@@ -223,6 +231,14 @@ public class UpdateRenderingInstanceConfigurationRequest extends Request {
         public static final class Builder {
             private java.util.List<Attributes> attributes; 
             private String moduleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configuration model) {
+                this.attributes = model.attributes;
+                this.moduleName = model.moduleName;
+            } 
 
             /**
              * <p>This parameter is required.</p>

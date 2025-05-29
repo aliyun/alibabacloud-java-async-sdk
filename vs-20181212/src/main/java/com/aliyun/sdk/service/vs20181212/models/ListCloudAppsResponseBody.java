@@ -48,6 +48,10 @@ public class ListCloudAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cloudApps
      */
@@ -89,6 +93,17 @@ public class ListCloudAppsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCloudAppsResponseBody model) {
+            this.cloudApps = model.cloudApps;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * CloudApps.
@@ -251,6 +266,20 @@ public class ListCloudAppsResponseBody extends TeaModel {
             private String statusDescription; 
             private String updateTime; 
             private String uploadTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(CloudApps model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.appVersion = model.appVersion;
+                this.description = model.description;
+                this.status = model.status;
+                this.statusDescription = model.statusDescription;
+                this.updateTime = model.updateTime;
+                this.uploadTime = model.uploadTime;
+            } 
 
             /**
              * AppId.

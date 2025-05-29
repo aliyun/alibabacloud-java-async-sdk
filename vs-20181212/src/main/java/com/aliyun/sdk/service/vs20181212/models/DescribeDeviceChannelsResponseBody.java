@@ -52,6 +52,10 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return channels
      */
@@ -101,6 +105,18 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDeviceChannelsResponseBody model) {
+            this.channels = model.channels;
+            this.pageCount = model.pageCount;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Channels.
@@ -271,6 +287,20 @@ public class DescribeDeviceChannelsResponseBody extends TeaModel {
             private String params; 
             private String streamId; 
             private String streamStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(Channels model) {
+                this.channelId = model.channelId;
+                this.deviceId = model.deviceId;
+                this.deviceStatus = model.deviceStatus;
+                this.gbId = model.gbId;
+                this.name = model.name;
+                this.params = model.params;
+                this.streamId = model.streamId;
+                this.streamStatus = model.streamStatus;
+            } 
 
             /**
              * ChannelId.

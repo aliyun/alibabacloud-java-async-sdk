@@ -48,6 +48,10 @@ public class CreateGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gbId
      */
@@ -89,6 +93,17 @@ public class CreateGroupResponseBody extends TeaModel {
         private Long gbPort; 
         private String id; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGroupResponseBody model) {
+            this.gbId = model.gbId;
+            this.gbIp = model.gbIp;
+            this.gbPort = model.gbPort;
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * GbId.

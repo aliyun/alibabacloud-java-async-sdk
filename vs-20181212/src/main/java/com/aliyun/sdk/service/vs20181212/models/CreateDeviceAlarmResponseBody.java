@@ -48,6 +48,10 @@ public class CreateDeviceAlarmResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alarmDelay
      */
@@ -89,6 +93,17 @@ public class CreateDeviceAlarmResponseBody extends TeaModel {
         private Long expire; 
         private String requestId; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDeviceAlarmResponseBody model) {
+            this.alarmDelay = model.alarmDelay;
+            this.alarmId = model.alarmId;
+            this.expire = model.expire;
+            this.requestId = model.requestId;
+            this.url = model.url;
+        } 
 
         /**
          * AlarmDelay.

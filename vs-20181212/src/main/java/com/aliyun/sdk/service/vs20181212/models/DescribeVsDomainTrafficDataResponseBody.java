@@ -52,6 +52,10 @@ public class DescribeVsDomainTrafficDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -101,6 +105,18 @@ public class DescribeVsDomainTrafficDataResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private TrafficDataPerInterval trafficDataPerInterval; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsDomainTrafficDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.trafficDataPerInterval = model.trafficDataPerInterval;
+        } 
 
         /**
          * DataInterval.
@@ -200,6 +216,14 @@ public class DescribeVsDomainTrafficDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String trafficValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.timeStamp = model.timeStamp;
+                this.trafficValue = model.trafficValue;
+            } 
+
             /**
              * TimeStamp.
              */
@@ -254,6 +278,13 @@ public class DescribeVsDomainTrafficDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

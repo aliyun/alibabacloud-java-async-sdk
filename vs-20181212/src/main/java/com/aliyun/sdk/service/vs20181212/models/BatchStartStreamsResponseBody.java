@@ -36,6 +36,10 @@ public class BatchStartStreamsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class BatchStartStreamsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Results> results; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchStartStreamsResponseBody model) {
+            this.requestId = model.requestId;
+            this.results = model.results;
+        } 
 
         /**
          * RequestId.
@@ -131,6 +143,15 @@ public class BatchStartStreamsResponseBody extends TeaModel {
             private String error; 
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.error = model.error;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * Error.

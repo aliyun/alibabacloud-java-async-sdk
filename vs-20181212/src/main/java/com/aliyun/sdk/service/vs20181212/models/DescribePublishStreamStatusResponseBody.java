@@ -40,6 +40,10 @@ public class DescribePublishStreamStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class DescribePublishStreamStatusResponseBody extends TeaModel {
         private Long code; 
         private Long message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePublishStreamStatusResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.

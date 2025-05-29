@@ -48,6 +48,10 @@ public class ListPublicKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListPublicKeysResponseBody extends TeaModel {
         private java.util.List<PublicKeys> publicKeys; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPublicKeysResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.publicKeys = model.publicKeys;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * PageNumber.
@@ -227,6 +242,18 @@ public class ListPublicKeysResponseBody extends TeaModel {
             private String keyName; 
             private String keyType; 
             private String uploadTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicKeys model) {
+                this.content = model.content;
+                this.description = model.description;
+                this.keyGroup = model.keyGroup;
+                this.keyName = model.keyName;
+                this.keyType = model.keyType;
+                this.uploadTime = model.uploadTime;
+            } 
 
             /**
              * Content.

@@ -36,6 +36,10 @@ public class BatchUnbindPurchasedDevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class BatchUnbindPurchasedDevicesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Results> results; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchUnbindPurchasedDevicesResponseBody model) {
+            this.requestId = model.requestId;
+            this.results = model.results;
+        } 
 
         /**
          * RequestId.
@@ -119,6 +131,14 @@ public class BatchUnbindPurchasedDevicesResponseBody extends TeaModel {
         public static final class Builder {
             private String deviceId; 
             private String error; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.deviceId = model.deviceId;
+                this.error = model.error;
+            } 
 
             /**
              * DeviceId.

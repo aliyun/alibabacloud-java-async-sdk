@@ -23,6 +23,9 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
+    @com.aliyun.core.annotation.NameInMap("EgressIp")
+    private String egressIp;
+
     @com.aliyun.core.annotation.NameInMap("Hostname")
     private String hostname;
 
@@ -50,6 +53,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     private DescribeRenderingInstanceResponseBody(Builder builder) {
         this.configInfo = builder.configInfo;
         this.creationTime = builder.creationTime;
+        this.egressIp = builder.egressIp;
         this.hostname = builder.hostname;
         this.portMappings = builder.portMappings;
         this.renderingInstanceId = builder.renderingInstanceId;
@@ -68,6 +72,10 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configInfo
      */
@@ -80,6 +88,13 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
      */
     public String getCreationTime() {
         return this.creationTime;
+    }
+
+    /**
+     * @return egressIp
+     */
+    public String getEgressIp() {
+        return this.egressIp;
     }
 
     /**
@@ -141,6 +156,7 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private ConfigInfo configInfo; 
         private String creationTime; 
+        private String egressIp; 
         private String hostname; 
         private java.util.List<PortMappings> portMappings; 
         private String renderingInstanceId; 
@@ -149,6 +165,23 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         private String requestId; 
         private Integer storageSize; 
         private SystemInfo systemInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRenderingInstanceResponseBody model) {
+            this.configInfo = model.configInfo;
+            this.creationTime = model.creationTime;
+            this.egressIp = model.egressIp;
+            this.hostname = model.hostname;
+            this.portMappings = model.portMappings;
+            this.renderingInstanceId = model.renderingInstanceId;
+            this.renderingSpec = model.renderingSpec;
+            this.renderingStatus = model.renderingStatus;
+            this.requestId = model.requestId;
+            this.storageSize = model.storageSize;
+            this.systemInfo = model.systemInfo;
+        } 
 
         /**
          * ConfigInfo.
@@ -163,6 +196,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
+            return this;
+        }
+
+        /**
+         * EgressIp.
+         */
+        public Builder egressIp(String egressIp) {
+            this.egressIp = egressIp;
             return this;
         }
 
@@ -280,6 +321,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             private String name; 
             private Object value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Attributes model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * Name.
              */
@@ -346,6 +395,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Attributes> attributes; 
             private String moduleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configuration model) {
+                this.attributes = model.attributes;
+                this.moduleName = model.moduleName;
+            } 
 
             /**
              * Attributes.
@@ -438,6 +495,16 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             private Integer maxIngressBandwidth; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkConfig model) {
+                this.bandwidthStatus = model.bandwidthStatus;
+                this.maxEgressBandwidth = model.maxEgressBandwidth;
+                this.maxIngressBandwidth = model.maxIngressBandwidth;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * BandwidthStatus.
              */
@@ -521,6 +588,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             private java.util.List<Configuration> configuration; 
             private NetworkConfig networkConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigInfo model) {
+                this.configuration = model.configuration;
+                this.networkConfig = model.networkConfig;
+            } 
+
             /**
              * Configuration.
              */
@@ -587,6 +662,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String externalPort; 
             private String internalPort; 
+
+            private Builder() {
+            } 
+
+            private Builder(PortMappings model) {
+                this.externalPort = model.externalPort;
+                this.internalPort = model.internalPort;
+            } 
 
             /**
              * ExternalPort.
@@ -667,6 +750,15 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             private String latestAction; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(RenderingStatus model) {
+                this.description = model.description;
+                this.latestAction = model.latestAction;
+                this.status = model.status;
+            } 
+
             /**
              * Description.
              */
@@ -741,6 +833,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private Integer frequency; 
             private String resolution; 
+
+            private Builder() {
+            } 
+
+            private Builder(SystemInfo model) {
+                this.frequency = model.frequency;
+                this.resolution = model.resolution;
+            } 
 
             /**
              * Frequency.

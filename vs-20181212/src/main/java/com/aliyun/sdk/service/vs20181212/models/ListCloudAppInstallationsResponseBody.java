@@ -48,6 +48,10 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return installationInfos
      */
@@ -89,6 +93,17 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCloudAppInstallationsResponseBody model) {
+            this.installationInfos = model.installationInfos;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * InstallationInfos.
@@ -251,6 +266,20 @@ public class ListCloudAppInstallationsResponseBody extends TeaModel {
             private String status; 
             private String statusDescription; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstallationInfos model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.appVersion = model.appVersion;
+                this.installationTime = model.installationTime;
+                this.renderingInstanceId = model.renderingInstanceId;
+                this.status = model.status;
+                this.statusDescription = model.statusDescription;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * AppId.

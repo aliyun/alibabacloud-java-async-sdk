@@ -44,6 +44,10 @@ public class DescribeVodStreamURLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return outProtocol
      */
@@ -77,6 +81,16 @@ public class DescribeVodStreamURLResponseBody extends TeaModel {
         private Long port; 
         private String requestId; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVodStreamURLResponseBody model) {
+            this.outProtocol = model.outProtocol;
+            this.port = model.port;
+            this.requestId = model.requestId;
+            this.url = model.url;
+        } 
 
         /**
          * OutProtocol.

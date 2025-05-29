@@ -96,6 +96,10 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoStart
      */
@@ -233,6 +237,29 @@ public class DescribeParentPlatformResponseBody extends TeaModel {
         private String protocol; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParentPlatformResponseBody model) {
+            this.autoStart = model.autoStart;
+            this.clientAuth = model.clientAuth;
+            this.clientGbId = model.clientGbId;
+            this.clientIp = model.clientIp;
+            this.clientPassword = model.clientPassword;
+            this.clientPort = model.clientPort;
+            this.clientUsername = model.clientUsername;
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.gbId = model.gbId;
+            this.id = model.id;
+            this.ip = model.ip;
+            this.name = model.name;
+            this.port = model.port;
+            this.protocol = model.protocol;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * AutoStart.

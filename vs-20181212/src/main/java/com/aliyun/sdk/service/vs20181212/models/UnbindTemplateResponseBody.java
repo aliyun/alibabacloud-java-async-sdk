@@ -48,6 +48,10 @@ public class UnbindTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -89,6 +93,17 @@ public class UnbindTemplateResponseBody extends TeaModel {
         private String requestId; 
         private String templateId; 
         private String templateType; 
+
+        private Builder() {
+        } 
+
+        private Builder(UnbindTemplateResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.instanceType = model.instanceType;
+            this.requestId = model.requestId;
+            this.templateId = model.templateId;
+            this.templateType = model.templateType;
+        } 
 
         /**
          * InstanceId.

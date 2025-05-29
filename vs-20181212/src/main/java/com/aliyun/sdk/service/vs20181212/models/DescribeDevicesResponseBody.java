@@ -52,6 +52,10 @@ public class DescribeDevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return devices
      */
@@ -101,6 +105,18 @@ public class DescribeDevicesResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDevicesResponseBody model) {
+            this.devices = model.devices;
+            this.pageCount = model.pageCount;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Devices.
@@ -248,6 +264,18 @@ public class DescribeDevicesResponseBody extends TeaModel {
             private String name; 
             private String parentId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Directory model) {
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.id = model.id;
+                this.name = model.name;
+                this.parentId = model.parentId;
+            } 
+
             /**
              * CreatedTime.
              */
@@ -382,6 +410,17 @@ public class DescribeDevicesResponseBody extends TeaModel {
             private Long offlineNum; 
             private Long onlineNum; 
             private Long streamNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Stats model) {
+                this.channelNum = model.channelNum;
+                this.failedNum = model.failedNum;
+                this.offlineNum = model.offlineNum;
+                this.onlineNum = model.onlineNum;
+                this.streamNum = model.streamNum;
+            } 
 
             /**
              * ChannelNum.
@@ -821,6 +860,43 @@ public class DescribeDevicesResponseBody extends TeaModel {
             private String url; 
             private String username; 
             private String vendor; 
+
+            private Builder() {
+            } 
+
+            private Builder(Devices model) {
+                this.alarmMethod = model.alarmMethod;
+                this.autoDirectory = model.autoDirectory;
+                this.autoPos = model.autoPos;
+                this.autoStart = model.autoStart;
+                this.channelSyncTime = model.channelSyncTime;
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.directory = model.directory;
+                this.directoryId = model.directoryId;
+                this.dsn = model.dsn;
+                this.enabled = model.enabled;
+                this.gbId = model.gbId;
+                this.groupId = model.groupId;
+                this.id = model.id;
+                this.ip = model.ip;
+                this.latitude = model.latitude;
+                this.longitude = model.longitude;
+                this.name = model.name;
+                this.params = model.params;
+                this.parentId = model.parentId;
+                this.password = model.password;
+                this.port = model.port;
+                this.posInterval = model.posInterval;
+                this.protocol = model.protocol;
+                this.registeredTime = model.registeredTime;
+                this.stats = model.stats;
+                this.status = model.status;
+                this.type = model.type;
+                this.url = model.url;
+                this.username = model.username;
+                this.vendor = model.vendor;
+            } 
 
             /**
              * AlarmMethod.

@@ -36,6 +36,10 @@ public class DescribeRenderingInstanceSettingsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeRenderingInstanceSettingsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Settings> settings; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRenderingInstanceSettingsResponseBody model) {
+            this.requestId = model.requestId;
+            this.settings = model.settings;
+        } 
 
         /**
          * <p>Id of the request</p>
@@ -122,6 +134,14 @@ public class DescribeRenderingInstanceSettingsResponseBody extends TeaModel {
         public static final class Builder {
             private String attributeName; 
             private String attributeValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Settings model) {
+                this.attributeName = model.attributeName;
+                this.attributeValue = model.attributeValue;
+            } 
 
             /**
              * AttributeName.

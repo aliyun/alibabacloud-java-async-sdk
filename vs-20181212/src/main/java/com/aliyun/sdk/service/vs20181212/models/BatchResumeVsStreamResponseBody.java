@@ -36,6 +36,10 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResumeResult resumeResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchResumeVsStreamResponseBody model) {
+            this.requestId = model.requestId;
+            this.resumeResult = model.resumeResult;
+        } 
 
         /**
          * RequestId.
@@ -107,6 +119,13 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> channel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Channels model) {
+                this.channel = model.channel;
+            } 
 
             /**
              * Channel.
@@ -191,6 +210,16 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
             private String detail; 
             private String result; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResumeResultInfo model) {
+                this.channels = model.channels;
+                this.count = model.count;
+                this.detail = model.detail;
+                this.result = model.result;
+            } 
+
             /**
              * Channels.
              */
@@ -261,6 +290,13 @@ public class BatchResumeVsStreamResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ResumeResultInfo> resumeResultInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResumeResult model) {
+                this.resumeResultInfo = model.resumeResultInfo;
+            } 
 
             /**
              * ResumeResultInfo.

@@ -52,6 +52,10 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageCount
      */
@@ -101,6 +105,18 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
         private java.util.List<Platforms> platforms; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParentPlatformsResponseBody model) {
+            this.pageCount = model.pageCount;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.platforms = model.platforms;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * PageCount.
@@ -367,6 +383,28 @@ public class DescribeParentPlatformsResponseBody extends TeaModel {
             private Long port; 
             private String protocol; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Platforms model) {
+                this.autoStart = model.autoStart;
+                this.clientAuth = model.clientAuth;
+                this.clientGbId = model.clientGbId;
+                this.clientIp = model.clientIp;
+                this.clientPassword = model.clientPassword;
+                this.clientPort = model.clientPort;
+                this.clientUsername = model.clientUsername;
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.gbId = model.gbId;
+                this.id = model.id;
+                this.ip = model.ip;
+                this.name = model.name;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.status = model.status;
+            } 
 
             /**
              * AutoStart.

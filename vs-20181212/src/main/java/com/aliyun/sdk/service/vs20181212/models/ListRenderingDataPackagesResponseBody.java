@@ -40,6 +40,10 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataPackages
      */
@@ -65,6 +69,15 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         private java.util.List<DataPackages> dataPackages; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRenderingDataPackagesResponseBody model) {
+            this.dataPackages = model.dataPackages;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * DataPackages.
@@ -214,6 +227,20 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
             private Integer size; 
             private String status; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataPackages model) {
+                this.category = model.category;
+                this.creationTime = model.creationTime;
+                this.dataPackageId = model.dataPackageId;
+                this.description = model.description;
+                this.renderingInstanceId = model.renderingInstanceId;
+                this.size = model.size;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * Category.

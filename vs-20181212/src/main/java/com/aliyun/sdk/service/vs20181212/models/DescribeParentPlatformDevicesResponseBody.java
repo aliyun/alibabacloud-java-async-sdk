@@ -52,6 +52,10 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return devices
      */
@@ -101,6 +105,18 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeParentPlatformDevicesResponseBody model) {
+            this.devices = model.devices;
+            this.pageCount = model.pageCount;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Devices.
@@ -235,6 +251,17 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String parentId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Devices model) {
+                this.gbId = model.gbId;
+                this.groupId = model.groupId;
+                this.id = model.id;
+                this.name = model.name;
+                this.parentId = model.parentId;
+            } 
 
             /**
              * GbId.

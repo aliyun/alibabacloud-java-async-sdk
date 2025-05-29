@@ -36,6 +36,10 @@ public class BatchDeleteDevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class BatchDeleteDevicesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Results> results; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchDeleteDevicesResponseBody model) {
+            this.requestId = model.requestId;
+            this.results = model.results;
+        } 
 
         /**
          * RequestId.
@@ -119,6 +131,14 @@ public class BatchDeleteDevicesResponseBody extends TeaModel {
         public static final class Builder {
             private String error; 
             private String id; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.error = model.error;
+                this.id = model.id;
+            } 
 
             /**
              * Error.

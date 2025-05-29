@@ -40,6 +40,10 @@ public class DescribeStreamURLResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return expireTime
      */
@@ -65,6 +69,15 @@ public class DescribeStreamURLResponseBody extends TeaModel {
         private Long expireTime; 
         private String requestId; 
         private String url; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStreamURLResponseBody model) {
+            this.expireTime = model.expireTime;
+            this.requestId = model.requestId;
+            this.url = model.url;
+        } 
 
         /**
          * ExpireTime.

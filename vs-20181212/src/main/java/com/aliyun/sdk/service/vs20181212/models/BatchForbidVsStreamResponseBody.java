@@ -36,6 +36,10 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return forbidResult
      */
@@ -53,6 +57,14 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
     public static final class Builder {
         private ForbidResult forbidResult; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchForbidVsStreamResponseBody model) {
+            this.forbidResult = model.forbidResult;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ForbidResult.
@@ -107,6 +119,13 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> channel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Channels model) {
+                this.channel = model.channel;
+            } 
 
             /**
              * Channel.
@@ -191,6 +210,16 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
             private String detail; 
             private String result; 
 
+            private Builder() {
+            } 
+
+            private Builder(ForbidResultInfo model) {
+                this.channels = model.channels;
+                this.count = model.count;
+                this.detail = model.detail;
+                this.result = model.result;
+            } 
+
             /**
              * Channels.
              */
@@ -261,6 +290,13 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ForbidResultInfo> forbidResultInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForbidResult model) {
+                this.forbidResultInfo = model.forbidResultInfo;
+            } 
 
             /**
              * ForbidResultInfo.

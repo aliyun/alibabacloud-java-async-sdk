@@ -48,6 +48,10 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gatewayConfigurationInfos
      */
@@ -89,6 +93,17 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
         private String pageSize; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRenderingInstanceGatewayResponseBody model) {
+            this.gatewayConfigurationInfos = model.gatewayConfigurationInfos;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * GatewayConfigurationInfos.
@@ -215,6 +230,17 @@ public class ListRenderingInstanceGatewayResponseBody extends TeaModel {
             private String renderingInstanceId; 
             private String status; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(GatewayConfigurationInfos model) {
+                this.creationTime = model.creationTime;
+                this.gatewayInstanceId = model.gatewayInstanceId;
+                this.renderingInstanceId = model.renderingInstanceId;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * CreationTime.

@@ -40,6 +40,10 @@ public class StartStreamResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -65,6 +69,15 @@ public class StartStreamResponseBody extends TeaModel {
         private String id; 
         private String name; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartStreamResponseBody model) {
+            this.id = model.id;
+            this.name = model.name;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Id.

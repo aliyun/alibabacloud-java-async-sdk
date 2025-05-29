@@ -52,6 +52,10 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -101,6 +105,18 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private UvDataInterval uvDataInterval; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsDomainUvDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.uvDataInterval = model.uvDataInterval;
+        } 
 
         /**
          * DataInterval.
@@ -200,6 +216,14 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(UsageData model) {
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * TimeStamp.
              */
@@ -254,6 +278,13 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<UsageData> usageData; 
+
+            private Builder() {
+            } 
+
+            private Builder(UvDataInterval model) {
+                this.usageData = model.usageData;
+            } 
 
             /**
              * UsageData.

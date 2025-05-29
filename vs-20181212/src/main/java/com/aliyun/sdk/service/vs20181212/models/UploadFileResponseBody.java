@@ -36,6 +36,10 @@ public class UploadFileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileId
      */
@@ -53,6 +57,14 @@ public class UploadFileResponseBody extends TeaModel {
     public static final class Builder {
         private String fileId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadFileResponseBody model) {
+            this.fileId = model.fileId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * FileId.

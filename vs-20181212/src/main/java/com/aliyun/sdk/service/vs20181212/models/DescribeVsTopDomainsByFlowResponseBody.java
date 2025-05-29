@@ -52,6 +52,10 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainCount
      */
@@ -101,6 +105,18 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private TopDomains topDomains; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsTopDomainsByFlowResponseBody model) {
+            this.domainCount = model.domainCount;
+            this.domainOnlineCount = model.domainOnlineCount;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.topDomains = model.topDomains;
+        } 
 
         /**
          * DomainCount.
@@ -260,6 +276,19 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
             private String totalTraffic; 
             private String trafficPercent; 
 
+            private Builder() {
+            } 
+
+            private Builder(TopDomain model) {
+                this.domainName = model.domainName;
+                this.maxBps = model.maxBps;
+                this.maxBpsTime = model.maxBpsTime;
+                this.rank = model.rank;
+                this.totalAccess = model.totalAccess;
+                this.totalTraffic = model.totalTraffic;
+                this.trafficPercent = model.trafficPercent;
+            } 
+
             /**
              * DomainName.
              */
@@ -354,6 +383,13 @@ public class DescribeVsTopDomainsByFlowResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TopDomain> topDomain; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopDomains model) {
+                this.topDomain = model.topDomain;
+            } 
 
             /**
              * TopDomain.

@@ -36,6 +36,10 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainConfigs
      */
@@ -53,6 +57,14 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DomainConfigs> domainConfigs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsDomainConfigsResponseBody model) {
+            this.domainConfigs = model.domainConfigs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DomainConfigs.
@@ -119,6 +131,14 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
         public static final class Builder {
             private String argName; 
             private String argValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(FunctionArgs model) {
+                this.argName = model.argName;
+                this.argValue = model.argValue;
+            } 
 
             /**
              * ArgName.
@@ -210,6 +230,16 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
             private java.util.List<FunctionArgs> functionArgs; 
             private String functionName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainConfigs model) {
+                this.configId = model.configId;
+                this.functionArgs = model.functionArgs;
+                this.functionName = model.functionName;
+                this.status = model.status;
+            } 
 
             /**
              * ConfigId.

@@ -68,6 +68,10 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return format
      */
@@ -149,6 +153,22 @@ public class CreateStreamSnapshotResponseBody extends TeaModel {
         private Long timestamp; 
         private String url; 
         private Long width; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateStreamSnapshotResponseBody model) {
+            this.format = model.format;
+            this.height = model.height;
+            this.id = model.id;
+            this.ossBucket = model.ossBucket;
+            this.ossEndpoint = model.ossEndpoint;
+            this.ossObject = model.ossObject;
+            this.requestId = model.requestId;
+            this.timestamp = model.timestamp;
+            this.url = model.url;
+            this.width = model.width;
+        } 
 
         /**
          * Format.

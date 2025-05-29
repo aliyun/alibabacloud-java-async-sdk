@@ -52,6 +52,10 @@ public class DescribeStreamsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageCount
      */
@@ -101,6 +105,18 @@ public class DescribeStreamsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Streams> streams; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStreamsResponseBody model) {
+            this.pageCount = model.pageCount;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.streams = model.streams;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * PageCount.
@@ -331,6 +347,25 @@ public class DescribeStreamsResponseBody extends TeaModel {
             private String pushDomain; 
             private String status; 
             private Integer width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Streams model) {
+                this.app = model.app;
+                this.createdTime = model.createdTime;
+                this.deviceId = model.deviceId;
+                this.enabled = model.enabled;
+                this.groupId = model.groupId;
+                this.height = model.height;
+                this.id = model.id;
+                this.name = model.name;
+                this.playDomain = model.playDomain;
+                this.protocol = model.protocol;
+                this.pushDomain = model.pushDomain;
+                this.status = model.status;
+                this.width = model.width;
+            } 
 
             /**
              * App.

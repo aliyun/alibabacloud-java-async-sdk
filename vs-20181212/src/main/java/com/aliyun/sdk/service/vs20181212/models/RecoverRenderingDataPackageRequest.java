@@ -23,6 +23,10 @@ public class RecoverRenderingDataPackageRequest extends Request {
     private String dataPackageId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadMode")
+    private String loadMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String renderingInstanceId;
@@ -30,6 +34,7 @@ public class RecoverRenderingDataPackageRequest extends Request {
     private RecoverRenderingDataPackageRequest(Builder builder) {
         super(builder);
         this.dataPackageId = builder.dataPackageId;
+        this.loadMode = builder.loadMode;
         this.renderingInstanceId = builder.renderingInstanceId;
     }
 
@@ -41,7 +46,7 @@ public class RecoverRenderingDataPackageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,6 +59,13 @@ public class RecoverRenderingDataPackageRequest extends Request {
     }
 
     /**
+     * @return loadMode
+     */
+    public String getLoadMode() {
+        return this.loadMode;
+    }
+
+    /**
      * @return renderingInstanceId
      */
     public String getRenderingInstanceId() {
@@ -62,6 +74,7 @@ public class RecoverRenderingDataPackageRequest extends Request {
 
     public static final class Builder extends Request.Builder<RecoverRenderingDataPackageRequest, Builder> {
         private String dataPackageId; 
+        private String loadMode; 
         private String renderingInstanceId; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class RecoverRenderingDataPackageRequest extends Request {
         private Builder(RecoverRenderingDataPackageRequest request) {
             super(request);
             this.dataPackageId = request.dataPackageId;
+            this.loadMode = request.loadMode;
             this.renderingInstanceId = request.renderingInstanceId;
         } 
 
@@ -83,6 +97,15 @@ public class RecoverRenderingDataPackageRequest extends Request {
         public Builder dataPackageId(String dataPackageId) {
             this.putQueryParameter("DataPackageId", dataPackageId);
             this.dataPackageId = dataPackageId;
+            return this;
+        }
+
+        /**
+         * LoadMode.
+         */
+        public Builder loadMode(String loadMode) {
+            this.putQueryParameter("LoadMode", loadMode);
+            this.loadMode = loadMode;
             return this;
         }
 

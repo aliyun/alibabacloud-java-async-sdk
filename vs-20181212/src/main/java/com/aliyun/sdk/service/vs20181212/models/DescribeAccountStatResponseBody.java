@@ -52,6 +52,10 @@ public class DescribeAccountStatResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupLimit
      */
@@ -101,6 +105,18 @@ public class DescribeAccountStatResponseBody extends TeaModel {
         private String requestId; 
         private Long templateLimit; 
         private Long templateNum; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountStatResponseBody model) {
+            this.groupLimit = model.groupLimit;
+            this.groupNum = model.groupNum;
+            this.id = model.id;
+            this.requestId = model.requestId;
+            this.templateLimit = model.templateLimit;
+            this.templateNum = model.templateNum;
+        } 
 
         /**
          * GroupLimit.

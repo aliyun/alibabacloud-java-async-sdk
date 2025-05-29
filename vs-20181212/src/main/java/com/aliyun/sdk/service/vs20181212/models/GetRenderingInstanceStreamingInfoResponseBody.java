@@ -52,6 +52,10 @@ public class GetRenderingInstanceStreamingInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return flowId
      */
@@ -101,6 +105,18 @@ public class GetRenderingInstanceStreamingInfoResponseBody extends TeaModel {
         private String port; 
         private String renderingInstanceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRenderingInstanceStreamingInfoResponseBody model) {
+            this.flowId = model.flowId;
+            this.gateway = model.gateway;
+            this.hostname = model.hostname;
+            this.port = model.port;
+            this.renderingInstanceId = model.renderingInstanceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * FlowId.

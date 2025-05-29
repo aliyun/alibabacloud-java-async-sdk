@@ -26,6 +26,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddVsPullStreamInfoConfigResponse> addVsPullStreamInfoConfig(AddVsPullStreamInfoConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于将满足特定条件的实例与指定项目进行关联。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of AssociateRenderingProjectInstances  AssociateRenderingProjectInstancesRequest
+     * @return AssociateRenderingProjectInstancesResponse
+     */
+    CompletableFuture<AssociateRenderingProjectInstancesResponse> associateRenderingProjectInstances(AssociateRenderingProjectInstancesRequest request);
+
+    /**
      * @param request the request parameters of BatchBindDirectories  BatchBindDirectoriesRequest
      * @return BatchBindDirectoriesResponse
      */
@@ -224,6 +236,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRenderingInstanceGatewayResponse> createRenderingInstanceGateway(CreateRenderingInstanceGatewayRequest request);
 
     /**
+     * @param request the request parameters of CreateRenderingProject  CreateRenderingProjectRequest
+     * @return CreateRenderingProjectResponse
+     */
+    CompletableFuture<CreateRenderingProjectResponse> createRenderingProject(CreateRenderingProjectRequest request);
+
+    /**
      * @param request the request parameters of CreateStreamSnapshot  CreateStreamSnapshotRequest
      * @return CreateStreamSnapshotResponse
      */
@@ -300,6 +318,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteRenderingInstanceSettingsResponse
      */
     CompletableFuture<DeleteRenderingInstanceSettingsResponse> deleteRenderingInstanceSettings(DeleteRenderingInstanceSettingsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRenderingProject  DeleteRenderingProjectRequest
+     * @return DeleteRenderingProjectResponse
+     */
+    CompletableFuture<DeleteRenderingProjectResponse> deleteRenderingProject(DeleteRenderingProjectRequest request);
 
     /**
      * @param request the request parameters of DeleteTemplate  DeleteTemplateRequest
@@ -444,6 +468,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRenderingInstanceSettingsResponse
      */
     CompletableFuture<DescribeRenderingInstanceSettingsResponse> describeRenderingInstanceSettings(DescribeRenderingInstanceSettingsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRenderingSession  DescribeRenderingSessionRequest
+     * @return DescribeRenderingSessionResponse
+     */
+    CompletableFuture<DescribeRenderingSessionResponse> describeRenderingSession(DescribeRenderingSessionRequest request);
 
     /**
      * @param request the request parameters of DescribeStream  DescribeStreamRequest
@@ -632,6 +662,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVsVerifyContentResponse> describeVsVerifyContent(DescribeVsVerifyContentRequest request);
 
     /**
+     * @param request the request parameters of DisassociateRenderingProjectInstances  DisassociateRenderingProjectInstancesRequest
+     * @return DisassociateRenderingProjectInstancesResponse
+     */
+    CompletableFuture<DisassociateRenderingProjectInstancesResponse> disassociateRenderingProjectInstances(DisassociateRenderingProjectInstancesRequest request);
+
+    /**
      * @param request the request parameters of ForbidVsStream  ForbidVsStreamRequest
      * @return ForbidVsStreamResponse
      */
@@ -642,6 +678,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetRenderingInstanceStreamingInfoResponse
      */
     CompletableFuture<GetRenderingInstanceStreamingInfoResponse> getRenderingInstanceStreamingInfo(GetRenderingInstanceStreamingInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetRenderingProjectInstanceStateMetrics  GetRenderingProjectInstanceStateMetricsRequest
+     * @return GetRenderingProjectInstanceStateMetricsResponse
+     */
+    CompletableFuture<GetRenderingProjectInstanceStateMetricsResponse> getRenderingProjectInstanceStateMetrics(GetRenderingProjectInstanceStateMetricsRequest request);
 
     /**
      * @param request the request parameters of GotoPreset  GotoPresetRequest
@@ -702,6 +744,44 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListRenderingInstancesResponse
      */
     CompletableFuture<ListRenderingInstancesResponse> listRenderingInstances(ListRenderingInstancesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口支持通过多种筛选条件（如状态、实例ID等）来查询指定项目下的云应用服务实例。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListRenderingProjectInstances  ListRenderingProjectInstancesRequest
+     * @return ListRenderingProjectInstancesResponse
+     */
+    CompletableFuture<ListRenderingProjectInstancesResponse> listRenderingProjectInstances(ListRenderingProjectInstancesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口用于分页查询指定用户下的渲染项目基本信息列表。</li>
+     * <li>可通过 <code>ProjectId</code> 和 <code>ProjectName</code> 进行过滤查询。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListRenderingProjects  ListRenderingProjectsRequest
+     * @return ListRenderingProjectsResponse
+     */
+    CompletableFuture<ListRenderingProjectsResponse> listRenderingProjects(ListRenderingProjectsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li>该接口支持通过多种参数组合来过滤和分页查询用户的渲染会话列表。</li>
+     * <li><code>SessionId</code> 和 <code>ClientId</code> 参数至少需要提供一个，但两者都不是必选的。如果同时提供了两个参数，则将根据这两个参数进行更精确的匹配。</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListRenderingSessions  ListRenderingSessionsRequest
+     * @return ListRenderingSessionsResponse
+     */
+    CompletableFuture<ListRenderingSessionsResponse> listRenderingSessions(ListRenderingSessionsRequest request);
 
     /**
      * @param request the request parameters of ManageLogin  ManageLoginRequest
@@ -878,6 +958,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartRecordStreamResponse> startRecordStream(StartRecordStreamRequest request);
 
     /**
+     * @param request the request parameters of StartRenderingSession  StartRenderingSessionRequest
+     * @return StartRenderingSessionResponse
+     */
+    CompletableFuture<StartRenderingSessionResponse> startRenderingSession(StartRenderingSessionRequest request);
+
+    /**
      * @param request the request parameters of StartStream  StartStreamRequest
      * @return StartStreamResponse
      */
@@ -918,6 +1004,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopRecordStreamResponse
      */
     CompletableFuture<StopRecordStreamResponse> stopRecordStream(StopRecordStreamRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * 
+     * @param request the request parameters of StopRenderingSession  StopRenderingSessionRequest
+     * @return StopRenderingSessionResponse
+     */
+    CompletableFuture<StopRenderingSessionResponse> stopRenderingSession(StopRenderingSessionRequest request);
 
     /**
      * @param request the request parameters of StopStream  StopStreamRequest
@@ -996,6 +1091,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateRenderingInstanceSettingsResponse
      */
     CompletableFuture<UpdateRenderingInstanceSettingsResponse> updateRenderingInstanceSettings(UpdateRenderingInstanceSettingsRequest request);
+
+    /**
+     * @param request the request parameters of UpdateRenderingProject  UpdateRenderingProjectRequest
+     * @return UpdateRenderingProjectResponse
+     */
+    CompletableFuture<UpdateRenderingProjectResponse> updateRenderingProject(UpdateRenderingProjectRequest request);
 
     /**
      * @param request the request parameters of UpdateVsPullStreamInfoConfig  UpdateVsPullStreamInfoConfigRequest

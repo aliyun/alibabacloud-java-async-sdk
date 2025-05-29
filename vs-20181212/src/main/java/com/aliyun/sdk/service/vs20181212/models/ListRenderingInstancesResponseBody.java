@@ -40,6 +40,10 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return renderingInstances
      */
@@ -65,6 +69,15 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
         private java.util.List<RenderingInstances> renderingInstances; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRenderingInstancesResponseBody model) {
+            this.renderingInstances = model.renderingInstances;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * RenderingInstances.
@@ -163,6 +176,16 @@ public class ListRenderingInstancesResponseBody extends TeaModel {
             private String renderingInstanceId; 
             private String renderingSpec; 
             private Integer storageSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(RenderingInstances model) {
+                this.creationTime = model.creationTime;
+                this.renderingInstanceId = model.renderingInstanceId;
+                this.renderingSpec = model.renderingSpec;
+                this.storageSize = model.storageSize;
+            } 
 
             /**
              * CreationTime.

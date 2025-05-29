@@ -36,6 +36,10 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainConfig
      */
@@ -53,6 +57,14 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
     public static final class Builder {
         private DomainConfig domainConfig; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsDomainDetailResponseBody model) {
+            this.domainConfig = model.domainConfig;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DomainConfig.
@@ -215,6 +227,22 @@ public class DescribeVsDomainDetailResponseBody extends TeaModel {
             private String region; 
             private String SSLProtocol; 
             private String scope; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainConfig model) {
+                this.cname = model.cname;
+                this.description = model.description;
+                this.domainName = model.domainName;
+                this.domainStatus = model.domainStatus;
+                this.domainType = model.domainType;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.region = model.region;
+                this.SSLProtocol = model.SSLProtocol;
+                this.scope = model.scope;
+            } 
 
             /**
              * Cname.

@@ -36,6 +36,10 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return describeVsUpPeakPublishStreamDatas
      */
@@ -53,6 +57,14 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
     public static final class Builder {
         private DescribeVsUpPeakPublishStreamDatas describeVsUpPeakPublishStreamDatas; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsUpPeakPublishStreamDataResponseBody model) {
+            this.describeVsUpPeakPublishStreamDatas = model.describeVsUpPeakPublishStreamDatas;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DescribeVsUpPeakPublishStreamDatas.
@@ -156,6 +168,17 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
             private String queryTime; 
             private String statName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DescribeVsUpPeakPublishStreamData model) {
+                this.bandWidth = model.bandWidth;
+                this.peakTime = model.peakTime;
+                this.publishStreamNum = model.publishStreamNum;
+                this.queryTime = model.queryTime;
+                this.statName = model.statName;
+            } 
+
             /**
              * BandWidth.
              */
@@ -234,6 +257,13 @@ public class DescribeVsUpPeakPublishStreamDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DescribeVsUpPeakPublishStreamData> describeVsUpPeakPublishStreamData; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescribeVsUpPeakPublishStreamDatas model) {
+                this.describeVsUpPeakPublishStreamData = model.describeVsUpPeakPublishStreamData;
+            } 
 
             /**
              * DescribeVsUpPeakPublishStreamData.

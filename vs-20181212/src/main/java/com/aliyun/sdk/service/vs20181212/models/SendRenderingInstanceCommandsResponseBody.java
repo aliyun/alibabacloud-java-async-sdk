@@ -36,6 +36,10 @@ public class SendRenderingInstanceCommandsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class SendRenderingInstanceCommandsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String result; 
+
+        private Builder() {
+        } 
+
+        private Builder(SendRenderingInstanceCommandsResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
 
         /**
          * RequestId.

@@ -52,6 +52,10 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNum
      */
@@ -101,6 +105,18 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalNum; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsStreamsPublishListResponseBody model) {
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.publishInfo = model.publishInfo;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * PageNum.
@@ -332,6 +348,25 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
             private String transcodeId; 
             private String transcoded; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamPublishInfo model) {
+                this.appName = model.appName;
+                this.clientAddr = model.clientAddr;
+                this.domainName = model.domainName;
+                this.edgeNodeAddr = model.edgeNodeAddr;
+                this.publishDomain = model.publishDomain;
+                this.publishTime = model.publishTime;
+                this.publishType = model.publishType;
+                this.publishUrl = model.publishUrl;
+                this.stopTime = model.stopTime;
+                this.streamName = model.streamName;
+                this.streamUrl = model.streamUrl;
+                this.transcodeId = model.transcodeId;
+                this.transcoded = model.transcoded;
+            } 
+
             /**
              * AppName.
              */
@@ -474,6 +509,13 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LiveStreamPublishInfo> liveStreamPublishInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublishInfo model) {
+                this.liveStreamPublishInfo = model.liveStreamPublishInfo;
+            } 
 
             /**
              * LiveStreamPublishInfo.

@@ -52,6 +52,10 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return directories
      */
@@ -101,6 +105,18 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDirectoriesResponseBody model) {
+            this.directories = model.directories;
+            this.pageCount = model.pageCount;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Directories.
@@ -247,6 +263,18 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
             private String id; 
             private String name; 
             private String parentId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Directories model) {
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.id = model.id;
+                this.name = model.name;
+                this.parentId = model.parentId;
+            } 
 
             /**
              * CreatedTime.

@@ -36,6 +36,10 @@ public class DescribeVsUserResourcePackageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeVsUserResourcePackageResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ResourcePackageInfos resourcePackageInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsUserResourcePackageResponseBody model) {
+            this.requestId = model.requestId;
+            this.resourcePackageInfos = model.resourcePackageInfos;
+        } 
 
         /**
          * RequestId.
@@ -168,6 +180,18 @@ public class DescribeVsUserResourcePackageResponseBody extends TeaModel {
             private String instanceId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourcePackageInfo model) {
+                this.commodityCode = model.commodityCode;
+                this.currCapacity = model.currCapacity;
+                this.displayName = model.displayName;
+                this.initCapacity = model.initCapacity;
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+            } 
+
             /**
              * CommodityCode.
              */
@@ -254,6 +278,13 @@ public class DescribeVsUserResourcePackageResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ResourcePackageInfo> resourcePackageInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourcePackageInfos model) {
+                this.resourcePackageInfo = model.resourcePackageInfo;
+            } 
 
             /**
              * ResourcePackageInfo.

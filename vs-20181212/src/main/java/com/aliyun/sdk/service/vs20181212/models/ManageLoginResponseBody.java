@@ -36,6 +36,10 @@ public class ManageLoginResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loginInfo
      */
@@ -53,6 +57,14 @@ public class ManageLoginResponseBody extends TeaModel {
     public static final class Builder {
         private LoginInfo loginInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ManageLoginResponseBody model) {
+            this.loginInfo = model.loginInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * LoginInfo.
@@ -131,6 +143,15 @@ public class ManageLoginResponseBody extends TeaModel {
             private Integer adbLoginPort; 
             private String loginHostname; 
             private Integer loginPort; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoginInfo model) {
+                this.adbLoginPort = model.adbLoginPort;
+                this.loginHostname = model.loginHostname;
+                this.loginPort = model.loginPort;
+            } 
 
             /**
              * AdbLoginPort.

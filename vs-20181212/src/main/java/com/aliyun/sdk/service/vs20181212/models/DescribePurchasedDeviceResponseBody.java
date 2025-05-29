@@ -80,6 +80,10 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdTime
      */
@@ -185,6 +189,25 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
         private String subType; 
         private String type; 
         private String vendor; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePurchasedDeviceResponseBody model) {
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.groupId = model.groupId;
+            this.groupName = model.groupName;
+            this.id = model.id;
+            this.name = model.name;
+            this.orderId = model.orderId;
+            this.region = model.region;
+            this.registerCode = model.registerCode;
+            this.requestId = model.requestId;
+            this.subType = model.subType;
+            this.type = model.type;
+            this.vendor = model.vendor;
+        } 
 
         /**
          * CreatedTime.

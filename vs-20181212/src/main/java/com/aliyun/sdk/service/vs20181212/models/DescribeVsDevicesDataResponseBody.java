@@ -36,6 +36,10 @@ public class DescribeVsDevicesDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return devicesDataPerInterval
      */
@@ -53,6 +57,14 @@ public class DescribeVsDevicesDataResponseBody extends TeaModel {
     public static final class Builder {
         private DevicesDataPerInterval devicesDataPerInterval; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsDevicesDataResponseBody model) {
+            this.devicesDataPerInterval = model.devicesDataPerInterval;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DevicesDataPerInterval.
@@ -120,6 +132,14 @@ public class DescribeVsDevicesDataResponseBody extends TeaModel {
             private String devicesDataValue; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.devicesDataValue = model.devicesDataValue;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * DevicesDataValue.
              */
@@ -174,6 +194,13 @@ public class DescribeVsDevicesDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(DevicesDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

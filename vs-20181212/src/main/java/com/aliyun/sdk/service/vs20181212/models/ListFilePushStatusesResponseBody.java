@@ -48,6 +48,10 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         private java.util.List<PushStatuses> pushStatuses; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFilePushStatusesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.pushStatuses = model.pushStatuses;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * PageNumber.
@@ -239,6 +254,19 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
             private String status; 
             private String statusDescription; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(PushStatuses model) {
+                this.fileId = model.fileId;
+                this.fileName = model.fileName;
+                this.pushTime = model.pushTime;
+                this.renderingInstanceId = model.renderingInstanceId;
+                this.status = model.status;
+                this.statusDescription = model.statusDescription;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * FileId.

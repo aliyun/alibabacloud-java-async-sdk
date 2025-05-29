@@ -36,6 +36,10 @@ public class DescribeVsDomainSnapshotDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeVsDomainSnapshotDataResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SnapshotDataPerInterval snapshotDataPerInterval; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsDomainSnapshotDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.snapshotDataPerInterval = model.snapshotDataPerInterval;
+        } 
 
         /**
          * RequestId.
@@ -120,6 +132,14 @@ public class DescribeVsDomainSnapshotDataResponseBody extends TeaModel {
             private String snapshotValue; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.snapshotValue = model.snapshotValue;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * SnapshotValue.
              */
@@ -174,6 +194,13 @@ public class DescribeVsDomainSnapshotDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(SnapshotDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

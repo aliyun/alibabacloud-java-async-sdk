@@ -32,6 +32,10 @@ public class UpdateRenderingInstanceConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -41,6 +45,13 @@ public class UpdateRenderingInstanceConfigurationResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateRenderingInstanceConfigurationResponseBody model) {
+            this.requestId = model.requestId;
+        } 
 
         /**
          * RequestId.

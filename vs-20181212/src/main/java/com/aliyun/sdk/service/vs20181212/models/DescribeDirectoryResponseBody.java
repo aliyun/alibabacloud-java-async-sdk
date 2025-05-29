@@ -56,6 +56,10 @@ public class DescribeDirectoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createdTime
      */
@@ -113,6 +117,19 @@ public class DescribeDirectoryResponseBody extends TeaModel {
         private String name; 
         private String parentId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDirectoryResponseBody model) {
+            this.createdTime = model.createdTime;
+            this.description = model.description;
+            this.groupId = model.groupId;
+            this.id = model.id;
+            this.name = model.name;
+            this.parentId = model.parentId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CreatedTime.

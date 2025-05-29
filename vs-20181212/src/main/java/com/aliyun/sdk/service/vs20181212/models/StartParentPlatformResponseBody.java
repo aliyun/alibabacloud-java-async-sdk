@@ -36,6 +36,10 @@ public class StartParentPlatformResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -53,6 +57,14 @@ public class StartParentPlatformResponseBody extends TeaModel {
     public static final class Builder {
         private String id; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StartParentPlatformResponseBody model) {
+            this.id = model.id;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Id.

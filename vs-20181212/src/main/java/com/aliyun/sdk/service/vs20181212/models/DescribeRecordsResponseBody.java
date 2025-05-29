@@ -56,6 +56,10 @@ public class DescribeRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextStartTime
      */
@@ -113,6 +117,19 @@ public class DescribeRecordsResponseBody extends TeaModel {
         private java.util.List<Records> records; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRecordsResponseBody model) {
+            this.nextStartTime = model.nextStartTime;
+            this.pageCount = model.pageCount;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.records = model.records;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * NextStartTime.
@@ -351,6 +368,25 @@ public class DescribeRecordsResponseBody extends TeaModel {
             private String type; 
             private String url; 
             private Long width; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.endTime = model.endTime;
+                this.fileFormat = model.fileFormat;
+                this.height = model.height;
+                this.id = model.id;
+                this.ossBucket = model.ossBucket;
+                this.ossEndpoint = model.ossEndpoint;
+                this.ossObject = model.ossObject;
+                this.startTime = model.startTime;
+                this.streamId = model.streamId;
+                this.templateId = model.templateId;
+                this.type = model.type;
+                this.url = model.url;
+                this.width = model.width;
+            } 
 
             /**
              * EndTime.

@@ -40,7 +40,7 @@ public class RefreshRenderingInstanceStreamingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,6 +145,14 @@ public class RefreshRenderingInstanceStreamingRequest extends Request {
         public static final class Builder {
             private String clientIp; 
             private Boolean newClient; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClientInfo model) {
+                this.clientIp = model.clientIp;
+                this.newClient = model.newClient;
+            } 
 
             /**
              * ClientIp.

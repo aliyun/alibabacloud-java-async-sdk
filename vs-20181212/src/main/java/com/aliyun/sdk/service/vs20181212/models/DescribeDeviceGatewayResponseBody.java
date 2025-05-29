@@ -48,6 +48,10 @@ public class DescribeDeviceGatewayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return host
      */
@@ -89,6 +93,17 @@ public class DescribeDeviceGatewayResponseBody extends TeaModel {
         private String protocol; 
         private String requestId; 
         private String token; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDeviceGatewayResponseBody model) {
+            this.host = model.host;
+            this.port = model.port;
+            this.protocol = model.protocol;
+            this.requestId = model.requestId;
+            this.token = model.token;
+        } 
 
         /**
          * Host.

@@ -39,7 +39,7 @@ public class UpdateRenderingInstanceSettingsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -141,6 +141,14 @@ public class UpdateRenderingInstanceSettingsRequest extends Request {
         public static final class Builder {
             private String attributeName; 
             private String attributeValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Settings model) {
+                this.attributeName = model.attributeName;
+                this.attributeValue = model.attributeValue;
+            } 
 
             /**
              * AttributeName.

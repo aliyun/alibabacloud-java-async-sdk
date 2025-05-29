@@ -36,6 +36,10 @@ public class DescribeVsDomainCertificateInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certInfos
      */
@@ -53,6 +57,14 @@ public class DescribeVsDomainCertificateInfoResponseBody extends TeaModel {
     public static final class Builder {
         private CertInfos certInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsDomainCertificateInfoResponseBody model) {
+            this.certInfos = model.certInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CertInfos.
@@ -216,6 +228,22 @@ public class DescribeVsDomainCertificateInfoResponseBody extends TeaModel {
             private String serverCertificateStatus; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(CertInfo model) {
+                this.certDomainName = model.certDomainName;
+                this.certExpireTime = model.certExpireTime;
+                this.certLife = model.certLife;
+                this.certName = model.certName;
+                this.certOrg = model.certOrg;
+                this.certType = model.certType;
+                this.domainName = model.domainName;
+                this.SSLPub = model.SSLPub;
+                this.serverCertificateStatus = model.serverCertificateStatus;
+                this.status = model.status;
+            } 
+
             /**
              * CertDomainName.
              */
@@ -334,6 +362,13 @@ public class DescribeVsDomainCertificateInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CertInfo> certInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertInfos model) {
+                this.certInfo = model.certInfo;
+            } 
 
             /**
              * CertInfo.

@@ -40,6 +40,10 @@ public class DescribePresetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -65,6 +69,15 @@ public class DescribePresetsResponseBody extends TeaModel {
         private String id; 
         private java.util.List<Presets> presets; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePresetsResponseBody model) {
+            this.id = model.id;
+            this.presets = model.presets;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Id.
@@ -139,6 +152,14 @@ public class DescribePresetsResponseBody extends TeaModel {
         public static final class Builder {
             private String id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Presets model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * Id.

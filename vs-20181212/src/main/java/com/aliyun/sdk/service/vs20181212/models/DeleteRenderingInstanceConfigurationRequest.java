@@ -40,7 +40,7 @@ public class DeleteRenderingInstanceConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -146,6 +146,14 @@ public class DeleteRenderingInstanceConfigurationRequest extends Request {
         public static final class Builder {
             private java.util.List<String> attributeNames; 
             private String moduleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configuration model) {
+                this.attributeNames = model.attributeNames;
+                this.moduleName = model.moduleName;
+            } 
 
             /**
              * AttributeNames.

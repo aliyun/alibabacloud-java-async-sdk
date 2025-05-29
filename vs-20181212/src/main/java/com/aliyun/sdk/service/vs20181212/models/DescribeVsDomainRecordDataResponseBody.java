@@ -36,6 +36,10 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return recordDataPerInterval
      */
@@ -53,6 +57,14 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
     public static final class Builder {
         private RecordDataPerInterval recordDataPerInterval; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsDomainRecordDataResponseBody model) {
+            this.recordDataPerInterval = model.recordDataPerInterval;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * RecordDataPerInterval.
@@ -132,6 +144,15 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
             private String streamCountValue; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.recordValue = model.recordValue;
+                this.streamCountValue = model.streamCountValue;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * RecordValue.
              */
@@ -194,6 +215,13 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

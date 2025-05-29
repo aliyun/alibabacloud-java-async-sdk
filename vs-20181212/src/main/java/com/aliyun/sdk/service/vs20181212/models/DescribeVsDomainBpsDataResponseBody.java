@@ -52,6 +52,10 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bpsDataPerInterval
      */
@@ -101,6 +105,18 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
         private String endTime; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsDomainBpsDataResponseBody model) {
+            this.bpsDataPerInterval = model.bpsDataPerInterval;
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * BpsDataPerInterval.
@@ -200,6 +216,14 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
             private String bpsValue; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.bpsValue = model.bpsValue;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * BpsValue.
              */
@@ -254,6 +278,13 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(BpsDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

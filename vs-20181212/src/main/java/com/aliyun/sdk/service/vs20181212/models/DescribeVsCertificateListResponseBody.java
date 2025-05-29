@@ -36,6 +36,10 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateListModel
      */
@@ -53,6 +57,14 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
     public static final class Builder {
         private CertificateListModel certificateListModel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsCertificateListResponseBody model) {
+            this.certificateListModel = model.certificateListModel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * CertificateListModel.
@@ -168,6 +180,18 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
             private String issuer; 
             private Long lastTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(CertList model) {
+                this.certId = model.certId;
+                this.certName = model.certName;
+                this.common = model.common;
+                this.fingerprint = model.fingerprint;
+                this.issuer = model.issuer;
+                this.lastTime = model.lastTime;
+            } 
+
             /**
              * CertId.
              */
@@ -266,6 +290,14 @@ public class DescribeVsCertificateListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<CertList> certList; 
             private Integer count; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertificateListModel model) {
+                this.certList = model.certList;
+                this.count = model.count;
+            } 
 
             /**
              * CertList.

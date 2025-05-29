@@ -52,6 +52,10 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return onlineInfo
      */
@@ -101,6 +105,18 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalNum; 
         private Integer totalPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsStreamsOnlineListResponseBody model) {
+            this.onlineInfo = model.onlineInfo;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+            this.totalPage = model.totalPage;
+        } 
 
         /**
          * OnlineInfo.
@@ -284,6 +300,21 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
             private String transcodeId; 
             private String transcoded; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamOnlineInfo model) {
+                this.appName = model.appName;
+                this.domainName = model.domainName;
+                this.publishDomain = model.publishDomain;
+                this.publishTime = model.publishTime;
+                this.publishType = model.publishType;
+                this.publishUrl = model.publishUrl;
+                this.streamName = model.streamName;
+                this.transcodeId = model.transcodeId;
+                this.transcoded = model.transcoded;
+            } 
+
             /**
              * AppName.
              */
@@ -394,6 +425,13 @@ public class DescribeVsStreamsOnlineListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LiveStreamOnlineInfo> liveStreamOnlineInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnlineInfo model) {
+                this.liveStreamOnlineInfo = model.liveStreamOnlineInfo;
+            } 
 
             /**
              * LiveStreamOnlineInfo.

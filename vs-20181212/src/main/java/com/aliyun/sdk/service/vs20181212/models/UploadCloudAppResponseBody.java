@@ -36,6 +36,10 @@ public class UploadCloudAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appId
      */
@@ -53,6 +57,14 @@ public class UploadCloudAppResponseBody extends TeaModel {
     public static final class Builder {
         private String appId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadCloudAppResponseBody model) {
+            this.appId = model.appId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AppId.

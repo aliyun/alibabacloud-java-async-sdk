@@ -36,6 +36,10 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Results> results; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchBindPurchasedDevicesResponseBody model) {
+            this.requestId = model.requestId;
+            this.results = model.results;
+        } 
 
         /**
          * RequestId.
@@ -143,6 +155,16 @@ public class BatchBindPurchasedDevicesResponseBody extends TeaModel {
             private String error; 
             private String groupId; 
             private String region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.deviceId = model.deviceId;
+                this.error = model.error;
+                this.groupId = model.groupId;
+                this.region = model.region;
+            } 
 
             /**
              * DeviceId.

@@ -44,6 +44,10 @@ public class BindTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -77,6 +81,16 @@ public class BindTemplateResponseBody extends TeaModel {
         private String instanceType; 
         private String requestId; 
         private String templateId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BindTemplateResponseBody model) {
+            this.instanceId = model.instanceId;
+            this.instanceType = model.instanceType;
+            this.requestId = model.requestId;
+            this.templateId = model.templateId;
+        } 
 
         /**
          * InstanceId.

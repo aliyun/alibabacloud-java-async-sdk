@@ -36,6 +36,10 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return liveStreamsNotifyConfig
      */
@@ -53,6 +57,14 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
     public static final class Builder {
         private LiveStreamsNotifyConfig liveStreamsNotifyConfig; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsStreamsNotifyUrlConfigResponseBody model) {
+            this.liveStreamsNotifyConfig = model.liveStreamsNotifyConfig;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * LiveStreamsNotifyConfig.
@@ -143,6 +155,16 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
             private String authType; 
             private String domainName; 
             private String notifyUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamsNotifyConfig model) {
+                this.authKey = model.authKey;
+                this.authType = model.authType;
+                this.domainName = model.domainName;
+                this.notifyUrl = model.notifyUrl;
+            } 
 
             /**
              * AuthKey.

@@ -36,6 +36,10 @@ public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return liveAppRecordList
      */
@@ -53,6 +57,14 @@ public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
     public static final class Builder {
         private LiveAppRecordList liveAppRecordList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeVsPullStreamInfoConfigResponseBody model) {
+            this.liveAppRecordList = model.liveAppRecordList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * LiveAppRecordList.
@@ -168,6 +180,18 @@ public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
             private String startTime; 
             private String streamName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveAppRecord model) {
+                this.appName = model.appName;
+                this.domainName = model.domainName;
+                this.endTime = model.endTime;
+                this.sourceUrl = model.sourceUrl;
+                this.startTime = model.startTime;
+                this.streamName = model.streamName;
+            } 
+
             /**
              * AppName.
              */
@@ -254,6 +278,13 @@ public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LiveAppRecord> liveAppRecord; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveAppRecordList model) {
+                this.liveAppRecord = model.liveAppRecord;
+            } 
 
             /**
              * LiveAppRecord.

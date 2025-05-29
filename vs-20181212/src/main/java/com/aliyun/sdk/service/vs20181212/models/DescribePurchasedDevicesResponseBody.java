@@ -52,6 +52,10 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return devices
      */
@@ -101,6 +105,18 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePurchasedDevicesResponseBody model) {
+            this.devices = model.devices;
+            this.pageCount = model.pageCount;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Devices.
@@ -319,6 +335,24 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
             private String subType; 
             private String type; 
             private String vendor; 
+
+            private Builder() {
+            } 
+
+            private Builder(Devices model) {
+                this.createdTime = model.createdTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.id = model.id;
+                this.name = model.name;
+                this.orderId = model.orderId;
+                this.region = model.region;
+                this.registerCode = model.registerCode;
+                this.subType = model.subType;
+                this.type = model.type;
+                this.vendor = model.vendor;
+            } 
 
             /**
              * CreatedTime.

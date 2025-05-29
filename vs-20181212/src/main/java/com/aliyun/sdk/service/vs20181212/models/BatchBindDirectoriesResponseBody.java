@@ -36,6 +36,10 @@ public class BatchBindDirectoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class BatchBindDirectoriesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Results> results; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchBindDirectoriesResponseBody model) {
+            this.requestId = model.requestId;
+            this.results = model.results;
+        } 
 
         /**
          * RequestId.
@@ -131,6 +143,15 @@ public class BatchBindDirectoriesResponseBody extends TeaModel {
             private String deviceId; 
             private String directoryId; 
             private String error; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.deviceId = model.deviceId;
+                this.directoryId = model.directoryId;
+                this.error = model.error;
+            } 
 
             /**
              * DeviceId.
