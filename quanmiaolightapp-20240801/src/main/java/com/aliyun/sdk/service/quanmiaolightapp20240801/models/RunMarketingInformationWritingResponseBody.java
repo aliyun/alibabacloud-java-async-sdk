@@ -296,10 +296,14 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
      * <p>RunMarketingInformationWritingResponseBody</p>
      */
     public static class Output extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("reasonContent")
+        private String reasonContent;
+
         @com.aliyun.core.annotation.NameInMap("text")
         private String text;
 
         private Output(Builder builder) {
+            this.reasonContent = builder.reasonContent;
             this.text = builder.text;
         }
 
@@ -312,6 +316,13 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
         }
 
         /**
+         * @return reasonContent
+         */
+        public String getReasonContent() {
+            return this.reasonContent;
+        }
+
+        /**
          * @return text
          */
         public String getText() {
@@ -319,14 +330,24 @@ public class RunMarketingInformationWritingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String reasonContent; 
             private String text; 
 
             private Builder() {
             } 
 
             private Builder(Output model) {
+                this.reasonContent = model.reasonContent;
                 this.text = model.text;
             } 
+
+            /**
+             * reasonContent.
+             */
+            public Builder reasonContent(String reasonContent) {
+                this.reasonContent = reasonContent;
+                return this;
+            }
 
             /**
              * text.
