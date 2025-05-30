@@ -646,6 +646,9 @@ public class ListClusterNodesResponseBody extends TeaModel {
 
             /**
              * <p>whether or not support file system mount</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
                 this.fileSystemMountEnabled = fileSystemMountEnabled;

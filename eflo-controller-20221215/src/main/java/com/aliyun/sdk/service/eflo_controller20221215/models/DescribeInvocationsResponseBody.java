@@ -356,7 +356,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>NodeNotExists：</p>
+             * <p>NodeNotExists</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;

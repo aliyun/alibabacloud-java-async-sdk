@@ -275,10 +275,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Cluster Description</p>
+         * <p>集群描述</p>
          * 
          * <strong>example:</strong>
-         * <p>Default cluster</p>
+         * <p>测试集群</p>
          */
         public Builder clusterDescription(String clusterDescription) {
             this.clusterDescription = clusterDescription;
@@ -286,7 +286,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cluster ID</p>
+         * <p>集群id</p>
          * 
          * <strong>example:</strong>
          * <p>i116913051662373010974</p>
@@ -297,7 +297,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cluster Name</p>
+         * <p>集群名称</p>
          * 
          * <strong>example:</strong>
          * <p>Eflo-YJ-Test-Cluster</p>
@@ -308,7 +308,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cluster Type</p>
+         * <p>集群类型</p>
          * 
          * <strong>example:</strong>
          * <p>AckEdgePro</p>
@@ -319,7 +319,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Component Information</p>
+         * <p>组件信息</p>
          */
         public Builder components(java.util.List<Components> components) {
             this.components = components;
@@ -327,7 +327,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Type of IP in the compute network</p>
+         * <p>计算网络的IP类型</p>
          * 
          * <strong>example:</strong>
          * <p>IPv4</p>
@@ -338,7 +338,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Creation Time</p>
+         * <p>创建时间</p>
          * 
          * <strong>example:</strong>
          * <p>2022-06-08T07:05:11Z</p>
@@ -349,7 +349,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cluster Number</p>
+         * <p>集群编号</p>
          * 
          * <strong>example:</strong>
          * <p>A2</p>
@@ -360,7 +360,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Network Information</p>
+         * <p>网络信息</p>
          */
         public Builder networks(Networks networks) {
             this.networks = networks;
@@ -368,7 +368,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of Nodes</p>
+         * <p>节点数</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -379,7 +379,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Number of Node Groups</p>
+         * <p>节点组数量</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -390,10 +390,10 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Open Eni Jumbo Frame</p>
+         * <p>网络接口巨帧</p>
          * 
          * <strong>example:</strong>
-         * <p>close</p>
+         * <p>unsupported</p>
          */
         public Builder openEniJumboFrame(String openEniJumboFrame) {
             this.openEniJumboFrame = openEniJumboFrame;
@@ -401,7 +401,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cluster State</p>
+         * <p>集群状态</p>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -412,7 +412,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>请求id。</p>
          * 
          * <strong>example:</strong>
          * <p>887FA855-89F4-5DB3-B305-C5879EC480E6</p>
@@ -423,7 +423,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Resource Group ID</p>
+         * <p>资源组id</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2k3rqlvv6ytq</p>
@@ -434,7 +434,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Task ID</p>
+         * <p>任务id</p>
          * 
          * <strong>example:</strong>
          * <p>i152609221670466904596</p>
@@ -445,7 +445,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Update Time</p>
+         * <p>更新时间</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-23T06:36:17.000Z</p>
@@ -456,7 +456,7 @@ public class DescribeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>VPC ID</p>
+         * <p>专有网络ID</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-0jlkqysom5dmcviymep3f</p>
@@ -525,7 +525,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Component ID</p>
+             * <p>组件id</p>
              * 
              * <strong>example:</strong>
              * <p>i149549021660892626529</p>
@@ -536,7 +536,7 @@ public class DescribeClusterResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Component Type</p>
+             * <p>组件类型</p>
              * 
              * <strong>example:</strong>
              * <p>ACKEdge</p>
@@ -593,7 +593,10 @@ public class DescribeClusterResponseBody extends TeaModel {
             } 
 
             /**
-             * VpdId.
+             * <p>集群网段id</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpd-iqd7xunc</p>
              */
             public Builder vpdId(String vpdId) {
                 this.vpdId = vpdId;

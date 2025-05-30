@@ -2011,6 +2011,9 @@ public class CreateClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("KeyPairName")
         private String keyPairName;
 
+        @com.aliyun.core.annotation.NameInMap("LoginPassword")
+        private String loginPassword;
+
         @com.aliyun.core.annotation.NameInMap("MachineType")
         private String machineType;
 
@@ -2036,6 +2039,7 @@ public class CreateClusterRequest extends Request {
             this.fileSystemMountEnabled = builder.fileSystemMountEnabled;
             this.imageId = builder.imageId;
             this.keyPairName = builder.keyPairName;
+            this.loginPassword = builder.loginPassword;
             this.machineType = builder.machineType;
             this.nodeGroupDescription = builder.nodeGroupDescription;
             this.nodeGroupName = builder.nodeGroupName;
@@ -2072,6 +2076,13 @@ public class CreateClusterRequest extends Request {
          */
         public String getKeyPairName() {
             return this.keyPairName;
+        }
+
+        /**
+         * @return loginPassword
+         */
+        public String getLoginPassword() {
+            return this.loginPassword;
         }
 
         /**
@@ -2127,6 +2138,7 @@ public class CreateClusterRequest extends Request {
             private Boolean fileSystemMountEnabled; 
             private String imageId; 
             private String keyPairName; 
+            private String loginPassword; 
             private String machineType; 
             private String nodeGroupDescription; 
             private String nodeGroupName; 
@@ -2142,6 +2154,7 @@ public class CreateClusterRequest extends Request {
                 this.fileSystemMountEnabled = model.fileSystemMountEnabled;
                 this.imageId = model.imageId;
                 this.keyPairName = model.keyPairName;
+                this.loginPassword = model.loginPassword;
                 this.machineType = model.machineType;
                 this.nodeGroupDescription = model.nodeGroupDescription;
                 this.nodeGroupName = model.nodeGroupName;
@@ -2181,6 +2194,17 @@ public class CreateClusterRequest extends Request {
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
+                return this;
+            }
+
+            /**
+             * <p>Login password</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
+             */
+            public Builder loginPassword(String loginPassword) {
+                this.loginPassword = loginPassword;
                 return this;
             }
 

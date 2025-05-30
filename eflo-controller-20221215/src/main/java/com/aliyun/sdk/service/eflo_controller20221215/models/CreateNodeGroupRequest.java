@@ -284,6 +284,9 @@ public class CreateNodeGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("KeyPairName")
         private String keyPairName;
 
+        @com.aliyun.core.annotation.NameInMap("LoginPassword")
+        private String loginPassword;
+
         @com.aliyun.core.annotation.NameInMap("MachineType")
         @com.aliyun.core.annotation.Validation(required = true)
         private String machineType;
@@ -306,6 +309,7 @@ public class CreateNodeGroupRequest extends Request {
             this.fileSystemMountEnabled = builder.fileSystemMountEnabled;
             this.imageId = builder.imageId;
             this.keyPairName = builder.keyPairName;
+            this.loginPassword = builder.loginPassword;
             this.machineType = builder.machineType;
             this.nodeGroupDescription = builder.nodeGroupDescription;
             this.nodeGroupName = builder.nodeGroupName;
@@ -350,6 +354,13 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
+         * @return loginPassword
+         */
+        public String getLoginPassword() {
+            return this.loginPassword;
+        }
+
+        /**
          * @return machineType
          */
         public String getMachineType() {
@@ -389,6 +400,7 @@ public class CreateNodeGroupRequest extends Request {
             private Boolean fileSystemMountEnabled; 
             private String imageId; 
             private String keyPairName; 
+            private String loginPassword; 
             private String machineType; 
             private String nodeGroupDescription; 
             private String nodeGroupName; 
@@ -403,6 +415,7 @@ public class CreateNodeGroupRequest extends Request {
                 this.fileSystemMountEnabled = model.fileSystemMountEnabled;
                 this.imageId = model.imageId;
                 this.keyPairName = model.keyPairName;
+                this.loginPassword = model.loginPassword;
                 this.machineType = model.machineType;
                 this.nodeGroupDescription = model.nodeGroupDescription;
                 this.nodeGroupName = model.nodeGroupName;
@@ -453,6 +466,14 @@ public class CreateNodeGroupRequest extends Request {
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
+                return this;
+            }
+
+            /**
+             * LoginPassword.
+             */
+            public Builder loginPassword(String loginPassword) {
+                this.loginPassword = loginPassword;
                 return this;
             }
 

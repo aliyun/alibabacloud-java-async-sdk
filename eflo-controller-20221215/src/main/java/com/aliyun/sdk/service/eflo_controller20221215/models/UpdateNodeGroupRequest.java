@@ -34,6 +34,10 @@ public class UpdateNodeGroupRequest extends Request {
     private String keyPairName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LoginPassword")
+    private String loginPassword;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NewNodeGroupName")
     private String newNodeGroupName;
 
@@ -51,6 +55,7 @@ public class UpdateNodeGroupRequest extends Request {
         this.fileSystemMountEnabled = builder.fileSystemMountEnabled;
         this.imageId = builder.imageId;
         this.keyPairName = builder.keyPairName;
+        this.loginPassword = builder.loginPassword;
         this.newNodeGroupName = builder.newNodeGroupName;
         this.nodeGroupId = builder.nodeGroupId;
         this.userData = builder.userData;
@@ -98,6 +103,13 @@ public class UpdateNodeGroupRequest extends Request {
     }
 
     /**
+     * @return loginPassword
+     */
+    public String getLoginPassword() {
+        return this.loginPassword;
+    }
+
+    /**
      * @return newNodeGroupName
      */
     public String getNewNodeGroupName() {
@@ -123,6 +135,7 @@ public class UpdateNodeGroupRequest extends Request {
         private Boolean fileSystemMountEnabled; 
         private String imageId; 
         private String keyPairName; 
+        private String loginPassword; 
         private String newNodeGroupName; 
         private String nodeGroupId; 
         private String userData; 
@@ -137,6 +150,7 @@ public class UpdateNodeGroupRequest extends Request {
             this.fileSystemMountEnabled = request.fileSystemMountEnabled;
             this.imageId = request.imageId;
             this.keyPairName = request.keyPairName;
+            this.loginPassword = request.loginPassword;
             this.newNodeGroupName = request.newNodeGroupName;
             this.nodeGroupId = request.nodeGroupId;
             this.userData = request.userData;
@@ -164,7 +178,7 @@ public class UpdateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>节点组的默认镜像id，如果不设置，那么就不会改变。</p>
+         * <p>The default image ID of a node group remains unchanged if not explicitly set.</p>
          * 
          * <strong>example:</strong>
          * <p>i123847249284734</p>
@@ -184,6 +198,15 @@ public class UpdateNodeGroupRequest extends Request {
         public Builder keyPairName(String keyPairName) {
             this.putBodyParameter("KeyPairName", keyPairName);
             this.keyPairName = keyPairName;
+            return this;
+        }
+
+        /**
+         * <p>节点组内机器的登录密码</p>
+         */
+        public Builder loginPassword(String loginPassword) {
+            this.putBodyParameter("LoginPassword", loginPassword);
+            this.loginPassword = loginPassword;
             return this;
         }
 
