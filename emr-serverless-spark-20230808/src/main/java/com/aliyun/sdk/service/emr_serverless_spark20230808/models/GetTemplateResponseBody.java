@@ -119,7 +119,7 @@ public class GetTemplateResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Template data) {
             this.data = data;
