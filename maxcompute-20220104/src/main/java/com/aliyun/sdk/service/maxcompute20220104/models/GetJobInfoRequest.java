@@ -60,7 +60,7 @@ public class GetJobInfoRequest extends Request {
         } 
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The job ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
