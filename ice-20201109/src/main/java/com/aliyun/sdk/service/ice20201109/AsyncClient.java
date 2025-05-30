@@ -189,6 +189,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEditingProjectResponse> createEditingProject(CreateEditingProjectRequest request);
 
     /**
+     * @param request the request parameters of CreateHotwordLibrary  CreateHotwordLibraryRequest
+     * @return CreateHotwordLibraryResponse
+     */
+    CompletableFuture<CreateHotwordLibraryResponse> createHotwordLibrary(CreateHotwordLibraryRequest request);
+
+    /**
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <p>After you call this operation to create a live package channel, the system will automatically generate the ingest endpoint URL, and username and password required for authentication.</p>
@@ -449,6 +455,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteEditingProjectsResponse
      */
     CompletableFuture<DeleteEditingProjectsResponse> deleteEditingProjects(DeleteEditingProjectsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteHotwordLibrary  DeleteHotwordLibraryRequest
+     * @return DeleteHotwordLibraryResponse
+     */
+    CompletableFuture<DeleteHotwordLibraryResponse> deleteHotwordLibrary(DeleteHotwordLibraryRequest request);
 
     /**
      * <b>description</b> :
@@ -912,6 +924,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEventCallbackResponse> getEventCallback(GetEventCallbackRequest request);
 
     /**
+     * @param request the request parameters of GetHotwordLibrary  GetHotwordLibraryRequest
+     * @return GetHotwordLibraryResponse
+     */
+    CompletableFuture<GetHotwordLibraryResponse> getHotwordLibrary(GetHotwordLibraryRequest request);
+
+    /**
      * @param request the request parameters of GetLiveEditingIndexFile  GetLiveEditingIndexFileRequest
      * @return GetLiveEditingIndexFileResponse
      */
@@ -1360,6 +1378,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListEditingProjectsResponse
      */
     CompletableFuture<ListEditingProjectsResponse> listEditingProjects(ListEditingProjectsRequest request);
+
+    /**
+     * @param request the request parameters of ListHotwordLibraries  ListHotwordLibrariesRequest
+     * @return ListHotwordLibrariesResponse
+     */
+    CompletableFuture<ListHotwordLibrariesResponse> listHotwordLibraries(ListHotwordLibrariesRequest request);
 
     /**
      * <b>description</b> :
@@ -2356,6 +2380,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateEditingProjectResponse
      */
     CompletableFuture<UpdateEditingProjectResponse> updateEditingProject(UpdateEditingProjectRequest request);
+
+    /**
+     * @param request the request parameters of UpdateHotwordLibrary  UpdateHotwordLibraryRequest
+     * @return UpdateHotwordLibraryResponse
+     */
+    CompletableFuture<UpdateHotwordLibraryResponse> updateHotwordLibrary(UpdateHotwordLibraryRequest request);
 
     /**
      * <b>description</b> :
