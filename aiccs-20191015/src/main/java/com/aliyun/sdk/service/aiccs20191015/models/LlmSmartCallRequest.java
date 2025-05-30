@@ -50,8 +50,25 @@ public class LlmSmartCallRequest extends Request {
     private java.util.Map<String, ?> promptParam;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 300)
+    private Integer sessionTimeout;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartWordParam")
     private java.util.Map<String, ?> startWordParam;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsSpeed")
+    private Integer ttsSpeed;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsVoiceCode")
+    private String ttsVoiceCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TtsVolume")
+    private Integer ttsVolume;
 
     private LlmSmartCallRequest(Builder builder) {
         super(builder);
@@ -62,7 +79,11 @@ public class LlmSmartCallRequest extends Request {
         this.extension = builder.extension;
         this.outId = builder.outId;
         this.promptParam = builder.promptParam;
+        this.sessionTimeout = builder.sessionTimeout;
         this.startWordParam = builder.startWordParam;
+        this.ttsSpeed = builder.ttsSpeed;
+        this.ttsVoiceCode = builder.ttsVoiceCode;
+        this.ttsVolume = builder.ttsVolume;
     }
 
     public static Builder builder() {
@@ -128,10 +149,38 @@ public class LlmSmartCallRequest extends Request {
     }
 
     /**
+     * @return sessionTimeout
+     */
+    public Integer getSessionTimeout() {
+        return this.sessionTimeout;
+    }
+
+    /**
      * @return startWordParam
      */
     public java.util.Map<String, ?> getStartWordParam() {
         return this.startWordParam;
+    }
+
+    /**
+     * @return ttsSpeed
+     */
+    public Integer getTtsSpeed() {
+        return this.ttsSpeed;
+    }
+
+    /**
+     * @return ttsVoiceCode
+     */
+    public String getTtsVoiceCode() {
+        return this.ttsVoiceCode;
+    }
+
+    /**
+     * @return ttsVolume
+     */
+    public Integer getTtsVolume() {
+        return this.ttsVolume;
     }
 
     public static final class Builder extends Request.Builder<LlmSmartCallRequest, Builder> {
@@ -142,7 +191,11 @@ public class LlmSmartCallRequest extends Request {
         private String extension; 
         private String outId; 
         private java.util.Map<String, ?> promptParam; 
+        private Integer sessionTimeout; 
         private java.util.Map<String, ?> startWordParam; 
+        private Integer ttsSpeed; 
+        private String ttsVoiceCode; 
+        private Integer ttsVolume; 
 
         private Builder() {
             super();
@@ -157,7 +210,11 @@ public class LlmSmartCallRequest extends Request {
             this.extension = request.extension;
             this.outId = request.outId;
             this.promptParam = request.promptParam;
+            this.sessionTimeout = request.sessionTimeout;
             this.startWordParam = request.startWordParam;
+            this.ttsSpeed = request.ttsSpeed;
+            this.ttsVoiceCode = request.ttsVoiceCode;
+            this.ttsVolume = request.ttsVolume;
         } 
 
         /**
@@ -232,12 +289,48 @@ public class LlmSmartCallRequest extends Request {
         }
 
         /**
+         * SessionTimeout.
+         */
+        public Builder sessionTimeout(Integer sessionTimeout) {
+            this.putQueryParameter("SessionTimeout", sessionTimeout);
+            this.sessionTimeout = sessionTimeout;
+            return this;
+        }
+
+        /**
          * StartWordParam.
          */
         public Builder startWordParam(java.util.Map<String, ?> startWordParam) {
             String startWordParamShrink = shrink(startWordParam, "StartWordParam", "json");
             this.putQueryParameter("StartWordParam", startWordParamShrink);
             this.startWordParam = startWordParam;
+            return this;
+        }
+
+        /**
+         * TtsSpeed.
+         */
+        public Builder ttsSpeed(Integer ttsSpeed) {
+            this.putQueryParameter("TtsSpeed", ttsSpeed);
+            this.ttsSpeed = ttsSpeed;
+            return this;
+        }
+
+        /**
+         * TtsVoiceCode.
+         */
+        public Builder ttsVoiceCode(String ttsVoiceCode) {
+            this.putQueryParameter("TtsVoiceCode", ttsVoiceCode);
+            this.ttsVoiceCode = ttsVoiceCode;
+            return this;
+        }
+
+        /**
+         * TtsVolume.
+         */
+        public Builder ttsVolume(Integer ttsVolume) {
+            this.putQueryParameter("TtsVolume", ttsVolume);
+            this.ttsVolume = ttsVolume;
             return this;
         }
 
