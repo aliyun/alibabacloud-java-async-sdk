@@ -1076,10 +1076,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
      * <p>DescribeClusterNodePoolDetailResponseBody</p>
      */
     public static class AutoRepairPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("approval_required")
+        private Boolean approvalRequired;
+
         @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
 
         private AutoRepairPolicy(Builder builder) {
+            this.approvalRequired = builder.approvalRequired;
             this.restartNode = builder.restartNode;
         }
 
@@ -1092,6 +1096,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return approvalRequired
+         */
+        public Boolean getApprovalRequired() {
+            return this.approvalRequired;
+        }
+
+        /**
          * @return restartNode
          */
         public Boolean getRestartNode() {
@@ -1099,14 +1110,24 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean approvalRequired; 
             private Boolean restartNode; 
 
             private Builder() {
             } 
 
             private Builder(AutoRepairPolicy model) {
+                this.approvalRequired = model.approvalRequired;
                 this.restartNode = model.restartNode;
             } 
+
+            /**
+             * approval_required.
+             */
+            public Builder approvalRequired(Boolean approvalRequired) {
+                this.approvalRequired = approvalRequired;
+                return this;
+            }
 
             /**
              * <p>Whether to allow restarting nodes.</p>

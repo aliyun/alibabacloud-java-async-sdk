@@ -1102,10 +1102,14 @@ public class CreateClusterNodePoolRequest extends Request {
      * <p>CreateClusterNodePoolRequest</p>
      */
     public static class AutoRepairPolicy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("approval_required")
+        private Boolean approvalRequired;
+
         @com.aliyun.core.annotation.NameInMap("restart_node")
         private Boolean restartNode;
 
         private AutoRepairPolicy(Builder builder) {
+            this.approvalRequired = builder.approvalRequired;
             this.restartNode = builder.restartNode;
         }
 
@@ -1118,6 +1122,13 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         /**
+         * @return approvalRequired
+         */
+        public Boolean getApprovalRequired() {
+            return this.approvalRequired;
+        }
+
+        /**
          * @return restartNode
          */
         public Boolean getRestartNode() {
@@ -1125,14 +1136,24 @@ public class CreateClusterNodePoolRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean approvalRequired; 
             private Boolean restartNode; 
 
             private Builder() {
             } 
 
             private Builder(AutoRepairPolicy model) {
+                this.approvalRequired = model.approvalRequired;
                 this.restartNode = model.restartNode;
             } 
+
+            /**
+             * approval_required.
+             */
+            public Builder approvalRequired(Boolean approvalRequired) {
+                this.approvalRequired = approvalRequired;
+                return this;
+            }
 
             /**
              * <p>Specifies whether to allow node restart. This parameter takes effect only when <code>auto_repair</code> is set to true. Valid values:</p>
