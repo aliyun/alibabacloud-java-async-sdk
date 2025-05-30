@@ -1710,6 +1710,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DeployType")
         private String deployType;
 
+        @com.aliyun.core.annotation.NameInMap("OperationMetadata")
+        private String operationMetadata;
+
         @com.aliyun.core.annotation.NameInMap("PublishTime")
         private String publishTime;
 
@@ -1755,6 +1758,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private Service(Builder builder) {
             this.deployMetadata = builder.deployMetadata;
             this.deployType = builder.deployType;
+            this.operationMetadata = builder.operationMetadata;
             this.publishTime = builder.publishTime;
             this.serviceDocUrl = builder.serviceDocUrl;
             this.serviceId = builder.serviceId;
@@ -1791,6 +1795,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          */
         public String getDeployType() {
             return this.deployType;
+        }
+
+        /**
+         * @return operationMetadata
+         */
+        public String getOperationMetadata() {
+            return this.operationMetadata;
         }
 
         /**
@@ -1894,6 +1905,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String deployMetadata; 
             private String deployType; 
+            private String operationMetadata; 
             private String publishTime; 
             private String serviceDocUrl; 
             private String serviceId; 
@@ -1915,6 +1927,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private Builder(Service model) {
                 this.deployMetadata = model.deployMetadata;
                 this.deployType = model.deployType;
+                this.operationMetadata = model.operationMetadata;
                 this.publishTime = model.publishTime;
                 this.serviceDocUrl = model.serviceDocUrl;
                 this.serviceId = model.serviceId;
@@ -1954,6 +1967,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
+                return this;
+            }
+
+            /**
+             * OperationMetadata.
+             */
+            public Builder operationMetadata(String operationMetadata) {
+                this.operationMetadata = operationMetadata;
                 return this;
             }
 
