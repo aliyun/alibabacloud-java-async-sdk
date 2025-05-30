@@ -179,6 +179,9 @@ public class PodcastTaskResultQueryResponseBody extends TeaModel {
      * <p>PodcastTaskResultQueryResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("extraResult")
+        private Object extraResult;
+
         @com.aliyun.core.annotation.NameInMap("resultUrl")
         private Object resultUrl;
 
@@ -192,6 +195,7 @@ public class PodcastTaskResultQueryResponseBody extends TeaModel {
         private String taskStatus;
 
         private Data(Builder builder) {
+            this.extraResult = builder.extraResult;
             this.resultUrl = builder.resultUrl;
             this.script = builder.script;
             this.taskId = builder.taskId;
@@ -204,6 +208,13 @@ public class PodcastTaskResultQueryResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return extraResult
+         */
+        public Object getExtraResult() {
+            return this.extraResult;
         }
 
         /**
@@ -235,6 +246,7 @@ public class PodcastTaskResultQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Object extraResult; 
             private Object resultUrl; 
             private String script; 
             private String taskId; 
@@ -244,11 +256,20 @@ public class PodcastTaskResultQueryResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.extraResult = model.extraResult;
                 this.resultUrl = model.resultUrl;
                 this.script = model.script;
                 this.taskId = model.taskId;
                 this.taskStatus = model.taskStatus;
             } 
+
+            /**
+             * extraResult.
+             */
+            public Builder extraResult(Object extraResult) {
+                this.extraResult = extraResult;
+                return this;
+            }
 
             /**
              * resultUrl.
