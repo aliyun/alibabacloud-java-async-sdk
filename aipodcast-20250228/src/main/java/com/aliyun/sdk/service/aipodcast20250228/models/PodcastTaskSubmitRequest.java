@@ -26,6 +26,10 @@ public class PodcastTaskSubmitRequest extends Request {
     private java.util.List<String> fileUrls;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceLang")
+    private String sourceLang;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("text")
     private String text;
 
@@ -46,6 +50,7 @@ public class PodcastTaskSubmitRequest extends Request {
         super(builder);
         this.counts = builder.counts;
         this.fileUrls = builder.fileUrls;
+        this.sourceLang = builder.sourceLang;
         this.text = builder.text;
         this.topic = builder.topic;
         this.voices = builder.voices;
@@ -80,6 +85,13 @@ public class PodcastTaskSubmitRequest extends Request {
     }
 
     /**
+     * @return sourceLang
+     */
+    public String getSourceLang() {
+        return this.sourceLang;
+    }
+
+    /**
      * @return text
      */
     public String getText() {
@@ -110,6 +122,7 @@ public class PodcastTaskSubmitRequest extends Request {
     public static final class Builder extends Request.Builder<PodcastTaskSubmitRequest, Builder> {
         private Integer counts; 
         private java.util.List<String> fileUrls; 
+        private String sourceLang; 
         private String text; 
         private String topic; 
         private java.util.List<String> voices; 
@@ -123,6 +136,7 @@ public class PodcastTaskSubmitRequest extends Request {
             super(request);
             this.counts = request.counts;
             this.fileUrls = request.fileUrls;
+            this.sourceLang = request.sourceLang;
             this.text = request.text;
             this.topic = request.topic;
             this.voices = request.voices;
@@ -145,6 +159,15 @@ public class PodcastTaskSubmitRequest extends Request {
             String fileUrlsShrink = shrink(fileUrls, "fileUrls", "json");
             this.putBodyParameter("fileUrls", fileUrlsShrink);
             this.fileUrls = fileUrls;
+            return this;
+        }
+
+        /**
+         * sourceLang.
+         */
+        public Builder sourceLang(String sourceLang) {
+            this.putBodyParameter("sourceLang", sourceLang);
+            this.sourceLang = sourceLang;
             return this;
         }
 
