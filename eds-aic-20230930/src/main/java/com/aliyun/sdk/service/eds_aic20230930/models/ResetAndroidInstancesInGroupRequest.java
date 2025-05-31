@@ -25,10 +25,15 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SaleMode")
     private String saleMode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SettingResetType")
+    private Integer settingResetType;
+
     private ResetAndroidInstancesInGroupRequest(Builder builder) {
         super(builder);
         this.androidInstanceIds = builder.androidInstanceIds;
         this.saleMode = builder.saleMode;
+        this.settingResetType = builder.settingResetType;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         return this.saleMode;
     }
 
+    /**
+     * @return settingResetType
+     */
+    public Integer getSettingResetType() {
+        return this.settingResetType;
+    }
+
     public static final class Builder extends Request.Builder<ResetAndroidInstancesInGroupRequest, Builder> {
         private java.util.List<String> androidInstanceIds; 
         private String saleMode; 
+        private Integer settingResetType; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
             super(request);
             this.androidInstanceIds = request.androidInstanceIds;
             this.saleMode = request.saleMode;
+            this.settingResetType = request.settingResetType;
         } 
 
         /**
@@ -87,6 +101,15 @@ public class ResetAndroidInstancesInGroupRequest extends Request {
         public Builder saleMode(String saleMode) {
             this.putQueryParameter("SaleMode", saleMode);
             this.saleMode = saleMode;
+            return this;
+        }
+
+        /**
+         * SettingResetType.
+         */
+        public Builder settingResetType(Integer settingResetType) {
+            this.putQueryParameter("SettingResetType", settingResetType);
+            this.settingResetType = settingResetType;
             return this;
         }
 

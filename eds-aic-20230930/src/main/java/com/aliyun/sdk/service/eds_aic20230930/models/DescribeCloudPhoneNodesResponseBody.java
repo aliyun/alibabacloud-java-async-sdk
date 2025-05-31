@@ -173,6 +173,81 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
      *
      * <p>DescribeCloudPhoneNodesResponseBody</p>
      */
+    public static class NetworkInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("NetworkId")
+        private String networkId;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        private NetworkInfos(Builder builder) {
+            this.networkId = builder.networkId;
+            this.vSwitchId = builder.vSwitchId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return networkId
+         */
+        public String getNetworkId() {
+            return this.networkId;
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public static final class Builder {
+            private String networkId; 
+            private String vSwitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkInfos model) {
+                this.networkId = model.networkId;
+                this.vSwitchId = model.vSwitchId;
+            } 
+
+            /**
+             * NetworkId.
+             */
+            public Builder networkId(String networkId) {
+                this.networkId = networkId;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            public NetworkInfos build() {
+                return new NetworkInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCloudPhoneNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudPhoneNodesResponseBody</p>
+     */
     public static class NodeModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
@@ -197,6 +272,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("NetworkId")
         private String networkId;
+
+        @com.aliyun.core.annotation.NameInMap("NetworkInfos")
+        private java.util.List<NetworkInfos> networkInfos;
 
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
@@ -237,6 +315,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             this.instanceType = builder.instanceType;
             this.memory = builder.memory;
             this.networkId = builder.networkId;
+            this.networkInfos = builder.networkInfos;
             this.nodeId = builder.nodeId;
             this.nodeName = builder.nodeName;
             this.phoneCount = builder.phoneCount;
@@ -311,6 +390,13 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
          */
         public String getNetworkId() {
             return this.networkId;
+        }
+
+        /**
+         * @return networkInfos
+         */
+        public java.util.List<NetworkInfos> getNetworkInfos() {
+            return this.networkInfos;
         }
 
         /**
@@ -392,6 +478,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             private String instanceType; 
             private Integer memory; 
             private String networkId; 
+            private java.util.List<NetworkInfos> networkInfos; 
             private String nodeId; 
             private String nodeName; 
             private Integer phoneCount; 
@@ -415,6 +502,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
                 this.instanceType = model.instanceType;
                 this.memory = model.memory;
                 this.networkId = model.networkId;
+                this.networkInfos = model.networkInfos;
                 this.nodeId = model.nodeId;
                 this.nodeName = model.nodeName;
                 this.phoneCount = model.phoneCount;
@@ -509,6 +597,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
              */
             public Builder networkId(String networkId) {
                 this.networkId = networkId;
+                return this;
+            }
+
+            /**
+             * NetworkInfos.
+             */
+            public Builder networkInfos(java.util.List<NetworkInfos> networkInfos) {
+                this.networkInfos = networkInfos;
                 return this;
             }
 

@@ -101,8 +101,17 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppInstanceGroupId")
         private String appInstanceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("AppInstanceId")
+        private String appInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("PersistentAppInstanceId")
+        private String persistentAppInstanceId;
 
         @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
@@ -115,7 +124,10 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
 
         private InstanceConnectionModels(Builder builder) {
             this.appInstanceGroupId = builder.appInstanceGroupId;
+            this.appInstanceId = builder.appInstanceId;
+            this.errorCode = builder.errorCode;
             this.instanceId = builder.instanceId;
+            this.persistentAppInstanceId = builder.persistentAppInstanceId;
             this.taskId = builder.taskId;
             this.taskStatus = builder.taskStatus;
             this.ticket = builder.ticket;
@@ -137,10 +149,31 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
         }
 
         /**
+         * @return appInstanceId
+         */
+        public String getAppInstanceId() {
+            return this.appInstanceId;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return persistentAppInstanceId
+         */
+        public String getPersistentAppInstanceId() {
+            return this.persistentAppInstanceId;
         }
 
         /**
@@ -166,7 +199,10 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appInstanceGroupId; 
+            private String appInstanceId; 
+            private String errorCode; 
             private String instanceId; 
+            private String persistentAppInstanceId; 
             private String taskId; 
             private String taskStatus; 
             private String ticket; 
@@ -176,7 +212,10 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
 
             private Builder(InstanceConnectionModels model) {
                 this.appInstanceGroupId = model.appInstanceGroupId;
+                this.appInstanceId = model.appInstanceId;
+                this.errorCode = model.errorCode;
                 this.instanceId = model.instanceId;
+                this.persistentAppInstanceId = model.persistentAppInstanceId;
                 this.taskId = model.taskId;
                 this.taskStatus = model.taskStatus;
                 this.ticket = model.ticket;
@@ -194,6 +233,22 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
             }
 
             /**
+             * AppInstanceId.
+             */
+            public Builder appInstanceId(String appInstanceId) {
+                this.appInstanceId = appInstanceId;
+                return this;
+            }
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
+                return this;
+            }
+
+            /**
              * <p>The ID of the cloud phone instance.</p>
              * 
              * <strong>example:</strong>
@@ -201,6 +256,14 @@ public class BatchGetAcpConnectionTicketResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * PersistentAppInstanceId.
+             */
+            public Builder persistentAppInstanceId(String persistentAppInstanceId) {
+                this.persistentAppInstanceId = persistentAppInstanceId;
                 return this;
             }
 

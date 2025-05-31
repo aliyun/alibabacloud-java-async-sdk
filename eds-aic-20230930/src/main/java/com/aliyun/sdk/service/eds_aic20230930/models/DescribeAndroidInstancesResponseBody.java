@@ -629,6 +629,12 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
         private InstanceModel(Builder builder) {
             this.androidInstanceGroupId = builder.androidInstanceGroupId;
             this.androidInstanceGroupName = builder.androidInstanceGroupName;
@@ -666,6 +672,8 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.renderingType = builder.renderingType;
             this.sessionStatus = builder.sessionStatus;
             this.tags = builder.tags;
+            this.vSwitchId = builder.vSwitchId;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -928,6 +936,20 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             return this.tags;
         }
 
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
             private String androidInstanceGroupId; 
             private String androidInstanceGroupName; 
@@ -965,6 +987,8 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String renderingType; 
             private String sessionStatus; 
             private java.util.List<Tags> tags; 
+            private String vSwitchId; 
+            private String zoneId; 
 
             private Builder() {
             } 
@@ -1006,6 +1030,8 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
                 this.renderingType = model.renderingType;
                 this.sessionStatus = model.sessionStatus;
                 this.tags = model.tags;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
             } 
 
             /**
@@ -1392,6 +1418,22 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * VSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 
