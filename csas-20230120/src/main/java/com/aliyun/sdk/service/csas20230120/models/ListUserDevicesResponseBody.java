@@ -245,6 +245,9 @@ public class ListUserDevicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mac")
         private String mac;
 
+        @com.aliyun.core.annotation.NameInMap("MatchDeviceGroupIds")
+        private java.util.List<String> matchDeviceGroupIds;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
         private String memory;
 
@@ -294,6 +297,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             this.iaStatus = builder.iaStatus;
             this.innerIP = builder.innerIP;
             this.mac = builder.mac;
+            this.matchDeviceGroupIds = builder.matchDeviceGroupIds;
             this.memory = builder.memory;
             this.nacStatus = builder.nacStatus;
             this.netInterfaceInfo = builder.netInterfaceInfo;
@@ -441,6 +445,13 @@ public class ListUserDevicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return matchDeviceGroupIds
+         */
+        public java.util.List<String> getMatchDeviceGroupIds() {
+            return this.matchDeviceGroupIds;
+        }
+
+        /**
          * @return memory
          */
         public String getMemory() {
@@ -529,6 +540,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
             private String iaStatus; 
             private String innerIP; 
             private String mac; 
+            private java.util.List<String> matchDeviceGroupIds; 
             private String memory; 
             private String nacStatus; 
             private java.util.List<NetInterfaceInfo> netInterfaceInfo; 
@@ -562,6 +574,7 @@ public class ListUserDevicesResponseBody extends TeaModel {
                 this.iaStatus = model.iaStatus;
                 this.innerIP = model.innerIP;
                 this.mac = model.mac;
+                this.matchDeviceGroupIds = model.matchDeviceGroupIds;
                 this.memory = model.memory;
                 this.nacStatus = model.nacStatus;
                 this.netInterfaceInfo = model.netInterfaceInfo;
@@ -715,6 +728,14 @@ public class ListUserDevicesResponseBody extends TeaModel {
              */
             public Builder mac(String mac) {
                 this.mac = mac;
+                return this;
+            }
+
+            /**
+             * MatchDeviceGroupIds.
+             */
+            public Builder matchDeviceGroupIds(java.util.List<String> matchDeviceGroupIds) {
+                this.matchDeviceGroupIds = matchDeviceGroupIds;
                 return this;
             }
 

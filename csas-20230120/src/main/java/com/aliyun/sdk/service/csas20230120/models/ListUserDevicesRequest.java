@@ -39,6 +39,10 @@ public class ListUserDevicesRequest extends Request {
     private String deviceBelong;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceGroupId")
+    private String deviceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeviceStatuses")
     private java.util.List<String> deviceStatuses;
 
@@ -110,6 +114,7 @@ public class ListUserDevicesRequest extends Request {
         this.currentPage = builder.currentPage;
         this.department = builder.department;
         this.deviceBelong = builder.deviceBelong;
+        this.deviceGroupId = builder.deviceGroupId;
         this.deviceStatuses = builder.deviceStatuses;
         this.deviceTags = builder.deviceTags;
         this.deviceTypes = builder.deviceTypes;
@@ -174,6 +179,13 @@ public class ListUserDevicesRequest extends Request {
      */
     public String getDeviceBelong() {
         return this.deviceBelong;
+    }
+
+    /**
+     * @return deviceGroupId
+     */
+    public String getDeviceGroupId() {
+        return this.deviceGroupId;
     }
 
     /**
@@ -294,6 +306,7 @@ public class ListUserDevicesRequest extends Request {
         private Long currentPage; 
         private String department; 
         private String deviceBelong; 
+        private String deviceGroupId; 
         private java.util.List<String> deviceStatuses; 
         private java.util.List<String> deviceTags; 
         private java.util.List<String> deviceTypes; 
@@ -322,6 +335,7 @@ public class ListUserDevicesRequest extends Request {
             this.currentPage = request.currentPage;
             this.department = request.department;
             this.deviceBelong = request.deviceBelong;
+            this.deviceGroupId = request.deviceGroupId;
             this.deviceStatuses = request.deviceStatuses;
             this.deviceTags = request.deviceTags;
             this.deviceTypes = request.deviceTypes;
@@ -385,6 +399,15 @@ public class ListUserDevicesRequest extends Request {
         public Builder deviceBelong(String deviceBelong) {
             this.putQueryParameter("DeviceBelong", deviceBelong);
             this.deviceBelong = deviceBelong;
+            return this;
+        }
+
+        /**
+         * DeviceGroupId.
+         */
+        public Builder deviceGroupId(String deviceGroupId) {
+            this.putQueryParameter("DeviceGroupId", deviceGroupId);
+            this.deviceGroupId = deviceGroupId;
             return this;
         }
 

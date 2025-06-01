@@ -60,6 +60,11 @@ public class GetPrivateAccessApplicationRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the office application. You can obtain the value by calling the following operations:</p>
+         * <ul>
+         * <li><a href="~~ListPrivateAccessApplications~~">ListPrivateAccessApplications</a>: queries office applications.</li>
+         * <li><a href="~~CreatePrivateAccessApplication~~">CreatePrivateAccessApplication</a>: creates an office application.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

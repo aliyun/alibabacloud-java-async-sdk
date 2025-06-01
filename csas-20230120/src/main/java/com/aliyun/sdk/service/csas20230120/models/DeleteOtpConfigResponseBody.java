@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdatePrivateAccessApplicationResponseBody} extends {@link TeaModel}
+ * {@link DeleteOtpConfigResponseBody} extends {@link TeaModel}
  *
- * <p>UpdatePrivateAccessApplicationResponseBody</p>
+ * <p>DeleteOtpConfigResponseBody</p>
  */
-public class UpdatePrivateAccessApplicationResponseBody extends TeaModel {
+public class DeleteOtpConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdatePrivateAccessApplicationResponseBody(Builder builder) {
+    private DeleteOtpConfigResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class UpdatePrivateAccessApplicationResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdatePrivateAccessApplicationResponseBody create() {
+    public static DeleteOtpConfigResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,20 @@ public class UpdatePrivateAccessApplicationResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdatePrivateAccessApplicationResponseBody model) {
+        private Builder(DeleteOtpConfigResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>FD724DBC-CD76-5235-BF76-59C51B73296D</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UpdatePrivateAccessApplicationResponseBody build() {
-            return new UpdatePrivateAccessApplicationResponseBody(this);
+        public DeleteOtpConfigResponseBody build() {
+            return new DeleteOtpConfigResponseBody(this);
         } 
 
     } 

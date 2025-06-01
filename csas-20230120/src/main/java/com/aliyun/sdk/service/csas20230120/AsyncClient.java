@@ -50,12 +50,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDynamicRouteResponse> createDynamicRoute(CreateDynamicRouteRequest request);
 
     /**
+     * @param request the request parameters of CreateEnterpriseAcceleratePolicy  CreateEnterpriseAcceleratePolicyRequest
+     * @return CreateEnterpriseAcceleratePolicyResponse
+     */
+    CompletableFuture<CreateEnterpriseAcceleratePolicyResponse> createEnterpriseAcceleratePolicy(CreateEnterpriseAcceleratePolicyRequest request);
+
+    /**
      * @param request the request parameters of CreateIdpDepartment  CreateIdpDepartmentRequest
      * @return CreateIdpDepartmentResponse
      */
     CompletableFuture<CreateIdpDepartmentResponse> createIdpDepartment(CreateIdpDepartmentRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>By default, you can create a maximum of 500 office applications.</p>
+     * 
      * @param request the request parameters of CreatePrivateAccessApplication  CreatePrivateAccessApplicationRequest
      * @return CreatePrivateAccessApplicationResponse
      */
@@ -132,6 +141,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteIdpDepartmentResponse
      */
     CompletableFuture<DeleteIdpDepartmentResponse> deleteIdpDepartment(DeleteIdpDepartmentRequest request);
+
+    /**
+     * @param request the request parameters of DeleteOtpConfig  DeleteOtpConfigRequest
+     * @return DeleteOtpConfigResponse
+     */
+    CompletableFuture<DeleteOtpConfigResponse> deleteOtpConfig(DeleteOtpConfigRequest request);
 
     /**
      * @param request the request parameters of DeletePrivateAccessApplication  DeletePrivateAccessApplicationRequest

@@ -161,7 +161,7 @@ public class CreateWmExtractTaskRequest extends Request {
         } 
 
         /**
-         * CsvControl.
+         * <p>The CSV watermark control parameter. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
          */
         public Builder csvControl(CsvControl csvControl) {
             String csvControlShrink = shrink(csvControl, "CsvControl", "json");
@@ -171,7 +171,14 @@ public class CreateWmExtractTaskRequest extends Request {
         }
 
         /**
-         * DocumentIsCapture.
+         * <p>The document watermark parameter that specifies whether the file to be extracted is a screenshot of a document with a background watermark added. The system determines whether to use the extraction logic for document background watermarks based on whether the file to be extracted is an image file. By default, you do not need to configure this parameter. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder documentIsCapture(Boolean documentIsCapture) {
             this.putBodyParameter("DocumentIsCapture", documentIsCapture);
@@ -180,6 +187,7 @@ public class CreateWmExtractTaskRequest extends Request {
         }
 
         /**
+         * <p>The URL used to download the file to be extracted. The URL must be accessible over the Internet.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,6 +200,7 @@ public class CreateWmExtractTaskRequest extends Request {
         }
 
         /**
+         * <p>The name of the file to be extracted. The system needs to check the file type based on the file name extension.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -204,7 +213,14 @@ public class CreateWmExtractTaskRequest extends Request {
         }
 
         /**
-         * VideoIsLong.
+         * <p>The watermark parameter for videos that specifies whether to use the long video watermark SDK. Default value: false. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder videoIsLong(Boolean videoIsLong) {
             this.putBodyParameter("VideoIsLong", videoIsLong);
@@ -213,7 +229,10 @@ public class CreateWmExtractTaskRequest extends Request {
         }
 
         /**
-         * VideoSpeed.
+         * <p>The watermark parameter for long videos that specifies the video speed factor. The value can be a floating-point number or a string. Default value: 1. This parameter indicates the speed at which a watermark is added or the time-stretching rate for videos after a watermark is added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder videoSpeed(String videoSpeed) {
             this.putBodyParameter("VideoSpeed", videoSpeed);
@@ -222,7 +241,10 @@ public class CreateWmExtractTaskRequest extends Request {
         }
 
         /**
-         * WmInfoSize.
+         * <p>The watermark information size. Default value: 32. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. For example, if a 40-bit watermark is used for watermark embedding, you must set this parameter to 40 for watermark extraction.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder wmInfoSize(Long wmInfoSize) {
             this.putBodyParameter("WmInfoSize", wmInfoSize);
@@ -231,6 +253,23 @@ public class CreateWmExtractTaskRequest extends Request {
         }
 
         /**
+         * <p>The watermark type. Valid values:</p>
+         * <ul>
+         * <li><strong>PureWebappInvisible</strong>: web page watermark</li>
+         * <li><strong>PureAppInvisible</strong>: app watermark</li>
+         * <li><strong>PureScreenInvisible</strong>: screen watermark</li>
+         * <li><strong>PureDocument</strong>: document watermark</li>
+         * <li><strong>PureImage</strong>: image watermark</li>
+         * <li><strong>PureAudio</strong>: audio watermark</li>
+         * <li><strong>PureVideo</strong>: video watermark</li>
+         * <li><strong>AigcWebappInvisible</strong>: artificial intelligence generated content (AIGC)-based webpage watermark</li>
+         * <li><strong>AigcAppInvisible</strong>: AIGC-based app watermark</li>
+         * <li><strong>AigcScreenInvisible</strong>: AIGC-based screen watermark</li>
+         * <li><strong>AigcDocument</strong>: AIGC-based document watermark</li>
+         * <li><strong>AigcImage</strong>: AIGC-based image watermark</li>
+         * <li><strong>AigcAudio</strong>: AIGC-based audio watermark</li>
+         * <li><strong>AigcVideo</strong>: AIGC-based video watermark</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -355,7 +394,10 @@ public class CreateWmExtractTaskRequest extends Request {
             } 
 
             /**
-             * EmbedBitsNumberInEachTime.
+             * <p>The timestamp watermark parameter that specifies how much information a single timestamp holds. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder embedBitsNumberInEachTime(Long embedBitsNumberInEachTime) {
                 this.embedBitsNumberInEachTime = embedBitsNumberInEachTime;
@@ -363,7 +405,10 @@ public class CreateWmExtractTaskRequest extends Request {
             }
 
             /**
-             * EmbedColumn.
+             * <p>The lossy embedding control parameter that specifies columns to be modified You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder embedColumn(Long embedColumn) {
                 this.embedColumn = embedColumn;
@@ -371,7 +416,10 @@ public class CreateWmExtractTaskRequest extends Request {
             }
 
             /**
-             * EmbedPrecision.
+             * <p>The lossy embedding control parameter that specifies the modification precision. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder embedPrecision(Long embedPrecision) {
                 this.embedPrecision = embedPrecision;
@@ -379,7 +427,10 @@ public class CreateWmExtractTaskRequest extends Request {
             }
 
             /**
-             * EmbedTimePosition.
+             * <p>The timestamp watermark parameter that specifies the embedding position of the timestamp watermarks. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Min</p>
              */
             public Builder embedTimePosition(String embedTimePosition) {
                 this.embedTimePosition = embedTimePosition;
@@ -387,7 +438,10 @@ public class CreateWmExtractTaskRequest extends Request {
             }
 
             /**
-             * Method.
+             * <p>The CSV watermark embedding method. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lossless_row_shift_embed</p>
              */
             public Builder method(String method) {
                 this.method = method;
@@ -395,7 +449,10 @@ public class CreateWmExtractTaskRequest extends Request {
             }
 
             /**
-             * TimeFormat.
+             * <p>The timestamp watermark parameter that specifies the timestamp format. You must keep the value of this parameter consistent for watermark embedding and watermark extraction. Otherwise, the extraction fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Year-Mon-Day Hour:Min:Sec.MilSec</p>
              */
             public Builder timeFormat(String timeFormat) {
                 this.timeFormat = timeFormat;

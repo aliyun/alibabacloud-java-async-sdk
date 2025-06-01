@@ -130,6 +130,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateEnterpriseAcceleratePolicy  CreateEnterpriseAcceleratePolicyRequest
+     * @return CreateEnterpriseAcceleratePolicyResponse
+     */
+    @Override
+    public CompletableFuture<CreateEnterpriseAcceleratePolicyResponse> createEnterpriseAcceleratePolicy(CreateEnterpriseAcceleratePolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateEnterpriseAcceleratePolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateEnterpriseAcceleratePolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateEnterpriseAcceleratePolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateIdpDepartment  CreateIdpDepartmentRequest
      * @return CreateIdpDepartmentResponse
      */
@@ -148,6 +166,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>By default, you can create a maximum of 500 office applications.</p>
+     * 
      * @param request the request parameters of CreatePrivateAccessApplication  CreatePrivateAccessApplicationRequest
      * @return CreatePrivateAccessApplicationResponse
      */
@@ -376,6 +397,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteIdpDepartmentResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteOtpConfig  DeleteOtpConfigRequest
+     * @return DeleteOtpConfigResponse
+     */
+    @Override
+    public CompletableFuture<DeleteOtpConfigResponse> deleteOtpConfig(DeleteOtpConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteOtpConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteOtpConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteOtpConfigResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

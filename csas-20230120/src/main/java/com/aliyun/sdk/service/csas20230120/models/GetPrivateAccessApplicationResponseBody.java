@@ -67,7 +67,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         } 
 
         /**
-         * Application.
+         * <p>The office application.</p>
          */
         public Builder application(Application application) {
             this.application = application;
@@ -75,7 +75,10 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3ACC5EDC-2B7D-5032-8C58-D7615D66C1D4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -141,7 +144,10 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * Begin.
+             * <p>The start port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder begin(Integer begin) {
                 this.begin = begin;
@@ -149,7 +155,10 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * End.
+             * <p>The end port.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>81</p>
              */
             public Builder end(Integer end) {
                 this.end = end;
@@ -385,7 +394,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             } 
 
             /**
-             * Addresses.
+             * <p>The addresses of the office applications.</p>
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
@@ -393,7 +402,10 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationId.
+             * <p>The ID of the office application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-application-e12860ef6c48****</p>
              */
             public Builder applicationId(String applicationId) {
                 this.applicationId = applicationId;
@@ -401,7 +413,14 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * BrowserAccessStatus.
+             * <p>The browser access mode. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong></li>
+             * <li><strong>Disabled</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder browserAccessStatus(String browserAccessStatus) {
                 this.browserAccessStatus = browserAccessStatus;
@@ -409,7 +428,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectorIds.
+             * <p>The IDs of connectors.</p>
              */
             public Builder connectorIds(java.util.List<String> connectorIds) {
                 this.connectorIds = connectorIds;
@@ -417,7 +436,10 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The creation time of the office application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-08-30 16:50:32</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -425,7 +447,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the office application.</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -433,7 +455,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * L7Config.
+             * <p>The browser access mode parameter. The parameter indicates the configurations of Layer 7 applications.</p>
              */
             public Builder l7Config(PAL7Config l7Config) {
                 this.l7Config = l7Config;
@@ -441,7 +463,10 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * L7ProxyDomainAutomatic.
+             * <p>The browser access mode parameter. The parameter indicates the domain name that the proxy gateway uses.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app.example.com</p>
              */
             public Builder l7ProxyDomainAutomatic(String l7ProxyDomainAutomatic) {
                 this.l7ProxyDomainAutomatic = l7ProxyDomainAutomatic;
@@ -449,7 +474,10 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * L7ProxyDomainCustom.
+             * <p>The browser access mode parameter. The parameter indicates the custom domain name of the proxy gateway.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app.example.com</p>
              */
             public Builder l7ProxyDomainCustom(String l7ProxyDomainCustom) {
                 this.l7ProxyDomainCustom = l7ProxyDomainCustom;
@@ -457,7 +485,10 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the office application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private_access_application_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -465,7 +496,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyIds.
+             * <p>The IDs of the private access policies.</p>
              */
             public Builder policyIds(java.util.List<String> policyIds) {
                 this.policyIds = policyIds;
@@ -473,7 +504,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * PortRanges.
+             * <p>The port ranges of the office applications. Multiple port ranges cannot be duplicated or overlapped.</p>
              */
             public Builder portRanges(java.util.List<PortRanges> portRanges) {
                 this.portRanges = portRanges;
@@ -481,7 +512,15 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>The protocol that is used by the office application. Valid values:</p>
+             * <ul>
+             * <li><strong>All</strong></li>
+             * <li><strong>TCP</strong></li>
+             * <li><strong>UDP</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>All</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -489,7 +528,14 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the office application. Valid values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong></li>
+             * <li><strong>Disabled</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -497,7 +543,7 @@ public class GetPrivateAccessApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * TagIds.
+             * <p>The IDs of the tags for the office applications.</p>
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;

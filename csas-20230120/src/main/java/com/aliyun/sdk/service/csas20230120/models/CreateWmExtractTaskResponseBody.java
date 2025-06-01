@@ -67,7 +67,7 @@ public class CreateWmExtractTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The information about the watermark extraction task.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -75,7 +75,10 @@ public class CreateWmExtractTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>D6707286-A50E-57B1-B2CF-EFAC59E850D8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -128,7 +131,10 @@ public class CreateWmExtractTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * TaskId.
+             * <p>The task ID. You can use task IDs to query task results.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wmt-9648c22d2eb2cb57bb855dcae7898464********</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
