@@ -230,6 +230,15 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HttpsForceCode")
         private String httpsForceCode;
 
+        @com.aliyun.core.annotation.NameInMap("HttpsNoSniDeny")
+        private String httpsNoSniDeny;
+
+        @com.aliyun.core.annotation.NameInMap("HttpsSniVerify")
+        private String httpsSniVerify;
+
+        @com.aliyun.core.annotation.NameInMap("HttpsSniWhitelist")
+        private String httpsSniWhitelist;
+
         @com.aliyun.core.annotation.NameInMap("Rule")
         private String rule;
 
@@ -258,6 +267,9 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             this.hstsPreload = builder.hstsPreload;
             this.httpsForce = builder.httpsForce;
             this.httpsForceCode = builder.httpsForceCode;
+            this.httpsNoSniDeny = builder.httpsNoSniDeny;
+            this.httpsSniVerify = builder.httpsSniVerify;
+            this.httpsSniWhitelist = builder.httpsSniWhitelist;
             this.rule = builder.rule;
             this.ruleEnable = builder.ruleEnable;
             this.ruleName = builder.ruleName;
@@ -358,6 +370,27 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return httpsNoSniDeny
+         */
+        public String getHttpsNoSniDeny() {
+            return this.httpsNoSniDeny;
+        }
+
+        /**
+         * @return httpsSniVerify
+         */
+        public String getHttpsSniVerify() {
+            return this.httpsSniVerify;
+        }
+
+        /**
+         * @return httpsSniWhitelist
+         */
+        public String getHttpsSniWhitelist() {
+            return this.httpsSniWhitelist;
+        }
+
+        /**
          * @return rule
          */
         public String getRule() {
@@ -405,6 +438,9 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
             private String hstsPreload; 
             private String httpsForce; 
             private String httpsForceCode; 
+            private String httpsNoSniDeny; 
+            private String httpsSniVerify; 
+            private String httpsSniWhitelist; 
             private String rule; 
             private String ruleEnable; 
             private String ruleName; 
@@ -427,6 +463,9 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
                 this.hstsPreload = model.hstsPreload;
                 this.httpsForce = model.httpsForce;
                 this.httpsForceCode = model.httpsForceCode;
+                this.httpsNoSniDeny = model.httpsNoSniDeny;
+                this.httpsSniVerify = model.httpsSniVerify;
+                this.httpsSniWhitelist = model.httpsSniWhitelist;
                 this.rule = model.rule;
                 this.ruleEnable = model.ruleEnable;
                 this.ruleName = model.ruleName;
@@ -601,6 +640,30 @@ public class ListHttpsApplicationConfigurationsResponseBody extends TeaModel {
              */
             public Builder httpsForceCode(String httpsForceCode) {
                 this.httpsForceCode = httpsForceCode;
+                return this;
+            }
+
+            /**
+             * HttpsNoSniDeny.
+             */
+            public Builder httpsNoSniDeny(String httpsNoSniDeny) {
+                this.httpsNoSniDeny = httpsNoSniDeny;
+                return this;
+            }
+
+            /**
+             * HttpsSniVerify.
+             */
+            public Builder httpsSniVerify(String httpsSniVerify) {
+                this.httpsSniVerify = httpsSniVerify;
+                return this;
+            }
+
+            /**
+             * HttpsSniWhitelist.
+             */
+            public Builder httpsSniWhitelist(String httpsSniWhitelist) {
+                this.httpsSniWhitelist = httpsSniWhitelist;
                 return this;
             }
 

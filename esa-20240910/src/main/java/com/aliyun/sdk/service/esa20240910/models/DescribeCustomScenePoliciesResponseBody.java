@@ -206,6 +206,9 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicyId")
         private Long policyId;
 
+        @com.aliyun.core.annotation.NameInMap("SiteIds")
+        private String siteIds;
+
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
@@ -220,6 +223,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             this.name = builder.name;
             this.objects = builder.objects;
             this.policyId = builder.policyId;
+            this.siteIds = builder.siteIds;
             this.startTime = builder.startTime;
             this.status = builder.status;
             this.template = builder.template;
@@ -262,6 +266,13 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
         }
 
         /**
+         * @return siteIds
+         */
+        public String getSiteIds() {
+            return this.siteIds;
+        }
+
+        /**
          * @return startTime
          */
         public String getStartTime() {
@@ -287,6 +298,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
             private String name; 
             private java.util.List<String> objects; 
             private Long policyId; 
+            private String siteIds; 
             private String startTime; 
             private String status; 
             private String template; 
@@ -299,6 +311,7 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
                 this.name = model.name;
                 this.objects = model.objects;
                 this.policyId = model.policyId;
+                this.siteIds = model.siteIds;
                 this.startTime = model.startTime;
                 this.status = model.status;
                 this.template = model.template;
@@ -343,6 +356,14 @@ public class DescribeCustomScenePoliciesResponseBody extends TeaModel {
              */
             public Builder policyId(Long policyId) {
                 this.policyId = policyId;
+                return this;
+            }
+
+            /**
+             * SiteIds.
+             */
+            public Builder siteIds(String siteIds) {
+                this.siteIds = siteIds;
                 return this;
             }
 

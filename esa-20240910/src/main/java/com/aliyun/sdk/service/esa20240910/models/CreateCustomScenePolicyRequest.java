@@ -32,6 +32,10 @@ public class CreateCustomScenePolicyRequest extends Request {
     private String objects;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SiteIds")
+    private String siteIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
@@ -46,6 +50,7 @@ public class CreateCustomScenePolicyRequest extends Request {
         this.endTime = builder.endTime;
         this.name = builder.name;
         this.objects = builder.objects;
+        this.siteIds = builder.siteIds;
         this.startTime = builder.startTime;
         this.template = builder.template;
     }
@@ -85,6 +90,13 @@ public class CreateCustomScenePolicyRequest extends Request {
     }
 
     /**
+     * @return siteIds
+     */
+    public String getSiteIds() {
+        return this.siteIds;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -102,6 +114,7 @@ public class CreateCustomScenePolicyRequest extends Request {
         private String endTime; 
         private String name; 
         private String objects; 
+        private String siteIds; 
         private String startTime; 
         private String template; 
 
@@ -114,6 +127,7 @@ public class CreateCustomScenePolicyRequest extends Request {
             this.endTime = request.endTime;
             this.name = request.name;
             this.objects = request.objects;
+            this.siteIds = request.siteIds;
             this.startTime = request.startTime;
             this.template = request.template;
         } 
@@ -154,6 +168,15 @@ public class CreateCustomScenePolicyRequest extends Request {
         public Builder objects(String objects) {
             this.putQueryParameter("Objects", objects);
             this.objects = objects;
+            return this;
+        }
+
+        /**
+         * SiteIds.
+         */
+        public Builder siteIds(String siteIds) {
+            this.putQueryParameter("SiteIds", siteIds);
+            this.siteIds = siteIds;
             return this;
         }
 

@@ -32,6 +32,9 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SiteIds")
+    private String siteIds;
+
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
@@ -44,6 +47,7 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         this.objects = builder.objects;
         this.policyId = builder.policyId;
         this.requestId = builder.requestId;
+        this.siteIds = builder.siteIds;
         this.startTime = builder.startTime;
         this.template = builder.template;
     }
@@ -96,6 +100,13 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
     }
 
     /**
+     * @return siteIds
+     */
+    public String getSiteIds() {
+        return this.siteIds;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -115,6 +126,7 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
         private java.util.List<String> objects; 
         private Long policyId; 
         private String requestId; 
+        private String siteIds; 
         private String startTime; 
         private String template; 
 
@@ -127,6 +139,7 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
             this.objects = model.objects;
             this.policyId = model.policyId;
             this.requestId = model.requestId;
+            this.siteIds = model.siteIds;
             this.startTime = model.startTime;
             this.template = model.template;
         } 
@@ -181,6 +194,14 @@ public class CreateCustomScenePolicyResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SiteIds.
+         */
+        public Builder siteIds(String siteIds) {
+            this.siteIds = siteIds;
             return this;
         }
 

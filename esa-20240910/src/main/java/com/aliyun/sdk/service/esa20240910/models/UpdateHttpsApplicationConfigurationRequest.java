@@ -63,6 +63,18 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
     private String httpsForceCode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpsNoSniDeny")
+    private String httpsNoSniDeny;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpsSniVerify")
+    private String httpsSniVerify;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpsSniWhitelist")
+    private String httpsSniWhitelist;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Rule")
     private String rule;
 
@@ -96,6 +108,9 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         this.hstsPreload = builder.hstsPreload;
         this.httpsForce = builder.httpsForce;
         this.httpsForceCode = builder.httpsForceCode;
+        this.httpsNoSniDeny = builder.httpsNoSniDeny;
+        this.httpsSniVerify = builder.httpsSniVerify;
+        this.httpsSniWhitelist = builder.httpsSniWhitelist;
         this.rule = builder.rule;
         this.ruleEnable = builder.ruleEnable;
         this.ruleName = builder.ruleName;
@@ -194,6 +209,27 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
     }
 
     /**
+     * @return httpsNoSniDeny
+     */
+    public String getHttpsNoSniDeny() {
+        return this.httpsNoSniDeny;
+    }
+
+    /**
+     * @return httpsSniVerify
+     */
+    public String getHttpsSniVerify() {
+        return this.httpsSniVerify;
+    }
+
+    /**
+     * @return httpsSniWhitelist
+     */
+    public String getHttpsSniWhitelist() {
+        return this.httpsSniWhitelist;
+    }
+
+    /**
      * @return rule
      */
     public String getRule() {
@@ -240,6 +276,9 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         private String hstsPreload; 
         private String httpsForce; 
         private String httpsForceCode; 
+        private String httpsNoSniDeny; 
+        private String httpsSniVerify; 
+        private String httpsSniWhitelist; 
         private String rule; 
         private String ruleEnable; 
         private String ruleName; 
@@ -263,6 +302,9 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
             this.hstsPreload = request.hstsPreload;
             this.httpsForce = request.httpsForce;
             this.httpsForceCode = request.httpsForceCode;
+            this.httpsNoSniDeny = request.httpsNoSniDeny;
+            this.httpsSniVerify = request.httpsSniVerify;
+            this.httpsSniWhitelist = request.httpsSniWhitelist;
             this.rule = request.rule;
             this.ruleEnable = request.ruleEnable;
             this.ruleName = request.ruleName;
@@ -434,6 +476,33 @@ public class UpdateHttpsApplicationConfigurationRequest extends Request {
         public Builder httpsForceCode(String httpsForceCode) {
             this.putQueryParameter("HttpsForceCode", httpsForceCode);
             this.httpsForceCode = httpsForceCode;
+            return this;
+        }
+
+        /**
+         * HttpsNoSniDeny.
+         */
+        public Builder httpsNoSniDeny(String httpsNoSniDeny) {
+            this.putQueryParameter("HttpsNoSniDeny", httpsNoSniDeny);
+            this.httpsNoSniDeny = httpsNoSniDeny;
+            return this;
+        }
+
+        /**
+         * HttpsSniVerify.
+         */
+        public Builder httpsSniVerify(String httpsSniVerify) {
+            this.putQueryParameter("HttpsSniVerify", httpsSniVerify);
+            this.httpsSniVerify = httpsSniVerify;
+            return this;
+        }
+
+        /**
+         * HttpsSniWhitelist.
+         */
+        public Builder httpsSniWhitelist(String httpsSniWhitelist) {
+            this.putQueryParameter("HttpsSniWhitelist", httpsSniWhitelist);
+            this.httpsSniWhitelist = httpsSniWhitelist;
             return this;
         }
 

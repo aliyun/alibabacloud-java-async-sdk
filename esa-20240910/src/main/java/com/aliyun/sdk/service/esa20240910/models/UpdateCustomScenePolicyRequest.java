@@ -29,13 +29,16 @@ public class UpdateCustomScenePolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Objects")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String objects;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PolicyId")
     @com.aliyun.core.annotation.Validation(required = true, minimum = 1)
     private Long policyId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SiteIds")
+    private String siteIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -53,6 +56,7 @@ public class UpdateCustomScenePolicyRequest extends Request {
         this.name = builder.name;
         this.objects = builder.objects;
         this.policyId = builder.policyId;
+        this.siteIds = builder.siteIds;
         this.startTime = builder.startTime;
         this.template = builder.template;
     }
@@ -99,6 +103,13 @@ public class UpdateCustomScenePolicyRequest extends Request {
     }
 
     /**
+     * @return siteIds
+     */
+    public String getSiteIds() {
+        return this.siteIds;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -117,6 +128,7 @@ public class UpdateCustomScenePolicyRequest extends Request {
         private String name; 
         private String objects; 
         private Long policyId; 
+        private String siteIds; 
         private String startTime; 
         private String template; 
 
@@ -130,6 +142,7 @@ public class UpdateCustomScenePolicyRequest extends Request {
             this.name = request.name;
             this.objects = request.objects;
             this.policyId = request.policyId;
+            this.siteIds = request.siteIds;
             this.startTime = request.startTime;
             this.template = request.template;
         } 
@@ -163,7 +176,6 @@ public class UpdateCustomScenePolicyRequest extends Request {
 
         /**
          * <p>The IDs of the websites that you want to associate with the policy. Separate multiple IDs with commas (,).</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>123456****</p>
@@ -184,6 +196,15 @@ public class UpdateCustomScenePolicyRequest extends Request {
         public Builder policyId(Long policyId) {
             this.putQueryParameter("PolicyId", policyId);
             this.policyId = policyId;
+            return this;
+        }
+
+        /**
+         * SiteIds.
+         */
+        public Builder siteIds(String siteIds) {
+            this.putQueryParameter("SiteIds", siteIds);
+            this.siteIds = siteIds;
             return this;
         }
 
