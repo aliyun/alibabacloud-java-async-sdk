@@ -26,12 +26,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("capabilityAssessment")
     private CapabilityAssessment capabilityAssessment;
 
-    @com.aliyun.core.annotation.NameInMap("id")
-    private String id;
-
-    @com.aliyun.core.annotation.NameInMap("metadata")
-    private java.util.Map<String, ?> metadata;
-
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
@@ -39,8 +33,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
         this.assistantDescription = builder.assistantDescription;
         this.canHandle = builder.canHandle;
         this.capabilityAssessment = builder.capabilityAssessment;
-        this.id = builder.id;
-        this.metadata = builder.metadata;
         this.requestId = builder.requestId;
     }
 
@@ -78,20 +70,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
     }
 
     /**
-     * @return id
-     */
-    public String getId() {
-        return this.id;
-    }
-
-    /**
-     * @return metadata
-     */
-    public java.util.Map<String, ?> getMetadata() {
-        return this.metadata;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -102,8 +80,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
         private String assistantDescription; 
         private Boolean canHandle; 
         private CapabilityAssessment capabilityAssessment; 
-        private String id; 
-        private java.util.Map<String, ?> metadata; 
         private String requestId; 
 
         private Builder() {
@@ -113,8 +89,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
             this.assistantDescription = model.assistantDescription;
             this.canHandle = model.canHandle;
             this.capabilityAssessment = model.capabilityAssessment;
-            this.id = model.id;
-            this.metadata = model.metadata;
             this.requestId = model.requestId;
         } 
 
@@ -139,22 +113,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
          */
         public Builder capabilityAssessment(CapabilityAssessment capabilityAssessment) {
             this.capabilityAssessment = capabilityAssessment;
-            return this;
-        }
-
-        /**
-         * id.
-         */
-        public Builder id(String id) {
-            this.id = id;
-            return this;
-        }
-
-        /**
-         * metadata.
-         */
-        public Builder metadata(java.util.Map<String, ?> metadata) {
-            this.metadata = metadata;
             return this;
         }
 
@@ -185,16 +143,12 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @com.aliyun.core.annotation.NameInMap("metadata")
-        private java.util.Map<String, ?> metadata;
-
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private CapabilityList(Builder builder) {
             this.capabilityOverview = builder.capabilityOverview;
             this.description = builder.description;
-            this.metadata = builder.metadata;
             this.name = builder.name;
         }
 
@@ -221,13 +175,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
         }
 
         /**
-         * @return metadata
-         */
-        public java.util.Map<String, ?> getMetadata() {
-            return this.metadata;
-        }
-
-        /**
          * @return name
          */
         public String getName() {
@@ -237,7 +184,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
         public static final class Builder {
             private String capabilityOverview; 
             private String description; 
-            private java.util.Map<String, ?> metadata; 
             private String name; 
 
             private Builder() {
@@ -246,7 +192,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
             private Builder(CapabilityList model) {
                 this.capabilityOverview = model.capabilityOverview;
                 this.description = model.description;
-                this.metadata = model.metadata;
                 this.name = model.name;
             } 
 
@@ -263,14 +208,6 @@ public class GetAssistantCapabilityResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
-                return this;
-            }
-
-            /**
-             * metadata.
-             */
-            public Builder metadata(java.util.Map<String, ?> metadata) {
-                this.metadata = metadata;
                 return this;
             }
 

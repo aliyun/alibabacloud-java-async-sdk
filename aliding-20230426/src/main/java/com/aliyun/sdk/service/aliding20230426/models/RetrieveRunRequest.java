@@ -35,9 +35,12 @@ public class RetrieveRunRequest extends Request {
     private String runId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("threadId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String threadId;
+    @com.aliyun.core.annotation.NameInMap("sourceIdOfOriginalAssistantId")
+    private String sourceIdOfOriginalAssistantId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceTypeOfOriginalAssistantId")
+    private String sourceTypeOfOriginalAssistantId;
 
     private RetrieveRunRequest(Builder builder) {
         super(builder);
@@ -45,7 +48,8 @@ public class RetrieveRunRequest extends Request {
         this.assistantId = builder.assistantId;
         this.originalAssistantId = builder.originalAssistantId;
         this.runId = builder.runId;
-        this.threadId = builder.threadId;
+        this.sourceIdOfOriginalAssistantId = builder.sourceIdOfOriginalAssistantId;
+        this.sourceTypeOfOriginalAssistantId = builder.sourceTypeOfOriginalAssistantId;
     }
 
     public static Builder builder() {
@@ -90,10 +94,17 @@ public class RetrieveRunRequest extends Request {
     }
 
     /**
-     * @return threadId
+     * @return sourceIdOfOriginalAssistantId
      */
-    public String getThreadId() {
-        return this.threadId;
+    public String getSourceIdOfOriginalAssistantId() {
+        return this.sourceIdOfOriginalAssistantId;
+    }
+
+    /**
+     * @return sourceTypeOfOriginalAssistantId
+     */
+    public String getSourceTypeOfOriginalAssistantId() {
+        return this.sourceTypeOfOriginalAssistantId;
     }
 
     public static final class Builder extends Request.Builder<RetrieveRunRequest, Builder> {
@@ -101,7 +112,8 @@ public class RetrieveRunRequest extends Request {
         private String assistantId; 
         private String originalAssistantId; 
         private String runId; 
-        private String threadId; 
+        private String sourceIdOfOriginalAssistantId; 
+        private String sourceTypeOfOriginalAssistantId; 
 
         private Builder() {
             super();
@@ -113,7 +125,8 @@ public class RetrieveRunRequest extends Request {
             this.assistantId = request.assistantId;
             this.originalAssistantId = request.originalAssistantId;
             this.runId = request.runId;
-            this.threadId = request.threadId;
+            this.sourceIdOfOriginalAssistantId = request.sourceIdOfOriginalAssistantId;
+            this.sourceTypeOfOriginalAssistantId = request.sourceTypeOfOriginalAssistantId;
         } 
 
         /**
@@ -156,14 +169,20 @@ public class RetrieveRunRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>threadId123</p>
+         * sourceIdOfOriginalAssistantId.
          */
-        public Builder threadId(String threadId) {
-            this.putBodyParameter("threadId", threadId);
-            this.threadId = threadId;
+        public Builder sourceIdOfOriginalAssistantId(String sourceIdOfOriginalAssistantId) {
+            this.putBodyParameter("sourceIdOfOriginalAssistantId", sourceIdOfOriginalAssistantId);
+            this.sourceIdOfOriginalAssistantId = sourceIdOfOriginalAssistantId;
+            return this;
+        }
+
+        /**
+         * sourceTypeOfOriginalAssistantId.
+         */
+        public Builder sourceTypeOfOriginalAssistantId(String sourceTypeOfOriginalAssistantId) {
+            this.putBodyParameter("sourceTypeOfOriginalAssistantId", sourceTypeOfOriginalAssistantId);
+            this.sourceTypeOfOriginalAssistantId = sourceTypeOfOriginalAssistantId;
             return this;
         }
 

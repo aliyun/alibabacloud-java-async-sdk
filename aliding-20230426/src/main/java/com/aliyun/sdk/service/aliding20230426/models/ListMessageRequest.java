@@ -35,12 +35,20 @@ public class ListMessageRequest extends Request {
     private String order;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("originalAssistantid")
-    private String originalAssistantid;
+    @com.aliyun.core.annotation.NameInMap("originalAssistantId")
+    private String originalAssistantId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("runId")
     private String runId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceIdOfOriginalAssistantId")
+    private String sourceIdOfOriginalAssistantId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceTypeOfOriginalAssistantId")
+    private String sourceTypeOfOriginalAssistantId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("threadId")
@@ -53,8 +61,10 @@ public class ListMessageRequest extends Request {
         this.assistantId = builder.assistantId;
         this.limit = builder.limit;
         this.order = builder.order;
-        this.originalAssistantid = builder.originalAssistantid;
+        this.originalAssistantId = builder.originalAssistantId;
         this.runId = builder.runId;
+        this.sourceIdOfOriginalAssistantId = builder.sourceIdOfOriginalAssistantId;
+        this.sourceTypeOfOriginalAssistantId = builder.sourceTypeOfOriginalAssistantId;
         this.threadId = builder.threadId;
     }
 
@@ -100,10 +110,10 @@ public class ListMessageRequest extends Request {
     }
 
     /**
-     * @return originalAssistantid
+     * @return originalAssistantId
      */
-    public String getOriginalAssistantid() {
-        return this.originalAssistantid;
+    public String getOriginalAssistantId() {
+        return this.originalAssistantId;
     }
 
     /**
@@ -111,6 +121,20 @@ public class ListMessageRequest extends Request {
      */
     public String getRunId() {
         return this.runId;
+    }
+
+    /**
+     * @return sourceIdOfOriginalAssistantId
+     */
+    public String getSourceIdOfOriginalAssistantId() {
+        return this.sourceIdOfOriginalAssistantId;
+    }
+
+    /**
+     * @return sourceTypeOfOriginalAssistantId
+     */
+    public String getSourceTypeOfOriginalAssistantId() {
+        return this.sourceTypeOfOriginalAssistantId;
     }
 
     /**
@@ -125,8 +149,10 @@ public class ListMessageRequest extends Request {
         private String assistantId; 
         private Integer limit; 
         private String order; 
-        private String originalAssistantid; 
+        private String originalAssistantId; 
         private String runId; 
+        private String sourceIdOfOriginalAssistantId; 
+        private String sourceTypeOfOriginalAssistantId; 
         private String threadId; 
 
         private Builder() {
@@ -139,8 +165,10 @@ public class ListMessageRequest extends Request {
             this.assistantId = request.assistantId;
             this.limit = request.limit;
             this.order = request.order;
-            this.originalAssistantid = request.originalAssistantid;
+            this.originalAssistantId = request.originalAssistantId;
             this.runId = request.runId;
+            this.sourceIdOfOriginalAssistantId = request.sourceIdOfOriginalAssistantId;
+            this.sourceTypeOfOriginalAssistantId = request.sourceTypeOfOriginalAssistantId;
             this.threadId = request.threadId;
         } 
 
@@ -184,11 +212,11 @@ public class ListMessageRequest extends Request {
         }
 
         /**
-         * originalAssistantid.
+         * originalAssistantId.
          */
-        public Builder originalAssistantid(String originalAssistantid) {
-            this.putBodyParameter("originalAssistantid", originalAssistantid);
-            this.originalAssistantid = originalAssistantid;
+        public Builder originalAssistantId(String originalAssistantId) {
+            this.putBodyParameter("originalAssistantId", originalAssistantId);
+            this.originalAssistantId = originalAssistantId;
             return this;
         }
 
@@ -198,6 +226,24 @@ public class ListMessageRequest extends Request {
         public Builder runId(String runId) {
             this.putBodyParameter("runId", runId);
             this.runId = runId;
+            return this;
+        }
+
+        /**
+         * sourceIdOfOriginalAssistantId.
+         */
+        public Builder sourceIdOfOriginalAssistantId(String sourceIdOfOriginalAssistantId) {
+            this.putBodyParameter("sourceIdOfOriginalAssistantId", sourceIdOfOriginalAssistantId);
+            this.sourceIdOfOriginalAssistantId = sourceIdOfOriginalAssistantId;
+            return this;
+        }
+
+        /**
+         * sourceTypeOfOriginalAssistantId.
+         */
+        public Builder sourceTypeOfOriginalAssistantId(String sourceTypeOfOriginalAssistantId) {
+            this.putBodyParameter("sourceTypeOfOriginalAssistantId", sourceTypeOfOriginalAssistantId);
+            this.sourceTypeOfOriginalAssistantId = sourceTypeOfOriginalAssistantId;
             return this;
         }
 

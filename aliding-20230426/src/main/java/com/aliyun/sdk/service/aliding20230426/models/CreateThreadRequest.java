@@ -27,19 +27,24 @@ public class CreateThreadRequest extends Request {
     private String assistantId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("metadata")
-    private java.util.Map<String, ?> metadata;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("originalAssistantId")
     private String originalAssistantId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceIdOfOriginalAssistantId")
+    private String sourceIdOfOriginalAssistantId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sourceTypeOfOriginalAssistantId")
+    private Integer sourceTypeOfOriginalAssistantId;
 
     private CreateThreadRequest(Builder builder) {
         super(builder);
         this.accountId = builder.accountId;
         this.assistantId = builder.assistantId;
-        this.metadata = builder.metadata;
         this.originalAssistantId = builder.originalAssistantId;
+        this.sourceIdOfOriginalAssistantId = builder.sourceIdOfOriginalAssistantId;
+        this.sourceTypeOfOriginalAssistantId = builder.sourceTypeOfOriginalAssistantId;
     }
 
     public static Builder builder() {
@@ -70,24 +75,32 @@ public class CreateThreadRequest extends Request {
     }
 
     /**
-     * @return metadata
-     */
-    public java.util.Map<String, ?> getMetadata() {
-        return this.metadata;
-    }
-
-    /**
      * @return originalAssistantId
      */
     public String getOriginalAssistantId() {
         return this.originalAssistantId;
     }
 
+    /**
+     * @return sourceIdOfOriginalAssistantId
+     */
+    public String getSourceIdOfOriginalAssistantId() {
+        return this.sourceIdOfOriginalAssistantId;
+    }
+
+    /**
+     * @return sourceTypeOfOriginalAssistantId
+     */
+    public Integer getSourceTypeOfOriginalAssistantId() {
+        return this.sourceTypeOfOriginalAssistantId;
+    }
+
     public static final class Builder extends Request.Builder<CreateThreadRequest, Builder> {
         private String accountId; 
         private String assistantId; 
-        private java.util.Map<String, ?> metadata; 
         private String originalAssistantId; 
+        private String sourceIdOfOriginalAssistantId; 
+        private Integer sourceTypeOfOriginalAssistantId; 
 
         private Builder() {
             super();
@@ -97,8 +110,9 @@ public class CreateThreadRequest extends Request {
             super(request);
             this.accountId = request.accountId;
             this.assistantId = request.assistantId;
-            this.metadata = request.metadata;
             this.originalAssistantId = request.originalAssistantId;
+            this.sourceIdOfOriginalAssistantId = request.sourceIdOfOriginalAssistantId;
+            this.sourceTypeOfOriginalAssistantId = request.sourceTypeOfOriginalAssistantId;
         } 
 
         /**
@@ -123,20 +137,29 @@ public class CreateThreadRequest extends Request {
         }
 
         /**
-         * metadata.
-         */
-        public Builder metadata(java.util.Map<String, ?> metadata) {
-            this.putBodyParameter("metadata", metadata);
-            this.metadata = metadata;
-            return this;
-        }
-
-        /**
          * originalAssistantId.
          */
         public Builder originalAssistantId(String originalAssistantId) {
             this.putBodyParameter("originalAssistantId", originalAssistantId);
             this.originalAssistantId = originalAssistantId;
+            return this;
+        }
+
+        /**
+         * sourceIdOfOriginalAssistantId.
+         */
+        public Builder sourceIdOfOriginalAssistantId(String sourceIdOfOriginalAssistantId) {
+            this.putBodyParameter("sourceIdOfOriginalAssistantId", sourceIdOfOriginalAssistantId);
+            this.sourceIdOfOriginalAssistantId = sourceIdOfOriginalAssistantId;
+            return this;
+        }
+
+        /**
+         * sourceTypeOfOriginalAssistantId.
+         */
+        public Builder sourceTypeOfOriginalAssistantId(Integer sourceTypeOfOriginalAssistantId) {
+            this.putBodyParameter("sourceTypeOfOriginalAssistantId", sourceTypeOfOriginalAssistantId);
+            this.sourceTypeOfOriginalAssistantId = sourceTypeOfOriginalAssistantId;
             return this;
         }
 
