@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateSecretResponseBody} extends {@link TeaModel}
  *
  * <p>CreateSecretResponseBody</p>
@@ -60,6 +66,10 @@ public class CreateSecretResponseBody extends TeaModel {
 
     public static CreateSecretResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -144,6 +154,22 @@ public class CreateSecretResponseBody extends TeaModel {
         private String secretType; 
         private String versionId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateSecretResponseBody model) {
+            this.arn = model.arn;
+            this.automaticRotation = model.automaticRotation;
+            this.DKMSInstanceId = model.DKMSInstanceId;
+            this.extendedConfig = model.extendedConfig;
+            this.nextRotationDate = model.nextRotationDate;
+            this.requestId = model.requestId;
+            this.rotationInterval = model.rotationInterval;
+            this.secretName = model.secretName;
+            this.secretType = model.secretType;
+            this.versionId = model.versionId;
+        } 
+
         /**
          * Arn.
          */
@@ -153,13 +179,16 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the secret. Valid values:
-         * <p>
+         * <p>The type of the secret. Valid values:</p>
+         * <ul>
+         * <li>Generic: indicates a generic secret.</li>
+         * <li>Rds: indicates a managed ApsaraDB RDS secret.</li>
+         * <li>RAMCredentials: indicates a managed RAM secret.</li>
+         * <li>ECS: indicates a managed ECS secret.</li>
+         * </ul>
          * 
-         * *   Generic: indicates a generic secret.
-         * *   Rds: indicates a managed ApsaraDB RDS secret.
-         * *   RAMCredentials: indicates a managed RAM secret.
-         * *   ECS: indicates a managed ECS secret.
+         * <strong>example:</strong>
+         * <p>Enabled</p>
          */
         public Builder automaticRotation(String automaticRotation) {
             this.automaticRotation = automaticRotation;
@@ -183,10 +212,13 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The extended configuration of the secret.
-         * <p>
+         * <p>The extended configuration of the secret.</p>
+         * <blockquote>
+         * <p> This parameter is returned if you set the SecretType parameter to Rds, RAMCredentials, or ECS.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned if you set the SecretType parameter to Rds, RAMCredentials, or ECS.
+         * <strong>example:</strong>
+         * <p>2022-07-06T18:22:03Z</p>
          */
         public Builder nextRotationDate(String nextRotationDate) {
             this.nextRotationDate = nextRotationDate;
@@ -194,10 +226,13 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the next rotation will be performed.
-         * <p>
+         * <p>The time when the next rotation will be performed.</p>
+         * <blockquote>
+         * <p> This parameter is returned if automatic rotation is enabled.</p>
+         * </blockquote>
          * 
-         * >  This parameter is returned if automatic rotation is enabled.
+         * <strong>example:</strong>
+         * <p>3bf02f7a-015b-4f93-be0f-cc043fda2dd3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -213,12 +248,14 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The interval for automatic rotation.
-         * <p>
+         * <p>The interval for automatic rotation.</p>
+         * <p>The value is in the <code>integer[unit]</code> format. The value of the <code>unit</code> field is fixed as s. For example, if the value is 604800s, automatic rotation is performed at a 7-day interval.</p>
+         * <blockquote>
+         * <p> This parameter is returned if automatic rotation is enabled.</p>
+         * </blockquote>
          * 
-         * The value is in the `integer[unit]` format. The value of the `unit` field is fixed as s. For example, if the value is 604800s, automatic rotation is performed at a 7-day interval.
-         * 
-         * >  This parameter is returned if automatic rotation is enabled.
+         * <strong>example:</strong>
+         * <p>mydbconninfo</p>
          */
         public Builder secretName(String secretName) {
             this.secretName = secretName;
@@ -226,7 +263,10 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the dedicated KMS instance.
+         * <p>The ID of the dedicated KMS instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Rds</p>
          */
         public Builder secretType(String secretType) {
             this.secretType = secretType;
@@ -234,7 +274,10 @@ public class CreateSecretResponseBody extends TeaModel {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the secret.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder versionId(String versionId) {
             this.versionId = versionId;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RotateSecretRequest} extends {@link RequestModel}
  *
  * <p>RotateSecretRequest</p>
@@ -35,7 +41,7 @@ public class RotateSecretRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +75,11 @@ public class RotateSecretRequest extends Request {
         } 
 
         /**
-         * The name of the secret.
+         * <p>The name of the secret.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RdsSecret/Mysql5.4/MyCred</p>
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -78,10 +88,14 @@ public class RotateSecretRequest extends Request {
         }
 
         /**
-         * The version number of the secret after the secret is rotated.
-         * <p>
+         * <p>The version number of the secret after the secret is rotated.</p>
+         * <blockquote>
+         * <p> The version number is used to ensure the idempotence of the request. Secrets Manager uses this version number to prevent your application from creating the same version of the secret when the application retries a request. If a version number already exists, Secrets Manager ignores the request for rotation and returns a success message.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The version number is used to ensure the idempotence of the request. Secrets Manager uses this version number to prevent your application from creating the same version of the secret when the application retries a request. If a version number already exists, Secrets Manager ignores the request for rotation and returns a success message.
+         * <strong>example:</strong>
+         * <p>000000123</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);

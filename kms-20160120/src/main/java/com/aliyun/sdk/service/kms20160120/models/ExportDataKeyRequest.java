@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportDataKeyRequest} extends {@link RequestModel}
  *
  * <p>ExportDataKeyRequest</p>
@@ -22,7 +28,7 @@ public class ExportDataKeyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EncryptionContext")
-    private java.util.Map < String, ? > encryptionContext;
+    private java.util.Map<String, ?> encryptionContext;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PublicKeyBlob")
@@ -57,7 +63,7 @@ public class ExportDataKeyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -79,7 +85,7 @@ public class ExportDataKeyRequest extends Request {
     /**
      * @return encryptionContext
      */
-    public java.util.Map < String, ? > getEncryptionContext() {
+    public java.util.Map<String, ?> getEncryptionContext() {
         return this.encryptionContext;
     }
 
@@ -107,7 +113,7 @@ public class ExportDataKeyRequest extends Request {
     public static final class Builder extends Request.Builder<ExportDataKeyRequest, Builder> {
         private String ciphertextBlob; 
         private String dryRun; 
-        private java.util.Map < String, ? > encryptionContext; 
+        private java.util.Map<String, ?> encryptionContext; 
         private String publicKeyBlob; 
         private String wrappingAlgorithm; 
         private String wrappingKeySpec; 
@@ -127,7 +133,11 @@ public class ExportDataKeyRequest extends Request {
         } 
 
         /**
-         * The ciphertext of the data key encrypted by using a CMK.
+         * <p>The ciphertext of the data key encrypted by using a CMK.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ODZhOWVmZDktM2QxNi00ODk0LWJkNGYtMWZjNDNmM2YyYWJmS7FmDBBQ0BkKsQrtRnidtPwirmDcS0ZuJCU41xxAAWk4Z8qsADfbV0b+i6kQmlvj79dJdGOvtX69Uycs901q********</p>
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.putQueryParameter("CiphertextBlob", ciphertextBlob);
@@ -145,9 +155,12 @@ public class ExportDataKeyRequest extends Request {
         }
 
         /**
-         * A JSON string that consists of key-value pairs. If you specify this parameter when you use a CMK to encrypt the data key, an equivalent value is required here. For more information, see [EncryptionContext](~~42975~~).
+         * <p>A JSON string that consists of key-value pairs. If you specify this parameter when you use a CMK to encrypt the data key, an equivalent value is required here. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Example&quot;:&quot;Example&quot;}</p>
          */
-        public Builder encryptionContext(java.util.Map < String, ? > encryptionContext) {
+        public Builder encryptionContext(java.util.Map<String, ?> encryptionContext) {
             String encryptionContextShrink = shrink(encryptionContext, "EncryptionContext", "json");
             this.putQueryParameter("EncryptionContext", encryptionContextShrink);
             this.encryptionContext = encryptionContext;
@@ -155,7 +168,11 @@ public class ExportDataKeyRequest extends Request {
         }
 
         /**
-         * A Base64-encoded public key.
+         * <p>A Base64-encoded public key.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAndKfC2ReLL2+y8a0+ZBBeAft/uBYo86GZiYJuflqgUzKxpyuvlo3uQkBv6b+nx+0tz8g8v7GhpPWMSW5L9mNHYsvYFsa7jTxsYdt17yj6GlUHPuMIs8hr5qbwl38IHU1iIa7nYWwE2fb3ePOvLDACRJVgGpU0yxioW80d2QD+9aU4jF5dlAahcfgsNzo2CXzCUc1+xbmNuq7Rp+H9VJB9dyYOwqnW3RhOLBo21FzpORapf0UiRlrHRpk1V6ez+aE1dofaYh/9bh0m6ioxj7j5hpZbWccuEZTMBKd+cbuBkRhJzc6Tti6qwZbDiu4fUwbZS0Tqpuo1UadiyxMW********</p>
          */
         public Builder publicKeyBlob(String publicKeyBlob) {
             this.putQueryParameter("PublicKeyBlob", publicKeyBlob);
@@ -164,14 +181,17 @@ public class ExportDataKeyRequest extends Request {
         }
 
         /**
-         * The encryption algorithm based on which you want to use the public key specified by PublicKeyBlob to encrypt the data key. For more information about encryption algorithms, see [AsymmetricDecrypt](~~148130~~).
-         * <p>
+         * <p>The encryption algorithm based on which you want to use the public key specified by PublicKeyBlob to encrypt the data key. For more information about encryption algorithms, see <a href="https://help.aliyun.com/document_detail/148130.html">AsymmetricDecrypt</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>RSAES_OAEP_SHA_256</li>
+         * <li>RSAES_OAEP_SHA_1</li>
+         * <li>SM2PKE</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   RSAES_OAEP_SHA\_256
-         * *   RSAES_OAEP_SHA\_1
-         * *   SM2PKE
+         * <strong>example:</strong>
+         * <p>RSAES_OAEP_SHA_256</p>
          */
         public Builder wrappingAlgorithm(String wrappingAlgorithm) {
             this.putQueryParameter("WrappingAlgorithm", wrappingAlgorithm);
@@ -180,13 +200,16 @@ public class ExportDataKeyRequest extends Request {
         }
 
         /**
-         * The key type of the public key specified by PublicKeyBlob. For more information about key types, see [Introduction to asymmetric keys](~~148147~~).
-         * <p>
+         * <p>The key type of the public key specified by PublicKeyBlob. For more information about key types, see <a href="https://help.aliyun.com/document_detail/148147.html">Introduction to asymmetric keys</a>.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>RSA_2048</li>
+         * <li>EC_SM2</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values:
-         * 
-         * *   RSA\_2048
-         * *   EC_SM2
+         * <strong>example:</strong>
+         * <p>RSA_2048</p>
          */
         public Builder wrappingKeySpec(String wrappingKeySpec) {
             this.putQueryParameter("WrappingKeySpec", wrappingKeySpec);

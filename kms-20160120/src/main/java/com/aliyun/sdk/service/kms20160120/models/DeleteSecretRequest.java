@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteSecretRequest} extends {@link RequestModel}
  *
  * <p>DeleteSecretRequest</p>
@@ -39,7 +45,7 @@ public class DeleteSecretRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,13 +88,15 @@ public class DeleteSecretRequest extends Request {
         } 
 
         /**
-         * Specifies whether to forcibly delete the secret. If this parameter is set to true, the secret cannot be recovered.
-         * <p>
+         * <p>Specifies whether to forcibly delete the secret. If this parameter is set to true, the secret cannot be recovered.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default value)</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   **true**
-         * *   **false** (default value)
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder forceDeleteWithoutRecovery(String forceDeleteWithoutRecovery) {
             this.putQueryParameter("ForceDeleteWithoutRecovery", forceDeleteWithoutRecovery);
@@ -97,7 +105,10 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * Specifies the recovery period of the secret if you do not forcibly delete it. Default value: 30. Unit: Days.
+         * <p>Specifies the recovery period of the secret if you do not forcibly delete it. Default value: 30. Unit: Days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder recoveryWindowInDays(String recoveryWindowInDays) {
             this.putQueryParameter("RecoveryWindowInDays", recoveryWindowInDays);
@@ -106,7 +117,11 @@ public class DeleteSecretRequest extends Request {
         }
 
         /**
-         * The name of the secret.
+         * <p>The name of the secret.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secret001</p>
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);

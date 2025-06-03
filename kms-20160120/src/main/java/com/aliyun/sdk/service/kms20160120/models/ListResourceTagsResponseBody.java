@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListResourceTagsResponseBody} extends {@link TeaModel}
  *
  * <p>ListResourceTagsResponseBody</p>
@@ -30,6 +36,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,8 +58,19 @@ public class ListResourceTagsResponseBody extends TeaModel {
         private String requestId; 
         private Tags tags; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListResourceTagsResponseBody model) {
+            this.requestId = model.requestId;
+            this.tags = model.tags;
+        } 
+
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4162a6af-bc99-40b3-a552-89dcc8aaf7c8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +78,7 @@ public class ListResourceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The tags of the CMK.
+         * <p>The tags of the CMK.</p>
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
@@ -70,6 +91,12 @@ public class ListResourceTagsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListResourceTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTagsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyId")
         private String keyId;
@@ -120,8 +147,20 @@ public class ListResourceTagsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.keyId = model.keyId;
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * The globally unique ID of the CMK.
+             * <p>The globally unique ID of the CMK.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>33caea95-c3e5-4b3e-a9c6-cec76e4e****</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -129,7 +168,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Project</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -137,7 +179,10 @@ public class ListResourceTagsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -151,9 +196,15 @@ public class ListResourceTagsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListResourceTagsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListResourceTagsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -170,17 +221,24 @@ public class ListResourceTagsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }

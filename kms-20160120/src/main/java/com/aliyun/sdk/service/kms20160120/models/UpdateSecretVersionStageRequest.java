@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSecretVersionStageRequest} extends {@link RequestModel}
  *
  * <p>UpdateSecretVersionStageRequest</p>
@@ -45,7 +51,7 @@ public class UpdateSecretVersionStageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,10 +103,13 @@ public class UpdateSecretVersionStageRequest extends Request {
         } 
 
         /**
-         * The version from which you want to remove the specified stage label.
-         * <p>
+         * <p>The version from which you want to remove the specified stage label.</p>
+         * <blockquote>
+         * <p> You must specify at least one of the RemoveFromVersion and MoveToVersion parameters.</p>
+         * </blockquote>
          * 
-         * >  You must specify at least one of the RemoveFromVersion and MoveToVersion parameters.
+         * <strong>example:</strong>
+         * <p>002</p>
          */
         public Builder moveToVersion(String moveToVersion) {
             this.putQueryParameter("MoveToVersion", moveToVersion);
@@ -109,12 +118,15 @@ public class UpdateSecretVersionStageRequest extends Request {
         }
 
         /**
-         * The specified stage label. Valid values:
-         * <p>
+         * <p>The specified stage label. Valid values:</p>
+         * <ul>
+         * <li>ACSCurrent</li>
+         * <li>ACSPrevious</li>
+         * <li>Custom stage label</li>
+         * </ul>
          * 
-         * *   ACSCurrent
-         * *   ACSPrevious
-         * *   Custom stage label
+         * <strong>example:</strong>
+         * <p>001</p>
          */
         public Builder removeFromVersion(String removeFromVersion) {
             this.putQueryParameter("RemoveFromVersion", removeFromVersion);
@@ -123,7 +135,11 @@ public class UpdateSecretVersionStageRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **UpdateSecretVersionStage**.
+         * <p>The operation that you want to perform. Set the value to <strong>UpdateSecretVersionStage</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secret001</p>
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -132,7 +148,11 @@ public class UpdateSecretVersionStageRequest extends Request {
         }
 
         /**
-         * The name of the secret.
+         * <p>The name of the secret.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACSCurrent</p>
          */
         public Builder versionStage(String versionStage) {
             this.putQueryParameter("VersionStage", versionStage);

@@ -12,18 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetKmsInstanceRequest} extends {@link RequestModel}
+ * {@link ReleaseKmsInstanceRequest} extends {@link RequestModel}
  *
- * <p>GetKmsInstanceRequest</p>
+ * <p>ReleaseKmsInstanceRequest</p>
  */
-public class GetKmsInstanceRequest extends Request {
+public class ReleaseKmsInstanceRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceDeleteWithoutBackup")
+    private String forceDeleteWithoutBackup;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KmsInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String kmsInstanceId;
 
-    private GetKmsInstanceRequest(Builder builder) {
+    private ReleaseKmsInstanceRequest(Builder builder) {
         super(builder);
+        this.forceDeleteWithoutBackup = builder.forceDeleteWithoutBackup;
         this.kmsInstanceId = builder.kmsInstanceId;
     }
 
@@ -31,7 +36,7 @@ public class GetKmsInstanceRequest extends Request {
         return new Builder();
     }
 
-    public static GetKmsInstanceRequest create() {
+    public static ReleaseKmsInstanceRequest create() {
         return builder().build();
     }
 
@@ -41,30 +46,47 @@ public class GetKmsInstanceRequest extends Request {
     }
 
     /**
+     * @return forceDeleteWithoutBackup
+     */
+    public String getForceDeleteWithoutBackup() {
+        return this.forceDeleteWithoutBackup;
+    }
+
+    /**
      * @return kmsInstanceId
      */
     public String getKmsInstanceId() {
         return this.kmsInstanceId;
     }
 
-    public static final class Builder extends Request.Builder<GetKmsInstanceRequest, Builder> {
+    public static final class Builder extends Request.Builder<ReleaseKmsInstanceRequest, Builder> {
+        private String forceDeleteWithoutBackup; 
         private String kmsInstanceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetKmsInstanceRequest request) {
+        private Builder(ReleaseKmsInstanceRequest request) {
             super(request);
+            this.forceDeleteWithoutBackup = request.forceDeleteWithoutBackup;
             this.kmsInstanceId = request.kmsInstanceId;
         } 
 
         /**
-         * <p>The ID of the KMS instance that you want to query.</p>
+         * ForceDeleteWithoutBackup.
+         */
+        public Builder forceDeleteWithoutBackup(String forceDeleteWithoutBackup) {
+            this.putQueryParameter("ForceDeleteWithoutBackup", forceDeleteWithoutBackup);
+            this.forceDeleteWithoutBackup = forceDeleteWithoutBackup;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>kst-bjj62f5ba3dnpb6v8****</p>
+         * <p>kst-hzz6****</p>
          */
         public Builder kmsInstanceId(String kmsInstanceId) {
             this.putQueryParameter("KmsInstanceId", kmsInstanceId);
@@ -73,8 +95,8 @@ public class GetKmsInstanceRequest extends Request {
         }
 
         @Override
-        public GetKmsInstanceRequest build() {
-            return new GetKmsInstanceRequest(this);
+        public ReleaseKmsInstanceRequest build() {
+            return new ReleaseKmsInstanceRequest(this);
         } 
 
     } 

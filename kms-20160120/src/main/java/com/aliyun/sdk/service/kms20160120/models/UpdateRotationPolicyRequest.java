@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateRotationPolicyRequest} extends {@link RequestModel}
  *
  * <p>UpdateRotationPolicyRequest</p>
@@ -40,7 +46,7 @@ public class UpdateRotationPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,11 +89,15 @@ public class UpdateRotationPolicyRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic key rotation. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic key rotation. Valid values:</p>
+         * <ul>
+         * <li>true: enables automatic key rotation.</li>
+         * <li>false: disables automatic key rotation.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: enables automatic key rotation.
-         * *   false: disables automatic key rotation.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAutomaticRotation(Boolean enableAutomaticRotation) {
             this.putQueryParameter("EnableAutomaticRotation", enableAutomaticRotation);
@@ -96,7 +106,11 @@ public class UpdateRotationPolicyRequest extends Request {
         }
 
         /**
-         * The ID of the customer master key (CMK). The ID must be globally unique.
+         * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234abcd-12ab-34cd-56ef-12345678****</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -105,10 +119,13 @@ public class UpdateRotationPolicyRequest extends Request {
         }
 
         /**
-         * The period of automatic key rotation. Specify the value in the integer\[unit] format. The following units are supported: d (day), h (hour), m (minute), and s (second). For example, you can use either 7d or 604800s to specify a seven-day period. The period can range from 7 days to 730 days.
-         * <p>
+         * <p>The period of automatic key rotation. Specify the value in the integer[unit] format. The following units are supported: d (day), h (hour), m (minute), and s (second). For example, you can use either 7d or 604800s to specify a seven-day period. The period can range from 7 days to 730 days.</p>
+         * <blockquote>
+         * <p> If you set the EnableAutomaticRotation parameter to true, you must also specify this parameter. If you set the EnableAutomaticRotation parameter to false, you can leave this parameter unspecified.</p>
+         * </blockquote>
          * 
-         * >  If you set the EnableAutomaticRotation parameter to true, you must also specify this parameter. If you set the EnableAutomaticRotation parameter to false, you can leave this parameter unspecified.
+         * <strong>example:</strong>
+         * <p>30d</p>
          */
         public Builder rotationInterval(String rotationInterval) {
             this.putQueryParameter("RotationInterval", rotationInterval);

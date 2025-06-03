@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UploadCertificateRequest} extends {@link RequestModel}
  *
  * <p>UploadCertificateRequest</p>
@@ -40,7 +46,7 @@ public class UploadCertificateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +89,11 @@ public class UploadCertificateRequest extends Request {
         } 
 
         /**
-         * The certificate issued by the CA, which is in the Privacy Enhanced Mail (PEM) format.
+         * <p>The certificate issued by the CA, which is in the Privacy Enhanced Mail (PEM) format.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----  (X.509 Certificate PEM Content)  -----END CERTIFICATE-----</p>
          */
         public Builder certificate(String certificate) {
             this.putQueryParameter("Certificate", certificate);
@@ -92,7 +102,10 @@ public class UploadCertificateRequest extends Request {
         }
 
         /**
-         * The certificate chain issued by the CA, which is in the PEM format.
+         * <p>The certificate chain issued by the CA, which is in the PEM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----  (Sub CA Certificate PEM Content)  -----END CERTIFICATE-----  -----BEGIN CERTIFICATE-----  (Sub CA Certificate PEM Content)  -----END CERTIFICATE-----  -----BEGIN CERTIFICATE-----  (Root CA Certificate PEM Content)  -----END CERTIFICATE-----</p>
          */
         public Builder certificateChain(String certificateChain) {
             this.putQueryParameter("CertificateChain", certificateChain);
@@ -101,7 +114,11 @@ public class UploadCertificateRequest extends Request {
         }
 
         /**
-         * The ID of the certificate. The ID must be globally unique in Certificates Manager.
+         * <p>The ID of the certificate. The ID must be globally unique in Certificates Manager.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-12345678****</p>
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);

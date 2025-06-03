@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListAliasesResponseBody} extends {@link TeaModel}
  *
  * <p>ListAliasesResponseBody</p>
@@ -40,6 +46,10 @@ public class ListAliasesResponseBody extends TeaModel {
 
     public static ListAliasesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,19 @@ public class ListAliasesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAliasesResponseBody model) {
+            this.aliases = model.aliases;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The alias of the user.
+         * <p>The alias of the user.</p>
          */
         public Builder aliases(Aliases aliases) {
             this.aliases = aliases;
@@ -93,7 +114,10 @@ public class ListAliasesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +125,10 @@ public class ListAliasesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +136,10 @@ public class ListAliasesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1b57992c-834b-4811-a889-f8bac1ba0353</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListAliasesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned aliases.
+         * <p>The total number of returned aliases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListAliasesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListAliasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAliasesResponseBody</p>
+     */
     public static class Alias extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliasArn")
         private String aliasArn;
@@ -180,8 +219,20 @@ public class ListAliasesResponseBody extends TeaModel {
             private String aliasName; 
             private String keyId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Alias model) {
+                this.aliasArn = model.aliasArn;
+                this.aliasName = model.aliasName;
+                this.keyId = model.keyId;
+            } 
+
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the alias.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:kms:cn-hangzhou:123456:alias/ExampleAlias1</p>
              */
             public Builder aliasArn(String aliasArn) {
                 this.aliasArn = aliasArn;
@@ -189,7 +240,10 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alias.
+             * <p>The ID of the alias.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alias/ExampleAlias1</p>
              */
             public Builder aliasName(String aliasName) {
                 this.aliasName = aliasName;
@@ -197,7 +251,10 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * The CMK to which the alias belongs.
+             * <p>The CMK to which the alias belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d****</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -211,9 +268,15 @@ public class ListAliasesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListAliasesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAliasesResponseBody</p>
+     */
     public static class Aliases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alias")
-        private java.util.List < Alias> alias;
+        private java.util.List<Alias> alias;
 
         private Aliases(Builder builder) {
             this.alias = builder.alias;
@@ -230,17 +293,24 @@ public class ListAliasesResponseBody extends TeaModel {
         /**
          * @return alias
          */
-        public java.util.List < Alias> getAlias() {
+        public java.util.List<Alias> getAlias() {
             return this.alias;
         }
 
         public static final class Builder {
-            private java.util.List < Alias> alias; 
+            private java.util.List<Alias> alias; 
+
+            private Builder() {
+            } 
+
+            private Builder(Aliases model) {
+                this.alias = model.alias;
+            } 
 
             /**
              * Alias.
              */
-            public Builder alias(java.util.List < Alias> alias) {
+            public Builder alias(java.util.List<Alias> alias) {
                 this.alias = alias;
                 return this;
             }

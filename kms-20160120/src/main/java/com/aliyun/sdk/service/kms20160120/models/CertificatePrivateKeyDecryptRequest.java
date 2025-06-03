@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CertificatePrivateKeyDecryptRequest} extends {@link RequestModel}
  *
  * <p>CertificatePrivateKeyDecryptRequest</p>
@@ -41,7 +47,7 @@ public class CertificatePrivateKeyDecryptRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,16 +90,22 @@ public class CertificatePrivateKeyDecryptRequest extends Request {
         } 
 
         /**
-         * The encryption algorithm. Valid values:
-         * <p>
+         * <p>The encryption algorithm. Valid values:</p>
+         * <ul>
+         * <li><p>RSAES_OAEP_SHA_1</p>
+         * </li>
+         * <li><p>RSAES_OAEP_SHA_256</p>
+         * </li>
+         * <li><p>SM2PKE</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>The SM2PKE encryption algorithm is supported only in regions in mainland China. In these regions, managed hardware security modules (HSMs) are used. For more information, see <a href="https://help.aliyun.com/document_detail/125803.html">Managed HSM overview</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   RSAES_OAEP_SHA\_1
-         * 
-         * *   RSAES_OAEP_SHA\_256
-         * 
-         * *   SM2PKE
-         * 
-         * > The SM2PKE encryption algorithm is supported only in regions in mainland China. In these regions, managed hardware security modules (HSMs) are used. For more information, see [Managed HSM overview](~~125803~~).
+         * <strong>example:</strong>
+         * <p>RSAES_OAEP_SHA_256</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -102,7 +114,11 @@ public class CertificatePrivateKeyDecryptRequest extends Request {
         }
 
         /**
-         * The ID of the certificate. The ID must be globally unique in Certificates Manager.
+         * <p>The ID of the certificate. The ID must be globally unique in Certificates Manager.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-12345678****</p>
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -111,10 +127,12 @@ public class CertificatePrivateKeyDecryptRequest extends Request {
         }
 
         /**
-         * The data that you want to decrypt.
-         * <p>
+         * <p>The data that you want to decrypt.</p>
+         * <p>The value is encoded in Base64.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The value is encoded in Base64.
+         * <strong>example:</strong>
+         * <p>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</p>
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.putQueryParameter("CiphertextBlob", ciphertextBlob);

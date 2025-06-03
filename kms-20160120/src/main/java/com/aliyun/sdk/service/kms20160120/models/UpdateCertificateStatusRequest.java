@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateCertificateStatusRequest} extends {@link RequestModel}
  *
  * <p>UpdateCertificateStatusRequest</p>
@@ -35,7 +41,7 @@ public class UpdateCertificateStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +75,11 @@ public class UpdateCertificateStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the certificate. The ID must be globally unique in Certificates Manager.
+         * <p>The ID of the certificate. The ID must be globally unique in Certificates Manager.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9a28de48-8d8b-484d-a766-dec4****</p>
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -78,16 +88,22 @@ public class UpdateCertificateStatusRequest extends Request {
         }
 
         /**
-         * The status of the certificate. Valid values:
-         * <p>
+         * <p>The status of the certificate. Valid values:</p>
+         * <ul>
+         * <li><p>INACTIVE: The certificate is disabled.</p>
+         * </li>
+         * <li><p>ACTIVE: The certificate is enabled.</p>
+         * </li>
+         * <li><p>REVOKED: The certificate is revoked.</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>If the certificate is in the REVOKED state, you can use the certificate only to verify a signature, but not to generate a signature.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   INACTIVE: The certificate is disabled.
-         * 
-         * *   ACTIVE: The certificate is enabled.
-         * 
-         * *   REVOKED: The certificate is revoked.
-         * 
-         * > If the certificate is in the REVOKED state, you can use the certificate only to verify a signature, but not to generate a signature.
+         * <strong>example:</strong>
+         * <p>INACTIVE</p>
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

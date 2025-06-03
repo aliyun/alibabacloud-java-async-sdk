@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetSecretValueRequest} extends {@link RequestModel}
  *
  * <p>GetSecretValueRequest</p>
@@ -49,7 +55,7 @@ public class GetSecretValueRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -119,13 +125,17 @@ public class GetSecretValueRequest extends Request {
         }
 
         /**
-         * Specifies whether to obtain the extended configuration of the secret. Valid values:
-         * <p>
+         * <p>Specifies whether to obtain the extended configuration of the secret. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false: This is the default value.</li>
+         * </ul>
+         * <blockquote>
+         * <p> This parameter is ignored for a generic secret.</p>
+         * </blockquote>
          * 
-         * *   true
-         * *   false: This is the default value.
-         * 
-         * >  This parameter is ignored for a generic secret.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder fetchExtendedConfig(Boolean fetchExtendedConfig) {
             this.putQueryParameter("FetchExtendedConfig", fetchExtendedConfig);
@@ -134,7 +144,11 @@ public class GetSecretValueRequest extends Request {
         }
 
         /**
-         * The name of the secret.
+         * <p>The name of the secret.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secret001</p>
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -143,10 +157,13 @@ public class GetSecretValueRequest extends Request {
         }
 
         /**
-         * The version number of the secret value. If you specify this parameter, Secrets Manager returns the secret value of the specified version.
-         * <p>
+         * <p>The version number of the secret value. If you specify this parameter, Secrets Manager returns the secret value of the specified version.</p>
+         * <blockquote>
+         * <p> This parameter is ignored for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.</p>
+         * </blockquote>
          * 
-         * >  This parameter is ignored for a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret.
+         * <strong>example:</strong>
+         * <p>00000000000000000000000000000001</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);
@@ -155,12 +172,14 @@ public class GetSecretValueRequest extends Request {
         }
 
         /**
-         * The stage label that marks the secret version. If you specify this parameter, Secrets Manager returns the secret value of the version that is marked with the specified stage label.
-         * <p>
+         * <p>The stage label that marks the secret version. If you specify this parameter, Secrets Manager returns the secret value of the version that is marked with the specified stage label.</p>
+         * <p>Default value: ACSCurrent.</p>
+         * <blockquote>
+         * <p> For a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret, Secrets Manager can return only the secret value of the version marked with ACSPrevious or ACSCurrent.</p>
+         * </blockquote>
          * 
-         * Default value: ACSCurrent.
-         * 
-         * >  For a managed ApsaraDB RDS secret, a managed RAM secret, or a managed ECS secret, Secrets Manager can return only the secret value of the version marked with ACSPrevious or ACSCurrent.
+         * <strong>example:</strong>
+         * <p>ACSCurrent</p>
          */
         public Builder versionStage(String versionStage) {
             this.putQueryParameter("VersionStage", versionStage);

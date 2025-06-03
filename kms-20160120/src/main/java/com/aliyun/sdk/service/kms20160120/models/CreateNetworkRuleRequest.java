@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateNetworkRuleRequest} extends {@link RequestModel}
  *
  * <p>CreateNetworkRuleRequest</p>
@@ -45,7 +51,7 @@ public class CreateNetworkRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +103,10 @@ public class CreateNetworkRuleRequest extends Request {
         } 
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>networkrule description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -106,7 +115,11 @@ public class CreateNetworkRuleRequest extends Request {
         }
 
         /**
-         * The name of the access control rule.
+         * <p>The name of the access control rule.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>networkrule_test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -115,7 +128,10 @@ public class CreateNetworkRuleRequest extends Request {
         }
 
         /**
-         * The private IP address or private CIDR block. Separate multiple items with commas (,).
+         * <p>The private IP address or private CIDR block. Separate multiple items with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;192.10.XX.XX&quot;,&quot;192.168.XX.XX/24&quot;]</p>
          */
         public Builder sourcePrivateIp(String sourcePrivateIp) {
             this.putQueryParameter("SourcePrivateIp", sourcePrivateIp);
@@ -124,10 +140,12 @@ public class CreateNetworkRuleRequest extends Request {
         }
 
         /**
-         * The network type.
-         * <p>
+         * <p>The network type.</p>
+         * <p>Only private IP addresses are supported. Set the value to Private.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Only private IP addresses are supported. Set the value to Private.
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

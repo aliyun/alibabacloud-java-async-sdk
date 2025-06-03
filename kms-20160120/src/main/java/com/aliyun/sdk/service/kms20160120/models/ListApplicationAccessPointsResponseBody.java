@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListApplicationAccessPointsResponseBody} extends {@link TeaModel}
  *
  * <p>ListApplicationAccessPointsResponseBody</p>
@@ -40,6 +46,10 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
 
     public static ListApplicationAccessPointsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,19 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationAccessPointsResponseBody model) {
+            this.applicationAccessPoints = model.applicationAccessPoints;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * A list of AAPs.
+         * <p>A list of AAPs.</p>
          */
         public Builder applicationAccessPoints(ApplicationAccessPoints applicationAccessPoints) {
             this.applicationAccessPoints = applicationAccessPoints;
@@ -93,7 +114,10 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +125,10 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +136,10 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bcfefe15-46f0-44a3-bd96-3d422474b71a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListApplicationAccessPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationAccessPointsResponseBody</p>
+     */
     public static class ApplicationAccessPoint extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthenticationMethod")
         private String authenticationMethod;
@@ -168,8 +207,19 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
             private String authenticationMethod; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplicationAccessPoint model) {
+                this.authenticationMethod = model.authenticationMethod;
+                this.name = model.name;
+            } 
+
             /**
-             * The authentication method.
+             * <p>The authentication method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ClientKey</p>
              */
             public Builder authenticationMethod(String authenticationMethod) {
                 this.authenticationMethod = authenticationMethod;
@@ -177,7 +227,10 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the AAP.
+             * <p>The name of the AAP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aap_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -191,9 +244,15 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListApplicationAccessPointsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListApplicationAccessPointsResponseBody</p>
+     */
     public static class ApplicationAccessPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ApplicationAccessPoint")
-        private java.util.List < ApplicationAccessPoint> applicationAccessPoint;
+        private java.util.List<ApplicationAccessPoint> applicationAccessPoint;
 
         private ApplicationAccessPoints(Builder builder) {
             this.applicationAccessPoint = builder.applicationAccessPoint;
@@ -210,17 +269,24 @@ public class ListApplicationAccessPointsResponseBody extends TeaModel {
         /**
          * @return applicationAccessPoint
          */
-        public java.util.List < ApplicationAccessPoint> getApplicationAccessPoint() {
+        public java.util.List<ApplicationAccessPoint> getApplicationAccessPoint() {
             return this.applicationAccessPoint;
         }
 
         public static final class Builder {
-            private java.util.List < ApplicationAccessPoint> applicationAccessPoint; 
+            private java.util.List<ApplicationAccessPoint> applicationAccessPoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationAccessPoints model) {
+                this.applicationAccessPoint = model.applicationAccessPoint;
+            } 
 
             /**
              * ApplicationAccessPoint.
              */
-            public Builder applicationAccessPoint(java.util.List < ApplicationAccessPoint> applicationAccessPoint) {
+            public Builder applicationAccessPoint(java.util.List<ApplicationAccessPoint> applicationAccessPoint) {
                 this.applicationAccessPoint = applicationAccessPoint;
                 return this;
             }

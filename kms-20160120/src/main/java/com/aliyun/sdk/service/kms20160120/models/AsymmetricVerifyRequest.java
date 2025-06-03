@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AsymmetricVerifyRequest} extends {@link RequestModel}
  *
  * <p>AsymmetricVerifyRequest</p>
@@ -58,7 +64,7 @@ public class AsymmetricVerifyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -128,7 +134,11 @@ public class AsymmetricVerifyRequest extends Request {
         } 
 
         /**
-         * The signature algorithm.
+         * <p>The signature algorithm.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA_PSS_SHA_256</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -137,10 +147,14 @@ public class AsymmetricVerifyRequest extends Request {
         }
 
         /**
-         * The digest that is generated for the original message by using a hash algorithm. The hash algorithm is specified by the **Algorithm** parameter.
-         * <p>
+         * <p>The digest that is generated for the original message by using a hash algorithm. The hash algorithm is specified by the <strong>Algorithm</strong> parameter.</p>
+         * <blockquote>
+         * <p> The value is encoded in Base64.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The value is encoded in Base64.
+         * <strong>example:</strong>
+         * <p>ZOyIygCyaOW6GjVnihtTFtIS9PNmskdyMlNKiuy****=</p>
          */
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);
@@ -158,10 +172,14 @@ public class AsymmetricVerifyRequest extends Request {
         }
 
         /**
-         * The ID of the CMK. The ID must be globally unique.
-         * <p>
+         * <p>The ID of the CMK. The ID must be globally unique.</p>
+         * <blockquote>
+         * <p> You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Overview of aliases</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Overview of aliases](~~68522~~).
+         * <strong>example:</strong>
+         * <p>5c438b18-05be-40ad-b6c2-3be6752c****</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -170,7 +188,11 @@ public class AsymmetricVerifyRequest extends Request {
         }
 
         /**
-         * The version ID of the CMK. The ID must be globally unique.
+         * <p>The version ID of the CMK. The ID must be globally unique.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ab1a983-7072-4bbc-a582-584b5bd8****</p>
          */
         public Builder keyVersionId(String keyVersionId) {
             this.putQueryParameter("KeyVersionId", keyVersionId);
@@ -179,10 +201,14 @@ public class AsymmetricVerifyRequest extends Request {
         }
 
         /**
-         * The signature value to be verified.
-         * <p>
+         * <p>The signature value to be verified.</p>
+         * <blockquote>
+         * <p> The value is encoded in Base64.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  The value is encoded in Base64.
+         * <strong>example:</strong>
+         * <p>M2CceNZH00ZgL9ED/ZHFp21YRAvYeZHknJUc207OCZ0N9wNn9As4z2bON3FF3je+1Nu+2+/8Zj50HpMTpzYpMp2R93cYmACCmhaYoKydxylbyGzJR8y9likZRCrkD38lRoS40aBBvv/6iRKzQuo9EGYVcel36cMNg00VmYNBy3pa1rwg3gA4l3cy6kjayZja1WGPkVhrVKsrJMdbpl0ApLjXKuD8rw1n1XLCwCUEL5eLPljTZaAveqdOFQOiZnZEGI27qIiZe7I1fN8tcz6anS/gTM7xRKE++5egEvRWlTQQTJeApnPSiUPA+8ZykNdelQsOQh5SrGoyI4A5pq****==</p>
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);

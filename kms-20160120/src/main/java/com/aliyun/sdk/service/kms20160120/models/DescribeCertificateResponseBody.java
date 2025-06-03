@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCertificateResponseBody</p>
@@ -51,7 +57,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
     private String subject;
 
     @com.aliyun.core.annotation.NameInMap("SubjectAlternativeNames")
-    private java.util.List < String > subjectAlternativeNames;
+    private java.util.List<String> subjectAlternativeNames;
 
     @com.aliyun.core.annotation.NameInMap("SubjectKeyIdentifier")
     private String subjectKeyIdentifier;
@@ -60,7 +66,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
     private String subjectPublicKey;
 
     @com.aliyun.core.annotation.NameInMap("Tags")
-    private java.util.Map < String, ? > tags;
+    private java.util.Map<String, ?> tags;
 
     @com.aliyun.core.annotation.NameInMap("UpdatedAt")
     private String updatedAt;
@@ -92,6 +98,10 @@ public class DescribeCertificateResponseBody extends TeaModel {
 
     public static DescribeCertificateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -188,7 +198,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
     /**
      * @return subjectAlternativeNames
      */
-    public java.util.List < String > getSubjectAlternativeNames() {
+    public java.util.List<String> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames;
     }
 
@@ -209,7 +219,7 @@ public class DescribeCertificateResponseBody extends TeaModel {
     /**
      * @return tags
      */
-    public java.util.Map < String, ? > getTags() {
+    public java.util.Map<String, ?> getTags() {
         return this.tags;
     }
 
@@ -234,14 +244,41 @@ public class DescribeCertificateResponseBody extends TeaModel {
         private String signatureAlgorithm; 
         private String status; 
         private String subject; 
-        private java.util.List < String > subjectAlternativeNames; 
+        private java.util.List<String> subjectAlternativeNames; 
         private String subjectKeyIdentifier; 
         private String subjectPublicKey; 
-        private java.util.Map < String, ? > tags; 
+        private java.util.Map<String, ?> tags; 
         private String updatedAt; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCertificateResponseBody model) {
+            this.arn = model.arn;
+            this.certificateId = model.certificateId;
+            this.createdAt = model.createdAt;
+            this.exportablePrivateKey = model.exportablePrivateKey;
+            this.issuer = model.issuer;
+            this.keySpec = model.keySpec;
+            this.notAfter = model.notAfter;
+            this.notBefore = model.notBefore;
+            this.requestId = model.requestId;
+            this.serial = model.serial;
+            this.signatureAlgorithm = model.signatureAlgorithm;
+            this.status = model.status;
+            this.subject = model.subject;
+            this.subjectAlternativeNames = model.subjectAlternativeNames;
+            this.subjectKeyIdentifier = model.subjectKeyIdentifier;
+            this.subjectPublicKey = model.subjectPublicKey;
+            this.tags = model.tags;
+            this.updatedAt = model.updatedAt;
+        } 
+
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the certificate.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:kms:cn-hangzhou:159498693826****:certificate/9a28de48-8d8b-484d-a766-dec4****&quot;</p>
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -249,7 +286,10 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the certificate. The ID must be globally unique in Certificates Manager.
+         * <p>The ID of the certificate. The ID must be globally unique in Certificates Manager.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9a28de48-8d8b-484d-a766-dec4****</p>
          */
         public Builder certificateId(String certificateId) {
             this.certificateId = certificateId;
@@ -257,7 +297,10 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the certificate was created.
+         * <p>The time when the certificate was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-13T03:05:03Z</p>
          */
         public Builder createdAt(String createdAt) {
             this.createdAt = createdAt;
@@ -265,11 +308,14 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the private key of the certificate can be exported for use. Valid values:
-         * <p>
+         * <p>Indicates whether the private key of the certificate can be exported for use. Valid values:</p>
+         * <ul>
+         * <li>true: The private key of the certificate can be exported for use. This is the default value.</li>
+         * <li>false: The private key of the certificate cannot be exported for use.</li>
+         * </ul>
          * 
-         * *   true: The private key of the certificate can be exported for use. This is the default value.
-         * *   false: The private key of the certificate cannot be exported for use.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder exportablePrivateKey(Boolean exportablePrivateKey) {
             this.exportablePrivateKey = exportablePrivateKey;
@@ -277,7 +323,10 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The certificate issuer in the distinguished name (DN) format.
+         * <p>The certificate issuer in the distinguished name (DN) format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN=testCA,OU=kms,O=aliyun,C=CN</p>
          */
         public Builder issuer(String issuer) {
             this.issuer = issuer;
@@ -285,7 +334,10 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The type of the key.
+         * <p>The type of the key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA_2048</p>
          */
         public Builder keySpec(String keySpec) {
             this.keySpec = keySpec;
@@ -293,7 +345,10 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the validity period of the certificate.
+         * <p>The end of the validity period of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2022-10-13T03:09:00Z</p>
          */
         public Builder notAfter(String notAfter) {
             this.notAfter = notAfter;
@@ -301,7 +356,10 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the validity period of the certificate.
+         * <p>The beginning of the validity period of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-10-13T03:09:00Z</p>
          */
         public Builder notBefore(String notBefore) {
             this.notBefore = notBefore;
@@ -309,7 +367,10 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edb671a3-c5a1-4ebe-a1de-d748b640bdf2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -317,7 +378,10 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The serial number of the certificate.
+         * <p>The serial number of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678</p>
          */
         public Builder serial(String serial) {
             this.serial = serial;
@@ -325,12 +389,15 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The signature algorithm of the certificate. Valid values:
-         * <p>
+         * <p>The signature algorithm of the certificate. Valid values:</p>
+         * <ul>
+         * <li>RSA2048-SHA256</li>
+         * <li>ECDSA-SHA256</li>
+         * <li>SM2-SM3</li>
+         * </ul>
          * 
-         * *   RSA2048-SHA256
-         * *   ECDSA-SHA256
-         * *   SM2-SM3
+         * <strong>example:</strong>
+         * <p>ECDSA-SHA256</p>
          */
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             this.signatureAlgorithm = signatureAlgorithm;
@@ -338,13 +405,16 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The status of the certificate. Valid values:
-         * <p>
+         * <p>The status of the certificate. Valid values:</p>
+         * <ul>
+         * <li>PENDING: The certificate is to be imported.</li>
+         * <li>ACTIVE: The certificate is enabled.</li>
+         * <li>INACTIVE: The certificate is disabled.</li>
+         * <li>REVOKED: The certificate is revoked.</li>
+         * </ul>
          * 
-         * *   PENDING: The certificate is to be imported.
-         * *   ACTIVE: The certificate is enabled.
-         * *   INACTIVE: The certificate is disabled.
-         * *   REVOKED: The certificate is revoked.
+         * <strong>example:</strong>
+         * <p>ACTIVE</p>
          */
         public Builder status(String status) {
             this.status = status;
@@ -352,7 +422,10 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The subject of the certificate, which is in the DN format.
+         * <p>The subject of the certificate, which is in the DN format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN=userName,OU=aliyun,O=aliyun,C=CN</p>
          */
         public Builder subject(String subject) {
             this.subject = subject;
@@ -360,18 +433,19 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The alias of the certificate subject.
-         * <p>
-         * 
-         * A domain name list is supported. A maximum of 10 domain names are supported.
+         * <p>The alias of the certificate subject.</p>
+         * <p>A domain name list is supported. A maximum of 10 domain names are supported.</p>
          */
-        public Builder subjectAlternativeNames(java.util.List < String > subjectAlternativeNames) {
+        public Builder subjectAlternativeNames(java.util.List<String> subjectAlternativeNames) {
             this.subjectAlternativeNames = subjectAlternativeNames;
             return this;
         }
 
         /**
-         * The public key identifier of the certificate subject.
+         * <p>The public key identifier of the certificate subject.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>79 36 26 DE 9F F5 15 E3 56 DC ****</p>
          */
         public Builder subjectKeyIdentifier(String subjectKeyIdentifier) {
             this.subjectKeyIdentifier = subjectKeyIdentifier;
@@ -379,7 +453,10 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The public key of the certificate.
+         * <p>The public key of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN PUBLIC KEY----- MIIBIjA -----END PUBLIC KEY-----</p>
          */
         public Builder subjectPublicKey(String subjectPublicKey) {
             this.subjectPublicKey = subjectPublicKey;
@@ -387,15 +464,21 @@ public class DescribeCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The tag of the certificate.
+         * <p>The tag of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;TagKey&quot;:&quot;S1key1&quot;,&quot;TagValue&quot;:&quot;S1val1&quot;},{&quot;TagKey&quot;:&quot;S1key2&quot;,&quot;TagValue&quot;:&quot;S2val2&quot;}]</p>
          */
-        public Builder tags(java.util.Map < String, ? > tags) {
+        public Builder tags(java.util.Map<String, ?> tags) {
             this.tags = tags;
             return this;
         }
 
         /**
-         * The time when the certificate was updated.
+         * <p>The time when the certificate was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2020-12-23T06:10:13Z</p>
          */
         public Builder updatedAt(String updatedAt) {
             this.updatedAt = updatedAt;

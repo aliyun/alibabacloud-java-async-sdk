@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateKeyDescriptionResponseBody} extends {@link TeaModel}
+ * {@link ReleaseKmsInstanceResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateKeyDescriptionResponseBody</p>
+ * <p>ReleaseKmsInstanceResponseBody</p>
  */
-public class UpdateKeyDescriptionResponseBody extends TeaModel {
+public class ReleaseKmsInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdateKeyDescriptionResponseBody(Builder builder) {
+    private ReleaseKmsInstanceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class UpdateKeyDescriptionResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateKeyDescriptionResponseBody create() {
+    public static ReleaseKmsInstanceResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,20 @@ public class UpdateKeyDescriptionResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdateKeyDescriptionResponseBody model) {
+        private Builder(ReleaseKmsInstanceResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3455b9b4-95c1-419d-b310-db6a53b09a39</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UpdateKeyDescriptionResponseBody build() {
-            return new UpdateKeyDescriptionResponseBody(this);
+        public ReleaseKmsInstanceResponseBody build() {
+            return new ReleaseKmsInstanceResponseBody(this);
         } 
 
     } 

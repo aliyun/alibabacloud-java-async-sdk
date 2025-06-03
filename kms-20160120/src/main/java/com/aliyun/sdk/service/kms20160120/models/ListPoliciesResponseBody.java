@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPoliciesResponseBody} extends {@link TeaModel}
  *
  * <p>ListPoliciesResponseBody</p>
@@ -40,6 +46,10 @@ public class ListPoliciesResponseBody extends TeaModel {
 
     public static ListPoliciesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class ListPoliciesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListPoliciesResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.policies = model.policies;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +117,10 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +128,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * A list of permission policies.
+         * <p>A list of permission policies.</p>
          */
         public Builder policies(Policies policies) {
             this.policies = policies;
@@ -109,7 +136,10 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b66ad557-9c00-4064-9c8d-b621c3263308</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListPoliciesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPoliciesResponseBody</p>
+     */
     public static class Policy extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -156,8 +195,18 @@ public class ListPoliciesResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.name = model.name;
+            } 
+
             /**
-             * The name of the permission policy.
+             * <p>The name of the permission policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>policy_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -171,9 +220,15 @@ public class ListPoliciesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListPoliciesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPoliciesResponseBody</p>
+     */
     public static class Policies extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Policy")
-        private java.util.List < Policy> policy;
+        private java.util.List<Policy> policy;
 
         private Policies(Builder builder) {
             this.policy = builder.policy;
@@ -190,17 +245,24 @@ public class ListPoliciesResponseBody extends TeaModel {
         /**
          * @return policy
          */
-        public java.util.List < Policy> getPolicy() {
+        public java.util.List<Policy> getPolicy() {
             return this.policy;
         }
 
         public static final class Builder {
-            private java.util.List < Policy> policy; 
+            private java.util.List<Policy> policy; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.policy = model.policy;
+            } 
 
             /**
              * Policy.
              */
-            public Builder policy(java.util.List < Policy> policy) {
+            public Builder policy(java.util.List<Policy> policy) {
                 this.policy = policy;
                 return this;
             }

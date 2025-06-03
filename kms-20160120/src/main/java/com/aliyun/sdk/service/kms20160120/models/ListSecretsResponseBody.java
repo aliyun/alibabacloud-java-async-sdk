@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecretsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSecretsResponseBody</p>
@@ -40,6 +46,10 @@ public class ListSecretsResponseBody extends TeaModel {
 
     public static ListSecretsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class ListSecretsResponseBody extends TeaModel {
         private SecretList secretList; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSecretsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.secretList = model.secretList;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +117,10 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of returned secrets.
+         * <p>The number of returned secrets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +128,10 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of secrets.
+         * <p>The list of secrets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6a6287a0-ff34-4780-a790-fdfca900557f</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +139,7 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the secret was updated.
+         * <p>The time when the secret was updated.</p>
          */
         public Builder secretList(SecretList secretList) {
             this.secretList = secretList;
@@ -117,7 +147,10 @@ public class ListSecretsResponseBody extends TeaModel {
         }
 
         /**
-         * The secret name.
+         * <p>The secret name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>55</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListSecretsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecretsResponseBody</p>
+     */
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
@@ -168,6 +207,14 @@ public class ListSecretsResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * TagKey.
              */
@@ -191,9 +238,15 @@ public class ListSecretsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecretsResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tag")
-        private java.util.List < Tag> tag;
+        private java.util.List<Tag> tag;
 
         private Tags(Builder builder) {
             this.tag = builder.tag;
@@ -210,17 +263,24 @@ public class ListSecretsResponseBody extends TeaModel {
         /**
          * @return tag
          */
-        public java.util.List < Tag> getTag() {
+        public java.util.List<Tag> getTag() {
             return this.tag;
         }
 
         public static final class Builder {
-            private java.util.List < Tag> tag; 
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
              */
-            public Builder tag(java.util.List < Tag> tag) {
+            public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;
                 return this;
             }
@@ -232,6 +292,12 @@ public class ListSecretsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecretsResponseBody</p>
+     */
     public static class Secret extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -318,8 +384,23 @@ public class ListSecretsResponseBody extends TeaModel {
             private Tags tags; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Secret model) {
+                this.createTime = model.createTime;
+                this.plannedDeleteTime = model.plannedDeleteTime;
+                this.secretName = model.secretName;
+                this.secretType = model.secretType;
+                this.tags = model.tags;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * The tag value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-17T07:59:05Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -327,10 +408,11 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource tags of the secret.
-             * <p>
+             * <p>The resource tags of the secret.</p>
+             * <p>This parameter is not returned if you set the FetchTags parameter to false or do not specify the FetchTags parameter.</p>
              * 
-             * This parameter is not returned if you set the FetchTags parameter to false or do not specify the FetchTags parameter.
+             * <strong>example:</strong>
+             * <p>2022-08-17T07:59:05Z</p>
              */
             public Builder plannedDeleteTime(String plannedDeleteTime) {
                 this.plannedDeleteTime = plannedDeleteTime;
@@ -338,11 +420,14 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the secret. Valid values:
-             * <p>
+             * <p>The type of the secret. Valid values:</p>
+             * <ul>
+             * <li>Generic: indicates a generic secret.</li>
+             * <li>Rds: indicates a managed ApsaraDB RDS secret.</li>
+             * </ul>
              * 
-             * *   Generic: indicates a generic secret.
-             * *   Rds: indicates a managed ApsaraDB RDS secret.
+             * <strong>example:</strong>
+             * <p>secret001</p>
              */
             public Builder secretName(String secretName) {
                 this.secretName = secretName;
@@ -350,7 +435,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the secret was created.
+             * <p>The time when the secret was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Generic</p>
              */
             public Builder secretType(String secretType) {
                 this.secretType = secretType;
@@ -358,7 +446,7 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag key.
+             * <p>The tag key.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -366,7 +454,10 @@ public class ListSecretsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the secret is scheduled to be deleted.
+             * <p>The time when the secret is scheduled to be deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-17T07:59:05Z</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -380,9 +471,15 @@ public class ListSecretsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSecretsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecretsResponseBody</p>
+     */
     public static class SecretList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Secret")
-        private java.util.List < Secret> secret;
+        private java.util.List<Secret> secret;
 
         private SecretList(Builder builder) {
             this.secret = builder.secret;
@@ -399,17 +496,24 @@ public class ListSecretsResponseBody extends TeaModel {
         /**
          * @return secret
          */
-        public java.util.List < Secret> getSecret() {
+        public java.util.List<Secret> getSecret() {
             return this.secret;
         }
 
         public static final class Builder {
-            private java.util.List < Secret> secret; 
+            private java.util.List<Secret> secret; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecretList model) {
+                this.secret = model.secret;
+            } 
 
             /**
              * Secret.
              */
-            public Builder secret(java.util.List < Secret> secret) {
+            public Builder secret(java.util.List<Secret> secret) {
                 this.secret = secret;
                 return this;
             }

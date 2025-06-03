@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DecryptResponseBody} extends {@link TeaModel}
  *
  * <p>DecryptResponseBody</p>
@@ -36,6 +42,10 @@ public class DecryptResponseBody extends TeaModel {
 
     public static DecryptResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,11 +82,22 @@ public class DecryptResponseBody extends TeaModel {
         private String plaintext; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DecryptResponseBody model) {
+            this.keyId = model.keyId;
+            this.keyVersionId = model.keyVersionId;
+            this.plaintext = model.plaintext;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the customer master key (CMK) that is used to decrypt the ciphertext.
-         * <p>
+         * <p>The ID of the customer master key (CMK) that is used to decrypt the ciphertext.</p>
+         * <p>It is the GUID of the CMK.</p>
          * 
-         * It is the GUID of the CMK.
+         * <strong>example:</strong>
+         * <p>202b9877-5a25-46e3-a763-e20791b5****</p>
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -84,7 +105,10 @@ public class DecryptResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the CMK version that is used to decrypt the ciphertext.
+         * <p>The ID of the CMK version that is used to decrypt the ciphertext.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2ab1a983-7072-4bbc-a582-584b5bd8****</p>
          */
         public Builder keyVersionId(String keyVersionId) {
             this.keyVersionId = keyVersionId;
@@ -92,7 +116,10 @@ public class DecryptResponseBody extends TeaModel {
         }
 
         /**
-         * The plaintext that is generated after decryption.
+         * <p>The plaintext that is generated after decryption.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tRYXuCwgja12xxO1N/gZERDDCLw9doZEQiPDk/Bv****</p>
          */
         public Builder plaintext(String plaintext) {
             this.plaintext = plaintext;
@@ -100,7 +127,10 @@ public class DecryptResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>207596a2-36d3-4840-b1bd-f87044699bd7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

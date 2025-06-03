@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetKmsInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetKmsInstanceResponseBody</p>
@@ -30,6 +36,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return kmsInstance
      */
@@ -48,8 +58,16 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         private KmsInstance kmsInstance; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetKmsInstanceResponseBody model) {
+            this.kmsInstance = model.kmsInstance;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The details of the KMS instance.
+         * <p>The details of the KMS instance.</p>
          */
         public Builder kmsInstance(KmsInstance kmsInstance) {
             this.kmsInstance = kmsInstance;
@@ -57,7 +75,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>46b4a94a-57d2-44b4-9810-1e87d31abb33</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class GetKmsInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetKmsInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetKmsInstanceResponseBody</p>
+     */
     public static class BindVpc extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -132,8 +159,21 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcOwnerId; 
 
+            private Builder() {
+            } 
+
+            private Builder(BindVpc model) {
+                this.regionId = model.regionId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+                this.vpcOwnerId = model.vpcOwnerId;
+            } 
+
             /**
-             * The region to which the VPC belongs.
+             * <p>The region to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -141,7 +181,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch in the VPC.
+             * <p>The vSwitch in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1i512amhdje10f1****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -149,7 +192,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * <p>The ID of the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp19z7djuhtad5dff****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -157,7 +203,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud account to which the VPC belongs.
+             * <p>The Alibaba Cloud account to which the VPC belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>190325303126****</p>
              */
             public Builder vpcOwnerId(String vpcOwnerId) {
                 this.vpcOwnerId = vpcOwnerId;
@@ -171,9 +220,15 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetKmsInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetKmsInstanceResponseBody</p>
+     */
     public static class BindVpcs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindVpc")
-        private java.util.List < BindVpc> bindVpc;
+        private java.util.List<BindVpc> bindVpc;
 
         private BindVpcs(Builder builder) {
             this.bindVpc = builder.bindVpc;
@@ -190,17 +245,24 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         /**
          * @return bindVpc
          */
-        public java.util.List < BindVpc> getBindVpc() {
+        public java.util.List<BindVpc> getBindVpc() {
             return this.bindVpc;
         }
 
         public static final class Builder {
-            private java.util.List < BindVpc> bindVpc; 
+            private java.util.List<BindVpc> bindVpc; 
+
+            private Builder() {
+            } 
+
+            private Builder(BindVpcs model) {
+                this.bindVpc = model.bindVpc;
+            } 
 
             /**
              * BindVpc.
              */
-            public Builder bindVpc(java.util.List < BindVpc> bindVpc) {
+            public Builder bindVpc(java.util.List<BindVpc> bindVpc) {
                 this.bindVpc = bindVpc;
                 return this;
             }
@@ -212,12 +274,21 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link GetKmsInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetKmsInstanceResponseBody</p>
+     */
     public static class KmsInstance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindVpcs")
         private BindVpcs bindVpcs;
 
         @com.aliyun.core.annotation.NameInMap("CaCertificateChainPem")
         private String caCertificateChainPem;
+
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
+        private String chargeType;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -261,6 +332,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         private KmsInstance(Builder builder) {
             this.bindVpcs = builder.bindVpcs;
             this.caCertificateChainPem = builder.caCertificateChainPem;
+            this.chargeType = builder.chargeType;
             this.createTime = builder.createTime;
             this.endDate = builder.endDate;
             this.instanceId = builder.instanceId;
@@ -296,6 +368,13 @@ public class GetKmsInstanceResponseBody extends TeaModel {
          */
         public String getCaCertificateChainPem() {
             return this.caCertificateChainPem;
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         /**
@@ -392,6 +471,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private BindVpcs bindVpcs; 
             private String caCertificateChainPem; 
+            private String chargeType; 
             private String createTime; 
             private String endDate; 
             private String instanceId; 
@@ -406,11 +486,33 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             private String vswitchIds; 
             private String zoneIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(KmsInstance model) {
+                this.bindVpcs = model.bindVpcs;
+                this.caCertificateChainPem = model.caCertificateChainPem;
+                this.chargeType = model.chargeType;
+                this.createTime = model.createTime;
+                this.endDate = model.endDate;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.keyNum = model.keyNum;
+                this.secretNum = model.secretNum;
+                this.spec = model.spec;
+                this.startDate = model.startDate;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+                this.vpcNum = model.vpcNum;
+                this.vswitchIds = model.vswitchIds;
+                this.zoneIds = model.zoneIds;
+            } 
+
             /**
-             * A list of associated VPCs.
-             * <p>
-             * 
-             * >  If your self-managed applications are deployed in multiple VPCs in the same region, you can associate VPCs with the KMS instance beyond the VPC that you specify when you enable the KMS instance. The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, self-managed applications in the VPCs can access the specified KMS instance.
+             * <p>A list of associated VPCs.</p>
+             * <blockquote>
+             * <p> If your self-managed applications are deployed in multiple VPCs in the same region, you can associate VPCs with the KMS instance beyond the VPC that you specify when you enable the KMS instance. The VPCs can belong to the same Alibaba Cloud account or different Alibaba Cloud accounts. After the configuration is complete, self-managed applications in the VPCs can access the specified KMS instance.</p>
+             * </blockquote>
              */
             public Builder bindVpcs(BindVpcs bindVpcs) {
                 this.bindVpcs = bindVpcs;
@@ -418,7 +520,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the certificate authority (CA) certificate of the KMS instance.
+             * <p>The content of the certificate authority (CA) certificate of the KMS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-----BEGIN CERTIFICATE-----\r\nMIIDuzCCAqOgAwIBAgIJALTKwWAjvbMiMA0GCSqGSIb3DQEBCwUAMHQxCzAJBgNV****-----END CERTIFICATE-----</p>
              */
             public Builder caCertificateChainPem(String caCertificateChainPem) {
                 this.caCertificateChainPem = caCertificateChainPem;
@@ -426,7 +531,18 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the KMS instance is created.
+             * ChargeType.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * <p>The time when the KMS instance is created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-09-05T12:44:20Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -434,7 +550,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the KMS instance.
+             * <p>The expiration time of the KMS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-10-05T16:00:00Z</p>
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -442,7 +561,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the KMS instance.
+             * <p>The ID of the KMS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kst-bjj62f5ba3dnpb6v8****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -450,7 +572,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the KMS instance.
+             * <p>The name of the KMS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kst-bjj62f5ba3dnpb6v8****</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -458,7 +583,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of keys that can be created for the KMS instance.
+             * <p>The number of keys that can be created for the KMS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder keyNum(Long keyNum) {
                 this.keyNum = keyNum;
@@ -466,7 +594,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The number of secrets that can be created for the KMS instance.
+             * <p>The number of secrets that can be created for the KMS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder secretNum(String secretNum) {
                 this.secretNum = secretNum;
@@ -474,7 +605,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The computing performance of the KMS instance.
+             * <p>The computing performance of the KMS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder spec(Long spec) {
                 this.spec = spec;
@@ -482,7 +616,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the KMS instance is enabled.
+             * <p>The time when the KMS instance is enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-09-05T12:44:19Z</p>
              */
             public Builder startDate(String startDate) {
                 this.startDate = startDate;
@@ -490,14 +627,17 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the KMS instance. Valid values:
-             * <p>
+             * <p>The status of the KMS instance. Valid values:</p>
+             * <ul>
+             * <li>Uninitialized: The KMS instance is not enabled.</li>
+             * <li>Connecting: The KMS instance is being connected.</li>
+             * <li>Connected: The KMS instance is enabled.</li>
+             * <li>Disconnected: The KMS instance is disconnected.</li>
+             * <li>Error: The KMS instance is abnormal.</li>
+             * </ul>
              * 
-             * *   Uninitialized: The KMS instance is not enabled.
-             * *   Connecting: The KMS instance is being connected.
-             * *   Connected: The KMS instance is enabled.
-             * *   Disconnected: The KMS instance is disconnected.
-             * *   Error: The KMS instance is abnormal.
+             * <strong>example:</strong>
+             * <p>Connected</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -505,7 +645,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) with which the KMS instance is associated.
+             * <p>The virtual private cloud (VPC) with which the KMS instance is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp19z7cwmltad5dff****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -513,7 +656,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The access management quota for the KMS instance.
+             * <p>The access management quota for the KMS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder vpcNum(Long vpcNum) {
                 this.vpcNum = vpcNum;
@@ -521,7 +667,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The vSwitch in the VPC.
+             * <p>The vSwitch in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1i512amda6d10a0****</p>
              */
             public Builder vswitchIds(String vswitchIds) {
                 this.vswitchIds = vswitchIds;
@@ -529,7 +678,10 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The zone with which the KMS instance is associated.
+             * <p>The zone with which the KMS instance is associated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;cn-hangzhou-k&quot;,       &quot;cn-hangzhou-j&quot;</p>
              */
             public Builder zoneIds(String zoneIds) {
                 this.zoneIds = zoneIds;

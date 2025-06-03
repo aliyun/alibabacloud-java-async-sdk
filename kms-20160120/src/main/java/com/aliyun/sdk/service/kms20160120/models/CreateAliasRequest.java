@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateAliasRequest} extends {@link RequestModel}
  *
  * <p>CreateAliasRequest</p>
@@ -35,7 +41,7 @@ public class CreateAliasRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,10 +75,12 @@ public class CreateAliasRequest extends Request {
         } 
 
         /**
-         * The alias of the CMK.
-         * <p>
+         * <p>The alias of the CMK.</p>
+         * <p>The alias must be 1 to 255 characters in length and must contain the prefix <code>alias/</code>. The alias cannot be prefixed with the reserved word <code>alias/acs</code>.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The alias must be 1 to 255 characters in length and must contain the prefix `alias/`. The alias cannot be prefixed with the reserved word `alias/acs`.
+         * <strong>example:</strong>
+         * <p>alias/example</p>
          */
         public Builder aliasName(String aliasName) {
             this.putQueryParameter("AliasName", aliasName);
@@ -81,7 +89,11 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * The ID of the CMK. The ID must be globally unique.
+         * <p>The ID of the CMK. The ID must be globally unique.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7906979c-8e06-46a2-be2d-68e3ccbc****</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);

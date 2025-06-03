@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClientKeyRequest} extends {@link RequestModel}
  *
  * <p>CreateClientKeyRequest</p>
@@ -45,7 +51,7 @@ public class CreateClientKeyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +103,11 @@ public class CreateClientKeyRequest extends Request {
         } 
 
         /**
-         * The operation that you want to perform. Set the value to **CreateClientKey**.
+         * <p>The operation that you want to perform. Set the value to <strong>CreateClientKey</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aap_test</p>
          */
         public Builder aapName(String aapName) {
             this.putQueryParameter("AapName", aapName);
@@ -106,10 +116,11 @@ public class CreateClientKeyRequest extends Request {
         }
 
         /**
-         * The encryption password of the client key.
-         * <p>
+         * <p>The encryption password of the client key.</p>
+         * <p>The password must be 8 to 64 characters in length and must contain at least two of the following types: digits, letters, and special characters. Special characters include <code>~ ! @ # $ % ^ &amp; * ? _ -</code>.</p>
          * 
-         * The password must be 8 to 64 characters in length and must contain at least two of the following types: digits, letters, and special characters. Special characters include `~ ! @ # $ % ^ & * ? _ -`.
+         * <strong>example:</strong>
+         * <p>2028-08-31T17:14:33Z</p>
          */
         public Builder notAfter(String notAfter) {
             this.putQueryParameter("NotAfter", notAfter);
@@ -118,15 +129,17 @@ public class CreateClientKeyRequest extends Request {
         }
 
         /**
-         * The end of the validity period of the client key.
-         * <p>
+         * <p>The end of the validity period of the client key.</p>
+         * <p>Specify the time in the ISO 8601 standard. The time must be in UTC. The time must be in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>If you do not configure NotAfter, the default value is the time when the client key was created plus five years.</li>
+         * <li>If you configure NotAfter, you must configure NotBefore.</li>
+         * </ul>
          * 
-         * Specify the time in the ISO 8601 standard. The time must be in UTC. The time must be in the yyyy-MM-ddTHH:mm:ssZ format.
-         * 
-         * > 
-         * 
-         * *   If you do not configure NotAfter, the default value is the time when the client key was created plus five years.
-         * *   If you configure NotAfter, you must configure NotBefore.
+         * <strong>example:</strong>
+         * <p>2023-08-31T17:14:33Z</p>
          */
         public Builder notBefore(String notBefore) {
             this.putQueryParameter("NotBefore", notBefore);
@@ -135,7 +148,11 @@ public class CreateClientKeyRequest extends Request {
         }
 
         /**
-         * The name of the AAP.
+         * <p>The name of the AAP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bcfefe15-46f0****</p>
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);

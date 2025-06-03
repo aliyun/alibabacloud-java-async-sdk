@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateKeyVersionResponseBody} extends {@link TeaModel}
  *
  * <p>CreateKeyVersionResponseBody</p>
@@ -30,6 +36,10 @@ public class CreateKeyVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return keyVersion
      */
@@ -48,8 +58,16 @@ public class CreateKeyVersionResponseBody extends TeaModel {
         private KeyVersion keyVersion; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateKeyVersionResponseBody model) {
+            this.keyVersion = model.keyVersion;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The metadata of the version.
+         * <p>The metadata of the version.</p>
          */
         public Builder keyVersion(KeyVersion keyVersion) {
             this.keyVersion = keyVersion;
@@ -57,7 +75,10 @@ public class CreateKeyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>b96f250a-4b75-498c-91be-22c6928f85be</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class CreateKeyVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateKeyVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateKeyVersionResponseBody</p>
+     */
     public static class KeyVersion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationDate")
         private String creationDate;
@@ -120,8 +147,20 @@ public class CreateKeyVersionResponseBody extends TeaModel {
             private String keyId; 
             private String keyVersionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(KeyVersion model) {
+                this.creationDate = model.creationDate;
+                this.keyId = model.keyId;
+                this.keyVersionId = model.keyVersionId;
+            } 
+
             /**
-             * The date and time when the version was created. The time is displayed in UTC.
+             * <p>The date and time when the version was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2019-08-02T10:38:27Z</p>
              */
             public Builder creationDate(String creationDate) {
                 this.creationDate = creationDate;
@@ -129,7 +168,10 @@ public class CreateKeyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CMK. The ID must be globally unique.
+             * <p>The ID of the CMK. The ID must be globally unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0b30658a-ed1a-4922-b8f7-a673ca9c****</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -137,7 +179,10 @@ public class CreateKeyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the version.
+             * <p>The ID of the version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c0a3d5dc-0b47-4199-a050-b289349a****</p>
              */
             public Builder keyVersionId(String keyVersionId) {
                 this.keyVersionId = keyVersionId;

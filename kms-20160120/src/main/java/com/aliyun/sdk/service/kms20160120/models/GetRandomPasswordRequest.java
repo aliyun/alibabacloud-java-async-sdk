@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetRandomPasswordRequest} extends {@link RequestModel}
  *
  * <p>GetRandomPasswordRequest</p>
@@ -58,7 +64,7 @@ public class GetRandomPasswordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,14 +143,13 @@ public class GetRandomPasswordRequest extends Request {
         } 
 
         /**
-         * The characters that are not included in the password to be generated.
-         * <p>
+         * <p>The characters that are not included in the password to be generated.</p>
+         * <p>Valid values:</p>
+         * <p><code>Valid characters: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ! \&quot;#$%&amp;\&quot;()*+,-. /:;&lt;=&gt;? @[\] your_project_id} ~ </code>.</p>
+         * <p>This parameter is empty by default.</p>
          * 
-         * Valid values:
-         * 
-         * ` Valid characters: 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ! \"#$%&\"()*+,-. /:;<=>? @[\] your_project_id} ~  `.
-         * 
-         * This parameter is empty by default.
+         * <strong>example:</strong>
+         * <p>ABCabc</p>
          */
         public Builder excludeCharacters(String excludeCharacters) {
             this.putQueryParameter("ExcludeCharacters", excludeCharacters);
@@ -153,13 +158,15 @@ public class GetRandomPasswordRequest extends Request {
         }
 
         /**
-         * Specifies whether to exclude lowercase letters.
-         * <p>
+         * <p>Specifies whether to exclude lowercase letters.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder excludeLowercase(String excludeLowercase) {
             this.putQueryParameter("ExcludeLowercase", excludeLowercase);
@@ -168,13 +175,15 @@ public class GetRandomPasswordRequest extends Request {
         }
 
         /**
-         * Specifies whether to exclude digits.
-         * <p>
+         * <p>Specifies whether to exclude digits.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder excludeNumbers(String excludeNumbers) {
             this.putQueryParameter("ExcludeNumbers", excludeNumbers);
@@ -183,13 +192,15 @@ public class GetRandomPasswordRequest extends Request {
         }
 
         /**
-         * Specifies whether to exclude special characters.
-         * <p>
+         * <p>Specifies whether to exclude special characters.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder excludePunctuation(String excludePunctuation) {
             this.putQueryParameter("ExcludePunctuation", excludePunctuation);
@@ -198,13 +209,15 @@ public class GetRandomPasswordRequest extends Request {
         }
 
         /**
-         * Specifies whether to exclude uppercase letters.
-         * <p>
+         * <p>Specifies whether to exclude uppercase letters.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder excludeUppercase(String excludeUppercase) {
             this.putQueryParameter("ExcludeUppercase", excludeUppercase);
@@ -213,12 +226,12 @@ public class GetRandomPasswordRequest extends Request {
         }
 
         /**
-         * The number of bytes that the password to be generated contains.
-         * <p>
+         * <p>The number of bytes that the password to be generated contains.</p>
+         * <p>Valid values: 8 to 128.</p>
+         * <p>Default value: 32</p>
          * 
-         * Valid values: 8 to 128.
-         * 
-         * Default value: 32
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder passwordLength(String passwordLength) {
             this.putQueryParameter("PasswordLength", passwordLength);
@@ -227,13 +240,15 @@ public class GetRandomPasswordRequest extends Request {
         }
 
         /**
-         * Specifies whether to include all the preceding character types.
-         * <p>
+         * <p>Specifies whether to include all the preceding character types.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
-         * Valid values:
-         * 
-         * *   true
-         * *   false
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder requireEachIncludedType(String requireEachIncludedType) {
             this.putQueryParameter("RequireEachIncludedType", requireEachIncludedType);

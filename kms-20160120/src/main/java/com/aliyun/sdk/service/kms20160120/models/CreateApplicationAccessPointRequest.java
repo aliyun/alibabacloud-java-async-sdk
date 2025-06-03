@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateApplicationAccessPointRequest} extends {@link RequestModel}
  *
  * <p>CreateApplicationAccessPointRequest</p>
@@ -45,7 +51,7 @@ public class CreateApplicationAccessPointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +103,10 @@ public class CreateApplicationAccessPointRequest extends Request {
         } 
 
         /**
-         * The authentication method. Currently, only ClientKey is supported.
+         * <p>The authentication method. Currently, only ClientKey is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClientKey</p>
          */
         public Builder authenticationMethod(String authenticationMethod) {
             this.putQueryParameter("AuthenticationMethod", authenticationMethod);
@@ -106,7 +115,10 @@ public class CreateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * The description of the AAP.
+         * <p>The description of the AAP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aap description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -115,7 +127,11 @@ public class CreateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * The name of the AAP.
+         * <p>The name of the AAP.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aap_test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -124,10 +140,14 @@ public class CreateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * The permission policy.
-         * <p>
+         * <p>The permission policy.</p>
+         * <blockquote>
+         * <p>You can bind up to three permission policies to each AAP.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * > You can bind up to three permission policies to each AAP.
+         * <strong>example:</strong>
+         * <p>[&quot;kst-hzz62ee817bvyyr5x****.efkd&quot;,&quot;kst-hzz62ee817bvyyr5x****.eyyp&quot;]</p>
          */
         public Builder policies(String policies) {
             this.putQueryParameter("Policies", policies);

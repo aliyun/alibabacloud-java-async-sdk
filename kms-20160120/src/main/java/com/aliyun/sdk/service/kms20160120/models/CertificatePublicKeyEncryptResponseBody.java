@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CertificatePublicKeyEncryptResponseBody} extends {@link TeaModel}
  *
  * <p>CertificatePublicKeyEncryptResponseBody</p>
@@ -34,6 +40,10 @@ public class CertificatePublicKeyEncryptResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateId
      */
@@ -60,8 +70,20 @@ public class CertificatePublicKeyEncryptResponseBody extends TeaModel {
         private String ciphertextBlob; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CertificatePublicKeyEncryptResponseBody model) {
+            this.certificateId = model.certificateId;
+            this.ciphertextBlob = model.ciphertextBlob;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ID of the certificate.
+         * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-12345678****</p>
          */
         public Builder certificateId(String certificateId) {
             this.certificateId = certificateId;
@@ -69,10 +91,11 @@ public class CertificatePublicKeyEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * The ciphertext.
-         * <p>
+         * <p>The ciphertext.</p>
+         * <p>The value is encoded in Base64.</p>
          * 
-         * The value is encoded in Base64.
+         * <strong>example:</strong>
+         * <p>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</p>
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.ciphertextBlob = ciphertextBlob;
@@ -80,7 +103,10 @@ public class CertificatePublicKeyEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5979d897-d69f-4fc9-87dd-f3bb73c40b80</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

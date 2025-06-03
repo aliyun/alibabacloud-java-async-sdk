@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EncryptRequest} extends {@link RequestModel}
  *
  * <p>EncryptRequest</p>
@@ -17,7 +23,7 @@ public class EncryptRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EncryptionContext")
-    private java.util.Map < String, ? > encryptionContext;
+    private java.util.Map<String, ?> encryptionContext;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyId")
@@ -45,7 +51,7 @@ public class EncryptRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +66,7 @@ public class EncryptRequest extends Request {
     /**
      * @return encryptionContext
      */
-    public java.util.Map < String, ? > getEncryptionContext() {
+    public java.util.Map<String, ?> getEncryptionContext() {
         return this.encryptionContext;
     }
 
@@ -80,7 +86,7 @@ public class EncryptRequest extends Request {
 
     public static final class Builder extends Request.Builder<EncryptRequest, Builder> {
         private String dryRun; 
-        private java.util.Map < String, ? > encryptionContext; 
+        private java.util.Map<String, ?> encryptionContext; 
         private String keyId; 
         private String plaintext; 
 
@@ -106,9 +112,12 @@ public class EncryptRequest extends Request {
         }
 
         /**
-         * A JSON string that consists of key-value pairs. If you specify this parameter, an equivalent value is required when you call the Decrypt operation. For more information, see [EncryptionContext](~~42975~~).
+         * <p>A JSON string that consists of key-value pairs. If you specify this parameter, an equivalent value is required when you call the Decrypt operation. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Example&quot;:&quot;Example&quot;}</p>
          */
-        public Builder encryptionContext(java.util.Map < String, ? > encryptionContext) {
+        public Builder encryptionContext(java.util.Map<String, ?> encryptionContext) {
             String encryptionContextShrink = shrink(encryptionContext, "EncryptionContext", "json");
             this.putQueryParameter("EncryptionContext", encryptionContextShrink);
             this.encryptionContext = encryptionContext;
@@ -116,7 +125,11 @@ public class EncryptRequest extends Request {
         }
 
         /**
-         * The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see [Use aliases](~~68522~~).
+         * <p>The globally unique ID of the CMK. You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Use aliases</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234abcd-12ab-34cd-56ef-12345678****</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -125,7 +138,11 @@ public class EncryptRequest extends Request {
         }
 
         /**
-         * The plaintext to be encrypted. The plaintext must be Base64 encoded.
+         * <p>The plaintext to be encrypted. The plaintext must be Base64 encoded.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SGVsbG8gd29y****</p>
          */
         public Builder plaintext(String plaintext) {
             this.putQueryParameter("Plaintext", plaintext);

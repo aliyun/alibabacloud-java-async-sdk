@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ScheduleKeyDeletionRequest} extends {@link RequestModel}
  *
  * <p>ScheduleKeyDeletionRequest</p>
@@ -35,7 +41,7 @@ public class ScheduleKeyDeletionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +75,11 @@ public class ScheduleKeyDeletionRequest extends Request {
         } 
 
         /**
-         * The ID of the customer master key (CMK). The ID must be globally unique.
+         * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7906979c-8e06-46a2-be2d-68e3ccbc****</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -78,12 +88,13 @@ public class ScheduleKeyDeletionRequest extends Request {
         }
 
         /**
-         * The scheduled period after which the CMK is deleted. During this period, the CMK is in the PendingDeletion state. After this period ends, you cannot cancel the key deletion task.
-         * <p>
+         * <p>The scheduled period after which the CMK is deleted. During this period, the CMK is in the PendingDeletion state. After this period ends, you cannot cancel the key deletion task.</p>
+         * <p>Valid values: 7 to 366.</p>
+         * <p>Unit: days.</p>
+         * <p>This parameter is required.</p>
          * 
-         * Valid values: 7 to 366.
-         * 
-         * Unit: days.
+         * <strong>example:</strong>
+         * <p>7</p>
          */
         public Builder pendingWindowInDays(Integer pendingWindowInDays) {
             this.putQueryParameter("PendingWindowInDays", pendingWindowInDays);

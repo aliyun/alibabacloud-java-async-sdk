@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteKeyMaterialRequest} extends {@link RequestModel}
  *
  * <p>DeleteKeyMaterialRequest</p>
@@ -29,7 +35,7 @@ public class DeleteKeyMaterialRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,11 @@ public class DeleteKeyMaterialRequest extends Request {
         } 
 
         /**
-         * The globally unique ID of the CMK.
+         * <p>The globally unique ID of the CMK.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1234abcd-12ab-34cd-56ef-12345678****</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);

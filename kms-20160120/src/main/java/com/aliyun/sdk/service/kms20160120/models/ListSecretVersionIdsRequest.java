@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecretVersionIdsRequest} extends {@link RequestModel}
  *
  * <p>ListSecretVersionIdsRequest</p>
@@ -44,7 +50,7 @@ public class ListSecretVersionIdsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -96,15 +102,16 @@ public class ListSecretVersionIdsRequest extends Request {
         } 
 
         /**
-         * Specifies whether to return deprecated secret versions.
-         * <p>
+         * <p>Specifies whether to return deprecated secret versions.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>false: no</li>
+         * <li>true: yes</li>
+         * </ul>
+         * <p>Default value: false.</p>
          * 
-         * Valid values:
-         * 
-         * *   false: no
-         * *   true: yes
-         * 
-         * Default value: false.
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder includeDeprecated(String includeDeprecated) {
             this.putQueryParameter("IncludeDeprecated", includeDeprecated);
@@ -113,7 +120,10 @@ public class ListSecretVersionIdsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: 1.
+         * <p>The number of the page to return. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -122,7 +132,10 @@ public class ListSecretVersionIdsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10.
+         * <p>The number of entries to return on each page. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -131,7 +144,11 @@ public class ListSecretVersionIdsRequest extends Request {
         }
 
         /**
-         * The name of the secret.
+         * <p>The name of the secret.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secret001</p>
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);

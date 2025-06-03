@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateCertificateResponseBody} extends {@link TeaModel}
  *
  * <p>CreateCertificateResponseBody</p>
@@ -36,6 +42,10 @@ public class CreateCertificateResponseBody extends TeaModel {
 
     public static CreateCertificateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -72,8 +82,21 @@ public class CreateCertificateResponseBody extends TeaModel {
         private String csr; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateCertificateResponseBody model) {
+            this.arn = model.arn;
+            this.certificateId = model.certificateId;
+            this.csr = model.csr;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the certificate.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:kms:cn-hangzhou:154035569884****:certificate/98e85c94-52d0-40c9-b3b2-afda52f4****</p>
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -81,7 +104,10 @@ public class CreateCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the certificate. It is the globally unique identifier (GUID) of the certificate in Certificates Manager.
+         * <p>The ID of the certificate. It is the globally unique identifier (GUID) of the certificate in Certificates Manager.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9a28de48-8d8b-484d-a766-dec4****</p>
          */
         public Builder certificateId(String certificateId) {
             this.certificateId = certificateId;
@@ -89,7 +115,10 @@ public class CreateCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The CSR in the PEM format.
+         * <p>The CSR in the PEM format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE REQUEST-----\nMIIDADCCAegCAQAwgboxCzAJBgNVBAYTAkNOMREwDwYDVQQIEwhaaGVqaWFuZzER\n****\nmkj4rg==\n-----END CERTIFICATE REQUEST-----\n</p>
          */
         public Builder csr(String csr) {
             this.csr = csr;
@@ -97,7 +126,10 @@ public class CreateCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>15a735a1-8fe6-45cc-a64c-3c4ff839334e</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

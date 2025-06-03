@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdatePolicyRequest} extends {@link RequestModel}
  *
  * <p>UpdatePolicyRequest</p>
@@ -49,7 +55,7 @@ public class UpdatePolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -110,10 +116,13 @@ public class UpdatePolicyRequest extends Request {
         } 
 
         /**
-         * The access control rule.
-         * <p>
+         * <p>The access control rule.</p>
+         * <blockquote>
+         * <p>For more information about how to query created access control rules, see <a href="https://help.aliyun.com/document_detail/2539433.html">ListNetworkRules</a>.</p>
+         * </blockquote>
          * 
-         * > For more information about how to query created access control rules, see [ListNetworkRules](~~2539433~~).
+         * <strong>example:</strong>
+         * <p>{&quot;NetworkRules&quot;:[&quot;kst-hzz62ee817bvyyr5x****.efkd&quot;,&quot;kst-hzz62ee817bvyyr5x****.eyyp&quot;]}</p>
          */
         public Builder accessControlRules(String accessControlRules) {
             this.putQueryParameter("AccessControlRules", accessControlRules);
@@ -122,7 +131,10 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy  description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -131,7 +143,11 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * The name of the permission policy that you want to update.
+         * <p>The name of the permission policy that you want to update.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy_test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -140,13 +156,15 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * The operations that are supported by the updated policy. Valid values:
-         * <p>
+         * <p>The operations that are supported by the updated policy. Valid values:</p>
+         * <ul>
+         * <li>RbacPermission/Template/CryptoServiceKeyUser: allows you to perform cryptographic operations.</li>
+         * <li>RbacPermission/Template/CryptoServiceSecretUser: allows you to perform secret-related operations.</li>
+         * </ul>
+         * <p>You can select both.</p>
          * 
-         * *   RbacPermission/Template/CryptoServiceKeyUser: allows you to perform cryptographic operations.
-         * *   RbacPermission/Template/CryptoServiceSecretUser: allows you to perform secret-related operations.
-         * 
-         * You can select both.
+         * <strong>example:</strong>
+         * <p>[&quot;RbacPermission/Template/CryptoServiceKeyUser&quot;, &quot;RbacPermission/Template/CryptoServiceSecretUser&quot;]</p>
          */
         public Builder permissions(String permissions) {
             this.putQueryParameter("Permissions", permissions);
@@ -155,11 +173,14 @@ public class UpdatePolicyRequest extends Request {
         }
 
         /**
-         * The key and secret that are allowed to access after the update.
-         * <p>
+         * <p>The key and secret that are allowed to access after the update.</p>
+         * <ul>
+         * <li>Key: Enter a key in the <code>key/${KeyId}</code> format. To allow access to all keys of a KMS instance, enter key/*.</li>
+         * <li>Secret: Enter a secret in the <code>secret/${SecretName}</code> format. To allow access to all secrets of a KMS instance, enter secret/*.</li>
+         * </ul>
          * 
-         * *   Key: Enter a key in the `key/${KeyId}` format. To allow access to all keys of a KMS instance, enter key/\*.
-         * *   Secret: Enter a secret in the `secret/${SecretName}` format. To allow access to all secrets of a KMS instance, enter secret/\*.
+         * <strong>example:</strong>
+         * <p>[&quot;secret/acs/ram/user/ram-secret&quot;, &quot;secret/acs/ram/user/acr-master&quot;, &quot;key/key-hzz63d9c8d3dfv8cv****&quot;]</p>
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);

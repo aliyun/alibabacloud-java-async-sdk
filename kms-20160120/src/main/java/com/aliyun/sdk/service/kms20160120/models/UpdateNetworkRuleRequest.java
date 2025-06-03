@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateNetworkRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateNetworkRuleRequest</p>
@@ -39,7 +45,7 @@ public class UpdateNetworkRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +88,10 @@ public class UpdateNetworkRuleRequest extends Request {
         } 
 
         /**
-         * The description after the update.
+         * <p>The description after the update.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creat by kst-hzz62ee817bvyyr5****</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -91,7 +100,11 @@ public class UpdateNetworkRuleRequest extends Request {
         }
 
         /**
-         * The name of the access control rule that you want to update.
+         * <p>The name of the access control rule that you want to update.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>networkrule_test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -100,7 +113,10 @@ public class UpdateNetworkRuleRequest extends Request {
         }
 
         /**
-         * The private IP address or CIDR block after the update. Separate multiple items with commas (,).
+         * <p>The private IP address or CIDR block after the update. Separate multiple items with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;192.10.XX.XX&quot;,&quot;192.168.XX.XX/24&quot;]</p>
          */
         public Builder sourcePrivateIp(String sourcePrivateIp) {
             this.putQueryParameter("SourcePrivateIp", sourcePrivateIp);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribePolicyResponseBody} extends {@link TeaModel}
  *
  * <p>DescribePolicyResponseBody</p>
@@ -27,13 +33,13 @@ public class DescribePolicyResponseBody extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("Permissions")
-    private java.util.List < String > permissions;
+    private java.util.List<String> permissions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Resources")
-    private java.util.List < String > resources;
+    private java.util.List<String> resources;
 
     private DescribePolicyResponseBody(Builder builder) {
         this.accessControlRules = builder.accessControlRules;
@@ -52,6 +58,10 @@ public class DescribePolicyResponseBody extends TeaModel {
 
     public static DescribePolicyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -92,7 +102,7 @@ public class DescribePolicyResponseBody extends TeaModel {
     /**
      * @return permissions
      */
-    public java.util.List < String > getPermissions() {
+    public java.util.List<String> getPermissions() {
         return this.permissions;
     }
 
@@ -106,7 +116,7 @@ public class DescribePolicyResponseBody extends TeaModel {
     /**
      * @return resources
      */
-    public java.util.List < String > getResources() {
+    public java.util.List<String> getResources() {
         return this.resources;
     }
 
@@ -116,12 +126,29 @@ public class DescribePolicyResponseBody extends TeaModel {
         private String description; 
         private String kmsInstance; 
         private String name; 
-        private java.util.List < String > permissions; 
+        private java.util.List<String> permissions; 
         private String requestId; 
-        private java.util.List < String > resources; 
+        private java.util.List<String> resources; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePolicyResponseBody model) {
+            this.accessControlRules = model.accessControlRules;
+            this.arn = model.arn;
+            this.description = model.description;
+            this.kmsInstance = model.kmsInstance;
+            this.name = model.name;
+            this.permissions = model.permissions;
+            this.requestId = model.requestId;
+            this.resources = model.resources;
+        } 
 
         /**
-         * The network access rule that is associated with the permission policy.
+         * <p>The network access rule that is associated with the permission policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;NetworkRules&quot;:[&quot;kst-hzz62ee817bvyyr5x****.efkd&quot;,&quot;kst-hzz62ee817bvyyr5x****.eyyp&quot;]}</p>
          */
         public Builder accessControlRules(String accessControlRules) {
             this.accessControlRules = accessControlRules;
@@ -129,7 +156,10 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The Alibaba Cloud Resource Name (ARN) of the permission policy.
+         * <p>The Alibaba Cloud Resource Name (ARN) of the permission policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:kms:cn-hangzhou:119285303511****:policy/policy_test</p>
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -137,7 +167,10 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy  description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -145,7 +178,10 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The scope of the permission policy.
+         * <p>The scope of the permission policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>kst-hzz634e67d126u9p9****</p>
          */
         public Builder kmsInstance(String kmsInstance) {
             this.kmsInstance = kmsInstance;
@@ -153,7 +189,10 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the permission policy.
+         * <p>The name of the permission policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>policy_test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -161,15 +200,21 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * A list of operations that can be performed.
+         * <p>A list of operations that can be performed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;RbacPermission/Template/CryptoServiceKeyUser&quot;, &quot;RbacPermission/Template/CryptoServiceSecretUser&quot;]</p>
          */
-        public Builder permissions(java.util.List < String > permissions) {
+        public Builder permissions(java.util.List<String> permissions) {
             this.permissions = permissions;
             return this;
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f455324b-e229-4066-9f58-9c1cf3fe83a9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -177,9 +222,12 @@ public class DescribePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * A list of keys and secrets that are allowed to access.
+         * <p>A list of keys and secrets that are allowed to access.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;secret/acs/ram/user/ram-secret&quot;, &quot;secret/acs/ram/user/acr-master&quot;, &quot;key/key-hzz63d9c8d3dfv8cv****&quot;]</p>
          */
-        public Builder resources(java.util.List < String > resources) {
+        public Builder resources(java.util.List<String> resources) {
             this.resources = resources;
             return this;
         }

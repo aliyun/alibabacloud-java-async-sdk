@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListNetworkRulesResponseBody} extends {@link TeaModel}
  *
  * <p>ListNetworkRulesResponseBody</p>
@@ -40,6 +46,10 @@ public class ListNetworkRulesResponseBody extends TeaModel {
 
     public static ListNetworkRulesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,19 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListNetworkRulesResponseBody model) {
+            this.networkRules = model.networkRules;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * A list of access control rules.
+         * <p>A list of access control rules.</p>
          */
         public Builder networkRules(NetworkRules networkRules) {
             this.networkRules = networkRules;
@@ -93,7 +114,10 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +125,10 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +136,10 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3bf02f7a-015b-4f34-be0f-cc043fda2d33</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListNetworkRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListNetworkRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNetworkRulesResponseBody</p>
+     */
     public static class NetworkRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -168,8 +207,19 @@ public class ListNetworkRulesResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkRule model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
-             * The name of the access control rule.
+             * <p>The name of the access control rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>networkrule_test</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -177,7 +227,10 @@ public class ListNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The network type. The value is fixed as Private. Self-managed applications can access KMS instances only over a private virtual private cloud (VPC).
+             * <p>The network type. The value is fixed as Private. Self-managed applications can access KMS instances only over a private virtual private cloud (VPC).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Private</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -191,9 +244,15 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListNetworkRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListNetworkRulesResponseBody</p>
+     */
     public static class NetworkRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NetworkRule")
-        private java.util.List < NetworkRule> networkRule;
+        private java.util.List<NetworkRule> networkRule;
 
         private NetworkRules(Builder builder) {
             this.networkRule = builder.networkRule;
@@ -210,17 +269,24 @@ public class ListNetworkRulesResponseBody extends TeaModel {
         /**
          * @return networkRule
          */
-        public java.util.List < NetworkRule> getNetworkRule() {
+        public java.util.List<NetworkRule> getNetworkRule() {
             return this.networkRule;
         }
 
         public static final class Builder {
-            private java.util.List < NetworkRule> networkRule; 
+            private java.util.List<NetworkRule> networkRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkRules model) {
+                this.networkRule = model.networkRule;
+            } 
 
             /**
              * NetworkRule.
              */
-            public Builder networkRule(java.util.List < NetworkRule> networkRule) {
+            public Builder networkRule(java.util.List<NetworkRule> networkRule) {
                 this.networkRule = networkRule;
                 return this;
             }

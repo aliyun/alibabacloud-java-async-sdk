@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateApplicationAccessPointRequest} extends {@link RequestModel}
  *
  * <p>UpdateApplicationAccessPointRequest</p>
@@ -39,7 +45,7 @@ public class UpdateApplicationAccessPointRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +88,10 @@ public class UpdateApplicationAccessPointRequest extends Request {
         } 
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aap description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -91,7 +100,11 @@ public class UpdateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * The name of the AAP that you want to update.
+         * <p>The name of the AAP that you want to update.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aap_test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -100,9 +113,13 @@ public class UpdateApplicationAccessPointRequest extends Request {
         }
 
         /**
-         * The permission policy that you want to update.
-         * <p>
-         * > You can associate up to three permission policies with each AAP.
+         * <p>The permission policy that you want to update.</p>
+         * <blockquote>
+         * <p>You can associate up to three permission policies with each AAP.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;kst-hzz62ee817bvyyr5x****.efkd&quot;,&quot;kst-hzz62ee817bvyyr5x****.eyyp&quot;]</p>
          */
         public Builder policies(String policies) {
             this.putQueryParameter("Policies", policies);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListKeysResponseBody} extends {@link TeaModel}
  *
  * <p>ListKeysResponseBody</p>
@@ -40,6 +46,10 @@ public class ListKeysResponseBody extends TeaModel {
 
     public static ListKeysResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,19 @@ public class ListKeysResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListKeysResponseBody model) {
+            this.keys = model.keys;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * An array that consists of the CMKs of the current Alibaba Cloud account in the current region.
+         * <p>An array that consists of the CMKs of the current Alibaba Cloud account in the current region.</p>
          */
         public Builder keys(Keys keys) {
             this.keys = keys;
@@ -93,7 +114,10 @@ public class ListKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +125,10 @@ public class ListKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +136,10 @@ public class ListKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8252db58-2036-408c-a3d5-56e656dc2551</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListKeysResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of CMKs.
+         * <p>The total number of CMKs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListKeysResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKeysResponseBody</p>
+     */
     public static class Key extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyArn")
         private String keyArn;
@@ -168,8 +207,19 @@ public class ListKeysResponseBody extends TeaModel {
             private String keyArn; 
             private String keyId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Key model) {
+                this.keyArn = model.keyArn;
+                this.keyId = model.keyId;
+            } 
+
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the CMK.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the CMK.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:kms:cn-hangzhou:123456:key/80e9409f-78fa-42ab-84bd-83f40c81****</p>
              */
             public Builder keyArn(String keyArn) {
                 this.keyArn = keyArn;
@@ -177,7 +227,10 @@ public class ListKeysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the CMK. The ID must be globally unique.
+             * <p>The ID of the CMK. The ID must be globally unique.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -191,9 +244,15 @@ public class ListKeysResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListKeysResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKeysResponseBody</p>
+     */
     public static class Keys extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
-        private java.util.List < Key> key;
+        private java.util.List<Key> key;
 
         private Keys(Builder builder) {
             this.key = builder.key;
@@ -210,17 +269,24 @@ public class ListKeysResponseBody extends TeaModel {
         /**
          * @return key
          */
-        public java.util.List < Key> getKey() {
+        public java.util.List<Key> getKey() {
             return this.key;
         }
 
         public static final class Builder {
-            private java.util.List < Key> key; 
+            private java.util.List<Key> key; 
+
+            private Builder() {
+            } 
+
+            private Builder(Keys model) {
+                this.key = model.key;
+            } 
 
             /**
              * Key.
              */
-            public Builder key(java.util.List < Key> key) {
+            public Builder key(java.util.List<Key> key) {
                 this.key = key;
                 return this;
             }

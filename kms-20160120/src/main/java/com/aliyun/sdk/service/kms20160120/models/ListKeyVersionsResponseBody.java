@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListKeyVersionsResponseBody} extends {@link TeaModel}
  *
  * <p>ListKeyVersionsResponseBody</p>
@@ -40,6 +46,10 @@ public class ListKeyVersionsResponseBody extends TeaModel {
 
     public static ListKeyVersionsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,19 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListKeyVersionsResponseBody model) {
+            this.keyVersions = model.keyVersions;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * An array that consists of key versions.
+         * <p>An array that consists of key versions.</p>
          */
         public Builder keyVersions(KeyVersions keyVersions) {
             this.keyVersions = keyVersions;
@@ -93,7 +114,10 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +125,10 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +136,10 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f71204c4-53cd-4eea-b405-653ba2db7e86</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of returned key versions.
+         * <p>The total number of returned key versions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListKeyVersionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListKeyVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKeyVersionsResponseBody</p>
+     */
     public static class KeyVersion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationDate")
         private String creationDate;
@@ -180,8 +219,20 @@ public class ListKeyVersionsResponseBody extends TeaModel {
             private String keyId; 
             private String keyVersionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(KeyVersion model) {
+                this.creationDate = model.creationDate;
+                this.keyId = model.keyId;
+                this.keyVersionId = model.keyVersionId;
+            } 
+
             /**
-             * The date and time when the CMK version was created. The time is displayed in UTC.
+             * <p>The date and time when the CMK version was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-03-25T10:42:40Z</p>
              */
             public Builder creationDate(String creationDate) {
                 this.creationDate = creationDate;
@@ -189,10 +240,13 @@ public class ListKeyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The globally unique ID of the CMK.
-             * <p>
+             * <p>The globally unique ID of the CMK.</p>
+             * <blockquote>
+             * <p> If you set the KeyId parameter to the alias of the CMK, the ID of the CMK to which the alias is bound is returned.</p>
+             * </blockquote>
              * 
-             * >  If you set the KeyId parameter to the alias of the CMK, the ID of the CMK to which the alias is bound is returned.
+             * <strong>example:</strong>
+             * <p>0b30658a-ed1a-4922-b8f7-a673ca9c****</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -200,7 +254,10 @@ public class ListKeyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * The globally unique ID of the CMK version.
+             * <p>The globally unique ID of the CMK version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1e3304fd-68ac-4d5b-8886-ae5f01a1****</p>
              */
             public Builder keyVersionId(String keyVersionId) {
                 this.keyVersionId = keyVersionId;
@@ -214,9 +271,15 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListKeyVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKeyVersionsResponseBody</p>
+     */
     public static class KeyVersions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyVersion")
-        private java.util.List < KeyVersion> keyVersion;
+        private java.util.List<KeyVersion> keyVersion;
 
         private KeyVersions(Builder builder) {
             this.keyVersion = builder.keyVersion;
@@ -233,17 +296,24 @@ public class ListKeyVersionsResponseBody extends TeaModel {
         /**
          * @return keyVersion
          */
-        public java.util.List < KeyVersion> getKeyVersion() {
+        public java.util.List<KeyVersion> getKeyVersion() {
             return this.keyVersion;
         }
 
         public static final class Builder {
-            private java.util.List < KeyVersion> keyVersion; 
+            private java.util.List<KeyVersion> keyVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(KeyVersions model) {
+                this.keyVersion = model.keyVersion;
+            } 
 
             /**
              * KeyVersion.
              */
-            public Builder keyVersion(java.util.List < KeyVersion> keyVersion) {
+            public Builder keyVersion(java.util.List<KeyVersion> keyVersion) {
                 this.keyVersion = keyVersion;
                 return this;
             }

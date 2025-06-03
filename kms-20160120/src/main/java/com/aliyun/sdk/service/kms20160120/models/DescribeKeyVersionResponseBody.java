@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeKeyVersionResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeKeyVersionResponseBody</p>
@@ -30,6 +36,10 @@ public class DescribeKeyVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return keyVersion
      */
@@ -48,8 +58,16 @@ public class DescribeKeyVersionResponseBody extends TeaModel {
         private KeyVersion keyVersion; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeKeyVersionResponseBody model) {
+            this.keyVersion = model.keyVersion;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The metadata of the CMK version.
+         * <p>The metadata of the CMK version.</p>
          */
         public Builder keyVersion(KeyVersion keyVersion) {
             this.keyVersion = keyVersion;
@@ -57,7 +75,10 @@ public class DescribeKeyVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7021b6ec-4be7-4d3c-8a68-1e85d4d515a0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class DescribeKeyVersionResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeKeyVersionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeKeyVersionResponseBody</p>
+     */
     public static class KeyVersion extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationDate")
         private String creationDate;
@@ -120,8 +147,20 @@ public class DescribeKeyVersionResponseBody extends TeaModel {
             private String keyId; 
             private String keyVersionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(KeyVersion model) {
+                this.creationDate = model.creationDate;
+                this.keyId = model.keyId;
+                this.keyVersionId = model.keyVersionId;
+            } 
+
             /**
-             * The date and time when the CMK version was created. The time is displayed in UTC.
+             * <p>The date and time when the CMK version was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-03-25T10:42:40Z</p>
              */
             public Builder creationDate(String creationDate) {
                 this.creationDate = creationDate;
@@ -129,10 +168,13 @@ public class DescribeKeyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The globally unique ID of the CMK.
-             * <p>
+             * <p>The globally unique ID of the CMK.</p>
+             * <blockquote>
+             * <p> If you set the KeyId parameter in the request to an alias of the CMK, the ID of the CMK to which the alias is bound is returned.</p>
+             * </blockquote>
              * 
-             * >  If you set the KeyId parameter in the request to an alias of the CMK, the ID of the CMK to which the alias is bound is returned.
+             * <strong>example:</strong>
+             * <p>1234abcd-12ab-34cd-56ef-12345678****</p>
              */
             public Builder keyId(String keyId) {
                 this.keyId = keyId;
@@ -140,7 +182,10 @@ public class DescribeKeyVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The globally unique ID of the CMK version.
+             * <p>The globally unique ID of the CMK version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2ab1a983-7072-4bbc-a582-584b5bd8****</p>
              */
             public Builder keyVersionId(String keyVersionId) {
                 this.keyVersionId = keyVersionId;

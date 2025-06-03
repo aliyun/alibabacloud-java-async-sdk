@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeApplicationAccessPointResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeApplicationAccessPointResponseBody</p>
@@ -44,6 +50,10 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
 
     public static DescribeApplicationAccessPointResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
         private String policies; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeApplicationAccessPointResponseBody model) {
+            this.arn = model.arn;
+            this.authenticationMethod = model.authenticationMethod;
+            this.description = model.description;
+            this.name = model.name;
+            this.policies = model.policies;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The ARN of the AAP.
+         * <p>The ARN of the AAP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:kms:cn-hangzhou:119285303511****:applicationaccesspoint/aap_test</p>
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -105,7 +130,10 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * The authentication method.
+         * <p>The authentication method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ClientKey</p>
          */
         public Builder authenticationMethod(String authenticationMethod) {
             this.authenticationMethod = authenticationMethod;
@@ -113,7 +141,10 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aap description</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -121,7 +152,10 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the AAP.
+         * <p>The name of the AAP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aap_test</p>
          */
         public Builder name(String name) {
             this.name = name;
@@ -129,7 +163,10 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * The permission policy that is bound to the AAP.
+         * <p>The permission policy that is bound to the AAP.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;kst-hzz62ee817bvyyr5x****.efkd&quot;,&quot;kst-hzz62ee817bvyyr5x****.eyyp&quot;]</p>
          */
         public Builder policies(String policies) {
             this.policies = policies;
@@ -137,7 +174,10 @@ public class DescribeApplicationAccessPointResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bcfefe15-46f0-44a3-bd96-3d422474b71a</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

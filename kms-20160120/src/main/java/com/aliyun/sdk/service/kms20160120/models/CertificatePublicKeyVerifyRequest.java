@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CertificatePublicKeyVerifyRequest} extends {@link RequestModel}
  *
  * <p>CertificatePublicKeyVerifyRequest</p>
@@ -53,7 +59,7 @@ public class CertificatePublicKeyVerifyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,18 +120,24 @@ public class CertificatePublicKeyVerifyRequest extends Request {
         } 
 
         /**
-         * The signature algorithm. Valid values:
-         * <p>
+         * <p>The signature algorithm. Valid values:</p>
+         * <ul>
+         * <li><p>RSA_PKCS1_SHA_256</p>
+         * </li>
+         * <li><p>RSA_PSS_SHA_256</p>
+         * </li>
+         * <li><p>ECDSA_SHA_256</p>
+         * </li>
+         * <li><p>SM2DSA</p>
+         * </li>
+         * </ul>
+         * <blockquote>
+         * <p>The SM2DSA signature algorithm is supported only in regions where managed hardware security modules (HSMs) are used in the Chinese mainland. For more information, see <a href="https://help.aliyun.com/document_detail/125803.html">Managed HSM overview</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * *   RSA_PKCS1\_SHA\_256
-         * 
-         * *   RSA_PSS_SHA\_256
-         * 
-         * *   ECDSA_SHA\_256
-         * 
-         * *   SM2DSA
-         * 
-         * > The SM2DSA signature algorithm is supported only in regions where managed hardware security modules (HSMs) are used in the Chinese mainland. For more information, see [Managed HSM overview](~~125803~~).
+         * <strong>example:</strong>
+         * <p>ECDSA_SHA_256</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -134,7 +146,11 @@ public class CertificatePublicKeyVerifyRequest extends Request {
         }
 
         /**
-         * The ID of the certificate. The ID must be globally unique in Certificates Manager.
+         * <p>The ID of the certificate. The ID must be globally unique in Certificates Manager.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12345678-1234-1234-1234-12345678****</p>
          */
         public Builder certificateId(String certificateId) {
             this.putQueryParameter("CertificateId", certificateId);
@@ -143,19 +159,21 @@ public class CertificatePublicKeyVerifyRequest extends Request {
         }
 
         /**
-         * The raw data that is signed.
-         * <p>
+         * <p>The raw data that is signed.</p>
+         * <p>The value is encoded in Base64. For example, if the raw data in the hexadecimal format is <code>[0x31, 0x32, 0x33, 0x34]</code>, set this parameter to the Base64-encoded value <code>MTIzNA==</code>.</p>
+         * <p>If the MessageType parameter is set to RAW, the size of the data must be less than or equal to 4 KB.</p>
+         * <p>If the size of the data is greater than 4 KB, you can set the MessageType parameter to DIGEST and set the Message parameter to the digest of the data. The digest is also called hash value. You can compute the digest of the data on an on-premises device. Certificates Manager uses the digest that you compute in your own certificate application system. The message digest algorithm that you use must match the specified signature algorithm. Comply with the following mapping between signature algorithms and message digest algorithms:</p>
+         * <ul>
+         * <li>If the signature algorithm is RSA_PKCS1_SHA_256, RSA_PSS_SHA_256, or ECDSA_SHA_256, the message digest algorithm must be SHA-256.</li>
+         * <li>If the signature algorithm is SM2DSA, the message digest algorithm must be SM3.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If the key type of the certificate is EC_SM2 and the MessageType parameter is set to DIGEST, the value of the Message parameter is <code>e</code> that is described in GB/T 32918.2-2016 6.1.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * The value is encoded in Base64. For example, if the raw data in the hexadecimal format is `[0x31, 0x32, 0x33, 0x34]`, set this parameter to the Base64-encoded value `MTIzNA==`.
-         * 
-         * If the MessageType parameter is set to RAW, the size of the data must be less than or equal to 4 KB.
-         * 
-         * If the size of the data is greater than 4 KB, you can set the MessageType parameter to DIGEST and set the Message parameter to the digest of the data. The digest is also called hash value. You can compute the digest of the data on an on-premises device. Certificates Manager uses the digest that you compute in your own certificate application system. The message digest algorithm that you use must match the specified signature algorithm. Comply with the following mapping between signature algorithms and message digest algorithms:
-         * 
-         * *   If the signature algorithm is RSA_PKCS1\_SHA\_256, RSA_PSS_SHA\_256, or ECDSA_SHA\_256, the message digest algorithm must be SHA-256.
-         * *   If the signature algorithm is SM2DSA, the message digest algorithm must be SM3.
-         * 
-         * >  If the key type of the certificate is EC_SM2 and the MessageType parameter is set to DIGEST, the value of the Message parameter is `e` that is described in GB/T 32918.2-2016 6.1.
+         * <strong>example:</strong>
+         * <p>VGhlIHF1aWNrIGJyb3duIGZveCBqdW1wcyBvdmVyIHRoZSBsYXp5IGRvZy4=</p>
          */
         public Builder message(String message) {
             this.putQueryParameter("Message", message);
@@ -164,11 +182,15 @@ public class CertificatePublicKeyVerifyRequest extends Request {
         }
 
         /**
-         * The type of the message. Valid values:
-         * <p>
+         * <p>The type of the message. Valid values:</p>
+         * <ul>
+         * <li>RAW: the raw data. This is the default value.</li>
+         * <li>DIGEST: the message digest (hash value) of the raw data.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   RAW: the raw data. This is the default value.
-         * *   DIGEST: the message digest (hash value) of the raw data.
+         * <strong>example:</strong>
+         * <p>RAW</p>
          */
         public Builder messageType(String messageType) {
             this.putQueryParameter("MessageType", messageType);
@@ -177,10 +199,12 @@ public class CertificatePublicKeyVerifyRequest extends Request {
         }
 
         /**
-         * The signature value.
-         * <p>
+         * <p>The signature value.</p>
+         * <p>The value is encoded in Base64.</p>
+         * <p>This parameter is required.</p>
          * 
-         * The value is encoded in Base64.
+         * <strong>example:</strong>
+         * <p>ZOyIygCyaOW6Gj****MlNKiuyjfzw=</p>
          */
         public Builder signatureValue(String signatureValue) {
             this.putQueryParameter("SignatureValue", signatureValue);

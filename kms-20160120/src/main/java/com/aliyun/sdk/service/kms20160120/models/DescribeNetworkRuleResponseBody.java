@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeNetworkRuleResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeNetworkRuleResponseBody</p>
@@ -40,6 +46,10 @@ public class DescribeNetworkRuleResponseBody extends TeaModel {
 
     public static DescribeNetworkRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,22 @@ public class DescribeNetworkRuleResponseBody extends TeaModel {
         private String sourcePrivateIp; 
         private String type; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeNetworkRuleResponseBody model) {
+            this.arn = model.arn;
+            this.description = model.description;
+            this.requestId = model.requestId;
+            this.sourcePrivateIp = model.sourcePrivateIp;
+            this.type = model.type;
+        } 
+
         /**
-         * The ARN of the access control rule.
+         * <p>The ARN of the access control rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:kms:cn-hangzhou:119285303511****:network/networkrule_test</p>
          */
         public Builder arn(String arn) {
             this.arn = arn;
@@ -93,7 +117,10 @@ public class DescribeNetworkRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The description.
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Creat by kst-hzz62ee817bvyyr5****</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -101,7 +128,10 @@ public class DescribeNetworkRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3bf02f7a-015b-4f93-be0f-cc043fda2d33</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +139,10 @@ public class DescribeNetworkRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The private IP address or private CIDR block.
+         * <p>The private IP address or private CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;192.10.XX.XX&quot;,&quot;192.168.XX.XX/24&quot;]</p>
          */
         public Builder sourcePrivateIp(String sourcePrivateIp) {
             this.sourcePrivateIp = sourcePrivateIp;
@@ -117,7 +150,10 @@ public class DescribeNetworkRuleResponseBody extends TeaModel {
         }
 
         /**
-         * The network type. Only private IP addresses are supported. The value is fixed as Private.
+         * <p>The network type. Only private IP addresses are supported. The value is fixed as Private.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Private</p>
          */
         public Builder type(String type) {
             this.type = type;

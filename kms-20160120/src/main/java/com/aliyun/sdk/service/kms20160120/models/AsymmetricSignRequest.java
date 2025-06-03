@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AsymmetricSignRequest} extends {@link RequestModel}
  *
  * <p>AsymmetricSignRequest</p>
@@ -52,7 +58,7 @@ public class AsymmetricSignRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +119,11 @@ public class AsymmetricSignRequest extends Request {
         } 
 
         /**
-         * The version ID of the CMK. The ID must be globally unique.
+         * <p>The version ID of the CMK. The ID must be globally unique.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA_PSS_SHA_256</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -122,7 +132,11 @@ public class AsymmetricSignRequest extends Request {
         }
 
         /**
-         * The signature algorithm.
+         * <p>The signature algorithm.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZOyIygCyaOW6GjVnihtTFtIS9PNmskdyMlNKiu****=</p>
          */
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);
@@ -140,7 +154,11 @@ public class AsymmetricSignRequest extends Request {
         }
 
         /**
-         * The operation that you want to perform. Set the value to **AsymmetricSign**.
+         * <p>The operation that you want to perform. Set the value to <strong>AsymmetricSign</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c438b18-05be-40ad-b6c2-3be6752c****</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -149,10 +167,14 @@ public class AsymmetricSignRequest extends Request {
         }
 
         /**
-         * The ID of the customer master key (CMK). The ID must be globally unique.
-         * <p>
+         * <p>The ID of the customer master key (CMK). The ID must be globally unique.</p>
+         * <blockquote>
+         * <p> You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Alias overview</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Alias overview](~~68522~~).
+         * <strong>example:</strong>
+         * <p>2ab1a983-7072-4bbc-a582-584b5bd8****</p>
          */
         public Builder keyVersionId(String keyVersionId) {
             this.putQueryParameter("KeyVersionId", keyVersionId);

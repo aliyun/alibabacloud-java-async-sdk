@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSecretRequest} extends {@link RequestModel}
  *
  * <p>UpdateSecretRequest</p>
@@ -39,7 +45,7 @@ public class UpdateSecretRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -91,7 +97,10 @@ public class UpdateSecretRequest extends Request {
         }
 
         /**
-         * The description of the secret.
+         * <p>The description of the secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>datainfo</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -100,7 +109,11 @@ public class UpdateSecretRequest extends Request {
         }
 
         /**
-         * The name of the secret.
+         * <p>The name of the secret.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secret001</p>
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -115,9 +128,15 @@ public class UpdateSecretRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link UpdateSecretRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateSecretRequest</p>
+     */
     public static class ExtendedConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CustomData")
-        private java.util.Map < String, ? > customData;
+        private java.util.Map<String, ?> customData;
 
         private ExtendedConfig(Builder builder) {
             this.customData = builder.customData;
@@ -134,21 +153,33 @@ public class UpdateSecretRequest extends Request {
         /**
          * @return customData
          */
-        public java.util.Map < String, ? > getCustomData() {
+        public java.util.Map<String, ?> getCustomData() {
             return this.customData;
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > customData; 
+            private java.util.Map<String, ?> customData; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtendedConfig model) {
+                this.customData = model.customData;
+            } 
 
             /**
-             * The custom data in the extended configuration of the secret.
-             * <p>
+             * <p>The custom data in the extended configuration of the secret.</p>
+             * <blockquote>
+             * <ul>
+             * <li>If this parameter is specified, the existing extended configuration of the secret is updated.</li>
+             * <li>This parameter is unavailable for generic secrets.</li>
+             * </ul>
+             * </blockquote>
              * 
-             * > *   If this parameter is specified, the existing extended configuration of the secret is updated.
-             * > *   This parameter is unavailable for generic secrets.
+             * <strong>example:</strong>
+             * <p>{&quot;DBName&quot;:&quot;app1&quot;,&quot;Port&quot;:&quot;3306&quot;}</p>
              */
-            public Builder customData(java.util.Map < String, ? > customData) {
+            public Builder customData(java.util.Map<String, ?> customData) {
                 this.customData = customData;
                 return this;
             }

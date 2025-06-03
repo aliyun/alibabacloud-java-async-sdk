@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AsymmetricEncryptRequest} extends {@link RequestModel}
  *
  * <p>AsymmetricEncryptRequest</p>
@@ -52,7 +58,7 @@ public class AsymmetricEncryptRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +119,11 @@ public class AsymmetricEncryptRequest extends Request {
         } 
 
         /**
-         * The encryption algorithm.
+         * <p>The encryption algorithm.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSAES_OAEP_SHA_1</p>
          */
         public Builder algorithm(String algorithm) {
             this.putQueryParameter("Algorithm", algorithm);
@@ -131,10 +141,14 @@ public class AsymmetricEncryptRequest extends Request {
         }
 
         /**
-         * The ID of the CMK. The ID must be globally unique.
-         * <p>
+         * <p>The ID of the CMK. The ID must be globally unique.</p>
+         * <blockquote>
+         * <p> You can also set this parameter to an alias that is bound to the CMK. For more information, see <a href="https://help.aliyun.com/document_detail/68522.html">Overview of aliases</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can also set this parameter to an alias that is bound to the CMK. For more information, see [Overview of aliases](~~68522~~).
+         * <strong>example:</strong>
+         * <p>5c438b18-05be-40ad-b6c2-3be6752c****</p>
          */
         public Builder keyId(String keyId) {
             this.putQueryParameter("KeyId", keyId);
@@ -143,10 +157,14 @@ public class AsymmetricEncryptRequest extends Request {
         }
 
         /**
-         * The version ID of the CMK. The ID must be globally unique.
-         * <p>
+         * <p>The version ID of the CMK. The ID must be globally unique.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/133966.html">ListKeyVersions</a> operation to query the versions of a CMK. The ID of a version is specified by the KeyVersionId parameter.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
          * 
-         * >  You can call the [ListKeyVersions](~~133966~~) operation to query the versions of a CMK. The ID of a version is specified by the KeyVersionId parameter.
+         * <strong>example:</strong>
+         * <p>2ab1a983-7072-4bbc-a582-584b5bd8****</p>
          */
         public Builder keyVersionId(String keyVersionId) {
             this.putQueryParameter("KeyVersionId", keyVersionId);
@@ -155,7 +173,11 @@ public class AsymmetricEncryptRequest extends Request {
         }
 
         /**
-         * The plaintext that you want to encrypt. The plaintext must be Base64-encoded.
+         * <p>The plaintext that you want to encrypt. The plaintext must be Base64-encoded.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SGVsbG8gd29ybGQ=</p>
          */
         public Builder plaintext(String plaintext) {
             this.putQueryParameter("Plaintext", plaintext);

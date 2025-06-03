@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link PutSecretValueRequest} extends {@link RequestModel}
  *
  * <p>PutSecretValueRequest</p>
@@ -51,7 +57,7 @@ public class PutSecretValueRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +118,11 @@ public class PutSecretValueRequest extends Request {
         } 
 
         /**
-         * The secret value. The value is encrypted and then stored in the new version.
+         * <p>The secret value. The value is encrypted and then stored in the new version.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>importantdata</p>
          */
         public Builder secretData(String secretData) {
             this.putQueryParameter("SecretData", secretData);
@@ -121,11 +131,14 @@ public class PutSecretValueRequest extends Request {
         }
 
         /**
-         * The type of the secret value. Valid values:
-         * <p>
+         * <p>The type of the secret value. Valid values:</p>
+         * <ul>
+         * <li>text: This is the default value.</li>
+         * <li>binary</li>
+         * </ul>
          * 
-         * *   text: This is the default value.
-         * *   binary
+         * <strong>example:</strong>
+         * <p>text</p>
          */
         public Builder secretDataType(String secretDataType) {
             this.putQueryParameter("SecretDataType", secretDataType);
@@ -134,7 +147,11 @@ public class PutSecretValueRequest extends Request {
         }
 
         /**
-         * The name of the secret.
+         * <p>The name of the secret.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secret001</p>
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);
@@ -143,7 +160,11 @@ public class PutSecretValueRequest extends Request {
         }
 
         /**
-         * The new version of the secret value. Version numbers must be unique in each secret.
+         * <p>The new version of the secret value. Version numbers must be unique in each secret.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>00000000000000000000000000000000203</p>
          */
         public Builder versionId(String versionId) {
             this.putQueryParameter("VersionId", versionId);
@@ -152,7 +173,10 @@ public class PutSecretValueRequest extends Request {
         }
 
         /**
-         * The stage labels that are used to mark the new version. If you do not specify this parameter, Secrets Manager marks the new version with ACSCurrent.
+         * <p>The stage labels that are used to mark the new version. If you do not specify this parameter, Secrets Manager marks the new version with ACSCurrent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;ACSCurrent&quot;,&quot;ACSNext&quot;]</p>
          */
         public Builder versionStages(String versionStages) {
             this.putQueryParameter("VersionStages", versionStages);

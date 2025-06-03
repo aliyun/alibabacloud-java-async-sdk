@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteNetworkRuleRequest} extends {@link RequestModel}
  *
  * <p>DeleteNetworkRuleRequest</p>
@@ -29,7 +35,7 @@ public class DeleteNetworkRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -54,7 +60,11 @@ public class DeleteNetworkRuleRequest extends Request {
         } 
 
         /**
-         * The name of the network access rule that you want to delete.
+         * <p>The name of the network access rule that you want to delete.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>networkrule_test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);

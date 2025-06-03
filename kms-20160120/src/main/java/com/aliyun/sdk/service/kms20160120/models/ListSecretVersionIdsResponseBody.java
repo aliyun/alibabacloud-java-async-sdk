@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListSecretVersionIdsResponseBody} extends {@link TeaModel}
  *
  * <p>ListSecretVersionIdsResponseBody</p>
@@ -44,6 +50,10 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
 
     public static ListSecretVersionIdsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -96,8 +106,23 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         private Integer totalCount; 
         private VersionIds versionIds; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSecretVersionIdsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.secretName = model.secretName;
+            this.totalCount = model.totalCount;
+            this.versionIds = model.versionIds;
+        } 
+
         /**
-         * The page number of the returned page.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -105,7 +130,10 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -113,7 +141,10 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b75d8b1-5b6a-4ec0-8e0c-c08befdfad47</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -121,7 +152,10 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * The name of the secret.
+         * <p>The name of the secret.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>secret001</p>
          */
         public Builder secretName(String secretName) {
             this.secretName = secretName;
@@ -129,7 +163,10 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on the current page.
+         * <p>The number of entries returned on the current page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -137,7 +174,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of secret versions.
+         * <p>The list of secret versions.</p>
          */
         public Builder versionIds(VersionIds versionIds) {
             this.versionIds = versionIds;
@@ -150,9 +187,15 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListSecretVersionIdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecretVersionIdsResponseBody</p>
+     */
     public static class VersionStages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VersionStage")
-        private java.util.List < String > versionStage;
+        private java.util.List<String> versionStage;
 
         private VersionStages(Builder builder) {
             this.versionStage = builder.versionStage;
@@ -169,17 +212,24 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         /**
          * @return versionStage
          */
-        public java.util.List < String > getVersionStage() {
+        public java.util.List<String> getVersionStage() {
             return this.versionStage;
         }
 
         public static final class Builder {
-            private java.util.List < String > versionStage; 
+            private java.util.List<String> versionStage; 
+
+            private Builder() {
+            } 
+
+            private Builder(VersionStages model) {
+                this.versionStage = model.versionStage;
+            } 
 
             /**
              * VersionStage.
              */
-            public Builder versionStage(java.util.List < String > versionStage) {
+            public Builder versionStage(java.util.List<String> versionStage) {
                 this.versionStage = versionStage;
                 return this;
             }
@@ -191,6 +241,12 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSecretVersionIdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecretVersionIdsResponseBody</p>
+     */
     public static class VersionId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -241,8 +297,20 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
             private String versionId; 
             private VersionStages versionStages; 
 
+            private Builder() {
+            } 
+
+            private Builder(VersionId model) {
+                this.createTime = model.createTime;
+                this.versionId = model.versionId;
+                this.versionStages = model.versionStages;
+            } 
+
             /**
-             * The time when the secret version was created.
+             * <p>The time when the secret version was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-02-21T15:39:26Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -250,7 +318,10 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
             }
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00000000000000000000000000000000203</p>
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -258,7 +329,7 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
             }
 
             /**
-             * The stage labels that mark the secret version.
+             * <p>The stage labels that mark the secret version.</p>
              */
             public Builder versionStages(VersionStages versionStages) {
                 this.versionStages = versionStages;
@@ -272,9 +343,15 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListSecretVersionIdsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListSecretVersionIdsResponseBody</p>
+     */
     public static class VersionIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VersionId")
-        private java.util.List < VersionId> versionId;
+        private java.util.List<VersionId> versionId;
 
         private VersionIds(Builder builder) {
             this.versionId = builder.versionId;
@@ -291,17 +368,27 @@ public class ListSecretVersionIdsResponseBody extends TeaModel {
         /**
          * @return versionId
          */
-        public java.util.List < VersionId> getVersionId() {
+        public java.util.List<VersionId> getVersionId() {
             return this.versionId;
         }
 
         public static final class Builder {
-            private java.util.List < VersionId> versionId; 
+            private java.util.List<VersionId> versionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VersionIds model) {
+                this.versionId = model.versionId;
+            } 
 
             /**
-             * The version number.
+             * <p>The version number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>00000000000000000000000000000000203</p>
              */
-            public Builder versionId(java.util.List < VersionId> versionId) {
+            public Builder versionId(java.util.List<VersionId> versionId) {
                 this.versionId = versionId;
                 return this;
             }

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListAliasesResponse} extends {@link TeaModel}
+ * {@link ReleaseKmsInstanceResponse} extends {@link TeaModel}
  *
- * <p>ListAliasesResponse</p>
+ * <p>ReleaseKmsInstanceResponse</p>
  */
-public class ListAliasesResponse extends Response {
+public class ReleaseKmsInstanceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListAliasesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListAliasesResponseBody body;
+    private ReleaseKmsInstanceResponseBody body;
 
-    private ListAliasesResponse(BuilderImpl builder) {
+    private ReleaseKmsInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListAliasesResponse create() {
+    public static ReleaseKmsInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListAliasesResponse extends Response {
     /**
      * @return body
      */
-    public ListAliasesResponseBody getBody() {
+    public ReleaseKmsInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListAliasesResponse, Builder> {
+    public interface Builder extends Response.Builder<ReleaseKmsInstanceResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListAliasesResponseBody body);
+        Builder body(ReleaseKmsInstanceResponseBody body);
 
         @Override
-        ListAliasesResponse build();
+        ReleaseKmsInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListAliasesResponse, Builder>
+            extends Response.BuilderImpl<ReleaseKmsInstanceResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListAliasesResponseBody body; 
+        private ReleaseKmsInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListAliasesResponse response) {
+        private BuilderImpl(ReleaseKmsInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListAliasesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListAliasesResponseBody body) {
+        public Builder body(ReleaseKmsInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListAliasesResponse build() {
-            return new ListAliasesResponse(this);
+        public ReleaseKmsInstanceResponse build() {
+            return new ReleaseKmsInstanceResponse(this);
         } 
 
     } 

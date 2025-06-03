@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DecryptRequest} extends {@link RequestModel}
  *
  * <p>DecryptRequest</p>
@@ -22,7 +28,7 @@ public class DecryptRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EncryptionContext")
-    private java.util.Map < String, ? > encryptionContext;
+    private java.util.Map<String, ?> encryptionContext;
 
     private DecryptRequest(Builder builder) {
         super(builder);
@@ -39,7 +45,7 @@ public class DecryptRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -61,14 +67,14 @@ public class DecryptRequest extends Request {
     /**
      * @return encryptionContext
      */
-    public java.util.Map < String, ? > getEncryptionContext() {
+    public java.util.Map<String, ?> getEncryptionContext() {
         return this.encryptionContext;
     }
 
     public static final class Builder extends Request.Builder<DecryptRequest, Builder> {
         private String ciphertextBlob; 
         private String dryRun; 
-        private java.util.Map < String, ? > encryptionContext; 
+        private java.util.Map<String, ?> encryptionContext; 
 
         private Builder() {
             super();
@@ -82,14 +88,17 @@ public class DecryptRequest extends Request {
         } 
 
         /**
-         * The ciphertext that you want to decrypt.
-         * <p>
+         * <p>The ciphertext that you want to decrypt.</p>
+         * <p>You can generate the ciphertext by calling the following operations:</p>
+         * <ul>
+         * <li><a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/28949.html">Encrypt</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a></li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * You can generate the ciphertext by calling the following operations:
-         * 
-         * *   [GenerateDataKey](~~28948~~)
-         * *   [Encrypt](~~28949~~)
-         * *   [GenerateDataKeyWithoutPlaintext](~~134043~~)
+         * <strong>example:</strong>
+         * <p>DZhOWVmZDktM2QxNi00ODk0LWJkNGYtMWZjNDNmM2YyYWJmaaSl+TztSIMe43nbTH/Z1Wr4XfLftKhAciUmDQXuMRl4WTvKhxjMThjK****</p>
          */
         public Builder ciphertextBlob(String ciphertextBlob) {
             this.putQueryParameter("CiphertextBlob", ciphertextBlob);
@@ -107,12 +116,15 @@ public class DecryptRequest extends Request {
         }
 
         /**
-         * The JSON string that consists of key-value pairs.
-         * <p>
+         * <p>The JSON string that consists of key-value pairs.</p>
+         * <blockquote>
+         * <p> If you specify the EncryptionContext parameter when you call the <a href="https://help.aliyun.com/document_detail/28948.html">GenerateDataKey</a>, <a href="https://help.aliyun.com/document_detail/28949.html">Encrypt</a>, or <a href="https://help.aliyun.com/document_detail/134043.html">GenerateDataKeyWithoutPlaintext</a> operation, you must specify the same context when you call the Decrypt operation. For more information, see <a href="https://help.aliyun.com/document_detail/42975.html">EncryptionContext</a>.</p>
+         * </blockquote>
          * 
-         * >  If you specify the EncryptionContext parameter when you call the [GenerateDataKey](~~28948~~), [Encrypt](~~28949~~), or [GenerateDataKeyWithoutPlaintext](~~134043~~) operation, you must specify the same context when you call the Decrypt operation. For more information, see [EncryptionContext](~~42975~~).
+         * <strong>example:</strong>
+         * <p>{&quot;Example&quot;:&quot;Example&quot;}</p>
          */
-        public Builder encryptionContext(java.util.Map < String, ? > encryptionContext) {
+        public Builder encryptionContext(java.util.Map<String, ?> encryptionContext) {
             String encryptionContextShrink = shrink(encryptionContext, "EncryptionContext", "json");
             this.putQueryParameter("EncryptionContext", encryptionContextShrink);
             this.encryptionContext = encryptionContext;

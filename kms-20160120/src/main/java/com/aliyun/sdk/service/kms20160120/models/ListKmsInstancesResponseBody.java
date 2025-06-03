@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListKmsInstancesResponseBody} extends {@link TeaModel}
  *
  * <p>ListKmsInstancesResponseBody</p>
@@ -40,6 +46,10 @@ public class ListKmsInstancesResponseBody extends TeaModel {
 
     public static ListKmsInstancesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -84,8 +94,19 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListKmsInstancesResponseBody model) {
+            this.kmsInstances = model.kmsInstances;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * A list of KMS instances.
+         * <p>A list of KMS instances.</p>
          */
         public Builder kmsInstances(KmsInstances kmsInstances) {
             this.kmsInstances = kmsInstances;
@@ -93,7 +114,10 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +125,10 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +136,10 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d3eca5c8-a856-4347-8eb6-e1898c3fda2e</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of KMS instances.
+         * <p>The total number of KMS instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListKmsInstancesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListKmsInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKmsInstancesResponseBody</p>
+     */
     public static class KmsInstance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KmsInstanceArn")
         private String kmsInstanceArn;
@@ -168,8 +207,19 @@ public class ListKmsInstancesResponseBody extends TeaModel {
             private String kmsInstanceArn; 
             private String kmsInstanceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(KmsInstance model) {
+                this.kmsInstanceArn = model.kmsInstanceArn;
+                this.kmsInstanceId = model.kmsInstanceId;
+            } 
+
             /**
-             * The ARN of the KMS instance.
+             * <p>The ARN of the KMS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:kms:pre-hangzhou:120708975881****:keystore/kst-phzz64c9f84eo32dbs****</p>
              */
             public Builder kmsInstanceArn(String kmsInstanceArn) {
                 this.kmsInstanceArn = kmsInstanceArn;
@@ -177,7 +227,10 @@ public class ListKmsInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the KMS instance.
+             * <p>The ID of the KMS instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>kst-phzz64c9f84eo32dbs****</p>
              */
             public Builder kmsInstanceId(String kmsInstanceId) {
                 this.kmsInstanceId = kmsInstanceId;
@@ -191,9 +244,15 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListKmsInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListKmsInstancesResponseBody</p>
+     */
     public static class KmsInstances extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KmsInstance")
-        private java.util.List < KmsInstance> kmsInstance;
+        private java.util.List<KmsInstance> kmsInstance;
 
         private KmsInstances(Builder builder) {
             this.kmsInstance = builder.kmsInstance;
@@ -210,17 +269,24 @@ public class ListKmsInstancesResponseBody extends TeaModel {
         /**
          * @return kmsInstance
          */
-        public java.util.List < KmsInstance> getKmsInstance() {
+        public java.util.List<KmsInstance> getKmsInstance() {
             return this.kmsInstance;
         }
 
         public static final class Builder {
-            private java.util.List < KmsInstance> kmsInstance; 
+            private java.util.List<KmsInstance> kmsInstance; 
+
+            private Builder() {
+            } 
+
+            private Builder(KmsInstances model) {
+                this.kmsInstance = model.kmsInstance;
+            } 
 
             /**
              * KmsInstance.
              */
-            public Builder kmsInstance(java.util.List < KmsInstance> kmsInstance) {
+            public Builder kmsInstance(java.util.List<KmsInstance> kmsInstance) {
                 this.kmsInstance = kmsInstance;
                 return this;
             }

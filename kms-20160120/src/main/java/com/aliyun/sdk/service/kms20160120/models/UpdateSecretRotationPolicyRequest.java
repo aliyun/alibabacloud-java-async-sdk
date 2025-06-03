@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateSecretRotationPolicyRequest} extends {@link RequestModel}
  *
  * <p>UpdateSecretRotationPolicyRequest</p>
@@ -40,7 +46,7 @@ public class UpdateSecretRotationPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,11 +89,15 @@ public class UpdateSecretRotationPolicyRequest extends Request {
         } 
 
         /**
-         * Specifies whether to enable automatic rotation. Valid values:
-         * <p>
+         * <p>Specifies whether to enable automatic rotation. Valid values:</p>
+         * <ul>
+         * <li>true: enables automatic rotation.</li>
+         * <li>false: does not enable automatic rotation. This is the default value.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   true: enables automatic rotation.
-         * *   false: does not enable automatic rotation. This is the default value.
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enableAutomaticRotation(Boolean enableAutomaticRotation) {
             this.putQueryParameter("EnableAutomaticRotation", enableAutomaticRotation);
@@ -96,14 +106,15 @@ public class UpdateSecretRotationPolicyRequest extends Request {
         }
 
         /**
-         * The interval for automatic rotation. Valid values: 6 hours to 8,760 hours (365 days).
-         * <p>
+         * <p>The interval for automatic rotation. Valid values: 6 hours to 8,760 hours (365 days).</p>
+         * <p>The value is in the <code>integer[unit]</code> format.````</p>
+         * <p>The unit can be d (day), h (hour), m (minute), or s (second). For example, both 7d and 604800s indicate a seven-day interval.</p>
+         * <blockquote>
+         * <p> This parameter is required if you set the EnableAutomaticRotation parameter to true. This parameter is ignored if you set the EnableAutomaticRotation parameter to false or does not specify the EnableAutomaticRotation parameter.</p>
+         * </blockquote>
          * 
-         * The value is in the `integer[unit]` format.````
-         * 
-         * The unit can be d (day), h (hour), m (minute), or s (second). For example, both 7d and 604800s indicate a seven-day interval.
-         * 
-         * >  This parameter is required if you set the EnableAutomaticRotation parameter to true. This parameter is ignored if you set the EnableAutomaticRotation parameter to false or does not specify the EnableAutomaticRotation parameter.
+         * <strong>example:</strong>
+         * <p>30d</p>
          */
         public Builder rotationInterval(String rotationInterval) {
             this.putQueryParameter("RotationInterval", rotationInterval);
@@ -112,7 +123,11 @@ public class UpdateSecretRotationPolicyRequest extends Request {
         }
 
         /**
-         * The name of the secret.
+         * <p>The name of the secret.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RdsSecret/Mysql5.4/MyCred</p>
          */
         public Builder secretName(String secretName) {
             this.putQueryParameter("SecretName", secretName);

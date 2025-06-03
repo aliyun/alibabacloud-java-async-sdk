@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.kms20160120.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetClientKeyResponseBody} extends {@link TeaModel}
  *
  * <p>GetClientKeyResponseBody</p>
@@ -56,6 +62,10 @@ public class GetClientKeyResponseBody extends TeaModel {
 
     public static GetClientKeyResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -132,8 +142,26 @@ public class GetClientKeyResponseBody extends TeaModel {
         private String publicKeyData; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetClientKeyResponseBody model) {
+            this.aapName = model.aapName;
+            this.clientKeyId = model.clientKeyId;
+            this.createTime = model.createTime;
+            this.keyAlgorithm = model.keyAlgorithm;
+            this.keyOrigin = model.keyOrigin;
+            this.notAfter = model.notAfter;
+            this.notBefore = model.notBefore;
+            this.publicKeyData = model.publicKeyData;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The name of the application access point (AAP).
+         * <p>The name of the application access point (AAP).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aap_test</p>
          */
         public Builder aapName(String aapName) {
             this.aapName = aapName;
@@ -141,7 +169,10 @@ public class GetClientKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the client key.
+         * <p>The ID of the client key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>KAAP.66abf237-63f6-4625-b8cf-47e1086e****</p>
          */
         public Builder clientKeyId(String clientKeyId) {
             this.clientKeyId = clientKeyId;
@@ -149,7 +180,10 @@ public class GetClientKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the client key was created.
+         * <p>The time when the client key was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-31T09:14:38Z</p>
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -157,7 +191,10 @@ public class GetClientKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The private key algorithm of the client key.
+         * <p>The private key algorithm of the client key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RSA_2048</p>
          */
         public Builder keyAlgorithm(String keyAlgorithm) {
             this.keyAlgorithm = keyAlgorithm;
@@ -165,10 +202,11 @@ public class GetClientKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The provider of the client key.
-         * <p>
+         * <p>The provider of the client key.</p>
+         * <p>Currently, only Key Management Service (KMS) is supported. The value is fixed as KMS_PROVIDED.</p>
          * 
-         * Currently, only Key Management Service (KMS) is supported. The value is fixed as KMS_PROVIDED.
+         * <strong>example:</strong>
+         * <p>KMS_PROVIDED</p>
          */
         public Builder keyOrigin(String keyOrigin) {
             this.keyOrigin = keyOrigin;
@@ -176,7 +214,10 @@ public class GetClientKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the validity period of the client key.
+         * <p>The end of the validity period of the client key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2028-08-31T17:14:33Z</p>
          */
         public Builder notAfter(String notAfter) {
             this.notAfter = notAfter;
@@ -184,7 +225,10 @@ public class GetClientKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the validity period of the client key.
+         * <p>The beginning of the validity period of the client key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2023-08-31T17:14:33Z</p>
          */
         public Builder notBefore(String notBefore) {
             this.notBefore = notBefore;
@@ -192,7 +236,10 @@ public class GetClientKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The content of the public key of the client key.
+         * <p>The content of the public key of the client key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----\nMIIDcjCCAlqgAwIBAgIQT/sAVRxwYp54mrw****-----END CERTIFICATE-----</p>
          */
         public Builder publicKeyData(String publicKeyData) {
             this.publicKeyData = publicKeyData;
@@ -200,7 +247,10 @@ public class GetClientKeyResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>63d849a6-045b-4a57-ad9f-c5f756cea9e9</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
