@@ -170,6 +170,12 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
      * <p>DescribeSDGDeploymentStatusResponseBody</p>
      */
     public static class DeploymentStatus extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BlockRwSplitSize")
+        private Integer blockRwSplitSize;
+
+        @com.aliyun.core.annotation.NameInMap("CacheSize")
+        private Integer cacheSize;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -189,6 +195,8 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         private String updateTime;
 
         private DeploymentStatus(Builder builder) {
+            this.blockRwSplitSize = builder.blockRwSplitSize;
+            this.cacheSize = builder.cacheSize;
             this.instanceId = builder.instanceId;
             this.mountType = builder.mountType;
             this.phase = builder.phase;
@@ -203,6 +211,20 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
 
         public static DeploymentStatus create() {
             return builder().build();
+        }
+
+        /**
+         * @return blockRwSplitSize
+         */
+        public Integer getBlockRwSplitSize() {
+            return this.blockRwSplitSize;
+        }
+
+        /**
+         * @return cacheSize
+         */
+        public Integer getCacheSize() {
+            return this.cacheSize;
         }
 
         /**
@@ -248,6 +270,8 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer blockRwSplitSize; 
+            private Integer cacheSize; 
             private String instanceId; 
             private String mountType; 
             private String phase; 
@@ -259,6 +283,8 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
             } 
 
             private Builder(DeploymentStatus model) {
+                this.blockRwSplitSize = model.blockRwSplitSize;
+                this.cacheSize = model.cacheSize;
                 this.instanceId = model.instanceId;
                 this.mountType = model.mountType;
                 this.phase = model.phase;
@@ -266,6 +292,22 @@ public class DescribeSDGDeploymentStatusResponseBody extends TeaModel {
                 this.status = model.status;
                 this.updateTime = model.updateTime;
             } 
+
+            /**
+             * BlockRwSplitSize.
+             */
+            public Builder blockRwSplitSize(Integer blockRwSplitSize) {
+                this.blockRwSplitSize = blockRwSplitSize;
+                return this;
+            }
+
+            /**
+             * CacheSize.
+             */
+            public Builder cacheSize(Integer cacheSize) {
+                this.cacheSize = cacheSize;
+                return this;
+            }
 
             /**
              * <p>The ID of the AIC instance.</p>

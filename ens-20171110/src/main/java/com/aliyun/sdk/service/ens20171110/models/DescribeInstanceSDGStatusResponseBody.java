@@ -170,6 +170,12 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
      * <p>DescribeInstanceSDGStatusResponseBody</p>
      */
     public static class DeploymentStatus extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BlockRwSplitSize")
+        private Integer blockRwSplitSize;
+
+        @com.aliyun.core.annotation.NameInMap("CacheSize")
+        private Integer cacheSize;
+
         @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
@@ -192,6 +198,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         private String updateTime;
 
         private DeploymentStatus(Builder builder) {
+            this.blockRwSplitSize = builder.blockRwSplitSize;
+            this.cacheSize = builder.cacheSize;
             this.ensRegionId = builder.ensRegionId;
             this.instanceId = builder.instanceId;
             this.mountType = builder.mountType;
@@ -207,6 +215,20 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
 
         public static DeploymentStatus create() {
             return builder().build();
+        }
+
+        /**
+         * @return blockRwSplitSize
+         */
+        public Integer getBlockRwSplitSize() {
+            return this.blockRwSplitSize;
+        }
+
+        /**
+         * @return cacheSize
+         */
+        public Integer getCacheSize() {
+            return this.cacheSize;
         }
 
         /**
@@ -259,6 +281,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer blockRwSplitSize; 
+            private Integer cacheSize; 
             private String ensRegionId; 
             private String instanceId; 
             private String mountType; 
@@ -271,6 +295,8 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
             } 
 
             private Builder(DeploymentStatus model) {
+                this.blockRwSplitSize = model.blockRwSplitSize;
+                this.cacheSize = model.cacheSize;
                 this.ensRegionId = model.ensRegionId;
                 this.instanceId = model.instanceId;
                 this.mountType = model.mountType;
@@ -279,6 +305,22 @@ public class DescribeInstanceSDGStatusResponseBody extends TeaModel {
                 this.status = model.status;
                 this.updateTime = model.updateTime;
             } 
+
+            /**
+             * BlockRwSplitSize.
+             */
+            public Builder blockRwSplitSize(Integer blockRwSplitSize) {
+                this.blockRwSplitSize = blockRwSplitSize;
+                return this;
+            }
+
+            /**
+             * CacheSize.
+             */
+            public Builder cacheSize(Integer cacheSize) {
+                this.cacheSize = cacheSize;
+                return this;
+            }
 
             /**
              * <p>The ID of the edge node.</p>
