@@ -27,6 +27,10 @@ public class UpdateStreamingOutRequest extends Request {
     private java.util.List<Backgrounds> backgrounds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BgColor")
+    private BgColor bgColor;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String channelId;
@@ -34,6 +38,10 @@ public class UpdateStreamingOutRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClockWidgets")
     private java.util.List<ClockWidgets> clockWidgets;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CropMode")
+    private Integer cropMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Images")
@@ -46,6 +54,10 @@ public class UpdateStreamingOutRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Panes")
     private java.util.List<Panes> panes;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionColor")
+    private RegionColor regionColor;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
@@ -65,11 +77,14 @@ public class UpdateStreamingOutRequest extends Request {
         super(builder);
         this.appId = builder.appId;
         this.backgrounds = builder.backgrounds;
+        this.bgColor = builder.bgColor;
         this.channelId = builder.channelId;
         this.clockWidgets = builder.clockWidgets;
+        this.cropMode = builder.cropMode;
         this.images = builder.images;
         this.layoutSpecifiedUsers = builder.layoutSpecifiedUsers;
         this.panes = builder.panes;
+        this.regionColor = builder.regionColor;
         this.taskId = builder.taskId;
         this.templateId = builder.templateId;
         this.texts = builder.texts;
@@ -103,6 +118,13 @@ public class UpdateStreamingOutRequest extends Request {
     }
 
     /**
+     * @return bgColor
+     */
+    public BgColor getBgColor() {
+        return this.bgColor;
+    }
+
+    /**
      * @return channelId
      */
     public String getChannelId() {
@@ -114,6 +136,13 @@ public class UpdateStreamingOutRequest extends Request {
      */
     public java.util.List<ClockWidgets> getClockWidgets() {
         return this.clockWidgets;
+    }
+
+    /**
+     * @return cropMode
+     */
+    public Integer getCropMode() {
+        return this.cropMode;
     }
 
     /**
@@ -135,6 +164,13 @@ public class UpdateStreamingOutRequest extends Request {
      */
     public java.util.List<Panes> getPanes() {
         return this.panes;
+    }
+
+    /**
+     * @return regionColor
+     */
+    public RegionColor getRegionColor() {
+        return this.regionColor;
     }
 
     /**
@@ -161,11 +197,14 @@ public class UpdateStreamingOutRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateStreamingOutRequest, Builder> {
         private String appId; 
         private java.util.List<Backgrounds> backgrounds; 
+        private BgColor bgColor; 
         private String channelId; 
         private java.util.List<ClockWidgets> clockWidgets; 
+        private Integer cropMode; 
         private java.util.List<Images> images; 
         private LayoutSpecifiedUsers layoutSpecifiedUsers; 
         private java.util.List<Panes> panes; 
+        private RegionColor regionColor; 
         private String taskId; 
         private String templateId; 
         private java.util.List<Texts> texts; 
@@ -178,11 +217,14 @@ public class UpdateStreamingOutRequest extends Request {
             super(request);
             this.appId = request.appId;
             this.backgrounds = request.backgrounds;
+            this.bgColor = request.bgColor;
             this.channelId = request.channelId;
             this.clockWidgets = request.clockWidgets;
+            this.cropMode = request.cropMode;
             this.images = request.images;
             this.layoutSpecifiedUsers = request.layoutSpecifiedUsers;
             this.panes = request.panes;
+            this.regionColor = request.regionColor;
             this.taskId = request.taskId;
             this.templateId = request.templateId;
             this.texts = request.texts;
@@ -210,6 +252,15 @@ public class UpdateStreamingOutRequest extends Request {
         }
 
         /**
+         * BgColor.
+         */
+        public Builder bgColor(BgColor bgColor) {
+            this.putQueryParameter("BgColor", bgColor);
+            this.bgColor = bgColor;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,6 +278,15 @@ public class UpdateStreamingOutRequest extends Request {
         public Builder clockWidgets(java.util.List<ClockWidgets> clockWidgets) {
             this.putQueryParameter("ClockWidgets", clockWidgets);
             this.clockWidgets = clockWidgets;
+            return this;
+        }
+
+        /**
+         * CropMode.
+         */
+        public Builder cropMode(Integer cropMode) {
+            this.putQueryParameter("CropMode", cropMode);
+            this.cropMode = cropMode;
             return this;
         }
 
@@ -255,6 +315,15 @@ public class UpdateStreamingOutRequest extends Request {
         public Builder panes(java.util.List<Panes> panes) {
             this.putQueryParameter("Panes", panes);
             this.panes = panes;
+            return this;
+        }
+
+        /**
+         * RegionColor.
+         */
+        public Builder regionColor(RegionColor regionColor) {
+            this.putQueryParameter("RegionColor", regionColor);
+            this.regionColor = regionColor;
             return this;
         }
 
@@ -516,6 +585,105 @@ public class UpdateStreamingOutRequest extends Request {
 
             public Backgrounds build() {
                 return new Backgrounds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateStreamingOutRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateStreamingOutRequest</p>
+     */
+    public static class BgColor extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("B")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer b;
+
+        @com.aliyun.core.annotation.NameInMap("G")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer g;
+
+        @com.aliyun.core.annotation.NameInMap("R")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer r;
+
+        private BgColor(Builder builder) {
+            this.b = builder.b;
+            this.g = builder.g;
+            this.r = builder.r;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BgColor create() {
+            return builder().build();
+        }
+
+        /**
+         * @return b
+         */
+        public Integer getB() {
+            return this.b;
+        }
+
+        /**
+         * @return g
+         */
+        public Integer getG() {
+            return this.g;
+        }
+
+        /**
+         * @return r
+         */
+        public Integer getR() {
+            return this.r;
+        }
+
+        public static final class Builder {
+            private Integer b; 
+            private Integer g; 
+            private Integer r; 
+
+            private Builder() {
+            } 
+
+            private Builder(BgColor model) {
+                this.b = model.b;
+                this.g = model.g;
+                this.r = model.r;
+            } 
+
+            /**
+             * B.
+             */
+            public Builder b(Integer b) {
+                this.b = b;
+                return this;
+            }
+
+            /**
+             * G.
+             */
+            public Builder g(Integer g) {
+                this.g = g;
+                return this;
+            }
+
+            /**
+             * R.
+             */
+            public Builder r(Integer r) {
+                this.r = r;
+                return this;
+            }
+
+            public BgColor build() {
+                return new BgColor(this);
             } 
 
         } 
@@ -2622,6 +2790,105 @@ public class UpdateStreamingOutRequest extends Request {
 
             public Panes build() {
                 return new Panes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateStreamingOutRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateStreamingOutRequest</p>
+     */
+    public static class RegionColor extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("B")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer b;
+
+        @com.aliyun.core.annotation.NameInMap("G")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer g;
+
+        @com.aliyun.core.annotation.NameInMap("R")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer r;
+
+        private RegionColor(Builder builder) {
+            this.b = builder.b;
+            this.g = builder.g;
+            this.r = builder.r;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RegionColor create() {
+            return builder().build();
+        }
+
+        /**
+         * @return b
+         */
+        public Integer getB() {
+            return this.b;
+        }
+
+        /**
+         * @return g
+         */
+        public Integer getG() {
+            return this.g;
+        }
+
+        /**
+         * @return r
+         */
+        public Integer getR() {
+            return this.r;
+        }
+
+        public static final class Builder {
+            private Integer b; 
+            private Integer g; 
+            private Integer r; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionColor model) {
+                this.b = model.b;
+                this.g = model.g;
+                this.r = model.r;
+            } 
+
+            /**
+             * B.
+             */
+            public Builder b(Integer b) {
+                this.b = b;
+                return this;
+            }
+
+            /**
+             * G.
+             */
+            public Builder g(Integer g) {
+                this.g = g;
+                return this;
+            }
+
+            /**
+             * R.
+             */
+            public Builder r(Integer r) {
+                this.r = r;
+                return this;
+            }
+
+            public RegionColor build() {
+                return new RegionColor(this);
             } 
 
         } 

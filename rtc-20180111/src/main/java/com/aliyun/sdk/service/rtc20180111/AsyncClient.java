@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAutoLiveStreamRuleResponse> createAutoLiveStreamRule(CreateAutoLiveStreamRuleRequest request);
 
     /**
+     * @param request the request parameters of CreateCloudNotePhrases  CreateCloudNotePhrasesRequest
+     * @return CreateCloudNotePhrasesResponse
+     */
+    CompletableFuture<CreateCloudNotePhrasesResponse> createCloudNotePhrases(CreateCloudNotePhrasesRequest request);
+
+    /**
      * @param request the request parameters of CreateEventSubscribe  CreateEventSubscribeRequest
      * @return CreateEventSubscribeResponse
      */
@@ -90,6 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteChannelResponse
      */
     CompletableFuture<DeleteChannelResponse> deleteChannel(DeleteChannelRequest request);
+
+    /**
+     * @param request the request parameters of DeleteCloudNotePhrases  DeleteCloudNotePhrasesRequest
+     * @return DeleteCloudNotePhrasesResponse
+     */
+    CompletableFuture<DeleteCloudNotePhrasesResponse> deleteCloudNotePhrases(DeleteCloudNotePhrasesRequest request);
 
     /**
      * @param request the request parameters of DeleteEventSubscribe  DeleteEventSubscribeRequest
@@ -266,10 +278,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeChannelsResponse> describeChannels(DescribeChannelsRequest request);
 
     /**
+     * @param request the request parameters of DescribeCloudNotePhrases  DescribeCloudNotePhrasesRequest
+     * @return DescribeCloudNotePhrasesResponse
+     */
+    CompletableFuture<DescribeCloudNotePhrasesResponse> describeCloudNotePhrases(DescribeCloudNotePhrasesRequest request);
+
+    /**
      * @param request the request parameters of DescribeCloudNotes  DescribeCloudNotesRequest
      * @return DescribeCloudNotesResponse
      */
     CompletableFuture<DescribeCloudNotesResponse> describeCloudNotes(DescribeCloudNotesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeCloudRecordStatus  DescribeCloudRecordStatusRequest
+     * @return DescribeCloudRecordStatusResponse
+     */
+    CompletableFuture<DescribeCloudRecordStatusResponse> describeCloudRecordStatus(DescribeCloudRecordStatusRequest request);
 
     /**
      * @param request the request parameters of DescribeEndPointEventList  DescribeEndPointEventListRequest
@@ -498,6 +522,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyCallbackMetaResponse
      */
     CompletableFuture<ModifyCallbackMetaResponse> modifyCallbackMeta(ModifyCallbackMetaRequest request);
+
+    /**
+     * @param request the request parameters of ModifyCloudNotePhrases  ModifyCloudNotePhrasesRequest
+     * @return ModifyCloudNotePhrasesResponse
+     */
+    CompletableFuture<ModifyCloudNotePhrasesResponse> modifyCloudNotePhrases(ModifyCloudNotePhrasesRequest request);
 
     /**
      * @param request the request parameters of ModifyMPULayout  ModifyMPULayoutRequest

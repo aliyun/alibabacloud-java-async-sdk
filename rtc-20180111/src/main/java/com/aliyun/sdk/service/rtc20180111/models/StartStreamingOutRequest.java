@@ -27,6 +27,10 @@ public class StartStreamingOutRequest extends Request {
     private java.util.List<Backgrounds> backgrounds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BgColor")
+    private BgColor bgColor;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String channelId;
@@ -72,6 +76,10 @@ public class StartStreamingOutRequest extends Request {
     private Integer startWithoutChannelWaitTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubHighResolutionStream")
+    private Boolean subHighResolutionStream;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     @com.aliyun.core.annotation.Validation(maxLength = 55, minLength = 1)
     private String taskId;
@@ -94,6 +102,7 @@ public class StartStreamingOutRequest extends Request {
         super(builder);
         this.appId = builder.appId;
         this.backgrounds = builder.backgrounds;
+        this.bgColor = builder.bgColor;
         this.channelId = builder.channelId;
         this.clockWidgets = builder.clockWidgets;
         this.cropMode = builder.cropMode;
@@ -105,6 +114,7 @@ public class StartStreamingOutRequest extends Request {
         this.showDefaultBackgroundOnMute = builder.showDefaultBackgroundOnMute;
         this.startWithoutChannel = builder.startWithoutChannel;
         this.startWithoutChannelWaitTime = builder.startWithoutChannelWaitTime;
+        this.subHighResolutionStream = builder.subHighResolutionStream;
         this.taskId = builder.taskId;
         this.templateId = builder.templateId;
         this.texts = builder.texts;
@@ -136,6 +146,13 @@ public class StartStreamingOutRequest extends Request {
      */
     public java.util.List<Backgrounds> getBackgrounds() {
         return this.backgrounds;
+    }
+
+    /**
+     * @return bgColor
+     */
+    public BgColor getBgColor() {
+        return this.bgColor;
     }
 
     /**
@@ -216,6 +233,13 @@ public class StartStreamingOutRequest extends Request {
     }
 
     /**
+     * @return subHighResolutionStream
+     */
+    public Boolean getSubHighResolutionStream() {
+        return this.subHighResolutionStream;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -246,6 +270,7 @@ public class StartStreamingOutRequest extends Request {
     public static final class Builder extends Request.Builder<StartStreamingOutRequest, Builder> {
         private String appId; 
         private java.util.List<Backgrounds> backgrounds; 
+        private BgColor bgColor; 
         private String channelId; 
         private java.util.List<ClockWidgets> clockWidgets; 
         private Integer cropMode; 
@@ -257,6 +282,7 @@ public class StartStreamingOutRequest extends Request {
         private Boolean showDefaultBackgroundOnMute; 
         private Boolean startWithoutChannel; 
         private Integer startWithoutChannelWaitTime; 
+        private Boolean subHighResolutionStream; 
         private String taskId; 
         private String templateId; 
         private java.util.List<Texts> texts; 
@@ -270,6 +296,7 @@ public class StartStreamingOutRequest extends Request {
             super(request);
             this.appId = request.appId;
             this.backgrounds = request.backgrounds;
+            this.bgColor = request.bgColor;
             this.channelId = request.channelId;
             this.clockWidgets = request.clockWidgets;
             this.cropMode = request.cropMode;
@@ -281,6 +308,7 @@ public class StartStreamingOutRequest extends Request {
             this.showDefaultBackgroundOnMute = request.showDefaultBackgroundOnMute;
             this.startWithoutChannel = request.startWithoutChannel;
             this.startWithoutChannelWaitTime = request.startWithoutChannelWaitTime;
+            this.subHighResolutionStream = request.subHighResolutionStream;
             this.taskId = request.taskId;
             this.templateId = request.templateId;
             this.texts = request.texts;
@@ -305,6 +333,15 @@ public class StartStreamingOutRequest extends Request {
         public Builder backgrounds(java.util.List<Backgrounds> backgrounds) {
             this.putQueryParameter("Backgrounds", backgrounds);
             this.backgrounds = backgrounds;
+            return this;
+        }
+
+        /**
+         * BgColor.
+         */
+        public Builder bgColor(BgColor bgColor) {
+            this.putQueryParameter("BgColor", bgColor);
+            this.bgColor = bgColor;
             return this;
         }
 
@@ -412,6 +449,15 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
+         * SubHighResolutionStream.
+         */
+        public Builder subHighResolutionStream(Boolean subHighResolutionStream) {
+            this.putQueryParameter("SubHighResolutionStream", subHighResolutionStream);
+            this.subHighResolutionStream = subHighResolutionStream;
+            return this;
+        }
+
+        /**
          * TaskId.
          */
         public Builder taskId(String taskId) {
@@ -468,34 +514,32 @@ public class StartStreamingOutRequest extends Request {
      */
     public static class Backgrounds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
-        @com.aliyun.core.annotation.Validation(maximum = 1)
         private Double alpha;
 
         @com.aliyun.core.annotation.NameInMap("BackgroundCropMode")
         private Integer backgroundCropMode;
 
         @com.aliyun.core.annotation.NameInMap("Height")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double height;
 
         @com.aliyun.core.annotation.NameInMap("Layer")
-        @com.aliyun.core.annotation.Validation(maximum = 100)
         private Integer layer;
 
         @com.aliyun.core.annotation.NameInMap("Url")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private String url;
 
         @com.aliyun.core.annotation.NameInMap("Width")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double width;
 
         @com.aliyun.core.annotation.NameInMap("X")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double x;
 
         @com.aliyun.core.annotation.NameInMap("Y")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double y;
 
         private Backgrounds(Builder builder) {
@@ -689,7 +733,7 @@ public class StartStreamingOutRequest extends Request {
      *
      * <p>StartStreamingOutRequest</p>
      */
-    public static class BoxColor extends TeaModel {
+    public static class BgColor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("B")
         @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer b;
@@ -700,6 +744,102 @@ public class StartStreamingOutRequest extends Request {
 
         @com.aliyun.core.annotation.NameInMap("R")
         @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer r;
+
+        private BgColor(Builder builder) {
+            this.b = builder.b;
+            this.g = builder.g;
+            this.r = builder.r;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BgColor create() {
+            return builder().build();
+        }
+
+        /**
+         * @return b
+         */
+        public Integer getB() {
+            return this.b;
+        }
+
+        /**
+         * @return g
+         */
+        public Integer getG() {
+            return this.g;
+        }
+
+        /**
+         * @return r
+         */
+        public Integer getR() {
+            return this.r;
+        }
+
+        public static final class Builder {
+            private Integer b; 
+            private Integer g; 
+            private Integer r; 
+
+            private Builder() {
+            } 
+
+            private Builder(BgColor model) {
+                this.b = model.b;
+                this.g = model.g;
+                this.r = model.r;
+            } 
+
+            /**
+             * B.
+             */
+            public Builder b(Integer b) {
+                this.b = b;
+                return this;
+            }
+
+            /**
+             * G.
+             */
+            public Builder g(Integer g) {
+                this.g = g;
+                return this;
+            }
+
+            /**
+             * R.
+             */
+            public Builder r(Integer r) {
+                this.r = r;
+                return this;
+            }
+
+            public BgColor build() {
+                return new BgColor(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartStreamingOutRequest} extends {@link TeaModel}
+     *
+     * <p>StartStreamingOutRequest</p>
+     */
+    public static class BoxColor extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("B")
+        private Integer b;
+
+        @com.aliyun.core.annotation.NameInMap("G")
+        private Integer g;
+
+        @com.aliyun.core.annotation.NameInMap("R")
         private Integer r;
 
         private BoxColor(Builder builder) {
@@ -790,15 +930,12 @@ public class StartStreamingOutRequest extends Request {
      */
     public static class FontColor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("B")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer b;
 
         @com.aliyun.core.annotation.NameInMap("G")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer g;
 
         @com.aliyun.core.annotation.NameInMap("R")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer r;
 
         private FontColor(Builder builder) {
@@ -889,48 +1026,41 @@ public class StartStreamingOutRequest extends Request {
      */
     public static class ClockWidgets extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
-        @com.aliyun.core.annotation.Validation(maximum = 1)
         private Double alpha;
 
         @com.aliyun.core.annotation.NameInMap("BoxAlpha")
-        @com.aliyun.core.annotation.Validation(maximum = 1)
         private Double boxAlpha;
 
         @com.aliyun.core.annotation.NameInMap("BoxBorderw")
-        @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
         private Integer boxBorderw;
 
         @com.aliyun.core.annotation.NameInMap("BoxColor")
         private BoxColor boxColor;
 
         @com.aliyun.core.annotation.NameInMap("Font")
-        @com.aliyun.core.annotation.Validation(maximum = 9)
         private Integer font;
 
         @com.aliyun.core.annotation.NameInMap("FontColor")
         private FontColor fontColor;
 
         @com.aliyun.core.annotation.NameInMap("FontSize")
-        @com.aliyun.core.annotation.Validation(maximum = 72)
         private Integer fontSize;
 
         @com.aliyun.core.annotation.NameInMap("HasBox")
         private Boolean hasBox;
 
         @com.aliyun.core.annotation.NameInMap("Layer")
-        @com.aliyun.core.annotation.Validation(maximum = 100)
         private Integer layer;
 
         @com.aliyun.core.annotation.NameInMap("X")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double x;
 
         @com.aliyun.core.annotation.NameInMap("Y")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double y;
 
         @com.aliyun.core.annotation.NameInMap("Zone")
-        @com.aliyun.core.annotation.Validation(maximum = 12)
         private Integer zone;
 
         private ClockWidgets(Builder builder) {
@@ -1189,34 +1319,32 @@ public class StartStreamingOutRequest extends Request {
      */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
-        @com.aliyun.core.annotation.Validation(maximum = 1)
         private Double alpha;
 
         @com.aliyun.core.annotation.NameInMap("Height")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double height;
 
         @com.aliyun.core.annotation.NameInMap("ImageCropMode")
         private Integer imageCropMode;
 
         @com.aliyun.core.annotation.NameInMap("Layer")
-        @com.aliyun.core.annotation.Validation(maximum = 100)
         private Integer layer;
 
         @com.aliyun.core.annotation.NameInMap("Url")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private String url;
 
         @com.aliyun.core.annotation.NameInMap("Width")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double width;
 
         @com.aliyun.core.annotation.NameInMap("X")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double x;
 
         @com.aliyun.core.annotation.NameInMap("Y")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double y;
 
         private Images(Builder builder) {
@@ -1489,37 +1617,35 @@ public class StartStreamingOutRequest extends Request {
      */
     public static class PanesBackgrounds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
-        @com.aliyun.core.annotation.Validation(maximum = 1)
         private Double alpha;
 
         @com.aliyun.core.annotation.NameInMap("Display")
         private String display;
 
         @com.aliyun.core.annotation.NameInMap("Height")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double height;
 
         @com.aliyun.core.annotation.NameInMap("Layer")
-        @com.aliyun.core.annotation.Validation(maximum = 100)
         private Integer layer;
 
         @com.aliyun.core.annotation.NameInMap("PaneBackgroundCropMode")
         private Integer paneBackgroundCropMode;
 
         @com.aliyun.core.annotation.NameInMap("Url")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private String url;
 
         @com.aliyun.core.annotation.NameInMap("Width")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double width;
 
         @com.aliyun.core.annotation.NameInMap("X")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double x;
 
         @com.aliyun.core.annotation.NameInMap("Y")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double y;
 
         private PanesBackgrounds(Builder builder) {
@@ -1733,37 +1859,35 @@ public class StartStreamingOutRequest extends Request {
      */
     public static class PanesImages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
-        @com.aliyun.core.annotation.Validation(maximum = 1)
         private Double alpha;
 
         @com.aliyun.core.annotation.NameInMap("Display")
         private String display;
 
         @com.aliyun.core.annotation.NameInMap("Height")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double height;
 
         @com.aliyun.core.annotation.NameInMap("Layer")
-        @com.aliyun.core.annotation.Validation(maximum = 100)
         private Integer layer;
 
         @com.aliyun.core.annotation.NameInMap("PaneImageCropMode")
         private Integer paneImageCropMode;
 
         @com.aliyun.core.annotation.NameInMap("Url")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private String url;
 
         @com.aliyun.core.annotation.NameInMap("Width")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double width;
 
         @com.aliyun.core.annotation.NameInMap("X")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double x;
 
         @com.aliyun.core.annotation.NameInMap("Y")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double y;
 
         private PanesImages(Builder builder) {
@@ -1977,15 +2101,12 @@ public class StartStreamingOutRequest extends Request {
      */
     public static class TextsBoxColor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("B")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer b;
 
         @com.aliyun.core.annotation.NameInMap("G")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer g;
 
         @com.aliyun.core.annotation.NameInMap("R")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer r;
 
         private TextsBoxColor(Builder builder) {
@@ -2076,15 +2197,12 @@ public class StartStreamingOutRequest extends Request {
      */
     public static class TextsFontColor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("B")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer b;
 
         @com.aliyun.core.annotation.NameInMap("G")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer g;
 
         @com.aliyun.core.annotation.NameInMap("R")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer r;
 
         private TextsFontColor(Builder builder) {
@@ -2175,15 +2293,12 @@ public class StartStreamingOutRequest extends Request {
      */
     public static class PanesTexts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
-        @com.aliyun.core.annotation.Validation(maximum = 1)
         private Double alpha;
 
         @com.aliyun.core.annotation.NameInMap("BoxAlpha")
-        @com.aliyun.core.annotation.Validation(maximum = 1)
         private Double boxAlpha;
 
         @com.aliyun.core.annotation.NameInMap("BoxBorderw")
-        @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
         private Integer boxBorderw;
 
         @com.aliyun.core.annotation.NameInMap("BoxColor")
@@ -2193,33 +2308,30 @@ public class StartStreamingOutRequest extends Request {
         private String display;
 
         @com.aliyun.core.annotation.NameInMap("Font")
-        @com.aliyun.core.annotation.Validation(maximum = 9)
         private Integer font;
 
         @com.aliyun.core.annotation.NameInMap("FontColor")
         private TextsFontColor fontColor;
 
         @com.aliyun.core.annotation.NameInMap("FontSize")
-        @com.aliyun.core.annotation.Validation(maximum = 72)
         private Integer fontSize;
 
         @com.aliyun.core.annotation.NameInMap("HasBox")
         private Boolean hasBox;
 
         @com.aliyun.core.annotation.NameInMap("Layer")
-        @com.aliyun.core.annotation.Validation(maximum = 100)
         private Integer layer;
 
         @com.aliyun.core.annotation.NameInMap("Texture")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private String texture;
 
         @com.aliyun.core.annotation.NameInMap("X")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double x;
 
         @com.aliyun.core.annotation.NameInMap("Y")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double y;
 
         private PanesTexts(Builder builder) {
@@ -2899,15 +3011,12 @@ public class StartStreamingOutRequest extends Request {
      */
     public static class StartStreamingOutRequestTextsBoxColor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("B")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer b;
 
         @com.aliyun.core.annotation.NameInMap("G")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer g;
 
         @com.aliyun.core.annotation.NameInMap("R")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer r;
 
         private StartStreamingOutRequestTextsBoxColor(Builder builder) {
@@ -2998,15 +3107,12 @@ public class StartStreamingOutRequest extends Request {
      */
     public static class StartStreamingOutRequestTextsFontColor extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("B")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer b;
 
         @com.aliyun.core.annotation.NameInMap("G")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer g;
 
         @com.aliyun.core.annotation.NameInMap("R")
-        @com.aliyun.core.annotation.Validation(maximum = 255)
         private Integer r;
 
         private StartStreamingOutRequestTextsFontColor(Builder builder) {
@@ -3097,48 +3203,42 @@ public class StartStreamingOutRequest extends Request {
      */
     public static class Texts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Alpha")
-        @com.aliyun.core.annotation.Validation(maximum = 1)
         private Double alpha;
 
         @com.aliyun.core.annotation.NameInMap("BoxAlpha")
-        @com.aliyun.core.annotation.Validation(maximum = 1)
         private Double boxAlpha;
 
         @com.aliyun.core.annotation.NameInMap("BoxBorderw")
-        @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
         private Integer boxBorderw;
 
         @com.aliyun.core.annotation.NameInMap("BoxColor")
         private StartStreamingOutRequestTextsBoxColor boxColor;
 
         @com.aliyun.core.annotation.NameInMap("Font")
-        @com.aliyun.core.annotation.Validation(maximum = 9)
         private Integer font;
 
         @com.aliyun.core.annotation.NameInMap("FontColor")
         private StartStreamingOutRequestTextsFontColor fontColor;
 
         @com.aliyun.core.annotation.NameInMap("FontSize")
-        @com.aliyun.core.annotation.Validation(maximum = 72)
         private Integer fontSize;
 
         @com.aliyun.core.annotation.NameInMap("HasBox")
         private Boolean hasBox;
 
         @com.aliyun.core.annotation.NameInMap("Layer")
-        @com.aliyun.core.annotation.Validation(maximum = 100)
         private Integer layer;
 
         @com.aliyun.core.annotation.NameInMap("Texture")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private String texture;
 
         @com.aliyun.core.annotation.NameInMap("X")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double x;
 
         @com.aliyun.core.annotation.NameInMap("Y")
-        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double y;
 
         private Texts(Builder builder) {

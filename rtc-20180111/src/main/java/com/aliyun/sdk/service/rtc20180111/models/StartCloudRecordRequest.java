@@ -27,6 +27,10 @@ public class StartCloudRecordRequest extends Request {
     private java.util.List<Backgrounds> backgrounds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BgColor")
+    private BgColor bgColor;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String channelId;
@@ -69,6 +73,10 @@ public class StartCloudRecordRequest extends Request {
     private StorageConfig storageConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubHighResolutionStream")
+    private Boolean subHighResolutionStream;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     @com.aliyun.core.annotation.Validation(maxLength = 55, minLength = 1)
     private String taskId;
@@ -86,6 +94,7 @@ public class StartCloudRecordRequest extends Request {
         super(builder);
         this.appId = builder.appId;
         this.backgrounds = builder.backgrounds;
+        this.bgColor = builder.bgColor;
         this.channelId = builder.channelId;
         this.clockWidgets = builder.clockWidgets;
         this.cropMode = builder.cropMode;
@@ -96,6 +105,7 @@ public class StartCloudRecordRequest extends Request {
         this.reservePaneForNoCameraUser = builder.reservePaneForNoCameraUser;
         this.showDefaultBackgroundOnMute = builder.showDefaultBackgroundOnMute;
         this.storageConfig = builder.storageConfig;
+        this.subHighResolutionStream = builder.subHighResolutionStream;
         this.taskId = builder.taskId;
         this.templateId = builder.templateId;
         this.texts = builder.texts;
@@ -126,6 +136,13 @@ public class StartCloudRecordRequest extends Request {
      */
     public java.util.List<Backgrounds> getBackgrounds() {
         return this.backgrounds;
+    }
+
+    /**
+     * @return bgColor
+     */
+    public BgColor getBgColor() {
+        return this.bgColor;
     }
 
     /**
@@ -199,6 +216,13 @@ public class StartCloudRecordRequest extends Request {
     }
 
     /**
+     * @return subHighResolutionStream
+     */
+    public Boolean getSubHighResolutionStream() {
+        return this.subHighResolutionStream;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -222,6 +246,7 @@ public class StartCloudRecordRequest extends Request {
     public static final class Builder extends Request.Builder<StartCloudRecordRequest, Builder> {
         private String appId; 
         private java.util.List<Backgrounds> backgrounds; 
+        private BgColor bgColor; 
         private String channelId; 
         private java.util.List<ClockWidgets> clockWidgets; 
         private Integer cropMode; 
@@ -232,6 +257,7 @@ public class StartCloudRecordRequest extends Request {
         private Boolean reservePaneForNoCameraUser; 
         private Boolean showDefaultBackgroundOnMute; 
         private StorageConfig storageConfig; 
+        private Boolean subHighResolutionStream; 
         private String taskId; 
         private String templateId; 
         private java.util.List<Texts> texts; 
@@ -244,6 +270,7 @@ public class StartCloudRecordRequest extends Request {
             super(request);
             this.appId = request.appId;
             this.backgrounds = request.backgrounds;
+            this.bgColor = request.bgColor;
             this.channelId = request.channelId;
             this.clockWidgets = request.clockWidgets;
             this.cropMode = request.cropMode;
@@ -254,6 +281,7 @@ public class StartCloudRecordRequest extends Request {
             this.reservePaneForNoCameraUser = request.reservePaneForNoCameraUser;
             this.showDefaultBackgroundOnMute = request.showDefaultBackgroundOnMute;
             this.storageConfig = request.storageConfig;
+            this.subHighResolutionStream = request.subHighResolutionStream;
             this.taskId = request.taskId;
             this.templateId = request.templateId;
             this.texts = request.texts;
@@ -278,6 +306,15 @@ public class StartCloudRecordRequest extends Request {
         public Builder backgrounds(java.util.List<Backgrounds> backgrounds) {
             this.putQueryParameter("Backgrounds", backgrounds);
             this.backgrounds = backgrounds;
+            return this;
+        }
+
+        /**
+         * BgColor.
+         */
+        public Builder bgColor(BgColor bgColor) {
+            this.putQueryParameter("BgColor", bgColor);
+            this.bgColor = bgColor;
             return this;
         }
 
@@ -374,6 +411,15 @@ public class StartCloudRecordRequest extends Request {
         public Builder storageConfig(StorageConfig storageConfig) {
             this.putQueryParameter("StorageConfig", storageConfig);
             this.storageConfig = storageConfig;
+            return this;
+        }
+
+        /**
+         * SubHighResolutionStream.
+         */
+        public Builder subHighResolutionStream(Boolean subHighResolutionStream) {
+            this.putQueryParameter("SubHighResolutionStream", subHighResolutionStream);
+            this.subHighResolutionStream = subHighResolutionStream;
             return this;
         }
 
@@ -636,6 +682,105 @@ public class StartCloudRecordRequest extends Request {
 
             public Backgrounds build() {
                 return new Backgrounds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     *
+     * <p>StartCloudRecordRequest</p>
+     */
+    public static class BgColor extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("B")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer b;
+
+        @com.aliyun.core.annotation.NameInMap("G")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer g;
+
+        @com.aliyun.core.annotation.NameInMap("R")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer r;
+
+        private BgColor(Builder builder) {
+            this.b = builder.b;
+            this.g = builder.g;
+            this.r = builder.r;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BgColor create() {
+            return builder().build();
+        }
+
+        /**
+         * @return b
+         */
+        public Integer getB() {
+            return this.b;
+        }
+
+        /**
+         * @return g
+         */
+        public Integer getG() {
+            return this.g;
+        }
+
+        /**
+         * @return r
+         */
+        public Integer getR() {
+            return this.r;
+        }
+
+        public static final class Builder {
+            private Integer b; 
+            private Integer g; 
+            private Integer r; 
+
+            private Builder() {
+            } 
+
+            private Builder(BgColor model) {
+                this.b = model.b;
+                this.g = model.g;
+                this.r = model.r;
+            } 
+
+            /**
+             * B.
+             */
+            public Builder b(Integer b) {
+                this.b = b;
+                return this;
+            }
+
+            /**
+             * G.
+             */
+            public Builder g(Integer g) {
+                this.g = g;
+                return this;
+            }
+
+            /**
+             * R.
+             */
+            public Builder r(Integer r) {
+                this.r = r;
+                return this;
+            }
+
+            public BgColor build() {
+                return new BgColor(this);
             } 
 
         } 

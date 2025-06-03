@@ -1363,6 +1363,10 @@ public class StartCloudNoteRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DiarizationEnabled")
         private Boolean diarizationEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("PhraseId")
+        @com.aliyun.core.annotation.Validation(maxLength = 50, minLength = 1)
+        private String phraseId;
+
         @com.aliyun.core.annotation.NameInMap("SpeakerCount")
         private Integer speakerCount;
 
@@ -1371,6 +1375,7 @@ public class StartCloudNoteRequest extends Request {
 
         private Transcription(Builder builder) {
             this.diarizationEnabled = builder.diarizationEnabled;
+            this.phraseId = builder.phraseId;
             this.speakerCount = builder.speakerCount;
             this.transcriptionLevel = builder.transcriptionLevel;
         }
@@ -1391,6 +1396,13 @@ public class StartCloudNoteRequest extends Request {
         }
 
         /**
+         * @return phraseId
+         */
+        public String getPhraseId() {
+            return this.phraseId;
+        }
+
+        /**
          * @return speakerCount
          */
         public Integer getSpeakerCount() {
@@ -1406,6 +1418,7 @@ public class StartCloudNoteRequest extends Request {
 
         public static final class Builder {
             private Boolean diarizationEnabled; 
+            private String phraseId; 
             private Integer speakerCount; 
             private Integer transcriptionLevel; 
 
@@ -1414,6 +1427,7 @@ public class StartCloudNoteRequest extends Request {
 
             private Builder(Transcription model) {
                 this.diarizationEnabled = model.diarizationEnabled;
+                this.phraseId = model.phraseId;
                 this.speakerCount = model.speakerCount;
                 this.transcriptionLevel = model.transcriptionLevel;
             } 
@@ -1423,6 +1437,14 @@ public class StartCloudNoteRequest extends Request {
              */
             public Builder diarizationEnabled(Boolean diarizationEnabled) {
                 this.diarizationEnabled = diarizationEnabled;
+                return this;
+            }
+
+            /**
+             * PhraseId.
+             */
+            public Builder phraseId(String phraseId) {
+                this.phraseId = phraseId;
                 return this;
             }
 
