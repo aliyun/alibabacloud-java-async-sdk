@@ -34,6 +34,10 @@ public class ListPluginsRequest extends Request {
     private String gatewayType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("includeBuiltinAiGateway")
+    private Boolean includeBuiltinAiGateway;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Integer pageNumber;
 
@@ -59,6 +63,7 @@ public class ListPluginsRequest extends Request {
         this.attachResourceType = builder.attachResourceType;
         this.gatewayId = builder.gatewayId;
         this.gatewayType = builder.gatewayType;
+        this.includeBuiltinAiGateway = builder.includeBuiltinAiGateway;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.pluginClassId = builder.pluginClassId;
@@ -108,6 +113,13 @@ public class ListPluginsRequest extends Request {
     }
 
     /**
+     * @return includeBuiltinAiGateway
+     */
+    public Boolean getIncludeBuiltinAiGateway() {
+        return this.includeBuiltinAiGateway;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -147,6 +159,7 @@ public class ListPluginsRequest extends Request {
         private String attachResourceType; 
         private String gatewayId; 
         private String gatewayType; 
+        private Boolean includeBuiltinAiGateway; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String pluginClassId; 
@@ -163,6 +176,7 @@ public class ListPluginsRequest extends Request {
             this.attachResourceType = request.attachResourceType;
             this.gatewayId = request.gatewayId;
             this.gatewayType = request.gatewayType;
+            this.includeBuiltinAiGateway = request.includeBuiltinAiGateway;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.pluginClassId = request.pluginClassId;
@@ -203,6 +217,15 @@ public class ListPluginsRequest extends Request {
         public Builder gatewayType(String gatewayType) {
             this.putQueryParameter("gatewayType", gatewayType);
             this.gatewayType = gatewayType;
+            return this;
+        }
+
+        /**
+         * includeBuiltinAiGateway.
+         */
+        public Builder includeBuiltinAiGateway(Boolean includeBuiltinAiGateway) {
+            this.putQueryParameter("includeBuiltinAiGateway", includeBuiltinAiGateway);
+            this.includeBuiltinAiGateway = includeBuiltinAiGateway;
             return this;
         }
 
