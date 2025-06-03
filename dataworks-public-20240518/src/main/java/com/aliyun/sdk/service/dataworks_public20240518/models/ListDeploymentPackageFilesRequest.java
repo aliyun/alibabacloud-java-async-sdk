@@ -239,7 +239,10 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * BusinessId.
+         * <p>The workflow ID. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the workflow ID by name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100001</p>
          */
         public Builder businessId(Long businessId) {
             this.putQueryParameter("BusinessId", businessId);
@@ -248,7 +251,15 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * ChangeType.
+         * <p>The change type. Valid values:</p>
+         * <ul>
+         * <li>0: addition</li>
+         * <li>1: update</li>
+         * <li>2: deletion</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder changeType(Integer changeType) {
             this.putQueryParameter("ChangeType", changeType);
@@ -257,7 +268,10 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * CommitFrom.
+         * <p>The start date for committing. Specify the date in the yyyy-MM-dd format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-01</p>
          */
         public Builder commitFrom(String commitFrom) {
             this.putQueryParameter("CommitFrom", commitFrom);
@@ -266,7 +280,10 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * CommitTo.
+         * <p>The end date (included) for committing. Specify the date in the yyyy-MM-dd format.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-01-31</p>
          */
         public Builder commitTo(String commitTo) {
             this.putQueryParameter("CommitTo", commitTo);
@@ -275,7 +292,10 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * CommitUserId.
+         * <p>The ID of the user who commits the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2003****</p>
          */
         public Builder commitUserId(String commitUserId) {
             this.putQueryParameter("CommitUserId", commitUserId);
@@ -284,7 +304,7 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * FileIds.
+         * <p>The IDs of the files to be queried.</p>
          */
         public Builder fileIds(java.util.List<String> fileIds) {
             String fileIdsShrink = shrink(fileIds, "FileIds", "json");
@@ -294,7 +314,10 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * FileName.
+         * <p>The name of the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Filename</p>
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -303,7 +326,11 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * FileType.
+         * <p>The type of the code for the file.</p>
+         * <p>The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>. You can call the <a href="https://help.aliyun.com/document_detail/212428.html">ListFileType</a> operation to query the type of the code for the file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder fileType(Integer fileType) {
             this.putQueryParameter("FileType", fileType);
@@ -312,7 +339,10 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -321,7 +351,10 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -330,6 +363,7 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,7 +376,10 @@ public class ListDeploymentPackageFilesRequest extends Request {
         }
 
         /**
-         * SolutionId.
+         * <p>The solution ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8065</p>
          */
         public Builder solutionId(Long solutionId) {
             this.putQueryParameter("SolutionId", solutionId);

@@ -67,7 +67,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -75,7 +75,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0000-ABCD-EFG****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -349,7 +352,15 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * ChangeType.
+             * <p>The change type, which is an integer. Valid values:</p>
+             * <ul>
+             * <li>0: addition</li>
+             * <li>1: update</li>
+             * <li>2: deletion</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder changeType(Integer changeType) {
                 this.changeType = changeType;
@@ -357,7 +368,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Comment.
+             * <p>The comment for committing.</p>
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -365,7 +376,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * CommitTime.
+             * <p>The time for committing.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-10 15:55:47</p>
              */
             public Builder commitTime(String commitTime) {
                 this.commitTime = commitTime;
@@ -373,7 +387,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * CommitUser.
+             * <p>The ID of the Alibaba Cloud account used by the user who committed the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>446***</p>
              */
             public Builder commitUser(String commitUser) {
                 this.commitUser = commitUser;
@@ -381,7 +398,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * CommitUserName.
+             * <p>The name of the Alibaba Cloud account used by the user who committed the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user***</p>
              */
             public Builder commitUserName(String commitUserName) {
                 this.commitUserName = commitUserName;
@@ -389,7 +409,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * <p>The file ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>520246913</p>
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -397,7 +420,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileName.
+             * <p>The name of the file of the current version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bak_part_basc_person_relation_all_da</p>
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -405,7 +431,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileType.
+             * <p>The file type. The code for files varies based on the file type. For more information, see <a href="https://help.aliyun.com/document_detail/600169.html">DataWorks nodes</a>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder fileType(Integer fileType) {
                 this.fileType = fileType;
@@ -413,7 +442,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * FileVersion.
+             * <p>The file version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder fileVersion(Long fileVersion) {
                 this.fileVersion = fileVersion;
@@ -421,7 +453,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>650433503</p>
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -429,7 +464,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * IsSameAsProductionVersion.
+             * <p>Indicates whether the version is a version in the production environment of the scheduling system.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSameAsProductionVersion(Boolean isSameAsProductionVersion) {
                 this.isSameAsProductionVersion = isSameAsProductionVersion;
@@ -437,7 +475,56 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeConfiguration.
+             * <p>The scheduling property configurations of the node that corresponds to the file, which is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;tagList&quot;: [],
+             *     &quot;fileId&quot;: -1,
+             *     &quot;taskRerunTime&quot;: 0,
+             *     &quot;taskRerunInterval&quot;: 0,
+             *     &quot;reRunAble&quot;: 1,
+             *     &quot;nodeId&quot;: 125803000,
+             *     &quot;nodeName&quot;: &quot;new&quot;,
+             *     &quot;nodeType&quot;: 0,
+             *     &quot;isStop&quot;: 0,
+             *     &quot;paraValue&quot;: &quot;&quot;,
+             *     &quot;startEffectDate&quot;: &quot;1970-01-01 00:00:00&quot;,
+             *     &quot;endEffectDate&quot;: &quot;9999-01-01 00:00:00&quot;,
+             *     &quot;cronExpress&quot;: &quot;00 26 00 * * ?&quot;,
+             *     &quot;owner&quot;: &quot;1107550004250000&quot;,
+             *     &quot;resgroupId&quot;: 6300000,
+             *     &quot;cu&quot;: &quot;0.25&quot;,
+             *     &quot;appId&quot;: 170000,
+             *     &quot;tenantId&quot;: 524257424560000,
+             *     &quot;createTime&quot;: &quot;2025-04-10 15:55:01&quot;,
+             *     &quot;createUser&quot;: &quot;1107550004250000&quot;,
+             *     &quot;lastModifyTime&quot;: &quot;2025-04-10 15:55:41&quot;,
+             *     &quot;cycleType&quot;: 0,
+             *     &quot;dependentType&quot;: 0,
+             *     &quot;dependentTypeList&quot;: [0],
+             *     &quot;lastModifyUser&quot;: &quot;1107550004250000&quot;,
+             *     &quot;dependentDataNode&quot;: &quot;&quot;,
+             *     &quot;input&quot;: &quot;[{&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;str&quot;:&quot;root_input&quot;,&quot;parseType&quot;:1}]&quot;,
+             *     &quot;output&quot;: &quot;[{&quot;str&quot;:&quot;project_root.526586287_out&quot;,&quot;parseType&quot;:2},{&quot;str&quot;:&quot;project_root.new&quot;,&quot;parseType&quot;:1}]&quot;,
+             *     &quot;inputList&quot;: [{
+             *         &quot;regionId&quot;: &quot;cn-hangzhou&quot;,
+             *         &quot;str&quot;: &quot;root_input&quot;,
+             *         &quot;parseType&quot;: 1
+             *     }],
+             *     &quot;outputList&quot;: [{
+             *         &quot;str&quot;: &quot;project_root.526586287_out&quot;,
+             *         &quot;parseType&quot;: 2
+             *     }, {
+             *         &quot;str&quot;: &quot;project_root.new&quot;,
+             *         &quot;parseType&quot;: 1
+             *     }],
+             *     &quot;isAutoParse&quot;: 1,
+             *     &quot;startRightNow&quot;: false,
+             *     &quot;extConfig&quot;: &quot;{&quot;openCustomCron&quot;:false,&quot;formCron&quot;:&quot;&quot;}&quot;,
+             *     &quot;inputContextList&quot;: [],
+             *     &quot;outputContextList&quot;: []
+             * }</p>
              */
             public Builder nodeConfiguration(String nodeConfiguration) {
                 this.nodeConfiguration = nodeConfiguration;
@@ -445,7 +532,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * <p>The ID of the auto triggered node that corresponds to the file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>700005008419</p>
              */
             public Builder nodeId(Long nodeId) {
                 this.nodeId = nodeId;
@@ -453,7 +543,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * <p>The workspace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>27595</p>
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -461,7 +554,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * SmokeTestStatus.
+             * <p>The test status in the development environment.</p>
              */
             public Builder smokeTestStatus(String smokeTestStatus) {
                 this.smokeTestStatus = smokeTestStatus;
@@ -469,7 +562,20 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the code for the file of the current version. Valid values:</p>
+             * <ul>
+             * <li>10: committing</li>
+             * <li>11: committed to the development environment of the scheduling system</li>
+             * <li>20: review passed</li>
+             * <li>21: review failed</li>
+             * <li>80: deployment package creation succeeded</li>
+             * <li>100: deploying</li>
+             * <li>101: deployed to the production environment</li>
+             * <li>200: cancelled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -477,7 +583,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * <p>The DataWorks tenant ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>639415964191360</p>
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -485,7 +594,18 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * UseType.
+             * <p>The module to which the file belongs. Valid values:</p>
+             * <ul>
+             * <li>NORMAL: The file is used for DataStudio.</li>
+             * <li>MANUAL: The file is used for a manually triggered node.</li>
+             * <li>MANUAL_BIZ: The file is used for a manually triggered workflow.</li>
+             * <li>SKIP: The file is used for a dry-run node in DataStudio.</li>
+             * <li>ADHOCQUERY: The file is used for an ad hoc query.</li>
+             * <li>COMPONENT: The file is used for a script template.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder useType(String useType) {
                 this.useType = useType;
@@ -578,7 +698,7 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             } 
 
             /**
-             * DeploymentPackageFiles.
+             * <p>The details of the versions of the files to be deployed.</p>
              */
             public Builder deploymentPackageFiles(java.util.List<DeploymentPackageFiles> deploymentPackageFiles) {
                 this.deploymentPackageFiles = deploymentPackageFiles;
@@ -586,7 +706,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * <p>The page number. Pages start from page 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -594,7 +717,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page. Default value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -602,7 +728,10 @@ public class ListDeploymentPackageFilesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

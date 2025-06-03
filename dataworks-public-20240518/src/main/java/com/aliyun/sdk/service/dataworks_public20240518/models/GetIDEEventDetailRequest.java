@@ -98,6 +98,7 @@ public class GetIDEEventDetailRequest extends Request {
         }
 
         /**
+         * <p>The message ID in DataWorks OpenEvent. You can obtain the ID from a received message when an extension point event is triggered.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,6 +111,7 @@ public class GetIDEEventDetailRequest extends Request {
         }
 
         /**
+         * <p>The DataWorks workspace ID. You can obtain the ID from the message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
