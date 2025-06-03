@@ -450,8 +450,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
         private String policyGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupIdList")
+        private java.util.List<String> policyGroupIdList;
+
         @com.aliyun.core.annotation.NameInMap("PolicyGroupName")
         private String policyGroupName;
+
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupNameList")
+        private java.util.List<String> policyGroupNameList;
 
         @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
@@ -532,7 +538,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.ownType = builder.ownType;
             this.payType = builder.payType;
             this.policyGroupId = builder.policyGroupId;
+            this.policyGroupIdList = builder.policyGroupIdList;
             this.policyGroupName = builder.policyGroupName;
+            this.policyGroupNameList = builder.policyGroupNameList;
             this.protocolType = builder.protocolType;
             this.ratioThreshold = builder.ratioThreshold;
             this.resetType = builder.resetType;
@@ -810,10 +818,24 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return policyGroupIdList
+         */
+        public java.util.List<String> getPolicyGroupIdList() {
+            return this.policyGroupIdList;
+        }
+
+        /**
          * @return policyGroupName
          */
         public String getPolicyGroupName() {
             return this.policyGroupName;
+        }
+
+        /**
+         * @return policyGroupNameList
+         */
+        public java.util.List<String> getPolicyGroupNameList() {
+            return this.policyGroupNameList;
         }
 
         /**
@@ -951,7 +973,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private Long ownType; 
             private String payType; 
             private String policyGroupId; 
+            private java.util.List<String> policyGroupIdList; 
             private String policyGroupName; 
+            private java.util.List<String> policyGroupNameList; 
             private String protocolType; 
             private Float ratioThreshold; 
             private Long resetType; 
@@ -1007,7 +1031,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
                 this.ownType = model.ownType;
                 this.payType = model.payType;
                 this.policyGroupId = model.policyGroupId;
+                this.policyGroupIdList = model.policyGroupIdList;
                 this.policyGroupName = model.policyGroupName;
+                this.policyGroupNameList = model.policyGroupNameList;
                 this.protocolType = model.protocolType;
                 this.ratioThreshold = model.ratioThreshold;
                 this.resetType = model.resetType;
@@ -1466,6 +1492,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * PolicyGroupIdList.
+             */
+            public Builder policyGroupIdList(java.util.List<String> policyGroupIdList) {
+                this.policyGroupIdList = policyGroupIdList;
+                return this;
+            }
+
+            /**
              * <p>The name of the applied policy.</p>
              * 
              * <strong>example:</strong>
@@ -1473,6 +1507,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder policyGroupName(String policyGroupName) {
                 this.policyGroupName = policyGroupName;
+                return this;
+            }
+
+            /**
+             * PolicyGroupNameList.
+             */
+            public Builder policyGroupNameList(java.util.List<String> policyGroupNameList) {
+                this.policyGroupNameList = policyGroupNameList;
                 return this;
             }
 
