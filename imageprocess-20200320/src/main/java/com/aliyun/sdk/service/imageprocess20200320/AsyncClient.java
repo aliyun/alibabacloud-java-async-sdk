@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FeedbackSessionResponse> feedbackSession(FeedbackSessionRequest request);
 
     /**
+     * @param request the request parameters of GenerateReport  GenerateReportRequest
+     * @return GenerateReportResponse
+     */
+    CompletableFuture<GenerateReportResponse> generateReport(GenerateReportRequest request);
+
+    /**
      * @param request the request parameters of GetAsyncJobResult  GetAsyncJobResultRequest
      * @return GetAsyncJobResultResponse
      */
