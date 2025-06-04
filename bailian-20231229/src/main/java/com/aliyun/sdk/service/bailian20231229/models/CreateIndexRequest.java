@@ -86,7 +86,6 @@ public class CreateIndexRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceType;
 
     @com.aliyun.core.annotation.Query
@@ -577,7 +576,6 @@ public class CreateIndexRequest extends Request {
          * <blockquote>
          * <p> If you want to create an empty knowledge base, you can use an empty category. Set this parameter to DATA_CENTER_CATEGORY. And specify the ID of an empty category for the <code>CategoryIds</code> parameter.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>DATA_CENTER_FILE</p>

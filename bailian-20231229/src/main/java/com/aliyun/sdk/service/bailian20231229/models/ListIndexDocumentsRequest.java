@@ -31,6 +31,10 @@ public class ListIndexDocumentsRequest extends Request {
     private String documentStatus;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableNameLike")
+    private String enableNameLike;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IndexId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String indexId;
@@ -48,6 +52,7 @@ public class ListIndexDocumentsRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.documentName = builder.documentName;
         this.documentStatus = builder.documentStatus;
+        this.enableNameLike = builder.enableNameLike;
         this.indexId = builder.indexId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -88,6 +93,13 @@ public class ListIndexDocumentsRequest extends Request {
     }
 
     /**
+     * @return enableNameLike
+     */
+    public String getEnableNameLike() {
+        return this.enableNameLike;
+    }
+
+    /**
      * @return indexId
      */
     public String getIndexId() {
@@ -112,6 +124,7 @@ public class ListIndexDocumentsRequest extends Request {
         private String workspaceId; 
         private String documentName; 
         private String documentStatus; 
+        private String enableNameLike; 
         private String indexId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -125,6 +138,7 @@ public class ListIndexDocumentsRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.documentName = request.documentName;
             this.documentStatus = request.documentStatus;
+            this.enableNameLike = request.enableNameLike;
             this.indexId = request.indexId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -168,6 +182,15 @@ public class ListIndexDocumentsRequest extends Request {
         public Builder documentStatus(String documentStatus) {
             this.putQueryParameter("DocumentStatus", documentStatus);
             this.documentStatus = documentStatus;
+            return this;
+        }
+
+        /**
+         * EnableNameLike.
+         */
+        public Builder enableNameLike(String enableNameLike) {
+            this.putQueryParameter("EnableNameLike", enableNameLike);
+            this.enableNameLike = enableNameLike;
             return this;
         }
 
