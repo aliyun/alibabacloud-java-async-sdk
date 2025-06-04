@@ -31,6 +31,10 @@ public class CopySnapshotRequest extends Request {
     private String destinationSnapshotName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceBillingCycle")
+    private String instanceBillingCycle;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String snapshotId;
@@ -40,6 +44,7 @@ public class CopySnapshotRequest extends Request {
         this.destinationRegionIds = builder.destinationRegionIds;
         this.destinationSnapshotDescription = builder.destinationSnapshotDescription;
         this.destinationSnapshotName = builder.destinationSnapshotName;
+        this.instanceBillingCycle = builder.instanceBillingCycle;
         this.snapshotId = builder.snapshotId;
     }
 
@@ -78,6 +83,13 @@ public class CopySnapshotRequest extends Request {
     }
 
     /**
+     * @return instanceBillingCycle
+     */
+    public String getInstanceBillingCycle() {
+        return this.instanceBillingCycle;
+    }
+
+    /**
      * @return snapshotId
      */
     public String getSnapshotId() {
@@ -88,6 +100,7 @@ public class CopySnapshotRequest extends Request {
         private java.util.List<String> destinationRegionIds; 
         private String destinationSnapshotDescription; 
         private String destinationSnapshotName; 
+        private String instanceBillingCycle; 
         private String snapshotId; 
 
         private Builder() {
@@ -99,6 +112,7 @@ public class CopySnapshotRequest extends Request {
             this.destinationRegionIds = request.destinationRegionIds;
             this.destinationSnapshotDescription = request.destinationSnapshotDescription;
             this.destinationSnapshotName = request.destinationSnapshotName;
+            this.instanceBillingCycle = request.instanceBillingCycle;
             this.snapshotId = request.snapshotId;
         } 
 
@@ -134,6 +148,15 @@ public class CopySnapshotRequest extends Request {
         public Builder destinationSnapshotName(String destinationSnapshotName) {
             this.putQueryParameter("DestinationSnapshotName", destinationSnapshotName);
             this.destinationSnapshotName = destinationSnapshotName;
+            return this;
+        }
+
+        /**
+         * InstanceBillingCycle.
+         */
+        public Builder instanceBillingCycle(String instanceBillingCycle) {
+            this.putQueryParameter("InstanceBillingCycle", instanceBillingCycle);
+            this.instanceBillingCycle = instanceBillingCycle;
             return this;
         }
 
