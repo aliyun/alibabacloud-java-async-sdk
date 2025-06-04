@@ -54,7 +54,6 @@ public class CreateJobRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("JobHandler")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 200, minLength = 1)
     private String jobHandler;
 
     @com.aliyun.core.annotation.Body
@@ -98,6 +97,10 @@ public class CreateJobRequest extends Request {
     private Integer routeStrategy;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Script")
+    private String script;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
@@ -138,6 +141,7 @@ public class CreateJobRequest extends Request {
         this.parameters = builder.parameters;
         this.priority = builder.priority;
         this.routeStrategy = builder.routeStrategy;
+        this.script = builder.script;
         this.startTime = builder.startTime;
         this.status = builder.status;
         this.timeExpression = builder.timeExpression;
@@ -285,6 +289,13 @@ public class CreateJobRequest extends Request {
     }
 
     /**
+     * @return script
+     */
+    public String getScript() {
+        return this.script;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -338,6 +349,7 @@ public class CreateJobRequest extends Request {
         private String parameters; 
         private Integer priority; 
         private Integer routeStrategy; 
+        private String script; 
         private Long startTime; 
         private Integer status; 
         private String timeExpression; 
@@ -368,6 +380,7 @@ public class CreateJobRequest extends Request {
             this.parameters = request.parameters;
             this.priority = request.priority;
             this.routeStrategy = request.routeStrategy;
+            this.script = request.script;
             this.startTime = request.startTime;
             this.status = request.status;
             this.timeExpression = request.timeExpression;
@@ -454,10 +467,7 @@ public class CreateJobRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>testJobVoidHandler</p>
+         * JobHandler.
          */
         public Builder jobHandler(String jobHandler) {
             this.putBodyParameter("JobHandler", jobHandler);
@@ -551,6 +561,15 @@ public class CreateJobRequest extends Request {
         public Builder routeStrategy(Integer routeStrategy) {
             this.putBodyParameter("RouteStrategy", routeStrategy);
             this.routeStrategy = routeStrategy;
+            return this;
+        }
+
+        /**
+         * Script.
+         */
+        public Builder script(String script) {
+            this.putBodyParameter("Script", script);
+            this.script = script;
             return this;
         }
 

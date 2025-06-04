@@ -99,6 +99,10 @@ public class UpdateJobRequest extends Request {
     private Integer routeStrategy;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Script")
+    private String script;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
@@ -134,6 +138,7 @@ public class UpdateJobRequest extends Request {
         this.parameters = builder.parameters;
         this.priority = builder.priority;
         this.routeStrategy = builder.routeStrategy;
+        this.script = builder.script;
         this.startTime = builder.startTime;
         this.timeExpression = builder.timeExpression;
         this.timeType = builder.timeType;
@@ -280,6 +285,13 @@ public class UpdateJobRequest extends Request {
     }
 
     /**
+     * @return script
+     */
+    public String getScript() {
+        return this.script;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -326,6 +338,7 @@ public class UpdateJobRequest extends Request {
         private String parameters; 
         private Integer priority; 
         private Integer routeStrategy; 
+        private String script; 
         private Long startTime; 
         private String timeExpression; 
         private Integer timeType; 
@@ -355,6 +368,7 @@ public class UpdateJobRequest extends Request {
             this.parameters = request.parameters;
             this.priority = request.priority;
             this.routeStrategy = request.routeStrategy;
+            this.script = request.script;
             this.startTime = request.startTime;
             this.timeExpression = request.timeExpression;
             this.timeType = request.timeType;
@@ -531,6 +545,15 @@ public class UpdateJobRequest extends Request {
         public Builder routeStrategy(Integer routeStrategy) {
             this.putBodyParameter("RouteStrategy", routeStrategy);
             this.routeStrategy = routeStrategy;
+            return this;
+        }
+
+        /**
+         * Script.
+         */
+        public Builder script(String script) {
+            this.putBodyParameter("Script", script);
+            this.script = script;
             return this;
         }
 

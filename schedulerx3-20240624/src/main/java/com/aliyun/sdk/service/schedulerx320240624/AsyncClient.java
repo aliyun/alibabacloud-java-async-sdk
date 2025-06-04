@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDesigateInfoResponse> getDesigateInfo(GetDesigateInfoRequest request);
 
     /**
+     * @param request the request parameters of GetJobExecution  GetJobExecutionRequest
+     * @return GetJobExecutionResponse
+     */
+    CompletableFuture<GetJobExecutionResponse> getJobExecution(GetJobExecutionRequest request);
+
+    /**
      * @param request the request parameters of GetJobExecutionProgress  GetJobExecutionProgressRequest
      * @return GetJobExecutionProgressResponse
      */

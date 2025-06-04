@@ -229,6 +229,9 @@ public class ListJobsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteStrategy")
         private Integer routeStrategy;
 
+        @com.aliyun.core.annotation.NameInMap("Script")
+        private String script;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
@@ -274,6 +277,7 @@ public class ListJobsResponseBody extends TeaModel {
             this.parameters = builder.parameters;
             this.priority = builder.priority;
             this.routeStrategy = builder.routeStrategy;
+            this.script = builder.script;
             this.status = builder.status;
             this.timeExpression = builder.timeExpression;
             this.timeType = builder.timeType;
@@ -453,6 +457,13 @@ public class ListJobsResponseBody extends TeaModel {
         }
 
         /**
+         * @return script
+         */
+        public String getScript() {
+            return this.script;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -525,6 +536,7 @@ public class ListJobsResponseBody extends TeaModel {
             private String parameters; 
             private Integer priority; 
             private Integer routeStrategy; 
+            private String script; 
             private Integer status; 
             private String timeExpression; 
             private Integer timeType; 
@@ -560,6 +572,7 @@ public class ListJobsResponseBody extends TeaModel {
                 this.parameters = model.parameters;
                 this.priority = model.priority;
                 this.routeStrategy = model.routeStrategy;
+                this.script = model.script;
                 this.status = model.status;
                 this.timeExpression = model.timeExpression;
                 this.timeType = model.timeType;
@@ -750,6 +763,14 @@ public class ListJobsResponseBody extends TeaModel {
              */
             public Builder routeStrategy(Integer routeStrategy) {
                 this.routeStrategy = routeStrategy;
+                return this;
+            }
+
+            /**
+             * Script.
+             */
+            public Builder script(String script) {
+                this.script = script;
                 return this;
             }
 
