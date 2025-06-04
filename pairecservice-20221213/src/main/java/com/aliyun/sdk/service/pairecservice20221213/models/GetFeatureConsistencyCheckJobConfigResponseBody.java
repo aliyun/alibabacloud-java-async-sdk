@@ -134,6 +134,9 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("ResourceConfig")
+    private String resourceConfig;
+
     @com.aliyun.core.annotation.NameInMap("SampleRate")
     private String sampleRate;
 
@@ -222,6 +225,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         this.predictWorkerCpu = builder.predictWorkerCpu;
         this.predictWorkerMemory = builder.predictWorkerMemory;
         this.requestId = builder.requestId;
+        this.resourceConfig = builder.resourceConfig;
         this.sampleRate = builder.sampleRate;
         this.sceneId = builder.sceneId;
         this.sceneName = builder.sceneName;
@@ -526,6 +530,13 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     }
 
     /**
+     * @return resourceConfig
+     */
+    public String getResourceConfig() {
+        return this.resourceConfig;
+    }
+
+    /**
      * @return sampleRate
      */
     public String getSampleRate() {
@@ -677,6 +688,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
         private Integer predictWorkerCpu; 
         private Integer predictWorkerMemory; 
         private String requestId; 
+        private String resourceConfig; 
         private String sampleRate; 
         private String sceneId; 
         private String sceneName; 
@@ -737,6 +749,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
             this.predictWorkerCpu = model.predictWorkerCpu;
             this.predictWorkerMemory = model.predictWorkerMemory;
             this.requestId = model.requestId;
+            this.resourceConfig = model.resourceConfig;
             this.sampleRate = model.sampleRate;
             this.sceneId = model.sceneId;
             this.sceneName = model.sceneName;
@@ -1064,6 +1077,14 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * ResourceConfig.
+         */
+        public Builder resourceConfig(String resourceConfig) {
+            this.resourceConfig = resourceConfig;
             return this;
         }
 

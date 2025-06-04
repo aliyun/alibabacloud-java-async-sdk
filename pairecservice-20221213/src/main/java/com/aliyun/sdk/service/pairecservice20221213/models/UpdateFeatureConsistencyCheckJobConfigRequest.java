@@ -170,6 +170,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
     private Integer predictWorkerMemory;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceConfig")
+    private String resourceConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SampleRate")
     @com.aliyun.core.annotation.Validation(required = true)
     private Double sampleRate;
@@ -260,6 +264,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         this.predictWorkerCount = builder.predictWorkerCount;
         this.predictWorkerCpu = builder.predictWorkerCpu;
         this.predictWorkerMemory = builder.predictWorkerMemory;
+        this.resourceConfig = builder.resourceConfig;
         this.sampleRate = builder.sampleRate;
         this.sceneId = builder.sceneId;
         this.securityGroupId = builder.securityGroupId;
@@ -533,6 +538,13 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
     }
 
     /**
+     * @return resourceConfig
+     */
+    public String getResourceConfig() {
+        return this.resourceConfig;
+    }
+
+    /**
      * @return sampleRate
      */
     public Double getSampleRate() {
@@ -652,6 +664,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         private Integer predictWorkerCount; 
         private Integer predictWorkerCpu; 
         private Integer predictWorkerMemory; 
+        private String resourceConfig; 
         private Double sampleRate; 
         private String sceneId; 
         private String securityGroupId; 
@@ -706,6 +719,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
             this.predictWorkerCount = request.predictWorkerCount;
             this.predictWorkerCpu = request.predictWorkerCpu;
             this.predictWorkerMemory = request.predictWorkerMemory;
+            this.resourceConfig = request.resourceConfig;
             this.sampleRate = request.sampleRate;
             this.sceneId = request.sceneId;
             this.securityGroupId = request.securityGroupId;
@@ -1068,6 +1082,15 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends Request {
         public Builder predictWorkerMemory(Integer predictWorkerMemory) {
             this.putBodyParameter("PredictWorkerMemory", predictWorkerMemory);
             this.predictWorkerMemory = predictWorkerMemory;
+            return this;
+        }
+
+        /**
+         * ResourceConfig.
+         */
+        public Builder resourceConfig(String resourceConfig) {
+            this.putBodyParameter("ResourceConfig", resourceConfig);
+            this.resourceConfig = resourceConfig;
             return this;
         }
 

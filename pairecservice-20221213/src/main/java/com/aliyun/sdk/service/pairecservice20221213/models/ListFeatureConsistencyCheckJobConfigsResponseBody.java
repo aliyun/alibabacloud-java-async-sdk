@@ -233,6 +233,9 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         @com.aliyun.core.annotation.NameInMap("PredictWorkerMemory")
         private Integer predictWorkerMemory;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceConfig")
+        private String resourceConfig;
+
         @com.aliyun.core.annotation.NameInMap("SampleRate")
         private String sampleRate;
 
@@ -321,6 +324,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
             this.predictWorkerCount = builder.predictWorkerCount;
             this.predictWorkerCpu = builder.predictWorkerCpu;
             this.predictWorkerMemory = builder.predictWorkerMemory;
+            this.resourceConfig = builder.resourceConfig;
             this.sampleRate = builder.sampleRate;
             this.sceneId = builder.sceneId;
             this.sceneName = builder.sceneName;
@@ -621,6 +625,13 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
         }
 
         /**
+         * @return resourceConfig
+         */
+        public String getResourceConfig() {
+            return this.resourceConfig;
+        }
+
+        /**
          * @return sampleRate
          */
         public String getSampleRate() {
@@ -772,6 +783,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
             private Integer predictWorkerCount; 
             private Integer predictWorkerCpu; 
             private Integer predictWorkerMemory; 
+            private String resourceConfig; 
             private String sampleRate; 
             private String sceneId; 
             private String sceneName; 
@@ -832,6 +844,7 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
                 this.predictWorkerCount = model.predictWorkerCount;
                 this.predictWorkerCpu = model.predictWorkerCpu;
                 this.predictWorkerMemory = model.predictWorkerMemory;
+                this.resourceConfig = model.resourceConfig;
                 this.sampleRate = model.sampleRate;
                 this.sceneId = model.sceneId;
                 this.sceneName = model.sceneName;
@@ -1159,6 +1172,14 @@ public class ListFeatureConsistencyCheckJobConfigsResponseBody extends TeaModel 
              */
             public Builder predictWorkerMemory(Integer predictWorkerMemory) {
                 this.predictWorkerMemory = predictWorkerMemory;
+                return this;
+            }
+
+            /**
+             * ResourceConfig.
+             */
+            public Builder resourceConfig(String resourceConfig) {
+                this.resourceConfig = resourceConfig;
                 return this;
             }
 
