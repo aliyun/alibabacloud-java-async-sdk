@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchCreateQualityProjectsResponse> batchCreateQualityProjects(BatchCreateQualityProjectsRequest request);
 
     /**
+     * @param request the request parameters of CancelAiCallDetails  CancelAiCallDetailsRequest
+     * @return CancelAiCallDetailsResponse
+     */
+    CompletableFuture<CancelAiCallDetailsResponse> cancelAiCallDetails(CancelAiCallDetailsRequest request);
+
+    /**
      * @param request the request parameters of CancelTask  CancelTaskRequest
      * @return CancelTaskResponse
      */
@@ -90,6 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateAgentResponse
      */
     CompletableFuture<CreateAgentResponse> createAgent(CreateAgentRequest request);
+
+    /**
+     * @param request the request parameters of CreateAiCallTask  CreateAiCallTaskRequest
+     * @return CreateAiCallTaskResponse
+     */
+    CompletableFuture<CreateAiCallTaskResponse> createAiCallTask(CreateAiCallTaskRequest request);
 
     /**
      * @param request the request parameters of CreateAiOutboundTask  CreateAiOutboundTaskRequest
@@ -596,6 +608,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<HotlineSessionQueryResponse> hotlineSessionQuery(HotlineSessionQueryRequest request);
 
     /**
+     * @param request the request parameters of ImportTaskNumberDatas  ImportTaskNumberDatasRequest
+     * @return ImportTaskNumberDatasResponse
+     */
+    CompletableFuture<ImportTaskNumberDatasResponse> importTaskNumberDatas(ImportTaskNumberDatasRequest request);
+
+    /**
      * @param request the request parameters of InsertAiOutboundPhoneNums  InsertAiOutboundPhoneNumsRequest
      * @return InsertAiOutboundPhoneNumsResponse
      */
@@ -728,6 +746,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MakeDoubleCallResponse> makeDoubleCall(MakeDoubleCallRequest request);
 
     /**
+     * @param request the request parameters of QueryAiCallDetailPage  QueryAiCallDetailPageRequest
+     * @return QueryAiCallDetailPageResponse
+     */
+    CompletableFuture<QueryAiCallDetailPageResponse> queryAiCallDetailPage(QueryAiCallDetailPageRequest request);
+
+    /**
+     * @param request the request parameters of QueryAiCallTaskDetail  QueryAiCallTaskDetailRequest
+     * @return QueryAiCallTaskDetailResponse
+     */
+    CompletableFuture<QueryAiCallTaskDetailResponse> queryAiCallTaskDetail(QueryAiCallTaskDetailRequest request);
+
+    /**
+     * @param request the request parameters of QueryAiCallTaskPage  QueryAiCallTaskPageRequest
+     * @return QueryAiCallTaskPageResponse
+     */
+    CompletableFuture<QueryAiCallTaskPageResponse> queryAiCallTaskPage(QueryAiCallTaskPageRequest request);
+
+    /**
      * @param request the request parameters of QueryHotlineInQueue  QueryHotlineInQueueRequest
      * @return QueryHotlineInQueueResponse
      */
@@ -818,6 +854,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SendHotlineHeartBeatResponse> sendHotlineHeartBeat(SendHotlineHeartBeatRequest request);
 
     /**
+     * @param request the request parameters of StartAiCallTask  StartAiCallTaskRequest
+     * @return StartAiCallTaskResponse
+     */
+    CompletableFuture<StartAiCallTaskResponse> startAiCallTask(StartAiCallTaskRequest request);
+
+    /**
      * @param request the request parameters of StartAiOutboundTask  StartAiOutboundTaskRequest
      * @return StartAiOutboundTaskResponse
      */
@@ -860,6 +902,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartTaskResponse> startTask(StartTaskRequest request);
 
     /**
+     * @param request the request parameters of StopAiCallTask  StopAiCallTaskRequest
+     * @return StopAiCallTaskResponse
+     */
+    CompletableFuture<StopAiCallTaskResponse> stopAiCallTask(StopAiCallTaskRequest request);
+
+    /**
      * @param request the request parameters of StopAiOutboundTask  StopAiOutboundTaskRequest
      * @return StopAiOutboundTaskResponse
      */
@@ -900,6 +948,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAgentResponse
      */
     CompletableFuture<UpdateAgentResponse> updateAgent(UpdateAgentRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAiCallTask  UpdateAiCallTaskRequest
+     * @return UpdateAiCallTaskResponse
+     */
+    CompletableFuture<UpdateAiCallTaskResponse> updateAiCallTask(UpdateAiCallTaskRequest request);
 
     /**
      * @param request the request parameters of UpdateAiOutboundTask  UpdateAiOutboundTaskRequest
