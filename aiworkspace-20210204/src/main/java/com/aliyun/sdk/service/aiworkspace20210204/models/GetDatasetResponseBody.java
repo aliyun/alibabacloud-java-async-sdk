@@ -32,6 +32,9 @@ public class GetDatasetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
     @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
@@ -104,6 +107,7 @@ public class GetDatasetResponseBody extends TeaModel {
         this.dataType = builder.dataType;
         this.datasetId = builder.datasetId;
         this.description = builder.description;
+        this.edition = builder.edition;
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.importInfo = builder.importInfo;
@@ -173,6 +177,13 @@ public class GetDatasetResponseBody extends TeaModel {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
     }
 
     /**
@@ -335,6 +346,7 @@ public class GetDatasetResponseBody extends TeaModel {
         private String dataType; 
         private String datasetId; 
         private String description; 
+        private String edition; 
         private String gmtCreateTime; 
         private String gmtModifiedTime; 
         private String importInfo; 
@@ -367,6 +379,7 @@ public class GetDatasetResponseBody extends TeaModel {
             this.dataType = model.dataType;
             this.datasetId = model.datasetId;
             this.description = model.description;
+            this.edition = model.edition;
             this.gmtCreateTime = model.gmtCreateTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.importInfo = model.importInfo;
@@ -455,6 +468,14 @@ public class GetDatasetResponseBody extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.edition = edition;
             return this;
         }
 

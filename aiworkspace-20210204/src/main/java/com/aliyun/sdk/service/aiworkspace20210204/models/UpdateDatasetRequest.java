@@ -27,6 +27,10 @@ public class UpdateDatasetRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("MountAccessReadWriteRoleIdList")
     private java.util.List<String> mountAccessReadWriteRoleIdList;
 
@@ -42,6 +46,7 @@ public class UpdateDatasetRequest extends Request {
         super(builder);
         this.datasetId = builder.datasetId;
         this.description = builder.description;
+        this.edition = builder.edition;
         this.mountAccessReadWriteRoleIdList = builder.mountAccessReadWriteRoleIdList;
         this.name = builder.name;
         this.options = builder.options;
@@ -75,6 +80,13 @@ public class UpdateDatasetRequest extends Request {
     }
 
     /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
+    }
+
+    /**
      * @return mountAccessReadWriteRoleIdList
      */
     public java.util.List<String> getMountAccessReadWriteRoleIdList() {
@@ -98,6 +110,7 @@ public class UpdateDatasetRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateDatasetRequest, Builder> {
         private String datasetId; 
         private String description; 
+        private String edition; 
         private java.util.List<String> mountAccessReadWriteRoleIdList; 
         private String name; 
         private String options; 
@@ -110,6 +123,7 @@ public class UpdateDatasetRequest extends Request {
             super(request);
             this.datasetId = request.datasetId;
             this.description = request.description;
+            this.edition = request.edition;
             this.mountAccessReadWriteRoleIdList = request.mountAccessReadWriteRoleIdList;
             this.name = request.name;
             this.options = request.options;
@@ -138,7 +152,16 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The list of role names in the workspace that have read and write permissions on the mounted database. The names start with PAI are basic role names and the names start with role- are custom role names. If the list contains asterisks (*), all roles have read and write permissions.</p>
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putBodyParameter("Edition", edition);
+            this.edition = edition;
+            return this;
+        }
+
+        /**
+         * <p>The list of role names in the workspace that have read and write permissions on the mounted database. The names starting with PAI are basic role names, and the names starting with role- are custom role names. If the list contains asterisks (*), all roles have read and write permissions.</p>
          * <ul>
          * <li>If you set the value to [&quot;PAI.AlgoOperator&quot;, &quot;role-hiuwpd01ncrokkgp21&quot;], the account of the specified role is granted the read and write permissions.</li>
          * <li>If you set the value to [&quot;*&quot;], all accounts are granted the read and write permissions.</li>
@@ -164,7 +187,7 @@ public class UpdateDatasetRequest extends Request {
         }
 
         /**
-         * <p>The extended field, which is a JSON string. When you use the dataset in Deep Learning Containers (DLC), you can configure the mountPath field to specify the default mount path of the dataset.</p>
+         * <p>The extended field, which is a JSON string. When you use the dataset in Deep Learning Containers (DLC), you can set mountPath to specify the default mount path of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>{

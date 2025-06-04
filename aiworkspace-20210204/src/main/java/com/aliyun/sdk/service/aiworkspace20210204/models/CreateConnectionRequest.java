@@ -173,7 +173,14 @@ public class CreateConnectionRequest extends Request {
         } 
 
         /**
-         * Accessibility.
+         * <p>The accessibility of the workspace. Valid values:</p>
+         * <ul>
+         * <li>PRIVATE: The workspace is accessible only to you and the administrator of the workspace. This is the default value.</li>
+         * <li>PUBLIC: The workspace is accessible to all users in the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
@@ -182,6 +189,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
+         * <p>The connection configurations, in key-value pairs. The key varies based on the connection type. For more information, see the supplementary notes below the request parameters.</p>
          * <p>This parameter is required.</p>
          */
         public Builder configs(java.util.Map<String, String> configs) {
@@ -191,6 +199,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
+         * <p>The connection name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,7 +212,21 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * ConnectionType.
+         * <p>The connection type. Valid values:</p>
+         * <ul>
+         * <li>DashScopeConnection: Alibaba Cloud Model Studio connection</li>
+         * <li>OpenLLMConnection: open source model connection</li>
+         * <li>MilvusConnection: Milvus connection</li>
+         * <li>OpenSearchConnection: OpenSearch connection</li>
+         * <li>LindormConnection: Lindorm connection</li>
+         * <li>ElasticsearchConnection: Elasticsearch connection</li>
+         * <li>HologresConnection: Hologres connection</li>
+         * <li>RDSConnection: RDS connection</li>
+         * <li>CustomConnection: custom connection</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DashScopeConnection</p>
          */
         public Builder connectionType(String connectionType) {
             this.putBodyParameter("ConnectionType", connectionType);
@@ -212,7 +235,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The connection description.</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -221,7 +244,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * Models.
+         * <p>The models, which apply to model service connections.</p>
          */
         public Builder models(java.util.List<Models> models) {
             this.putBodyParameter("Models", models);
@@ -230,7 +253,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * ResourceMeta.
+         * <p>The instance resource information of the connection, which applies to database connections.</p>
          */
         public Builder resourceMeta(ResourceMeta resourceMeta) {
             this.putBodyParameter("ResourceMeta", resourceMeta);
@@ -239,7 +262,7 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * Secrets.
+         * <p>The configuration to be encrypted. Examples: the database logon account and password and the key of the model service.</p>
          */
         public Builder secrets(java.util.Map<String, String> secrets) {
             this.putBodyParameter("Secrets", secrets);
@@ -248,7 +271,10 @@ public class CreateConnectionRequest extends Request {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID. You can call <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123**45</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("WorkspaceId", workspaceId);
@@ -342,7 +368,7 @@ public class CreateConnectionRequest extends Request {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name of the model.</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -350,7 +376,10 @@ public class CreateConnectionRequest extends Request {
             }
 
             /**
-             * Model.
+             * <p>The model identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model_001</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -358,7 +387,15 @@ public class CreateConnectionRequest extends Request {
             }
 
             /**
-             * ModelType.
+             * <p>The model type. Valid values:</p>
+             * <ul>
+             * <li>LLM</li>
+             * <li>Embedding</li>
+             * <li>ReRank</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LLM</p>
              */
             public Builder modelType(String modelType) {
                 this.modelType = modelType;
@@ -366,7 +403,14 @@ public class CreateConnectionRequest extends Request {
             }
 
             /**
-             * ToolCall.
+             * <p>Specifies whether a tool can be called by using ToolCall. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder toolCall(Boolean toolCall) {
                 this.toolCall = toolCall;
@@ -433,7 +477,10 @@ public class CreateConnectionRequest extends Request {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ld-uf69****9nqjjes</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -441,7 +488,7 @@ public class CreateConnectionRequest extends Request {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

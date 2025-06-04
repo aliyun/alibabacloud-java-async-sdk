@@ -223,7 +223,14 @@ public class GetConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * Accessibility.
+         * <p>The resource accessibility. Valid values:</p>
+         * <ul>
+         * <li>PUBLIC: All members in the workspace can access the workspace.</li>
+         * <li>PRIVATE: Only the creator can access the workspace.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIVATE</p>
          */
         public Builder accessibility(String accessibility) {
             this.accessibility = accessibility;
@@ -231,7 +238,7 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Configs.
+         * <p>The connection configuration.</p>
          */
         public Builder configs(java.util.Map<String, String> configs) {
             this.configs = configs;
@@ -239,7 +246,10 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * ConnectionId.
+         * <p>The connection ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conn-pai9m***mi47</p>
          */
         public Builder connectionId(String connectionId) {
             this.connectionId = connectionId;
@@ -247,7 +257,7 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * ConnectionName.
+         * <p>The connection name.</p>
          */
         public Builder connectionName(String connectionName) {
             this.connectionName = connectionName;
@@ -255,7 +265,21 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * ConnectionType.
+         * <p>The type of the connection. Valid values:</p>
+         * <ul>
+         * <li>DashScopeConnection: Alibaba Cloud Model Studio connection.</li>
+         * <li>OpenLLMConnection: Open source model connection.</li>
+         * <li>MilvusConnection: Milvus connection.</li>
+         * <li>OpenSearchConnection: OpenSearch connection.</li>
+         * <li>LindormConnection: Lindorm connection.</li>
+         * <li>ElasticsearchConnection: Elasticsearch connection.</li>
+         * <li>HologresConnection: Hologres connection.</li>
+         * <li>RDSConnection: RDS connection.</li>
+         * <li>CustomConnection: Custom connection.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OpenSearchConnection</p>
          */
         public Builder connectionType(String connectionType) {
             this.connectionType = connectionType;
@@ -263,7 +287,10 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Creator.
+         * <p>The creator of the connection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28632***898231</p>
          */
         public Builder creator(String creator) {
             this.creator = creator;
@@ -271,7 +298,7 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * <p>The connection description.</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -279,7 +306,10 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * GmtCreateTime.
+         * <p>The time when the connection is created, in UTC. The time follows the ISO 8601 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-07T07:54:56Z</p>
          */
         public Builder gmtCreateTime(String gmtCreateTime) {
             this.gmtCreateTime = gmtCreateTime;
@@ -287,7 +317,10 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModifiedTime.
+         * <p>The time when the connection is modified, in UTC. The time follows the ISO 8601 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-03-07T07:54:56Z</p>
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
@@ -295,7 +328,7 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Models.
+         * <p>The models, which apply to model service connections.</p>
          */
         public Builder models(java.util.List<Models> models) {
             this.models = models;
@@ -303,7 +336,10 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -311,7 +347,7 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceMeta.
+         * <p>The instance resource information of the connection, which applies to database connections.</p>
          */
         public Builder resourceMeta(ResourceMeta resourceMeta) {
             this.resourceMeta = resourceMeta;
@@ -319,7 +355,7 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * Secrets.
+         * <p>The encrypted configuration, in key-value pairs. Examples: the database logon password and the key of the model connection.</p>
          */
         public Builder secrets(java.util.Map<String, String> secrets) {
             this.secrets = secrets;
@@ -327,7 +363,10 @@ public class GetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * WorkspaceId.
+         * <p>The workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11**43</p>
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
@@ -419,7 +458,7 @@ public class GetConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * DisplayName.
+             * <p>The display name of the model.</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -427,7 +466,10 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The model identifier.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>model_001</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -435,7 +477,15 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * ModelType.
+             * <p>The model type. Valid values:</p>
+             * <ul>
+             * <li>LLM</li>
+             * <li>Embedding</li>
+             * <li>ReRank</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>LLM</p>
              */
             public Builder modelType(String modelType) {
                 this.modelType = modelType;
@@ -443,7 +493,14 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * ToolCall.
+             * <p>Indicates whether a tool can be called by using ToolCall. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder toolCall(Boolean toolCall) {
                 this.toolCall = toolCall;
@@ -510,7 +567,10 @@ public class GetConnectionResponseBody extends TeaModel {
             } 
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ld-2vc1***v1zaqgzol</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -518,7 +578,7 @@ public class GetConnectionResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * <p>The instance name.</p>
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;

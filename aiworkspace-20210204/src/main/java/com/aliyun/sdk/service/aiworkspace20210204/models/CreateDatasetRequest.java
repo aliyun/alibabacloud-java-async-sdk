@@ -45,6 +45,10 @@ public class CreateDatasetRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImportInfo")
     private String importInfo;
 
@@ -123,6 +127,7 @@ public class CreateDatasetRequest extends Request {
         this.dataSourceType = builder.dataSourceType;
         this.dataType = builder.dataType;
         this.description = builder.description;
+        this.edition = builder.edition;
         this.importInfo = builder.importInfo;
         this.labels = builder.labels;
         this.mountAccessReadWriteRoleIdList = builder.mountAccessReadWriteRoleIdList;
@@ -195,6 +200,13 @@ public class CreateDatasetRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
     }
 
     /**
@@ -323,6 +335,7 @@ public class CreateDatasetRequest extends Request {
         private String dataSourceType; 
         private String dataType; 
         private String description; 
+        private String edition; 
         private String importInfo; 
         private java.util.List<Label> labels; 
         private java.util.List<String> mountAccessReadWriteRoleIdList; 
@@ -353,6 +366,7 @@ public class CreateDatasetRequest extends Request {
             this.dataSourceType = request.dataSourceType;
             this.dataType = request.dataType;
             this.description = request.description;
+            this.edition = request.edition;
             this.importInfo = request.importInfo;
             this.labels = request.labels;
             this.mountAccessReadWriteRoleIdList = request.mountAccessReadWriteRoleIdList;
@@ -454,6 +468,15 @@ public class CreateDatasetRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putBodyParameter("Edition", edition);
+            this.edition = edition;
             return this;
         }
 

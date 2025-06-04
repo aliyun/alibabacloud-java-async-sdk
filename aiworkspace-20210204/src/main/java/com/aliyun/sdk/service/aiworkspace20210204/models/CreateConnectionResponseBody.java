@@ -67,7 +67,10 @@ public class CreateConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * ConnectionId.
+         * <p>The connection ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>conn-pai9m***mi47</p>
          */
         public Builder connectionId(String connectionId) {
             this.connectionId = connectionId;
@@ -75,7 +78,10 @@ public class CreateConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5A14FA81-DD4E-******-6343FE44B941</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

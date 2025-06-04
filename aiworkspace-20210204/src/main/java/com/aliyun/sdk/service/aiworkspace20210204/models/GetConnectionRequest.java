@@ -74,6 +74,7 @@ public class GetConnectionRequest extends Request {
         } 
 
         /**
+         * <p>The connection ID. You can call <a href="url">ListConnections</a> to obtain the connection ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +87,14 @@ public class GetConnectionRequest extends Request {
         }
 
         /**
-         * EncryptOption.
+         * <p>The encryption settings. Valid values:</p>
+         * <ul>
+         * <li>PlainText</li>
+         * <li>Secret</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PlainText</p>
          */
         public Builder encryptOption(String encryptOption) {
             this.putQueryParameter("EncryptOption", encryptOption);
