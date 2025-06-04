@@ -84,6 +84,10 @@ public class UpdateStackRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaintResources")
+    private java.util.List<String> taintResources;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
@@ -126,6 +130,7 @@ public class UpdateStackRequest extends Request {
         this.stackPolicyDuringUpdateURL = builder.stackPolicyDuringUpdateURL;
         this.stackPolicyURL = builder.stackPolicyURL;
         this.tags = builder.tags;
+        this.taintResources = builder.taintResources;
         this.templateBody = builder.templateBody;
         this.templateId = builder.templateId;
         this.templateURL = builder.templateURL;
@@ -260,6 +265,13 @@ public class UpdateStackRequest extends Request {
     }
 
     /**
+     * @return taintResources
+     */
+    public java.util.List<String> getTaintResources() {
+        return this.taintResources;
+    }
+
+    /**
      * @return templateBody
      */
     public String getTemplateBody() {
@@ -318,6 +330,7 @@ public class UpdateStackRequest extends Request {
         private String stackPolicyDuringUpdateURL; 
         private String stackPolicyURL; 
         private java.util.List<Tags> tags; 
+        private java.util.List<String> taintResources; 
         private String templateBody; 
         private String templateId; 
         private String templateURL; 
@@ -347,6 +360,7 @@ public class UpdateStackRequest extends Request {
             this.stackPolicyDuringUpdateURL = request.stackPolicyDuringUpdateURL;
             this.stackPolicyURL = request.stackPolicyURL;
             this.tags = request.tags;
+            this.taintResources = request.taintResources;
             this.templateBody = request.templateBody;
             this.templateId = request.templateId;
             this.templateURL = request.templateURL;
@@ -600,6 +614,15 @@ public class UpdateStackRequest extends Request {
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * TaintResources.
+         */
+        public Builder taintResources(java.util.List<String> taintResources) {
+            this.putQueryParameter("TaintResources", taintResources);
+            this.taintResources = taintResources;
             return this;
         }
 

@@ -58,6 +58,10 @@ public class PreviewStackRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StackPolicyURL")
     private String stackPolicyURL;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaintResources")
+    private java.util.List<String> taintResources;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TemplateBody")
     private String templateBody;
@@ -98,6 +102,7 @@ public class PreviewStackRequest extends Request {
         this.stackName = builder.stackName;
         this.stackPolicyBody = builder.stackPolicyBody;
         this.stackPolicyURL = builder.stackPolicyURL;
+        this.taintResources = builder.taintResources;
         this.templateBody = builder.templateBody;
         this.templateId = builder.templateId;
         this.templateScratchId = builder.templateScratchId;
@@ -191,6 +196,13 @@ public class PreviewStackRequest extends Request {
     }
 
     /**
+     * @return taintResources
+     */
+    public java.util.List<String> getTaintResources() {
+        return this.taintResources;
+    }
+
+    /**
      * @return templateBody
      */
     public String getTemplateBody() {
@@ -250,6 +262,7 @@ public class PreviewStackRequest extends Request {
         private String stackName; 
         private String stackPolicyBody; 
         private String stackPolicyURL; 
+        private java.util.List<String> taintResources; 
         private String templateBody; 
         private String templateId; 
         private String templateScratchId; 
@@ -274,6 +287,7 @@ public class PreviewStackRequest extends Request {
             this.stackName = request.stackName;
             this.stackPolicyBody = request.stackPolicyBody;
             this.stackPolicyURL = request.stackPolicyURL;
+            this.taintResources = request.taintResources;
             this.templateBody = request.templateBody;
             this.templateId = request.templateId;
             this.templateScratchId = request.templateScratchId;
@@ -427,6 +441,15 @@ public class PreviewStackRequest extends Request {
         public Builder stackPolicyURL(String stackPolicyURL) {
             this.putQueryParameter("StackPolicyURL", stackPolicyURL);
             this.stackPolicyURL = stackPolicyURL;
+            return this;
+        }
+
+        /**
+         * TaintResources.
+         */
+        public Builder taintResources(java.util.List<String> taintResources) {
+            this.putQueryParameter("TaintResources", taintResources);
+            this.taintResources = taintResources;
             return this;
         }
 
