@@ -35,6 +35,10 @@ public class ListEcsSpecsRequest extends Request {
     private Long pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
@@ -44,6 +48,7 @@ public class ListEcsSpecsRequest extends Request {
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceType = builder.resourceType;
         this.sortBy = builder.sortBy;
     }
 
@@ -89,6 +94,13 @@ public class ListEcsSpecsRequest extends Request {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return sortBy
      */
     public String getSortBy() {
@@ -100,6 +112,7 @@ public class ListEcsSpecsRequest extends Request {
         private String order; 
         private Long pageNumber; 
         private Long pageSize; 
+        private String resourceType; 
         private String sortBy; 
 
         private Builder() {
@@ -112,6 +125,7 @@ public class ListEcsSpecsRequest extends Request {
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceType = request.resourceType;
             this.sortBy = request.sortBy;
         } 
 
@@ -169,6 +183,15 @@ public class ListEcsSpecsRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 

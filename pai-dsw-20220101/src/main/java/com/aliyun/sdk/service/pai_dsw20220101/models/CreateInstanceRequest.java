@@ -74,6 +74,10 @@ public class CreateInstanceRequest extends Request {
     private java.util.List<Labels> labels;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OversoldType")
+    private String oversoldType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Priority")
     private Long priority;
 
@@ -121,6 +125,7 @@ public class CreateInstanceRequest extends Request {
         this.imageUrl = builder.imageUrl;
         this.instanceName = builder.instanceName;
         this.labels = builder.labels;
+        this.oversoldType = builder.oversoldType;
         this.priority = builder.priority;
         this.requestedResource = builder.requestedResource;
         this.resourceId = builder.resourceId;
@@ -243,6 +248,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return oversoldType
+     */
+    public String getOversoldType() {
+        return this.oversoldType;
+    }
+
+    /**
      * @return priority
      */
     public Long getPriority() {
@@ -313,6 +325,7 @@ public class CreateInstanceRequest extends Request {
         private String imageUrl; 
         private String instanceName; 
         private java.util.List<Labels> labels; 
+        private String oversoldType; 
         private Long priority; 
         private RequestedResource requestedResource; 
         private String resourceId; 
@@ -342,6 +355,7 @@ public class CreateInstanceRequest extends Request {
             this.imageUrl = request.imageUrl;
             this.instanceName = request.instanceName;
             this.labels = request.labels;
+            this.oversoldType = request.oversoldType;
             this.priority = request.priority;
             this.requestedResource = request.requestedResource;
             this.resourceId = request.resourceId;
@@ -514,6 +528,15 @@ public class CreateInstanceRequest extends Request {
         public Builder labels(java.util.List<Labels> labels) {
             this.putBodyParameter("Labels", labels);
             this.labels = labels;
+            return this;
+        }
+
+        /**
+         * OversoldType.
+         */
+        public Builder oversoldType(String oversoldType) {
+            this.putBodyParameter("OversoldType", oversoldType);
+            this.oversoldType = oversoldType;
             return this;
         }
 

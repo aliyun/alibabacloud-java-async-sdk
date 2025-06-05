@@ -91,6 +91,10 @@ public class UpdateInstanceRequest extends Request {
     private String instanceName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OversoldType")
+    private String oversoldType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Priority")
     private Long priority;
 
@@ -130,6 +134,7 @@ public class UpdateInstanceRequest extends Request {
         this.imageId = builder.imageId;
         this.imageUrl = builder.imageUrl;
         this.instanceName = builder.instanceName;
+        this.oversoldType = builder.oversoldType;
         this.priority = builder.priority;
         this.requestedResource = builder.requestedResource;
         this.userId = builder.userId;
@@ -277,6 +282,13 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return oversoldType
+     */
+    public String getOversoldType() {
+        return this.oversoldType;
+    }
+
+    /**
      * @return priority
      */
     public Long getPriority() {
@@ -330,6 +342,7 @@ public class UpdateInstanceRequest extends Request {
         private String imageId; 
         private String imageUrl; 
         private String instanceName; 
+        private String oversoldType; 
         private Long priority; 
         private RequestedResource requestedResource; 
         private String userId; 
@@ -360,6 +373,7 @@ public class UpdateInstanceRequest extends Request {
             this.imageId = request.imageId;
             this.imageUrl = request.imageUrl;
             this.instanceName = request.instanceName;
+            this.oversoldType = request.oversoldType;
             this.priority = request.priority;
             this.requestedResource = request.requestedResource;
             this.userId = request.userId;
@@ -582,6 +596,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder instanceName(String instanceName) {
             this.putBodyParameter("InstanceName", instanceName);
             this.instanceName = instanceName;
+            return this;
+        }
+
+        /**
+         * OversoldType.
+         */
+        public Builder oversoldType(String oversoldType) {
+            this.putBodyParameter("OversoldType", oversoldType);
+            this.oversoldType = oversoldType;
             return this;
         }
 
