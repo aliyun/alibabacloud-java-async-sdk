@@ -87,9 +87,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSchemeTaskConfigResponse> createSchemeTaskConfig(CreateSchemeTaskConfigRequest request);
 
     /**
-     * @param request the request parameters of CreateSkillGroupConfig  CreateSkillGroupConfigRequest
+     * @deprecated OpenAPI CreateSkillGroupConfig is deprecated  * @param request  the request parameters of CreateSkillGroupConfig  CreateSkillGroupConfigRequest
      * @return CreateSkillGroupConfigResponse
      */
+    @Deprecated
     CompletableFuture<CreateSkillGroupConfigResponse> createSkillGroupConfig(CreateSkillGroupConfigRequest request);
 
     /**
@@ -179,9 +180,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSchemeTaskConfigResponse> deleteSchemeTaskConfig(DeleteSchemeTaskConfigRequest request);
 
     /**
-     * @param request the request parameters of DeleteSkillGroupConfig  DeleteSkillGroupConfigRequest
+     * @deprecated OpenAPI DeleteSkillGroupConfig is deprecated  * @param request  the request parameters of DeleteSkillGroupConfig  DeleteSkillGroupConfigRequest
      * @return DeleteSkillGroupConfigResponse
      */
+    @Deprecated
     CompletableFuture<DeleteSkillGroupConfigResponse> deleteSkillGroupConfig(DeleteSkillGroupConfigRequest request);
 
     /**
@@ -290,6 +292,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRulesCountListResponse> getRulesCountList(GetRulesCountListRequest request);
 
     /**
+     * @param request the request parameters of GetSchemeTaskConfig  GetSchemeTaskConfigRequest
+     * @return GetSchemeTaskConfigResponse
+     */
+    CompletableFuture<GetSchemeTaskConfigResponse> getSchemeTaskConfig(GetSchemeTaskConfigRequest request);
+
+    /**
      * @deprecated OpenAPI GetScoreInfo is deprecated  * @param request  the request parameters of GetScoreInfo  GetScoreInfoRequest
      * @return GetScoreInfoResponse
      */
@@ -297,9 +305,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetScoreInfoResponse> getScoreInfo(GetScoreInfoRequest request);
 
     /**
-     * @param request the request parameters of GetSkillGroupConfig  GetSkillGroupConfigRequest
+     * @deprecated OpenAPI GetSkillGroupConfig is deprecated  * @param request  the request parameters of GetSkillGroupConfig  GetSkillGroupConfigRequest
      * @return GetSkillGroupConfigResponse
      */
+    @Deprecated
     CompletableFuture<GetSkillGroupConfigResponse> getSkillGroupConfig(GetSkillGroupConfigRequest request);
 
     /**
@@ -380,9 +389,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListSessionGroupResponse> listSessionGroup(ListSessionGroupRequest request);
 
     /**
-     * @param request the request parameters of ListSkillGroupConfig  ListSkillGroupConfigRequest
+     * @deprecated OpenAPI ListSkillGroupConfig is deprecated  * @param request  the request parameters of ListSkillGroupConfig  ListSkillGroupConfigRequest
      * @return ListSkillGroupConfigResponse
      */
+    @Deprecated
     CompletableFuture<ListSkillGroupConfigResponse> listSkillGroupConfig(ListSkillGroupConfigRequest request);
 
     /**
@@ -522,9 +532,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateSchemeTaskConfigResponse> updateSchemeTaskConfig(UpdateSchemeTaskConfigRequest request);
 
     /**
-     * @param request the request parameters of UpdateSkillGroupConfig  UpdateSkillGroupConfigRequest
+     * @deprecated OpenAPI UpdateSkillGroupConfig is deprecated  * @param request  the request parameters of UpdateSkillGroupConfig  UpdateSkillGroupConfigRequest
      * @return UpdateSkillGroupConfigResponse
      */
+    @Deprecated
     CompletableFuture<UpdateSkillGroupConfigResponse> updateSkillGroupConfig(UpdateSkillGroupConfigRequest request);
 
     /**

@@ -239,9 +239,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreateSkillGroupConfig  CreateSkillGroupConfigRequest
+     * @deprecated OpenAPI CreateSkillGroupConfig is deprecated  * @param request  the request parameters of CreateSkillGroupConfig  CreateSkillGroupConfigRequest
      * @return CreateSkillGroupConfigResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreateSkillGroupConfigResponse> createSkillGroupConfig(CreateSkillGroupConfigRequest request) {
         try {
@@ -511,9 +512,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeleteSkillGroupConfig  DeleteSkillGroupConfigRequest
+     * @deprecated OpenAPI DeleteSkillGroupConfig is deprecated  * @param request  the request parameters of DeleteSkillGroupConfig  DeleteSkillGroupConfigRequest
      * @return DeleteSkillGroupConfigResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteSkillGroupConfigResponse> deleteSkillGroupConfig(DeleteSkillGroupConfigRequest request) {
         try {
@@ -838,6 +840,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetSchemeTaskConfig  GetSchemeTaskConfigRequest
+     * @return GetSchemeTaskConfigResponse
+     */
+    @Override
+    public CompletableFuture<GetSchemeTaskConfigResponse> getSchemeTaskConfig(GetSchemeTaskConfigRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetSchemeTaskConfig").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetSchemeTaskConfigResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetSchemeTaskConfigResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @deprecated OpenAPI GetScoreInfo is deprecated  * @param request  the request parameters of GetScoreInfo  GetScoreInfoRequest
      * @return GetScoreInfoResponse
      */
@@ -857,9 +877,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of GetSkillGroupConfig  GetSkillGroupConfigRequest
+     * @deprecated OpenAPI GetSkillGroupConfig is deprecated  * @param request  the request parameters of GetSkillGroupConfig  GetSkillGroupConfigRequest
      * @return GetSkillGroupConfigResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetSkillGroupConfigResponse> getSkillGroupConfig(GetSkillGroupConfigRequest request) {
         try {
@@ -1096,9 +1117,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ListSkillGroupConfig  ListSkillGroupConfigRequest
+     * @deprecated OpenAPI ListSkillGroupConfig is deprecated  * @param request  the request parameters of ListSkillGroupConfig  ListSkillGroupConfigRequest
      * @return ListSkillGroupConfigResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ListSkillGroupConfigResponse> listSkillGroupConfig(ListSkillGroupConfigRequest request) {
         try {
@@ -1514,9 +1536,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of UpdateSkillGroupConfig  UpdateSkillGroupConfigRequest
+     * @deprecated OpenAPI UpdateSkillGroupConfig is deprecated  * @param request  the request parameters of UpdateSkillGroupConfig  UpdateSkillGroupConfigRequest
      * @return UpdateSkillGroupConfigResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdateSkillGroupConfigResponse> updateSkillGroupConfig(UpdateSkillGroupConfigRequest request) {
         try {
