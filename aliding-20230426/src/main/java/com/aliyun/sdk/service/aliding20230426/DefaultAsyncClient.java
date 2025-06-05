@@ -275,6 +275,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AuthorizeSkill  AuthorizeSkillRequest
+     * @return AuthorizeSkillResponse
+     */
+    @Override
+    public CompletableFuture<AuthorizeSkillResponse> authorizeSkill(AuthorizeSkillRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("AuthorizeSkill").setMethod(HttpMethod.POST).setPathRegex("/ai/v1/skill/authorizeSkill").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AuthorizeSkillResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AuthorizeSkillResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BatchGetFormDataByIdList  BatchGetFormDataByIdListRequest
      * @return BatchGetFormDataByIdListResponse
      */
@@ -2724,6 +2742,16 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    @Override
+    public ResponseIterable<InvokeSkillResponseBody> invokeSkillWithResponseIterable(InvokeSkillRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("InvokeSkill").setMethod(HttpMethod.POST).setPathRegex("/ai/v1/skill/invoke").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        InvokeSkillResponseBodyIterator iterator = InvokeSkillResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
     /**
      * @param request the request parameters of ListApplication  ListApplicationRequest
      * @return ListApplicationResponse
@@ -2953,6 +2981,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListReportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListSkill  ListSkillRequest
+     * @return ListSkillResponse
+     */
+    @Override
+    public CompletableFuture<ListSkillResponse> listSkill(ListSkillRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListSkill").setMethod(HttpMethod.POST).setPathRegex("/ai/v1/skill/listSkill").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListSkillResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListSkillResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

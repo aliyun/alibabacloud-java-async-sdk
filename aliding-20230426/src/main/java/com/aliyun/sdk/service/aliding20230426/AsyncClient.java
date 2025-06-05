@@ -98,6 +98,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssignTicketResponse> assignTicket(AssignTicketRequest request);
 
     /**
+     * @param request the request parameters of AuthorizeSkill  AuthorizeSkillRequest
+     * @return AuthorizeSkillResponse
+     */
+    CompletableFuture<AuthorizeSkillResponse> authorizeSkill(AuthorizeSkillRequest request);
+
+    /**
      * @param request the request parameters of BatchGetFormDataByIdList  BatchGetFormDataByIdListRequest
      * @return BatchGetFormDataByIdListResponse
      */
@@ -911,6 +917,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<InvokeSkillResponse> invokeSkill(InvokeSkillRequest request);
 
+    ResponseIterable<InvokeSkillResponseBody> invokeSkillWithResponseIterable(InvokeSkillRequest request);
+
     /**
      * @param request the request parameters of ListApplication  ListApplicationRequest
      * @return ListApplicationResponse
@@ -988,6 +996,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListReportResponse
      */
     CompletableFuture<ListReportResponse> listReport(ListReportRequest request);
+
+    /**
+     * @param request the request parameters of ListSkill  ListSkillRequest
+     * @return ListSkillResponse
+     */
+    CompletableFuture<ListSkillResponse> listSkill(ListSkillRequest request);
 
     /**
      * @param request the request parameters of ListTableDataByFormInstanceIdTableId  ListTableDataByFormInstanceIdTableIdRequest

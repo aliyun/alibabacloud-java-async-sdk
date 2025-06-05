@@ -12,41 +12,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InvokeSkillRequest} extends {@link RequestModel}
+ * {@link AuthorizeSkillRequest} extends {@link RequestModel}
  *
- * <p>InvokeSkillRequest</p>
+ * <p>AuthorizeSkillRequest</p>
  */
-public class InvokeSkillRequest extends Request {
+public class AuthorizeSkillRequest extends Request {
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Params")
-    private java.util.Map<String, ?> params;
+    @com.aliyun.core.annotation.NameInMap("PermissionCodes")
+    private java.util.List<String> permissionCodes;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("SkillId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String skillId;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Stream")
-    private Boolean stream;
-
-    private InvokeSkillRequest(Builder builder) {
+    private AuthorizeSkillRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
-        this.params = builder.params;
-        this.skillId = builder.skillId;
-        this.stream = builder.stream;
+        this.permissionCodes = builder.permissionCodes;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static InvokeSkillRequest create() {
+    public static AuthorizeSkillRequest create() {
         return builder().build();
     }
 
@@ -63,42 +52,24 @@ public class InvokeSkillRequest extends Request {
     }
 
     /**
-     * @return params
+     * @return permissionCodes
      */
-    public java.util.Map<String, ?> getParams() {
-        return this.params;
+    public java.util.List<String> getPermissionCodes() {
+        return this.permissionCodes;
     }
 
-    /**
-     * @return skillId
-     */
-    public String getSkillId() {
-        return this.skillId;
-    }
-
-    /**
-     * @return stream
-     */
-    public Boolean getStream() {
-        return this.stream;
-    }
-
-    public static final class Builder extends Request.Builder<InvokeSkillRequest, Builder> {
+    public static final class Builder extends Request.Builder<AuthorizeSkillRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.Map<String, ?> params; 
-        private String skillId; 
-        private Boolean stream; 
+        private java.util.List<String> permissionCodes; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(InvokeSkillRequest request) {
+        private Builder(AuthorizeSkillRequest request) {
             super(request);
             this.accountContext = request.accountContext;
-            this.params = request.params;
-            this.skillId = request.skillId;
-            this.stream = request.stream;
+            this.permissionCodes = request.permissionCodes;
         } 
 
         /**
@@ -112,48 +83,27 @@ public class InvokeSkillRequest extends Request {
         }
 
         /**
-         * Params.
+         * PermissionCodes.
          */
-        public Builder params(java.util.Map<String, ?> params) {
-            String paramsShrink = shrink(params, "Params", "json");
-            this.putBodyParameter("Params", paramsShrink);
-            this.params = params;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a1d033dd-xxxx-49cf-b49b-2068081bb551</p>
-         */
-        public Builder skillId(String skillId) {
-            this.putBodyParameter("SkillId", skillId);
-            this.skillId = skillId;
-            return this;
-        }
-
-        /**
-         * Stream.
-         */
-        public Builder stream(Boolean stream) {
-            this.putBodyParameter("Stream", stream);
-            this.stream = stream;
+        public Builder permissionCodes(java.util.List<String> permissionCodes) {
+            String permissionCodesShrink = shrink(permissionCodes, "PermissionCodes", "json");
+            this.putBodyParameter("PermissionCodes", permissionCodesShrink);
+            this.permissionCodes = permissionCodes;
             return this;
         }
 
         @Override
-        public InvokeSkillRequest build() {
-            return new InvokeSkillRequest(this);
+        public AuthorizeSkillRequest build() {
+            return new AuthorizeSkillRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link InvokeSkillRequest} extends {@link TeaModel}
+     * {@link AuthorizeSkillRequest} extends {@link TeaModel}
      *
-     * <p>InvokeSkillRequest</p>
+     * <p>AuthorizeSkillRequest</p>
      */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")

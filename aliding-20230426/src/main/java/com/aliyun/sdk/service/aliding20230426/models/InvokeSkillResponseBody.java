@@ -17,15 +17,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InvokeSkillResponseBody</p>
  */
 public class InvokeSkillResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Object data;
+
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
+    private String errorCode;
+
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
+    private String errorMsg;
+
+    @com.aliyun.core.annotation.NameInMap("Finished")
+    private Boolean finished;
+
+    @com.aliyun.core.annotation.NameInMap("Metadata")
+    private Object metadata;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("data")
-    private java.util.Map<String, ?> data;
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
 
     private InvokeSkillResponseBody(Builder builder) {
-        this.requestId = builder.requestId;
         this.data = builder.data;
+        this.errorCode = builder.errorCode;
+        this.errorMsg = builder.errorMsg;
+        this.finished = builder.finished;
+        this.metadata = builder.metadata;
+        this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -41,6 +61,41 @@ public class InvokeSkillResponseBody extends TeaModel {
     }
 
     /**
+     * @return data
+     */
+    public Object getData() {
+        return this.data;
+    }
+
+    /**
+     * @return errorCode
+     */
+    public String getErrorCode() {
+        return this.errorCode;
+    }
+
+    /**
+     * @return errorMsg
+     */
+    public String getErrorMsg() {
+        return this.errorMsg;
+    }
+
+    /**
+     * @return finished
+     */
+    public Boolean getFinished() {
+        return this.finished;
+    }
+
+    /**
+     * @return metadata
+     */
+    public Object getMetadata() {
+        return this.metadata;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -48,23 +103,73 @@ public class InvokeSkillResponseBody extends TeaModel {
     }
 
     /**
-     * @return data
+     * @return success
      */
-    public java.util.Map<String, ?> getData() {
-        return this.data;
+    public Boolean getSuccess() {
+        return this.success;
     }
 
     public static final class Builder {
+        private Object data; 
+        private String errorCode; 
+        private String errorMsg; 
+        private Boolean finished; 
+        private Object metadata; 
         private String requestId; 
-        private java.util.Map<String, ?> data; 
+        private Boolean success; 
 
         private Builder() {
         } 
 
         private Builder(InvokeSkillResponseBody model) {
-            this.requestId = model.requestId;
             this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.finished = model.finished;
+            this.metadata = model.metadata;
+            this.requestId = model.requestId;
+            this.success = model.success;
         } 
+
+        /**
+         * Data.
+         */
+        public Builder data(Object data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * ErrorCode.
+         */
+        public Builder errorCode(String errorCode) {
+            this.errorCode = errorCode;
+            return this;
+        }
+
+        /**
+         * ErrorMsg.
+         */
+        public Builder errorMsg(String errorMsg) {
+            this.errorMsg = errorMsg;
+            return this;
+        }
+
+        /**
+         * Finished.
+         */
+        public Builder finished(Boolean finished) {
+            this.finished = finished;
+            return this;
+        }
+
+        /**
+         * Metadata.
+         */
+        public Builder metadata(Object metadata) {
+            this.metadata = metadata;
+            return this;
+        }
 
         /**
          * <p>RequestId</p>
@@ -78,10 +183,10 @@ public class InvokeSkillResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * Success.
          */
-        public Builder data(java.util.Map<String, ?> data) {
-            this.data = data;
+        public Builder success(Boolean success) {
+            this.success = success;
             return this;
         }
 

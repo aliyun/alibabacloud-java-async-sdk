@@ -12,41 +12,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link InvokeSkillRequest} extends {@link RequestModel}
+ * {@link ListSkillRequest} extends {@link RequestModel}
  *
- * <p>InvokeSkillRequest</p>
+ * <p>ListSkillRequest</p>
  */
-public class InvokeSkillRequest extends Request {
+public class ListSkillRequest extends Request {
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("AccountContext")
     private AccountContext accountContext;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Params")
-    private java.util.Map<String, ?> params;
+    @com.aliyun.core.annotation.NameInMap("groupId")
+    private String groupId;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("SkillId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String skillId;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Stream")
-    private Boolean stream;
-
-    private InvokeSkillRequest(Builder builder) {
+    private ListSkillRequest(Builder builder) {
         super(builder);
         this.accountContext = builder.accountContext;
-        this.params = builder.params;
-        this.skillId = builder.skillId;
-        this.stream = builder.stream;
+        this.groupId = builder.groupId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static InvokeSkillRequest create() {
+    public static ListSkillRequest create() {
         return builder().build();
     }
 
@@ -63,42 +52,24 @@ public class InvokeSkillRequest extends Request {
     }
 
     /**
-     * @return params
+     * @return groupId
      */
-    public java.util.Map<String, ?> getParams() {
-        return this.params;
+    public String getGroupId() {
+        return this.groupId;
     }
 
-    /**
-     * @return skillId
-     */
-    public String getSkillId() {
-        return this.skillId;
-    }
-
-    /**
-     * @return stream
-     */
-    public Boolean getStream() {
-        return this.stream;
-    }
-
-    public static final class Builder extends Request.Builder<InvokeSkillRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListSkillRequest, Builder> {
         private AccountContext accountContext; 
-        private java.util.Map<String, ?> params; 
-        private String skillId; 
-        private Boolean stream; 
+        private String groupId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(InvokeSkillRequest request) {
+        private Builder(ListSkillRequest request) {
             super(request);
             this.accountContext = request.accountContext;
-            this.params = request.params;
-            this.skillId = request.skillId;
-            this.stream = request.stream;
+            this.groupId = request.groupId;
         } 
 
         /**
@@ -112,48 +83,26 @@ public class InvokeSkillRequest extends Request {
         }
 
         /**
-         * Params.
+         * groupId.
          */
-        public Builder params(java.util.Map<String, ?> params) {
-            String paramsShrink = shrink(params, "Params", "json");
-            this.putBodyParameter("Params", paramsShrink);
-            this.params = params;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a1d033dd-xxxx-49cf-b49b-2068081bb551</p>
-         */
-        public Builder skillId(String skillId) {
-            this.putBodyParameter("SkillId", skillId);
-            this.skillId = skillId;
-            return this;
-        }
-
-        /**
-         * Stream.
-         */
-        public Builder stream(Boolean stream) {
-            this.putBodyParameter("Stream", stream);
-            this.stream = stream;
+        public Builder groupId(String groupId) {
+            this.putBodyParameter("groupId", groupId);
+            this.groupId = groupId;
             return this;
         }
 
         @Override
-        public InvokeSkillRequest build() {
-            return new InvokeSkillRequest(this);
+        public ListSkillRequest build() {
+            return new ListSkillRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link InvokeSkillRequest} extends {@link TeaModel}
+     * {@link ListSkillRequest} extends {@link TeaModel}
      *
-     * <p>InvokeSkillRequest</p>
+     * <p>ListSkillRequest</p>
      */
     public static class AccountContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("accountId")
