@@ -26,6 +26,10 @@ public class ListNodesRequest extends Request {
     private Long containerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
@@ -56,6 +60,7 @@ public class ListNodesRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.containerId = builder.containerId;
+        this.name = builder.name;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
@@ -89,6 +94,13 @@ public class ListNodesRequest extends Request {
      */
     public Long getContainerId() {
         return this.containerId;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -136,6 +148,7 @@ public class ListNodesRequest extends Request {
     public static final class Builder extends Request.Builder<ListNodesRequest, Builder> {
         private String regionId; 
         private Long containerId; 
+        private String name; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private Long projectId; 
@@ -151,6 +164,7 @@ public class ListNodesRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.containerId = request.containerId;
+            this.name = request.name;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
@@ -177,6 +191,15 @@ public class ListNodesRequest extends Request {
         public Builder containerId(Long containerId) {
             this.putQueryParameter("ContainerId", containerId);
             this.containerId = containerId;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
             return this;
         }
 

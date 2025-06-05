@@ -22,6 +22,10 @@ public class ListWorkflowDefinitionsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    private String name;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
@@ -47,6 +51,7 @@ public class ListWorkflowDefinitionsRequest extends Request {
     private ListWorkflowDefinitionsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.name = builder.name;
         this.owner = builder.owner;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -72,6 +77,13 @@ public class ListWorkflowDefinitionsRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return name
+     */
+    public String getName() {
+        return this.name;
     }
 
     /**
@@ -111,6 +123,7 @@ public class ListWorkflowDefinitionsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListWorkflowDefinitionsRequest, Builder> {
         private String regionId; 
+        private String name; 
         private String owner; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -124,6 +137,7 @@ public class ListWorkflowDefinitionsRequest extends Request {
         private Builder(ListWorkflowDefinitionsRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.name = request.name;
             this.owner = request.owner;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -137,6 +151,15 @@ public class ListWorkflowDefinitionsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Name.
+         */
+        public Builder name(String name) {
+            this.putQueryParameter("Name", name);
+            this.name = name;
             return this;
         }
 
