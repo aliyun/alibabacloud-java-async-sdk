@@ -195,6 +195,9 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
+        @com.aliyun.core.annotation.NameInMap("TotalSqlSize")
+        private Long totalSqlSize;
+
         private Data(Builder builder) {
             this.coldSqlSize = builder.coldSqlSize;
             this.freeColdSqlSize = builder.freeColdSqlSize;
@@ -202,6 +205,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             this.hotSqlSize = builder.hotSqlSize;
             this.importSqlSize = builder.importSqlSize;
             this.timestamp = builder.timestamp;
+            this.totalSqlSize = builder.totalSqlSize;
         }
 
         public static Builder builder() {
@@ -254,6 +258,13 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             return this.timestamp;
         }
 
+        /**
+         * @return totalSqlSize
+         */
+        public Long getTotalSqlSize() {
+            return this.totalSqlSize;
+        }
+
         public static final class Builder {
             private Long coldSqlSize; 
             private Long freeColdSqlSize; 
@@ -261,6 +272,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             private Long hotSqlSize; 
             private Long importSqlSize; 
             private Long timestamp; 
+            private Long totalSqlSize; 
 
             private Builder() {
             } 
@@ -272,6 +284,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
                 this.hotSqlSize = model.hotSqlSize;
                 this.importSqlSize = model.importSqlSize;
                 this.timestamp = model.timestamp;
+                this.totalSqlSize = model.totalSqlSize;
             } 
 
             /**
@@ -337,6 +350,14 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
+                return this;
+            }
+
+            /**
+             * TotalSqlSize.
+             */
+            public Builder totalSqlSize(Long totalSqlSize) {
+                this.totalSqlSize = totalSqlSize;
                 return this;
             }
 

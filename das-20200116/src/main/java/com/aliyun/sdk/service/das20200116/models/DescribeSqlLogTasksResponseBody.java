@@ -279,6 +279,9 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Filters")
         private java.util.List<Filters> filters;
 
+        @com.aliyun.core.annotation.NameInMap("InnerResult")
+        private String innerResult;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -316,6 +319,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             this.end = builder.end;
             this.expire = builder.expire;
             this.filters = builder.filters;
+            this.innerResult = builder.innerResult;
             this.instanceId = builder.instanceId;
             this.logCount = builder.logCount;
             this.name = builder.name;
@@ -376,6 +380,13 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
          */
         public java.util.List<Filters> getFilters() {
             return this.filters;
+        }
+
+        /**
+         * @return innerResult
+         */
+        public String getInnerResult() {
+            return this.innerResult;
         }
 
         /**
@@ -455,6 +466,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             private Long end; 
             private Boolean expire; 
             private java.util.List<Filters> filters; 
+            private String innerResult; 
             private String instanceId; 
             private Long logCount; 
             private String name; 
@@ -476,6 +488,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
                 this.end = model.end;
                 this.expire = model.expire;
                 this.filters = model.filters;
+                this.innerResult = model.innerResult;
                 this.instanceId = model.instanceId;
                 this.logCount = model.logCount;
                 this.name = model.name;
@@ -555,6 +568,14 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
              */
             public Builder filters(java.util.List<Filters> filters) {
                 this.filters = filters;
+                return this;
+            }
+
+            /**
+             * InnerResult.
+             */
+            public Builder innerResult(String innerResult) {
+                this.innerResult = innerResult;
                 return this;
             }
 
