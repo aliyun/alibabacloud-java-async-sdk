@@ -307,6 +307,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateProgramResponse> createProgram(CreateProgramRequest request);
 
     /**
+     * @param request the request parameters of CreateRecognitionEntity  CreateRecognitionEntityRequest
+     * @return CreateRecognitionEntityResponse
+     */
+    CompletableFuture<CreateRecognitionEntityResponse> createRecognitionEntity(CreateRecognitionEntityRequest request);
+
+    /**
+     * @param request the request parameters of CreateRecognitionLib  CreateRecognitionLibRequest
+     * @return CreateRecognitionLibResponse
+     */
+    CompletableFuture<CreateRecognitionLibResponse> createRecognitionLib(CreateRecognitionLibRequest request);
+
+    /**
+     * @param request the request parameters of CreateRecognitionSample  CreateRecognitionSampleRequest
+     * @return CreateRecognitionSampleResponse
+     */
+    CompletableFuture<CreateRecognitionSampleResponse> createRecognitionSample(CreateRecognitionSampleRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The large visual model feature is still in the public preview phase. You can use this feature for free for 1,000 hours of videos.</p>
      * 
@@ -637,6 +655,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteProgramResponse
      */
     CompletableFuture<DeleteProgramResponse> deleteProgram(DeleteProgramRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRecognitionEntity  DeleteRecognitionEntityRequest
+     * @return DeleteRecognitionEntityResponse
+     */
+    CompletableFuture<DeleteRecognitionEntityResponse> deleteRecognitionEntity(DeleteRecognitionEntityRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRecognitionLib  DeleteRecognitionLibRequest
+     * @return DeleteRecognitionLibResponse
+     */
+    CompletableFuture<DeleteRecognitionLibResponse> deleteRecognitionLib(DeleteRecognitionLibRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRecognitionSample  DeleteRecognitionSampleRequest
+     * @return DeleteRecognitionSampleResponse
+     */
+    CompletableFuture<DeleteRecognitionSampleResponse> deleteRecognitionSample(DeleteRecognitionSampleRequest request);
 
     /**
      * @param request the request parameters of DeleteSmartJob  DeleteSmartJobRequest
@@ -1549,6 +1585,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListPublicMediaBasicInfosResponse
      */
     CompletableFuture<ListPublicMediaBasicInfosResponse> listPublicMediaBasicInfos(ListPublicMediaBasicInfosRequest request);
+
+    /**
+     * @param request the request parameters of ListRecognitionEntities  ListRecognitionEntitiesRequest
+     * @return ListRecognitionEntitiesResponse
+     */
+    CompletableFuture<ListRecognitionEntitiesResponse> listRecognitionEntities(ListRecognitionEntitiesRequest request);
+
+    /**
+     * @param request the request parameters of ListRecognitionLibs  ListRecognitionLibsRequest
+     * @return ListRecognitionLibsResponse
+     */
+    CompletableFuture<ListRecognitionLibsResponse> listRecognitionLibs(ListRecognitionLibsRequest request);
+
+    /**
+     * @param request the request parameters of ListRecognitionSamples  ListRecognitionSamplesRequest
+     * @return ListRecognitionSamplesResponse
+     */
+    CompletableFuture<ListRecognitionSamplesResponse> listRecognitionSamples(ListRecognitionSamplesRequest request);
 
     /**
      * @param request the request parameters of ListSchedules  ListSchedulesRequest
