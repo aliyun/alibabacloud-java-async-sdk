@@ -48,6 +48,10 @@ public class ListAutomateResponseConfigsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResponseRuleType")
+    private String responseRuleType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RoleFor")
     private Long roleFor;
 
@@ -76,6 +80,7 @@ public class ListAutomateResponseConfigsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.playbookUuid = builder.playbookUuid;
         this.regionId = builder.regionId;
+        this.responseRuleType = builder.responseRuleType;
         this.roleFor = builder.roleFor;
         this.roleType = builder.roleType;
         this.ruleName = builder.ruleName;
@@ -146,6 +151,13 @@ public class ListAutomateResponseConfigsRequest extends Request {
     }
 
     /**
+     * @return responseRuleType
+     */
+    public String getResponseRuleType() {
+        return this.responseRuleType;
+    }
+
+    /**
      * @return roleFor
      */
     public Long getRoleFor() {
@@ -188,6 +200,7 @@ public class ListAutomateResponseConfigsRequest extends Request {
         private Integer pageSize; 
         private String playbookUuid; 
         private String regionId; 
+        private String responseRuleType; 
         private Long roleFor; 
         private Integer roleType; 
         private String ruleName; 
@@ -207,6 +220,7 @@ public class ListAutomateResponseConfigsRequest extends Request {
             this.pageSize = request.pageSize;
             this.playbookUuid = request.playbookUuid;
             this.regionId = request.regionId;
+            this.responseRuleType = request.responseRuleType;
             this.roleFor = request.roleFor;
             this.roleType = request.roleType;
             this.ruleName = request.ruleName;
@@ -310,6 +324,15 @@ public class ListAutomateResponseConfigsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResponseRuleType.
+         */
+        public Builder responseRuleType(String responseRuleType) {
+            this.putBodyParameter("ResponseRuleType", responseRuleType);
+            this.responseRuleType = responseRuleType;
             return this;
         }
 

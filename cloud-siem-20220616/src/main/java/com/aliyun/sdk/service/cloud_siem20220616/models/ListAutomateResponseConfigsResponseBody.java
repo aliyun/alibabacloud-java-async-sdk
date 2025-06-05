@@ -309,6 +309,9 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("ResponseRuleType")
+        private String responseRuleType;
+
         @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
@@ -328,6 +331,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
+            this.responseRuleType = builder.responseRuleType;
             this.ruleName = builder.ruleName;
             this.status = builder.status;
             this.subUserId = builder.subUserId;
@@ -405,6 +409,13 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return responseRuleType
+         */
+        public String getResponseRuleType() {
+            return this.responseRuleType;
+        }
+
+        /**
          * @return ruleName
          */
         public String getRuleName() {
@@ -435,6 +446,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModified; 
             private Long id; 
+            private String responseRuleType; 
             private String ruleName; 
             private Integer status; 
             private Long subUserId; 
@@ -452,6 +464,7 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
                 this.id = model.id;
+                this.responseRuleType = model.responseRuleType;
                 this.ruleName = model.ruleName;
                 this.status = model.status;
                 this.subUserId = model.subUserId;
@@ -570,6 +583,14 @@ public class ListAutomateResponseConfigsResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * ResponseRuleType.
+             */
+            public Builder responseRuleType(String responseRuleType) {
+                this.responseRuleType = responseRuleType;
                 return this;
             }
 
