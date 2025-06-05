@@ -1256,6 +1256,9 @@ public class RunSearchGenerationRequest extends Request {
      * <p>RunSearchGenerationRequest</p>
      */
     public static class ChatConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableThinking")
+        private Boolean enableThinking;
+
         @com.aliyun.core.annotation.NameInMap("GenerateLevel")
         private String generateLevel;
 
@@ -1269,6 +1272,7 @@ public class RunSearchGenerationRequest extends Request {
         private SearchParam searchParam;
 
         private ChatConfig(Builder builder) {
+            this.enableThinking = builder.enableThinking;
             this.generateLevel = builder.generateLevel;
             this.generateTechnology = builder.generateTechnology;
             this.searchModels = builder.searchModels;
@@ -1281,6 +1285,13 @@ public class RunSearchGenerationRequest extends Request {
 
         public static ChatConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return enableThinking
+         */
+        public Boolean getEnableThinking() {
+            return this.enableThinking;
         }
 
         /**
@@ -1312,6 +1323,7 @@ public class RunSearchGenerationRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean enableThinking; 
             private String generateLevel; 
             private String generateTechnology; 
             private java.util.List<String> searchModels; 
@@ -1321,11 +1333,20 @@ public class RunSearchGenerationRequest extends Request {
             } 
 
             private Builder(ChatConfig model) {
+                this.enableThinking = model.enableThinking;
                 this.generateLevel = model.generateLevel;
                 this.generateTechnology = model.generateTechnology;
                 this.searchModels = model.searchModels;
                 this.searchParam = model.searchParam;
             } 
+
+            /**
+             * EnableThinking.
+             */
+            public Builder enableThinking(Boolean enableThinking) {
+                this.enableThinking = enableThinking;
+                return this;
+            }
 
             /**
              * GenerateLevel.

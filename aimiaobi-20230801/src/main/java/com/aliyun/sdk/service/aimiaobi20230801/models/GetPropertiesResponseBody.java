@@ -775,6 +775,177 @@ public class GetPropertiesResponseBody extends TeaModel {
      *
      * <p>GetPropertiesResponseBody</p>
      */
+    public static class ModelInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ModelId")
+        private String modelId;
+
+        @com.aliyun.core.annotation.NameInMap("ModelName")
+        private String modelName;
+
+        private ModelInfos(Builder builder) {
+            this.modelId = builder.modelId;
+            this.modelName = builder.modelName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModelInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return modelId
+         */
+        public String getModelId() {
+            return this.modelId;
+        }
+
+        /**
+         * @return modelName
+         */
+        public String getModelName() {
+            return this.modelName;
+        }
+
+        public static final class Builder {
+            private String modelId; 
+            private String modelName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ModelInfos model) {
+                this.modelId = model.modelId;
+                this.modelName = model.modelName;
+            } 
+
+            /**
+             * ModelId.
+             */
+            public Builder modelId(String modelId) {
+                this.modelId = modelId;
+                return this;
+            }
+
+            /**
+             * ModelName.
+             */
+            public Builder modelName(String modelName) {
+                this.modelName = modelName;
+                return this;
+            }
+
+            public ModelInfos build() {
+                return new ModelInfos(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertiesResponseBody</p>
+     */
+    public static class MiaosouConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MaxDocSize")
+        private Long maxDocSize;
+
+        @com.aliyun.core.annotation.NameInMap("ModelInfos")
+        private java.util.List<ModelInfos> modelInfos;
+
+        @com.aliyun.core.annotation.NameInMap("UseDocSize")
+        private Long useDocSize;
+
+        private MiaosouConfig(Builder builder) {
+            this.maxDocSize = builder.maxDocSize;
+            this.modelInfos = builder.modelInfos;
+            this.useDocSize = builder.useDocSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MiaosouConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return maxDocSize
+         */
+        public Long getMaxDocSize() {
+            return this.maxDocSize;
+        }
+
+        /**
+         * @return modelInfos
+         */
+        public java.util.List<ModelInfos> getModelInfos() {
+            return this.modelInfos;
+        }
+
+        /**
+         * @return useDocSize
+         */
+        public Long getUseDocSize() {
+            return this.useDocSize;
+        }
+
+        public static final class Builder {
+            private Long maxDocSize; 
+            private java.util.List<ModelInfos> modelInfos; 
+            private Long useDocSize; 
+
+            private Builder() {
+            } 
+
+            private Builder(MiaosouConfig model) {
+                this.maxDocSize = model.maxDocSize;
+                this.modelInfos = model.modelInfos;
+                this.useDocSize = model.useDocSize;
+            } 
+
+            /**
+             * MaxDocSize.
+             */
+            public Builder maxDocSize(Long maxDocSize) {
+                this.maxDocSize = maxDocSize;
+                return this;
+            }
+
+            /**
+             * ModelInfos.
+             */
+            public Builder modelInfos(java.util.List<ModelInfos> modelInfos) {
+                this.modelInfos = modelInfos;
+                return this;
+            }
+
+            /**
+             * UseDocSize.
+             */
+            public Builder useDocSize(Long useDocSize) {
+                this.useDocSize = useDocSize;
+                return this;
+            }
+
+            public MiaosouConfig build() {
+                return new MiaosouConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetPropertiesResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetPropertiesResponseBody</p>
+     */
     public static class SearchSourceList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
@@ -1247,6 +1418,9 @@ public class GetPropertiesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntelligentSearchConfig")
         private IntelligentSearchConfig intelligentSearchConfig;
 
+        @com.aliyun.core.annotation.NameInMap("MiaosouConfig")
+        private MiaosouConfig miaosouConfig;
+
         @com.aliyun.core.annotation.NameInMap("SearchSourceList")
         private java.util.List<SearchSourceList> searchSourceList;
 
@@ -1270,6 +1444,7 @@ public class GetPropertiesResponseBody extends TeaModel {
             this.consoleConfig = builder.consoleConfig;
             this.generalConfigMap = builder.generalConfigMap;
             this.intelligentSearchConfig = builder.intelligentSearchConfig;
+            this.miaosouConfig = builder.miaosouConfig;
             this.searchSourceList = builder.searchSourceList;
             this.searchSources = builder.searchSources;
             this.slrAuthorized = builder.slrAuthorized;
@@ -1312,6 +1487,13 @@ public class GetPropertiesResponseBody extends TeaModel {
          */
         public IntelligentSearchConfig getIntelligentSearchConfig() {
             return this.intelligentSearchConfig;
+        }
+
+        /**
+         * @return miaosouConfig
+         */
+        public MiaosouConfig getMiaosouConfig() {
+            return this.miaosouConfig;
         }
 
         /**
@@ -1361,6 +1543,7 @@ public class GetPropertiesResponseBody extends TeaModel {
             private ConsoleConfig consoleConfig; 
             private java.util.Map<String, ?> generalConfigMap; 
             private IntelligentSearchConfig intelligentSearchConfig; 
+            private MiaosouConfig miaosouConfig; 
             private java.util.List<SearchSourceList> searchSourceList; 
             private java.util.List<DataSearchSources> searchSources; 
             private Boolean slrAuthorized; 
@@ -1376,6 +1559,7 @@ public class GetPropertiesResponseBody extends TeaModel {
                 this.consoleConfig = model.consoleConfig;
                 this.generalConfigMap = model.generalConfigMap;
                 this.intelligentSearchConfig = model.intelligentSearchConfig;
+                this.miaosouConfig = model.miaosouConfig;
                 this.searchSourceList = model.searchSourceList;
                 this.searchSources = model.searchSources;
                 this.slrAuthorized = model.slrAuthorized;
@@ -1413,6 +1597,14 @@ public class GetPropertiesResponseBody extends TeaModel {
              */
             public Builder intelligentSearchConfig(IntelligentSearchConfig intelligentSearchConfig) {
                 this.intelligentSearchConfig = intelligentSearchConfig;
+                return this;
+            }
+
+            /**
+             * MiaosouConfig.
+             */
+            public Builder miaosouConfig(MiaosouConfig miaosouConfig) {
+                this.miaosouConfig = miaosouConfig;
                 return this;
             }
 
