@@ -1162,6 +1162,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request);
 
     /**
+     * @param request the request parameters of ModifyCollection  ModifyCollectionRequest
+     * @return ModifyCollectionResponse
+     */
+    CompletableFuture<ModifyCollectionResponse> modifyCollection(ModifyCollectionRequest request);
+
+    /**
      * @param request the request parameters of ModifyDBInstanceConfig  ModifyDBInstanceConfigRequest
      * @return ModifyDBInstanceConfigResponse
      */
