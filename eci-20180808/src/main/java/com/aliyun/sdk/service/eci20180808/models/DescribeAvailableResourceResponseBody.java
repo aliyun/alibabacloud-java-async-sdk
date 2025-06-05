@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return availableZones
      */
@@ -48,6 +57,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     public static final class Builder {
         private AvailableZones availableZones; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAvailableResourceResponseBody model) {
+            this.availableZones = model.availableZones;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The zones in which the specified resources are available.</p>
@@ -118,6 +135,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String statusCategory; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SupportedResource model) {
+                this.statusCategory = model.statusCategory;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The category of resources based on stock status. Valid values:</p>
              * <ul>
@@ -165,7 +190,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      */
     public static class SupportedResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SupportedResource")
-        private java.util.List < SupportedResource> supportedResource;
+        private java.util.List<SupportedResource> supportedResource;
 
         private SupportedResources(Builder builder) {
             this.supportedResource = builder.supportedResource;
@@ -182,17 +207,24 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return supportedResource
          */
-        public java.util.List < SupportedResource> getSupportedResource() {
+        public java.util.List<SupportedResource> getSupportedResource() {
             return this.supportedResource;
         }
 
         public static final class Builder {
-            private java.util.List < SupportedResource> supportedResource; 
+            private java.util.List<SupportedResource> supportedResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedResources model) {
+                this.supportedResource = model.supportedResource;
+            } 
 
             /**
              * SupportedResource.
              */
-            public Builder supportedResource(java.util.List < SupportedResource> supportedResource) {
+            public Builder supportedResource(java.util.List<SupportedResource> supportedResource) {
                 this.supportedResource = supportedResource;
                 return this;
             }
@@ -248,6 +280,14 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private SupportedResources supportedResources; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableResource model) {
+                this.supportedResources = model.supportedResources;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The information about the resources that are available in the zones.</p>
              */
@@ -286,7 +326,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      */
     public static class AvailableResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableResource")
-        private java.util.List < AvailableResource> availableResource;
+        private java.util.List<AvailableResource> availableResource;
 
         private AvailableResources(Builder builder) {
             this.availableResource = builder.availableResource;
@@ -303,17 +343,24 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return availableResource
          */
-        public java.util.List < AvailableResource> getAvailableResource() {
+        public java.util.List<AvailableResource> getAvailableResource() {
             return this.availableResource;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableResource> availableResource; 
+            private java.util.List<AvailableResource> availableResource; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableResources model) {
+                this.availableResource = model.availableResource;
+            } 
 
             /**
              * AvailableResource.
              */
-            public Builder availableResource(java.util.List < AvailableResource> availableResource) {
+            public Builder availableResource(java.util.List<AvailableResource> availableResource) {
                 this.availableResource = availableResource;
                 return this;
             }
@@ -381,6 +428,15 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
             private String regionId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableZone model) {
+                this.availableResources = model.availableResources;
+                this.regionId = model.regionId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The resources that are available in the specified zone.</p>
              */
@@ -426,7 +482,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
      */
     public static class AvailableZones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableZone")
-        private java.util.List < AvailableZone> availableZone;
+        private java.util.List<AvailableZone> availableZone;
 
         private AvailableZones(Builder builder) {
             this.availableZone = builder.availableZone;
@@ -443,17 +499,24 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
         /**
          * @return availableZone
          */
-        public java.util.List < AvailableZone> getAvailableZone() {
+        public java.util.List<AvailableZone> getAvailableZone() {
             return this.availableZone;
         }
 
         public static final class Builder {
-            private java.util.List < AvailableZone> availableZone; 
+            private java.util.List<AvailableZone> availableZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableZones model) {
+                this.availableZone = model.availableZone;
+            } 
 
             /**
              * AvailableZone.
              */
-            public Builder availableZone(java.util.List < AvailableZone> availableZone) {
+            public Builder availableZone(java.util.List<AvailableZone> availableZone) {
                 this.availableZone = availableZone;
                 return this;
             }

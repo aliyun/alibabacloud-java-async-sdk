@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeContainerGroupEventsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -57,14 +66,23 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeContainerGroupEventsResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>Details of the events.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -141,6 +159,14 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             private String name; 
             private String namespace; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metadata model) {
+                this.name = model.name;
+                this.namespace = model.namespace;
+            } 
+
             /**
              * <p>The event name.</p>
              * 
@@ -213,6 +239,14 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         public static final class Builder {
             private String component; 
             private String host; 
+
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.component = model.component;
+                this.host = model.host;
+            } 
 
             /**
              * <p>The component.</p>
@@ -322,6 +356,17 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             private String name; 
             private String namespace; 
             private String uid; 
+
+            private Builder() {
+            } 
+
+            private Builder(InvolvedObject model) {
+                this.apiVersion = model.apiVersion;
+                this.kind = model.kind;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.uid = model.uid;
+            } 
 
             /**
              * <p>The version of Kubernetes.</p>
@@ -537,6 +582,23 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             private String type; 
             private InvolvedObject involvedObject; 
 
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.count = model.count;
+                this.firstTimestamp = model.firstTimestamp;
+                this.lastTimestamp = model.lastTimestamp;
+                this.message = model.message;
+                this.metadata = model.metadata;
+                this.reason = model.reason;
+                this.reportingComponent = model.reportingComponent;
+                this.reportingInstance = model.reportingInstance;
+                this.source = model.source;
+                this.type = model.type;
+                this.involvedObject = model.involvedObject;
+            } 
+
             /**
              * <p>The number of events.</p>
              * 
@@ -674,7 +736,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         private String containerGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Events")
-        private java.util.List < Events> events;
+        private java.util.List<Events> events;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
@@ -719,7 +781,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         /**
          * @return events
          */
-        public java.util.List < Events> getEvents() {
+        public java.util.List<Events> getEvents() {
             return this.events;
         }
 
@@ -747,10 +809,22 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
         public static final class Builder {
             private String annotations; 
             private String containerGroupId; 
-            private java.util.List < Events> events; 
+            private java.util.List<Events> events; 
             private String name; 
             private String namespace; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.annotations = model.annotations;
+                this.containerGroupId = model.containerGroupId;
+                this.events = model.events;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>The annotations of the elastic container instance.</p>
@@ -777,7 +851,7 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
             /**
              * <p>The events.</p>
              */
-            public Builder events(java.util.List < Events> events) {
+            public Builder events(java.util.List<Events> events) {
                 this.events = events;
                 return this;
             }

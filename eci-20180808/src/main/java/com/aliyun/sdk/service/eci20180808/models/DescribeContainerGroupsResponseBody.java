@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeContainerGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ContainerGroups")
-    private java.util.List < ContainerGroups> containerGroups;
+    private java.util.List<ContainerGroups> containerGroups;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -39,10 +44,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return containerGroups
      */
-    public java.util.List < ContainerGroups> getContainerGroups() {
+    public java.util.List<ContainerGroups> getContainerGroups() {
         return this.containerGroups;
     }
 
@@ -68,15 +77,25 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ContainerGroups> containerGroups; 
+        private java.util.List<ContainerGroups> containerGroups; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeContainerGroupsResponseBody model) {
+            this.containerGroups = model.containerGroups;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>Details about the queried elastic container instances.</p>
          */
-        public Builder containerGroups(java.util.List < ContainerGroups> containerGroups) {
+        public Builder containerGroups(java.util.List<ContainerGroups> containerGroups) {
             this.containerGroups = containerGroups;
             return this;
         }
@@ -236,6 +255,20 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String startTime; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(CurrentState model) {
+                this.detailStatus = model.detailStatus;
+                this.exitCode = model.exitCode;
+                this.finishTime = model.finishTime;
+                this.message = model.message;
+                this.reason = model.reason;
+                this.signal = model.signal;
+                this.startTime = model.startTime;
+                this.state = model.state;
+            } 
+
             /**
              * <p>The details of the container status.</p>
              * 
@@ -368,6 +401,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String fieldPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(FieldRef model) {
+                this.fieldPath = model.fieldPath;
+            } 
+
             /**
              * <p>The path of the field.</p>
              * 
@@ -417,6 +457,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private FieldRef fieldRef; 
+
+            private Builder() {
+            } 
+
+            private Builder(ValueFrom model) {
+                this.fieldRef = model.fieldRef;
+            } 
 
             /**
              * <p>The specified field.</p>
@@ -488,6 +535,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String key; 
             private String value; 
             private ValueFrom valueFrom; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentVars model) {
+                this.key = model.key;
+                this.value = model.value;
+                this.valueFrom = model.valueFrom;
+            } 
 
             /**
              * <p>The name of the environment variable.</p>
@@ -582,6 +638,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private Integer port; 
             private String scheme; 
 
+            private Builder() {
+            } 
+
+            private Builder(HttpGet model) {
+                this.path = model.path;
+                this.port = model.port;
+                this.scheme = model.scheme;
+            } 
+
             /**
              * <p>The path to which the system sends an HTTP GET request for a health check.</p>
              * 
@@ -666,6 +731,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String host; 
             private Integer port; 
 
+            private Builder() {
+            } 
+
+            private Builder(TcpSocket model) {
+                this.host = model.host;
+                this.port = model.port;
+            } 
+
             /**
              * <p>The hostname.</p>
              * 
@@ -703,7 +776,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
      */
     public static class LivenessProbe extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Execs")
-        private java.util.List < String > execs;
+        private java.util.List<String> execs;
 
         @com.aliyun.core.annotation.NameInMap("FailureThreshold")
         private Integer failureThreshold;
@@ -748,7 +821,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return execs
          */
-        public java.util.List < String > getExecs() {
+        public java.util.List<String> getExecs() {
             return this.execs;
         }
 
@@ -802,7 +875,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > execs; 
+            private java.util.List<String> execs; 
             private Integer failureThreshold; 
             private HttpGet httpGet; 
             private Integer initialDelaySeconds; 
@@ -811,10 +884,24 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private TcpSocket tcpSocket; 
             private Integer timeoutSeconds; 
 
+            private Builder() {
+            } 
+
+            private Builder(LivenessProbe model) {
+                this.execs = model.execs;
+                this.failureThreshold = model.failureThreshold;
+                this.httpGet = model.httpGet;
+                this.initialDelaySeconds = model.initialDelaySeconds;
+                this.periodSeconds = model.periodSeconds;
+                this.successThreshold = model.successThreshold;
+                this.tcpSocket = model.tcpSocket;
+                this.timeoutSeconds = model.timeoutSeconds;
+            } 
+
             /**
              * <p>The commands that are used to check the containers.</p>
              */
-            public Builder execs(java.util.List < String > execs) {
+            public Builder execs(java.util.List<String> execs) {
                 this.execs = execs;
                 return this;
             }
@@ -940,6 +1027,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ports model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The port number. Valid values: 1 to 65535.</p>
@@ -1085,6 +1180,20 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private Integer signal; 
             private String startTime; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(PreviousState model) {
+                this.detailStatus = model.detailStatus;
+                this.exitCode = model.exitCode;
+                this.finishTime = model.finishTime;
+                this.message = model.message;
+                this.reason = model.reason;
+                this.signal = model.signal;
+                this.startTime = model.startTime;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The details of the container status.</p>
@@ -1242,6 +1351,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private Integer port; 
             private String scheme; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadinessProbeHttpGet model) {
+                this.path = model.path;
+                this.port = model.port;
+                this.scheme = model.scheme;
+            } 
+
             /**
              * <p>The path to which the system sends an HTTP GET request for a health check.</p>
              * 
@@ -1326,6 +1444,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String host; 
             private Integer port; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadinessProbeTcpSocket model) {
+                this.host = model.host;
+                this.port = model.port;
+            } 
+
             /**
              * <p>The hostname.</p>
              * 
@@ -1363,7 +1489,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
      */
     public static class ReadinessProbe extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Execs")
-        private java.util.List < String > execs;
+        private java.util.List<String> execs;
 
         @com.aliyun.core.annotation.NameInMap("FailureThreshold")
         private Integer failureThreshold;
@@ -1408,7 +1534,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return execs
          */
-        public java.util.List < String > getExecs() {
+        public java.util.List<String> getExecs() {
             return this.execs;
         }
 
@@ -1462,7 +1588,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > execs; 
+            private java.util.List<String> execs; 
             private Integer failureThreshold; 
             private ReadinessProbeHttpGet httpGet; 
             private Integer initialDelaySeconds; 
@@ -1471,10 +1597,24 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private ReadinessProbeTcpSocket tcpSocket; 
             private Integer timeoutSeconds; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadinessProbe model) {
+                this.execs = model.execs;
+                this.failureThreshold = model.failureThreshold;
+                this.httpGet = model.httpGet;
+                this.initialDelaySeconds = model.initialDelaySeconds;
+                this.periodSeconds = model.periodSeconds;
+                this.successThreshold = model.successThreshold;
+                this.tcpSocket = model.tcpSocket;
+                this.timeoutSeconds = model.timeoutSeconds;
+            } 
+
             /**
              * <p>The commands that are run in the container when you use a CLI to perform health checks.</p>
              */
-            public Builder execs(java.util.List < String > execs) {
+            public Builder execs(java.util.List<String> execs) {
                 this.execs = execs;
                 return this;
             }
@@ -1565,7 +1705,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
      */
     public static class Capability extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Adds")
-        private java.util.List < String > adds;
+        private java.util.List<String> adds;
 
         private Capability(Builder builder) {
             this.adds = builder.adds;
@@ -1582,17 +1722,24 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return adds
          */
-        public java.util.List < String > getAdds() {
+        public java.util.List<String> getAdds() {
             return this.adds;
         }
 
         public static final class Builder {
-            private java.util.List < String > adds; 
+            private java.util.List<String> adds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Capability model) {
+                this.adds = model.adds;
+            } 
 
             /**
              * <p>The permissions specific to the process in the container.</p>
              */
-            public Builder adds(java.util.List < String > adds) {
+            public Builder adds(java.util.List<String> adds) {
                 this.adds = adds;
                 return this;
             }
@@ -1659,6 +1806,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private Capability capability; 
             private Boolean readOnlyRootFilesystem; 
             private Long runAsUser; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityContext model) {
+                this.capability = model.capability;
+                this.readOnlyRootFilesystem = model.readOnlyRootFilesystem;
+                this.runAsUser = model.runAsUser;
+            } 
 
             /**
              * <p>The permissions specific to the processes in the container.</p>
@@ -1777,6 +1933,17 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private Boolean readOnly; 
             private String subPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(VolumeMounts model) {
+                this.mountPath = model.mountPath;
+                this.mountPropagation = model.mountPropagation;
+                this.name = model.name;
+                this.readOnly = model.readOnly;
+                this.subPath = model.subPath;
+            } 
+
             /**
              * <p>The directory of the volume that is mounted to the container. The data in this directory is overwritten by the data on the volume.</p>
              * 
@@ -1852,10 +2019,10 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
      */
     public static class Containers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Args")
-        private java.util.List < String > args;
+        private java.util.List<String> args;
 
         @com.aliyun.core.annotation.NameInMap("Commands")
-        private java.util.List < String > commands;
+        private java.util.List<String> commands;
 
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
@@ -1864,7 +2031,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         private CurrentState currentState;
 
         @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
-        private java.util.List < EnvironmentVars> environmentVars;
+        private java.util.List<EnvironmentVars> environmentVars;
 
         @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
@@ -1885,7 +2052,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Ports")
-        private java.util.List < Ports> ports;
+        private java.util.List<Ports> ports;
 
         @com.aliyun.core.annotation.NameInMap("PreviousState")
         private PreviousState previousState;
@@ -1912,7 +2079,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         private Boolean tty;
 
         @com.aliyun.core.annotation.NameInMap("VolumeMounts")
-        private java.util.List < VolumeMounts> volumeMounts;
+        private java.util.List<VolumeMounts> volumeMounts;
 
         @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
@@ -1953,14 +2120,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return args
          */
-        public java.util.List < String > getArgs() {
+        public java.util.List<String> getArgs() {
             return this.args;
         }
 
         /**
          * @return commands
          */
-        public java.util.List < String > getCommands() {
+        public java.util.List<String> getCommands() {
             return this.commands;
         }
 
@@ -1981,7 +2148,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return environmentVars
          */
-        public java.util.List < EnvironmentVars> getEnvironmentVars() {
+        public java.util.List<EnvironmentVars> getEnvironmentVars() {
             return this.environmentVars;
         }
 
@@ -2030,7 +2197,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return ports
          */
-        public java.util.List < Ports> getPorts() {
+        public java.util.List<Ports> getPorts() {
             return this.ports;
         }
 
@@ -2093,7 +2260,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return volumeMounts
          */
-        public java.util.List < VolumeMounts> getVolumeMounts() {
+        public java.util.List<VolumeMounts> getVolumeMounts() {
             return this.volumeMounts;
         }
 
@@ -2105,18 +2272,18 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > args; 
-            private java.util.List < String > commands; 
+            private java.util.List<String> args; 
+            private java.util.List<String> commands; 
             private Float cpu; 
             private CurrentState currentState; 
-            private java.util.List < EnvironmentVars> environmentVars; 
+            private java.util.List<EnvironmentVars> environmentVars; 
             private Integer gpu; 
             private String image; 
             private String imagePullPolicy; 
             private LivenessProbe livenessProbe; 
             private Float memory; 
             private String name; 
-            private java.util.List < Ports> ports; 
+            private java.util.List<Ports> ports; 
             private PreviousState previousState; 
             private ReadinessProbe readinessProbe; 
             private Boolean ready; 
@@ -2125,13 +2292,41 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private Boolean stdin; 
             private Boolean stdinOnce; 
             private Boolean tty; 
-            private java.util.List < VolumeMounts> volumeMounts; 
+            private java.util.List<VolumeMounts> volumeMounts; 
             private String workingDir; 
+
+            private Builder() {
+            } 
+
+            private Builder(Containers model) {
+                this.args = model.args;
+                this.commands = model.commands;
+                this.cpu = model.cpu;
+                this.currentState = model.currentState;
+                this.environmentVars = model.environmentVars;
+                this.gpu = model.gpu;
+                this.image = model.image;
+                this.imagePullPolicy = model.imagePullPolicy;
+                this.livenessProbe = model.livenessProbe;
+                this.memory = model.memory;
+                this.name = model.name;
+                this.ports = model.ports;
+                this.previousState = model.previousState;
+                this.readinessProbe = model.readinessProbe;
+                this.ready = model.ready;
+                this.restartCount = model.restartCount;
+                this.securityContext = model.securityContext;
+                this.stdin = model.stdin;
+                this.stdinOnce = model.stdinOnce;
+                this.tty = model.tty;
+                this.volumeMounts = model.volumeMounts;
+                this.workingDir = model.workingDir;
+            } 
 
             /**
              * <p>The arguments that are passed to the startup commands of the container.</p>
              */
-            public Builder args(java.util.List < String > args) {
+            public Builder args(java.util.List<String> args) {
                 this.args = args;
                 return this;
             }
@@ -2139,7 +2334,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The startup commands of the container.</p>
              */
-            public Builder commands(java.util.List < String > commands) {
+            public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
                 return this;
             }
@@ -2166,7 +2361,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The environment variables of the container.</p>
              */
-            public Builder environmentVars(java.util.List < EnvironmentVars> environmentVars) {
+            public Builder environmentVars(java.util.List<EnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
                 return this;
             }
@@ -2242,7 +2437,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The exposed port and protocol of the container.</p>
              */
-            public Builder ports(java.util.List < Ports> ports) {
+            public Builder ports(java.util.List<Ports> ports) {
                 this.ports = ports;
                 return this;
             }
@@ -2329,7 +2524,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>Information about the mounted volumes.</p>
              */
-            public Builder volumeMounts(java.util.List < VolumeMounts> volumeMounts) {
+            public Builder volumeMounts(java.util.List<VolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
                 return this;
             }
@@ -2396,6 +2591,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Options model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The variable name of the option.</p>
              * 
@@ -2433,13 +2636,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
      */
     public static class DnsConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameServers")
-        private java.util.List < String > nameServers;
+        private java.util.List<String> nameServers;
 
         @com.aliyun.core.annotation.NameInMap("Options")
-        private java.util.List < Options> options;
+        private java.util.List<Options> options;
 
         @com.aliyun.core.annotation.NameInMap("Searches")
-        private java.util.List < String > searches;
+        private java.util.List<String> searches;
 
         private DnsConfig(Builder builder) {
             this.nameServers = builder.nameServers;
@@ -2458,33 +2661,42 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return nameServers
          */
-        public java.util.List < String > getNameServers() {
+        public java.util.List<String> getNameServers() {
             return this.nameServers;
         }
 
         /**
          * @return options
          */
-        public java.util.List < Options> getOptions() {
+        public java.util.List<Options> getOptions() {
             return this.options;
         }
 
         /**
          * @return searches
          */
-        public java.util.List < String > getSearches() {
+        public java.util.List<String> getSearches() {
             return this.searches;
         }
 
         public static final class Builder {
-            private java.util.List < String > nameServers; 
-            private java.util.List < Options> options; 
-            private java.util.List < String > searches; 
+            private java.util.List<String> nameServers; 
+            private java.util.List<Options> options; 
+            private java.util.List<String> searches; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsConfig model) {
+                this.nameServers = model.nameServers;
+                this.options = model.options;
+                this.searches = model.searches;
+            } 
 
             /**
              * <p>The IP addresses of DNS servers.</p>
              */
-            public Builder nameServers(java.util.List < String > nameServers) {
+            public Builder nameServers(java.util.List<String> nameServers) {
                 this.nameServers = nameServers;
                 return this;
             }
@@ -2492,7 +2704,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The options. Each option is a name-value pair. The value in the name-value pair is optional.</p>
              */
-            public Builder options(java.util.List < Options> options) {
+            public Builder options(java.util.List<Options> options) {
                 this.options = options;
                 return this;
             }
@@ -2500,7 +2712,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The search domains of DNS servers.</p>
              */
-            public Builder searches(java.util.List < String > searches) {
+            public Builder searches(java.util.List<String> searches) {
                 this.searches = searches;
                 return this;
             }
@@ -2556,6 +2768,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Sysctls model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the Sysctl parameter.</p>
              * 
@@ -2593,7 +2813,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
      */
     public static class EciSecurityContext extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Sysctls")
-        private java.util.List < Sysctls> sysctls;
+        private java.util.List<Sysctls> sysctls;
 
         private EciSecurityContext(Builder builder) {
             this.sysctls = builder.sysctls;
@@ -2610,17 +2830,24 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return sysctls
          */
-        public java.util.List < Sysctls> getSysctls() {
+        public java.util.List<Sysctls> getSysctls() {
             return this.sysctls;
         }
 
         public static final class Builder {
-            private java.util.List < Sysctls> sysctls; 
+            private java.util.List<Sysctls> sysctls; 
+
+            private Builder() {
+            } 
+
+            private Builder(EciSecurityContext model) {
+                this.sysctls = model.sysctls;
+            } 
 
             /**
              * <p>sysctl parameters.</p>
              */
-            public Builder sysctls(java.util.List < Sysctls> sysctls) {
+            public Builder sysctls(java.util.List<Sysctls> sysctls) {
                 this.sysctls = sysctls;
                 return this;
             }
@@ -2736,6 +2963,19 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String reason; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.count = model.count;
+                this.firstTimestamp = model.firstTimestamp;
+                this.lastTimestamp = model.lastTimestamp;
+                this.message = model.message;
+                this.name = model.name;
+                this.reason = model.reason;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The number of the events.</p>
              * 
@@ -2832,7 +3072,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
      */
     public static class HostAliases extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Hostnames")
-        private java.util.List < String > hostnames;
+        private java.util.List<String> hostnames;
 
         @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
@@ -2853,7 +3093,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return hostnames
          */
-        public java.util.List < String > getHostnames() {
+        public java.util.List<String> getHostnames() {
             return this.hostnames;
         }
 
@@ -2865,13 +3105,21 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > hostnames; 
+            private java.util.List<String> hostnames; 
             private String ip; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostAliases model) {
+                this.hostnames = model.hostnames;
+                this.ip = model.ip;
+            } 
 
             /**
              * <p>The information about the hosts.</p>
              */
-            public Builder hostnames(java.util.List < String > hostnames) {
+            public Builder hostnames(java.util.List<String> hostnames) {
                 this.hostnames = hostnames;
                 return this;
             }
@@ -3010,6 +3258,20 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String startTime; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainersCurrentState model) {
+                this.detailStatus = model.detailStatus;
+                this.exitCode = model.exitCode;
+                this.finishTime = model.finishTime;
+                this.message = model.message;
+                this.reason = model.reason;
+                this.signal = model.signal;
+                this.startTime = model.startTime;
+                this.state = model.state;
+            } 
+
             /**
              * <p>The details of the container status.</p>
              * 
@@ -3142,6 +3404,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String fieldPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(ValueFromFieldRef model) {
+                this.fieldPath = model.fieldPath;
+            } 
+
             /**
              * <p>The path of the field. Only <code>status.podIP</code> is supported.</p>
              * 
@@ -3191,6 +3460,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private ValueFromFieldRef fieldRef; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentVarsValueFrom model) {
+                this.fieldRef = model.fieldRef;
+            } 
 
             /**
              * <p>The specified fields.</p>
@@ -3262,6 +3538,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String key; 
             private String value; 
             private EnvironmentVarsValueFrom valueFrom; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainersEnvironmentVars model) {
+                this.key = model.key;
+                this.value = model.value;
+                this.valueFrom = model.valueFrom;
+            } 
 
             /**
              * <p>The name of the environment variable.</p>
@@ -3343,6 +3628,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainersPorts model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The port number. Valid values: 1 to 65535.</p>
@@ -3489,6 +3782,20 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String startTime; 
             private String state; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainersPreviousState model) {
+                this.detailStatus = model.detailStatus;
+                this.exitCode = model.exitCode;
+                this.finishTime = model.finishTime;
+                this.message = model.message;
+                this.reason = model.reason;
+                this.signal = model.signal;
+                this.startTime = model.startTime;
+                this.state = model.state;
+            } 
+
             /**
              * <p>The details of the container status.</p>
              * 
@@ -3592,7 +3899,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
      */
     public static class SecurityContextCapability extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Adds")
-        private java.util.List < String > adds;
+        private java.util.List<String> adds;
 
         private SecurityContextCapability(Builder builder) {
             this.adds = builder.adds;
@@ -3609,17 +3916,24 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return adds
          */
-        public java.util.List < String > getAdds() {
+        public java.util.List<String> getAdds() {
             return this.adds;
         }
 
         public static final class Builder {
-            private java.util.List < String > adds; 
+            private java.util.List<String> adds; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityContextCapability model) {
+                this.adds = model.adds;
+            } 
 
             /**
              * <p>The permissions specific to the processes in the container.</p>
              */
-            public Builder adds(java.util.List < String > adds) {
+            public Builder adds(java.util.List<String> adds) {
                 this.adds = adds;
                 return this;
             }
@@ -3686,6 +4000,15 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private SecurityContextCapability capability; 
             private Boolean readOnlyRootFilesystem; 
             private Long runAsUser; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainersSecurityContext model) {
+                this.capability = model.capability;
+                this.readOnlyRootFilesystem = model.readOnlyRootFilesystem;
+                this.runAsUser = model.runAsUser;
+            } 
 
             /**
              * <p>The permissions specific to the processes in the container.</p>
@@ -3792,6 +4115,16 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String name; 
             private Boolean readOnly; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainersVolumeMounts model) {
+                this.mountPath = model.mountPath;
+                this.mountPropagation = model.mountPropagation;
+                this.name = model.name;
+                this.readOnly = model.readOnly;
+            } 
+
             /**
              * <p>The directory of the volume that is mounted to the container. The data in this directory is overwritten by the data on the volume.</p>
              * 
@@ -3856,10 +4189,10 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
      */
     public static class InitContainers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Args")
-        private java.util.List < String > args;
+        private java.util.List<String> args;
 
         @com.aliyun.core.annotation.NameInMap("Command")
-        private java.util.List < String > command;
+        private java.util.List<String> command;
 
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
@@ -3868,7 +4201,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         private InitContainersCurrentState currentState;
 
         @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
-        private java.util.List < InitContainersEnvironmentVars> environmentVars;
+        private java.util.List<InitContainersEnvironmentVars> environmentVars;
 
         @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
@@ -3886,7 +4219,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Ports")
-        private java.util.List < InitContainersPorts> ports;
+        private java.util.List<InitContainersPorts> ports;
 
         @com.aliyun.core.annotation.NameInMap("PreviousState")
         private InitContainersPreviousState previousState;
@@ -3901,7 +4234,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         private InitContainersSecurityContext securityContext;
 
         @com.aliyun.core.annotation.NameInMap("VolumeMounts")
-        private java.util.List < InitContainersVolumeMounts> volumeMounts;
+        private java.util.List<InitContainersVolumeMounts> volumeMounts;
 
         @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
@@ -3937,14 +4270,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return args
          */
-        public java.util.List < String > getArgs() {
+        public java.util.List<String> getArgs() {
             return this.args;
         }
 
         /**
          * @return command
          */
-        public java.util.List < String > getCommand() {
+        public java.util.List<String> getCommand() {
             return this.command;
         }
 
@@ -3965,7 +4298,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return environmentVars
          */
-        public java.util.List < InitContainersEnvironmentVars> getEnvironmentVars() {
+        public java.util.List<InitContainersEnvironmentVars> getEnvironmentVars() {
             return this.environmentVars;
         }
 
@@ -4007,7 +4340,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return ports
          */
-        public java.util.List < InitContainersPorts> getPorts() {
+        public java.util.List<InitContainersPorts> getPorts() {
             return this.ports;
         }
 
@@ -4042,7 +4375,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return volumeMounts
          */
-        public java.util.List < InitContainersVolumeMounts> getVolumeMounts() {
+        public java.util.List<InitContainersVolumeMounts> getVolumeMounts() {
             return this.volumeMounts;
         }
 
@@ -4054,28 +4387,51 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > args; 
-            private java.util.List < String > command; 
+            private java.util.List<String> args; 
+            private java.util.List<String> command; 
             private Float cpu; 
             private InitContainersCurrentState currentState; 
-            private java.util.List < InitContainersEnvironmentVars> environmentVars; 
+            private java.util.List<InitContainersEnvironmentVars> environmentVars; 
             private Integer gpu; 
             private String image; 
             private String imagePullPolicy; 
             private Float memory; 
             private String name; 
-            private java.util.List < InitContainersPorts> ports; 
+            private java.util.List<InitContainersPorts> ports; 
             private InitContainersPreviousState previousState; 
             private Boolean ready; 
             private Integer restartCount; 
             private InitContainersSecurityContext securityContext; 
-            private java.util.List < InitContainersVolumeMounts> volumeMounts; 
+            private java.util.List<InitContainersVolumeMounts> volumeMounts; 
             private String workingDir; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainers model) {
+                this.args = model.args;
+                this.command = model.command;
+                this.cpu = model.cpu;
+                this.currentState = model.currentState;
+                this.environmentVars = model.environmentVars;
+                this.gpu = model.gpu;
+                this.image = model.image;
+                this.imagePullPolicy = model.imagePullPolicy;
+                this.memory = model.memory;
+                this.name = model.name;
+                this.ports = model.ports;
+                this.previousState = model.previousState;
+                this.ready = model.ready;
+                this.restartCount = model.restartCount;
+                this.securityContext = model.securityContext;
+                this.volumeMounts = model.volumeMounts;
+                this.workingDir = model.workingDir;
+            } 
 
             /**
              * <p>The arguments that are passed to the startup commands of the container.</p>
              */
-            public Builder args(java.util.List < String > args) {
+            public Builder args(java.util.List<String> args) {
                 this.args = args;
                 return this;
             }
@@ -4083,7 +4439,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The startup commands of the containers.</p>
              */
-            public Builder command(java.util.List < String > command) {
+            public Builder command(java.util.List<String> command) {
                 this.command = command;
                 return this;
             }
@@ -4110,7 +4466,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The environment variables of the init container.</p>
              */
-            public Builder environmentVars(java.util.List < InitContainersEnvironmentVars> environmentVars) {
+            public Builder environmentVars(java.util.List<InitContainersEnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
                 return this;
             }
@@ -4178,7 +4534,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The exposed port and protocol of the container.</p>
              */
-            public Builder ports(java.util.List < InitContainersPorts> ports) {
+            public Builder ports(java.util.List<InitContainersPorts> ports) {
                 this.ports = ports;
                 return this;
             }
@@ -4224,7 +4580,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The information about the volumes that are mounted to the init container.</p>
              */
-            public Builder volumeMounts(java.util.List < InitContainersVolumeMounts> volumeMounts) {
+            public Builder volumeMounts(java.util.List<InitContainersVolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
                 return this;
             }
@@ -4290,6 +4646,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -4364,6 +4728,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String content; 
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigFileVolumeConfigFileToPaths model) {
+                this.content = model.content;
+                this.path = model.path;
+            } 
+
             /**
              * <p>The content of the ConfigFile volume. Maximum size: 32 KB.</p>
              * 
@@ -4401,7 +4773,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
      */
     public static class Volumes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigFileVolumeConfigFileToPaths")
-        private java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths;
+        private java.util.List<ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths;
 
         @com.aliyun.core.annotation.NameInMap("DiskVolumeDiskId")
         private String diskVolumeDiskId;
@@ -4466,7 +4838,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return configFileVolumeConfigFileToPaths
          */
-        public java.util.List < ConfigFileVolumeConfigFileToPaths> getConfigFileVolumeConfigFileToPaths() {
+        public java.util.List<ConfigFileVolumeConfigFileToPaths> getConfigFileVolumeConfigFileToPaths() {
             return this.configFileVolumeConfigFileToPaths;
         }
 
@@ -4555,7 +4927,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths; 
+            private java.util.List<ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths; 
             private String diskVolumeDiskId; 
             private String diskVolumeFsType; 
             private String emptyDirVolumeMedium; 
@@ -4569,10 +4941,29 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Volumes model) {
+                this.configFileVolumeConfigFileToPaths = model.configFileVolumeConfigFileToPaths;
+                this.diskVolumeDiskId = model.diskVolumeDiskId;
+                this.diskVolumeFsType = model.diskVolumeFsType;
+                this.emptyDirVolumeMedium = model.emptyDirVolumeMedium;
+                this.emptyDirVolumeSizeLimit = model.emptyDirVolumeSizeLimit;
+                this.flexVolumeDriver = model.flexVolumeDriver;
+                this.flexVolumeFsType = model.flexVolumeFsType;
+                this.flexVolumeOptions = model.flexVolumeOptions;
+                this.NFSVolumePath = model.NFSVolumePath;
+                this.NFSVolumeReadOnly = model.NFSVolumeReadOnly;
+                this.NFSVolumeServer = model.NFSVolumeServer;
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The path of the ConfigFile volume.</p>
              */
-            public Builder configFileVolumeConfigFileToPaths(java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths) {
+            public Builder configFileVolumeConfigFileToPaths(java.util.List<ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths) {
                 this.configFileVolumeConfigFileToPaths = configFileVolumeConfigFileToPaths;
                 return this;
             }
@@ -4743,7 +5134,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         private String containerGroupName;
 
         @com.aliyun.core.annotation.NameInMap("Containers")
-        private java.util.List < Containers> containers;
+        private java.util.List<Containers> containers;
 
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
@@ -4770,7 +5161,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         private Integer ephemeralStorage;
 
         @com.aliyun.core.annotation.NameInMap("Events")
-        private java.util.List < Events> events;
+        private java.util.List<Events> events;
 
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
@@ -4779,10 +5170,10 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         private String failedTime;
 
         @com.aliyun.core.annotation.NameInMap("HostAliases")
-        private java.util.List < HostAliases> hostAliases;
+        private java.util.List<HostAliases> hostAliases;
 
         @com.aliyun.core.annotation.NameInMap("InitContainers")
-        private java.util.List < InitContainers> initContainers;
+        private java.util.List<InitContainers> initContainers;
 
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
@@ -4827,7 +5218,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         private String succeededTime;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("TenantEniInstanceId")
         private String tenantEniInstanceId;
@@ -4845,7 +5236,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         private String vSwitchId;
 
         @com.aliyun.core.annotation.NameInMap("Volumes")
-        private java.util.List < Volumes> volumes;
+        private java.util.List<Volumes> volumes;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
@@ -4928,7 +5319,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return containers
          */
-        public java.util.List < Containers> getContainers() {
+        public java.util.List<Containers> getContainers() {
             return this.containers;
         }
 
@@ -4991,7 +5382,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return events
          */
-        public java.util.List < Events> getEvents() {
+        public java.util.List<Events> getEvents() {
             return this.events;
         }
 
@@ -5012,14 +5403,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return hostAliases
          */
-        public java.util.List < HostAliases> getHostAliases() {
+        public java.util.List<HostAliases> getHostAliases() {
             return this.hostAliases;
         }
 
         /**
          * @return initContainers
          */
-        public java.util.List < InitContainers> getInitContainers() {
+        public java.util.List<InitContainers> getInitContainers() {
             return this.initContainers;
         }
 
@@ -5124,7 +5515,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -5166,7 +5557,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         /**
          * @return volumes
          */
-        public java.util.List < Volumes> getVolumes() {
+        public java.util.List<Volumes> getVolumes() {
             return this.volumes;
         }
 
@@ -5188,7 +5579,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String computeCategory; 
             private String containerGroupId; 
             private String containerGroupName; 
-            private java.util.List < Containers> containers; 
+            private java.util.List<Containers> containers; 
             private Float cpu; 
             private String creationTime; 
             private Integer discount; 
@@ -5197,11 +5588,11 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private EciSecurityContext eciSecurityContext; 
             private String eniInstanceId; 
             private Integer ephemeralStorage; 
-            private java.util.List < Events> events; 
+            private java.util.List<Events> events; 
             private String expiredTime; 
             private String failedTime; 
-            private java.util.List < HostAliases> hostAliases; 
-            private java.util.List < InitContainers> initContainers; 
+            private java.util.List<HostAliases> hostAliases; 
+            private java.util.List<InitContainers> initContainers; 
             private String instanceType; 
             private String internetIp; 
             private String intranetIp; 
@@ -5216,15 +5607,61 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String spotStrategy; 
             private String status; 
             private String succeededTime; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
             private String tenantEniInstanceId; 
             private String tenantEniIp; 
             private String tenantSecurityGroupId; 
             private String tenantVSwitchId; 
             private String vSwitchId; 
-            private java.util.List < Volumes> volumes; 
+            private java.util.List<Volumes> volumes; 
             private String vpcId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContainerGroups model) {
+                this.computeCategory = model.computeCategory;
+                this.containerGroupId = model.containerGroupId;
+                this.containerGroupName = model.containerGroupName;
+                this.containers = model.containers;
+                this.cpu = model.cpu;
+                this.creationTime = model.creationTime;
+                this.discount = model.discount;
+                this.dnsConfig = model.dnsConfig;
+                this.dnsPolicy = model.dnsPolicy;
+                this.eciSecurityContext = model.eciSecurityContext;
+                this.eniInstanceId = model.eniInstanceId;
+                this.ephemeralStorage = model.ephemeralStorage;
+                this.events = model.events;
+                this.expiredTime = model.expiredTime;
+                this.failedTime = model.failedTime;
+                this.hostAliases = model.hostAliases;
+                this.initContainers = model.initContainers;
+                this.instanceType = model.instanceType;
+                this.internetIp = model.internetIp;
+                this.intranetIp = model.intranetIp;
+                this.ipv6Address = model.ipv6Address;
+                this.memory = model.memory;
+                this.ramRoleName = model.ramRoleName;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.restartPolicy = model.restartPolicy;
+                this.securityGroupId = model.securityGroupId;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+                this.status = model.status;
+                this.succeededTime = model.succeededTime;
+                this.tags = model.tags;
+                this.tenantEniInstanceId = model.tenantEniInstanceId;
+                this.tenantEniIp = model.tenantEniIp;
+                this.tenantSecurityGroupId = model.tenantSecurityGroupId;
+                this.tenantVSwitchId = model.tenantVSwitchId;
+                this.vSwitchId = model.vSwitchId;
+                this.volumes = model.volumes;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The computing power type of the elastic container instance. Valid values:</p>
@@ -5266,7 +5703,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The information about containers in the elastic container instance.</p>
              */
-            public Builder containers(java.util.List < Containers> containers) {
+            public Builder containers(java.util.List<Containers> containers) {
                 this.containers = containers;
                 return this;
             }
@@ -5313,7 +5750,14 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * DnsPolicy.
+             * <p>The Domain Name System (DNS) policy. Valid values:</p>
+             * <ul>
+             * <li>None: uses the DNS that is specified by DnsConfig.</li>
+             * <li>Default: uses the DNS that is specified for the runtime environment.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder dnsPolicy(String dnsPolicy) {
                 this.dnsPolicy = dnsPolicy;
@@ -5353,7 +5797,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The events of the elastic container instance. A maximum of 50 events can be returned.</p>
              */
-            public Builder events(java.util.List < Events> events) {
+            public Builder events(java.util.List<Events> events) {
                 this.events = events;
                 return this;
             }
@@ -5383,7 +5827,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The hostnames and IP addresses for a container that are added to the hosts file of the elastic container instance.</p>
              */
-            public Builder hostAliases(java.util.List < HostAliases> hostAliases) {
+            public Builder hostAliases(java.util.List<HostAliases> hostAliases) {
                 this.hostAliases = hostAliases;
                 return this;
             }
@@ -5391,7 +5835,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The information about the init containers.</p>
              */
-            public Builder initContainers(java.util.List < InitContainers> initContainers) {
+            public Builder initContainers(java.util.List<InitContainers> initContainers) {
                 this.initContainers = initContainers;
                 return this;
             }
@@ -5576,7 +6020,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The tags that are added to the instance.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }
@@ -5639,7 +6083,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             /**
              * <p>The information about the volumes.</p>
              */
-            public Builder volumes(java.util.List < Volumes> volumes) {
+            public Builder volumes(java.util.List<Volumes> volumes) {
                 this.volumes = volumes;
                 return this;
             }

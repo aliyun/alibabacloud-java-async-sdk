@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return priceInfo
      */
@@ -48,6 +57,14 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
     public static final class Builder {
         private PriceInfo priceInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeContainerGroupPriceResponseBody model) {
+            this.priceInfo = model.priceInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the prices and discount rules.</p>
@@ -118,6 +135,14 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private String description; 
             private Long ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rule model) {
+                this.description = model.description;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * <p>The description of the rule.</p>
              * 
@@ -155,7 +180,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
      */
     public static class Rules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rule")
-        private java.util.List < Rule> rule;
+        private java.util.List<Rule> rule;
 
         private Rules(Builder builder) {
             this.rule = builder.rule;
@@ -172,17 +197,24 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         /**
          * @return rule
          */
-        public java.util.List < Rule> getRule() {
+        public java.util.List<Rule> getRule() {
             return this.rule;
         }
 
         public static final class Builder {
-            private java.util.List < Rule> rule; 
+            private java.util.List<Rule> rule; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.rule = model.rule;
+            } 
 
             /**
              * Rule.
              */
-            public Builder rule(java.util.List < Rule> rule) {
+            public Builder rule(java.util.List<Rule> rule) {
                 this.rule = rule;
                 return this;
             }
@@ -274,6 +306,17 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private Rules rules; 
             private Float tradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(DetailInfo model) {
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.resource = model.resource;
+                this.rules = model.rules;
+                this.tradePrice = model.tradePrice;
+            } 
+
             /**
              * <p>The discount.</p>
              * 
@@ -341,7 +384,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
      */
     public static class DetailInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DetailInfo")
-        private java.util.List < DetailInfo> detailInfo;
+        private java.util.List<DetailInfo> detailInfo;
 
         private DetailInfos(Builder builder) {
             this.detailInfo = builder.detailInfo;
@@ -358,17 +401,24 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         /**
          * @return detailInfo
          */
-        public java.util.List < DetailInfo> getDetailInfo() {
+        public java.util.List<DetailInfo> getDetailInfo() {
             return this.detailInfo;
         }
 
         public static final class Builder {
-            private java.util.List < DetailInfo> detailInfo; 
+            private java.util.List<DetailInfo> detailInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetailInfos model) {
+                this.detailInfo = model.detailInfo;
+            } 
 
             /**
              * DetailInfo.
              */
-            public Builder detailInfo(java.util.List < DetailInfo> detailInfo) {
+            public Builder detailInfo(java.util.List<DetailInfo> detailInfo) {
                 this.detailInfo = detailInfo;
                 return this;
             }
@@ -459,6 +509,17 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private Float discountPrice; 
             private Float originalPrice; 
             private Float tradePrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(Price model) {
+                this.currency = model.currency;
+                this.detailInfos = model.detailInfos;
+                this.discountPrice = model.discountPrice;
+                this.originalPrice = model.originalPrice;
+                this.tradePrice = model.tradePrice;
+            } 
 
             /**
              * <p>The currency unit. Valid values:</p>
@@ -567,6 +628,14 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private String description; 
             private Long ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RulesRule model) {
+                this.description = model.description;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * <p>The description of the promotion rule.</p>
              * 
@@ -604,7 +673,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
      */
     public static class PriceInfoRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Rule")
-        private java.util.List < RulesRule> rule;
+        private java.util.List<RulesRule> rule;
 
         private PriceInfoRules(Builder builder) {
             this.rule = builder.rule;
@@ -621,17 +690,24 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         /**
          * @return rule
          */
-        public java.util.List < RulesRule> getRule() {
+        public java.util.List<RulesRule> getRule() {
             return this.rule;
         }
 
         public static final class Builder {
-            private java.util.List < RulesRule> rule; 
+            private java.util.List<RulesRule> rule; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceInfoRules model) {
+                this.rule = model.rule;
+            } 
 
             /**
              * Rule.
              */
-            public Builder rule(java.util.List < RulesRule> rule) {
+            public Builder rule(java.util.List<RulesRule> rule) {
                 this.rule = rule;
                 return this;
             }
@@ -711,6 +787,16 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private Float spotPrice; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(SpotPrice model) {
+                this.instanceType = model.instanceType;
+                this.originPrice = model.originPrice;
+                this.spotPrice = model.spotPrice;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The ECS instance type.</p>
              * 
@@ -770,7 +856,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
      */
     public static class SpotPrices extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpotPrice")
-        private java.util.List < SpotPrice> spotPrice;
+        private java.util.List<SpotPrice> spotPrice;
 
         private SpotPrices(Builder builder) {
             this.spotPrice = builder.spotPrice;
@@ -787,12 +873,19 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
         /**
          * @return spotPrice
          */
-        public java.util.List < SpotPrice> getSpotPrice() {
+        public java.util.List<SpotPrice> getSpotPrice() {
             return this.spotPrice;
         }
 
         public static final class Builder {
-            private java.util.List < SpotPrice> spotPrice; 
+            private java.util.List<SpotPrice> spotPrice; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpotPrices model) {
+                this.spotPrice = model.spotPrice;
+            } 
 
             /**
              * <p>The prices of preemptible elastic container instances.</p>
@@ -800,7 +893,7 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0.056</p>
              */
-            public Builder spotPrice(java.util.List < SpotPrice> spotPrice) {
+            public Builder spotPrice(java.util.List<SpotPrice> spotPrice) {
                 this.spotPrice = spotPrice;
                 return this;
             }
@@ -867,6 +960,15 @@ public class DescribeContainerGroupPriceResponseBody extends TeaModel {
             private Price price; 
             private PriceInfoRules rules; 
             private SpotPrices spotPrices; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceInfo model) {
+                this.price = model.price;
+                this.rules = model.rules;
+                this.spotPrices = model.spotPrices;
+            } 
 
             /**
              * <p>The price.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -66,7 +71,7 @@ public class DescribeAvailableResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -311,6 +316,16 @@ public class DescribeAvailableResourceRequest extends Request {
             private Float memory; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DestinationResource model) {
+                this.category = model.category;
+                this.cores = model.cores;
+                this.memory = model.memory;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The type of the resource. Valid values:</p>
              * <ul>
@@ -426,6 +441,15 @@ public class DescribeAvailableResourceRequest extends Request {
             private Integer spotDuration; 
             private Double spotPriceLimit; 
             private String spotStrategy; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpotResource model) {
+                this.spotDuration = model.spotDuration;
+                this.spotPriceLimit = model.spotPriceLimit;
+                this.spotStrategy = model.spotStrategy;
+            } 
 
             /**
              * <p>The protection period of the preemptible instance. Unit: hours. Default value: 1. The value of 0 indicates no protection period.</p>

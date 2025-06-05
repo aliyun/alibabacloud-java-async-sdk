@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeRegionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Regions")
-    private java.util.List < Regions> regions;
+    private java.util.List<Regions> regions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
-    public java.util.List < Regions> getRegions() {
+    public java.util.List<Regions> getRegions() {
         return this.regions;
     }
 
@@ -46,13 +55,21 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Regions> regions; 
+        private java.util.List<Regions> regions; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The queried regions.</p>
+         * <p>The list of regions.</p>
          */
-        public Builder regions(java.util.List < Regions> regions) {
+        public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
             return this;
         }
@@ -82,7 +99,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
      */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RecommendZones")
-        private java.util.List < String > recommendZones;
+        private java.util.List<String> recommendZones;
 
         @com.aliyun.core.annotation.NameInMap("RegionEndpoint")
         private String regionEndpoint;
@@ -91,10 +108,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("UnavailableZones")
-        private java.util.List < String > unavailableZones;
+        private java.util.List<String> unavailableZones;
 
         @com.aliyun.core.annotation.NameInMap("Zones")
-        private java.util.List < String > zones;
+        private java.util.List<String> zones;
 
         private Regions(Builder builder) {
             this.recommendZones = builder.recommendZones;
@@ -115,7 +132,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         /**
          * @return recommendZones
          */
-        public java.util.List < String > getRecommendZones() {
+        public java.util.List<String> getRecommendZones() {
             return this.recommendZones;
         }
 
@@ -136,28 +153,39 @@ public class DescribeRegionsResponseBody extends TeaModel {
         /**
          * @return unavailableZones
          */
-        public java.util.List < String > getUnavailableZones() {
+        public java.util.List<String> getUnavailableZones() {
             return this.unavailableZones;
         }
 
         /**
          * @return zones
          */
-        public java.util.List < String > getZones() {
+        public java.util.List<String> getZones() {
             return this.zones;
         }
 
         public static final class Builder {
-            private java.util.List < String > recommendZones; 
+            private java.util.List<String> recommendZones; 
             private String regionEndpoint; 
             private String regionId; 
-            private java.util.List < String > unavailableZones; 
-            private java.util.List < String > zones; 
+            private java.util.List<String> unavailableZones; 
+            private java.util.List<String> zones; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.recommendZones = model.recommendZones;
+                this.regionEndpoint = model.regionEndpoint;
+                this.regionId = model.regionId;
+                this.unavailableZones = model.unavailableZones;
+                this.zones = model.zones;
+            } 
 
             /**
-             * <p>The recommended zones. Recommended zones are zones that have relatively sufficient resources in the current region.</p>
+             * <p>The list of recommended zones.</p>
              */
-            public Builder recommendZones(java.util.List < String > recommendZones) {
+            public Builder recommendZones(java.util.List<String> recommendZones) {
                 this.recommendZones = recommendZones;
                 return this;
             }
@@ -185,9 +213,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * UnavailableZones.
+             * <p>The list of unavailable zones.</p>
              */
-            public Builder unavailableZones(java.util.List < String > unavailableZones) {
+            public Builder unavailableZones(java.util.List<String> unavailableZones) {
                 this.unavailableZones = unavailableZones;
                 return this;
             }
@@ -195,7 +223,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             /**
              * <p>The queried zones.</p>
              */
-            public Builder zones(java.util.List < String > zones) {
+            public Builder zones(java.util.List<String> zones) {
                 this.zones = zones;
                 return this;
             }

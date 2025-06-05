@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeImageCachesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ImageCaches")
-    private java.util.List < ImageCaches> imageCaches;
+    private java.util.List<ImageCaches> imageCaches;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -39,10 +44,14 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return imageCaches
      */
-    public java.util.List < ImageCaches> getImageCaches() {
+    public java.util.List<ImageCaches> getImageCaches() {
         return this.imageCaches;
     }
 
@@ -68,15 +77,25 @@ public class DescribeImageCachesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ImageCaches> imageCaches; 
+        private java.util.List<ImageCaches> imageCaches; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageCachesResponseBody model) {
+            this.imageCaches = model.imageCaches;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The information about image caches.</p>
          */
-        public Builder imageCaches(java.util.List < ImageCaches> imageCaches) {
+        public Builder imageCaches(java.util.List<ImageCaches> imageCaches) {
             this.imageCaches = imageCaches;
             return this;
         }
@@ -224,6 +243,19 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             private String reason; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.count = model.count;
+                this.firstTimestamp = model.firstTimestamp;
+                this.lastTimestamp = model.lastTimestamp;
+                this.message = model.message;
+                this.name = model.name;
+                this.reason = model.reason;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The number of events.</p>
              * 
@@ -352,6 +384,14 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -398,7 +438,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         private String eliminationStrategy;
 
         @com.aliyun.core.annotation.NameInMap("Events")
-        private java.util.List < Events> events;
+        private java.util.List<Events> events;
 
         @com.aliyun.core.annotation.NameInMap("ExpireDateTime")
         private String expireDateTime;
@@ -416,7 +456,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         private Integer imageCacheSize;
 
         @com.aliyun.core.annotation.NameInMap("Images")
-        private java.util.List < String > images;
+        private java.util.List<String> images;
 
         @com.aliyun.core.annotation.NameInMap("LastMatchedTime")
         private String lastMatchedTime;
@@ -437,7 +477,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private ImageCaches(Builder builder) {
             this.containerGroupId = builder.containerGroupId;
@@ -491,7 +531,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         /**
          * @return events
          */
-        public java.util.List < Events> getEvents() {
+        public java.util.List<Events> getEvents() {
             return this.events;
         }
 
@@ -533,7 +573,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         /**
          * @return images
          */
-        public java.util.List < String > getImages() {
+        public java.util.List<String> getImages() {
             return this.images;
         }
 
@@ -582,7 +622,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -590,20 +630,43 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             private String containerGroupId; 
             private String creationTime; 
             private String eliminationStrategy; 
-            private java.util.List < Events> events; 
+            private java.util.List<Events> events; 
             private String expireDateTime; 
             private String flashSnapshotId; 
             private String imageCacheId; 
             private String imageCacheName; 
             private Integer imageCacheSize; 
-            private java.util.List < String > images; 
+            private java.util.List<String> images; 
             private String lastMatchedTime; 
             private String progress; 
             private String regionId; 
             private String resourceGroupId; 
             private String snapshotId; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageCaches model) {
+                this.containerGroupId = model.containerGroupId;
+                this.creationTime = model.creationTime;
+                this.eliminationStrategy = model.eliminationStrategy;
+                this.events = model.events;
+                this.expireDateTime = model.expireDateTime;
+                this.flashSnapshotId = model.flashSnapshotId;
+                this.imageCacheId = model.imageCacheId;
+                this.imageCacheName = model.imageCacheName;
+                this.imageCacheSize = model.imageCacheSize;
+                this.images = model.images;
+                this.lastMatchedTime = model.lastMatchedTime;
+                this.progress = model.progress;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.snapshotId = model.snapshotId;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ID of the elastic container instance.</p>
@@ -642,7 +705,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             /**
              * <p>The events of pulling an image to create the image cache.</p>
              */
-            public Builder events(java.util.List < Events> events) {
+            public Builder events(java.util.List<Events> events) {
                 this.events = events;
                 return this;
             }
@@ -705,7 +768,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             /**
              * <p>The images contained in the image cache.</p>
              */
-            public Builder images(java.util.List < String > images) {
+            public Builder images(java.util.List<String> images) {
                 this.images = images;
                 return this;
             }
@@ -791,7 +854,7 @@ public class DescribeImageCachesResponseBody extends TeaModel {
             /**
              * <p>The tags of the image cache.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

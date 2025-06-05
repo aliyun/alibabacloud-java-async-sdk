@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Records")
-    private java.util.List < Records> records;
+    private java.util.List<Records> records;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return records
      */
-    public java.util.List < Records> getRecords() {
+    public java.util.List<Records> getRecords() {
         return this.records;
     }
 
@@ -46,13 +55,21 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Records> records; 
+        private java.util.List<Records> records; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceOpsRecordsResponseBody model) {
+            this.records = model.records;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the queried O&amp;M tasks.</p>
          */
-        public Builder records(java.util.List < Records> records) {
+        public Builder records(java.util.List<Records> records) {
             this.records = records;
             return this;
         }
@@ -165,6 +182,18 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
             private String opsType; 
             private String resultContent; 
             private String resultType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.createTime = model.createTime;
+                this.expireTime = model.expireTime;
+                this.opsStatus = model.opsStatus;
+                this.opsType = model.opsType;
+                this.resultContent = model.resultContent;
+                this.resultType = model.resultType;
+            } 
 
             /**
              * <p>The time when the O&amp;M task was created.</p>

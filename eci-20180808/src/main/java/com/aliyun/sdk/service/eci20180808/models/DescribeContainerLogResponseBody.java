@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class DescribeContainerLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return containerName
      */
@@ -60,6 +69,15 @@ public class DescribeContainerLogResponseBody extends TeaModel {
         private String containerName; 
         private String content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeContainerLogResponseBody model) {
+            this.containerName = model.containerName;
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The container name.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -14,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateImageCacheRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AcrRegistryInfo")
-    private java.util.List < AcrRegistryInfo> acrRegistryInfo;
+    private java.util.List<AcrRegistryInfo> acrRegistryInfo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Annotations")
@@ -47,7 +52,7 @@ public class CreateImageCacheRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Image")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > image;
+    private java.util.List<String> image;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageCacheName")
@@ -60,7 +65,7 @@ public class CreateImageCacheRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageRegistryCredential")
-    private java.util.List < ImageRegistryCredential> imageRegistryCredential;
+    private java.util.List<ImageRegistryCredential> imageRegistryCredential;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InsecureRegistry")
@@ -113,7 +118,7 @@ public class CreateImageCacheRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
@@ -162,7 +167,7 @@ public class CreateImageCacheRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -170,7 +175,7 @@ public class CreateImageCacheRequest extends Request {
     /**
      * @return acrRegistryInfo
      */
-    public java.util.List < AcrRegistryInfo> getAcrRegistryInfo() {
+    public java.util.List<AcrRegistryInfo> getAcrRegistryInfo() {
         return this.acrRegistryInfo;
     }
 
@@ -226,7 +231,7 @@ public class CreateImageCacheRequest extends Request {
     /**
      * @return image
      */
-    public java.util.List < String > getImage() {
+    public java.util.List<String> getImage() {
         return this.image;
     }
 
@@ -247,7 +252,7 @@ public class CreateImageCacheRequest extends Request {
     /**
      * @return imageRegistryCredential
      */
-    public java.util.List < ImageRegistryCredential> getImageRegistryCredential() {
+    public java.util.List<ImageRegistryCredential> getImageRegistryCredential() {
         return this.imageRegistryCredential;
     }
 
@@ -338,7 +343,7 @@ public class CreateImageCacheRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -357,7 +362,7 @@ public class CreateImageCacheRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateImageCacheRequest, Builder> {
-        private java.util.List < AcrRegistryInfo> acrRegistryInfo; 
+        private java.util.List<AcrRegistryInfo> acrRegistryInfo; 
         private String annotations; 
         private Boolean autoMatchImageCache; 
         private String clientToken; 
@@ -365,10 +370,10 @@ public class CreateImageCacheRequest extends Request {
         private String eliminationStrategy; 
         private Boolean flash; 
         private Integer flashCopyCount; 
-        private java.util.List < String > image; 
+        private java.util.List<String> image; 
         private String imageCacheName; 
         private Integer imageCacheSize; 
-        private java.util.List < ImageRegistryCredential> imageRegistryCredential; 
+        private java.util.List<ImageRegistryCredential> imageRegistryCredential; 
         private String insecureRegistry; 
         private String osType; 
         private String ownerAccount; 
@@ -381,7 +386,7 @@ public class CreateImageCacheRequest extends Request {
         private Integer retentionDays; 
         private String securityGroupId; 
         private Integer standardCopyCount; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String zoneId; 
 
@@ -423,7 +428,7 @@ public class CreateImageCacheRequest extends Request {
         /**
          * <p>Information about the Container Registry Enterprise Edition instance. For more information, see <a href="https://help.aliyun.com/document_detail/194250.html">Pull images from a Container Registry Enterprise Edition instance without using secrets</a>.</p>
          */
-        public Builder acrRegistryInfo(java.util.List < AcrRegistryInfo> acrRegistryInfo) {
+        public Builder acrRegistryInfo(java.util.List<AcrRegistryInfo> acrRegistryInfo) {
             this.putQueryParameter("AcrRegistryInfo", acrRegistryInfo);
             this.acrRegistryInfo = acrRegistryInfo;
             return this;
@@ -534,7 +539,7 @@ public class CreateImageCacheRequest extends Request {
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:1.15.10-perl</p>
          */
-        public Builder image(java.util.List < String > image) {
+        public Builder image(java.util.List<String> image) {
             this.putQueryParameter("Image", image);
             this.image = image;
             return this;
@@ -568,7 +573,7 @@ public class CreateImageCacheRequest extends Request {
         /**
          * <p>The image repository.</p>
          */
-        public Builder imageRegistryCredential(java.util.List < ImageRegistryCredential> imageRegistryCredential) {
+        public Builder imageRegistryCredential(java.util.List<ImageRegistryCredential> imageRegistryCredential) {
             this.putQueryParameter("ImageRegistryCredential", imageRegistryCredential);
             this.imageRegistryCredential = imageRegistryCredential;
             return this;
@@ -588,7 +593,17 @@ public class CreateImageCacheRequest extends Request {
         }
 
         /**
-         * OsType.
+         * <p>The operating system of the image. Default value: Linux. Valid values:</p>
+         * <ul>
+         * <li>Linux</li>
+         * <li>Windows</li>
+         * </ul>
+         * <blockquote>
+         * <p>Windows instances are in invitational preview. To use the operating system, submit a ticket.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>Linux</p>
          */
         public Builder osType(String osType) {
             this.putQueryParameter("OsType", osType);
@@ -714,7 +729,7 @@ public class CreateImageCacheRequest extends Request {
         /**
          * <p>The tag of the image cache.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -765,7 +780,7 @@ public class CreateImageCacheRequest extends Request {
         private String arnUser;
 
         @com.aliyun.core.annotation.NameInMap("Domain")
-        private java.util.List < String > domain;
+        private java.util.List<String> domain;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -810,7 +825,7 @@ public class CreateImageCacheRequest extends Request {
         /**
          * @return domain
          */
-        public java.util.List < String > getDomain() {
+        public java.util.List<String> getDomain() {
             return this.domain;
         }
 
@@ -838,10 +853,22 @@ public class CreateImageCacheRequest extends Request {
         public static final class Builder {
             private String arnService; 
             private String arnUser; 
-            private java.util.List < String > domain; 
+            private java.util.List<String> domain; 
             private String instanceId; 
             private String instanceName; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AcrRegistryInfo model) {
+                this.arnService = model.arnService;
+                this.arnUser = model.arnUser;
+                this.domain = model.domain;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the RAM roles in the Alibaba Cloud account to which the elastic container instance belongs.</p>
@@ -871,7 +898,7 @@ public class CreateImageCacheRequest extends Request {
              * <strong>example:</strong>
              * <p>test****-registry.cn-beijing.cr.aliyuncs.com</p>
              */
-            public Builder domain(java.util.List < String > domain) {
+            public Builder domain(java.util.List<String> domain) {
                 this.domain = domain;
                 return this;
             }
@@ -972,6 +999,15 @@ public class CreateImageCacheRequest extends Request {
             private String server; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageRegistryCredential model) {
+                this.password = model.password;
+                this.server = model.server;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The password that is used to log on to image repository N.</p>
              * 
@@ -1055,6 +1091,14 @@ public class CreateImageCacheRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N of the image cache. Valid values of N: 1 to 20.</p>

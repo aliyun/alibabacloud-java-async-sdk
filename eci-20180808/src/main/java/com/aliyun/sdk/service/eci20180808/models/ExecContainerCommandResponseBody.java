@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,6 +44,10 @@ public class ExecContainerCommandResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return httpUrl
      */
@@ -72,6 +81,16 @@ public class ExecContainerCommandResponseBody extends TeaModel {
         private String requestId; 
         private String syncResponse; 
         private String webSocketUri; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExecContainerCommandResponseBody model) {
+            this.httpUrl = model.httpUrl;
+            this.requestId = model.requestId;
+            this.syncResponse = model.syncResponse;
+            this.webSocketUri = model.webSocketUri;
+        } 
 
         /**
          * <p>The HTTP URL. You can use this URL to enter the container within 30 seconds after this operation is called. For more information, see <a href="https://help.aliyun.com/document_detail/202846.html">Use and integrate the Elastic Container Instance terminal</a>.</p>

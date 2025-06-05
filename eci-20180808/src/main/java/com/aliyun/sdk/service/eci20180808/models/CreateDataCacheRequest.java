@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -79,7 +84,7 @@ public class CreateDataCacheRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
@@ -115,7 +120,7 @@ public class CreateDataCacheRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -235,7 +240,7 @@ public class CreateDataCacheRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -263,7 +268,7 @@ public class CreateDataCacheRequest extends Request {
         private Integer retentionDays; 
         private String securityGroupId; 
         private Integer size; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
 
         private Builder() {
@@ -473,7 +478,7 @@ public class CreateDataCacheRequest extends Request {
         /**
          * <p>The tags to be bound to the data cache.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -506,7 +511,7 @@ public class CreateDataCacheRequest extends Request {
      */
     public static class DataSource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Options")
-        private java.util.Map < String, String > options;
+        private java.util.Map<String, String> options;
 
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
@@ -527,7 +532,7 @@ public class CreateDataCacheRequest extends Request {
         /**
          * @return options
          */
-        public java.util.Map < String, String > getOptions() {
+        public java.util.Map<String, String> getOptions() {
             return this.options;
         }
 
@@ -539,13 +544,21 @@ public class CreateDataCacheRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > options; 
+            private java.util.Map<String, String> options; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.options = model.options;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The parameters that are configured for the data source.</p>
              */
-            public Builder options(java.util.Map < String, String > options) {
+            public Builder options(java.util.Map<String, String> options) {
                 this.options = options;
                 return this;
             }
@@ -653,6 +666,17 @@ public class CreateDataCacheRequest extends Request {
             private String ISP; 
             private String internetChargeType; 
             private String publicIpAddressPoolId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EipCreateParam model) {
+                this.bandwidth = model.bandwidth;
+                this.commonBandwidthPackage = model.commonBandwidthPackage;
+                this.ISP = model.ISP;
+                this.internetChargeType = model.internetChargeType;
+                this.publicIpAddressPoolId = model.publicIpAddressPoolId;
+            } 
 
             /**
              * <p>The bandwidth of the EIP. Unit: Mbit/s. Default value: 5.</p>
@@ -767,6 +791,14 @@ public class CreateDataCacheRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>

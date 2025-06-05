@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -77,7 +82,7 @@ public class CommitContainerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -362,6 +367,16 @@ public class CommitContainerRequest extends Request {
             private String instanceId; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AcrRegistryInfo model) {
+                this.arnService = model.arnService;
+                this.arnUser = model.arnUser;
+                this.instanceId = model.instanceId;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Access (ARN) of the RAM role that is assigned to the user (the authorized account) in cross-account authorization scenarios.</p>
              * 
@@ -456,6 +471,14 @@ public class CommitContainerRequest extends Request {
         public static final class Builder {
             private String roleArn; 
             private String roleType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Arn model) {
+                this.roleArn = model.roleArn;
+                this.roleType = model.roleType;
+            } 
 
             /**
              * <p>The ARN of the authorized role.</p>
@@ -555,6 +578,16 @@ public class CommitContainerRequest extends Request {
             private String message; 
             private String repository; 
             private String tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Image model) {
+                this.author = model.author;
+                this.message = model.message;
+                this.repository = model.repository;
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>The authorization of the image.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeContainerGroupStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private java.util.List<Data> data;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -39,10 +44,14 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public java.util.List<Data> getData() {
         return this.data;
     }
 
@@ -68,15 +77,25 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Data> data; 
+        private java.util.List<Data> data; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeContainerGroupStatusResponseBody model) {
+            this.data = model.data;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The collection of the statuses of the container groups.</p>
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(java.util.List<Data> data) {
             this.data = data;
             return this;
         }
@@ -200,6 +219,17 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.message = model.message;
+                this.reason = model.reason;
+                this.lastTransitionTime = model.lastTransitionTime;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The message about the event.</p>
              * 
@@ -303,6 +333,13 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private String startedAtstartedAt; 
+
+            private Builder() {
+            } 
+
+            private Builder(Running model) {
+                this.startedAtstartedAt = model.startedAtstartedAt;
+            } 
 
             /**
              * <p>The time when the container started to run.</p>
@@ -425,6 +462,19 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String reason; 
             private Integer signal; 
             private String startedAt; 
+
+            private Builder() {
+            } 
+
+            private Builder(Terminated model) {
+                this.containerID = model.containerID;
+                this.exitCode = model.exitCode;
+                this.finishedAt = model.finishedAt;
+                this.message = model.message;
+                this.reason = model.reason;
+                this.signal = model.signal;
+                this.startedAt = model.startedAt;
+            } 
 
             /**
              * <p>The container ID.</p>
@@ -554,6 +604,14 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String message; 
             private String reason; 
 
+            private Builder() {
+            } 
+
+            private Builder(Waiting model) {
+                this.message = model.message;
+                this.reason = model.reason;
+            } 
+
             /**
              * <p>The message about the event.</p>
              * 
@@ -639,6 +697,15 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private Terminated terminated; 
             private Waiting waiting; 
 
+            private Builder() {
+            } 
+
+            private Builder(LastState model) {
+                this.running = model.running;
+                this.terminated = model.terminated;
+                this.waiting = model.waiting;
+            } 
+
             /**
              * <p>The container is created and running.</p>
              */
@@ -701,6 +768,13 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private String startedAtstartedAt; 
+
+            private Builder() {
+            } 
+
+            private Builder(StateRunning model) {
+                this.startedAtstartedAt = model.startedAtstartedAt;
+            } 
 
             /**
              * <p>The time when the container started to run.</p>
@@ -823,6 +897,19 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String reason; 
             private Integer signal; 
             private String startedAt; 
+
+            private Builder() {
+            } 
+
+            private Builder(StateTerminated model) {
+                this.containerID = model.containerID;
+                this.exitCode = model.exitCode;
+                this.finishedAt = model.finishedAt;
+                this.message = model.message;
+                this.reason = model.reason;
+                this.signal = model.signal;
+                this.startedAt = model.startedAt;
+            } 
 
             /**
              * <p>The container ID.</p>
@@ -952,6 +1039,14 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private String message; 
             private String reason; 
 
+            private Builder() {
+            } 
+
+            private Builder(StateWaiting model) {
+                this.message = model.message;
+                this.reason = model.reason;
+            } 
+
             /**
              * <p>The message about the event.</p>
              * 
@@ -1036,6 +1131,15 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private StateRunning running; 
             private StateTerminated terminated; 
             private StateWaiting waiting; 
+
+            private Builder() {
+            } 
+
+            private Builder(State model) {
+                this.running = model.running;
+                this.terminated = model.terminated;
+                this.waiting = model.waiting;
+            } 
 
             /**
              * <p>The container is created and running.</p>
@@ -1184,6 +1288,20 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private Boolean started; 
             private State state; 
 
+            private Builder() {
+            } 
+
+            private Builder(ContainerStatuses model) {
+                this.image = model.image;
+                this.imageID = model.imageID;
+                this.lastState = model.lastState;
+                this.name = model.name;
+                this.ready = model.ready;
+                this.restartCount = model.restartCount;
+                this.started = model.started;
+                this.state = model.state;
+            } 
+
             /**
              * <p>The image of the container.</p>
              * 
@@ -1310,6 +1428,13 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String ip; 
 
+            private Builder() {
+            } 
+
+            private Builder(PodIps model) {
+                this.ip = model.ip;
+            } 
+
             /**
              * <p>The IP address of the container group.</p>
              * 
@@ -1336,10 +1461,10 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
      */
     public static class PodStatus extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Conditions")
-        private java.util.List < Conditions> conditions;
+        private java.util.List<Conditions> conditions;
 
         @com.aliyun.core.annotation.NameInMap("ContainerStatuses")
-        private java.util.List < ContainerStatuses> containerStatuses;
+        private java.util.List<ContainerStatuses> containerStatuses;
 
         @com.aliyun.core.annotation.NameInMap("HostIp")
         private String hostIp;
@@ -1351,7 +1476,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         private String podIp;
 
         @com.aliyun.core.annotation.NameInMap("PodIps")
-        private java.util.List < PodIps> podIps;
+        private java.util.List<PodIps> podIps;
 
         @com.aliyun.core.annotation.NameInMap("QosClass")
         private String qosClass;
@@ -1381,14 +1506,14 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         /**
          * @return conditions
          */
-        public java.util.List < Conditions> getConditions() {
+        public java.util.List<Conditions> getConditions() {
             return this.conditions;
         }
 
         /**
          * @return containerStatuses
          */
-        public java.util.List < ContainerStatuses> getContainerStatuses() {
+        public java.util.List<ContainerStatuses> getContainerStatuses() {
             return this.containerStatuses;
         }
 
@@ -1416,7 +1541,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         /**
          * @return podIps
          */
-        public java.util.List < PodIps> getPodIps() {
+        public java.util.List<PodIps> getPodIps() {
             return this.podIps;
         }
 
@@ -1435,19 +1560,33 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Conditions> conditions; 
-            private java.util.List < ContainerStatuses> containerStatuses; 
+            private java.util.List<Conditions> conditions; 
+            private java.util.List<ContainerStatuses> containerStatuses; 
             private String hostIp; 
             private String phase; 
             private String podIp; 
-            private java.util.List < PodIps> podIps; 
+            private java.util.List<PodIps> podIps; 
             private String qosClass; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(PodStatus model) {
+                this.conditions = model.conditions;
+                this.containerStatuses = model.containerStatuses;
+                this.hostIp = model.hostIp;
+                this.phase = model.phase;
+                this.podIp = model.podIp;
+                this.podIps = model.podIps;
+                this.qosClass = model.qosClass;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The conditions of the container group.</p>
              */
-            public Builder conditions(java.util.List < Conditions> conditions) {
+            public Builder conditions(java.util.List<Conditions> conditions) {
                 this.conditions = conditions;
                 return this;
             }
@@ -1455,7 +1594,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             /**
              * <p>The statuses about the containers.</p>
              */
-            public Builder containerStatuses(java.util.List < ContainerStatuses> containerStatuses) {
+            public Builder containerStatuses(java.util.List<ContainerStatuses> containerStatuses) {
                 this.containerStatuses = containerStatuses;
                 return this;
             }
@@ -1496,7 +1635,7 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             /**
              * <p>The IP addresses of the container groups.</p>
              */
-            public Builder podIps(java.util.List < PodIps> podIps) {
+            public Builder podIps(java.util.List<PodIps> podIps) {
                 this.podIps = podIps;
                 return this;
             }
@@ -1633,6 +1772,19 @@ public class DescribeContainerGroupStatusResponseBody extends TeaModel {
             private PodStatus podStatus; 
             private String status; 
             private String uuid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.annotations = model.annotations;
+                this.containerGroupId = model.containerGroupId;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.podStatus = model.podStatus;
+                this.status = model.status;
+                this.uuid = model.uuid;
+            } 
 
             /**
              * <p>Annotations that are added to the container groups.</p>

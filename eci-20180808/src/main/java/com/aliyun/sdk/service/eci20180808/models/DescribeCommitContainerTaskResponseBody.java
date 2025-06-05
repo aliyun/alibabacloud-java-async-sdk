@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCommitContainerTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CommitTasks")
-    private java.util.List < CommitTasks> commitTasks;
+    private java.util.List<CommitTasks> commitTasks;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
@@ -43,10 +48,14 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commitTasks
      */
-    public java.util.List < CommitTasks> getCommitTasks() {
+    public java.util.List<CommitTasks> getCommitTasks() {
         return this.commitTasks;
     }
 
@@ -79,16 +88,27 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < CommitTasks> commitTasks; 
+        private java.util.List<CommitTasks> commitTasks; 
         private String maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCommitContainerTaskResponseBody model) {
+            this.commitTasks = model.commitTasks;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>Details of the task.</p>
          */
-        public Builder commitTasks(java.util.List < CommitTasks> commitTasks) {
+        public Builder commitTasks(java.util.List<CommitTasks> commitTasks) {
             this.commitTasks = commitTasks;
             return this;
         }
@@ -211,6 +231,16 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             private String recordTime; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommitPhaseInfos model) {
+                this.message = model.message;
+                this.phase = model.phase;
+                this.recordTime = model.recordTime;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The message about the phase.</p>
              * 
@@ -275,7 +305,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
      */
     public static class CommitTasks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CommitPhaseInfos")
-        private java.util.List < CommitPhaseInfos> commitPhaseInfos;
+        private java.util.List<CommitPhaseInfos> commitPhaseInfos;
 
         @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
@@ -320,7 +350,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
         /**
          * @return commitPhaseInfos
          */
-        public java.util.List < CommitPhaseInfos> getCommitPhaseInfos() {
+        public java.util.List<CommitPhaseInfos> getCommitPhaseInfos() {
             return this.commitPhaseInfos;
         }
 
@@ -374,7 +404,7 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < CommitPhaseInfos> commitPhaseInfos; 
+            private java.util.List<CommitPhaseInfos> commitPhaseInfos; 
             private String containerName; 
             private String statusMessage; 
             private String taskCreationTime; 
@@ -383,10 +413,24 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
             private String taskProgress; 
             private String taskStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommitTasks model) {
+                this.commitPhaseInfos = model.commitPhaseInfos;
+                this.containerName = model.containerName;
+                this.statusMessage = model.statusMessage;
+                this.taskCreationTime = model.taskCreationTime;
+                this.taskFinishedTime = model.taskFinishedTime;
+                this.taskId = model.taskId;
+                this.taskProgress = model.taskProgress;
+                this.taskStatus = model.taskStatus;
+            } 
+
             /**
              * <p>The information about the phase that the task arrives.</p>
              */
-            public Builder commitPhaseInfos(java.util.List < CommitPhaseInfos> commitPhaseInfos) {
+            public Builder commitPhaseInfos(java.util.List<CommitPhaseInfos> commitPhaseInfos) {
                 this.commitPhaseInfos = commitPhaseInfos;
                 return this;
             }

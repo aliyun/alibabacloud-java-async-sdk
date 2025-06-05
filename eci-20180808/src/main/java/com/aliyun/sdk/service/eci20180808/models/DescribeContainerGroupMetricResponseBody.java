@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
     private String containerGroupId;
 
     @com.aliyun.core.annotation.NameInMap("Records")
-    private java.util.List < Records> records;
+    private java.util.List<Records> records;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,6 +40,10 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return containerGroupId
      */
@@ -45,7 +54,7 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
     /**
      * @return records
      */
-    public java.util.List < Records> getRecords() {
+    public java.util.List<Records> getRecords() {
         return this.records;
     }
 
@@ -58,8 +67,17 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
 
     public static final class Builder {
         private String containerGroupId; 
-        private java.util.List < Records> records; 
+        private java.util.List<Records> records; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeContainerGroupMetricResponseBody model) {
+            this.containerGroupId = model.containerGroupId;
+            this.records = model.records;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The instance ID.</p>
@@ -75,7 +93,7 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
         /**
          * <p>The monitoring data of the elastic container instance.</p>
          */
-        public Builder records(java.util.List < Records> records) {
+        public Builder records(java.util.List<Records> records) {
             this.records = records;
             return this;
         }
@@ -164,6 +182,16 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
             private Long load; 
             private Long usageCoreNanoSeconds; 
             private Long usageNanoCores; 
+
+            private Builder() {
+            } 
+
+            private Builder(CPU model) {
+                this.limit = model.limit;
+                this.load = model.load;
+                this.usageCoreNanoSeconds = model.usageCoreNanoSeconds;
+                this.usageNanoCores = model.usageNanoCores;
+            } 
 
             /**
              * <p>The upper limit of vCPU usage. The calculation formula for this parameter: The number of vCPUs × 1000.</p>
@@ -283,6 +311,16 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
             private Long load; 
             private Long usageCoreNanoSeconds; 
             private Long usageNanoCores; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContainersCPU model) {
+                this.limit = model.limit;
+                this.load = model.load;
+                this.usageCoreNanoSeconds = model.usageCoreNanoSeconds;
+                this.usageNanoCores = model.usageNanoCores;
+            } 
 
             /**
              * <p>The upper limit of vCPU usage. The calculation formula for this parameter: The number of vCPUs × 1000.</p>
@@ -415,6 +453,17 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
             private Long usageBytes; 
             private Long workingSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(Memory model) {
+                this.availableBytes = model.availableBytes;
+                this.cache = model.cache;
+                this.rss = model.rss;
+                this.usageBytes = model.usageBytes;
+                this.workingSet = model.workingSet;
+            } 
+
             /**
              * <p>The size of the available memory. Unit: bytes.</p>
              * 
@@ -533,6 +582,15 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
             private Memory memory; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Containers model) {
+                this.CPU = model.CPU;
+                this.memory = model.memory;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The vCPU monitoring data of the container.</p>
              */
@@ -646,6 +704,17 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
             private Long readIO; 
             private Long writeBytes; 
             private Long writeIO; 
+
+            private Builder() {
+            } 
+
+            private Builder(Disk model) {
+                this.device = model.device;
+                this.readBytes = model.readBytes;
+                this.readIO = model.readIO;
+                this.writeBytes = model.writeBytes;
+                this.writeIO = model.writeIO;
+            } 
 
             /**
              * <p>The name of the disk.</p>
@@ -788,6 +857,17 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
             private String category; 
             private String fsName; 
             private Long usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filesystem model) {
+                this.available = model.available;
+                this.capacity = model.capacity;
+                this.category = model.category;
+                this.fsName = model.fsName;
+                this.usage = model.usage;
+            } 
 
             /**
              * <p>The size of the available space.</p>
@@ -935,6 +1015,17 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
             private Long rss; 
             private Long usageBytes; 
             private Long workingSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordsMemory model) {
+                this.availableBytes = model.availableBytes;
+                this.cache = model.cache;
+                this.rss = model.rss;
+                this.usageBytes = model.usageBytes;
+                this.workingSet = model.workingSet;
+            } 
 
             /**
              * <p>The size of the available memory. Unit: bytes.</p>
@@ -1126,6 +1217,21 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
             private Long txErrors; 
             private Long txPackets; 
 
+            private Builder() {
+            } 
+
+            private Builder(Interfaces model) {
+                this.name = model.name;
+                this.rxBytes = model.rxBytes;
+                this.rxDrops = model.rxDrops;
+                this.rxErrors = model.rxErrors;
+                this.rxPackets = model.rxPackets;
+                this.txBytes = model.txBytes;
+                this.txDrops = model.txDrops;
+                this.txErrors = model.txErrors;
+                this.txPackets = model.txPackets;
+            } 
+
             /**
              * <p>The name of the NIC.</p>
              * 
@@ -1240,7 +1346,7 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
      */
     public static class Network extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Interfaces")
-        private java.util.List < Interfaces> interfaces;
+        private java.util.List<Interfaces> interfaces;
 
         private Network(Builder builder) {
             this.interfaces = builder.interfaces;
@@ -1257,17 +1363,24 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
         /**
          * @return interfaces
          */
-        public java.util.List < Interfaces> getInterfaces() {
+        public java.util.List<Interfaces> getInterfaces() {
             return this.interfaces;
         }
 
         public static final class Builder {
-            private java.util.List < Interfaces> interfaces; 
+            private java.util.List<Interfaces> interfaces; 
+
+            private Builder() {
+            } 
+
+            private Builder(Network model) {
+                this.interfaces = model.interfaces;
+            } 
 
             /**
              * <p>The monitoring data of network interface controllers (NICs).</p>
              */
-            public Builder interfaces(java.util.List < Interfaces> interfaces) {
+            public Builder interfaces(java.util.List<Interfaces> interfaces) {
                 this.interfaces = interfaces;
                 return this;
             }
@@ -1290,13 +1403,13 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
         private CPU CPU;
 
         @com.aliyun.core.annotation.NameInMap("Containers")
-        private java.util.List < Containers> containers;
+        private java.util.List<Containers> containers;
 
         @com.aliyun.core.annotation.NameInMap("Disk")
-        private java.util.List < Disk> disk;
+        private java.util.List<Disk> disk;
 
         @com.aliyun.core.annotation.NameInMap("Filesystem")
-        private java.util.List < Filesystem> filesystem;
+        private java.util.List<Filesystem> filesystem;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
         private RecordsMemory memory;
@@ -1335,21 +1448,21 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
         /**
          * @return containers
          */
-        public java.util.List < Containers> getContainers() {
+        public java.util.List<Containers> getContainers() {
             return this.containers;
         }
 
         /**
          * @return disk
          */
-        public java.util.List < Disk> getDisk() {
+        public java.util.List<Disk> getDisk() {
             return this.disk;
         }
 
         /**
          * @return filesystem
          */
-        public java.util.List < Filesystem> getFilesystem() {
+        public java.util.List<Filesystem> getFilesystem() {
             return this.filesystem;
         }
 
@@ -1376,12 +1489,25 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
 
         public static final class Builder {
             private CPU CPU; 
-            private java.util.List < Containers> containers; 
-            private java.util.List < Disk> disk; 
-            private java.util.List < Filesystem> filesystem; 
+            private java.util.List<Containers> containers; 
+            private java.util.List<Disk> disk; 
+            private java.util.List<Filesystem> filesystem; 
             private RecordsMemory memory; 
             private Network network; 
             private String timestamp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Records model) {
+                this.CPU = model.CPU;
+                this.containers = model.containers;
+                this.disk = model.disk;
+                this.filesystem = model.filesystem;
+                this.memory = model.memory;
+                this.network = model.network;
+                this.timestamp = model.timestamp;
+            } 
 
             /**
              * <p>The monitoring data of vCPUs.</p>
@@ -1394,7 +1520,7 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
             /**
              * <p>The monitoring data of containers.</p>
              */
-            public Builder containers(java.util.List < Containers> containers) {
+            public Builder containers(java.util.List<Containers> containers) {
                 this.containers = containers;
                 return this;
             }
@@ -1402,7 +1528,7 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
             /**
              * <p>The monitoring data of disks.</p>
              */
-            public Builder disk(java.util.List < Disk> disk) {
+            public Builder disk(java.util.List<Disk> disk) {
                 this.disk = disk;
                 return this;
             }
@@ -1410,7 +1536,7 @@ public class DescribeContainerGroupMetricResponseBody extends TeaModel {
             /**
              * <p>The monitoring data of file system partitions.</p>
              */
-            public Builder filesystem(java.util.List < Filesystem> filesystem) {
+            public Builder filesystem(java.util.List<Filesystem> filesystem) {
                 this.filesystem = filesystem;
                 return this;
             }

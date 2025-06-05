@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -38,7 +43,7 @@ public class DescribeImageCachesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MatchImage")
-    private java.util.List < String > matchImage;
+    private java.util.List<String> matchImage;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextToken")
@@ -75,7 +80,7 @@ public class DescribeImageCachesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     private DescribeImageCachesRequest(Builder builder) {
         super(builder);
@@ -105,7 +110,7 @@ public class DescribeImageCachesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -155,7 +160,7 @@ public class DescribeImageCachesRequest extends Request {
     /**
      * @return matchImage
      */
-    public java.util.List < String > getMatchImage() {
+    public java.util.List<String> getMatchImage() {
         return this.matchImage;
     }
 
@@ -218,7 +223,7 @@ public class DescribeImageCachesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -229,7 +234,7 @@ public class DescribeImageCachesRequest extends Request {
         private Boolean imageFullMatch; 
         private Integer imageMatchCountRequest; 
         private Integer limit; 
-        private java.util.List < String > matchImage; 
+        private java.util.List<String> matchImage; 
         private String nextToken; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -238,7 +243,7 @@ public class DescribeImageCachesRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String snapshotId; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -342,7 +347,7 @@ public class DescribeImageCachesRequest extends Request {
          * <strong>example:</strong>
          * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:1.15.10-perl</p>
          */
-        public Builder matchImage(java.util.List < String > matchImage) {
+        public Builder matchImage(java.util.List<String> matchImage) {
             this.putQueryParameter("MatchImage", matchImage);
             this.matchImage = matchImage;
             return this;
@@ -436,7 +441,7 @@ public class DescribeImageCachesRequest extends Request {
         /**
          * <p>The tags to add to the image caches.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -492,6 +497,14 @@ public class DescribeImageCachesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of tag N of the image cache.</p>

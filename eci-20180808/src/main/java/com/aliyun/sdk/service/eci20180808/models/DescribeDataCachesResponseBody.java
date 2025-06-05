@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDataCachesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DataCaches")
-    private java.util.List < DataCaches> dataCaches;
+    private java.util.List<DataCaches> dataCaches;
 
     @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
@@ -39,10 +44,14 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataCaches
      */
-    public java.util.List < DataCaches> getDataCaches() {
+    public java.util.List<DataCaches> getDataCaches() {
         return this.dataCaches;
     }
 
@@ -68,15 +77,25 @@ public class DescribeDataCachesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < DataCaches> dataCaches; 
+        private java.util.List<DataCaches> dataCaches; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataCachesResponseBody model) {
+            this.dataCaches = model.dataCaches;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The information about the data caches.</p>
          */
-        public Builder dataCaches(java.util.List < DataCaches> dataCaches) {
+        public Builder dataCaches(java.util.List<DataCaches> dataCaches) {
             this.dataCaches = dataCaches;
             return this;
         }
@@ -163,6 +182,14 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         public static final class Builder {
             private String options; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataSource model) {
+                this.options = model.options;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The parameters that are configured for the data source.</p>
@@ -311,6 +338,19 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             private String reason; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.count = model.count;
+                this.firstTimestamp = model.firstTimestamp;
+                this.lastTimestamp = model.lastTimestamp;
+                this.message = model.message;
+                this.name = model.name;
+                this.reason = model.reason;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The number of times that the event occurred.</p>
              * 
@@ -443,6 +483,14 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -495,7 +543,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         private DataSource dataSource;
 
         @com.aliyun.core.annotation.NameInMap("Events")
-        private java.util.List < Events> events;
+        private java.util.List<Events> events;
 
         @com.aliyun.core.annotation.NameInMap("ExpireDateTime")
         private String expireDateTime;
@@ -531,7 +579,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         private String status;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
-        private java.util.List < Tags> tags;
+        private java.util.List<Tags> tags;
 
         private DataCaches(Builder builder) {
             this.bucket = builder.bucket;
@@ -600,7 +648,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         /**
          * @return events
          */
-        public java.util.List < Events> getEvents() {
+        public java.util.List<Events> getEvents() {
             return this.events;
         }
 
@@ -684,7 +732,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
         /**
          * @return tags
          */
-        public java.util.List < Tags> getTags() {
+        public java.util.List<Tags> getTags() {
             return this.tags;
         }
 
@@ -694,7 +742,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             private String creationTime; 
             private String dataCacheId; 
             private DataSource dataSource; 
-            private java.util.List < Events> events; 
+            private java.util.List<Events> events; 
             private String expireDateTime; 
             private String flashSnapshotId; 
             private String lastMatchedTime; 
@@ -706,7 +754,31 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             private Integer size; 
             private String snapshotId; 
             private String status; 
-            private java.util.List < Tags> tags; 
+            private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataCaches model) {
+                this.bucket = model.bucket;
+                this.containerGroupId = model.containerGroupId;
+                this.creationTime = model.creationTime;
+                this.dataCacheId = model.dataCacheId;
+                this.dataSource = model.dataSource;
+                this.events = model.events;
+                this.expireDateTime = model.expireDateTime;
+                this.flashSnapshotId = model.flashSnapshotId;
+                this.lastMatchedTime = model.lastMatchedTime;
+                this.name = model.name;
+                this.path = model.path;
+                this.progress = model.progress;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.size = model.size;
+                this.snapshotId = model.snapshotId;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The bucket that stores the data cache.</p>
@@ -763,7 +835,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             /**
              * <p>The events.</p>
              */
-            public Builder events(java.util.List < Events> events) {
+            public Builder events(java.util.List<Events> events) {
                 this.events = events;
                 return this;
             }
@@ -901,7 +973,7 @@ public class DescribeDataCachesResponseBody extends TeaModel {
             /**
              * <p>The tags that are attached to the data cache.</p>
              */
-            public Builder tags(java.util.List < Tags> tags) {
+            public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
                 return this;
             }

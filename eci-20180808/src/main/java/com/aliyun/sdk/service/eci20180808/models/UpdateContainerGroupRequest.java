@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -18,7 +23,7 @@ public class UpdateContainerGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AcrRegistryInfo")
-    private java.util.List < AcrRegistryInfo> acrRegistryInfo;
+    private java.util.List<AcrRegistryInfo> acrRegistryInfo;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
@@ -26,7 +31,7 @@ public class UpdateContainerGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Container")
-    private java.util.List < Container> container;
+    private java.util.List<Container> container;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
@@ -39,11 +44,11 @@ public class UpdateContainerGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageRegistryCredential")
-    private java.util.List < ImageRegistryCredential> imageRegistryCredential;
+    private java.util.List<ImageRegistryCredential> imageRegistryCredential;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InitContainer")
-    private java.util.List < InitContainer> initContainer;
+    private java.util.List<InitContainer> initContainer;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Memory")
@@ -80,7 +85,7 @@ public class UpdateContainerGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UpdateType")
@@ -88,7 +93,7 @@ public class UpdateContainerGroupRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Volume")
-    private java.util.List < Volume> volume;
+    private java.util.List<Volume> volume;
 
     private UpdateContainerGroupRequest(Builder builder) {
         super(builder);
@@ -121,7 +126,7 @@ public class UpdateContainerGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -136,7 +141,7 @@ public class UpdateContainerGroupRequest extends Request {
     /**
      * @return acrRegistryInfo
      */
-    public java.util.List < AcrRegistryInfo> getAcrRegistryInfo() {
+    public java.util.List<AcrRegistryInfo> getAcrRegistryInfo() {
         return this.acrRegistryInfo;
     }
 
@@ -150,7 +155,7 @@ public class UpdateContainerGroupRequest extends Request {
     /**
      * @return container
      */
-    public java.util.List < Container> getContainer() {
+    public java.util.List<Container> getContainer() {
         return this.container;
     }
 
@@ -171,14 +176,14 @@ public class UpdateContainerGroupRequest extends Request {
     /**
      * @return imageRegistryCredential
      */
-    public java.util.List < ImageRegistryCredential> getImageRegistryCredential() {
+    public java.util.List<ImageRegistryCredential> getImageRegistryCredential() {
         return this.imageRegistryCredential;
     }
 
     /**
      * @return initContainer
      */
-    public java.util.List < InitContainer> getInitContainer() {
+    public java.util.List<InitContainer> getInitContainer() {
         return this.initContainer;
     }
 
@@ -241,7 +246,7 @@ public class UpdateContainerGroupRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -255,19 +260,19 @@ public class UpdateContainerGroupRequest extends Request {
     /**
      * @return volume
      */
-    public java.util.List < Volume> getVolume() {
+    public java.util.List<Volume> getVolume() {
         return this.volume;
     }
 
     public static final class Builder extends Request.Builder<UpdateContainerGroupRequest, Builder> {
         private DnsConfig dnsConfig; 
-        private java.util.List < AcrRegistryInfo> acrRegistryInfo; 
+        private java.util.List<AcrRegistryInfo> acrRegistryInfo; 
         private String clientToken; 
-        private java.util.List < Container> container; 
+        private java.util.List<Container> container; 
         private String containerGroupId; 
         private Float cpu; 
-        private java.util.List < ImageRegistryCredential> imageRegistryCredential; 
-        private java.util.List < InitContainer> initContainer; 
+        private java.util.List<ImageRegistryCredential> imageRegistryCredential; 
+        private java.util.List<InitContainer> initContainer; 
         private Float memory; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -276,9 +281,9 @@ public class UpdateContainerGroupRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String restartPolicy; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
         private String updateType; 
-        private java.util.List < Volume> volume; 
+        private java.util.List<Volume> volume; 
 
         private Builder() {
             super();
@@ -319,7 +324,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * <p>Details of the Container Registry Enterprise Edition instance that hosts the image of the init container.</p>
          */
-        public Builder acrRegistryInfo(java.util.List < AcrRegistryInfo> acrRegistryInfo) {
+        public Builder acrRegistryInfo(java.util.List<AcrRegistryInfo> acrRegistryInfo) {
             this.putQueryParameter("AcrRegistryInfo", acrRegistryInfo);
             this.acrRegistryInfo = acrRegistryInfo;
             return this;
@@ -340,7 +345,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * <p>The new configurations of the container group.</p>
          */
-        public Builder container(java.util.List < Container> container) {
+        public Builder container(java.util.List<Container> container) {
             this.putQueryParameter("Container", container);
             this.container = container;
             return this;
@@ -374,7 +379,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * <p>The information about the credentials of the image repository.</p>
          */
-        public Builder imageRegistryCredential(java.util.List < ImageRegistryCredential> imageRegistryCredential) {
+        public Builder imageRegistryCredential(java.util.List<ImageRegistryCredential> imageRegistryCredential) {
             this.putQueryParameter("ImageRegistryCredential", imageRegistryCredential);
             this.imageRegistryCredential = imageRegistryCredential;
             return this;
@@ -383,7 +388,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * <p>The information about the new init container.</p>
          */
-        public Builder initContainer(java.util.List < InitContainer> initContainer) {
+        public Builder initContainer(java.util.List<InitContainer> initContainer) {
             this.putQueryParameter("InitContainer", initContainer);
             this.initContainer = initContainer;
             return this;
@@ -482,7 +487,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * <p>The tags that are bound to the instance.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -508,7 +513,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * <p>The volumes that are mounted to the instance.</p>
          */
-        public Builder volume(java.util.List < Volume> volume) {
+        public Builder volume(java.util.List<Volume> volume) {
             this.putQueryParameter("Volume", volume);
             this.volume = volume;
             return this;
@@ -565,6 +570,14 @@ public class UpdateContainerGroupRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Option model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The option name of DNS configurations.</p>
              * 
@@ -602,13 +615,13 @@ public class UpdateContainerGroupRequest extends Request {
      */
     public static class DnsConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NameServer")
-        private java.util.List < String > nameServer;
+        private java.util.List<String> nameServer;
 
         @com.aliyun.core.annotation.NameInMap("Option")
-        private java.util.List < Option> option;
+        private java.util.List<Option> option;
 
         @com.aliyun.core.annotation.NameInMap("Search")
-        private java.util.List < String > search;
+        private java.util.List<String> search;
 
         private DnsConfig(Builder builder) {
             this.nameServer = builder.nameServer;
@@ -627,28 +640,37 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return nameServer
          */
-        public java.util.List < String > getNameServer() {
+        public java.util.List<String> getNameServer() {
             return this.nameServer;
         }
 
         /**
          * @return option
          */
-        public java.util.List < Option> getOption() {
+        public java.util.List<Option> getOption() {
             return this.option;
         }
 
         /**
          * @return search
          */
-        public java.util.List < String > getSearch() {
+        public java.util.List<String> getSearch() {
             return this.search;
         }
 
         public static final class Builder {
-            private java.util.List < String > nameServer; 
-            private java.util.List < Option> option; 
-            private java.util.List < String > search; 
+            private java.util.List<String> nameServer; 
+            private java.util.List<Option> option; 
+            private java.util.List<String> search; 
+
+            private Builder() {
+            } 
+
+            private Builder(DnsConfig model) {
+                this.nameServer = model.nameServer;
+                this.option = model.option;
+                this.search = model.search;
+            } 
 
             /**
              * <p>The IP addresses of DNS servers.</p>
@@ -656,7 +678,7 @@ public class UpdateContainerGroupRequest extends Request {
              * <strong>example:</strong>
              * <p>1.2.3.4</p>
              */
-            public Builder nameServer(java.util.List < String > nameServer) {
+            public Builder nameServer(java.util.List<String> nameServer) {
                 this.nameServer = nameServer;
                 return this;
             }
@@ -664,7 +686,7 @@ public class UpdateContainerGroupRequest extends Request {
             /**
              * <p>The configurations of DNS.</p>
              */
-            public Builder option(java.util.List < Option> option) {
+            public Builder option(java.util.List<Option> option) {
                 this.option = option;
                 return this;
             }
@@ -675,7 +697,7 @@ public class UpdateContainerGroupRequest extends Request {
              * <strong>example:</strong>
              * <p>my.dns.search.suffix</p>
              */
-            public Builder search(java.util.List < String > search) {
+            public Builder search(java.util.List<String> search) {
                 this.search = search;
                 return this;
             }
@@ -695,7 +717,7 @@ public class UpdateContainerGroupRequest extends Request {
      */
     public static class AcrRegistryInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
-        private java.util.List < String > domain;
+        private java.util.List<String> domain;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
@@ -724,7 +746,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return domain
          */
-        public java.util.List < String > getDomain() {
+        public java.util.List<String> getDomain() {
             return this.domain;
         }
 
@@ -750,15 +772,25 @@ public class UpdateContainerGroupRequest extends Request {
         }
 
         public static final class Builder {
-            private java.util.List < String > domain; 
+            private java.util.List<String> domain; 
             private String instanceId; 
             private String instanceName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AcrRegistryInfo model) {
+                this.domain = model.domain;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. You can specify specific domain names. Separate multiple domain names with commas (,).</p>
              */
-            public Builder domain(java.util.List < String > domain) {
+            public Builder domain(java.util.List<String> domain) {
                 this.domain = domain;
                 return this;
             }
@@ -811,7 +843,7 @@ public class UpdateContainerGroupRequest extends Request {
      */
     public static class Exec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Command")
-        private java.util.List < String > command;
+        private java.util.List<String> command;
 
         private Exec(Builder builder) {
             this.command = builder.command;
@@ -828,17 +860,24 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return command
          */
-        public java.util.List < String > getCommand() {
+        public java.util.List<String> getCommand() {
             return this.command;
         }
 
         public static final class Builder {
-            private java.util.List < String > command; 
+            private java.util.List<String> command; 
+
+            private Builder() {
+            } 
+
+            private Builder(Exec model) {
+                this.command = model.command;
+            } 
 
             /**
              * Command.
              */
-            public Builder command(java.util.List < String > command) {
+            public Builder command(java.util.List<String> command) {
                 this.command = command;
                 return this;
             }
@@ -906,6 +945,15 @@ public class UpdateContainerGroupRequest extends Request {
             private Integer port; 
             private String scheme; 
 
+            private Builder() {
+            } 
+
+            private Builder(HttpGet model) {
+                this.path = model.path;
+                this.port = model.port;
+                this.scheme = model.scheme;
+            } 
+
             /**
              * Path.
              */
@@ -968,6 +1016,13 @@ public class UpdateContainerGroupRequest extends Request {
 
         public static final class Builder {
             private Integer port; 
+
+            private Builder() {
+            } 
+
+            private Builder(TcpSocket model) {
+                this.port = model.port;
+            } 
 
             /**
              * Port.
@@ -1103,6 +1158,20 @@ public class UpdateContainerGroupRequest extends Request {
             private TcpSocket tcpSocket; 
             private Integer timeoutSeconds; 
 
+            private Builder() {
+            } 
+
+            private Builder(LivenessProbe model) {
+                this.exec = model.exec;
+                this.failureThreshold = model.failureThreshold;
+                this.httpGet = model.httpGet;
+                this.initialDelaySeconds = model.initialDelaySeconds;
+                this.periodSeconds = model.periodSeconds;
+                this.successThreshold = model.successThreshold;
+                this.tcpSocket = model.tcpSocket;
+                this.timeoutSeconds = model.timeoutSeconds;
+            } 
+
             /**
              * Exec.
              */
@@ -1182,7 +1251,7 @@ public class UpdateContainerGroupRequest extends Request {
      */
     public static class ReadinessProbeExec extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Command")
-        private java.util.List < String > command;
+        private java.util.List<String> command;
 
         private ReadinessProbeExec(Builder builder) {
             this.command = builder.command;
@@ -1199,17 +1268,24 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return command
          */
-        public java.util.List < String > getCommand() {
+        public java.util.List<String> getCommand() {
             return this.command;
         }
 
         public static final class Builder {
-            private java.util.List < String > command; 
+            private java.util.List<String> command; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReadinessProbeExec model) {
+                this.command = model.command;
+            } 
 
             /**
              * Command.
              */
-            public Builder command(java.util.List < String > command) {
+            public Builder command(java.util.List<String> command) {
                 this.command = command;
                 return this;
             }
@@ -1277,6 +1353,15 @@ public class UpdateContainerGroupRequest extends Request {
             private Integer port; 
             private String scheme; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadinessProbeHttpGet model) {
+                this.path = model.path;
+                this.port = model.port;
+                this.scheme = model.scheme;
+            } 
+
             /**
              * Path.
              */
@@ -1339,6 +1424,13 @@ public class UpdateContainerGroupRequest extends Request {
 
         public static final class Builder {
             private Integer port; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReadinessProbeTcpSocket model) {
+                this.port = model.port;
+            } 
 
             /**
              * Port.
@@ -1474,6 +1566,20 @@ public class UpdateContainerGroupRequest extends Request {
             private ReadinessProbeTcpSocket tcpSocket; 
             private Integer timeoutSeconds; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReadinessProbe model) {
+                this.exec = model.exec;
+                this.failureThreshold = model.failureThreshold;
+                this.httpGet = model.httpGet;
+                this.initialDelaySeconds = model.initialDelaySeconds;
+                this.periodSeconds = model.periodSeconds;
+                this.successThreshold = model.successThreshold;
+                this.tcpSocket = model.tcpSocket;
+                this.timeoutSeconds = model.timeoutSeconds;
+            } 
+
             /**
              * Exec.
              */
@@ -1553,7 +1659,7 @@ public class UpdateContainerGroupRequest extends Request {
      */
     public static class Capability extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Add")
-        private java.util.List < String > add;
+        private java.util.List<String> add;
 
         private Capability(Builder builder) {
             this.add = builder.add;
@@ -1570,17 +1676,24 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return add
          */
-        public java.util.List < String > getAdd() {
+        public java.util.List<String> getAdd() {
             return this.add;
         }
 
         public static final class Builder {
-            private java.util.List < String > add; 
+            private java.util.List<String> add; 
+
+            private Builder() {
+            } 
+
+            private Builder(Capability model) {
+                this.add = model.add;
+            } 
 
             /**
              * Add.
              */
-            public Builder add(java.util.List < String > add) {
+            public Builder add(java.util.List<String> add) {
                 this.add = add;
                 return this;
             }
@@ -1649,6 +1762,15 @@ public class UpdateContainerGroupRequest extends Request {
             private Boolean readOnlyRootFilesystem; 
             private Long runAsUser; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityContext model) {
+                this.capability = model.capability;
+                this.readOnlyRootFilesystem = model.readOnlyRootFilesystem;
+                this.runAsUser = model.runAsUser;
+            } 
+
             /**
              * Capability.
              */
@@ -1711,6 +1833,13 @@ public class UpdateContainerGroupRequest extends Request {
 
         public static final class Builder {
             private String fieldPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(FieldRef model) {
+                this.fieldPath = model.fieldPath;
+            } 
 
             /**
              * FieldPath.
@@ -1783,6 +1912,15 @@ public class UpdateContainerGroupRequest extends Request {
             private FieldRef fieldRef; 
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentVar model) {
+                this.fieldRef = model.fieldRef;
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * FieldRef.
@@ -1865,6 +2003,14 @@ public class UpdateContainerGroupRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(LifecyclePostStartHandlerHttpGetHttpHeaders model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The request parameter of the HTTP GET request when you use an HTTP request to specify the postStart callback function.</p>
              * 
@@ -1938,6 +2084,14 @@ public class UpdateContainerGroupRequest extends Request {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(LifecyclePreStopHandlerHttpGetHttpHeader model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The request parameter of the HTTP GET request when you use an HTTP request to specify the preStop callback function.</p>
              * 
@@ -2010,6 +2164,14 @@ public class UpdateContainerGroupRequest extends Request {
         public static final class Builder {
             private Integer port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(Port model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The port number. Valid values: 1 to 65535.</p>
@@ -2120,6 +2282,17 @@ public class UpdateContainerGroupRequest extends Request {
             private Boolean readOnly; 
             private String subPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(VolumeMount model) {
+                this.mountPath = model.mountPath;
+                this.mountPropagation = model.mountPropagation;
+                this.name = model.name;
+                this.readOnly = model.readOnly;
+                this.subPath = model.subPath;
+            } 
+
             /**
              * <p>The directory of the volume that is mounted to the container. The data in this directory is overwritten by the data on the volume. Specify this parameter with caution.</p>
              * 
@@ -2208,16 +2381,16 @@ public class UpdateContainerGroupRequest extends Request {
         private SecurityContext securityContext;
 
         @com.aliyun.core.annotation.NameInMap("Arg")
-        private java.util.List < String > arg;
+        private java.util.List<String> arg;
 
         @com.aliyun.core.annotation.NameInMap("Command")
-        private java.util.List < String > command;
+        private java.util.List<String> command;
 
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
         @com.aliyun.core.annotation.NameInMap("EnvironmentVar")
-        private java.util.List < EnvironmentVar> environmentVar;
+        private java.util.List<EnvironmentVar> environmentVar;
 
         @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
@@ -2229,13 +2402,13 @@ public class UpdateContainerGroupRequest extends Request {
         private String imagePullPolicy;
 
         @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerExec")
-        private java.util.List < String > lifecyclePostStartHandlerExec;
+        private java.util.List<String> lifecyclePostStartHandlerExec;
 
         @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetHost")
         private String lifecyclePostStartHandlerHttpGetHost;
 
         @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetHttpHeaders")
-        private java.util.List < LifecyclePostStartHandlerHttpGetHttpHeaders> lifecyclePostStartHandlerHttpGetHttpHeaders;
+        private java.util.List<LifecyclePostStartHandlerHttpGetHttpHeaders> lifecyclePostStartHandlerHttpGetHttpHeaders;
 
         @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetPath")
         private String lifecyclePostStartHandlerHttpGetPath;
@@ -2253,13 +2426,13 @@ public class UpdateContainerGroupRequest extends Request {
         private Integer lifecyclePostStartHandlerTcpSocketPort;
 
         @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerExec")
-        private java.util.List < String > lifecyclePreStopHandlerExec;
+        private java.util.List<String> lifecyclePreStopHandlerExec;
 
         @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetHost")
         private String lifecyclePreStopHandlerHttpGetHost;
 
         @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetHttpHeader")
-        private java.util.List < LifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader;
+        private java.util.List<LifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader;
 
         @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetPath")
         private String lifecyclePreStopHandlerHttpGetPath;
@@ -2283,7 +2456,7 @@ public class UpdateContainerGroupRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Port")
-        private java.util.List < Port> port;
+        private java.util.List<Port> port;
 
         @com.aliyun.core.annotation.NameInMap("Stdin")
         private Boolean stdin;
@@ -2295,7 +2468,7 @@ public class UpdateContainerGroupRequest extends Request {
         private Boolean tty;
 
         @com.aliyun.core.annotation.NameInMap("VolumeMount")
-        private java.util.List < VolumeMount> volumeMount;
+        private java.util.List<VolumeMount> volumeMount;
 
         @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
@@ -2369,14 +2542,14 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return arg
          */
-        public java.util.List < String > getArg() {
+        public java.util.List<String> getArg() {
             return this.arg;
         }
 
         /**
          * @return command
          */
-        public java.util.List < String > getCommand() {
+        public java.util.List<String> getCommand() {
             return this.command;
         }
 
@@ -2390,7 +2563,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return environmentVar
          */
-        public java.util.List < EnvironmentVar> getEnvironmentVar() {
+        public java.util.List<EnvironmentVar> getEnvironmentVar() {
             return this.environmentVar;
         }
 
@@ -2418,7 +2591,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return lifecyclePostStartHandlerExec
          */
-        public java.util.List < String > getLifecyclePostStartHandlerExec() {
+        public java.util.List<String> getLifecyclePostStartHandlerExec() {
             return this.lifecyclePostStartHandlerExec;
         }
 
@@ -2432,7 +2605,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return lifecyclePostStartHandlerHttpGetHttpHeaders
          */
-        public java.util.List < LifecyclePostStartHandlerHttpGetHttpHeaders> getLifecyclePostStartHandlerHttpGetHttpHeaders() {
+        public java.util.List<LifecyclePostStartHandlerHttpGetHttpHeaders> getLifecyclePostStartHandlerHttpGetHttpHeaders() {
             return this.lifecyclePostStartHandlerHttpGetHttpHeaders;
         }
 
@@ -2474,7 +2647,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return lifecyclePreStopHandlerExec
          */
-        public java.util.List < String > getLifecyclePreStopHandlerExec() {
+        public java.util.List<String> getLifecyclePreStopHandlerExec() {
             return this.lifecyclePreStopHandlerExec;
         }
 
@@ -2488,7 +2661,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return lifecyclePreStopHandlerHttpGetHttpHeader
          */
-        public java.util.List < LifecyclePreStopHandlerHttpGetHttpHeader> getLifecyclePreStopHandlerHttpGetHttpHeader() {
+        public java.util.List<LifecyclePreStopHandlerHttpGetHttpHeader> getLifecyclePreStopHandlerHttpGetHttpHeader() {
             return this.lifecyclePreStopHandlerHttpGetHttpHeader;
         }
 
@@ -2544,7 +2717,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return port
          */
-        public java.util.List < Port> getPort() {
+        public java.util.List<Port> getPort() {
             return this.port;
         }
 
@@ -2572,7 +2745,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return volumeMount
          */
-        public java.util.List < VolumeMount> getVolumeMount() {
+        public java.util.List<VolumeMount> getVolumeMount() {
             return this.volumeMount;
         }
 
@@ -2587,24 +2760,24 @@ public class UpdateContainerGroupRequest extends Request {
             private LivenessProbe livenessProbe; 
             private ReadinessProbe readinessProbe; 
             private SecurityContext securityContext; 
-            private java.util.List < String > arg; 
-            private java.util.List < String > command; 
+            private java.util.List<String> arg; 
+            private java.util.List<String> command; 
             private Float cpu; 
-            private java.util.List < EnvironmentVar> environmentVar; 
+            private java.util.List<EnvironmentVar> environmentVar; 
             private Integer gpu; 
             private String image; 
             private String imagePullPolicy; 
-            private java.util.List < String > lifecyclePostStartHandlerExec; 
+            private java.util.List<String> lifecyclePostStartHandlerExec; 
             private String lifecyclePostStartHandlerHttpGetHost; 
-            private java.util.List < LifecyclePostStartHandlerHttpGetHttpHeaders> lifecyclePostStartHandlerHttpGetHttpHeaders; 
+            private java.util.List<LifecyclePostStartHandlerHttpGetHttpHeaders> lifecyclePostStartHandlerHttpGetHttpHeaders; 
             private String lifecyclePostStartHandlerHttpGetPath; 
             private Integer lifecyclePostStartHandlerHttpGetPort; 
             private String lifecyclePostStartHandlerHttpGetScheme; 
             private String lifecyclePostStartHandlerTcpSocketHost; 
             private Integer lifecyclePostStartHandlerTcpSocketPort; 
-            private java.util.List < String > lifecyclePreStopHandlerExec; 
+            private java.util.List<String> lifecyclePreStopHandlerExec; 
             private String lifecyclePreStopHandlerHttpGetHost; 
-            private java.util.List < LifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader; 
+            private java.util.List<LifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader; 
             private String lifecyclePreStopHandlerHttpGetPath; 
             private Integer lifecyclePreStopHandlerHttpGetPort; 
             private String lifecyclePreStopHandlerHttpGetScheme; 
@@ -2612,12 +2785,52 @@ public class UpdateContainerGroupRequest extends Request {
             private Integer lifecyclePreStopHandlerTcpSocketPort; 
             private Float memory; 
             private String name; 
-            private java.util.List < Port> port; 
+            private java.util.List<Port> port; 
             private Boolean stdin; 
             private Boolean stdinOnce; 
             private Boolean tty; 
-            private java.util.List < VolumeMount> volumeMount; 
+            private java.util.List<VolumeMount> volumeMount; 
             private String workingDir; 
+
+            private Builder() {
+            } 
+
+            private Builder(Container model) {
+                this.livenessProbe = model.livenessProbe;
+                this.readinessProbe = model.readinessProbe;
+                this.securityContext = model.securityContext;
+                this.arg = model.arg;
+                this.command = model.command;
+                this.cpu = model.cpu;
+                this.environmentVar = model.environmentVar;
+                this.gpu = model.gpu;
+                this.image = model.image;
+                this.imagePullPolicy = model.imagePullPolicy;
+                this.lifecyclePostStartHandlerExec = model.lifecyclePostStartHandlerExec;
+                this.lifecyclePostStartHandlerHttpGetHost = model.lifecyclePostStartHandlerHttpGetHost;
+                this.lifecyclePostStartHandlerHttpGetHttpHeaders = model.lifecyclePostStartHandlerHttpGetHttpHeaders;
+                this.lifecyclePostStartHandlerHttpGetPath = model.lifecyclePostStartHandlerHttpGetPath;
+                this.lifecyclePostStartHandlerHttpGetPort = model.lifecyclePostStartHandlerHttpGetPort;
+                this.lifecyclePostStartHandlerHttpGetScheme = model.lifecyclePostStartHandlerHttpGetScheme;
+                this.lifecyclePostStartHandlerTcpSocketHost = model.lifecyclePostStartHandlerTcpSocketHost;
+                this.lifecyclePostStartHandlerTcpSocketPort = model.lifecyclePostStartHandlerTcpSocketPort;
+                this.lifecyclePreStopHandlerExec = model.lifecyclePreStopHandlerExec;
+                this.lifecyclePreStopHandlerHttpGetHost = model.lifecyclePreStopHandlerHttpGetHost;
+                this.lifecyclePreStopHandlerHttpGetHttpHeader = model.lifecyclePreStopHandlerHttpGetHttpHeader;
+                this.lifecyclePreStopHandlerHttpGetPath = model.lifecyclePreStopHandlerHttpGetPath;
+                this.lifecyclePreStopHandlerHttpGetPort = model.lifecyclePreStopHandlerHttpGetPort;
+                this.lifecyclePreStopHandlerHttpGetScheme = model.lifecyclePreStopHandlerHttpGetScheme;
+                this.lifecyclePreStopHandlerTcpSocketHost = model.lifecyclePreStopHandlerTcpSocketHost;
+                this.lifecyclePreStopHandlerTcpSocketPort = model.lifecyclePreStopHandlerTcpSocketPort;
+                this.memory = model.memory;
+                this.name = model.name;
+                this.port = model.port;
+                this.stdin = model.stdin;
+                this.stdinOnce = model.stdinOnce;
+                this.tty = model.tty;
+                this.volumeMount = model.volumeMount;
+                this.workingDir = model.workingDir;
+            } 
 
             /**
              * LivenessProbe.
@@ -2649,7 +2862,7 @@ public class UpdateContainerGroupRequest extends Request {
              * <strong>example:</strong>
              * <p>hello</p>
              */
-            public Builder arg(java.util.List < String > arg) {
+            public Builder arg(java.util.List<String> arg) {
                 this.arg = arg;
                 return this;
             }
@@ -2660,7 +2873,7 @@ public class UpdateContainerGroupRequest extends Request {
              * <strong>example:</strong>
              * <p>echo</p>
              */
-            public Builder command(java.util.List < String > command) {
+            public Builder command(java.util.List<String> command) {
                 this.command = command;
                 return this;
             }
@@ -2679,7 +2892,7 @@ public class UpdateContainerGroupRequest extends Request {
             /**
              * <p>The environment variables for the container.</p>
              */
-            public Builder environmentVar(java.util.List < EnvironmentVar> environmentVar) {
+            public Builder environmentVar(java.util.List<EnvironmentVar> environmentVar) {
                 this.environmentVar = environmentVar;
                 return this;
             }
@@ -2728,7 +2941,7 @@ public class UpdateContainerGroupRequest extends Request {
              * <strong>example:</strong>
              * <p>hide</p>
              */
-            public Builder lifecyclePostStartHandlerExec(java.util.List < String > lifecyclePostStartHandlerExec) {
+            public Builder lifecyclePostStartHandlerExec(java.util.List<String> lifecyclePostStartHandlerExec) {
                 this.lifecyclePostStartHandlerExec = lifecyclePostStartHandlerExec;
                 return this;
             }
@@ -2747,7 +2960,7 @@ public class UpdateContainerGroupRequest extends Request {
             /**
              * <p>The information about the valid HTTP request headers among the generated HTTP request headers.</p>
              */
-            public Builder lifecyclePostStartHandlerHttpGetHttpHeaders(java.util.List < LifecyclePostStartHandlerHttpGetHttpHeaders> lifecyclePostStartHandlerHttpGetHttpHeaders) {
+            public Builder lifecyclePostStartHandlerHttpGetHttpHeaders(java.util.List<LifecyclePostStartHandlerHttpGetHttpHeaders> lifecyclePostStartHandlerHttpGetHttpHeaders) {
                 this.lifecyclePostStartHandlerHttpGetHttpHeaders = lifecyclePostStartHandlerHttpGetHttpHeaders;
                 return this;
             }
@@ -2813,7 +3026,7 @@ public class UpdateContainerGroupRequest extends Request {
              * <strong>example:</strong>
              * <p>hide</p>
              */
-            public Builder lifecyclePreStopHandlerExec(java.util.List < String > lifecyclePreStopHandlerExec) {
+            public Builder lifecyclePreStopHandlerExec(java.util.List<String> lifecyclePreStopHandlerExec) {
                 this.lifecyclePreStopHandlerExec = lifecyclePreStopHandlerExec;
                 return this;
             }
@@ -2832,7 +3045,7 @@ public class UpdateContainerGroupRequest extends Request {
             /**
              * <p>The information about the generated HTTP request header.</p>
              */
-            public Builder lifecyclePreStopHandlerHttpGetHttpHeader(java.util.List < LifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader) {
+            public Builder lifecyclePreStopHandlerHttpGetHttpHeader(java.util.List<LifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader) {
                 this.lifecyclePreStopHandlerHttpGetHttpHeader = lifecyclePreStopHandlerHttpGetHttpHeader;
                 return this;
             }
@@ -2921,7 +3134,7 @@ public class UpdateContainerGroupRequest extends Request {
             /**
              * <p>The port to which the system sends an HTTP GET request for a health check.</p>
              */
-            public Builder port(java.util.List < Port> port) {
+            public Builder port(java.util.List<Port> port) {
                 this.port = port;
                 return this;
             }
@@ -2962,7 +3175,7 @@ public class UpdateContainerGroupRequest extends Request {
             /**
              * <p>Pod volumes that you want to mount into the filesystem of the container.</p>
              */
-            public Builder volumeMount(java.util.List < VolumeMount> volumeMount) {
+            public Builder volumeMount(java.util.List<VolumeMount> volumeMount) {
                 this.volumeMount = volumeMount;
                 return this;
             }
@@ -3041,6 +3254,15 @@ public class UpdateContainerGroupRequest extends Request {
             private String server; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageRegistryCredential model) {
+                this.password = model.password;
+                this.server = model.server;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The password that you use to access the image repository.</p>
              * 
@@ -3089,7 +3311,7 @@ public class UpdateContainerGroupRequest extends Request {
      */
     public static class SecurityContextCapability extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Add")
-        private java.util.List < String > add;
+        private java.util.List<String> add;
 
         private SecurityContextCapability(Builder builder) {
             this.add = builder.add;
@@ -3106,17 +3328,24 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return add
          */
-        public java.util.List < String > getAdd() {
+        public java.util.List<String> getAdd() {
             return this.add;
         }
 
         public static final class Builder {
-            private java.util.List < String > add; 
+            private java.util.List<String> add; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityContextCapability model) {
+                this.add = model.add;
+            } 
 
             /**
              * Add.
              */
-            public Builder add(java.util.List < String > add) {
+            public Builder add(java.util.List<String> add) {
                 this.add = add;
                 return this;
             }
@@ -3185,6 +3414,15 @@ public class UpdateContainerGroupRequest extends Request {
             private Boolean readOnlyRootFilesystem; 
             private Long runAsUser; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainerSecurityContext model) {
+                this.capability = model.capability;
+                this.readOnlyRootFilesystem = model.readOnlyRootFilesystem;
+                this.runAsUser = model.runAsUser;
+            } 
+
             /**
              * Capability.
              */
@@ -3247,6 +3485,13 @@ public class UpdateContainerGroupRequest extends Request {
 
         public static final class Builder {
             private String fieldPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(EnvironmentVarFieldRef model) {
+                this.fieldPath = model.fieldPath;
+            } 
 
             /**
              * FieldPath.
@@ -3319,6 +3564,15 @@ public class UpdateContainerGroupRequest extends Request {
             private EnvironmentVarFieldRef fieldRef; 
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainerEnvironmentVar model) {
+                this.fieldRef = model.fieldRef;
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * FieldRef.
@@ -3400,6 +3654,14 @@ public class UpdateContainerGroupRequest extends Request {
         public static final class Builder {
             private Integer port; 
             private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainerPort model) {
+                this.port = model.port;
+                this.protocol = model.protocol;
+            } 
 
             /**
              * <p>The port number of the init container. Valid values: 1 to 65535.</p>
@@ -3510,6 +3772,17 @@ public class UpdateContainerGroupRequest extends Request {
             private Boolean readOnly; 
             private String subPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(InitContainerVolumeMount model) {
+                this.mountPath = model.mountPath;
+                this.mountPropagation = model.mountPropagation;
+                this.name = model.name;
+                this.readOnly = model.readOnly;
+                this.subPath = model.subPath;
+            } 
+
             /**
              * <p>The mount directory of the init container. The data in this directory is overwritten by the data on the volume. Specify this parameter with caution.</p>
              * 
@@ -3590,16 +3863,16 @@ public class UpdateContainerGroupRequest extends Request {
         private InitContainerSecurityContext securityContext;
 
         @com.aliyun.core.annotation.NameInMap("Arg")
-        private java.util.List < String > arg;
+        private java.util.List<String> arg;
 
         @com.aliyun.core.annotation.NameInMap("Command")
-        private java.util.List < String > command;
+        private java.util.List<String> command;
 
         @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
         @com.aliyun.core.annotation.NameInMap("EnvironmentVar")
-        private java.util.List < InitContainerEnvironmentVar> environmentVar;
+        private java.util.List<InitContainerEnvironmentVar> environmentVar;
 
         @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
@@ -3617,7 +3890,7 @@ public class UpdateContainerGroupRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Port")
-        private java.util.List < InitContainerPort> port;
+        private java.util.List<InitContainerPort> port;
 
         @com.aliyun.core.annotation.NameInMap("Stdin")
         private Boolean stdin;
@@ -3629,7 +3902,7 @@ public class UpdateContainerGroupRequest extends Request {
         private Boolean tty;
 
         @com.aliyun.core.annotation.NameInMap("VolumeMount")
-        private java.util.List < InitContainerVolumeMount> volumeMount;
+        private java.util.List<InitContainerVolumeMount> volumeMount;
 
         @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
@@ -3671,14 +3944,14 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return arg
          */
-        public java.util.List < String > getArg() {
+        public java.util.List<String> getArg() {
             return this.arg;
         }
 
         /**
          * @return command
          */
-        public java.util.List < String > getCommand() {
+        public java.util.List<String> getCommand() {
             return this.command;
         }
 
@@ -3692,7 +3965,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return environmentVar
          */
-        public java.util.List < InitContainerEnvironmentVar> getEnvironmentVar() {
+        public java.util.List<InitContainerEnvironmentVar> getEnvironmentVar() {
             return this.environmentVar;
         }
 
@@ -3734,7 +4007,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return port
          */
-        public java.util.List < InitContainerPort> getPort() {
+        public java.util.List<InitContainerPort> getPort() {
             return this.port;
         }
 
@@ -3762,7 +4035,7 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return volumeMount
          */
-        public java.util.List < InitContainerVolumeMount> getVolumeMount() {
+        public java.util.List<InitContainerVolumeMount> getVolumeMount() {
             return this.volumeMount;
         }
 
@@ -3775,21 +4048,43 @@ public class UpdateContainerGroupRequest extends Request {
 
         public static final class Builder {
             private InitContainerSecurityContext securityContext; 
-            private java.util.List < String > arg; 
-            private java.util.List < String > command; 
+            private java.util.List<String> arg; 
+            private java.util.List<String> command; 
             private Float cpu; 
-            private java.util.List < InitContainerEnvironmentVar> environmentVar; 
+            private java.util.List<InitContainerEnvironmentVar> environmentVar; 
             private Integer gpu; 
             private String image; 
             private String imagePullPolicy; 
             private Float memory; 
             private String name; 
-            private java.util.List < InitContainerPort> port; 
+            private java.util.List<InitContainerPort> port; 
             private Boolean stdin; 
             private Boolean stdinOnce; 
             private Boolean tty; 
-            private java.util.List < InitContainerVolumeMount> volumeMount; 
+            private java.util.List<InitContainerVolumeMount> volumeMount; 
             private String workingDir; 
+
+            private Builder() {
+            } 
+
+            private Builder(InitContainer model) {
+                this.securityContext = model.securityContext;
+                this.arg = model.arg;
+                this.command = model.command;
+                this.cpu = model.cpu;
+                this.environmentVar = model.environmentVar;
+                this.gpu = model.gpu;
+                this.image = model.image;
+                this.imagePullPolicy = model.imagePullPolicy;
+                this.memory = model.memory;
+                this.name = model.name;
+                this.port = model.port;
+                this.stdin = model.stdin;
+                this.stdinOnce = model.stdinOnce;
+                this.tty = model.tty;
+                this.volumeMount = model.volumeMount;
+                this.workingDir = model.workingDir;
+            } 
 
             /**
              * SecurityContext.
@@ -3805,7 +4100,7 @@ public class UpdateContainerGroupRequest extends Request {
              * <strong>example:</strong>
              * <p>10</p>
              */
-            public Builder arg(java.util.List < String > arg) {
+            public Builder arg(java.util.List<String> arg) {
                 this.arg = arg;
                 return this;
             }
@@ -3816,7 +4111,7 @@ public class UpdateContainerGroupRequest extends Request {
              * <strong>example:</strong>
              * <p>/bin/sh sleep</p>
              */
-            public Builder command(java.util.List < String > command) {
+            public Builder command(java.util.List<String> command) {
                 this.command = command;
                 return this;
             }
@@ -3835,7 +4130,7 @@ public class UpdateContainerGroupRequest extends Request {
             /**
              * <p>The environment variable of the init container.</p>
              */
-            public Builder environmentVar(java.util.List < InitContainerEnvironmentVar> environmentVar) {
+            public Builder environmentVar(java.util.List<InitContainerEnvironmentVar> environmentVar) {
                 this.environmentVar = environmentVar;
                 return this;
             }
@@ -3903,7 +4198,7 @@ public class UpdateContainerGroupRequest extends Request {
             /**
              * <p>The port number. Valid values: 1 to 65535.</p>
              */
-            public Builder port(java.util.List < InitContainerPort> port) {
+            public Builder port(java.util.List<InitContainerPort> port) {
                 this.port = port;
                 return this;
             }
@@ -3944,7 +4239,7 @@ public class UpdateContainerGroupRequest extends Request {
             /**
              * <p>The information about the volume that you want to mount on the init container.</p>
              */
-            public Builder volumeMount(java.util.List < InitContainerVolumeMount> volumeMount) {
+            public Builder volumeMount(java.util.List<InitContainerVolumeMount> volumeMount) {
                 this.volumeMount = volumeMount;
                 return this;
             }
@@ -4010,6 +4305,14 @@ public class UpdateContainerGroupRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -4084,6 +4387,14 @@ public class UpdateContainerGroupRequest extends Request {
             private String content; 
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConfigFileToPath model) {
+                this.content = model.content;
+                this.path = model.path;
+            } 
+
             /**
              * Content.
              */
@@ -4115,7 +4426,7 @@ public class UpdateContainerGroupRequest extends Request {
      */
     public static class ConfigFileVolume extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigFileToPath")
-        private java.util.List < ConfigFileToPath> configFileToPath;
+        private java.util.List<ConfigFileToPath> configFileToPath;
 
         private ConfigFileVolume(Builder builder) {
             this.configFileToPath = builder.configFileToPath;
@@ -4132,17 +4443,24 @@ public class UpdateContainerGroupRequest extends Request {
         /**
          * @return configFileToPath
          */
-        public java.util.List < ConfigFileToPath> getConfigFileToPath() {
+        public java.util.List<ConfigFileToPath> getConfigFileToPath() {
             return this.configFileToPath;
         }
 
         public static final class Builder {
-            private java.util.List < ConfigFileToPath> configFileToPath; 
+            private java.util.List<ConfigFileToPath> configFileToPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigFileVolume model) {
+                this.configFileToPath = model.configFileToPath;
+            } 
 
             /**
              * ConfigFileToPath.
              */
-            public Builder configFileToPath(java.util.List < ConfigFileToPath> configFileToPath) {
+            public Builder configFileToPath(java.util.List<ConfigFileToPath> configFileToPath) {
                 this.configFileToPath = configFileToPath;
                 return this;
             }
@@ -4197,6 +4515,14 @@ public class UpdateContainerGroupRequest extends Request {
         public static final class Builder {
             private String medium; 
             private String sizeLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(EmptyDirVolume model) {
+                this.medium = model.medium;
+                this.sizeLimit = model.sizeLimit;
+            } 
 
             /**
              * Medium.
@@ -4277,6 +4603,15 @@ public class UpdateContainerGroupRequest extends Request {
             private String fsType; 
             private String options; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlexVolume model) {
+                this.driver = model.driver;
+                this.fsType = model.fsType;
+                this.options = model.options;
+            } 
+
             /**
              * Driver.
              */
@@ -4351,6 +4686,14 @@ public class UpdateContainerGroupRequest extends Request {
         public static final class Builder {
             private String path; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(HostPathVolume model) {
+                this.path = model.path;
+                this.type = model.type;
+            } 
 
             /**
              * Path.
@@ -4430,6 +4773,15 @@ public class UpdateContainerGroupRequest extends Request {
             private String path; 
             private Boolean readOnly; 
             private String server; 
+
+            private Builder() {
+            } 
+
+            private Builder(NFSVolume model) {
+                this.path = model.path;
+                this.readOnly = model.readOnly;
+                this.server = model.server;
+            } 
 
             /**
              * Path.
@@ -4576,6 +4928,19 @@ public class UpdateContainerGroupRequest extends Request {
             private NFSVolume NFSVolume; 
             private String name; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Volume model) {
+                this.configFileVolume = model.configFileVolume;
+                this.emptyDirVolume = model.emptyDirVolume;
+                this.flexVolume = model.flexVolume;
+                this.hostPathVolume = model.hostPathVolume;
+                this.NFSVolume = model.NFSVolume;
+                this.name = model.name;
+                this.type = model.type;
+            } 
 
             /**
              * ConfigFileVolume.

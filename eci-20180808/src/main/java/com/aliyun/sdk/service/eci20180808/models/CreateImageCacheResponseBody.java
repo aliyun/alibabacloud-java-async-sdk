@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -35,6 +40,10 @@ public class CreateImageCacheResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return containerGroupId
      */
@@ -60,6 +69,15 @@ public class CreateImageCacheResponseBody extends TeaModel {
         private String containerGroupId; 
         private String imageCacheId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateImageCacheResponseBody model) {
+            this.containerGroupId = model.containerGroupId;
+            this.imageCacheId = model.imageCacheId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the intermediate elastic container instance that is used to create the image cache.</p>

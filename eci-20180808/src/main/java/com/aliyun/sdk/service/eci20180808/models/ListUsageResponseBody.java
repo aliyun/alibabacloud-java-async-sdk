@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListUsageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Attributes")
-    private java.util.Map < String, ? > attributes;
+    private java.util.Map<String, ?> attributes;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -31,10 +36,14 @@ public class ListUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attributes
      */
-    public java.util.Map < String, ? > getAttributes() {
+    public java.util.Map<String, ?> getAttributes() {
         return this.attributes;
     }
 
@@ -46,8 +55,16 @@ public class ListUsageResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.Map < String, ? > attributes; 
+        private java.util.Map<String, ?> attributes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUsageResponseBody model) {
+            this.attributes = model.attributes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the used amounts and upper limits of privileges and quotas that you have in the specified region. The information contains the following items:</p>
@@ -65,7 +82,7 @@ public class ListUsageResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>{&quot;UsedCpu&quot;: 11,&quot;MaxCpu&quot;: 1000,&quot;MaxImageCacheCount&quot;: 50,&quot;UsedImageCacheCount&quot;: 0}</p>
          */
-        public Builder attributes(java.util.Map < String, ? > attributes) {
+        public Builder attributes(java.util.Map<String, ?> attributes) {
             this.attributes = attributes;
             return this;
         }

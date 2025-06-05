@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -72,11 +77,11 @@ public class CreateVirtualNodeRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Taint")
-    private java.util.List < Taint> taint;
+    private java.util.List<Taint> taint;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TlsBootstrapEnabled")
@@ -127,7 +132,7 @@ public class CreateVirtualNodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -233,14 +238,14 @@ public class CreateVirtualNodeRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     /**
      * @return taint
      */
-    public java.util.List < Taint> getTaint() {
+    public java.util.List<Taint> getTaint() {
         return this.taint;
     }
 
@@ -287,8 +292,8 @@ public class CreateVirtualNodeRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String securityGroupId; 
-        private java.util.List < Tag> tag; 
-        private java.util.List < Taint> taint; 
+        private java.util.List<Tag> tag; 
+        private java.util.List<Taint> taint; 
         private Boolean tlsBootstrapEnabled; 
         private String vSwitchId; 
         private String virtualNodeName; 
@@ -484,7 +489,7 @@ public class CreateVirtualNodeRequest extends Request {
         /**
          * <p>The tags to add to the VNode. You can add up to 20 tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -493,7 +498,7 @@ public class CreateVirtualNodeRequest extends Request {
         /**
          * <p>The taints of the VNode. You can configure up to 20 taints.</p>
          */
-        public Builder taint(java.util.List < Taint> taint) {
+        public Builder taint(java.util.List<Taint> taint) {
             this.putQueryParameter("Taint", taint);
             this.taint = taint;
             return this;
@@ -605,6 +610,14 @@ public class CreateVirtualNodeRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -689,6 +702,15 @@ public class CreateVirtualNodeRequest extends Request {
             private String effect; 
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Taint model) {
+                this.effect = model.effect;
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The effect of the taint. Valid values:</p>

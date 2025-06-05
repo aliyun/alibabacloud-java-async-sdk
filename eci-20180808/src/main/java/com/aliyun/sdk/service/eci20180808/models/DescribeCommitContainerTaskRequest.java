@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -47,7 +52,7 @@ public class DescribeCommitContainerTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
-    private java.util.List < String > taskId;
+    private java.util.List<String> taskId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskStatus")
@@ -75,7 +80,7 @@ public class DescribeCommitContainerTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,7 +144,7 @@ public class DescribeCommitContainerTaskRequest extends Request {
     /**
      * @return taskId
      */
-    public java.util.List < String > getTaskId() {
+    public java.util.List<String> getTaskId() {
         return this.taskId;
     }
 
@@ -159,7 +164,7 @@ public class DescribeCommitContainerTaskRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private java.util.List < String > taskId; 
+        private java.util.List<String> taskId; 
         private String taskStatus; 
 
         private Builder() {
@@ -268,7 +273,7 @@ public class DescribeCommitContainerTaskRequest extends Request {
         /**
          * <p>The ID of the task.</p>
          */
-        public Builder taskId(java.util.List < String > taskId) {
+        public Builder taskId(java.util.List<String> taskId) {
             this.putQueryParameter("TaskId", taskId);
             this.taskId = taskId;
             return this;
