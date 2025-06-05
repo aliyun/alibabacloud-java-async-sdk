@@ -209,12 +209,20 @@ public class ListConfigsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigValue")
         private String configValue;
 
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
+        private String gmtCreateTime;
+
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
+        private String gmtModifiedTime;
+
         @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List<Labels> labels;
 
         private Configs(Builder builder) {
             this.configKey = builder.configKey;
             this.configValue = builder.configValue;
+            this.gmtCreateTime = builder.gmtCreateTime;
+            this.gmtModifiedTime = builder.gmtModifiedTime;
             this.labels = builder.labels;
         }
 
@@ -241,6 +249,20 @@ public class ListConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return gmtCreateTime
+         */
+        public String getGmtCreateTime() {
+            return this.gmtCreateTime;
+        }
+
+        /**
+         * @return gmtModifiedTime
+         */
+        public String getGmtModifiedTime() {
+            return this.gmtModifiedTime;
+        }
+
+        /**
          * @return labels
          */
         public java.util.List<Labels> getLabels() {
@@ -250,6 +272,8 @@ public class ListConfigsResponseBody extends TeaModel {
         public static final class Builder {
             private String configKey; 
             private String configValue; 
+            private String gmtCreateTime; 
+            private String gmtModifiedTime; 
             private java.util.List<Labels> labels; 
 
             private Builder() {
@@ -258,6 +282,8 @@ public class ListConfigsResponseBody extends TeaModel {
             private Builder(Configs model) {
                 this.configKey = model.configKey;
                 this.configValue = model.configValue;
+                this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtModifiedTime = model.gmtModifiedTime;
                 this.labels = model.labels;
             } 
 
@@ -287,6 +313,22 @@ public class ListConfigsResponseBody extends TeaModel {
              */
             public Builder configValue(String configValue) {
                 this.configValue = configValue;
+                return this;
+            }
+
+            /**
+             * GmtCreateTime.
+             */
+            public Builder gmtCreateTime(String gmtCreateTime) {
+                this.gmtCreateTime = gmtCreateTime;
+                return this;
+            }
+
+            /**
+             * GmtModifiedTime.
+             */
+            public Builder gmtModifiedTime(String gmtModifiedTime) {
+                this.gmtModifiedTime = gmtModifiedTime;
                 return this;
             }
 
