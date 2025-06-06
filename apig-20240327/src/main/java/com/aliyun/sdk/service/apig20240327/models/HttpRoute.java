@@ -41,6 +41,9 @@ public class HttpRoute extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("match")
     private HttpRouteMatch match;
 
+    @com.aliyun.core.annotation.NameInMap("mcpServerInfo")
+    private McpServerInfo mcpServerInfo;
+
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
@@ -59,6 +62,7 @@ public class HttpRoute extends TeaModel {
         this.environmentInfo = builder.environmentInfo;
         this.gatewayStatus = builder.gatewayStatus;
         this.match = builder.match;
+        this.mcpServerInfo = builder.mcpServerInfo;
         this.name = builder.name;
         this.routeId = builder.routeId;
         this.updateTimestamp = builder.updateTimestamp;
@@ -133,6 +137,13 @@ public class HttpRoute extends TeaModel {
     }
 
     /**
+     * @return mcpServerInfo
+     */
+    public McpServerInfo getMcpServerInfo() {
+        return this.mcpServerInfo;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -162,6 +173,7 @@ public class HttpRoute extends TeaModel {
         private EnvironmentInfo environmentInfo; 
         private java.util.Map<String, String> gatewayStatus; 
         private HttpRouteMatch match; 
+        private McpServerInfo mcpServerInfo; 
         private String name; 
         private String routeId; 
         private Long updateTimestamp; 
@@ -178,6 +190,7 @@ public class HttpRoute extends TeaModel {
             this.environmentInfo = model.environmentInfo;
             this.gatewayStatus = model.gatewayStatus;
             this.match = model.match;
+            this.mcpServerInfo = model.mcpServerInfo;
             this.name = model.name;
             this.routeId = model.routeId;
             this.updateTimestamp = model.updateTimestamp;
@@ -244,6 +257,14 @@ public class HttpRoute extends TeaModel {
          */
         public Builder match(HttpRouteMatch match) {
             this.match = match;
+            return this;
+        }
+
+        /**
+         * mcpServerInfo.
+         */
+        public Builder mcpServerInfo(McpServerInfo mcpServerInfo) {
+            this.mcpServerInfo = mcpServerInfo;
             return this;
         }
 
@@ -698,6 +719,240 @@ public class HttpRoute extends TeaModel {
 
             public EnvironmentInfo build() {
                 return new EnvironmentInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HttpRoute} extends {@link TeaModel}
+     *
+     * <p>HttpRoute</p>
+     */
+    public static class McpRouteConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("exposedUriPath")
+        private String exposedUriPath;
+
+        @com.aliyun.core.annotation.NameInMap("protocol")
+        private String protocol;
+
+        private McpRouteConfig(Builder builder) {
+            this.exposedUriPath = builder.exposedUriPath;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static McpRouteConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return exposedUriPath
+         */
+        public String getExposedUriPath() {
+            return this.exposedUriPath;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private String exposedUriPath; 
+            private String protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(McpRouteConfig model) {
+                this.exposedUriPath = model.exposedUriPath;
+                this.protocol = model.protocol;
+            } 
+
+            /**
+             * exposedUriPath.
+             */
+            public Builder exposedUriPath(String exposedUriPath) {
+                this.exposedUriPath = exposedUriPath;
+                return this;
+            }
+
+            /**
+             * protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public McpRouteConfig build() {
+                return new McpRouteConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link HttpRoute} extends {@link TeaModel}
+     *
+     * <p>HttpRoute</p>
+     */
+    public static class McpServerInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("createFromType")
+        private String createFromType;
+
+        @com.aliyun.core.annotation.NameInMap("importInstanceId")
+        private String importInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("importMcpServerId")
+        private String importMcpServerId;
+
+        @com.aliyun.core.annotation.NameInMap("importNamespace")
+        private String importNamespace;
+
+        @com.aliyun.core.annotation.NameInMap("mcpRouteConfig")
+        private McpRouteConfig mcpRouteConfig;
+
+        @com.aliyun.core.annotation.NameInMap("mcpServerConfig")
+        private String mcpServerConfig;
+
+        private McpServerInfo(Builder builder) {
+            this.createFromType = builder.createFromType;
+            this.importInstanceId = builder.importInstanceId;
+            this.importMcpServerId = builder.importMcpServerId;
+            this.importNamespace = builder.importNamespace;
+            this.mcpRouteConfig = builder.mcpRouteConfig;
+            this.mcpServerConfig = builder.mcpServerConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static McpServerInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return createFromType
+         */
+        public String getCreateFromType() {
+            return this.createFromType;
+        }
+
+        /**
+         * @return importInstanceId
+         */
+        public String getImportInstanceId() {
+            return this.importInstanceId;
+        }
+
+        /**
+         * @return importMcpServerId
+         */
+        public String getImportMcpServerId() {
+            return this.importMcpServerId;
+        }
+
+        /**
+         * @return importNamespace
+         */
+        public String getImportNamespace() {
+            return this.importNamespace;
+        }
+
+        /**
+         * @return mcpRouteConfig
+         */
+        public McpRouteConfig getMcpRouteConfig() {
+            return this.mcpRouteConfig;
+        }
+
+        /**
+         * @return mcpServerConfig
+         */
+        public String getMcpServerConfig() {
+            return this.mcpServerConfig;
+        }
+
+        public static final class Builder {
+            private String createFromType; 
+            private String importInstanceId; 
+            private String importMcpServerId; 
+            private String importNamespace; 
+            private McpRouteConfig mcpRouteConfig; 
+            private String mcpServerConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(McpServerInfo model) {
+                this.createFromType = model.createFromType;
+                this.importInstanceId = model.importInstanceId;
+                this.importMcpServerId = model.importMcpServerId;
+                this.importNamespace = model.importNamespace;
+                this.mcpRouteConfig = model.mcpRouteConfig;
+                this.mcpServerConfig = model.mcpServerConfig;
+            } 
+
+            /**
+             * createFromType.
+             */
+            public Builder createFromType(String createFromType) {
+                this.createFromType = createFromType;
+                return this;
+            }
+
+            /**
+             * importInstanceId.
+             */
+            public Builder importInstanceId(String importInstanceId) {
+                this.importInstanceId = importInstanceId;
+                return this;
+            }
+
+            /**
+             * importMcpServerId.
+             */
+            public Builder importMcpServerId(String importMcpServerId) {
+                this.importMcpServerId = importMcpServerId;
+                return this;
+            }
+
+            /**
+             * importNamespace.
+             */
+            public Builder importNamespace(String importNamespace) {
+                this.importNamespace = importNamespace;
+                return this;
+            }
+
+            /**
+             * mcpRouteConfig.
+             */
+            public Builder mcpRouteConfig(McpRouteConfig mcpRouteConfig) {
+                this.mcpRouteConfig = mcpRouteConfig;
+                return this;
+            }
+
+            /**
+             * mcpServerConfig.
+             */
+            public Builder mcpServerConfig(String mcpServerConfig) {
+                this.mcpServerConfig = mcpServerConfig;
+                return this;
+            }
+
+            public McpServerInfo build() {
+                return new McpServerInfo(this);
             } 
 
         } 
