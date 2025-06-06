@@ -170,6 +170,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<LivenessFaceVerifyResponse> livenessFaceVerify(LivenessFaceVerifyRequest request);
 
     /**
+     * @param request the request parameters of Mobile2MetaVerify  Mobile2MetaVerifyRequest
+     * @return Mobile2MetaVerifyResponse
+     */
+    CompletableFuture<Mobile2MetaVerifyResponse> mobile2MetaVerify(Mobile2MetaVerifyRequest request);
+
+    /**
      * @param request the request parameters of Mobile3MetaDetailStandardVerify  Mobile3MetaDetailStandardVerifyRequest
      * @return Mobile3MetaDetailStandardVerifyResponse
      */
