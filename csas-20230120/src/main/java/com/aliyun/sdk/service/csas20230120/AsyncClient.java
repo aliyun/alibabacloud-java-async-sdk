@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEnterpriseAcceleratePolicyResponse> createEnterpriseAcceleratePolicy(CreateEnterpriseAcceleratePolicyRequest request);
 
     /**
+     * @param request the request parameters of CreateEnterpriseAccelerateTarget  CreateEnterpriseAccelerateTargetRequest
+     * @return CreateEnterpriseAccelerateTargetResponse
+     */
+    CompletableFuture<CreateEnterpriseAccelerateTargetResponse> createEnterpriseAccelerateTarget(CreateEnterpriseAccelerateTargetRequest request);
+
+    /**
      * @param request the request parameters of CreateIdpDepartment  CreateIdpDepartmentRequest
      * @return CreateIdpDepartmentResponse
      */
@@ -137,6 +143,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDynamicRouteResponse> deleteDynamicRoute(DeleteDynamicRouteRequest request);
 
     /**
+     * @param request the request parameters of DeleteEnterpriseAcceleratePolicy  DeleteEnterpriseAcceleratePolicyRequest
+     * @return DeleteEnterpriseAcceleratePolicyResponse
+     */
+    CompletableFuture<DeleteEnterpriseAcceleratePolicyResponse> deleteEnterpriseAcceleratePolicy(DeleteEnterpriseAcceleratePolicyRequest request);
+
+    /**
+     * @param request the request parameters of DeleteEnterpriseAccelerateTarget  DeleteEnterpriseAccelerateTargetRequest
+     * @return DeleteEnterpriseAccelerateTargetResponse
+     */
+    CompletableFuture<DeleteEnterpriseAccelerateTargetResponse> deleteEnterpriseAccelerateTarget(DeleteEnterpriseAccelerateTargetRequest request);
+
+    /**
      * @param request the request parameters of DeleteIdpDepartment  DeleteIdpDepartmentRequest
      * @return DeleteIdpDepartmentResponse
      */
@@ -195,6 +213,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DetachPolicy2ApprovalProcessResponse
      */
     CompletableFuture<DetachPolicy2ApprovalProcessResponse> detachPolicy2ApprovalProcess(DetachPolicy2ApprovalProcessRequest request);
+
+    /**
+     * @param request the request parameters of DisableEnterpriseAcceleratePolicy  DisableEnterpriseAcceleratePolicyRequest
+     * @return DisableEnterpriseAcceleratePolicyResponse
+     */
+    CompletableFuture<DisableEnterpriseAcceleratePolicyResponse> disableEnterpriseAcceleratePolicy(DisableEnterpriseAcceleratePolicyRequest request);
+
+    /**
+     * @param request the request parameters of EnableEnterpriseAcceleratePolicy  EnableEnterpriseAcceleratePolicyRequest
+     * @return EnableEnterpriseAcceleratePolicyResponse
+     */
+    CompletableFuture<EnableEnterpriseAcceleratePolicyResponse> enableEnterpriseAcceleratePolicy(EnableEnterpriseAcceleratePolicyRequest request);
 
     /**
      * @param request the request parameters of ExportUserDevices  ExportUserDevicesRequest
@@ -293,6 +323,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetWmExtractTaskResponse> getWmExtractTask(GetWmExtractTaskRequest request);
 
     /**
+     * @param request the request parameters of ImportEnterpriseAccelerateTargets  ImportEnterpriseAccelerateTargetsRequest
+     * @return ImportEnterpriseAccelerateTargetsResponse
+     */
+    CompletableFuture<ImportEnterpriseAccelerateTargetsResponse> importEnterpriseAccelerateTargets(ImportEnterpriseAccelerateTargetsRequest request);
+
+    /**
      * @param request the request parameters of ListApplicationsForPrivateAccessPolicy  ListApplicationsForPrivateAccessPolicyRequest
      * @return ListApplicationsForPrivateAccessPolicyResponse
      */
@@ -363,6 +399,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListDynamicRoutesResponse
      */
     CompletableFuture<ListDynamicRoutesResponse> listDynamicRoutes(ListDynamicRoutesRequest request);
+
+    /**
+     * @param request the request parameters of ListEnterpriseAccelerateLogs  ListEnterpriseAccelerateLogsRequest
+     * @return ListEnterpriseAccelerateLogsResponse
+     */
+    CompletableFuture<ListEnterpriseAccelerateLogsResponse> listEnterpriseAccelerateLogs(ListEnterpriseAccelerateLogsRequest request);
+
+    /**
+     * @param request the request parameters of ListEnterpriseAcceleratePolicies  ListEnterpriseAcceleratePoliciesRequest
+     * @return ListEnterpriseAcceleratePoliciesResponse
+     */
+    CompletableFuture<ListEnterpriseAcceleratePoliciesResponse> listEnterpriseAcceleratePolicies(ListEnterpriseAcceleratePoliciesRequest request);
+
+    /**
+     * @param request the request parameters of ListEnterpriseAccelerateTargets  ListEnterpriseAccelerateTargetsRequest
+     * @return ListEnterpriseAccelerateTargetsResponse
+     */
+    CompletableFuture<ListEnterpriseAccelerateTargetsResponse> listEnterpriseAccelerateTargets(ListEnterpriseAccelerateTargetsRequest request);
 
     /**
      * @param request the request parameters of ListExcessiveDeviceRegistrationApplications  ListExcessiveDeviceRegistrationApplicationsRequest
@@ -525,6 +579,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return LookupWmInfoMappingResponse
      */
     CompletableFuture<LookupWmInfoMappingResponse> lookupWmInfoMapping(LookupWmInfoMappingRequest request);
+
+    /**
+     * @param request the request parameters of ModifyEnterpriseAcceleratePolicy  ModifyEnterpriseAcceleratePolicyRequest
+     * @return ModifyEnterpriseAcceleratePolicyResponse
+     */
+    CompletableFuture<ModifyEnterpriseAcceleratePolicyResponse> modifyEnterpriseAcceleratePolicy(ModifyEnterpriseAcceleratePolicyRequest request);
 
     /**
      * @deprecated OpenAPI RevokeUserSession is deprecated  * @param request  the request parameters of RevokeUserSession  RevokeUserSessionRequest

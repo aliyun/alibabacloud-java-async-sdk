@@ -80,7 +80,7 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
         } 
 
         /**
-         * DisposalProcesses.
+         * <p>List of disposal processes.</p>
          */
         public Builder disposalProcesses(java.util.List<DisposalProcesses> disposalProcesses) {
             this.disposalProcesses = disposalProcesses;
@@ -88,7 +88,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BE4FB974-11BC-5453-9BE1-1606A73EACA6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>Total number of dynamic disposal processes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -240,7 +246,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * Cpu.
+             * <p>CPU model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz</p>
              */
             public Builder cpu(String cpu) {
                 this.cpu = cpu;
@@ -248,7 +257,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DevTag.
+             * <p>Device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A84D0AF0-1ACC-02B8-6A07-FC898F71BE09</p>
              */
             public Builder devTag(String devTag) {
                 this.devTag = devTag;
@@ -256,7 +268,18 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DevType.
+             * <p>Device operating system type. Values:</p>
+             * <ul>
+             * <li><strong>Windows</strong>：Windows system.</li>
+             * <li><strong>macOS</strong>：macOS system.</li>
+             * <li><strong>Linux</strong>：Linux system.</li>
+             * <li><strong>Android</strong>：Android system.</li>
+             * <li><strong>iOS</strong>：iOS system.</li>
+             * <li><strong>Windows_Wuying</strong>：Wuying cloud desktop system.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>windows</p>
              */
             public Builder devType(String devType) {
                 this.devType = devType;
@@ -264,7 +287,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * Disk.
+             * <p>Device disk model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>KXG6AZNV512G TOSHIBA</p>
              */
             public Builder disk(String disk) {
                 this.disk = disk;
@@ -272,7 +298,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>Device name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DESKTOP-ERLV3AK</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -280,7 +309,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * Mac.
+             * <p>Device MAC address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CE:3B:<strong>:</strong>:FD:FB</p>
              */
             public Builder mac(String mac) {
                 this.mac = mac;
@@ -288,7 +320,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * <p>Device memory capacity. Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder memory(String memory) {
                 this.memory = memory;
@@ -296,7 +331,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * OsVersion.
+             * <p>Operating system version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder osVersion(String osVersion) {
                 this.osVersion = osVersion;
@@ -493,7 +531,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * AppVersion.
+             * <p>Client version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4.5.1</p>
              */
             public Builder appVersion(String appVersion) {
                 this.appVersion = appVersion;
@@ -501,7 +542,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * Department.
+             * <p>Department to which the user belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IT运维部</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -509,7 +553,16 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DlpStatus.
+             * <p>Office data protection status. Values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * <li><strong>Unprovisioned</strong>: Not configured.</li>
+             * <li><strong>Unauthorized</strong>: Unauthorized.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder dlpStatus(String dlpStatus) {
                 this.dlpStatus = dlpStatus;
@@ -517,7 +570,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * InternetIp.
+             * <p>Public IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.26.XX.XX</p>
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -525,7 +581,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * LaStatus.
+             * <p>Internet behavior management enablement status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder laStatus(String laStatus) {
                 this.laStatus = laStatus;
@@ -533,7 +592,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * LoginStatus.
+             * <p>Login status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder loginStatus(String loginStatus) {
                 this.loginStatus = loginStatus;
@@ -541,7 +603,15 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * NacStatus.
+             * <p>Network access control status. Values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * <li><strong>Unprovisioned</strong>: Not configured.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder nacStatus(String nacStatus) {
                 this.nacStatus = nacStatus;
@@ -549,7 +619,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateIp.
+             * <p>Private IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>172.20.XX.XX</p>
              */
             public Builder privateIp(String privateIp) {
                 this.privateIp = privateIp;
@@ -557,7 +630,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * SaseUserId.
+             * <p>Unique ID of the SASE user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>su_dfsdfsdgasgsgag</p>
              */
             public Builder saseUserId(String saseUserId) {
                 this.saseUserId = saseUserId;
@@ -565,7 +641,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * <p>Username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -573,7 +652,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * Workshop.
+             * <p>Identified office area name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>office</p>
              */
             public Builder workshop(String workshop) {
                 this.workshop = workshop;
@@ -581,7 +663,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * ZtnaStatus.
+             * <p>ZTNA enablement status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder ztnaStatus(String ztnaStatus) {
                 this.ztnaStatus = ztnaStatus;
@@ -817,7 +902,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             } 
 
             /**
-             * Department.
+             * <p>User&quot;s department.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IT</p>
              */
             public Builder department(String department) {
                 this.department = department;
@@ -825,7 +913,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DevTag.
+             * <p>Device ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FD7554AD-4CDE-6359-6B49-4FE950606C2C</p>
              */
             public Builder devTag(String devTag) {
                 this.devTag = devTag;
@@ -833,7 +924,7 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceBasicInfo.
+             * <p>Basic device information.</p>
              */
             public Builder deviceBasicInfo(DeviceBasicInfo deviceBasicInfo) {
                 this.deviceBasicInfo = deviceBasicInfo;
@@ -841,7 +932,7 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceStatusInfo.
+             * <p>设备状态信息。</p>
              */
             public Builder deviceStatusInfo(DeviceStatusInfo deviceStatusInfo) {
                 this.deviceStatusInfo = deviceStatusInfo;
@@ -849,7 +940,7 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DisposalActions.
+             * <p>List of disposal actions.</p>
              */
             public Builder disposalActions(java.util.List<String> disposalActions) {
                 this.disposalActions = disposalActions;
@@ -857,7 +948,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DisposalProcessId.
+             * <p>Disposal process ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dp-xxxxxxxx</p>
              */
             public Builder disposalProcessId(String disposalProcessId) {
                 this.disposalProcessId = disposalProcessId;
@@ -865,7 +959,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DisposalTime.
+             * <p>Disposal time, in seconds since the epoch.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1743059249</p>
              */
             public Builder disposalTime(String disposalTime) {
                 this.disposalTime = disposalTime;
@@ -873,7 +970,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicPolicyId.
+             * <p>Dynamic policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dynamic-policy-xxxxxxxx</p>
              */
             public Builder dynamicPolicyId(String dynamicPolicyId) {
                 this.dynamicPolicyId = dynamicPolicyId;
@@ -881,7 +981,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * DynamicPolicyName.
+             * <p>Dynamic policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>动态策略1</p>
              */
             public Builder dynamicPolicyName(String dynamicPolicyName) {
                 this.dynamicPolicyName = dynamicPolicyName;
@@ -889,7 +992,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * Hostname.
+             * <p>Terminal device name. Length: 1~128 characters, supporting Chinese and uppercase/lowercase English letters, and can include numbers, half-width periods (.), commas (,), semicolons (;), hyphens (-), underscores (<em>), slashes (/), at (@) symbols, and spaces. Entering an underscore (</em>) alone will additionally query all terminal devices with 4-byte UTF-8 characters in their names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WANGCHENCHENNBB</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -897,7 +1003,15 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * RecoveryType.
+             * <p>Recovery type.</p>
+             * <ul>
+             * <li><strong>auto</strong>：Automatic recovery.</li>
+             * <li><strong>console</strong>：Console recovery.</li>
+             * <li><strong>auth</strong>：Certification and reporting recovery.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>auto</p>
              */
             public Builder recoveryType(String recoveryType) {
                 this.recoveryType = recoveryType;
@@ -905,7 +1019,24 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleContent.
+             * <p>Rule content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;Combinator&quot;: &quot;OR&quot;,
+             *   &quot;Rules&quot;: [
+             *     {
+             *       &quot;Operator&quot;: &quot;version_gt&quot;,
+             *       &quot;Values&quot;: [
+             *         &quot;1&quot;
+             *       ],
+             *       &quot;RuleType&quot;: &quot;device_info&quot;,
+             *       &quot;Id&quot;: &quot;1&quot;,
+             *       &quot;RuleSubType&quot;: &quot;basic_info&quot;,
+             *       &quot;Name&quot;: &quot;app_version&quot;
+             *     }
+             *   ]
+             * }</p>
              */
             public Builder ruleContent(Object ruleContent) {
                 this.ruleContent = ruleContent;
@@ -913,7 +1044,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * SaseUserId.
+             * <p>SASE用户ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdqwedg-xzczvzdaf-asfafs</p>
              */
             public Builder saseUserId(String saseUserId) {
                 this.saseUserId = saseUserId;
@@ -921,7 +1055,15 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Disposal status. Values:</p>
+             * <ul>
+             * <li><strong>disposal</strong>: In the disposal state.</li>
+             * <li><strong>finished</strong>: Already automatically recovered.</li>
+             * <li><strong>recovery</strong>: Recovered by authentication and reporting or console recovery.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>disposal</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -929,7 +1071,10 @@ public class ListDynamicDisposalProcessesResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * <p>Username.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xiaoming</p>
              */
             public Builder userName(String userName) {
                 this.userName = userName;

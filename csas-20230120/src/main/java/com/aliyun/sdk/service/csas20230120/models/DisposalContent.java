@@ -29,6 +29,9 @@ public class DisposalContent extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AlertTitleEn")
     private String alertTitleEn;
 
+    @com.aliyun.core.annotation.NameInMap("NacDemotionPolicyIds")
+    private java.util.List<String> nacDemotionPolicyIds;
+
     @com.aliyun.core.annotation.NameInMap("NoticeContent")
     private String noticeContent;
 
@@ -47,6 +50,7 @@ public class DisposalContent extends TeaModel {
         this.alertContentEn = builder.alertContentEn;
         this.alertTitle = builder.alertTitle;
         this.alertTitleEn = builder.alertTitleEn;
+        this.nacDemotionPolicyIds = builder.nacDemotionPolicyIds;
         this.noticeContent = builder.noticeContent;
         this.noticeContentEn = builder.noticeContentEn;
         this.notifyActions = builder.notifyActions;
@@ -94,6 +98,13 @@ public class DisposalContent extends TeaModel {
     }
 
     /**
+     * @return nacDemotionPolicyIds
+     */
+    public java.util.List<String> getNacDemotionPolicyIds() {
+        return this.nacDemotionPolicyIds;
+    }
+
+    /**
      * @return noticeContent
      */
     public String getNoticeContent() {
@@ -126,6 +137,7 @@ public class DisposalContent extends TeaModel {
         private String alertContentEn; 
         private String alertTitle; 
         private String alertTitleEn; 
+        private java.util.List<String> nacDemotionPolicyIds; 
         private String noticeContent; 
         private String noticeContentEn; 
         private java.util.List<String> notifyActions; 
@@ -139,6 +151,7 @@ public class DisposalContent extends TeaModel {
             this.alertContentEn = model.alertContentEn;
             this.alertTitle = model.alertTitle;
             this.alertTitleEn = model.alertTitleEn;
+            this.nacDemotionPolicyIds = model.nacDemotionPolicyIds;
             this.noticeContent = model.noticeContent;
             this.noticeContentEn = model.noticeContentEn;
             this.notifyActions = model.notifyActions;
@@ -174,6 +187,14 @@ public class DisposalContent extends TeaModel {
          */
         public Builder alertTitleEn(String alertTitleEn) {
             this.alertTitleEn = alertTitleEn;
+            return this;
+        }
+
+        /**
+         * NacDemotionPolicyIds.
+         */
+        public Builder nacDemotionPolicyIds(java.util.List<String> nacDemotionPolicyIds) {
+            this.nacDemotionPolicyIds = nacDemotionPolicyIds;
             return this;
         }
 

@@ -148,6 +148,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateEnterpriseAccelerateTarget  CreateEnterpriseAccelerateTargetRequest
+     * @return CreateEnterpriseAccelerateTargetResponse
+     */
+    @Override
+    public CompletableFuture<CreateEnterpriseAccelerateTargetResponse> createEnterpriseAccelerateTarget(CreateEnterpriseAccelerateTargetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("CreateEnterpriseAccelerateTarget").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateEnterpriseAccelerateTargetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateEnterpriseAccelerateTargetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateIdpDepartment  CreateIdpDepartmentRequest
      * @return CreateIdpDepartmentResponse
      */
@@ -385,6 +403,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteEnterpriseAcceleratePolicy  DeleteEnterpriseAcceleratePolicyRequest
+     * @return DeleteEnterpriseAcceleratePolicyResponse
+     */
+    @Override
+    public CompletableFuture<DeleteEnterpriseAcceleratePolicyResponse> deleteEnterpriseAcceleratePolicy(DeleteEnterpriseAcceleratePolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteEnterpriseAcceleratePolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteEnterpriseAcceleratePolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteEnterpriseAcceleratePolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteEnterpriseAccelerateTarget  DeleteEnterpriseAccelerateTargetRequest
+     * @return DeleteEnterpriseAccelerateTargetResponse
+     */
+    @Override
+    public CompletableFuture<DeleteEnterpriseAccelerateTargetResponse> deleteEnterpriseAccelerateTarget(DeleteEnterpriseAccelerateTargetRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteEnterpriseAccelerateTarget").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteEnterpriseAccelerateTargetResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteEnterpriseAccelerateTargetResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteIdpDepartment  DeleteIdpDepartmentRequest
      * @return DeleteIdpDepartmentResponse
      */
@@ -559,6 +613,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DetachPolicy2ApprovalProcessResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DisableEnterpriseAcceleratePolicy  DisableEnterpriseAcceleratePolicyRequest
+     * @return DisableEnterpriseAcceleratePolicyResponse
+     */
+    @Override
+    public CompletableFuture<DisableEnterpriseAcceleratePolicyResponse> disableEnterpriseAcceleratePolicy(DisableEnterpriseAcceleratePolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DisableEnterpriseAcceleratePolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DisableEnterpriseAcceleratePolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DisableEnterpriseAcceleratePolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnableEnterpriseAcceleratePolicy  EnableEnterpriseAcceleratePolicyRequest
+     * @return EnableEnterpriseAcceleratePolicyResponse
+     */
+    @Override
+    public CompletableFuture<EnableEnterpriseAcceleratePolicyResponse> enableEnterpriseAcceleratePolicy(EnableEnterpriseAcceleratePolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnableEnterpriseAcceleratePolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnableEnterpriseAcceleratePolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnableEnterpriseAcceleratePolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -853,6 +943,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ImportEnterpriseAccelerateTargets  ImportEnterpriseAccelerateTargetsRequest
+     * @return ImportEnterpriseAccelerateTargetsResponse
+     */
+    @Override
+    public CompletableFuture<ImportEnterpriseAccelerateTargetsResponse> importEnterpriseAccelerateTargets(ImportEnterpriseAccelerateTargetsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ImportEnterpriseAccelerateTargets").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ImportEnterpriseAccelerateTargetsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ImportEnterpriseAccelerateTargetsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListApplicationsForPrivateAccessPolicy  ListApplicationsForPrivateAccessPolicyRequest
      * @return ListApplicationsForPrivateAccessPolicyResponse
      */
@@ -1063,6 +1171,60 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListDynamicRoutesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListEnterpriseAccelerateLogs  ListEnterpriseAccelerateLogsRequest
+     * @return ListEnterpriseAccelerateLogsResponse
+     */
+    @Override
+    public CompletableFuture<ListEnterpriseAccelerateLogsResponse> listEnterpriseAccelerateLogs(ListEnterpriseAccelerateLogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListEnterpriseAccelerateLogs").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEnterpriseAccelerateLogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListEnterpriseAccelerateLogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListEnterpriseAcceleratePolicies  ListEnterpriseAcceleratePoliciesRequest
+     * @return ListEnterpriseAcceleratePoliciesResponse
+     */
+    @Override
+    public CompletableFuture<ListEnterpriseAcceleratePoliciesResponse> listEnterpriseAcceleratePolicies(ListEnterpriseAcceleratePoliciesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListEnterpriseAcceleratePolicies").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEnterpriseAcceleratePoliciesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListEnterpriseAcceleratePoliciesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListEnterpriseAccelerateTargets  ListEnterpriseAccelerateTargetsRequest
+     * @return ListEnterpriseAccelerateTargetsResponse
+     */
+    @Override
+    public CompletableFuture<ListEnterpriseAccelerateTargetsResponse> listEnterpriseAccelerateTargets(ListEnterpriseAccelerateTargetsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListEnterpriseAccelerateTargets").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListEnterpriseAccelerateTargetsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListEnterpriseAccelerateTargetsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1549,6 +1711,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<LookupWmInfoMappingResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyEnterpriseAcceleratePolicy  ModifyEnterpriseAcceleratePolicyRequest
+     * @return ModifyEnterpriseAcceleratePolicyResponse
+     */
+    @Override
+    public CompletableFuture<ModifyEnterpriseAcceleratePolicyResponse> modifyEnterpriseAcceleratePolicy(ModifyEnterpriseAcceleratePolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyEnterpriseAcceleratePolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyEnterpriseAcceleratePolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyEnterpriseAcceleratePolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

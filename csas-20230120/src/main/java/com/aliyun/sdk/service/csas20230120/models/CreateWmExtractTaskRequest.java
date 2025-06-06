@@ -35,6 +35,10 @@ public class CreateWmExtractTaskRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String filename;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsClientEmbed")
+    private Boolean isClientEmbed;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VideoIsLong")
     private Boolean videoIsLong;
@@ -59,6 +63,7 @@ public class CreateWmExtractTaskRequest extends Request {
         this.documentIsCapture = builder.documentIsCapture;
         this.fileUrl = builder.fileUrl;
         this.filename = builder.filename;
+        this.isClientEmbed = builder.isClientEmbed;
         this.videoIsLong = builder.videoIsLong;
         this.videoSpeed = builder.videoSpeed;
         this.wmInfoSize = builder.wmInfoSize;
@@ -107,6 +112,13 @@ public class CreateWmExtractTaskRequest extends Request {
     }
 
     /**
+     * @return isClientEmbed
+     */
+    public Boolean getIsClientEmbed() {
+        return this.isClientEmbed;
+    }
+
+    /**
      * @return videoIsLong
      */
     public Boolean getVideoIsLong() {
@@ -139,6 +151,7 @@ public class CreateWmExtractTaskRequest extends Request {
         private Boolean documentIsCapture; 
         private String fileUrl; 
         private String filename; 
+        private Boolean isClientEmbed; 
         private Boolean videoIsLong; 
         private String videoSpeed; 
         private Long wmInfoSize; 
@@ -154,6 +167,7 @@ public class CreateWmExtractTaskRequest extends Request {
             this.documentIsCapture = request.documentIsCapture;
             this.fileUrl = request.fileUrl;
             this.filename = request.filename;
+            this.isClientEmbed = request.isClientEmbed;
             this.videoIsLong = request.videoIsLong;
             this.videoSpeed = request.videoSpeed;
             this.wmInfoSize = request.wmInfoSize;
@@ -209,6 +223,15 @@ public class CreateWmExtractTaskRequest extends Request {
         public Builder filename(String filename) {
             this.putBodyParameter("Filename", filename);
             this.filename = filename;
+            return this;
+        }
+
+        /**
+         * IsClientEmbed.
+         */
+        public Builder isClientEmbed(Boolean isClientEmbed) {
+            this.putQueryParameter("IsClientEmbed", isClientEmbed);
+            this.isClientEmbed = isClientEmbed;
             return this;
         }
 
