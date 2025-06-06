@@ -23,12 +23,16 @@ public class DefaultBuilderConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("languages")
     private java.util.List<String> languages;
 
+    @com.aliyun.core.annotation.NameInMap("rootPath")
+    private String rootPath;
+
     @com.aliyun.core.annotation.NameInMap("steps")
     private java.util.List<?> steps;
 
     private DefaultBuilderConfig(Builder builder) {
         this.cache = builder.cache;
         this.languages = builder.languages;
+        this.rootPath = builder.rootPath;
         this.steps = builder.steps;
     }
 
@@ -59,6 +63,13 @@ public class DefaultBuilderConfig extends TeaModel {
     }
 
     /**
+     * @return rootPath
+     */
+    public String getRootPath() {
+        return this.rootPath;
+    }
+
+    /**
      * @return steps
      */
     public java.util.List<?> getSteps() {
@@ -68,6 +79,7 @@ public class DefaultBuilderConfig extends TeaModel {
     public static final class Builder {
         private BuildCacheConfig cache; 
         private java.util.List<String> languages; 
+        private String rootPath; 
         private java.util.List<?> steps; 
 
         private Builder() {
@@ -76,6 +88,7 @@ public class DefaultBuilderConfig extends TeaModel {
         private Builder(DefaultBuilderConfig model) {
             this.cache = model.cache;
             this.languages = model.languages;
+            this.rootPath = model.rootPath;
             this.steps = model.steps;
         } 
 
@@ -92,6 +105,14 @@ public class DefaultBuilderConfig extends TeaModel {
          */
         public Builder languages(java.util.List<String> languages) {
             this.languages = languages;
+            return this;
+        }
+
+        /**
+         * rootPath.
+         */
+        public Builder rootPath(String rootPath) {
+            this.rootPath = rootPath;
             return this;
         }
 

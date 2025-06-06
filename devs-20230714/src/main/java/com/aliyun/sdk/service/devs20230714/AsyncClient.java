@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateTaskResponse> createTask(CreateTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateToolset  CreateToolsetRequest
+     * @return CreateToolsetResponse
+     */
+    CompletableFuture<CreateToolsetResponse> createToolset(CreateToolsetRequest request);
+
+    /**
      * @param request the request parameters of DeleteArtifact  DeleteArtifactRequest
      * @return DeleteArtifactResponse
      */
@@ -90,6 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteProjectResponse
      */
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
+
+    /**
+     * @param request the request parameters of DeleteToolset  DeleteToolsetRequest
+     * @return DeleteToolsetResponse
+     */
+    CompletableFuture<DeleteToolsetResponse> deleteToolset(DeleteToolsetRequest request);
 
     /**
      * @param request the request parameters of DeployEnvironment  DeployEnvironmentRequest
@@ -164,6 +176,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTaskResponse> getTask(GetTaskRequest request);
 
     /**
+     * @param request the request parameters of GetToolset  GetToolsetRequest
+     * @return GetToolsetResponse
+     */
+    CompletableFuture<GetToolsetResponse> getToolset(GetToolsetRequest request);
+
+    /**
      * @param request the request parameters of ListConnections  ListConnectionsRequest
      * @return ListConnectionsResponse
      */
@@ -198,6 +216,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTasksResponse
      */
     CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListToolsets  ListToolsetsRequest
+     * @return ListToolsetsResponse
+     */
+    CompletableFuture<ListToolsetsResponse> listToolsets(ListToolsetsRequest request);
 
     /**
      * @param request the request parameters of PreviewEnvironment  PreviewEnvironmentRequest
@@ -264,5 +288,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateProjectResponse
      */
     CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request);
+
+    /**
+     * @param request the request parameters of UpdateToolset  UpdateToolsetRequest
+     * @return UpdateToolsetResponse
+     */
+    CompletableFuture<UpdateToolsetResponse> updateToolset(UpdateToolsetRequest request);
 
 }

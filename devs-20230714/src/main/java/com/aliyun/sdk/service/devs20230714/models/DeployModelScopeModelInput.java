@@ -712,6 +712,9 @@ public class DeployModelScopeModelInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("authType")
         private String authType;
 
+        @com.aliyun.core.annotation.NameInMap("disableURLInternet")
+        private Boolean disableURLInternet;
+
         @com.aliyun.core.annotation.NameInMap("dsableURLInternet")
         private Boolean dsableURLInternet;
 
@@ -720,6 +723,7 @@ public class DeployModelScopeModelInput extends TeaModel {
 
         private TriggerConfig(Builder builder) {
             this.authType = builder.authType;
+            this.disableURLInternet = builder.disableURLInternet;
             this.dsableURLInternet = builder.dsableURLInternet;
             this.methods = builder.methods;
         }
@@ -740,6 +744,13 @@ public class DeployModelScopeModelInput extends TeaModel {
         }
 
         /**
+         * @return disableURLInternet
+         */
+        public Boolean getDisableURLInternet() {
+            return this.disableURLInternet;
+        }
+
+        /**
          * @return dsableURLInternet
          */
         public Boolean getDsableURLInternet() {
@@ -755,6 +766,7 @@ public class DeployModelScopeModelInput extends TeaModel {
 
         public static final class Builder {
             private String authType; 
+            private Boolean disableURLInternet; 
             private Boolean dsableURLInternet; 
             private java.util.List<String> methods; 
 
@@ -763,6 +775,7 @@ public class DeployModelScopeModelInput extends TeaModel {
 
             private Builder(TriggerConfig model) {
                 this.authType = model.authType;
+                this.disableURLInternet = model.disableURLInternet;
                 this.dsableURLInternet = model.dsableURLInternet;
                 this.methods = model.methods;
             } 
@@ -772,6 +785,14 @@ public class DeployModelScopeModelInput extends TeaModel {
              */
             public Builder authType(String authType) {
                 this.authType = authType;
+                return this;
+            }
+
+            /**
+             * disableURLInternet.
+             */
+            public Builder disableURLInternet(Boolean disableURLInternet) {
+                this.disableURLInternet = disableURLInternet;
                 return this;
             }
 
@@ -1048,6 +1069,9 @@ public class DeployModelScopeModelInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("srcOssRegion")
         private String srcOssRegion;
 
+        @com.aliyun.core.annotation.NameInMap("syncStrategy")
+        private String syncStrategy;
+
         private ModelConfig(Builder builder) {
             this.framework = builder.framework;
             this.multiModelConfig = builder.multiModelConfig;
@@ -1059,6 +1083,7 @@ public class DeployModelScopeModelInput extends TeaModel {
             this.srcOssBucket = builder.srcOssBucket;
             this.srcOssPath = builder.srcOssPath;
             this.srcOssRegion = builder.srcOssRegion;
+            this.syncStrategy = builder.syncStrategy;
         }
 
         public static Builder builder() {
@@ -1139,6 +1164,13 @@ public class DeployModelScopeModelInput extends TeaModel {
             return this.srcOssRegion;
         }
 
+        /**
+         * @return syncStrategy
+         */
+        public String getSyncStrategy() {
+            return this.syncStrategy;
+        }
+
         public static final class Builder {
             private String framework; 
             private java.util.List<ModelConfig> multiModelConfig; 
@@ -1150,6 +1182,7 @@ public class DeployModelScopeModelInput extends TeaModel {
             private String srcOssBucket; 
             private String srcOssPath; 
             private String srcOssRegion; 
+            private String syncStrategy; 
 
             private Builder() {
             } 
@@ -1165,6 +1198,7 @@ public class DeployModelScopeModelInput extends TeaModel {
                 this.srcOssBucket = model.srcOssBucket;
                 this.srcOssPath = model.srcOssPath;
                 this.srcOssRegion = model.srcOssRegion;
+                this.syncStrategy = model.syncStrategy;
             } 
 
             /**
@@ -1244,6 +1278,14 @@ public class DeployModelScopeModelInput extends TeaModel {
              */
             public Builder srcOssRegion(String srcOssRegion) {
                 this.srcOssRegion = srcOssRegion;
+                return this;
+            }
+
+            /**
+             * syncStrategy.
+             */
+            public Builder syncStrategy(String syncStrategy) {
+                this.syncStrategy = syncStrategy;
                 return this;
             }
 

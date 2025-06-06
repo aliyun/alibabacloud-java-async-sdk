@@ -20,6 +20,9 @@ public class DeployCustomContainerInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("accountID")
     private String accountID;
 
+    @com.aliyun.core.annotation.NameInMap("asyncInvokeConfig")
+    private AsyncInvokeConfig asyncInvokeConfig;
+
     @com.aliyun.core.annotation.NameInMap("concurrencyConfig")
     private ConcurrencyConfig concurrencyConfig;
 
@@ -66,6 +69,9 @@ public class DeployCustomContainerInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("originalName")
     private String originalName;
 
+    @com.aliyun.core.annotation.NameInMap("ossMountConfig")
+    private OssMountConfig ossMountConfig;
+
     @com.aliyun.core.annotation.NameInMap("projectName")
     private String projectName;
 
@@ -93,6 +99,7 @@ public class DeployCustomContainerInput extends TeaModel {
 
     private DeployCustomContainerInput(Builder builder) {
         this.accountID = builder.accountID;
+        this.asyncInvokeConfig = builder.asyncInvokeConfig;
         this.concurrencyConfig = builder.concurrencyConfig;
         this.cpu = builder.cpu;
         this.customContainerConfig = builder.customContainerConfig;
@@ -108,6 +115,7 @@ public class DeployCustomContainerInput extends TeaModel {
         this.name = builder.name;
         this.nasConfig = builder.nasConfig;
         this.originalName = builder.originalName;
+        this.ossMountConfig = builder.ossMountConfig;
         this.projectName = builder.projectName;
         this.provisionConfig = builder.provisionConfig;
         this.region = builder.region;
@@ -135,6 +143,13 @@ public class DeployCustomContainerInput extends TeaModel {
      */
     public String getAccountID() {
         return this.accountID;
+    }
+
+    /**
+     * @return asyncInvokeConfig
+     */
+    public AsyncInvokeConfig getAsyncInvokeConfig() {
+        return this.asyncInvokeConfig;
     }
 
     /**
@@ -243,6 +258,13 @@ public class DeployCustomContainerInput extends TeaModel {
     }
 
     /**
+     * @return ossMountConfig
+     */
+    public OssMountConfig getOssMountConfig() {
+        return this.ossMountConfig;
+    }
+
+    /**
      * @return projectName
      */
     public String getProjectName() {
@@ -300,6 +322,7 @@ public class DeployCustomContainerInput extends TeaModel {
 
     public static final class Builder {
         private String accountID; 
+        private AsyncInvokeConfig asyncInvokeConfig; 
         private ConcurrencyConfig concurrencyConfig; 
         private Float cpu; 
         private CustomContainerConfig customContainerConfig; 
@@ -315,6 +338,7 @@ public class DeployCustomContainerInput extends TeaModel {
         private String name; 
         private NasConfig nasConfig; 
         private String originalName; 
+        private OssMountConfig ossMountConfig; 
         private String projectName; 
         private ProvisionConfig provisionConfig; 
         private String region; 
@@ -329,6 +353,7 @@ public class DeployCustomContainerInput extends TeaModel {
 
         private Builder(DeployCustomContainerInput model) {
             this.accountID = model.accountID;
+            this.asyncInvokeConfig = model.asyncInvokeConfig;
             this.concurrencyConfig = model.concurrencyConfig;
             this.cpu = model.cpu;
             this.customContainerConfig = model.customContainerConfig;
@@ -344,6 +369,7 @@ public class DeployCustomContainerInput extends TeaModel {
             this.name = model.name;
             this.nasConfig = model.nasConfig;
             this.originalName = model.originalName;
+            this.ossMountConfig = model.ossMountConfig;
             this.projectName = model.projectName;
             this.provisionConfig = model.provisionConfig;
             this.region = model.region;
@@ -359,6 +385,14 @@ public class DeployCustomContainerInput extends TeaModel {
          */
         public Builder accountID(String accountID) {
             this.accountID = accountID;
+            return this;
+        }
+
+        /**
+         * asyncInvokeConfig.
+         */
+        public Builder asyncInvokeConfig(AsyncInvokeConfig asyncInvokeConfig) {
+            this.asyncInvokeConfig = asyncInvokeConfig;
             return this;
         }
 
@@ -483,6 +517,14 @@ public class DeployCustomContainerInput extends TeaModel {
         }
 
         /**
+         * ossMountConfig.
+         */
+        public Builder ossMountConfig(OssMountConfig ossMountConfig) {
+            this.ossMountConfig = ossMountConfig;
+            return this;
+        }
+
+        /**
          * projectName.
          */
         public Builder projectName(String projectName) {
@@ -552,6 +594,306 @@ public class DeployCustomContainerInput extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DeployCustomContainerInput} extends {@link TeaModel}
+     *
+     * <p>DeployCustomContainerInput</p>
+     */
+    public static class OnFailure extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("destination")
+        private String destination;
+
+        private OnFailure(Builder builder) {
+            this.destination = builder.destination;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OnFailure create() {
+            return builder().build();
+        }
+
+        /**
+         * @return destination
+         */
+        public String getDestination() {
+            return this.destination;
+        }
+
+        public static final class Builder {
+            private String destination; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnFailure model) {
+                this.destination = model.destination;
+            } 
+
+            /**
+             * destination.
+             */
+            public Builder destination(String destination) {
+                this.destination = destination;
+                return this;
+            }
+
+            public OnFailure build() {
+                return new OnFailure(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DeployCustomContainerInput} extends {@link TeaModel}
+     *
+     * <p>DeployCustomContainerInput</p>
+     */
+    public static class OnSuccess extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("destination")
+        private String destination;
+
+        private OnSuccess(Builder builder) {
+            this.destination = builder.destination;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OnSuccess create() {
+            return builder().build();
+        }
+
+        /**
+         * @return destination
+         */
+        public String getDestination() {
+            return this.destination;
+        }
+
+        public static final class Builder {
+            private String destination; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnSuccess model) {
+                this.destination = model.destination;
+            } 
+
+            /**
+             * destination.
+             */
+            public Builder destination(String destination) {
+                this.destination = destination;
+                return this;
+            }
+
+            public OnSuccess build() {
+                return new OnSuccess(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DeployCustomContainerInput} extends {@link TeaModel}
+     *
+     * <p>DeployCustomContainerInput</p>
+     */
+    public static class DestinationConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("onFailure")
+        private OnFailure onFailure;
+
+        @com.aliyun.core.annotation.NameInMap("onSuccess")
+        private OnSuccess onSuccess;
+
+        private DestinationConfig(Builder builder) {
+            this.onFailure = builder.onFailure;
+            this.onSuccess = builder.onSuccess;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DestinationConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return onFailure
+         */
+        public OnFailure getOnFailure() {
+            return this.onFailure;
+        }
+
+        /**
+         * @return onSuccess
+         */
+        public OnSuccess getOnSuccess() {
+            return this.onSuccess;
+        }
+
+        public static final class Builder {
+            private OnFailure onFailure; 
+            private OnSuccess onSuccess; 
+
+            private Builder() {
+            } 
+
+            private Builder(DestinationConfig model) {
+                this.onFailure = model.onFailure;
+                this.onSuccess = model.onSuccess;
+            } 
+
+            /**
+             * onFailure.
+             */
+            public Builder onFailure(OnFailure onFailure) {
+                this.onFailure = onFailure;
+                return this;
+            }
+
+            /**
+             * onSuccess.
+             */
+            public Builder onSuccess(OnSuccess onSuccess) {
+                this.onSuccess = onSuccess;
+                return this;
+            }
+
+            public DestinationConfig build() {
+                return new DestinationConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DeployCustomContainerInput} extends {@link TeaModel}
+     *
+     * <p>DeployCustomContainerInput</p>
+     */
+    public static class AsyncInvokeConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("asyncTask")
+        private Boolean asyncTask;
+
+        @com.aliyun.core.annotation.NameInMap("destinationConfig")
+        private DestinationConfig destinationConfig;
+
+        @com.aliyun.core.annotation.NameInMap("maxAsyncEventAgeInSeconds")
+        private Long maxAsyncEventAgeInSeconds;
+
+        @com.aliyun.core.annotation.NameInMap("maxAsyncRetryAttempts")
+        private Long maxAsyncRetryAttempts;
+
+        private AsyncInvokeConfig(Builder builder) {
+            this.asyncTask = builder.asyncTask;
+            this.destinationConfig = builder.destinationConfig;
+            this.maxAsyncEventAgeInSeconds = builder.maxAsyncEventAgeInSeconds;
+            this.maxAsyncRetryAttempts = builder.maxAsyncRetryAttempts;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AsyncInvokeConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return asyncTask
+         */
+        public Boolean getAsyncTask() {
+            return this.asyncTask;
+        }
+
+        /**
+         * @return destinationConfig
+         */
+        public DestinationConfig getDestinationConfig() {
+            return this.destinationConfig;
+        }
+
+        /**
+         * @return maxAsyncEventAgeInSeconds
+         */
+        public Long getMaxAsyncEventAgeInSeconds() {
+            return this.maxAsyncEventAgeInSeconds;
+        }
+
+        /**
+         * @return maxAsyncRetryAttempts
+         */
+        public Long getMaxAsyncRetryAttempts() {
+            return this.maxAsyncRetryAttempts;
+        }
+
+        public static final class Builder {
+            private Boolean asyncTask; 
+            private DestinationConfig destinationConfig; 
+            private Long maxAsyncEventAgeInSeconds; 
+            private Long maxAsyncRetryAttempts; 
+
+            private Builder() {
+            } 
+
+            private Builder(AsyncInvokeConfig model) {
+                this.asyncTask = model.asyncTask;
+                this.destinationConfig = model.destinationConfig;
+                this.maxAsyncEventAgeInSeconds = model.maxAsyncEventAgeInSeconds;
+                this.maxAsyncRetryAttempts = model.maxAsyncRetryAttempts;
+            } 
+
+            /**
+             * asyncTask.
+             */
+            public Builder asyncTask(Boolean asyncTask) {
+                this.asyncTask = asyncTask;
+                return this;
+            }
+
+            /**
+             * destinationConfig.
+             */
+            public Builder destinationConfig(DestinationConfig destinationConfig) {
+                this.destinationConfig = destinationConfig;
+                return this;
+            }
+
+            /**
+             * maxAsyncEventAgeInSeconds.
+             */
+            public Builder maxAsyncEventAgeInSeconds(Long maxAsyncEventAgeInSeconds) {
+                this.maxAsyncEventAgeInSeconds = maxAsyncEventAgeInSeconds;
+                return this;
+            }
+
+            /**
+             * maxAsyncRetryAttempts.
+             */
+            public Builder maxAsyncRetryAttempts(Long maxAsyncRetryAttempts) {
+                this.maxAsyncRetryAttempts = maxAsyncRetryAttempts;
+                return this;
+            }
+
+            public AsyncInvokeConfig build() {
+                return new AsyncInvokeConfig(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DeployCustomContainerInput} extends {@link TeaModel}
@@ -1018,6 +1360,9 @@ public class DeployCustomContainerInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
+        @com.aliyun.core.annotation.NameInMap("role")
+        private String role;
+
         private CustomContainerConfig(Builder builder) {
             this.command = builder.command;
             this.entrypoint = builder.entrypoint;
@@ -1026,6 +1371,7 @@ public class DeployCustomContainerInput extends TeaModel {
             this.instanceConcurrency = builder.instanceConcurrency;
             this.instanceLifecycleConfig = builder.instanceLifecycleConfig;
             this.port = builder.port;
+            this.role = builder.role;
         }
 
         public static Builder builder() {
@@ -1085,6 +1431,13 @@ public class DeployCustomContainerInput extends TeaModel {
             return this.port;
         }
 
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
         public static final class Builder {
             private java.util.List<String> command; 
             private java.util.List<String> entrypoint; 
@@ -1093,6 +1446,7 @@ public class DeployCustomContainerInput extends TeaModel {
             private Integer instanceConcurrency; 
             private InstanceLifecycleConfig instanceLifecycleConfig; 
             private Integer port; 
+            private String role; 
 
             private Builder() {
             } 
@@ -1105,6 +1459,7 @@ public class DeployCustomContainerInput extends TeaModel {
                 this.instanceConcurrency = model.instanceConcurrency;
                 this.instanceLifecycleConfig = model.instanceLifecycleConfig;
                 this.port = model.port;
+                this.role = model.role;
             } 
 
             /**
@@ -1160,6 +1515,14 @@ public class DeployCustomContainerInput extends TeaModel {
              */
             public Builder port(Integer port) {
                 this.port = port;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder role(String role) {
+                this.role = role;
                 return this;
             }
 
@@ -1255,6 +1618,9 @@ public class DeployCustomContainerInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("authType")
         private String authType;
 
+        @com.aliyun.core.annotation.NameInMap("disableURLInternet")
+        private Boolean disableURLInternet;
+
         @com.aliyun.core.annotation.NameInMap("dsableURLInternet")
         private Boolean dsableURLInternet;
 
@@ -1263,6 +1629,7 @@ public class DeployCustomContainerInput extends TeaModel {
 
         private TriggerConfig(Builder builder) {
             this.authType = builder.authType;
+            this.disableURLInternet = builder.disableURLInternet;
             this.dsableURLInternet = builder.dsableURLInternet;
             this.methods = builder.methods;
         }
@@ -1283,6 +1650,13 @@ public class DeployCustomContainerInput extends TeaModel {
         }
 
         /**
+         * @return disableURLInternet
+         */
+        public Boolean getDisableURLInternet() {
+            return this.disableURLInternet;
+        }
+
+        /**
          * @return dsableURLInternet
          */
         public Boolean getDsableURLInternet() {
@@ -1298,6 +1672,7 @@ public class DeployCustomContainerInput extends TeaModel {
 
         public static final class Builder {
             private String authType; 
+            private Boolean disableURLInternet; 
             private Boolean dsableURLInternet; 
             private java.util.List<String> methods; 
 
@@ -1306,6 +1681,7 @@ public class DeployCustomContainerInput extends TeaModel {
 
             private Builder(TriggerConfig model) {
                 this.authType = model.authType;
+                this.disableURLInternet = model.disableURLInternet;
                 this.dsableURLInternet = model.dsableURLInternet;
                 this.methods = model.methods;
             } 
@@ -1315,6 +1691,14 @@ public class DeployCustomContainerInput extends TeaModel {
              */
             public Builder authType(String authType) {
                 this.authType = authType;
+                return this;
+            }
+
+            /**
+             * disableURLInternet.
+             */
+            public Builder disableURLInternet(Boolean disableURLInternet) {
+                this.disableURLInternet = disableURLInternet;
                 return this;
             }
 
@@ -1591,6 +1975,9 @@ public class DeployCustomContainerInput extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("srcOssRegion")
         private String srcOssRegion;
 
+        @com.aliyun.core.annotation.NameInMap("syncStrategy")
+        private String syncStrategy;
+
         private ModelConfig(Builder builder) {
             this.framework = builder.framework;
             this.multiModelConfig = builder.multiModelConfig;
@@ -1602,6 +1989,7 @@ public class DeployCustomContainerInput extends TeaModel {
             this.srcOssBucket = builder.srcOssBucket;
             this.srcOssPath = builder.srcOssPath;
             this.srcOssRegion = builder.srcOssRegion;
+            this.syncStrategy = builder.syncStrategy;
         }
 
         public static Builder builder() {
@@ -1682,6 +2070,13 @@ public class DeployCustomContainerInput extends TeaModel {
             return this.srcOssRegion;
         }
 
+        /**
+         * @return syncStrategy
+         */
+        public String getSyncStrategy() {
+            return this.syncStrategy;
+        }
+
         public static final class Builder {
             private String framework; 
             private java.util.List<ModelConfig> multiModelConfig; 
@@ -1693,6 +2088,7 @@ public class DeployCustomContainerInput extends TeaModel {
             private String srcOssBucket; 
             private String srcOssPath; 
             private String srcOssRegion; 
+            private String syncStrategy; 
 
             private Builder() {
             } 
@@ -1708,6 +2104,7 @@ public class DeployCustomContainerInput extends TeaModel {
                 this.srcOssBucket = model.srcOssBucket;
                 this.srcOssPath = model.srcOssPath;
                 this.srcOssRegion = model.srcOssRegion;
+                this.syncStrategy = model.syncStrategy;
             } 
 
             /**
@@ -1787,6 +2184,14 @@ public class DeployCustomContainerInput extends TeaModel {
              */
             public Builder srcOssRegion(String srcOssRegion) {
                 this.srcOssRegion = srcOssRegion;
+                return this;
+            }
+
+            /**
+             * syncStrategy.
+             */
+            public Builder syncStrategy(String syncStrategy) {
+                this.syncStrategy = syncStrategy;
                 return this;
             }
 
@@ -1888,6 +2293,198 @@ public class DeployCustomContainerInput extends TeaModel {
 
             public NasConfig build() {
                 return new NasConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DeployCustomContainerInput} extends {@link TeaModel}
+     *
+     * <p>DeployCustomContainerInput</p>
+     */
+    public static class MountPoints extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("bucketName")
+        private String bucketName;
+
+        @com.aliyun.core.annotation.NameInMap("bucketPath")
+        private String bucketPath;
+
+        @com.aliyun.core.annotation.NameInMap("endpoint")
+        private String endpoint;
+
+        @com.aliyun.core.annotation.NameInMap("mountDir")
+        private String mountDir;
+
+        @com.aliyun.core.annotation.NameInMap("readOnly")
+        private Boolean readOnly;
+
+        private MountPoints(Builder builder) {
+            this.bucketName = builder.bucketName;
+            this.bucketPath = builder.bucketPath;
+            this.endpoint = builder.endpoint;
+            this.mountDir = builder.mountDir;
+            this.readOnly = builder.readOnly;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MountPoints create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bucketName
+         */
+        public String getBucketName() {
+            return this.bucketName;
+        }
+
+        /**
+         * @return bucketPath
+         */
+        public String getBucketPath() {
+            return this.bucketPath;
+        }
+
+        /**
+         * @return endpoint
+         */
+        public String getEndpoint() {
+            return this.endpoint;
+        }
+
+        /**
+         * @return mountDir
+         */
+        public String getMountDir() {
+            return this.mountDir;
+        }
+
+        /**
+         * @return readOnly
+         */
+        public Boolean getReadOnly() {
+            return this.readOnly;
+        }
+
+        public static final class Builder {
+            private String bucketName; 
+            private String bucketPath; 
+            private String endpoint; 
+            private String mountDir; 
+            private Boolean readOnly; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountPoints model) {
+                this.bucketName = model.bucketName;
+                this.bucketPath = model.bucketPath;
+                this.endpoint = model.endpoint;
+                this.mountDir = model.mountDir;
+                this.readOnly = model.readOnly;
+            } 
+
+            /**
+             * bucketName.
+             */
+            public Builder bucketName(String bucketName) {
+                this.bucketName = bucketName;
+                return this;
+            }
+
+            /**
+             * bucketPath.
+             */
+            public Builder bucketPath(String bucketPath) {
+                this.bucketPath = bucketPath;
+                return this;
+            }
+
+            /**
+             * endpoint.
+             */
+            public Builder endpoint(String endpoint) {
+                this.endpoint = endpoint;
+                return this;
+            }
+
+            /**
+             * mountDir.
+             */
+            public Builder mountDir(String mountDir) {
+                this.mountDir = mountDir;
+                return this;
+            }
+
+            /**
+             * readOnly.
+             */
+            public Builder readOnly(Boolean readOnly) {
+                this.readOnly = readOnly;
+                return this;
+            }
+
+            public MountPoints build() {
+                return new MountPoints(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DeployCustomContainerInput} extends {@link TeaModel}
+     *
+     * <p>DeployCustomContainerInput</p>
+     */
+    public static class OssMountConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("mountPoints")
+        private java.util.List<MountPoints> mountPoints;
+
+        private OssMountConfig(Builder builder) {
+            this.mountPoints = builder.mountPoints;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OssMountConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mountPoints
+         */
+        public java.util.List<MountPoints> getMountPoints() {
+            return this.mountPoints;
+        }
+
+        public static final class Builder {
+            private java.util.List<MountPoints> mountPoints; 
+
+            private Builder() {
+            } 
+
+            private Builder(OssMountConfig model) {
+                this.mountPoints = model.mountPoints;
+            } 
+
+            /**
+             * mountPoints.
+             */
+            public Builder mountPoints(java.util.List<MountPoints> mountPoints) {
+                this.mountPoints = mountPoints;
+                return this;
+            }
+
+            public OssMountConfig build() {
+                return new OssMountConfig(this);
             } 
 
         } 

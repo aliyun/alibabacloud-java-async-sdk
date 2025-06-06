@@ -33,6 +33,9 @@ public class Toolset extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
+    @com.aliyun.core.annotation.NameInMap("spec")
+    private ToolsetSpec spec;
+
     @com.aliyun.core.annotation.NameInMap("status")
     private ToolsetStatus status;
 
@@ -45,6 +48,7 @@ public class Toolset extends TeaModel {
         this.kind = builder.kind;
         this.labels = builder.labels;
         this.name = builder.name;
+        this.spec = builder.spec;
         this.status = builder.status;
         this.uid = builder.uid;
     }
@@ -97,6 +101,13 @@ public class Toolset extends TeaModel {
     }
 
     /**
+     * @return spec
+     */
+    public ToolsetSpec getSpec() {
+        return this.spec;
+    }
+
+    /**
      * @return status
      */
     public ToolsetStatus getStatus() {
@@ -116,6 +127,7 @@ public class Toolset extends TeaModel {
         private String kind; 
         private java.util.Map<String, String> labels; 
         private String name; 
+        private ToolsetSpec spec; 
         private ToolsetStatus status; 
         private String uid; 
 
@@ -128,6 +140,7 @@ public class Toolset extends TeaModel {
             this.kind = model.kind;
             this.labels = model.labels;
             this.name = model.name;
+            this.spec = model.spec;
             this.status = model.status;
             this.uid = model.uid;
         } 
@@ -172,6 +185,14 @@ public class Toolset extends TeaModel {
          */
         public Builder name(String name) {
             this.name = name;
+            return this;
+        }
+
+        /**
+         * spec.
+         */
+        public Builder spec(ToolsetSpec spec) {
+            this.spec = spec;
             return this;
         }
 

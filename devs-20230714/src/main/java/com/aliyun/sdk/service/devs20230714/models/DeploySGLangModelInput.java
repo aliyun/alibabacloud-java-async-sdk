@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DeployTensorRtModelInput} extends {@link TeaModel}
+ * {@link DeploySGLangModelInput} extends {@link TeaModel}
  *
- * <p>DeployTensorRtModelInput</p>
+ * <p>DeploySGLangModelInput</p>
  */
-public class DeployTensorRtModelInput extends TeaModel {
+public class DeploySGLangModelInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("accountID")
     private String accountID;
 
@@ -94,7 +94,7 @@ public class DeployTensorRtModelInput extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("vpcConfig")
     private VpcConfig vpcConfig;
 
-    private DeployTensorRtModelInput(Builder builder) {
+    private DeploySGLangModelInput(Builder builder) {
         this.accountID = builder.accountID;
         this.concurrencyConfig = builder.concurrencyConfig;
         this.cpu = builder.cpu;
@@ -126,7 +126,7 @@ public class DeployTensorRtModelInput extends TeaModel {
         return new Builder();
     }
 
-    public static DeployTensorRtModelInput create() {
+    public static DeploySGLangModelInput create() {
         return builder().build();
     }
 
@@ -339,7 +339,7 @@ public class DeployTensorRtModelInput extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(DeployTensorRtModelInput model) {
+        private Builder(DeploySGLangModelInput model) {
             this.accountID = model.accountID;
             this.concurrencyConfig = model.concurrencyConfig;
             this.cpu = model.cpu;
@@ -567,17 +567,17 @@ public class DeployTensorRtModelInput extends TeaModel {
             return this;
         }
 
-        public DeployTensorRtModelInput build() {
-            return new DeployTensorRtModelInput(this);
+        public DeploySGLangModelInput build() {
+            return new DeploySGLangModelInput(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link DeployTensorRtModelInput} extends {@link TeaModel}
+     * {@link DeploySGLangModelInput} extends {@link TeaModel}
      *
-     * <p>DeployTensorRtModelInput</p>
+     * <p>DeploySGLangModelInput</p>
      */
     public static class ConcurrencyConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("reservedConcurrency")
@@ -629,9 +629,9 @@ public class DeployTensorRtModelInput extends TeaModel {
     }
     /**
      * 
-     * {@link DeployTensorRtModelInput} extends {@link TeaModel}
+     * {@link DeploySGLangModelInput} extends {@link TeaModel}
      *
-     * <p>DeployTensorRtModelInput</p>
+     * <p>DeploySGLangModelInput</p>
      */
     public static class GpuConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gpuMemorySize")
@@ -704,9 +704,9 @@ public class DeployTensorRtModelInput extends TeaModel {
     }
     /**
      * 
-     * {@link DeployTensorRtModelInput} extends {@link TeaModel}
+     * {@link DeploySGLangModelInput} extends {@link TeaModel}
      *
-     * <p>DeployTensorRtModelInput</p>
+     * <p>DeploySGLangModelInput</p>
      */
     public static class TriggerConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("authType")
@@ -821,9 +821,9 @@ public class DeployTensorRtModelInput extends TeaModel {
     }
     /**
      * 
-     * {@link DeployTensorRtModelInput} extends {@link TeaModel}
+     * {@link DeploySGLangModelInput} extends {@link TeaModel}
      *
-     * <p>DeployTensorRtModelInput</p>
+     * <p>DeploySGLangModelInput</p>
      */
     public static class HttpTrigger extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("qualifier")
@@ -896,9 +896,9 @@ public class DeployTensorRtModelInput extends TeaModel {
     }
     /**
      * 
-     * {@link DeployTensorRtModelInput} extends {@link TeaModel}
+     * {@link DeploySGLangModelInput} extends {@link TeaModel}
      *
-     * <p>DeployTensorRtModelInput</p>
+     * <p>DeploySGLangModelInput</p>
      */
     public static class LogConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableInstanceMetrics")
@@ -1034,11 +1034,257 @@ public class DeployTensorRtModelInput extends TeaModel {
     }
     /**
      * 
-     * {@link DeployTensorRtModelInput} extends {@link TeaModel}
+     * {@link DeploySGLangModelInput} extends {@link TeaModel}
      *
-     * <p>DeployTensorRtModelInput</p>
+     * <p>DeploySGLangModelInput</p>
+     */
+    public static class FmkSGLangConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("apiKey")
+        private String apiKey;
+
+        @com.aliyun.core.annotation.NameInMap("chatTemplate")
+        private String chatTemplate;
+
+        @com.aliyun.core.annotation.NameInMap("dtype")
+        private String dtype;
+
+        @com.aliyun.core.annotation.NameInMap("fullTextPostfix")
+        private String fullTextPostfix;
+
+        @com.aliyun.core.annotation.NameInMap("loadFormat")
+        private String loadFormat;
+
+        @com.aliyun.core.annotation.NameInMap("maxRunningRequests")
+        private Integer maxRunningRequests;
+
+        @com.aliyun.core.annotation.NameInMap("maxTotalTokens")
+        private Integer maxTotalTokens;
+
+        @com.aliyun.core.annotation.NameInMap("memFractionStatic")
+        private Float memFractionStatic;
+
+        @com.aliyun.core.annotation.NameInMap("quantization")
+        private String quantization;
+
+        @com.aliyun.core.annotation.NameInMap("servedModelName")
+        private String servedModelName;
+
+        private FmkSGLangConfig(Builder builder) {
+            this.apiKey = builder.apiKey;
+            this.chatTemplate = builder.chatTemplate;
+            this.dtype = builder.dtype;
+            this.fullTextPostfix = builder.fullTextPostfix;
+            this.loadFormat = builder.loadFormat;
+            this.maxRunningRequests = builder.maxRunningRequests;
+            this.maxTotalTokens = builder.maxTotalTokens;
+            this.memFractionStatic = builder.memFractionStatic;
+            this.quantization = builder.quantization;
+            this.servedModelName = builder.servedModelName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FmkSGLangConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return apiKey
+         */
+        public String getApiKey() {
+            return this.apiKey;
+        }
+
+        /**
+         * @return chatTemplate
+         */
+        public String getChatTemplate() {
+            return this.chatTemplate;
+        }
+
+        /**
+         * @return dtype
+         */
+        public String getDtype() {
+            return this.dtype;
+        }
+
+        /**
+         * @return fullTextPostfix
+         */
+        public String getFullTextPostfix() {
+            return this.fullTextPostfix;
+        }
+
+        /**
+         * @return loadFormat
+         */
+        public String getLoadFormat() {
+            return this.loadFormat;
+        }
+
+        /**
+         * @return maxRunningRequests
+         */
+        public Integer getMaxRunningRequests() {
+            return this.maxRunningRequests;
+        }
+
+        /**
+         * @return maxTotalTokens
+         */
+        public Integer getMaxTotalTokens() {
+            return this.maxTotalTokens;
+        }
+
+        /**
+         * @return memFractionStatic
+         */
+        public Float getMemFractionStatic() {
+            return this.memFractionStatic;
+        }
+
+        /**
+         * @return quantization
+         */
+        public String getQuantization() {
+            return this.quantization;
+        }
+
+        /**
+         * @return servedModelName
+         */
+        public String getServedModelName() {
+            return this.servedModelName;
+        }
+
+        public static final class Builder {
+            private String apiKey; 
+            private String chatTemplate; 
+            private String dtype; 
+            private String fullTextPostfix; 
+            private String loadFormat; 
+            private Integer maxRunningRequests; 
+            private Integer maxTotalTokens; 
+            private Float memFractionStatic; 
+            private String quantization; 
+            private String servedModelName; 
+
+            private Builder() {
+            } 
+
+            private Builder(FmkSGLangConfig model) {
+                this.apiKey = model.apiKey;
+                this.chatTemplate = model.chatTemplate;
+                this.dtype = model.dtype;
+                this.fullTextPostfix = model.fullTextPostfix;
+                this.loadFormat = model.loadFormat;
+                this.maxRunningRequests = model.maxRunningRequests;
+                this.maxTotalTokens = model.maxTotalTokens;
+                this.memFractionStatic = model.memFractionStatic;
+                this.quantization = model.quantization;
+                this.servedModelName = model.servedModelName;
+            } 
+
+            /**
+             * apiKey.
+             */
+            public Builder apiKey(String apiKey) {
+                this.apiKey = apiKey;
+                return this;
+            }
+
+            /**
+             * chatTemplate.
+             */
+            public Builder chatTemplate(String chatTemplate) {
+                this.chatTemplate = chatTemplate;
+                return this;
+            }
+
+            /**
+             * dtype.
+             */
+            public Builder dtype(String dtype) {
+                this.dtype = dtype;
+                return this;
+            }
+
+            /**
+             * fullTextPostfix.
+             */
+            public Builder fullTextPostfix(String fullTextPostfix) {
+                this.fullTextPostfix = fullTextPostfix;
+                return this;
+            }
+
+            /**
+             * loadFormat.
+             */
+            public Builder loadFormat(String loadFormat) {
+                this.loadFormat = loadFormat;
+                return this;
+            }
+
+            /**
+             * maxRunningRequests.
+             */
+            public Builder maxRunningRequests(Integer maxRunningRequests) {
+                this.maxRunningRequests = maxRunningRequests;
+                return this;
+            }
+
+            /**
+             * maxTotalTokens.
+             */
+            public Builder maxTotalTokens(Integer maxTotalTokens) {
+                this.maxTotalTokens = maxTotalTokens;
+                return this;
+            }
+
+            /**
+             * memFractionStatic.
+             */
+            public Builder memFractionStatic(Float memFractionStatic) {
+                this.memFractionStatic = memFractionStatic;
+                return this;
+            }
+
+            /**
+             * quantization.
+             */
+            public Builder quantization(String quantization) {
+                this.quantization = quantization;
+                return this;
+            }
+
+            /**
+             * servedModelName.
+             */
+            public Builder servedModelName(String servedModelName) {
+                this.servedModelName = servedModelName;
+                return this;
+            }
+
+            public FmkSGLangConfig build() {
+                return new FmkSGLangConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DeploySGLangModelInput} extends {@link TeaModel}
+     *
+     * <p>DeploySGLangModelInput</p>
      */
     public static class ModelConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("fmkSGLangConfig")
+        private FmkSGLangConfig fmkSGLangConfig;
+
         @com.aliyun.core.annotation.NameInMap("framework")
         private String framework;
 
@@ -1073,6 +1319,7 @@ public class DeployTensorRtModelInput extends TeaModel {
         private String syncStrategy;
 
         private ModelConfig(Builder builder) {
+            this.fmkSGLangConfig = builder.fmkSGLangConfig;
             this.framework = builder.framework;
             this.multiModelConfig = builder.multiModelConfig;
             this.prefix = builder.prefix;
@@ -1092,6 +1339,13 @@ public class DeployTensorRtModelInput extends TeaModel {
 
         public static ModelConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return fmkSGLangConfig
+         */
+        public FmkSGLangConfig getFmkSGLangConfig() {
+            return this.fmkSGLangConfig;
         }
 
         /**
@@ -1172,6 +1426,7 @@ public class DeployTensorRtModelInput extends TeaModel {
         }
 
         public static final class Builder {
+            private FmkSGLangConfig fmkSGLangConfig; 
             private String framework; 
             private java.util.List<ModelConfig> multiModelConfig; 
             private String prefix; 
@@ -1188,6 +1443,7 @@ public class DeployTensorRtModelInput extends TeaModel {
             } 
 
             private Builder(ModelConfig model) {
+                this.fmkSGLangConfig = model.fmkSGLangConfig;
                 this.framework = model.framework;
                 this.multiModelConfig = model.multiModelConfig;
                 this.prefix = model.prefix;
@@ -1200,6 +1456,14 @@ public class DeployTensorRtModelInput extends TeaModel {
                 this.srcOssRegion = model.srcOssRegion;
                 this.syncStrategy = model.syncStrategy;
             } 
+
+            /**
+             * fmkSGLangConfig.
+             */
+            public Builder fmkSGLangConfig(FmkSGLangConfig fmkSGLangConfig) {
+                this.fmkSGLangConfig = fmkSGLangConfig;
+                return this;
+            }
 
             /**
              * framework.
@@ -1298,9 +1562,9 @@ public class DeployTensorRtModelInput extends TeaModel {
     }
     /**
      * 
-     * {@link DeployTensorRtModelInput} extends {@link TeaModel}
+     * {@link DeploySGLangModelInput} extends {@link TeaModel}
      *
-     * <p>DeployTensorRtModelInput</p>
+     * <p>DeploySGLangModelInput</p>
      */
     public static class MountPoints extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enableTLS")
@@ -1394,9 +1658,9 @@ public class DeployTensorRtModelInput extends TeaModel {
     }
     /**
      * 
-     * {@link DeployTensorRtModelInput} extends {@link TeaModel}
+     * {@link DeploySGLangModelInput} extends {@link TeaModel}
      *
-     * <p>DeployTensorRtModelInput</p>
+     * <p>DeploySGLangModelInput</p>
      */
     public static class NasConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("groupId")
@@ -1490,9 +1754,9 @@ public class DeployTensorRtModelInput extends TeaModel {
     }
     /**
      * 
-     * {@link DeployTensorRtModelInput} extends {@link TeaModel}
+     * {@link DeploySGLangModelInput} extends {@link TeaModel}
      *
-     * <p>DeployTensorRtModelInput</p>
+     * <p>DeploySGLangModelInput</p>
      */
     public static class ScheduledActions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("endTime")
@@ -1649,9 +1913,9 @@ public class DeployTensorRtModelInput extends TeaModel {
     }
     /**
      * 
-     * {@link DeployTensorRtModelInput} extends {@link TeaModel}
+     * {@link DeploySGLangModelInput} extends {@link TeaModel}
      *
-     * <p>DeployTensorRtModelInput</p>
+     * <p>DeploySGLangModelInput</p>
      */
     public static class ProvisionConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alwaysAllocateGPU")
@@ -1745,9 +2009,9 @@ public class DeployTensorRtModelInput extends TeaModel {
     }
     /**
      * 
-     * {@link DeployTensorRtModelInput} extends {@link TeaModel}
+     * {@link DeploySGLangModelInput} extends {@link TeaModel}
      *
-     * <p>DeployTensorRtModelInput</p>
+     * <p>DeploySGLangModelInput</p>
      */
     public static class VpcConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("securityGroupId")
