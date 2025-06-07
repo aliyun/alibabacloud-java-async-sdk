@@ -209,9 +209,13 @@ public class FilterUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OrgName")
         private String orgName;
 
+        @com.aliyun.core.annotation.NameInMap("OrgNamePath")
+        private String orgNamePath;
+
         private OrgList(Builder builder) {
             this.orgId = builder.orgId;
             this.orgName = builder.orgName;
+            this.orgNamePath = builder.orgNamePath;
         }
 
         public static Builder builder() {
@@ -236,9 +240,17 @@ public class FilterUsersResponseBody extends TeaModel {
             return this.orgName;
         }
 
+        /**
+         * @return orgNamePath
+         */
+        public String getOrgNamePath() {
+            return this.orgNamePath;
+        }
+
         public static final class Builder {
             private String orgId; 
             private String orgName; 
+            private String orgNamePath; 
 
             private Builder() {
             } 
@@ -246,6 +258,7 @@ public class FilterUsersResponseBody extends TeaModel {
             private Builder(OrgList model) {
                 this.orgId = model.orgId;
                 this.orgName = model.orgName;
+                this.orgNamePath = model.orgNamePath;
             } 
 
             /**
@@ -261,6 +274,14 @@ public class FilterUsersResponseBody extends TeaModel {
              */
             public Builder orgName(String orgName) {
                 this.orgName = orgName;
+                return this;
+            }
+
+            /**
+             * OrgNamePath.
+             */
+            public Builder orgNamePath(String orgNamePath) {
+                this.orgNamePath = orgNamePath;
                 return this;
             }
 

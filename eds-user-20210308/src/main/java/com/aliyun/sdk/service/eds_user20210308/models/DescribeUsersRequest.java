@@ -70,6 +70,10 @@ public class DescribeUsersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SolutionId")
     private String solutionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private Integer status;
+
     private DescribeUsersRequest(Builder builder) {
         super(builder);
         this.bizType = builder.bizType;
@@ -85,6 +89,7 @@ public class DescribeUsersRequest extends Request {
         this.orgId = builder.orgId;
         this.showExtras = builder.showExtras;
         this.solutionId = builder.solutionId;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
@@ -191,6 +196,13 @@ public class DescribeUsersRequest extends Request {
         return this.solutionId;
     }
 
+    /**
+     * @return status
+     */
+    public Integer getStatus() {
+        return this.status;
+    }
+
     public static final class Builder extends Request.Builder<DescribeUsersRequest, Builder> {
         private String bizType; 
         private java.util.List<String> endUserIds; 
@@ -205,6 +217,7 @@ public class DescribeUsersRequest extends Request {
         private String orgId; 
         private java.util.Map<String, ?> showExtras; 
         private String solutionId; 
+        private Integer status; 
 
         private Builder() {
             super();
@@ -225,6 +238,7 @@ public class DescribeUsersRequest extends Request {
             this.orgId = request.orgId;
             this.showExtras = request.showExtras;
             this.solutionId = request.solutionId;
+            this.status = request.status;
         } 
 
         /**
@@ -363,6 +377,15 @@ public class DescribeUsersRequest extends Request {
         public Builder solutionId(String solutionId) {
             this.putBodyParameter("SolutionId", solutionId);
             this.solutionId = solutionId;
+            return this;
+        }
+
+        /**
+         * Status.
+         */
+        public Builder status(Integer status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 
