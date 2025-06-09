@@ -3614,7 +3614,6 @@ public class CreateContainerGroupRequest extends Request {
      */
     public static class EnvironmentVar extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldRef")
-        @com.aliyun.core.annotation.Validation(required = true)
         private FieldRef fieldRef;
 
         @com.aliyun.core.annotation.NameInMap("Key")
@@ -4126,15 +4125,12 @@ public class CreateContainerGroupRequest extends Request {
      */
     public static class Container extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LivenessProbe")
-        @com.aliyun.core.annotation.Validation(required = true)
         private LivenessProbe livenessProbe;
 
         @com.aliyun.core.annotation.NameInMap("ReadinessProbe")
-        @com.aliyun.core.annotation.Validation(required = true)
         private ReadinessProbe readinessProbe;
 
         @com.aliyun.core.annotation.NameInMap("SecurityContext")
-        @com.aliyun.core.annotation.Validation(required = true)
         private ContainerSecurityContext securityContext;
 
         @com.aliyun.core.annotation.NameInMap("Arg")
@@ -5526,7 +5522,6 @@ public class CreateContainerGroupRequest extends Request {
      */
     public static class InitContainerEnvironmentVar extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldRef")
-        @com.aliyun.core.annotation.Validation(required = true)
         private EnvironmentVarFieldRef fieldRef;
 
         @com.aliyun.core.annotation.NameInMap("Key")
@@ -5873,7 +5868,6 @@ public class CreateContainerGroupRequest extends Request {
      */
     public static class InitContainer extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityContext")
-        @com.aliyun.core.annotation.Validation(required = true)
         private InitContainerSecurityContext securityContext;
 
         @com.aliyun.core.annotation.NameInMap("Arg")
@@ -6957,27 +6951,21 @@ public class CreateContainerGroupRequest extends Request {
      */
     public static class Volume extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigFileVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private ConfigFileVolume configFileVolume;
 
         @com.aliyun.core.annotation.NameInMap("DiskVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private DiskVolume diskVolume;
 
         @com.aliyun.core.annotation.NameInMap("EmptyDirVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private EmptyDirVolume emptyDirVolume;
 
         @com.aliyun.core.annotation.NameInMap("FlexVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private FlexVolume flexVolume;
 
         @com.aliyun.core.annotation.NameInMap("HostPathVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private HostPathVolume hostPathVolume;
 
         @com.aliyun.core.annotation.NameInMap("NFSVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private NFSVolume NFSVolume;
 
         @com.aliyun.core.annotation.NameInMap("Name")
