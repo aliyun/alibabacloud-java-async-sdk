@@ -22,6 +22,10 @@ public class UpgradeLindormV2StreamEngineRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomConfig")
+    private String customConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -75,6 +79,7 @@ public class UpgradeLindormV2StreamEngineRequest extends Request {
     private UpgradeLindormV2StreamEngineRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.customConfig = builder.customConfig;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -106,6 +111,13 @@ public class UpgradeLindormV2StreamEngineRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return customConfig
+     */
+    public String getCustomConfig() {
+        return this.customConfig;
     }
 
     /**
@@ -187,6 +199,7 @@ public class UpgradeLindormV2StreamEngineRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpgradeLindormV2StreamEngineRequest, Builder> {
         private String regionId; 
+        private String customConfig; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -206,6 +219,7 @@ public class UpgradeLindormV2StreamEngineRequest extends Request {
         private Builder(UpgradeLindormV2StreamEngineRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.customConfig = request.customConfig;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -225,6 +239,15 @@ public class UpgradeLindormV2StreamEngineRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CustomConfig.
+         */
+        public Builder customConfig(String customConfig) {
+            this.putQueryParameter("CustomConfig", customConfig);
+            this.customConfig = customConfig;
             return this;
         }
 
