@@ -29,11 +29,16 @@ public class UpdateAclRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
+    private String networkType;
+
     private UpdateAclRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.aclEntryList = builder.aclEntryList;
         this.instanceId = builder.instanceId;
+        this.networkType = builder.networkType;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class UpdateAclRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return networkType
+     */
+    public String getNetworkType() {
+        return this.networkType;
+    }
+
     public static final class Builder extends Request.Builder<UpdateAclRequest, Builder> {
         private String acceptLanguage; 
         private String aclEntryList; 
         private String instanceId; 
+        private String networkType; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class UpdateAclRequest extends Request {
             this.acceptLanguage = request.acceptLanguage;
             this.aclEntryList = request.aclEntryList;
             this.instanceId = request.instanceId;
+            this.networkType = request.networkType;
         } 
 
         /**
@@ -123,6 +137,15 @@ public class UpdateAclRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * NetworkType.
+         */
+        public Builder networkType(String networkType) {
+            this.putQueryParameter("NetworkType", networkType);
+            this.networkType = networkType;
             return this;
         }
 
