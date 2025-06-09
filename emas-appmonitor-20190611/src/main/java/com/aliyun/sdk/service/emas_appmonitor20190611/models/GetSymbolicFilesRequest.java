@@ -27,6 +27,10 @@ public class GetSymbolicFilesRequest extends Request {
     private String appVersion;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BuildId")
+    private String buildId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
@@ -70,6 +74,7 @@ public class GetSymbolicFilesRequest extends Request {
         super(builder);
         this.appKey = builder.appKey;
         this.appVersion = builder.appVersion;
+        this.buildId = builder.buildId;
         this.endTime = builder.endTime;
         this.exportStatus = builder.exportStatus;
         this.fileName = builder.fileName;
@@ -106,6 +111,13 @@ public class GetSymbolicFilesRequest extends Request {
      */
     public String getAppVersion() {
         return this.appVersion;
+    }
+
+    /**
+     * @return buildId
+     */
+    public String getBuildId() {
+        return this.buildId;
     }
 
     /**
@@ -174,6 +186,7 @@ public class GetSymbolicFilesRequest extends Request {
     public static final class Builder extends Request.Builder<GetSymbolicFilesRequest, Builder> {
         private Long appKey; 
         private String appVersion; 
+        private String buildId; 
         private Long endTime; 
         private String exportStatus; 
         private String fileName; 
@@ -192,6 +205,7 @@ public class GetSymbolicFilesRequest extends Request {
             super(request);
             this.appKey = request.appKey;
             this.appVersion = request.appVersion;
+            this.buildId = request.buildId;
             this.endTime = request.endTime;
             this.exportStatus = request.exportStatus;
             this.fileName = request.fileName;
@@ -222,6 +236,15 @@ public class GetSymbolicFilesRequest extends Request {
         public Builder appVersion(String appVersion) {
             this.putBodyParameter("AppVersion", appVersion);
             this.appVersion = appVersion;
+            return this;
+        }
+
+        /**
+         * BuildId.
+         */
+        public Builder buildId(String buildId) {
+            this.putBodyParameter("BuildId", buildId);
+            this.buildId = buildId;
             return this;
         }
 
