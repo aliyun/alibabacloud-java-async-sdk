@@ -32,6 +32,10 @@ public class ModifyDefenseRuleRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
+    private String resource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
@@ -49,6 +53,7 @@ public class ModifyDefenseRuleRequest extends Request {
         this.defenseScene = builder.defenseScene;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
+        this.resource = builder.resource;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.rules = builder.rules;
         this.templateId = builder.templateId;
@@ -89,6 +94,13 @@ public class ModifyDefenseRuleRequest extends Request {
     }
 
     /**
+     * @return resource
+     */
+    public String getResource() {
+        return this.resource;
+    }
+
+    /**
      * @return resourceManagerResourceGroupId
      */
     public String getResourceManagerResourceGroupId() {
@@ -113,6 +125,7 @@ public class ModifyDefenseRuleRequest extends Request {
         private String defenseScene; 
         private String instanceId; 
         private String regionId; 
+        private String resource; 
         private String resourceManagerResourceGroupId; 
         private String rules; 
         private Long templateId; 
@@ -126,6 +139,7 @@ public class ModifyDefenseRuleRequest extends Request {
             this.defenseScene = request.defenseScene;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
+            this.resource = request.resource;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.rules = request.rules;
             this.templateId = request.templateId;
@@ -173,6 +187,15 @@ public class ModifyDefenseRuleRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Resource.
+         */
+        public Builder resource(String resource) {
+            this.putQueryParameter("Resource", resource);
+            this.resource = resource;
             return this;
         }
 

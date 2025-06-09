@@ -161,6 +161,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMemberAccountResponse> deleteMemberAccount(DeleteMemberAccountRequest request);
 
     /**
+     * @param request the request parameters of DescribeAbnormalCloudResources  DescribeAbnormalCloudResourcesRequest
+     * @return DescribeAbnormalCloudResourcesResponse
+     */
+    CompletableFuture<DescribeAbnormalCloudResourcesResponse> describeAbnormalCloudResources(DescribeAbnormalCloudResourcesRequest request);
+
+    /**
      * @param request the request parameters of DescribeAccountDelegatedStatus  DescribeAccountDelegatedStatusRequest
      * @return DescribeAccountDelegatedStatusResponse
      */
@@ -1011,6 +1017,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyTemplateResourcesResponse
      */
     CompletableFuture<ModifyTemplateResourcesResponse> modifyTemplateResources(ModifyTemplateResourcesRequest request);
+
+    /**
+     * @param request the request parameters of ReCreateCloudResource  ReCreateCloudResourceRequest
+     * @return ReCreateCloudResourceResponse
+     */
+    CompletableFuture<ReCreateCloudResourceResponse> reCreateCloudResource(ReCreateCloudResourceRequest request);
 
     /**
      * @param request the request parameters of ReleaseInstance  ReleaseInstanceRequest

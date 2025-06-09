@@ -149,6 +149,9 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
+        @com.aliyun.core.annotation.NameInMap("Resource")
+        private String resource;
+
         @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
@@ -174,6 +177,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             this.externalInfo = builder.externalInfo;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
+            this.resource = builder.resource;
             this.ruleId = builder.ruleId;
             this.ruleName = builder.ruleName;
             this.ruleType = builder.ruleType;
@@ -253,6 +257,13 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         }
 
         /**
+         * @return resource
+         */
+        public String getResource() {
+            return this.resource;
+        }
+
+        /**
          * @return ruleId
          */
         public Long getRuleId() {
@@ -297,6 +308,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             private String externalInfo; 
             private Long gmtCreate; 
             private Long gmtModified; 
+            private String resource; 
             private Long ruleId; 
             private String ruleName; 
             private String ruleType; 
@@ -316,6 +328,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
                 this.externalInfo = model.externalInfo;
                 this.gmtCreate = model.gmtCreate;
                 this.gmtModified = model.gmtModified;
+                this.resource = model.resource;
                 this.ruleId = model.ruleId;
                 this.ruleName = model.ruleName;
                 this.ruleType = model.ruleType;
@@ -423,6 +436,14 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
              */
             public Builder gmtModified(Long gmtModified) {
                 this.gmtModified = gmtModified;
+                return this;
+            }
+
+            /**
+             * Resource.
+             */
+            public Builder resource(String resource) {
+                this.resource = resource;
                 return this;
             }
 

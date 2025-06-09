@@ -482,6 +482,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeAbnormalCloudResources  DescribeAbnormalCloudResourcesRequest
+     * @return DescribeAbnormalCloudResourcesResponse
+     */
+    @Override
+    public CompletableFuture<DescribeAbnormalCloudResourcesResponse> describeAbnormalCloudResources(DescribeAbnormalCloudResourcesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeAbnormalCloudResources").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeAbnormalCloudResourcesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeAbnormalCloudResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeAccountDelegatedStatus  DescribeAccountDelegatedStatusRequest
      * @return DescribeAccountDelegatedStatusResponse
      */
@@ -2984,6 +3002,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyTemplateResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReCreateCloudResource  ReCreateCloudResourceRequest
+     * @return ReCreateCloudResourceResponse
+     */
+    @Override
+    public CompletableFuture<ReCreateCloudResourceResponse> reCreateCloudResource(ReCreateCloudResourceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReCreateCloudResource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReCreateCloudResourceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReCreateCloudResourceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
