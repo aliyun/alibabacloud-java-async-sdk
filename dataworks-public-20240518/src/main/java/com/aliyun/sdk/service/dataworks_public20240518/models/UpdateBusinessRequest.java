@@ -153,6 +153,7 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
+         * <p>The workflow ID. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -165,7 +166,10 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * BusinessName.
+         * <p>The name of the workflow. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MyBusiness</p>
          */
         public Builder businessName(String businessName) {
             this.putBodyParameter("BusinessName", businessName);
@@ -174,7 +178,10 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the workflow.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>modified from my first business</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
@@ -183,7 +190,10 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The owner of the workflow. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the owner.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>348428****</p>
          */
         public Builder owner(String owner) {
             this.putBodyParameter("Owner", owner);
@@ -192,7 +202,10 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -201,7 +214,10 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace page to query the workspace name. You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dw_project</p>
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putBodyParameter("ProjectIdentifier", projectIdentifier);

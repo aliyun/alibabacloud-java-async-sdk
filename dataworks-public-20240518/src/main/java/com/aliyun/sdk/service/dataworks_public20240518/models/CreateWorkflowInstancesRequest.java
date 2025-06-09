@@ -719,6 +719,9 @@ public class CreateWorkflowInstancesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Parallelism")
         private Integer parallelism;
 
+        @com.aliyun.core.annotation.NameInMap("Priority")
+        private Integer priority;
+
         @com.aliyun.core.annotation.NameInMap("RootTaskIds")
         private java.util.List<Long> rootTaskIds;
 
@@ -738,6 +741,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             this.mode = builder.mode;
             this.order = builder.order;
             this.parallelism = builder.parallelism;
+            this.priority = builder.priority;
             this.rootTaskIds = builder.rootTaskIds;
             this.runPolicy = builder.runPolicy;
             this.runtimeResource = builder.runtimeResource;
@@ -815,6 +819,13 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        /**
          * @return rootTaskIds
          */
         public java.util.List<Long> getRootTaskIds() {
@@ -845,6 +856,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             private String mode; 
             private String order; 
             private Integer parallelism; 
+            private Integer priority; 
             private java.util.List<Long> rootTaskIds; 
             private RunPolicy runPolicy; 
             private String runtimeResource; 
@@ -862,6 +874,7 @@ public class CreateWorkflowInstancesRequest extends Request {
                 this.mode = model.mode;
                 this.order = model.order;
                 this.parallelism = model.parallelism;
+                this.priority = model.priority;
                 this.rootTaskIds = model.rootTaskIds;
                 this.runPolicy = model.runPolicy;
                 this.runtimeResource = model.runtimeResource;
@@ -955,6 +968,14 @@ public class CreateWorkflowInstancesRequest extends Request {
              */
             public Builder parallelism(Integer parallelism) {
                 this.parallelism = parallelism;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
                 return this;
             }
 
