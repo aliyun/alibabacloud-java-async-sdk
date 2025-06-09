@@ -94,6 +94,10 @@ public class CreateInstanceRequest extends Request {
     private java.util.List<Tag> tag;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserCommand")
+    private UserCommand userCommand;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
@@ -130,6 +134,7 @@ public class CreateInstanceRequest extends Request {
         this.requestedResource = builder.requestedResource;
         this.resourceId = builder.resourceId;
         this.tag = builder.tag;
+        this.userCommand = builder.userCommand;
         this.userId = builder.userId;
         this.userVpc = builder.userVpc;
         this.workspaceId = builder.workspaceId;
@@ -283,6 +288,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return userCommand
+     */
+    public UserCommand getUserCommand() {
+        return this.userCommand;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -330,6 +342,7 @@ public class CreateInstanceRequest extends Request {
         private RequestedResource requestedResource; 
         private String resourceId; 
         private java.util.List<Tag> tag; 
+        private UserCommand userCommand; 
         private String userId; 
         private UserVpc userVpc; 
         private String workspaceId; 
@@ -360,6 +373,7 @@ public class CreateInstanceRequest extends Request {
             this.requestedResource = request.requestedResource;
             this.resourceId = request.resourceId;
             this.tag = request.tag;
+            this.userCommand = request.userCommand;
             this.userId = request.userId;
             this.userVpc = request.userVpc;
             this.workspaceId = request.workspaceId;
@@ -586,6 +600,15 @@ public class CreateInstanceRequest extends Request {
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * UserCommand.
+         */
+        public Builder userCommand(UserCommand userCommand) {
+            this.putBodyParameter("UserCommand", userCommand);
+            this.userCommand = userCommand;
             return this;
         }
 
@@ -1600,6 +1623,114 @@ public class CreateInstanceRequest extends Request {
 
             public Tag build() {
                 return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class OnStart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        private OnStart(Builder builder) {
+            this.content = builder.content;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OnStart create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        public static final class Builder {
+            private String content; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnStart model) {
+                this.content = model.content;
+            } 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            public OnStart build() {
+                return new OnStart(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>CreateInstanceRequest</p>
+     */
+    public static class UserCommand extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OnStart")
+        private OnStart onStart;
+
+        private UserCommand(Builder builder) {
+            this.onStart = builder.onStart;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserCommand create() {
+            return builder().build();
+        }
+
+        /**
+         * @return onStart
+         */
+        public OnStart getOnStart() {
+            return this.onStart;
+        }
+
+        public static final class Builder {
+            private OnStart onStart; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserCommand model) {
+                this.onStart = model.onStart;
+            } 
+
+            /**
+             * OnStart.
+             */
+            public Builder onStart(OnStart onStart) {
+                this.onStart = onStart;
+                return this;
+            }
+
+            public UserCommand build() {
+                return new UserCommand(this);
             } 
 
         } 

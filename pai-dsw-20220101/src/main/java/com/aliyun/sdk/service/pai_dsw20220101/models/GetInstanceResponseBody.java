@@ -146,6 +146,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("TerminalUrl")
     private String terminalUrl;
 
+    @com.aliyun.core.annotation.NameInMap("UserCommandId")
+    private String userCommandId;
+
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
@@ -211,6 +214,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.success = builder.success;
         this.tags = builder.tags;
         this.terminalUrl = builder.terminalUrl;
+        this.userCommandId = builder.userCommandId;
         this.userId = builder.userId;
         this.userName = builder.userName;
         this.userVpc = builder.userVpc;
@@ -534,6 +538,13 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return userCommandId
+     */
+    public String getUserCommandId() {
+        return this.userCommandId;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -626,6 +637,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private Boolean success; 
         private java.util.List<Tags> tags; 
         private String terminalUrl; 
+        private String userCommandId; 
         private String userId; 
         private String userName; 
         private UserVpc userVpc; 
@@ -681,6 +693,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.success = model.success;
             this.tags = model.tags;
             this.terminalUrl = model.terminalUrl;
+            this.userCommandId = model.userCommandId;
             this.userId = model.userId;
             this.userName = model.userName;
             this.userVpc = model.userVpc;
@@ -1187,6 +1200,14 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder terminalUrl(String terminalUrl) {
             this.terminalUrl = terminalUrl;
+            return this;
+        }
+
+        /**
+         * UserCommandId.
+         */
+        public Builder userCommandId(String userCommandId) {
+            this.userCommandId = userCommandId;
             return this;
         }
 

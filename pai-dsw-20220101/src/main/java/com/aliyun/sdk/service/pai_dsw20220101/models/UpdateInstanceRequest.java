@@ -55,8 +55,16 @@ public class UpdateInstanceRequest extends Request {
     private Boolean disassociateDriver;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisassociateEnvironmentVariables")
+    private Boolean disassociateEnvironmentVariables;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DisassociateForwardInfos")
     private Boolean disassociateForwardInfos;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisassociateUserCommand")
+    private Boolean disassociateUserCommand;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DisassociateVpc")
@@ -73,6 +81,10 @@ public class UpdateInstanceRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnvironmentVariables")
+    private java.util.Map<String, ?> environmentVariables;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ImageAuth")
@@ -103,6 +115,10 @@ public class UpdateInstanceRequest extends Request {
     private RequestedResource requestedResource;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserCommand")
+    private UserCommand userCommand;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
@@ -125,11 +141,14 @@ public class UpdateInstanceRequest extends Request {
         this.disassociateCredential = builder.disassociateCredential;
         this.disassociateDatasets = builder.disassociateDatasets;
         this.disassociateDriver = builder.disassociateDriver;
+        this.disassociateEnvironmentVariables = builder.disassociateEnvironmentVariables;
         this.disassociateForwardInfos = builder.disassociateForwardInfos;
+        this.disassociateUserCommand = builder.disassociateUserCommand;
         this.disassociateVpc = builder.disassociateVpc;
         this.driver = builder.driver;
         this.dynamicMount = builder.dynamicMount;
         this.ecsSpec = builder.ecsSpec;
+        this.environmentVariables = builder.environmentVariables;
         this.imageAuth = builder.imageAuth;
         this.imageId = builder.imageId;
         this.imageUrl = builder.imageUrl;
@@ -137,6 +156,7 @@ public class UpdateInstanceRequest extends Request {
         this.oversoldType = builder.oversoldType;
         this.priority = builder.priority;
         this.requestedResource = builder.requestedResource;
+        this.userCommand = builder.userCommand;
         this.userId = builder.userId;
         this.userVpc = builder.userVpc;
         this.workspaceSource = builder.workspaceSource;
@@ -219,10 +239,24 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return disassociateEnvironmentVariables
+     */
+    public Boolean getDisassociateEnvironmentVariables() {
+        return this.disassociateEnvironmentVariables;
+    }
+
+    /**
      * @return disassociateForwardInfos
      */
     public Boolean getDisassociateForwardInfos() {
         return this.disassociateForwardInfos;
+    }
+
+    /**
+     * @return disassociateUserCommand
+     */
+    public Boolean getDisassociateUserCommand() {
+        return this.disassociateUserCommand;
     }
 
     /**
@@ -251,6 +285,13 @@ public class UpdateInstanceRequest extends Request {
      */
     public String getEcsSpec() {
         return this.ecsSpec;
+    }
+
+    /**
+     * @return environmentVariables
+     */
+    public java.util.Map<String, ?> getEnvironmentVariables() {
+        return this.environmentVariables;
     }
 
     /**
@@ -303,6 +344,13 @@ public class UpdateInstanceRequest extends Request {
     }
 
     /**
+     * @return userCommand
+     */
+    public UserCommand getUserCommand() {
+        return this.userCommand;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -333,11 +381,14 @@ public class UpdateInstanceRequest extends Request {
         private Boolean disassociateCredential; 
         private Boolean disassociateDatasets; 
         private Boolean disassociateDriver; 
+        private Boolean disassociateEnvironmentVariables; 
         private Boolean disassociateForwardInfos; 
+        private Boolean disassociateUserCommand; 
         private Boolean disassociateVpc; 
         private String driver; 
         private DynamicMount dynamicMount; 
         private String ecsSpec; 
+        private java.util.Map<String, ?> environmentVariables; 
         private String imageAuth; 
         private String imageId; 
         private String imageUrl; 
@@ -345,6 +396,7 @@ public class UpdateInstanceRequest extends Request {
         private String oversoldType; 
         private Long priority; 
         private RequestedResource requestedResource; 
+        private UserCommand userCommand; 
         private String userId; 
         private UserVpc userVpc; 
         private String workspaceSource; 
@@ -364,11 +416,14 @@ public class UpdateInstanceRequest extends Request {
             this.disassociateCredential = request.disassociateCredential;
             this.disassociateDatasets = request.disassociateDatasets;
             this.disassociateDriver = request.disassociateDriver;
+            this.disassociateEnvironmentVariables = request.disassociateEnvironmentVariables;
             this.disassociateForwardInfos = request.disassociateForwardInfos;
+            this.disassociateUserCommand = request.disassociateUserCommand;
             this.disassociateVpc = request.disassociateVpc;
             this.driver = request.driver;
             this.dynamicMount = request.dynamicMount;
             this.ecsSpec = request.ecsSpec;
+            this.environmentVariables = request.environmentVariables;
             this.imageAuth = request.imageAuth;
             this.imageId = request.imageId;
             this.imageUrl = request.imageUrl;
@@ -376,6 +431,7 @@ public class UpdateInstanceRequest extends Request {
             this.oversoldType = request.oversoldType;
             this.priority = request.priority;
             this.requestedResource = request.requestedResource;
+            this.userCommand = request.userCommand;
             this.userId = request.userId;
             this.userVpc = request.userVpc;
             this.workspaceSource = request.workspaceSource;
@@ -491,6 +547,15 @@ public class UpdateInstanceRequest extends Request {
         }
 
         /**
+         * DisassociateEnvironmentVariables.
+         */
+        public Builder disassociateEnvironmentVariables(Boolean disassociateEnvironmentVariables) {
+            this.putBodyParameter("DisassociateEnvironmentVariables", disassociateEnvironmentVariables);
+            this.disassociateEnvironmentVariables = disassociateEnvironmentVariables;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to delete the associated forward information.</p>
          * 
          * <strong>example:</strong>
@@ -499,6 +564,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder disassociateForwardInfos(Boolean disassociateForwardInfos) {
             this.putBodyParameter("DisassociateForwardInfos", disassociateForwardInfos);
             this.disassociateForwardInfos = disassociateForwardInfos;
+            return this;
+        }
+
+        /**
+         * DisassociateUserCommand.
+         */
+        public Builder disassociateUserCommand(Boolean disassociateUserCommand) {
+            this.putBodyParameter("DisassociateUserCommand", disassociateUserCommand);
+            this.disassociateUserCommand = disassociateUserCommand;
             return this;
         }
 
@@ -544,6 +618,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder ecsSpec(String ecsSpec) {
             this.putBodyParameter("EcsSpec", ecsSpec);
             this.ecsSpec = ecsSpec;
+            return this;
+        }
+
+        /**
+         * EnvironmentVariables.
+         */
+        public Builder environmentVariables(java.util.Map<String, ?> environmentVariables) {
+            this.putBodyParameter("EnvironmentVariables", environmentVariables);
+            this.environmentVariables = environmentVariables;
             return this;
         }
 
@@ -633,6 +716,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder requestedResource(RequestedResource requestedResource) {
             this.putBodyParameter("RequestedResource", requestedResource);
             this.requestedResource = requestedResource;
+            return this;
+        }
+
+        /**
+         * UserCommand.
+         */
+        public Builder userCommand(UserCommand userCommand) {
+            this.putBodyParameter("UserCommand", userCommand);
+            this.userCommand = userCommand;
             return this;
         }
 
@@ -1292,6 +1384,114 @@ public class UpdateInstanceRequest extends Request {
 
             public RequestedResource build() {
                 return new RequestedResource(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
+    public static class OnStart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        private OnStart(Builder builder) {
+            this.content = builder.content;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OnStart create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        public static final class Builder {
+            private String content; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnStart model) {
+                this.content = model.content;
+            } 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            public OnStart build() {
+                return new OnStart(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateInstanceRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateInstanceRequest</p>
+     */
+    public static class UserCommand extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OnStart")
+        private OnStart onStart;
+
+        private UserCommand(Builder builder) {
+            this.onStart = builder.onStart;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserCommand create() {
+            return builder().build();
+        }
+
+        /**
+         * @return onStart
+         */
+        public OnStart getOnStart() {
+            return this.onStart;
+        }
+
+        public static final class Builder {
+            private OnStart onStart; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserCommand model) {
+                this.onStart = model.onStart;
+            } 
+
+            /**
+             * OnStart.
+             */
+            public Builder onStart(OnStart onStart) {
+                this.onStart = onStart;
+                return this;
+            }
+
+            public UserCommand build() {
+                return new UserCommand(this);
             } 
 
         } 
