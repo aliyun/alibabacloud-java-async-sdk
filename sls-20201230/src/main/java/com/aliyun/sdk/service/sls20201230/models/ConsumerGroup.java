@@ -40,6 +40,10 @@ public class ConsumerGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return name
      */
@@ -65,6 +69,15 @@ public class ConsumerGroup extends TeaModel {
         private String name; 
         private Boolean order; 
         private Integer timeout; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConsumerGroup model) {
+            this.name = model.name;
+            this.order = model.order;
+            this.timeout = model.timeout;
+        } 
 
         /**
          * name.

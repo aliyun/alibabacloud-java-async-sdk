@@ -44,6 +44,10 @@ public class Histogram extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -77,6 +81,16 @@ public class Histogram extends TeaModel {
         private Integer from; 
         private String progress; 
         private Integer to; 
+
+        private Builder() {
+        } 
+
+        private Builder(Histogram model) {
+            this.count = model.count;
+            this.from = model.from;
+            this.progress = model.progress;
+            this.to = model.to;
+        } 
 
         /**
          * count.

@@ -32,6 +32,10 @@ public class CreateTicketResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ticket
      */
@@ -41,6 +45,13 @@ public class CreateTicketResponseBody extends TeaModel {
 
     public static final class Builder {
         private String ticket; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTicketResponseBody model) {
+            this.ticket = model.ticket;
+        } 
 
         /**
          * <p>The ticket that is used for logon-free access.</p>

@@ -40,6 +40,10 @@ public class ListETLsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -66,8 +70,20 @@ public class ListETLsResponseBody extends TeaModel {
         private java.util.List<ETL> results; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListETLsResponseBody model) {
+            this.count = model.count;
+            this.results = model.results;
+            this.total = model.total;
+        } 
+
         /**
-         * count.
+         * <p>The number of data transformation jobs that are returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -83,7 +99,10 @@ public class ListETLsResponseBody extends TeaModel {
         }
 
         /**
-         * total.
+         * <p>The total number of data transformation jobs in the project.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80</p>
          */
         public Builder total(Integer total) {
             this.total = total;

@@ -57,7 +57,7 @@ public class CreateDownloadJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -276,6 +276,18 @@ public class CreateDownloadJobRequest extends Request {
             private String roleArn; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Sink model) {
+                this.bucket = model.bucket;
+                this.compressionType = model.compressionType;
+                this.contentType = model.contentType;
+                this.prefix = model.prefix;
+                this.roleArn = model.roleArn;
+                this.type = model.type;
+            } 
+
             /**
              * <p>对象存储桶</p>
              * 
@@ -457,6 +469,19 @@ public class CreateDownloadJobRequest extends Request {
             private String query; 
             private Sink sink; 
             private Long toTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configuration model) {
+                this.allowInComplete = model.allowInComplete;
+                this.fromTime = model.fromTime;
+                this.logstore = model.logstore;
+                this.powerSql = model.powerSql;
+                this.query = model.query;
+                this.sink = model.sink;
+                this.toTime = model.toTime;
+            } 
 
             /**
              * <p>This parameter is required.</p>

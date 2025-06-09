@@ -12,28 +12,28 @@ import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
  * 
- * {@link CreateRdsExternalStoreResponse} extends {@link TeaModel}
+ * {@link UpdateMaxComputeExportResponse} extends {@link TeaModel}
  *
- * <p>CreateRdsExternalStoreResponse</p>
+ * <p>UpdateMaxComputeExportResponse</p>
  */
-public class CreateRdsExternalStoreResponse extends Response {
+public class UpdateMaxComputeExportResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    private CreateRdsExternalStoreResponse(BuilderImpl builder) {
+    private UpdateMaxComputeExportResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
     }
 
-    public static CreateRdsExternalStoreResponse create() {
+    public static UpdateMaxComputeExportResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -52,19 +52,19 @@ public class CreateRdsExternalStoreResponse extends Response {
         return this.statusCode;
     }
 
-    public interface Builder extends Response.Builder<CreateRdsExternalStoreResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateMaxComputeExportResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
         @Override
-        CreateRdsExternalStoreResponse build();
+        UpdateMaxComputeExportResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateRdsExternalStoreResponse, Builder>
+            extends Response.BuilderImpl<UpdateMaxComputeExportResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
@@ -73,7 +73,7 @@ public class CreateRdsExternalStoreResponse extends Response {
             super();
         } 
 
-        private BuilderImpl(CreateRdsExternalStoreResponse response) {
+        private BuilderImpl(UpdateMaxComputeExportResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -98,8 +98,8 @@ public class CreateRdsExternalStoreResponse extends Response {
         }
 
         @Override
-        public CreateRdsExternalStoreResponse build() {
-            return new CreateRdsExternalStoreResponse(this);
+        public UpdateMaxComputeExportResponse build() {
+            return new UpdateMaxComputeExportResponse(this);
         } 
 
     } 

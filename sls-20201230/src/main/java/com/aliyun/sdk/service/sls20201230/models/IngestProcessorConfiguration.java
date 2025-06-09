@@ -37,6 +37,10 @@ public class IngestProcessorConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parseFail
      */
@@ -54,6 +58,14 @@ public class IngestProcessorConfiguration extends TeaModel {
     public static final class Builder {
         private String parseFail; 
         private String spl; 
+
+        private Builder() {
+        } 
+
+        private Builder(IngestProcessorConfiguration model) {
+            this.parseFail = model.parseFail;
+            this.spl = model.spl;
+        } 
 
         /**
          * parseFail.

@@ -40,6 +40,10 @@ public class ListMachinesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class ListMachinesResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<Machine> machines; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMachinesResponseBody model) {
+            this.count = model.count;
+            this.machines = model.machines;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The number of machines that are returned on the current page.</p>

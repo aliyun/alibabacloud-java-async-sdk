@@ -37,7 +37,7 @@ public class GetSqlInstanceResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -207,6 +207,17 @@ public class GetSqlInstanceResponse extends Response {
             private Integer createTime; 
             private Integer updateTime; 
             private Boolean useAsDefault; 
+
+            private Builder() {
+            } 
+
+            private Builder(GetSqlInstanceResponseBody model) {
+                this.name = model.name;
+                this.cu = model.cu;
+                this.createTime = model.createTime;
+                this.updateTime = model.updateTime;
+                this.useAsDefault = model.useAsDefault;
+            } 
 
             /**
              * name.

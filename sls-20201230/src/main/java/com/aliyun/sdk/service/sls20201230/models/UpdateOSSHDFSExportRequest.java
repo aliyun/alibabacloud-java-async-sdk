@@ -28,6 +28,7 @@ public class UpdateOSSHDFSExportRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("configuration")
+    @com.aliyun.core.annotation.Validation(required = true)
     private OSSExportConfiguration configuration;
 
     @com.aliyun.core.annotation.Body
@@ -36,6 +37,7 @@ public class UpdateOSSHDFSExportRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("displayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
     private UpdateOSSHDFSExportRequest(Builder builder) {
@@ -55,7 +57,7 @@ public class UpdateOSSHDFSExportRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,6 +145,7 @@ public class UpdateOSSHDFSExportRequest extends Request {
 
         /**
          * <p>The configuration details of the job.</p>
+         * <p>This parameter is required.</p>
          */
         public Builder configuration(OSSExportConfiguration configuration) {
             this.putBodyParameter("configuration", configuration);
@@ -161,6 +164,7 @@ public class UpdateOSSHDFSExportRequest extends Request {
 
         /**
          * <p>The display name of the job.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ali-test-oss-hdfs-job</p>

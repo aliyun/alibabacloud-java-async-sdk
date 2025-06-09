@@ -40,6 +40,10 @@ public class PolicyConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actionPolicyId
      */
@@ -65,6 +69,15 @@ public class PolicyConfiguration extends TeaModel {
         private String actionPolicyId; 
         private String alertPolicyId; 
         private String repeatInterval; 
+
+        private Builder() {
+        } 
+
+        private Builder(PolicyConfiguration model) {
+            this.actionPolicyId = model.actionPolicyId;
+            this.alertPolicyId = model.alertPolicyId;
+            this.repeatInterval = model.repeatInterval;
+        } 
 
         /**
          * actionPolicyId.

@@ -36,6 +36,10 @@ public class GetLogsV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetLogsV2ResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<java.util.Map<String, String>> data; 
         private Meta meta; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLogsV2ResponseBody model) {
+            this.data = model.data;
+            this.meta = model.meta;
+        } 
 
         /**
          * <p>The returned result.</p>
@@ -143,6 +155,16 @@ public class GetLogsV2ResponseBody extends TeaModel {
             private Long endOffset; 
             private Long endTime; 
             private Boolean scanAll; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhraseQueryInfo model) {
+                this.beginOffset = model.beginOffset;
+                this.endOffset = model.endOffset;
+                this.endTime = model.endTime;
+                this.scanAll = model.scanAll;
+            } 
 
             /**
              * beginOffset.
@@ -442,6 +464,32 @@ public class GetLogsV2ResponseBody extends TeaModel {
             private String telementryType; 
             private java.util.List<java.util.Map<String, ?>> terms; 
             private String whereQuery; 
+
+            private Builder() {
+            } 
+
+            private Builder(Meta model) {
+                this.aggQuery = model.aggQuery;
+                this.columnTypes = model.columnTypes;
+                this.count = model.count;
+                this.cpuCores = model.cpuCores;
+                this.cpuSec = model.cpuSec;
+                this.elapsedMillisecond = model.elapsedMillisecond;
+                this.hasSQL = model.hasSQL;
+                this.highlights = model.highlights;
+                this.isAccurate = model.isAccurate;
+                this.keys = model.keys;
+                this.limited = model.limited;
+                this.mode = model.mode;
+                this.phraseQueryInfo = model.phraseQueryInfo;
+                this.processedBytes = model.processedBytes;
+                this.processedRows = model.processedRows;
+                this.progress = model.progress;
+                this.scanBytes = model.scanBytes;
+                this.telementryType = model.telementryType;
+                this.terms = model.terms;
+                this.whereQuery = model.whereQuery;
+            } 
 
             /**
              * <p>The SQL statement after | in the query statement.</p>

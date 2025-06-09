@@ -26,6 +26,14 @@ public class CreateMetricStoreRequest extends Request {
     private Boolean autoSplit;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("hot_ttl")
+    private Integer hotTtl;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("infrequentAccessTTL")
+    private Integer infrequentAccessTTL;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("maxSplitShard")
     private Integer maxSplitShard;
 
@@ -56,6 +64,8 @@ public class CreateMetricStoreRequest extends Request {
         super(builder);
         this.project = builder.project;
         this.autoSplit = builder.autoSplit;
+        this.hotTtl = builder.hotTtl;
+        this.infrequentAccessTTL = builder.infrequentAccessTTL;
         this.maxSplitShard = builder.maxSplitShard;
         this.metricType = builder.metricType;
         this.mode = builder.mode;
@@ -72,7 +82,7 @@ public class CreateMetricStoreRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -89,6 +99,20 @@ public class CreateMetricStoreRequest extends Request {
      */
     public Boolean getAutoSplit() {
         return this.autoSplit;
+    }
+
+    /**
+     * @return hotTtl
+     */
+    public Integer getHotTtl() {
+        return this.hotTtl;
+    }
+
+    /**
+     * @return infrequentAccessTTL
+     */
+    public Integer getInfrequentAccessTTL() {
+        return this.infrequentAccessTTL;
     }
 
     /**
@@ -136,6 +160,8 @@ public class CreateMetricStoreRequest extends Request {
     public static final class Builder extends Request.Builder<CreateMetricStoreRequest, Builder> {
         private String project; 
         private Boolean autoSplit; 
+        private Integer hotTtl; 
+        private Integer infrequentAccessTTL; 
         private Integer maxSplitShard; 
         private String metricType; 
         private String mode; 
@@ -151,6 +177,8 @@ public class CreateMetricStoreRequest extends Request {
             super(request);
             this.project = request.project;
             this.autoSplit = request.autoSplit;
+            this.hotTtl = request.hotTtl;
+            this.infrequentAccessTTL = request.infrequentAccessTTL;
             this.maxSplitShard = request.maxSplitShard;
             this.metricType = request.metricType;
             this.mode = request.mode;
@@ -181,6 +209,24 @@ public class CreateMetricStoreRequest extends Request {
         public Builder autoSplit(Boolean autoSplit) {
             this.putBodyParameter("autoSplit", autoSplit);
             this.autoSplit = autoSplit;
+            return this;
+        }
+
+        /**
+         * hot_ttl.
+         */
+        public Builder hotTtl(Integer hotTtl) {
+            this.putBodyParameter("hot_ttl", hotTtl);
+            this.hotTtl = hotTtl;
+            return this;
+        }
+
+        /**
+         * infrequentAccessTTL.
+         */
+        public Builder infrequentAccessTTL(Integer infrequentAccessTTL) {
+            this.putBodyParameter("infrequentAccessTTL", infrequentAccessTTL);
+            this.infrequentAccessTTL = infrequentAccessTTL;
             return this;
         }
 

@@ -18,18 +18,19 @@ import com.aliyun.sdk.gateway.sls.models.*;
  */
 public class DeleteAgentInstanceConfigRequest extends Request {
     @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("configName")
+    @com.aliyun.core.annotation.NameInMap("configType")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String configName;
+    private String configType;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("isGray")
-    private Boolean isGray;
+    @com.aliyun.core.annotation.NameInMap("attributes")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String attributes;
 
     private DeleteAgentInstanceConfigRequest(Builder builder) {
         super(builder);
-        this.configName = builder.configName;
-        this.isGray = builder.isGray;
+        this.configType = builder.configType;
+        this.attributes = builder.attributes;
     }
 
     public static Builder builder() {
@@ -40,28 +41,28 @@ public class DeleteAgentInstanceConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
-     * @return configName
+     * @return configType
      */
-    public String getConfigName() {
-        return this.configName;
+    public String getConfigType() {
+        return this.configType;
     }
 
     /**
-     * @return isGray
+     * @return attributes
      */
-    public Boolean getIsGray() {
-        return this.isGray;
+    public String getAttributes() {
+        return this.attributes;
     }
 
     public static final class Builder extends Request.Builder<DeleteAgentInstanceConfigRequest, Builder> {
-        private String configName; 
-        private Boolean isGray; 
+        private String configType; 
+        private String attributes; 
 
         private Builder() {
             super();
@@ -69,25 +70,25 @@ public class DeleteAgentInstanceConfigRequest extends Request {
 
         private Builder(DeleteAgentInstanceConfigRequest request) {
             super(request);
-            this.configName = request.configName;
-            this.isGray = request.isGray;
+            this.configType = request.configType;
+            this.attributes = request.attributes;
         } 
 
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder configName(String configName) {
-            this.putPathParameter("configName", configName);
-            this.configName = configName;
+        public Builder configType(String configType) {
+            this.putPathParameter("configType", configType);
+            this.configType = configType;
             return this;
         }
 
         /**
-         * isGray.
+         * <p>This parameter is required.</p>
          */
-        public Builder isGray(Boolean isGray) {
-            this.putQueryParameter("isGray", isGray);
-            this.isGray = isGray;
+        public Builder attributes(String attributes) {
+            this.putQueryParameter("attributes", attributes);
+            this.attributes = attributes;
             return this;
         }
 

@@ -67,6 +67,10 @@ public class LogtailPipelineConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aggregators
      */
@@ -140,6 +144,21 @@ public class LogtailPipelineConfig extends TeaModel {
         private Long lastModifyTime; 
         private String logSample; 
         private java.util.List<java.util.Map<String, ?>> processors; 
+
+        private Builder() {
+        } 
+
+        private Builder(LogtailPipelineConfig model) {
+            this.aggregators = model.aggregators;
+            this.configName = model.configName;
+            this.createTime = model.createTime;
+            this.flushers = model.flushers;
+            this.global = model.global;
+            this.inputs = model.inputs;
+            this.lastModifyTime = model.lastModifyTime;
+            this.logSample = model.logSample;
+            this.processors = model.processors;
+        } 
 
         /**
          * aggregators.

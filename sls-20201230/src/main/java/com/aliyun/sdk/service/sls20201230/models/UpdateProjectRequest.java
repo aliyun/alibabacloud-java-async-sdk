@@ -26,10 +26,15 @@ public class UpdateProjectRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("recycleBinEnabled")
+    private Boolean recycleBinEnabled;
+
     private UpdateProjectRequest(Builder builder) {
         super(builder);
         this.project = builder.project;
         this.description = builder.description;
+        this.recycleBinEnabled = builder.recycleBinEnabled;
     }
 
     public static Builder builder() {
@@ -40,7 +45,7 @@ public class UpdateProjectRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,9 +64,17 @@ public class UpdateProjectRequest extends Request {
         return this.description;
     }
 
+    /**
+     * @return recycleBinEnabled
+     */
+    public Boolean getRecycleBinEnabled() {
+        return this.recycleBinEnabled;
+    }
+
     public static final class Builder extends Request.Builder<UpdateProjectRequest, Builder> {
         private String project; 
         private String description; 
+        private Boolean recycleBinEnabled; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class UpdateProjectRequest extends Request {
             super(request);
             this.project = request.project;
             this.description = request.description;
+            this.recycleBinEnabled = request.recycleBinEnabled;
         } 
 
         /**
@@ -96,6 +110,23 @@ public class UpdateProjectRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable the recycle bin feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder recycleBinEnabled(Boolean recycleBinEnabled) {
+            this.putBodyParameter("recycleBinEnabled", recycleBinEnabled);
+            this.recycleBinEnabled = recycleBinEnabled;
             return this;
         }
 

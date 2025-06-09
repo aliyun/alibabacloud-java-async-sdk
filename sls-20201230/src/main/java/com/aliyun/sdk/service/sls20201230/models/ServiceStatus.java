@@ -36,6 +36,10 @@ public class ServiceStatus extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enabled
      */
@@ -53,6 +57,14 @@ public class ServiceStatus extends TeaModel {
     public static final class Builder {
         private Boolean enabled; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(ServiceStatus model) {
+            this.enabled = model.enabled;
+            this.status = model.status;
+        } 
 
         /**
          * enabled.

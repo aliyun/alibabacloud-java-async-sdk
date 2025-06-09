@@ -36,6 +36,10 @@ public class GetAppliedConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configs
      */
@@ -53,6 +57,14 @@ public class GetAppliedConfigsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<String> configs; 
         private Integer count; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAppliedConfigsResponseBody model) {
+            this.configs = model.configs;
+            this.count = model.count;
+        } 
 
         /**
          * <p>The names of the Logtail configurations.</p>

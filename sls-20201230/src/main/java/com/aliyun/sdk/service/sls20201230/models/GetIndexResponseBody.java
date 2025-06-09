@@ -69,6 +69,10 @@ public class GetIndexResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return indexMode
      */
@@ -150,6 +154,22 @@ public class GetIndexResponseBody extends TeaModel {
         private Integer maxTextLen; 
         private String storage; 
         private Integer ttl; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetIndexResponseBody model) {
+            this.indexMode = model.indexMode;
+            this.keys = model.keys;
+            this.lastModifyTime = model.lastModifyTime;
+            this.line = model.line;
+            this.logReduce = model.logReduce;
+            this.logReduceBlackList = model.logReduceBlackList;
+            this.logReduceWhiteList = model.logReduceWhiteList;
+            this.maxTextLen = model.maxTextLen;
+            this.storage = model.storage;
+            this.ttl = model.ttl;
+        } 
 
         /**
          * <p>The type of the index.</p>
@@ -336,6 +356,17 @@ public class GetIndexResponseBody extends TeaModel {
             private java.util.List<String> excludeKeys; 
             private java.util.List<String> includeKeys; 
             private java.util.List<String> token; 
+
+            private Builder() {
+            } 
+
+            private Builder(Line model) {
+                this.caseSensitive = model.caseSensitive;
+                this.chn = model.chn;
+                this.excludeKeys = model.excludeKeys;
+                this.includeKeys = model.includeKeys;
+                this.token = model.token;
+            } 
 
             /**
              * <p>Indicates whether case sensitivity is enabled. Valid values:</p>

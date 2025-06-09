@@ -48,6 +48,10 @@ public class SinkEventStoreConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enabled
      */
@@ -89,6 +93,17 @@ public class SinkEventStoreConfiguration extends TeaModel {
         private String eventStore; 
         private String project; 
         private String roleArn; 
+
+        private Builder() {
+        } 
+
+        private Builder(SinkEventStoreConfiguration model) {
+            this.enabled = model.enabled;
+            this.endpoint = model.endpoint;
+            this.eventStore = model.eventStore;
+            this.project = model.project;
+            this.roleArn = model.roleArn;
+        } 
 
         /**
          * enabled.

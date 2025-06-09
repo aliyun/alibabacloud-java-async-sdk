@@ -32,6 +32,10 @@ public class GetCursorTimeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cursorTime
      */
@@ -41,6 +45,13 @@ public class GetCursorTimeResponseBody extends TeaModel {
 
     public static final class Builder {
         private String cursorTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCursorTimeResponseBody model) {
+            this.cursorTime = model.cursorTime;
+        } 
 
         /**
          * <p>The server time that is queried based on the cursor. The value is a UNIX timestamp representing the number of seconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>

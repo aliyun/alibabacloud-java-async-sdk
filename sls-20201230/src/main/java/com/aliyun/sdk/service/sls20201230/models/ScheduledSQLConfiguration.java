@@ -113,6 +113,10 @@ public class ScheduledSQLConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataFormat
      */
@@ -250,6 +254,29 @@ public class ScheduledSQLConfiguration extends TeaModel {
         private String sqlType; 
         private Long toTime; 
         private String toTimeExpr; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScheduledSQLConfiguration model) {
+            this.dataFormat = model.dataFormat;
+            this.destEndpoint = model.destEndpoint;
+            this.destLogstore = model.destLogstore;
+            this.destProject = model.destProject;
+            this.destRoleArn = model.destRoleArn;
+            this.fromTime = model.fromTime;
+            this.fromTimeExpr = model.fromTimeExpr;
+            this.maxRetries = model.maxRetries;
+            this.maxRunTimeInSeconds = model.maxRunTimeInSeconds;
+            this.parameters = model.parameters;
+            this.resourcePool = model.resourcePool;
+            this.roleArn = model.roleArn;
+            this.script = model.script;
+            this.sourceLogstore = model.sourceLogstore;
+            this.sqlType = model.sqlType;
+            this.toTime = model.toTime;
+            this.toTimeExpr = model.toTimeExpr;
+        } 
 
         /**
          * <p>This parameter is required.</p>

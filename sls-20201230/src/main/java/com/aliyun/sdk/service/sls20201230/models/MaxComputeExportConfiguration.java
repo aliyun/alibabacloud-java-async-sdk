@@ -53,6 +53,10 @@ public class MaxComputeExportConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fromTime
      */
@@ -94,6 +98,17 @@ public class MaxComputeExportConfiguration extends TeaModel {
         private String roleArn; 
         private MaxComputeExportConfigurationSink sink; 
         private Long toTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(MaxComputeExportConfiguration model) {
+            this.fromTime = model.fromTime;
+            this.logstore = model.logstore;
+            this.roleArn = model.roleArn;
+            this.sink = model.sink;
+            this.toTime = model.toTime;
+        } 
 
         /**
          * <p>This parameter is required.</p>

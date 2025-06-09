@@ -48,6 +48,10 @@ public class Shard extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -89,6 +93,17 @@ public class Shard extends TeaModel {
         private String inclusiveBeginKey; 
         private Integer shardID; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(Shard model) {
+            this.createTime = model.createTime;
+            this.exclusiveEndKey = model.exclusiveEndKey;
+            this.inclusiveBeginKey = model.inclusiveBeginKey;
+            this.shardID = model.shardID;
+            this.status = model.status;
+        } 
 
         /**
          * createTime.

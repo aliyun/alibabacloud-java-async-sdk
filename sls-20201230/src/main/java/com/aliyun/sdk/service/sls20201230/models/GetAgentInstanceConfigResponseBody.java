@@ -17,30 +17,30 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>GetAgentInstanceConfigResponseBody</p>
  */
 public class GetAgentInstanceConfigResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("attributes")
+    private String attributes;
+
     @com.aliyun.core.annotation.NameInMap("config")
     private String config;
 
-    @com.aliyun.core.annotation.NameInMap("configMatcher")
-    private String configMatcher;
-
-    @com.aliyun.core.annotation.NameInMap("configName")
-    private String configName;
+    @com.aliyun.core.annotation.NameInMap("configType")
+    private String configType;
 
     @com.aliyun.core.annotation.NameInMap("createTime")
     private Long createTime;
 
-    @com.aliyun.core.annotation.NameInMap("isGray")
-    private Boolean isGray;
+    @com.aliyun.core.annotation.NameInMap("grayConfigs")
+    private java.util.List<java.util.Map<String, String>> grayConfigs;
 
     @com.aliyun.core.annotation.NameInMap("lastModifyTime")
     private Long lastModifyTime;
 
     private GetAgentInstanceConfigResponseBody(Builder builder) {
+        this.attributes = builder.attributes;
         this.config = builder.config;
-        this.configMatcher = builder.configMatcher;
-        this.configName = builder.configName;
+        this.configType = builder.configType;
         this.createTime = builder.createTime;
-        this.isGray = builder.isGray;
+        this.grayConfigs = builder.grayConfigs;
         this.lastModifyTime = builder.lastModifyTime;
     }
 
@@ -52,6 +52,17 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return attributes
+     */
+    public String getAttributes() {
+        return this.attributes;
+    }
+
     /**
      * @return config
      */
@@ -60,17 +71,10 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
     }
 
     /**
-     * @return configMatcher
+     * @return configType
      */
-    public String getConfigMatcher() {
-        return this.configMatcher;
-    }
-
-    /**
-     * @return configName
-     */
-    public String getConfigName() {
-        return this.configName;
+    public String getConfigType() {
+        return this.configType;
     }
 
     /**
@@ -81,10 +85,10 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
     }
 
     /**
-     * @return isGray
+     * @return grayConfigs
      */
-    public Boolean getIsGray() {
-        return this.isGray;
+    public java.util.List<java.util.Map<String, String>> getGrayConfigs() {
+        return this.grayConfigs;
     }
 
     /**
@@ -95,12 +99,32 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String attributes; 
         private String config; 
-        private String configMatcher; 
-        private String configName; 
+        private String configType; 
         private Long createTime; 
-        private Boolean isGray; 
+        private java.util.List<java.util.Map<String, String>> grayConfigs; 
         private Long lastModifyTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAgentInstanceConfigResponseBody model) {
+            this.attributes = model.attributes;
+            this.config = model.config;
+            this.configType = model.configType;
+            this.createTime = model.createTime;
+            this.grayConfigs = model.grayConfigs;
+            this.lastModifyTime = model.lastModifyTime;
+        } 
+
+        /**
+         * attributes.
+         */
+        public Builder attributes(String attributes) {
+            this.attributes = attributes;
+            return this;
+        }
 
         /**
          * config.
@@ -111,18 +135,10 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * configMatcher.
+         * configType.
          */
-        public Builder configMatcher(String configMatcher) {
-            this.configMatcher = configMatcher;
-            return this;
-        }
-
-        /**
-         * configName.
-         */
-        public Builder configName(String configName) {
-            this.configName = configName;
+        public Builder configType(String configType) {
+            this.configType = configType;
             return this;
         }
 
@@ -135,10 +151,10 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * isGray.
+         * grayConfigs.
          */
-        public Builder isGray(Boolean isGray) {
-            this.isGray = isGray;
+        public Builder grayConfigs(java.util.List<java.util.Map<String, String>> grayConfigs) {
+            this.grayConfigs = grayConfigs;
             return this;
         }
 

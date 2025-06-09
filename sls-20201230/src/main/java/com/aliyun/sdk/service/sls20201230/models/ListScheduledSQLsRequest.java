@@ -49,7 +49,7 @@ public class ListScheduledSQLsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +101,11 @@ public class ListScheduledSQLsRequest extends Request {
         } 
 
         /**
-         * project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);

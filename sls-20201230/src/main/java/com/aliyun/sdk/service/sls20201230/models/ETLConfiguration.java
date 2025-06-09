@@ -76,6 +76,10 @@ public class ETLConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessKeyId
      */
@@ -157,6 +161,22 @@ public class ETLConfiguration extends TeaModel {
         private String script; 
         private java.util.List<ETLConfigurationSink> sinks; 
         private Long toTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(ETLConfiguration model) {
+            this.accessKeyId = model.accessKeyId;
+            this.accessKeySecret = model.accessKeySecret;
+            this.fromTime = model.fromTime;
+            this.lang = model.lang;
+            this.logstore = model.logstore;
+            this.parameters = model.parameters;
+            this.roleArn = model.roleArn;
+            this.script = model.script;
+            this.sinks = model.sinks;
+            this.toTime = model.toTime;
+        } 
 
         /**
          * accessKeyId.

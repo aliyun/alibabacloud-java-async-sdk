@@ -40,6 +40,10 @@ public class ListLogStoresResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class ListLogStoresResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<String> logstores; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLogStoresResponseBody model) {
+            this.count = model.count;
+            this.logstores = model.logstores;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The number of entries returned on the current page.</p>

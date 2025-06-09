@@ -32,6 +32,10 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return collectionPolicy
      */
@@ -41,6 +45,13 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
 
     public static final class Builder {
         private CollectionPolicy collectionPolicy; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCollectionPolicyResponseBody model) {
+            this.collectionPolicy = model.collectionPolicy;
+        } 
 
         /**
          * collectionPolicy.
@@ -124,6 +135,16 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
             private String destRegion; 
             private Integer destTTL; 
 
+            private Builder() {
+            } 
+
+            private Builder(CentralizeConfig model) {
+                this.destLogstore = model.destLogstore;
+                this.destProject = model.destProject;
+                this.destRegion = model.destRegion;
+                this.destTTL = model.destTTL;
+            } 
+
             /**
              * destLogstore.
              */
@@ -206,6 +227,14 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String dataProject; 
             private String dataRegion; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataConfig model) {
+                this.dataProject = model.dataProject;
+                this.dataRegion = model.dataRegion;
+            } 
 
             /**
              * dataProject.
@@ -298,6 +327,16 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
             private String resourceMode; 
             private java.util.Map<String, ?> resourceTags; 
 
+            private Builder() {
+            } 
+
+            private Builder(PolicyConfig model) {
+                this.instanceIds = model.instanceIds;
+                this.regions = model.regions;
+                this.resourceMode = model.resourceMode;
+                this.resourceTags = model.resourceTags;
+            } 
+
             /**
              * instanceIds.
              */
@@ -380,6 +419,14 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private String accountGroupType; 
             private java.util.List<String> members; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceDirectory model) {
+                this.accountGroupType = model.accountGroupType;
+                this.members = model.members;
+            } 
 
             /**
              * accountGroupType.
@@ -555,6 +602,23 @@ public class GetCollectionPolicyResponseBody extends TeaModel {
             private String policyUid; 
             private String productCode; 
             private ResourceDirectory resourceDirectory; 
+
+            private Builder() {
+            } 
+
+            private Builder(CollectionPolicy model) {
+                this.centralizeConfig = model.centralizeConfig;
+                this.centralizeEnabled = model.centralizeEnabled;
+                this.dataCode = model.dataCode;
+                this.dataConfig = model.dataConfig;
+                this.enabled = model.enabled;
+                this.internalPolicy = model.internalPolicy;
+                this.policyConfig = model.policyConfig;
+                this.policyName = model.policyName;
+                this.policyUid = model.policyUid;
+                this.productCode = model.productCode;
+                this.resourceDirectory = model.resourceDirectory;
+            } 
 
             /**
              * centralizeConfig.

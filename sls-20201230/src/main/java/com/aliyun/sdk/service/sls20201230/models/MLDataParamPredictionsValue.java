@@ -40,6 +40,10 @@ public class MLDataParamPredictionsValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return annotatedBy
      */
@@ -65,6 +69,15 @@ public class MLDataParamPredictionsValue extends TeaModel {
         private String annotatedBy; 
         private Long updateTime; 
         private java.util.List<java.util.Map<String, String>> results; 
+
+        private Builder() {
+        } 
+
+        private Builder(MLDataParamPredictionsValue model) {
+            this.annotatedBy = model.annotatedBy;
+            this.updateTime = model.updateTime;
+            this.results = model.results;
+        } 
 
         /**
          * annotatedBy.

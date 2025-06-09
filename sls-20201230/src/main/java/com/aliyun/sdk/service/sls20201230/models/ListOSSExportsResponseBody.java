@@ -40,6 +40,10 @@ public class ListOSSExportsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class ListOSSExportsResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<OSSExport> results; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOSSExportsResponseBody model) {
+            this.count = model.count;
+            this.results = model.results;
+            this.total = model.total;
+        } 
 
         /**
          * count.

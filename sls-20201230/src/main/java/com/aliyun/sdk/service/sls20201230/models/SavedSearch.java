@@ -52,6 +52,10 @@ public class SavedSearch extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return displayName
      */
@@ -93,6 +97,17 @@ public class SavedSearch extends TeaModel {
         private String savedsearchName; 
         private String searchQuery; 
         private String topic; 
+
+        private Builder() {
+        } 
+
+        private Builder(SavedSearch model) {
+            this.displayName = model.displayName;
+            this.logstore = model.logstore;
+            this.savedsearchName = model.savedsearchName;
+            this.searchQuery = model.searchQuery;
+            this.topic = model.topic;
+        } 
 
         /**
          * <p>This parameter is required.</p>

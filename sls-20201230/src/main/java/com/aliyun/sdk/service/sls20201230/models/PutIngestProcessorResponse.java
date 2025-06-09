@@ -12,28 +12,28 @@ import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
  * 
- * {@link UpdateRdsExternalStoreResponse} extends {@link TeaModel}
+ * {@link PutIngestProcessorResponse} extends {@link TeaModel}
  *
- * <p>UpdateRdsExternalStoreResponse</p>
+ * <p>PutIngestProcessorResponse</p>
  */
-public class UpdateRdsExternalStoreResponse extends Response {
+public class PutIngestProcessorResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    private UpdateRdsExternalStoreResponse(BuilderImpl builder) {
+    private PutIngestProcessorResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
     }
 
-    public static UpdateRdsExternalStoreResponse create() {
+    public static PutIngestProcessorResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -52,19 +52,19 @@ public class UpdateRdsExternalStoreResponse extends Response {
         return this.statusCode;
     }
 
-    public interface Builder extends Response.Builder<UpdateRdsExternalStoreResponse, Builder> {
+    public interface Builder extends Response.Builder<PutIngestProcessorResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
         @Override
-        UpdateRdsExternalStoreResponse build();
+        PutIngestProcessorResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateRdsExternalStoreResponse, Builder>
+            extends Response.BuilderImpl<PutIngestProcessorResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
@@ -73,7 +73,7 @@ public class UpdateRdsExternalStoreResponse extends Response {
             super();
         } 
 
-        private BuilderImpl(UpdateRdsExternalStoreResponse response) {
+        private BuilderImpl(PutIngestProcessorResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -98,8 +98,8 @@ public class UpdateRdsExternalStoreResponse extends Response {
         }
 
         @Override
-        public UpdateRdsExternalStoreResponse build() {
-            return new UpdateRdsExternalStoreResponse(this);
+        public PutIngestProcessorResponse build() {
+            return new PutIngestProcessorResponse(this);
         } 
 
     } 

@@ -79,7 +79,7 @@ public class UpsertCollectionPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -176,7 +176,7 @@ public class UpsertCollectionPolicyRequest extends Request {
         } 
 
         /**
-         * centralizeConfig.
+         * <p>The configurations of centralized storage.</p>
          */
         public Builder centralizeConfig(CentralizeConfig centralizeConfig) {
             this.putBodyParameter("centralizeConfig", centralizeConfig);
@@ -185,7 +185,10 @@ public class UpsertCollectionPolicyRequest extends Request {
         }
 
         /**
-         * centralizeEnabled.
+         * <p>Specifies whether to enable centralized storage. Default value: false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder centralizeEnabled(Boolean centralizeEnabled) {
             this.putBodyParameter("centralizeEnabled", centralizeEnabled);
@@ -194,6 +197,7 @@ public class UpsertCollectionPolicyRequest extends Request {
         }
 
         /**
+         * <p>The code of the log type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +210,7 @@ public class UpsertCollectionPolicyRequest extends Request {
         }
 
         /**
-         * dataConfig.
+         * <p>The data configurations. The configuration is returned only for global logs. For example, if productCode is set to sls, the configuration is returned.</p>
          */
         public Builder dataConfig(DataConfig dataConfig) {
             this.putBodyParameter("dataConfig", dataConfig);
@@ -215,6 +219,7 @@ public class UpsertCollectionPolicyRequest extends Request {
         }
 
         /**
+         * <p>Specifies whether to enable the policy.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -227,6 +232,7 @@ public class UpsertCollectionPolicyRequest extends Request {
         }
 
         /**
+         * <p>The configurations of the policy.</p>
          * <p>This parameter is required.</p>
          */
         public Builder policyConfig(PolicyConfig policyConfig) {
@@ -236,6 +242,12 @@ public class UpsertCollectionPolicyRequest extends Request {
         }
 
         /**
+         * <p>The name must meet the following requirements:</p>
+         * <ul>
+         * <li>The name can contain only lowercase letters, digits, hyphens (-), and underscores (_).</li>
+         * <li>The name must start with a letter.</li>
+         * <li>The name must be 3 to 63 characters in length.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -248,6 +260,7 @@ public class UpsertCollectionPolicyRequest extends Request {
         }
 
         /**
+         * <p>The code of the service.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,7 +273,7 @@ public class UpsertCollectionPolicyRequest extends Request {
         }
 
         /**
-         * resourceDirectory.
+         * <p>The configurations of the resource directory. The account must have activated the resource directory and be a management account or a delegated administrator of the resource directory.</p>
          */
         public Builder resourceDirectory(ResourceDirectory resourceDirectory) {
             this.putBodyParameter("resourceDirectory", resourceDirectory);
@@ -343,8 +356,21 @@ public class UpsertCollectionPolicyRequest extends Request {
             private String destRegion; 
             private Integer destTTL; 
 
+            private Builder() {
+            } 
+
+            private Builder(CentralizeConfig model) {
+                this.destLogstore = model.destLogstore;
+                this.destProject = model.destProject;
+                this.destRegion = model.destRegion;
+                this.destTTL = model.destTTL;
+            } 
+
             /**
-             * destLogstore.
+             * <p>The destination logstore for centralized storage. Make sure that the region of the destination logstore is consistent with the region specified by destRegion and the destination logstore belongs to the destination project specified by destProject.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>your-sls-logstore-in-beijing</p>
              */
             public Builder destLogstore(String destLogstore) {
                 this.destLogstore = destLogstore;
@@ -352,7 +378,10 @@ public class UpsertCollectionPolicyRequest extends Request {
             }
 
             /**
-             * destProject.
+             * <p>The destination project for centralized storage. Make sure that the region of the destination project is consistent with the region specified by destRegion.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>your-sls-project-in-beijing</p>
              */
             public Builder destProject(String destProject) {
                 this.destProject = destProject;
@@ -360,7 +389,10 @@ public class UpsertCollectionPolicyRequest extends Request {
             }
 
             /**
-             * destRegion.
+             * <p>The destination region for centralized storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder destRegion(String destRegion) {
                 this.destRegion = destRegion;
@@ -368,7 +400,10 @@ public class UpsertCollectionPolicyRequest extends Request {
             }
 
             /**
-             * destTTL.
+             * <p>The data retention period for centralized storage. Unit: days. This parameter takes effect only when you use an existing logstore for centralized storage.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>your-sls-logstore-ttl</p>
              */
             public Builder destTTL(Integer destTTL) {
                 this.destTTL = destTTL;
@@ -414,8 +449,18 @@ public class UpsertCollectionPolicyRequest extends Request {
         public static final class Builder {
             private String dataRegion; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataConfig model) {
+                this.dataRegion = model.dataRegion;
+            } 
+
             /**
-             * dataRegion.
+             * <p>The region for storing the global logs that are collected for the first time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder dataRegion(String dataRegion) {
                 this.dataRegion = dataRegion;
@@ -498,8 +543,18 @@ public class UpsertCollectionPolicyRequest extends Request {
             private String resourceMode; 
             private java.util.Map<String, ?> resourceTags; 
 
+            private Builder() {
+            } 
+
+            private Builder(PolicyConfig model) {
+                this.instanceIds = model.instanceIds;
+                this.regions = model.regions;
+                this.resourceMode = model.resourceMode;
+                this.resourceTags = model.resourceTags;
+            } 
+
             /**
-             * instanceIds.
+             * <p>The IDs of the instances. This parameter takes effect only when resourceMode is set to instanceMode. Logs are collected only from instances that use the specified IDs.</p>
              */
             public Builder instanceIds(java.util.List<String> instanceIds) {
                 this.instanceIds = instanceIds;
@@ -507,7 +562,7 @@ public class UpsertCollectionPolicyRequest extends Request {
             }
 
             /**
-             * regions.
+             * <p>The regions of the instances. This parameter takes effect only when resourceMode is set to attributeMode. Wildcard characters are supported. If you leave this parameter empty, region-based filtering is not performed. The system considers that all instances are matched. If you specify a value for this parameter, logs of instances that reside in the specified regions are collected. Logs are collected from an instance only if the resource tags and region of the instance match the specified conditions.</p>
              */
             public Builder regions(java.util.List<String> regions) {
                 this.regions = regions;
@@ -515,6 +570,7 @@ public class UpsertCollectionPolicyRequest extends Request {
             }
 
             /**
+             * <p>The resource collection mode. Valid values: all, attributeMode, and instanceMode. The value all specifies that logs of all instances within your account are collected to the default logstore. The value attributeMode specifies that logs are collected based on the regions of instances and resource tags. The value instanceMode specifies that logs are collected based on instance IDs.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -526,7 +582,10 @@ public class UpsertCollectionPolicyRequest extends Request {
             }
 
             /**
-             * resourceTags.
+             * <p>The resource tags. This parameter takes effect only when resourceMode is set to attributeMode. If you leave this parameter empty, resource tag-based filtering is not performed. The system considers that all instances are matched. If you specify a value for this parameter, logs of instances that use the specified resource tags are collected. Logs are collected from an instance only if the resource tags and region of the instance match the specified conditions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;tag1&quot;:&quot;value1&quot;,“tag2&quot;:&quot;value2&quot;}</p>
              */
             public Builder resourceTags(java.util.Map<String, ?> resourceTags) {
                 this.resourceTags = resourceTags;
@@ -584,8 +643,19 @@ public class UpsertCollectionPolicyRequest extends Request {
             private String accountGroupType; 
             private java.util.List<String> members; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceDirectory model) {
+                this.accountGroupType = model.accountGroupType;
+                this.members = model.members;
+            } 
+
             /**
-             * accountGroupType.
+             * <p>The mode of the resource directory. Valid values: all and custom.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>all,custom</p>
              */
             public Builder accountGroupType(String accountGroupType) {
                 this.accountGroupType = accountGroupType;
@@ -593,7 +663,7 @@ public class UpsertCollectionPolicyRequest extends Request {
             }
 
             /**
-             * members.
+             * <p>The members. If accountGroupType is set to custom, the members are returned.</p>
              */
             public Builder members(java.util.List<String> members) {
                 this.members = members;

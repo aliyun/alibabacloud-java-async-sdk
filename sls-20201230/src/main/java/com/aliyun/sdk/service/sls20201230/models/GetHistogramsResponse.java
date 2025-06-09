@@ -37,7 +37,7 @@ public class GetHistogramsResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -195,6 +195,16 @@ public class GetHistogramsResponse extends Response {
             private Long to; 
             private Long count; 
             private String progress; 
+
+            private Builder() {
+            } 
+
+            private Builder(GetHistogramsResponseBody model) {
+                this.from = model.from;
+                this.to = model.to;
+                this.count = model.count;
+                this.progress = model.progress;
+            } 
 
             /**
              * <p>The start time of the subinterval. The value is a UNIX timestamp representing the number of seconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.</p>

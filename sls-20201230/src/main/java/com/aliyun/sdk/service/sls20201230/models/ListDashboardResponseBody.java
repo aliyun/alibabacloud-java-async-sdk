@@ -36,6 +36,10 @@ public class ListDashboardResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dashboardItems
      */
@@ -53,6 +57,14 @@ public class ListDashboardResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DashboardItems> dashboardItems; 
         private java.util.List<String> dashboards; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDashboardResponseBody model) {
+            this.dashboardItems = model.dashboardItems;
+            this.dashboards = model.dashboards;
+        } 
 
         /**
          * <p>The details of the dashboard.</p>
@@ -86,11 +98,15 @@ public class ListDashboardResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("dashboardName")
         private String dashboardName;
 
+        @com.aliyun.core.annotation.NameInMap("description")
+        private String description;
+
         @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
         private DashboardItems(Builder builder) {
             this.dashboardName = builder.dashboardName;
+            this.description = builder.description;
             this.displayName = builder.displayName;
         }
 
@@ -110,6 +126,13 @@ public class ListDashboardResponseBody extends TeaModel {
         }
 
         /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
+        }
+
+        /**
          * @return displayName
          */
         public String getDisplayName() {
@@ -118,7 +141,17 @@ public class ListDashboardResponseBody extends TeaModel {
 
         public static final class Builder {
             private String dashboardName; 
+            private String description; 
             private String displayName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DashboardItems model) {
+                this.dashboardName = model.dashboardName;
+                this.description = model.description;
+                this.displayName = model.displayName;
+            } 
 
             /**
              * <p>The dashboard ID. The ID must be unique in a project. Fuzzy search is supported. For example, if you enter da, all dashboards whose IDs start with da are queried.</p>
@@ -128,6 +161,14 @@ public class ListDashboardResponseBody extends TeaModel {
              */
             public Builder dashboardName(String dashboardName) {
                 this.dashboardName = dashboardName;
+                return this;
+            }
+
+            /**
+             * description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 

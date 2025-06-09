@@ -88,6 +88,10 @@ public class AlertQuery extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return chartTitle
      */
@@ -193,6 +197,25 @@ public class AlertQuery extends TeaModel {
         private String storeType; 
         private String timeSpanType; 
         private String ui; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlertQuery model) {
+            this.chartTitle = model.chartTitle;
+            this.dashboardId = model.dashboardId;
+            this.end = model.end;
+            this.powerSqlMode = model.powerSqlMode;
+            this.project = model.project;
+            this.query = model.query;
+            this.region = model.region;
+            this.roleArn = model.roleArn;
+            this.start = model.start;
+            this.store = model.store;
+            this.storeType = model.storeType;
+            this.timeSpanType = model.timeSpanType;
+            this.ui = model.ui;
+        } 
 
         /**
          * chartTitle.

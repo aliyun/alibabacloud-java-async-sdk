@@ -62,6 +62,10 @@ public class OSSExport extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configuration
      */
@@ -127,6 +131,20 @@ public class OSSExport extends TeaModel {
         private String name; 
         private String scheduleId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(OSSExport model) {
+            this.configuration = model.configuration;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.displayName = model.displayName;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.name = model.name;
+            this.scheduleId = model.scheduleId;
+            this.status = model.status;
+        } 
 
         /**
          * configuration.

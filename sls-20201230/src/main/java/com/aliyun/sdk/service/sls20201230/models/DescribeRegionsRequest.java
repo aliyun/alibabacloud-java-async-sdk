@@ -34,7 +34,7 @@ public class DescribeRegionsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +59,16 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * language.
+         * <p>The language of the localName parameter that is returned.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>ja</li>
+         * <li>en</li>
+         * <li>zh</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>zh</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("language", language);

@@ -38,6 +38,10 @@ public class LogItem extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contents
      */
@@ -55,6 +59,14 @@ public class LogItem extends TeaModel {
     public static final class Builder {
         private java.util.List<LogContent> contents; 
         private Integer time; 
+
+        private Builder() {
+        } 
+
+        private Builder(LogItem model) {
+            this.contents = model.contents;
+            this.time = model.time;
+        } 
 
         /**
          * <p>This parameter is required.</p>

@@ -52,6 +52,10 @@ public class Index extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return keys
      */
@@ -101,6 +105,18 @@ public class Index extends TeaModel {
         private java.util.List<String> logReduceBlackList; 
         private java.util.List<String> logReduceWhiteList; 
         private Integer maxTextLen; 
+
+        private Builder() {
+        } 
+
+        private Builder(Index model) {
+            this.keys = model.keys;
+            this.line = model.line;
+            this.logReduce = model.logReduce;
+            this.logReduceBlackList = model.logReduceBlackList;
+            this.logReduceWhiteList = model.logReduceWhiteList;
+            this.maxTextLen = model.maxTextLen;
+        } 
 
         /**
          * keys.
@@ -236,6 +252,17 @@ public class Index extends TeaModel {
             private java.util.List<String> excludeKeys; 
             private java.util.List<String> includeKeys; 
             private java.util.List<String> token; 
+
+            private Builder() {
+            } 
+
+            private Builder(Line model) {
+                this.caseSensitive = model.caseSensitive;
+                this.chn = model.chn;
+                this.excludeKeys = model.excludeKeys;
+                this.includeKeys = model.includeKeys;
+                this.token = model.token;
+            } 
 
             /**
              * caseSensitive.

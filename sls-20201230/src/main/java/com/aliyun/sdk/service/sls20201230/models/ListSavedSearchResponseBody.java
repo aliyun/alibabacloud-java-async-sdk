@@ -40,6 +40,10 @@ public class ListSavedSearchResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class ListSavedSearchResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<SavedSearch> savedsearchItems; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSavedSearchResponseBody model) {
+            this.count = model.count;
+            this.savedsearchItems = model.savedsearchItems;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The number of saved searches returned on the current page.</p>

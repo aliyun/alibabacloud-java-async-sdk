@@ -68,6 +68,10 @@ public class MLDataParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return annotationdataId
      */
@@ -149,6 +153,22 @@ public class MLDataParam extends TeaModel {
         private java.util.Map<String, MLDataParamPredictionsValue> predictions; 
         private String value; 
         private String valueType; 
+
+        private Builder() {
+        } 
+
+        private Builder(MLDataParam model) {
+            this.annotationdataId = model.annotationdataId;
+            this.annotations = model.annotations;
+            this.config = model.config;
+            this.createTime = model.createTime;
+            this.dataHash = model.dataHash;
+            this.datasetId = model.datasetId;
+            this.lastModifyTime = model.lastModifyTime;
+            this.predictions = model.predictions;
+            this.value = model.value;
+            this.valueType = model.valueType;
+        } 
 
         /**
          * annotationdataId.

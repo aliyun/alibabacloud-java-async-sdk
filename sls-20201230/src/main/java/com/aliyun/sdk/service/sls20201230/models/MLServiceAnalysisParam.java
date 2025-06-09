@@ -36,6 +36,10 @@ public class MLServiceAnalysisParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return input
      */
@@ -53,6 +57,14 @@ public class MLServiceAnalysisParam extends TeaModel {
     public static final class Builder {
         private java.util.List<java.util.Map<String, String>> input; 
         private java.util.Map<String, String> parameter; 
+
+        private Builder() {
+        } 
+
+        private Builder(MLServiceAnalysisParam model) {
+            this.input = model.input;
+            this.parameter = model.parameter;
+        } 
 
         /**
          * input.

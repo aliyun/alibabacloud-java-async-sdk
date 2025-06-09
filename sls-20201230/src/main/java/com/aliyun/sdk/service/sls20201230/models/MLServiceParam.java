@@ -56,6 +56,10 @@ public class MLServiceParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -113,6 +117,19 @@ public class MLServiceParam extends TeaModel {
         private String serviceType; 
         private String status; 
         private Long updateTimestamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(MLServiceParam model) {
+            this.description = model.description;
+            this.model = model.model;
+            this.name = model.name;
+            this.resource = model.resource;
+            this.serviceType = model.serviceType;
+            this.status = model.status;
+            this.updateTimestamp = model.updateTimestamp;
+        } 
 
         /**
          * description.
@@ -220,6 +237,14 @@ public class MLServiceParam extends TeaModel {
             private String modelResourceId; 
             private String modelResourceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Model model) {
+                this.modelResourceId = model.modelResourceId;
+                this.modelResourceType = model.modelResourceType;
+            } 
+
             /**
              * modelResourceId.
              */
@@ -310,6 +335,16 @@ public class MLServiceParam extends TeaModel {
             private Integer gpu; 
             private Integer memoryLimit; 
             private Integer replica; 
+
+            private Builder() {
+            } 
+
+            private Builder(Resource model) {
+                this.cpuLimit = model.cpuLimit;
+                this.gpu = model.gpu;
+                this.memoryLimit = model.memoryLimit;
+                this.replica = model.replica;
+            } 
 
             /**
              * cpuLimit.

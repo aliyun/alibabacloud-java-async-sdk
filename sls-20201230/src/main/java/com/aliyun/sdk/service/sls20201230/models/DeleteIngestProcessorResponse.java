@@ -12,28 +12,28 @@ import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
  * 
- * {@link UpdateOssExternalStoreResponse} extends {@link TeaModel}
+ * {@link DeleteIngestProcessorResponse} extends {@link TeaModel}
  *
- * <p>UpdateOssExternalStoreResponse</p>
+ * <p>DeleteIngestProcessorResponse</p>
  */
-public class UpdateOssExternalStoreResponse extends Response {
+public class DeleteIngestProcessorResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    private UpdateOssExternalStoreResponse(BuilderImpl builder) {
+    private DeleteIngestProcessorResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
     }
 
-    public static UpdateOssExternalStoreResponse create() {
+    public static DeleteIngestProcessorResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -52,19 +52,19 @@ public class UpdateOssExternalStoreResponse extends Response {
         return this.statusCode;
     }
 
-    public interface Builder extends Response.Builder<UpdateOssExternalStoreResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteIngestProcessorResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
         @Override
-        UpdateOssExternalStoreResponse build();
+        DeleteIngestProcessorResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateOssExternalStoreResponse, Builder>
+            extends Response.BuilderImpl<DeleteIngestProcessorResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
@@ -73,7 +73,7 @@ public class UpdateOssExternalStoreResponse extends Response {
             super();
         } 
 
-        private BuilderImpl(UpdateOssExternalStoreResponse response) {
+        private BuilderImpl(DeleteIngestProcessorResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -98,8 +98,8 @@ public class UpdateOssExternalStoreResponse extends Response {
         }
 
         @Override
-        public UpdateOssExternalStoreResponse build() {
-            return new UpdateOssExternalStoreResponse(this);
+        public DeleteIngestProcessorResponse build() {
+            return new DeleteIngestProcessorResponse(this);
         } 
 
     } 

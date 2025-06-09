@@ -33,6 +33,10 @@ public class ConsumeProcessorConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return spl
      */
@@ -42,6 +46,13 @@ public class ConsumeProcessorConfiguration extends TeaModel {
 
     public static final class Builder {
         private String spl; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConsumeProcessorConfiguration model) {
+            this.spl = model.spl;
+        } 
 
         /**
          * <p>This parameter is required.</p>

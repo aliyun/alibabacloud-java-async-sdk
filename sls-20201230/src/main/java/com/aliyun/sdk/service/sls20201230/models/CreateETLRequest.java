@@ -57,7 +57,7 @@ public class CreateETLRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,6 +118,7 @@ public class CreateETLRequest extends Request {
         } 
 
         /**
+         * <p>Project name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,6 +131,7 @@ public class CreateETLRequest extends Request {
         }
 
         /**
+         * <p>The detailed configuration of the job.</p>
          * <p>This parameter is required.</p>
          */
         public Builder configuration(ETLConfiguration configuration) {
@@ -139,7 +141,10 @@ public class CreateETLRequest extends Request {
         }
 
         /**
-         * description.
+         * <p>The description of the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>this is ETL</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -148,6 +153,7 @@ public class CreateETLRequest extends Request {
         }
 
         /**
+         * <p>The display name of the job.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,6 +166,7 @@ public class CreateETLRequest extends Request {
         }
 
         /**
+         * <p>The name of the job (unique within a project).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

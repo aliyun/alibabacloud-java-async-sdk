@@ -65,6 +65,10 @@ public class IndexKey extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alias
      */
@@ -138,6 +142,21 @@ public class IndexKey extends TeaModel {
         private Long maxDepth; 
         private java.util.List<String> token; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(IndexKey model) {
+            this.alias = model.alias;
+            this.caseSensitive = model.caseSensitive;
+            this.chn = model.chn;
+            this.docValue = model.docValue;
+            this.indexAll = model.indexAll;
+            this.jsonKeys = model.jsonKeys;
+            this.maxDepth = model.maxDepth;
+            this.token = model.token;
+            this.type = model.type;
+        } 
 
         /**
          * alias.

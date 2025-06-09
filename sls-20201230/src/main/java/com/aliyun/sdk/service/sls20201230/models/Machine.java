@@ -48,6 +48,10 @@ public class Machine extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return hostId
      */
@@ -89,6 +93,17 @@ public class Machine extends TeaModel {
         private Long lastHeartbeatTime; 
         private String machineUniqueid; 
         private String userdefinedId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Machine model) {
+            this.hostId = model.hostId;
+            this.ip = model.ip;
+            this.lastHeartbeatTime = model.lastHeartbeatTime;
+            this.machineUniqueid = model.machineUniqueid;
+            this.userdefinedId = model.userdefinedId;
+        } 
 
         /**
          * host-id.

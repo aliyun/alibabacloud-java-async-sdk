@@ -51,6 +51,10 @@ public class MachineGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupAttribute
      */
@@ -92,6 +96,17 @@ public class MachineGroup extends TeaModel {
         private String groupType; 
         private String machineIdentifyType; 
         private java.util.List<String> machineList; 
+
+        private Builder() {
+        } 
+
+        private Builder(MachineGroup model) {
+            this.groupAttribute = model.groupAttribute;
+            this.groupName = model.groupName;
+            this.groupType = model.groupType;
+            this.machineIdentifyType = model.machineIdentifyType;
+            this.machineList = model.machineList;
+        } 
 
         /**
          * groupAttribute.
@@ -188,6 +203,14 @@ public class MachineGroup extends TeaModel {
         public static final class Builder {
             private String externalName; 
             private String groupTopic; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupAttribute model) {
+                this.externalName = model.externalName;
+                this.groupTopic = model.groupTopic;
+            } 
 
             /**
              * externalName.

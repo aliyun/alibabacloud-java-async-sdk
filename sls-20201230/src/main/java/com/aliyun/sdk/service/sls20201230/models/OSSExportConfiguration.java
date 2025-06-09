@@ -48,6 +48,10 @@ public class OSSExportConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fromTime
      */
@@ -89,6 +93,17 @@ public class OSSExportConfiguration extends TeaModel {
         private String roleArn; 
         private Sink sink; 
         private Long toTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(OSSExportConfiguration model) {
+            this.fromTime = model.fromTime;
+            this.logstore = model.logstore;
+            this.roleArn = model.roleArn;
+            this.sink = model.sink;
+            this.toTime = model.toTime;
+        } 
 
         /**
          * fromTime.
@@ -341,6 +356,27 @@ public class OSSExportConfiguration extends TeaModel {
             private String roleArn; 
             private String suffix; 
             private String timeZone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sink model) {
+                this.bucket = model.bucket;
+                this.bufferInterval = model.bufferInterval;
+                this.bufferSize = model.bufferSize;
+                this.compressionType = model.compressionType;
+                this.contentDetail = model.contentDetail;
+                this.contentType = model.contentType;
+                this.delaySec = model.delaySec;
+                this.delaySeconds = model.delaySeconds;
+                this.endpoint = model.endpoint;
+                this.pathFormat = model.pathFormat;
+                this.pathFormatType = model.pathFormatType;
+                this.prefix = model.prefix;
+                this.roleArn = model.roleArn;
+                this.suffix = model.suffix;
+                this.timeZone = model.timeZone;
+            } 
 
             /**
              * <p>This parameter is required.</p>

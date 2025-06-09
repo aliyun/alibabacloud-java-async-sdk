@@ -32,6 +32,10 @@ public class GetStoreViewIndexResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return indexes
      */
@@ -41,6 +45,13 @@ public class GetStoreViewIndexResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Indexes> indexes; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStoreViewIndexResponseBody model) {
+            this.indexes = model.indexes;
+        } 
 
         /**
          * <p>The index configurations.</p>
@@ -111,6 +122,15 @@ public class GetStoreViewIndexResponseBody extends TeaModel {
             private Index index; 
             private String logstore; 
             private String project; 
+
+            private Builder() {
+            } 
+
+            private Builder(Indexes model) {
+                this.index = model.index;
+                this.logstore = model.logstore;
+                this.project = model.project;
+            } 
 
             /**
              * <p>The index configurations of the Logstore.</p>

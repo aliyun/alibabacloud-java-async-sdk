@@ -32,6 +32,10 @@ public class CreateProjectRequest extends Request {
     private String projectName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("recycleBinEnabled")
+    private Boolean recycleBinEnabled;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
@@ -40,6 +44,7 @@ public class CreateProjectRequest extends Request {
         this.dataRedundancyType = builder.dataRedundancyType;
         this.description = builder.description;
         this.projectName = builder.projectName;
+        this.recycleBinEnabled = builder.recycleBinEnabled;
         this.resourceGroupId = builder.resourceGroupId;
     }
 
@@ -51,7 +56,7 @@ public class CreateProjectRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -78,6 +83,13 @@ public class CreateProjectRequest extends Request {
     }
 
     /**
+     * @return recycleBinEnabled
+     */
+    public Boolean getRecycleBinEnabled() {
+        return this.recycleBinEnabled;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -88,6 +100,7 @@ public class CreateProjectRequest extends Request {
         private String dataRedundancyType; 
         private String description; 
         private String projectName; 
+        private Boolean recycleBinEnabled; 
         private String resourceGroupId; 
 
         private Builder() {
@@ -99,11 +112,16 @@ public class CreateProjectRequest extends Request {
             this.dataRedundancyType = request.dataRedundancyType;
             this.description = request.description;
             this.projectName = request.projectName;
+            this.recycleBinEnabled = request.recycleBinEnabled;
             this.resourceGroupId = request.resourceGroupId;
         } 
 
         /**
-         * <p>Data redundancy type</p>
+         * <p>The disaster recovery type. Valid values:</p>
+         * <ul>
+         * <li>LRS: locally redundant storage</li>
+         * <li>ZRS: zone-redundant storage</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>LRS</p>
@@ -128,12 +146,12 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * <p>The name of the project. The name must be unique in a region. You cannot change the name after you create the project. The name must meet the following requirements:</p>
+         * <p>The project name must be unique in a region. You cannot change the name after you create the project. The name must meet the following requirements:</p>
          * <ul>
-         * <li>The name must be unique.</li>
-         * <li>It can contain only lowercase letters, digits, and hyphens (-).</li>
-         * <li>It must start and end with a lowercase letter or a digit.</li>
-         * <li>It must be 3 to 63 characters in length.</li>
+         * <li>The name must be globally unique.</li>
+         * <li>The name can contain only lowercase letters, digits, and hyphens (-).</li>
+         * <li>The name must start and end with a lowercase letter or a digit.</li>
+         * <li>The name must be 3 to 63 characters in length.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -143,6 +161,23 @@ public class CreateProjectRequest extends Request {
         public Builder projectName(String projectName) {
             this.putBodyParameter("projectName", projectName);
             this.projectName = projectName;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to enable the recycle bin feature.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder recycleBinEnabled(Boolean recycleBinEnabled) {
+            this.putBodyParameter("recycleBinEnabled", recycleBinEnabled);
+            this.recycleBinEnabled = recycleBinEnabled;
             return this;
         }
 

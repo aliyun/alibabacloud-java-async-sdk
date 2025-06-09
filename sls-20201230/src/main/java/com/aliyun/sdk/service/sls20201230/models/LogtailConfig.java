@@ -65,6 +65,10 @@ public class LogtailConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configName
      */
@@ -130,6 +134,20 @@ public class LogtailConfig extends TeaModel {
         private String logSample; 
         private OutputDetail outputDetail; 
         private String outputType; 
+
+        private Builder() {
+        } 
+
+        private Builder(LogtailConfig model) {
+            this.configName = model.configName;
+            this.createTime = model.createTime;
+            this.inputDetail = model.inputDetail;
+            this.inputType = model.inputType;
+            this.lastModifyTime = model.lastModifyTime;
+            this.logSample = model.logSample;
+            this.outputDetail = model.outputDetail;
+            this.outputType = model.outputType;
+        } 
 
         /**
          * <p>This parameter is required.</p>
@@ -279,6 +297,16 @@ public class LogtailConfig extends TeaModel {
             private String logstoreName; 
             private String region; 
             private String telemetryType; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutputDetail model) {
+                this.endpoint = model.endpoint;
+                this.logstoreName = model.logstoreName;
+                this.region = model.region;
+                this.telemetryType = model.telemetryType;
+            } 
 
             /**
              * <p>This parameter is required.</p>

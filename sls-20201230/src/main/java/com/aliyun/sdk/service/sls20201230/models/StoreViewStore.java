@@ -42,6 +42,10 @@ public class StoreViewStore extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return project
      */
@@ -67,6 +71,15 @@ public class StoreViewStore extends TeaModel {
         private String project; 
         private String query; 
         private String storeName; 
+
+        private Builder() {
+        } 
+
+        private Builder(StoreViewStore model) {
+            this.project = model.project;
+            this.query = model.query;
+            this.storeName = model.storeName;
+        } 
 
         /**
          * <p>This parameter is required.</p>

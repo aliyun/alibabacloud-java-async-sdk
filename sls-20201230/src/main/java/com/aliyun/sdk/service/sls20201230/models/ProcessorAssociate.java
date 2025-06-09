@@ -33,6 +33,10 @@ public class ProcessorAssociate extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return processorId
      */
@@ -42,6 +46,13 @@ public class ProcessorAssociate extends TeaModel {
 
     public static final class Builder {
         private String processorId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProcessorAssociate model) {
+            this.processorId = model.processorId;
+        } 
 
         /**
          * <p>This parameter is required.</p>

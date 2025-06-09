@@ -36,6 +36,10 @@ public class ConditionConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return condition
      */
@@ -53,6 +57,14 @@ public class ConditionConfiguration extends TeaModel {
     public static final class Builder {
         private String condition; 
         private String countCondition; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConditionConfiguration model) {
+            this.condition = model.condition;
+            this.countCondition = model.countCondition;
+        } 
 
         /**
          * condition.

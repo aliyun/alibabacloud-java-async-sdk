@@ -36,6 +36,10 @@ public class ListAnnotationLabelsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListAnnotationLabelsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<MLLabelParam> data; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAnnotationLabelsResponseBody model) {
+            this.data = model.data;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The data returned.</p>

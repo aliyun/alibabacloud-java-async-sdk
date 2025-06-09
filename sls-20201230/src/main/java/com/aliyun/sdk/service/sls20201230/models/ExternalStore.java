@@ -43,6 +43,10 @@ public class ExternalStore extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return externalStoreName
      */
@@ -68,6 +72,15 @@ public class ExternalStore extends TeaModel {
         private String externalStoreName; 
         private java.util.Map<String, ?> parameter; 
         private String storeType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExternalStore model) {
+            this.externalStoreName = model.externalStoreName;
+            this.parameter = model.parameter;
+            this.storeType = model.storeType;
+        } 
 
         /**
          * <p>This parameter is required.</p>

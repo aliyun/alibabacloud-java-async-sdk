@@ -124,6 +124,10 @@ public class AlertConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return annotations
      */
@@ -301,6 +305,34 @@ public class AlertConfiguration extends TeaModel {
         private Integer threshold; 
         private String type; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(AlertConfiguration model) {
+            this.annotations = model.annotations;
+            this.autoAnnotation = model.autoAnnotation;
+            this.conditionConfiguration = model.conditionConfiguration;
+            this.dashboard = model.dashboard;
+            this.groupConfiguration = model.groupConfiguration;
+            this.joinConfigurations = model.joinConfigurations;
+            this.labels = model.labels;
+            this.muteUntil = model.muteUntil;
+            this.noDataFire = model.noDataFire;
+            this.noDataSeverity = model.noDataSeverity;
+            this.policyConfiguration = model.policyConfiguration;
+            this.queryList = model.queryList;
+            this.sendResolved = model.sendResolved;
+            this.severityConfigurations = model.severityConfigurations;
+            this.sinkAlerthub = model.sinkAlerthub;
+            this.sinkCms = model.sinkCms;
+            this.sinkEventStore = model.sinkEventStore;
+            this.tags = model.tags;
+            this.templateConfiguration = model.templateConfiguration;
+            this.threshold = model.threshold;
+            this.type = model.type;
+            this.version = model.version;
+        } 
 
         /**
          * annotations.

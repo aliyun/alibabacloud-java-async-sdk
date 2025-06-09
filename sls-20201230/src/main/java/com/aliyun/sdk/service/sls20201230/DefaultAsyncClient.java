@@ -61,6 +61,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CallAiTools  CallAiToolsRequest
+     * @return CallAiToolsResponse
+     */
+    @Override
+    public CompletableFuture<CallAiToolsResponse> callAiTools(CallAiToolsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CallAiTools").setMethod(HttpMethod.POST).setPathRegex("/ml/tool/call").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CallAiToolsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CallAiToolsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -506,6 +524,32 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateMaxComputeExport  CreateMaxComputeExportRequest
+     * @return CreateMaxComputeExportResponse
+     */
+    @Override
+    public CompletableFuture<CreateMaxComputeExportResponse> createMaxComputeExport(CreateMaxComputeExportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateMaxComputeExport").setMethod(HttpMethod.POST).setPathRegex("/maxcomputeexports").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateMaxComputeExportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateMaxComputeExportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Metricstores are used to store metric data. For more information, see <a href="https://help.aliyun.com/document_detail/174965.html">Metric data</a>.</p>
      * <ul>
      * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
@@ -588,28 +632,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * @param request the request parameters of CreateOssExternalStore  CreateOssExternalStoreRequest
-     * @return CreateOssExternalStoreResponse
-     */
-    @Override
-    public CompletableFuture<CreateOssExternalStoreResponse> createOssExternalStore(CreateOssExternalStoreRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateOssExternalStore").setMethod(HttpMethod.POST).setPathRegex("/externalstores").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateOssExternalStoreResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateOssExternalStoreResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of CreateProject  CreateProjectRequest
      * @return CreateProjectResponse
      */
@@ -622,27 +644,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateProjectResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * @param request the request parameters of CreateRdsExternalStore  CreateRdsExternalStoreRequest
-     * @return CreateRdsExternalStoreResponse
-     */
-    @Override
-    public CompletableFuture<CreateRdsExternalStoreResponse> createRdsExternalStore(CreateRdsExternalStoreRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateRdsExternalStore").setMethod(HttpMethod.POST).setPathRegex("/externalstores").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateRdsExternalStoreResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<CreateRdsExternalStoreResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -773,7 +774,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<DeleteAgentInstanceConfigResponse> deleteAgentInstanceConfig(DeleteAgentInstanceConfigRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAgentInstanceConfig").setMethod(HttpMethod.DELETE).setPathRegex("/agentinstanceconfigs/{configName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteAgentInstanceConfig").setMethod(HttpMethod.DELETE).setPathRegex("/agentinstanceconfigs/{configType}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAgentInstanceConfigResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -863,7 +864,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.</p>
+     * <p>You must use the Simple Log Service endpoint for the China (Shanghai), Singapore, or Heyuan ACDR Auto region to call the operation.</p>
      * 
      * @param request the request parameters of DeleteCollectionPolicy  DeleteCollectionPolicyRequest
      * @return DeleteCollectionPolicyResponse
@@ -1039,27 +1040,6 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * @param request the request parameters of DeleteExternalStore  DeleteExternalStoreRequest
-     * @return DeleteExternalStoreResponse
-     */
-    @Override
-    public CompletableFuture<DeleteExternalStoreResponse> deleteExternalStore(DeleteExternalStoreRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteExternalStore").setMethod(HttpMethod.DELETE).setPathRegex("/externalstores/{externalStoreName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteExternalStoreResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<DeleteExternalStoreResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
      * <h3>Usage notes</h3>
      * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
      * 
@@ -1075,6 +1055,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteIndexResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteIngestProcessor  DeleteIngestProcessorRequest
+     * @return DeleteIngestProcessorResponse
+     */
+    @Override
+    public CompletableFuture<DeleteIngestProcessorResponse> deleteIngestProcessor(DeleteIngestProcessorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteIngestProcessor").setMethod(HttpMethod.DELETE).setPathRegex("/ingestprocessors/{processorName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteIngestProcessorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteIngestProcessorResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1158,6 +1156,32 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteMachineGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteMaxComputeExport  DeleteMaxComputeExportRequest
+     * @return DeleteMaxComputeExportResponse
+     */
+    @Override
+    public CompletableFuture<DeleteMaxComputeExportResponse> deleteMaxComputeExport(DeleteMaxComputeExportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteMaxComputeExport").setMethod(HttpMethod.DELETE).setPathRegex("/maxcomputeexports/{mcExportName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteMaxComputeExportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteMaxComputeExportResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1491,7 +1515,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetAgentInstanceConfigResponse> getAgentInstanceConfig(GetAgentInstanceConfigRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAgentInstanceConfig").setMethod(HttpMethod.GET).setPathRegex("/agentinstanceconfigs/{configName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAgentInstanceConfig").setMethod(HttpMethod.GET).setPathRegex("/agentinstanceconfigs/{configType}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAgentInstanceConfigResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1637,6 +1661,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must use the Simple Log Service endpoint for the China (Shanghai), Singapore, or Heyuan ACDR Auto region to call the operation.</p>
+     * 
      * @param request the request parameters of GetCollectionPolicy  GetCollectionPolicyRequest
      * @return GetCollectionPolicyResponse
      */
@@ -1839,30 +1866,6 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).</p>
-     * <ul>
-     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
-     * </ul>
-     * 
-     * @param request the request parameters of GetExternalStore  GetExternalStoreRequest
-     * @return GetExternalStoreResponse
-     */
-    @Override
-    public CompletableFuture<GetExternalStoreResponse> getExternalStore(GetExternalStoreRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetExternalStore").setMethod(HttpMethod.GET).setPathRegex("/externalstores/{externalStoreName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetExternalStoreResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetExternalStoreResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
      * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
@@ -1914,6 +1917,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetIndexResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetIngestProcessor  GetIngestProcessorRequest
+     * @return GetIngestProcessorResponse
+     */
+    @Override
+    public CompletableFuture<GetIngestProcessorResponse> getIngestProcessor(GetIngestProcessorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetIngestProcessor").setMethod(HttpMethod.GET).setPathRegex("/ingestprocessors/{processorName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetIngestProcessorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetIngestProcessorResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2079,6 +2100,23 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You must obtain the following basic permissions before you call this operation:
+     *     {
+     *         &quot;Version&quot;: &quot;1&quot;,
+     *         &quot;Statement&quot;: [
+     *             {
+     *                 &quot;Action&quot;: [
+     *                     &quot;log:Get*&quot;
+     *                 ],
+     *                 &quot;Resource&quot;: [
+     *                     &quot;acs:log:<em>:</em>:mlservice/sls_builtin_*&quot;
+     *                 ],
+     *                 &quot;Effect&quot;: &quot;Allow&quot;
+     *             }
+     *         ]
+     *     }</p>
+     * 
      * @param request the request parameters of GetMLServiceResults  GetMLServiceResultsRequest
      * @return GetMLServiceResultsResponse
      */
@@ -2112,6 +2150,32 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetMachineGroupResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetMaxComputeExport  GetMaxComputeExportRequest
+     * @return GetMaxComputeExportResponse
+     */
+    @Override
+    public CompletableFuture<GetMaxComputeExportResponse> getMaxComputeExport(GetMaxComputeExportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetMaxComputeExport").setMethod(HttpMethod.GET).setPathRegex("/maxcomputeexports/{mcExportName}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMaxComputeExportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMaxComputeExportResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2465,6 +2529,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListAiTools  ListAiToolsRequest
+     * @return ListAiToolsResponse
+     */
+    @Override
+    public CompletableFuture<ListAiToolsResponse> listAiTools(ListAiToolsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListAiTools").setMethod(HttpMethod.GET).setPathRegex("/ml/tool/list").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListAiToolsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListAiToolsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListAlerts  ListAlertsRequest
      * @return ListAlertsResponse
      */
@@ -2538,7 +2620,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.</p>
+     * <p>You must use the Simple Log Service endpoint for the China (Shanghai), Singapore, or Heyuan ACDR Auto region to call the operation.</p>
      * 
      * @param request the request parameters of ListCollectionPolicies  ListCollectionPoliciesRequest
      * @return ListCollectionPoliciesResponse
@@ -2713,6 +2795,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListIngestProcessors  ListIngestProcessorsRequest
+     * @return ListIngestProcessorsResponse
+     */
+    @Override
+    public CompletableFuture<ListIngestProcessorsResponse> listIngestProcessors(ListIngestProcessorsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListIngestProcessors").setMethod(HttpMethod.GET).setPathRegex("/ingestprocessors").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListIngestProcessorsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListIngestProcessorsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
@@ -2811,6 +2911,32 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListMachinesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListMaxComputeExports  ListMaxComputeExportsRequest
+     * @return ListMaxComputeExportsResponse
+     */
+    @Override
+    public CompletableFuture<ListMaxComputeExportsResponse> listMaxComputeExports(ListMaxComputeExportsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListMaxComputeExports").setMethod(HttpMethod.GET).setPathRegex("/maxcomputeexports").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListMaxComputeExportsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListMaxComputeExportsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3074,7 +3200,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You cannot call this operation in OpenAPI Explorer. You can use Simple Log Service SDK to call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/29063.html">SLS SDK Reference</a>.</p>
+     * <ul>
+     * <li><strong>Warning</strong> You cannot call this operation in OpenAPI Explorer. You can use Simple Log Service SDK to call this operation. For more information, see SLS SDK Reference.</li>
+     * <li>You must specify a shard when you query the logs.</li>
+     * <li>You can query only logs in the Protocol Buffers (protobuf) format. For more information, see <a href="https://help.aliyun.com/document_detail/29055.html">Data encoding</a>.</li>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * </ul>
      * 
      * @param request the request parameters of PullLogs  PullLogsRequest
      * @return PullLogsResponse
@@ -3112,8 +3243,37 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of PutIngestProcessor  PutIngestProcessorRequest
+     * @return PutIngestProcessorResponse
+     */
+    @Override
+    public CompletableFuture<PutIngestProcessorResponse> putIngestProcessor(PutIngestProcessorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PutIngestProcessor").setMethod(HttpMethod.PUT).setPathRegex("/ingestprocessors/{processorName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutIngestProcessorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PutIngestProcessorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
-     * <p>You cannot call this operation by using cloud service SDKs that are provided by Alibaba Cloud OpenAPI Portal. You can use Simple Log Service SDK to call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/29063.html">SLS SDK Reference</a>.</p>
+     * <ul>
+     * <li><strong>Warning</strong> You cannot call this operation in OpenAPI Explorer. You can use Simple Log Service SDK to call this operation. For more information, see SLS SDK Reference.</li>
+     * <li>When you call the PutLogs operation to write logs to Simple Log Service, Simple Log Servicechecks the format of the logs. If a log does not meet the format requirements, the request fails and no logs are written to Simple Log Service.</li>
+     * <li>You can write logs only in the Protocol Buffers (Protobuf) format as log groups. For more information, see <a href="https://help.aliyun.com/document_detail/29055.html">Data encoding</a>.</li>
+     * <li>You can write logs in one of the following modes:<ul>
+     * <li>LoadBalance mode: In this mode, Log Service automatically writes logs to all writable shards in a Logstore. This mode delivers high availability for write operations and is suitable for data consumption scenarios in which you do not need to preserve the order of logs.</li>
+     * <li>KeyHash: In this mode, a key field is added in the URL parameter. Log Service writes logs to a shard based on the key field. The hash key is optional. If you do not configure the hash key, logs are written to shards in LoadBalance mode. For example, you can use the KeyHash mode to write data from a producer, such as an instance, to the shard whose hash value range includes the hash value of the producer name. This ensures that the data that is written to the shard is ordered and the data in the shard is consumed based on the order. This way, when a shard is split or when shards are merged, the data that is associated with the same hash key is stored only in one shard at a point in time. For more information, see <a href="https://help.aliyun.com/document_detail/28976.html">Shard</a>.</li>
+     * </ul>
+     * </li>
+     * <li>You can call the PutLogs operation to write up to 10 MB of raw logs at a time. We recommend that you keep the total size of the values for each log in a log group to or below 1 MB. Historical versions of SDKs may have different limits. We recommend that you upgrade your SDK to the latest version.</li>
+     * <li>The references for Log Service SDK for Java and Log Service SDK for Python provide examples on how to call the PutLogs operation. For more information, see <a href="https://help.aliyun.com/document_detail/279525.html">Get started with Simple Log Service SDK for Java</a> and <a href="https://help.aliyun.com/document_detail/284638.html">Get started with Simple Log Service SDK for Python</a>.</li>
+     * </ul>
      * 
      * @param request the request parameters of PutLogs  PutLogsRequest
      * @return PutLogsResponse
@@ -3293,6 +3453,32 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of StartMaxComputeExport  StartMaxComputeExportRequest
+     * @return StartMaxComputeExportResponse
+     */
+    @Override
+    public CompletableFuture<StartMaxComputeExportResponse> startMaxComputeExport(StartMaxComputeExportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartMaxComputeExport").setMethod(HttpMethod.PUT).setPathRegex("/maxcomputeexports/{mcExportName}?action=START").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartMaxComputeExportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartMaxComputeExportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StartOSSExport  StartOSSExportRequest
      * @return StartOSSExportResponse
      */
@@ -3359,6 +3545,32 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StopETLResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of StopMaxComputeExport  StopMaxComputeExportRequest
+     * @return StopMaxComputeExportResponse
+     */
+    @Override
+    public CompletableFuture<StopMaxComputeExportResponse> stopMaxComputeExport(StopMaxComputeExportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopMaxComputeExport").setMethod(HttpMethod.PUT).setPathRegex("/maxcomputeexports/{mcExportName}?action=STOP").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopMaxComputeExportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopMaxComputeExportResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3509,7 +3721,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<UpdateAgentInstanceConfigResponse> updateAgentInstanceConfig(UpdateAgentInstanceConfigRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAgentInstanceConfig").setMethod(HttpMethod.PUT).setPathRegex("/agentinstanceconfigs/{configName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateAgentInstanceConfig").setMethod(HttpMethod.PUT).setPathRegex("/agentinstanceconfigs/{configType}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateAgentInstanceConfigResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -3781,6 +3993,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateLogStoreProcessor  UpdateLogStoreProcessorRequest
+     * @return UpdateLogStoreProcessorResponse
+     */
+    @Override
+    public CompletableFuture<UpdateLogStoreProcessorResponse> updateLogStoreProcessor(UpdateLogStoreProcessorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateLogStoreProcessor").setMethod(HttpMethod.POST).setPathRegex("/logstores/{logstore}/processor").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateLogStoreProcessorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateLogStoreProcessorResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * <b>description</b> :
      * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
      * 
@@ -3866,6 +4096,32 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateMaxComputeExport  UpdateMaxComputeExportRequest
+     * @return UpdateMaxComputeExportResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMaxComputeExportResponse> updateMaxComputeExport(UpdateMaxComputeExportRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMaxComputeExport").setMethod(HttpMethod.PUT).setPathRegex("/maxcomputeexports/{mcExportName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMaxComputeExportResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMaxComputeExportResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Metricstores are used to store metric data. For more information, see <a href="https://help.aliyun.com/document_detail/174965.html">Metric data</a>.</p>
      * <ul>
      * <li>You must specify an existing Metricstore.</li>
@@ -3907,6 +4163,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateMetricStoreMeteringModeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateMetricStoreProcessor  UpdateMetricStoreProcessorRequest
+     * @return UpdateMetricStoreProcessorResponse
+     */
+    @Override
+    public CompletableFuture<UpdateMetricStoreProcessorResponse> updateMetricStoreProcessor(UpdateMetricStoreProcessorRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateMetricStoreProcessor").setMethod(HttpMethod.POST).setPathRegex("/metricstores/{metricstore}/processor").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateMetricStoreProcessorResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateMetricStoreProcessorResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -3968,28 +4242,6 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * @param request the request parameters of UpdateOssExternalStore  UpdateOssExternalStoreRequest
-     * @return UpdateOssExternalStoreResponse
-     */
-    @Override
-    public CompletableFuture<UpdateOssExternalStoreResponse> updateOssExternalStore(UpdateOssExternalStoreRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateOssExternalStore").setMethod(HttpMethod.PUT).setPathRegex("/externalstores/{externalStoreName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateOssExternalStoreResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UpdateOssExternalStoreResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
      * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
@@ -4023,27 +4275,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateProjectResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
-     * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * @param request the request parameters of UpdateRdsExternalStore  UpdateRdsExternalStoreRequest
-     * @return UpdateRdsExternalStoreResponse
-     */
-    @Override
-    public CompletableFuture<UpdateRdsExternalStoreResponse> updateRdsExternalStore(UpdateRdsExternalStoreRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateRdsExternalStore").setMethod(HttpMethod.PUT).setPathRegex("/externalstores/{externalStoreName}").setBodyType(BodyType.NONE).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateRdsExternalStoreResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<UpdateRdsExternalStoreResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

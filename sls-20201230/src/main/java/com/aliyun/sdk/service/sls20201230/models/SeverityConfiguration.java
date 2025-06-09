@@ -36,6 +36,10 @@ public class SeverityConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return evalCondition
      */
@@ -53,6 +57,14 @@ public class SeverityConfiguration extends TeaModel {
     public static final class Builder {
         private ConditionConfiguration evalCondition; 
         private Integer severity; 
+
+        private Builder() {
+        } 
+
+        private Builder(SeverityConfiguration model) {
+            this.evalCondition = model.evalCondition;
+            this.severity = model.severity;
+        } 
 
         /**
          * evalCondition.

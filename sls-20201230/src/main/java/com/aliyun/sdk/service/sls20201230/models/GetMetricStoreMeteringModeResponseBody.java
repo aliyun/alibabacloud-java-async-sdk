@@ -32,6 +32,10 @@ public class GetMetricStoreMeteringModeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return meteringMode
      */
@@ -41,6 +45,13 @@ public class GetMetricStoreMeteringModeResponseBody extends TeaModel {
 
     public static final class Builder {
         private String meteringMode; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetricStoreMeteringModeResponseBody model) {
+            this.meteringMode = model.meteringMode;
+        } 
 
         /**
          * <p>The billing mode. Default value: ChargeByFunction. Valid values: ChargeByFunction and ChargeByDataIngest.</p>

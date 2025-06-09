@@ -32,6 +32,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -41,6 +45,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Regions> regions; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regions = model.regions;
+        } 
 
         /**
          * regions.
@@ -124,8 +135,18 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String localName; 
             private String region; 
 
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.internetEndpoint = model.internetEndpoint;
+                this.intranetEndpoint = model.intranetEndpoint;
+                this.localName = model.localName;
+                this.region = model.region;
+            } 
+
             /**
-             * internetEndpoint.
+             * <p>The public endpoint of Simple Log Service.</p>
              */
             public Builder internetEndpoint(String internetEndpoint) {
                 this.internetEndpoint = internetEndpoint;
@@ -133,7 +154,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * intranetEndpoint.
+             * <p>The internal endpoint of Simple Log Service.</p>
              */
             public Builder intranetEndpoint(String intranetEndpoint) {
                 this.intranetEndpoint = intranetEndpoint;
@@ -141,7 +162,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * localName.
+             * <p>The name of the Simple Log Service region.</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -149,7 +170,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * region.
+             * <p>SLS region</p>
              */
             public Builder region(String region) {
                 this.region = region;

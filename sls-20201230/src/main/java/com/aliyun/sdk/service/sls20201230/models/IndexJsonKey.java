@@ -53,6 +53,10 @@ public class IndexJsonKey extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alias
      */
@@ -102,6 +106,18 @@ public class IndexJsonKey extends TeaModel {
         private Boolean docValue; 
         private java.util.List<String> token; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(IndexJsonKey model) {
+            this.alias = model.alias;
+            this.caseSensitive = model.caseSensitive;
+            this.chn = model.chn;
+            this.docValue = model.docValue;
+            this.token = model.token;
+            this.type = model.type;
+        } 
 
         /**
          * alias.

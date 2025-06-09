@@ -41,6 +41,10 @@ public class EncryptConf extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enable
      */
@@ -66,6 +70,15 @@ public class EncryptConf extends TeaModel {
         private Boolean enable; 
         private String encryptType; 
         private EncryptUserCmkConf userCmkInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(EncryptConf model) {
+            this.enable = model.enable;
+            this.encryptType = model.encryptType;
+            this.userCmkInfo = model.userCmkInfo;
+        } 
 
         /**
          * <p>This parameter is required.</p>

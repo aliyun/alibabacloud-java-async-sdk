@@ -46,7 +46,7 @@ public class UpdateMetricStoreMeteringModeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -89,6 +89,7 @@ public class UpdateMetricStoreMeteringModeRequest extends Request {
         } 
 
         /**
+         * <p>The name of the project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -113,6 +114,7 @@ public class UpdateMetricStoreMeteringModeRequest extends Request {
         }
 
         /**
+         * <p>The billing mode. Default value: ChargeByFunction. Valid values: ChargeByFunction and ChargeByDataIngest.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -30,6 +30,9 @@ public class Project extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("lastModifyTime")
     private String lastModifyTime;
 
+    @com.aliyun.core.annotation.NameInMap("location")
+    private String location;
+
     @com.aliyun.core.annotation.NameInMap("owner")
     private String owner;
 
@@ -39,6 +42,9 @@ public class Project extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("quota")
     private java.util.Map<String, ?> quota;
+
+    @com.aliyun.core.annotation.NameInMap("recycleBinEnabled")
+    private Boolean recycleBinEnabled;
 
     @com.aliyun.core.annotation.NameInMap("region")
     private String region;
@@ -54,9 +60,11 @@ public class Project extends TeaModel {
         this.dataRedundancyType = builder.dataRedundancyType;
         this.description = builder.description;
         this.lastModifyTime = builder.lastModifyTime;
+        this.location = builder.location;
         this.owner = builder.owner;
         this.projectName = builder.projectName;
         this.quota = builder.quota;
+        this.recycleBinEnabled = builder.recycleBinEnabled;
         this.region = builder.region;
         this.resourceGroupId = builder.resourceGroupId;
         this.status = builder.status;
@@ -68,6 +76,10 @@ public class Project extends TeaModel {
 
     public static Project create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -99,6 +111,13 @@ public class Project extends TeaModel {
     }
 
     /**
+     * @return location
+     */
+    public String getLocation() {
+        return this.location;
+    }
+
+    /**
      * @return owner
      */
     public String getOwner() {
@@ -117,6 +136,13 @@ public class Project extends TeaModel {
      */
     public java.util.Map<String, ?> getQuota() {
         return this.quota;
+    }
+
+    /**
+     * @return recycleBinEnabled
+     */
+    public Boolean getRecycleBinEnabled() {
+        return this.recycleBinEnabled;
     }
 
     /**
@@ -145,12 +171,32 @@ public class Project extends TeaModel {
         private String dataRedundancyType; 
         private String description; 
         private String lastModifyTime; 
+        private String location; 
         private String owner; 
         private String projectName; 
         private java.util.Map<String, ?> quota; 
+        private Boolean recycleBinEnabled; 
         private String region; 
         private String resourceGroupId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(Project model) {
+            this.createTime = model.createTime;
+            this.dataRedundancyType = model.dataRedundancyType;
+            this.description = model.description;
+            this.lastModifyTime = model.lastModifyTime;
+            this.location = model.location;
+            this.owner = model.owner;
+            this.projectName = model.projectName;
+            this.quota = model.quota;
+            this.recycleBinEnabled = model.recycleBinEnabled;
+            this.region = model.region;
+            this.resourceGroupId = model.resourceGroupId;
+            this.status = model.status;
+        } 
 
         /**
          * createTime.
@@ -185,6 +231,14 @@ public class Project extends TeaModel {
         }
 
         /**
+         * location.
+         */
+        public Builder location(String location) {
+            this.location = location;
+            return this;
+        }
+
+        /**
          * owner.
          */
         public Builder owner(String owner) {
@@ -205,6 +259,14 @@ public class Project extends TeaModel {
          */
         public Builder quota(java.util.Map<String, ?> quota) {
             this.quota = quota;
+            return this;
+        }
+
+        /**
+         * recycleBinEnabled.
+         */
+        public Builder recycleBinEnabled(Boolean recycleBinEnabled) {
+            this.recycleBinEnabled = recycleBinEnabled;
             return this;
         }
 

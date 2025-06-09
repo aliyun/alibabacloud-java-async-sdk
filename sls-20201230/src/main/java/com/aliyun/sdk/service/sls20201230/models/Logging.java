@@ -38,6 +38,10 @@ public class Logging extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loggingDetails
      */
@@ -55,6 +59,14 @@ public class Logging extends TeaModel {
     public static final class Builder {
         private java.util.List<LoggingDetails> loggingDetails; 
         private String loggingProject; 
+
+        private Builder() {
+        } 
+
+        private Builder(Logging model) {
+            this.loggingDetails = model.loggingDetails;
+            this.loggingProject = model.loggingProject;
+        } 
 
         /**
          * <p>This parameter is required.</p>
@@ -126,6 +138,14 @@ public class Logging extends TeaModel {
         public static final class Builder {
             private String logstore; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoggingDetails model) {
+                this.logstore = model.logstore;
+                this.type = model.type;
+            } 
 
             /**
              * <p>This parameter is required.</p>

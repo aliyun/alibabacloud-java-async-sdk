@@ -23,6 +23,7 @@ public class EnableScheduledSQLRequest extends Request {
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("scheduledSQLName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scheduledSQLName;
 
     private EnableScheduledSQLRequest(Builder builder) {
@@ -39,7 +40,7 @@ public class EnableScheduledSQLRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +74,8 @@ public class EnableScheduledSQLRequest extends Request {
         } 
 
         /**
-         * <p>The short description of the struct.</p>
+         * <p>A short description of struct</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>ali-test-project</p>
@@ -86,6 +88,7 @@ public class EnableScheduledSQLRequest extends Request {
 
         /**
          * <p>The unique name of the job. Make sure that the job exists.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>sql-123456789-123456</p>

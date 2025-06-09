@@ -44,6 +44,10 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentCount
      */
@@ -77,6 +81,16 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private java.util.List<Statistics> statistics; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCollectionPoliciesResponseBody model) {
+            this.currentCount = model.currentCount;
+            this.data = model.data;
+            this.statistics = model.statistics;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * currentCount.
@@ -184,6 +198,16 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
             private String destRegion; 
             private Integer destTTL; 
 
+            private Builder() {
+            } 
+
+            private Builder(CentralizeConfig model) {
+                this.destLogstore = model.destLogstore;
+                this.destProject = model.destProject;
+                this.destRegion = model.destRegion;
+                this.destTTL = model.destTTL;
+            } 
+
             /**
              * destLogstore.
              */
@@ -269,6 +293,14 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         public static final class Builder {
             private String dataProject; 
             private String dataRegion; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataConfig model) {
+                this.dataProject = model.dataProject;
+                this.dataRegion = model.dataRegion;
+            } 
 
             /**
              * dataProject.
@@ -361,6 +393,16 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
             private String resourceMode; 
             private java.util.Map<String, ?> resourceTags; 
 
+            private Builder() {
+            } 
+
+            private Builder(PolicyConfig model) {
+                this.instanceIds = model.instanceIds;
+                this.regions = model.regions;
+                this.resourceMode = model.resourceMode;
+                this.resourceTags = model.resourceTags;
+            } 
+
             /**
              * instanceIds.
              */
@@ -443,6 +485,14 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         public static final class Builder {
             private String accountGroupType; 
             private java.util.List<String> members; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceDirectory model) {
+                this.accountGroupType = model.accountGroupType;
+                this.members = model.members;
+            } 
 
             /**
              * accountGroupType.
@@ -619,6 +669,23 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
             private String productCode; 
             private ResourceDirectory resourceDirectory; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.centralizeConfig = model.centralizeConfig;
+                this.centralizeEnabled = model.centralizeEnabled;
+                this.dataCode = model.dataCode;
+                this.dataConfig = model.dataConfig;
+                this.enabled = model.enabled;
+                this.internalPolicy = model.internalPolicy;
+                this.policyConfig = model.policyConfig;
+                this.policyName = model.policyName;
+                this.policyUid = model.policyUid;
+                this.productCode = model.productCode;
+                this.resourceDirectory = model.resourceDirectory;
+            } 
+
             /**
              * <p>The configuration for centralized storage.</p>
              */
@@ -758,6 +825,14 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
             private String policyName; 
             private String policyUid; 
 
+            private Builder() {
+            } 
+
+            private Builder(PolicySourceList model) {
+                this.policyName = model.policyName;
+                this.policyUid = model.policyUid;
+            } 
+
             /**
              * policyName.
              */
@@ -824,6 +899,14 @@ public class ListCollectionPoliciesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PolicySourceList> policySourceList; 
             private String productCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Statistics model) {
+                this.policySourceList = model.policySourceList;
+                this.productCode = model.productCode;
+            } 
 
             /**
              * policySourceList.

@@ -36,6 +36,10 @@ public class GetAppliedMachineGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -53,6 +57,14 @@ public class GetAppliedMachineGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private Integer count; 
         private java.util.List<String> machinegroups; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAppliedMachineGroupsResponseBody model) {
+            this.count = model.count;
+            this.machinegroups = model.machinegroups;
+        } 
 
         /**
          * <p>The number of returned machine groups.</p>

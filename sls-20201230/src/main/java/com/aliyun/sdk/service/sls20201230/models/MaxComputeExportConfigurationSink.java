@@ -17,15 +17,15 @@ import com.aliyun.sdk.gateway.sls.models.*;
  * <p>MaxComputeExportConfigurationSink</p>
  */
 public class MaxComputeExportConfigurationSink extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("bufferInterval")
+    private String bufferInterval;
+
     @com.aliyun.core.annotation.NameInMap("fields")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> fields;
 
     @com.aliyun.core.annotation.NameInMap("filterInvalid")
     private Boolean filterInvalid;
-
-    @com.aliyun.core.annotation.NameInMap("mode")
-    private String mode;
 
     @com.aliyun.core.annotation.NameInMap("odpsAccessKeyId")
     @Deprecated
@@ -52,7 +52,6 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     private String odpsTable;
 
     @com.aliyun.core.annotation.NameInMap("odpsTunnelEndpoint")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String odpsTunnelEndpoint;
 
     @com.aliyun.core.annotation.NameInMap("partitionColumn")
@@ -63,14 +62,17 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String partitionTimeFormat;
 
+    @com.aliyun.core.annotation.NameInMap("timeFormatType")
+    private String timeFormatType;
+
     @com.aliyun.core.annotation.NameInMap("timeZone")
     @com.aliyun.core.annotation.Validation(required = true)
     private String timeZone;
 
     private MaxComputeExportConfigurationSink(Builder builder) {
+        this.bufferInterval = builder.bufferInterval;
         this.fields = builder.fields;
         this.filterInvalid = builder.filterInvalid;
-        this.mode = builder.mode;
         this.odpsAccessKeyId = builder.odpsAccessKeyId;
         this.odpsAccessSecret = builder.odpsAccessSecret;
         this.odpsEndpoint = builder.odpsEndpoint;
@@ -80,6 +82,7 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
         this.odpsTunnelEndpoint = builder.odpsTunnelEndpoint;
         this.partitionColumn = builder.partitionColumn;
         this.partitionTimeFormat = builder.partitionTimeFormat;
+        this.timeFormatType = builder.timeFormatType;
         this.timeZone = builder.timeZone;
     }
 
@@ -89,6 +92,17 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
 
     public static MaxComputeExportConfigurationSink create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return bufferInterval
+     */
+    public String getBufferInterval() {
+        return this.bufferInterval;
     }
 
     /**
@@ -103,13 +117,6 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
      */
     public Boolean getFilterInvalid() {
         return this.filterInvalid;
-    }
-
-    /**
-     * @return mode
-     */
-    public String getMode() {
-        return this.mode;
     }
 
     /**
@@ -176,6 +183,13 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     }
 
     /**
+     * @return timeFormatType
+     */
+    public String getTimeFormatType() {
+        return this.timeFormatType;
+    }
+
+    /**
      * @return timeZone
      */
     public String getTimeZone() {
@@ -183,9 +197,9 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
     }
 
     public static final class Builder {
+        private String bufferInterval; 
         private java.util.List<String> fields; 
         private Boolean filterInvalid; 
-        private String mode; 
         private String odpsAccessKeyId; 
         private String odpsAccessSecret; 
         private String odpsEndpoint; 
@@ -195,7 +209,36 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
         private String odpsTunnelEndpoint; 
         private java.util.List<String> partitionColumn; 
         private String partitionTimeFormat; 
+        private String timeFormatType; 
         private String timeZone; 
+
+        private Builder() {
+        } 
+
+        private Builder(MaxComputeExportConfigurationSink model) {
+            this.bufferInterval = model.bufferInterval;
+            this.fields = model.fields;
+            this.filterInvalid = model.filterInvalid;
+            this.odpsAccessKeyId = model.odpsAccessKeyId;
+            this.odpsAccessSecret = model.odpsAccessSecret;
+            this.odpsEndpoint = model.odpsEndpoint;
+            this.odpsProject = model.odpsProject;
+            this.odpsRolearn = model.odpsRolearn;
+            this.odpsTable = model.odpsTable;
+            this.odpsTunnelEndpoint = model.odpsTunnelEndpoint;
+            this.partitionColumn = model.partitionColumn;
+            this.partitionTimeFormat = model.partitionTimeFormat;
+            this.timeFormatType = model.timeFormatType;
+            this.timeZone = model.timeZone;
+        } 
+
+        /**
+         * bufferInterval.
+         */
+        public Builder bufferInterval(String bufferInterval) {
+            this.bufferInterval = bufferInterval;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -210,14 +253,6 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
          */
         public Builder filterInvalid(Boolean filterInvalid) {
             this.filterInvalid = filterInvalid;
-            return this;
-        }
-
-        /**
-         * mode.
-         */
-        public Builder mode(String mode) {
-            this.mode = mode;
             return this;
         }
 
@@ -282,10 +317,7 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p><a href="http://dt.cn-hangzhou.maxcompute.aliyun-inc.com">http://dt.cn-hangzhou.maxcompute.aliyun-inc.com</a></p>
+         * odpsTunnelEndpoint.
          */
         public Builder odpsTunnelEndpoint(String odpsTunnelEndpoint) {
             this.odpsTunnelEndpoint = odpsTunnelEndpoint;
@@ -308,6 +340,14 @@ public class MaxComputeExportConfigurationSink extends TeaModel {
          */
         public Builder partitionTimeFormat(String partitionTimeFormat) {
             this.partitionTimeFormat = partitionTimeFormat;
+            return this;
+        }
+
+        /**
+         * timeFormatType.
+         */
+        public Builder timeFormatType(String timeFormatType) {
+            this.timeFormatType = timeFormatType;
             return this;
         }
 

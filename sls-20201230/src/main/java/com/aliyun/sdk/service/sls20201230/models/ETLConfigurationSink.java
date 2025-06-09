@@ -66,6 +66,10 @@ public class ETLConfigurationSink extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessKeyId
      */
@@ -131,6 +135,20 @@ public class ETLConfigurationSink extends TeaModel {
         private String name; 
         private String project; 
         private String roleArn; 
+
+        private Builder() {
+        } 
+
+        private Builder(ETLConfigurationSink model) {
+            this.accessKeyId = model.accessKeyId;
+            this.accessKeySecret = model.accessKeySecret;
+            this.datasets = model.datasets;
+            this.endpoint = model.endpoint;
+            this.logstore = model.logstore;
+            this.name = model.name;
+            this.project = model.project;
+            this.roleArn = model.roleArn;
+        } 
 
         /**
          * accessKeyId.

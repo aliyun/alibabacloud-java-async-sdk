@@ -23,6 +23,12 @@ public class GetMetricStoreResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createTime")
     private Long createTime;
 
+    @com.aliyun.core.annotation.NameInMap("hot_ttl")
+    private Integer hotTtl;
+
+    @com.aliyun.core.annotation.NameInMap("infrequentAccessTTL")
+    private Integer infrequentAccessTTL;
+
     @com.aliyun.core.annotation.NameInMap("lastModifyTime")
     private Long lastModifyTime;
 
@@ -47,6 +53,8 @@ public class GetMetricStoreResponseBody extends TeaModel {
     private GetMetricStoreResponseBody(Builder builder) {
         this.autoSplit = builder.autoSplit;
         this.createTime = builder.createTime;
+        this.hotTtl = builder.hotTtl;
+        this.infrequentAccessTTL = builder.infrequentAccessTTL;
         this.lastModifyTime = builder.lastModifyTime;
         this.maxSplitShard = builder.maxSplitShard;
         this.metricType = builder.metricType;
@@ -64,6 +72,10 @@ public class GetMetricStoreResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoSplit
      */
@@ -76,6 +88,20 @@ public class GetMetricStoreResponseBody extends TeaModel {
      */
     public Long getCreateTime() {
         return this.createTime;
+    }
+
+    /**
+     * @return hotTtl
+     */
+    public Integer getHotTtl() {
+        return this.hotTtl;
+    }
+
+    /**
+     * @return infrequentAccessTTL
+     */
+    public Integer getInfrequentAccessTTL() {
+        return this.infrequentAccessTTL;
     }
 
     /**
@@ -130,6 +156,8 @@ public class GetMetricStoreResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean autoSplit; 
         private Long createTime; 
+        private Integer hotTtl; 
+        private Integer infrequentAccessTTL; 
         private Long lastModifyTime; 
         private Integer maxSplitShard; 
         private String metricType; 
@@ -137,6 +165,23 @@ public class GetMetricStoreResponseBody extends TeaModel {
         private String name; 
         private Integer shardCount; 
         private Integer ttl; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMetricStoreResponseBody model) {
+            this.autoSplit = model.autoSplit;
+            this.createTime = model.createTime;
+            this.hotTtl = model.hotTtl;
+            this.infrequentAccessTTL = model.infrequentAccessTTL;
+            this.lastModifyTime = model.lastModifyTime;
+            this.maxSplitShard = model.maxSplitShard;
+            this.metricType = model.metricType;
+            this.mode = model.mode;
+            this.name = model.name;
+            this.shardCount = model.shardCount;
+            this.ttl = model.ttl;
+        } 
 
         /**
          * <p>Indicates whether the automatic sharding feature is enabled.</p>
@@ -157,6 +202,22 @@ public class GetMetricStoreResponseBody extends TeaModel {
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * hot_ttl.
+         */
+        public Builder hotTtl(Integer hotTtl) {
+            this.hotTtl = hotTtl;
+            return this;
+        }
+
+        /**
+         * infrequentAccessTTL.
+         */
+        public Builder infrequentAccessTTL(Integer infrequentAccessTTL) {
+            this.infrequentAccessTTL = infrequentAccessTTL;
             return this;
         }
 

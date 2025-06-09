@@ -48,6 +48,10 @@ public class GetContextLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backLines
      */
@@ -89,6 +93,17 @@ public class GetContextLogsResponseBody extends TeaModel {
         private java.util.List<java.util.Map<String, ?>> logs; 
         private String progress; 
         private Long totalLines; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetContextLogsResponseBody model) {
+            this.backLines = model.backLines;
+            this.forwardLines = model.forwardLines;
+            this.logs = model.logs;
+            this.progress = model.progress;
+            this.totalLines = model.totalLines;
+        } 
 
         /**
          * <p>The number of logs that are generated before the generation time of the start log.</p>

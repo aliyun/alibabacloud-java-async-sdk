@@ -45,6 +45,10 @@ public class LogGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logItems
      */
@@ -78,6 +82,16 @@ public class LogGroup extends TeaModel {
         private java.util.List<LogTag> logTags; 
         private String source; 
         private String topic; 
+
+        private Builder() {
+        } 
+
+        private Builder(LogGroup model) {
+            this.logItems = model.logItems;
+            this.logTags = model.logTags;
+            this.source = model.source;
+            this.topic = model.topic;
+        } 
 
         /**
          * <p>This parameter is required.</p>

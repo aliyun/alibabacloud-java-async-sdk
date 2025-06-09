@@ -40,6 +40,10 @@ public class ListOSSIngestionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class ListOSSIngestionsResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<OSSIngestion> results; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOSSIngestionsResponseBody model) {
+            this.count = model.count;
+            this.results = model.results;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The number of OSS data import jobs that are returned.</p>

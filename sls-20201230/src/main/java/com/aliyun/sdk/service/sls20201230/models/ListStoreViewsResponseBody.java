@@ -40,6 +40,10 @@ public class ListStoreViewsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class ListStoreViewsResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<String> storeviews; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListStoreViewsResponseBody model) {
+            this.count = model.count;
+            this.storeviews = model.storeviews;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The number of returned datasets.</p>

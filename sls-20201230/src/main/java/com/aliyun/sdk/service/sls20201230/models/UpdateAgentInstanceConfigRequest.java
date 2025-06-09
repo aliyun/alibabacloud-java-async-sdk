@@ -18,9 +18,14 @@ import com.aliyun.sdk.gateway.sls.models.*;
  */
 public class UpdateAgentInstanceConfigRequest extends Request {
     @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("configName")
+    @com.aliyun.core.annotation.NameInMap("configType")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String configName;
+    private String configType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("attributes")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String attributes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("config")
@@ -28,20 +33,15 @@ public class UpdateAgentInstanceConfigRequest extends Request {
     private String config;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("configMatcher")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String configMatcher;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("isGray")
-    private Boolean isGray;
+    @com.aliyun.core.annotation.NameInMap("grayConfigs")
+    private String grayConfigs;
 
     private UpdateAgentInstanceConfigRequest(Builder builder) {
         super(builder);
-        this.configName = builder.configName;
+        this.configType = builder.configType;
+        this.attributes = builder.attributes;
         this.config = builder.config;
-        this.configMatcher = builder.configMatcher;
-        this.isGray = builder.isGray;
+        this.grayConfigs = builder.grayConfigs;
     }
 
     public static Builder builder() {
@@ -52,16 +52,23 @@ public class UpdateAgentInstanceConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
-     * @return configName
+     * @return configType
      */
-    public String getConfigName() {
-        return this.configName;
+    public String getConfigType() {
+        return this.configType;
+    }
+
+    /**
+     * @return attributes
+     */
+    public String getAttributes() {
+        return this.attributes;
     }
 
     /**
@@ -72,24 +79,17 @@ public class UpdateAgentInstanceConfigRequest extends Request {
     }
 
     /**
-     * @return configMatcher
+     * @return grayConfigs
      */
-    public String getConfigMatcher() {
-        return this.configMatcher;
-    }
-
-    /**
-     * @return isGray
-     */
-    public Boolean getIsGray() {
-        return this.isGray;
+    public String getGrayConfigs() {
+        return this.grayConfigs;
     }
 
     public static final class Builder extends Request.Builder<UpdateAgentInstanceConfigRequest, Builder> {
-        private String configName; 
+        private String configType; 
+        private String attributes; 
         private String config; 
-        private String configMatcher; 
-        private Boolean isGray; 
+        private String grayConfigs; 
 
         private Builder() {
             super();
@@ -97,18 +97,27 @@ public class UpdateAgentInstanceConfigRequest extends Request {
 
         private Builder(UpdateAgentInstanceConfigRequest request) {
             super(request);
-            this.configName = request.configName;
+            this.configType = request.configType;
+            this.attributes = request.attributes;
             this.config = request.config;
-            this.configMatcher = request.configMatcher;
-            this.isGray = request.isGray;
+            this.grayConfigs = request.grayConfigs;
         } 
 
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder configName(String configName) {
-            this.putPathParameter("configName", configName);
-            this.configName = configName;
+        public Builder configType(String configType) {
+            this.putPathParameter("configType", configType);
+            this.configType = configType;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder attributes(String attributes) {
+            this.putQueryParameter("attributes", attributes);
+            this.attributes = attributes;
             return this;
         }
 
@@ -122,20 +131,11 @@ public class UpdateAgentInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * grayConfigs.
          */
-        public Builder configMatcher(String configMatcher) {
-            this.putBodyParameter("configMatcher", configMatcher);
-            this.configMatcher = configMatcher;
-            return this;
-        }
-
-        /**
-         * isGray.
-         */
-        public Builder isGray(Boolean isGray) {
-            this.putBodyParameter("isGray", isGray);
-            this.isGray = isGray;
+        public Builder grayConfigs(String grayConfigs) {
+            this.putBodyParameter("grayConfigs", grayConfigs);
+            this.grayConfigs = grayConfigs;
             return this;
         }
 

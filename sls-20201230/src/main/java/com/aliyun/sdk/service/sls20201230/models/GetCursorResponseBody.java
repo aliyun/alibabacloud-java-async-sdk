@@ -32,6 +32,10 @@ public class GetCursorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cursor
      */
@@ -41,6 +45,13 @@ public class GetCursorResponseBody extends TeaModel {
 
     public static final class Builder {
         private String cursor; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCursorResponseBody model) {
+            this.cursor = model.cursor;
+        } 
 
         /**
          * <p>The value of the cursor.</p>

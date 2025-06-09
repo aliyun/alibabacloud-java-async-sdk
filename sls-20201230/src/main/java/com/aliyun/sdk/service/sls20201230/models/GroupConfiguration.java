@@ -37,6 +37,10 @@ public class GroupConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fields
      */
@@ -54,6 +58,14 @@ public class GroupConfiguration extends TeaModel {
     public static final class Builder {
         private java.util.List<String> fields; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GroupConfiguration model) {
+            this.fields = model.fields;
+            this.type = model.type;
+        } 
 
         /**
          * fields.

@@ -36,6 +36,10 @@ public class GetStoreViewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return storeType
      */
@@ -53,6 +57,14 @@ public class GetStoreViewResponseBody extends TeaModel {
     public static final class Builder {
         private String storeType; 
         private java.util.List<StoreViewStore> stores; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetStoreViewResponseBody model) {
+            this.storeType = model.storeType;
+            this.stores = model.stores;
+        } 
 
         /**
          * <p>The type of the dataset.</p>

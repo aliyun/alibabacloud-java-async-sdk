@@ -36,6 +36,10 @@ public class JoinConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return condition
      */
@@ -53,6 +57,14 @@ public class JoinConfiguration extends TeaModel {
     public static final class Builder {
         private String condition; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(JoinConfiguration model) {
+            this.condition = model.condition;
+            this.type = model.type;
+        } 
 
         /**
          * condition.

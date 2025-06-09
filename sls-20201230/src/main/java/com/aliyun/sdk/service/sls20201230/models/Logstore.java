@@ -95,6 +95,10 @@ public class Logstore extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appendMeta
      */
@@ -224,6 +228,28 @@ public class Logstore extends TeaModel {
         private Integer shardCount; 
         private String telemetryType; 
         private Integer ttl; 
+
+        private Builder() {
+        } 
+
+        private Builder(Logstore model) {
+            this.appendMeta = model.appendMeta;
+            this.autoSplit = model.autoSplit;
+            this.createTime = model.createTime;
+            this.enableTracking = model.enableTracking;
+            this.encryptConf = model.encryptConf;
+            this.hotTtl = model.hotTtl;
+            this.infrequentAccessTTL = model.infrequentAccessTTL;
+            this.lastModifyTime = model.lastModifyTime;
+            this.logstoreName = model.logstoreName;
+            this.maxSplitShard = model.maxSplitShard;
+            this.mode = model.mode;
+            this.processorId = model.processorId;
+            this.productType = model.productType;
+            this.shardCount = model.shardCount;
+            this.telemetryType = model.telemetryType;
+            this.ttl = model.ttl;
+        } 
 
         /**
          * appendMeta.

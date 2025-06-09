@@ -49,7 +49,7 @@ public class GetMLServiceResultsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +101,16 @@ public class GetMLServiceResultsRequest extends Request {
         } 
 
         /**
-         * serviceName.
+         * <p>The name of the service.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>sls_builtin_service_trace_rca: service name for high-latency trace analysis.</li>
+         * <li>sls_builtin_service_log_struct: service name for NER tasks on logs.</li>
+         * <li>sls_builtin_service_metric_anomaly: service name for single-dimension anomaly detection on time series.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>sls_builtin_service_log_struct</p>
          */
         public Builder serviceName(String serviceName) {
             this.putPathParameter("serviceName", serviceName);
@@ -128,7 +137,10 @@ public class GetMLServiceResultsRequest extends Request {
         }
 
         /**
-         * version.
+         * <p>The version of the algorithm. The algorithm varies based on the version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
          */
         public Builder version(String version) {
             this.putQueryParameter("version", version);

@@ -77,6 +77,10 @@ public class Ticket extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return callerUid
      */
@@ -174,6 +178,24 @@ public class Ticket extends TeaModel {
         private String ticketId; 
         private Integer usedNumber; 
         private Boolean valid; 
+
+        private Builder() {
+        } 
+
+        private Builder(Ticket model) {
+            this.callerUid = model.callerUid;
+            this.createDate = model.createDate;
+            this.expirationTime = model.expirationTime;
+            this.expireDate = model.expireDate;
+            this.extra = model.extra;
+            this.name = model.name;
+            this.number = model.number;
+            this.sharingTo = model.sharingTo;
+            this.ticket = model.ticket;
+            this.ticketId = model.ticketId;
+            this.usedNumber = model.usedNumber;
+            this.valid = model.valid;
+        } 
 
         /**
          * callerUid.

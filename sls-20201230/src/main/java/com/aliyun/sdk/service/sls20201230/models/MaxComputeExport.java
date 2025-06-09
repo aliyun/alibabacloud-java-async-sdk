@@ -63,6 +63,10 @@ public class MaxComputeExport extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configuration
      */
@@ -128,6 +132,20 @@ public class MaxComputeExport extends TeaModel {
         private String name; 
         private String scheduleId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(MaxComputeExport model) {
+            this.configuration = model.configuration;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.displayName = model.displayName;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.name = model.name;
+            this.scheduleId = model.scheduleId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>This parameter is required.</p>

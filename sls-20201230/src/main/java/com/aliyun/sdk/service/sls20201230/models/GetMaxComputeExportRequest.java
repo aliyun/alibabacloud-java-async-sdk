@@ -12,35 +12,35 @@ import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
  * 
- * {@link DeleteExternalStoreRequest} extends {@link RequestModel}
+ * {@link GetMaxComputeExportRequest} extends {@link RequestModel}
  *
- * <p>DeleteExternalStoreRequest</p>
+ * <p>GetMaxComputeExportRequest</p>
  */
-public class DeleteExternalStoreRequest extends Request {
+public class GetMaxComputeExportRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
     @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("externalStoreName")
+    @com.aliyun.core.annotation.NameInMap("mcExportName")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String externalStoreName;
+    private String mcExportName;
 
-    private DeleteExternalStoreRequest(Builder builder) {
+    private GetMaxComputeExportRequest(Builder builder) {
         super(builder);
         this.project = builder.project;
-        this.externalStoreName = builder.externalStoreName;
+        this.mcExportName = builder.mcExportName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeleteExternalStoreRequest create() {
+    public static GetMaxComputeExportRequest create() {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -53,24 +53,24 @@ public class DeleteExternalStoreRequest extends Request {
     }
 
     /**
-     * @return externalStoreName
+     * @return mcExportName
      */
-    public String getExternalStoreName() {
-        return this.externalStoreName;
+    public String getMcExportName() {
+        return this.mcExportName;
     }
 
-    public static final class Builder extends Request.Builder<DeleteExternalStoreRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetMaxComputeExportRequest, Builder> {
         private String project; 
-        private String externalStoreName; 
+        private String mcExportName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DeleteExternalStoreRequest request) {
+        private Builder(GetMaxComputeExportRequest request) {
             super(request);
             this.project = request.project;
-            this.externalStoreName = request.externalStoreName;
+            this.mcExportName = request.mcExportName;
         } 
 
         /**
@@ -78,7 +78,7 @@ public class DeleteExternalStoreRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>ali-test-project</p>
+         * <p>my-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -87,21 +87,21 @@ public class DeleteExternalStoreRequest extends Request {
         }
 
         /**
-         * <p>The name of the external store.</p>
+         * <p>The unique name of the job. Make sure that the job exists.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>rds_store</p>
+         * <p>export-mc-123456789-123456</p>
          */
-        public Builder externalStoreName(String externalStoreName) {
-            this.putPathParameter("externalStoreName", externalStoreName);
-            this.externalStoreName = externalStoreName;
+        public Builder mcExportName(String mcExportName) {
+            this.putPathParameter("mcExportName", mcExportName);
+            this.mcExportName = mcExportName;
             return this;
         }
 
         @Override
-        public DeleteExternalStoreRequest build() {
-            return new DeleteExternalStoreRequest(this);
+        public GetMaxComputeExportRequest build() {
+            return new GetMaxComputeExportRequest(this);
         } 
 
     } 

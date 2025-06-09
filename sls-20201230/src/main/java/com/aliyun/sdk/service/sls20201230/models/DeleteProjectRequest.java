@@ -21,9 +21,14 @@ public class DeleteProjectRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("project")
     private String project;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("forceDelete")
+    private Boolean forceDelete;
+
     private DeleteProjectRequest(Builder builder) {
         super(builder);
         this.project = builder.project;
+        this.forceDelete = builder.forceDelete;
     }
 
     public static Builder builder() {
@@ -34,7 +39,7 @@ public class DeleteProjectRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -46,8 +51,16 @@ public class DeleteProjectRequest extends Request {
         return this.project;
     }
 
+    /**
+     * @return forceDelete
+     */
+    public Boolean getForceDelete() {
+        return this.forceDelete;
+    }
+
     public static final class Builder extends Request.Builder<DeleteProjectRequest, Builder> {
         private String project; 
+        private Boolean forceDelete; 
 
         private Builder() {
             super();
@@ -56,6 +69,7 @@ public class DeleteProjectRequest extends Request {
         private Builder(DeleteProjectRequest request) {
             super(request);
             this.project = request.project;
+            this.forceDelete = request.forceDelete;
         } 
 
         /**
@@ -67,6 +81,15 @@ public class DeleteProjectRequest extends Request {
         public Builder project(String project) {
             this.putHostParameter("project", project);
             this.project = project;
+            return this;
+        }
+
+        /**
+         * forceDelete.
+         */
+        public Builder forceDelete(Boolean forceDelete) {
+            this.putQueryParameter("forceDelete", forceDelete);
+            this.forceDelete = forceDelete;
             return this;
         }
 

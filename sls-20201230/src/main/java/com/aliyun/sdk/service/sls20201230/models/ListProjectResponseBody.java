@@ -40,6 +40,10 @@ public class ListProjectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class ListProjectResponseBody extends TeaModel {
         private Long count; 
         private java.util.List<Project> projects; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListProjectResponseBody model) {
+            this.count = model.count;
+            this.projects = model.projects;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The number of returned projects on the current page.</p>

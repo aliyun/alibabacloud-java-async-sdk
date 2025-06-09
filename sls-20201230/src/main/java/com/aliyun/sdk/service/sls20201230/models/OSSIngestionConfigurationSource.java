@@ -59,6 +59,9 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("startTime")
     private Long startTime;
 
+    @com.aliyun.core.annotation.NameInMap("tagPackId")
+    private Boolean tagPackId;
+
     @com.aliyun.core.annotation.NameInMap("timeField")
     private String timeField;
 
@@ -88,6 +91,7 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         this.restoreObjectEnabled = builder.restoreObjectEnabled;
         this.roleARN = builder.roleARN;
         this.startTime = builder.startTime;
+        this.tagPackId = builder.tagPackId;
         this.timeField = builder.timeField;
         this.timeFormat = builder.timeFormat;
         this.timePattern = builder.timePattern;
@@ -101,6 +105,10 @@ public class OSSIngestionConfigurationSource extends TeaModel {
 
     public static OSSIngestionConfigurationSource create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -188,6 +196,13 @@ public class OSSIngestionConfigurationSource extends TeaModel {
     }
 
     /**
+     * @return tagPackId
+     */
+    public Boolean getTagPackId() {
+        return this.tagPackId;
+    }
+
+    /**
      * @return timeField
      */
     public String getTimeField() {
@@ -235,11 +250,36 @@ public class OSSIngestionConfigurationSource extends TeaModel {
         private Boolean restoreObjectEnabled; 
         private String roleARN; 
         private Long startTime; 
+        private Boolean tagPackId; 
         private String timeField; 
         private String timeFormat; 
         private String timePattern; 
         private String timeZone; 
         private Boolean useMetaIndex; 
+
+        private Builder() {
+        } 
+
+        private Builder(OSSIngestionConfigurationSource model) {
+            this.bucket = model.bucket;
+            this.compressionCodec = model.compressionCodec;
+            this.encoding = model.encoding;
+            this.endTime = model.endTime;
+            this.endpoint = model.endpoint;
+            this.format = model.format;
+            this.interval = model.interval;
+            this.pattern = model.pattern;
+            this.prefix = model.prefix;
+            this.restoreObjectEnabled = model.restoreObjectEnabled;
+            this.roleARN = model.roleARN;
+            this.startTime = model.startTime;
+            this.tagPackId = model.tagPackId;
+            this.timeField = model.timeField;
+            this.timeFormat = model.timeFormat;
+            this.timePattern = model.timePattern;
+            this.timeZone = model.timeZone;
+            this.useMetaIndex = model.useMetaIndex;
+        } 
 
         /**
          * <p>This parameter is required.</p>
@@ -349,6 +389,14 @@ public class OSSIngestionConfigurationSource extends TeaModel {
          */
         public Builder startTime(Long startTime) {
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * tagPackId.
+         */
+        public Builder tagPackId(Boolean tagPackId) {
+            this.tagPackId = tagPackId;
             return this;
         }
 

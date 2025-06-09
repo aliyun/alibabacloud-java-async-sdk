@@ -64,6 +64,10 @@ public class MLDataSetParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createBy
      */
@@ -137,6 +141,21 @@ public class MLDataSetParam extends TeaModel {
         private Long lastModifyTime; 
         private String name; 
         private String settingType; 
+
+        private Builder() {
+        } 
+
+        private Builder(MLDataSetParam model) {
+            this.createBy = model.createBy;
+            this.createTime = model.createTime;
+            this.dataType = model.dataType;
+            this.datasetId = model.datasetId;
+            this.description = model.description;
+            this.labelId = model.labelId;
+            this.lastModifyTime = model.lastModifyTime;
+            this.name = model.name;
+            this.settingType = model.settingType;
+        } 
 
         /**
          * createBy.

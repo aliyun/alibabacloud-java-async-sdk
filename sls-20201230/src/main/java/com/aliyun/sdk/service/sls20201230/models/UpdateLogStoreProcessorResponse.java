@@ -12,28 +12,28 @@ import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
  * 
- * {@link DeleteExternalStoreResponse} extends {@link TeaModel}
+ * {@link UpdateLogStoreProcessorResponse} extends {@link TeaModel}
  *
- * <p>DeleteExternalStoreResponse</p>
+ * <p>UpdateLogStoreProcessorResponse</p>
  */
-public class DeleteExternalStoreResponse extends Response {
+public class UpdateLogStoreProcessorResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    private DeleteExternalStoreResponse(BuilderImpl builder) {
+    private UpdateLogStoreProcessorResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
     }
 
-    public static DeleteExternalStoreResponse create() {
+    public static UpdateLogStoreProcessorResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -52,19 +52,19 @@ public class DeleteExternalStoreResponse extends Response {
         return this.statusCode;
     }
 
-    public interface Builder extends Response.Builder<DeleteExternalStoreResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateLogStoreProcessorResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
         @Override
-        DeleteExternalStoreResponse build();
+        UpdateLogStoreProcessorResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteExternalStoreResponse, Builder>
+            extends Response.BuilderImpl<UpdateLogStoreProcessorResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
@@ -73,7 +73,7 @@ public class DeleteExternalStoreResponse extends Response {
             super();
         } 
 
-        private BuilderImpl(DeleteExternalStoreResponse response) {
+        private BuilderImpl(UpdateLogStoreProcessorResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -98,8 +98,8 @@ public class DeleteExternalStoreResponse extends Response {
         }
 
         @Override
-        public DeleteExternalStoreResponse build() {
-            return new DeleteExternalStoreResponse(this);
+        public UpdateLogStoreProcessorResponse build() {
+            return new UpdateLogStoreProcessorResponse(this);
         } 
 
     } 

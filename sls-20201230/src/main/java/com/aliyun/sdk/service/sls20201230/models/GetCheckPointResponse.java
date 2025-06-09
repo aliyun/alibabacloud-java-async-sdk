@@ -37,7 +37,7 @@ public class GetCheckPointResponse extends Response {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -195,6 +195,16 @@ public class GetCheckPointResponse extends Response {
             private String checkpoint; 
             private Long updateTime; 
             private String consumer; 
+
+            private Builder() {
+            } 
+
+            private Builder(GetCheckPointResponseBody model) {
+                this.shard = model.shard;
+                this.checkpoint = model.checkpoint;
+                this.updateTime = model.updateTime;
+                this.consumer = model.consumer;
+            } 
 
             /**
              * <p>The shard ID.</p>

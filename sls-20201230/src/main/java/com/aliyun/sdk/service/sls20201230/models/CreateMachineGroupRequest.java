@@ -62,7 +62,7 @@ public class CreateMachineGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -265,6 +265,14 @@ public class CreateMachineGroupRequest extends Request {
         public static final class Builder {
             private String externalName; 
             private String groupTopic; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupAttribute model) {
+                this.externalName = model.externalName;
+                this.groupTopic = model.groupTopic;
+            } 
 
             /**
              * <p>The identifier of the external management system on which the machine group depends.</p>

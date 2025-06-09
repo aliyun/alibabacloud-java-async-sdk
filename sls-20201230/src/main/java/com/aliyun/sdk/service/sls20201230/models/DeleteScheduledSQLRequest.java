@@ -23,6 +23,7 @@ public class DeleteScheduledSQLRequest extends Request {
 
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("scheduledSQLName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scheduledSQLName;
 
     private DeleteScheduledSQLRequest(Builder builder) {
@@ -39,7 +40,7 @@ public class DeleteScheduledSQLRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +74,11 @@ public class DeleteScheduledSQLRequest extends Request {
         } 
 
         /**
-         * project.
+         * <p>The name of the project.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali-test-project</p>
          */
         public Builder project(String project) {
             this.putHostParameter("project", project);
@@ -82,7 +87,11 @@ public class DeleteScheduledSQLRequest extends Request {
         }
 
         /**
-         * scheduledSQLName.
+         * <p>The unique name of the job. Make sure that the job exists.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sql-123456789-123456</p>
          */
         public Builder scheduledSQLName(String scheduledSQLName) {
             this.putPathParameter("scheduledSQLName", scheduledSQLName);

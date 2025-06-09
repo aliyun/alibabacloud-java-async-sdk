@@ -56,6 +56,10 @@ public class MLLabelParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -113,6 +117,19 @@ public class MLLabelParam extends TeaModel {
         private String name; 
         private java.util.List<Settings> settings; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(MLLabelParam model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.labelId = model.labelId;
+            this.lastModifyTime = model.lastModifyTime;
+            this.name = model.name;
+            this.settings = model.settings;
+            this.type = model.type;
+        } 
 
         /**
          * createTime.
@@ -243,6 +260,16 @@ public class MLLabelParam extends TeaModel {
             private String mode; 
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Settings model) {
+                this.config = model.config;
+                this.mode = model.mode;
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * config.

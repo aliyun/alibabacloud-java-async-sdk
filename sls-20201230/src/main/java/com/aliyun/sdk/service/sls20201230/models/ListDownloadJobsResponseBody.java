@@ -40,6 +40,10 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<Results> results; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDownloadJobsResponseBody model) {
+            this.count = model.count;
+            this.results = model.results;
+            this.total = model.total;
+        } 
 
         /**
          * count.
@@ -187,6 +200,18 @@ public class ListDownloadJobsResponseBody extends TeaModel {
             private String prefix; 
             private String roleArn; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sink model) {
+                this.bucket = model.bucket;
+                this.compressionType = model.compressionType;
+                this.contentType = model.contentType;
+                this.prefix = model.prefix;
+                this.roleArn = model.roleArn;
+                this.type = model.type;
+            } 
 
             /**
              * <p>对象存储桶</p>
@@ -358,6 +383,19 @@ public class ListDownloadJobsResponseBody extends TeaModel {
             private String query; 
             private Sink sink; 
             private Long toTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configuration model) {
+                this.allowInComplete = model.allowInComplete;
+                this.fromTime = model.fromTime;
+                this.logstore = model.logstore;
+                this.powerSql = model.powerSql;
+                this.query = model.query;
+                this.sink = model.sink;
+                this.toTime = model.toTime;
+            } 
 
             /**
              * allowInComplete.
@@ -555,6 +593,20 @@ public class ListDownloadJobsResponseBody extends TeaModel {
             private String notice; 
             private Long progress; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExecutionDetails model) {
+                this.checkSum = model.checkSum;
+                this.errorMessage = model.errorMessage;
+                this.executeTime = model.executeTime;
+                this.filePath = model.filePath;
+                this.fileSize = model.fileSize;
+                this.logCount = model.logCount;
+                this.notice = model.notice;
+                this.progress = model.progress;
+            } 
+
             /**
              * checkSum.
              */
@@ -747,6 +799,19 @@ public class ListDownloadJobsResponseBody extends TeaModel {
             private ExecutionDetails executionDetails; 
             private String name; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.configuration = model.configuration;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.executionDetails = model.executionDetails;
+                this.name = model.name;
+                this.status = model.status;
+            } 
 
             /**
              * <p>下载配置</p>

@@ -53,6 +53,10 @@ public class Chart extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return action
      */
@@ -94,6 +98,17 @@ public class Chart extends TeaModel {
         private java.util.Map<String, ?> search; 
         private String title; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(Chart model) {
+            this.action = model.action;
+            this.display = model.display;
+            this.search = model.search;
+            this.title = model.title;
+            this.type = model.type;
+        } 
 
         /**
          * <p>This parameter is required.</p>

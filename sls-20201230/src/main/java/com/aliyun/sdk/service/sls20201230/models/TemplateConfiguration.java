@@ -54,6 +54,10 @@ public class TemplateConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aonotations
      */
@@ -103,6 +107,18 @@ public class TemplateConfiguration extends TeaModel {
         private java.util.Map<String, ?> tokens; 
         private String type; 
         private String version; 
+
+        private Builder() {
+        } 
+
+        private Builder(TemplateConfiguration model) {
+            this.aonotations = model.aonotations;
+            this.id = model.id;
+            this.lang = model.lang;
+            this.tokens = model.tokens;
+            this.type = model.type;
+            this.version = model.version;
+        } 
 
         /**
          * aonotations.

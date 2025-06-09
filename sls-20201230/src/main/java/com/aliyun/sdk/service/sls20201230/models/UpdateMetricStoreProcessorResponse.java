@@ -12,32 +12,28 @@ import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
  * 
- * {@link GetExternalStoreResponse} extends {@link TeaModel}
+ * {@link UpdateMetricStoreProcessorResponse} extends {@link TeaModel}
  *
- * <p>GetExternalStoreResponse</p>
+ * <p>UpdateMetricStoreProcessorResponse</p>
  */
-public class GetExternalStoreResponse extends Response {
+public class UpdateMetricStoreProcessorResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @com.aliyun.core.annotation.NameInMap("body")
-    private ExternalStore body;
-
-    private GetExternalStoreResponse(BuilderImpl builder) {
+    private UpdateMetricStoreProcessorResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
-        this.body = builder.body;
     }
 
-    public static GetExternalStoreResponse create() {
+    public static UpdateMetricStoreProcessorResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -56,42 +52,31 @@ public class GetExternalStoreResponse extends Response {
         return this.statusCode;
     }
 
-    /**
-     * @return body
-     */
-    public ExternalStore getBody() {
-        return this.body;
-    }
-
-    public interface Builder extends Response.Builder<GetExternalStoreResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateMetricStoreProcessorResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ExternalStore body);
-
         @Override
-        GetExternalStoreResponse build();
+        UpdateMetricStoreProcessorResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetExternalStoreResponse, Builder>
+            extends Response.BuilderImpl<UpdateMetricStoreProcessorResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ExternalStore body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetExternalStoreResponse response) {
+        private BuilderImpl(UpdateMetricStoreProcessorResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
-            this.body = response.body;
         } 
 
         /**
@@ -112,18 +97,9 @@ public class GetExternalStoreResponse extends Response {
             return this;
         }
 
-        /**
-         * body.
-         */
         @Override
-        public Builder body(ExternalStore body) {
-            this.body = body;
-            return this;
-        }
-
-        @Override
-        public GetExternalStoreResponse build() {
-            return new GetExternalStoreResponse(this);
+        public UpdateMetricStoreProcessorResponse build() {
+            return new UpdateMetricStoreProcessorResponse(this);
         } 
 
     } 

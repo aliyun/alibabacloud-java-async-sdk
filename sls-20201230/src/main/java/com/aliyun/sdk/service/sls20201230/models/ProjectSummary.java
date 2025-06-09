@@ -58,6 +58,10 @@ public class ProjectSummary extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -107,6 +111,18 @@ public class ProjectSummary extends TeaModel {
         private String region; 
         private String resourceGroupId; 
         private Long updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProjectSummary model) {
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.projectName = model.projectName;
+            this.region = model.region;
+            this.resourceGroupId = model.resourceGroupId;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * <p>This parameter is required.</p>

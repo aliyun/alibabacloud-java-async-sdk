@@ -38,6 +38,10 @@ public class OSSIngestionConfiguration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logstore
      */
@@ -55,6 +59,14 @@ public class OSSIngestionConfiguration extends TeaModel {
     public static final class Builder {
         private String logstore; 
         private OSSIngestionConfigurationSource source; 
+
+        private Builder() {
+        } 
+
+        private Builder(OSSIngestionConfiguration model) {
+            this.logstore = model.logstore;
+            this.source = model.source;
+        } 
 
         /**
          * <p>This parameter is required.</p>

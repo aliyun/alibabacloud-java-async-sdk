@@ -40,6 +40,10 @@ public class ListScheduledSQLsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class ListScheduledSQLsResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<ScheduledSQL> results; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListScheduledSQLsResponseBody model) {
+            this.count = model.count;
+            this.results = model.results;
+            this.total = model.total;
+        } 
 
         /**
          * count.

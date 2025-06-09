@@ -32,6 +32,10 @@ public class RefreshTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessToken
      */
@@ -41,6 +45,13 @@ public class RefreshTokenResponseBody extends TeaModel {
 
     public static final class Builder {
         private String accessToken; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefreshTokenResponseBody model) {
+            this.accessToken = model.accessToken;
+        } 
 
         /**
          * accessToken.

@@ -62,7 +62,7 @@ public class CreateOSSIngestionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -144,7 +144,7 @@ public class CreateOSSIngestionRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the OSS data import job.</p>
+         * <p>The configuration of the OSS data import job.</p>
          * <p>This parameter is required.</p>
          */
         public Builder configuration(OSSIngestionConfiguration configuration) {
@@ -163,7 +163,7 @@ public class CreateOSSIngestionRequest extends Request {
         }
 
         /**
-         * <p>The display name.</p>
+         * <p>The display name of the job.</p>
          * <p>This parameter is required.</p>
          */
         public Builder displayName(String displayName) {

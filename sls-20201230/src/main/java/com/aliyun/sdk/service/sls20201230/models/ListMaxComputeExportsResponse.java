@@ -12,28 +12,32 @@ import com.aliyun.sdk.gateway.sls.models.*;
 
 /**
  * 
- * {@link CreateOssExternalStoreResponse} extends {@link TeaModel}
+ * {@link ListMaxComputeExportsResponse} extends {@link TeaModel}
  *
- * <p>CreateOssExternalStoreResponse</p>
+ * <p>ListMaxComputeExportsResponse</p>
  */
-public class CreateOssExternalStoreResponse extends Response {
+public class ListMaxComputeExportsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
     @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    private CreateOssExternalStoreResponse(BuilderImpl builder) {
+    @com.aliyun.core.annotation.NameInMap("body")
+    private ListMaxComputeExportsResponseBody body;
+
+    private ListMaxComputeExportsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
+        this.body = builder.body;
     }
 
-    public static CreateOssExternalStoreResponse create() {
+    public static ListMaxComputeExportsResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -52,31 +56,42 @@ public class CreateOssExternalStoreResponse extends Response {
         return this.statusCode;
     }
 
-    public interface Builder extends Response.Builder<CreateOssExternalStoreResponse, Builder> {
+    /**
+     * @return body
+     */
+    public ListMaxComputeExportsResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<ListMaxComputeExportsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
+        Builder body(ListMaxComputeExportsResponseBody body);
+
         @Override
-        CreateOssExternalStoreResponse build();
+        ListMaxComputeExportsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<CreateOssExternalStoreResponse, Builder>
+            extends Response.BuilderImpl<ListMaxComputeExportsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
+        private ListMaxComputeExportsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(CreateOssExternalStoreResponse response) {
+        private BuilderImpl(ListMaxComputeExportsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
+            this.body = response.body;
         } 
 
         /**
@@ -97,9 +112,18 @@ public class CreateOssExternalStoreResponse extends Response {
             return this;
         }
 
+        /**
+         * body.
+         */
         @Override
-        public CreateOssExternalStoreResponse build() {
-            return new CreateOssExternalStoreResponse(this);
+        public Builder body(ListMaxComputeExportsResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public ListMaxComputeExportsResponse build() {
+            return new ListMaxComputeExportsResponse(this);
         } 
 
     } 

@@ -40,6 +40,10 @@ public class ListAlertsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class ListAlertsResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<Alert> results; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAlertsResponseBody model) {
+            this.count = model.count;
+            this.results = model.results;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The number of alert rules that are returned.</p>

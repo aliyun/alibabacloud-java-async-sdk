@@ -64,6 +64,10 @@ public class Alert extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configuration
      */
@@ -129,6 +133,20 @@ public class Alert extends TeaModel {
         private String name; 
         private Schedule schedule; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(Alert model) {
+            this.configuration = model.configuration;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.displayName = model.displayName;
+            this.lastModifiedTime = model.lastModifiedTime;
+            this.name = model.name;
+            this.schedule = model.schedule;
+            this.status = model.status;
+        } 
 
         /**
          * <p>This parameter is required.</p>

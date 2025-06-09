@@ -53,6 +53,10 @@ public class Schedule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cronExpression
      */
@@ -102,6 +106,18 @@ public class Schedule extends TeaModel {
         private Boolean runImmediately; 
         private String timeZone; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(Schedule model) {
+            this.cronExpression = model.cronExpression;
+            this.delay = model.delay;
+            this.interval = model.interval;
+            this.runImmediately = model.runImmediately;
+            this.timeZone = model.timeZone;
+            this.type = model.type;
+        } 
 
         /**
          * cronExpression.

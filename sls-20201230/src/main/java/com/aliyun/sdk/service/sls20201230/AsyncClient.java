@@ -29,6 +29,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyConfigToMachineGroupResponse> applyConfigToMachineGroup(ApplyConfigToMachineGroupRequest request);
 
     /**
+     * @param request the request parameters of CallAiTools  CallAiToolsRequest
+     * @return CallAiToolsResponse
+     */
+    CompletableFuture<CallAiToolsResponse> callAiTools(CallAiToolsRequest request);
+
+    /**
      * @param request the request parameters of ChangeResourceGroup  ChangeResourceGroupRequest
      * @return ChangeResourceGroupResponse
      */
@@ -258,6 +264,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of CreateMaxComputeExport  CreateMaxComputeExportRequest
+     * @return CreateMaxComputeExportResponse
+     */
+    CompletableFuture<CreateMaxComputeExportResponse> createMaxComputeExport(CreateMaxComputeExportRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Metricstores are used to store metric data. For more information, see <a href="https://help.aliyun.com/document_detail/174965.html">Metric data</a>.</p>
      * <ul>
      * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
@@ -292,29 +312,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateOSSIngestionResponse> createOSSIngestion(CreateOSSIngestionRequest request);
 
     /**
-     * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * @param request the request parameters of CreateOssExternalStore  CreateOssExternalStoreRequest
-     * @return CreateOssExternalStoreResponse
-     */
-    CompletableFuture<CreateOssExternalStoreResponse> createOssExternalStore(CreateOssExternalStoreRequest request);
-
-    /**
      * @param request the request parameters of CreateProject  CreateProjectRequest
      * @return CreateProjectResponse
      */
     CompletableFuture<CreateProjectResponse> createProject(CreateProjectRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * @param request the request parameters of CreateRdsExternalStore  CreateRdsExternalStoreRequest
-     * @return CreateRdsExternalStoreResponse
-     */
-    CompletableFuture<CreateRdsExternalStoreResponse> createRdsExternalStore(CreateRdsExternalStoreRequest request);
 
     /**
      * <b>description</b> :
@@ -411,7 +412,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.</p>
+     * <p>You must use the Simple Log Service endpoint for the China (Shanghai), Singapore, or Heyuan ACDR Auto region to call the operation.</p>
      * 
      * @param request the request parameters of DeleteCollectionPolicy  DeleteCollectionPolicyRequest
      * @return DeleteCollectionPolicyResponse
@@ -503,15 +504,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * @param request the request parameters of DeleteExternalStore  DeleteExternalStoreRequest
-     * @return DeleteExternalStoreResponse
-     */
-    CompletableFuture<DeleteExternalStoreResponse> deleteExternalStore(DeleteExternalStoreRequest request);
-
-    /**
-     * <b>description</b> :
      * <h3>Usage notes</h3>
      * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
      * 
@@ -519,6 +511,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteIndexResponse
      */
     CompletableFuture<DeleteIndexResponse> deleteIndex(DeleteIndexRequest request);
+
+    /**
+     * @param request the request parameters of DeleteIngestProcessor  DeleteIngestProcessorRequest
+     * @return DeleteIngestProcessorResponse
+     */
+    CompletableFuture<DeleteIngestProcessorResponse> deleteIngestProcessor(DeleteIngestProcessorRequest request);
 
     /**
      * <b>description</b> :
@@ -554,6 +552,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteMachineGroupResponse
      */
     CompletableFuture<DeleteMachineGroupResponse> deleteMachineGroup(DeleteMachineGroupRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of DeleteMaxComputeExport  DeleteMaxComputeExportRequest
+     * @return DeleteMaxComputeExportResponse
+     */
+    CompletableFuture<DeleteMaxComputeExportResponse> deleteMaxComputeExport(DeleteMaxComputeExportRequest request);
 
     /**
      * <b>description</b> :
@@ -765,6 +777,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCheckPointResponse> getCheckPoint(GetCheckPointRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You must use the Simple Log Service endpoint for the China (Shanghai), Singapore, or Heyuan ACDR Auto region to call the operation.</p>
+     * 
      * @param request the request parameters of GetCollectionPolicy  GetCollectionPolicyRequest
      * @return GetCollectionPolicyResponse
      */
@@ -871,18 +886,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  The supported data sources of external stores include Object Storage Service (OSS) buckets and ApsaraDB RDS for MySQL databases in a virtual private cloud (VPC).</p>
-     * <ul>
-     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
-     * </ul>
-     * 
-     * @param request the request parameters of GetExternalStore  GetExternalStoreRequest
-     * @return GetExternalStoreResponse
-     */
-    CompletableFuture<GetExternalStoreResponse> getExternalStore(GetExternalStoreRequest request);
-
-    /**
-     * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
      * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
@@ -914,6 +917,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetIndexResponse
      */
     CompletableFuture<GetIndexResponse> getIndex(GetIndexRequest request);
+
+    /**
+     * @param request the request parameters of GetIngestProcessor  GetIngestProcessorRequest
+     * @return GetIngestProcessorResponse
+     */
+    CompletableFuture<GetIngestProcessorResponse> getIngestProcessor(GetIngestProcessorRequest request);
 
     /**
      * <b>description</b> :
@@ -1003,6 +1012,23 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLogtailPipelineConfigResponse> getLogtailPipelineConfig(GetLogtailPipelineConfigRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You must obtain the following basic permissions before you call this operation:
+     *     {
+     *         &quot;Version&quot;: &quot;1&quot;,
+     *         &quot;Statement&quot;: [
+     *             {
+     *                 &quot;Action&quot;: [
+     *                     &quot;log:Get*&quot;
+     *                 ],
+     *                 &quot;Resource&quot;: [
+     *                     &quot;acs:log:<em>:</em>:mlservice/sls_builtin_*&quot;
+     *                 ],
+     *                 &quot;Effect&quot;: &quot;Allow&quot;
+     *             }
+     *         ]
+     *     }</p>
+     * 
      * @param request the request parameters of GetMLServiceResults  GetMLServiceResultsRequest
      * @return GetMLServiceResultsResponse
      */
@@ -1016,6 +1042,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetMachineGroupResponse
      */
     CompletableFuture<GetMachineGroupResponse> getMachineGroup(GetMachineGroupRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of GetMaxComputeExport  GetMaxComputeExportRequest
+     * @return GetMaxComputeExportResponse
+     */
+    CompletableFuture<GetMaxComputeExportResponse> getMaxComputeExport(GetMaxComputeExportRequest request);
 
     /**
      * <b>description</b> :
@@ -1185,6 +1225,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAgentInstanceConfigsResponse> listAgentInstanceConfigs(ListAgentInstanceConfigsRequest request);
 
     /**
+     * @param request the request parameters of ListAiTools  ListAiToolsRequest
+     * @return ListAiToolsResponse
+     */
+    CompletableFuture<ListAiToolsResponse> listAiTools(ListAiToolsRequest request);
+
+    /**
      * @param request the request parameters of ListAlerts  ListAlertsRequest
      * @return ListAlertsResponse
      */
@@ -1210,7 +1256,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You must use the Simple Log Service endpoint for the China (Shanghai) or Singapore region to call the operation.</p>
+     * <p>You must use the Simple Log Service endpoint for the China (Shanghai), Singapore, or Heyuan ACDR Auto region to call the operation.</p>
      * 
      * @param request the request parameters of ListCollectionPolicies  ListCollectionPoliciesRequest
      * @return ListCollectionPoliciesResponse
@@ -1301,6 +1347,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListETLsResponse> listETLs(ListETLsRequest request);
 
     /**
+     * @param request the request parameters of ListIngestProcessors  ListIngestProcessorsRequest
+     * @return ListIngestProcessorsResponse
+     */
+    CompletableFuture<ListIngestProcessorsResponse> listIngestProcessors(ListIngestProcessorsRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>Usage notes</h3>
      * <ul>
@@ -1355,6 +1407,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListMachinesResponse
      */
     CompletableFuture<ListMachinesResponse> listMachines(ListMachinesRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of ListMaxComputeExports  ListMaxComputeExportsRequest
+     * @return ListMaxComputeExportsResponse
+     */
+    CompletableFuture<ListMaxComputeExportsResponse> listMaxComputeExports(ListMaxComputeExportsRequest request);
 
     /**
      * <b>description</b> :
@@ -1470,7 +1536,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You cannot call this operation in OpenAPI Explorer. You can use Simple Log Service SDK to call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/29063.html">SLS SDK Reference</a>.</p>
+     * <ul>
+     * <li><strong>Warning</strong> You cannot call this operation in OpenAPI Explorer. You can use Simple Log Service SDK to call this operation. For more information, see SLS SDK Reference.</li>
+     * <li>You must specify a shard when you query the logs.</li>
+     * <li>You can query only logs in the Protocol Buffers (protobuf) format. For more information, see <a href="https://help.aliyun.com/document_detail/29055.html">Data encoding</a>.</li>
+     * <li>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</li>
+     * </ul>
      * 
      * @param request the request parameters of PullLogs  PullLogsRequest
      * @return PullLogsResponse
@@ -1484,8 +1555,25 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutAnnotationDataResponse> putAnnotationData(PutAnnotationDataRequest request);
 
     /**
+     * @param request the request parameters of PutIngestProcessor  PutIngestProcessorRequest
+     * @return PutIngestProcessorResponse
+     */
+    CompletableFuture<PutIngestProcessorResponse> putIngestProcessor(PutIngestProcessorRequest request);
+
+    /**
      * <b>description</b> :
-     * <p>You cannot call this operation by using cloud service SDKs that are provided by Alibaba Cloud OpenAPI Portal. You can use Simple Log Service SDK to call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/29063.html">SLS SDK Reference</a>.</p>
+     * <ul>
+     * <li><strong>Warning</strong> You cannot call this operation in OpenAPI Explorer. You can use Simple Log Service SDK to call this operation. For more information, see SLS SDK Reference.</li>
+     * <li>When you call the PutLogs operation to write logs to Simple Log Service, Simple Log Servicechecks the format of the logs. If a log does not meet the format requirements, the request fails and no logs are written to Simple Log Service.</li>
+     * <li>You can write logs only in the Protocol Buffers (Protobuf) format as log groups. For more information, see <a href="https://help.aliyun.com/document_detail/29055.html">Data encoding</a>.</li>
+     * <li>You can write logs in one of the following modes:<ul>
+     * <li>LoadBalance mode: In this mode, Log Service automatically writes logs to all writable shards in a Logstore. This mode delivers high availability for write operations and is suitable for data consumption scenarios in which you do not need to preserve the order of logs.</li>
+     * <li>KeyHash: In this mode, a key field is added in the URL parameter. Log Service writes logs to a shard based on the key field. The hash key is optional. If you do not configure the hash key, logs are written to shards in LoadBalance mode. For example, you can use the KeyHash mode to write data from a producer, such as an instance, to the shard whose hash value range includes the hash value of the producer name. This ensures that the data that is written to the shard is ordered and the data in the shard is consumed based on the order. This way, when a shard is split or when shards are merged, the data that is associated with the same hash key is stored only in one shard at a point in time. For more information, see <a href="https://help.aliyun.com/document_detail/28976.html">Shard</a>.</li>
+     * </ul>
+     * </li>
+     * <li>You can call the PutLogs operation to write up to 10 MB of raw logs at a time. We recommend that you keep the total size of the values for each log in a log group to or below 1 MB. Historical versions of SDKs may have different limits. We recommend that you upgrade your SDK to the latest version.</li>
+     * <li>The references for Log Service SDK for Java and Log Service SDK for Python provide examples on how to call the PutLogs operation. For more information, see <a href="https://help.aliyun.com/document_detail/279525.html">Get started with Simple Log Service SDK for Java</a> and <a href="https://help.aliyun.com/document_detail/284638.html">Get started with Simple Log Service SDK for Python</a>.</li>
+     * </ul>
      * 
      * @param request the request parameters of PutLogs  PutLogsRequest
      * @return PutLogsResponse
@@ -1569,6 +1657,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartETLResponse> startETL(StartETLRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a>.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of StartMaxComputeExport  StartMaxComputeExportRequest
+     * @return StartMaxComputeExportResponse
+     */
+    CompletableFuture<StartMaxComputeExportResponse> startMaxComputeExport(StartMaxComputeExportRequest request);
+
+    /**
      * @param request the request parameters of StartOSSExport  StartOSSExportRequest
      * @return StartOSSExportResponse
      */
@@ -1591,6 +1693,20 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopETLResponse
      */
     CompletableFuture<StopETLResponse> stopETL(StopETLRequest request);
+
+    /**
+     * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of StopMaxComputeExport  StopMaxComputeExportRequest
+     * @return StopMaxComputeExportResponse
+     */
+    CompletableFuture<StopMaxComputeExportResponse> stopMaxComputeExport(StopMaxComputeExportRequest request);
 
     /**
      * @param request the request parameters of StopOSSExport  StopOSSExportRequest
@@ -1805,6 +1921,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateLogStoreMeteringModeResponse> updateLogStoreMeteringMode(UpdateLogStoreMeteringModeRequest request);
 
     /**
+     * @param request the request parameters of UpdateLogStoreProcessor  UpdateLogStoreProcessorRequest
+     * @return UpdateLogStoreProcessorResponse
+     */
+    CompletableFuture<UpdateLogStoreProcessorResponse> updateLogStoreProcessor(UpdateLogStoreProcessorRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
      * 
@@ -1842,6 +1964,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>  Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
+     * <ul>
+     * <li>An AccessKey pair is created and obtained. For more information, see <a href="https://help.aliyun.com/document_detail/29009.html">AccessKey pair</a>.
+     * The AccessKey pair of an Alibaba Cloud account has permissions on all API operations. Using these credentials to perform operations in Simple Log Service is a high-risk operation. We recommend that you use a Resource Access Management (RAM) user to call API operations or perform routine O\&amp;M. To create a RAM user, log on to the RAM console. Make sure that the RAM user has the management permissions on Simple Log Service resources. For more information, see <a href="https://help.aliyun.com/document_detail/47664.html">Create a RAM user and authorize the RAM user to access Simple Log Service</a>.</li>
+     * <li>The information that is required to query logs is obtained. The information includes the name of the project to which the logs belong and the region of the project. For more information, see <a href="https://help.aliyun.com/document_detail/48984.html">Manage a project</a></li>
+     * </ul>
+     * 
+     * @param request the request parameters of UpdateMaxComputeExport  UpdateMaxComputeExportRequest
+     * @return UpdateMaxComputeExportResponse
+     */
+    CompletableFuture<UpdateMaxComputeExportResponse> updateMaxComputeExport(UpdateMaxComputeExportRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Metricstores are used to store metric data. For more information, see <a href="https://help.aliyun.com/document_detail/174965.html">Metric data</a>.</p>
      * <ul>
      * <li>You must specify an existing Metricstore.</li>
@@ -1865,6 +2001,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateMetricStoreMeteringModeResponse> updateMetricStoreMeteringMode(UpdateMetricStoreMeteringModeRequest request);
 
     /**
+     * @param request the request parameters of UpdateMetricStoreProcessor  UpdateMetricStoreProcessorRequest
+     * @return UpdateMetricStoreProcessorResponse
+     */
+    CompletableFuture<UpdateMetricStoreProcessorResponse> updateMetricStoreProcessor(UpdateMetricStoreProcessorRequest request);
+
+    /**
      * @param request the request parameters of UpdateOSSExport  UpdateOSSExportRequest
      * @return UpdateOSSExportResponse
      */
@@ -1881,16 +2023,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateOSSIngestionResponse
      */
     CompletableFuture<UpdateOSSIngestionResponse> updateOSSIngestion(UpdateOSSIngestionRequest request);
-
-    /**
-     * <b>description</b> :
-     * <h3><a href="#"></a>Usage notes</h3>
-     * <p>Host consists of a project name and a Simple Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * @param request the request parameters of UpdateOssExternalStore  UpdateOssExternalStoreRequest
-     * @return UpdateOssExternalStoreResponse
-     */
-    CompletableFuture<UpdateOssExternalStoreResponse> updateOssExternalStore(UpdateOssExternalStoreRequest request);
 
     /**
      * <b>description</b> :
@@ -1919,15 +2051,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateProjectResponse
      */
     CompletableFuture<UpdateProjectResponse> updateProject(UpdateProjectRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>Host consists of a project name and a Log Service endpoint. You must specify a project in Host.</p>
-     * 
-     * @param request the request parameters of UpdateRdsExternalStore  UpdateRdsExternalStoreRequest
-     * @return UpdateRdsExternalStoreResponse
-     */
-    CompletableFuture<UpdateRdsExternalStoreResponse> updateRdsExternalStore(UpdateRdsExternalStoreRequest request);
 
     /**
      * <b>description</b> :

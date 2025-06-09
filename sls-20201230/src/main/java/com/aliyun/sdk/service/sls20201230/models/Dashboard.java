@@ -51,6 +51,10 @@ public class Dashboard extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return attribute
      */
@@ -92,6 +96,17 @@ public class Dashboard extends TeaModel {
         private String dashboardName; 
         private String description; 
         private String displayName; 
+
+        private Builder() {
+        } 
+
+        private Builder(Dashboard model) {
+            this.attribute = model.attribute;
+            this.charts = model.charts;
+            this.dashboardName = model.dashboardName;
+            this.description = model.description;
+            this.displayName = model.displayName;
+        } 
 
         /**
          * attribute.

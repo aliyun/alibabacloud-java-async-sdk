@@ -43,6 +43,10 @@ public class EncryptUserCmkConf extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return arn
      */
@@ -68,6 +72,15 @@ public class EncryptUserCmkConf extends TeaModel {
         private String arn; 
         private String cmkKeyId; 
         private String regionId; 
+
+        private Builder() {
+        } 
+
+        private Builder(EncryptUserCmkConf model) {
+            this.arn = model.arn;
+            this.cmkKeyId = model.cmkKeyId;
+            this.regionId = model.regionId;
+        } 
 
         /**
          * <p>This parameter is required.</p>

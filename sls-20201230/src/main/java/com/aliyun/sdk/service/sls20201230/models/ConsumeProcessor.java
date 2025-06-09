@@ -55,6 +55,10 @@ public class ConsumeProcessor extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configuration
      */
@@ -104,6 +108,18 @@ public class ConsumeProcessor extends TeaModel {
         private String displayName; 
         private String processorName; 
         private Long updateTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConsumeProcessor model) {
+            this.configuration = model.configuration;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.displayName = model.displayName;
+            this.processorName = model.processorName;
+            this.updateTime = model.updateTime;
+        } 
 
         /**
          * <p>This parameter is required.</p>

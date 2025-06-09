@@ -46,7 +46,7 @@ public class CreateLoggingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -176,6 +176,14 @@ public class CreateLoggingRequest extends Request {
         public static final class Builder {
             private String logstore; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoggingDetails model) {
+                this.logstore = model.logstore;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The name of the Logstore to which service logs of the type are stored.</p>

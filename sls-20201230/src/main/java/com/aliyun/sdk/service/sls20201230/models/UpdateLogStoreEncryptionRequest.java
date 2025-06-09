@@ -56,7 +56,7 @@ public class UpdateLogStoreEncryptionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -238,6 +238,15 @@ public class UpdateLogStoreEncryptionRequest extends Request {
             private String keyId; 
             private String regionId; 
             private String roleArn; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserCmkInfo model) {
+                this.keyId = model.keyId;
+                this.regionId = model.regionId;
+                this.roleArn = model.roleArn;
+            } 
 
             /**
              * <p>The ID of the CMK to which the BYOK key belongs. You can create a CMK in KMS. The CMK must be in the same region as the endpoint of Simple Log Service.</p>

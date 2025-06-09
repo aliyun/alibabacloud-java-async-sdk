@@ -40,6 +40,10 @@ public class ListMetricStoresResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -65,6 +69,15 @@ public class ListMetricStoresResponseBody extends TeaModel {
         private Integer count; 
         private java.util.List<String> metricstores; 
         private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMetricStoresResponseBody model) {
+            this.count = model.count;
+            this.metricstores = model.metricstores;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The total number of entries returned.</p>

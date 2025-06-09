@@ -36,6 +36,10 @@ public class GetMLServiceResultsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetMLServiceResultsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<java.util.Map<String, String>> data; 
         private java.util.Map<String, String> status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMLServiceResultsResponseBody model) {
+            this.data = model.data;
+            this.status = model.status;
+        } 
 
         /**
          * data.
