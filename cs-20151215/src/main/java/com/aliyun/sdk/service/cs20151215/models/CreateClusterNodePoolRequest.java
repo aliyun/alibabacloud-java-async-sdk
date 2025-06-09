@@ -32,6 +32,10 @@ public class CreateClusterNodePoolRequest extends Request {
     private Long count;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("eflo_node_group")
+    private EfloNodeGroup efloNodeGroup;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("host_network")
     private Boolean hostNetwork;
 
@@ -82,6 +86,7 @@ public class CreateClusterNodePoolRequest extends Request {
         this.clusterId = builder.clusterId;
         this.autoScaling = builder.autoScaling;
         this.count = builder.count;
+        this.efloNodeGroup = builder.efloNodeGroup;
         this.hostNetwork = builder.hostNetwork;
         this.interconnectConfig = builder.interconnectConfig;
         this.interconnectMode = builder.interconnectMode;
@@ -127,6 +132,13 @@ public class CreateClusterNodePoolRequest extends Request {
      */
     public Long getCount() {
         return this.count;
+    }
+
+    /**
+     * @return efloNodeGroup
+     */
+    public EfloNodeGroup getEfloNodeGroup() {
+        return this.efloNodeGroup;
     }
 
     /**
@@ -210,6 +222,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private String clusterId; 
         private AutoScaling autoScaling; 
         private Long count; 
+        private EfloNodeGroup efloNodeGroup; 
         private Boolean hostNetwork; 
         private InterconnectConfig interconnectConfig; 
         private String interconnectMode; 
@@ -231,6 +244,7 @@ public class CreateClusterNodePoolRequest extends Request {
             this.clusterId = request.clusterId;
             this.autoScaling = request.autoScaling;
             this.count = request.count;
+            this.efloNodeGroup = request.efloNodeGroup;
             this.hostNetwork = request.hostNetwork;
             this.interconnectConfig = request.interconnectConfig;
             this.interconnectMode = request.interconnectMode;
@@ -276,6 +290,15 @@ public class CreateClusterNodePoolRequest extends Request {
         public Builder count(Long count) {
             this.putBodyParameter("count", count);
             this.count = count;
+            return this;
+        }
+
+        /**
+         * eflo_node_group.
+         */
+        public Builder efloNodeGroup(EfloNodeGroup efloNodeGroup) {
+            this.putBodyParameter("eflo_node_group", efloNodeGroup);
+            this.efloNodeGroup = efloNodeGroup;
             return this;
         }
 
@@ -644,6 +667,81 @@ public class CreateClusterNodePoolRequest extends Request {
 
             public AutoScaling build() {
                 return new AutoScaling(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateClusterNodePoolRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterNodePoolRequest</p>
+     */
+    public static class EfloNodeGroup extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cluster_id")
+        private String clusterId;
+
+        @com.aliyun.core.annotation.NameInMap("group_id")
+        private String groupId;
+
+        private EfloNodeGroup(Builder builder) {
+            this.clusterId = builder.clusterId;
+            this.groupId = builder.groupId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EfloNodeGroup create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
+         * @return groupId
+         */
+        public String getGroupId() {
+            return this.groupId;
+        }
+
+        public static final class Builder {
+            private String clusterId; 
+            private String groupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EfloNodeGroup model) {
+                this.clusterId = model.clusterId;
+                this.groupId = model.groupId;
+            } 
+
+            /**
+             * cluster_id.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
+             * group_id.
+             */
+            public Builder groupId(String groupId) {
+                this.groupId = groupId;
+                return this;
+            }
+
+            public EfloNodeGroup build() {
+                return new EfloNodeGroup(this);
             } 
 
         } 
