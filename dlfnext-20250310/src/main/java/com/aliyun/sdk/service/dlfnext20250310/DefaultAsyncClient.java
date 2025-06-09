@@ -202,6 +202,78 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetCatalogSummary  GetCatalogSummaryRequest
+     * @return GetCatalogSummaryResponse
+     */
+    @Override
+    public CompletableFuture<GetCatalogSummaryResponse> getCatalogSummary(GetCatalogSummaryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCatalogSummary").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/storage-summary/{catalogId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCatalogSummaryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCatalogSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetCatalogSummaryTrend  GetCatalogSummaryTrendRequest
+     * @return GetCatalogSummaryTrendResponse
+     */
+    @Override
+    public CompletableFuture<GetCatalogSummaryTrendResponse> getCatalogSummaryTrend(GetCatalogSummaryTrendRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCatalogSummaryTrend").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/storage-summary/{catalogId}/trend").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCatalogSummaryTrendResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCatalogSummaryTrendResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetCatalogToken  GetCatalogTokenRequest
+     * @return GetCatalogTokenResponse
+     */
+    @Override
+    public CompletableFuture<GetCatalogTokenResponse> getCatalogToken(GetCatalogTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCatalogToken").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/catalogs/{catalog}/token").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCatalogTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCatalogTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetDatabaseSummary  GetDatabaseSummaryRequest
+     * @return GetDatabaseSummaryResponse
+     */
+    @Override
+    public CompletableFuture<GetDatabaseSummaryResponse> getDatabaseSummary(GetDatabaseSummaryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDatabaseSummary").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/storage-summary/{catalogId}/databases/{database}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDatabaseSummaryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDatabaseSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetRegionStatus  GetRegionStatusRequest
      * @return GetRegionStatusResponse
      */
@@ -232,6 +304,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetTableSummary  GetTableSummaryRequest
+     * @return GetTableSummaryResponse
+     */
+    @Override
+    public CompletableFuture<GetTableSummaryResponse> getTableSummary(GetTableSummaryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTableSummary").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/storage-summary/{catalogId}/databases/{database}/tables/{table}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTableSummaryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetTableSummaryResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -286,6 +376,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListCatalogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListPartitionSummaries  ListPartitionSummariesRequest
+     * @return ListPartitionSummariesResponse
+     */
+    @Override
+    public CompletableFuture<ListPartitionSummariesResponse> listPartitionSummaries(ListPartitionSummariesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListPartitionSummaries").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/storage-summary/{catalogId}/databases/{database}/tables/{table}/partitions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPartitionSummariesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListPartitionSummariesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

@@ -74,6 +74,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCatalogResponse> getCatalog(GetCatalogRequest request);
 
     /**
+     * @param request the request parameters of GetCatalogSummary  GetCatalogSummaryRequest
+     * @return GetCatalogSummaryResponse
+     */
+    CompletableFuture<GetCatalogSummaryResponse> getCatalogSummary(GetCatalogSummaryRequest request);
+
+    /**
+     * @param request the request parameters of GetCatalogSummaryTrend  GetCatalogSummaryTrendRequest
+     * @return GetCatalogSummaryTrendResponse
+     */
+    CompletableFuture<GetCatalogSummaryTrendResponse> getCatalogSummaryTrend(GetCatalogSummaryTrendRequest request);
+
+    /**
+     * @param request the request parameters of GetCatalogToken  GetCatalogTokenRequest
+     * @return GetCatalogTokenResponse
+     */
+    CompletableFuture<GetCatalogTokenResponse> getCatalogToken(GetCatalogTokenRequest request);
+
+    /**
+     * @param request the request parameters of GetDatabaseSummary  GetDatabaseSummaryRequest
+     * @return GetDatabaseSummaryResponse
+     */
+    CompletableFuture<GetDatabaseSummaryResponse> getDatabaseSummary(GetDatabaseSummaryRequest request);
+
+    /**
      * @param request the request parameters of GetRegionStatus  GetRegionStatusRequest
      * @return GetRegionStatusResponse
      */
@@ -84,6 +108,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetRoleResponse
      */
     CompletableFuture<GetRoleResponse> getRole(GetRoleRequest request);
+
+    /**
+     * @param request the request parameters of GetTableSummary  GetTableSummaryRequest
+     * @return GetTableSummaryResponse
+     */
+    CompletableFuture<GetTableSummaryResponse> getTableSummary(GetTableSummaryRequest request);
 
     /**
      * @param request the request parameters of GetUser  GetUserRequest
@@ -102,6 +132,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListCatalogsResponse
      */
     CompletableFuture<ListCatalogsResponse> listCatalogs(ListCatalogsRequest request);
+
+    /**
+     * @param request the request parameters of ListPartitionSummaries  ListPartitionSummariesRequest
+     * @return ListPartitionSummariesResponse
+     */
+    CompletableFuture<ListPartitionSummariesResponse> listPartitionSummaries(ListPartitionSummariesRequest request);
 
     /**
      * @param request the request parameters of ListPermissions  ListPermissionsRequest
