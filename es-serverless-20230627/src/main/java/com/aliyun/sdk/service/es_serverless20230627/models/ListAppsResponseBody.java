@@ -119,6 +119,81 @@ public class ListAppsResponseBody extends TeaModel {
      *
      * <p>ListAppsResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAppsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAppsResponseBody</p>
+     */
     public static class Result extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("appId")
         private String appId;
@@ -150,6 +225,9 @@ public class ListAppsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
@@ -164,6 +242,7 @@ public class ListAppsResponseBody extends TeaModel {
             this.ownerId = builder.ownerId;
             this.regionId = builder.regionId;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.version = builder.version;
         }
 
@@ -246,6 +325,13 @@ public class ListAppsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return version
          */
         public String getVersion() {
@@ -263,6 +349,7 @@ public class ListAppsResponseBody extends TeaModel {
             private String ownerId; 
             private String regionId; 
             private String status; 
+            private java.util.List<Tags> tags; 
             private String version; 
 
             private Builder() {
@@ -279,6 +366,7 @@ public class ListAppsResponseBody extends TeaModel {
                 this.ownerId = model.ownerId;
                 this.regionId = model.regionId;
                 this.status = model.status;
+                this.tags = model.tags;
                 this.version = model.version;
             } 
 
@@ -374,6 +462,14 @@ public class ListAppsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 
