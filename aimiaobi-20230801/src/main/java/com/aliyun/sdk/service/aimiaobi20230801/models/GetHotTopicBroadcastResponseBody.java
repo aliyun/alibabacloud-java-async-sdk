@@ -932,11 +932,17 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutputToken")
         private Integer outputToken;
 
+        @com.aliyun.core.annotation.NameInMap("PubTime")
+        private String pubTime;
+
         @com.aliyun.core.annotation.NameInMap("Summary")
         private Summary summary;
 
         @com.aliyun.core.annotation.NameInMap("TextSummary")
         private String textSummary;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
 
         private DataData(Builder builder) {
             this.category = builder.category;
@@ -952,8 +958,10 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             this.locations = builder.locations;
             this.news = builder.news;
             this.outputToken = builder.outputToken;
+            this.pubTime = builder.pubTime;
             this.summary = builder.summary;
             this.textSummary = builder.textSummary;
+            this.url = builder.url;
         }
 
         public static Builder builder() {
@@ -1056,6 +1064,13 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
         }
 
         /**
+         * @return pubTime
+         */
+        public String getPubTime() {
+            return this.pubTime;
+        }
+
+        /**
          * @return summary
          */
         public Summary getSummary() {
@@ -1067,6 +1082,13 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
          */
         public String getTextSummary() {
             return this.textSummary;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
         }
 
         public static final class Builder {
@@ -1083,8 +1105,10 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             private java.util.List<String> locations; 
             private java.util.List<News> news; 
             private Integer outputToken; 
+            private String pubTime; 
             private Summary summary; 
             private String textSummary; 
+            private String url; 
 
             private Builder() {
             } 
@@ -1103,8 +1127,10 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
                 this.locations = model.locations;
                 this.news = model.news;
                 this.outputToken = model.outputToken;
+                this.pubTime = model.pubTime;
                 this.summary = model.summary;
                 this.textSummary = model.textSummary;
+                this.url = model.url;
             } 
 
             /**
@@ -1212,6 +1238,14 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
             }
 
             /**
+             * PubTime.
+             */
+            public Builder pubTime(String pubTime) {
+                this.pubTime = pubTime;
+                return this;
+            }
+
+            /**
              * Summary.
              */
             public Builder summary(Summary summary) {
@@ -1224,6 +1258,14 @@ public class GetHotTopicBroadcastResponseBody extends TeaModel {
              */
             public Builder textSummary(String textSummary) {
                 this.textSummary = textSummary;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
                 return this;
             }
 
