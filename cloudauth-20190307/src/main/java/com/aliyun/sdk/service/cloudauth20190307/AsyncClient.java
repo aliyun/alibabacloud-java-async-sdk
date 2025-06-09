@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteFaceVerifyResultResponse> deleteFaceVerifyResult(DeleteFaceVerifyResultRequest request);
 
     /**
+     * @param request the request parameters of DescribeCardVerify  DescribeCardVerifyRequest
+     * @return DescribeCardVerifyResponse
+     */
+    CompletableFuture<DescribeCardVerifyResponse> describeCardVerify(DescribeCardVerifyRequest request);
+
+    /**
      * @param request the request parameters of DescribeDeviceInfo  DescribeDeviceInfoRequest
      * @return DescribeDeviceInfoResponse
      */
@@ -150,6 +156,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return Id2MetaVerifyResponse
      */
     CompletableFuture<Id2MetaVerifyResponse> id2MetaVerify(Id2MetaVerifyRequest request);
+
+    /**
+     * @param request the request parameters of InitCardVerify  InitCardVerifyRequest
+     * @return InitCardVerifyResponse
+     */
+    CompletableFuture<InitCardVerifyResponse> initCardVerify(InitCardVerifyRequest request);
 
     /**
      * @param request the request parameters of InitFaceVerify  InitFaceVerifyRequest
