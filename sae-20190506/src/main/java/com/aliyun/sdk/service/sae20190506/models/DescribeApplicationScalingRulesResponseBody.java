@@ -1363,11 +1363,15 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Schedules")
         private java.util.List<Schedules> schedules;
 
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
+        private String timeZone;
+
         private Timer(Builder builder) {
             this.beginDate = builder.beginDate;
             this.endDate = builder.endDate;
             this.period = builder.period;
             this.schedules = builder.schedules;
+            this.timeZone = builder.timeZone;
         }
 
         public static Builder builder() {
@@ -1406,11 +1410,19 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
             return this.schedules;
         }
 
+        /**
+         * @return timeZone
+         */
+        public String getTimeZone() {
+            return this.timeZone;
+        }
+
         public static final class Builder {
             private String beginDate; 
             private String endDate; 
             private String period; 
             private java.util.List<Schedules> schedules; 
+            private String timeZone; 
 
             private Builder() {
             } 
@@ -1420,6 +1432,7 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
                 this.endDate = model.endDate;
                 this.period = model.period;
                 this.schedules = model.schedules;
+                this.timeZone = model.timeZone;
             } 
 
             /**
@@ -1485,6 +1498,14 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
              */
             public Builder schedules(java.util.List<Schedules> schedules) {
                 this.schedules = schedules;
+                return this;
+            }
+
+            /**
+             * TimeZone.
+             */
+            public Builder timeZone(String timeZone) {
+                this.timeZone = timeZone;
                 return this;
             }
 

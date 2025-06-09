@@ -112,6 +112,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of BindNlb  BindNlbRequest
+     * @return BindNlbResponse
+     */
+    @Override
+    public CompletableFuture<BindNlbResponse> bindNlb(BindNlbRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("BindNlb").setMethod(HttpMethod.POST).setPathRegex("/pop/v1/sam/app/nlb").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(BindNlbResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<BindNlbResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BindSlb  BindSlbRequest
      * @return BindSlbResponse
      */
@@ -747,6 +765,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DescribeApplicationInstancesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeApplicationNlbs  DescribeApplicationNlbsRequest
+     * @return DescribeApplicationNlbsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeApplicationNlbsResponse> describeApplicationNlbs(DescribeApplicationNlbsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DescribeApplicationNlbs").setMethod(HttpMethod.GET).setPathRegex("/pop/v1/sam/app/nlb").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeApplicationNlbsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeApplicationNlbsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

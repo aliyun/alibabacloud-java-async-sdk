@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchStopApplicationsResponse> batchStopApplications(BatchStopApplicationsRequest request);
 
     /**
+     * @param request the request parameters of BindNlb  BindNlbRequest
+     * @return BindNlbResponse
+     */
+    CompletableFuture<BindNlbResponse> bindNlb(BindNlbRequest request);
+
+    /**
      * @param request the request parameters of BindSlb  BindSlbRequest
      * @return BindSlbResponse
      */
@@ -275,6 +281,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeApplicationInstancesResponse
      */
     CompletableFuture<DescribeApplicationInstancesResponse> describeApplicationInstances(DescribeApplicationInstancesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeApplicationNlbs  DescribeApplicationNlbsRequest
+     * @return DescribeApplicationNlbsResponse
+     */
+    CompletableFuture<DescribeApplicationNlbsResponse> describeApplicationNlbs(DescribeApplicationNlbsRequest request);
 
     /**
      * @param request the request parameters of DescribeApplicationScalingRule  DescribeApplicationScalingRuleRequest
