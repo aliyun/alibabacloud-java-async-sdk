@@ -18,10 +18,6 @@ import com.aliyun.sdk.gateway.sls.models.*;
  */
 public class ListAgentInstanceConfigsRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("attributes")
-    private String attributes;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("configType")
     private String configType;
 
@@ -35,7 +31,6 @@ public class ListAgentInstanceConfigsRequest extends Request {
 
     private ListAgentInstanceConfigsRequest(Builder builder) {
         super(builder);
-        this.attributes = builder.attributes;
         this.configType = builder.configType;
         this.offset = builder.offset;
         this.size = builder.size;
@@ -52,13 +47,6 @@ public class ListAgentInstanceConfigsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return attributes
-     */
-    public String getAttributes() {
-        return this.attributes;
     }
 
     /**
@@ -83,7 +71,6 @@ public class ListAgentInstanceConfigsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListAgentInstanceConfigsRequest, Builder> {
-        private String attributes; 
         private String configType; 
         private Long offset; 
         private Long size; 
@@ -94,20 +81,10 @@ public class ListAgentInstanceConfigsRequest extends Request {
 
         private Builder(ListAgentInstanceConfigsRequest request) {
             super(request);
-            this.attributes = request.attributes;
             this.configType = request.configType;
             this.offset = request.offset;
             this.size = request.size;
         } 
-
-        /**
-         * attributes.
-         */
-        public Builder attributes(String attributes) {
-            this.putQueryParameter("attributes", attributes);
-            this.attributes = attributes;
-            return this;
-        }
 
         /**
          * configType.

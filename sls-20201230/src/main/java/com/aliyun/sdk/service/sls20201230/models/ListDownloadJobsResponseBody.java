@@ -88,7 +88,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The log download tasks.</p>
+         * <p>Array, to return a list of log download tasks.</p>
          */
         public Builder results(java.util.List<Results> results) {
             this.results = results;
@@ -852,7 +852,7 @@ public class ListDownloadJobsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>任务执行细节</p>
+             * <p>The execution details.</p>
              */
             public Builder executionDetails(ExecutionDetails executionDetails) {
                 this.executionDetails = executionDetails;

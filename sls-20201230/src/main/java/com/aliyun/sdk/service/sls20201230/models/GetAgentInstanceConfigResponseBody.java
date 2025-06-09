@@ -18,7 +18,7 @@ import com.aliyun.sdk.gateway.sls.models.*;
  */
 public class GetAgentInstanceConfigResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("attributes")
-    private String attributes;
+    private java.util.Map<String, String> attributes;
 
     @com.aliyun.core.annotation.NameInMap("config")
     private String config;
@@ -30,7 +30,7 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
     private Long createTime;
 
     @com.aliyun.core.annotation.NameInMap("grayConfigs")
-    private java.util.List<java.util.Map<String, String>> grayConfigs;
+    private java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs;
 
     @com.aliyun.core.annotation.NameInMap("lastModifyTime")
     private Long lastModifyTime;
@@ -59,7 +59,7 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
     /**
      * @return attributes
      */
-    public String getAttributes() {
+    public java.util.Map<String, String> getAttributes() {
         return this.attributes;
     }
 
@@ -87,7 +87,7 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
     /**
      * @return grayConfigs
      */
-    public java.util.List<java.util.Map<String, String>> getGrayConfigs() {
+    public java.util.List<AgentInstanceConfigGrayConfigs> getGrayConfigs() {
         return this.grayConfigs;
     }
 
@@ -99,11 +99,11 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String attributes; 
+        private java.util.Map<String, String> attributes; 
         private String config; 
         private String configType; 
         private Long createTime; 
-        private java.util.List<java.util.Map<String, String>> grayConfigs; 
+        private java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs; 
         private Long lastModifyTime; 
 
         private Builder() {
@@ -121,7 +121,7 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
         /**
          * attributes.
          */
-        public Builder attributes(String attributes) {
+        public Builder attributes(java.util.Map<String, String> attributes) {
             this.attributes = attributes;
             return this;
         }
@@ -153,7 +153,7 @@ public class GetAgentInstanceConfigResponseBody extends TeaModel {
         /**
          * grayConfigs.
          */
-        public Builder grayConfigs(java.util.List<java.util.Map<String, String>> grayConfigs) {
+        public Builder grayConfigs(java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs) {
             this.grayConfigs = grayConfigs;
             return this;
         }

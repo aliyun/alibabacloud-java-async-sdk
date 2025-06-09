@@ -24,8 +24,7 @@ public class DeleteAgentInstanceConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("attributes")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String attributes;
+    private java.util.Map<String, String> attributes;
 
     private DeleteAgentInstanceConfigRequest(Builder builder) {
         super(builder);
@@ -56,13 +55,13 @@ public class DeleteAgentInstanceConfigRequest extends Request {
     /**
      * @return attributes
      */
-    public String getAttributes() {
+    public java.util.Map<String, String> getAttributes() {
         return this.attributes;
     }
 
     public static final class Builder extends Request.Builder<DeleteAgentInstanceConfigRequest, Builder> {
         private String configType; 
-        private String attributes; 
+        private java.util.Map<String, String> attributes; 
 
         private Builder() {
             super();
@@ -84,10 +83,11 @@ public class DeleteAgentInstanceConfigRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
+         * attributes.
          */
-        public Builder attributes(String attributes) {
-            this.putQueryParameter("attributes", attributes);
+        public Builder attributes(java.util.Map<String, String> attributes) {
+            String attributesShrink = shrink(attributes, "attributes", "json");
+            this.putQueryParameter("attributes", attributesShrink);
             this.attributes = attributes;
             return this;
         }

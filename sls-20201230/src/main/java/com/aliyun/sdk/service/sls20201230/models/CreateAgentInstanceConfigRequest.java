@@ -19,8 +19,7 @@ import com.aliyun.sdk.gateway.sls.models.*;
 public class CreateAgentInstanceConfigRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("attributes")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String attributes;
+    private java.util.Map<String, String> attributes;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("config")
@@ -34,7 +33,7 @@ public class CreateAgentInstanceConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("grayConfigs")
-    private String grayConfigs;
+    private java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs;
 
     private CreateAgentInstanceConfigRequest(Builder builder) {
         super(builder);
@@ -60,7 +59,7 @@ public class CreateAgentInstanceConfigRequest extends Request {
     /**
      * @return attributes
      */
-    public String getAttributes() {
+    public java.util.Map<String, String> getAttributes() {
         return this.attributes;
     }
 
@@ -81,15 +80,15 @@ public class CreateAgentInstanceConfigRequest extends Request {
     /**
      * @return grayConfigs
      */
-    public String getGrayConfigs() {
+    public java.util.List<AgentInstanceConfigGrayConfigs> getGrayConfigs() {
         return this.grayConfigs;
     }
 
     public static final class Builder extends Request.Builder<CreateAgentInstanceConfigRequest, Builder> {
-        private String attributes; 
+        private java.util.Map<String, String> attributes; 
         private String config; 
         private String configType; 
-        private String grayConfigs; 
+        private java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs; 
 
         private Builder() {
             super();
@@ -104,9 +103,9 @@ public class CreateAgentInstanceConfigRequest extends Request {
         } 
 
         /**
-         * <p>This parameter is required.</p>
+         * attributes.
          */
-        public Builder attributes(String attributes) {
+        public Builder attributes(java.util.Map<String, String> attributes) {
             this.putBodyParameter("attributes", attributes);
             this.attributes = attributes;
             return this;
@@ -133,7 +132,7 @@ public class CreateAgentInstanceConfigRequest extends Request {
         /**
          * grayConfigs.
          */
-        public Builder grayConfigs(String grayConfigs) {
+        public Builder grayConfigs(java.util.List<AgentInstanceConfigGrayConfigs> grayConfigs) {
             this.putBodyParameter("grayConfigs", grayConfigs);
             this.grayConfigs = grayConfigs;
             return this;
