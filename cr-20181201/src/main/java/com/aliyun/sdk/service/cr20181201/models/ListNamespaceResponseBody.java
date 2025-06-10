@@ -132,7 +132,10 @@ public class ListNamespaceResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,14 @@ public class ListNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -148,7 +158,7 @@ public class ListNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * Namespaces.
+         * <p>The queried namespaces.</p>
          */
         public Builder namespaces(java.util.List<Namespaces> namespaces) {
             this.namespaces = namespaces;
@@ -156,7 +166,10 @@ public class ListNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -164,7 +177,10 @@ public class ListNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -183,7 +199,10 @@ public class ListNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of the queried namespaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -206,7 +225,11 @@ public class ListNamespaceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoCreateRepo")
         private Boolean autoCreateRepo;
 
+        @com.aliyun.core.annotation.NameInMap("DefaultRepoConfiguration")
+        private RepoConfiguration defaultRepoConfiguration;
+
         @com.aliyun.core.annotation.NameInMap("DefaultRepoType")
+        @Deprecated
         private String defaultRepoType;
 
         @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -226,6 +249,7 @@ public class ListNamespaceResponseBody extends TeaModel {
 
         private Namespaces(Builder builder) {
             this.autoCreateRepo = builder.autoCreateRepo;
+            this.defaultRepoConfiguration = builder.defaultRepoConfiguration;
             this.defaultRepoType = builder.defaultRepoType;
             this.instanceId = builder.instanceId;
             this.namespaceId = builder.namespaceId;
@@ -247,6 +271,13 @@ public class ListNamespaceResponseBody extends TeaModel {
          */
         public Boolean getAutoCreateRepo() {
             return this.autoCreateRepo;
+        }
+
+        /**
+         * @return defaultRepoConfiguration
+         */
+        public RepoConfiguration getDefaultRepoConfiguration() {
+            return this.defaultRepoConfiguration;
         }
 
         /**
@@ -293,6 +324,7 @@ public class ListNamespaceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean autoCreateRepo; 
+            private RepoConfiguration defaultRepoConfiguration; 
             private String defaultRepoType; 
             private String instanceId; 
             private String namespaceId; 
@@ -305,6 +337,7 @@ public class ListNamespaceResponseBody extends TeaModel {
 
             private Builder(Namespaces model) {
                 this.autoCreateRepo = model.autoCreateRepo;
+                this.defaultRepoConfiguration = model.defaultRepoConfiguration;
                 this.defaultRepoType = model.defaultRepoType;
                 this.instanceId = model.instanceId;
                 this.namespaceId = model.namespaceId;
@@ -314,7 +347,10 @@ public class ListNamespaceResponseBody extends TeaModel {
             } 
 
             /**
-             * AutoCreateRepo.
+             * <p>Indicates whether the automatically creating repositories feature is enabled for the namespace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoCreateRepo(Boolean autoCreateRepo) {
                 this.autoCreateRepo = autoCreateRepo;
@@ -322,7 +358,22 @@ public class ListNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultRepoType.
+             * DefaultRepoConfiguration.
+             */
+            public Builder defaultRepoConfiguration(RepoConfiguration defaultRepoConfiguration) {
+                this.defaultRepoConfiguration = defaultRepoConfiguration;
+                return this;
+            }
+
+            /**
+             * <p>The default type of repositories in the namespace. Valid values:</p>
+             * <ul>
+             * <li><code>PUBLIC</code>: public repositories.</li>
+             * <li><code>PRIVATE</code>: private repositories.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PUBLIC</p>
              */
             public Builder defaultRepoType(String defaultRepoType) {
                 this.defaultRepoType = defaultRepoType;
@@ -330,7 +381,10 @@ public class ListNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-94klsruryslx****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -338,7 +392,10 @@ public class ListNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceId.
+             * <p>The namespace ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crn-tiw8t3f8i5lt****</p>
              */
             public Builder namespaceId(String namespaceId) {
                 this.namespaceId = namespaceId;
@@ -346,7 +403,10 @@ public class ListNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceName.
+             * <p>The namespace name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder namespaceName(String namespaceName) {
                 this.namespaceName = namespaceName;
@@ -354,7 +414,14 @@ public class ListNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * NamespaceStatus.
+             * <p>The status of the namespace. Valid values:</p>
+             * <ul>
+             * <li><code>NORMAL</code>: The namespace is normal.</li>
+             * <li><code>DELETING</code>: The namespace is being deleted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder namespaceStatus(String namespaceStatus) {
                 this.namespaceStatus = namespaceStatus;
@@ -362,7 +429,10 @@ public class ListNamespaceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm4n5kzyf2fbi</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

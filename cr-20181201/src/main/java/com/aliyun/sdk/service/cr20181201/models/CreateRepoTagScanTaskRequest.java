@@ -167,7 +167,7 @@ public class CreateRepoTagScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The ID of the Container Registry instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class CreateRepoTagScanTaskRequest extends Request {
         }
 
         /**
-         * <p>The version of the image.</p>
+         * <p>The image version.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -106,7 +106,10 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +117,14 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -122,7 +132,10 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC648259-91A7-4502-BED3-EDF64361FA83</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +143,14 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
         }
 
         /**
-         * ScanService.
+         * <p>The type of the scanning engine.</p>
+         * <ul>
+         * <li><code>ACR_SCAN_SERVICE</code>: Trivy scan engine provided by Container Registry</li>
+         * <li><code>SAS_SCAN_SERVICE</code>: Security Center scan engine</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ACR_SCAN_SERVICE</p>
          */
         public Builder scanService(String scanService) {
             this.scanService = scanService;
@@ -138,7 +158,16 @@ public class GetRepoTagScanStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The scanning status of the image tag. Valid values:</p>
+         * <ul>
+         * <li><code>SCANNING</code>: The image tag is being scanned.</li>
+         * <li><code>COMPLETE</code>: The scanning of the image tag is complete.</li>
+         * <li><code>FAILED</code>: The image tag failed to be scanned.</li>
+         * <li><code>RETRYING</code>: The system is retrying to scan the image tag.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>COMPLETE</p>
          */
         public Builder status(String status) {
             this.status = status;

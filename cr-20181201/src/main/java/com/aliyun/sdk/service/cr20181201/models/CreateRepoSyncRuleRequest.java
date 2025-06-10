@@ -258,6 +258,7 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
+         * <p>The source instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,6 +271,7 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
+         * <p>The namespace name of the source instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -282,7 +284,10 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * <p>The name of the image repository in the source instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo1</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -291,7 +296,7 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * <p>The rule that is used to filter repositories.</p>
+         * <p>The regular expression that is used to filter repositories.</p>
          * <blockquote>
          * <p> This parameter is valid only when SyncScope is set to <code>NAMESPACE</code>.</p>
          * </blockquote>
@@ -306,6 +311,7 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
+         * <p>The name of the image synchronization rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -318,6 +324,11 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
+         * <p>The synchronization scope. Valid values:</p>
+         * <ul>
+         * <li><code>REPO</code>: synchronizes the image tags in an image repository that meet the synchronization rule.</li>
+         * <li><code>NAMESPACE</code>: synchronizes the image tags in a namespace that meet the synchronization rule.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -330,7 +341,14 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * SyncTrigger.
+         * <p>The mode of triggering the synchronization rule. Valid values:</p>
+         * <ul>
+         * <li><code>INITIATIVE</code>: manually triggers the synchronization rule.</li>
+         * <li><code>PASSIVE</code>: automatically triggers the synchronization rule.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>PASSIVE</p>
          */
         public Builder syncTrigger(String syncTrigger) {
             this.putQueryParameter("SyncTrigger", syncTrigger);
@@ -339,6 +357,7 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
+         * <p>The regular expression that is used to filter image tags.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -351,6 +370,7 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
+         * <p>The destination instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -363,6 +383,7 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
+         * <p>The namespace name of the destination instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -375,6 +396,7 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the destination instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -387,7 +409,10 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * TargetRepoName.
+         * <p>The name of the image repository in the destination instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>repo1</p>
          */
         public Builder targetRepoName(String targetRepoName) {
             this.putQueryParameter("TargetRepoName", targetRepoName);
@@ -396,7 +421,13 @@ public class CreateRepoSyncRuleRequest extends Request {
         }
 
         /**
-         * TargetUserId.
+         * <p>The user ID (UID) of the account to which the destination instance belongs.</p>
+         * <blockquote>
+         * <p> If you synchronize images across accounts, you must use the UID.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>12645940***</p>
          */
         public Builder targetUserId(String targetUserId) {
             this.putQueryParameter("TargetUserId", targetUserId);

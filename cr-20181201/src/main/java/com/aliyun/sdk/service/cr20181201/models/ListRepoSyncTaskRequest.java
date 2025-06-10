@@ -167,6 +167,7 @@ public class ListRepoSyncTaskRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -179,7 +180,10 @@ public class ListRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -188,7 +192,10 @@ public class ListRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -197,7 +204,10 @@ public class ListRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * RepoName.
+         * <p>The repository name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder repoName(String repoName) {
             this.putQueryParameter("RepoName", repoName);
@@ -206,7 +216,10 @@ public class ListRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * RepoNamespaceName.
+         * <p>The name of the namespace to which the repository belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ns</p>
          */
         public Builder repoNamespaceName(String repoNamespaceName) {
             this.putQueryParameter("RepoNamespaceName", repoNamespaceName);
@@ -230,7 +243,10 @@ public class ListRepoSyncTaskRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The image tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nginx</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

@@ -93,7 +93,10 @@ public class CreateBuildRecordByRecordResponseBody extends TeaModel {
         } 
 
         /**
-         * BuildRecordId.
+         * <p>The ID of the image building record.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crbr-ly77w5i3t31f****</p>
          */
         public Builder buildRecordId(String buildRecordId) {
             this.buildRecordId = buildRecordId;
@@ -101,7 +104,10 @@ public class CreateBuildRecordByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The HTTP status code. The status code 200 indicates that the request is successful.<br>Other status codes indicate that the request failed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -109,7 +115,14 @@ public class CreateBuildRecordByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -117,7 +130,10 @@ public class CreateBuildRecordByRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4CE1F661-75DD-4EBD-A4AD-057B26834ABB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

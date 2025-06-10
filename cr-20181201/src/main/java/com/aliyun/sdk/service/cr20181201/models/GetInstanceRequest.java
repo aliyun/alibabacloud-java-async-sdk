@@ -83,6 +83,7 @@ public class GetInstanceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the Container Registry instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

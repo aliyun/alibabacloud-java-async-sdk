@@ -26,7 +26,12 @@ public class CreateNamespaceRequest extends Request {
     private Boolean autoCreateRepo;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultRepoConfiguration")
+    private RepoConfiguration defaultRepoConfiguration;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefaultRepoType")
+    @Deprecated
     private String defaultRepoType;
 
     @com.aliyun.core.annotation.Query
@@ -43,6 +48,7 @@ public class CreateNamespaceRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.autoCreateRepo = builder.autoCreateRepo;
+        this.defaultRepoConfiguration = builder.defaultRepoConfiguration;
         this.defaultRepoType = builder.defaultRepoType;
         this.instanceId = builder.instanceId;
         this.namespaceName = builder.namespaceName;
@@ -76,6 +82,13 @@ public class CreateNamespaceRequest extends Request {
     }
 
     /**
+     * @return defaultRepoConfiguration
+     */
+    public RepoConfiguration getDefaultRepoConfiguration() {
+        return this.defaultRepoConfiguration;
+    }
+
+    /**
      * @return defaultRepoType
      */
     public String getDefaultRepoType() {
@@ -99,6 +112,7 @@ public class CreateNamespaceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateNamespaceRequest, Builder> {
         private String regionId; 
         private Boolean autoCreateRepo; 
+        private RepoConfiguration defaultRepoConfiguration; 
         private String defaultRepoType; 
         private String instanceId; 
         private String namespaceName; 
@@ -111,6 +125,7 @@ public class CreateNamespaceRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.autoCreateRepo = request.autoCreateRepo;
+            this.defaultRepoConfiguration = request.defaultRepoConfiguration;
             this.defaultRepoType = request.defaultRepoType;
             this.instanceId = request.instanceId;
             this.namespaceName = request.namespaceName;
@@ -138,10 +153,20 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The default type of the repository that is automatically created. Valid values:</p>
+         * DefaultRepoConfiguration.
+         */
+        public Builder defaultRepoConfiguration(RepoConfiguration defaultRepoConfiguration) {
+            String defaultRepoConfigurationShrink = shrink(defaultRepoConfiguration, "DefaultRepoConfiguration", "json");
+            this.putQueryParameter("DefaultRepoConfiguration", defaultRepoConfigurationShrink);
+            this.defaultRepoConfiguration = defaultRepoConfiguration;
+            return this;
+        }
+
+        /**
+         * <p>The default type of the repositories that are automatically created in the namespace. Valid values:</p>
          * <ul>
-         * <li><code>PUBLIC</code>: a public repository</li>
-         * <li><code>PRIVATE</code>: a private repository</li>
+         * <li><code>PUBLIC</code>: public repositories</li>
+         * <li><code>PRIVATE</code>: private repositories.</li>
          * </ul>
          * 
          * <strong>example:</strong>

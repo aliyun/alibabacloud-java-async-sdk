@@ -132,7 +132,10 @@ public class ListRepositoryResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The return value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -148,7 +154,10 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -156,7 +165,10 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +176,7 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * Repositories.
+         * <p>The information about the repositories.</p>
          */
         public Builder repositories(java.util.List<Repositories> repositories) {
             this.repositories = repositories;
@@ -172,7 +184,10 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5241C090-DA69-4B0F-8E3F-2F24FDE1110E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -180,7 +195,10 @@ public class ListRepositoryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of the queried image repositories.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -376,7 +394,10 @@ public class ListRepositoryResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the repository was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1564153576000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -384,7 +405,10 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the Container Registry instance to which the repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-kmsiwlxxdcv****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -392,7 +416,10 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * <p>The time when the repository was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1564153576000</p>
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -400,7 +427,14 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * RepoBuildType.
+             * <p>The type of the repository building. Valid values:</p>
+             * <ul>
+             * <li><code>AUTO</code>: The repository is automatically built.</li>
+             * <li><code>MANUAL</code>: The repository is manually built.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MANUAL</p>
              */
             public Builder repoBuildType(String repoBuildType) {
                 this.repoBuildType = repoBuildType;
@@ -408,7 +442,10 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * <p>The ID of the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crr-03cuozrsqhkw****</p>
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -416,7 +453,10 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * <p>The name of the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -424,7 +464,10 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespaceName.
+             * <p>The name of the namespace to which the repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder repoNamespaceName(String repoNamespaceName) {
                 this.repoNamespaceName = repoNamespaceName;
@@ -432,7 +475,10 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * RepoStatus.
+             * <p>The status of the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder repoStatus(String repoStatus) {
                 this.repoStatus = repoStatus;
@@ -440,7 +486,14 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * RepoType.
+             * <p>The type of the repository. Valid values:</p>
+             * <ul>
+             * <li><code>PUBLIC</code></li>
+             * <li><code>PRIVATE</code></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PRIVATE</p>
              */
             public Builder repoType(String repoType) {
                 this.repoType = repoType;
@@ -448,7 +501,10 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfm4n5kzyfxxxx</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -456,7 +512,10 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p>The summary of the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test OK</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -464,7 +523,10 @@ public class ListRepositoryResponseBody extends TeaModel {
             }
 
             /**
-             * TagImmutability.
+             * <p>Indicates whether the feature of image tag immutability is enabled for the repository.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder tagImmutability(Boolean tagImmutability) {
                 this.tagImmutability = tagImmutability;

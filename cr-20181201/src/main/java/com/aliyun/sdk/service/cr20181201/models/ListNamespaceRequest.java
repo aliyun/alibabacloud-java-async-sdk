@@ -139,7 +139,7 @@ public class ListNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return.</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -152,7 +152,7 @@ public class ListNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The namespace name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-namespace</p>
@@ -164,7 +164,11 @@ public class ListNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the namespace.</p>
+         * <p>The status of the namespace. Valid values:</p>
+         * <ul>
+         * <li><code>NORMAL</code></li>
+         * <li><code>DELETING</code></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -176,7 +180,7 @@ public class ListNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The list of namespaces.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -188,7 +192,7 @@ public class ListNamespaceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>

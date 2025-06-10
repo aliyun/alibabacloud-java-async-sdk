@@ -153,7 +153,10 @@ public class GetRepoTagScanStatusRequest extends Request {
         }
 
         /**
-         * Digest.
+         * <p>The image digest.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>67bfbcc12b67936ec7f867927817cbb071832b873dbcaed312a1930ba5f1d529</p>
          */
         public Builder digest(String digest) {
             this.putQueryParameter("Digest", digest);
@@ -162,6 +165,7 @@ public class GetRepoTagScanStatusRequest extends Request {
         }
 
         /**
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +178,10 @@ public class GetRepoTagScanStatusRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * <p>The ID of the image repository.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crr-uf082u9dg8do****</p>
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);
@@ -183,7 +190,10 @@ public class GetRepoTagScanStatusRequest extends Request {
         }
 
         /**
-         * ScanTaskId.
+         * <p>The ID of the image scan task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>838152F9-F725-5A52-A344-8972D65AC045</p>
          */
         public Builder scanTaskId(String scanTaskId) {
             this.putQueryParameter("ScanTaskId", scanTaskId);
@@ -201,7 +211,10 @@ public class GetRepoTagScanStatusRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The image tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

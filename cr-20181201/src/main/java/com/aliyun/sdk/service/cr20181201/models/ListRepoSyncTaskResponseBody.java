@@ -132,7 +132,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -140,7 +143,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -148,7 +154,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageNo.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNo(Integer pageNo) {
             this.pageNo = pageNo;
@@ -156,7 +165,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -164,7 +176,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7640819A-FB5B-4E25-A227-97717F62****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +187,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about synchronization tasks.</p>
+         * <p>The queried synchronization tasks.</p>
          */
         public Builder syncTasks(java.util.List<SyncTasks> syncTasks) {
             this.syncTasks = syncTasks;
@@ -180,7 +195,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of the queried synchronization tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(String totalCount) {
             this.totalCount = totalCount;
@@ -285,7 +303,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * ImageTag.
+             * <p>The image tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v0.1</p>
              */
             public Builder imageTag(String imageTag) {
                 this.imageTag = imageTag;
@@ -293,7 +314,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-kmsiwlxxdcva****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -301,7 +325,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -309,7 +336,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * <p>The repository name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -317,7 +347,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespaceName.
+             * <p>The namespace to which the repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder repoNamespaceName(String repoNamespaceName) {
                 this.repoNamespaceName = repoNamespaceName;
@@ -423,7 +456,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * ImageTag.
+             * <p>The image tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v0.1</p>
              */
             public Builder imageTag(String imageTag) {
                 this.imageTag = imageTag;
@@ -431,7 +467,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cri-k77rd2eo9zttneqo</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -439,7 +478,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shenzhen</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -447,7 +489,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * <p>The repository name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -455,7 +500,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * RepoNamespaceName.
+             * <p>The namespace to which the repository belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder repoNamespaceName(String repoNamespaceName) {
                 this.repoNamespaceName = repoNamespaceName;
@@ -665,7 +713,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the synchronization task was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572839126000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -673,7 +724,15 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CrossUser.
+             * <p>Indicates whether the synchronization task is performed across Alibaba Cloud accounts. Valid values:</p>
+             * <ul>
+             * <li><code>true</code>: The image synchronization task is performed across accounts.</li>
+             * <li><code>false</code>: The image synchronization task is performed within the same account.</li>
+             * </ul>
+             * <p>Default value: <code>false</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder crossUser(Boolean crossUser) {
                 this.crossUser = crossUser;
@@ -681,7 +740,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CustomLink.
+             * <p>Indicates whether a custom synchronization link is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder customLink(Boolean customLink) {
                 this.customLink = customLink;
@@ -689,7 +751,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ImageFrom.
+             * <p>The information about the source image.</p>
              */
             public Builder imageFrom(ImageFrom imageFrom) {
                 this.imageFrom = imageFrom;
@@ -697,7 +759,7 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ImageTo.
+             * <p>The information about the destination image.</p>
              */
             public Builder imageTo(ImageTo imageTo) {
                 this.imageTo = imageTo;
@@ -705,7 +767,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ModifedTime.
+             * <p>The time when the synchronization task was last modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1572839133000</p>
              */
             public Builder modifedTime(Long modifedTime) {
                 this.modifedTime = modifedTime;
@@ -713,7 +778,13 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SyncBatchTaskId.
+             * <p>The ID of the image synchronization batch tasks, which is the same as the value of SyncRecordId in the request.</p>
+             * <blockquote>
+             * <p> If an image meets multiple synchronization rules and multiple synchronization tasks are generated for the image, these synchronization tasks use the same SyncBatchTaskId.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>15DEEB56-9271-4FDD-AC4D-C3A5CC2C****</p>
              */
             public Builder syncBatchTaskId(String syncBatchTaskId) {
                 this.syncBatchTaskId = syncBatchTaskId;
@@ -721,7 +792,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SyncRuleId.
+             * <p>The ID of the synchronization rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>crsr-7lph66uloi6h****</p>
              */
             public Builder syncRuleId(String syncRuleId) {
                 this.syncRuleId = syncRuleId;
@@ -729,7 +803,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SyncTaskId.
+             * <p>The ID of the synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rst-4kfd7fk6pohk****</p>
              */
             public Builder syncTaskId(String syncTaskId) {
                 this.syncTaskId = syncTaskId;
@@ -737,7 +814,10 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SyncTransAccelerate.
+             * <p>Indicates whether the synchronization transfer acceleration feature is enabled for the synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder syncTransAccelerate(Boolean syncTransAccelerate) {
                 this.syncTransAccelerate = syncTransAccelerate;
@@ -749,11 +829,11 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
              * <blockquote>
              * <p> The system uses this parameter to return an error message if the synchronization task fails.</p>
              * </blockquote>
-             * <p>Valid values:</p>
+             * <p>Valid value:</p>
              * <ul>
-             * <li>OSS_POLICY_UNAUTHORIZED: Container Registry is not granted permissions to use Object Storage Service (OSS).</li>
+             * <li>OSS_POLICY_UNAUTHORIZED: Container Registry is not granted permissions to access Object Storage Service (OSS).</li>
              * <li>TAG_CONFLICT: The destination repository contains an image that has the same tag as the source image, and image tag immutability is enabled for the destination repository.</li>
-             * <li>UNSUPPORTED_FORMAT: The manifest and config formats of the image to be synchronized are not supported.</li>
+             * <li>UNSUPPORTED_FORMAT: The manifest or config format of the image to be synchronized is not supported.</li>
              * <li>INTERNAL_ERROR: The synchronization task failed due to internal issues on the server.</li>
              * <li>NETWORK_ERROR: The synchronization task failed due to unstable network connection.</li>
              * <li>DATA_LENGTH_EXCEEDED: The manifest or config of the image is oversized.</li>
@@ -779,7 +859,15 @@ public class ListRepoSyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskTrigger.
+             * <p>The policy that is configured to trigger the synchronization task. Valid values:</p>
+             * <ul>
+             * <li><code>PASSIVE</code>: automatically triggers the synchronization task.</li>
+             * <li><code>INITIATIVE</code>: manually triggers the synchronization task.</li>
+             * </ul>
+             * <p>Default value: <code>PASSIVE</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PASSIVE</p>
              */
             public Builder taskTrigger(String taskTrigger) {
                 this.taskTrigger = taskTrigger;

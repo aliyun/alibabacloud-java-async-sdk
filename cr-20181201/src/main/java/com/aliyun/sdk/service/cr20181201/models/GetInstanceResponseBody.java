@@ -205,7 +205,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571926439000</p>
          */
         public Builder createTime(Long createTime) {
             this.createTime = createTime;
@@ -213,7 +216,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the Container Registry instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-xkx6vujuhay0****</p>
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -232,7 +238,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceName.
+         * <p>The name of the instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>shanghai-instance1</p>
          */
         public Builder instanceName(String instanceName) {
             this.instanceName = instanceName;
@@ -251,7 +260,20 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * InstanceStatus.
+         * <p>The status of the instance. Valid values:</p>
+         * <ul>
+         * <li><code>PENDING</code>: The instance is being initialized.</li>
+         * <li><code>INIT_ERROR</code>: The instance failed to be initialized.</li>
+         * <li><code>STARTING</code>: The instance is being started.</li>
+         * <li><code>RUNNING</code>: The instance is running.</li>
+         * <li><code>STOPPING</code>: The instance is being stopped.</li>
+         * <li><code>STOPPED</code>: The instance is stopped.</li>
+         * <li><code>DELETING</code>: The instance is being deleted.</li>
+         * <li><code>DELETED</code>: The instance is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>RUNNING</p>
          */
         public Builder instanceStatus(String instanceStatus) {
             this.instanceStatus = instanceStatus;
@@ -259,7 +281,14 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><code>true</code>: The request is successful.</li>
+         * <li><code>false</code>: The request fails.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -267,7 +296,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ModifiedTime.
+         * <p>The time when the instance was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1571926560000</p>
          */
         public Builder modifiedTime(Long modifiedTime) {
             this.modifiedTime = modifiedTime;
@@ -275,7 +307,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6EF34B18-4228-470C-860C-D28597CF010E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -283,7 +318,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group to which the instance belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmv36i4isx****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;

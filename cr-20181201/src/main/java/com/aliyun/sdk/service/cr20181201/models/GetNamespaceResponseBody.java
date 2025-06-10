@@ -23,7 +23,11 @@ public class GetNamespaceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("DefaultRepoConfiguration")
+    private RepoConfiguration defaultRepoConfiguration;
+
     @com.aliyun.core.annotation.NameInMap("DefaultRepoType")
+    @Deprecated
     private String defaultRepoType;
 
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -50,6 +54,7 @@ public class GetNamespaceResponseBody extends TeaModel {
     private GetNamespaceResponseBody(Builder builder) {
         this.autoCreateRepo = builder.autoCreateRepo;
         this.code = builder.code;
+        this.defaultRepoConfiguration = builder.defaultRepoConfiguration;
         this.defaultRepoType = builder.defaultRepoType;
         this.instanceId = builder.instanceId;
         this.isSuccess = builder.isSuccess;
@@ -84,6 +89,13 @@ public class GetNamespaceResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return defaultRepoConfiguration
+     */
+    public RepoConfiguration getDefaultRepoConfiguration() {
+        return this.defaultRepoConfiguration;
     }
 
     /**
@@ -145,6 +157,7 @@ public class GetNamespaceResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean autoCreateRepo; 
         private String code; 
+        private RepoConfiguration defaultRepoConfiguration; 
         private String defaultRepoType; 
         private String instanceId; 
         private Boolean isSuccess; 
@@ -160,6 +173,7 @@ public class GetNamespaceResponseBody extends TeaModel {
         private Builder(GetNamespaceResponseBody model) {
             this.autoCreateRepo = model.autoCreateRepo;
             this.code = model.code;
+            this.defaultRepoConfiguration = model.defaultRepoConfiguration;
             this.defaultRepoType = model.defaultRepoType;
             this.instanceId = model.instanceId;
             this.isSuccess = model.isSuccess;
@@ -193,10 +207,18 @@ public class GetNamespaceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The default type of repositories. Valid values:</p>
+         * DefaultRepoConfiguration.
+         */
+        public Builder defaultRepoConfiguration(RepoConfiguration defaultRepoConfiguration) {
+            this.defaultRepoConfiguration = defaultRepoConfiguration;
+            return this;
+        }
+
+        /**
+         * <p>The default type of repositories in the namespace. Valid values:</p>
          * <ul>
-         * <li>PUBLIC: The repositories are public repositories.</li>
-         * <li>PRIVATE: The repositories are private repositories.</li>
+         * <li>PUBLIC: public repositories.</li>
+         * <li>PRIVATE: private repositories.</li>
          * </ul>
          * 
          * <strong>example:</strong>

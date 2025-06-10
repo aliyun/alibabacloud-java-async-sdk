@@ -93,7 +93,10 @@ public class CreateRepoSyncRuleResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -101,7 +104,10 @@ public class CreateRepoSyncRuleResponseBody extends TeaModel {
         }
 
         /**
-         * IsSuccess.
+         * <p>Indicates whether the request is successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isSuccess(Boolean isSuccess) {
             this.isSuccess = isSuccess;
@@ -109,7 +115,10 @@ public class CreateRepoSyncRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8F8A0BA6-7F06-4BAE-B147-10BD6A25****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,10 @@ public class CreateRepoSyncRuleResponseBody extends TeaModel {
         }
 
         /**
-         * SyncRuleId.
+         * <p>The ID of the synchronization rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>crsr-gk5p2ns1kzns****</p>
          */
         public Builder syncRuleId(String syncRuleId) {
             this.syncRuleId = syncRuleId;
