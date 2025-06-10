@@ -117,7 +117,7 @@ public class ListAgentInstanceConfigsResponseBody extends TeaModel {
      */
     public static class Configs extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("attributes")
-        private String attributes;
+        private java.util.Map<String, String> attributes;
 
         @com.aliyun.core.annotation.NameInMap("configType")
         private String configType;
@@ -138,7 +138,7 @@ public class ListAgentInstanceConfigsResponseBody extends TeaModel {
         /**
          * @return attributes
          */
-        public String getAttributes() {
+        public java.util.Map<String, String> getAttributes() {
             return this.attributes;
         }
 
@@ -150,7 +150,7 @@ public class ListAgentInstanceConfigsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String attributes; 
+            private java.util.Map<String, String> attributes; 
             private String configType; 
 
             private Builder() {
@@ -164,7 +164,7 @@ public class ListAgentInstanceConfigsResponseBody extends TeaModel {
             /**
              * attributes.
              */
-            public Builder attributes(String attributes) {
+            public Builder attributes(java.util.Map<String, String> attributes) {
                 this.attributes = attributes;
                 return this;
             }
