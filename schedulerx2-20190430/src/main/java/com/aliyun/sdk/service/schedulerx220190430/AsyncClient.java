@@ -305,6 +305,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ReadSchedulerxDesignateDetailResponse> readSchedulerxDesignateDetail(ReadSchedulerxDesignateDetailRequest request);
 
     /**
+     * @param request the request parameters of ReadSchedulerxDesignateInfo  ReadSchedulerxDesignateInfoRequest
+     * @return ReadSchedulerxDesignateInfoResponse
+     */
+    CompletableFuture<ReadSchedulerxDesignateInfoResponse> readSchedulerxDesignateInfo(ReadSchedulerxDesignateInfoRequest request);
+
+    /**
      * @param request the request parameters of RerunJob  RerunJobRequest
      * @return RerunJobResponse
      */
