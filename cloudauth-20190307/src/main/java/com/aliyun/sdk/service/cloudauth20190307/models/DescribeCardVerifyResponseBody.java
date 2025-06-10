@@ -143,6 +143,9 @@ public class DescribeCardVerifyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CardInfo")
         private String cardInfo;
 
+        @com.aliyun.core.annotation.NameInMap("FaceDetail")
+        private String faceDetail;
+
         @com.aliyun.core.annotation.NameInMap("OcrCardInfo")
         private String ocrCardInfo;
 
@@ -152,6 +155,7 @@ public class DescribeCardVerifyResponseBody extends TeaModel {
         private ResultObject(Builder builder) {
             this.bizCode = builder.bizCode;
             this.cardInfo = builder.cardInfo;
+            this.faceDetail = builder.faceDetail;
             this.ocrCardInfo = builder.ocrCardInfo;
             this.pictureInfo = builder.pictureInfo;
         }
@@ -179,6 +183,13 @@ public class DescribeCardVerifyResponseBody extends TeaModel {
         }
 
         /**
+         * @return faceDetail
+         */
+        public String getFaceDetail() {
+            return this.faceDetail;
+        }
+
+        /**
          * @return ocrCardInfo
          */
         public String getOcrCardInfo() {
@@ -195,6 +206,7 @@ public class DescribeCardVerifyResponseBody extends TeaModel {
         public static final class Builder {
             private String bizCode; 
             private String cardInfo; 
+            private String faceDetail; 
             private String ocrCardInfo; 
             private String pictureInfo; 
 
@@ -204,6 +216,7 @@ public class DescribeCardVerifyResponseBody extends TeaModel {
             private Builder(ResultObject model) {
                 this.bizCode = model.bizCode;
                 this.cardInfo = model.cardInfo;
+                this.faceDetail = model.faceDetail;
                 this.ocrCardInfo = model.ocrCardInfo;
                 this.pictureInfo = model.pictureInfo;
             } 
@@ -221,6 +234,14 @@ public class DescribeCardVerifyResponseBody extends TeaModel {
              */
             public Builder cardInfo(String cardInfo) {
                 this.cardInfo = cardInfo;
+                return this;
+            }
+
+            /**
+             * FaceDetail.
+             */
+            public Builder faceDetail(String faceDetail) {
+                this.faceDetail = faceDetail;
                 return this;
             }
 
