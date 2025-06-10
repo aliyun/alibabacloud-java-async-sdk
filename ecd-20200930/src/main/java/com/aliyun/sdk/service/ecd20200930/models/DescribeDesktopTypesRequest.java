@@ -79,6 +79,10 @@ public class DescribeDesktopTypesRequest extends Request {
     private String scope;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScopeSet")
+    private java.util.List<String> scopeSet;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortType")
     private String sortType;
 
@@ -107,6 +111,7 @@ public class DescribeDesktopTypesRequest extends Request {
         this.orderType = builder.orderType;
         this.regionId = builder.regionId;
         this.scope = builder.scope;
+        this.scopeSet = builder.scopeSet;
         this.sortType = builder.sortType;
         this.supportMinSessionCount = builder.supportMinSessionCount;
         this.zoneId = builder.zoneId;
@@ -231,6 +236,13 @@ public class DescribeDesktopTypesRequest extends Request {
     }
 
     /**
+     * @return scopeSet
+     */
+    public java.util.List<String> getScopeSet() {
+        return this.scopeSet;
+    }
+
+    /**
      * @return sortType
      */
     public String getSortType() {
@@ -267,6 +279,7 @@ public class DescribeDesktopTypesRequest extends Request {
         private String orderType; 
         private String regionId; 
         private String scope; 
+        private java.util.List<String> scopeSet; 
         private String sortType; 
         private Integer supportMinSessionCount; 
         private String zoneId; 
@@ -292,6 +305,7 @@ public class DescribeDesktopTypesRequest extends Request {
             this.orderType = request.orderType;
             this.regionId = request.regionId;
             this.scope = request.scope;
+            this.scopeSet = request.scopeSet;
             this.sortType = request.sortType;
             this.supportMinSessionCount = request.supportMinSessionCount;
             this.zoneId = request.zoneId;
@@ -532,6 +546,15 @@ public class DescribeDesktopTypesRequest extends Request {
         public Builder scope(String scope) {
             this.putQueryParameter("Scope", scope);
             this.scope = scope;
+            return this;
+        }
+
+        /**
+         * ScopeSet.
+         */
+        public Builder scopeSet(java.util.List<String> scopeSet) {
+            this.putQueryParameter("ScopeSet", scopeSet);
+            this.scopeSet = scopeSet;
             return this;
         }
 
