@@ -12,24 +12,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateCnameFlatteningRequest} extends {@link RequestModel}
+ * {@link GetVideoProcessingRequest} extends {@link RequestModel}
  *
- * <p>UpdateCnameFlatteningRequest</p>
+ * <p>GetVideoProcessingRequest</p>
  */
-public class UpdateCnameFlatteningRequest extends Request {
+public class GetVideoProcessingRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("FlattenMode")
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String flattenMode;
+    private Long configId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SiteId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long siteId;
 
-    private UpdateCnameFlatteningRequest(Builder builder) {
+    private GetVideoProcessingRequest(Builder builder) {
         super(builder);
-        this.flattenMode = builder.flattenMode;
+        this.configId = builder.configId;
         this.siteId = builder.siteId;
     }
 
@@ -37,7 +37,7 @@ public class UpdateCnameFlatteningRequest extends Request {
         return new Builder();
     }
 
-    public static UpdateCnameFlatteningRequest create() {
+    public static GetVideoProcessingRequest create() {
         return builder().build();
     }
 
@@ -47,10 +47,10 @@ public class UpdateCnameFlatteningRequest extends Request {
     }
 
     /**
-     * @return flattenMode
+     * @return configId
      */
-    public String getFlattenMode() {
-        return this.flattenMode;
+    public Long getConfigId() {
+        return this.configId;
     }
 
     /**
@@ -60,43 +60,37 @@ public class UpdateCnameFlatteningRequest extends Request {
         return this.siteId;
     }
 
-    public static final class Builder extends Request.Builder<UpdateCnameFlatteningRequest, Builder> {
-        private String flattenMode; 
+    public static final class Builder extends Request.Builder<GetVideoProcessingRequest, Builder> {
+        private Long configId; 
         private Long siteId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateCnameFlatteningRequest request) {
+        private Builder(GetVideoProcessingRequest request) {
             super(request);
-            this.flattenMode = request.flattenMode;
+            this.configId = request.configId;
             this.siteId = request.siteId;
         } 
 
         /**
-         * <p>The CNAME flattening mode. Valid values:</p>
-         * <ul>
-         * <li>flatten_all: flattens all CNAMEs.</li>
-         * <li>flatten_at_root: flattens only the root domain. Default: flatten_at_root</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>flatten_all</p>
+         * <p>23321557***</p>
          */
-        public Builder flattenMode(String flattenMode) {
-            this.putQueryParameter("FlattenMode", flattenMode);
-            this.flattenMode = flattenMode;
+        public Builder configId(Long configId) {
+            this.putQueryParameter("ConfigId", configId);
+            this.configId = configId;
             return this;
         }
 
         /**
-         * <p>The website ID, which can be obtained by calling the <a href="https://help.aliyun.com/document_detail/2850189.html">ListSites</a> operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>123456****</p>
+         * <p>23282348***</p>
          */
         public Builder siteId(Long siteId) {
             this.putQueryParameter("SiteId", siteId);
@@ -105,8 +99,8 @@ public class UpdateCnameFlatteningRequest extends Request {
         }
 
         @Override
-        public UpdateCnameFlatteningRequest build() {
-            return new UpdateCnameFlatteningRequest(this);
+        public GetVideoProcessingRequest build() {
+            return new GetVideoProcessingRequest(this);
         } 
 
     } 

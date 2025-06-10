@@ -346,6 +346,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUserDeliveryTaskResponse> createUserDeliveryTask(CreateUserDeliveryTaskRequest request);
 
     /**
+     * @param request the request parameters of CreateVideoProcessing  CreateVideoProcessingRequest
+     * @return CreateVideoProcessingResponse
+     */
+    CompletableFuture<CreateVideoProcessingResponse> createVideoProcessing(CreateVideoProcessingRequest request);
+
+    /**
      * @param request the request parameters of CreateWafRule  CreateWafRuleRequest
      * @return CreateWafRuleResponse
      */
@@ -622,6 +628,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteUserDeliveryTaskResponse
      */
     CompletableFuture<DeleteUserDeliveryTaskResponse> deleteUserDeliveryTask(DeleteUserDeliveryTaskRequest request);
+
+    /**
+     * @param request the request parameters of DeleteVideoProcessing  DeleteVideoProcessingRequest
+     * @return DeleteVideoProcessingResponse
+     */
+    CompletableFuture<DeleteVideoProcessingResponse> deleteVideoProcessing(DeleteVideoProcessingRequest request);
 
     /**
      * @param request the request parameters of DeleteWafRule  DeleteWafRuleRequest
@@ -1210,6 +1222,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserLogDeliveryQuotaResponse> getUserLogDeliveryQuota(GetUserLogDeliveryQuotaRequest request);
 
     /**
+     * @param request the request parameters of GetVideoProcessing  GetVideoProcessingRequest
+     * @return GetVideoProcessingResponse
+     */
+    CompletableFuture<GetVideoProcessingResponse> getVideoProcessing(GetVideoProcessingRequest request);
+
+    /**
      * @param request the request parameters of GetWafBotAppKey  GetWafBotAppKeyRequest
      * @return GetWafBotAppKeyResponse
      */
@@ -1558,6 +1576,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListUserRoutinesResponse
      */
     CompletableFuture<ListUserRoutinesResponse> listUserRoutines(ListUserRoutinesRequest request);
+
+    /**
+     * @param request the request parameters of ListVideoProcessings  ListVideoProcessingsRequest
+     * @return ListVideoProcessingsResponse
+     */
+    CompletableFuture<ListVideoProcessingsResponse> listVideoProcessings(ListVideoProcessingsRequest request);
 
     /**
      * @param request the request parameters of ListWafManagedRules  ListWafManagedRulesRequest
@@ -2030,6 +2054,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateUserDeliveryTaskStatusResponse
      */
     CompletableFuture<UpdateUserDeliveryTaskStatusResponse> updateUserDeliveryTaskStatus(UpdateUserDeliveryTaskStatusRequest request);
+
+    /**
+     * @param request the request parameters of UpdateVideoProcessing  UpdateVideoProcessingRequest
+     * @return UpdateVideoProcessingResponse
+     */
+    CompletableFuture<UpdateVideoProcessingResponse> updateVideoProcessing(UpdateVideoProcessingRequest request);
 
     /**
      * @param request the request parameters of UpdateWafRule  UpdateWafRuleRequest

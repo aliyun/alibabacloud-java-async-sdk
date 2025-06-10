@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateCnameFlatteningResponseBody} extends {@link TeaModel}
+ * {@link UpdateVideoProcessingResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateCnameFlatteningResponseBody</p>
+ * <p>UpdateVideoProcessingResponseBody</p>
  */
-public class UpdateCnameFlatteningResponseBody extends TeaModel {
+public class UpdateVideoProcessingResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdateCnameFlatteningResponseBody(Builder builder) {
+    private UpdateVideoProcessingResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class UpdateCnameFlatteningResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateCnameFlatteningResponseBody create() {
+    public static UpdateVideoProcessingResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,20 @@ public class UpdateCnameFlatteningResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(UpdateCnameFlatteningResponseBody model) {
+        private Builder(UpdateVideoProcessingResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UpdateCnameFlatteningResponseBody build() {
-            return new UpdateCnameFlatteningResponseBody(this);
+        public UpdateVideoProcessingResponseBody build() {
+            return new UpdateVideoProcessingResponseBody(this);
         } 
 
     } 

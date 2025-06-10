@@ -55,6 +55,10 @@ public class UpdateRecordRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Ttl")
     private Integer ttl;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private UpdateRecordRequest(Builder builder) {
         super(builder);
         this.authConf = builder.authConf;
@@ -66,6 +70,7 @@ public class UpdateRecordRequest extends Request {
         this.recordId = builder.recordId;
         this.sourceType = builder.sourceType;
         this.ttl = builder.ttl;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -144,6 +149,13 @@ public class UpdateRecordRequest extends Request {
         return this.ttl;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<UpdateRecordRequest, Builder> {
         private AuthConf authConf; 
         private String bizName; 
@@ -154,6 +166,7 @@ public class UpdateRecordRequest extends Request {
         private Long recordId; 
         private String sourceType; 
         private Integer ttl; 
+        private String type; 
 
         private Builder() {
             super();
@@ -170,6 +183,7 @@ public class UpdateRecordRequest extends Request {
             this.recordId = request.recordId;
             this.sourceType = request.sourceType;
             this.ttl = request.ttl;
+            this.type = request.type;
         } 
 
         /**
@@ -301,6 +315,15 @@ public class UpdateRecordRequest extends Request {
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
             this.ttl = ttl;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 

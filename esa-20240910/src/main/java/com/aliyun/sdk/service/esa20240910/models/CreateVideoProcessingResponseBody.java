@@ -12,15 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link UpdateCnameFlatteningResponseBody} extends {@link TeaModel}
+ * {@link CreateVideoProcessingResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateCnameFlatteningResponseBody</p>
+ * <p>CreateVideoProcessingResponseBody</p>
  */
-public class UpdateCnameFlatteningResponseBody extends TeaModel {
+public class CreateVideoProcessingResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ConfigId")
+    private Long configId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UpdateCnameFlatteningResponseBody(Builder builder) {
+    private CreateVideoProcessingResponseBody(Builder builder) {
+        this.configId = builder.configId;
         this.requestId = builder.requestId;
     }
 
@@ -28,12 +32,19 @@ public class UpdateCnameFlatteningResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateCnameFlatteningResponseBody create() {
+    public static CreateVideoProcessingResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return configId
+     */
+    public Long getConfigId() {
+        return this.configId;
     }
 
     /**
@@ -44,28 +55,35 @@ public class UpdateCnameFlatteningResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Long configId; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(UpdateCnameFlatteningResponseBody model) {
+        private Builder(CreateVideoProcessingResponseBody model) {
+            this.configId = model.configId;
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>The request ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CB1A380B-09F0-41BB-280B-72F8FD6DA2FE</p>
+         * ConfigId.
+         */
+        public Builder configId(Long configId) {
+            this.configId = configId;
+            return this;
+        }
+
+        /**
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public UpdateCnameFlatteningResponseBody build() {
-            return new UpdateCnameFlatteningResponseBody(this);
+        public CreateVideoProcessingResponseBody build() {
+            return new CreateVideoProcessingResponseBody(this);
         } 
 
     } 
