@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRenderingInstanceResponseBody</p>
  */
 public class DescribeRenderingInstanceResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AdditionalIngresses")
+    private java.util.List<AdditionalIngresses> additionalIngresses;
+
     @com.aliyun.core.annotation.NameInMap("ConfigInfo")
     private ConfigInfo configInfo;
 
@@ -28,6 +31,9 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Hostname")
     private String hostname;
+
+    @com.aliyun.core.annotation.NameInMap("Isp")
+    private String isp;
 
     @com.aliyun.core.annotation.NameInMap("PortMappings")
     private java.util.List<PortMappings> portMappings;
@@ -51,10 +57,12 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     private SystemInfo systemInfo;
 
     private DescribeRenderingInstanceResponseBody(Builder builder) {
+        this.additionalIngresses = builder.additionalIngresses;
         this.configInfo = builder.configInfo;
         this.creationTime = builder.creationTime;
         this.egressIp = builder.egressIp;
         this.hostname = builder.hostname;
+        this.isp = builder.isp;
         this.portMappings = builder.portMappings;
         this.renderingInstanceId = builder.renderingInstanceId;
         this.renderingSpec = builder.renderingSpec;
@@ -74,6 +82,13 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return additionalIngresses
+     */
+    public java.util.List<AdditionalIngresses> getAdditionalIngresses() {
+        return this.additionalIngresses;
     }
 
     /**
@@ -102,6 +117,13 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
      */
     public String getHostname() {
         return this.hostname;
+    }
+
+    /**
+     * @return isp
+     */
+    public String getIsp() {
+        return this.isp;
     }
 
     /**
@@ -154,10 +176,12 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<AdditionalIngresses> additionalIngresses; 
         private ConfigInfo configInfo; 
         private String creationTime; 
         private String egressIp; 
         private String hostname; 
+        private String isp; 
         private java.util.List<PortMappings> portMappings; 
         private String renderingInstanceId; 
         private String renderingSpec; 
@@ -170,10 +194,12 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeRenderingInstanceResponseBody model) {
+            this.additionalIngresses = model.additionalIngresses;
             this.configInfo = model.configInfo;
             this.creationTime = model.creationTime;
             this.egressIp = model.egressIp;
             this.hostname = model.hostname;
+            this.isp = model.isp;
             this.portMappings = model.portMappings;
             this.renderingInstanceId = model.renderingInstanceId;
             this.renderingSpec = model.renderingSpec;
@@ -182,6 +208,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
             this.storageSize = model.storageSize;
             this.systemInfo = model.systemInfo;
         } 
+
+        /**
+         * AdditionalIngresses.
+         */
+        public Builder additionalIngresses(java.util.List<AdditionalIngresses> additionalIngresses) {
+            this.additionalIngresses = additionalIngresses;
+            return this;
+        }
 
         /**
          * ConfigInfo.
@@ -212,6 +246,14 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
          */
         public Builder hostname(String hostname) {
             this.hostname = hostname;
+            return this;
+        }
+
+        /**
+         * Isp.
+         */
+        public Builder isp(String isp) {
+            this.isp = isp;
             return this;
         }
 
@@ -277,6 +319,177 @@ public class DescribeRenderingInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRenderingInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenderingInstanceResponseBody</p>
+     */
+    public static class AdditionalIngressesPortMappings extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExternalPort")
+        private String externalPort;
+
+        @com.aliyun.core.annotation.NameInMap("InternalPort")
+        private String internalPort;
+
+        private AdditionalIngressesPortMappings(Builder builder) {
+            this.externalPort = builder.externalPort;
+            this.internalPort = builder.internalPort;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdditionalIngressesPortMappings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return externalPort
+         */
+        public String getExternalPort() {
+            return this.externalPort;
+        }
+
+        /**
+         * @return internalPort
+         */
+        public String getInternalPort() {
+            return this.internalPort;
+        }
+
+        public static final class Builder {
+            private String externalPort; 
+            private String internalPort; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdditionalIngressesPortMappings model) {
+                this.externalPort = model.externalPort;
+                this.internalPort = model.internalPort;
+            } 
+
+            /**
+             * ExternalPort.
+             */
+            public Builder externalPort(String externalPort) {
+                this.externalPort = externalPort;
+                return this;
+            }
+
+            /**
+             * InternalPort.
+             */
+            public Builder internalPort(String internalPort) {
+                this.internalPort = internalPort;
+                return this;
+            }
+
+            public AdditionalIngressesPortMappings build() {
+                return new AdditionalIngressesPortMappings(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRenderingInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRenderingInstanceResponseBody</p>
+     */
+    public static class AdditionalIngresses extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Hostname")
+        private String hostname;
+
+        @com.aliyun.core.annotation.NameInMap("Isp")
+        private String isp;
+
+        @com.aliyun.core.annotation.NameInMap("PortMappings")
+        private java.util.List<AdditionalIngressesPortMappings> portMappings;
+
+        private AdditionalIngresses(Builder builder) {
+            this.hostname = builder.hostname;
+            this.isp = builder.isp;
+            this.portMappings = builder.portMappings;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdditionalIngresses create() {
+            return builder().build();
+        }
+
+        /**
+         * @return hostname
+         */
+        public String getHostname() {
+            return this.hostname;
+        }
+
+        /**
+         * @return isp
+         */
+        public String getIsp() {
+            return this.isp;
+        }
+
+        /**
+         * @return portMappings
+         */
+        public java.util.List<AdditionalIngressesPortMappings> getPortMappings() {
+            return this.portMappings;
+        }
+
+        public static final class Builder {
+            private String hostname; 
+            private String isp; 
+            private java.util.List<AdditionalIngressesPortMappings> portMappings; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdditionalIngresses model) {
+                this.hostname = model.hostname;
+                this.isp = model.isp;
+                this.portMappings = model.portMappings;
+            } 
+
+            /**
+             * Hostname.
+             */
+            public Builder hostname(String hostname) {
+                this.hostname = hostname;
+                return this;
+            }
+
+            /**
+             * Isp.
+             */
+            public Builder isp(String isp) {
+                this.isp = isp;
+                return this;
+            }
+
+            /**
+             * PortMappings.
+             */
+            public Builder portMappings(java.util.List<AdditionalIngressesPortMappings> portMappings) {
+                this.portMappings = portMappings;
+                return this;
+            }
+
+            public AdditionalIngresses build() {
+                return new AdditionalIngresses(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeRenderingInstanceResponseBody} extends {@link TeaModel}
