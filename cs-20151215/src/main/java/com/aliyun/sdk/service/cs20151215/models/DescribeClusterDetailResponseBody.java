@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterDetailResponseBody</p>
  */
 public class DescribeClusterDetailResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("auto_mode")
+    private AutoMode autoMode;
+
     @com.aliyun.core.annotation.NameInMap("cluster_domain")
     private String clusterDomain;
 
@@ -141,6 +144,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     private String zoneId;
 
     private DescribeClusterDetailResponseBody(Builder builder) {
+        this.autoMode = builder.autoMode;
         this.clusterDomain = builder.clusterDomain;
         this.clusterId = builder.clusterId;
         this.clusterSpec = builder.clusterSpec;
@@ -193,6 +197,13 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoMode
+     */
+    public AutoMode getAutoMode() {
+        return this.autoMode;
     }
 
     /**
@@ -476,6 +487,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private AutoMode autoMode; 
         private String clusterDomain; 
         private String clusterId; 
         private String clusterSpec; 
@@ -521,6 +533,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeClusterDetailResponseBody model) {
+            this.autoMode = model.autoMode;
             this.clusterDomain = model.clusterDomain;
             this.clusterId = model.clusterId;
             this.clusterSpec = model.clusterSpec;
@@ -562,6 +575,14 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
             this.workerRamRoleName = model.workerRamRoleName;
             this.zoneId = model.zoneId;
         } 
+
+        /**
+         * auto_mode.
+         */
+        public Builder autoMode(AutoMode autoMode) {
+            this.autoMode = autoMode;
+            return this;
+        }
 
         /**
          * <p>The domain name of the cluster.</p>
@@ -1039,6 +1060,60 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeClusterDetailResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeClusterDetailResponseBody</p>
+     */
+    public static class AutoMode extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enable")
+        private Boolean enable;
+
+        private AutoMode(Builder builder) {
+            this.enable = builder.enable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoMode create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoMode model) {
+                this.enable = model.enable;
+            } 
+
+            /**
+             * enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            public AutoMode build() {
+                return new AutoMode(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link DescribeClusterDetailResponseBody} extends {@link TeaModel}

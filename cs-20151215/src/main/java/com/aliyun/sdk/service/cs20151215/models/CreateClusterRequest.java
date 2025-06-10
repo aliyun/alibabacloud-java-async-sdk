@@ -34,6 +34,10 @@ public class CreateClusterRequest extends Request {
     private AuditLogConfig auditLogConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("auto_mode")
+    private AutoMode autoMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("auto_renew")
     @Deprecated
     private Boolean autoRenew;
@@ -474,6 +478,7 @@ public class CreateClusterRequest extends Request {
         this.addons = builder.addons;
         this.apiAudiences = builder.apiAudiences;
         this.auditLogConfig = builder.auditLogConfig;
+        this.autoMode = builder.autoMode;
         this.autoRenew = builder.autoRenew;
         this.autoRenewPeriod = builder.autoRenewPeriod;
         this.chargeType = builder.chargeType;
@@ -610,6 +615,13 @@ public class CreateClusterRequest extends Request {
      */
     public AuditLogConfig getAuditLogConfig() {
         return this.auditLogConfig;
+    }
+
+    /**
+     * @return autoMode
+     */
+    public AutoMode getAutoMode() {
+        return this.autoMode;
     }
 
     /**
@@ -1282,6 +1294,7 @@ public class CreateClusterRequest extends Request {
         private java.util.List<Addon> addons; 
         private String apiAudiences; 
         private AuditLogConfig auditLogConfig; 
+        private AutoMode autoMode; 
         private Boolean autoRenew; 
         private Long autoRenewPeriod; 
         private String chargeType; 
@@ -1388,6 +1401,7 @@ public class CreateClusterRequest extends Request {
             this.addons = request.addons;
             this.apiAudiences = request.apiAudiences;
             this.auditLogConfig = request.auditLogConfig;
+            this.autoMode = request.autoMode;
             this.autoRenew = request.autoRenew;
             this.autoRenewPeriod = request.autoRenewPeriod;
             this.chargeType = request.chargeType;
@@ -1542,6 +1556,15 @@ public class CreateClusterRequest extends Request {
         public Builder auditLogConfig(AuditLogConfig auditLogConfig) {
             this.putBodyParameter("audit_log_config", auditLogConfig);
             this.auditLogConfig = auditLogConfig;
+            return this;
+        }
+
+        /**
+         * auto_mode.
+         */
+        public Builder autoMode(AutoMode autoMode) {
+            this.putBodyParameter("auto_mode", autoMode);
+            this.autoMode = autoMode;
             return this;
         }
 
@@ -3010,6 +3033,60 @@ public class CreateClusterRequest extends Request {
 
             public AuditLogConfig build() {
                 return new AuditLogConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
+    public static class AutoMode extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enable")
+        private Boolean enable;
+
+        private AutoMode(Builder builder) {
+            this.enable = builder.enable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoMode create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoMode model) {
+                this.enable = model.enable;
+            } 
+
+            /**
+             * enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            public AutoMode build() {
+                return new AutoMode(this);
             } 
 
         } 

@@ -23,6 +23,10 @@ public class CreateClusterNodePoolRequest extends Request {
     private String clusterId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("auto_mode")
+    private AutoMode autoMode;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("auto_scaling")
     private AutoScaling autoScaling;
 
@@ -84,6 +88,7 @@ public class CreateClusterNodePoolRequest extends Request {
     private CreateClusterNodePoolRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.autoMode = builder.autoMode;
         this.autoScaling = builder.autoScaling;
         this.count = builder.count;
         this.efloNodeGroup = builder.efloNodeGroup;
@@ -118,6 +123,13 @@ public class CreateClusterNodePoolRequest extends Request {
      */
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    /**
+     * @return autoMode
+     */
+    public AutoMode getAutoMode() {
+        return this.autoMode;
     }
 
     /**
@@ -220,6 +232,7 @@ public class CreateClusterNodePoolRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateClusterNodePoolRequest, Builder> {
         private String clusterId; 
+        private AutoMode autoMode; 
         private AutoScaling autoScaling; 
         private Long count; 
         private EfloNodeGroup efloNodeGroup; 
@@ -242,6 +255,7 @@ public class CreateClusterNodePoolRequest extends Request {
         private Builder(CreateClusterNodePoolRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.autoMode = request.autoMode;
             this.autoScaling = request.autoScaling;
             this.count = request.count;
             this.efloNodeGroup = request.efloNodeGroup;
@@ -268,6 +282,15 @@ public class CreateClusterNodePoolRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * auto_mode.
+         */
+        public Builder autoMode(AutoMode autoMode) {
+            this.putBodyParameter("auto_mode", autoMode);
+            this.autoMode = autoMode;
             return this;
         }
 
@@ -434,6 +457,60 @@ public class CreateClusterNodePoolRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateClusterNodePoolRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterNodePoolRequest</p>
+     */
+    public static class AutoMode extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enable")
+        private Boolean enable;
+
+        private AutoMode(Builder builder) {
+            this.enable = builder.enable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AutoMode create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoMode model) {
+                this.enable = model.enable;
+            } 
+
+            /**
+             * enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            public AutoMode build() {
+                return new AutoMode(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link CreateClusterNodePoolRequest} extends {@link TeaModel}
