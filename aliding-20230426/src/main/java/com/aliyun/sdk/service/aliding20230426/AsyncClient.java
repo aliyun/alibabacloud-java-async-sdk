@@ -1424,6 +1424,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UnsubscribeEventResponse> unsubscribeEvent(UnsubscribeEventRequest request);
 
     /**
+     * @param request the request parameters of UpdateConvExtension  UpdateConvExtensionRequest
+     * @return UpdateConvExtensionResponse
+     */
+    CompletableFuture<UpdateConvExtensionResponse> updateConvExtension(UpdateConvExtensionRequest request);
+
+    /**
      * @param request the request parameters of UpdateFormData  UpdateFormDataRequest
      * @return UpdateFormDataResponse
      */
