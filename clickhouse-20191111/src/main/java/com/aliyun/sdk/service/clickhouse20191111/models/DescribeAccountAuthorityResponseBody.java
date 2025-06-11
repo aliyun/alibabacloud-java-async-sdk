@@ -60,6 +60,10 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountName
      */
@@ -125,6 +129,20 @@ public class DescribeAccountAuthorityResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> totalDatabases; 
         private java.util.List<String> totalDictionaries; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccountAuthorityResponseBody model) {
+            this.accountName = model.accountName;
+            this.allowDatabases = model.allowDatabases;
+            this.allowDictionaries = model.allowDictionaries;
+            this.ddlAuthority = model.ddlAuthority;
+            this.dmlAuthority = model.dmlAuthority;
+            this.requestId = model.requestId;
+            this.totalDatabases = model.totalDatabases;
+            this.totalDictionaries = model.totalDictionaries;
+        } 
 
         /**
          * <p>The name of the database account.</p>

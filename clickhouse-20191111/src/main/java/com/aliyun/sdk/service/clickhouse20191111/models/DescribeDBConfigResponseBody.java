@@ -36,6 +36,10 @@ public class DescribeDBConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return config
      */
@@ -53,6 +57,14 @@ public class DescribeDBConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String config; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBConfigResponseBody model) {
+            this.config = model.config;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configuration information about the cluster.</p>

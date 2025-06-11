@@ -36,6 +36,10 @@ public class DescribeProcessListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return processList
      */
@@ -53,6 +57,14 @@ public class DescribeProcessListResponseBody extends TeaModel {
     public static final class Builder {
         private ProcessList processList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProcessListResponseBody model) {
+            this.processList = model.processList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The queries.</p>
@@ -171,6 +183,18 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private String queryDurationMs; 
             private String queryStartTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultSet model) {
+                this.initialAddress = model.initialAddress;
+                this.initialQueryId = model.initialQueryId;
+                this.initialUser = model.initialUser;
+                this.query = model.query;
+                this.queryDurationMs = model.queryDurationMs;
+                this.queryStartTime = model.queryStartTime;
+            } 
+
             /**
              * <p>The IP address of the client that initiates the query.</p>
              * 
@@ -276,6 +300,13 @@ public class DescribeProcessListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ResultSet> resultSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.resultSet = model.resultSet;
+            } 
+
             /**
              * ResultSet.
              */
@@ -346,6 +377,15 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private Integer bytesRead; 
             private Float elapsedTime; 
             private Integer rowsRead; 
+
+            private Builder() {
+            } 
+
+            private Builder(Statistics model) {
+                this.bytesRead = model.bytesRead;
+                this.elapsedTime = model.elapsedTime;
+                this.rowsRead = model.rowsRead;
+            } 
 
             /**
              * <p>The size of the data that was scanned. Unit: bytes.</p>
@@ -431,6 +471,14 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableSchemaResultSet model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The column name.</p>
              * 
@@ -491,6 +539,13 @@ public class DescribeProcessListResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TableSchemaResultSet> resultSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableSchema model) {
+                this.resultSet = model.resultSet;
+            } 
 
             /**
              * ResultSet.
@@ -586,6 +641,17 @@ public class DescribeProcessListResponseBody extends TeaModel {
             private String rowsBeforeLimitAtLeast; 
             private Statistics statistics; 
             private TableSchema tableSchema; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProcessList model) {
+                this.data = model.data;
+                this.rows = model.rows;
+                this.rowsBeforeLimitAtLeast = model.rowsBeforeLimitAtLeast;
+                this.statistics = model.statistics;
+                this.tableSchema = model.tableSchema;
+            } 
 
             /**
              * <p>The details of the query.</p>

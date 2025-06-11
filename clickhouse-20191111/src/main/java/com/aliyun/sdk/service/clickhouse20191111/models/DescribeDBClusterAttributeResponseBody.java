@@ -36,6 +36,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBCluster
      */
@@ -53,6 +57,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private DBCluster DBCluster; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterAttributeResponseBody model) {
+            this.DBCluster = model.DBCluster;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the cluster.</p>
@@ -122,6 +134,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String progress; 
             private String ratio; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScaleOutStatus model) {
+                this.progress = model.progress;
+                this.ratio = model.ratio;
+            } 
 
             /**
              * <p>The progress of the data migration task in percentage.</p>
@@ -202,6 +222,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag name.</p>
              * 
@@ -263,6 +291,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Tag> tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
+
             /**
              * Tag.
              */
@@ -287,6 +322,18 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     public static class DBCluster extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private String aliUid;
+
+        @com.aliyun.core.annotation.NameInMap("AppointmentElectZookeeperDisableWrite")
+        private Boolean appointmentElectZookeeperDisableWrite;
+
+        @com.aliyun.core.annotation.NameInMap("AppointmentElectZookeeperTime")
+        private String appointmentElectZookeeperTime;
+
+        @com.aliyun.core.annotation.NameInMap("AppointmentRestartNodeList")
+        private String appointmentRestartNodeList;
+
+        @com.aliyun.core.annotation.NameInMap("AppointmentRestartNodeTime")
+        private String appointmentRestartNodeTime;
 
         @com.aliyun.core.annotation.NameInMap("AppointmentRestartTime")
         private String appointmentRestartTime;
@@ -443,6 +490,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         private DBCluster(Builder builder) {
             this.aliUid = builder.aliUid;
+            this.appointmentElectZookeeperDisableWrite = builder.appointmentElectZookeeperDisableWrite;
+            this.appointmentElectZookeeperTime = builder.appointmentElectZookeeperTime;
+            this.appointmentRestartNodeList = builder.appointmentRestartNodeList;
+            this.appointmentRestartNodeTime = builder.appointmentRestartNodeTime;
             this.appointmentRestartTime = builder.appointmentRestartTime;
             this.availableUpgradeMajorVersion = builder.availableUpgradeMajorVersion;
             this.bid = builder.bid;
@@ -509,6 +560,34 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getAliUid() {
             return this.aliUid;
+        }
+
+        /**
+         * @return appointmentElectZookeeperDisableWrite
+         */
+        public Boolean getAppointmentElectZookeeperDisableWrite() {
+            return this.appointmentElectZookeeperDisableWrite;
+        }
+
+        /**
+         * @return appointmentElectZookeeperTime
+         */
+        public String getAppointmentElectZookeeperTime() {
+            return this.appointmentElectZookeeperTime;
+        }
+
+        /**
+         * @return appointmentRestartNodeList
+         */
+        public String getAppointmentRestartNodeList() {
+            return this.appointmentRestartNodeList;
+        }
+
+        /**
+         * @return appointmentRestartNodeTime
+         */
+        public String getAppointmentRestartNodeTime() {
+            return this.appointmentRestartNodeTime;
         }
 
         /**
@@ -870,6 +949,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aliUid; 
+            private Boolean appointmentElectZookeeperDisableWrite; 
+            private String appointmentElectZookeeperTime; 
+            private String appointmentRestartNodeList; 
+            private String appointmentRestartNodeTime; 
             private String appointmentRestartTime; 
             private java.util.Map<String, ?> availableUpgradeMajorVersion; 
             private String bid; 
@@ -922,6 +1005,68 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private java.util.Map<String, ?> zoneIdVswitchMap; 
             private String zookeeperClass; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBCluster model) {
+                this.aliUid = model.aliUid;
+                this.appointmentElectZookeeperDisableWrite = model.appointmentElectZookeeperDisableWrite;
+                this.appointmentElectZookeeperTime = model.appointmentElectZookeeperTime;
+                this.appointmentRestartNodeList = model.appointmentRestartNodeList;
+                this.appointmentRestartNodeTime = model.appointmentRestartNodeTime;
+                this.appointmentRestartTime = model.appointmentRestartTime;
+                this.availableUpgradeMajorVersion = model.availableUpgradeMajorVersion;
+                this.bid = model.bid;
+                this.category = model.category;
+                this.commodityCode = model.commodityCode;
+                this.connectionString = model.connectionString;
+                this.controlVersion = model.controlVersion;
+                this.createTime = model.createTime;
+                this.DBClusterDescription = model.DBClusterDescription;
+                this.DBClusterId = model.DBClusterId;
+                this.DBClusterNetworkType = model.DBClusterNetworkType;
+                this.DBClusterStatus = model.DBClusterStatus;
+                this.DBClusterType = model.DBClusterType;
+                this.DBNodeClass = model.DBNodeClass;
+                this.DBNodeCount = model.DBNodeCount;
+                this.DBNodeStorage = model.DBNodeStorage;
+                this.encryptionKey = model.encryptionKey;
+                this.encryptionType = model.encryptionType;
+                this.engine = model.engine;
+                this.engineLatestMinorVersion = model.engineLatestMinorVersion;
+                this.engineMinorVersion = model.engineMinorVersion;
+                this.engineVersion = model.engineVersion;
+                this.expireTime = model.expireTime;
+                this.extStorageSize = model.extStorageSize;
+                this.extStorageType = model.extStorageType;
+                this.isExpired = model.isExpired;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.maintainAutoType = model.maintainAutoType;
+                this.maintainTime = model.maintainTime;
+                this.payType = model.payType;
+                this.port = model.port;
+                this.publicConnectionString = model.publicConnectionString;
+                this.publicIpAddr = model.publicIpAddr;
+                this.publicPort = model.publicPort;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.scaleOutStatus = model.scaleOutStatus;
+                this.storageType = model.storageType;
+                this.supportBackup = model.supportBackup;
+                this.supportHttpsPort = model.supportHttpsPort;
+                this.supportMysqlPort = model.supportMysqlPort;
+                this.supportOss = model.supportOss;
+                this.tags = model.tags;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcCloudInstanceId = model.vpcCloudInstanceId;
+                this.vpcId = model.vpcId;
+                this.vpcIpAddr = model.vpcIpAddr;
+                this.zoneId = model.zoneId;
+                this.zoneIdVswitchMap = model.zoneIdVswitchMap;
+                this.zookeeperClass = model.zookeeperClass;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account.</p>
              * 
@@ -930,6 +1075,38 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder aliUid(String aliUid) {
                 this.aliUid = aliUid;
+                return this;
+            }
+
+            /**
+             * AppointmentElectZookeeperDisableWrite.
+             */
+            public Builder appointmentElectZookeeperDisableWrite(Boolean appointmentElectZookeeperDisableWrite) {
+                this.appointmentElectZookeeperDisableWrite = appointmentElectZookeeperDisableWrite;
+                return this;
+            }
+
+            /**
+             * AppointmentElectZookeeperTime.
+             */
+            public Builder appointmentElectZookeeperTime(String appointmentElectZookeeperTime) {
+                this.appointmentElectZookeeperTime = appointmentElectZookeeperTime;
+                return this;
+            }
+
+            /**
+             * AppointmentRestartNodeList.
+             */
+            public Builder appointmentRestartNodeList(String appointmentRestartNodeList) {
+                this.appointmentRestartNodeList = appointmentRestartNodeList;
+                return this;
+            }
+
+            /**
+             * AppointmentRestartNodeTime.
+             */
+            public Builder appointmentRestartNodeTime(String appointmentRestartNodeTime) {
+                this.appointmentRestartNodeTime = appointmentRestartNodeTime;
                 return this;
             }
 
@@ -945,7 +1122,10 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * AvailableUpgradeMajorVersion.
+             * <p>The major engine versions available for upgrades.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;MajorVersion&quot;:&quot;MinorVersion&quot;}</p>
              */
             public Builder availableUpgradeMajorVersion(java.util.Map<String, ?> availableUpgradeMajorVersion) {
                 this.availableUpgradeMajorVersion = availableUpgradeMajorVersion;

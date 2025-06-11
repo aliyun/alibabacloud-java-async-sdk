@@ -44,6 +44,10 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorMsg
      */
@@ -77,6 +81,16 @@ public class CreateRDSToClickhouseDbResponseBody extends TeaModel {
         private java.util.List<String> repeatedDbs; 
         private String requestId; 
         private Long status; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRDSToClickhouseDbResponseBody model) {
+            this.errorMsg = model.errorMsg;
+            this.repeatedDbs = model.repeatedDbs;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>If the value of the <strong>Status</strong> parameter is -1, the cause of the creation failure is returned.</p>

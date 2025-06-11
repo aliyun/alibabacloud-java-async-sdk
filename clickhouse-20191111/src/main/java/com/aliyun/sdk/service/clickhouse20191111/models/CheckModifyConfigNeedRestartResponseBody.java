@@ -36,6 +36,10 @@ public class CheckModifyConfigNeedRestartResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return needRestart
      */
@@ -53,6 +57,14 @@ public class CheckModifyConfigNeedRestartResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean needRestart; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckModifyConfigNeedRestartResponseBody model) {
+            this.needRestart = model.needRestart;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the cluster was restarted after you modified the configuration parameters. Valid values:</p>

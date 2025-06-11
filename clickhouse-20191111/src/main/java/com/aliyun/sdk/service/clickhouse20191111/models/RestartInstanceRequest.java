@@ -76,7 +76,7 @@ public class RestartInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -204,7 +204,7 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * <p>The page number.</p>
+         * <p>The number of pages to return.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -216,9 +216,9 @@ public class RestartInstanceRequest extends Request {
         }
 
         /**
-         * <p>The number of entries per page. Valid values:</p>
+         * <p>The number of entries to return per page. Default value: 30. Valid values:</p>
          * <ul>
-         * <li>30 (default)</li>
+         * <li>30</li>
          * <li>50</li>
          * <li>100</li>
          * </ul>

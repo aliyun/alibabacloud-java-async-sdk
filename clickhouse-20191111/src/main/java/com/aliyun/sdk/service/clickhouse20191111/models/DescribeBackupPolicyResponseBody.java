@@ -52,6 +52,10 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backupRetentionPeriod
      */
@@ -101,6 +105,18 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String preferredBackupTime; 
         private String requestId; 
         private String _switch; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBackupPolicyResponseBody model) {
+            this.backupRetentionPeriod = model.backupRetentionPeriod;
+            this.backupSize = model.backupSize;
+            this.preferredBackupPeriod = model.preferredBackupPeriod;
+            this.preferredBackupTime = model.preferredBackupTime;
+            this.requestId = model.requestId;
+            this._switch = model._switch;
+        } 
 
         /**
          * <p>The retention period for the backup data. By default, the backup data is retained for seven days. Valid values: 7 to 730. Unit: day.</p>

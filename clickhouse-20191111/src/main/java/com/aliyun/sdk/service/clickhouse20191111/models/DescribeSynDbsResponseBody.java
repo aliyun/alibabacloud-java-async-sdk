@@ -48,6 +48,10 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeSynDbsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SynDbs> synDbs; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSynDbsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.synDbs = model.synDbs;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -239,6 +254,18 @@ public class DescribeSynDbsResponseBody extends TeaModel {
             private String rdsVpcUrl; 
             private String synDb; 
             private Boolean synStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(SynDbs model) {
+                this.errorMsg = model.errorMsg;
+                this.rdsId = model.rdsId;
+                this.rdsUserName = model.rdsUserName;
+                this.rdsVpcUrl = model.rdsVpcUrl;
+                this.synDb = model.synDb;
+                this.synStatus = model.synStatus;
+            } 
 
             /**
              * <ul>

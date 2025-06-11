@@ -36,6 +36,10 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configHistoryItems
      */
@@ -53,6 +57,14 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ConfigHistoryItems> configHistoryItems; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeConfigHistoryResponseBody model) {
+            this.configHistoryItems = model.configHistoryItems;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The change records of the configuration parameters.</p>
@@ -158,6 +170,17 @@ public class DescribeConfigHistoryResponseBody extends TeaModel {
             private String reason; 
             private Boolean success; 
             private String time; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigHistoryItems model) {
+                this.changeId = model.changeId;
+                this.ownerId = model.ownerId;
+                this.reason = model.reason;
+                this.success = model.success;
+                this.time = model.time;
+            } 
 
             /**
              * <p>The ID of the change record.</p>

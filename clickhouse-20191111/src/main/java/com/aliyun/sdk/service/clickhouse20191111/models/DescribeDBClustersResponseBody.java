@@ -48,6 +48,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusters
      */
@@ -89,6 +93,17 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClustersResponseBody model) {
+            this.DBClusters = model.DBClusters;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The clusters.</p>
@@ -197,6 +212,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String progress; 
             private String ratio; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScaleOutStatus model) {
+                this.progress = model.progress;
+                this.ratio = model.ratio;
+            } 
+
             /**
              * <p>The progress of the data migration task in percentage.</p>
              * <blockquote>
@@ -276,6 +299,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag name.</p>
              * 
@@ -336,6 +367,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -768,6 +806,45 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String vpcId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DBCluster model) {
+                this.aliUid = model.aliUid;
+                this.bid = model.bid;
+                this.category = model.category;
+                this.commodityCode = model.commodityCode;
+                this.connectionString = model.connectionString;
+                this.controlVersion = model.controlVersion;
+                this.createTime = model.createTime;
+                this.DBClusterDescription = model.DBClusterDescription;
+                this.DBClusterId = model.DBClusterId;
+                this.DBClusterNetworkType = model.DBClusterNetworkType;
+                this.DBClusterStatus = model.DBClusterStatus;
+                this.DBNodeClass = model.DBNodeClass;
+                this.DBNodeCount = model.DBNodeCount;
+                this.DBNodeStorage = model.DBNodeStorage;
+                this.dbVersion = model.dbVersion;
+                this.expireTime = model.expireTime;
+                this.extStorageSize = model.extStorageSize;
+                this.extStorageType = model.extStorageType;
+                this.isExpired = model.isExpired;
+                this.lockMode = model.lockMode;
+                this.lockReason = model.lockReason;
+                this.payType = model.payType;
+                this.port = model.port;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.scaleOutDisableWriteWindows = model.scaleOutDisableWriteWindows;
+                this.scaleOutStatus = model.scaleOutStatus;
+                this.storageType = model.storageType;
+                this.tags = model.tags;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcCloudInstanceId = model.vpcCloudInstanceId;
+                this.vpcId = model.vpcId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The ID of the Alibaba Cloud account.</p>
              * 
@@ -961,7 +1038,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * DbVersion.
+             * <p>The engine version of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23.8</p>
              */
             public Builder dbVersion(String dbVersion) {
                 this.dbVersion = dbVersion;
@@ -1107,7 +1187,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * ScaleOutDisableWriteWindows.
+             * <p>The time window during which write operations are stopped for specification changes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-08T00:00:00+08:00,2025-02-12T00:00:00+08:00</p>
              */
             public Builder scaleOutDisableWriteWindows(String scaleOutDisableWriteWindows) {
                 this.scaleOutDisableWriteWindows = scaleOutDisableWriteWindows;
@@ -1229,6 +1312,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DBCluster> DBCluster; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBClusters model) {
+                this.DBCluster = model.DBCluster;
+            } 
 
             /**
              * DBCluster.

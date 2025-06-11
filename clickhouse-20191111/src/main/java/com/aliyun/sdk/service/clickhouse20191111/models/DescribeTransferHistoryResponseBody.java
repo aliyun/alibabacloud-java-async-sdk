@@ -36,6 +36,10 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return historyDetails
      */
@@ -53,6 +57,14 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
     public static final class Builder {
         private HistoryDetails historyDetails; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTransferHistoryResponseBody model) {
+            this.historyDetails = model.historyDetails;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The migration information.</p>
@@ -255,8 +267,30 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             private Long unsyncedBytes; 
             private Long unsyncedParts; 
 
+            private Builder() {
+            } 
+
+            private Builder(HistoryDetail model) {
+                this.bytesPerMinute = model.bytesPerMinute;
+                this.disableWriteWindows = model.disableWriteWindows;
+                this.partsPerMinute = model.partsPerMinute;
+                this.progress = model.progress;
+                this.sourceControlVersion = model.sourceControlVersion;
+                this.sourceDBCluster = model.sourceDBCluster;
+                this.status = model.status;
+                this.subJob = model.subJob;
+                this.subJobStatus = model.subJobStatus;
+                this.targetControlVersion = model.targetControlVersion;
+                this.targetDBCluster = model.targetDBCluster;
+                this.unsyncedBytes = model.unsyncedBytes;
+                this.unsyncedParts = model.unsyncedParts;
+            } 
+
             /**
-             * BytesPerMinute.
+             * <p>The amount of data that is migrated per minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10240</p>
              */
             public Builder bytesPerMinute(Long bytesPerMinute) {
                 this.bytesPerMinute = bytesPerMinute;
@@ -264,7 +298,10 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * DisableWriteWindows.
+             * <p>The time window during which write operations are stopped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-08T00:00:00+08:00,2025-02-12T00:00:00+08:00</p>
              */
             public Builder disableWriteWindows(String disableWriteWindows) {
                 this.disableWriteWindows = disableWriteWindows;
@@ -272,7 +309,10 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * PartsPerMinute.
+             * <p>The number of parts that are migrated per minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.24</p>
              */
             public Builder partsPerMinute(Double partsPerMinute) {
                 this.partsPerMinute = partsPerMinute;
@@ -291,7 +331,10 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * SourceControlVersion.
+             * <p>The control version of the source cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder sourceControlVersion(String sourceControlVersion) {
                 this.sourceControlVersion = sourceControlVersion;
@@ -325,7 +368,10 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * SubJob.
+             * <p>The running subtask.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SubJob</p>
              */
             public Builder subJob(String subJob) {
                 this.subJob = subJob;
@@ -333,7 +379,10 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * SubJobStatus.
+             * <p>The subtask status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder subJobStatus(String subJobStatus) {
                 this.subJobStatus = subJobStatus;
@@ -341,7 +390,10 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * TargetControlVersion.
+             * <p>The control version of the destination cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v2</p>
              */
             public Builder targetControlVersion(String targetControlVersion) {
                 this.targetControlVersion = targetControlVersion;
@@ -360,7 +412,10 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * UnsyncedBytes.
+             * <p>The amount of data that is not migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>102400</p>
              */
             public Builder unsyncedBytes(Long unsyncedBytes) {
                 this.unsyncedBytes = unsyncedBytes;
@@ -368,7 +423,10 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * UnsyncedParts.
+             * <p>The number of parts that are not migrated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder unsyncedParts(Long unsyncedParts) {
                 this.unsyncedParts = unsyncedParts;
@@ -413,6 +471,13 @@ public class DescribeTransferHistoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<HistoryDetail> historyDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(HistoryDetails model) {
+                this.historyDetail = model.historyDetail;
+            } 
 
             /**
              * HistoryDetail.

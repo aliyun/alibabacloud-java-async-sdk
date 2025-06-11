@@ -36,6 +36,10 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SlowLogRecords slowLogRecords; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSlowLogRecordsResponseBody model) {
+            this.requestId = model.requestId;
+            this.slowLogRecords = model.slowLogRecords;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -231,6 +243,23 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String resultBytes; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResultSet model) {
+                this.initialAddress = model.initialAddress;
+                this.initialQueryId = model.initialQueryId;
+                this.initialUser = model.initialUser;
+                this.memoryUsage = model.memoryUsage;
+                this.query = model.query;
+                this.queryDurationMs = model.queryDurationMs;
+                this.queryStartTime = model.queryStartTime;
+                this.readBytes = model.readBytes;
+                this.readRows = model.readRows;
+                this.resultBytes = model.resultBytes;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The IP address of the client that initiated the query.</p>
              * 
@@ -395,6 +424,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ResultSet> resultSet; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.resultSet = model.resultSet;
+            } 
+
             /**
              * ResultSet.
              */
@@ -465,6 +501,15 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private Integer bytesRead; 
             private Float elapsedTime; 
             private Integer rowsRead; 
+
+            private Builder() {
+            } 
+
+            private Builder(Statistics model) {
+                this.bytesRead = model.bytesRead;
+                this.elapsedTime = model.elapsedTime;
+                this.rowsRead = model.rowsRead;
+            } 
 
             /**
              * <p>The total size of data that were read. Unit: bytes.</p>
@@ -550,6 +595,14 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String name; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableSchemaResultSet model) {
+                this.name = model.name;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The name of the column.</p>
              * 
@@ -610,6 +663,13 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TableSchemaResultSet> resultSet; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableSchema model) {
+                this.resultSet = model.resultSet;
+            } 
 
             /**
              * ResultSet.
@@ -705,6 +765,17 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
             private String rowsBeforeLimitAtLeast; 
             private Statistics statistics; 
             private TableSchema tableSchema; 
+
+            private Builder() {
+            } 
+
+            private Builder(SlowLogRecords model) {
+                this.data = model.data;
+                this.rows = model.rows;
+                this.rowsBeforeLimitAtLeast = model.rowsBeforeLimitAtLeast;
+                this.statistics = model.statistics;
+                this.tableSchema = model.tableSchema;
+            } 
 
             /**
              * <p>Details about the slow query logs.</p>

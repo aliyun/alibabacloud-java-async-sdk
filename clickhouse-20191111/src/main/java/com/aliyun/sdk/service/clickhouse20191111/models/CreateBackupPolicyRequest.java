@@ -77,7 +77,7 @@ public class CreateBackupPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -174,7 +174,7 @@ public class CreateBackupPolicyRequest extends Request {
         } 
 
         /**
-         * <p>The backup retention period. The default retention period is seven days. Valid values: 7 to 730. Unit: days.</p>
+         * <p>The backup retention period. The default retention period is seven days. Valid values: 7 to 730. Unit: day.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>

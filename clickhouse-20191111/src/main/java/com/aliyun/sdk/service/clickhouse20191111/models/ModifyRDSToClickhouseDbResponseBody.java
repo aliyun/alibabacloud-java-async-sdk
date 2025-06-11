@@ -44,6 +44,10 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -77,6 +81,16 @@ public class ModifyRDSToClickhouseDbResponseBody extends TeaModel {
         private String errorMsg; 
         private String requestId; 
         private Long status; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyRDSToClickhouseDbResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.errorMsg = model.errorMsg;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The error code.</p>

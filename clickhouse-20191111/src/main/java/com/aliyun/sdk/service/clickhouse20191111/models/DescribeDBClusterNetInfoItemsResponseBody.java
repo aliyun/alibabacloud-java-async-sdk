@@ -45,6 +45,10 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterNetworkType
      */
@@ -78,6 +82,16 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
         private Boolean enableSLB; 
         private NetInfoItems netInfoItems; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterNetInfoItemsResponseBody model) {
+            this.clusterNetworkType = model.clusterNetworkType;
+            this.enableSLB = model.enableSLB;
+            this.netInfoItems = model.netInfoItems;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The network type of the cluster. Only VPC is supported.</p>
@@ -259,6 +273,21 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetInfoItem model) {
+                this.connectionString = model.connectionString;
+                this.httpPort = model.httpPort;
+                this.httpsPort = model.httpsPort;
+                this.IPAddress = model.IPAddress;
+                this.jdbcPort = model.jdbcPort;
+                this.mySQLPort = model.mySQLPort;
+                this.netType = model.netType;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The endpoint that is used to connect to the database.</p>
              * 
@@ -406,6 +435,13 @@ public class DescribeDBClusterNetInfoItemsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<NetInfoItem> netInfoItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetInfoItems model) {
+                this.netInfoItem = model.netInfoItem;
+            } 
 
             /**
              * NetInfoItem.

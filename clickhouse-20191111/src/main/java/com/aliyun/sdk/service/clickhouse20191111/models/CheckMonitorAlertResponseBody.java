@@ -40,6 +40,10 @@ public class CheckMonitorAlertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parameter
      */
@@ -65,6 +69,15 @@ public class CheckMonitorAlertResponseBody extends TeaModel {
         private String parameter; 
         private String requestId; 
         private String state; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckMonitorAlertResponseBody model) {
+            this.parameter = model.parameter;
+            this.requestId = model.requestId;
+            this.state = model.state;
+        } 
 
         /**
          * <p>The parameters that are used to configure the monitoring and alerting feature.</p>

@@ -48,6 +48,10 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return coldStorage
      */
@@ -89,6 +93,17 @@ public class DescribeOSSStorageResponseBody extends TeaModel {
         private String requestId; 
         private String state; 
         private String storageUsage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeOSSStorageResponseBody model) {
+            this.coldStorage = model.coldStorage;
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+            this.state = model.state;
+            this.storageUsage = model.storageUsage;
+        } 
 
         /**
          * <p>Indicates whether tiered storage of hot data and cold data is supported. Valid values:</p>

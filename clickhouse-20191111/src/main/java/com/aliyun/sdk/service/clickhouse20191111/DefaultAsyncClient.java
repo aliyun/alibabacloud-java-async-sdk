@@ -561,6 +561,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is available only for ApsaraDB for ClickHouse clusters of version 21.8 and later.</p>
+     * </blockquote>
+     * 
      * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
      * @return DescribeBackupsResponse
      */

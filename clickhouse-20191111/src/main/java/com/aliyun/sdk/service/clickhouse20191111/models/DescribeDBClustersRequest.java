@@ -90,7 +90,7 @@ public class DescribeDBClustersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -290,7 +290,7 @@ public class DescribeDBClustersRequest extends Request {
         }
 
         /**
-         * <p>The number of entries returned per page. Valid values:</p>
+         * <p>The number of entries to return per page. Valid values:</p>
          * <ul>
          * <li><strong>30</strong> (default)</li>
          * <li><strong>50</strong></li>
@@ -408,6 +408,14 @@ public class DescribeDBClustersRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag name.</p>

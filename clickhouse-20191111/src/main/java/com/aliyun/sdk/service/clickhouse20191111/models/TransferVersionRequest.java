@@ -116,7 +116,7 @@ public class TransferVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -289,7 +289,10 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * DisableWriteWindows.
+         * <p>The time window during which write operations are stopped.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-02-08T00:00:00+08:00,2025-02-12T00:00:00+08:00</p>
          */
         public Builder disableWriteWindows(String disableWriteWindows) {
             this.putQueryParameter("DisableWriteWindows", disableWriteWindows);
@@ -389,7 +392,10 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * SourceClusterName.
+         * <p>The name of the self-managed ClickHouse cluster. You can execute the <code>SELECT * FROM system.clusters</code> statement to query the cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder sourceClusterName(String sourceClusterName) {
             this.putQueryParameter("SourceClusterName", sourceClusterName);
@@ -411,7 +417,10 @@ public class TransferVersionRequest extends Request {
         }
 
         /**
-         * SourceShards.
+         * <p>The endpoint and TCP port of the self-managed ClickHouse cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.4:9000,192.168.0.5:9000,192.168.0.6:9000</p>
          */
         public Builder sourceShards(String sourceShards) {
             this.putQueryParameter("SourceShards", sourceShards);

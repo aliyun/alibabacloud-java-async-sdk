@@ -40,6 +40,10 @@ public class CheckClickhouseToRDSResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -65,6 +69,15 @@ public class CheckClickhouseToRDSResponseBody extends TeaModel {
         private String errorCode; 
         private String requestId; 
         private Boolean status; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckClickhouseToRDSResponseBody model) {
+            this.errorCode = model.errorCode;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <ul>

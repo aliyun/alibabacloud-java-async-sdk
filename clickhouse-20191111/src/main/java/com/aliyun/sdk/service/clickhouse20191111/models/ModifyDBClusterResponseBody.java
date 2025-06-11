@@ -36,6 +36,10 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBCluster
      */
@@ -54,8 +58,16 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         private DBCluster DBCluster; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyDBClusterResponseBody model) {
+            this.DBCluster = model.DBCluster;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The information about the cluster.</p>
+         * <p>The clusters.</p>
          */
         public Builder DBCluster(DBCluster DBCluster) {
             this.DBCluster = DBCluster;
@@ -122,6 +134,14 @@ public class ModifyDBClusterResponseBody extends TeaModel {
         public static final class Builder {
             private String dbClusterId; 
             private String orderId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DBCluster model) {
+                this.dbClusterId = model.dbClusterId;
+                this.orderId = model.orderId;
+            } 
 
             /**
              * <p>The cluster ID.</p>

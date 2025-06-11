@@ -48,6 +48,10 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return DBClusterId
      */
@@ -89,6 +93,17 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         private java.util.List<Performances> performances; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDBClusterPerformanceResponseBody model) {
+            this.DBClusterId = model.DBClusterId;
+            this.endTime = model.endTime;
+            this.performances = model.performances;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The cluster ID.</p>
@@ -180,6 +195,13 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> point; 
 
+            private Builder() {
+            } 
+
+            private Builder(Values model) {
+                this.point = model.point;
+            } 
+
             /**
              * <p>The values of a metric.</p>
              */
@@ -238,6 +260,14 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private java.util.List<Values> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Series model) {
+                this.name = model.name;
+                this.values = model.values;
+            } 
 
             /**
              * <p>The name of the list of performance metric values.</p>
@@ -332,6 +362,16 @@ public class DescribeDBClusterPerformanceResponseBody extends TeaModel {
             private String name; 
             private java.util.List<Series> series; 
             private String unit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Performances model) {
+                this.key = model.key;
+                this.name = model.name;
+                this.series = model.series;
+                this.unit = model.unit;
+            } 
 
             /**
              * <p>The name of the performance metric.</p>

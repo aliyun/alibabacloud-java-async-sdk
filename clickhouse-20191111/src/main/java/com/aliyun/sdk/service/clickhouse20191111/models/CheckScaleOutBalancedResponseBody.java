@@ -56,6 +56,10 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return checkCode
      */
@@ -113,6 +117,19 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
         private TableDetails tableDetails; 
         private String timeDuration; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckScaleOutBalancedResponseBody model) {
+            this.checkCode = model.checkCode;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.tableDetails = model.tableDetails;
+            this.timeDuration = model.timeDuration;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The check result. Valid values:</p>
@@ -271,6 +288,16 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
             private Integer detail; 
             private String tableName; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableDetail model) {
+                this.cluster = model.cluster;
+                this.database = model.database;
+                this.detail = model.detail;
+                this.tableName = model.tableName;
+            } 
+
             /**
              * <p>The cluster. The value is fixed as <strong>default</strong>.</p>
              * 
@@ -357,6 +384,13 @@ public class CheckScaleOutBalancedResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TableDetail> tableDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(TableDetails model) {
+                this.tableDetail = model.tableDetail;
+            } 
 
             /**
              * TableDetail.

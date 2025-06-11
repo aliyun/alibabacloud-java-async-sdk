@@ -84,7 +84,7 @@ public class DescribeBackupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -190,7 +190,10 @@ public class DescribeBackupsRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * <p>The backup task ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>117403****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -199,6 +202,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +215,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -241,7 +246,10 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -285,6 +293,7 @@ public class DescribeBackupsRequest extends Request {
         }
 
         /**
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

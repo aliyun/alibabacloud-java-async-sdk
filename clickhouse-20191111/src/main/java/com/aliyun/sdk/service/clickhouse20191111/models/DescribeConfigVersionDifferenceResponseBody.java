@@ -40,6 +40,10 @@ public class DescribeConfigVersionDifferenceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return newConfigXML
      */
@@ -65,6 +69,15 @@ public class DescribeConfigVersionDifferenceResponseBody extends TeaModel {
         private String newConfigXML; 
         private String oldConfigXML; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeConfigVersionDifferenceResponseBody model) {
+            this.newConfigXML = model.newConfigXML;
+            this.oldConfigXML = model.oldConfigXML;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The values of the configuration parameters after the values of the configuration parameters are changed.</p>

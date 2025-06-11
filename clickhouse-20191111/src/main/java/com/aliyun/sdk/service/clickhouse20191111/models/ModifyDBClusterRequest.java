@@ -88,7 +88,7 @@ public class ModifyDBClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -207,7 +207,6 @@ public class ModifyDBClusterRequest extends Request {
          * <ul>
          * <li><p>Valid values when the cluster is of Single-replica Edition:</p>
          * <ul>
-         * <li><strong>S4-NEW</strong></li>
          * <li><strong>S8</strong></li>
          * <li><strong>S16</strong></li>
          * <li><strong>S32</strong></li>
@@ -217,7 +216,6 @@ public class ModifyDBClusterRequest extends Request {
          * </li>
          * <li><p>Valid values when the cluster is of Double-replica Edition:</p>
          * <ul>
-         * <li><strong>C4-NEW</strong></li>
          * <li><strong>C8</strong></li>
          * <li><strong>C16</strong></li>
          * <li><strong>C32</strong></li>
@@ -284,7 +282,17 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * DbNodeStorageType.
+         * <p>The storage type of the cluster. Valid values:</p>
+         * <ul>
+         * <li><strong>CloudESSD</strong>: The cluster uses an Enterprise SSD (ESSD) of performance level 1 (PL1).</li>
+         * <li><strong>CloudESSD_PL2</strong>: The cluster uses an ESSD of PL2.</li>
+         * <li><strong>CloudESSD_PL3</strong>: The cluster uses an ESSD of PL3.</li>
+         * <li><strong>CloudEfficiency</strong>: The cluster uses an ultra disk.</li>
+         * <li><strong>CloudSSD</strong>: The cluster uses a standard SSD.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>CloudESSD</p>
          */
         public Builder dbNodeStorageType(String dbNodeStorageType) {
             this.putQueryParameter("DbNodeStorageType", dbNodeStorageType);
@@ -293,7 +301,10 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * DisableWriteWindows.
+         * <p>The time window during which write operations are stopped. Separate the start time and end time with commas (,). Specify the time in the ISO 8601 standard.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-09T20:00:00+08:00,2024-07-09T21:00:00+08:00</p>
          */
         public Builder disableWriteWindows(String disableWriteWindows) {
             this.putQueryParameter("DisableWriteWindows", disableWriteWindows);
@@ -320,7 +331,7 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
-         * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID You can call the <a href="https://help.aliyun.com/document_detail/170875.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

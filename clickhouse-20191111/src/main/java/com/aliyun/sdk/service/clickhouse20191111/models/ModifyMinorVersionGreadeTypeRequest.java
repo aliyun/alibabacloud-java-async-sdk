@@ -61,7 +61,7 @@ public class ModifyMinorVersionGreadeTypeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -131,6 +131,7 @@ public class ModifyMinorVersionGreadeTypeRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,6 +144,7 @@ public class ModifyMinorVersionGreadeTypeRequest extends Request {
         }
 
         /**
+         * <p>The update type. If you set the parameter to <strong>false</strong>, you perform the manual update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

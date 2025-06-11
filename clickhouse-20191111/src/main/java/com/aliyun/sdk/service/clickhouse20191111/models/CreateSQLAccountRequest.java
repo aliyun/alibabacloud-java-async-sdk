@@ -78,7 +78,7 @@ public class CreateSQLAccountRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -180,6 +180,9 @@ public class CreateSQLAccountRequest extends Request {
          * <li>The description cannot start with http:// or https://.</li>
          * <li>The description can be up to 256 characters in length or be an empty string.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Used for test</p>
          */
         public Builder accountDescription(String accountDescription) {
             this.putQueryParameter("AccountDescription", accountDescription);
@@ -192,7 +195,7 @@ public class CreateSQLAccountRequest extends Request {
          * <ul>
          * <li>The name must be unique in the cluster.</li>
          * <li>The name can contain lowercase letters, digits, or underscores (_).</li>
-         * <li>The name must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+         * <li>The name must start with a lowercase letter and end with a lowercase letter or digit.</li>
          * <li>The name must be 2 to 64 characters in length.</li>
          * </ul>
          * <p>This parameter is required.</p>
