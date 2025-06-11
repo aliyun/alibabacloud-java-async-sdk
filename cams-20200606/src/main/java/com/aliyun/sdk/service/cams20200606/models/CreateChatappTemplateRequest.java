@@ -19,12 +19,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateChatappTemplateRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AllowCategoryChange")
+    @Deprecated
     private Boolean allowCategoryChange;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Category")
     @com.aliyun.core.annotation.Validation(required = true)
     private String category;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CategoryChangePaused")
+    private Boolean categoryChangePaused;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Components")
@@ -72,6 +77,7 @@ public class CreateChatappTemplateRequest extends Request {
         super(builder);
         this.allowCategoryChange = builder.allowCategoryChange;
         this.category = builder.category;
+        this.categoryChangePaused = builder.categoryChangePaused;
         this.components = builder.components;
         this.custSpaceId = builder.custSpaceId;
         this.custWabaId = builder.custWabaId;
@@ -108,6 +114,13 @@ public class CreateChatappTemplateRequest extends Request {
      */
     public String getCategory() {
         return this.category;
+    }
+
+    /**
+     * @return categoryChangePaused
+     */
+    public Boolean getCategoryChangePaused() {
+        return this.categoryChangePaused;
     }
 
     /**
@@ -176,6 +189,7 @@ public class CreateChatappTemplateRequest extends Request {
     public static final class Builder extends Request.Builder<CreateChatappTemplateRequest, Builder> {
         private Boolean allowCategoryChange; 
         private String category; 
+        private Boolean categoryChangePaused; 
         private java.util.List<Components> components; 
         private String custSpaceId; 
         private String custWabaId; 
@@ -194,6 +208,7 @@ public class CreateChatappTemplateRequest extends Request {
             super(request);
             this.allowCategoryChange = request.allowCategoryChange;
             this.category = request.category;
+            this.categoryChangePaused = request.categoryChangePaused;
             this.components = request.components;
             this.custSpaceId = request.custSpaceId;
             this.custWabaId = request.custWabaId;
@@ -244,6 +259,15 @@ public class CreateChatappTemplateRequest extends Request {
         public Builder category(String category) {
             this.putBodyParameter("Category", category);
             this.category = category;
+            return this;
+        }
+
+        /**
+         * CategoryChangePaused.
+         */
+        public Builder categoryChangePaused(Boolean categoryChangePaused) {
+            this.putBodyParameter("CategoryChangePaused", categoryChangePaused);
+            this.categoryChangePaused = categoryChangePaused;
             return this;
         }
 

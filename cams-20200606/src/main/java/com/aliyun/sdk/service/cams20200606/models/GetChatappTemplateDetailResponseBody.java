@@ -1689,11 +1689,17 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
      * <p>GetChatappTemplateDetailResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowSend")
+        private Boolean allowSend;
+
         @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private String auditStatus;
 
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
+
+        @com.aliyun.core.annotation.NameInMap("CategoryChangePaused")
+        private Boolean categoryChangePaused;
 
         @com.aliyun.core.annotation.NameInMap("Components")
         private java.util.List<Components> components;
@@ -1724,8 +1730,10 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         private String templateType;
 
         private Data(Builder builder) {
+            this.allowSend = builder.allowSend;
             this.auditStatus = builder.auditStatus;
             this.category = builder.category;
+            this.categoryChangePaused = builder.categoryChangePaused;
             this.components = builder.components;
             this.example = builder.example;
             this.language = builder.language;
@@ -1746,6 +1754,13 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return allowSend
+         */
+        public Boolean getAllowSend() {
+            return this.allowSend;
+        }
+
+        /**
          * @return auditStatus
          */
         public String getAuditStatus() {
@@ -1757,6 +1772,13 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
          */
         public String getCategory() {
             return this.category;
+        }
+
+        /**
+         * @return categoryChangePaused
+         */
+        public Boolean getCategoryChangePaused() {
+            return this.categoryChangePaused;
         }
 
         /**
@@ -1823,8 +1845,10 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean allowSend; 
             private String auditStatus; 
             private String category; 
+            private Boolean categoryChangePaused; 
             private java.util.List<Components> components; 
             private java.util.Map<String, String> example; 
             private String language; 
@@ -1839,8 +1863,10 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.allowSend = model.allowSend;
                 this.auditStatus = model.auditStatus;
                 this.category = model.category;
+                this.categoryChangePaused = model.categoryChangePaused;
                 this.components = model.components;
                 this.example = model.example;
                 this.language = model.language;
@@ -1851,6 +1877,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
                 this.templateCode = model.templateCode;
                 this.templateType = model.templateType;
             } 
+
+            /**
+             * AllowSend.
+             */
+            public Builder allowSend(Boolean allowSend) {
+                this.allowSend = allowSend;
+                return this;
+            }
 
             /**
              * <p>The review status of the message template. Valid values:</p>
@@ -1897,6 +1931,14 @@ public class GetChatappTemplateDetailResponseBody extends TeaModel {
              */
             public Builder category(String category) {
                 this.category = category;
+                return this;
+            }
+
+            /**
+             * CategoryChangePaused.
+             */
+            public Builder categoryChangePaused(Boolean categoryChangePaused) {
+                this.categoryChangePaused = categoryChangePaused;
                 return this;
             }
 

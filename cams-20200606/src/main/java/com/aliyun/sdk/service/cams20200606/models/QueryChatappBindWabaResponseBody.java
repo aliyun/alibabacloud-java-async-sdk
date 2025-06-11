@@ -220,6 +220,9 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
+        @com.aliyun.core.annotation.NameInMap("MarketingMessageLiteStatus")
+        private String marketingMessageLiteStatus;
+
         @com.aliyun.core.annotation.NameInMap("MessageTemplateNamespace")
         private String messageTemplateNamespace;
 
@@ -236,6 +239,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             this.businessName = builder.businessName;
             this.currency = builder.currency;
             this.id = builder.id;
+            this.marketingMessageLiteStatus = builder.marketingMessageLiteStatus;
             this.messageTemplateNamespace = builder.messageTemplateNamespace;
             this.name = builder.name;
             this.primaryBusinessLocation = builder.primaryBusinessLocation;
@@ -292,6 +296,13 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         }
 
         /**
+         * @return marketingMessageLiteStatus
+         */
+        public String getMarketingMessageLiteStatus() {
+            return this.marketingMessageLiteStatus;
+        }
+
+        /**
          * @return messageTemplateNamespace
          */
         public String getMessageTemplateNamespace() {
@@ -319,6 +330,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             private String businessName; 
             private String currency; 
             private String id; 
+            private String marketingMessageLiteStatus; 
             private String messageTemplateNamespace; 
             private String name; 
             private String primaryBusinessLocation; 
@@ -333,6 +345,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
                 this.businessName = model.businessName;
                 this.currency = model.currency;
                 this.id = model.id;
+                this.marketingMessageLiteStatus = model.marketingMessageLiteStatus;
                 this.messageTemplateNamespace = model.messageTemplateNamespace;
                 this.name = model.name;
                 this.primaryBusinessLocation = model.primaryBusinessLocation;
@@ -411,6 +424,14 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
              */
             public Builder id(String id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * MarketingMessageLiteStatus.
+             */
+            public Builder marketingMessageLiteStatus(String marketingMessageLiteStatus) {
+                this.marketingMessageLiteStatus = marketingMessageLiteStatus;
                 return this;
             }
 
