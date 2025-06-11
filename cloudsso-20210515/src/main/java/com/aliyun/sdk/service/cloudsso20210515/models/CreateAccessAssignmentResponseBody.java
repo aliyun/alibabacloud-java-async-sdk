@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Task task; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAccessAssignmentResponseBody model) {
+            this.requestId = model.requestId;
+            this.task = model.task;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -249,6 +266,25 @@ public class CreateAccessAssignmentResponseBody extends TeaModel {
             private String targetType; 
             private String taskId; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.accessConfigurationId = model.accessConfigurationId;
+                this.accessConfigurationName = model.accessConfigurationName;
+                this.principalId = model.principalId;
+                this.principalName = model.principalName;
+                this.principalType = model.principalType;
+                this.status = model.status;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetPath = model.targetPath;
+                this.targetPathName = model.targetPathName;
+                this.targetType = model.targetType;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The ID of the access configuration.</p>

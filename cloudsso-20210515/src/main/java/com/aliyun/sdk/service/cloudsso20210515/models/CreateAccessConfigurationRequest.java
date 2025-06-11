@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -32,6 +37,10 @@ public class CreateAccessConfigurationRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SessionDuration")
     private Integer sessionDuration;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
     private CreateAccessConfigurationRequest(Builder builder) {
         super(builder);
         this.accessConfigurationName = builder.accessConfigurationName;
@@ -39,6 +48,7 @@ public class CreateAccessConfigurationRequest extends Request {
         this.directoryId = builder.directoryId;
         this.relayState = builder.relayState;
         this.sessionDuration = builder.sessionDuration;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -49,7 +59,7 @@ public class CreateAccessConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -89,12 +99,20 @@ public class CreateAccessConfigurationRequest extends Request {
         return this.sessionDuration;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<CreateAccessConfigurationRequest, Builder> {
         private String accessConfigurationName; 
         private String description; 
         private String directoryId; 
         private String relayState; 
         private Integer sessionDuration; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -107,6 +125,7 @@ public class CreateAccessConfigurationRequest extends Request {
             this.directoryId = request.directoryId;
             this.relayState = request.relayState;
             this.sessionDuration = request.sessionDuration;
+            this.tags = request.tags;
         } 
 
         /**
@@ -149,7 +168,8 @@ public class CreateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+         * <p>The initial web page</p>
+         * <p>that is displayed after a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
          * <p>The web page must be a page of the Alibaba Cloud Management Console. By default, this parameter is empty, which indicates that the initial web page is the homepage of the Alibaba Cloud Management Console.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +182,8 @@ public class CreateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+         * <p>The duration of a session</p>
+         * <p>in which a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
          * <p>Unit: seconds.</p>
          * <p>Valid values: 900 to 43200. The value 900 indicates 15 minutes. The value 43200 indicates 12 hours.</p>
          * <p>Default value: 3600. The value indicates 1 hour.</p>
@@ -176,6 +197,15 @@ public class CreateAccessConfigurationRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public CreateAccessConfigurationRequest build() {
             return new CreateAccessConfigurationRequest(this);
@@ -183,4 +213,79 @@ public class CreateAccessConfigurationRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateAccessConfigurationRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAccessConfigurationRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

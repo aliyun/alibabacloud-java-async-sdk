@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return directoryStatistics
      */
@@ -48,6 +57,14 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
     public static final class Builder {
         private DirectoryStatistics directoryStatistics; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDirectoryStatisticsResponseBody model) {
+            this.directoryStatistics = model.directoryStatistics;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The statistics of the directory.</p>
@@ -285,6 +302,28 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
             private Integer systemPolicyPerAccessConfigurationQuota; 
             private Integer userCount; 
             private Integer userQuota; 
+
+            private Builder() {
+            } 
+
+            private Builder(DirectoryStatistics model) {
+                this.accessAssignmentCount = model.accessAssignmentCount;
+                this.accessConfigurationCount = model.accessConfigurationCount;
+                this.accessConfigurationQuota = model.accessConfigurationQuota;
+                this.directoryId = model.directoryId;
+                this.directoryName = model.directoryName;
+                this.groupCount = model.groupCount;
+                this.groupQuota = model.groupQuota;
+                this.inProgressTaskCount = model.inProgressTaskCount;
+                this.inlinePolicyPerAccessConfigurationQuota = model.inlinePolicyPerAccessConfigurationQuota;
+                this.region = model.region;
+                this.SCIMServerCredentialCount = model.SCIMServerCredentialCount;
+                this.SCIMSyncEnabled = model.SCIMSyncEnabled;
+                this.SSOEnabled = model.SSOEnabled;
+                this.systemPolicyPerAccessConfigurationQuota = model.systemPolicyPerAccessConfigurationQuota;
+                this.userCount = model.userCount;
+                this.userQuota = model.userQuota;
+            } 
 
             /**
              * <p>The number of access permissions that are assigned.</p>

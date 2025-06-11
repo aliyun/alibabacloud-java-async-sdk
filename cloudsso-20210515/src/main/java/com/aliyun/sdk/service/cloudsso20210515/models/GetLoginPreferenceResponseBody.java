@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loginPreference
      */
@@ -48,6 +57,14 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
     public static final class Builder {
         private LoginPreference loginPreference; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetLoginPreferenceResponseBody model) {
+            this.loginPreference = model.loginPreference;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The logon preference.</p>
@@ -118,11 +135,19 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
             private Boolean allowUserToGetCredentials; 
             private String loginNetworkMasks; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoginPreference model) {
+                this.allowUserToGetCredentials = model.allowUserToGetCredentials;
+                this.loginNetworkMasks = model.loginNetworkMasks;
+            } 
+
             /**
-             * <p>Whether the user can obtain program access credentials on the portal after logging in. Values: </p>
+             * <p>Indicates whether a user can obtain the application access credential after logon to the portal. Valid values:</p>
              * <ul>
-             * <li>True: Yes. </li>
-             * <li>False (default): No.</li>
+             * <li>True</li>
+             * <li>False (default)</li>
              * </ul>
              * 
              * <strong>example:</strong>

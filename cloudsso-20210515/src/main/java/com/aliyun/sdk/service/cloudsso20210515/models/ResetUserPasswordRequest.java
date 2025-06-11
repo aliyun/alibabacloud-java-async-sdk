@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,7 +54,7 @@ public class ResetUserPasswordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -142,7 +147,7 @@ public class ResetUserPasswordRequest extends Request {
          * <p>The password must contain the following types of characters: uppercase letters, lowercase letters, digits, and special characters.</p>
          * <p>The password must be 8 to 32 characters in length.</p>
          * <blockquote>
-         * <p> If you set <code>GenerateRandomPassword</code> to <code>False</code>, you must specify <code>Password</code> .</p>
+         * <p> If you set <code>GenerateRandomPassword</code> to <code>False</code>, you must specify <code>Password</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

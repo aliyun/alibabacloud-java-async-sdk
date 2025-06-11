@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -49,8 +58,16 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
         private String requestId; 
         private SCIMServerCredential SCIMServerCredential; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateSCIMServerCredentialResponseBody model) {
+            this.requestId = model.requestId;
+            this.SCIMServerCredential = model.SCIMServerCredential;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2D2E5180-7ACF-57FF-A56C-26A49ABEBFF7</p>
@@ -177,6 +194,19 @@ public class CreateSCIMServerCredentialResponseBody extends TeaModel {
             private String directoryId; 
             private String expireTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SCIMServerCredential model) {
+                this.createTime = model.createTime;
+                this.credentialId = model.credentialId;
+                this.credentialSecret = model.credentialSecret;
+                this.credentialType = model.credentialType;
+                this.directoryId = model.directoryId;
+                this.expireTime = model.expireTime;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the SCIM credential was created.</p>

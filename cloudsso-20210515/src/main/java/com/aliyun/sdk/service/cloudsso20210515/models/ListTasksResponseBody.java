@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -25,7 +30,7 @@ public class ListTasksResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Tasks")
-    private java.util.List < Tasks> tasks;
+    private java.util.List<Tasks> tasks;
 
     @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
@@ -45,6 +50,10 @@ public class ListTasksResponseBody extends TeaModel {
 
     public static ListTasksResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -78,7 +87,7 @@ public class ListTasksResponseBody extends TeaModel {
     /**
      * @return tasks
      */
-    public java.util.List < Tasks> getTasks() {
+    public java.util.List<Tasks> getTasks() {
         return this.tasks;
     }
 
@@ -94,8 +103,20 @@ public class ListTasksResponseBody extends TeaModel {
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
-        private java.util.List < Tasks> tasks; 
+        private java.util.List<Tasks> tasks; 
         private Integer totalCounts; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTasksResponseBody model) {
+            this.isTruncated = model.isTruncated;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+            this.totalCounts = model.totalCounts;
+        } 
 
         /**
          * <p>Indicates whether the queried entries are truncated. Valid values:</p>
@@ -151,7 +172,7 @@ public class ListTasksResponseBody extends TeaModel {
         /**
          * <p>The tasks.</p>
          */
-        public Builder tasks(java.util.List < Tasks> tasks) {
+        public Builder tasks(java.util.List<Tasks> tasks) {
             this.tasks = tasks;
             return this;
         }
@@ -384,6 +405,28 @@ public class ListTasksResponseBody extends TeaModel {
             private String targetType; 
             private String taskId; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.accessConfigurationId = model.accessConfigurationId;
+                this.accessConfigurationName = model.accessConfigurationName;
+                this.endTime = model.endTime;
+                this.failureReason = model.failureReason;
+                this.principalId = model.principalId;
+                this.principalName = model.principalName;
+                this.principalType = model.principalType;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetPath = model.targetPath;
+                this.targetPathName = model.targetPathName;
+                this.targetType = model.targetType;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The ID of the access configuration.</p>

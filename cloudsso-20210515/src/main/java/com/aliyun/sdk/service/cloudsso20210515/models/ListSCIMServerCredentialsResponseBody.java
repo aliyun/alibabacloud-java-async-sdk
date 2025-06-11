@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SCIMServerCredentials")
-    private java.util.List < SCIMServerCredentials> SCIMServerCredentials;
+    private java.util.List<SCIMServerCredentials> SCIMServerCredentials;
 
     @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
@@ -35,6 +40,10 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -45,7 +54,7 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
     /**
      * @return SCIMServerCredentials
      */
-    public java.util.List < SCIMServerCredentials> getSCIMServerCredentials() {
+    public java.util.List<SCIMServerCredentials> getSCIMServerCredentials() {
         return this.SCIMServerCredentials;
     }
 
@@ -58,11 +67,20 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SCIMServerCredentials> SCIMServerCredentials; 
+        private java.util.List<SCIMServerCredentials> SCIMServerCredentials; 
         private Integer totalCounts; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListSCIMServerCredentialsResponseBody model) {
+            this.requestId = model.requestId;
+            this.SCIMServerCredentials = model.SCIMServerCredentials;
+            this.totalCounts = model.totalCounts;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>FE4B7037-C315-5DD5-826E-57A87950BCD1</p>
@@ -75,7 +93,7 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
         /**
          * <p>The SCIM credentials.</p>
          */
-        public Builder SCIMServerCredentials(java.util.List < SCIMServerCredentials> SCIMServerCredentials) {
+        public Builder SCIMServerCredentials(java.util.List<SCIMServerCredentials> SCIMServerCredentials) {
             this.SCIMServerCredentials = SCIMServerCredentials;
             return this;
         }
@@ -189,6 +207,18 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
             private String expireTime; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(SCIMServerCredentials model) {
+                this.createTime = model.createTime;
+                this.credentialId = model.credentialId;
+                this.credentialType = model.credentialType;
+                this.directoryId = model.directoryId;
+                this.expireTime = model.expireTime;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The time when the SCIM credential was created.</p>
              * 
@@ -247,8 +277,8 @@ public class ListSCIMServerCredentialsResponseBody extends TeaModel {
             /**
              * <p>The status of the SCIM credential. Valid values:</p>
              * <ul>
-             * <li>Enabled: The SCIM credential is enabled.</li>
-             * <li>Disabled: The SCIM credential is disabled.</li>
+             * <li>Enabled</li>
+             * <li>Disabled</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -49,8 +58,16 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
         private String requestId; 
         private SAMLIdentityProviderConfiguration SAMLIdentityProviderConfiguration; 
 
+        private Builder() {
+        } 
+
+        private Builder(SetExternalSAMLIdentityProviderResponseBody model) {
+            this.requestId = model.requestId;
+            this.SAMLIdentityProviderConfiguration = model.SAMLIdentityProviderConfiguration;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>63160579-2E1B-57B0-8273-B27427172385</p>
@@ -85,7 +102,7 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
         private String bindingType;
 
         @com.aliyun.core.annotation.NameInMap("CertificateIds")
-        private java.util.List < String > certificateIds;
+        private java.util.List<String> certificateIds;
 
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
@@ -142,7 +159,7 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
         /**
          * @return certificateIds
          */
-        public java.util.List < String > getCertificateIds() {
+        public java.util.List<String> getCertificateIds() {
             return this.certificateIds;
         }
 
@@ -204,7 +221,7 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bindingType; 
-            private java.util.List < String > certificateIds; 
+            private java.util.List<String> certificateIds; 
             private String createTime; 
             private String directoryId; 
             private String encodedMetadataDocument; 
@@ -214,11 +231,27 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             private String updateTime; 
             private Boolean wantRequestSigned; 
 
+            private Builder() {
+            } 
+
+            private Builder(SAMLIdentityProviderConfiguration model) {
+                this.bindingType = model.bindingType;
+                this.certificateIds = model.certificateIds;
+                this.createTime = model.createTime;
+                this.directoryId = model.directoryId;
+                this.encodedMetadataDocument = model.encodedMetadataDocument;
+                this.entityId = model.entityId;
+                this.loginUrl = model.loginUrl;
+                this.SSOStatus = model.SSOStatus;
+                this.updateTime = model.updateTime;
+                this.wantRequestSigned = model.wantRequestSigned;
+            } 
+
             /**
-             * <p>The Binding method for initiating a SAML request. Values:</p>
+             * <p>The binding for sending SAML requests. Valid values:</p>
              * <ul>
-             * <li>Post: Initiate the SAML request using the Post method. </li>
-             * <li>Redirect: Initiate the SAML request using the Redirect method.</li>
+             * <li>Post: HTTP Post bindings.</li>
+             * <li>Redirect: HTTP Redirect bindings.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -230,9 +263,9 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the SAML signing certificate.</p>
+             * <p>The IDs of the SAML signing certificates.</p>
              */
-            public Builder certificateIds(java.util.List < String > certificateIds) {
+            public Builder certificateIds(java.util.List<String> certificateIds) {
                 this.certificateIds = certificateIds;
                 return this;
             }
@@ -318,8 +351,8 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
             /**
              * <p>Indicates whether CloudSSO needs to sign SAML requests. The requests are sent when users log on to the CloudSSO user portal to initiate SAML-based SSO. Valid values:</p>
              * <ul>
-             * <li>true: yes</li>
-             * <li>false: no (default)</li>
+             * <li>true</li>
+             * <li>false (default)</li>
              * </ul>
              * 
              * <strong>example:</strong>

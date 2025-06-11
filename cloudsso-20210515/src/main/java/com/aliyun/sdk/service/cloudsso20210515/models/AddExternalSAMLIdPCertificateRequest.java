@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class AddExternalSAMLIdPCertificateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -81,7 +86,7 @@ public class AddExternalSAMLIdPCertificateRequest extends Request {
 
         /**
          * <p>The X.509 certificate in the PEM format.</p>
-         * <p>The certificate is provided by the SAML IdP.</p>
+         * <p>The certificate is provided by the SAML identity provider (IdP).</p>
          * 
          * <strong>example:</strong>
          * <p>MIIC8DCCAdigAwIBAgIQP9eomUYGeoND****</p>

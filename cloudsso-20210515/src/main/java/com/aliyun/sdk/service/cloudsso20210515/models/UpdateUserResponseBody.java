@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdateUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -49,8 +58,16 @@ public class UpdateUserResponseBody extends TeaModel {
         private String requestId; 
         private User user; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateUserResponseBody model) {
+            this.requestId = model.requestId;
+            this.user = model.user;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F44F02EC-70D1-5E51-8E8E-FA9AC4EF952A</p>
@@ -226,8 +243,25 @@ public class UpdateUserResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.firstName = model.firstName;
+                this.lastName = model.lastName;
+                this.provisionType = model.provisionType;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
-             * <p>The time when the user was created.</p>
+             * <p>The time when the user was created. The value is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-10-26T03:03:42Z</p>
@@ -323,7 +357,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the information about the user was modified.</p>
+             * <p>The time when the information about the user was modified. The value is displayed in UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-10-26T07:32:32Z</p>
@@ -345,7 +379,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the user.</p>
+             * <p>The username of the user.</p>
              * 
              * <strong>example:</strong>
              * <p>Alice</p>

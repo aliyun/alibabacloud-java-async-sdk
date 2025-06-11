@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessConfiguration
      */
@@ -49,6 +58,14 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
         private AccessConfiguration accessConfiguration; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateAccessConfigurationResponseBody model) {
+            this.accessConfiguration = model.accessConfiguration;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The information about the access configuration.</p>
          */
@@ -58,7 +75,7 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9B13E4EE-3853-5852-9165-597C32AD8FB7</p>
@@ -100,7 +117,7 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
         private Integer sessionDuration;
 
         @com.aliyun.core.annotation.NameInMap("StatusNotifications")
-        private java.util.List < String > statusNotifications;
+        private java.util.List<String> statusNotifications;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
@@ -169,7 +186,7 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
         /**
          * @return statusNotifications
          */
-        public java.util.List < String > getStatusNotifications() {
+        public java.util.List<String> getStatusNotifications() {
             return this.statusNotifications;
         }
 
@@ -187,8 +204,22 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
             private String description; 
             private String relayState; 
             private Integer sessionDuration; 
-            private java.util.List < String > statusNotifications; 
+            private java.util.List<String> statusNotifications; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessConfiguration model) {
+                this.accessConfigurationId = model.accessConfigurationId;
+                this.accessConfigurationName = model.accessConfigurationName;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.relayState = model.relayState;
+                this.sessionDuration = model.sessionDuration;
+                this.statusNotifications = model.statusNotifications;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The ID of the access configuration.</p>
@@ -235,7 +266,8 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+             * <p>The initial web page</p>
+             * <p>that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
@@ -246,7 +278,8 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+             * <p>The duration of a session</p>
+             * <p>in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
              * <p>Unit: seconds.</p>
              * 
              * <strong>example:</strong>
@@ -258,9 +291,9 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status notification.</p>
+             * <p>The status notifications.</p>
              */
-            public Builder statusNotifications(java.util.List < String > statusNotifications) {
+            public Builder statusNotifications(java.util.List<String> statusNotifications) {
                 this.statusNotifications = statusNotifications;
                 return this;
             }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetTaskStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class GetTaskStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TaskStatus taskStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTaskStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskStatus = model.taskStatus;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -165,6 +182,18 @@ public class GetTaskStatusResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
             private String taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskStatus model) {
+                this.endTime = model.endTime;
+                this.failureReason = model.failureReason;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The end time of the task.</p>

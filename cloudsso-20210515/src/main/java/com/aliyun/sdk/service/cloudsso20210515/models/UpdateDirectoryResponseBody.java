@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdateDirectoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return directory
      */
@@ -49,6 +58,14 @@ public class UpdateDirectoryResponseBody extends TeaModel {
         private Directory directory; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateDirectoryResponseBody model) {
+            this.directory = model.directory;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The information about the directory.</p>
          */
@@ -58,7 +75,7 @@ public class UpdateDirectoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>B182C041-8C64-5F2F-A07B-FC67FAF89CF9</p>
@@ -153,6 +170,17 @@ public class UpdateDirectoryResponseBody extends TeaModel {
             private String directoryName; 
             private String region; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Directory model) {
+                this.createTime = model.createTime;
+                this.directoryId = model.directoryId;
+                this.directoryName = model.directoryName;
+                this.region = model.region;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the directory was created.</p>

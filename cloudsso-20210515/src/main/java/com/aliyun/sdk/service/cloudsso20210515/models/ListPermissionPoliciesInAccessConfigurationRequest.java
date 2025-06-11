@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class ListPermissionPoliciesInAccessConfigurationRequest extends Request 
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -108,8 +113,8 @@ public class ListPermissionPoliciesInAccessConfigurationRequest extends Request 
         /**
          * <p>The type of the policy. The type can be used to filter policies. Valid values:</p>
          * <ul>
-         * <li>System: system policy</li>
-         * <li>Inline: inline policy</li>
+         * <li>System: system policy.</li>
+         * <li>Inline: inline policy.</li>
          * </ul>
          * <p>If you do not specify this parameter, all types of policies are queried.</p>
          * 

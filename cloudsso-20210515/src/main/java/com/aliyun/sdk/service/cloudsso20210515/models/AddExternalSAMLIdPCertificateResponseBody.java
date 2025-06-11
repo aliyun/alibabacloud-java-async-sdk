@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class AddExternalSAMLIdPCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateId
      */
@@ -49,6 +58,14 @@ public class AddExternalSAMLIdPCertificateResponseBody extends TeaModel {
         private String certificateId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AddExternalSAMLIdPCertificateResponseBody model) {
+            this.certificateId = model.certificateId;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The ID of the SAML signing certificate.</p>
          * 
@@ -61,7 +78,7 @@ public class AddExternalSAMLIdPCertificateResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>12B3E332-DD16-515B-B695-39BA233AA172</p>

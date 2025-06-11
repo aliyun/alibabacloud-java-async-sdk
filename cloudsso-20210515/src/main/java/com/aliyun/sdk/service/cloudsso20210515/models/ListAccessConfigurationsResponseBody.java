@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAccessConfigurationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessConfigurations")
-    private java.util.List < AccessConfigurations> accessConfigurations;
+    private java.util.List<AccessConfigurations> accessConfigurations;
 
     @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
@@ -47,10 +52,14 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessConfigurations
      */
-    public java.util.List < AccessConfigurations> getAccessConfigurations() {
+    public java.util.List<AccessConfigurations> getAccessConfigurations() {
         return this.accessConfigurations;
     }
 
@@ -90,17 +99,29 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AccessConfigurations> accessConfigurations; 
+        private java.util.List<AccessConfigurations> accessConfigurations; 
         private Boolean isTruncated; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCounts; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAccessConfigurationsResponseBody model) {
+            this.accessConfigurations = model.accessConfigurations;
+            this.isTruncated = model.isTruncated;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCounts = model.totalCounts;
+        } 
+
         /**
          * <p>The access configurations.</p>
          */
-        public Builder accessConfigurations(java.util.List < AccessConfigurations> accessConfigurations) {
+        public Builder accessConfigurations(java.util.List<AccessConfigurations> accessConfigurations) {
             this.accessConfigurations = accessConfigurations;
             return this;
         }
@@ -108,8 +129,8 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the queried entries are truncated. Valid values:</p>
          * <ul>
-         * <li>true: The queried entries are truncated.</li>
-         * <li>false: The queried entries are not truncated.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +142,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -132,9 +153,9 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that is returned for the next page.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the <code>IsTruncated</code> parameter is set to <code>true</code>.</p>
+         * <p> This parameter is returned only when the value of the <code>IsTruncated</code> parameter is <code>true</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,7 +167,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2BC0CBAC-45E1-5BD3-BF6E-F69D1D5391C2</p>
@@ -179,6 +200,81 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
      *
      * <p>ListAccessConfigurationsResponseBody</p>
      */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAccessConfigurationsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAccessConfigurationsResponseBody</p>
+     */
     public static class AccessConfigurations extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
         private String accessConfigurationId;
@@ -199,7 +295,10 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         private Integer sessionDuration;
 
         @com.aliyun.core.annotation.NameInMap("StatusNotifications")
-        private java.util.List < String > statusNotifications;
+        private java.util.List<String> statusNotifications;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
 
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
@@ -212,6 +311,7 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             this.relayState = builder.relayState;
             this.sessionDuration = builder.sessionDuration;
             this.statusNotifications = builder.statusNotifications;
+            this.tags = builder.tags;
             this.updateTime = builder.updateTime;
         }
 
@@ -268,8 +368,15 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
         /**
          * @return statusNotifications
          */
-        public java.util.List < String > getStatusNotifications() {
+        public java.util.List<String> getStatusNotifications() {
             return this.statusNotifications;
+        }
+
+        /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
         }
 
         /**
@@ -286,8 +393,24 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             private String description; 
             private String relayState; 
             private Integer sessionDuration; 
-            private java.util.List < String > statusNotifications; 
+            private java.util.List<String> statusNotifications; 
+            private java.util.List<Tags> tags; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessConfigurations model) {
+                this.accessConfigurationId = model.accessConfigurationId;
+                this.accessConfigurationName = model.accessConfigurationName;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.relayState = model.relayState;
+                this.sessionDuration = model.sessionDuration;
+                this.statusNotifications = model.statusNotifications;
+                this.tags = model.tags;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The ID of the access configuration.</p>
@@ -334,7 +457,8 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+             * <p>The initial web page</p>
+             * <p>that is displayed after a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></p>
@@ -345,7 +469,8 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+             * <p>The duration of a session</p>
+             * <p>in which a CloudSSO user uses the access configuration to access an account in your resource directory.</p>
              * <p>Unit: seconds.</p>
              * 
              * <strong>example:</strong>
@@ -357,10 +482,18 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status notification.</p>
+             * <p>The status notifications.</p>
              */
-            public Builder statusNotifications(java.util.List < String > statusNotifications) {
+            public Builder statusNotifications(java.util.List<String> statusNotifications) {
                 this.statusNotifications = statusNotifications;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -28,7 +33,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
     private Integer totalCounts;
 
     @com.aliyun.core.annotation.NameInMap("UserProvisionings")
-    private java.util.List < UserProvisionings> userProvisionings;
+    private java.util.List<UserProvisionings> userProvisionings;
 
     private ListUserProvisioningsResponseBody(Builder builder) {
         this.isTruncated = builder.isTruncated;
@@ -45,6 +50,10 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
 
     public static ListUserProvisioningsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,7 +94,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
     /**
      * @return userProvisionings
      */
-    public java.util.List < UserProvisionings> getUserProvisionings() {
+    public java.util.List<UserProvisionings> getUserProvisionings() {
         return this.userProvisionings;
     }
 
@@ -95,7 +104,19 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCounts; 
-        private java.util.List < UserProvisionings> userProvisionings; 
+        private java.util.List<UserProvisionings> userProvisionings; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserProvisioningsResponseBody model) {
+            this.isTruncated = model.isTruncated;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCounts = model.totalCounts;
+            this.userProvisionings = model.userProvisionings;
+        } 
 
         /**
          * <p>Indicates whether the queried entries are truncated. Valid values:</p>
@@ -164,7 +185,7 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
         /**
          * <p>The RAM user provisionings.</p>
          */
-        public Builder userProvisionings(java.util.List < UserProvisionings> userProvisionings) {
+        public Builder userProvisionings(java.util.List<UserProvisionings> userProvisionings) {
             this.userProvisionings = userProvisionings;
             return this;
         }
@@ -386,6 +407,28 @@ public class ListUserProvisioningsResponseBody extends TeaModel {
             private String targetType; 
             private String updateTime; 
             private String userProvisioningId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserProvisionings model) {
+                this.createTime = model.createTime;
+                this.deletionStrategy = model.deletionStrategy;
+                this.description = model.description;
+                this.directoryId = model.directoryId;
+                this.duplicationStrategy = model.duplicationStrategy;
+                this.ownerPk = model.ownerPk;
+                this.principalId = model.principalId;
+                this.principalName = model.principalName;
+                this.principalType = model.principalType;
+                this.status = model.status;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetPath = model.targetPath;
+                this.targetType = model.targetType;
+                this.updateTime = model.updateTime;
+                this.userProvisioningId = model.userProvisioningId;
+            } 
 
             /**
              * <p>The creation time.</p>

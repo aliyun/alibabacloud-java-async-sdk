@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListGroupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Groups")
-    private java.util.List < Groups> groups;
+    private java.util.List<Groups> groups;
 
     @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
@@ -47,10 +52,14 @@ public class ListGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groups
      */
-    public java.util.List < Groups> getGroups() {
+    public java.util.List<Groups> getGroups() {
         return this.groups;
     }
 
@@ -90,17 +99,29 @@ public class ListGroupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Groups> groups; 
+        private java.util.List<Groups> groups; 
         private Boolean isTruncated; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCounts; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListGroupsResponseBody model) {
+            this.groups = model.groups;
+            this.isTruncated = model.isTruncated;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCounts = model.totalCounts;
+        } 
+
         /**
          * <p>The groups.</p>
          */
-        public Builder groups(java.util.List < Groups> groups) {
+        public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
             return this;
         }
@@ -108,8 +129,8 @@ public class ListGroupsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the queried entries are truncated. Valid values:</p>
          * <ul>
-         * <li>true: The queried entries are truncated.</li>
-         * <li>false: The queried entries are not truncated.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +142,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -132,9 +153,9 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that is returned for the next page.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the <code>IsTruncated</code> parameter is set to <code>true</code>.</p>
+         * <p> This parameter is returned only when the value of the <code>IsTruncated</code> parameter is <code>true</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,7 +167,7 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>768F908D-A66A-5A5D-816C-20C93CBBFEE3</p>
@@ -264,6 +285,18 @@ public class ListGroupsResponseBody extends TeaModel {
             private String groupName; 
             private String provisionType; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.provisionType = model.provisionType;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the group was created.</p>

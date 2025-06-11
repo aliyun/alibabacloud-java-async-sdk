@@ -41,7 +41,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
-     * This topic provides an example of how to add the user <code>u-00q8wbq42wiltcrk****</code> to the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
+     * This topic provides an example on how to add the user <code>u-00q8wbq42wiltcrk****</code> to the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
      * 
      * @param request the request parameters of AddUserToGroup  AddUserToGroupRequest
      * @return AddUserToGroupResponse
@@ -81,10 +81,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <h3><a href="#"></a>Operation description</h3>
      * <p>A directory is a CloudSSO instance. Before you can use CloudSSO, you must create a directory. The directory is used to manage all CloudSSO resources.
      * To create a directory, you must select a region. Alibaba Cloud stores data in the directory only in the region that you select. However, you can deploy Alibaba Cloud resources including Elastic Compute Service (ECS) instances and ApsaraDB RDS instances in other regions. You can also use your cloud account for logons and access the Alibaba Cloud resources in other regions. You can select a region to create a directory based on your security compliance requirements and the geographic location of specific users. If you do not have strict security compliance requirements, we recommend that you select a region that is the closest to the geographical location of the specific users. This way, access to cloud resources is accelerated. You can create the CloudSSO directory in the China (Shanghai), China (Hong Kong), US (Silicon Valley), or Germany (Frankfurt) region.
      * This topic provides an example on how to create a directory named <code>example</code> in the China (Shanghai) region.</p>
-     * <h2>Limits</h2>
+     * <h3><a href="#"></a>Limits</h3>
      * <ul>
      * <li>You can create only one directory for a management account.</li>
      * <li>If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.</li>
@@ -144,9 +145,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to delete the access configuration whose ID is <code>ac-001j9mcm3k7335bc****</code>.</p>
-     * <h2>Prerequisites</h2>
+     * <h3><a href="#"></a>Prerequisites</h3>
      * <p>The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</p>
+     * <h3><a href="#"></a>Operation description</h3>
+     * <p>This topic provides an example on how to delete the access configuration whose ID is <code>ac-001j9mcm3k7335bc****</code>.</p>
      * 
      * @param request the request parameters of DeleteAccessConfiguration  DeleteAccessConfigurationRequest
      * @return DeleteAccessConfigurationResponse
@@ -155,8 +157,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to delete a directory whose ID is <code>d-00fc2p61****</code>.</p>
-     * <h2>Prerequisites</h2>
+     * <h3><a href="#"></a>Prerequisites</h3>
      * <p>No resources are contained in the directory that you want to delete.</p>
      * <ul>
      * <li>Access permissions on the accounts in your resource directory are removed from all users and groups. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
@@ -164,8 +165,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <li>Groups are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</li>
      * <li>Access configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</li>
      * <li>System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</li>
-     * <li>SSO logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</li>
+     * <li>Single sign-on (SSO) logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</li>
      * </ul>
+     * <h3><a href="#"></a>Operation description</h3>
+     * <p>This topic provides an example on how to delete a directory whose ID is <code>d-00fc2p61****</code>.</p>
      * 
      * @param request the request parameters of DeleteDirectory  DeleteDirectoryRequest
      * @return DeleteDirectoryResponse
@@ -174,13 +177,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.</p>
-     * <h2>Prerequisites</h2>
+     * <h3><a href="#"></a>Prerequisites</h3>
      * <p>The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.</p>
      * <ul>
      * <li>Users: You must remove users from the group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</li>
      * <li>Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
      * </ul>
+     * <h3><a href="#"></a>Operation description</h3>
+     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.
+     * This topic provides an example on how to delete the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
      * 
      * @param request the request parameters of DeleteGroup  DeleteGroupRequest
      * @return DeleteGroupResponse
@@ -189,7 +194,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to unbind the MFA device <code>mfa-00ujhet8pycljj7j****</code> from the user <code>u-00q8wbq42wiltcrk****</code>.</p>
+     * <p>This topic provides an example on how to unbind the MFA device whose ID is <code>mfa-00ujhet8pycljj7j****</code> from the user whose ID is <code>u-00q8wbq42wiltcrk****</code>.</p>
      * 
      * @param request the request parameters of DeleteMFADeviceForUser  DeleteMFADeviceForUserRequest
      * @return DeleteMFADeviceForUserResponse
@@ -208,14 +213,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.</p>
-     * <h2>Prerequisites</h2>
-     * <p>The user that you want to delete is not associated with the following resources. If the user is associated with the resources, the deletion fails.</p>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Before you delete a user, make sure that the user is not associated with the following resources. Otherwise, the deletion fails.</p>
      * <ul>
-     * <li>Multi-factor authentication (MFA) devices: You must unbind the MFA devices from the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</li>
+     * <li>Multi-factor authentication (MFA) devices: You must delete the MFA devices bound to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</li>
      * <li>Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
      * <li>Groups: You must remove the user from groups. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</li>
      * </ul>
+     * <h3><a href="#"></a>Precautions</h3>
+     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.
+     * This topic provides an example on how to delete the user whose ID is <code>u-00q8wbq42wiltcrk****</code>.</p>
      * 
      * @param request the request parameters of DeleteUser  DeleteUserRequest
      * @return DeleteUserResponse
@@ -271,7 +278,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
+     * <p>You can call this operation only if your account belongs to the management account that is used to enable a resource directory and has the permissions to enable CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/262819.html">Enable CloudSSO</a>.
      * If you call this operation, you agree to the <a href="https://www.alibabacloud.com/help/doc-detail/42416.htm">Alibaba Cloud International Website Product Terms of Service</a>.</p>
      * 
      * @param request the request parameters of EnableService  EnableServiceRequest
@@ -281,7 +288,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the information about the access configuration whose ID is <code>ac-00ccule7tadaijxc****</code>.</p>
+     * <p>This topic provides an example on how to query information about the access configuration whose ID is <code>ac-00ccule7tadaijxc****</code>.</p>
      * 
      * @param request the request parameters of GetAccessConfiguration  GetAccessConfigurationRequest
      * @return GetAccessConfigurationResponse
@@ -300,7 +307,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <p>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an identity provider (IdP).
-     * This topic provides an example on how to query the information about the SP within the directory <code>d-00fc2p61****</code>.</p>
+     * This topic provides an example on how to query information about the SP within the directory <code>d-00fc2p61****</code>.</p>
      * 
      * @param request the request parameters of GetDirectorySAMLServiceProviderInfo  GetDirectorySAMLServiceProviderInfoRequest
      * @return GetDirectorySAMLServiceProviderInfoResponse
@@ -327,7 +334,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the information about the group <code>g-00jqzghi2n3o5hkh****</code> in the directory <code>d-00fc2p61****</code>.</p>
+     * <p>This topic provides an example on how to query information about the group <code>g-00jqzghi2n3o5hkh****</code> in the directory <code>d-00fc2p61****</code>.</p>
      * 
      * @param request the request parameters of GetGroup  GetGroupRequest
      * @return GetGroupResponse
@@ -342,8 +349,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you enable username-password logon for CloudSSO users, you can also configure MFA for the users.
-     * This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <code>00q8wbq42wiltcrk****</code>.</p>
+     * <p>If you enable username-password logon for CloudSSO users, you can query the MFA setting for the users.
+     * This topic provides an example on how to query the MFA setting of all CloudSSO users that belong to the directory named <code>u-00q8wbq42wiltcrk****</code>.</p>
      * 
      * @param request the request parameters of GetMFAAuthenticationSettingInfo  GetMFAAuthenticationSettingInfoRequest
      * @return GetMFAAuthenticationSettingInfoResponse
@@ -353,7 +360,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>This operation is no longer maintained and updated. You can call the <a href="https://help.aliyun.com/document_detail/611286.html">GetMFAAuthenticationSettingInfo</a> operation to query more detailed information.
+     * <p> This operation is no longer maintained and updated. You can call the <a href="https://help.aliyun.com/document_detail/611286.html">GetMFAAuthenticationSettingInfo</a> operation to query more detailed information.
      * This topic provides an example on how to query the MFA setting of the users that belong to the directory named <code>d-00fc2p61****</code>. The returned result shows that MFA is enabled for all the users.</p>
      * </blockquote>
      * 
@@ -364,7 +371,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to check whether MFA is enabled for users in the directory whose ID is <code>00fc2p61****</code>. The returned result shows that MFA is in the Enabled state.</p>
+     * <p>This topic provides an example on how to check whether MFA is enabled for users in the directory whose ID is <code>d-00fc2p61****</code>. The returned result shows that MFA is in the Enabled state.</p>
      * 
      * @param request the request parameters of GetMFAAuthenticationStatus  GetMFAAuthenticationStatusRequest
      * @return GetMFAAuthenticationStatusResponse
@@ -626,7 +633,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot remove a user from a group that is synchronized by using SCIM.<br>This topic provides an example on how to remove the user <code>u-00q8wbq42wiltcrk****</code> from the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
+     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot remove a user from a group that is synchronized by using SCIM.
+     * This topic provides an example on how to remove the user <code>u-00q8wbq42wiltcrk****</code> from the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
      * 
      * @param request the request parameters of RemoveUserFromGroup  RemoveUserFromGroupRequest
      * @return RemoveUserFromGroupResponse
@@ -635,9 +643,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>If you forget your password or your password expires or is at risk, you must contact a CloudSSO administrator to reset your password.</p>
+     * <p>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</p>
      * <blockquote>
-     * <p> After you enable SSO logon, your password cannot be reset.
+     * <p> After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
      * This topic provides an example on how to reset the password of the user <code>u-00q8wbq42wiltcrk****</code>. The new password is automatically generated by the system.</p>
      * </blockquote>
      * 
@@ -654,11 +662,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is an SP, and the identity management system of an enterprise is an IdP.
+     * <p>During SAML 2.0-based single sign-on (SSO) logon, CloudSSO is a service provider (SP), and the identity management system of an enterprise is an IdP.
      * You can use one of the following methods to configure a SAML IdP. You can obtain the required metadata file or parameter values from your IdP.</p>
      * <ul>
-     * <li>Use the metadata file. You can specify the <code>EncodedMetadataDocument</code> parameter to upload the metadata file.</li>
-     * <li>Manually configure the IdP. You can manually specify the following parameters for your IdP: <code>EntityId</code>, <code>LoginUrl</code>, <code>WantRequestSigned</code>, and <code>X509Certificate</code>.
+     * <li>Use the metadata file: You can specify the <code>EncodedMetadataDocument</code> parameter to upload the metadata file.</li>
+     * <li>Manually configure the IdP: You can manually specify the following parameters for your IdP: <code>EntityId</code>, <code>LoginUrl</code>, <code>WantRequestSigned</code>, and <code>X509Certificate</code>.
      * If you have configured a SAML IdP, the existing configurations are replaced after you call this operation.</li>
      * <li>If the IdP is configured by using the metadata file, all existing configurations are replaced with new configurations.</li>
      * <li>If the IdP is manually configured, the original parameter values that are different from the new parameter values are replaced.<blockquote>
@@ -721,7 +729,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>After you change the name of a directory, the URL that is used to log on to the Cloud SSO user portal is changed. You must notify the Cloud SSO users of the correct URL. 
+     * <p>After you change the name of a directory, the URL that is used to log on to the CloudSSO user portal is changed. You must notify the CloudSSO users of the correct URL.
      * This topic provides an example on how to change the name of a directory to <code>new-example</code>.</p>
      * 
      * @param request the request parameters of UpdateDirectory  UpdateDirectoryRequest
@@ -733,8 +741,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>You can modify <code>GroupName</code> and <code>Description</code> for a group.</p>
      * <blockquote>
-     * <p> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a group that is synchronized by using SCIM.
-     * This topic provides an example on how to change the name of the group <code>g-00jqzghi2n3o5hkh****</code> to <code>NewTestGroup</code>.</p>
+     * <p> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a group that is synchronized by using SCIM.
+     * This topic provides an example on how to modify the name of the group <code>g-00jqzghi2n3o5hkh****</code> to <code>NewTestGroup</code>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UpdateGroup  UpdateGroupRequest
@@ -774,8 +782,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>You can modify <code>FirstName</code>, <code>LastName</code>, <code>DisplayName</code>, <code>Email</code>, and <code>Description</code> for a user. You cannot modify <code>UserName</code> for a user.</p>
      * <blockquote>
-     * <p> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify the information about a user that is synchronized by using SCIM.
-     * This topic provides an example on how to change the email address of the user whose ID is <code>u-00q8wbq42wiltcrk****</code> to <code>AliceLee@example.com</code>.</p>
+     * <p> If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot modify information about a user that is synchronized by using SCIM.</p>
      * </blockquote>
      * 
      * @param request the request parameters of UpdateUser  UpdateUserRequest

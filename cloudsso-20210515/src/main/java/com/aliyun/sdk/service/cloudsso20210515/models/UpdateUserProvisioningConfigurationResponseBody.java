@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdateUserProvisioningConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class UpdateUserProvisioningConfigurationResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UserProvisioningConfiguration userProvisioningConfiguration; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateUserProvisioningConfigurationResponseBody model) {
+            this.requestId = model.requestId;
+            this.userProvisioningConfiguration = model.userProvisioningConfiguration;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -153,6 +170,17 @@ public class UpdateUserProvisioningConfigurationResponseBody extends TeaModel {
             private String directoryId; 
             private Integer sessionDuration; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserProvisioningConfiguration model) {
+                this.createTime = model.createTime;
+                this.defaultLandingPage = model.defaultLandingPage;
+                this.directoryId = model.directoryId;
+                this.sessionDuration = model.sessionDuration;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The creation time.</p>

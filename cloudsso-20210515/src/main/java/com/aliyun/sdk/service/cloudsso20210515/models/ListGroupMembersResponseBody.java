@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListGroupMembersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GroupMembers")
-    private java.util.List < GroupMembers> groupMembers;
+    private java.util.List<GroupMembers> groupMembers;
 
     @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
@@ -47,10 +52,14 @@ public class ListGroupMembersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupMembers
      */
-    public java.util.List < GroupMembers> getGroupMembers() {
+    public java.util.List<GroupMembers> getGroupMembers() {
         return this.groupMembers;
     }
 
@@ -90,17 +99,29 @@ public class ListGroupMembersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < GroupMembers> groupMembers; 
+        private java.util.List<GroupMembers> groupMembers; 
         private Boolean isTruncated; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCounts; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListGroupMembersResponseBody model) {
+            this.groupMembers = model.groupMembers;
+            this.isTruncated = model.isTruncated;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCounts = model.totalCounts;
+        } 
+
         /**
          * <p>The users in the group.</p>
          */
-        public Builder groupMembers(java.util.List < GroupMembers> groupMembers) {
+        public Builder groupMembers(java.util.List<GroupMembers> groupMembers) {
             this.groupMembers = groupMembers;
             return this;
         }
@@ -108,8 +129,8 @@ public class ListGroupMembersResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the queried entries are truncated. Valid values:</p>
          * <ul>
-         * <li>true: The queried entries are truncated.</li>
-         * <li>false: The queried entries are not truncated.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +142,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -132,9 +153,9 @@ public class ListGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that is returned for the next page.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of <code>IsTruncated</code> is <code>true</code>.</p>
+         * <p> This parameter is returned only when the value of the <code>IsTruncated</code> parameter is <code>true</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,7 +167,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BB759F84-2C64-5C36-B6C6-253172C5C370</p>
@@ -301,6 +322,21 @@ public class ListGroupMembersResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupMembers model) {
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.groupId = model.groupId;
+                this.joinTime = model.joinTime;
+                this.provisionType = model.provisionType;
+                this.status = model.status;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The description of the user.</p>
              * 
@@ -346,7 +382,7 @@ public class ListGroupMembersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the user was added to the user group.</p>
+             * <p>The time when the user was added to the group.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-01T06:58:18Z</p>

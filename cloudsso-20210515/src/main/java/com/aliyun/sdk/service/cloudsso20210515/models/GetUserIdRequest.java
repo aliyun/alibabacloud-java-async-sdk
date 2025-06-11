@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -34,7 +39,7 @@ public class GetUserIdRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,6 +144,14 @@ public class GetUserIdRequest extends Request {
         public static final class Builder {
             private String id; 
             private String issuer; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExternalId model) {
+                this.id = model.id;
+                this.issuer = model.issuer;
+            } 
 
             /**
              * <p>The identifier of the user that is synchronized from an external IdP.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UserProvisioning userProvisioning; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateUserProvisioningResponseBody model) {
+            this.requestId = model.requestId;
+            this.userProvisioning = model.userProvisioning;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -285,6 +302,28 @@ public class UpdateUserProvisioningResponseBody extends TeaModel {
             private String targetType; 
             private String updateTime; 
             private String userProvisioningId; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserProvisioning model) {
+                this.createTime = model.createTime;
+                this.deletionStrategy = model.deletionStrategy;
+                this.description = model.description;
+                this.directoryId = model.directoryId;
+                this.duplicationStrategy = model.duplicationStrategy;
+                this.ownerPk = model.ownerPk;
+                this.principalId = model.principalId;
+                this.principalName = model.principalName;
+                this.principalType = model.principalType;
+                this.status = model.status;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetPath = model.targetPath;
+                this.targetType = model.targetType;
+                this.updateTime = model.updateTime;
+                this.userProvisioningId = model.userProvisioningId;
+            } 
 
             /**
              * <p>The creation time.</p>

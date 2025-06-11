@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListMFADevicesForUserResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MFADevices")
-    private java.util.List < MFADevices> MFADevices;
+    private java.util.List<MFADevices> MFADevices;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return MFADevices
      */
-    public java.util.List < MFADevices> getMFADevices() {
+    public java.util.List<MFADevices> getMFADevices() {
         return this.MFADevices;
     }
 
@@ -57,20 +66,29 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < MFADevices> MFADevices; 
+        private java.util.List<MFADevices> MFADevices; 
         private String requestId; 
         private Integer totalCounts; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListMFADevicesForUserResponseBody model) {
+            this.MFADevices = model.MFADevices;
+            this.requestId = model.requestId;
+            this.totalCounts = model.totalCounts;
+        } 
 
         /**
          * <p>The MFA devices.</p>
          */
-        public Builder MFADevices(java.util.List < MFADevices> MFADevices) {
+        public Builder MFADevices(java.util.List<MFADevices> MFADevices) {
             this.MFADevices = MFADevices;
             return this;
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8B9982ED-FD0D-5622-8EA0-7B768685DCE7</p>
@@ -176,6 +194,17 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
             private String deviceType; 
             private String effectiveTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MFADevices model) {
+                this.deviceId = model.deviceId;
+                this.deviceName = model.deviceName;
+                this.deviceType = model.deviceType;
+                this.effectiveTime = model.effectiveTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The ID of the MFA device.</p>

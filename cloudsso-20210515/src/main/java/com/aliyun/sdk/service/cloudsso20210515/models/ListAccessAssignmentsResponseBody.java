@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAccessAssignmentsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessAssignments")
-    private java.util.List < AccessAssignments> accessAssignments;
+    private java.util.List<AccessAssignments> accessAssignments;
 
     @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
@@ -47,10 +52,14 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessAssignments
      */
-    public java.util.List < AccessAssignments> getAccessAssignments() {
+    public java.util.List<AccessAssignments> getAccessAssignments() {
         return this.accessAssignments;
     }
 
@@ -90,17 +99,29 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AccessAssignments> accessAssignments; 
+        private java.util.List<AccessAssignments> accessAssignments; 
         private Boolean isTruncated; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCounts; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAccessAssignmentsResponseBody model) {
+            this.accessAssignments = model.accessAssignments;
+            this.isTruncated = model.isTruncated;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCounts = model.totalCounts;
+        } 
+
         /**
          * <p>The access permissions that are assigned.</p>
          */
-        public Builder accessAssignments(java.util.List < AccessAssignments> accessAssignments) {
+        public Builder accessAssignments(java.util.List<AccessAssignments> accessAssignments) {
             this.accessAssignments = accessAssignments;
             return this;
         }
@@ -324,6 +345,23 @@ public class ListAccessAssignmentsResponseBody extends TeaModel {
             private String targetPath; 
             private String targetPathName; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessAssignments model) {
+                this.accessConfigurationId = model.accessConfigurationId;
+                this.accessConfigurationName = model.accessConfigurationName;
+                this.createTime = model.createTime;
+                this.principalId = model.principalId;
+                this.principalName = model.principalName;
+                this.principalType = model.principalType;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetPath = model.targetPath;
+                this.targetPathName = model.targetPathName;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The ID of the access configuration.</p>

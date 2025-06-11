@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetUserMFAAuthenticationSettingsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -49,8 +58,16 @@ public class GetUserMFAAuthenticationSettingsResponseBody extends TeaModel {
         private String requestId; 
         private String userMFAAuthenticationSettings; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetUserMFAAuthenticationSettingsResponseBody model) {
+            this.requestId = model.requestId;
+            this.userMFAAuthenticationSettings = model.userMFAAuthenticationSettings;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5B598B62-85E6-5792-9DF1-246D251B07DA</p>
@@ -63,8 +80,8 @@ public class GetUserMFAAuthenticationSettingsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether MFA is enabled for the user. Valid values:</p>
          * <ul>
-         * <li>Enabled: MFA is enabled for the user.</li>
-         * <li>Disabled: MFA is disabled for the user.</li>
+         * <li>Enabled</li>
+         * <li>Disabled</li>
          * </ul>
          * 
          * <strong>example:</strong>

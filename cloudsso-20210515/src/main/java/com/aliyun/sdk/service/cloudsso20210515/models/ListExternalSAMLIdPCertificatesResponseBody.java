@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("SAMLIdPCertificates")
-    private java.util.List < SAMLIdPCertificates> SAMLIdPCertificates;
+    private java.util.List<SAMLIdPCertificates> SAMLIdPCertificates;
 
     @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
@@ -35,6 +40,10 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -45,7 +54,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
     /**
      * @return SAMLIdPCertificates
      */
-    public java.util.List < SAMLIdPCertificates> getSAMLIdPCertificates() {
+    public java.util.List<SAMLIdPCertificates> getSAMLIdPCertificates() {
         return this.SAMLIdPCertificates;
     }
 
@@ -58,11 +67,20 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < SAMLIdPCertificates> SAMLIdPCertificates; 
+        private java.util.List<SAMLIdPCertificates> SAMLIdPCertificates; 
         private Integer totalCounts; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListExternalSAMLIdPCertificatesResponseBody model) {
+            this.requestId = model.requestId;
+            this.SAMLIdPCertificates = model.SAMLIdPCertificates;
+            this.totalCounts = model.totalCounts;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>400979BC-92EC-58B9-B47C-6913BD56A6FD</p>
@@ -75,7 +93,7 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
         /**
          * <p>The SAML signing certificates.</p>
          */
-        public Builder SAMLIdPCertificates(java.util.List < SAMLIdPCertificates> SAMLIdPCertificates) {
+        public Builder SAMLIdPCertificates(java.util.List<SAMLIdPCertificates> SAMLIdPCertificates) {
             this.SAMLIdPCertificates = SAMLIdPCertificates;
             return this;
         }
@@ -236,6 +254,22 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
             private String subject; 
             private Integer version; 
             private String x509Certificate; 
+
+            private Builder() {
+            } 
+
+            private Builder(SAMLIdPCertificates model) {
+                this.certificateId = model.certificateId;
+                this.issuer = model.issuer;
+                this.notAfter = model.notAfter;
+                this.notBefore = model.notBefore;
+                this.publicKey = model.publicKey;
+                this.serialNumber = model.serialNumber;
+                this.signatureAlgorithm = model.signatureAlgorithm;
+                this.subject = model.subject;
+                this.version = model.version;
+                this.x509Certificate = model.x509Certificate;
+            } 
 
             /**
              * <p>The ID of the certificate.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class ResetUserPasswordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return newPassword
      */
@@ -49,6 +58,14 @@ public class ResetUserPasswordResponseBody extends TeaModel {
         private String newPassword; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ResetUserPasswordResponseBody model) {
+            this.newPassword = model.newPassword;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The new password.</p>
          * <blockquote>
@@ -64,7 +81,7 @@ public class ResetUserPasswordResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F44F02EC-70D1-5E51-8E8E-FA9AC4EF952A</p>

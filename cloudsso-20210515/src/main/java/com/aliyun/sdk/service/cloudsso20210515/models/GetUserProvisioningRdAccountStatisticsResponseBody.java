@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel
     public static final class Builder {
         private String requestId; 
         private UserProvisioningStatistics userProvisioningStatistics; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserProvisioningRdAccountStatisticsResponseBody model) {
+            this.requestId = model.requestId;
+            this.userProvisioningStatistics = model.userProvisioningStatistics;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -165,6 +182,18 @@ public class GetUserProvisioningRdAccountStatisticsResponseBody extends TeaModel
             private String latestAsyncTime; 
             private String ownerPk; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserProvisioningStatistics model) {
+                this.directoryId = model.directoryId;
+                this.entityId = model.entityId;
+                this.failedEventCount = model.failedEventCount;
+                this.latestAsyncTime = model.latestAsyncTime;
+                this.ownerPk = model.ownerPk;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the resource directory.</p>

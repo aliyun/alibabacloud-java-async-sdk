@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return passwordPolicy
      */
@@ -48,6 +57,14 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private PasswordPolicy passwordPolicy; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPasswordPolicyResponseBody model) {
+            this.passwordPolicy = model.passwordPolicy;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The password policy.</p>
@@ -237,6 +254,24 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             private Boolean requireNumbers; 
             private Boolean requireSymbols; 
             private Boolean requireUpperCaseChars; 
+
+            private Builder() {
+            } 
+
+            private Builder(PasswordPolicy model) {
+                this.hardExpire = model.hardExpire;
+                this.maxLoginAttempts = model.maxLoginAttempts;
+                this.maxPasswordAge = model.maxPasswordAge;
+                this.maxPasswordLength = model.maxPasswordLength;
+                this.minPasswordDifferentChars = model.minPasswordDifferentChars;
+                this.minPasswordLength = model.minPasswordLength;
+                this.passwordNotContainUsername = model.passwordNotContainUsername;
+                this.passwordReusePrevention = model.passwordReusePrevention;
+                this.requireLowerCaseChars = model.requireLowerCaseChars;
+                this.requireNumbers = model.requireNumbers;
+                this.requireSymbols = model.requireSymbols;
+                this.requireUpperCaseChars = model.requireUpperCaseChars;
+            } 
 
             /**
              * <p>Indicates whether to disable logon after a password expires. Valid values:</p>

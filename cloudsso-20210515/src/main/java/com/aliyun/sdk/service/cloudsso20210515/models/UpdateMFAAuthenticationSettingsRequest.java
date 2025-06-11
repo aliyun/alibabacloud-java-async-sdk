@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -39,7 +44,7 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -94,7 +99,7 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable MFA for all users. Valid value:</p>
+         * <p>Specifies whether to enable MFA for all users. Valid values:</p>
          * <ul>
          * <li>Enabled: enables MFA for all users.</li>
          * <li>Byuser: uses user-specific settings. For more information about how to configure MFA for a single user, see <a href="https://help.aliyun.com/document_detail/450135.html">UpdateUserMFAAuthenticationSettings</a>.</li>
@@ -112,13 +117,8 @@ public class UpdateMFAAuthenticationSettingsRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether MFA is required for users who initiated unusual logons. Valid value:</p>
-         * <ul>
-         * <li><p>Autonomous: MFA is prompted for users who initiated unusual logons. However, the users are allowed to skip MFA. If an MFA device is bound to a user who initiated an unusual logon, the user must pass MFA.</p>
-         * </li>
-         * <li><p>EnforceVerify: MFA is required. If no MFA devices are bound to a user who initiated an unusual logon, the user must bind an MFA device. If an MFA device is already bound to a user who initiated an unusual logon, the user must pass MFA.</p>
-         * </li>
-         * </ul>
+         * <p>Specifies whether MFA is required for users who initiated unusual logons. Valid values:</p>
+         * <p>Autonomous: MFA is prompted for users who initiated unusual logons. However, the users are allowed to skip MFA. If an MFA device is bound to a user who initiated an unusual logon, the user must pass MFA. EnforceVerify: MFA is required. If no MFA devices are bound to a user who initiated an unusual logon, the user must bind an MFA device. If an MFA device is already bound to a user who initiated an unusual logon, the user must pass MFA.</p>
          * 
          * <strong>example:</strong>
          * <p>Autonomous</p>

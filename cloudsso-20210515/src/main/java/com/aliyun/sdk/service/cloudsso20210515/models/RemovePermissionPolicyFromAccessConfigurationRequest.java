@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -44,7 +49,7 @@ public class RemovePermissionPolicyFromAccessConfigurationRequest extends Reques
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -134,8 +139,8 @@ public class RemovePermissionPolicyFromAccessConfigurationRequest extends Reques
         /**
          * <p>The type of the policy. Valid values:</p>
          * <ul>
-         * <li>System: system policy</li>
-         * <li>Inline: inline policy</li>
+         * <li>System: system policy.</li>
+         * <li>Inline: inline policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>

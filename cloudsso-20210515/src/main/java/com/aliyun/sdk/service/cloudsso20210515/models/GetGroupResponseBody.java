@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return group
      */
@@ -49,6 +58,14 @@ public class GetGroupResponseBody extends TeaModel {
         private Group group; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetGroupResponseBody model) {
+            this.group = model.group;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The information about the group.</p>
          */
@@ -58,7 +75,7 @@ public class GetGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>768F908D-A66A-5A5D-816C-20C93CBBFEE3</p>
@@ -166,6 +183,18 @@ public class GetGroupResponseBody extends TeaModel {
             private String provisionType; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.provisionType = model.provisionType;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The time when the group was created.</p>
              * 
@@ -226,7 +255,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the information about the group was modified.</p>
+             * <p>The time when information about the group was modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-01T02:38:27Z</p>

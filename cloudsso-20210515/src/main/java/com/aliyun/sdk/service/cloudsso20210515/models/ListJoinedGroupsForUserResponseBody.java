@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -16,7 +21,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
     private Boolean isTruncated;
 
     @com.aliyun.core.annotation.NameInMap("JoinedGroups")
-    private java.util.List < JoinedGroups> joinedGroups;
+    private java.util.List<JoinedGroups> joinedGroups;
 
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -47,6 +52,10 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isTruncated
      */
@@ -57,7 +66,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
     /**
      * @return joinedGroups
      */
-    public java.util.List < JoinedGroups> getJoinedGroups() {
+    public java.util.List<JoinedGroups> getJoinedGroups() {
         return this.joinedGroups;
     }
 
@@ -91,17 +100,29 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
 
     public static final class Builder {
         private Boolean isTruncated; 
-        private java.util.List < JoinedGroups> joinedGroups; 
+        private java.util.List<JoinedGroups> joinedGroups; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCounts; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListJoinedGroupsForUserResponseBody model) {
+            this.isTruncated = model.isTruncated;
+            this.joinedGroups = model.joinedGroups;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCounts = model.totalCounts;
+        } 
+
         /**
          * <p>Indicates whether the queried entries are truncated. Valid values:</p>
          * <ul>
-         * <li>true: The queried entries are truncated.</li>
-         * <li>false: The queried entries are not truncated.</li>
+         * <li>true</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,13 +136,13 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         /**
          * <p>The groups to which the user is added.</p>
          */
-        public Builder joinedGroups(java.util.List < JoinedGroups> joinedGroups) {
+        public Builder joinedGroups(java.util.List<JoinedGroups> joinedGroups) {
             this.joinedGroups = joinedGroups;
             return this;
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -132,9 +153,9 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The token that is returned for the next page.</p>
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
          * <blockquote>
-         * <p> This parameter is returned only when the value of <code>IsTruncated</code> is <code>true</code>.</p>
+         * <p> This parameter is returned only when the <code>IsTruncated</code> parameter is <code>true</code>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -146,7 +167,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>E9BBB45F-7877-5DE9-96A5-20E6CFA48929</p>
@@ -265,6 +286,18 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
             private String provisionType; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(JoinedGroups model) {
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.joinTime = model.joinTime;
+                this.provisionType = model.provisionType;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The description of the group.</p>
              * 
@@ -299,7 +332,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the user was added to the user group.</p>
+             * <p>The time when the user was added to the group.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-01T06:58:18Z</p>
@@ -313,7 +346,7 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
              * <p>The type of the group. Valid values:</p>
              * <ul>
              * <li>Manual: The group is manually created.</li>
-             * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+             * <li>Synchronized: The group is synchronized from an external identity provider (IdP).</li>
              * </ul>
              * 
              * <strong>example:</strong>

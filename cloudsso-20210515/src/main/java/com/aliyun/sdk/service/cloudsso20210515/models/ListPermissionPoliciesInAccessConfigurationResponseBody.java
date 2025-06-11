@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListPermissionPoliciesInAccessConfigurationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PermissionPolicies")
-    private java.util.List < PermissionPolicies> permissionPolicies;
+    private java.util.List<PermissionPolicies> permissionPolicies;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return permissionPolicies
      */
-    public java.util.List < PermissionPolicies> getPermissionPolicies() {
+    public java.util.List<PermissionPolicies> getPermissionPolicies() {
         return this.permissionPolicies;
     }
 
@@ -57,20 +66,29 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
     }
 
     public static final class Builder {
-        private java.util.List < PermissionPolicies> permissionPolicies; 
+        private java.util.List<PermissionPolicies> permissionPolicies; 
         private String requestId; 
         private Integer totalCounts; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPermissionPoliciesInAccessConfigurationResponseBody model) {
+            this.permissionPolicies = model.permissionPolicies;
+            this.requestId = model.requestId;
+            this.totalCounts = model.totalCounts;
+        } 
 
         /**
          * <p>The policies.</p>
          */
-        public Builder permissionPolicies(java.util.List < PermissionPolicies> permissionPolicies) {
+        public Builder permissionPolicies(java.util.List<PermissionPolicies> permissionPolicies) {
             this.permissionPolicies = permissionPolicies;
             return this;
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3A5E771F-1F5A-5555-A64E-579748AAFD98</p>
@@ -164,6 +182,16 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
             private String permissionPolicyDocument; 
             private String permissionPolicyName; 
             private String permissionPolicyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PermissionPolicies model) {
+                this.addTime = model.addTime;
+                this.permissionPolicyDocument = model.permissionPolicyDocument;
+                this.permissionPolicyName = model.permissionPolicyName;
+                this.permissionPolicyType = model.permissionPolicyType;
+            } 
 
             /**
              * <p>The time when the policy was created for the access configuration.</p>

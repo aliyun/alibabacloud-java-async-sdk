@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdateGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return group
      */
@@ -49,6 +58,14 @@ public class UpdateGroupResponseBody extends TeaModel {
         private Group group; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateGroupResponseBody model) {
+            this.group = model.group;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The information about the group.</p>
          */
@@ -58,7 +75,7 @@ public class UpdateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F723DE01-6276-5DC4-9B1F-9CBE3E1748B2</p>
@@ -166,6 +183,18 @@ public class UpdateGroupResponseBody extends TeaModel {
             private String provisionType; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.provisionType = model.provisionType;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The time when the group was created.</p>
              * 
@@ -214,7 +243,7 @@ public class UpdateGroupResponseBody extends TeaModel {
              * <p>The type of the group. Valid values:</p>
              * <ul>
              * <li>Manual: The group is manually created.</li>
-             * <li>Synchronized: The user is synchronized from an external identity provider (IdP).</li>
+             * <li>Synchronized: The group is synchronized from an external identity provider (IdP).</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -226,7 +255,7 @@ public class UpdateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the information about the group was modified.</p>
+             * <p>The time when the group was modified.</p>
              * 
              * <strong>example:</strong>
              * <p>2021-11-01T06:06:11Z</p>

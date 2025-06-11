@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,7 +54,7 @@ public class UpdateAccessConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -147,7 +152,8 @@ public class UpdateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The new initial web page that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+         * <p>The new initial web page</p>
+         * <p>that is displayed after a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
          * <p>The web page must be a page of the Alibaba Cloud Management Console.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +166,8 @@ public class UpdateAccessConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The new duration of a session in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
+         * <p>The new duration of a session</p>
+         * <p>in which a CloudSSO user accesses an account in your resource directory by using the access configuration.</p>
          * <p>Unit: seconds.</p>
          * <p>Valid values: 900 to 43200. The value 900 indicates 15 minutes. The value 43200 indicates 12 hours.</p>
          * 

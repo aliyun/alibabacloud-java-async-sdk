@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -48,6 +57,14 @@ public class GetUserResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private User user; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserResponseBody model) {
+            this.requestId = model.requestId;
+            this.user = model.user;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -118,6 +135,14 @@ public class GetUserResponseBody extends TeaModel {
             private String id; 
             private String issuer; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExternalId model) {
+                this.id = model.id;
+                this.issuer = model.issuer;
+            } 
+
             /**
              * <p>The identifier of the user that is synchronized from an external IdP.</p>
              * 
@@ -142,6 +167,81 @@ public class GetUserResponseBody extends TeaModel {
 
             public ExternalId build() {
                 return new ExternalId(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetUserResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetUserResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 
@@ -181,6 +281,9 @@ public class GetUserResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List<Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
@@ -200,6 +303,7 @@ public class GetUserResponseBody extends TeaModel {
             this.lastName = builder.lastName;
             this.provisionType = builder.provisionType;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.updateTime = builder.updateTime;
             this.userId = builder.userId;
             this.userName = builder.userName;
@@ -277,6 +381,13 @@ public class GetUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List<Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return updateTime
          */
         public String getUpdateTime() {
@@ -307,9 +418,29 @@ public class GetUserResponseBody extends TeaModel {
             private String lastName; 
             private String provisionType; 
             private String status; 
+            private java.util.List<Tags> tags; 
             private String updateTime; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.externalId = model.externalId;
+                this.firstName = model.firstName;
+                this.lastName = model.lastName;
+                this.provisionType = model.provisionType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The time when the user was created. The value is displayed in UTC.</p>
@@ -412,6 +543,14 @@ public class GetUserResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List<Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

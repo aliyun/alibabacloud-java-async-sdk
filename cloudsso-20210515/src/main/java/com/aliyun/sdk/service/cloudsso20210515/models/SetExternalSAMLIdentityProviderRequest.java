@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -64,7 +69,7 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,10 +157,10 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         } 
 
         /**
-         * <p>The Binding method for initiating a SAML request. Values:</p>
+         * <p>The binding for sending SAML requests. Valid values:</p>
          * <ul>
-         * <li>Post: Initiate the SAML request using the Post method. </li>
-         * <li>Redirect: Initiate the SAML request using the Redirect method.</li>
+         * <li>Post: HTTP Post bindings.</li>
+         * <li>Redirect: HTTP Redirect bindings.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,8 +237,8 @@ public class SetExternalSAMLIdentityProviderRequest extends Request {
         /**
          * <p>Specifies whether CloudSSO needs to sign SAML requests. The requests are sent when users log on to the CloudSSO user portal to initiate SAML-based SSO. Valid values:</p>
          * <ul>
-         * <li>true: yes</li>
-         * <li>false: no (default)</li>
+         * <li>true</li>
+         * <li>false (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>

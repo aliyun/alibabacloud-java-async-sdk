@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -36,6 +41,10 @@ public class ListUsersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private java.util.List<Tags> tags;
+
     private ListUsersRequest(Builder builder) {
         super(builder);
         this.directoryId = builder.directoryId;
@@ -44,6 +53,7 @@ public class ListUsersRequest extends Request {
         this.nextToken = builder.nextToken;
         this.provisionType = builder.provisionType;
         this.status = builder.status;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -54,7 +64,7 @@ public class ListUsersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,6 +111,13 @@ public class ListUsersRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return tags
+     */
+    public java.util.List<Tags> getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<ListUsersRequest, Builder> {
         private String directoryId; 
         private String filter; 
@@ -108,6 +125,7 @@ public class ListUsersRequest extends Request {
         private String nextToken; 
         private String provisionType; 
         private String status; 
+        private java.util.List<Tags> tags; 
 
         private Builder() {
             super();
@@ -121,6 +139,7 @@ public class ListUsersRequest extends Request {
             this.nextToken = request.nextToken;
             this.provisionType = request.provisionType;
             this.status = request.status;
+            this.tags = request.tags;
         } 
 
         /**
@@ -208,6 +227,15 @@ public class ListUsersRequest extends Request {
             return this;
         }
 
+        /**
+         * Tags.
+         */
+        public Builder tags(java.util.List<Tags> tags) {
+            this.putQueryParameter("Tags", tags);
+            this.tags = tags;
+            return this;
+        }
+
         @Override
         public ListUsersRequest build() {
             return new ListUsersRequest(this);
@@ -215,4 +243,79 @@ public class ListUsersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListUsersRequest} extends {@link TeaModel}
+     *
+     * <p>ListUsersRequest</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
 }

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -49,8 +58,16 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
         private String requestId; 
         private SAMLServiceProvider SAMLServiceProvider; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetDirectorySAMLServiceProviderInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.SAMLServiceProvider = model.SAMLServiceProvider;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4632107D-BCE1-5A96-B30B-182EE0709625</p>
@@ -178,6 +195,19 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
             private String entityId; 
             private Boolean supportEncryptedAssertion; 
 
+            private Builder() {
+            } 
+
+            private Builder(SAMLServiceProvider model) {
+                this.acsUrl = model.acsUrl;
+                this.authnSignAlgo = model.authnSignAlgo;
+                this.certificateType = model.certificateType;
+                this.directoryId = model.directoryId;
+                this.encodedMetadataDocument = model.encodedMetadataDocument;
+                this.entityId = model.entityId;
+                this.supportEncryptedAssertion = model.supportEncryptedAssertion;
+            } 
+
             /**
              * <p>The Assertion Consumer Service (ACS) URL of the SP.</p>
              * 
@@ -190,7 +220,16 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AuthnSignAlgo.
+             * <p>The signature algorithm supported by the AuthNRequest initiated by Alibaba Cloud. Value:</p>
+             * <ul>
+             * <li><p>rsa-sha256</p>
+             * </li>
+             * <li><p>rsa-sha1</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>rsa-sha256</p>
              */
             public Builder authnSignAlgo(String authnSignAlgo) {
                 this.authnSignAlgo = authnSignAlgo;
@@ -198,7 +237,16 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CertificateType.
+             * <p>The certificate type used by Alibaba Cloud for signing during the SSO process. Value:</p>
+             * <ul>
+             * <li><p>self-signed: Use a self-signed certificate.</p>
+             * </li>
+             * <li><p>public: Use a certificate issued by CA.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>public</p>
              */
             public Builder certificateType(String certificateType) {
                 this.certificateType = certificateType;
@@ -239,7 +287,10 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SupportEncryptedAssertion.
+             * <p>Whether to support Assertion encryption on the IdP side.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder supportEncryptedAssertion(Boolean supportEncryptedAssertion) {
                 this.supportEncryptedAssertion = supportEncryptedAssertion;

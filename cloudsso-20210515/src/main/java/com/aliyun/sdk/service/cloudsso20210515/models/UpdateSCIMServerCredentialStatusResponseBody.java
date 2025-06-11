@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -49,8 +58,16 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
         private String requestId; 
         private SCIMServerCredential SCIMServerCredential; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateSCIMServerCredentialStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.SCIMServerCredential = model.SCIMServerCredential;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7C086C2F-1C66-57B3-B14E-2C1DA70727CD</p>
@@ -165,6 +182,18 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
             private String directoryId; 
             private String expireTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SCIMServerCredential model) {
+                this.createTime = model.createTime;
+                this.credentialId = model.credentialId;
+                this.credentialType = model.credentialType;
+                this.directoryId = model.directoryId;
+                this.expireTime = model.expireTime;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the SCIM credential was created.</p>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessConfigurationProvisionings")
-    private java.util.List < AccessConfigurationProvisionings> accessConfigurationProvisionings;
+    private java.util.List<AccessConfigurationProvisionings> accessConfigurationProvisionings;
 
     @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
@@ -47,10 +52,14 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessConfigurationProvisionings
      */
-    public java.util.List < AccessConfigurationProvisionings> getAccessConfigurationProvisionings() {
+    public java.util.List<AccessConfigurationProvisionings> getAccessConfigurationProvisionings() {
         return this.accessConfigurationProvisionings;
     }
 
@@ -90,17 +99,29 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < AccessConfigurationProvisionings> accessConfigurationProvisionings; 
+        private java.util.List<AccessConfigurationProvisionings> accessConfigurationProvisionings; 
         private Boolean isTruncated; 
         private Integer maxResults; 
         private String nextToken; 
         private String requestId; 
         private Integer totalCounts; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAccessConfigurationProvisioningsResponseBody model) {
+            this.accessConfigurationProvisionings = model.accessConfigurationProvisionings;
+            this.isTruncated = model.isTruncated;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCounts = model.totalCounts;
+        } 
+
         /**
          * <p>The accounts for which the access configuration is provisioned.</p>
          */
-        public Builder accessConfigurationProvisionings(java.util.List < AccessConfigurationProvisionings> accessConfigurationProvisionings) {
+        public Builder accessConfigurationProvisionings(java.util.List<AccessConfigurationProvisionings> accessConfigurationProvisionings) {
             this.accessConfigurationProvisionings = accessConfigurationProvisionings;
             return this;
         }
@@ -190,7 +211,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("RAMPolicyNames")
-        private java.util.List < String > RAMPolicyNames;
+        private java.util.List<String> RAMPolicyNames;
 
         @com.aliyun.core.annotation.NameInMap("RAMRoleName")
         private String RAMRoleName;
@@ -267,7 +288,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         /**
          * @return RAMPolicyNames
          */
-        public java.util.List < String > getRAMPolicyNames() {
+        public java.util.List<String> getRAMPolicyNames() {
             return this.RAMPolicyNames;
         }
 
@@ -338,7 +359,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             private String accessConfigurationId; 
             private String accessConfigurationName; 
             private String createTime; 
-            private java.util.List < String > RAMPolicyNames; 
+            private java.util.List<String> RAMPolicyNames; 
             private String RAMRoleName; 
             private String SAMLProviderName; 
             private String status; 
@@ -348,6 +369,25 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             private String targetPathName; 
             private String targetType; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessConfigurationProvisionings model) {
+                this.accessConfigurationId = model.accessConfigurationId;
+                this.accessConfigurationName = model.accessConfigurationName;
+                this.createTime = model.createTime;
+                this.RAMPolicyNames = model.RAMPolicyNames;
+                this.RAMRoleName = model.RAMRoleName;
+                this.SAMLProviderName = model.SAMLProviderName;
+                this.status = model.status;
+                this.targetId = model.targetId;
+                this.targetName = model.targetName;
+                this.targetPath = model.targetPath;
+                this.targetPathName = model.targetPathName;
+                this.targetType = model.targetType;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The ID of the access configuration.</p>
@@ -385,7 +425,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
             /**
              * <p>The name of the custom policy that is created for an account in the resource directory.</p>
              */
-            public Builder RAMPolicyNames(java.util.List < String > RAMPolicyNames) {
+            public Builder RAMPolicyNames(java.util.List<String> RAMPolicyNames) {
                 this.RAMPolicyNames = RAMPolicyNames;
                 return this;
             }

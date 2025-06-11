@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetServiceStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -49,8 +58,16 @@ public class GetServiceStatusResponseBody extends TeaModel {
         private String requestId; 
         private ServiceStatus serviceStatus; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetServiceStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.serviceStatus = model.serviceStatus;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ADADC31D-90EE-5459-99B0-D83DF07769A3</p>
@@ -88,7 +105,7 @@ public class GetServiceStatusResponseBody extends TeaModel {
         private String prerequisiteCheckResult;
 
         @com.aliyun.core.annotation.NameInMap("RegionsInUse")
-        private java.util.List < String > regionsInUse;
+        private java.util.List<String> regionsInUse;
 
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -125,7 +142,7 @@ public class GetServiceStatusResponseBody extends TeaModel {
         /**
          * @return regionsInUse
          */
-        public java.util.List < String > getRegionsInUse() {
+        public java.util.List<String> getRegionsInUse() {
             return this.regionsInUse;
         }
 
@@ -139,8 +156,18 @@ public class GetServiceStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String accountId; 
             private String prerequisiteCheckResult; 
-            private java.util.List < String > regionsInUse; 
+            private java.util.List<String> regionsInUse; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServiceStatus model) {
+                this.accountId = model.accountId;
+                this.prerequisiteCheckResult = model.prerequisiteCheckResult;
+                this.regionsInUse = model.regionsInUse;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of your Alibaba Cloud account.</p>
@@ -154,10 +181,10 @@ public class GetServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether you have permissions to enable CloudSSO. Valid values:</p>
+             * <p>Indicates whether you have the permissions to enable CloudSSO. Valid values:</p>
              * <ul>
-             * <li>Success: You have permissions to enable CloudSSO.</li>
-             * <li>Failed: You do not have permissions to enable CloudSSO.</li>
+             * <li>Success: You have the permissions to enable CloudSSO.</li>
+             * <li>Failed: You do not have the permissions to enable CloudSSO.</li>
              * </ul>
              * <blockquote>
              * <p> The value of this parameter is returned only if the value of <code>Status</code> is <code>Disabled</code>.</p>
@@ -172,9 +199,9 @@ public class GetServiceStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region.</p>
+             * <p>The region IDs.</p>
              */
-            public Builder regionsInUse(java.util.List < String > regionsInUse) {
+            public Builder regionsInUse(java.util.List<String> regionsInUse) {
                 this.regionsInUse = regionsInUse;
                 return this;
             }

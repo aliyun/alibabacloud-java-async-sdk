@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return MFAAuthenticationSettingInfo
      */
@@ -48,6 +57,14 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
     public static final class Builder {
         private MFAAuthenticationSettingInfo MFAAuthenticationSettingInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMFAAuthenticationSettingInfoResponseBody model) {
+            this.MFAAuthenticationSettingInfo = model.MFAAuthenticationSettingInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The MFA setting of all users.</p>
@@ -117,6 +134,14 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String mfaAuthenticationAdvanceSettings; 
             private String operationForRiskLogin; 
+
+            private Builder() {
+            } 
+
+            private Builder(MFAAuthenticationSettingInfo model) {
+                this.mfaAuthenticationAdvanceSettings = model.mfaAuthenticationAdvanceSettings;
+                this.operationForRiskLogin = model.operationForRiskLogin;
+            } 
 
             /**
              * <p>The MFA policy of all users. Valid values:</p>

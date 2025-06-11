@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -31,6 +36,10 @@ public class CreateGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return group
      */
@@ -49,6 +58,14 @@ public class CreateGroupResponseBody extends TeaModel {
         private Group group; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateGroupResponseBody model) {
+            this.group = model.group;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The information about the group.</p>
          */
@@ -58,7 +75,7 @@ public class CreateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>20E9650E-EC23-593E-933F-EA0D280D040C</p>
@@ -165,6 +182,18 @@ public class CreateGroupResponseBody extends TeaModel {
             private String groupName; 
             private String provisionType; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.provisionType = model.provisionType;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the group was created.</p>

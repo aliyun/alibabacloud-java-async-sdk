@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -49,7 +54,7 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -150,8 +155,8 @@ public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
         /**
          * <p>The name of the policy.</p>
          * <ul>
-         * <li>If you set <code>PermissionPolicyType</code> to <code>System</code>, you must set this parameter to the name of the system policy. You can obtain the name of the system policy from RAM.</li>
-         * <li>If you set <code>PermissionPolicyType</code> to <code>Inline</code>, you must set this parameter to the name of the inline policy. A custom value is supported.</li>
+         * <li>If you set <code>PermissionPolicyType</code> to <code>System</code>, you must set PermissionPolicyName to the name of a system policy. You can obtain the name of the system policy from RAM.</li>
+         * <li>If you set <code>PermissionPolicyType</code> to <code>Inline</code>, you must set PermissionPolicyName to the name of an inline policy. A custom value is supported. The value can be up to 32 characters in length.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -1,6 +1,11 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -13,7 +18,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListDirectoriesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Directories")
-    private java.util.List < Directories> directories;
+    private java.util.List<Directories> directories;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -35,10 +40,14 @@ public class ListDirectoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return directories
      */
-    public java.util.List < Directories> getDirectories() {
+    public java.util.List<Directories> getDirectories() {
         return this.directories;
     }
 
@@ -57,20 +66,29 @@ public class ListDirectoriesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Directories> directories; 
+        private java.util.List<Directories> directories; 
         private String requestId; 
         private Integer totalCounts; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDirectoriesResponseBody model) {
+            this.directories = model.directories;
+            this.requestId = model.requestId;
+            this.totalCounts = model.totalCounts;
+        } 
 
         /**
          * <p>The directories.</p>
          */
-        public Builder directories(java.util.List < Directories> directories) {
+        public Builder directories(java.util.List<Directories> directories) {
             this.directories = directories;
             return this;
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9A504392-F06D-5029-AB64-6654CB9F1DC1</p>
@@ -176,6 +194,17 @@ public class ListDirectoriesResponseBody extends TeaModel {
             private String directoryName; 
             private String region; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Directories model) {
+                this.createTime = model.createTime;
+                this.directoryId = model.directoryId;
+                this.directoryName = model.directoryName;
+                this.region = model.region;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the directory was created.</p>
