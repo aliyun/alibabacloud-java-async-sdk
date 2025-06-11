@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpsertChunksRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowInsertWithFilter")
+    private Boolean allowInsertWithFilter;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Collection")
     @com.aliyun.core.annotation.Validation(required = true)
     private String collection;
@@ -59,6 +63,7 @@ public class UpsertChunksRequest extends Request {
 
     private UpsertChunksRequest(Builder builder) {
         super(builder);
+        this.allowInsertWithFilter = builder.allowInsertWithFilter;
         this.collection = builder.collection;
         this.DBInstanceId = builder.DBInstanceId;
         this.fileName = builder.fileName;
@@ -81,6 +86,13 @@ public class UpsertChunksRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return allowInsertWithFilter
+     */
+    public Boolean getAllowInsertWithFilter() {
+        return this.allowInsertWithFilter;
     }
 
     /**
@@ -147,6 +159,7 @@ public class UpsertChunksRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpsertChunksRequest, Builder> {
+        private Boolean allowInsertWithFilter; 
         private String collection; 
         private String DBInstanceId; 
         private String fileName; 
@@ -163,6 +176,7 @@ public class UpsertChunksRequest extends Request {
 
         private Builder(UpsertChunksRequest request) {
             super(request);
+            this.allowInsertWithFilter = request.allowInsertWithFilter;
             this.collection = request.collection;
             this.DBInstanceId = request.DBInstanceId;
             this.fileName = request.fileName;
@@ -173,6 +187,15 @@ public class UpsertChunksRequest extends Request {
             this.shouldReplaceFile = request.shouldReplaceFile;
             this.textChunks = request.textChunks;
         } 
+
+        /**
+         * AllowInsertWithFilter.
+         */
+        public Builder allowInsertWithFilter(Boolean allowInsertWithFilter) {
+            this.putQueryParameter("AllowInsertWithFilter", allowInsertWithFilter);
+            this.allowInsertWithFilter = allowInsertWithFilter;
+            return this;
+        }
 
         /**
          * <p>Document collection name.</p>
