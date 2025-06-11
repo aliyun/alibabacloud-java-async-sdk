@@ -628,6 +628,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EditLogicDatabaseResponse> editLogicDatabase(EditLogicDatabaseRequest request);
 
     /**
+     * @param request the request parameters of EditMetaKnowledgeAsset  EditMetaKnowledgeAssetRequest
+     * @return EditMetaKnowledgeAssetResponse
+     */
+    CompletableFuture<EditMetaKnowledgeAssetResponse> editMetaKnowledgeAsset(EditMetaKnowledgeAssetRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The effect of enabling a user by calling this operation is the same as that of enabling a user by choosing System Management &gt; User Management in the DMS Enterprise console. The administrator of DMS Enterprise can call this operation to enable a user that has been disabled in DMS Enterprise. After the user is enabled, the corresponding Alibaba Cloud account or Resource Access Management (RAM) user can continue to log on to DMS Enterprise and perform relevant operations.</p>
      * <blockquote>
@@ -1074,6 +1080,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTableDesignProjectInfoResponse> getTableDesignProjectInfo(GetTableDesignProjectInfoRequest request);
 
     /**
+     * @param request the request parameters of GetTableKnowledgeInfo  GetTableKnowledgeInfoRequest
+     * @return GetTableKnowledgeInfoResponse
+     */
+    CompletableFuture<GetTableKnowledgeInfoResponse> getTableKnowledgeInfo(GetTableKnowledgeInfoRequest request);
+
+    /**
      * @param request the request parameters of GetTableTopology  GetTableTopologyRequest
      * @return GetTableTopologyResponse
      */
@@ -1507,6 +1519,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListStandardGroupsResponse
      */
     CompletableFuture<ListStandardGroupsResponse> listStandardGroups(ListStandardGroupsRequest request);
+
+    /**
+     * @param request the request parameters of ListTableColumns  ListTableColumnsRequest
+     * @return ListTableColumnsResponse
+     */
+    CompletableFuture<ListTableColumnsResponse> listTableColumns(ListTableColumnsRequest request);
 
     /**
      * <b>description</b> :
