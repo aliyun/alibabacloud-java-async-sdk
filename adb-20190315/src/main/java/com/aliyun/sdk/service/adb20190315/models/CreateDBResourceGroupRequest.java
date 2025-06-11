@@ -22,9 +22,25 @@ public class CreateDBResourceGroupRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterMode")
+    private String clusterMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterSizeResource")
+    private String clusterSizeResource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineParams")
+    private java.util.Map<String, ?> engineParams;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupName")
@@ -34,6 +50,22 @@ public class CreateDBResourceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupType")
     private String groupType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxClusterCount")
+    private Integer maxClusterCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxComputeResource")
+    private String maxComputeResource;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinClusterCount")
+    private Integer minClusterCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinComputeResource")
+    private String minComputeResource;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NodeNum")
@@ -59,9 +91,17 @@ public class CreateDBResourceGroupRequest extends Request {
     private CreateDBResourceGroupRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.clusterMode = builder.clusterMode;
+        this.clusterSizeResource = builder.clusterSizeResource;
         this.DBClusterId = builder.DBClusterId;
+        this.engine = builder.engine;
+        this.engineParams = builder.engineParams;
         this.groupName = builder.groupName;
         this.groupType = builder.groupType;
+        this.maxClusterCount = builder.maxClusterCount;
+        this.maxComputeResource = builder.maxComputeResource;
+        this.minClusterCount = builder.minClusterCount;
+        this.minComputeResource = builder.minComputeResource;
         this.nodeNum = builder.nodeNum;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -90,10 +130,38 @@ public class CreateDBResourceGroupRequest extends Request {
     }
 
     /**
+     * @return clusterMode
+     */
+    public String getClusterMode() {
+        return this.clusterMode;
+    }
+
+    /**
+     * @return clusterSizeResource
+     */
+    public String getClusterSizeResource() {
+        return this.clusterSizeResource;
+    }
+
+    /**
      * @return DBClusterId
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
+    /**
+     * @return engineParams
+     */
+    public java.util.Map<String, ?> getEngineParams() {
+        return this.engineParams;
     }
 
     /**
@@ -108,6 +176,34 @@ public class CreateDBResourceGroupRequest extends Request {
      */
     public String getGroupType() {
         return this.groupType;
+    }
+
+    /**
+     * @return maxClusterCount
+     */
+    public Integer getMaxClusterCount() {
+        return this.maxClusterCount;
+    }
+
+    /**
+     * @return maxComputeResource
+     */
+    public String getMaxComputeResource() {
+        return this.maxComputeResource;
+    }
+
+    /**
+     * @return minClusterCount
+     */
+    public Integer getMinClusterCount() {
+        return this.minClusterCount;
+    }
+
+    /**
+     * @return minComputeResource
+     */
+    public String getMinComputeResource() {
+        return this.minComputeResource;
     }
 
     /**
@@ -147,9 +243,17 @@ public class CreateDBResourceGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateDBResourceGroupRequest, Builder> {
         private String clientToken; 
+        private String clusterMode; 
+        private String clusterSizeResource; 
         private String DBClusterId; 
+        private String engine; 
+        private java.util.Map<String, ?> engineParams; 
         private String groupName; 
         private String groupType; 
+        private Integer maxClusterCount; 
+        private String maxComputeResource; 
+        private Integer minClusterCount; 
+        private String minComputeResource; 
         private Integer nodeNum; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -163,9 +267,17 @@ public class CreateDBResourceGroupRequest extends Request {
         private Builder(CreateDBResourceGroupRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.clusterMode = request.clusterMode;
+            this.clusterSizeResource = request.clusterSizeResource;
             this.DBClusterId = request.DBClusterId;
+            this.engine = request.engine;
+            this.engineParams = request.engineParams;
             this.groupName = request.groupName;
             this.groupType = request.groupType;
+            this.maxClusterCount = request.maxClusterCount;
+            this.maxComputeResource = request.maxComputeResource;
+            this.minClusterCount = request.minClusterCount;
+            this.minComputeResource = request.minComputeResource;
             this.nodeNum = request.nodeNum;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -183,6 +295,24 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
+         * ClusterMode.
+         */
+        public Builder clusterMode(String clusterMode) {
+            this.putQueryParameter("ClusterMode", clusterMode);
+            this.clusterMode = clusterMode;
+            return this;
+        }
+
+        /**
+         * ClusterSizeResource.
+         */
+        public Builder clusterSizeResource(String clusterSizeResource) {
+            this.putQueryParameter("ClusterSizeResource", clusterSizeResource);
+            this.clusterSizeResource = clusterSizeResource;
+            return this;
+        }
+
+        /**
          * <p>The ID of the AnalyticDB for MySQL Data Warehouse Edition (V3.0) cluster.</p>
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Warehouse Edition (V3.0) clusters within a specific region.</p>
@@ -195,6 +325,25 @@ public class CreateDBResourceGroupRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
+            return this;
+        }
+
+        /**
+         * EngineParams.
+         */
+        public Builder engineParams(java.util.Map<String, ?> engineParams) {
+            String engineParamsShrink = shrink(engineParams, "EngineParams", "json");
+            this.putQueryParameter("EngineParams", engineParamsShrink);
+            this.engineParams = engineParams;
             return this;
         }
 
@@ -229,6 +378,42 @@ public class CreateDBResourceGroupRequest extends Request {
         public Builder groupType(String groupType) {
             this.putQueryParameter("GroupType", groupType);
             this.groupType = groupType;
+            return this;
+        }
+
+        /**
+         * MaxClusterCount.
+         */
+        public Builder maxClusterCount(Integer maxClusterCount) {
+            this.putQueryParameter("MaxClusterCount", maxClusterCount);
+            this.maxClusterCount = maxClusterCount;
+            return this;
+        }
+
+        /**
+         * MaxComputeResource.
+         */
+        public Builder maxComputeResource(String maxComputeResource) {
+            this.putQueryParameter("MaxComputeResource", maxComputeResource);
+            this.maxComputeResource = maxComputeResource;
+            return this;
+        }
+
+        /**
+         * MinClusterCount.
+         */
+        public Builder minClusterCount(Integer minClusterCount) {
+            this.putQueryParameter("MinClusterCount", minClusterCount);
+            this.minClusterCount = minClusterCount;
+            return this;
+        }
+
+        /**
+         * MinComputeResource.
+         */
+        public Builder minComputeResource(String minComputeResource) {
+            this.putQueryParameter("MinComputeResource", minComputeResource);
+            this.minComputeResource = minComputeResource;
             return this;
         }
 

@@ -23,6 +23,10 @@ public class DescribeDBClusterNetInfoRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -45,6 +49,7 @@ public class DescribeDBClusterNetInfoRequest extends Request {
     private DescribeDBClusterNetInfoRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.engine = builder.engine;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -70,6 +75,13 @@ public class DescribeDBClusterNetInfoRequest extends Request {
      */
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
     }
 
     /**
@@ -109,6 +121,7 @@ public class DescribeDBClusterNetInfoRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDBClusterNetInfoRequest, Builder> {
         private String DBClusterId; 
+        private String engine; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -122,6 +135,7 @@ public class DescribeDBClusterNetInfoRequest extends Request {
         private Builder(DescribeDBClusterNetInfoRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.engine = request.engine;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -139,6 +153,15 @@ public class DescribeDBClusterNetInfoRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
             return this;
         }
 
