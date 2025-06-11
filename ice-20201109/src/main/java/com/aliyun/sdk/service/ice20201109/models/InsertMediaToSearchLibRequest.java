@@ -22,6 +22,10 @@ public class InsertMediaToSearchLibRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImagesInput")
+    private String imagesInput;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Input")
     @com.aliyun.core.annotation.Validation(required = true)
     private String input;
@@ -45,6 +49,7 @@ public class InsertMediaToSearchLibRequest extends Request {
     private InsertMediaToSearchLibRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.imagesInput = builder.imagesInput;
         this.input = builder.input;
         this.mediaId = builder.mediaId;
         this.mediaType = builder.mediaType;
@@ -70,6 +75,13 @@ public class InsertMediaToSearchLibRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return imagesInput
+     */
+    public String getImagesInput() {
+        return this.imagesInput;
     }
 
     /**
@@ -109,6 +121,7 @@ public class InsertMediaToSearchLibRequest extends Request {
 
     public static final class Builder extends Request.Builder<InsertMediaToSearchLibRequest, Builder> {
         private String regionId; 
+        private String imagesInput; 
         private String input; 
         private String mediaId; 
         private String mediaType; 
@@ -122,6 +135,7 @@ public class InsertMediaToSearchLibRequest extends Request {
         private Builder(InsertMediaToSearchLibRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.imagesInput = request.imagesInput;
             this.input = request.input;
             this.mediaId = request.mediaId;
             this.mediaType = request.mediaType;
@@ -135,6 +149,15 @@ public class InsertMediaToSearchLibRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ImagesInput.
+         */
+        public Builder imagesInput(String imagesInput) {
+            this.putQueryParameter("ImagesInput", imagesInput);
+            this.imagesInput = imagesInput;
             return this;
         }
 

@@ -1331,6 +1331,9 @@ public class SearchMediaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
+        @com.aliyun.core.annotation.NameInMap("ImagesInput")
+        private String imagesInput;
+
         @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
@@ -1351,6 +1354,7 @@ public class SearchMediaResponseBody extends TeaModel {
             this.fileUrl = builder.fileUrl;
             this.formatName = builder.formatName;
             this.height = builder.height;
+            this.imagesInput = builder.imagesInput;
             this.modifiedTime = builder.modifiedTime;
             this.region = builder.region;
             this.width = builder.width;
@@ -1435,6 +1439,13 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
+         * @return imagesInput
+         */
+        public String getImagesInput() {
+            return this.imagesInput;
+        }
+
+        /**
          * @return modifiedTime
          */
         public String getModifiedTime() {
@@ -1466,6 +1477,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private String fileUrl; 
             private String formatName; 
             private String height; 
+            private String imagesInput; 
             private String modifiedTime; 
             private String region; 
             private String width; 
@@ -1484,6 +1496,7 @@ public class SearchMediaResponseBody extends TeaModel {
                 this.fileUrl = model.fileUrl;
                 this.formatName = model.formatName;
                 this.height = model.height;
+                this.imagesInput = model.imagesInput;
                 this.modifiedTime = model.modifiedTime;
                 this.region = model.region;
                 this.width = model.width;
@@ -1596,6 +1609,14 @@ public class SearchMediaResponseBody extends TeaModel {
              */
             public Builder height(String height) {
                 this.height = height;
+                return this;
+            }
+
+            /**
+             * ImagesInput.
+             */
+            public Builder imagesInput(String imagesInput) {
+                this.imagesInput = imagesInput;
                 return this;
             }
 
@@ -1817,6 +1838,9 @@ public class SearchMediaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
+        @com.aliyun.core.annotation.NameInMap("Namespace")
+        private String namespace;
+
         @com.aliyun.core.annotation.NameInMap("ReferenceId")
         private String referenceId;
 
@@ -1844,6 +1868,9 @@ public class SearchMediaResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
+        @com.aliyun.core.annotation.NameInMap("VisionDescription")
+        private String visionDescription;
+
         private MediaBasicInfo(Builder builder) {
             this.biz = builder.biz;
             this.businessType = builder.businessType;
@@ -1859,6 +1886,7 @@ public class SearchMediaResponseBody extends TeaModel {
             this.mediaTags = builder.mediaTags;
             this.mediaType = builder.mediaType;
             this.modifiedTime = builder.modifiedTime;
+            this.namespace = builder.namespace;
             this.referenceId = builder.referenceId;
             this.snapshots = builder.snapshots;
             this.source = builder.source;
@@ -1868,6 +1896,7 @@ public class SearchMediaResponseBody extends TeaModel {
             this.transcodeStatus = builder.transcodeStatus;
             this.uploadSource = builder.uploadSource;
             this.userData = builder.userData;
+            this.visionDescription = builder.visionDescription;
         }
 
         public static Builder builder() {
@@ -1977,6 +2006,13 @@ public class SearchMediaResponseBody extends TeaModel {
         }
 
         /**
+         * @return namespace
+         */
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        /**
          * @return referenceId
          */
         public String getReferenceId() {
@@ -2039,6 +2075,13 @@ public class SearchMediaResponseBody extends TeaModel {
             return this.userData;
         }
 
+        /**
+         * @return visionDescription
+         */
+        public String getVisionDescription() {
+            return this.visionDescription;
+        }
+
         public static final class Builder {
             private String biz; 
             private String businessType; 
@@ -2054,6 +2097,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private String mediaTags; 
             private String mediaType; 
             private String modifiedTime; 
+            private String namespace; 
             private String referenceId; 
             private String snapshots; 
             private String source; 
@@ -2063,6 +2107,7 @@ public class SearchMediaResponseBody extends TeaModel {
             private String transcodeStatus; 
             private String uploadSource; 
             private String userData; 
+            private String visionDescription; 
 
             private Builder() {
             } 
@@ -2082,6 +2127,7 @@ public class SearchMediaResponseBody extends TeaModel {
                 this.mediaTags = model.mediaTags;
                 this.mediaType = model.mediaType;
                 this.modifiedTime = model.modifiedTime;
+                this.namespace = model.namespace;
                 this.referenceId = model.referenceId;
                 this.snapshots = model.snapshots;
                 this.source = model.source;
@@ -2091,6 +2137,7 @@ public class SearchMediaResponseBody extends TeaModel {
                 this.transcodeStatus = model.transcodeStatus;
                 this.uploadSource = model.uploadSource;
                 this.userData = model.userData;
+                this.visionDescription = model.visionDescription;
             } 
 
             /**
@@ -2242,6 +2289,14 @@ public class SearchMediaResponseBody extends TeaModel {
             }
 
             /**
+             * Namespace.
+             */
+            public Builder namespace(String namespace) {
+                this.namespace = namespace;
+                return this;
+            }
+
+            /**
              * <p>The custom ID of the media asset. The ID is a string that contains 6 to 64 characters. Only letters, digits, hyphens (-), and underscores (_) are supported. Each custom ID is unique.</p>
              * 
              * <strong>example:</strong>
@@ -2334,6 +2389,14 @@ public class SearchMediaResponseBody extends TeaModel {
              */
             public Builder userData(String userData) {
                 this.userData = userData;
+                return this;
+            }
+
+            /**
+             * VisionDescription.
+             */
+            public Builder visionDescription(String visionDescription) {
+                this.visionDescription = visionDescription;
                 return this;
             }
 

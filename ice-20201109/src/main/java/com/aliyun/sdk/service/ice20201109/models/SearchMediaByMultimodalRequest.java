@@ -26,6 +26,10 @@ public class SearchMediaByMultimodalRequest extends Request {
     private String mediaType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    private String namespace;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
@@ -45,6 +49,7 @@ public class SearchMediaByMultimodalRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.mediaType = builder.mediaType;
+        this.namespace = builder.namespace;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.searchLibName = builder.searchLibName;
@@ -79,6 +84,13 @@ public class SearchMediaByMultimodalRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return pageNo
      */
     public Integer getPageNo() {
@@ -109,6 +121,7 @@ public class SearchMediaByMultimodalRequest extends Request {
     public static final class Builder extends Request.Builder<SearchMediaByMultimodalRequest, Builder> {
         private String regionId; 
         private String mediaType; 
+        private String namespace; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String searchLibName; 
@@ -122,6 +135,7 @@ public class SearchMediaByMultimodalRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.mediaType = request.mediaType;
+            this.namespace = request.namespace;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.searchLibName = request.searchLibName;
@@ -151,6 +165,15 @@ public class SearchMediaByMultimodalRequest extends Request {
         public Builder mediaType(String mediaType) {
             this.putQueryParameter("MediaType", mediaType);
             this.mediaType = mediaType;
+            return this;
+        }
+
+        /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 

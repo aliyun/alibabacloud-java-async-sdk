@@ -38,6 +38,10 @@ public class SearchMediaByAILabelRequest extends Request {
     private String multimodalSearchType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
+    private String namespace;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
@@ -68,6 +72,7 @@ public class SearchMediaByAILabelRequest extends Request {
         this.mediaId = builder.mediaId;
         this.mediaType = builder.mediaType;
         this.multimodalSearchType = builder.multimodalSearchType;
+        this.namespace = builder.namespace;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.searchLibName = builder.searchLibName;
@@ -125,6 +130,13 @@ public class SearchMediaByAILabelRequest extends Request {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return pageNo
      */
     public Integer getPageNo() {
@@ -172,6 +184,7 @@ public class SearchMediaByAILabelRequest extends Request {
         private String mediaId; 
         private String mediaType; 
         private String multimodalSearchType; 
+        private String namespace; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String searchLibName; 
@@ -190,6 +203,7 @@ public class SearchMediaByAILabelRequest extends Request {
             this.mediaId = request.mediaId;
             this.mediaType = request.mediaType;
             this.multimodalSearchType = request.multimodalSearchType;
+            this.namespace = request.namespace;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.searchLibName = request.searchLibName;
@@ -260,6 +274,15 @@ public class SearchMediaByAILabelRequest extends Request {
         public Builder multimodalSearchType(String multimodalSearchType) {
             this.putQueryParameter("MultimodalSearchType", multimodalSearchType);
             this.multimodalSearchType = multimodalSearchType;
+            return this;
+        }
+
+        /**
+         * Namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.putQueryParameter("Namespace", namespace);
+            this.namespace = namespace;
             return this;
         }
 
