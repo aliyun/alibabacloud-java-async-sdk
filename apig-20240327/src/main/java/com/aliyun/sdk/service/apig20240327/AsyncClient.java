@@ -290,6 +290,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListHttpApisResponse> listHttpApis(ListHttpApisRequest request);
 
     /**
+     * @param request the request parameters of ListPluginAttachments  ListPluginAttachmentsRequest
+     * @return ListPluginAttachmentsResponse
+     */
+    CompletableFuture<ListPluginAttachmentsResponse> listPluginAttachments(ListPluginAttachmentsRequest request);
+
+    /**
      * @param request the request parameters of ListPlugins  ListPluginsRequest
      * @return ListPluginsResponse
      */
