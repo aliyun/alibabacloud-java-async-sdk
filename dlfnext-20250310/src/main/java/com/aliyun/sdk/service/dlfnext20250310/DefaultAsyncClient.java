@@ -209,7 +209,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetCatalogSummaryResponse> getCatalogSummary(GetCatalogSummaryRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCatalogSummary").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/storage-summary/{catalogId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCatalogSummary").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/{catalogId}/storage-summary").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCatalogSummaryResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -227,7 +227,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetCatalogSummaryTrendResponse> getCatalogSummaryTrend(GetCatalogSummaryTrendRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCatalogSummaryTrend").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/storage-summary/{catalogId}/trend").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCatalogSummaryTrend").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/{catalogId}/storage-summary/trend").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCatalogSummaryTrendResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -263,7 +263,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetDatabaseSummaryResponse> getDatabaseSummary(GetDatabaseSummaryRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDatabaseSummary").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/storage-summary/{catalogId}/databases/{database}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetDatabaseSummary").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/{catalogId}/databases/{database}/storage-summary").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDatabaseSummaryResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -317,7 +317,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetTableSummaryResponse> getTableSummary(GetTableSummaryRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTableSummary").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/storage-summary/{catalogId}/databases/{database}/tables/{table}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTableSummary").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/{catalogId}/databases/{database}/tables/{table}/storage-summary").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTableSummaryResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -389,7 +389,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ListPartitionSummariesResponse> listPartitionSummaries(ListPartitionSummariesRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListPartitionSummaries").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/storage-summary/{catalogId}/databases/{database}/tables/{table}/partitions").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListPartitionSummaries").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/{catalogId}/databases/{database}/tables/{table}/partitions/storage-summary").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListPartitionSummariesResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
