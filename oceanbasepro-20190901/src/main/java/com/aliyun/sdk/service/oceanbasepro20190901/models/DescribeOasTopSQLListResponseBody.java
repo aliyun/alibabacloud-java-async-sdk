@@ -97,6 +97,81 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
      *
      * <p>DescribeOasTopSQLListResponseBody</p>
      */
+    public static class CustomColumns extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Expression")
+        private String expression;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private CustomColumns(Builder builder) {
+            this.expression = builder.expression;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomColumns create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expression
+         */
+        public String getExpression() {
+            return this.expression;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String expression; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomColumns model) {
+                this.expression = model.expression;
+                this.value = model.value;
+            } 
+
+            /**
+             * Expression.
+             */
+            public Builder expression(String expression) {
+                this.expression = expression;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public CustomColumns build() {
+                return new CustomColumns(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeOasTopSQLListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeOasTopSQLListResponseBody</p>
+     */
     public static class SqlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgAffectedRows")
         private Double avgAffectedRows;
@@ -1865,6 +1940,9 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CpuPercentage")
         private Double cpuPercentage;
 
+        @com.aliyun.core.annotation.NameInMap("CustomColumns")
+        private CustomColumns customColumns;
+
         @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
@@ -1927,6 +2005,9 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("MissPlans")
         private Double missPlans;
+
+        @com.aliyun.core.annotation.NameInMap("ObDbId")
+        private String obDbId;
 
         @com.aliyun.core.annotation.NameInMap("RemotePlanPercentage")
         private Double remotePlanPercentage;
@@ -2045,6 +2126,7 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             this.avgWaitTime = builder.avgWaitTime;
             this.clientIp = builder.clientIp;
             this.cpuPercentage = builder.cpuPercentage;
+            this.customColumns = builder.customColumns;
             this.dbName = builder.dbName;
             this.distPlanPercentage = builder.distPlanPercentage;
             this.dynamicSql = builder.dynamicSql;
@@ -2066,6 +2148,7 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             this.maxWaitTime = builder.maxWaitTime;
             this.missPlanPercentage = builder.missPlanPercentage;
             this.missPlans = builder.missPlans;
+            this.obDbId = builder.obDbId;
             this.remotePlanPercentage = builder.remotePlanPercentage;
             this.remotePlans = builder.remotePlans;
             this.retCode4012Count = builder.retCode4012Count;
@@ -2329,6 +2412,13 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
         }
 
         /**
+         * @return customColumns
+         */
+        public CustomColumns getCustomColumns() {
+            return this.customColumns;
+        }
+
+        /**
          * @return dbName
          */
         public String getDbName() {
@@ -2473,6 +2563,13 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
          */
         public Double getMissPlans() {
             return this.missPlans;
+        }
+
+        /**
+         * @return obDbId
+         */
+        public String getObDbId() {
+            return this.obDbId;
         }
 
         /**
@@ -2704,6 +2801,7 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             private Double avgWaitTime; 
             private String clientIp; 
             private Double cpuPercentage; 
+            private CustomColumns customColumns; 
             private String dbName; 
             private Double distPlanPercentage; 
             private Boolean dynamicSql; 
@@ -2725,6 +2823,7 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             private Double maxWaitTime; 
             private Double missPlanPercentage; 
             private Double missPlans; 
+            private String obDbId; 
             private Double remotePlanPercentage; 
             private Double remotePlans; 
             private Long retCode4012Count; 
@@ -2790,6 +2889,7 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
                 this.avgWaitTime = model.avgWaitTime;
                 this.clientIp = model.clientIp;
                 this.cpuPercentage = model.cpuPercentage;
+                this.customColumns = model.customColumns;
                 this.dbName = model.dbName;
                 this.distPlanPercentage = model.distPlanPercentage;
                 this.dynamicSql = model.dynamicSql;
@@ -2811,6 +2911,7 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
                 this.maxWaitTime = model.maxWaitTime;
                 this.missPlanPercentage = model.missPlanPercentage;
                 this.missPlans = model.missPlans;
+                this.obDbId = model.obDbId;
                 this.remotePlanPercentage = model.remotePlanPercentage;
                 this.remotePlans = model.remotePlans;
                 this.retCode4012Count = model.retCode4012Count;
@@ -3191,6 +3292,14 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
             }
 
             /**
+             * CustomColumns.
+             */
+            public Builder customColumns(CustomColumns customColumns) {
+                this.customColumns = customColumns;
+                return this;
+            }
+
+            /**
              * <p>The name of the database.</p>
              * 
              * <strong>example:</strong>
@@ -3412,6 +3521,14 @@ public class DescribeOasTopSQLListResponseBody extends TeaModel {
              */
             public Builder missPlans(Double missPlans) {
                 this.missPlans = missPlans;
+                return this;
+            }
+
+            /**
+             * ObDbId.
+             */
+            public Builder obDbId(String obDbId) {
+                this.obDbId = obDbId;
                 return this;
             }
 

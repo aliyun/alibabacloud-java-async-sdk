@@ -22,6 +22,10 @@ public class BatchKillProcessListRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ByObSessionId")
+    private Boolean byObSessionId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -39,6 +43,7 @@ public class BatchKillProcessListRequest extends Request {
     private BatchKillProcessListRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.byObSessionId = builder.byObSessionId;
         this.instanceId = builder.instanceId;
         this.sessionList = builder.sessionList;
         this.tenantId = builder.tenantId;
@@ -65,6 +70,13 @@ public class BatchKillProcessListRequest extends Request {
     }
 
     /**
+     * @return byObSessionId
+     */
+    public Boolean getByObSessionId() {
+        return this.byObSessionId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -87,6 +99,7 @@ public class BatchKillProcessListRequest extends Request {
 
     public static final class Builder extends Request.Builder<BatchKillProcessListRequest, Builder> {
         private String regionId; 
+        private Boolean byObSessionId; 
         private String instanceId; 
         private String sessionList; 
         private String tenantId; 
@@ -98,6 +111,7 @@ public class BatchKillProcessListRequest extends Request {
         private Builder(BatchKillProcessListRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.byObSessionId = request.byObSessionId;
             this.instanceId = request.instanceId;
             this.sessionList = request.sessionList;
             this.tenantId = request.tenantId;
@@ -109,6 +123,15 @@ public class BatchKillProcessListRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ByObSessionId.
+         */
+        public Builder byObSessionId(Boolean byObSessionId) {
+            this.putBodyParameter("ByObSessionId", byObSessionId);
+            this.byObSessionId = byObSessionId;
             return this;
         }
 

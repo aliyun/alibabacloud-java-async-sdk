@@ -31,6 +31,10 @@ public class DescribeProcessStatsCompositionRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MergeDynamicSql")
+    private Boolean mergeDynamicSql;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ServerIp")
     private String serverIp;
 
@@ -59,6 +63,7 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         this.regionId = builder.regionId;
         this.clientIp = builder.clientIp;
         this.instanceId = builder.instanceId;
+        this.mergeDynamicSql = builder.mergeDynamicSql;
         this.serverIp = builder.serverIp;
         this.sqlText = builder.sqlText;
         this.status = builder.status;
@@ -99,6 +104,13 @@ public class DescribeProcessStatsCompositionRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return mergeDynamicSql
+     */
+    public Boolean getMergeDynamicSql() {
+        return this.mergeDynamicSql;
     }
 
     /**
@@ -147,6 +159,7 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         private String regionId; 
         private String clientIp; 
         private String instanceId; 
+        private Boolean mergeDynamicSql; 
         private String serverIp; 
         private String sqlText; 
         private String status; 
@@ -163,6 +176,7 @@ public class DescribeProcessStatsCompositionRequest extends Request {
             this.regionId = request.regionId;
             this.clientIp = request.clientIp;
             this.instanceId = request.instanceId;
+            this.mergeDynamicSql = request.mergeDynamicSql;
             this.serverIp = request.serverIp;
             this.sqlText = request.sqlText;
             this.status = request.status;
@@ -202,6 +216,15 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MergeDynamicSql.
+         */
+        public Builder mergeDynamicSql(Boolean mergeDynamicSql) {
+            this.putBodyParameter("MergeDynamicSql", mergeDynamicSql);
+            this.mergeDynamicSql = mergeDynamicSql;
             return this;
         }
 

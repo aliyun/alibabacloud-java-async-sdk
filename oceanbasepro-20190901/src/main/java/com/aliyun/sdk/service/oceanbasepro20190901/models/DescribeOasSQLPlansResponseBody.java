@@ -251,6 +251,9 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
 
+        @com.aliyun.core.annotation.NameInMap("SqlText")
+        private String sqlText;
+
         @com.aliyun.core.annotation.NameInMap("TableScan")
         private Boolean tableScan;
 
@@ -293,6 +296,7 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             this.server = builder.server;
             this.serverId = builder.serverId;
             this.sqlId = builder.sqlId;
+            this.sqlText = builder.sqlText;
             this.tableScan = builder.tableScan;
             this.timeoutPercentage = builder.timeoutPercentage;
             this.uid = builder.uid;
@@ -531,6 +535,13 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
         }
 
         /**
+         * @return sqlText
+         */
+        public String getSqlText() {
+            return this.sqlText;
+        }
+
+        /**
          * @return tableScan
          */
         public Boolean getTableScan() {
@@ -584,6 +595,7 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
             private String server; 
             private Long serverId; 
             private String sqlId; 
+            private String sqlText; 
             private Boolean tableScan; 
             private Double timeoutPercentage; 
             private String uid; 
@@ -624,6 +636,7 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
                 this.server = model.server;
                 this.serverId = model.serverId;
                 this.sqlId = model.sqlId;
+                this.sqlText = model.sqlText;
                 this.tableScan = model.tableScan;
                 this.timeoutPercentage = model.timeoutPercentage;
                 this.uid = model.uid;
@@ -978,6 +991,14 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
+                return this;
+            }
+
+            /**
+             * SqlText.
+             */
+            public Builder sqlText(String sqlText) {
+                this.sqlText = sqlText;
                 return this;
             }
 

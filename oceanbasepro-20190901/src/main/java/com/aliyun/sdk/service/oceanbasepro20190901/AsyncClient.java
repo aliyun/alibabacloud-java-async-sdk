@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateMySqlDataSourceResponse> createMySqlDataSource(CreateMySqlDataSourceRequest request);
 
     /**
+     * @param request the request parameters of CreateOasOutlineTask  CreateOasOutlineTaskRequest
+     * @return CreateOasOutlineTaskResponse
+     */
+    CompletableFuture<CreateOasOutlineTaskResponse> createOasOutlineTask(CreateOasOutlineTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateOceanBaseDataSource  CreateOceanBaseDataSourceRequest
      * @return CreateOceanBaseDataSourceResponse
      */
@@ -274,6 +280,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeInstanceResponse
      */
     CompletableFuture<DescribeInstanceResponse> describeInstance(DescribeInstanceRequest request);
+
+    /**
+     * @param request the request parameters of DescribeInstanceAvailableZones  DescribeInstanceAvailableZonesRequest
+     * @return DescribeInstanceAvailableZonesResponse
+     */
+    CompletableFuture<DescribeInstanceAvailableZonesResponse> describeInstanceAvailableZones(DescribeInstanceAvailableZonesRequest request);
 
     /**
      * @param request the request parameters of DescribeInstanceCreatableZone  DescribeInstanceCreatableZoneRequest

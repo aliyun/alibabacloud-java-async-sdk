@@ -110,6 +110,12 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OutlineId")
         private Long outlineId;
 
+        @com.aliyun.core.annotation.NameInMap("SqlText")
+        private String sqlText;
+
+        @com.aliyun.core.annotation.NameInMap("SqlTextConcurrentNum")
+        private Long sqlTextConcurrentNum;
+
         @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
@@ -118,6 +124,8 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
             this.bindPlan = builder.bindPlan;
             this.maxConcurrent = builder.maxConcurrent;
             this.outlineId = builder.outlineId;
+            this.sqlText = builder.sqlText;
+            this.sqlTextConcurrentNum = builder.sqlTextConcurrentNum;
             this.tableName = builder.tableName;
         }
 
@@ -158,6 +166,20 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
         }
 
         /**
+         * @return sqlText
+         */
+        public String getSqlText() {
+            return this.sqlText;
+        }
+
+        /**
+         * @return sqlTextConcurrentNum
+         */
+        public Long getSqlTextConcurrentNum() {
+            return this.sqlTextConcurrentNum;
+        }
+
+        /**
          * @return tableName
          */
         public String getTableName() {
@@ -169,6 +191,8 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
             private String bindPlan; 
             private Integer maxConcurrent; 
             private Long outlineId; 
+            private String sqlText; 
+            private Long sqlTextConcurrentNum; 
             private String tableName; 
 
             private Builder() {
@@ -179,6 +203,8 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
                 this.bindPlan = model.bindPlan;
                 this.maxConcurrent = model.maxConcurrent;
                 this.outlineId = model.outlineId;
+                this.sqlText = model.sqlText;
+                this.sqlTextConcurrentNum = model.sqlTextConcurrentNum;
                 this.tableName = model.tableName;
             } 
 
@@ -223,6 +249,22 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
              */
             public Builder outlineId(Long outlineId) {
                 this.outlineId = outlineId;
+                return this;
+            }
+
+            /**
+             * SqlText.
+             */
+            public Builder sqlText(String sqlText) {
+                this.sqlText = sqlText;
+                return this;
+            }
+
+            /**
+             * SqlTextConcurrentNum.
+             */
+            public Builder sqlTextConcurrentNum(Long sqlTextConcurrentNum) {
+                this.sqlTextConcurrentNum = sqlTextConcurrentNum;
                 return this;
             }
 

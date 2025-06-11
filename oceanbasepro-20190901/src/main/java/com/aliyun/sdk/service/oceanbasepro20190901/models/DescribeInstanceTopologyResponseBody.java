@@ -443,6 +443,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeNum")
         private Integer nodeNum;
 
+        @com.aliyun.core.annotation.NameInMap("OnlineNodeNum")
+        private Long onlineNodeNum;
+
         @com.aliyun.core.annotation.NameInMap("ReadOnlyReplicaType")
         private String readOnlyReplicaType;
 
@@ -467,6 +470,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         private Replicas(Builder builder) {
             this.logicalZone = builder.logicalZone;
             this.nodeNum = builder.nodeNum;
+            this.onlineNodeNum = builder.onlineNodeNum;
             this.readOnlyReplicaType = builder.readOnlyReplicaType;
             this.replicaResource = builder.replicaResource;
             this.replicaType = builder.replicaType;
@@ -496,6 +500,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
          */
         public Integer getNodeNum() {
             return this.nodeNum;
+        }
+
+        /**
+         * @return onlineNodeNum
+         */
+        public Long getOnlineNodeNum() {
+            return this.onlineNodeNum;
         }
 
         /**
@@ -550,6 +561,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         public static final class Builder {
             private String logicalZone; 
             private Integer nodeNum; 
+            private Long onlineNodeNum; 
             private String readOnlyReplicaType; 
             private ReplicaResource replicaResource; 
             private String replicaType; 
@@ -564,6 +576,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Builder(Replicas model) {
                 this.logicalZone = model.logicalZone;
                 this.nodeNum = model.nodeNum;
+                this.onlineNodeNum = model.onlineNodeNum;
                 this.readOnlyReplicaType = model.readOnlyReplicaType;
                 this.replicaResource = model.replicaResource;
                 this.replicaType = model.replicaType;
@@ -592,6 +605,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
              */
             public Builder nodeNum(Integer nodeNum) {
                 this.nodeNum = nodeNum;
+                return this;
+            }
+
+            /**
+             * OnlineNodeNum.
+             */
+            public Builder onlineNodeNum(Long onlineNodeNum) {
+                this.onlineNodeNum = onlineNodeNum;
                 return this;
             }
 

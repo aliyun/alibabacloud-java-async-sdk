@@ -746,6 +746,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InternetRpcPort")
         private Integer internetRpcPort;
 
+        @com.aliyun.core.annotation.NameInMap("InternetSqlPort")
+        private Integer internetSqlPort;
+
         @com.aliyun.core.annotation.NameInMap("IntranetAddress")
         private String intranetAddress;
 
@@ -806,6 +809,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.internetMaxConnectionNum = builder.internetMaxConnectionNum;
             this.internetPort = builder.internetPort;
             this.internetRpcPort = builder.internetRpcPort;
+            this.internetSqlPort = builder.internetSqlPort;
             this.intranetAddress = builder.intranetAddress;
             this.intranetAddressMasterZoneId = builder.intranetAddressMasterZoneId;
             this.intranetAddressSlaveZoneId = builder.intranetAddressSlaveZoneId;
@@ -907,6 +911,13 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public Integer getInternetRpcPort() {
             return this.internetRpcPort;
+        }
+
+        /**
+         * @return internetSqlPort
+         */
+        public Integer getInternetSqlPort() {
+            return this.internetSqlPort;
         }
 
         /**
@@ -1033,6 +1044,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Long internetMaxConnectionNum; 
             private Integer internetPort; 
             private Integer internetRpcPort; 
+            private Integer internetSqlPort; 
             private String intranetAddress; 
             private String intranetAddressMasterZoneId; 
             private String intranetAddressSlaveZoneId; 
@@ -1065,6 +1077,7 @@ public class DescribeTenantResponseBody extends TeaModel {
                 this.internetMaxConnectionNum = model.internetMaxConnectionNum;
                 this.internetPort = model.internetPort;
                 this.internetRpcPort = model.internetRpcPort;
+                this.internetSqlPort = model.internetSqlPort;
                 this.intranetAddress = model.intranetAddress;
                 this.intranetAddressMasterZoneId = model.intranetAddressMasterZoneId;
                 this.intranetAddressSlaveZoneId = model.intranetAddressSlaveZoneId;
@@ -1210,6 +1223,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder internetRpcPort(Integer internetRpcPort) {
                 this.internetRpcPort = internetRpcPort;
+                return this;
+            }
+
+            /**
+             * InternetSqlPort.
+             */
+            public Builder internetSqlPort(Integer internetSqlPort) {
+                this.internetSqlPort = internetSqlPort;
                 return this;
             }
 

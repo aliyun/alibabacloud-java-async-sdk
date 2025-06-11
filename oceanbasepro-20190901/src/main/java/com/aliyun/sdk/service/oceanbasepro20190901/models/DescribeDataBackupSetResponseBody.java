@@ -537,7 +537,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
         private String progress;
 
         @com.aliyun.core.annotation.NameInMap("SetId")
-        private Integer setId;
+        private String setId;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
@@ -670,7 +670,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
         /**
          * @return setId
          */
-        public Integer getSetId() {
+        public String getSetId() {
             return this.setId;
         }
 
@@ -722,7 +722,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
             private String method; 
             private String policy; 
             private String progress; 
-            private Integer setId; 
+            private String setId; 
             private String startTime; 
             private String status; 
             private String storageClass; 
@@ -852,7 +852,7 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
             /**
              * SetId.
              */
-            public Builder setId(Integer setId) {
+            public Builder setId(String setId) {
                 this.setId = setId;
                 return this;
             }

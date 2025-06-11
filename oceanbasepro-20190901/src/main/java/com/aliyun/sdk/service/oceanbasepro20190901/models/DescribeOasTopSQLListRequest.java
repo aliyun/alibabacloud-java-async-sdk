@@ -26,6 +26,10 @@ public class DescribeOasTopSQLListRequest extends Request {
     private String acceptLanguage;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomColumns")
+    private String customColumns;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DbName")
     private String dbName;
 
@@ -93,6 +97,7 @@ public class DescribeOasTopSQLListRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.acceptLanguage = builder.acceptLanguage;
+        this.customColumns = builder.customColumns;
         this.dbName = builder.dbName;
         this.dynamicSql = builder.dynamicSql;
         this.endTime = builder.endTime;
@@ -135,6 +140,13 @@ public class DescribeOasTopSQLListRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return customColumns
+     */
+    public String getCustomColumns() {
+        return this.customColumns;
     }
 
     /**
@@ -245,6 +257,7 @@ public class DescribeOasTopSQLListRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeOasTopSQLListRequest, Builder> {
         private String regionId; 
         private String acceptLanguage; 
+        private String customColumns; 
         private String dbName; 
         private Boolean dynamicSql; 
         private String endTime; 
@@ -269,6 +282,7 @@ public class DescribeOasTopSQLListRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.acceptLanguage = request.acceptLanguage;
+            this.customColumns = request.customColumns;
             this.dbName = request.dbName;
             this.dynamicSql = request.dynamicSql;
             this.endTime = request.endTime;
@@ -311,6 +325,15 @@ public class DescribeOasTopSQLListRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putBodyParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * CustomColumns.
+         */
+        public Builder customColumns(String customColumns) {
+            this.putBodyParameter("CustomColumns", customColumns);
+            this.customColumns = customColumns;
             return this;
         }
 

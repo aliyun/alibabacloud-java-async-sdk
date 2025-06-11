@@ -346,6 +346,261 @@ public class DescribeInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeInstancesResponseBody</p>
      */
+    public static class CheckResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("CodeName")
+        private String codeName;
+
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private String level;
+
+        @com.aliyun.core.annotation.NameInMap("Module")
+        private String module;
+
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
+        private String moduleName;
+
+        @com.aliyun.core.annotation.NameInMap("SubModule")
+        private String subModule;
+
+        @com.aliyun.core.annotation.NameInMap("SubModuleName")
+        private String subModuleName;
+
+        private CheckResult(Builder builder) {
+            this.code = builder.code;
+            this.codeName = builder.codeName;
+            this.level = builder.level;
+            this.module = builder.module;
+            this.moduleName = builder.moduleName;
+            this.subModule = builder.subModule;
+            this.subModuleName = builder.subModuleName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CheckResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return codeName
+         */
+        public String getCodeName() {
+            return this.codeName;
+        }
+
+        /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return module
+         */
+        public String getModule() {
+            return this.module;
+        }
+
+        /**
+         * @return moduleName
+         */
+        public String getModuleName() {
+            return this.moduleName;
+        }
+
+        /**
+         * @return subModule
+         */
+        public String getSubModule() {
+            return this.subModule;
+        }
+
+        /**
+         * @return subModuleName
+         */
+        public String getSubModuleName() {
+            return this.subModuleName;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String codeName; 
+            private String level; 
+            private String module; 
+            private String moduleName; 
+            private String subModule; 
+            private String subModuleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CheckResult model) {
+                this.code = model.code;
+                this.codeName = model.codeName;
+                this.level = model.level;
+                this.module = model.module;
+                this.moduleName = model.moduleName;
+                this.subModule = model.subModule;
+                this.subModuleName = model.subModuleName;
+            } 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * CodeName.
+             */
+            public Builder codeName(String codeName) {
+                this.codeName = codeName;
+                return this;
+            }
+
+            /**
+             * Level.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * Module.
+             */
+            public Builder module(String module) {
+                this.module = module;
+                return this;
+            }
+
+            /**
+             * ModuleName.
+             */
+            public Builder moduleName(String moduleName) {
+                this.moduleName = moduleName;
+                return this;
+            }
+
+            /**
+             * SubModule.
+             */
+            public Builder subModule(String subModule) {
+                this.subModule = subModule;
+                return this;
+            }
+
+            /**
+             * SubModuleName.
+             */
+            public Builder subModuleName(String subModuleName) {
+                this.subModuleName = subModuleName;
+                return this;
+            }
+
+            public CheckResult build() {
+                return new CheckResult(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
+    public static class MigrationInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CheckResult")
+        private CheckResult checkResult;
+
+        @com.aliyun.core.annotation.NameInMap("Migratable")
+        private Boolean migratable;
+
+        private MigrationInfo(Builder builder) {
+            this.checkResult = builder.checkResult;
+            this.migratable = builder.migratable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MigrationInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return checkResult
+         */
+        public CheckResult getCheckResult() {
+            return this.checkResult;
+        }
+
+        /**
+         * @return migratable
+         */
+        public Boolean getMigratable() {
+            return this.migratable;
+        }
+
+        public static final class Builder {
+            private CheckResult checkResult; 
+            private Boolean migratable; 
+
+            private Builder() {
+            } 
+
+            private Builder(MigrationInfo model) {
+                this.checkResult = model.checkResult;
+                this.migratable = model.migratable;
+            } 
+
+            /**
+             * CheckResult.
+             */
+            public Builder checkResult(CheckResult checkResult) {
+                this.checkResult = checkResult;
+                return this;
+            }
+
+            /**
+             * Migratable.
+             */
+            public Builder migratable(Boolean migratable) {
+                this.migratable = migratable;
+                return this;
+            }
+
+            public MigrationInfo build() {
+                return new MigrationInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class CapacityUnit extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaxCapacityUnit")
         private Integer maxCapacityUnit;
@@ -1046,6 +1301,12 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mem")
         private Long mem;
 
+        @com.aliyun.core.annotation.NameInMap("Migratable")
+        private Boolean migratable;
+
+        @com.aliyun.core.annotation.NameInMap("MigrationInfo")
+        private MigrationInfo migrationInfo;
+
         @com.aliyun.core.annotation.NameInMap("ObRpmVersion")
         private String obRpmVersion;
 
@@ -1102,6 +1363,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.instanceType = builder.instanceType;
             this.maintainTime = builder.maintainTime;
             this.mem = builder.mem;
+            this.migratable = builder.migratable;
+            this.migrationInfo = builder.migrationInfo;
             this.obRpmVersion = builder.obRpmVersion;
             this.payType = builder.payType;
             this.replicaMode = builder.replicaMode;
@@ -1278,6 +1541,20 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return migratable
+         */
+        public Boolean getMigratable() {
+            return this.migratable;
+        }
+
+        /**
+         * @return migrationInfo
+         */
+        public MigrationInfo getMigrationInfo() {
+            return this.migrationInfo;
+        }
+
+        /**
          * @return obRpmVersion
          */
         public String getObRpmVersion() {
@@ -1377,6 +1654,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String instanceType; 
             private String maintainTime; 
             private Long mem; 
+            private Boolean migratable; 
+            private MigrationInfo migrationInfo; 
             private String obRpmVersion; 
             private String payType; 
             private String replicaMode; 
@@ -1415,6 +1694,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.instanceType = model.instanceType;
                 this.maintainTime = model.maintainTime;
                 this.mem = model.mem;
+                this.migratable = model.migratable;
+                this.migrationInfo = model.migrationInfo;
                 this.obRpmVersion = model.obRpmVersion;
                 this.payType = model.payType;
                 this.replicaMode = model.replicaMode;
@@ -1688,6 +1969,22 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder mem(Long mem) {
                 this.mem = mem;
+                return this;
+            }
+
+            /**
+             * Migratable.
+             */
+            public Builder migratable(Boolean migratable) {
+                this.migratable = migratable;
+                return this;
+            }
+
+            /**
+             * MigrationInfo.
+             */
+            public Builder migrationInfo(MigrationInfo migrationInfo) {
+                this.migrationInfo = migrationInfo;
                 return this;
             }
 

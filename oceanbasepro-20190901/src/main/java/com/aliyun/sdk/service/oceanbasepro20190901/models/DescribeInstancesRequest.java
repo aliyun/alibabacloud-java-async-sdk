@@ -45,6 +45,10 @@ public class DescribeInstancesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SearchKey")
     private String searchKey;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WithOBCloudInstances")
+    private Boolean withOBCloudInstances;
+
     private DescribeInstancesRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -54,6 +58,7 @@ public class DescribeInstancesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceGroupId = builder.resourceGroupId;
         this.searchKey = builder.searchKey;
+        this.withOBCloudInstances = builder.withOBCloudInstances;
     }
 
     public static Builder builder() {
@@ -118,6 +123,13 @@ public class DescribeInstancesRequest extends Request {
         return this.searchKey;
     }
 
+    /**
+     * @return withOBCloudInstances
+     */
+    public Boolean getWithOBCloudInstances() {
+        return this.withOBCloudInstances;
+    }
+
     public static final class Builder extends Request.Builder<DescribeInstancesRequest, Builder> {
         private String regionId; 
         private String instanceId; 
@@ -126,6 +138,7 @@ public class DescribeInstancesRequest extends Request {
         private Integer pageSize; 
         private String resourceGroupId; 
         private String searchKey; 
+        private Boolean withOBCloudInstances; 
 
         private Builder() {
             super();
@@ -140,6 +153,7 @@ public class DescribeInstancesRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceGroupId = request.resourceGroupId;
             this.searchKey = request.searchKey;
+            this.withOBCloudInstances = request.withOBCloudInstances;
         } 
 
         /**
@@ -228,6 +242,15 @@ public class DescribeInstancesRequest extends Request {
         public Builder searchKey(String searchKey) {
             this.putBodyParameter("SearchKey", searchKey);
             this.searchKey = searchKey;
+            return this;
+        }
+
+        /**
+         * WithOBCloudInstances.
+         */
+        public Builder withOBCloudInstances(Boolean withOBCloudInstances) {
+            this.putBodyParameter("WithOBCloudInstances", withOBCloudInstances);
+            this.withOBCloudInstances = withOBCloudInstances;
             return this;
         }
 

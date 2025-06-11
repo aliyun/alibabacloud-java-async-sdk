@@ -97,7 +97,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
      *
      * <p>DescribeProcessStatsCompositionResponseBody</p>
      */
-    public static class AllProcessList extends TeaModel {
+    public static class ProcessSqlList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
@@ -109,6 +109,9 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
+
+        @com.aliyun.core.annotation.NameInMap("DynamicSql")
+        private String dynamicSql;
 
         @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private Long executeTime;
@@ -143,11 +146,12 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("User")
         private String user;
 
-        private AllProcessList(Builder builder) {
+        private ProcessSqlList(Builder builder) {
             this.clientIp = builder.clientIp;
             this.command = builder.command;
             this.cpuTime = builder.cpuTime;
             this.database = builder.database;
+            this.dynamicSql = builder.dynamicSql;
             this.executeTime = builder.executeTime;
             this.planId = builder.planId;
             this.proxySessId = builder.proxySessId;
@@ -165,7 +169,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static AllProcessList create() {
+        public static ProcessSqlList create() {
             return builder().build();
         }
 
@@ -195,6 +199,13 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
          */
         public String getDatabase() {
             return this.database;
+        }
+
+        /**
+         * @return dynamicSql
+         */
+        public String getDynamicSql() {
+            return this.dynamicSql;
         }
 
         /**
@@ -279,10 +290,794 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private String command; 
             private Long cpuTime; 
             private String database; 
+            private String dynamicSql; 
             private Long executeTime; 
             private String planId; 
             private String proxySessId; 
             private String serverIp; 
+            private Long sessionId; 
+            private String sqlId; 
+            private String sqlText; 
+            private String status; 
+            private String tenantId; 
+            private String traceId; 
+            private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProcessSqlList model) {
+                this.clientIp = model.clientIp;
+                this.command = model.command;
+                this.cpuTime = model.cpuTime;
+                this.database = model.database;
+                this.dynamicSql = model.dynamicSql;
+                this.executeTime = model.executeTime;
+                this.planId = model.planId;
+                this.proxySessId = model.proxySessId;
+                this.serverIp = model.serverIp;
+                this.sessionId = model.sessionId;
+                this.sqlId = model.sqlId;
+                this.sqlText = model.sqlText;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.traceId = model.traceId;
+                this.user = model.user;
+            } 
+
+            /**
+             * ClientIp.
+             */
+            public Builder clientIp(String clientIp) {
+                this.clientIp = clientIp;
+                return this;
+            }
+
+            /**
+             * Command.
+             */
+            public Builder command(String command) {
+                this.command = command;
+                return this;
+            }
+
+            /**
+             * CpuTime.
+             */
+            public Builder cpuTime(Long cpuTime) {
+                this.cpuTime = cpuTime;
+                return this;
+            }
+
+            /**
+             * Database.
+             */
+            public Builder database(String database) {
+                this.database = database;
+                return this;
+            }
+
+            /**
+             * DynamicSql.
+             */
+            public Builder dynamicSql(String dynamicSql) {
+                this.dynamicSql = dynamicSql;
+                return this;
+            }
+
+            /**
+             * ExecuteTime.
+             */
+            public Builder executeTime(Long executeTime) {
+                this.executeTime = executeTime;
+                return this;
+            }
+
+            /**
+             * PlanId.
+             */
+            public Builder planId(String planId) {
+                this.planId = planId;
+                return this;
+            }
+
+            /**
+             * ProxySessId.
+             */
+            public Builder proxySessId(String proxySessId) {
+                this.proxySessId = proxySessId;
+                return this;
+            }
+
+            /**
+             * ServerIp.
+             */
+            public Builder serverIp(String serverIp) {
+                this.serverIp = serverIp;
+                return this;
+            }
+
+            /**
+             * SessionId.
+             */
+            public Builder sessionId(Long sessionId) {
+                this.sessionId = sessionId;
+                return this;
+            }
+
+            /**
+             * SqlId.
+             */
+            public Builder sqlId(String sqlId) {
+                this.sqlId = sqlId;
+                return this;
+            }
+
+            /**
+             * SqlText.
+             */
+            public Builder sqlText(String sqlText) {
+                this.sqlText = sqlText;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * TenantId.
+             */
+            public Builder tenantId(String tenantId) {
+                this.tenantId = tenantId;
+                return this;
+            }
+
+            /**
+             * TraceId.
+             */
+            public Builder traceId(String traceId) {
+                this.traceId = traceId;
+                return this;
+            }
+
+            /**
+             * User.
+             */
+            public Builder user(String user) {
+                this.user = user;
+                return this;
+            }
+
+            public ProcessSqlList build() {
+                return new ProcessSqlList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeProcessStatsCompositionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessStatsCompositionResponseBody</p>
+     */
+    public static class ProcessSqlLists extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
+        private String clientIp;
+
+        @com.aliyun.core.annotation.NameInMap("Command")
+        private String command;
+
+        @com.aliyun.core.annotation.NameInMap("CpuTime")
+        private Long cpuTime;
+
+        @com.aliyun.core.annotation.NameInMap("Database")
+        private String database;
+
+        @com.aliyun.core.annotation.NameInMap("DynamicSql")
+        private String dynamicSql;
+
+        @com.aliyun.core.annotation.NameInMap("ExecuteTime")
+        private Long executeTime;
+
+        @com.aliyun.core.annotation.NameInMap("PlanId")
+        private String planId;
+
+        @com.aliyun.core.annotation.NameInMap("ProcessSqlList")
+        private java.util.List<ProcessSqlList> processSqlList;
+
+        @com.aliyun.core.annotation.NameInMap("ProxySessId")
+        private String proxySessId;
+
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
+        private String serverIp;
+
+        @com.aliyun.core.annotation.NameInMap("SessionId")
+        private Long sessionId;
+
+        @com.aliyun.core.annotation.NameInMap("SqlId")
+        private String sqlId;
+
+        @com.aliyun.core.annotation.NameInMap("SqlText")
+        private String sqlText;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("TenantId")
+        private String tenantId;
+
+        @com.aliyun.core.annotation.NameInMap("TraceId")
+        private String traceId;
+
+        @com.aliyun.core.annotation.NameInMap("User")
+        private String user;
+
+        private ProcessSqlLists(Builder builder) {
+            this.clientIp = builder.clientIp;
+            this.command = builder.command;
+            this.cpuTime = builder.cpuTime;
+            this.database = builder.database;
+            this.dynamicSql = builder.dynamicSql;
+            this.executeTime = builder.executeTime;
+            this.planId = builder.planId;
+            this.processSqlList = builder.processSqlList;
+            this.proxySessId = builder.proxySessId;
+            this.serverIp = builder.serverIp;
+            this.sessionId = builder.sessionId;
+            this.sqlId = builder.sqlId;
+            this.sqlText = builder.sqlText;
+            this.status = builder.status;
+            this.tenantId = builder.tenantId;
+            this.traceId = builder.traceId;
+            this.user = builder.user;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProcessSqlLists create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clientIp
+         */
+        public String getClientIp() {
+            return this.clientIp;
+        }
+
+        /**
+         * @return command
+         */
+        public String getCommand() {
+            return this.command;
+        }
+
+        /**
+         * @return cpuTime
+         */
+        public Long getCpuTime() {
+            return this.cpuTime;
+        }
+
+        /**
+         * @return database
+         */
+        public String getDatabase() {
+            return this.database;
+        }
+
+        /**
+         * @return dynamicSql
+         */
+        public String getDynamicSql() {
+            return this.dynamicSql;
+        }
+
+        /**
+         * @return executeTime
+         */
+        public Long getExecuteTime() {
+            return this.executeTime;
+        }
+
+        /**
+         * @return planId
+         */
+        public String getPlanId() {
+            return this.planId;
+        }
+
+        /**
+         * @return processSqlList
+         */
+        public java.util.List<ProcessSqlList> getProcessSqlList() {
+            return this.processSqlList;
+        }
+
+        /**
+         * @return proxySessId
+         */
+        public String getProxySessId() {
+            return this.proxySessId;
+        }
+
+        /**
+         * @return serverIp
+         */
+        public String getServerIp() {
+            return this.serverIp;
+        }
+
+        /**
+         * @return sessionId
+         */
+        public Long getSessionId() {
+            return this.sessionId;
+        }
+
+        /**
+         * @return sqlId
+         */
+        public String getSqlId() {
+            return this.sqlId;
+        }
+
+        /**
+         * @return sqlText
+         */
+        public String getSqlText() {
+            return this.sqlText;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return tenantId
+         */
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
+        /**
+         * @return traceId
+         */
+        public String getTraceId() {
+            return this.traceId;
+        }
+
+        /**
+         * @return user
+         */
+        public String getUser() {
+            return this.user;
+        }
+
+        public static final class Builder {
+            private String clientIp; 
+            private String command; 
+            private Long cpuTime; 
+            private String database; 
+            private String dynamicSql; 
+            private Long executeTime; 
+            private String planId; 
+            private java.util.List<ProcessSqlList> processSqlList; 
+            private String proxySessId; 
+            private String serverIp; 
+            private Long sessionId; 
+            private String sqlId; 
+            private String sqlText; 
+            private String status; 
+            private String tenantId; 
+            private String traceId; 
+            private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProcessSqlLists model) {
+                this.clientIp = model.clientIp;
+                this.command = model.command;
+                this.cpuTime = model.cpuTime;
+                this.database = model.database;
+                this.dynamicSql = model.dynamicSql;
+                this.executeTime = model.executeTime;
+                this.planId = model.planId;
+                this.processSqlList = model.processSqlList;
+                this.proxySessId = model.proxySessId;
+                this.serverIp = model.serverIp;
+                this.sessionId = model.sessionId;
+                this.sqlId = model.sqlId;
+                this.sqlText = model.sqlText;
+                this.status = model.status;
+                this.tenantId = model.tenantId;
+                this.traceId = model.traceId;
+                this.user = model.user;
+            } 
+
+            /**
+             * ClientIp.
+             */
+            public Builder clientIp(String clientIp) {
+                this.clientIp = clientIp;
+                return this;
+            }
+
+            /**
+             * Command.
+             */
+            public Builder command(String command) {
+                this.command = command;
+                return this;
+            }
+
+            /**
+             * CpuTime.
+             */
+            public Builder cpuTime(Long cpuTime) {
+                this.cpuTime = cpuTime;
+                return this;
+            }
+
+            /**
+             * Database.
+             */
+            public Builder database(String database) {
+                this.database = database;
+                return this;
+            }
+
+            /**
+             * DynamicSql.
+             */
+            public Builder dynamicSql(String dynamicSql) {
+                this.dynamicSql = dynamicSql;
+                return this;
+            }
+
+            /**
+             * ExecuteTime.
+             */
+            public Builder executeTime(Long executeTime) {
+                this.executeTime = executeTime;
+                return this;
+            }
+
+            /**
+             * PlanId.
+             */
+            public Builder planId(String planId) {
+                this.planId = planId;
+                return this;
+            }
+
+            /**
+             * ProcessSqlList.
+             */
+            public Builder processSqlList(java.util.List<ProcessSqlList> processSqlList) {
+                this.processSqlList = processSqlList;
+                return this;
+            }
+
+            /**
+             * ProxySessId.
+             */
+            public Builder proxySessId(String proxySessId) {
+                this.proxySessId = proxySessId;
+                return this;
+            }
+
+            /**
+             * ServerIp.
+             */
+            public Builder serverIp(String serverIp) {
+                this.serverIp = serverIp;
+                return this;
+            }
+
+            /**
+             * SessionId.
+             */
+            public Builder sessionId(Long sessionId) {
+                this.sessionId = sessionId;
+                return this;
+            }
+
+            /**
+             * SqlId.
+             */
+            public Builder sqlId(String sqlId) {
+                this.sqlId = sqlId;
+                return this;
+            }
+
+            /**
+             * SqlText.
+             */
+            public Builder sqlText(String sqlText) {
+                this.sqlText = sqlText;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * TenantId.
+             */
+            public Builder tenantId(String tenantId) {
+                this.tenantId = tenantId;
+                return this;
+            }
+
+            /**
+             * TraceId.
+             */
+            public Builder traceId(String traceId) {
+                this.traceId = traceId;
+                return this;
+            }
+
+            /**
+             * User.
+             */
+            public Builder user(String user) {
+                this.user = user;
+                return this;
+            }
+
+            public ProcessSqlLists build() {
+                return new ProcessSqlLists(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeProcessStatsCompositionResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeProcessStatsCompositionResponseBody</p>
+     */
+    public static class AllProcessList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
+        private String clientIp;
+
+        @com.aliyun.core.annotation.NameInMap("Command")
+        private String command;
+
+        @com.aliyun.core.annotation.NameInMap("CpuTime")
+        private Long cpuTime;
+
+        @com.aliyun.core.annotation.NameInMap("Database")
+        private String database;
+
+        @com.aliyun.core.annotation.NameInMap("DynamicSql")
+        private String dynamicSql;
+
+        @com.aliyun.core.annotation.NameInMap("ExecuteTime")
+        private Long executeTime;
+
+        @com.aliyun.core.annotation.NameInMap("PlanId")
+        private String planId;
+
+        @com.aliyun.core.annotation.NameInMap("ProcessSqlLists")
+        private java.util.List<ProcessSqlLists> processSqlLists;
+
+        @com.aliyun.core.annotation.NameInMap("ProxySessId")
+        private String proxySessId;
+
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
+        private String serverIp;
+
+        @com.aliyun.core.annotation.NameInMap("ServerSn")
+        private String serverSn;
+
+        @com.aliyun.core.annotation.NameInMap("SessionId")
+        private Long sessionId;
+
+        @com.aliyun.core.annotation.NameInMap("SqlId")
+        private String sqlId;
+
+        @com.aliyun.core.annotation.NameInMap("SqlText")
+        private String sqlText;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("TenantId")
+        private String tenantId;
+
+        @com.aliyun.core.annotation.NameInMap("TraceId")
+        private String traceId;
+
+        @com.aliyun.core.annotation.NameInMap("User")
+        private String user;
+
+        private AllProcessList(Builder builder) {
+            this.clientIp = builder.clientIp;
+            this.command = builder.command;
+            this.cpuTime = builder.cpuTime;
+            this.database = builder.database;
+            this.dynamicSql = builder.dynamicSql;
+            this.executeTime = builder.executeTime;
+            this.planId = builder.planId;
+            this.processSqlLists = builder.processSqlLists;
+            this.proxySessId = builder.proxySessId;
+            this.serverIp = builder.serverIp;
+            this.serverSn = builder.serverSn;
+            this.sessionId = builder.sessionId;
+            this.sqlId = builder.sqlId;
+            this.sqlText = builder.sqlText;
+            this.status = builder.status;
+            this.tenantId = builder.tenantId;
+            this.traceId = builder.traceId;
+            this.user = builder.user;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AllProcessList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return clientIp
+         */
+        public String getClientIp() {
+            return this.clientIp;
+        }
+
+        /**
+         * @return command
+         */
+        public String getCommand() {
+            return this.command;
+        }
+
+        /**
+         * @return cpuTime
+         */
+        public Long getCpuTime() {
+            return this.cpuTime;
+        }
+
+        /**
+         * @return database
+         */
+        public String getDatabase() {
+            return this.database;
+        }
+
+        /**
+         * @return dynamicSql
+         */
+        public String getDynamicSql() {
+            return this.dynamicSql;
+        }
+
+        /**
+         * @return executeTime
+         */
+        public Long getExecuteTime() {
+            return this.executeTime;
+        }
+
+        /**
+         * @return planId
+         */
+        public String getPlanId() {
+            return this.planId;
+        }
+
+        /**
+         * @return processSqlLists
+         */
+        public java.util.List<ProcessSqlLists> getProcessSqlLists() {
+            return this.processSqlLists;
+        }
+
+        /**
+         * @return proxySessId
+         */
+        public String getProxySessId() {
+            return this.proxySessId;
+        }
+
+        /**
+         * @return serverIp
+         */
+        public String getServerIp() {
+            return this.serverIp;
+        }
+
+        /**
+         * @return serverSn
+         */
+        public String getServerSn() {
+            return this.serverSn;
+        }
+
+        /**
+         * @return sessionId
+         */
+        public Long getSessionId() {
+            return this.sessionId;
+        }
+
+        /**
+         * @return sqlId
+         */
+        public String getSqlId() {
+            return this.sqlId;
+        }
+
+        /**
+         * @return sqlText
+         */
+        public String getSqlText() {
+            return this.sqlText;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return tenantId
+         */
+        public String getTenantId() {
+            return this.tenantId;
+        }
+
+        /**
+         * @return traceId
+         */
+        public String getTraceId() {
+            return this.traceId;
+        }
+
+        /**
+         * @return user
+         */
+        public String getUser() {
+            return this.user;
+        }
+
+        public static final class Builder {
+            private String clientIp; 
+            private String command; 
+            private Long cpuTime; 
+            private String database; 
+            private String dynamicSql; 
+            private Long executeTime; 
+            private String planId; 
+            private java.util.List<ProcessSqlLists> processSqlLists; 
+            private String proxySessId; 
+            private String serverIp; 
+            private String serverSn; 
             private Long sessionId; 
             private String sqlId; 
             private String sqlText; 
@@ -299,10 +1094,13 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
                 this.command = model.command;
                 this.cpuTime = model.cpuTime;
                 this.database = model.database;
+                this.dynamicSql = model.dynamicSql;
                 this.executeTime = model.executeTime;
                 this.planId = model.planId;
+                this.processSqlLists = model.processSqlLists;
                 this.proxySessId = model.proxySessId;
                 this.serverIp = model.serverIp;
+                this.serverSn = model.serverSn;
                 this.sessionId = model.sessionId;
                 this.sqlId = model.sqlId;
                 this.sqlText = model.sqlText;
@@ -360,6 +1158,14 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
+             * DynamicSql.
+             */
+            public Builder dynamicSql(String dynamicSql) {
+                this.dynamicSql = dynamicSql;
+                return this;
+            }
+
+            /**
              * <p>The definition of this parameter varies based on whether the SQL statement is executed.</p>
              * <ul>
              * <li>When the request is accepted and the result is not returned to the client, this parameter indicates the time interval between the time when the request is accepted and the current time, in seconds.</li>
@@ -386,6 +1192,14 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             }
 
             /**
+             * ProcessSqlLists.
+             */
+            public Builder processSqlLists(java.util.List<ProcessSqlLists> processSqlLists) {
+                this.processSqlLists = processSqlLists;
+                return this;
+            }
+
+            /**
              * <p>The session ID of the client. If an OceanBase Database Proxy (ODP) is used for connection, the session ID of the ODP is returned.</p>
              * 
              * <strong>example:</strong>
@@ -404,6 +1218,14 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
+                return this;
+            }
+
+            /**
+             * ServerSn.
+             */
+            public Builder serverSn(String serverSn) {
+                this.serverSn = serverSn;
                 return this;
             }
 
