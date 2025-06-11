@@ -128,6 +128,9 @@ public class GetTaskResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("role")
         private String role;
 
+        @com.aliyun.core.annotation.NameInMap("roleName")
+        private String roleName;
+
         @com.aliyun.core.annotation.NameInMap("speechRate")
         private Integer speechRate;
 
@@ -139,6 +142,7 @@ public class GetTaskResultResponseBody extends TeaModel {
             this.emotionValue = builder.emotionValue;
             this.end = builder.end;
             this.role = builder.role;
+            this.roleName = builder.roleName;
             this.speechRate = builder.speechRate;
             this.words = builder.words;
         }
@@ -180,6 +184,13 @@ public class GetTaskResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return roleName
+         */
+        public String getRoleName() {
+            return this.roleName;
+        }
+
+        /**
          * @return speechRate
          */
         public Integer getSpeechRate() {
@@ -198,6 +209,7 @@ public class GetTaskResultResponseBody extends TeaModel {
             private Integer emotionValue; 
             private Long end; 
             private String role; 
+            private String roleName; 
             private Integer speechRate; 
             private String words; 
 
@@ -209,6 +221,7 @@ public class GetTaskResultResponseBody extends TeaModel {
                 this.emotionValue = model.emotionValue;
                 this.end = model.end;
                 this.role = model.role;
+                this.roleName = model.roleName;
                 this.speechRate = model.speechRate;
                 this.words = model.words;
             } 
@@ -242,6 +255,14 @@ public class GetTaskResultResponseBody extends TeaModel {
              */
             public Builder role(String role) {
                 this.role = role;
+                return this;
+            }
+
+            /**
+             * roleName.
+             */
+            public Builder roleName(String roleName) {
+                this.roleName = roleName;
                 return this;
             }
 
