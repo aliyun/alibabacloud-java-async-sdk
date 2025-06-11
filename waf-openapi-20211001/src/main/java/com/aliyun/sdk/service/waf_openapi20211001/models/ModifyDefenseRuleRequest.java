@@ -23,6 +23,10 @@ public class ModifyDefenseRuleRequest extends Request {
     private String defenseScene;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefenseType")
+    private String defenseType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -51,6 +55,7 @@ public class ModifyDefenseRuleRequest extends Request {
     private ModifyDefenseRuleRequest(Builder builder) {
         super(builder);
         this.defenseScene = builder.defenseScene;
+        this.defenseType = builder.defenseType;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resource = builder.resource;
@@ -77,6 +82,13 @@ public class ModifyDefenseRuleRequest extends Request {
      */
     public String getDefenseScene() {
         return this.defenseScene;
+    }
+
+    /**
+     * @return defenseType
+     */
+    public String getDefenseType() {
+        return this.defenseType;
     }
 
     /**
@@ -123,6 +135,7 @@ public class ModifyDefenseRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDefenseRuleRequest, Builder> {
         private String defenseScene; 
+        private String defenseType; 
         private String instanceId; 
         private String regionId; 
         private String resource; 
@@ -137,6 +150,7 @@ public class ModifyDefenseRuleRequest extends Request {
         private Builder(ModifyDefenseRuleRequest request) {
             super(request);
             this.defenseScene = request.defenseScene;
+            this.defenseType = request.defenseType;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resource = request.resource;
@@ -155,6 +169,15 @@ public class ModifyDefenseRuleRequest extends Request {
         public Builder defenseScene(String defenseScene) {
             this.putQueryParameter("DefenseScene", defenseScene);
             this.defenseScene = defenseScene;
+            return this;
+        }
+
+        /**
+         * DefenseType.
+         */
+        public Builder defenseType(String defenseType) {
+            this.putQueryParameter("DefenseType", defenseType);
+            this.defenseType = defenseType;
             return this;
         }
 
