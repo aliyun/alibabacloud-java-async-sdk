@@ -178,6 +178,102 @@ public class ListScriptsResponseBody extends TeaModel {
      *
      * <p>ListScriptsResponseBody</p>
      */
+    public static class NluProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FcFunction")
+        private String fcFunction;
+
+        @com.aliyun.core.annotation.NameInMap("FcHttpTriggerUrl")
+        private String fcHttpTriggerUrl;
+
+        @com.aliyun.core.annotation.NameInMap("FcRegion")
+        private String fcRegion;
+
+        private NluProfile(Builder builder) {
+            this.fcFunction = builder.fcFunction;
+            this.fcHttpTriggerUrl = builder.fcHttpTriggerUrl;
+            this.fcRegion = builder.fcRegion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NluProfile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fcFunction
+         */
+        public String getFcFunction() {
+            return this.fcFunction;
+        }
+
+        /**
+         * @return fcHttpTriggerUrl
+         */
+        public String getFcHttpTriggerUrl() {
+            return this.fcHttpTriggerUrl;
+        }
+
+        /**
+         * @return fcRegion
+         */
+        public String getFcRegion() {
+            return this.fcRegion;
+        }
+
+        public static final class Builder {
+            private String fcFunction; 
+            private String fcHttpTriggerUrl; 
+            private String fcRegion; 
+
+            private Builder() {
+            } 
+
+            private Builder(NluProfile model) {
+                this.fcFunction = model.fcFunction;
+                this.fcHttpTriggerUrl = model.fcHttpTriggerUrl;
+                this.fcRegion = model.fcRegion;
+            } 
+
+            /**
+             * FcFunction.
+             */
+            public Builder fcFunction(String fcFunction) {
+                this.fcFunction = fcFunction;
+                return this;
+            }
+
+            /**
+             * FcHttpTriggerUrl.
+             */
+            public Builder fcHttpTriggerUrl(String fcHttpTriggerUrl) {
+                this.fcHttpTriggerUrl = fcHttpTriggerUrl;
+                return this;
+            }
+
+            /**
+             * FcRegion.
+             */
+            public Builder fcRegion(String fcRegion) {
+                this.fcRegion = fcRegion;
+                return this;
+            }
+
+            public NluProfile build() {
+                return new NluProfile(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListScriptsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListScriptsResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentKey")
         private String agentKey;
@@ -221,6 +317,9 @@ public class ListScriptsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NluEngine")
         private String nluEngine;
 
+        @com.aliyun.core.annotation.NameInMap("NluProfile")
+        private NluProfile nluProfile;
+
         @com.aliyun.core.annotation.NameInMap("RejectReason")
         private String rejectReason;
 
@@ -260,6 +359,7 @@ public class ListScriptsResponseBody extends TeaModel {
             this.newBargeInEnable = builder.newBargeInEnable;
             this.nluAccessType = builder.nluAccessType;
             this.nluEngine = builder.nluEngine;
+            this.nluProfile = builder.nluProfile;
             this.rejectReason = builder.rejectReason;
             this.scene = builder.scene;
             this.scriptDescription = builder.scriptDescription;
@@ -377,6 +477,13 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
+         * @return nluProfile
+         */
+        public NluProfile getNluProfile() {
+            return this.nluProfile;
+        }
+
+        /**
          * @return rejectReason
          */
         public String getRejectReason() {
@@ -447,6 +554,7 @@ public class ListScriptsResponseBody extends TeaModel {
             private Boolean newBargeInEnable; 
             private String nluAccessType; 
             private String nluEngine; 
+            private NluProfile nluProfile; 
             private String rejectReason; 
             private String scene; 
             private String scriptDescription; 
@@ -474,6 +582,7 @@ public class ListScriptsResponseBody extends TeaModel {
                 this.newBargeInEnable = model.newBargeInEnable;
                 this.nluAccessType = model.nluAccessType;
                 this.nluEngine = model.nluEngine;
+                this.nluProfile = model.nluProfile;
                 this.rejectReason = model.rejectReason;
                 this.scene = model.scene;
                 this.scriptDescription = model.scriptDescription;
@@ -593,6 +702,14 @@ public class ListScriptsResponseBody extends TeaModel {
              */
             public Builder nluEngine(String nluEngine) {
                 this.nluEngine = nluEngine;
+                return this;
+            }
+
+            /**
+             * NluProfile.
+             */
+            public Builder nluProfile(NluProfile nluProfile) {
+                this.nluProfile = nluProfile;
                 return this;
             }
 

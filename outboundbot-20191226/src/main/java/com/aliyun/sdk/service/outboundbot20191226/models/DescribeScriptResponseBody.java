@@ -199,6 +199,102 @@ public class DescribeScriptResponseBody extends TeaModel {
      *
      * <p>DescribeScriptResponseBody</p>
      */
+    public static class NluProfile extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FcFunction")
+        private String fcFunction;
+
+        @com.aliyun.core.annotation.NameInMap("FcHttpTriggerUrl")
+        private String fcHttpTriggerUrl;
+
+        @com.aliyun.core.annotation.NameInMap("FcRegion")
+        private String fcRegion;
+
+        private NluProfile(Builder builder) {
+            this.fcFunction = builder.fcFunction;
+            this.fcHttpTriggerUrl = builder.fcHttpTriggerUrl;
+            this.fcRegion = builder.fcRegion;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NluProfile create() {
+            return builder().build();
+        }
+
+        /**
+         * @return fcFunction
+         */
+        public String getFcFunction() {
+            return this.fcFunction;
+        }
+
+        /**
+         * @return fcHttpTriggerUrl
+         */
+        public String getFcHttpTriggerUrl() {
+            return this.fcHttpTriggerUrl;
+        }
+
+        /**
+         * @return fcRegion
+         */
+        public String getFcRegion() {
+            return this.fcRegion;
+        }
+
+        public static final class Builder {
+            private String fcFunction; 
+            private String fcHttpTriggerUrl; 
+            private String fcRegion; 
+
+            private Builder() {
+            } 
+
+            private Builder(NluProfile model) {
+                this.fcFunction = model.fcFunction;
+                this.fcHttpTriggerUrl = model.fcHttpTriggerUrl;
+                this.fcRegion = model.fcRegion;
+            } 
+
+            /**
+             * FcFunction.
+             */
+            public Builder fcFunction(String fcFunction) {
+                this.fcFunction = fcFunction;
+                return this;
+            }
+
+            /**
+             * FcHttpTriggerUrl.
+             */
+            public Builder fcHttpTriggerUrl(String fcHttpTriggerUrl) {
+                this.fcHttpTriggerUrl = fcHttpTriggerUrl;
+                return this;
+            }
+
+            /**
+             * FcRegion.
+             */
+            public Builder fcRegion(String fcRegion) {
+                this.fcRegion = fcRegion;
+                return this;
+            }
+
+            public NluProfile build() {
+                return new NluProfile(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeScriptResponseBody</p>
+     */
     public static class Script extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentId")
         private Long agentId;
@@ -233,6 +329,9 @@ public class DescribeScriptResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsDrafted")
         private Boolean isDrafted;
 
+        @com.aliyun.core.annotation.NameInMap("LabelConfig")
+        private String labelConfig;
+
         @com.aliyun.core.annotation.NameInMap("LongWaitEnable")
         private Boolean longWaitEnable;
 
@@ -241,6 +340,12 @@ public class DescribeScriptResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("NewBargeInEnable")
         private Boolean newBargeInEnable;
+
+        @com.aliyun.core.annotation.NameInMap("NluEngine")
+        private String nluEngine;
+
+        @com.aliyun.core.annotation.NameInMap("NluProfile")
+        private NluProfile nluProfile;
 
         @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
@@ -275,9 +380,12 @@ public class DescribeScriptResponseBody extends TeaModel {
             this.industry = builder.industry;
             this.isDebugDrafted = builder.isDebugDrafted;
             this.isDrafted = builder.isDrafted;
+            this.labelConfig = builder.labelConfig;
             this.longWaitEnable = builder.longWaitEnable;
             this.miniPlaybackEnable = builder.miniPlaybackEnable;
             this.newBargeInEnable = builder.newBargeInEnable;
+            this.nluEngine = builder.nluEngine;
+            this.nluProfile = builder.nluProfile;
             this.scene = builder.scene;
             this.scriptDescription = builder.scriptDescription;
             this.scriptId = builder.scriptId;
@@ -373,6 +481,13 @@ public class DescribeScriptResponseBody extends TeaModel {
         }
 
         /**
+         * @return labelConfig
+         */
+        public String getLabelConfig() {
+            return this.labelConfig;
+        }
+
+        /**
          * @return longWaitEnable
          */
         public Boolean getLongWaitEnable() {
@@ -391,6 +506,20 @@ public class DescribeScriptResponseBody extends TeaModel {
          */
         public Boolean getNewBargeInEnable() {
             return this.newBargeInEnable;
+        }
+
+        /**
+         * @return nluEngine
+         */
+        public String getNluEngine() {
+            return this.nluEngine;
+        }
+
+        /**
+         * @return nluProfile
+         */
+        public NluProfile getNluProfile() {
+            return this.nluProfile;
         }
 
         /**
@@ -454,9 +583,12 @@ public class DescribeScriptResponseBody extends TeaModel {
             private String industry; 
             private Boolean isDebugDrafted; 
             private Boolean isDrafted; 
+            private String labelConfig; 
             private Boolean longWaitEnable; 
             private Boolean miniPlaybackEnable; 
             private Boolean newBargeInEnable; 
+            private String nluEngine; 
+            private NluProfile nluProfile; 
             private String scene; 
             private String scriptDescription; 
             private String scriptId; 
@@ -480,9 +612,12 @@ public class DescribeScriptResponseBody extends TeaModel {
                 this.industry = model.industry;
                 this.isDebugDrafted = model.isDebugDrafted;
                 this.isDrafted = model.isDrafted;
+                this.labelConfig = model.labelConfig;
                 this.longWaitEnable = model.longWaitEnable;
                 this.miniPlaybackEnable = model.miniPlaybackEnable;
                 this.newBargeInEnable = model.newBargeInEnable;
+                this.nluEngine = model.nluEngine;
+                this.nluProfile = model.nluProfile;
                 this.scene = model.scene;
                 this.scriptDescription = model.scriptDescription;
                 this.scriptId = model.scriptId;
@@ -581,6 +716,14 @@ public class DescribeScriptResponseBody extends TeaModel {
             }
 
             /**
+             * LabelConfig.
+             */
+            public Builder labelConfig(String labelConfig) {
+                this.labelConfig = labelConfig;
+                return this;
+            }
+
+            /**
              * LongWaitEnable.
              */
             public Builder longWaitEnable(Boolean longWaitEnable) {
@@ -601,6 +744,22 @@ public class DescribeScriptResponseBody extends TeaModel {
              */
             public Builder newBargeInEnable(Boolean newBargeInEnable) {
                 this.newBargeInEnable = newBargeInEnable;
+                return this;
+            }
+
+            /**
+             * NluEngine.
+             */
+            public Builder nluEngine(String nluEngine) {
+                this.nluEngine = nluEngine;
+                return this;
+            }
+
+            /**
+             * NluProfile.
+             */
+            public Builder nluProfile(NluProfile nluProfile) {
+                this.nluProfile = nluProfile;
                 return this;
             }
 

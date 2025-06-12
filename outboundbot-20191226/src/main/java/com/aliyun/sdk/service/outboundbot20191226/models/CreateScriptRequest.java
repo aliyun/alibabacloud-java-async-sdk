@@ -90,6 +90,10 @@ public class CreateScriptRequest extends Request {
     private String scriptName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScriptNluProfileJsonString")
+    private String scriptNluProfileJsonString;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ScriptWaveform")
     private java.util.List<String> scriptWaveform;
 
@@ -116,6 +120,7 @@ public class CreateScriptRequest extends Request {
         this.scriptContent = builder.scriptContent;
         this.scriptDescription = builder.scriptDescription;
         this.scriptName = builder.scriptName;
+        this.scriptNluProfileJsonString = builder.scriptNluProfileJsonString;
         this.scriptWaveform = builder.scriptWaveform;
         this.ttsConfig = builder.ttsConfig;
     }
@@ -253,6 +258,13 @@ public class CreateScriptRequest extends Request {
     }
 
     /**
+     * @return scriptNluProfileJsonString
+     */
+    public String getScriptNluProfileJsonString() {
+        return this.scriptNluProfileJsonString;
+    }
+
+    /**
      * @return scriptWaveform
      */
     public java.util.List<String> getScriptWaveform() {
@@ -284,6 +296,7 @@ public class CreateScriptRequest extends Request {
         private java.util.List<String> scriptContent; 
         private String scriptDescription; 
         private String scriptName; 
+        private String scriptNluProfileJsonString; 
         private java.util.List<String> scriptWaveform; 
         private String ttsConfig; 
 
@@ -310,6 +323,7 @@ public class CreateScriptRequest extends Request {
             this.scriptContent = request.scriptContent;
             this.scriptDescription = request.scriptDescription;
             this.scriptName = request.scriptName;
+            this.scriptNluProfileJsonString = request.scriptNluProfileJsonString;
             this.scriptWaveform = request.scriptWaveform;
             this.ttsConfig = request.ttsConfig;
         } 
@@ -467,6 +481,15 @@ public class CreateScriptRequest extends Request {
         public Builder scriptName(String scriptName) {
             this.putQueryParameter("ScriptName", scriptName);
             this.scriptName = scriptName;
+            return this;
+        }
+
+        /**
+         * ScriptNluProfileJsonString.
+         */
+        public Builder scriptNluProfileJsonString(String scriptNluProfileJsonString) {
+            this.putQueryParameter("ScriptNluProfileJsonString", scriptNluProfileJsonString);
+            this.scriptNluProfileJsonString = scriptNluProfileJsonString;
             return this;
         }
 

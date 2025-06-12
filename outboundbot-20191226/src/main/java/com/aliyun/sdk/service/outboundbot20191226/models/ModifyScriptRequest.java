@@ -56,6 +56,10 @@ public class ModifyScriptRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelConfig")
+    private String labelConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LongWaitEnable")
     private Boolean longWaitEnable;
 
@@ -125,6 +129,7 @@ public class ModifyScriptRequest extends Request {
         this.emotionEnable = builder.emotionEnable;
         this.industry = builder.industry;
         this.instanceId = builder.instanceId;
+        this.labelConfig = builder.labelConfig;
         this.longWaitEnable = builder.longWaitEnable;
         this.miniPlaybackConfigListJsonString = builder.miniPlaybackConfigListJsonString;
         this.miniPlaybackEnable = builder.miniPlaybackEnable;
@@ -215,6 +220,13 @@ public class ModifyScriptRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return labelConfig
+     */
+    public String getLabelConfig() {
+        return this.labelConfig;
     }
 
     /**
@@ -325,6 +337,7 @@ public class ModifyScriptRequest extends Request {
         private Boolean emotionEnable; 
         private String industry; 
         private String instanceId; 
+        private String labelConfig; 
         private Boolean longWaitEnable; 
         private String miniPlaybackConfigListJsonString; 
         private Boolean miniPlaybackEnable; 
@@ -355,6 +368,7 @@ public class ModifyScriptRequest extends Request {
             this.emotionEnable = request.emotionEnable;
             this.industry = request.industry;
             this.instanceId = request.instanceId;
+            this.labelConfig = request.labelConfig;
             this.longWaitEnable = request.longWaitEnable;
             this.miniPlaybackConfigListJsonString = request.miniPlaybackConfigListJsonString;
             this.miniPlaybackEnable = request.miniPlaybackEnable;
@@ -452,6 +466,15 @@ public class ModifyScriptRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * LabelConfig.
+         */
+        public Builder labelConfig(String labelConfig) {
+            this.putQueryParameter("LabelConfig", labelConfig);
+            this.labelConfig = labelConfig;
             return this;
         }
 

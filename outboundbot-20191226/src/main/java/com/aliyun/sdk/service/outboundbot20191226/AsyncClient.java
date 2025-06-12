@@ -68,6 +68,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateBatchRepeatJobResponse> createBatchRepeatJob(CreateBatchRepeatJobRequest request);
 
     /**
+     * @param request the request parameters of CreateBeebotIntent  CreateBeebotIntentRequest
+     * @return CreateBeebotIntentResponse
+     */
+    CompletableFuture<CreateBeebotIntentResponse> createBeebotIntent(CreateBeebotIntentRequest request);
+
+    /**
+     * @param request the request parameters of CreateBeebotIntentLgf  CreateBeebotIntentLgfRequest
+     * @return CreateBeebotIntentLgfResponse
+     */
+    CompletableFuture<CreateBeebotIntentLgfResponse> createBeebotIntentLgf(CreateBeebotIntentLgfRequest request);
+
+    /**
+     * @param request the request parameters of CreateBeebotIntentUserSay  CreateBeebotIntentUserSayRequest
+     * @return CreateBeebotIntentUserSayResponse
+     */
+    CompletableFuture<CreateBeebotIntentUserSayResponse> createBeebotIntentUserSay(CreateBeebotIntentUserSayRequest request);
+
+    /**
      * @param request the request parameters of CreateDialogueFlow  CreateDialogueFlowRequest
      * @return CreateDialogueFlowResponse
      */
@@ -176,6 +194,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAllNumberDistrictInfoResponse> deleteAllNumberDistrictInfo(DeleteAllNumberDistrictInfoRequest request);
 
     /**
+     * @param request the request parameters of DeleteBeebotIntent  DeleteBeebotIntentRequest
+     * @return DeleteBeebotIntentResponse
+     */
+    CompletableFuture<DeleteBeebotIntentResponse> deleteBeebotIntent(DeleteBeebotIntentRequest request);
+
+    /**
+     * @param request the request parameters of DeleteBeebotIntentLgf  DeleteBeebotIntentLgfRequest
+     * @return DeleteBeebotIntentLgfResponse
+     */
+    CompletableFuture<DeleteBeebotIntentLgfResponse> deleteBeebotIntentLgf(DeleteBeebotIntentLgfRequest request);
+
+    /**
+     * @param request the request parameters of DeleteBeebotIntentUserSay  DeleteBeebotIntentUserSayRequest
+     * @return DeleteBeebotIntentUserSayResponse
+     */
+    CompletableFuture<DeleteBeebotIntentUserSayResponse> deleteBeebotIntentUserSay(DeleteBeebotIntentUserSayRequest request);
+
+    /**
      * @param request the request parameters of DeleteContactBlockList  DeleteContactBlockListRequest
      * @return DeleteContactBlockListResponse
      */
@@ -240,6 +276,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteScriptWaveformResponse
      */
     CompletableFuture<DeleteScriptWaveformResponse> deleteScriptWaveform(DeleteScriptWaveformRequest request);
+
+    /**
+     * <b>description</b> :
+     * <hr>
+     * 
+     * @param request the request parameters of DescribeBeebotIntent  DescribeBeebotIntentRequest
+     * @return DescribeBeebotIntentResponse
+     */
+    CompletableFuture<DescribeBeebotIntentResponse> describeBeebotIntent(DescribeBeebotIntentRequest request);
 
     /**
      * @param request the request parameters of DescribeDialogueNodeStatistics  DescribeDialogueNodeStatisticsRequest
@@ -554,6 +599,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApiPluginsResponse> listApiPlugins(ListApiPluginsRequest request);
 
     /**
+     * @param request the request parameters of ListBeebotIntent  ListBeebotIntentRequest
+     * @return ListBeebotIntentResponse
+     */
+    CompletableFuture<ListBeebotIntentResponse> listBeebotIntent(ListBeebotIntentRequest request);
+
+    /**
+     * @param request the request parameters of ListBeebotIntentLgf  ListBeebotIntentLgfRequest
+     * @return ListBeebotIntentLgfResponse
+     */
+    CompletableFuture<ListBeebotIntentLgfResponse> listBeebotIntentLgf(ListBeebotIntentLgfRequest request);
+
+    /**
+     * @param request the request parameters of ListBeebotIntentUserSay  ListBeebotIntentUserSayRequest
+     * @return ListBeebotIntentUserSayResponse
+     */
+    CompletableFuture<ListBeebotIntentUserSayResponse> listBeebotIntentUserSay(ListBeebotIntentUserSayRequest request);
+
+    /**
      * @param request the request parameters of ListChatbotInstances  ListChatbotInstancesRequest
      * @return ListChatbotInstancesResponse
      */
@@ -588,6 +651,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListInstancesResponse
      */
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListIntentions  ListIntentionsRequest
+     * @return ListIntentionsResponse
+     */
+    CompletableFuture<ListIntentionsResponse> listIntentions(ListIntentionsRequest request);
 
     /**
      * @param request the request parameters of ListIntents  ListIntentsRequest
@@ -690,6 +759,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyBatchJobsResponse
      */
     CompletableFuture<ModifyBatchJobsResponse> modifyBatchJobs(ModifyBatchJobsRequest request);
+
+    /**
+     * @param request the request parameters of ModifyBeebotIntent  ModifyBeebotIntentRequest
+     * @return ModifyBeebotIntentResponse
+     */
+    CompletableFuture<ModifyBeebotIntentResponse> modifyBeebotIntent(ModifyBeebotIntentRequest request);
+
+    /**
+     * @param request the request parameters of ModifyBeebotIntentLgf  ModifyBeebotIntentLgfRequest
+     * @return ModifyBeebotIntentLgfResponse
+     */
+    CompletableFuture<ModifyBeebotIntentLgfResponse> modifyBeebotIntentLgf(ModifyBeebotIntentLgfRequest request);
+
+    /**
+     * @param request the request parameters of ModifyBeebotIntentUserSay  ModifyBeebotIntentUserSayRequest
+     * @return ModifyBeebotIntentUserSayResponse
+     */
+    CompletableFuture<ModifyBeebotIntentUserSayResponse> modifyBeebotIntentUserSay(ModifyBeebotIntentUserSayRequest request);
 
     /**
      * @param request the request parameters of ModifyDialogueFlow  ModifyDialogueFlowRequest
