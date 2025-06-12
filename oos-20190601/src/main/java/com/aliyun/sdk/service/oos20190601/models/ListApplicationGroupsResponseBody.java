@@ -166,6 +166,12 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("ErrorDetail")
+        private String errorDetail;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorType")
+        private String errorType;
+
         @com.aliyun.core.annotation.NameInMap("ImportTagKey")
         private String importTagKey;
 
@@ -191,6 +197,8 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             this.deployParameters = builder.deployParameters;
             this.deployRegionId = builder.deployRegionId;
             this.description = builder.description;
+            this.errorDetail = builder.errorDetail;
+            this.errorType = builder.errorType;
             this.importTagKey = builder.importTagKey;
             this.importTagValue = builder.importTagValue;
             this.name = builder.name;
@@ -250,6 +258,20 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return errorDetail
+         */
+        public String getErrorDetail() {
+            return this.errorDetail;
+        }
+
+        /**
+         * @return errorType
+         */
+        public String getErrorType() {
+            return this.errorType;
+        }
+
+        /**
          * @return importTagKey
          */
         public String getImportTagKey() {
@@ -298,6 +320,8 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
             private String deployParameters; 
             private String deployRegionId; 
             private String description; 
+            private String errorDetail; 
+            private String errorType; 
             private String importTagKey; 
             private String importTagValue; 
             private String name; 
@@ -315,6 +339,8 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
                 this.deployParameters = model.deployParameters;
                 this.deployRegionId = model.deployRegionId;
                 this.description = model.description;
+                this.errorDetail = model.errorDetail;
+                this.errorType = model.errorType;
                 this.importTagKey = model.importTagKey;
                 this.importTagValue = model.importTagValue;
                 this.name = model.name;
@@ -386,6 +412,22 @@ public class ListApplicationGroupsResponseBody extends TeaModel {
              */
             public Builder description(String description) {
                 this.description = description;
+                return this;
+            }
+
+            /**
+             * ErrorDetail.
+             */
+            public Builder errorDetail(String errorDetail) {
+                this.errorDetail = errorDetail;
+                return this;
+            }
+
+            /**
+             * ErrorType.
+             */
+            public Builder errorType(String errorType) {
+                this.errorType = errorType;
                 return this;
             }
 

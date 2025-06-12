@@ -1,3 +1,6 @@
+2025-06-12 Version: 3.0.14
+- Generated java-async 2019-06-01 for oos.
+
 2025-05-12 Version: 3.0.13
 - Generated java-async 2019-06-01 for oos.
 
