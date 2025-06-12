@@ -794,12 +794,16 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disks")
         private java.util.List<Disks> disks;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceTypes")
+        private java.util.List<String> instanceTypes;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
         private Resource(Builder builder) {
             this.cores = builder.cores;
             this.disks = builder.disks;
+            this.instanceTypes = builder.instanceTypes;
             this.memory = builder.memory;
         }
 
@@ -826,6 +830,13 @@ public class GetJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceTypes
+         */
+        public java.util.List<String> getInstanceTypes() {
+            return this.instanceTypes;
+        }
+
+        /**
          * @return memory
          */
         public Integer getMemory() {
@@ -835,6 +846,7 @@ public class GetJobResponseBody extends TeaModel {
         public static final class Builder {
             private Float cores; 
             private java.util.List<Disks> disks; 
+            private java.util.List<String> instanceTypes; 
             private Integer memory; 
 
             private Builder() {
@@ -843,6 +855,7 @@ public class GetJobResponseBody extends TeaModel {
             private Builder(Resource model) {
                 this.cores = model.cores;
                 this.disks = model.disks;
+                this.instanceTypes = model.instanceTypes;
                 this.memory = model.memory;
             } 
 
@@ -859,6 +872,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
+                return this;
+            }
+
+            /**
+             * InstanceTypes.
+             */
+            public Builder instanceTypes(java.util.List<String> instanceTypes) {
+                this.instanceTypes = instanceTypes;
                 return this;
             }
 
@@ -893,10 +914,14 @@ public class GetJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Script")
         private String script;
 
+        @com.aliyun.core.annotation.NameInMap("UserName")
+        private String userName;
+
         private Vm(Builder builder) {
             this.image = builder.image;
             this.prologScript = builder.prologScript;
             this.script = builder.script;
+            this.userName = builder.userName;
         }
 
         public static Builder builder() {
@@ -928,10 +953,18 @@ public class GetJobResponseBody extends TeaModel {
             return this.script;
         }
 
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
         public static final class Builder {
             private String image; 
             private String prologScript; 
             private String script; 
+            private String userName; 
 
             private Builder() {
             } 
@@ -940,6 +973,7 @@ public class GetJobResponseBody extends TeaModel {
                 this.image = model.image;
                 this.prologScript = model.prologScript;
                 this.script = model.script;
+                this.userName = model.userName;
             } 
 
             /**
@@ -963,6 +997,14 @@ public class GetJobResponseBody extends TeaModel {
              */
             public Builder script(String script) {
                 this.script = script;
+                return this;
+            }
+
+            /**
+             * UserName.
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
                 return this;
             }
 

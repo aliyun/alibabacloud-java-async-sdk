@@ -364,6 +364,12 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
+        @com.aliyun.core.annotation.NameInMap("Pool")
+        private String pool;
+
+        @com.aliyun.core.annotation.NameInMap("Priority")
+        private Integer priority;
+
         @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List<Tag> tag;
 
@@ -371,6 +377,8 @@ public class CreateJobRequest extends Request {
             this.allocationSpec = builder.allocationSpec;
             this.level = builder.level;
             this.network = builder.network;
+            this.pool = builder.pool;
+            this.priority = builder.priority;
             this.tag = builder.tag;
         }
 
@@ -404,6 +412,20 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return pool
+         */
+        public String getPool() {
+            return this.pool;
+        }
+
+        /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        /**
          * @return tag
          */
         public java.util.List<Tag> getTag() {
@@ -414,6 +436,8 @@ public class CreateJobRequest extends Request {
             private String allocationSpec; 
             private String level; 
             private Network network; 
+            private String pool; 
+            private Integer priority; 
             private java.util.List<Tag> tag; 
 
             private Builder() {
@@ -423,6 +447,8 @@ public class CreateJobRequest extends Request {
                 this.allocationSpec = model.allocationSpec;
                 this.level = model.level;
                 this.network = model.network;
+                this.pool = model.pool;
+                this.priority = model.priority;
                 this.tag = model.tag;
             } 
 
@@ -447,6 +473,22 @@ public class CreateJobRequest extends Request {
              */
             public Builder network(Network network) {
                 this.network = network;
+                return this;
+            }
+
+            /**
+             * Pool.
+             */
+            public Builder pool(String pool) {
+                this.pool = pool;
+                return this;
+            }
+
+            /**
+             * Priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
                 return this;
             }
 
@@ -832,12 +874,16 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Disks")
         private java.util.List<Disks> disks;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceTypes")
+        private java.util.List<String> instanceTypes;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
         private Resource(Builder builder) {
             this.cores = builder.cores;
             this.disks = builder.disks;
+            this.instanceTypes = builder.instanceTypes;
             this.memory = builder.memory;
         }
 
@@ -864,6 +910,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return instanceTypes
+         */
+        public java.util.List<String> getInstanceTypes() {
+            return this.instanceTypes;
+        }
+
+        /**
          * @return memory
          */
         public Float getMemory() {
@@ -873,6 +926,7 @@ public class CreateJobRequest extends Request {
         public static final class Builder {
             private Float cores; 
             private java.util.List<Disks> disks; 
+            private java.util.List<String> instanceTypes; 
             private Float memory; 
 
             private Builder() {
@@ -881,6 +935,7 @@ public class CreateJobRequest extends Request {
             private Builder(Resource model) {
                 this.cores = model.cores;
                 this.disks = model.disks;
+                this.instanceTypes = model.instanceTypes;
                 this.memory = model.memory;
             } 
 
@@ -897,6 +952,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
+                return this;
+            }
+
+            /**
+             * InstanceTypes.
+             */
+            public Builder instanceTypes(java.util.List<String> instanceTypes) {
+                this.instanceTypes = instanceTypes;
                 return this;
             }
 
@@ -1000,6 +1063,9 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
+        @com.aliyun.core.annotation.NameInMap("Arg")
+        private java.util.List<String> arg;
+
         @com.aliyun.core.annotation.NameInMap("Command")
         private java.util.List<String> command;
 
@@ -1015,6 +1081,7 @@ public class CreateJobRequest extends Request {
 
         private Container(Builder builder) {
             this.appId = builder.appId;
+            this.arg = builder.arg;
             this.command = builder.command;
             this.environmentVars = builder.environmentVars;
             this.image = builder.image;
@@ -1034,6 +1101,13 @@ public class CreateJobRequest extends Request {
          */
         public String getAppId() {
             return this.appId;
+        }
+
+        /**
+         * @return arg
+         */
+        public java.util.List<String> getArg() {
+            return this.arg;
         }
 
         /**
@@ -1066,6 +1140,7 @@ public class CreateJobRequest extends Request {
 
         public static final class Builder {
             private String appId; 
+            private java.util.List<String> arg; 
             private java.util.List<String> command; 
             private java.util.List<EnvironmentVars> environmentVars; 
             private String image; 
@@ -1076,6 +1151,7 @@ public class CreateJobRequest extends Request {
 
             private Builder(Container model) {
                 this.appId = model.appId;
+                this.arg = model.arg;
                 this.command = model.command;
                 this.environmentVars = model.environmentVars;
                 this.image = model.image;
@@ -1087,6 +1163,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder appId(String appId) {
                 this.appId = appId;
+                return this;
+            }
+
+            /**
+             * Arg.
+             */
+            public Builder arg(java.util.List<String> arg) {
+                this.arg = arg;
                 return this;
             }
 
@@ -1146,6 +1230,9 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String image;
 
+        @com.aliyun.core.annotation.NameInMap("Password")
+        private String password;
+
         @com.aliyun.core.annotation.NameInMap("PrologScript")
         private String prologScript;
 
@@ -1155,6 +1242,7 @@ public class CreateJobRequest extends Request {
         private Vm(Builder builder) {
             this.appId = builder.appId;
             this.image = builder.image;
+            this.password = builder.password;
             this.prologScript = builder.prologScript;
             this.script = builder.script;
         }
@@ -1182,6 +1270,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return password
+         */
+        public String getPassword() {
+            return this.password;
+        }
+
+        /**
          * @return prologScript
          */
         public String getPrologScript() {
@@ -1198,6 +1293,7 @@ public class CreateJobRequest extends Request {
         public static final class Builder {
             private String appId; 
             private String image; 
+            private String password; 
             private String prologScript; 
             private String script; 
 
@@ -1207,6 +1303,7 @@ public class CreateJobRequest extends Request {
             private Builder(Vm model) {
                 this.appId = model.appId;
                 this.image = model.image;
+                this.password = model.password;
                 this.prologScript = model.prologScript;
                 this.script = model.script;
             } 
@@ -1227,6 +1324,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder image(String image) {
                 this.image = image;
+                return this;
+            }
+
+            /**
+             * Password.
+             */
+            public Builder password(String password) {
+                this.password = password;
                 return this;
             }
 
@@ -1341,12 +1446,16 @@ public class CreateJobRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
+        private Boolean readOnly;
+
         @com.aliyun.core.annotation.NameInMap("VolumeDriver")
         private String volumeDriver;
 
         private VolumeMount(Builder builder) {
             this.mountOptions = builder.mountOptions;
             this.mountPath = builder.mountPath;
+            this.readOnly = builder.readOnly;
             this.volumeDriver = builder.volumeDriver;
         }
 
@@ -1373,6 +1482,13 @@ public class CreateJobRequest extends Request {
         }
 
         /**
+         * @return readOnly
+         */
+        public Boolean getReadOnly() {
+            return this.readOnly;
+        }
+
+        /**
          * @return volumeDriver
          */
         public String getVolumeDriver() {
@@ -1382,6 +1498,7 @@ public class CreateJobRequest extends Request {
         public static final class Builder {
             private String mountOptions; 
             private String mountPath; 
+            private Boolean readOnly; 
             private String volumeDriver; 
 
             private Builder() {
@@ -1390,6 +1507,7 @@ public class CreateJobRequest extends Request {
             private Builder(VolumeMount model) {
                 this.mountOptions = model.mountOptions;
                 this.mountPath = model.mountPath;
+                this.readOnly = model.readOnly;
                 this.volumeDriver = model.volumeDriver;
             } 
 
@@ -1406,6 +1524,14 @@ public class CreateJobRequest extends Request {
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * ReadOnly.
+             */
+            public Builder readOnly(Boolean readOnly) {
+                this.readOnly = readOnly;
                 return this;
             }
 
