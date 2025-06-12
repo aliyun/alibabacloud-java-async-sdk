@@ -763,6 +763,60 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
      *
      * <p>ListCallDetailRecordsV2ResponseBody</p>
      */
+    public static class SummaryIndex extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Keywords")
+        private String keywords;
+
+        private SummaryIndex(Builder builder) {
+            this.keywords = builder.keywords;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SummaryIndex create() {
+            return builder().build();
+        }
+
+        /**
+         * @return keywords
+         */
+        public String getKeywords() {
+            return this.keywords;
+        }
+
+        public static final class Builder {
+            private String keywords; 
+
+            private Builder() {
+            } 
+
+            private Builder(SummaryIndex model) {
+                this.keywords = model.keywords;
+            } 
+
+            /**
+             * Keywords.
+             */
+            public Builder keywords(String keywords) {
+                this.keywords = keywords;
+                return this;
+            }
+
+            public SummaryIndex build() {
+                return new SummaryIndex(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListCallDetailRecordsV2ResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListCallDetailRecordsV2ResponseBody</p>
+     */
     public static class List extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccessChannelName")
         private String accessChannelName;
@@ -878,6 +932,9 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OffsiteAgentOriginatorNumbers")
         private String offsiteAgentOriginatorNumbers;
 
+        @com.aliyun.core.annotation.NameInMap("OutsideNumberReleaseReason")
+        private String outsideNumberReleaseReason;
+
         @com.aliyun.core.annotation.NameInMap("QueueTime")
         private Long queueTime;
 
@@ -919,6 +976,9 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
+
+        @com.aliyun.core.annotation.NameInMap("SummaryIndex")
+        private SummaryIndex summaryIndex;
 
         @com.aliyun.core.annotation.NameInMap("TalkTime")
         private Long talkTime;
@@ -968,6 +1028,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             this.offSiteAgentIds = builder.offSiteAgentIds;
             this.offsiteAgentDestinationNumbers = builder.offsiteAgentDestinationNumbers;
             this.offsiteAgentOriginatorNumbers = builder.offsiteAgentOriginatorNumbers;
+            this.outsideNumberReleaseReason = builder.outsideNumberReleaseReason;
             this.queueTime = builder.queueTime;
             this.recordingDuration = builder.recordingDuration;
             this.recordingReady = builder.recordingReady;
@@ -982,6 +1043,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             this.skillGroupIds = builder.skillGroupIds;
             this.skillGroupNames = builder.skillGroupNames;
             this.startTime = builder.startTime;
+            this.summaryIndex = builder.summaryIndex;
             this.talkTime = builder.talkTime;
             this.transferCount = builder.transferCount;
             this.waitTime = builder.waitTime;
@@ -1262,6 +1324,13 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return outsideNumberReleaseReason
+         */
+        public String getOutsideNumberReleaseReason() {
+            return this.outsideNumberReleaseReason;
+        }
+
+        /**
          * @return queueTime
          */
         public Long getQueueTime() {
@@ -1360,6 +1429,13 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return summaryIndex
+         */
+        public SummaryIndex getSummaryIndex() {
+            return this.summaryIndex;
+        }
+
+        /**
          * @return talkTime
          */
         public Long getTalkTime() {
@@ -1419,6 +1495,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             private String offSiteAgentIds; 
             private String offsiteAgentDestinationNumbers; 
             private String offsiteAgentOriginatorNumbers; 
+            private String outsideNumberReleaseReason; 
             private Long queueTime; 
             private Long recordingDuration; 
             private Boolean recordingReady; 
@@ -1433,6 +1510,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             private String skillGroupIds; 
             private String skillGroupNames; 
             private Long startTime; 
+            private SummaryIndex summaryIndex; 
             private Long talkTime; 
             private Long transferCount; 
             private Long waitTime; 
@@ -1479,6 +1557,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
                 this.offSiteAgentIds = model.offSiteAgentIds;
                 this.offsiteAgentDestinationNumbers = model.offsiteAgentDestinationNumbers;
                 this.offsiteAgentOriginatorNumbers = model.offsiteAgentOriginatorNumbers;
+                this.outsideNumberReleaseReason = model.outsideNumberReleaseReason;
                 this.queueTime = model.queueTime;
                 this.recordingDuration = model.recordingDuration;
                 this.recordingReady = model.recordingReady;
@@ -1493,6 +1572,7 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
                 this.skillGroupIds = model.skillGroupIds;
                 this.skillGroupNames = model.skillGroupNames;
                 this.startTime = model.startTime;
+                this.summaryIndex = model.summaryIndex;
                 this.talkTime = model.talkTime;
                 this.transferCount = model.transferCount;
                 this.waitTime = model.waitTime;
@@ -1803,6 +1883,14 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
             }
 
             /**
+             * OutsideNumberReleaseReason.
+             */
+            public Builder outsideNumberReleaseReason(String outsideNumberReleaseReason) {
+                this.outsideNumberReleaseReason = outsideNumberReleaseReason;
+                return this;
+            }
+
+            /**
              * QueueTime.
              */
             public Builder queueTime(Long queueTime) {
@@ -1911,6 +1999,14 @@ public class ListCallDetailRecordsV2ResponseBody extends TeaModel {
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
+                return this;
+            }
+
+            /**
+             * SummaryIndex.
+             */
+            public Builder summaryIndex(SummaryIndex summaryIndex) {
+                this.summaryIndex = summaryIndex;
                 return this;
             }
 

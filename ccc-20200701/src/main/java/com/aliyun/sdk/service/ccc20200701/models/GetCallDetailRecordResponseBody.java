@@ -1565,6 +1565,9 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IvrEvents")
         private java.util.List<IvrEvents> ivrEvents;
 
+        @com.aliyun.core.annotation.NameInMap("OutsideNumberReleaseReason")
+        private String outsideNumberReleaseReason;
+
         @com.aliyun.core.annotation.NameInMap("QueueEvents")
         private java.util.List<QueueEvents> queueEvents;
 
@@ -1617,6 +1620,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             this.establishedTime = builder.establishedTime;
             this.instanceId = builder.instanceId;
             this.ivrEvents = builder.ivrEvents;
+            this.outsideNumberReleaseReason = builder.outsideNumberReleaseReason;
             this.queueEvents = builder.queueEvents;
             this.recordingReady = builder.recordingReady;
             this.releaseInitiator = builder.releaseInitiator;
@@ -1765,6 +1769,13 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
         }
 
         /**
+         * @return outsideNumberReleaseReason
+         */
+        public String getOutsideNumberReleaseReason() {
+            return this.outsideNumberReleaseReason;
+        }
+
+        /**
          * @return queueEvents
          */
         public java.util.List<QueueEvents> getQueueEvents() {
@@ -1860,6 +1871,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
             private Long establishedTime; 
             private String instanceId; 
             private java.util.List<IvrEvents> ivrEvents; 
+            private String outsideNumberReleaseReason; 
             private java.util.List<QueueEvents> queueEvents; 
             private Boolean recordingReady; 
             private String releaseInitiator; 
@@ -1894,6 +1906,7 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
                 this.establishedTime = model.establishedTime;
                 this.instanceId = model.instanceId;
                 this.ivrEvents = model.ivrEvents;
+                this.outsideNumberReleaseReason = model.outsideNumberReleaseReason;
                 this.queueEvents = model.queueEvents;
                 this.recordingReady = model.recordingReady;
                 this.releaseInitiator = model.releaseInitiator;
@@ -2048,6 +2061,14 @@ public class GetCallDetailRecordResponseBody extends TeaModel {
              */
             public Builder ivrEvents(java.util.List<IvrEvents> ivrEvents) {
                 this.ivrEvents = ivrEvents;
+                return this;
+            }
+
+            /**
+             * OutsideNumberReleaseReason.
+             */
+            public Builder outsideNumberReleaseReason(String outsideNumberReleaseReason) {
+                this.outsideNumberReleaseReason = outsideNumberReleaseReason;
                 return this;
             }
 

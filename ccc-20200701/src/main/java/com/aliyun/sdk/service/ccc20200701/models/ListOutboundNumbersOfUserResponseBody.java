@@ -164,12 +164,24 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
+        @com.aliyun.core.annotation.NameInMap("Provider")
+        private String provider;
+
+        @com.aliyun.core.annotation.NameInMap("ProviderCode")
+        private String providerCode;
+
+        @com.aliyun.core.annotation.NameInMap("ProviderDisplayName")
+        private String providerDisplayName;
+
         @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private List(Builder builder) {
             this.city = builder.city;
             this.number = builder.number;
+            this.provider = builder.provider;
+            this.providerCode = builder.providerCode;
+            this.providerDisplayName = builder.providerDisplayName;
             this.province = builder.province;
         }
 
@@ -196,6 +208,27 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         }
 
         /**
+         * @return provider
+         */
+        public String getProvider() {
+            return this.provider;
+        }
+
+        /**
+         * @return providerCode
+         */
+        public String getProviderCode() {
+            return this.providerCode;
+        }
+
+        /**
+         * @return providerDisplayName
+         */
+        public String getProviderDisplayName() {
+            return this.providerDisplayName;
+        }
+
+        /**
          * @return province
          */
         public String getProvince() {
@@ -205,6 +238,9 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
         public static final class Builder {
             private String city; 
             private String number; 
+            private String provider; 
+            private String providerCode; 
+            private String providerDisplayName; 
             private String province; 
 
             private Builder() {
@@ -213,6 +249,9 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
             private Builder(List model) {
                 this.city = model.city;
                 this.number = model.number;
+                this.provider = model.provider;
+                this.providerCode = model.providerCode;
+                this.providerDisplayName = model.providerDisplayName;
                 this.province = model.province;
             } 
 
@@ -229,6 +268,30 @@ public class ListOutboundNumbersOfUserResponseBody extends TeaModel {
              */
             public Builder number(String number) {
                 this.number = number;
+                return this;
+            }
+
+            /**
+             * Provider.
+             */
+            public Builder provider(String provider) {
+                this.provider = provider;
+                return this;
+            }
+
+            /**
+             * ProviderCode.
+             */
+            public Builder providerCode(String providerCode) {
+                this.providerCode = providerCode;
+                return this;
+            }
+
+            /**
+             * ProviderDisplayName.
+             */
+            public Builder providerDisplayName(String providerDisplayName) {
+                this.providerDisplayName = providerDisplayName;
                 return this;
             }
 
