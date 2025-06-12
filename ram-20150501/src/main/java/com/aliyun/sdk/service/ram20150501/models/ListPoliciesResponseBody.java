@@ -44,6 +44,10 @@ public class ListPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isTruncated
      */
@@ -78,6 +82,16 @@ public class ListPoliciesResponseBody extends TeaModel {
         private Policies policies; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListPoliciesResponseBody model) {
+            this.isTruncated = model.isTruncated;
+            this.marker = model.marker;
+            this.policies = model.policies;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>Indicates whether the response is truncated.</p>
          * 
@@ -90,7 +104,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the value of IsTruncated is <code>true</code>, you can call this operation again and set <code>Marker</code> to obtain the truncated part.</p>
+         * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set <code>Marker</code> to obtain the truncated part.``</p>
          * 
          * <strong>example:</strong>
          * <p>EXAMPLE</p>
@@ -101,7 +115,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of policies.</p>
+         * <p>The information about the policies.</p>
          */
         public Builder policies(Policies policies) {
             this.policies = policies;
@@ -109,7 +123,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
@@ -169,8 +183,19 @@ public class ListPoliciesResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
-             * TagKey.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -178,7 +203,10 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -223,6 +251,13 @@ public class ListPoliciesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -355,6 +390,20 @@ public class ListPoliciesResponseBody extends TeaModel {
             private Tags tags; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.attachmentCount = model.attachmentCount;
+                this.createDate = model.createDate;
+                this.defaultVersion = model.defaultVersion;
+                this.description = model.description;
+                this.policyName = model.policyName;
+                this.policyType = model.policyType;
+                this.tags = model.tags;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
              * <p>The number of references to the policy.</p>
              * 
@@ -422,7 +471,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tags.</p>
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -478,6 +527,13 @@ public class ListPoliciesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Policy> policy; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.policy = model.policy;
+            } 
 
             /**
              * Policy.

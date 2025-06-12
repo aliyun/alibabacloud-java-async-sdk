@@ -52,7 +52,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> This operation is available only for RAM users. Before you call this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code>. The value True indicates that RAM users can change their passwords.</p>
+     * <p> This operation is available only for RAM users. Before you call this operation, make sure that <code>AllowUserToChangePassword</code> in <a href="https://help.aliyun.com/document_detail/43765.html">SetSecurityPreference</a> is set to <code>True</code>. The value True indicates that RAM users can manage their passwords.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ChangePassword  ChangePasswordRequest
@@ -102,7 +102,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h3><a href="#"></a>Operation description</h3>
      * <p>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/93689.html">Overview of RAM roles</a>.</p>
      * 
      * @param request the request parameters of CreateRole  CreateRoleRequest
@@ -259,7 +259,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the information about the RAM user <code>alice</code>.</p>
+     * <p>This topic provides an example on how to query information about the RAM user <code>alice</code>.</p>
      * 
      * @param request the request parameters of GetUser  GetUserRequest
      * @return GetUserResponse
@@ -292,6 +292,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <h3><a href="#"></a></h3>
      * <p>This topic provides an example on how to query the RAM user groups to which the RAM user <code>Alice</code> belongs. The response shows that <code>Alice</code> belongs to the RAM user group named <code>Dev-Team</code>.</p>
      * 
      * @param request the request parameters of ListGroupsForUser  ListGroupsForUserRequest
@@ -339,6 +340,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListRolesResponse
      */
     CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request);
+
+    /**
+     * @param request the request parameters of ListTagResources  ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
      * @param request the request parameters of ListUsers  ListUsersRequest
@@ -389,10 +396,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetSecurityPreferenceResponse> setSecurityPreference(SetSecurityPreferenceRequest request);
 
     /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
      * @param request the request parameters of UnbindMFADevice  UnbindMFADeviceRequest
      * @return UnbindMFADeviceResponse
      */
     CompletableFuture<UnbindMFADeviceResponse> unbindMFADevice(UnbindMFADeviceRequest request);
+
+    /**
+     * @param request the request parameters of UntagResources  UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
      * @param request the request parameters of UpdateAccessKey  UpdateAccessKeyRequest
@@ -414,6 +433,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <h3><a href="#"></a></h3>
      * <p>You can call this operation to modify only the description of a custom policy. You cannot modify the description of a system policy.</p>
      * 
      * @param request the request parameters of UpdatePolicyDescription  UpdatePolicyDescriptionRequest
@@ -423,7 +443,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example to show how to change the description of ECSAdmin to ECS administrator.</p>
+     * <p>This topic provides an example on how to change the description of <code>ECSAdmin</code> to <code>ECS administrator</code>.</p>
      * 
      * @param request the request parameters of UpdateRole  UpdateRoleRequest
      * @return UpdateRoleResponse

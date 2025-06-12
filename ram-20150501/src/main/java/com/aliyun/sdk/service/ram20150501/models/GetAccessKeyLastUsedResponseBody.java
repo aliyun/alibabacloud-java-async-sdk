@@ -36,6 +36,10 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessKeyLastUsed
      */
@@ -54,8 +58,16 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         private AccessKeyLastUsed accessKeyLastUsed; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetAccessKeyLastUsedResponseBody model) {
+            this.accessKeyLastUsed = model.accessKeyLastUsed;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AccessKeyLastUsed.
+         * <p>The details of the time when the AccessKey pair was used for the last time.</p>
          */
         public Builder accessKeyLastUsed(AccessKeyLastUsed accessKeyLastUsed) {
             this.accessKeyLastUsed = accessKeyLastUsed;
@@ -63,7 +75,10 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5CCE804C-6450-49A7-B1DB-2460F7A97416</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -108,8 +123,18 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         public static final class Builder {
             private String lastUsedDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessKeyLastUsed model) {
+                this.lastUsedDate = model.lastUsedDate;
+            } 
+
             /**
-             * LastUsedDate.
+             * <p>The time when the AccessKey pair was used for the last time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2020-10-21T06:37:40Z</p>
              */
             public Builder lastUsedDate(String lastUsedDate) {
                 this.lastUsedDate = lastUsedDate;

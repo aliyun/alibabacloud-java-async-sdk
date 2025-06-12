@@ -36,6 +36,10 @@ public class CreatePolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policy
      */
@@ -54,6 +58,14 @@ public class CreatePolicyResponseBody extends TeaModel {
         private Policy policy; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreatePolicyResponseBody model) {
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The information about the policy.</p>
          */
@@ -63,7 +75,7 @@ public class CreatePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>BA34C54A-C2B1-5A65-B6B0-B5842C1DB4DA</p>
@@ -159,6 +171,17 @@ public class CreatePolicyResponseBody extends TeaModel {
             private String policyName; 
             private String policyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.createDate = model.createDate;
+                this.defaultVersion = model.defaultVersion;
+                this.description = model.description;
+                this.policyName = model.policyName;
+                this.policyType = model.policyType;
+            } 
+
             /**
              * <p>The time when the policy was created.</p>
              * 
@@ -206,8 +229,8 @@ public class CreatePolicyResponseBody extends TeaModel {
             /**
              * <p>The type of the policy. Valid values:</p>
              * <ul>
-             * <li>Custom: custom policy</li>
-             * <li>System: system policy</li>
+             * <li>Custom</li>
+             * <li>System</li>
              * </ul>
              * 
              * <strong>example:</strong>

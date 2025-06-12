@@ -36,6 +36,10 @@ public class CreateRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class CreateRoleResponseBody extends TeaModel {
         private String requestId; 
         private Role role; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateRoleResponseBody model) {
+            this.requestId = model.requestId;
+            this.role = model.role;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -66,7 +78,7 @@ public class CreateRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of the RAM role.</p>
+         * <p>The information about the RAM role.</p>
          */
         public Builder role(Role role) {
             this.role = role;
@@ -183,8 +195,21 @@ public class CreateRoleResponseBody extends TeaModel {
             private String roleId; 
             private String roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Role model) {
+                this.arn = model.arn;
+                this.assumeRolePolicyDocument = model.assumeRolePolicyDocument;
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.maxSessionDuration = model.maxSessionDuration;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+            } 
+
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the role.</p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::123456789012****:role/ECSAdmin</p>
@@ -206,7 +231,7 @@ public class CreateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM user was created.</p>
+             * <p>The time when the RAM role was created.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -228,7 +253,7 @@ public class CreateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The maximum session duration of the RAM role.</p>
+             * <p>The maximum session time of the RAM role.</p>
              * 
              * <strong>example:</strong>
              * <p>3600</p>

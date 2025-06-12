@@ -54,7 +54,7 @@ public class CreateUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,7 +129,7 @@ public class CreateUserRequest extends Request {
 
         /**
          * <p>The display name of the RAM user.</p>
-         * <p>The display name must be 1 to 128 characters in length.</p>
+         * <p>The name must be 1 to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -157,7 +157,7 @@ public class CreateUserRequest extends Request {
 
         /**
          * <p>The mobile phone number of the RAM user.</p>
-         * <p>Format: Country code-Mobile phone number.</p>
+         * <p>Format: &lt;Country code&gt;-&lt;Mobile phone number&gt;.</p>
          * <blockquote>
          * <p> This parameter applies only to the China site (aliyun.com).</p>
          * </blockquote>
@@ -172,8 +172,8 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * <p>The username of the RAM user.</p>
-         * <p>The username must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
+         * <p>The name of the RAM user.</p>
+         * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>

@@ -36,6 +36,10 @@ public class UpdateUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class UpdateUserResponseBody extends TeaModel {
         private String requestId; 
         private User user; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateUserResponseBody model) {
+            this.requestId = model.requestId;
+            this.user = model.user;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -194,6 +206,20 @@ public class UpdateUserResponseBody extends TeaModel {
             private String updateDate; 
             private String userId; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.comments = model.comments;
+                this.createDate = model.createDate;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.mobilePhone = model.mobilePhone;
+                this.updateDate = model.updateDate;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The description of the RAM user.</p>

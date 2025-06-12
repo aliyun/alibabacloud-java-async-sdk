@@ -36,6 +36,10 @@ public class GetAccountAliasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountAlias
      */
@@ -54,6 +58,14 @@ public class GetAccountAliasResponseBody extends TeaModel {
         private String accountAlias; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetAccountAliasResponseBody model) {
+            this.accountAlias = model.accountAlias;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The alias of the Alibaba Cloud account.</p>
          * 
@@ -66,7 +78,7 @@ public class GetAccountAliasResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>

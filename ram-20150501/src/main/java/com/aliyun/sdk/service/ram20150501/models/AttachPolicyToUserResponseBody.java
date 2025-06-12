@@ -32,6 +32,10 @@ public class AttachPolicyToUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,15 @@ public class AttachPolicyToUserResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AttachPolicyToUserResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>697852FB-50D7-44D9-9774-530C31EAC572</p>

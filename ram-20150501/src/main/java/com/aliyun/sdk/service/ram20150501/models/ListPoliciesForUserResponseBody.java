@@ -36,6 +36,10 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policies
      */
@@ -53,6 +57,14 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
     public static final class Builder {
         private Policies policies; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPoliciesForUserResponseBody model) {
+            this.policies = model.policies;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the policy.</p>
@@ -159,6 +171,17 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             private String policyName; 
             private String policyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.attachDate = model.attachDate;
+                this.defaultVersion = model.defaultVersion;
+                this.description = model.description;
+                this.policyName = model.policyName;
+                this.policyType = model.policyType;
+            } 
+
             /**
              * <p>The time at which the policy is attached to the RAM user. The time is displayed in UTC.</p>
              * 
@@ -256,6 +279,13 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Policy> policy; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.policy = model.policy;
+            } 
 
             /**
              * Policy.

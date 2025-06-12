@@ -36,6 +36,10 @@ public class CreateGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return group
      */
@@ -53,6 +57,14 @@ public class CreateGroupResponseBody extends TeaModel {
     public static final class Builder {
         private Group group; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGroupResponseBody model) {
+            this.group = model.group;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the group.</p>
@@ -146,6 +158,16 @@ public class CreateGroupResponseBody extends TeaModel {
             private String createDate; 
             private String groupId; 
             private String groupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.comments = model.comments;
+                this.createDate = model.createDate;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+            } 
 
             /**
              * <p>The description.</p>

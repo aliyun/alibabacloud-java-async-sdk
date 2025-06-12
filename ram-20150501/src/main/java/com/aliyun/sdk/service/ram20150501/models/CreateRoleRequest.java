@@ -54,7 +54,7 @@ public class CreateRoleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,7 +143,7 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * <p>The maximum session duration of the RAM role.</p>
+         * <p>The maximum session time of the RAM role.</p>
          * <p>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</p>
          * <p>If you do not specify this parameter, the default value is used.</p>
          * 
@@ -170,7 +170,7 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -230,8 +230,19 @@ public class CreateRoleRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -239,7 +250,10 @@ public class CreateRoleRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>v1</p>
              */
             public Builder value(String value) {
                 this.value = value;

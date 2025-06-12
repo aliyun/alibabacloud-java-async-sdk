@@ -44,6 +44,10 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groups
      */
@@ -78,8 +82,18 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         private Roles roles; 
         private Users users; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListEntitiesForPolicyResponseBody model) {
+            this.groups = model.groups;
+            this.requestId = model.requestId;
+            this.roles = model.roles;
+            this.users = model.users;
+        } 
+
         /**
-         * <p>The list of the RAM user groups.</p>
+         * <p>The information about the Resource Access Management (RAM) user groups.</p>
          */
         public Builder groups(Groups groups) {
             this.groups = groups;
@@ -87,7 +101,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
@@ -98,7 +112,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of RAM roles.</p>
+         * <p>The information about the RAM roles.</p>
          */
         public Builder roles(Roles roles) {
             this.roles = roles;
@@ -106,7 +120,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of the RAM users to which the policy is attached.</p>
+         * <p>The information about the RAM users.</p>
          */
         public Builder users(Users users) {
             this.users = users;
@@ -174,6 +188,15 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             private String attachDate; 
             private String comments; 
             private String groupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.attachDate = model.attachDate;
+                this.comments = model.comments;
+                this.groupName = model.groupName;
+            } 
 
             /**
              * <p>The time when the policy was attached to the RAM user group.</p>
@@ -246,6 +269,13 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Group> group; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.group = model.group;
+            } 
 
             /**
              * Group.
@@ -342,6 +372,17 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             private String roleId; 
             private String roleName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Role model) {
+                this.arn = model.arn;
+                this.attachDate = model.attachDate;
+                this.description = model.description;
+                this.roleId = model.roleId;
+                this.roleName = model.roleName;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
              * 
@@ -354,7 +395,7 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the policy was attached to the RAM user.</p>
+             * <p>The time when the policy was attached to the RAM role.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -435,6 +476,13 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Role> role; 
+
+            private Builder() {
+            } 
+
+            private Builder(Roles model) {
+                this.role = model.role;
+            } 
 
             /**
              * Role.
@@ -519,6 +567,16 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.attachDate = model.attachDate;
+                this.displayName = model.displayName;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The time when the policy was attached to the RAM user.</p>
              * 
@@ -601,6 +659,13 @@ public class ListEntitiesForPolicyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<User> user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.user = model.user;
+            } 
 
             /**
              * User.

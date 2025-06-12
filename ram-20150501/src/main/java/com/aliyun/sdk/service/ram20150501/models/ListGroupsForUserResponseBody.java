@@ -36,6 +36,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groups
      */
@@ -54,8 +58,16 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         private Groups groups; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListGroupsForUserResponseBody model) {
+            this.groups = model.groups;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The list of the RAM user groups.</p>
+         * <p>The information about the RAM user groups.</p>
          */
         public Builder groups(Groups groups) {
             this.groups = groups;
@@ -147,8 +159,18 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             private String groupName; 
             private String joinDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.comments = model.comments;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.joinDate = model.joinDate;
+            } 
+
             /**
-             * <p>The description of the RAM user group.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>Dev-Team</p>
@@ -181,7 +203,7 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM user joined the RAM user group.</p>
+             * <p>The time when the RAM user was added to the RAM user group.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -229,6 +251,13 @@ public class ListGroupsForUserResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Group> group; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.group = model.group;
+            } 
 
             /**
              * Group.

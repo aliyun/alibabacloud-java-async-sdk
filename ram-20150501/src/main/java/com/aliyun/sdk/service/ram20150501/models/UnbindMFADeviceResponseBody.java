@@ -36,6 +36,10 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return MFADevice
      */
@@ -54,8 +58,16 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         private MFADevice MFADevice; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UnbindMFADeviceResponseBody model) {
+            this.MFADevice = model.MFADevice;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The information of the MFA device.</p>
+         * <p>The information about the MFA device.</p>
          */
         public Builder MFADevice(MFADevice MFADevice) {
             this.MFADevice = MFADevice;
@@ -63,7 +75,7 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of the MFA device.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -111,8 +123,15 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         public static final class Builder {
             private String serialNumber; 
 
+            private Builder() {
+            } 
+
+            private Builder(MFADevice model) {
+                this.serialNumber = model.serialNumber;
+            } 
+
             /**
-             * <p>The name of the RAM user.</p>
+             * <p>The serial number of the MFA device.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:ram::123456789012****:mfa/device002</p>

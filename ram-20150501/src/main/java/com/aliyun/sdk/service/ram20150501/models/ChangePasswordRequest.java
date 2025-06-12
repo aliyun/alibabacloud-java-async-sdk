@@ -39,7 +39,7 @@ public class ChangePasswordRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +73,7 @@ public class ChangePasswordRequest extends Request {
         } 
 
         /**
-         * <p>The new password that is used to log on to the Alibaba Cloud Management Console.</p>
+         * <p>The new password that is used to log on to the console.</p>
          * <p>The password must meet the complexity requirements. For more information, see <a href="https://help.aliyun.com/document_detail/28739.html">SetPasswordPolicy</a>.</p>
          * 
          * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class ChangePasswordRequest extends Request {
         }
 
         /**
-         * <p>The old password that is used to log on to the Alibaba Cloud Management Console.</p>
+         * <p>The old password that is used to log on to the console.</p>
          * 
          * <strong>example:</strong>
          * <p>12****</p>

@@ -36,6 +36,10 @@ public class GetGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return group
      */
@@ -54,8 +58,16 @@ public class GetGroupResponseBody extends TeaModel {
         private Group group; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetGroupResponseBody model) {
+            this.group = model.group;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The information of the RAM user group.</p>
+         * <p>The information about the RAM user group.</p>
          */
         public Builder group(Group group) {
             this.group = group;
@@ -63,7 +75,7 @@ public class GetGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>D4065824-E422-3ED6-68B1-1AF7D5C7804C</p>
@@ -159,6 +171,17 @@ public class GetGroupResponseBody extends TeaModel {
             private String groupName; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.comments = model.comments;
+                this.createDate = model.createDate;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
              * <p>The description of the RAM user group.</p>
              * 
@@ -204,7 +227,7 @@ public class GetGroupResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the information of the RAM user group was updated.</p>
+             * <p>The modification time.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-02-11T03:15:21Z</p>

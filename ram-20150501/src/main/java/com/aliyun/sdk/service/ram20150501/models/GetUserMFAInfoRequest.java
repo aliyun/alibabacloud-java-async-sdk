@@ -34,7 +34,7 @@ public class GetUserMFAInfoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +59,7 @@ public class GetUserMFAInfoRequest extends Request {
         } 
 
         /**
-         * <p>The username of the RAM user.</p>
+         * <p>The name of the RAM user.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

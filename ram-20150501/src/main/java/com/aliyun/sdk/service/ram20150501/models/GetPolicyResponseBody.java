@@ -40,6 +40,10 @@ public class GetPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultPolicyVersion
      */
@@ -66,8 +70,17 @@ public class GetPolicyResponseBody extends TeaModel {
         private Policy policy; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetPolicyResponseBody model) {
+            this.defaultPolicyVersion = model.defaultPolicyVersion;
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The information of the default policy version.</p>
+         * <p>The information about the default policy version.</p>
          */
         public Builder defaultPolicyVersion(DefaultPolicyVersion defaultPolicyVersion) {
             this.defaultPolicyVersion = defaultPolicyVersion;
@@ -75,7 +88,7 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The basic information of the policy.</p>
+         * <p>The basic information about the policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -83,7 +96,7 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>697852FB-50D7-44D9-9774-530C31EAC572</p>
@@ -167,6 +180,16 @@ public class GetPolicyResponseBody extends TeaModel {
             private String policyDocument; 
             private String versionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(DefaultPolicyVersion model) {
+                this.createDate = model.createDate;
+                this.isDefaultVersion = model.isDefaultVersion;
+                this.policyDocument = model.policyDocument;
+                this.versionId = model.versionId;
+            } 
+
             /**
              * <p>The time when the default policy version was created.</p>
              * 
@@ -190,7 +213,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The script of the default policy version.</p>
+             * <p>The document of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</p>
@@ -334,6 +357,20 @@ public class GetPolicyResponseBody extends TeaModel {
             private String policyType; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.attachmentCount = model.attachmentCount;
+                this.createDate = model.createDate;
+                this.defaultVersion = model.defaultVersion;
+                this.description = model.description;
+                this.policyDocument = model.policyDocument;
+                this.policyName = model.policyName;
+                this.policyType = model.policyType;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
              * <p>The number of references to the policy.</p>
              * 
@@ -357,7 +394,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The default version ID of the policy.</p>
+             * <p>The default version of the policy.</p>
              * 
              * <strong>example:</strong>
              * <p>v1</p>

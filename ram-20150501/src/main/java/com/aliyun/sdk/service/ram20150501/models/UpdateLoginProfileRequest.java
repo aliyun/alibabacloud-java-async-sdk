@@ -49,7 +49,7 @@ public class UpdateLoginProfileRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +101,7 @@ public class UpdateLoginProfileRequest extends Request {
         } 
 
         /**
-         * <p>Specifies whether an MFA device must be attached to the RAM user upon logon.</p>
+         * <p>Specifies whether a multi-factor authentication (MFA) device must be bound to the RAM user upon logon.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -125,7 +125,7 @@ public class UpdateLoginProfileRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the RAM user must change the password upon logon.</p>
+         * <p>Specifies whether the RAM user has to change the password upon logon.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

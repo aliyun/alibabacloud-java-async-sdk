@@ -44,6 +44,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isTruncated
      */
@@ -78,6 +82,16 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         private String requestId; 
         private Users users; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListUsersForGroupResponseBody model) {
+            this.isTruncated = model.isTruncated;
+            this.marker = model.marker;
+            this.requestId = model.requestId;
+            this.users = model.users;
+        } 
+
         /**
          * <p>Indicates whether the response is truncated.</p>
          * 
@@ -90,7 +104,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the value of IsTruncated is <code>true</code>, you can call this operation again and set <code>marker</code> to obtain the truncated part.</p>
+         * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.````</p>
          * 
          * <strong>example:</strong>
          * <p>EXAMPLE</p>
@@ -101,7 +115,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</p>
@@ -112,7 +126,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of the RAM users.</p>
+         * <p>The information about the RAM users.</p>
          */
         public Builder users(Users users) {
             this.users = users;
@@ -180,6 +194,15 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             private String displayName; 
             private String joinDate; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.displayName = model.displayName;
+                this.joinDate = model.joinDate;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>The display name of the RAM user.</p>
@@ -252,6 +275,13 @@ public class ListUsersForGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<User> user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.user = model.user;
+            } 
 
             /**
              * User.

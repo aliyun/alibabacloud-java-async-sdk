@@ -64,7 +64,7 @@ public class SetSecurityPreferenceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,8 +145,8 @@ public class SetSecurityPreferenceRequest extends Request {
         /**
          * <p>Specifies whether RAM users can change their passwords. Valid values:</p>
          * <ul>
-         * <li>true: RAM users can change their passwords. This is the default value.</li>
-         * <li>false: RAM users cannot change their passwords.</li>
+         * <li>true (default)</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -161,8 +161,8 @@ public class SetSecurityPreferenceRequest extends Request {
         /**
          * <p>Specifies whether RAM users can manage their AccessKey pairs. Valid values:</p>
          * <ul>
-         * <li>true: RAM users can manage their AccessKey pairs.</li>
-         * <li>false: RAM users cannot manage their AccessKey pairs. This is the default value.</li>
+         * <li>true</li>
+         * <li>false (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,8 +177,8 @@ public class SetSecurityPreferenceRequest extends Request {
         /**
          * <p>Specifies whether RAM users can manage their MFA devices. Valid values:</p>
          * <ul>
-         * <li>true: RAM users can manage their MFA devices. This is the default value.</li>
-         * <li>false: RAM users cannot manage their MFA devices.</li>
+         * <li>true (default)</li>
+         * <li>false</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -193,8 +193,8 @@ public class SetSecurityPreferenceRequest extends Request {
         /**
          * <p>Specifies whether RAM users can manage their public keys. Valid values:</p>
          * <ul>
-         * <li>true: RAM users can manage their public keys.</li>
-         * <li>false: RAM users cannot manage their public keys. This is the default value.</li>
+         * <li>true</li>
+         * <li>false (default)</li>
          * </ul>
          * <blockquote>
          * <p> This parameter is valid only for the Japan site.</p>
@@ -212,8 +212,8 @@ public class SetSecurityPreferenceRequest extends Request {
         /**
          * <p>Specifies whether to remember the multi-factor authentication (MFA) devices of Resource Access Management (RAM) users for seven days. Valid values:</p>
          * <ul>
-         * <li>true: remembers the MFA devices of RAM users for seven days.</li>
-         * <li>false: does not remember the MFA devices of RAM users for seven days.</li>
+         * <li>true</li>
+         * <li>false (default)</li>
          * </ul>
          * 
          * <strong>example:</strong>

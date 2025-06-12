@@ -36,6 +36,10 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
         private String requestId; 
         private VirtualMFADevice virtualMFADevice; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateVirtualMFADeviceResponseBody model) {
+            this.requestId = model.requestId;
+            this.virtualMFADevice = model.virtualMFADevice;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -66,7 +78,7 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of the MFA device.</p>
+         * <p>The information about the MFA device.</p>
          */
         public Builder virtualMFADevice(VirtualMFADevice virtualMFADevice) {
             this.virtualMFADevice = virtualMFADevice;
@@ -134,6 +146,15 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
             private String base32StringSeed; 
             private String QRCodePNG; 
             private String serialNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualMFADevice model) {
+                this.base32StringSeed = model.base32StringSeed;
+                this.QRCodePNG = model.QRCodePNG;
+                this.serialNumber = model.serialNumber;
+            } 
 
             /**
              * <p>The key of the MFA device.</p>

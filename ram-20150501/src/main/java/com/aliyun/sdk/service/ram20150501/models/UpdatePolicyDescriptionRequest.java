@@ -39,7 +39,7 @@ public class UpdatePolicyDescriptionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,7 +74,7 @@ public class UpdatePolicyDescriptionRequest extends Request {
 
         /**
          * <p>The description of the policy.</p>
-         * <p>The value of the parameter must be 1 to 1,024 characters in length.</p>
+         * <p>The description must be 1 to 1,024 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a test policy.</p>

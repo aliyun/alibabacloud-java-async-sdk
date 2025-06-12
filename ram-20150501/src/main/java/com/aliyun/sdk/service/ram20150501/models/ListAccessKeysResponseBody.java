@@ -36,6 +36,10 @@ public class ListAccessKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessKeys
      */
@@ -54,8 +58,16 @@ public class ListAccessKeysResponseBody extends TeaModel {
         private AccessKeys accessKeys; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAccessKeysResponseBody model) {
+            this.accessKeys = model.accessKeys;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The list of AccessKey pairs that belong to the RAM user.</p>
+         * <p>The AccessKey pairs that belong to the RAM user.</p>
          */
         public Builder accessKeys(AccessKeys accessKeys) {
             this.accessKeys = accessKeys;
@@ -63,7 +75,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4B450CA1-36E8-4AA2-8461-86B42BF4CC4E</p>
@@ -134,6 +146,15 @@ public class ListAccessKeysResponseBody extends TeaModel {
             private String accessKeyId; 
             private String createDate; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessKey model) {
+                this.accessKeyId = model.accessKeyId;
+                this.createDate = model.createDate;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The AccessKey ID.</p>
@@ -206,6 +227,13 @@ public class ListAccessKeysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AccessKey> accessKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessKeys model) {
+                this.accessKey = model.accessKey;
+            } 
 
             /**
              * AccessKey.

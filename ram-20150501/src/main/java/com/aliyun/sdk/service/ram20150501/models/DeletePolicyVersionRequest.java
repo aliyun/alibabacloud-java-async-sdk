@@ -39,7 +39,7 @@ public class DeletePolicyVersionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -85,7 +85,7 @@ public class DeletePolicyVersionRequest extends Request {
         }
 
         /**
-         * <p>The ID of the policy version.</p>
+         * <p>The ID of the policy version that you want to delete.</p>
          * 
          * <strong>example:</strong>
          * <p>v3</p>

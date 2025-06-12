@@ -34,7 +34,7 @@ public class CreateVirtualMFADeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +60,7 @@ public class CreateVirtualMFADeviceRequest extends Request {
 
         /**
          * <p>The name of the MFA device.</p>
-         * <p>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</p>
+         * <p>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>device001</p>

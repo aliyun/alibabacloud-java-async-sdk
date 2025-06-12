@@ -36,6 +36,10 @@ public class GetLoginProfileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loginProfile
      */
@@ -54,6 +58,14 @@ public class GetLoginProfileResponseBody extends TeaModel {
         private LoginProfile loginProfile; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetLoginProfileResponseBody model) {
+            this.loginProfile = model.loginProfile;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The logon configurations of the RAM user.</p>
          */
@@ -63,7 +75,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -147,8 +159,18 @@ public class GetLoginProfileResponseBody extends TeaModel {
             private Boolean passwordResetRequired; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoginProfile model) {
+                this.createDate = model.createDate;
+                this.MFABindRequired = model.MFABindRequired;
+                this.passwordResetRequired = model.passwordResetRequired;
+                this.userName = model.userName;
+            } 
+
             /**
-             * <p>The time when the logon configurations were created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -159,7 +181,7 @@ public class GetLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether an MFA device must be attached to the RAM user upon logon.</p>
+             * <p>Indicates whether a multi-factor authentication (MFA) device must be bound to the RAM user.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>

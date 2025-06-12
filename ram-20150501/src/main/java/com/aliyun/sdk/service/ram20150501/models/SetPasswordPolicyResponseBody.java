@@ -36,6 +36,10 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return passwordPolicy
      */
@@ -54,6 +58,14 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         private PasswordPolicy passwordPolicy; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(SetPasswordPolicyResponseBody model) {
+            this.passwordPolicy = model.passwordPolicy;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The password policy.</p>
          */
@@ -63,7 +75,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -207,9 +219,23 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             private Boolean requireSymbols; 
             private Boolean requireUppercaseCharacters; 
 
+            private Builder() {
+            } 
+
+            private Builder(PasswordPolicy model) {
+                this.hardExpiry = model.hardExpiry;
+                this.maxLoginAttemps = model.maxLoginAttemps;
+                this.maxPasswordAge = model.maxPasswordAge;
+                this.minimumPasswordLength = model.minimumPasswordLength;
+                this.passwordReusePrevention = model.passwordReusePrevention;
+                this.requireLowercaseCharacters = model.requireLowercaseCharacters;
+                this.requireNumbers = model.requireNumbers;
+                this.requireSymbols = model.requireSymbols;
+                this.requireUppercaseCharacters = model.requireUppercaseCharacters;
+            } 
+
             /**
-             * <p>Indicates whether a password expires.</p>
-             * <p>Valid values: <code>true</code> and <code>false</code>. Default value: <code>false</code>. If the parameter is unspecified, the default value false is returned.</p>
+             * <p>Indicates whether a password expires. Valid values: <code>true</code> and <code>false</code>. Default value: <code>false</code>. If the parameter is unspecified, the default value false is returned.</p>
              * <ul>
              * <li>If this parameter is set to <code>true</code>, the Alibaba Cloud account to which the RAM users belong must reset the password before the RAM users can log on to the Alibaba Cloud Management Console.</li>
              * <li>If this parameter is set to <code>false</code>, the RAM users can change the passwords after the passwords expire and then log on to the Alibaba Cloud Management Console.</li>
@@ -235,7 +261,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of days for which a password is valid. Default value: 0. The default value indicates that the password never expires.</p>
+             * <p>The number of days for which a password is valid. If you reset a password, the password validity period restarts. Default value: 0. The default value indicates that the password never expires.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -246,7 +272,7 @@ public class SetPasswordPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The minimum required number of characters in a password.</p>
+             * <p>The minimum number of characters in a password.</p>
              * 
              * <strong>example:</strong>
              * <p>12</p>

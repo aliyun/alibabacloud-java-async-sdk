@@ -36,6 +36,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         private String requestId; 
         private SecurityPreference securityPreference; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetSecurityPreferenceResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityPreference = model.securityPreference;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DC1213F1-A9D5-4A01-A996-44983689126C</p>
@@ -111,11 +123,18 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean allowUserToManageAccessKeys; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessKeyPreference model) {
+                this.allowUserToManageAccessKeys = model.allowUserToManageAccessKeys;
+            } 
+
             /**
-             * <p>Indicates whether RAM users can manage their AccessKey pairs. Valid values:</p>
+             * <p>Indicates whether Resource Access Management (RAM) users can manage their AccessKey pairs. Valid values:</p>
              * <ul>
-             * <li>true: RAM users can manage their AccessKey pairs.</li>
-             * <li>false: RAM users cannot manage their AccessKey pairs.</li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -201,11 +220,21 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private String loginNetworkMasks; 
             private Integer loginSessionDuration; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoginProfilePreference model) {
+                this.allowUserToChangePassword = model.allowUserToChangePassword;
+                this.enableSaveMFATicket = model.enableSaveMFATicket;
+                this.loginNetworkMasks = model.loginNetworkMasks;
+                this.loginSessionDuration = model.loginSessionDuration;
+            } 
+
             /**
              * <p>Indicates whether RAM users can change their passwords. Valid values:</p>
              * <ul>
-             * <li>true: RAM users can change their passwords.</li>
-             * <li>false: RAM users cannot change their passwords.</li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -217,10 +246,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether RAM users can save security codes for multi-factor authentication (MFA) during logon. Each security code is valid for seven days. Valid values:</p>
+             * <p>Indicates whether RAM users can save security codes for MFA during logon. Each security code is valid for seven days. Valid values:</p>
              * <ul>
-             * <li>true: RAM users can save MFA security codes during logon.</li>
-             * <li>false: RAM users cannot save MFA security codes during logon.</li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -234,10 +263,10 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             /**
              * <p>The subnet mask that indicates the IP addresses from which logon to the Alibaba Cloud Management Console is allowed. This parameter applies to password-based logon and single sign-on (SSO). However, this parameter does not apply to API calls that are authenticated based on AccessKey pairs.</p>
              * <ul>
-             * <li>If a subnet mask is specified, RAM users can log on to the Alibaba Cloud Management Console only by using the IP addresses in the subnetwork.</li>
-             * <li>If no subnet mask is specified, RAM users can log on to the Alibaba Cloud Management Console by using all IP addresses.</li>
+             * <li>If you specify a subnet mask, RAM users can use only the IP addresses in the subnet mask to log on to the Alibaba Cloud Management Console.</li>
+             * <li>If you do not specify a subnet mask, RAM users can use all IP addresses to log on to the Alibaba Cloud Management Console.</li>
              * </ul>
-             * <p>If more than one subnet mask is specified, the masks are separated with semicolons (;), for example, 192.168.0.0/16;10.0.0.0/8.</p>
+             * <p>If you want to specify more than one subnet mask, separate the masks with semicolons (;). Example: 192.168.0.0/16;10.0.0.0/8.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.0/8</p>
@@ -248,7 +277,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The validity period of a logon session of a RAM user. Unit: hours.</p>
+             * <p>The validity period of the logon session of RAM users. Unit: hours.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -297,11 +326,18 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean allowUserToManageMFADevices; 
 
+            private Builder() {
+            } 
+
+            private Builder(MFAPreference model) {
+                this.allowUserToManageMFADevices = model.allowUserToManageMFADevices;
+            } 
+
             /**
              * <p>Indicates whether RAM users can manage their MFA devices. Valid values:</p>
              * <ul>
-             * <li>true: RAM users can manage their MFA devices.</li>
-             * <li>false: RAM users cannot manage their MFA devices.</li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -351,11 +387,18 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean allowUserToManagePublicKeys; 
 
+            private Builder() {
+            } 
+
+            private Builder(PublicKeyPreference model) {
+                this.allowUserToManagePublicKeys = model.allowUserToManagePublicKeys;
+            } 
+
             /**
              * <p>Indicates whether RAM users can manage their public keys. Valid values:</p>
              * <ul>
-             * <li>true: RAM users can manage their public keys.</li>
-             * <li>false: RAM users cannot manage their public keys.</li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -441,6 +484,16 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             private MFAPreference MFAPreference; 
             private PublicKeyPreference publicKeyPreference; 
 
+            private Builder() {
+            } 
+
+            private Builder(SecurityPreference model) {
+                this.accessKeyPreference = model.accessKeyPreference;
+                this.loginProfilePreference = model.loginProfilePreference;
+                this.MFAPreference = model.MFAPreference;
+                this.publicKeyPreference = model.publicKeyPreference;
+            } 
+
             /**
              * <p>The AccessKey pair preference.</p>
              */
@@ -450,7 +503,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The logon preferences.</p>
+             * <p>The logon preference.</p>
              */
             public Builder loginProfilePreference(LoginProfilePreference loginProfilePreference) {
                 this.loginProfilePreference = loginProfilePreference;
@@ -458,7 +511,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The MFA preference.</p>
+             * <p>The multi-factor authentication (MFA) preference.</p>
              */
             public Builder MFAPreference(MFAPreference MFAPreference) {
                 this.MFAPreference = MFAPreference;
@@ -468,7 +521,7 @@ public class GetSecurityPreferenceResponseBody extends TeaModel {
             /**
              * <p>The public key preference.</p>
              * <blockquote>
-             * <p> The public key preference is valid only for the Japan site.</p>
+             * <p> This parameter is valid only for the Japan site.</p>
              * </blockquote>
              */
             public Builder publicKeyPreference(PublicKeyPreference publicKeyPreference) {

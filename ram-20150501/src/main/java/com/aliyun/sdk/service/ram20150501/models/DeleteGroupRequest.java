@@ -34,7 +34,7 @@ public class DeleteGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -60,7 +60,7 @@ public class DeleteGroupRequest extends Request {
 
         /**
          * <p>The name of the RAM user group.</p>
-         * <p>If you want to query the name of a RAM user group, call the <a href="https://help.aliyun.com/document_detail/28703.html">ListGroups</a> operation.</p>
+         * <p>If you want to query the name of a RAM user group, you can call the <a href="https://help.aliyun.com/document_detail/28703.html">ListGroups</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Dev-Team</p>

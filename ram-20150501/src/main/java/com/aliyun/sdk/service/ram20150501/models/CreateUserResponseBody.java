@@ -36,6 +36,10 @@ public class CreateUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class CreateUserResponseBody extends TeaModel {
         private String requestId; 
         private User user; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateUserResponseBody model) {
+            this.requestId = model.requestId;
+            this.user = model.user;
+        } 
+
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -183,6 +195,19 @@ public class CreateUserResponseBody extends TeaModel {
             private String userId; 
             private String userName; 
 
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.comments = model.comments;
+                this.createDate = model.createDate;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.mobilePhone = model.mobilePhone;
+                this.userId = model.userId;
+                this.userName = model.userName;
+            } 
+
             /**
              * <p>The description of the RAM user.</p>
              * 
@@ -219,7 +244,7 @@ public class CreateUserResponseBody extends TeaModel {
             /**
              * <p>The email address of the RAM user.</p>
              * <blockquote>
-             * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+             * <p> This parameter applies only to the China site (aliyun.com).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -233,7 +258,7 @@ public class CreateUserResponseBody extends TeaModel {
             /**
              * <p>The mobile phone number of the RAM user.</p>
              * <blockquote>
-             * <p> This parameter can be returned only on the China site (aliyun.com).</p>
+             * <p> This parameter applies only to the China site (aliyun.com).</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -256,7 +281,7 @@ public class CreateUserResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The username of the RAM user.</p>
+             * <p>The name of the RAM user.</p>
              * 
              * <strong>example:</strong>
              * <p>alice</p>

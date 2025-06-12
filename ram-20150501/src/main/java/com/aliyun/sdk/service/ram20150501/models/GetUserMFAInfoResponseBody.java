@@ -36,6 +36,10 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return MFADevice
      */
@@ -54,8 +58,16 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         private MFADevice MFADevice; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetUserMFAInfoResponseBody model) {
+            this.MFADevice = model.MFADevice;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The information about the MFA device that is attached to the RAM user.</p>
+         * <p>The information about the MFA device that is bound to the RAM user.</p>
          */
         public Builder MFADevice(MFADevice MFADevice) {
             this.MFADevice = MFADevice;
@@ -63,7 +75,7 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
@@ -123,6 +135,14 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
             private String serialNumber; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(MFADevice model) {
+                this.serialNumber = model.serialNumber;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The serial number of the MFA device.</p>
              * 
@@ -137,8 +157,8 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
             /**
              * <p>The type of the MFA device. Valid values:</p>
              * <ul>
-             * <li>VMFA: virtual MFA device</li>
-             * <li>U2F: Universal 2nd Factor (U2F) security key</li>
+             * <li>VMFA: virtual MFA device.</li>
+             * <li>U2F: Universal 2nd Factor (U2F) security key.</li>
              * </ul>
              * 
              * <strong>example:</strong>

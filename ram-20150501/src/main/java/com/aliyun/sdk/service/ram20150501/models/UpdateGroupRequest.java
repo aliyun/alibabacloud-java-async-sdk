@@ -44,7 +44,7 @@ public class UpdateGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,7 +100,7 @@ public class UpdateGroupRequest extends Request {
 
         /**
          * <p>The new description of the RAM user group.</p>
-         * <p>The comments must be 1 to 128 characters in length.</p>
+         * <p>The new description must be 1 to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>NewDev-Team</p>

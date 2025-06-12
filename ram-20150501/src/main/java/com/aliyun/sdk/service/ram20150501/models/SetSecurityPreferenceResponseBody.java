@@ -36,6 +36,10 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SecurityPreference securityPreference; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetSecurityPreferenceResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityPreference = model.securityPreference;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -110,6 +122,13 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean allowUserToManageAccessKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessKeyPreference model) {
+                this.allowUserToManageAccessKeys = model.allowUserToManageAccessKeys;
+            } 
 
             /**
              * <p>Indicates whether RAM users can manage their AccessKey pairs.</p>
@@ -197,6 +216,16 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             private String loginNetworkMasks; 
             private Integer loginSessionDuration; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoginProfilePreference model) {
+                this.allowUserToChangePassword = model.allowUserToChangePassword;
+                this.enableSaveMFATicket = model.enableSaveMFATicket;
+                this.loginNetworkMasks = model.loginNetworkMasks;
+                this.loginSessionDuration = model.loginSessionDuration;
+            } 
+
             /**
              * <p>Indicates whether RAM users can change their passwords.</p>
              * 
@@ -280,6 +309,13 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean allowUserToManageMFADevices; 
 
+            private Builder() {
+            } 
+
+            private Builder(MFAPreference model) {
+                this.allowUserToManageMFADevices = model.allowUserToManageMFADevices;
+            } 
+
             /**
              * <p>Indicates whether RAM users can manage their MFA devices.</p>
              * 
@@ -329,6 +365,13 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean allowUserToManagePublicKeys; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicKeyPreference model) {
+                this.allowUserToManagePublicKeys = model.allowUserToManagePublicKeys;
+            } 
 
             /**
              * <p>Indicates whether RAM users can manage their public keys.</p>
@@ -415,6 +458,16 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             private LoginProfilePreference loginProfilePreference; 
             private MFAPreference MFAPreference; 
             private PublicKeyPreference publicKeyPreference; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityPreference model) {
+                this.accessKeyPreference = model.accessKeyPreference;
+                this.loginProfilePreference = model.loginProfilePreference;
+                this.MFAPreference = model.MFAPreference;
+                this.publicKeyPreference = model.publicKeyPreference;
+            } 
 
             /**
              * <p>The AccessKey pair preference.</p>

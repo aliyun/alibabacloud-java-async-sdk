@@ -36,6 +36,10 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return decodedDiagnosticMessage
      */
@@ -53,6 +57,14 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
     public static final class Builder {
         private DecodedDiagnosticMessage decodedDiagnosticMessage; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DecodeDiagnosticMessageResponseBody model) {
+            this.decodedDiagnosticMessage = model.decodedDiagnosticMessage;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The decoded diagnostic information.</p>
@@ -122,6 +134,14 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
         public static final class Builder {
             private String conditionKey; 
             private java.util.List<String> conditionValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthConditions model) {
+                this.conditionKey = model.conditionKey;
+                this.conditionValues = model.conditionValues;
+            } 
 
             /**
              * <p>The key of the condition.</p>
@@ -204,6 +224,15 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             private String authPrincipalDisplayName; 
             private String authPrincipalOwnerId; 
             private String authPrincipalType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AuthPrincipal model) {
+                this.authPrincipalDisplayName = model.authPrincipalDisplayName;
+                this.authPrincipalOwnerId = model.authPrincipalOwnerId;
+                this.authPrincipalType = model.authPrincipalType;
+            } 
 
             /**
              * <p>The identity.</p>
@@ -347,6 +376,18 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             private String policyIdentifier; 
             private String policyType; 
             private String policyVersion; 
+
+            private Builder() {
+            } 
+
+            private Builder(MatchedPolicies model) {
+                this.attachedEntityType = model.attachedEntityType;
+                this.attachedScope = model.attachedScope;
+                this.effect = model.effect;
+                this.policyIdentifier = model.policyIdentifier;
+                this.policyType = model.policyType;
+                this.policyVersion = model.policyVersion;
+            } 
 
             /**
              * <p>The type of the entity to which the policy is attached.</p>
@@ -566,6 +607,19 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
             private java.util.List<MatchedPolicies> matchedPolicies; 
             private String noPermissionPolicyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DecodedDiagnosticMessage model) {
+                this.authAction = model.authAction;
+                this.authConditions = model.authConditions;
+                this.authPrincipal = model.authPrincipal;
+                this.authResource = model.authResource;
+                this.explicitDeny = model.explicitDeny;
+                this.matchedPolicies = model.matchedPolicies;
+                this.noPermissionPolicyType = model.noPermissionPolicyType;
+            } 
+
             /**
              * <p>The operation that is used for authentication in the request.</p>
              * 
@@ -610,19 +664,8 @@ public class DecodeDiagnosticMessageResponseBody extends TeaModel {
              * <p>Indicates whether the access denied error is caused by an explicit deny.</p>
              * <p>Valid values:</p>
              * <ul>
-             * <li><p>true</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- -->
-             * </li>
-             * <li><p>false</p>
-             * <!-- -->
-             * 
-             * <!-- -->
-             * 
-             * <!-- --></li>
+             * <li>true</li>
+             * <li>false</li>
              * </ul>
              * 
              * <strong>example:</strong>

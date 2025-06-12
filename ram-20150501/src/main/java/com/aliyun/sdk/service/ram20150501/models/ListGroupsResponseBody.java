@@ -44,6 +44,10 @@ public class ListGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groups
      */
@@ -78,8 +82,18 @@ public class ListGroupsResponseBody extends TeaModel {
         private String marker; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListGroupsResponseBody model) {
+            this.groups = model.groups;
+            this.isTruncated = model.isTruncated;
+            this.marker = model.marker;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The list of the RAM user groups.</p>
+         * <p>The information about the RAM user groups.</p>
          */
         public Builder groups(Groups groups) {
             this.groups = groups;
@@ -87,7 +101,11 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the response is truncated.</p>
+         * <p>Indicates whether the response is truncated. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -98,7 +116,10 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The marker. This parameter is returned only if the value of <code>IsTruncated</code> is <code>true</code>. If <code>true</code> is returned, you can call this operation again and set the <code>Marker</code> parameter to obtain the truncated part.</p>
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * <blockquote>
+         * <p> This parameter is returned only when <code>IsTruncated</code> is <code>true</code>.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>EXAMPLE</p>
@@ -205,8 +226,19 @@ public class ListGroupsResponseBody extends TeaModel {
             private String groupName; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.comments = model.comments;
+                this.createDate = model.createDate;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
-             * <p>The description of the RAM user group.</p>
+             * <p>The description.</p>
              * 
              * <strong>example:</strong>
              * <p>Dev-Team</p>
@@ -217,7 +249,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the RAM user group was created.</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -250,7 +282,7 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the information of the RAM user group was updated.</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2015-01-23T12:33:18Z</p>
@@ -298,6 +330,13 @@ public class ListGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Group> group; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.group = model.group;
+            } 
 
             /**
              * Group.

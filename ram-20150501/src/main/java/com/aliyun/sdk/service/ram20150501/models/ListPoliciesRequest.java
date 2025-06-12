@@ -49,7 +49,7 @@ public class ListPoliciesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +101,7 @@ public class ListPoliciesRequest extends Request {
         } 
 
         /**
-         * <p>The <code>Marker</code>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
+         * <p>The <code>marker</code>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</p>
          * 
          * <strong>example:</strong>
          * <p>EXAMPLE</p>
@@ -126,7 +126,7 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * <p>The type of the <code>Policy</code>. Valid values: <code>System</code> and <code>Custom</code>. If you do not specify the parameter, all policies are returned.</p>
+         * <p>The type of the policies. Valid values: <code>System</code> and <code>Custom</code>. If you do not specify the parameter, all policies are returned.``</p>
          * 
          * <strong>example:</strong>
          * <p>System</p>
@@ -138,7 +138,7 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -198,8 +198,19 @@ public class ListPoliciesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -207,7 +218,10 @@ public class ListPoliciesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder value(String value) {
                 this.value = value;

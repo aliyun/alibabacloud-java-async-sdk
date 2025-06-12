@@ -44,7 +44,7 @@ public class UpdateAccessKeyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -99,7 +99,7 @@ public class UpdateAccessKeyRequest extends Request {
         }
 
         /**
-         * <p>The AccessKey ID in the AccessKey pair whose status you want to change.</p>
+         * <p>The AccessKey ID in the AccessKey pair whose status you want to change.``</p>
          * 
          * <strong>example:</strong>
          * <p>0wNEpMMlzy7s****</p>

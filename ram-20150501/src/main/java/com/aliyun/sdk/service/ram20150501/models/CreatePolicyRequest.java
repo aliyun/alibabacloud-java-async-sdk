@@ -49,7 +49,7 @@ public class CreatePolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,7 +129,7 @@ public class CreatePolicyRequest extends Request {
 
         /**
          * <p>The name of the policy.</p>
-         * <p>The name must be 1 to 128 characters in length, and can contain letters, digits, and hyphens (-).</p>
+         * <p>The name must be 1 to 128 characters in length and can contain letters, digits, and hyphens (-).</p>
          * 
          * <strong>example:</strong>
          * <p>View-ECS-instances-in-a-specific-region</p>
@@ -141,7 +141,7 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             String tagShrink = shrink(tag, "Tag", "json");
@@ -201,8 +201,19 @@ public class CreatePolicyRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>owner</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -210,7 +221,10 @@ public class CreatePolicyRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alice</p>
              */
             public Builder value(String value) {
                 this.value = value;

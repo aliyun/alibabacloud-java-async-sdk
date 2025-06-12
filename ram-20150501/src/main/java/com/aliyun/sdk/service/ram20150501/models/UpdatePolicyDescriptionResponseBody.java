@@ -36,6 +36,10 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policy
      */
@@ -54,6 +58,14 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
         private Policy policy; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdatePolicyDescriptionResponseBody model) {
+            this.policy = model.policy;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * <p>The information about the policy.</p>
          */
@@ -63,7 +75,7 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7572DEBD-0ECE-518E-8682-D8CB82F8FE8E</p>
@@ -171,6 +183,18 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
             private String policyType; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.createDate = model.createDate;
+                this.defaultVersion = model.defaultVersion;
+                this.description = model.description;
+                this.policyName = model.policyName;
+                this.policyType = model.policyType;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
              * <p>The time when the policy was created.</p>
              * 
@@ -218,8 +242,8 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
             /**
              * <p>The type of the policy. Valid values:</p>
              * <ul>
-             * <li>Custom: custom policy</li>
-             * <li>System: system policy</li>
+             * <li>Custom</li>
+             * <li>System</li>
              * </ul>
              * 
              * <strong>example:</strong>

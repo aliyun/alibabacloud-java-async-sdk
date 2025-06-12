@@ -34,7 +34,7 @@ public class UnbindMFADeviceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -59,7 +59,10 @@ public class UnbindMFADeviceRequest extends Request {
         } 
 
         /**
-         * UserName.
+         * <p>Specifies the username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zhangq****</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

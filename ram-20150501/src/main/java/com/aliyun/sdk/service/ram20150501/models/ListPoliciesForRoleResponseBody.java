@@ -36,6 +36,10 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return policies
      */
@@ -54,8 +58,16 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
         private Policies policies; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListPoliciesForRoleResponseBody model) {
+            this.policies = model.policies;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The list of the policies that are attached to the RAM role.</p>
+         * <p>The information about the policies.</p>
          */
         public Builder policies(Policies policies) {
             this.policies = policies;
@@ -63,7 +75,7 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7B8A4E7D-6CFF-471D-84DF-195A7A241ECB</p>
@@ -159,6 +171,17 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
             private String policyName; 
             private String policyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Policy model) {
+                this.attachDate = model.attachDate;
+                this.defaultVersion = model.defaultVersion;
+                this.description = model.description;
+                this.policyName = model.policyName;
+                this.policyType = model.policyType;
+            } 
+
             /**
              * <p>The time when the policy was attached to the RAM role.</p>
              * 
@@ -252,6 +275,13 @@ public class ListPoliciesForRoleResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Policy> policy; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.policy = model.policy;
+            } 
 
             /**
              * Policy.
