@@ -44,6 +44,10 @@ public class ValuateTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ValuateTemplateResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ValuateTemplateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -252,6 +266,21 @@ public class ValuateTemplateResponseBody extends TeaModel {
             private String resourceId; 
             private Float tradePrice; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceList model) {
+                this.discountAmount = model.discountAmount;
+                this.error = model.error;
+                this.nodeType = model.nodeType;
+                this.originalPrice = model.originalPrice;
+                this.priceUnit = model.priceUnit;
+                this.promotionName = model.promotionName;
+                this.resourceId = model.resourceId;
+                this.tradePrice = model.tradePrice;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The discount amount.</p>
@@ -475,6 +504,20 @@ public class ValuateTemplateResponseBody extends TeaModel {
             private String promotionName; 
             private Double tradePrice; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResourceList model) {
+                this.discountAmount = model.discountAmount;
+                this.error = model.error;
+                this.nodeType = model.nodeType;
+                this.originalPrice = model.originalPrice;
+                this.priceList = model.priceList;
+                this.priceUnit = model.priceUnit;
+                this.promotionName = model.promotionName;
+                this.tradePrice = model.tradePrice;
+            } 
+
             /**
              * <p>The discount amount.</p>
              * 
@@ -598,6 +641,13 @@ public class ValuateTemplateResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ResourceList> resourceList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.resourceList = model.resourceList;
+            } 
 
             /**
              * <p>The result set of the inquiry.</p>

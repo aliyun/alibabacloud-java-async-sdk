@@ -40,7 +40,7 @@ public class ModifyApplicationSpecRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,6 +145,14 @@ public class ModifyApplicationSpecRequest extends Request {
         public static final class Builder {
             private java.util.Map<String, ?> configuration; 
             private String instanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceSpec model) {
+                this.configuration = model.configuration;
+                this.instanceId = model.instanceId;
+            } 
 
             /**
              * Configuration.

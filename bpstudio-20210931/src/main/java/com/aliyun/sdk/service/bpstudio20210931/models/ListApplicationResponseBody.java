@@ -52,6 +52,10 @@ public class ListApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListApplicationResponseBody extends TeaModel {
         private Integer nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -262,6 +278,18 @@ public class ListApplicationResponseBody extends TeaModel {
             private String name; 
             private String resourceGroupId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.applicationId = model.applicationId;
+                this.createTime = model.createTime;
+                this.imageURL = model.imageURL;
+                this.name = model.name;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The application ID.</p>

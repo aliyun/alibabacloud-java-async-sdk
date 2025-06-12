@@ -45,6 +45,10 @@ public class ListApplicationRequest extends Request {
     private String resourceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShowHide")
+    private Boolean showHide;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -60,6 +64,7 @@ public class ListApplicationRequest extends Request {
         this.orderType = builder.orderType;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceId = builder.resourceId;
+        this.showHide = builder.showHide;
         this.status = builder.status;
         this.templateId = builder.templateId;
     }
@@ -72,7 +77,7 @@ public class ListApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -120,6 +125,13 @@ public class ListApplicationRequest extends Request {
     }
 
     /**
+     * @return showHide
+     */
+    public Boolean getShowHide() {
+        return this.showHide;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -140,6 +152,7 @@ public class ListApplicationRequest extends Request {
         private Long orderType; 
         private String resourceGroupId; 
         private String resourceId; 
+        private Boolean showHide; 
         private String status; 
         private String templateId; 
 
@@ -155,6 +168,7 @@ public class ListApplicationRequest extends Request {
             this.orderType = request.orderType;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceId = request.resourceId;
+            this.showHide = request.showHide;
             this.status = request.status;
             this.templateId = request.templateId;
         } 
@@ -230,6 +244,15 @@ public class ListApplicationRequest extends Request {
         public Builder resourceId(String resourceId) {
             this.putBodyParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
+            return this;
+        }
+
+        /**
+         * ShowHide.
+         */
+        public Builder showHide(Boolean showHide) {
+            this.putBodyParameter("ShowHide", showHide);
+            this.showHide = showHide;
             return this;
         }
 

@@ -44,6 +44,10 @@ public class ExecuteOperationSyncResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ExecuteOperationSyncResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ExecuteOperationSyncResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -183,6 +197,16 @@ public class ExecuteOperationSyncResponseBody extends TeaModel {
             private String message; 
             private String operationId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.arguments = model.arguments;
+                this.message = model.message;
+                this.operationId = model.operationId;
+                this.status = model.status;
+            } 
 
             /**
              * Arguments.

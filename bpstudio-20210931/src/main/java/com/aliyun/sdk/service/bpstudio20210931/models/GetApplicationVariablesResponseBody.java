@@ -44,6 +44,10 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationVariablesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -163,6 +177,14 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
             private String value; 
             private String variable; 
 
+            private Builder() {
+            } 
+
+            private Builder(VariableList model) {
+                this.value = model.value;
+                this.variable = model.variable;
+            } 
+
             /**
              * Value.
              */
@@ -229,6 +251,14 @@ public class GetApplicationVariablesResponseBody extends TeaModel {
         public static final class Builder {
             private String instanceId; 
             private java.util.List<VariableList> variableList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceId = model.instanceId;
+                this.variableList = model.variableList;
+            } 
 
             /**
              * InstanceId.

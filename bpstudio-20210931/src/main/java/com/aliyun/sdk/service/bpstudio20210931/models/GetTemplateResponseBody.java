@@ -44,6 +44,10 @@ public class GetTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetTemplateResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTemplateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -204,6 +218,17 @@ public class GetTemplateResponseBody extends TeaModel {
             private String defaultValue; 
             private String options; 
             private String variable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Variables model) {
+                this.attribute = model.attribute;
+                this.dataType = model.dataType;
+                this.defaultValue = model.defaultValue;
+                this.options = model.options;
+                this.variable = model.variable;
+            } 
 
             /**
              * <p>The name of the variable.</p>
@@ -367,6 +392,19 @@ public class GetTemplateResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String templateId; 
             private java.util.List<Variables> variables; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.imageURL = model.imageURL;
+                this.name = model.name;
+                this.resourceGroupId = model.resourceGroupId;
+                this.templateId = model.templateId;
+                this.variables = model.variables;
+            } 
 
             /**
              * <p>The time when the template was created.</p>

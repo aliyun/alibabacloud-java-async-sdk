@@ -44,6 +44,10 @@ public class GetApplicationVariables4FailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetApplicationVariables4FailResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationVariables4FailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Code.
@@ -210,6 +224,18 @@ public class GetApplicationVariables4FailResponseBody extends TeaModel {
             private String region; 
             private String value; 
             private String variable; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.attribute = model.attribute;
+                this.defaultValue = model.defaultValue;
+                this.placeHolder = model.placeHolder;
+                this.region = model.region;
+                this.value = model.value;
+                this.variable = model.variable;
+            } 
 
             /**
              * Attribute.

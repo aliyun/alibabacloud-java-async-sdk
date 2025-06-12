@@ -44,6 +44,10 @@ public class GetTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetTokenResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTokenResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -216,6 +230,18 @@ public class GetTokenResponseBody extends TeaModel {
             private String endpoint; 
             private String securityToken; 
             private String snapshotBucket; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessKeyId = model.accessKeyId;
+                this.accessKeySecret = model.accessKeySecret;
+                this.bucket = model.bucket;
+                this.endpoint = model.endpoint;
+                this.securityToken = model.securityToken;
+                this.snapshotBucket = model.snapshotBucket;
+            } 
 
             /**
              * <p>The AccessKey ID that is used to access OSS.</p>

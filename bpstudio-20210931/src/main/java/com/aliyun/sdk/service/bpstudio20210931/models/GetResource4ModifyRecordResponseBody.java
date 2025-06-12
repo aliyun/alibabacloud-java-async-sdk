@@ -56,6 +56,10 @@ public class GetResource4ModifyRecordResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -113,6 +117,19 @@ public class GetResource4ModifyRecordResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private String totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResource4ModifyRecordResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -267,6 +284,18 @@ public class GetResource4ModifyRecordResponseBody extends TeaModel {
             private String resourceId; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.attribute = model.attribute;
+                this.error = model.error;
+                this.modifyTime = model.modifyTime;
+                this.resourceId = model.resourceId;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * Attribute.

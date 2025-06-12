@@ -48,6 +48,10 @@ public class GetResult4QueryInstancePrice4ModifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -89,6 +93,17 @@ public class GetResult4QueryInstancePrice4ModifyResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetResult4QueryInstancePrice4ModifyResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -240,6 +255,19 @@ public class GetResult4QueryInstancePrice4ModifyResponseBody extends TeaModel {
             private String promotionName; 
             private Double tradeAmount; 
 
+            private Builder() {
+            } 
+
+            private Builder(PriceList model) {
+                this.discountAmount = model.discountAmount;
+                this.error = model.error;
+                this.nodeType = model.nodeType;
+                this.originalAmount = model.originalAmount;
+                this.priceUnit = model.priceUnit;
+                this.promotionName = model.promotionName;
+                this.tradeAmount = model.tradeAmount;
+            } 
+
             /**
              * DiscountAmount.
              */
@@ -358,6 +386,15 @@ public class GetResult4QueryInstancePrice4ModifyResponseBody extends TeaModel {
             private java.util.List<PriceList> priceList; 
             private String status; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.priceList = model.priceList;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * PriceList.

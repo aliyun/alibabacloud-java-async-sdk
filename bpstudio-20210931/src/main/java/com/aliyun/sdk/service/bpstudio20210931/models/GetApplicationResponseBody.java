@@ -44,6 +44,10 @@ public class GetApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetApplicationResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -229,6 +243,19 @@ public class GetApplicationResponseBody extends TeaModel {
             private String result; 
             private String specification; 
 
+            private Builder() {
+            } 
+
+            private Builder(Checklist model) {
+                this.lifecycle = model.lifecycle;
+                this.region = model.region;
+                this.remark = model.remark;
+                this.resourceCode = model.resourceCode;
+                this.resourceName = model.resourceName;
+                this.result = model.result;
+                this.specification = model.specification;
+            } 
+
             /**
              * <p>The resource tag.</p>
              * 
@@ -357,6 +384,14 @@ public class GetApplicationResponseBody extends TeaModel {
             private String ruleDetail; 
             private String ruleId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.ruleDetail = model.ruleDetail;
+                this.ruleId = model.ruleId;
+            } 
+
             /**
              * ruleDetail.
              */
@@ -435,6 +470,15 @@ public class GetApplicationResponseBody extends TeaModel {
             private String resourceCode; 
             private String resourceName; 
             private java.util.List<Rules> rules; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComplianceList model) {
+                this.resourceCode = model.resourceCode;
+                this.resourceName = model.resourceName;
+                this.rules = model.rules;
+            } 
 
             /**
              * <p>The service code.</p>
@@ -660,6 +704,26 @@ public class GetApplicationResponseBody extends TeaModel {
             private String resourceCode; 
             private String specification; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(PriceList model) {
+                this.chargeType = model.chargeType;
+                this.count = model.count;
+                this.instanceName = model.instanceName;
+                this.lifecycle = model.lifecycle;
+                this.onePrice = model.onePrice;
+                this.originalPrice = model.originalPrice;
+                this.period = model.period;
+                this.price = model.price;
+                this.priceUnit = model.priceUnit;
+                this.region = model.region;
+                this.remark = model.remark;
+                this.resourceCode = model.resourceCode;
+                this.specification = model.specification;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The billing method.</p>
@@ -949,6 +1013,21 @@ public class GetApplicationResponseBody extends TeaModel {
             private String resourceName; 
             private String resourceType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceList model) {
+                this.chargeType = model.chargeType;
+                this.lifecycle = model.lifecycle;
+                this.nodeLabel = model.nodeLabel;
+                this.remark = model.remark;
+                this.resourceCode = model.resourceCode;
+                this.resourceId = model.resourceId;
+                this.resourceName = model.resourceName;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The billing method.</p>
@@ -1240,6 +1319,26 @@ public class GetApplicationResponseBody extends TeaModel {
             private java.util.List<ResourceList> resourceList; 
             private String status; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.applicationId = model.applicationId;
+                this.checklist = model.checklist;
+                this.complianceList = model.complianceList;
+                this.createTime = model.createTime;
+                this.deployPercent = model.deployPercent;
+                this.description = model.description;
+                this.error = model.error;
+                this.imageURL = model.imageURL;
+                this.name = model.name;
+                this.priceList = model.priceList;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceList = model.resourceList;
+                this.status = model.status;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>App ID</p>

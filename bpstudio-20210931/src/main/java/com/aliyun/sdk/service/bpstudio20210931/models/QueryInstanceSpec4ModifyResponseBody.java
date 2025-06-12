@@ -52,6 +52,10 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -101,6 +105,18 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryInstanceSpec4ModifyResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * AccessDeniedDetail.
@@ -236,6 +252,17 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
             private Double step; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(OptionalValues model) {
+                this.label = model.label;
+                this.max = model.max;
+                this.min = model.min;
+                this.step = model.step;
+                this.value = model.value;
+            } 
+
             /**
              * Label.
              */
@@ -314,6 +341,13 @@ public class QueryInstanceSpec4ModifyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OptionalValues> optionalValues; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.optionalValues = model.optionalValues;
+            } 
 
             /**
              * OptionalValues.

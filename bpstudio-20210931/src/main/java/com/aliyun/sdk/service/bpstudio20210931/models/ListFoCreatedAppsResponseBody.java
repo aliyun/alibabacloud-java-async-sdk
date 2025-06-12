@@ -44,6 +44,10 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFoCreatedAppsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status code.</p>
@@ -192,6 +206,16 @@ public class ListFoCreatedAppsResponseBody extends TeaModel {
             private String reportUrl; 
             private String status; 
             private String title; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.applicationId = model.applicationId;
+                this.reportUrl = model.reportUrl;
+                this.status = model.status;
+                this.title = model.title;
+            } 
 
             /**
              * <p>The application ID.</p>

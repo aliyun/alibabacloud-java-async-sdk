@@ -52,6 +52,10 @@ public class ListTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListTemplateResponseBody extends TeaModel {
         private Integer nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTemplateResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The HTTP status code.</p>
@@ -274,6 +290,19 @@ public class ListTemplateResponseBody extends TeaModel {
             private Integer tagId; 
             private String tagName; 
             private String templateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.createTime = model.createTime;
+                this.imageURL = model.imageURL;
+                this.name = model.name;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tagId = model.tagId;
+                this.tagName = model.tagName;
+                this.templateId = model.templateId;
+            } 
 
             /**
              * <p>The time when the template was created.</p>

@@ -44,6 +44,10 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetExecuteOperationResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code. A value of 200 indicates that the request is successful.</p>
@@ -192,6 +206,16 @@ public class GetExecuteOperationResultResponseBody extends TeaModel {
             private String message; 
             private String operationId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.arguments = model.arguments;
+                this.message = model.message;
+                this.operationId = model.operationId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The output of the operation.</p>

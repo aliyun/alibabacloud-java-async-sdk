@@ -61,7 +61,7 @@ public class ValuateTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -262,6 +262,15 @@ public class ValuateTemplateRequest extends Request {
             private String id; 
             private String nodeName; 
             private String nodeType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.id = model.id;
+                this.nodeName = model.nodeName;
+                this.nodeType = model.nodeType;
+            } 
 
             /**
              * <p>The instance ID.</p>
