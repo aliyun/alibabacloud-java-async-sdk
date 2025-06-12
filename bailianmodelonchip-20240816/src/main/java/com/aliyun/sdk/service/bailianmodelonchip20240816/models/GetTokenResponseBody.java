@@ -179,14 +179,14 @@ public class GetTokenResponseBody extends TeaModel {
      * <p>GetTokenResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("appId")
+        private String appId;
+
         @com.aliyun.core.annotation.NameInMap("deviceName")
         private String deviceName;
 
         @com.aliyun.core.annotation.NameInMap("nonce")
         private String nonce;
-
-        @com.aliyun.core.annotation.NameInMap("productKey")
-        private String productKey;
 
         @com.aliyun.core.annotation.NameInMap("requestIp")
         private String requestIp;
@@ -198,9 +198,9 @@ public class GetTokenResponseBody extends TeaModel {
         private String signature;
 
         private Data(Builder builder) {
+            this.appId = builder.appId;
             this.deviceName = builder.deviceName;
             this.nonce = builder.nonce;
-            this.productKey = builder.productKey;
             this.requestIp = builder.requestIp;
             this.responseTime = builder.responseTime;
             this.signature = builder.signature;
@@ -215,6 +215,13 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         /**
+         * @return appId
+         */
+        public String getAppId() {
+            return this.appId;
+        }
+
+        /**
          * @return deviceName
          */
         public String getDeviceName() {
@@ -226,13 +233,6 @@ public class GetTokenResponseBody extends TeaModel {
          */
         public String getNonce() {
             return this.nonce;
-        }
-
-        /**
-         * @return productKey
-         */
-        public String getProductKey() {
-            return this.productKey;
         }
 
         /**
@@ -257,9 +257,9 @@ public class GetTokenResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String appId; 
             private String deviceName; 
             private String nonce; 
-            private String productKey; 
             private String requestIp; 
             private String responseTime; 
             private String signature; 
@@ -268,13 +268,21 @@ public class GetTokenResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.appId = model.appId;
                 this.deviceName = model.deviceName;
                 this.nonce = model.nonce;
-                this.productKey = model.productKey;
                 this.requestIp = model.requestIp;
                 this.responseTime = model.responseTime;
                 this.signature = model.signature;
             } 
+
+            /**
+             * appId.
+             */
+            public Builder appId(String appId) {
+                this.appId = appId;
+                return this;
+            }
 
             /**
              * deviceName.
@@ -289,14 +297,6 @@ public class GetTokenResponseBody extends TeaModel {
              */
             public Builder nonce(String nonce) {
                 this.nonce = nonce;
-                return this;
-            }
-
-            /**
-             * productKey.
-             */
-            public Builder productKey(String productKey) {
-                this.productKey = productKey;
                 return this;
             }
 

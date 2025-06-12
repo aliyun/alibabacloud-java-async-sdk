@@ -18,6 +18,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetTokenRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("appId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String appId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("deviceName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String deviceName;
@@ -26,11 +31,6 @@ public class GetTokenRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("nonce")
     @com.aliyun.core.annotation.Validation(required = true)
     private String nonce;
-
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("productKey")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String productKey;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("requestTime")
@@ -53,9 +53,9 @@ public class GetTokenRequest extends Request {
 
     private GetTokenRequest(Builder builder) {
         super(builder);
+        this.appId = builder.appId;
         this.deviceName = builder.deviceName;
         this.nonce = builder.nonce;
-        this.productKey = builder.productKey;
         this.requestTime = builder.requestTime;
         this.signature = builder.signature;
         this.tokenKey = builder.tokenKey;
@@ -76,6 +76,13 @@ public class GetTokenRequest extends Request {
     }
 
     /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
+    }
+
+    /**
      * @return deviceName
      */
     public String getDeviceName() {
@@ -87,13 +94,6 @@ public class GetTokenRequest extends Request {
      */
     public String getNonce() {
         return this.nonce;
-    }
-
-    /**
-     * @return productKey
-     */
-    public String getProductKey() {
-        return this.productKey;
     }
 
     /**
@@ -125,9 +125,9 @@ public class GetTokenRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetTokenRequest, Builder> {
+        private String appId; 
         private String deviceName; 
         private String nonce; 
-        private String productKey; 
         private String requestTime; 
         private String signature; 
         private String tokenKey; 
@@ -139,14 +139,23 @@ public class GetTokenRequest extends Request {
 
         private Builder(GetTokenRequest request) {
             super(request);
+            this.appId = request.appId;
             this.deviceName = request.deviceName;
             this.nonce = request.nonce;
-            this.productKey = request.productKey;
             this.requestTime = request.requestTime;
             this.signature = request.signature;
             this.tokenKey = request.tokenKey;
             this.tokenType = request.tokenType;
         } 
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder appId(String appId) {
+            this.putBodyParameter("appId", appId);
+            this.appId = appId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -169,18 +178,6 @@ public class GetTokenRequest extends Request {
         public Builder nonce(String nonce) {
             this.putBodyParameter("nonce", nonce);
             this.nonce = nonce;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>el3SzmCU2p0x4RBc</p>
-         */
-        public Builder productKey(String productKey) {
-            this.putBodyParameter("productKey", productKey);
-            this.productKey = productKey;
             return this;
         }
 

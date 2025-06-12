@@ -18,29 +18,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeviceRegisterRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("appId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String appId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("nonce")
     @com.aliyun.core.annotation.Validation(required = true)
     private String nonce;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("productKey")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String productKey;
-
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("requestTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private String requestTime;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("signature")
     @com.aliyun.core.annotation.Validation(required = true)
     private String signature;
 
     private DeviceRegisterRequest(Builder builder) {
         super(builder);
+        this.appId = builder.appId;
         this.nonce = builder.nonce;
-        this.productKey = builder.productKey;
         this.requestTime = builder.requestTime;
         this.signature = builder.signature;
     }
@@ -59,17 +59,17 @@ public class DeviceRegisterRequest extends Request {
     }
 
     /**
+     * @return appId
+     */
+    public String getAppId() {
+        return this.appId;
+    }
+
+    /**
      * @return nonce
      */
     public String getNonce() {
         return this.nonce;
-    }
-
-    /**
-     * @return productKey
-     */
-    public String getProductKey() {
-        return this.productKey;
     }
 
     /**
@@ -87,8 +87,8 @@ public class DeviceRegisterRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeviceRegisterRequest, Builder> {
+        private String appId; 
         private String nonce; 
-        private String productKey; 
         private String requestTime; 
         private String signature; 
 
@@ -98,11 +98,20 @@ public class DeviceRegisterRequest extends Request {
 
         private Builder(DeviceRegisterRequest request) {
             super(request);
+            this.appId = request.appId;
             this.nonce = request.nonce;
-            this.productKey = request.productKey;
             this.requestTime = request.requestTime;
             this.signature = request.signature;
         } 
+
+        /**
+         * <p>This parameter is required.</p>
+         */
+        public Builder appId(String appId) {
+            this.putBodyParameter("appId", appId);
+            this.appId = appId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -118,36 +127,18 @@ public class DeviceRegisterRequest extends Request {
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>el3SzmCU2p0x4RBc</p>
-         */
-        public Builder productKey(String productKey) {
-            this.putQueryParameter("productKey", productKey);
-            this.productKey = productKey;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>1748312544852</p>
          */
         public Builder requestTime(String requestTime) {
-            this.putQueryParameter("requestTime", requestTime);
+            this.putBodyParameter("requestTime", requestTime);
             this.requestTime = requestTime;
             return this;
         }
 
         /**
          * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>3spKwUgUpAGsXbbrHKnpVJPlI9wamoyhh96uqJuSyCKyJ7oscLAHRcz15dSzLG5L+ywFgYXSQNqdRtsn/Ri0j7pD0IuoKt9R7EnNo/U6viPvWD3Ldp3ehDDtOFtSrpUg6LTedvGtUWYU4x/zSD2jgCXijEdZCCMGCypcheMHRXfInYWF1xFtnCEXJfxtrBrnCk1p/pW3JSmdHJzmInnUEO3dWbNe3A==</p>
          */
         public Builder signature(String signature) {
-            this.putQueryParameter("signature", signature);
+            this.putBodyParameter("signature", signature);
             this.signature = signature;
             return this;
         }
