@@ -44,6 +44,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class VideoModerationResultResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(VideoModerationResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -181,8 +195,20 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String label; 
             private Integer labelSum; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioSummarys model) {
+                this.description = model.description;
+                this.label = model.label;
+                this.labelSum = model.labelSum;
+            } 
+
             /**
-             * Description.
+             * <p>The description of the labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no risk</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -394,8 +420,30 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String text; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(SliceDetails model) {
+                this.descriptions = model.descriptions;
+                this.endTime = model.endTime;
+                this.endTimestamp = model.endTimestamp;
+                this.extend = model.extend;
+                this.labels = model.labels;
+                this.riskLevel = model.riskLevel;
+                this.riskTips = model.riskTips;
+                this.riskWords = model.riskWords;
+                this.score = model.score;
+                this.startTime = model.startTime;
+                this.startTimestamp = model.startTimestamp;
+                this.text = model.text;
+                this.url = model.url;
+            } 
+
             /**
-             * Descriptions.
+             * <p>The description of the labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no risk</p>
              */
             public Builder descriptions(String descriptions) {
                 this.descriptions = descriptions;
@@ -597,6 +645,15 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String riskLevel; 
             private java.util.List<SliceDetails> sliceDetails; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioResult model) {
+                this.audioSummarys = model.audioSummarys;
+                this.riskLevel = model.riskLevel;
+                this.sliceDetails = model.sliceDetails;
+            } 
+
             /**
              * <p>Summary of voice labels.</p>
              */
@@ -687,6 +744,15 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String label; 
             private Integer labelSum; 
 
+            private Builder() {
+            } 
+
+            private Builder(FrameSummarys model) {
+                this.description = model.description;
+                this.label = model.label;
+                this.labelSum = model.labelSum;
+            } 
+
             /**
              * <p>The description of the result.</p>
              * 
@@ -770,6 +836,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
         public static final class Builder {
             private String imageId; 
             private String libId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomImage model) {
+                this.imageId = model.imageId;
+                this.libId = model.libId;
+            } 
 
             /**
              * <p>The ID of the custom image that is hit.</p>
@@ -868,8 +942,21 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private Integer x; 
             private Integer y; 
 
+            private Builder() {
+            } 
+
+            private Builder(Location model) {
+                this.h = model.h;
+                this.w = model.w;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
-             * H.
+             * <p>The height of the text area. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder h(Integer h) {
                 this.h = h;
@@ -877,7 +964,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * W.
+             * <p>The width of the text area. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder w(Integer w) {
                 this.w = w;
@@ -885,7 +975,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * X.
+             * <p>The distance from the top-left corner of the text area to the y-axis, with the top-left corner of the image as the origin. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder x(Integer x) {
                 this.x = x;
@@ -893,7 +986,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Y.
+             * <p>The distance from the top-left corner of the text area to the x-axis, with the top-left corner of the image as the origin. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
              */
             public Builder y(Integer y) {
                 this.y = y;
@@ -963,8 +1059,20 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String label; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Logo model) {
+                this.confidence = model.confidence;
+                this.label = model.label;
+                this.name = model.name;
+            } 
+
             /**
-             * confidence.
+             * <p>Confidence score, ranging from 0 to 100, with two decimal places.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99.10</p>
              */
             public Builder confidence(Long confidence) {
                 this.confidence = confidence;
@@ -972,7 +1080,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * label.
+             * <p>label</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pt_logotoSocialNetwork</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -980,7 +1091,10 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * <p>Logo name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>**logo</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1038,8 +1152,16 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private Location location; 
             private java.util.List<Logo> logo; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogoData model) {
+                this.location = model.location;
+                this.logo = model.logo;
+            } 
+
             /**
-             * Location.
+             * <p>The location of the logo.</p>
              */
             public Builder location(Location location) {
                 this.location = location;
@@ -1047,7 +1169,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Logo.
+             * <p>Logo information.</p>
              */
             public Builder logo(java.util.List<Logo> logo) {
                 this.logo = logo;
@@ -1092,6 +1214,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
 
         public static final class Builder {
             private String figureId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicFigure model) {
+                this.figureId = model.figureId;
+            } 
 
             /**
              * <p>The information about the code of the identified figure.</p>
@@ -1166,6 +1295,15 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private Float confidence; 
             private String description; 
             private String label; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.confidence = model.confidence;
+                this.description = model.description;
+                this.label = model.label;
+            } 
 
             /**
              * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
@@ -1299,6 +1437,18 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String service; 
             private java.util.Map<String, ?> textInImage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.customImage = model.customImage;
+                this.logoData = model.logoData;
+                this.publicFigure = model.publicFigure;
+                this.result = model.result;
+                this.service = model.service;
+                this.textInImage = model.textInImage;
+            } 
+
             /**
              * <p>If a custom image library is hit, information about the custom image library is returned.</p>
              */
@@ -1308,7 +1458,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * LogoData.
+             * <p>Returns logo information when the video contains a logo.</p>
              */
             public Builder logoData(java.util.List<LogoData> logoData) {
                 this.logoData = logoData;
@@ -1437,6 +1587,17 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String tempUrl; 
             private Long timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Frames model) {
+                this.offset = model.offset;
+                this.results = model.results;
+                this.riskLevel = model.riskLevel;
+                this.tempUrl = model.tempUrl;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * <p>The interval between the start of the video file and the captured frame. Unit: seconds.</p>
              * 
@@ -1564,6 +1725,16 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private java.util.List<Frames> frames; 
             private String riskLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(FrameResult model) {
+                this.frameNum = model.frameNum;
+                this.frameSummarys = model.frameSummarys;
+                this.frames = model.frames;
+                this.riskLevel = model.riskLevel;
+            } 
+
             /**
              * <p>The number of captured frames that are returned for the video file.</p>
              * 
@@ -1628,6 +1799,9 @@ public class VideoModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LiveId")
         private String liveId;
 
+        @com.aliyun.core.annotation.NameInMap("ManualTaskId")
+        private String manualTaskId;
+
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
@@ -1639,6 +1813,7 @@ public class VideoModerationResultResponseBody extends TeaModel {
             this.dataId = builder.dataId;
             this.frameResult = builder.frameResult;
             this.liveId = builder.liveId;
+            this.manualTaskId = builder.manualTaskId;
             this.riskLevel = builder.riskLevel;
             this.taskId = builder.taskId;
         }
@@ -1680,6 +1855,13 @@ public class VideoModerationResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return manualTaskId
+         */
+        public String getManualTaskId() {
+            return this.manualTaskId;
+        }
+
+        /**
          * @return riskLevel
          */
         public String getRiskLevel() {
@@ -1698,8 +1880,22 @@ public class VideoModerationResultResponseBody extends TeaModel {
             private String dataId; 
             private FrameResult frameResult; 
             private String liveId; 
+            private String manualTaskId; 
             private String riskLevel; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.audioResult = model.audioResult;
+                this.dataId = model.dataId;
+                this.frameResult = model.frameResult;
+                this.liveId = model.liveId;
+                this.manualTaskId = model.manualTaskId;
+                this.riskLevel = model.riskLevel;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The voice moderation results. The moderation results contain a structure.</p>
@@ -1736,6 +1932,14 @@ public class VideoModerationResultResponseBody extends TeaModel {
              */
             public Builder liveId(String liveId) {
                 this.liveId = liveId;
+                return this;
+            }
+
+            /**
+             * ManualTaskId.
+             */
+            public Builder manualTaskId(String manualTaskId) {
+                this.manualTaskId = manualTaskId;
                 return this;
             }
 

@@ -44,6 +44,10 @@ public class ManualModerationResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class ManualModerationResultResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ManualModerationResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Code.
+         * <p>Error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -87,7 +104,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class ManualModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -103,7 +123,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -163,8 +183,19 @@ public class ManualModerationResultResponseBody extends TeaModel {
             private String description; 
             private String label; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.description = model.description;
+                this.label = model.label;
+            } 
+
             /**
-             * Description.
+             * <p>Label description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no risk</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -172,7 +203,10 @@ public class ManualModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Label.
+             * <p>Risk label</p>
+             * 
+             * <strong>example:</strong>
+             * <p>violent_explosion</p>
              */
             public Builder label(String label) {
                 this.label = label;
@@ -254,8 +288,21 @@ public class ManualModerationResultResponseBody extends TeaModel {
             private String riskLevel; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataId = model.dataId;
+                this.result = model.result;
+                this.riskLevel = model.riskLevel;
+                this.taskId = model.taskId;
+            } 
+
             /**
-             * DataId.
+             * <p>The value of dataId passed during the API request. This field will not be present if it was not provided during the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>data1234</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -263,7 +310,7 @@ public class ManualModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * <p>Detailed label results.</p>
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
@@ -271,7 +318,18 @@ public class ManualModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>Risk level, returned based on the set high and low risk scores. Possible values include:</p>
+             * <ul>
+             * <li><p>high: High risk</p>
+             * </li>
+             * <li><p>low: Low risk</p>
+             * </li>
+             * <li><p>none: No risk detected</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -279,7 +337,10 @@ public class ManualModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Task ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx-xxxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;

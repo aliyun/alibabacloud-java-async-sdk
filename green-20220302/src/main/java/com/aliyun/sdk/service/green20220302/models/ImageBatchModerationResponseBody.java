@@ -44,6 +44,10 @@ public class ImageBatchModerationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ImageBatchModerationResponseBody extends TeaModel {
         private Data data; 
         private String msg; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ImageBatchModerationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Return code. A return of 200 represents success.</p>
@@ -181,6 +195,15 @@ public class ImageBatchModerationResponseBody extends TeaModel {
             private String description; 
             private String label; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.confidence = model.confidence;
+                this.description = model.description;
+                this.label = model.label;
+            } 
+
             /**
              * <p>Confidence score, ranging from 0 to 100, retained to two decimal places. Some labels do not have a confidence score.</p>
              * 
@@ -276,6 +299,15 @@ public class ImageBatchModerationResponseBody extends TeaModel {
             private String imageId; 
             private String libId; 
             private String libName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomImage model) {
+                this.imageId = model.imageId;
+                this.libId = model.libId;
+                this.libName = model.libName;
+            } 
 
             /**
              * <p>The ID of the hit custom image.</p>
@@ -385,6 +417,16 @@ public class ImageBatchModerationResponseBody extends TeaModel {
             private Integer x; 
             private Integer y; 
 
+            private Builder() {
+            } 
+
+            private Builder(Location model) {
+                this.h = model.h;
+                this.w = model.w;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * <p>The width of the text area, in pixels.</p>
              * 
@@ -492,6 +534,15 @@ public class ImageBatchModerationResponseBody extends TeaModel {
             private String label; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Logo model) {
+                this.confidence = model.confidence;
+                this.label = model.label;
+                this.name = model.name;
+            } 
+
             /**
              * <p>Confidence score, from 0 to 100, rounded to two decimal places.</p>
              * 
@@ -575,6 +626,14 @@ public class ImageBatchModerationResponseBody extends TeaModel {
         public static final class Builder {
             private Location location; 
             private java.util.List<Logo> logo; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogoData model) {
+                this.location = model.location;
+                this.logo = model.logo;
+            } 
 
             /**
              * <p>The location information of the identifier.</p>
@@ -666,6 +725,16 @@ public class ImageBatchModerationResponseBody extends TeaModel {
             private Integer w; 
             private Integer x; 
             private Integer y; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicFigureLocation model) {
+                this.h = model.h;
+                this.w = model.w;
+                this.x = model.x;
+                this.y = model.y;
+            } 
 
             /**
              * <p>The width of the text area, in pixels.</p>
@@ -774,6 +843,15 @@ public class ImageBatchModerationResponseBody extends TeaModel {
             private String figureName; 
             private java.util.List<PublicFigureLocation> location; 
 
+            private Builder() {
+            } 
+
+            private Builder(PublicFigure model) {
+                this.figureId = model.figureId;
+                this.figureName = model.figureName;
+                this.location = model.location;
+            } 
+
             /**
              * <p>Identify the encoded information of the person.</p>
              * 
@@ -866,6 +944,15 @@ public class ImageBatchModerationResponseBody extends TeaModel {
             private String keyWords; 
             private String libId; 
             private String libName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomText model) {
+                this.keyWords = model.keyWords;
+                this.libId = model.libId;
+                this.libName = model.libName;
+            } 
 
             /**
              * <p>Custom words, separate multiple words with commas.</p>
@@ -975,6 +1062,16 @@ public class ImageBatchModerationResponseBody extends TeaModel {
             private Integer x; 
             private Integer y; 
 
+            private Builder() {
+            } 
+
+            private Builder(OcrResultLocation model) {
+                this.h = model.h;
+                this.w = model.w;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
             /**
              * <p>The height of the text area, in pixels.</p>
              * 
@@ -1070,6 +1167,14 @@ public class ImageBatchModerationResponseBody extends TeaModel {
             private OcrResultLocation location; 
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(OcrResult model) {
+                this.location = model.location;
+                this.text = model.text;
+            } 
+
             /**
              * <p>Text line coordinate information.</p>
              */
@@ -1151,6 +1256,15 @@ public class ImageBatchModerationResponseBody extends TeaModel {
             private java.util.List<CustomText> customText; 
             private java.util.List<OcrResult> ocrResult; 
             private java.util.List<String> riskWord; 
+
+            private Builder() {
+            } 
+
+            private Builder(TextInImage model) {
+                this.customText = model.customText;
+                this.ocrResult = model.ocrResult;
+                this.riskWord = model.riskWord;
+            } 
 
             /**
              * <p>When a custom text library is matched, return the custom library ID, custom library name, and custom words.</p>
@@ -1251,6 +1365,16 @@ public class ImageBatchModerationResponseBody extends TeaModel {
             private java.util.List<PublicFigure> publicFigure; 
             private TextInImage textInImage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ext model) {
+                this.customImage = model.customImage;
+                this.logoData = model.logoData;
+                this.publicFigure = model.publicFigure;
+                this.textInImage = model.textInImage;
+            } 
+
             /**
              * <p>Custom image library hit information list.</p>
              */
@@ -1345,6 +1469,15 @@ public class ImageBatchModerationResponseBody extends TeaModel {
             private Float confidence; 
             private String description; 
             private String label; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResultsResult model) {
+                this.confidence = model.confidence;
+                this.description = model.description;
+                this.label = model.label;
+            } 
 
             /**
              * <p>Confidence score, ranging from 0 to 100, rounded to two decimal places. Some labels do not have a confidence score.</p>
@@ -1454,6 +1587,16 @@ public class ImageBatchModerationResponseBody extends TeaModel {
             private String riskLevel; 
             private String service; 
 
+            private Builder() {
+            } 
+
+            private Builder(Results model) {
+                this.ext = model.ext;
+                this.result = model.result;
+                this.riskLevel = model.riskLevel;
+                this.service = model.service;
+            } 
+
             /**
              * <p>Image supplementary reference information.</p>
              */
@@ -1509,6 +1652,9 @@ public class ImageBatchModerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
+        @com.aliyun.core.annotation.NameInMap("ManualTaskId")
+        private String manualTaskId;
+
         @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List<Result> result;
 
@@ -1520,6 +1666,7 @@ public class ImageBatchModerationResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.dataId = builder.dataId;
+            this.manualTaskId = builder.manualTaskId;
             this.result = builder.result;
             this.results = builder.results;
             this.riskLevel = builder.riskLevel;
@@ -1538,6 +1685,13 @@ public class ImageBatchModerationResponseBody extends TeaModel {
          */
         public String getDataId() {
             return this.dataId;
+        }
+
+        /**
+         * @return manualTaskId
+         */
+        public String getManualTaskId() {
+            return this.manualTaskId;
         }
 
         /**
@@ -1563,9 +1717,21 @@ public class ImageBatchModerationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String dataId; 
+            private String manualTaskId; 
             private java.util.List<Result> result; 
             private java.util.List<Results> results; 
             private String riskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataId = model.dataId;
+                this.manualTaskId = model.manualTaskId;
+                this.result = model.result;
+                this.results = model.results;
+                this.riskLevel = model.riskLevel;
+            } 
 
             /**
              * <p>To detect the data ID corresponding to the object.</p>
@@ -1575,6 +1741,14 @@ public class ImageBatchModerationResponseBody extends TeaModel {
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
+                return this;
+            }
+
+            /**
+             * ManualTaskId.
+             */
+            public Builder manualTaskId(String manualTaskId) {
+                this.manualTaskId = manualTaskId;
                 return this;
             }
 

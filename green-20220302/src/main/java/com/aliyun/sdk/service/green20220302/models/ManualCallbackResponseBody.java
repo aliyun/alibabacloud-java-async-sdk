@@ -40,6 +40,10 @@ public class ManualCallbackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -66,8 +70,20 @@ public class ManualCallbackResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ManualCallbackResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Code.
+         * <p>Error code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -75,7 +91,10 @@ public class ManualCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Message information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -83,7 +102,7 @@ public class ManualCallbackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>

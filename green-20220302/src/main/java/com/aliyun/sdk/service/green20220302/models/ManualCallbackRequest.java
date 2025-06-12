@@ -59,7 +59,7 @@ public class ManualCallbackRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -129,7 +129,10 @@ public class ManualCallbackRequest extends Request {
         } 
 
         /**
-         * Channel.
+         * <p>Channel field</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ant</p>
          */
         public Builder channel(String channel) {
             this.putBodyParameter("Channel", channel);
@@ -138,7 +141,10 @@ public class ManualCallbackRequest extends Request {
         }
 
         /**
-         * Checksum.
+         * <p>Checksum.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder checksum(String checksum) {
             this.putBodyParameter("Checksum", checksum);
@@ -147,7 +153,10 @@ public class ManualCallbackRequest extends Request {
         }
 
         /**
-         * Code.
+         * <p>Code value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.putBodyParameter("Code", code);
@@ -156,7 +165,10 @@ public class ManualCallbackRequest extends Request {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Result&quot;: [{&quot;Confidence&quot;: 100.0, &quot;CustomizedHit&quot;: [{&quot;KeyWords&quot;: u&quot;\u4fdd\u969c,\u6700\u5927,\u9ad8\u7ea7&quot;, &quot;LibName&quot;: u&quot;\u4f18\u8def\u654f\u611f\u8bcd&quot;}], &quot;Label&quot;: &quot;customized&quot;}]}</p>
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -165,7 +177,10 @@ public class ManualCallbackRequest extends Request {
         }
 
         /**
-         * Msg.
+         * <p>Message information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder msg(String msg) {
             this.putBodyParameter("Msg", msg);
@@ -174,7 +189,10 @@ public class ManualCallbackRequest extends Request {
         }
 
         /**
-         * ReqId.
+         * <p>Platform request ID, used for troubleshooting assistance</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B0963D30-BAB4-562F-9ED0-7A23AEC51C7C</p>
          */
         public Builder reqId(String reqId) {
             this.putBodyParameter("ReqId", reqId);

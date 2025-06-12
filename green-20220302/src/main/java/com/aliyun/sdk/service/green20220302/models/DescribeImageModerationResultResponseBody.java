@@ -44,6 +44,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         private Data data; 
         private String msg; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeImageModerationResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned HTTP status code.</p>
@@ -193,6 +207,16 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             private String label; 
             private String riskLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.confidence = model.confidence;
+                this.description = model.description;
+                this.label = model.label;
+                this.riskLevel = model.riskLevel;
+            } 
+
             /**
              * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
              * 
@@ -227,7 +251,10 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             }
 
             /**
-             * RiskLevel.
+             * <p>Risk Level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder riskLevel(String riskLevel) {
                 this.riskLevel = riskLevel;
@@ -257,6 +284,9 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FrameNum")
         private Integer frameNum;
 
+        @com.aliyun.core.annotation.NameInMap("ManualTaskId")
+        private String manualTaskId;
+
         @com.aliyun.core.annotation.NameInMap("ReqId")
         private String reqId;
 
@@ -270,6 +300,7 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             this.dataId = builder.dataId;
             this.frame = builder.frame;
             this.frameNum = builder.frameNum;
+            this.manualTaskId = builder.manualTaskId;
             this.reqId = builder.reqId;
             this.result = builder.result;
             this.riskLevel = builder.riskLevel;
@@ -305,6 +336,13 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return manualTaskId
+         */
+        public String getManualTaskId() {
+            return this.manualTaskId;
+        }
+
+        /**
          * @return reqId
          */
         public String getReqId() {
@@ -329,9 +367,23 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
             private String dataId; 
             private String frame; 
             private Integer frameNum; 
+            private String manualTaskId; 
             private String reqId; 
             private java.util.List<Result> result; 
             private String riskLevel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataId = model.dataId;
+                this.frame = model.frame;
+                this.frameNum = model.frameNum;
+                this.manualTaskId = model.manualTaskId;
+                this.reqId = model.reqId;
+                this.result = model.result;
+                this.riskLevel = model.riskLevel;
+            } 
 
             /**
              * <p>The value of dataId that is specified in the API request. If this parameter is not specified in the API request, this field is not available in the response.</p>
@@ -363,6 +415,14 @@ public class DescribeImageModerationResultResponseBody extends TeaModel {
              */
             public Builder frameNum(Integer frameNum) {
                 this.frameNum = frameNum;
+                return this;
+            }
+
+            /**
+             * ManualTaskId.
+             */
+            public Builder manualTaskId(String manualTaskId) {
+                this.manualTaskId = manualTaskId;
                 return this;
             }
 

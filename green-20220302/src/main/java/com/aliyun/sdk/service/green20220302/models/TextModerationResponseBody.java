@@ -44,6 +44,10 @@ public class TextModerationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class TextModerationResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TextModerationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned HTTP status code.</p>
@@ -147,6 +161,9 @@ public class TextModerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("labels")
         private String labels;
 
+        @com.aliyun.core.annotation.NameInMap("manualTaskId")
+        private String manualTaskId;
+
         @com.aliyun.core.annotation.NameInMap("reason")
         private String reason;
 
@@ -156,6 +173,7 @@ public class TextModerationResponseBody extends TeaModel {
             this.descriptions = builder.descriptions;
             this.deviceId = builder.deviceId;
             this.labels = builder.labels;
+            this.manualTaskId = builder.manualTaskId;
             this.reason = builder.reason;
         }
 
@@ -203,6 +221,13 @@ public class TextModerationResponseBody extends TeaModel {
         }
 
         /**
+         * @return manualTaskId
+         */
+        public String getManualTaskId() {
+            return this.manualTaskId;
+        }
+
+        /**
          * @return reason
          */
         public String getReason() {
@@ -215,7 +240,21 @@ public class TextModerationResponseBody extends TeaModel {
             private String descriptions; 
             private String deviceId; 
             private String labels; 
+            private String manualTaskId; 
             private String reason; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accountId = model.accountId;
+                this.dataId = model.dataId;
+                this.descriptions = model.descriptions;
+                this.deviceId = model.deviceId;
+                this.labels = model.labels;
+                this.manualTaskId = model.manualTaskId;
+                this.reason = model.reason;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>
@@ -229,7 +268,10 @@ public class TextModerationResponseBody extends TeaModel {
             }
 
             /**
-             * dataId.
+             * <p>The ID of the moderated object.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>text1234</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -237,7 +279,10 @@ public class TextModerationResponseBody extends TeaModel {
             }
 
             /**
-             * descriptions.
+             * <p>The description of the labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no risk</p>
              */
             public Builder descriptions(String descriptions) {
                 this.descriptions = descriptions;
@@ -256,7 +301,7 @@ public class TextModerationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Labels.</p>
+             * <p>The labels. Multiple labels are separated by commas (,). Valid values: ad: ad violation profanity: abuse contraband: contraband sexual_content: pornography violence: violence nonsense: irrigation spam: spam negative_content: undesirable content cyberbullying: cyberbullying C_customized: custom library that is hit</p>
              * 
              * <strong>example:</strong>
              * <p>porn</p>
@@ -267,7 +312,15 @@ public class TextModerationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The JSON string used to locate the cause.</p>
+             * manualTaskId.
+             */
+            public Builder manualTaskId(String manualTaskId) {
+                this.manualTaskId = manualTaskId;
+                return this;
+            }
+
+            /**
+             * <p>The JSON string used to locate the cause. Valid values: riskTips: subcategory label riskWords: risk words adNums: hit advertising number customizedWords: customized words customizedLibs: customized libraries</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;detectedLanguage&quot;:&quot;ar&quot;,&quot;riskTips&quot;:&quot;sexuality_Suggestive&quot;,&quot;riskWords&quot;:&quot;pxxxxy&quot;,&quot;translatedContent&quot;:&quot;pxxxxy sxxxx&quot;}</p>

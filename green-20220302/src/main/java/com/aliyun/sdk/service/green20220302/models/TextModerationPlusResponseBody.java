@@ -44,6 +44,10 @@ public class TextModerationPlusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class TextModerationPlusResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TextModerationPlusResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -180,6 +194,15 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private String answer; 
             private String hitLabel; 
             private String hitLibName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Advice model) {
+                this.answer = model.answer;
+                this.hitLabel = model.hitLabel;
+                this.hitLibName = model.hitLibName;
+            } 
 
             /**
              * <p>The answer.</p>
@@ -289,6 +312,16 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private String description; 
             private String label; 
 
+            private Builder() {
+            } 
+
+            private Builder(AttackResult model) {
+                this.attackLevel = model.attackLevel;
+                this.confidence = model.confidence;
+                this.description = model.description;
+                this.label = model.label;
+            } 
+
             /**
              * <p>The level of prompt attack</p>
              * 
@@ -383,6 +416,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
         public static final class Builder {
             private String keyWords; 
             private String libName; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomizedHit model) {
+                this.keyWords = model.keyWords;
+                this.libName = model.libName;
+            } 
 
             /**
              * <p>The terms that are hit. Multiple terms are separated by commas (,).</p>
@@ -492,6 +533,17 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private String description; 
             private String label; 
             private String riskWords; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.confidence = model.confidence;
+                this.customizedHit = model.customizedHit;
+                this.description = model.description;
+                this.label = model.label;
+                this.riskWords = model.riskWords;
+            } 
 
             /**
              * <p>The score of the confidence level. Valid values: 0 to 100. The value is accurate to two decimal places.</p>
@@ -620,6 +672,16 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private java.util.List<String> sensitiveData; 
             private String sensitiveLevel; 
 
+            private Builder() {
+            } 
+
+            private Builder(SensitiveResult model) {
+                this.description = model.description;
+                this.label = model.label;
+                this.sensitiveData = model.sensitiveData;
+                this.sensitiveLevel = model.sensitiveLevel;
+            } 
+
             /**
              * <p>Description</p>
              * 
@@ -687,6 +749,9 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
+        @com.aliyun.core.annotation.NameInMap("ManualTaskId")
+        private String manualTaskId;
+
         @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List<Result> result;
 
@@ -707,6 +772,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
             this.attackLevel = builder.attackLevel;
             this.attackResult = builder.attackResult;
             this.dataId = builder.dataId;
+            this.manualTaskId = builder.manualTaskId;
             this.result = builder.result;
             this.riskLevel = builder.riskLevel;
             this.score = builder.score;
@@ -751,6 +817,13 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         /**
+         * @return manualTaskId
+         */
+        public String getManualTaskId() {
+            return this.manualTaskId;
+        }
+
+        /**
          * @return result
          */
         public java.util.List<Result> getResult() {
@@ -790,11 +863,28 @@ public class TextModerationPlusResponseBody extends TeaModel {
             private String attackLevel; 
             private java.util.List<AttackResult> attackResult; 
             private String dataId; 
+            private String manualTaskId; 
             private java.util.List<Result> result; 
             private String riskLevel; 
             private Float score; 
             private String sensitiveLevel; 
             private java.util.List<SensitiveResult> sensitiveResult; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.advice = model.advice;
+                this.attackLevel = model.attackLevel;
+                this.attackResult = model.attackResult;
+                this.dataId = model.dataId;
+                this.manualTaskId = model.manualTaskId;
+                this.result = model.result;
+                this.riskLevel = model.riskLevel;
+                this.score = model.score;
+                this.sensitiveLevel = model.sensitiveLevel;
+                this.sensitiveResult = model.sensitiveResult;
+            } 
 
             /**
              * <p>The suggestion.</p>
@@ -831,6 +921,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
+                return this;
+            }
+
+            /**
+             * ManualTaskId.
+             */
+            public Builder manualTaskId(String manualTaskId) {
+                this.manualTaskId = manualTaskId;
                 return this;
             }
 

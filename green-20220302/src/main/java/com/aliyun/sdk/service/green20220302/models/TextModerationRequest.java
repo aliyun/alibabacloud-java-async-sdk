@@ -39,7 +39,7 @@ public class TextModerationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +73,17 @@ public class TextModerationRequest extends Request {
         } 
 
         /**
-         * <p>The type of the moderation service.</p>
+         * <p>The type of the moderation service. Valid values: nickname_detection: user nickname chat_detection: chat interactions comment_detection: dynamic comments pgc_detection: professionally-generated content (PGC) teaching materials</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>pgc_detection: moderation of PGC teaching materials</li>
+         * <li>nickname_detection: user nickname moderation</li>
+         * <li>comment_multilingual_pro: multi-language moderation in international business scenarios</li>
+         * <li>chat_detection: moderation of interactive content of private chats</li>
+         * <li>ad_compliance_detection: advertising law compliance identification</li>
+         * <li>comment_detection: moderation of comment content of public chats</li>
+         * <li>ai_art_detection: AI-generated text identfication</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>nickname_detection</p>

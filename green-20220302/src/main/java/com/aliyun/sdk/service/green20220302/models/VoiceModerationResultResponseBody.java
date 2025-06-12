@@ -44,6 +44,10 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(VoiceModerationResultResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned HTTP status code.</p>
@@ -313,8 +327,31 @@ public class VoiceModerationResultResponseBody extends TeaModel {
             private String text; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(SliceDetails model) {
+                this.descriptions = model.descriptions;
+                this.endTime = model.endTime;
+                this.endTimestamp = model.endTimestamp;
+                this.extend = model.extend;
+                this.labels = model.labels;
+                this.originAlgoResult = model.originAlgoResult;
+                this.riskLevel = model.riskLevel;
+                this.riskTips = model.riskTips;
+                this.riskWords = model.riskWords;
+                this.score = model.score;
+                this.startTime = model.startTime;
+                this.startTimestamp = model.startTimestamp;
+                this.text = model.text;
+                this.url = model.url;
+            } 
+
             /**
-             * Descriptions.
+             * <p>The description of the labels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>no risk</p>
              */
             public Builder descriptions(String descriptions) {
                 this.descriptions = descriptions;
@@ -484,6 +521,9 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LiveId")
         private String liveId;
 
+        @com.aliyun.core.annotation.NameInMap("ManualTaskId")
+        private String manualTaskId;
+
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
@@ -499,6 +539,7 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.dataId = builder.dataId;
             this.liveId = builder.liveId;
+            this.manualTaskId = builder.manualTaskId;
             this.riskLevel = builder.riskLevel;
             this.sliceDetails = builder.sliceDetails;
             this.taskId = builder.taskId;
@@ -525,6 +566,13 @@ public class VoiceModerationResultResponseBody extends TeaModel {
          */
         public String getLiveId() {
             return this.liveId;
+        }
+
+        /**
+         * @return manualTaskId
+         */
+        public String getManualTaskId() {
+            return this.manualTaskId;
         }
 
         /**
@@ -558,10 +606,24 @@ public class VoiceModerationResultResponseBody extends TeaModel {
         public static final class Builder {
             private String dataId; 
             private String liveId; 
+            private String manualTaskId; 
             private String riskLevel; 
             private java.util.List<SliceDetails> sliceDetails; 
             private String taskId; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataId = model.dataId;
+                this.liveId = model.liveId;
+                this.manualTaskId = model.manualTaskId;
+                this.riskLevel = model.riskLevel;
+                this.sliceDetails = model.sliceDetails;
+                this.taskId = model.taskId;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The ID of the moderated object.</p>
@@ -582,6 +644,14 @@ public class VoiceModerationResultResponseBody extends TeaModel {
              */
             public Builder liveId(String liveId) {
                 this.liveId = liveId;
+                return this;
+            }
+
+            /**
+             * ManualTaskId.
+             */
+            public Builder manualTaskId(String manualTaskId) {
+                this.manualTaskId = manualTaskId;
                 return this;
             }
 

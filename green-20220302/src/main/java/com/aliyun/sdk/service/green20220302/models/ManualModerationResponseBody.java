@@ -44,6 +44,10 @@ public class ManualModerationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,21 @@ public class ManualModerationResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ManualModerationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Code.
+         * <p>Status code</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -87,7 +104,7 @@ public class ManualModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -95,7 +112,10 @@ public class ManualModerationResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -103,7 +123,7 @@ public class ManualModerationResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</p>
@@ -163,8 +183,19 @@ public class ManualModerationResponseBody extends TeaModel {
             private String dataId; 
             private String taskId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataId = model.dataId;
+                this.taskId = model.taskId;
+            } 
+
             /**
-             * DataId.
+             * <p>The value of dataId passed during the API request. This field will not be present if it was not provided during the request.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2a5389eb-4ff8-4584-ac99-644e2a539aa1</p>
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
@@ -172,7 +203,10 @@ public class ManualModerationResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * <p>Task ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxxxx-xxxxx</p>
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
