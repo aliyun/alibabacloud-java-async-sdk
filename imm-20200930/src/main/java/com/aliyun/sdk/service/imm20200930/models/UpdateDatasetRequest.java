@@ -59,6 +59,10 @@ public class UpdateDatasetRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowParameters")
+    private java.util.List<WorkflowParameter> workflowParameters;
+
     private UpdateDatasetRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -71,6 +75,7 @@ public class UpdateDatasetRequest extends Request {
         this.description = builder.description;
         this.projectName = builder.projectName;
         this.templateId = builder.templateId;
+        this.workflowParameters = builder.workflowParameters;
     }
 
     public static Builder builder() {
@@ -156,6 +161,13 @@ public class UpdateDatasetRequest extends Request {
         return this.templateId;
     }
 
+    /**
+     * @return workflowParameters
+     */
+    public java.util.List<WorkflowParameter> getWorkflowParameters() {
+        return this.workflowParameters;
+    }
+
     public static final class Builder extends Request.Builder<UpdateDatasetRequest, Builder> {
         private String regionId; 
         private Long datasetMaxBindCount; 
@@ -167,6 +179,7 @@ public class UpdateDatasetRequest extends Request {
         private String description; 
         private String projectName; 
         private String templateId; 
+        private java.util.List<WorkflowParameter> workflowParameters; 
 
         private Builder() {
             super();
@@ -184,6 +197,7 @@ public class UpdateDatasetRequest extends Request {
             this.description = request.description;
             this.projectName = request.projectName;
             this.templateId = request.templateId;
+            this.workflowParameters = request.workflowParameters;
         } 
 
         /**
@@ -279,6 +293,16 @@ public class UpdateDatasetRequest extends Request {
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
             this.templateId = templateId;
+            return this;
+        }
+
+        /**
+         * WorkflowParameters.
+         */
+        public Builder workflowParameters(java.util.List<WorkflowParameter> workflowParameters) {
+            String workflowParametersShrink = shrink(workflowParameters, "WorkflowParameters", "json");
+            this.putQueryParameter("WorkflowParameters", workflowParametersShrink);
+            this.workflowParameters = workflowParameters;
             return this;
         }
 

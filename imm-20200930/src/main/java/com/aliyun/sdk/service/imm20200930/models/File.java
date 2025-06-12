@@ -128,6 +128,9 @@ public class File extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ImageWidth")
     private Long imageWidth;
 
+    @com.aliyun.core.annotation.NameInMap("Insights")
+    private Insights insights;
+
     @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List<Label> labels;
 
@@ -304,6 +307,7 @@ public class File extends TeaModel {
         this.imageHeight = builder.imageHeight;
         this.imageScore = builder.imageScore;
         this.imageWidth = builder.imageWidth;
+        this.insights = builder.insights;
         this.labels = builder.labels;
         this.language = builder.language;
         this.latLong = builder.latLong;
@@ -621,6 +625,13 @@ public class File extends TeaModel {
      */
     public Long getImageWidth() {
         return this.imageWidth;
+    }
+
+    /**
+     * @return insights
+     */
+    public Insights getInsights() {
+        return this.insights;
     }
 
     /**
@@ -983,6 +994,7 @@ public class File extends TeaModel {
         private Long imageHeight; 
         private ImageScore imageScore; 
         private Long imageWidth; 
+        private Insights insights; 
         private java.util.List<Label> labels; 
         private String language; 
         private String latLong; 
@@ -1071,6 +1083,7 @@ public class File extends TeaModel {
             this.imageHeight = model.imageHeight;
             this.imageScore = model.imageScore;
             this.imageWidth = model.imageWidth;
+            this.insights = model.insights;
             this.labels = model.labels;
             this.language = model.language;
             this.latLong = model.latLong;
@@ -1412,6 +1425,14 @@ public class File extends TeaModel {
          */
         public Builder imageWidth(Long imageWidth) {
             this.imageWidth = imageWidth;
+            return this;
+        }
+
+        /**
+         * Insights.
+         */
+        public Builder insights(Insights insights) {
+            this.insights = insights;
             return this;
         }
 
