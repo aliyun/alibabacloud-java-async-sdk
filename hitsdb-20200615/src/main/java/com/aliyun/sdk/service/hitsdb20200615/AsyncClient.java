@@ -200,6 +200,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLindormV2StorageUsageResponse> getLindormV2StorageUsage(GetLindormV2StorageUsageRequest request);
 
     /**
+     * @param request the request parameters of GetLindormV2StreamEngineInfo  GetLindormV2StreamEngineInfoRequest
+     * @return GetLindormV2StreamEngineInfoResponse
+     */
+    CompletableFuture<GetLindormV2StreamEngineInfoResponse> getLindormV2StreamEngineInfo(GetLindormV2StreamEngineInfoRequest request);
+
+    /**
      * @param request the request parameters of ListAutoScalingConfigs  ListAutoScalingConfigsRequest
      * @return ListAutoScalingConfigsResponse
      */

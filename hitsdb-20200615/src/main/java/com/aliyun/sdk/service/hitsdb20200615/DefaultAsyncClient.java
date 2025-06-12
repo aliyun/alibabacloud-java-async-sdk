@@ -568,6 +568,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetLindormV2StreamEngineInfo  GetLindormV2StreamEngineInfoRequest
+     * @return GetLindormV2StreamEngineInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetLindormV2StreamEngineInfoResponse> getLindormV2StreamEngineInfo(GetLindormV2StreamEngineInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetLindormV2StreamEngineInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLindormV2StreamEngineInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLindormV2StreamEngineInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListAutoScalingConfigs  ListAutoScalingConfigsRequest
      * @return ListAutoScalingConfigsResponse
      */
