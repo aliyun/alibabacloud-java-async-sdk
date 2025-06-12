@@ -128,6 +128,9 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
+        @com.aliyun.core.annotation.NameInMap("FailedDetail")
+        private String failedDetail;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -140,6 +143,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
         private Connection(Builder builder) {
             this.closedReason = builder.closedReason;
             this.endTime = builder.endTime;
+            this.failedDetail = builder.failedDetail;
             this.instanceId = builder.instanceId;
             this.startTime = builder.startTime;
             this.status = builder.status;
@@ -168,6 +172,13 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return failedDetail
+         */
+        public String getFailedDetail() {
+            return this.failedDetail;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
@@ -191,6 +202,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
         public static final class Builder {
             private String closedReason; 
             private String endTime; 
+            private String failedDetail; 
             private String instanceId; 
             private String startTime; 
             private String status; 
@@ -201,6 +213,7 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
             private Builder(Connection model) {
                 this.closedReason = model.closedReason;
                 this.endTime = model.endTime;
+                this.failedDetail = model.failedDetail;
                 this.instanceId = model.instanceId;
                 this.startTime = model.startTime;
                 this.status = model.status;
@@ -235,6 +248,14 @@ public class DescribeTerminalSessionsResponseBody extends TeaModel {
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
+                return this;
+            }
+
+            /**
+             * FailedDetail.
+             */
+            public Builder failedDetail(String failedDetail) {
+                this.failedDetail = failedDetail;
                 return this;
             }
 

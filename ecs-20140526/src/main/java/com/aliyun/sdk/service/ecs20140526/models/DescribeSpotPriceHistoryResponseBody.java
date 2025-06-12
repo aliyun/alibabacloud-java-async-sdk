@@ -93,7 +93,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance type of the preemptible instance.</p>
+         * <p>The instance type of the spot instance.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -104,7 +104,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The network type of the preemptible instance.</p>
+         * <p>The network type of the spot instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -115,7 +115,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance type of the preemptible instance.</p>
+         * <p>The instance type of the spot instance.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -126,7 +126,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The zone ID of the preemptible instance.</p>
+         * <p>The zone ID of the spot instance.</p>
          */
         public Builder spotPrices(SpotPrices spotPrices) {
             this.spotPrices = spotPrices;
@@ -257,7 +257,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The instance type of the preemptible instance.</p>
+             * <p>The instance type of the spot instance.</p>
              * 
              * <strong>example:</strong>
              * <p>ecs.g5.large</p>
@@ -268,7 +268,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Details about the price history of the preemptible instance.</p>
+             * <p>Details about the price history of the spot instance.</p>
              * 
              * <strong>example:</strong>
              * <p>optimized</p>
@@ -279,7 +279,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Queries the price history of a preemptible instance within the last 30 days.</p>
+             * <p>Queries the price history of a spot instance within the last 30 days.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc</p>
@@ -290,7 +290,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price for a pay-as-you-go instance that has the same configuration as the specified preemptible instance.</p>
+             * <p>The price for a pay-as-you-go instance that has the same configuration as the specified spot instance.</p>
              * 
              * <strong>example:</strong>
              * <p>0.354</p>
@@ -301,7 +301,7 @@ public class DescribeSpotPriceHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price for a pay-as-you-go instance that has the same configurations as the preemptible instance.</p>
+             * <p>The price for a pay-as-you-go instance that has the same configurations as the spot instance.</p>
              * 
              * <strong>example:</strong>
              * <p>0.036</p>

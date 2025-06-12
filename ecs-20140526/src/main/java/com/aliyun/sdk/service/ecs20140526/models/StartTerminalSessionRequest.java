@@ -43,6 +43,10 @@ public class StartTerminalSessionRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordName")
+    private String passwordName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PortNumber")
     private Integer portNumber;
 
@@ -75,6 +79,7 @@ public class StartTerminalSessionRequest extends Request {
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.passwordName = builder.passwordName;
         this.portNumber = builder.portNumber;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -139,6 +144,13 @@ public class StartTerminalSessionRequest extends Request {
     }
 
     /**
+     * @return passwordName
+     */
+    public String getPasswordName() {
+        return this.passwordName;
+    }
+
+    /**
      * @return portNumber
      */
     public Integer getPortNumber() {
@@ -187,6 +199,7 @@ public class StartTerminalSessionRequest extends Request {
         private java.util.List<String> instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String passwordName; 
         private Integer portNumber; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -206,6 +219,7 @@ public class StartTerminalSessionRequest extends Request {
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.passwordName = request.passwordName;
             this.portNumber = request.portNumber;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -272,6 +286,15 @@ public class StartTerminalSessionRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * PasswordName.
+         */
+        public Builder passwordName(String passwordName) {
+            this.putQueryParameter("PasswordName", passwordName);
+            this.passwordName = passwordName;
             return this;
         }
 

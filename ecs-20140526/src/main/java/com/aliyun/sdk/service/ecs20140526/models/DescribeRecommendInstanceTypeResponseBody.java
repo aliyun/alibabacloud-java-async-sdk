@@ -75,7 +75,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -375,7 +375,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The details of network types of instance types.</p>
+             * <p>The details of the network types of the instance type.</p>
              */
             public Builder networkTypes(NetworkTypes networkTypes) {
                 this.networkTypes = networkTypes;
@@ -383,7 +383,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the zone where the instance type is available.</p>
+             * <p>The ID of the zone in which the instance type is available.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-h</p>
@@ -622,7 +622,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The billing method of the instance.</p>
+             * <p>The billing method of the instances.</p>
              * 
              * <strong>example:</strong>
              * <p>PostPaid</p>
@@ -633,7 +633,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the instance type.</p>
+             * <p>The details of the instance type.</p>
              */
             public Builder instanceType(InstanceType instanceType) {
                 this.instanceType = instanceType;
@@ -641,7 +641,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the instance.</p>
+             * <p>The network type of the ECS instances.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc</p>
@@ -663,7 +663,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The region ID of the instance type.</p>
+             * <p>The ID of the region in which the instance type is available.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -674,7 +674,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The scenarios in which the instance type is recommended.</p>
+             * <p>The scenario in which the instance type is recommended.</p>
              * 
              * <strong>example:</strong>
              * <p>CREATE</p>
@@ -685,7 +685,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bidding policy for the preemptible instance.</p>
+             * <p>The bidding policy for the spot instances.</p>
              * 
              * <strong>example:</strong>
              * <p>NoSpot</p>
@@ -707,7 +707,7 @@ public class DescribeRecommendInstanceTypeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The details of the zones where the instance types resides.</p>
+             * <p>The details of the zones in which the instance type is available.</p>
              */
             public Builder zones(Zones zones) {
                 this.zones = zones;

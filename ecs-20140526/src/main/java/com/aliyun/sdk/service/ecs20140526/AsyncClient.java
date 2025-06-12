@@ -503,9 +503,9 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <h2><a href="#"></a>Usage notes</h2>
      * <ul>
-     * <li>Auto Provisioning is a service that allows quick deployment of an instance cluster that consists of preemptible instances and pay-as-you-go instances. Auto Provisioning supports push-button deployment of instance clusters across different billing methods, instance families, and zones. For more information, see <a href="https://help.aliyun.com/document_detail/200772.html">Use auto provisioning group-related API operations to create multiple ECS instances at the same time</a>.</li>
-     * <li>Auto Provisioning uses auto provisioning groups to schedule and maintain computing resources. You can use auto provisioning groups to obtain a steady supply of computing resources. This helps reduce the impact on compute capacity when preemptible instances are reclaimed.</li>
-     * <li>Auto Provisioning is provided free of charge. However, you are charged for instance resources that are created in auto provisioning groups. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Overview of preemptible instances</a> and <a href="https://help.aliyun.com/document_detail/40653.html">Pay-as-you-go</a>.</li>
+     * <li>Auto Provisioning is a service that allows quick deployment of an instance cluster that consists of spot instances and pay-as-you-go instances. Auto Provisioning supports push-button deployment of instance clusters across different billing methods, instance families, and zones. For more information, see <a href="https://help.aliyun.com/document_detail/200772.html">Use auto provisioning group-related API operations to create multiple ECS instances at the same time</a>.</li>
+     * <li>Auto Provisioning uses auto provisioning groups to schedule and maintain computing resources. You can use auto provisioning groups to obtain a steady supply of computing resources. This helps reduce the impact on compute capacity when spot instances are reclaimed.</li>
+     * <li>Auto Provisioning is provided free of charge. However, you are charged for instance resources that are created in auto provisioning groups. For more information, see <a href="https://help.aliyun.com/document_detail/52088.html">Overview of spot instances</a> and <a href="https://help.aliyun.com/document_detail/40653.html">Pay-as-you-go</a>.</li>
      * <li>When you specify both a launch template (<code>LaunchTemplateId</code>) and extended configurations (<code>LaunchConfiguration.*</code> parameters), LaunchTemplateId takes precedence.</li>
      * </ul>
      * 
@@ -2468,7 +2468,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is applicable only to I/O optimized preemptible instances that reside in virtual private clouds (VPCs).</p>
+     * <p>  This operation is applicable only to I/O optimized spot instances that reside in virtual private clouds (VPCs).</p>
      * <ul>
      * <li>You can use one of the following methods to call this operation:<ul>
      * <li>Specify <code>Cores</code> and <code>Memory</code> or <code>MinCores</code> and <code>MinMemory</code> to query information about the instance types that meet the specified vCPU and memory requirements.</li>
@@ -2476,7 +2476,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <li>Specify <code>Cores</code> and <code>Memory</code> or <code>MinCores</code> and <code>MinMemory</code>, and then specify <code>InstanceTypeFamily</code> or <code>InstanceFamilyLevel</code> to query information about the instance types that meet the specified vCPU and memory requirements within the specified instance family or at a specified instance family level.</li>
      * </ul>
      * </li>
-     * <li>You can calculate the average price of preemptible instances based on the percentage of the average preemptible instance price relative to the pay-as-you-go instance price and the pay-as-you-go instance price.</li>
+     * <li>You can calculate the average price of spot instances based on the percentage of the average spot instance price relative to the pay-as-you-go instance price and the pay-as-you-go instance price.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeSpotAdvice  DescribeSpotAdviceRequest
@@ -2486,7 +2486,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>  This operation is applicable only to I/O optimized preemptible instances.</p>
+     * <p>  This operation is applicable only to I/O optimized spot instances.</p>
      * <ul>
      * <li>The data returned by the interface may be paginated. If the returned data contains the <code>NextOffset</code> parameter, you can set the <code>Offset</code> parameter in the request to the value of the <code>NextOffset</code> parameter for subsequent data query.</li>
      * </ul>
@@ -3453,7 +3453,7 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <li>The network type of the instance must be Virtual Private Cloud (VPC).</li>
      * <li>The instance and the destination dedicated host to which to migrate the instance must belong to the same account and reside in the same region and zone.</li>
      * <li>A pay-as-you-go instance can be migrated to a subscription dedicated host. A subscription instance can be migrated only between subscription dedicated hosts. The expiration date of the subscription instance cannot be later than that of the destination dedicated host.</li>
-     * <li>You can migrate only pay-as-you-go instances from a shared host to a dedicated host. You cannot migrate subscription instances or preemptible instances from a shared host to a dedicated host.</li>
+     * <li>You can migrate only pay-as-you-go instances from a shared host to a dedicated host. You cannot migrate subscription instances or spot instances from a shared host to a dedicated host.</li>
      * <li>You can redeploy an instance to a specific dedicated host cluster.</li>
      * </ul>
      * 
@@ -4497,11 +4497,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      *     Amount:10, //Set the number of ECS instances that you want to create to 10.
      *     InstanceChargeType:&quot;PostPaid&quot;, //Set the billing method to PostPaid, which specifies the pay-as-you-go billing method.
      *     SpotStrategy:&quot;NoSpot&quot; //Set this parameter to NoSpot, which is the default value and specifies that the instances are created as pay-as-you-go instances.
-     * <strong>Example: Create 20 preemptible instances that use a specific bidding policy and a protection period</strong>
+     * <strong>Example: Create 20 spot instances that use a specific bidding policy and a protection period</strong>
      *     Amount:20, //Set the number of ECS instances that you want to create to 20.
      *     InstanceChargeType:&quot;PostPaid&quot;,
-     *     SpotStrategy:&quot;SpotAsPriceGo&quot;, //Set the bidding policy to SpotAsPriceGo, which specifies that the instances are created as preemptible instances for which the market price at the time of purchase is automatically used as the bid price.
-     *     SpotDuration:1 //Set the protection period of the preemptible instances to 1. Unit: hours.
+     *     SpotStrategy:&quot;SpotAsPriceGo&quot;, //Set the bidding policy to SpotAsPriceGo, which specifies that the instances are created as spot instances for which the market price at the time of purchase is automatically used as the bid price.
+     *     SpotDuration:1 //Set the protection period of the spot instances to 1. Unit: hours.
      * Use a launch template created by calling the <a href="https://help.aliyun.com/document_detail/2679729.html">CreateLaunchTemplate</a> operation to create ECS instances in the China (Hangzhou) region. Examples:
      * <strong>Example: Create 10 ECS instances based on a launch template</strong>
      *     RegionId:&quot;cn-hangzhou&quot;, //Set the region ID to cn-hangzhou, which specifies the China (Hangzhou) region.
@@ -4635,11 +4635,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>This operation is an asynchronous operation. After you call this operation to stop ECS instances, the operation sets the status of the ECS instances to Stopping and begins the stop process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instances. When the status of the ECS instances changes to <code>Stopped</code>, the instances are stopped.</p>
-     * <h3><a href="#"></a>Precautions</h3>
+     * <p>This operation is an asynchronous operation. After you call this operation to stop an ECS instance, the operation sets the status of the ECS instance to Stopping and begins the stop process. You can call the <a href="https://help.aliyun.com/document_detail/2679688.html">DescribeInstanceStatus</a> operation to query the status of the ECS instance. When the status of the ECS instance changes to <code>Stopped</code>, the instance is stopped.</p>
+     * <h3><a href="#"></a>Considerations</h3>
      * <ul>
+     * <li>The instance is unavailable after you stop the instance. Make sure that stopping the instance does not affect your business. You can also call the <a href="https://help.aliyun.com/document_detail/2679679.html">StartInstance</a> or <a href="https://help.aliyun.com/document_detail/2679680.html">StartInstances</a> operation to start the instance.</li>
      * <li>You cannot call this operation to stop ECS instances that are locked for security reasons. For more information, see <a href="https://help.aliyun.com/document_detail/25695.html">API behavior when an instance is locked for security reasons</a>.</li>
-     * <li>After you enable the default economical mode for all pay-as-you-go ECS instances located in virtual private clouds (VPCs) in your account, you can set <code>StoppedMode</code> to KeepCharging for the pay-as-you-go ECS instances that you want to stop to enable standard mode. This way, the instances continue to be billed after they are stopped. The instance type resources and public IP addresses of the instances are retained.</li>
      * </ul>
      * 
      * @param request the request parameters of StopInstances  StopInstancesRequest
