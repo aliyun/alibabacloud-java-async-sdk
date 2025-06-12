@@ -134,6 +134,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportAnalysisTagDetailByTaskIdResponse> exportAnalysisTagDetailByTaskId(ExportAnalysisTagDetailByTaskIdRequest request);
 
     /**
+     * @param request the request parameters of ExportCustomSourceAnalysisTask  ExportCustomSourceAnalysisTaskRequest
+     * @return ExportCustomSourceAnalysisTaskResponse
+     */
+    CompletableFuture<ExportCustomSourceAnalysisTaskResponse> exportCustomSourceAnalysisTask(ExportCustomSourceAnalysisTaskRequest request);
+
+    /**
      * @param request the request parameters of ExportGeneratedContent  ExportGeneratedContentRequest
      * @return ExportGeneratedContentResponse
      */
@@ -198,6 +204,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCustomHotTopicBroadcastJobResponse
      */
     CompletableFuture<GetCustomHotTopicBroadcastJobResponse> getCustomHotTopicBroadcastJob(GetCustomHotTopicBroadcastJobRequest request);
+
+    /**
+     * @param request the request parameters of GetCustomSourceTopicAnalysisTask  GetCustomSourceTopicAnalysisTaskRequest
+     * @return GetCustomSourceTopicAnalysisTaskResponse
+     */
+    CompletableFuture<GetCustomSourceTopicAnalysisTaskResponse> getCustomSourceTopicAnalysisTask(GetCustomSourceTopicAnalysisTaskRequest request);
 
     /**
      * @param request the request parameters of GetCustomText  GetCustomTextRequest
@@ -848,6 +860,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitCustomHotTopicBroadcastJobResponse
      */
     CompletableFuture<SubmitCustomHotTopicBroadcastJobResponse> submitCustomHotTopicBroadcastJob(SubmitCustomHotTopicBroadcastJobRequest request);
+
+    /**
+     * @param request the request parameters of SubmitCustomSourceTopicAnalysis  SubmitCustomSourceTopicAnalysisRequest
+     * @return SubmitCustomSourceTopicAnalysisResponse
+     */
+    CompletableFuture<SubmitCustomSourceTopicAnalysisResponse> submitCustomSourceTopicAnalysis(SubmitCustomSourceTopicAnalysisRequest request);
 
     /**
      * @param request the request parameters of SubmitCustomTopicSelectionPerspectiveAnalysisTask  SubmitCustomTopicSelectionPerspectiveAnalysisTaskRequest

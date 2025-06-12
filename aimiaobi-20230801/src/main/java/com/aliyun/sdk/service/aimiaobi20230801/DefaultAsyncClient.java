@@ -383,6 +383,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ExportCustomSourceAnalysisTask  ExportCustomSourceAnalysisTaskRequest
+     * @return ExportCustomSourceAnalysisTaskResponse
+     */
+    @Override
+    public CompletableFuture<ExportCustomSourceAnalysisTaskResponse> exportCustomSourceAnalysisTask(ExportCustomSourceAnalysisTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ExportCustomSourceAnalysisTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ExportCustomSourceAnalysisTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ExportCustomSourceAnalysisTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ExportGeneratedContent  ExportGeneratedContentRequest
      * @return ExportGeneratedContentResponse
      */
@@ -575,6 +593,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetCustomHotTopicBroadcastJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetCustomSourceTopicAnalysisTask  GetCustomSourceTopicAnalysisTaskRequest
+     * @return GetCustomSourceTopicAnalysisTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetCustomSourceTopicAnalysisTaskResponse> getCustomSourceTopicAnalysisTask(GetCustomSourceTopicAnalysisTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetCustomSourceTopicAnalysisTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCustomSourceTopicAnalysisTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCustomSourceTopicAnalysisTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2649,6 +2685,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitCustomHotTopicBroadcastJobResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitCustomSourceTopicAnalysis  SubmitCustomSourceTopicAnalysisRequest
+     * @return SubmitCustomSourceTopicAnalysisResponse
+     */
+    @Override
+    public CompletableFuture<SubmitCustomSourceTopicAnalysisResponse> submitCustomSourceTopicAnalysis(SubmitCustomSourceTopicAnalysisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitCustomSourceTopicAnalysis").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitCustomSourceTopicAnalysisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitCustomSourceTopicAnalysisResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
