@@ -31,6 +31,10 @@ public class UpdateInstanceSettingsRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("force")
+    private Boolean force;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("updateStrategy")
     private String updateStrategy;
 
@@ -39,6 +43,7 @@ public class UpdateInstanceSettingsRequest extends Request {
         this.instanceId = builder.instanceId;
         this.body = builder.body;
         this.clientToken = builder.clientToken;
+        this.force = builder.force;
         this.updateStrategy = builder.updateStrategy;
     }
 
@@ -77,6 +82,13 @@ public class UpdateInstanceSettingsRequest extends Request {
     }
 
     /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
      * @return updateStrategy
      */
     public String getUpdateStrategy() {
@@ -87,6 +99,7 @@ public class UpdateInstanceSettingsRequest extends Request {
         private String instanceId; 
         private String body; 
         private String clientToken; 
+        private Boolean force; 
         private String updateStrategy; 
 
         private Builder() {
@@ -98,6 +111,7 @@ public class UpdateInstanceSettingsRequest extends Request {
             this.instanceId = request.instanceId;
             this.body = request.body;
             this.clientToken = request.clientToken;
+            this.force = request.force;
             this.updateStrategy = request.updateStrategy;
         } 
 
@@ -132,6 +146,15 @@ public class UpdateInstanceSettingsRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("clientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("force", force);
+            this.force = force;
             return this;
         }
 

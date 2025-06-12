@@ -26,10 +26,15 @@ public class InstallUserPluginsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("body")
     private String body;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("force")
+    private Boolean force;
+
     private InstallUserPluginsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.body = builder.body;
+        this.force = builder.force;
     }
 
     public static Builder builder() {
@@ -59,9 +64,17 @@ public class InstallUserPluginsRequest extends Request {
         return this.body;
     }
 
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
     public static final class Builder extends Request.Builder<InstallUserPluginsRequest, Builder> {
         private String instanceId; 
         private String body; 
+        private Boolean force; 
 
         private Builder() {
             super();
@@ -71,6 +84,7 @@ public class InstallUserPluginsRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.body = request.body;
+            this.force = request.force;
         } 
 
         /**
@@ -92,6 +106,15 @@ public class InstallUserPluginsRequest extends Request {
         public Builder body(String body) {
             this.putBodyParameter("body", body);
             this.body = body;
+            return this;
+        }
+
+        /**
+         * force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("force", force);
+            this.force = force;
             return this;
         }
 

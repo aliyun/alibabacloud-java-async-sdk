@@ -50,6 +50,10 @@ public class ListInstanceRequest extends Request {
     private Integer size;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("status")
+    private String status;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("tags")
     private String tags;
 
@@ -71,6 +75,7 @@ public class ListInstanceRequest extends Request {
         this.paymentType = builder.paymentType;
         this.resourceGroupId = builder.resourceGroupId;
         this.size = builder.size;
+        this.status = builder.status;
         this.tags = builder.tags;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
@@ -146,6 +151,13 @@ public class ListInstanceRequest extends Request {
     }
 
     /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
      * @return tags
      */
     public String getTags() {
@@ -175,6 +187,7 @@ public class ListInstanceRequest extends Request {
         private String paymentType; 
         private String resourceGroupId; 
         private Integer size; 
+        private String status; 
         private String tags; 
         private String vpcId; 
         private String zoneId; 
@@ -193,6 +206,7 @@ public class ListInstanceRequest extends Request {
             this.paymentType = request.paymentType;
             this.resourceGroupId = request.resourceGroupId;
             this.size = request.size;
+            this.status = request.status;
             this.tags = request.tags;
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
@@ -295,6 +309,15 @@ public class ListInstanceRequest extends Request {
         public Builder size(Integer size) {
             this.putQueryParameter("size", size);
             this.size = size;
+            return this;
+        }
+
+        /**
+         * status.
+         */
+        public Builder status(String status) {
+            this.putQueryParameter("status", status);
+            this.status = status;
             return this;
         }
 
