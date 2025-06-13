@@ -22,6 +22,10 @@ public class UpdateScanResultFeedbackRequest extends Request {
     private String feedback;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
+    private String labels;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("QueryRequestId")
     private String queryRequestId;
 
@@ -33,12 +37,18 @@ public class UpdateScanResultFeedbackRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
+    private String riskLevel;
+
     private UpdateScanResultFeedbackRequest(Builder builder) {
         super(builder);
         this.feedback = builder.feedback;
+        this.labels = builder.labels;
         this.queryRequestId = builder.queryRequestId;
         this.regionId = builder.regionId;
         this.resourceType = builder.resourceType;
+        this.riskLevel = builder.riskLevel;
     }
 
     public static Builder builder() {
@@ -62,6 +72,13 @@ public class UpdateScanResultFeedbackRequest extends Request {
     }
 
     /**
+     * @return labels
+     */
+    public String getLabels() {
+        return this.labels;
+    }
+
+    /**
      * @return queryRequestId
      */
     public String getQueryRequestId() {
@@ -82,11 +99,20 @@ public class UpdateScanResultFeedbackRequest extends Request {
         return this.resourceType;
     }
 
+    /**
+     * @return riskLevel
+     */
+    public String getRiskLevel() {
+        return this.riskLevel;
+    }
+
     public static final class Builder extends Request.Builder<UpdateScanResultFeedbackRequest, Builder> {
         private String feedback; 
+        private String labels; 
         private String queryRequestId; 
         private String regionId; 
         private String resourceType; 
+        private String riskLevel; 
 
         private Builder() {
             super();
@@ -95,9 +121,11 @@ public class UpdateScanResultFeedbackRequest extends Request {
         private Builder(UpdateScanResultFeedbackRequest request) {
             super(request);
             this.feedback = request.feedback;
+            this.labels = request.labels;
             this.queryRequestId = request.queryRequestId;
             this.regionId = request.regionId;
             this.resourceType = request.resourceType;
+            this.riskLevel = request.riskLevel;
         } 
 
         /**
@@ -106,6 +134,15 @@ public class UpdateScanResultFeedbackRequest extends Request {
         public Builder feedback(String feedback) {
             this.putBodyParameter("Feedback", feedback);
             this.feedback = feedback;
+            return this;
+        }
+
+        /**
+         * Labels.
+         */
+        public Builder labels(String labels) {
+            this.putBodyParameter("Labels", labels);
+            this.labels = labels;
             return this;
         }
 
@@ -133,6 +170,15 @@ public class UpdateScanResultFeedbackRequest extends Request {
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * RiskLevel.
+         */
+        public Builder riskLevel(String riskLevel) {
+            this.putBodyParameter("RiskLevel", riskLevel);
+            this.riskLevel = riskLevel;
             return this;
         }
 

@@ -275,6 +275,21 @@ public class GetScanResultResponseBody extends TeaModel {
      * <p>GetScanResultResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApiLabels")
+        private String apiLabels;
+
+        @com.aliyun.core.annotation.NameInMap("ApiRequestTime")
+        private String apiRequestTime;
+
+        @com.aliyun.core.annotation.NameInMap("ApiRiskLevel")
+        private String apiRiskLevel;
+
+        @com.aliyun.core.annotation.NameInMap("ApiService")
+        private String apiService;
+
+        @com.aliyun.core.annotation.NameInMap("ApiTaskId")
+        private String apiTaskId;
+
         @com.aliyun.core.annotation.NameInMap("AttackLevel")
         private String attackLevel;
 
@@ -311,6 +326,9 @@ public class GetScanResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
+        @com.aliyun.core.annotation.NameInMap("ManualOnly")
+        private Boolean manualOnly;
+
         @com.aliyun.core.annotation.NameInMap("NoLabels")
         private java.util.List<String> noLabels;
 
@@ -329,8 +347,26 @@ public class GetScanResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RequestTime")
         private String requestTime;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        private String resourceType;
+
         @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List<Result> result;
+
+        @com.aliyun.core.annotation.NameInMap("ReviewLabels")
+        private String reviewLabels;
+
+        @com.aliyun.core.annotation.NameInMap("ReviewRiskLevel")
+        private String reviewRiskLevel;
+
+        @com.aliyun.core.annotation.NameInMap("ReviewTime")
+        private String reviewTime;
+
+        @com.aliyun.core.annotation.NameInMap("ReviewUid")
+        private String reviewUid;
+
+        @com.aliyun.core.annotation.NameInMap("Reviewed")
+        private Boolean reviewed;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -384,6 +420,11 @@ public class GetScanResultResponseBody extends TeaModel {
         private String voiceService;
 
         private Items(Builder builder) {
+            this.apiLabels = builder.apiLabels;
+            this.apiRequestTime = builder.apiRequestTime;
+            this.apiRiskLevel = builder.apiRiskLevel;
+            this.apiService = builder.apiService;
+            this.apiTaskId = builder.apiTaskId;
             this.attackLevel = builder.attackLevel;
             this.content = builder.content;
             this.dataId = builder.dataId;
@@ -396,13 +437,20 @@ public class GetScanResultResponseBody extends TeaModel {
             this.imageService = builder.imageService;
             this.imageUrl = builder.imageUrl;
             this.labels = builder.labels;
+            this.manualOnly = builder.manualOnly;
             this.noLabels = builder.noLabels;
             this.offset = builder.offset;
             this.pageNum = builder.pageNum;
             this.requestFrom = builder.requestFrom;
             this.requestId = builder.requestId;
             this.requestTime = builder.requestTime;
+            this.resourceType = builder.resourceType;
             this.result = builder.result;
+            this.reviewLabels = builder.reviewLabels;
+            this.reviewRiskLevel = builder.reviewRiskLevel;
+            this.reviewTime = builder.reviewTime;
+            this.reviewUid = builder.reviewUid;
+            this.reviewed = builder.reviewed;
             this.riskLevel = builder.riskLevel;
             this.riskTips = builder.riskTips;
             this.riskWords = builder.riskWords;
@@ -428,6 +476,41 @@ public class GetScanResultResponseBody extends TeaModel {
 
         public static Items create() {
             return builder().build();
+        }
+
+        /**
+         * @return apiLabels
+         */
+        public String getApiLabels() {
+            return this.apiLabels;
+        }
+
+        /**
+         * @return apiRequestTime
+         */
+        public String getApiRequestTime() {
+            return this.apiRequestTime;
+        }
+
+        /**
+         * @return apiRiskLevel
+         */
+        public String getApiRiskLevel() {
+            return this.apiRiskLevel;
+        }
+
+        /**
+         * @return apiService
+         */
+        public String getApiService() {
+            return this.apiService;
+        }
+
+        /**
+         * @return apiTaskId
+         */
+        public String getApiTaskId() {
+            return this.apiTaskId;
         }
 
         /**
@@ -515,6 +598,13 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return manualOnly
+         */
+        public Boolean getManualOnly() {
+            return this.manualOnly;
+        }
+
+        /**
          * @return noLabels
          */
         public java.util.List<String> getNoLabels() {
@@ -557,10 +647,52 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        /**
          * @return result
          */
         public java.util.List<Result> getResult() {
             return this.result;
+        }
+
+        /**
+         * @return reviewLabels
+         */
+        public String getReviewLabels() {
+            return this.reviewLabels;
+        }
+
+        /**
+         * @return reviewRiskLevel
+         */
+        public String getReviewRiskLevel() {
+            return this.reviewRiskLevel;
+        }
+
+        /**
+         * @return reviewTime
+         */
+        public String getReviewTime() {
+            return this.reviewTime;
+        }
+
+        /**
+         * @return reviewUid
+         */
+        public String getReviewUid() {
+            return this.reviewUid;
+        }
+
+        /**
+         * @return reviewed
+         */
+        public Boolean getReviewed() {
+            return this.reviewed;
         }
 
         /**
@@ -683,6 +815,11 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String apiLabels; 
+            private String apiRequestTime; 
+            private String apiRiskLevel; 
+            private String apiService; 
+            private String apiTaskId; 
             private String attackLevel; 
             private String content; 
             private String dataId; 
@@ -695,13 +832,20 @@ public class GetScanResultResponseBody extends TeaModel {
             private String imageService; 
             private String imageUrl; 
             private String labels; 
+            private Boolean manualOnly; 
             private java.util.List<String> noLabels; 
             private Long offset; 
             private Long pageNum; 
             private String requestFrom; 
             private String requestId; 
             private String requestTime; 
+            private String resourceType; 
             private java.util.List<Result> result; 
+            private String reviewLabels; 
+            private String reviewRiskLevel; 
+            private String reviewTime; 
+            private String reviewUid; 
+            private Boolean reviewed; 
             private String riskLevel; 
             private String riskTips; 
             private String riskWords; 
@@ -724,6 +868,11 @@ public class GetScanResultResponseBody extends TeaModel {
             } 
 
             private Builder(Items model) {
+                this.apiLabels = model.apiLabels;
+                this.apiRequestTime = model.apiRequestTime;
+                this.apiRiskLevel = model.apiRiskLevel;
+                this.apiService = model.apiService;
+                this.apiTaskId = model.apiTaskId;
                 this.attackLevel = model.attackLevel;
                 this.content = model.content;
                 this.dataId = model.dataId;
@@ -736,13 +885,20 @@ public class GetScanResultResponseBody extends TeaModel {
                 this.imageService = model.imageService;
                 this.imageUrl = model.imageUrl;
                 this.labels = model.labels;
+                this.manualOnly = model.manualOnly;
                 this.noLabels = model.noLabels;
                 this.offset = model.offset;
                 this.pageNum = model.pageNum;
                 this.requestFrom = model.requestFrom;
                 this.requestId = model.requestId;
                 this.requestTime = model.requestTime;
+                this.resourceType = model.resourceType;
                 this.result = model.result;
+                this.reviewLabels = model.reviewLabels;
+                this.reviewRiskLevel = model.reviewRiskLevel;
+                this.reviewTime = model.reviewTime;
+                this.reviewUid = model.reviewUid;
+                this.reviewed = model.reviewed;
                 this.riskLevel = model.riskLevel;
                 this.riskTips = model.riskTips;
                 this.riskWords = model.riskWords;
@@ -761,6 +917,46 @@ public class GetScanResultResponseBody extends TeaModel {
                 this.voiceScanOpened = model.voiceScanOpened;
                 this.voiceService = model.voiceService;
             } 
+
+            /**
+             * ApiLabels.
+             */
+            public Builder apiLabels(String apiLabels) {
+                this.apiLabels = apiLabels;
+                return this;
+            }
+
+            /**
+             * ApiRequestTime.
+             */
+            public Builder apiRequestTime(String apiRequestTime) {
+                this.apiRequestTime = apiRequestTime;
+                return this;
+            }
+
+            /**
+             * ApiRiskLevel.
+             */
+            public Builder apiRiskLevel(String apiRiskLevel) {
+                this.apiRiskLevel = apiRiskLevel;
+                return this;
+            }
+
+            /**
+             * ApiService.
+             */
+            public Builder apiService(String apiService) {
+                this.apiService = apiService;
+                return this;
+            }
+
+            /**
+             * ApiTaskId.
+             */
+            public Builder apiTaskId(String apiTaskId) {
+                this.apiTaskId = apiTaskId;
+                return this;
+            }
 
             /**
              * AttackLevel.
@@ -865,6 +1061,14 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
+             * ManualOnly.
+             */
+            public Builder manualOnly(Boolean manualOnly) {
+                this.manualOnly = manualOnly;
+                return this;
+            }
+
+            /**
              * NoLabels.
              */
             public Builder noLabels(java.util.List<String> noLabels) {
@@ -913,10 +1117,58 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            /**
              * Result.
              */
             public Builder result(java.util.List<Result> result) {
                 this.result = result;
+                return this;
+            }
+
+            /**
+             * ReviewLabels.
+             */
+            public Builder reviewLabels(String reviewLabels) {
+                this.reviewLabels = reviewLabels;
+                return this;
+            }
+
+            /**
+             * ReviewRiskLevel.
+             */
+            public Builder reviewRiskLevel(String reviewRiskLevel) {
+                this.reviewRiskLevel = reviewRiskLevel;
+                return this;
+            }
+
+            /**
+             * ReviewTime.
+             */
+            public Builder reviewTime(String reviewTime) {
+                this.reviewTime = reviewTime;
+                return this;
+            }
+
+            /**
+             * ReviewUid.
+             */
+            public Builder reviewUid(String reviewUid) {
+                this.reviewUid = reviewUid;
+                return this;
+            }
+
+            /**
+             * Reviewed.
+             */
+            public Builder reviewed(Boolean reviewed) {
+                this.reviewed = reviewed;
                 return this;
             }
 

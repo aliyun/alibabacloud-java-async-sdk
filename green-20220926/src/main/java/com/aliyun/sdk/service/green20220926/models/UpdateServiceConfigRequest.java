@@ -29,6 +29,10 @@ public class UpdateServiceConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("KeywordHitLibs")
     private String keywordHitLibs;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ManualMachineConfig")
+    private String manualMachineConfig;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -58,6 +62,7 @@ public class UpdateServiceConfigRequest extends Request {
         this.fileConfig = builder.fileConfig;
         this.keywordFilterLibs = builder.keywordFilterLibs;
         this.keywordHitLibs = builder.keywordHitLibs;
+        this.manualMachineConfig = builder.manualMachineConfig;
         this.regionId = builder.regionId;
         this.resourceType = builder.resourceType;
         this.scene = builder.scene;
@@ -98,6 +103,13 @@ public class UpdateServiceConfigRequest extends Request {
      */
     public String getKeywordHitLibs() {
         return this.keywordHitLibs;
+    }
+
+    /**
+     * @return manualMachineConfig
+     */
+    public String getManualMachineConfig() {
+        return this.manualMachineConfig;
     }
 
     /**
@@ -146,6 +158,7 @@ public class UpdateServiceConfigRequest extends Request {
         private String fileConfig; 
         private String keywordFilterLibs; 
         private String keywordHitLibs; 
+        private String manualMachineConfig; 
         private String regionId; 
         private String resourceType; 
         private String scene; 
@@ -162,6 +175,7 @@ public class UpdateServiceConfigRequest extends Request {
             this.fileConfig = request.fileConfig;
             this.keywordFilterLibs = request.keywordFilterLibs;
             this.keywordHitLibs = request.keywordHitLibs;
+            this.manualMachineConfig = request.manualMachineConfig;
             this.regionId = request.regionId;
             this.resourceType = request.resourceType;
             this.scene = request.scene;
@@ -194,6 +208,15 @@ public class UpdateServiceConfigRequest extends Request {
         public Builder keywordHitLibs(String keywordHitLibs) {
             this.putBodyParameter("KeywordHitLibs", keywordHitLibs);
             this.keywordHitLibs = keywordHitLibs;
+            return this;
+        }
+
+        /**
+         * ManualMachineConfig.
+         */
+        public Builder manualMachineConfig(String manualMachineConfig) {
+            this.putBodyParameter("ManualMachineConfig", manualMachineConfig);
+            this.manualMachineConfig = manualMachineConfig;
             return this;
         }
 

@@ -157,6 +157,123 @@ public class GetServiceConfigResponseBody extends TeaModel {
      *
      * <p>GetServiceConfigResponseBody</p>
      */
+    public static class ManualMachineConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuditRiskLevels")
+        private java.util.List<String> auditRiskLevels;
+
+        @com.aliyun.core.annotation.NameInMap("CallbackId")
+        private Long callbackId;
+
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        @com.aliyun.core.annotation.NameInMap("ManualService")
+        private String manualService;
+
+        private ManualMachineConfig(Builder builder) {
+            this.auditRiskLevels = builder.auditRiskLevels;
+            this.callbackId = builder.callbackId;
+            this.enable = builder.enable;
+            this.manualService = builder.manualService;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ManualMachineConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return auditRiskLevels
+         */
+        public java.util.List<String> getAuditRiskLevels() {
+            return this.auditRiskLevels;
+        }
+
+        /**
+         * @return callbackId
+         */
+        public Long getCallbackId() {
+            return this.callbackId;
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return manualService
+         */
+        public String getManualService() {
+            return this.manualService;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> auditRiskLevels; 
+            private Long callbackId; 
+            private Boolean enable; 
+            private String manualService; 
+
+            private Builder() {
+            } 
+
+            private Builder(ManualMachineConfig model) {
+                this.auditRiskLevels = model.auditRiskLevels;
+                this.callbackId = model.callbackId;
+                this.enable = model.enable;
+                this.manualService = model.manualService;
+            } 
+
+            /**
+             * AuditRiskLevels.
+             */
+            public Builder auditRiskLevels(java.util.List<String> auditRiskLevels) {
+                this.auditRiskLevels = auditRiskLevels;
+                return this;
+            }
+
+            /**
+             * CallbackId.
+             */
+            public Builder callbackId(Long callbackId) {
+                this.callbackId = callbackId;
+                return this;
+            }
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * ManualService.
+             */
+            public Builder manualService(String manualService) {
+                this.manualService = manualService;
+                return this;
+            }
+
+            public ManualMachineConfig build() {
+                return new ManualMachineConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetServiceConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetServiceConfigResponseBody</p>
+     */
     public static class CustomServiceConf extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeywordFilterLibs")
         private java.util.List<String> keywordFilterLibs;
@@ -164,12 +281,16 @@ public class GetServiceConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeywordHitLibs")
         private java.util.List<String> keywordHitLibs;
 
+        @com.aliyun.core.annotation.NameInMap("ManualMachineConfig")
+        private ManualMachineConfig manualMachineConfig;
+
         @com.aliyun.core.annotation.NameInMap("SimilarTextHitLibs")
         private java.util.List<String> similarTextHitLibs;
 
         private CustomServiceConf(Builder builder) {
             this.keywordFilterLibs = builder.keywordFilterLibs;
             this.keywordHitLibs = builder.keywordHitLibs;
+            this.manualMachineConfig = builder.manualMachineConfig;
             this.similarTextHitLibs = builder.similarTextHitLibs;
         }
 
@@ -196,6 +317,13 @@ public class GetServiceConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return manualMachineConfig
+         */
+        public ManualMachineConfig getManualMachineConfig() {
+            return this.manualMachineConfig;
+        }
+
+        /**
          * @return similarTextHitLibs
          */
         public java.util.List<String> getSimilarTextHitLibs() {
@@ -205,6 +333,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> keywordFilterLibs; 
             private java.util.List<String> keywordHitLibs; 
+            private ManualMachineConfig manualMachineConfig; 
             private java.util.List<String> similarTextHitLibs; 
 
             private Builder() {
@@ -213,6 +342,7 @@ public class GetServiceConfigResponseBody extends TeaModel {
             private Builder(CustomServiceConf model) {
                 this.keywordFilterLibs = model.keywordFilterLibs;
                 this.keywordHitLibs = model.keywordHitLibs;
+                this.manualMachineConfig = model.manualMachineConfig;
                 this.similarTextHitLibs = model.similarTextHitLibs;
             } 
 
@@ -229,6 +359,14 @@ public class GetServiceConfigResponseBody extends TeaModel {
              */
             public Builder keywordHitLibs(java.util.List<String> keywordHitLibs) {
                 this.keywordHitLibs = keywordHitLibs;
+                return this;
+            }
+
+            /**
+             * ManualMachineConfig.
+             */
+            public Builder manualMachineConfig(ManualMachineConfig manualMachineConfig) {
+                this.manualMachineConfig = manualMachineConfig;
                 return this;
             }
 
