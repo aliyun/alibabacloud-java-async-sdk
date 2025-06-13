@@ -48,18 +48,22 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UpstreamHost")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String upstreamHost;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UpstreamPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer upstreamPort;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UpstreamType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String upstreamType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserAttributeGroup")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userAttributeGroup;
 
     private ModifyEnterpriseAcceleratePolicyRequest(Builder builder) {
@@ -263,7 +267,10 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
-         * UpstreamHost.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12.34.56.XX</p>
          */
         public Builder upstreamHost(String upstreamHost) {
             this.putBodyParameter("UpstreamHost", upstreamHost);
@@ -272,7 +279,10 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
-         * UpstreamPort.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder upstreamPort(Integer upstreamPort) {
             this.putBodyParameter("UpstreamPort", upstreamPort);
@@ -281,7 +291,10 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
-         * UpstreamType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ga</p>
          */
         public Builder upstreamType(String upstreamType) {
             this.putBodyParameter("UpstreamType", upstreamType);
@@ -290,7 +303,7 @@ public class ModifyEnterpriseAcceleratePolicyRequest extends Request {
         }
 
         /**
-         * UserAttributeGroup.
+         * <p>This parameter is required.</p>
          */
         public Builder userAttributeGroup(String userAttributeGroup) {
             this.putBodyParameter("UserAttributeGroup", userAttributeGroup);

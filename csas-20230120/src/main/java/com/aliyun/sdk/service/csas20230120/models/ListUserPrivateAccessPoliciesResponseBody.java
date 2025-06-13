@@ -257,6 +257,12 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Long priority;
 
+        @com.aliyun.core.annotation.NameInMap("TrustedProcessGroupIds")
+        private java.util.List<String> trustedProcessGroupIds;
+
+        @com.aliyun.core.annotation.NameInMap("TrustedSoftwareIds")
+        private java.util.List<String> trustedSoftwareIds;
+
         @com.aliyun.core.annotation.NameInMap("UserGroupMode")
         private String userGroupMode;
 
@@ -268,6 +274,8 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             this.policyAction = builder.policyAction;
             this.policyId = builder.policyId;
             this.priority = builder.priority;
+            this.trustedProcessGroupIds = builder.trustedProcessGroupIds;
+            this.trustedSoftwareIds = builder.trustedSoftwareIds;
             this.userGroupMode = builder.userGroupMode;
         }
 
@@ -329,6 +337,20 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         }
 
         /**
+         * @return trustedProcessGroupIds
+         */
+        public java.util.List<String> getTrustedProcessGroupIds() {
+            return this.trustedProcessGroupIds;
+        }
+
+        /**
+         * @return trustedSoftwareIds
+         */
+        public java.util.List<String> getTrustedSoftwareIds() {
+            return this.trustedSoftwareIds;
+        }
+
+        /**
          * @return userGroupMode
          */
         public String getUserGroupMode() {
@@ -343,6 +365,8 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             private String policyAction; 
             private String policyId; 
             private Long priority; 
+            private java.util.List<String> trustedProcessGroupIds; 
+            private java.util.List<String> trustedSoftwareIds; 
             private String userGroupMode; 
 
             private Builder() {
@@ -356,6 +380,8 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
                 this.policyAction = model.policyAction;
                 this.policyId = model.policyId;
                 this.priority = model.priority;
+                this.trustedProcessGroupIds = model.trustedProcessGroupIds;
+                this.trustedSoftwareIds = model.trustedSoftwareIds;
                 this.userGroupMode = model.userGroupMode;
             } 
 
@@ -412,6 +438,22 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
+                return this;
+            }
+
+            /**
+             * TrustedProcessGroupIds.
+             */
+            public Builder trustedProcessGroupIds(java.util.List<String> trustedProcessGroupIds) {
+                this.trustedProcessGroupIds = trustedProcessGroupIds;
+                return this;
+            }
+
+            /**
+             * TrustedSoftwareIds.
+             */
+            public Builder trustedSoftwareIds(java.util.List<String> trustedSoftwareIds) {
+                this.trustedSoftwareIds = trustedSoftwareIds;
                 return this;
             }
 

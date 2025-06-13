@@ -71,6 +71,18 @@ public class CreatePrivateAccessPolicyRequest extends Request {
     private String triggerTemplateId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TrustedProcessGroupIds")
+    private java.util.List<String> trustedProcessGroupIds;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TrustedProcessStatus")
+    private String trustedProcessStatus;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TrustedSoftwareIds")
+    private java.util.List<String> trustedSoftwareIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserGroupIds")
     private java.util.List<String> userGroupIds;
 
@@ -93,6 +105,9 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         this.status = builder.status;
         this.tagIds = builder.tagIds;
         this.triggerTemplateId = builder.triggerTemplateId;
+        this.trustedProcessGroupIds = builder.trustedProcessGroupIds;
+        this.trustedProcessStatus = builder.trustedProcessStatus;
+        this.trustedSoftwareIds = builder.trustedSoftwareIds;
         this.userGroupIds = builder.userGroupIds;
         this.userGroupMode = builder.userGroupMode;
     }
@@ -195,6 +210,27 @@ public class CreatePrivateAccessPolicyRequest extends Request {
     }
 
     /**
+     * @return trustedProcessGroupIds
+     */
+    public java.util.List<String> getTrustedProcessGroupIds() {
+        return this.trustedProcessGroupIds;
+    }
+
+    /**
+     * @return trustedProcessStatus
+     */
+    public String getTrustedProcessStatus() {
+        return this.trustedProcessStatus;
+    }
+
+    /**
+     * @return trustedSoftwareIds
+     */
+    public java.util.List<String> getTrustedSoftwareIds() {
+        return this.trustedSoftwareIds;
+    }
+
+    /**
      * @return userGroupIds
      */
     public java.util.List<String> getUserGroupIds() {
@@ -221,6 +257,9 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         private String status; 
         private java.util.List<String> tagIds; 
         private String triggerTemplateId; 
+        private java.util.List<String> trustedProcessGroupIds; 
+        private String trustedProcessStatus; 
+        private java.util.List<String> trustedSoftwareIds; 
         private java.util.List<String> userGroupIds; 
         private String userGroupMode; 
 
@@ -242,6 +281,9 @@ public class CreatePrivateAccessPolicyRequest extends Request {
             this.status = request.status;
             this.tagIds = request.tagIds;
             this.triggerTemplateId = request.triggerTemplateId;
+            this.trustedProcessGroupIds = request.trustedProcessGroupIds;
+            this.trustedProcessStatus = request.trustedProcessStatus;
+            this.trustedSoftwareIds = request.trustedSoftwareIds;
             this.userGroupIds = request.userGroupIds;
             this.userGroupMode = request.userGroupMode;
         } 
@@ -366,6 +408,33 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         public Builder triggerTemplateId(String triggerTemplateId) {
             this.putBodyParameter("TriggerTemplateId", triggerTemplateId);
             this.triggerTemplateId = triggerTemplateId;
+            return this;
+        }
+
+        /**
+         * TrustedProcessGroupIds.
+         */
+        public Builder trustedProcessGroupIds(java.util.List<String> trustedProcessGroupIds) {
+            this.putBodyParameter("TrustedProcessGroupIds", trustedProcessGroupIds);
+            this.trustedProcessGroupIds = trustedProcessGroupIds;
+            return this;
+        }
+
+        /**
+         * TrustedProcessStatus.
+         */
+        public Builder trustedProcessStatus(String trustedProcessStatus) {
+            this.putBodyParameter("TrustedProcessStatus", trustedProcessStatus);
+            this.trustedProcessStatus = trustedProcessStatus;
+            return this;
+        }
+
+        /**
+         * TrustedSoftwareIds.
+         */
+        public Builder trustedSoftwareIds(java.util.List<String> trustedSoftwareIds) {
+            this.putBodyParameter("TrustedSoftwareIds", trustedSoftwareIds);
+            this.trustedSoftwareIds = trustedSoftwareIds;
             return this;
         }
 

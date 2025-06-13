@@ -19,10 +19,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateEnterpriseAccelerateTargetRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EapId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eapId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Target")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> target;
 
     private CreateEnterpriseAccelerateTargetRequest(Builder builder) {
@@ -73,7 +75,10 @@ public class CreateEnterpriseAccelerateTargetRequest extends Request {
         } 
 
         /**
-         * EapId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eap-eec34d4b12fcca61</p>
          */
         public Builder eapId(String eapId) {
             this.putBodyParameter("EapId", eapId);
@@ -82,7 +87,7 @@ public class CreateEnterpriseAccelerateTargetRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>This parameter is required.</p>
          */
         public Builder target(java.util.List<String> target) {
             this.putBodyParameter("Target", target);

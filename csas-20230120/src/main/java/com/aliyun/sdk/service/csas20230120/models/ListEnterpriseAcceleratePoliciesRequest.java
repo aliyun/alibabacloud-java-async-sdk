@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListEnterpriseAcceleratePoliciesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000, minimum = 1)
     private Integer currentPage;
 
     @com.aliyun.core.annotation.Query
@@ -27,6 +28,7 @@ public class ListEnterpriseAcceleratePoliciesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000, minimum = 1)
     private Integer pageSize;
 
     private ListEnterpriseAcceleratePoliciesRequest(Builder builder) {
@@ -87,7 +89,10 @@ public class ListEnterpriseAcceleratePoliciesRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -105,7 +110,10 @@ public class ListEnterpriseAcceleratePoliciesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

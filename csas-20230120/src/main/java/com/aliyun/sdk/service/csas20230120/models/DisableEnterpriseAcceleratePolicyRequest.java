@@ -19,6 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DisableEnterpriseAcceleratePolicyRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EapId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eapId;
 
     private DisableEnterpriseAcceleratePolicyRequest(Builder builder) {
@@ -59,7 +60,10 @@ public class DisableEnterpriseAcceleratePolicyRequest extends Request {
         } 
 
         /**
-         * EapId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eap-d50b45aa7dc04aef</p>
          */
         public Builder eapId(String eapId) {
             this.putBodyParameter("EapId", eapId);

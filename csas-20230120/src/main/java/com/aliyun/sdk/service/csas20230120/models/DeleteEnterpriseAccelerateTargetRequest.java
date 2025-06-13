@@ -19,10 +19,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteEnterpriseAccelerateTargetRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EapId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eapId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Target")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> target;
 
     private DeleteEnterpriseAccelerateTargetRequest(Builder builder) {
@@ -73,7 +75,10 @@ public class DeleteEnterpriseAccelerateTargetRequest extends Request {
         } 
 
         /**
-         * EapId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eap-ed1f0e392a28a4e6</p>
          */
         public Builder eapId(String eapId) {
             this.putBodyParameter("EapId", eapId);
@@ -82,7 +87,7 @@ public class DeleteEnterpriseAccelerateTargetRequest extends Request {
         }
 
         /**
-         * Target.
+         * <p>This parameter is required.</p>
          */
         public Builder target(java.util.List<String> target) {
             this.putBodyParameter("Target", target);

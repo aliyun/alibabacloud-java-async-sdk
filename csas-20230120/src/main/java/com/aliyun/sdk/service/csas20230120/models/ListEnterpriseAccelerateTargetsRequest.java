@@ -19,14 +19,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListEnterpriseAccelerateTargetsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10000, minimum = 1)
     private Long currentPage;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EapId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String eapId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 1000, minimum = 1)
     private Long pageSize;
 
     @com.aliyun.core.annotation.Query
@@ -101,7 +104,10 @@ public class ListEnterpriseAccelerateTargetsRequest extends Request {
         } 
 
         /**
-         * CurrentPage.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -110,7 +116,10 @@ public class ListEnterpriseAccelerateTargetsRequest extends Request {
         }
 
         /**
-         * EapId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eap-424ba3f47660425c</p>
          */
         public Builder eapId(String eapId) {
             this.putQueryParameter("EapId", eapId);
@@ -119,7 +128,10 @@ public class ListEnterpriseAccelerateTargetsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
