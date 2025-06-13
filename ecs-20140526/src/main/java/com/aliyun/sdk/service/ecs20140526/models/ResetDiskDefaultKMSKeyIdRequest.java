@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ResetDiskDefaultKMSKeyIdRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -28,6 +32,7 @@ public class ResetDiskDefaultKMSKeyIdRequest extends Request {
 
     private ResetDiskDefaultKMSKeyIdRequest(Builder builder) {
         super(builder);
+        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -46,6 +51,13 @@ public class ResetDiskDefaultKMSKeyIdRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -60,6 +72,7 @@ public class ResetDiskDefaultKMSKeyIdRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ResetDiskDefaultKMSKeyIdRequest, Builder> {
+        private Long ownerId; 
         private String regionId; 
         private Long resourceOwnerId; 
 
@@ -69,9 +82,19 @@ public class ResetDiskDefaultKMSKeyIdRequest extends Request {
 
         private Builder(ResetDiskDefaultKMSKeyIdRequest request) {
             super(request);
+            this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
 
         /**
          * <p>The ID of the region for which you want to disable Account-level EBS Default Encryption. You can call the <a href="https://help.aliyun.com/document_detail/2679950.html">DescribeRegions</a> operation to query the most recent region list.</p>

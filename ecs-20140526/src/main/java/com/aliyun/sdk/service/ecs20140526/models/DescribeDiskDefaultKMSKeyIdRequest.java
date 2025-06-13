@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDiskDefaultKMSKeyIdRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -28,6 +32,7 @@ public class DescribeDiskDefaultKMSKeyIdRequest extends Request {
 
     private DescribeDiskDefaultKMSKeyIdRequest(Builder builder) {
         super(builder);
+        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -46,6 +51,13 @@ public class DescribeDiskDefaultKMSKeyIdRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -60,6 +72,7 @@ public class DescribeDiskDefaultKMSKeyIdRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDiskDefaultKMSKeyIdRequest, Builder> {
+        private Long ownerId; 
         private String regionId; 
         private Long resourceOwnerId; 
 
@@ -69,9 +82,19 @@ public class DescribeDiskDefaultKMSKeyIdRequest extends Request {
 
         private Builder(DescribeDiskDefaultKMSKeyIdRequest request) {
             super(request);
+            this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
 
         /**
          * <p>The ID of the region. You can call the DescribeRegions operation to query the most recent region list.</p>

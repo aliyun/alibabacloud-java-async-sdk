@@ -23,6 +23,10 @@ public class ModifyDiskDefaultKMSKeyIdRequest extends Request {
     private String KMSKeyId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -34,6 +38,7 @@ public class ModifyDiskDefaultKMSKeyIdRequest extends Request {
     private ModifyDiskDefaultKMSKeyIdRequest(Builder builder) {
         super(builder);
         this.KMSKeyId = builder.KMSKeyId;
+        this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -59,6 +64,13 @@ public class ModifyDiskDefaultKMSKeyIdRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -74,6 +86,7 @@ public class ModifyDiskDefaultKMSKeyIdRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyDiskDefaultKMSKeyIdRequest, Builder> {
         private String KMSKeyId; 
+        private Long ownerId; 
         private String regionId; 
         private Long resourceOwnerId; 
 
@@ -84,6 +97,7 @@ public class ModifyDiskDefaultKMSKeyIdRequest extends Request {
         private Builder(ModifyDiskDefaultKMSKeyIdRequest request) {
             super(request);
             this.KMSKeyId = request.KMSKeyId;
+            this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
@@ -98,6 +112,15 @@ public class ModifyDiskDefaultKMSKeyIdRequest extends Request {
         public Builder KMSKeyId(String KMSKeyId) {
             this.putQueryParameter("KMSKeyId", KMSKeyId);
             this.KMSKeyId = KMSKeyId;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
             return this;
         }
 
