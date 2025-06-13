@@ -164,10 +164,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FeedbackDialogueResponse> feedbackDialogue(FeedbackDialogueRequest request);
 
     /**
+     * @param request the request parameters of FetchExportWordTask  FetchExportWordTaskRequest
+     * @return FetchExportWordTaskResponse
+     */
+    CompletableFuture<FetchExportWordTaskResponse> fetchExportWordTask(FetchExportWordTaskRequest request);
+
+    /**
      * @param request the request parameters of FetchImageTask  FetchImageTaskRequest
      * @return FetchImageTaskResponse
      */
     CompletableFuture<FetchImageTaskResponse> fetchImageTask(FetchImageTaskRequest request);
+
+    /**
+     * @param request the request parameters of GenerateExportWordTask  GenerateExportWordTaskRequest
+     * @return GenerateExportWordTaskResponse
+     */
+    CompletableFuture<GenerateExportWordTaskResponse> generateExportWordTask(GenerateExportWordTaskRequest request);
 
     /**
      * @param request the request parameters of GenerateFileUrlByKey  GenerateFileUrlByKeyRequest
