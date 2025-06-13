@@ -125,11 +125,15 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private PeerVpcs(Builder builder) {
             this.region = builder.region;
+            this.status = builder.status;
             this.vpcId = builder.vpcId;
         }
 
@@ -149,6 +153,13 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         }
 
         /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -157,6 +168,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
 
         public static final class Builder {
             private String region; 
+            private String status; 
             private String vpcId; 
 
             private Builder() {
@@ -164,6 +176,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
 
             private Builder(PeerVpcs model) {
                 this.region = model.region;
+                this.status = model.status;
                 this.vpcId = model.vpcId;
             } 
 
@@ -175,6 +188,14 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
              */
             public Builder region(String region) {
                 this.region = region;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 

@@ -122,8 +122,23 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
      * <p>ListGatewayDomainsResponseBody</p>
      */
     public static class CustomDomains extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CertificateEndDate")
+        private String certificateEndDate;
+
         @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
+
+        @com.aliyun.core.annotation.NameInMap("CertificateName")
+        private String certificateName;
+
+        @com.aliyun.core.annotation.NameInMap("CertificateStartDate")
+        private String certificateStartDate;
+
+        @com.aliyun.core.annotation.NameInMap("CertificateStatus")
+        private String certificateStatus;
+
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
@@ -131,10 +146,19 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
+        private String updateTime;
+
         private CustomDomains(Builder builder) {
+            this.certificateEndDate = builder.certificateEndDate;
             this.certificateId = builder.certificateId;
+            this.certificateName = builder.certificateName;
+            this.certificateStartDate = builder.certificateStartDate;
+            this.certificateStatus = builder.certificateStatus;
+            this.createTime = builder.createTime;
             this.domain = builder.domain;
             this.type = builder.type;
+            this.updateTime = builder.updateTime;
         }
 
         public static Builder builder() {
@@ -146,10 +170,45 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return certificateEndDate
+         */
+        public String getCertificateEndDate() {
+            return this.certificateEndDate;
+        }
+
+        /**
          * @return certificateId
          */
         public String getCertificateId() {
             return this.certificateId;
+        }
+
+        /**
+         * @return certificateName
+         */
+        public String getCertificateName() {
+            return this.certificateName;
+        }
+
+        /**
+         * @return certificateStartDate
+         */
+        public String getCertificateStartDate() {
+            return this.certificateStartDate;
+        }
+
+        /**
+         * @return certificateStatus
+         */
+        public String getCertificateStatus() {
+            return this.certificateStatus;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -166,19 +225,46 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return updateTime
+         */
+        public String getUpdateTime() {
+            return this.updateTime;
+        }
+
         public static final class Builder {
+            private String certificateEndDate; 
             private String certificateId; 
+            private String certificateName; 
+            private String certificateStartDate; 
+            private String certificateStatus; 
+            private String createTime; 
             private String domain; 
             private String type; 
+            private String updateTime; 
 
             private Builder() {
             } 
 
             private Builder(CustomDomains model) {
+                this.certificateEndDate = model.certificateEndDate;
                 this.certificateId = model.certificateId;
+                this.certificateName = model.certificateName;
+                this.certificateStartDate = model.certificateStartDate;
+                this.certificateStatus = model.certificateStatus;
+                this.createTime = model.createTime;
                 this.domain = model.domain;
                 this.type = model.type;
+                this.updateTime = model.updateTime;
             } 
+
+            /**
+             * CertificateEndDate.
+             */
+            public Builder certificateEndDate(String certificateEndDate) {
+                this.certificateEndDate = certificateEndDate;
+                return this;
+            }
 
             /**
              * <p>The ID of the SSL certificate bound to the domain name. Obtain the certificate ID after you upload or purchase a certificate in the <a href="https://yundunnext.console.aliyun.com/?spm=5176.2020520163.console-base_help.2.4b3baJixaJixOc&p=cas">Certificate Management Service</a> console.</p>
@@ -188,6 +274,38 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;
+                return this;
+            }
+
+            /**
+             * CertificateName.
+             */
+            public Builder certificateName(String certificateName) {
+                this.certificateName = certificateName;
+                return this;
+            }
+
+            /**
+             * CertificateStartDate.
+             */
+            public Builder certificateStartDate(String certificateStartDate) {
+                this.certificateStartDate = certificateStartDate;
+                return this;
+            }
+
+            /**
+             * CertificateStatus.
+             */
+            public Builder certificateStatus(String certificateStatus) {
+                this.certificateStatus = certificateStatus;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
                 return this;
             }
 
@@ -215,6 +333,14 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
              */
             public Builder type(String type) {
                 this.type = type;
+                return this;
+            }
+
+            /**
+             * UpdateTime.
+             */
+            public Builder updateTime(String updateTime) {
+                this.updateTime = updateTime;
                 return this;
             }
 

@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGatewayResponseBody</p>
  */
 public class DescribeGatewayResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    private String chargeType;
+
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
@@ -63,6 +66,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     private String updateTime;
 
     private DescribeGatewayResponseBody(Builder builder) {
+        this.chargeType = builder.chargeType;
         this.createTime = builder.createTime;
         this.externalClusterId = builder.externalClusterId;
         this.gatewayId = builder.gatewayId;
@@ -90,6 +94,13 @@ public class DescribeGatewayResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return chargeType
+     */
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     /**
@@ -198,6 +209,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String chargeType; 
         private String createTime; 
         private String externalClusterId; 
         private String gatewayId; 
@@ -218,6 +230,7 @@ public class DescribeGatewayResponseBody extends TeaModel {
         } 
 
         private Builder(DescribeGatewayResponseBody model) {
+            this.chargeType = model.chargeType;
             this.createTime = model.createTime;
             this.externalClusterId = model.externalClusterId;
             this.gatewayId = model.gatewayId;
@@ -234,6 +247,14 @@ public class DescribeGatewayResponseBody extends TeaModel {
             this.status = model.status;
             this.updateTime = model.updateTime;
         } 
+
+        /**
+         * ChargeType.
+         */
+        public Builder chargeType(String chargeType) {
+            this.chargeType = chargeType;
+            return this;
+        }
 
         /**
          * <p>The time when the private gateway was created. The time is displayed in UTC.</p>
