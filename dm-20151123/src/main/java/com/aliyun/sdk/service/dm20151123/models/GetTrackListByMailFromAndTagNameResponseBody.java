@@ -35,6 +35,9 @@ public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
+    private String totalPages;
+
     @com.aliyun.core.annotation.NameInMap("TrackList")
     private TrackList trackList;
 
@@ -45,6 +48,7 @@ public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.total = builder.total;
+        this.totalPages = builder.totalPages;
         this.trackList = builder.trackList;
     }
 
@@ -103,6 +107,13 @@ public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalPages
+     */
+    public String getTotalPages() {
+        return this.totalPages;
+    }
+
+    /**
      * @return trackList
      */
     public TrackList getTrackList() {
@@ -116,6 +127,7 @@ public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer total; 
+        private String totalPages; 
         private TrackList trackList; 
 
         private Builder() {
@@ -128,6 +140,7 @@ public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
             this.pageSize = model.pageSize;
             this.requestId = model.requestId;
             this.total = model.total;
+            this.totalPages = model.totalPages;
             this.trackList = model.trackList;
         } 
 
@@ -194,6 +207,14 @@ public class GetTrackListByMailFromAndTagNameResponseBody extends TeaModel {
          */
         public Builder total(Integer total) {
             this.total = total;
+            return this;
+        }
+
+        /**
+         * TotalPages.
+         */
+        public Builder totalPages(String totalPages) {
+            this.totalPages = totalPages;
             return this;
         }
 

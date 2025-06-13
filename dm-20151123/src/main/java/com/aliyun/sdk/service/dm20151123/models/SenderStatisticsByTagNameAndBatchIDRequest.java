@@ -22,9 +22,21 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
     private String accountName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedIp")
+    private String dedicatedIp;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DedicatedIpPoolId")
+    private String dedicatedIpPoolId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Esp")
+    private String esp;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -50,7 +62,10 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
     private SenderStatisticsByTagNameAndBatchIDRequest(Builder builder) {
         super(builder);
         this.accountName = builder.accountName;
+        this.dedicatedIp = builder.dedicatedIp;
+        this.dedicatedIpPoolId = builder.dedicatedIpPoolId;
         this.endTime = builder.endTime;
+        this.esp = builder.esp;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -79,10 +94,31 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
     }
 
     /**
+     * @return dedicatedIp
+     */
+    public String getDedicatedIp() {
+        return this.dedicatedIp;
+    }
+
+    /**
+     * @return dedicatedIpPoolId
+     */
+    public String getDedicatedIpPoolId() {
+        return this.dedicatedIpPoolId;
+    }
+
+    /**
      * @return endTime
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return esp
+     */
+    public String getEsp() {
+        return this.esp;
     }
 
     /**
@@ -122,7 +158,10 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
 
     public static final class Builder extends Request.Builder<SenderStatisticsByTagNameAndBatchIDRequest, Builder> {
         private String accountName; 
+        private String dedicatedIp; 
+        private String dedicatedIpPoolId; 
         private String endTime; 
+        private String esp; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -136,7 +175,10 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
         private Builder(SenderStatisticsByTagNameAndBatchIDRequest request) {
             super(request);
             this.accountName = request.accountName;
+            this.dedicatedIp = request.dedicatedIp;
+            this.dedicatedIpPoolId = request.dedicatedIpPoolId;
             this.endTime = request.endTime;
+            this.esp = request.esp;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -157,6 +199,24 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
         }
 
         /**
+         * DedicatedIp.
+         */
+        public Builder dedicatedIp(String dedicatedIp) {
+            this.putQueryParameter("DedicatedIp", dedicatedIp);
+            this.dedicatedIp = dedicatedIp;
+            return this;
+        }
+
+        /**
+         * DedicatedIpPoolId.
+         */
+        public Builder dedicatedIpPoolId(String dedicatedIpPoolId) {
+            this.putQueryParameter("DedicatedIpPoolId", dedicatedIpPoolId);
+            this.dedicatedIpPoolId = dedicatedIpPoolId;
+            return this;
+        }
+
+        /**
          * <p>End time, which cannot exceed 7 days from the start time, in the format yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
@@ -166,6 +226,15 @@ public class SenderStatisticsByTagNameAndBatchIDRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * Esp.
+         */
+        public Builder esp(String esp) {
+            this.putQueryParameter("Esp", esp);
+            this.esp = esp;
             return this;
         }
 

@@ -35,6 +35,9 @@ public class GetTrackListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
+    private Integer totalPages;
+
     @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
@@ -45,6 +48,7 @@ public class GetTrackListResponseBody extends TeaModel {
         this.pageSize = builder.pageSize;
         this.requestId = builder.requestId;
         this.total = builder.total;
+        this.totalPages = builder.totalPages;
         this.data = builder.data;
     }
 
@@ -103,6 +107,13 @@ public class GetTrackListResponseBody extends TeaModel {
     }
 
     /**
+     * @return totalPages
+     */
+    public Integer getTotalPages() {
+        return this.totalPages;
+    }
+
+    /**
      * @return data
      */
     public Data getData() {
@@ -116,6 +127,7 @@ public class GetTrackListResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer total; 
+        private Integer totalPages; 
         private Data data; 
 
         private Builder() {
@@ -128,6 +140,7 @@ public class GetTrackListResponseBody extends TeaModel {
             this.pageSize = model.pageSize;
             this.requestId = model.requestId;
             this.total = model.total;
+            this.totalPages = model.totalPages;
             this.data = model.data;
         } 
 
@@ -194,6 +207,14 @@ public class GetTrackListResponseBody extends TeaModel {
          */
         public Builder total(Integer total) {
             this.total = total;
+            return this;
+        }
+
+        /**
+         * TotalPages.
+         */
+        public Builder totalPages(Integer totalPages) {
+            this.totalPages = totalPages;
             return this;
         }
 
