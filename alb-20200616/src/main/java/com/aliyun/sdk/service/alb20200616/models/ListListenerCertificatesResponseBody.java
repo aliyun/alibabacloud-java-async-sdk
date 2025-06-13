@@ -48,6 +48,10 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificates
      */
@@ -89,6 +93,17 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListListenerCertificatesResponseBody model) {
+            this.certificates = model.certificates;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The certificates.</p>
@@ -219,6 +234,16 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
             private String certificateType; 
             private Boolean isDefault; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Certificates model) {
+                this.certificateId = model.certificateId;
+                this.certificateType = model.certificateType;
+                this.isDefault = model.isDefault;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The certificate ID. Only server certificates are supported.</p>

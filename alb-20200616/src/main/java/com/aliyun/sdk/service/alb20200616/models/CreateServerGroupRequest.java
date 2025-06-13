@@ -121,7 +121,7 @@ public class CreateServerGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -612,6 +612,14 @@ public class CreateServerGroupRequest extends Request {
             private Boolean connectionDrainEnabled; 
             private Integer connectionDrainTimeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConnectionDrainConfig model) {
+                this.connectionDrainEnabled = model.connectionDrainEnabled;
+                this.connectionDrainTimeout = model.connectionDrainTimeout;
+            } 
+
             /**
              * <p>Specifies whether to enable connection draining. Valid values:</p>
              * <ul>
@@ -816,6 +824,24 @@ public class CreateServerGroupRequest extends Request {
             private Integer healthCheckTimeout; 
             private Integer healthyThreshold; 
             private Integer unhealthyThreshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthCheckConfig model) {
+                this.healthCheckCodes = model.healthCheckCodes;
+                this.healthCheckConnectPort = model.healthCheckConnectPort;
+                this.healthCheckEnabled = model.healthCheckEnabled;
+                this.healthCheckHost = model.healthCheckHost;
+                this.healthCheckHttpVersion = model.healthCheckHttpVersion;
+                this.healthCheckInterval = model.healthCheckInterval;
+                this.healthCheckMethod = model.healthCheckMethod;
+                this.healthCheckPath = model.healthCheckPath;
+                this.healthCheckProtocol = model.healthCheckProtocol;
+                this.healthCheckTimeout = model.healthCheckTimeout;
+                this.healthyThreshold = model.healthyThreshold;
+                this.unhealthyThreshold = model.unhealthyThreshold;
+            } 
 
             /**
              * <p>The HTTP status code that indicates healthy backend servers.</p>
@@ -1052,6 +1078,14 @@ public class CreateServerGroupRequest extends Request {
             private Integer slowStartDuration; 
             private Boolean slowStartEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlowStartConfig model) {
+                this.slowStartDuration = model.slowStartDuration;
+                this.slowStartEnabled = model.slowStartEnabled;
+            } 
+
             /**
              * <p>The duration of a slow start.
              * Valid values: 30 to 900.
@@ -1157,6 +1191,16 @@ public class CreateServerGroupRequest extends Request {
             private Integer cookieTimeout; 
             private Boolean stickySessionEnabled; 
             private String stickySessionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(StickySessionConfig model) {
+                this.cookie = model.cookie;
+                this.cookieTimeout = model.cookieTimeout;
+                this.stickySessionEnabled = model.stickySessionEnabled;
+                this.stickySessionType = model.stickySessionType;
+            } 
 
             /**
              * <p>The cookie that you want to configure for the server.</p>
@@ -1276,6 +1320,14 @@ public class CreateServerGroupRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key. The tag key can be up to 128 characters in length, and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
              * 
@@ -1350,6 +1402,14 @@ public class CreateServerGroupRequest extends Request {
         public static final class Builder {
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(UchConfig model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The type of the parameter.</p>

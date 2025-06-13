@@ -55,7 +55,7 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -173,7 +173,7 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
         }
 
         /**
-         * <p>The configuration read-only mode.</p>
+         * <p>The configuration read-only mode settings.</p>
          */
         public Builder modificationProtectionConfig(ModificationProtectionConfig modificationProtectionConfig) {
             this.putQueryParameter("ModificationProtectionConfig", modificationProtectionConfig);
@@ -232,9 +232,18 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
             private String reason; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModificationProtectionConfig model) {
+                this.reason = model.reason;
+                this.status = model.status;
+            } 
+
             /**
-             * <p>It must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
-             * <p>This parameter takes effect only when <strong>ModificationProtectionStatus</strong> is set to <strong>ConsoleProtection</strong>.</p>
+             * <p>The reason for enabling the configuration read-only mode.</p>
+             * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter.</p>
+             * <p>This parameter takes effect only when <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -245,13 +254,13 @@ public class UpdateLoadBalancerAttributeRequest extends Request {
             }
 
             /**
-             * <p>The status of the configuration read-only mode. Valid values:</p>
+             * <p>Specifies whether to enable the configuration read-only mode. Valid values:</p>
              * <ul>
-             * <li><strong>NonProtection</strong>: disables the configuration read-only mode. In this case, you cannot specify <strong>ModificationProtectionReason</strong>. If you specify <strong>ModificationProtectionReason</strong>, the value of the parameter is cleared.</li>
-             * <li><strong>ConsoleProtection</strong>: enables the configuration read-only mode. In this case, you can specify <strong>ModificationProtectionReason</strong>.</li>
+             * <li><strong>NonProtection</strong>: disables the configuration read-only mode. In this case, the value of the <strong>Reason</strong> parameter that you specify does not take effect. If you set the value of <strong>Reason</strong>, the value is cleared.</li>
+             * <li><strong>ConsoleProtection</strong>: enables the configuration read-only mode. In this case, the value of the <strong>Reason</strong> parameter that you specify takes effect.****</li>
              * </ul>
              * <blockquote>
-             * <p>If you set this parameter to <strong>ConsoleProtection</strong>, you cannot use the ALB console to modify instance configurations. However, you can call API operations to modify instance configurations.</p>
+             * <p> If the parameter is set to <strong>ConsoleProtection</strong>, the configuration read-only mode is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

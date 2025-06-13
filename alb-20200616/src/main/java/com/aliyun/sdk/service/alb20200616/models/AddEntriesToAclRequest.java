@@ -51,7 +51,7 @@ public class AddEntriesToAclRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -208,6 +208,14 @@ public class AddEntriesToAclRequest extends Request {
         public static final class Builder {
             private String description; 
             private String entry; 
+
+            private Builder() {
+            } 
+
+            private Builder(AclEntries model) {
+                this.description = model.description;
+                this.entry = model.entry;
+            } 
 
             /**
              * <p>The description of the ACL entry. The description must be 2 to 256 characters in length, and can contain letters, digits, commas (,), periods (.), semicolons (;), forward slashes (/), at signs (@), underscores (_), and hyphens (-).</p>

@@ -36,6 +36,10 @@ public class CreateHealthCheckTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return healthCheckTemplateId
      */
@@ -53,6 +57,14 @@ public class CreateHealthCheckTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private String healthCheckTemplateId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateHealthCheckTemplateResponseBody model) {
+            this.healthCheckTemplateId = model.healthCheckTemplateId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the health check template.</p>

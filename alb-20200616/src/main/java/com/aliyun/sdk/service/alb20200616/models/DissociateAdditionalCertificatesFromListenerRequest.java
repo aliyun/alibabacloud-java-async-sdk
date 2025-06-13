@@ -51,7 +51,7 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -196,6 +196,13 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
 
         public static final class Builder {
             private String certificateId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Certificates model) {
+                this.certificateId = model.certificateId;
+            } 
 
             /**
              * <p>The certificate ID.</p>

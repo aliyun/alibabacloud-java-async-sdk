@@ -48,6 +48,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListServerGroupsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ServerGroups> serverGroups; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServerGroupsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.serverGroups = model.serverGroups;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries returned per page.</p>
@@ -195,6 +210,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean connectionDrainEnabled; 
             private Integer connectionDrainTimeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConnectionDrainConfig model) {
+                this.connectionDrainEnabled = model.connectionDrainEnabled;
+                this.connectionDrainTimeout = model.connectionDrainTimeout;
+            } 
 
             /**
              * <p>Indicates whether connection draining is enabled. Valid values:</p>
@@ -392,6 +415,24 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private Integer healthCheckTimeout; 
             private Integer healthyThreshold; 
             private Integer unhealthyThreshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthCheckConfig model) {
+                this.healthCheckCodes = model.healthCheckCodes;
+                this.healthCheckConnectPort = model.healthCheckConnectPort;
+                this.healthCheckEnabled = model.healthCheckEnabled;
+                this.healthCheckHost = model.healthCheckHost;
+                this.healthCheckHttpVersion = model.healthCheckHttpVersion;
+                this.healthCheckInterval = model.healthCheckInterval;
+                this.healthCheckMethod = model.healthCheckMethod;
+                this.healthCheckPath = model.healthCheckPath;
+                this.healthCheckProtocol = model.healthCheckProtocol;
+                this.healthCheckTimeout = model.healthCheckTimeout;
+                this.healthyThreshold = model.healthyThreshold;
+                this.unhealthyThreshold = model.unhealthyThreshold;
+            } 
 
             /**
              * <p>The HTTP status codes that indicate healthy backend servers.</p>
@@ -615,6 +656,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private Integer slowStartDuration; 
             private Boolean slowStartEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlowStartConfig model) {
+                this.slowStartDuration = model.slowStartDuration;
+                this.slowStartEnabled = model.slowStartEnabled;
+            } 
+
             /**
              * <p>The duration of a slow start.</p>
              * 
@@ -715,6 +764,16 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private Integer cookieTimeout; 
             private Boolean stickySessionEnabled; 
             private String stickySessionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(StickySessionConfig model) {
+                this.cookie = model.cookie;
+                this.cookieTimeout = model.cookieTimeout;
+                this.stickySessionEnabled = model.stickySessionEnabled;
+                this.stickySessionType = model.stickySessionType;
+            } 
 
             /**
              * <p>The cookie configured for the server.</p>
@@ -822,6 +881,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -894,6 +961,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
         public static final class Builder {
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(UchConfig model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The parameter type. Valid value: QueryString.</p>
@@ -1207,6 +1282,34 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private UchConfig uchConfig; 
             private Boolean upstreamKeepaliveEnabled; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerGroups model) {
+                this.configManagedEnabled = model.configManagedEnabled;
+                this.connectionDrainConfig = model.connectionDrainConfig;
+                this.createTime = model.createTime;
+                this.crossZoneEnabled = model.crossZoneEnabled;
+                this.healthCheckConfig = model.healthCheckConfig;
+                this.ipv6Enabled = model.ipv6Enabled;
+                this.protocol = model.protocol;
+                this.relatedLoadBalancerIds = model.relatedLoadBalancerIds;
+                this.resourceGroupId = model.resourceGroupId;
+                this.scheduler = model.scheduler;
+                this.serverCount = model.serverCount;
+                this.serverGroupId = model.serverGroupId;
+                this.serverGroupName = model.serverGroupName;
+                this.serverGroupStatus = model.serverGroupStatus;
+                this.serverGroupType = model.serverGroupType;
+                this.serviceName = model.serviceName;
+                this.slowStartConfig = model.slowStartConfig;
+                this.stickySessionConfig = model.stickySessionConfig;
+                this.tags = model.tags;
+                this.uchConfig = model.uchConfig;
+                this.upstreamKeepaliveEnabled = model.upstreamKeepaliveEnabled;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>Indicates whether configuration management is enabled. Valid values:</p>

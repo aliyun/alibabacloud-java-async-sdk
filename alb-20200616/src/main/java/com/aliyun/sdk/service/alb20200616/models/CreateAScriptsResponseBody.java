@@ -40,6 +40,10 @@ public class CreateAScriptsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aScriptIds
      */
@@ -65,6 +69,15 @@ public class CreateAScriptsResponseBody extends TeaModel {
         private java.util.List<AScriptIds> aScriptIds; 
         private String jobId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAScriptsResponseBody model) {
+            this.aScriptIds = model.aScriptIds;
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The AScript rule IDs.</p>
@@ -133,6 +146,13 @@ public class CreateAScriptsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aScriptId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AScriptIds model) {
+                this.aScriptId = model.aScriptId;
+            } 
 
             /**
              * <p>The AScript rule ID.</p>

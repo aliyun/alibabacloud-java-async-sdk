@@ -48,6 +48,10 @@ public class ListAclEntriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclEntries
      */
@@ -89,6 +93,17 @@ public class ListAclEntriesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAclEntriesResponseBody model) {
+            this.aclEntries = model.aclEntries;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ACL entries.</p>
@@ -207,6 +222,15 @@ public class ListAclEntriesResponseBody extends TeaModel {
             private String description; 
             private String entry; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AclEntries model) {
+                this.description = model.description;
+                this.entry = model.entry;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The description of the ACL entry. The description must be 1 to 256 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), and underscores (_).</p>

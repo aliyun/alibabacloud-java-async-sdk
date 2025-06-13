@@ -45,7 +45,7 @@ public class UpdateRulesAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -227,6 +227,18 @@ public class UpdateRulesAttributeRequest extends Request {
             private java.util.List<String> exposeHeaders; 
             private Long maxAge; 
 
+            private Builder() {
+            } 
+
+            private Builder(CorsConfig model) {
+                this.allowCredentials = model.allowCredentials;
+                this.allowHeaders = model.allowHeaders;
+                this.allowMethods = model.allowMethods;
+                this.allowOrigin = model.allowOrigin;
+                this.exposeHeaders = model.exposeHeaders;
+                this.maxAge = model.maxAge;
+            } 
+
             /**
              * AllowCredentials.
              */
@@ -338,6 +350,15 @@ public class UpdateRulesAttributeRequest extends Request {
             private String contentType; 
             private String httpCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(FixedResponseConfig model) {
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.httpCode = model.httpCode;
+            } 
+
             /**
              * Content.
              */
@@ -413,6 +434,14 @@ public class UpdateRulesAttributeRequest extends Request {
             private Boolean enabled; 
             private Integer timeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServerGroupStickySession model) {
+                this.enabled = model.enabled;
+                this.timeout = model.timeout;
+            } 
+
             /**
              * Enabled.
              */
@@ -480,6 +509,14 @@ public class UpdateRulesAttributeRequest extends Request {
             private String serverGroupId; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServerGroupTuples model) {
+                this.serverGroupId = model.serverGroupId;
+                this.weight = model.weight;
+            } 
+
             /**
              * ServerGroupId.
              */
@@ -546,6 +583,14 @@ public class UpdateRulesAttributeRequest extends Request {
         public static final class Builder {
             private ServerGroupStickySession serverGroupStickySession; 
             private java.util.List<ServerGroupTuples> serverGroupTuples; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForwardGroupConfig model) {
+                this.serverGroupStickySession = model.serverGroupStickySession;
+                this.serverGroupTuples = model.serverGroupTuples;
+            } 
 
             /**
              * ServerGroupStickySession.
@@ -637,6 +682,16 @@ public class UpdateRulesAttributeRequest extends Request {
             private String key; 
             private String value; 
             private String valueType; 
+
+            private Builder() {
+            } 
+
+            private Builder(InsertHeaderConfig model) {
+                this.coverEnabled = model.coverEnabled;
+                this.key = model.key;
+                this.value = model.value;
+                this.valueType = model.valueType;
+            } 
 
             /**
              * CoverEnabled.
@@ -769,6 +824,18 @@ public class UpdateRulesAttributeRequest extends Request {
             private String protocol; 
             private String query; 
 
+            private Builder() {
+            } 
+
+            private Builder(RedirectConfig model) {
+                this.host = model.host;
+                this.httpCode = model.httpCode;
+                this.path = model.path;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.query = model.query;
+            } 
+
             /**
              * Host.
              */
@@ -856,6 +923,13 @@ public class UpdateRulesAttributeRequest extends Request {
         public static final class Builder {
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(RemoveHeaderConfig model) {
+                this.key = model.key;
+            } 
+
             /**
              * Key.
              */
@@ -926,6 +1000,15 @@ public class UpdateRulesAttributeRequest extends Request {
             private String host; 
             private String path; 
             private String query; 
+
+            private Builder() {
+            } 
+
+            private Builder(RewriteConfig model) {
+                this.host = model.host;
+                this.path = model.path;
+                this.query = model.query;
+            } 
 
             /**
              * Host.
@@ -1002,6 +1085,14 @@ public class UpdateRulesAttributeRequest extends Request {
             private Integer perIpQps; 
             private Integer QPS; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrafficLimitConfig model) {
+                this.perIpQps = model.perIpQps;
+                this.QPS = model.QPS;
+            } 
+
             /**
              * PerIpQps.
              */
@@ -1057,6 +1148,13 @@ public class UpdateRulesAttributeRequest extends Request {
         public static final class Builder {
             private String serverGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(MirrorGroupConfigServerGroupTuples model) {
+                this.serverGroupId = model.serverGroupId;
+            } 
+
             /**
              * ServerGroupId.
              */
@@ -1103,6 +1201,13 @@ public class UpdateRulesAttributeRequest extends Request {
 
         public static final class Builder {
             private java.util.List<MirrorGroupConfigServerGroupTuples> serverGroupTuples; 
+
+            private Builder() {
+            } 
+
+            private Builder(MirrorGroupConfig model) {
+                this.serverGroupTuples = model.serverGroupTuples;
+            } 
 
             /**
              * ServerGroupTuples.
@@ -1162,6 +1267,14 @@ public class UpdateRulesAttributeRequest extends Request {
         public static final class Builder {
             private MirrorGroupConfig mirrorGroupConfig; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficMirrorConfig model) {
+                this.mirrorGroupConfig = model.mirrorGroupConfig;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * MirrorGroupConfig.
@@ -1340,6 +1453,23 @@ public class UpdateRulesAttributeRequest extends Request {
             private TrafficMirrorConfig trafficMirrorConfig; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleActions model) {
+                this.corsConfig = model.corsConfig;
+                this.fixedResponseConfig = model.fixedResponseConfig;
+                this.forwardGroupConfig = model.forwardGroupConfig;
+                this.insertHeaderConfig = model.insertHeaderConfig;
+                this.order = model.order;
+                this.redirectConfig = model.redirectConfig;
+                this.removeHeaderConfig = model.removeHeaderConfig;
+                this.rewriteConfig = model.rewriteConfig;
+                this.trafficLimitConfig = model.trafficLimitConfig;
+                this.trafficMirrorConfig = model.trafficMirrorConfig;
+                this.type = model.type;
+            } 
+
             /**
              * CorsConfig.
              */
@@ -1479,6 +1609,14 @@ public class UpdateRulesAttributeRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Values model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -1533,6 +1671,13 @@ public class UpdateRulesAttributeRequest extends Request {
 
         public static final class Builder {
             private java.util.List<Values> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(CookieConfig model) {
+                this.values = model.values;
+            } 
 
             /**
              * Values.
@@ -1593,6 +1738,14 @@ public class UpdateRulesAttributeRequest extends Request {
             private String key; 
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderConfig model) {
+                this.key = model.key;
+                this.values = model.values;
+            } 
+
             /**
              * Key.
              */
@@ -1648,6 +1801,13 @@ public class UpdateRulesAttributeRequest extends Request {
         public static final class Builder {
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(HostConfig model) {
+                this.values = model.values;
+            } 
+
             /**
              * Values.
              */
@@ -1695,6 +1855,13 @@ public class UpdateRulesAttributeRequest extends Request {
         public static final class Builder {
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(MethodConfig model) {
+                this.values = model.values;
+            } 
+
             /**
              * Values.
              */
@@ -1741,6 +1908,13 @@ public class UpdateRulesAttributeRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(PathConfig model) {
+                this.values = model.values;
+            } 
 
             /**
              * Values.
@@ -1801,6 +1975,14 @@ public class UpdateRulesAttributeRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryStringConfigValues model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * Key.
              */
@@ -1855,6 +2037,13 @@ public class UpdateRulesAttributeRequest extends Request {
 
         public static final class Builder {
             private java.util.List<QueryStringConfigValues> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryStringConfig model) {
+                this.values = model.values;
+            } 
 
             /**
              * Values.
@@ -1915,6 +2104,14 @@ public class UpdateRulesAttributeRequest extends Request {
             private String key; 
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResponseHeaderConfig model) {
+                this.key = model.key;
+                this.values = model.values;
+            } 
+
             /**
              * Key.
              */
@@ -1970,6 +2167,13 @@ public class UpdateRulesAttributeRequest extends Request {
         public static final class Builder {
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResponseStatusCodeConfig model) {
+                this.values = model.values;
+            } 
+
             /**
              * Values.
              */
@@ -2016,6 +2220,13 @@ public class UpdateRulesAttributeRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceIpConfig model) {
+                this.values = model.values;
+            } 
 
             /**
              * Values.
@@ -2171,6 +2382,22 @@ public class UpdateRulesAttributeRequest extends Request {
             private ResponseStatusCodeConfig responseStatusCodeConfig; 
             private SourceIpConfig sourceIpConfig; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleConditions model) {
+                this.cookieConfig = model.cookieConfig;
+                this.headerConfig = model.headerConfig;
+                this.hostConfig = model.hostConfig;
+                this.methodConfig = model.methodConfig;
+                this.pathConfig = model.pathConfig;
+                this.queryStringConfig = model.queryStringConfig;
+                this.responseHeaderConfig = model.responseHeaderConfig;
+                this.responseStatusCodeConfig = model.responseStatusCodeConfig;
+                this.sourceIpConfig = model.sourceIpConfig;
+                this.type = model.type;
+            } 
 
             /**
              * CookieConfig.
@@ -2339,6 +2566,17 @@ public class UpdateRulesAttributeRequest extends Request {
             private java.util.List<RuleConditions> ruleConditions; 
             private String ruleId; 
             private String ruleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.priority = model.priority;
+                this.ruleActions = model.ruleActions;
+                this.ruleConditions = model.ruleConditions;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+            } 
 
             /**
              * Priority.

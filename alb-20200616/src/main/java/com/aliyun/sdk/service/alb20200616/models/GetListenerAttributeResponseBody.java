@@ -112,6 +112,10 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclConfig
      */
@@ -281,6 +285,33 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         private String securityPolicyId; 
         private java.util.List<Tags> tags; 
         private XForwardedForConfig xForwardedForConfig; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetListenerAttributeResponseBody model) {
+            this.aclConfig = model.aclConfig;
+            this.caCertificates = model.caCertificates;
+            this.caEnabled = model.caEnabled;
+            this.certificates = model.certificates;
+            this.defaultActions = model.defaultActions;
+            this.gzipEnabled = model.gzipEnabled;
+            this.http2Enabled = model.http2Enabled;
+            this.idleTimeout = model.idleTimeout;
+            this.listenerDescription = model.listenerDescription;
+            this.listenerId = model.listenerId;
+            this.listenerPort = model.listenerPort;
+            this.listenerProtocol = model.listenerProtocol;
+            this.listenerStatus = model.listenerStatus;
+            this.loadBalancerId = model.loadBalancerId;
+            this.logConfig = model.logConfig;
+            this.quicConfig = model.quicConfig;
+            this.requestId = model.requestId;
+            this.requestTimeout = model.requestTimeout;
+            this.securityPolicyId = model.securityPolicyId;
+            this.tags = model.tags;
+            this.xForwardedForConfig = model.xForwardedForConfig;
+        } 
 
         /**
          * <p>The configurations of the access control lists (ACLs).</p>
@@ -565,6 +596,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private String aclId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(AclRelations model) {
+                this.aclId = model.aclId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The ID of the ACL that is associated with the listener.</p>
              * 
@@ -642,6 +681,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<AclRelations> aclRelations; 
             private String aclType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AclConfig model) {
+                this.aclRelations = model.aclRelations;
+                this.aclType = model.aclType;
+            } 
 
             /**
              * <p>The IDs of the ACLs that are associated with the listener.</p>
@@ -733,6 +780,15 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private Boolean isDefault; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(CaCertificates model) {
+                this.certificateId = model.certificateId;
+                this.isDefault = model.isDefault;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The ID of the default CA certificate.</p>
              * 
@@ -809,6 +865,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String certificateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Certificates model) {
+                this.certificateId = model.certificateId;
+            } 
+
             /**
              * <p>The ID of the certificate. Only server certificates are supported.</p>
              * 
@@ -859,6 +922,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String serverGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServerGroupTuples model) {
+                this.serverGroupId = model.serverGroupId;
+            } 
+
             /**
              * <p>The ID of the server group to which requests are forwarded.</p>
              * 
@@ -908,6 +978,13 @@ public class GetListenerAttributeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ServerGroupTuples> serverGroupTuples; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForwardGroupConfig model) {
+                this.serverGroupTuples = model.serverGroupTuples;
+            } 
 
             /**
              * <p>The server group to which requests are forwarded.</p>
@@ -967,6 +1044,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private ForwardGroupConfig forwardGroupConfig; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefaultActions model) {
+                this.forwardGroupConfig = model.forwardGroupConfig;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The configuration of the ForwardGroup action. This parameter is returned and takes effect when Type is set to <strong>ForwardGroup</strong>.</p>
@@ -1050,6 +1135,15 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private Boolean tracingEnabled; 
             private Integer tracingSample; 
             private String tracingType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessLogTracingConfig model) {
+                this.tracingEnabled = model.tracingEnabled;
+                this.tracingSample = model.tracingSample;
+                this.tracingType = model.tracingType;
+            } 
 
             /**
              * <p>Indicates whether Xtrace is enabled. Valid values:</p>
@@ -1148,6 +1242,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private Boolean accessLogRecordCustomizedHeadersEnabled; 
             private AccessLogTracingConfig accessLogTracingConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogConfig model) {
+                this.accessLogRecordCustomizedHeadersEnabled = model.accessLogRecordCustomizedHeadersEnabled;
+                this.accessLogTracingConfig = model.accessLogTracingConfig;
+            } 
+
             /**
              * <p>Indicates whether custom headers are recorded in the access log. Valid values:</p>
              * <ul>
@@ -1221,6 +1323,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String quicListenerId; 
             private Boolean quicUpgradeEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuicConfig model) {
+                this.quicListenerId = model.quicListenerId;
+                this.quicUpgradeEnabled = model.quicUpgradeEnabled;
+            } 
 
             /**
              * <p>The ID of the QUIC listener. This parameter is returned when <strong>QuicUpgradeEnabled</strong> is set to <strong>true</strong>. Only HTTPS listeners support this parameter.</p>
@@ -1304,6 +1414,14 @@ public class GetListenerAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
@@ -1557,6 +1675,29 @@ public class GetListenerAttributeResponseBody extends TeaModel {
             private Boolean xForwardedForProtoEnabled; 
             private Boolean xForwardedForSLBIdEnabled; 
             private Boolean xForwardedForSLBPortEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(XForwardedForConfig model) {
+                this.xForwardedForClientCertClientVerifyAlias = model.xForwardedForClientCertClientVerifyAlias;
+                this.xForwardedForClientCertClientVerifyEnabled = model.xForwardedForClientCertClientVerifyEnabled;
+                this.xForwardedForClientCertFingerprintAlias = model.xForwardedForClientCertFingerprintAlias;
+                this.xForwardedForClientCertFingerprintEnabled = model.xForwardedForClientCertFingerprintEnabled;
+                this.xForwardedForClientCertIssuerDNAlias = model.xForwardedForClientCertIssuerDNAlias;
+                this.xForwardedForClientCertIssuerDNEnabled = model.xForwardedForClientCertIssuerDNEnabled;
+                this.xForwardedForClientCertSubjectDNAlias = model.xForwardedForClientCertSubjectDNAlias;
+                this.xForwardedForClientCertSubjectDNEnabled = model.xForwardedForClientCertSubjectDNEnabled;
+                this.xForwardedForClientSourceIpsEnabled = model.xForwardedForClientSourceIpsEnabled;
+                this.xForwardedForClientSourceIpsTrusted = model.xForwardedForClientSourceIpsTrusted;
+                this.xForwardedForClientSrcPortEnabled = model.xForwardedForClientSrcPortEnabled;
+                this.xForwardedForEnabled = model.xForwardedForEnabled;
+                this.xForwardedForHostEnabled = model.xForwardedForHostEnabled;
+                this.xForwardedForProcessingMode = model.xForwardedForProcessingMode;
+                this.xForwardedForProtoEnabled = model.xForwardedForProtoEnabled;
+                this.xForwardedForSLBIdEnabled = model.xForwardedForSLBIdEnabled;
+                this.xForwardedForSLBPortEnabled = model.xForwardedForSLBPortEnabled;
+            } 
 
             /**
              * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertClientVerifyEnabled</strong> is set to <strong>true</strong>.</p>

@@ -48,6 +48,10 @@ public class ListTagValuesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListTagValuesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<String> tagValues; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTagValuesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.tagValues = model.tagValues;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page.</p>

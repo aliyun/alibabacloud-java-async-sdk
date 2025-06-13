@@ -105,7 +105,7 @@ public class UpdateListenerAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -369,8 +369,8 @@ public class UpdateListenerAttributeRequest extends Request {
         }
 
         /**
-         * <p>The timeout period of an idle connection. Unit: seconds. Valid values: <strong>1 to 60</strong>.</p>
-         * <p>If no request is received within the specified timeout period, ALB closes the current connection. When another request is received, ALB establishes a new connection.</p>
+         * <p>The timeout period for idle connections. Unit: seconds. Valid values: <strong>1 to 60</strong></p>
+         * <p>If no requests are received within the specified timeout period, ALB closes the current connection. When another request is received, ALB establishes a new connection.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -492,6 +492,13 @@ public class UpdateListenerAttributeRequest extends Request {
         public static final class Builder {
             private String certificateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CaCertificates model) {
+                this.certificateId = model.certificateId;
+            } 
+
             /**
              * <p>The ID of the CA certificate.</p>
              * <blockquote>
@@ -545,6 +552,13 @@ public class UpdateListenerAttributeRequest extends Request {
         public static final class Builder {
             private String certificateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Certificates model) {
+                this.certificateId = model.certificateId;
+            } 
+
             /**
              * <p>The certificate ID.</p>
              * 
@@ -595,6 +609,13 @@ public class UpdateListenerAttributeRequest extends Request {
 
         public static final class Builder {
             private String serverGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerGroupTuples model) {
+                this.serverGroupId = model.serverGroupId;
+            } 
 
             /**
              * <p>The ID of the server group to which requests are forwarded.</p>
@@ -647,6 +668,13 @@ public class UpdateListenerAttributeRequest extends Request {
 
         public static final class Builder {
             private java.util.List<ServerGroupTuples> serverGroupTuples; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForwardGroupConfig model) {
+                this.serverGroupTuples = model.serverGroupTuples;
+            } 
 
             /**
              * <p>The server groups to which requests are forwarded.</p>
@@ -708,6 +736,14 @@ public class UpdateListenerAttributeRequest extends Request {
         public static final class Builder {
             private ForwardGroupConfig forwardGroupConfig; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefaultActions model) {
+                this.forwardGroupConfig = model.forwardGroupConfig;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The forwarding action. This parameter takes effect only when you set <strong>Type</strong> to <strong>ForwardGroup</strong>. You can specify at most 20 actions.</p>
@@ -780,6 +816,14 @@ public class UpdateListenerAttributeRequest extends Request {
         public static final class Builder {
             private String quicListenerId; 
             private Boolean quicUpgradeEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuicConfig model) {
+                this.quicListenerId = model.quicListenerId;
+                this.quicUpgradeEnabled = model.quicUpgradeEnabled;
+            } 
 
             /**
              * <p>The QUIC listener ID. This parameter is required if <strong>QuicUpgradeEnabled</strong> is set to <strong>true</strong>. Only HTTPS listeners support this parameter.</p>
@@ -1043,6 +1087,29 @@ public class UpdateListenerAttributeRequest extends Request {
             private Boolean xForwardedForProtoEnabled; 
             private Boolean xForwardedForSLBIdEnabled; 
             private Boolean xForwardedForSLBPortEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(XForwardedForConfig model) {
+                this.xForwardedForClientCertClientVerifyAlias = model.xForwardedForClientCertClientVerifyAlias;
+                this.xForwardedForClientCertClientVerifyEnabled = model.xForwardedForClientCertClientVerifyEnabled;
+                this.xForwardedForClientCertFingerprintAlias = model.xForwardedForClientCertFingerprintAlias;
+                this.xForwardedForClientCertFingerprintEnabled = model.xForwardedForClientCertFingerprintEnabled;
+                this.xForwardedForClientCertIssuerDNAlias = model.xForwardedForClientCertIssuerDNAlias;
+                this.xForwardedForClientCertIssuerDNEnabled = model.xForwardedForClientCertIssuerDNEnabled;
+                this.xForwardedForClientCertSubjectDNAlias = model.xForwardedForClientCertSubjectDNAlias;
+                this.xForwardedForClientCertSubjectDNEnabled = model.xForwardedForClientCertSubjectDNEnabled;
+                this.xForwardedForClientSourceIpsEnabled = model.xForwardedForClientSourceIpsEnabled;
+                this.xForwardedForClientSourceIpsTrusted = model.xForwardedForClientSourceIpsTrusted;
+                this.xForwardedForClientSrcPortEnabled = model.xForwardedForClientSrcPortEnabled;
+                this.xForwardedForEnabled = model.xForwardedForEnabled;
+                this.xForwardedForHostEnabled = model.xForwardedForHostEnabled;
+                this.xForwardedForProcessingMode = model.xForwardedForProcessingMode;
+                this.xForwardedForProtoEnabled = model.xForwardedForProtoEnabled;
+                this.xForwardedForSLBIdEnabled = model.xForwardedForSLBIdEnabled;
+                this.xForwardedForSLBPortEnabled = model.xForwardedForSLBPortEnabled;
+            } 
 
             /**
              * <p>The name of the custom header. The header takes effect only when you set **XForwardedForClientCertClientVerifyEnabled **to <strong>true</strong>.</p>

@@ -56,7 +56,7 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -262,6 +262,16 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
             private String vSwitchId; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ZoneMappings model) {
+                this.allocationId = model.allocationId;
+                this.eipType = model.eipType;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>The ID of the elastic IP address (EIP). You can specify a maximum of 10 zones.</p>
              * <blockquote>
@@ -277,10 +287,10 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
             }
 
             /**
-             * <p>The type of EIP. Valid values:</p>
+             * <p>The type of the EIP. Valid values:</p>
              * <ul>
-             * <li><strong>Common</strong>: an EIP.</li>
-             * <li><strong>Anycast</strong>: an Anycast EIP.</li>
+             * <li>Common (default): indicates an EIP</li>
+             * <li>Anycast: indicates an Anycast EIP</li>
              * </ul>
              * <blockquote>
              * <p> For more information about the regions in which ALB supports Anycast EIPs, see <a href="https://help.aliyun.com/document_detail/460727.html">Limits</a>.</p>

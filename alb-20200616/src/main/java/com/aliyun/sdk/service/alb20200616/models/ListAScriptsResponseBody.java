@@ -49,6 +49,10 @@ public class ListAScriptsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aScripts
      */
@@ -90,6 +94,17 @@ public class ListAScriptsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAScriptsResponseBody model) {
+            this.aScripts = model.aScripts;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The AScript rules.</p>
@@ -260,6 +275,19 @@ public class ListAScriptsResponseBody extends TeaModel {
             private String listenerId; 
             private String loadBalancerId; 
             private String scriptContent; 
+
+            private Builder() {
+            } 
+
+            private Builder(AScripts model) {
+                this.aScriptId = model.aScriptId;
+                this.aScriptName = model.aScriptName;
+                this.aScriptStatus = model.aScriptStatus;
+                this.enabled = model.enabled;
+                this.listenerId = model.listenerId;
+                this.loadBalancerId = model.loadBalancerId;
+                this.scriptContent = model.scriptContent;
+            } 
 
             /**
              * <p>The AScript rule ID.</p>

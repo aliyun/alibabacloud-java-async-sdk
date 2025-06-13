@@ -48,6 +48,10 @@ public class ListAclsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acls
      */
@@ -89,6 +93,17 @@ public class ListAclsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAclsResponseBody model) {
+            this.acls = model.acls;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A list of ACLs.</p>
@@ -195,6 +210,14 @@ public class ListAclsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
@@ -340,6 +363,20 @@ public class ListAclsResponseBody extends TeaModel {
             private String createTime; 
             private String resourceGroupId; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Acls model) {
+                this.aclId = model.aclId;
+                this.aclName = model.aclName;
+                this.aclStatus = model.aclStatus;
+                this.addressIPVersion = model.addressIPVersion;
+                this.configManagedEnabled = model.configManagedEnabled;
+                this.createTime = model.createTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ACL ID.</p>

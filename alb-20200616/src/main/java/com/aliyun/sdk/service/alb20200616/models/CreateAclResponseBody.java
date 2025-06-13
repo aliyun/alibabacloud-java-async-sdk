@@ -40,6 +40,10 @@ public class CreateAclResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclId
      */
@@ -65,6 +69,15 @@ public class CreateAclResponseBody extends TeaModel {
         private String aclId; 
         private String jobId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAclResponseBody model) {
+            this.aclId = model.aclId;
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the ACL.</p>

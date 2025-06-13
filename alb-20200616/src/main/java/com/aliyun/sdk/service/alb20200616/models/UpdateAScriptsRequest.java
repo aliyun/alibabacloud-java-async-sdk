@@ -44,7 +44,7 @@ public class UpdateAScriptsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -180,6 +180,14 @@ public class UpdateAScriptsRequest extends Request {
             private String attributeKey; 
             private String attributeValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtAttributes model) {
+                this.attributeKey = model.attributeKey;
+                this.attributeValue = model.attributeValue;
+            } 
+
             /**
              * <p>The attribute name.</p>
              * <p>Set the value to <strong>EsDebug</strong>, which specifies that when requests carry the _es_dbg parameter whose value is the specified key, the debugging header is enabled to output the execution result.</p>
@@ -304,6 +312,18 @@ public class UpdateAScriptsRequest extends Request {
             private Boolean extAttributeEnabled; 
             private java.util.List<ExtAttributes> extAttributes; 
             private String scriptContent; 
+
+            private Builder() {
+            } 
+
+            private Builder(AScripts model) {
+                this.aScriptId = model.aScriptId;
+                this.aScriptName = model.aScriptName;
+                this.enabled = model.enabled;
+                this.extAttributeEnabled = model.extAttributeEnabled;
+                this.extAttributes = model.extAttributes;
+                this.scriptContent = model.scriptContent;
+            } 
 
             /**
              * <p>The rule ID.</p>

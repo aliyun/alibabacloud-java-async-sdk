@@ -36,6 +36,10 @@ public class DissociateAdditionalCertificatesFromListenerResponseBody extends Te
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -53,6 +57,14 @@ public class DissociateAdditionalCertificatesFromListenerResponseBody extends Te
     public static final class Builder {
         private String jobId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DissociateAdditionalCertificatesFromListenerResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The asynchronous task ID.</p>

@@ -36,6 +36,10 @@ public class CreateSecurityPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateSecurityPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String securityPolicyId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSecurityPolicyResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityPolicyId = model.securityPolicyId;
+        } 
 
         /**
          * <p>The request ID.</p>

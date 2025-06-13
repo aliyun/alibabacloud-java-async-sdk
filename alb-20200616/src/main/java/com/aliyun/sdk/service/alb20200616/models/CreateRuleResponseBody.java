@@ -40,6 +40,10 @@ public class CreateRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -65,6 +69,15 @@ public class CreateRuleResponseBody extends TeaModel {
         private String jobId; 
         private String requestId; 
         private String ruleId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRuleResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+            this.ruleId = model.ruleId;
+        } 
 
         /**
          * <p>The ID of the asynchronous task.</p>

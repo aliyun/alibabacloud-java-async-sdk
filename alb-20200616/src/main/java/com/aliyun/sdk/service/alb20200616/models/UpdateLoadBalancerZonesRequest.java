@@ -51,7 +51,7 @@ public class UpdateLoadBalancerZonesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -233,6 +233,16 @@ public class UpdateLoadBalancerZonesRequest extends Request {
             private String intranetAddress; 
             private String vSwitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneMappings model) {
+                this.eipType = model.eipType;
+                this.intranetAddress = model.intranetAddress;
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The type of EIP. Valid values:</p>

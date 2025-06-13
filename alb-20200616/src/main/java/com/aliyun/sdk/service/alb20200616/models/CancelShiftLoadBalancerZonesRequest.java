@@ -51,7 +51,7 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -212,6 +212,14 @@ public class CancelShiftLoadBalancerZonesRequest extends Request {
         public static final class Builder {
             private String vSwitchId; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ZoneMappings model) {
+                this.vSwitchId = model.vSwitchId;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The ID of the vSwitch in the zone. By default, each zone uses one vSwitch and one subnet.</p>

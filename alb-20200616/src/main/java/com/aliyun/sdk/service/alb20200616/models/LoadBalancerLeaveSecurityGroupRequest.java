@@ -51,7 +51,7 @@ public class LoadBalancerLeaveSecurityGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -144,7 +144,7 @@ public class LoadBalancerLeaveSecurityGroupRequest extends Request {
         }
 
         /**
-         * <p>The security IDs.</p>
+         * <p>The security group IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder securityGroupIds(java.util.List<String> securityGroupIds) {

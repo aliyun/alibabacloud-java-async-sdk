@@ -92,6 +92,10 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return healthCheckCodes
      */
@@ -221,6 +225,28 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         private String resourceGroupId; 
         private java.util.List<Tags> tags; 
         private Integer unhealthyThreshold; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetHealthCheckTemplateAttributeResponseBody model) {
+            this.healthCheckCodes = model.healthCheckCodes;
+            this.healthCheckConnectPort = model.healthCheckConnectPort;
+            this.healthCheckHost = model.healthCheckHost;
+            this.healthCheckHttpVersion = model.healthCheckHttpVersion;
+            this.healthCheckInterval = model.healthCheckInterval;
+            this.healthCheckMethod = model.healthCheckMethod;
+            this.healthCheckPath = model.healthCheckPath;
+            this.healthCheckProtocol = model.healthCheckProtocol;
+            this.healthCheckTemplateId = model.healthCheckTemplateId;
+            this.healthCheckTemplateName = model.healthCheckTemplateName;
+            this.healthCheckTimeout = model.healthCheckTimeout;
+            this.healthyThreshold = model.healthyThreshold;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.tags = model.tags;
+            this.unhealthyThreshold = model.unhealthyThreshold;
+        } 
 
         /**
          * <p>The HTTP status codes that indicate a healthy backend server.</p>
@@ -396,7 +422,10 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-atstuj3rtop****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -472,6 +501,14 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. The tag key can be up to 128 characters in length, and cannot contain <code>http://</code> or <code>https://</code>. The tag key cannot start with <code>acs:</code> or <code>aliyun</code>.</p>

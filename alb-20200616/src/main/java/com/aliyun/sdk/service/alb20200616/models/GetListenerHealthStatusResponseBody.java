@@ -44,6 +44,10 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return listenerHealthStatus
      */
@@ -78,8 +82,18 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<RuleHealthStatus> ruleHealthStatus; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetListenerHealthStatusResponseBody model) {
+            this.listenerHealthStatus = model.listenerHealthStatus;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.ruleHealthStatus = model.ruleHealthStatus;
+        } 
+
         /**
-         * <p>The health check status of the server groups that are associated with the listener.</p>
+         * <p>The health check status of the server groups associated with the listener.</p>
          */
         public Builder listenerHealthStatus(java.util.List<ListenerHealthStatus> listenerHealthStatus) {
             this.listenerHealthStatus = listenerHealthStatus;
@@ -182,6 +196,15 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String expectedResponse; 
             private String reasonCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Reason model) {
+                this.actualResponse = model.actualResponse;
+                this.expectedResponse = model.expectedResponse;
+                this.reasonCode = model.reasonCode;
+            } 
+
             /**
              * <p>The HTTP status code returned from the server, for example, <strong>302</strong>.</p>
              * <blockquote>
@@ -221,7 +244,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
              * <li><strong>SEND_REQUEST_FAILED</strong>: ALB failed to send a request to the backend server.</li>
              * <li><strong>SEND_REQUEST_TIMEOUT</strong>: ALB failed to send a request to the backend server within the specified period of time.</li>
              * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The format of the response from the backend server is invalid.</li>
-             * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The HTTP status code returned from the backend server is not the expected one.</li>
+             * <li><strong>RESPONSE_MISMATCH</strong>: The HTTP status code returned from the backend server is not the expected one.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -319,6 +342,17 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String serverIp; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(NonNormalServers model) {
+                this.port = model.port;
+                this.reason = model.reason;
+                this.serverId = model.serverId;
+                this.serverIp = model.serverIp;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The backend port.</p>
              * 
@@ -331,7 +365,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cause of the abnormal state.</p>
+             * <p>The cause for the unhealthy state of the backend servers.</p>
              */
             public Builder reason(Reason reason) {
                 this.reason = reason;
@@ -451,6 +485,16 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String healthCheckEnabled; 
             private java.util.List<NonNormalServers> nonNormalServers; 
             private String serverGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerGroupInfos model) {
+                this.actionType = model.actionType;
+                this.healthCheckEnabled = model.healthCheckEnabled;
+                this.nonNormalServers = model.nonNormalServers;
+                this.serverGroupId = model.serverGroupId;
+            } 
 
             /**
              * <p>The action specified for the server group. Valid values:</p>
@@ -572,6 +616,16 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String listenerProtocol; 
             private java.util.List<ServerGroupInfos> serverGroupInfos; 
 
+            private Builder() {
+            } 
+
+            private Builder(ListenerHealthStatus model) {
+                this.listenerId = model.listenerId;
+                this.listenerPort = model.listenerPort;
+                this.listenerProtocol = model.listenerProtocol;
+                this.serverGroupInfos = model.serverGroupInfos;
+            } 
+
             /**
              * <p>The listener ID.</p>
              * 
@@ -676,6 +730,15 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String expectedResponse; 
             private String reasonCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(NonNormalServersReason model) {
+                this.actualResponse = model.actualResponse;
+                this.expectedResponse = model.expectedResponse;
+                this.reasonCode = model.reasonCode;
+            } 
+
             /**
              * <p>The HTTP status code returned from the server, for example, <strong>302</strong>.</p>
              * <blockquote>
@@ -706,7 +769,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The reason why the value of <strong>Status</strong> is Unhealthy. Only HTTP and HTTPS listeners support this parameter.</p>
+             * <p>The reason why the value of <strong>Status</strong> is Unhealthy. Only forwarding rules for HTTP and HTTPS listeners support this parameter.</p>
              * <ul>
              * <li><strong>CONNECT_TIMEOUT</strong>: ALB failed to connect to the backend server within the specified period of time.</li>
              * <li><strong>CONNECT_FAILED</strong>: ALB failed to connect to the backend server.</li>
@@ -715,7 +778,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
              * <li><strong>SEND_REQUEST_FAILED</strong>: ALB failed to send a request to the backend server.</li>
              * <li><strong>SEND_REQUEST_TIMEOUT</strong>: ALB failed to send a request to the backend server within the specified period of time.</li>
              * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The format of the response from the backend server is invalid.</li>
-             * <li><strong>RESPONSE_FORMAT_ERROR</strong>: The HTTP status code returned from the backend server is not the expected one.</li>
+             * <li><strong>RESPONSE_MISMATCH</strong>: The HTTP status code returned from the backend server is not the expected one.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -813,6 +876,17 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private String serverIp; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServerGroupInfosNonNormalServers model) {
+                this.port = model.port;
+                this.reason = model.reason;
+                this.serverId = model.serverId;
+                this.serverIp = model.serverIp;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The backend port.</p>
              * 
@@ -825,7 +899,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The cause of the abnormal state.</p>
+             * <p>The cause for the unhealthy state of the backend servers.</p>
              */
             public Builder reason(NonNormalServersReason reason) {
                 this.reason = reason;
@@ -946,6 +1020,16 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
             private java.util.List<ServerGroupInfosNonNormalServers> nonNormalServers; 
             private String serverGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleHealthStatusServerGroupInfos model) {
+                this.actionType = model.actionType;
+                this.healthCheckEnabled = model.healthCheckEnabled;
+                this.nonNormalServers = model.nonNormalServers;
+                this.serverGroupId = model.serverGroupId;
+            } 
+
             /**
              * <p>The action specified for the server group.</p>
              * 
@@ -1037,6 +1121,14 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String ruleId; 
             private java.util.List<RuleHealthStatusServerGroupInfos> serverGroupInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleHealthStatus model) {
+                this.ruleId = model.ruleId;
+                this.serverGroupInfos = model.serverGroupInfos;
+            } 
 
             /**
              * <p>The ID of the forwarding rule.</p>

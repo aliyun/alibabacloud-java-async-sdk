@@ -40,6 +40,10 @@ public class CreateRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -65,6 +69,15 @@ public class CreateRulesResponseBody extends TeaModel {
         private String jobId; 
         private String requestId; 
         private java.util.List<RuleIds> ruleIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRulesResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+            this.ruleIds = model.ruleIds;
+        } 
 
         /**
          * <p>The ID of the asynchronous task.</p>
@@ -148,6 +161,14 @@ public class CreateRulesResponseBody extends TeaModel {
         public static final class Builder {
             private Integer priority; 
             private String ruleId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleIds model) {
+                this.priority = model.priority;
+                this.ruleId = model.ruleId;
+            } 
 
             /**
              * <p>The priority of the forwarding rule. Valid values: <strong>1 to 10000</strong>. A smaller value indicates a higher priority.</p>

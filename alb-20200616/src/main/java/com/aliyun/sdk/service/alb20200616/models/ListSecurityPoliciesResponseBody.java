@@ -48,6 +48,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SecurityPolicies> securityPolicies; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSecurityPoliciesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.securityPolicies = model.securityPolicies;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The number of entries per page.</p>
@@ -195,6 +210,14 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
@@ -340,6 +363,20 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             private String securityPolicyStatus; 
             private java.util.List<String> TLSVersions; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityPolicies model) {
+                this.ciphers = model.ciphers;
+                this.createTime = model.createTime;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityPolicyId = model.securityPolicyId;
+                this.securityPolicyName = model.securityPolicyName;
+                this.securityPolicyStatus = model.securityPolicyStatus;
+                this.TLSVersions = model.TLSVersions;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The supported cipher suites.</p>

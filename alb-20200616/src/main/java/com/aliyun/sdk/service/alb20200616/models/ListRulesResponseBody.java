@@ -48,6 +48,10 @@ public class ListRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListRulesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Rules> rules; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRulesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.rules = model.rules;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The maximum number of entries returned.</p>
@@ -244,6 +259,18 @@ public class ListRulesResponseBody extends TeaModel {
             private java.util.List<String> exposeHeaders; 
             private Long maxAge; 
 
+            private Builder() {
+            } 
+
+            private Builder(CorsConfig model) {
+                this.allowCredentials = model.allowCredentials;
+                this.allowHeaders = model.allowHeaders;
+                this.allowMethods = model.allowMethods;
+                this.allowOrigin = model.allowOrigin;
+                this.exposeHeaders = model.exposeHeaders;
+                this.maxAge = model.maxAge;
+            } 
+
             /**
              * <p>Indicates whether credentials can be carried in CORS requests. Valid values:</p>
              * <ul>
@@ -366,6 +393,15 @@ public class ListRulesResponseBody extends TeaModel {
             private String contentType; 
             private String httpCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(FixedResponseConfig model) {
+                this.content = model.content;
+                this.contentType = model.contentType;
+                this.httpCode = model.httpCode;
+            } 
+
             /**
              * <p>The content of the custom response. The content can be up to 1 KB in size, and can contain only ASCII characters.</p>
              * 
@@ -451,6 +487,14 @@ public class ListRulesResponseBody extends TeaModel {
             private Boolean enabled; 
             private Integer timeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServerGroupStickySession model) {
+                this.enabled = model.enabled;
+                this.timeout = model.timeout;
+            } 
+
             /**
              * <p>If the value of N in ServerGroupTuple.N is larger than 1, you can enable or disable session persistence for server groups.</p>
              * 
@@ -524,6 +568,14 @@ public class ListRulesResponseBody extends TeaModel {
             private String serverGroupId; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServerGroupTuples model) {
+                this.serverGroupId = model.serverGroupId;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The server group to which requests are forwarded.</p>
              * 
@@ -596,6 +648,14 @@ public class ListRulesResponseBody extends TeaModel {
         public static final class Builder {
             private ServerGroupStickySession serverGroupStickySession; 
             private java.util.List<ServerGroupTuples> serverGroupTuples; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForwardGroupConfig model) {
+                this.serverGroupStickySession = model.serverGroupStickySession;
+                this.serverGroupTuples = model.serverGroupTuples;
+            } 
 
             /**
              * <p>The session persistence configurations of the server group.</p>
@@ -675,6 +735,15 @@ public class ListRulesResponseBody extends TeaModel {
             private String key; 
             private String value; 
             private String valueType; 
+
+            private Builder() {
+            } 
+
+            private Builder(InsertHeaderConfig model) {
+                this.key = model.key;
+                this.value = model.value;
+                this.valueType = model.valueType;
+            } 
 
             /**
              * <p>The key of the header. The header key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header key specified in <code>InsertHeader</code> must be unique.</p>
@@ -831,6 +900,18 @@ public class ListRulesResponseBody extends TeaModel {
             private String protocol; 
             private String query; 
 
+            private Builder() {
+            } 
+
+            private Builder(RedirectConfig model) {
+                this.host = model.host;
+                this.httpCode = model.httpCode;
+                this.path = model.path;
+                this.port = model.port;
+                this.protocol = model.protocol;
+                this.query = model.query;
+            } 
+
             /**
              * <p>The hostname to which requests are redirected. Valid values:</p>
              * <ul>
@@ -970,6 +1051,13 @@ public class ListRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
 
+            private Builder() {
+            } 
+
+            private Builder(RemoveHeaderConfig model) {
+                this.key = model.key;
+            } 
+
             /**
              * <p>The key of the header to be removed. The header key must be 1 to 40 characters in length, and can contain letters, digits, underscores (_), and hyphens (-). The header keys specified in RemoveHeader must be unique.</p>
              * <ul>
@@ -1047,6 +1135,15 @@ public class ListRulesResponseBody extends TeaModel {
             private String host; 
             private String path; 
             private String query; 
+
+            private Builder() {
+            } 
+
+            private Builder(RewriteConfig model) {
+                this.host = model.host;
+                this.path = model.path;
+                this.query = model.query;
+            } 
 
             /**
              * <p>The hostname to which requests are redirected. Valid values:</p>
@@ -1145,6 +1242,14 @@ public class ListRulesResponseBody extends TeaModel {
             private Integer perIpQps; 
             private Integer QPS; 
 
+            private Builder() {
+            } 
+
+            private Builder(TrafficLimitConfig model) {
+                this.perIpQps = model.perIpQps;
+                this.QPS = model.QPS;
+            } 
+
             /**
              * <p>The number of requests per IP address. Valid values: <strong>1 to 100000</strong>.</p>
              * <blockquote>
@@ -1221,6 +1326,14 @@ public class ListRulesResponseBody extends TeaModel {
             private String serverGroupId; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(MirrorGroupConfigServerGroupTuples model) {
+                this.serverGroupId = model.serverGroupId;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The ID of the server group.</p>
              * 
@@ -1282,6 +1395,13 @@ public class ListRulesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<MirrorGroupConfigServerGroupTuples> serverGroupTuples; 
 
+            private Builder() {
+            } 
+
+            private Builder(MirrorGroupConfig model) {
+                this.serverGroupTuples = model.serverGroupTuples;
+            } 
+
             /**
              * <p>The server group to which traffic is mirrored.</p>
              */
@@ -1340,6 +1460,14 @@ public class ListRulesResponseBody extends TeaModel {
         public static final class Builder {
             private MirrorGroupConfig mirrorGroupConfig; 
             private String targetType; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficMirrorConfig model) {
+                this.mirrorGroupConfig = model.mirrorGroupConfig;
+                this.targetType = model.targetType;
+            } 
 
             /**
              * <p>The configuration of the server group to which traffic is mirrored.</p>
@@ -1519,6 +1647,23 @@ public class ListRulesResponseBody extends TeaModel {
             private TrafficMirrorConfig trafficMirrorConfig; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleActions model) {
+                this.corsConfig = model.corsConfig;
+                this.fixedResponseConfig = model.fixedResponseConfig;
+                this.forwardGroupConfig = model.forwardGroupConfig;
+                this.insertHeaderConfig = model.insertHeaderConfig;
+                this.order = model.order;
+                this.redirectConfig = model.redirectConfig;
+                this.removeHeaderConfig = model.removeHeaderConfig;
+                this.rewriteConfig = model.rewriteConfig;
+                this.trafficLimitConfig = model.trafficLimitConfig;
+                this.trafficMirrorConfig = model.trafficMirrorConfig;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The CORS configuration.</p>
              */
@@ -1680,6 +1825,14 @@ public class ListRulesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Values model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The cookie key. The cookie key must be 1 to 100 characters in length, and can contain lowercase letters, printable ASCII characters, asterisks (*), and question marks (?). It cannot contain space characters or the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</p>
              * 
@@ -1741,6 +1894,13 @@ public class ListRulesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Values> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(CookieConfig model) {
+                this.values = model.values;
+            } 
+
             /**
              * <p>The cookie value.</p>
              */
@@ -1800,6 +1960,14 @@ public class ListRulesResponseBody extends TeaModel {
             private String key; 
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(HeaderConfig model) {
+                this.key = model.key;
+                this.values = model.values;
+            } 
+
             /**
              * <p>The key of the header. The header key must be 1 to 40 characters in length. It can contain letters, digits, hyphens (-), and underscores (_). Cookie and Host are not supported.</p>
              * 
@@ -1858,6 +2026,13 @@ public class ListRulesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(HostConfig model) {
+                this.values = model.values;
+            } 
+
             /**
              * <p>The hostnames.</p>
              */
@@ -1905,6 +2080,13 @@ public class ListRulesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(MethodConfig model) {
+                this.values = model.values;
+            } 
+
             /**
              * <p>The request methods.</p>
              */
@@ -1951,6 +2133,13 @@ public class ListRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(PathConfig model) {
+                this.values = model.values;
+            } 
 
             /**
              * <p>The URLs to which requests are forwarded.</p>
@@ -2010,6 +2199,14 @@ public class ListRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryStringConfigValues model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>They key of the query string. The key must be 1 to 100 characters in length, and can contain lowercase letters, printable ASCII characters, asterisks (*), and question marks (?). It cannot contain space characters or the following special characters: <code># [ ] { } \ | &lt; &gt; &amp;</code>.</p>
@@ -2072,6 +2269,13 @@ public class ListRulesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<QueryStringConfigValues> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(QueryStringConfig model) {
+                this.values = model.values;
+            } 
+
             /**
              * <p>The query string.</p>
              */
@@ -2131,6 +2335,14 @@ public class ListRulesResponseBody extends TeaModel {
             private String key; 
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResponseHeaderConfig model) {
+                this.key = model.key;
+                this.values = model.values;
+            } 
+
             /**
              * <p>The key of the HTTP header. The header key must be 1 to 40 characters in length, It can contain letters, digits, hyphens (-), and underscores (_). Cookie and Host are not supported.</p>
              * 
@@ -2189,6 +2401,13 @@ public class ListRulesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> values; 
 
+            private Builder() {
+            } 
+
+            private Builder(ResponseStatusCodeConfig model) {
+                this.values = model.values;
+            } 
+
             /**
              * <p>The response status codes.</p>
              */
@@ -2235,6 +2454,13 @@ public class ListRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceIpConfig model) {
+                this.values = model.values;
+            } 
 
             /**
              * <p>The source IP addresses.</p>
@@ -2391,6 +2617,22 @@ public class ListRulesResponseBody extends TeaModel {
             private SourceIpConfig sourceIpConfig; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleConditions model) {
+                this.cookieConfig = model.cookieConfig;
+                this.headerConfig = model.headerConfig;
+                this.hostConfig = model.hostConfig;
+                this.methodConfig = model.methodConfig;
+                this.pathConfig = model.pathConfig;
+                this.queryStringConfig = model.queryStringConfig;
+                this.responseHeaderConfig = model.responseHeaderConfig;
+                this.responseStatusCodeConfig = model.responseStatusCodeConfig;
+                this.sourceIpConfig = model.sourceIpConfig;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The key-value pairs of the cookie.</p>
              */
@@ -2533,6 +2775,14 @@ public class ListRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
@@ -2702,6 +2952,22 @@ public class ListRulesResponseBody extends TeaModel {
             private String ruleName; 
             private String ruleStatus; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.direction = model.direction;
+                this.listenerId = model.listenerId;
+                this.loadBalancerId = model.loadBalancerId;
+                this.priority = model.priority;
+                this.ruleActions = model.ruleActions;
+                this.ruleConditions = model.ruleConditions;
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+                this.ruleStatus = model.ruleStatus;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The direction to which the forwarding rule is applied. Valid values:</p>

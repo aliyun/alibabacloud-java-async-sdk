@@ -56,7 +56,7 @@ public class ListListenerCertificatesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -117,7 +117,7 @@ public class ListListenerCertificatesRequest extends Request {
         } 
 
         /**
-         * <p>The certificate IDs.</p>
+         * <p>The certificates.</p>
          */
         public Builder certificateIds(java.util.List<String> certificateIds) {
             this.putQueryParameter("CertificateIds", certificateIds);
@@ -151,7 +151,7 @@ public class ListListenerCertificatesRequest extends Request {
         }
 
         /**
-         * <p>The maximum number of entries to return. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries to return in each call. Valid values: <strong>1 to 100</strong>. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>

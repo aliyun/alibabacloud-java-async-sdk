@@ -45,7 +45,7 @@ public class DeleteRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -120,7 +120,7 @@ public class DeleteRulesRequest extends Request {
         }
 
         /**
-         * <p>The forwarding rules.</p>
+         * <p>The forwarding rules. You can specify at most 100 forwarding rules in each call.</p>
          * <p>This parameter is required.</p>
          */
         public Builder ruleIds(java.util.List<String> ruleIds) {

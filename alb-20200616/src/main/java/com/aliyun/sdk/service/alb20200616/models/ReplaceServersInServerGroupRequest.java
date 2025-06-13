@@ -57,7 +57,7 @@ public class ReplaceServersInServerGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -285,6 +285,18 @@ public class ReplaceServersInServerGroupRequest extends Request {
             private String serverType; 
             private Integer weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(AddedServers model) {
+                this.description = model.description;
+                this.port = model.port;
+                this.serverId = model.serverId;
+                this.serverIp = model.serverIp;
+                this.serverType = model.serverType;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The description of the backend server. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>
              * 
@@ -440,6 +452,16 @@ public class ReplaceServersInServerGroupRequest extends Request {
             private String serverId; 
             private String serverIp; 
             private String serverType; 
+
+            private Builder() {
+            } 
+
+            private Builder(RemovedServers model) {
+                this.port = model.port;
+                this.serverId = model.serverId;
+                this.serverIp = model.serverIp;
+                this.serverType = model.serverType;
+            } 
 
             /**
              * <p>The port that is used by the backend server. Valid values: <strong>1</strong> to <strong>65535</strong>. You can specify at most 200 servers in each call.</p>

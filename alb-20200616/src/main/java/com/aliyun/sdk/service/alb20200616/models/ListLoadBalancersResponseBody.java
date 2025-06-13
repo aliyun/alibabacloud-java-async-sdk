@@ -48,6 +48,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loadBalancers
      */
@@ -89,6 +93,17 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLoadBalancersResponseBody model) {
+            this.loadBalancers = model.loadBalancers;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>A list of ALB instances.</p>
@@ -196,6 +211,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String logProject; 
             private String logStore; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessLogConfig model) {
+                this.logProject = model.logProject;
+                this.logStore = model.logStore;
+            } 
+
             /**
              * <p>The Simple Log Service project.</p>
              * 
@@ -269,6 +292,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private Boolean enabled; 
             private String enabledTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DeletionProtectionConfig model) {
+                this.enabled = model.enabled;
+                this.enabledTime = model.enabledTime;
+            } 
+
             /**
              * <p>Indicates whether deletion protection is enabled. Valid values:</p>
              * <ul>
@@ -334,8 +365,15 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public static final class Builder {
             private String payType; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancerBillingConfig model) {
+                this.payType = model.payType;
+            } 
+
             /**
-             * <p>The billing method. Valid values:</p>
+             * <p>The billing method. Valid value:</p>
              * <p>Only <strong>PostPay</strong> may be returned, which indicates the pay-as-you-go billing method.</p>
              * 
              * <strong>example:</strong>
@@ -396,6 +434,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public static final class Builder {
             private String lockReason; 
             private String lockType; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancerOperationLocks model) {
+                this.lockReason = model.lockReason;
+                this.lockType = model.lockType;
+            } 
 
             /**
              * <p>The reason why the ALB instance is locked. This parameter is valid only if <strong>LoadBalancerBussinessStatus</strong> is set to <strong>Abnormal</strong>.</p>
@@ -476,10 +522,18 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String reason; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModificationProtectionConfig model) {
+                this.reason = model.reason;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The reason why the configuration read-only mode is enabled.</p>
              * <p>The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
-             * <p>This parameter is available only if the <strong>ModificationProtectionStatus</strong> parameter is set to <strong>ConsoleProtection</strong>.</p>
+             * <p>This parameter takes effect only if <strong>Status</strong> is set to <strong>ConsoleProtection</strong>.</p>
              * 
              * <strong>example:</strong>
              * <p>Test Reason</p>
@@ -490,13 +544,13 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the configuration read-only mode is enabled for the ALB instance. Valid values:</p>
+             * <p>Indicates whether the configuration read-only mode is enabled. Valid values:</p>
              * <ul>
-             * <li><strong>NonProtection</strong>: Modification protection is disabled. In this case, you cannot set the ModificationProtectionReason parameter. If the ModificationProtectionReason parameter is specified, the value is cleared.</li>
-             * <li><strong>ConsoleProtection</strong>: Modification protection is enabled. In this case, you can set the ModificationProtectionReason parameter.</li>
+             * <li><strong>NonProtection</strong>: The configuration read-only mode is disabled. In this case, <strong>Reason</strong> is not returned. If <strong>Reason</strong> is set, the value is cleared.</li>
+             * <li><strong>ConsoleProtection</strong>: The configuration read-only mode is enabled. In this case, <strong>Reason</strong> is returned.****</li>
              * </ul>
              * <blockquote>
-             * <p> If the value is <strong>ConsoleProtection</strong>, modification protection is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</p>
+             * <p> If the value is <strong>ConsoleProtection</strong>, the configuration read-only mode is enabled. You cannot modify the configurations of the ALB instance in the ALB console. However, you can call API operations to modify the configurations of the ALB instance.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -557,6 +611,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key of the ALB instance.</p>
@@ -648,6 +710,9 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
+        private java.util.List<String> securityGroupIds;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -673,6 +738,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             this.loadBalancerStatus = builder.loadBalancerStatus;
             this.modificationProtectionConfig = builder.modificationProtectionConfig;
             this.resourceGroupId = builder.resourceGroupId;
+            this.securityGroupIds = builder.securityGroupIds;
             this.tags = builder.tags;
             this.vpcId = builder.vpcId;
         }
@@ -812,6 +878,13 @@ public class ListLoadBalancersResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityGroupIds
+         */
+        public java.util.List<String> getSecurityGroupIds() {
+            return this.securityGroupIds;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -844,8 +917,36 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             private String loadBalancerStatus; 
             private ModificationProtectionConfig modificationProtectionConfig; 
             private String resourceGroupId; 
+            private java.util.List<String> securityGroupIds; 
             private java.util.List<Tags> tags; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoadBalancers model) {
+                this.accessLogConfig = model.accessLogConfig;
+                this.addressAllocatedMode = model.addressAllocatedMode;
+                this.addressIpVersion = model.addressIpVersion;
+                this.addressType = model.addressType;
+                this.bandwidthPackageId = model.bandwidthPackageId;
+                this.createTime = model.createTime;
+                this.DNSName = model.DNSName;
+                this.deletionProtectionConfig = model.deletionProtectionConfig;
+                this.ipv6AddressType = model.ipv6AddressType;
+                this.loadBalancerBillingConfig = model.loadBalancerBillingConfig;
+                this.loadBalancerBussinessStatus = model.loadBalancerBussinessStatus;
+                this.loadBalancerEdition = model.loadBalancerEdition;
+                this.loadBalancerId = model.loadBalancerId;
+                this.loadBalancerName = model.loadBalancerName;
+                this.loadBalancerOperationLocks = model.loadBalancerOperationLocks;
+                this.loadBalancerStatus = model.loadBalancerStatus;
+                this.modificationProtectionConfig = model.modificationProtectionConfig;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityGroupIds = model.securityGroupIds;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The configurations of access logs.</p>
@@ -1044,7 +1145,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The configuration of modification protection.</p>
+             * <p>The configuration read-only mode settings.</p>
              */
             public Builder modificationProtectionConfig(ModificationProtectionConfig modificationProtectionConfig) {
                 this.modificationProtectionConfig = modificationProtectionConfig;
@@ -1059,6 +1160,14 @@ public class ListLoadBalancersResponseBody extends TeaModel {
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * SecurityGroupIds.
+             */
+            public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
+                this.securityGroupIds = securityGroupIds;
                 return this;
             }
 

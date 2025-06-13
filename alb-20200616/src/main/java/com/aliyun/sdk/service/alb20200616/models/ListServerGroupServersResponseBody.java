@@ -48,6 +48,10 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListServerGroupServersResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Servers> servers; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListServerGroupServersResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.servers = model.servers;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The maximum number of entries returned.</p>
@@ -279,6 +294,21 @@ public class ListServerGroupServersResponseBody extends TeaModel {
             private String serverType; 
             private String status; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Servers model) {
+                this.description = model.description;
+                this.port = model.port;
+                this.remoteIpEnabled = model.remoteIpEnabled;
+                this.serverGroupId = model.serverGroupId;
+                this.serverId = model.serverId;
+                this.serverIp = model.serverIp;
+                this.serverType = model.serverType;
+                this.status = model.status;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The description of the backend server.</p>

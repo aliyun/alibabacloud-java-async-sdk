@@ -51,7 +51,7 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -257,6 +257,18 @@ public class UpdateServerGroupServersAttributeRequest extends Request {
             private String serverIp; 
             private String serverType; 
             private Integer weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Servers model) {
+                this.description = model.description;
+                this.port = model.port;
+                this.serverId = model.serverId;
+                this.serverIp = model.serverIp;
+                this.serverType = model.serverType;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The description of the backend server. The description must be 2 to 256 characters in length, and cannot start with http:// or https://.</p>

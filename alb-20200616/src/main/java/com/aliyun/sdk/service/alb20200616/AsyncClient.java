@@ -412,7 +412,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p><em>DeleteDhcpOptionsSet</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the <a href="https://help.aliyun.com/document_detail/213618.html">ListAclRelations</a> operation to query the status of the task.</p>
+     * <p><em>DissociateAclsFromListener</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/213618.html">ListAclRelations</a> to query the status of an ACL.</p>
      * <ul>
      * <li>If an ACL is in the <strong>Dissociating</strong> state, the ACL is being disassociated from the listener.</li>
      * <li>If an ACL is in the <strong>Dissociated</strong> state, the ACL is disassociated from the listener.</li>
@@ -655,14 +655,14 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p><em>RemoveServersFromServerGroup</em>* is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background.</p>
      * <ol>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/213627.html">ListServerGroups</a> operation to query the status of a server group.<ul>
-     * <li>If a server group is in the <strong>Configuring</strong> state, it indicates that the server group is being modified.</li>
-     * <li>If a server group is in the <strong>Available</strong> state, it indicates that the server group is running.</li>
+     * <li>You can call <a href="https://help.aliyun.com/document_detail/2254862.html">ListServerGroups</a> to query the status of a server group.<ul>
+     * <li>If the server group is in the <strong>Configuring</strong> state, the server group is being modified.</li>
+     * <li>If the server group is in the <strong>Available</strong> state, the server group is running.</li>
      * </ul>
      * </li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/213628.html">ListServerGroupServers</a> operation to query the status of a backend server.<ul>
-     * <li>If a backend server is in the <strong>Removing</strong> state, the server is being removed from the server group.</li>
-     * <li>If a backend server cannot be found, the server is no longer in the server group.</li>
+     * <li>You can call <a href="https://help.aliyun.com/document_detail/2254863.html">ListServerGroupServers</a> to query the status of a backend server.<ul>
+     * <li>If the backend server is in the <strong>Removing</strong> state, the backend server is being removed from the server group.</li>
+     * <li>If the backend server cannot be found, the backend server is no longer in the server group.</li>
      * </ul>
      * </li>
      * </ol>

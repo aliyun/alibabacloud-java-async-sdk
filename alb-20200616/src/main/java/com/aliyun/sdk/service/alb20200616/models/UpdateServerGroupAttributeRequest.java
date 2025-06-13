@@ -95,7 +95,7 @@ public class UpdateServerGroupAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -460,6 +460,14 @@ public class UpdateServerGroupAttributeRequest extends Request {
             private Boolean connectionDrainEnabled; 
             private Integer connectionDrainTimeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConnectionDrainConfig model) {
+                this.connectionDrainEnabled = model.connectionDrainEnabled;
+                this.connectionDrainTimeout = model.connectionDrainTimeout;
+            } 
+
             /**
              * <p>Specifies whether to enable connection draining. Valid values:</p>
              * <ul>
@@ -662,6 +670,24 @@ public class UpdateServerGroupAttributeRequest extends Request {
             private Integer healthCheckTimeout; 
             private Integer healthyThreshold; 
             private Integer unhealthyThreshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(HealthCheckConfig model) {
+                this.healthCheckCodes = model.healthCheckCodes;
+                this.healthCheckConnectPort = model.healthCheckConnectPort;
+                this.healthCheckEnabled = model.healthCheckEnabled;
+                this.healthCheckHost = model.healthCheckHost;
+                this.healthCheckHttpVersion = model.healthCheckHttpVersion;
+                this.healthCheckInterval = model.healthCheckInterval;
+                this.healthCheckMethod = model.healthCheckMethod;
+                this.healthCheckPath = model.healthCheckPath;
+                this.healthCheckProtocol = model.healthCheckProtocol;
+                this.healthCheckTimeout = model.healthCheckTimeout;
+                this.healthyThreshold = model.healthyThreshold;
+                this.unhealthyThreshold = model.unhealthyThreshold;
+            } 
 
             /**
              * <p>The HTTP status codes that indicate healthy backend servers.</p>
@@ -903,6 +929,14 @@ public class UpdateServerGroupAttributeRequest extends Request {
             private Integer slowStartDuration; 
             private Boolean slowStartEnabled; 
 
+            private Builder() {
+            } 
+
+            private Builder(SlowStartConfig model) {
+                this.slowStartDuration = model.slowStartDuration;
+                this.slowStartEnabled = model.slowStartEnabled;
+            } 
+
             /**
              * <p>The duration of a slow start.</p>
              * 
@@ -1004,6 +1038,16 @@ public class UpdateServerGroupAttributeRequest extends Request {
             private Integer cookieTimeout; 
             private Boolean stickySessionEnabled; 
             private String stickySessionType; 
+
+            private Builder() {
+            } 
+
+            private Builder(StickySessionConfig model) {
+                this.cookie = model.cookie;
+                this.cookieTimeout = model.cookieTimeout;
+                this.stickySessionEnabled = model.stickySessionEnabled;
+                this.stickySessionType = model.stickySessionType;
+            } 
 
             /**
              * <p>The cookie to be configured on the server.</p>
@@ -1124,6 +1168,14 @@ public class UpdateServerGroupAttributeRequest extends Request {
         public static final class Builder {
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(UchConfig model) {
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The type of the parameter. Only query strings are supported.</p>

@@ -36,6 +36,10 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SecrityPolicyRelations> secrityPolicyRelations; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSecurityPolicyRelationsResponseBody model) {
+            this.requestId = model.requestId;
+            this.secrityPolicyRelations = model.secrityPolicyRelations;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,6 +158,16 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
             private Long listenerPort; 
             private String listenerProtocol; 
             private String loadBalancerId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelatedListeners model) {
+                this.listenerId = model.listenerId;
+                this.listenerPort = model.listenerPort;
+                this.listenerProtocol = model.listenerProtocol;
+                this.loadBalancerId = model.loadBalancerId;
+            } 
 
             /**
              * <p>The listener ID.</p>
@@ -241,6 +263,14 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<RelatedListeners> relatedListeners; 
             private String securityPolicyId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecrityPolicyRelations model) {
+                this.relatedListeners = model.relatedListeners;
+                this.securityPolicyId = model.securityPolicyId;
+            } 
 
             /**
              * <p>The listeners that are associated with the security policy.</p>

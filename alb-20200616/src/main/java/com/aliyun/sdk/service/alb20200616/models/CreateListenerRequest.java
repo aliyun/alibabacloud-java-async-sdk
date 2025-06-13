@@ -123,7 +123,7 @@ public class CreateListenerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -577,6 +577,13 @@ public class CreateListenerRequest extends Request {
         public static final class Builder {
             private String certificateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CaCertificates model) {
+                this.certificateId = model.certificateId;
+            } 
+
             /**
              * <p>The ID of the CA certificate.</p>
              * <blockquote>
@@ -630,6 +637,13 @@ public class CreateListenerRequest extends Request {
         public static final class Builder {
             private String certificateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Certificates model) {
+                this.certificateId = model.certificateId;
+            } 
+
             /**
              * <p>The ID of the certificate. Only server certificates are supported. You can specify up to 20 certificate IDs.</p>
              * 
@@ -680,6 +694,13 @@ public class CreateListenerRequest extends Request {
 
         public static final class Builder {
             private String serverGroupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ServerGroupTuples model) {
+                this.serverGroupId = model.serverGroupId;
+            } 
 
             /**
              * <p>The ID of the server group to which requests are forwarded.</p>
@@ -732,6 +753,13 @@ public class CreateListenerRequest extends Request {
 
         public static final class Builder {
             private java.util.List<ServerGroupTuples> serverGroupTuples; 
+
+            private Builder() {
+            } 
+
+            private Builder(ForwardGroupConfig model) {
+                this.serverGroupTuples = model.serverGroupTuples;
+            } 
 
             /**
              * <p>The destination server group to which requests are forwarded.</p>
@@ -794,6 +822,14 @@ public class CreateListenerRequest extends Request {
         public static final class Builder {
             private ForwardGroupConfig forwardGroupConfig; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefaultActions model) {
+                this.forwardGroupConfig = model.forwardGroupConfig;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The configuration of the forwarding action. You can specify at most 20 actions.</p>
@@ -867,6 +903,14 @@ public class CreateListenerRequest extends Request {
         public static final class Builder {
             private String quicListenerId; 
             private Boolean quicUpgradeEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(QuicConfig model) {
+                this.quicListenerId = model.quicListenerId;
+                this.quicUpgradeEnabled = model.quicUpgradeEnabled;
+            } 
 
             /**
              * <p>The ID of the QUIC listener that you want to associate with the HTTPS listener. Only HTTPS listeners support this parameter. This parameter is required when <strong>QuicUpgradeEnabled</strong> is set to <strong>true</strong>.</p>
@@ -950,6 +994,14 @@ public class CreateListenerRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
@@ -1203,6 +1255,29 @@ public class CreateListenerRequest extends Request {
             private Boolean xForwardedForProtoEnabled; 
             private Boolean xForwardedForSLBIdEnabled; 
             private Boolean xForwardedForSLBPortEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(XForwardedForConfig model) {
+                this.xForwardedForClientCertClientVerifyAlias = model.xForwardedForClientCertClientVerifyAlias;
+                this.xForwardedForClientCertClientVerifyEnabled = model.xForwardedForClientCertClientVerifyEnabled;
+                this.xForwardedForClientCertFingerprintAlias = model.xForwardedForClientCertFingerprintAlias;
+                this.xForwardedForClientCertFingerprintEnabled = model.xForwardedForClientCertFingerprintEnabled;
+                this.xForwardedForClientCertIssuerDNAlias = model.xForwardedForClientCertIssuerDNAlias;
+                this.xForwardedForClientCertIssuerDNEnabled = model.xForwardedForClientCertIssuerDNEnabled;
+                this.xForwardedForClientCertSubjectDNAlias = model.xForwardedForClientCertSubjectDNAlias;
+                this.xForwardedForClientCertSubjectDNEnabled = model.xForwardedForClientCertSubjectDNEnabled;
+                this.xForwardedForClientSourceIpsEnabled = model.xForwardedForClientSourceIpsEnabled;
+                this.xForwardedForClientSourceIpsTrusted = model.xForwardedForClientSourceIpsTrusted;
+                this.xForwardedForClientSrcPortEnabled = model.xForwardedForClientSrcPortEnabled;
+                this.xForwardedForEnabled = model.xForwardedForEnabled;
+                this.xForwardedForHostEnabled = model.xForwardedForHostEnabled;
+                this.xForwardedForProcessingMode = model.xForwardedForProcessingMode;
+                this.xForwardedForProtoEnabled = model.xForwardedForProtoEnabled;
+                this.xForwardedForSLBIdEnabled = model.xForwardedForSLBIdEnabled;
+                this.xForwardedForSLBPortEnabled = model.xForwardedForSLBPortEnabled;
+            } 
 
             /**
              * <p>The name of the custom header. This parameter takes effect only when <strong>XForwardedForClientCertClientVerifyEnabled</strong> is set to <strong>true</strong>.</p>

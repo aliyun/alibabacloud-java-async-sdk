@@ -36,6 +36,10 @@ public class ListAclRelationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return aclRelations
      */
@@ -53,6 +57,14 @@ public class ListAclRelationsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<AclRelations> aclRelations; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAclRelationsResponseBody model) {
+            this.aclRelations = model.aclRelations;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The relations between the specified ACL and the listeners.</p>
@@ -158,6 +170,17 @@ public class ListAclRelationsResponseBody extends TeaModel {
             private String listenerProtocol; 
             private String loadBalancerId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(RelatedListeners model) {
+                this.listenerId = model.listenerId;
+                this.listenerPort = model.listenerPort;
+                this.listenerProtocol = model.listenerProtocol;
+                this.loadBalancerId = model.loadBalancerId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The listener ID.</p>
@@ -269,6 +292,14 @@ public class ListAclRelationsResponseBody extends TeaModel {
         public static final class Builder {
             private String aclId; 
             private java.util.List<RelatedListeners> relatedListeners; 
+
+            private Builder() {
+            } 
+
+            private Builder(AclRelations model) {
+                this.aclId = model.aclId;
+                this.relatedListeners = model.relatedListeners;
+            } 
 
             /**
              * <p>ACL ID</p>

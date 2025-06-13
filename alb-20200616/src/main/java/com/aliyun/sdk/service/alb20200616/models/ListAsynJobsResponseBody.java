@@ -48,6 +48,10 @@ public class ListAsynJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobs
      */
@@ -89,6 +93,17 @@ public class ListAsynJobsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAsynJobsResponseBody model) {
+            this.jobs = model.jobs;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The tasks.</p>
@@ -291,6 +306,22 @@ public class ListAsynJobsResponseBody extends TeaModel {
             private String resourceId; 
             private String resourceType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.apiName = model.apiName;
+                this.createTime = model.createTime;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.id = model.id;
+                this.modifyTime = model.modifyTime;
+                this.operateType = model.operateType;
+                this.resourceId = model.resourceId;
+                this.resourceType = model.resourceType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The name of the operation.</p>

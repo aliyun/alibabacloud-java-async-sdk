@@ -50,7 +50,7 @@ public class CreateAScriptsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -203,6 +203,14 @@ public class CreateAScriptsRequest extends Request {
             private String attributeKey; 
             private String attributeValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtAttributes model) {
+                this.attributeKey = model.attributeKey;
+                this.attributeValue = model.attributeValue;
+            } 
+
             /**
              * <p>The attribute name.</p>
              * <p>Set the value to <strong>EsDebug</strong>, which specifies that if requests carry the _es_dbg parameter and the value is the specified key, the debugging header is enabled to output the execution result.</p>
@@ -253,6 +261,9 @@ public class CreateAScriptsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ExtAttributes")
         private java.util.List<ExtAttributes> extAttributes;
 
+        @com.aliyun.core.annotation.NameInMap("Position")
+        private String position;
+
         @com.aliyun.core.annotation.NameInMap("ScriptContent")
         @com.aliyun.core.annotation.Validation(required = true)
         private String scriptContent;
@@ -262,6 +273,7 @@ public class CreateAScriptsRequest extends Request {
             this.enabled = builder.enabled;
             this.extAttributeEnabled = builder.extAttributeEnabled;
             this.extAttributes = builder.extAttributes;
+            this.position = builder.position;
             this.scriptContent = builder.scriptContent;
         }
 
@@ -302,6 +314,13 @@ public class CreateAScriptsRequest extends Request {
         }
 
         /**
+         * @return position
+         */
+        public String getPosition() {
+            return this.position;
+        }
+
+        /**
          * @return scriptContent
          */
         public String getScriptContent() {
@@ -313,7 +332,20 @@ public class CreateAScriptsRequest extends Request {
             private Boolean enabled; 
             private Boolean extAttributeEnabled; 
             private java.util.List<ExtAttributes> extAttributes; 
+            private String position; 
             private String scriptContent; 
+
+            private Builder() {
+            } 
+
+            private Builder(AScripts model) {
+                this.aScriptName = model.aScriptName;
+                this.enabled = model.enabled;
+                this.extAttributeEnabled = model.extAttributeEnabled;
+                this.extAttributes = model.extAttributes;
+                this.position = model.position;
+                this.scriptContent = model.scriptContent;
+            } 
 
             /**
              * <p>The name of the AScript rule.</p>
@@ -363,6 +395,25 @@ public class CreateAScriptsRequest extends Request {
              */
             public Builder extAttributes(java.util.List<ExtAttributes> extAttributes) {
                 this.extAttributes = extAttributes;
+                return this;
+            }
+
+            /**
+             * <p>可编程脚本执行位置</p>
+             * <ul>
+             * <li><p>RequestHead（默认值）：请求方向规则执行前</p>
+             * </li>
+             * <li><p>RequestFoot：请求方向规则执行后</p>
+             * </li>
+             * <li><p>ResponseHead：响应方向规则执行前</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>RequestFoot</p>
+             */
+            public Builder position(String position) {
+                this.position = position;
                 return this;
             }
 

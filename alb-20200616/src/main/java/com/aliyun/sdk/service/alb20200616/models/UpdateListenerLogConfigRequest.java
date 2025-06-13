@@ -55,7 +55,7 @@ public class UpdateListenerLogConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -251,6 +251,15 @@ public class UpdateListenerLogConfigRequest extends Request {
             private Boolean tracingEnabled; 
             private Integer tracingSample; 
             private String tracingType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessLogTracingConfig model) {
+                this.tracingEnabled = model.tracingEnabled;
+                this.tracingSample = model.tracingSample;
+                this.tracingType = model.tracingType;
+            } 
 
             /**
              * <p>Specifies whether to enable the Xtrace feature. Valid values:</p>
