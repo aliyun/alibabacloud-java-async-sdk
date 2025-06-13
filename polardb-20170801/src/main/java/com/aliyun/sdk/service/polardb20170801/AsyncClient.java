@@ -649,6 +649,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeGlobalSecurityIPGroupRelationResponse> describeGlobalSecurityIPGroupRelation(DescribeGlobalSecurityIPGroupRelationRequest request);
 
     /**
+     * @param request the request parameters of DescribeHALogs  DescribeHALogsRequest
+     * @return DescribeHALogsResponse
+     */
+    CompletableFuture<DescribeHALogsResponse> describeHALogs(DescribeHALogsRequest request);
+
+    /**
      * @param request the request parameters of DescribeHistoryTasks  DescribeHistoryTasksRequest
      * @return DescribeHistoryTasksResponse
      */
@@ -1128,6 +1134,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return OpenAITaskResponse
      */
     CompletableFuture<OpenAITaskResponse> openAITask(OpenAITaskRequest request);
+
+    /**
+     * @param request the request parameters of ReactivateDBClusterBackup  ReactivateDBClusterBackupRequest
+     * @return ReactivateDBClusterBackupResponse
+     */
+    CompletableFuture<ReactivateDBClusterBackupResponse> reactivateDBClusterBackup(ReactivateDBClusterBackupRequest request);
 
     /**
      * @param request the request parameters of RefreshDBClusterStorageUsage  RefreshDBClusterStorageUsageRequest

@@ -1662,6 +1662,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeHALogs  DescribeHALogsRequest
+     * @return DescribeHALogsResponse
+     */
+    @Override
+    public CompletableFuture<DescribeHALogsResponse> describeHALogs(DescribeHALogsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeHALogs").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeHALogsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeHALogsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeHistoryTasks  DescribeHistoryTasksRequest
      * @return DescribeHistoryTasksResponse
      */
@@ -2917,6 +2935,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<OpenAITaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ReactivateDBClusterBackup  ReactivateDBClusterBackupRequest
+     * @return ReactivateDBClusterBackupResponse
+     */
+    @Override
+    public CompletableFuture<ReactivateDBClusterBackupResponse> reactivateDBClusterBackup(ReactivateDBClusterBackupRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ReactivateDBClusterBackup").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ReactivateDBClusterBackupResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ReactivateDBClusterBackupResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
