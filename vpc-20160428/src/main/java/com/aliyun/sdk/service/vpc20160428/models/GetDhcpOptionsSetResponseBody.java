@@ -20,6 +20,9 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AssociateVpcs")
     private java.util.List<AssociateVpcs> associateVpcs;
 
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
+    private String creationTime;
+
     @com.aliyun.core.annotation.NameInMap("DhcpOptions")
     private DhcpOptions dhcpOptions;
 
@@ -49,6 +52,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
 
     private GetDhcpOptionsSetResponseBody(Builder builder) {
         this.associateVpcs = builder.associateVpcs;
+        this.creationTime = builder.creationTime;
         this.dhcpOptions = builder.dhcpOptions;
         this.dhcpOptionsSetDescription = builder.dhcpOptionsSetDescription;
         this.dhcpOptionsSetId = builder.dhcpOptionsSetId;
@@ -77,6 +81,13 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
      */
     public java.util.List<AssociateVpcs> getAssociateVpcs() {
         return this.associateVpcs;
+    }
+
+    /**
+     * @return creationTime
+     */
+    public String getCreationTime() {
+        return this.creationTime;
     }
 
     /**
@@ -144,6 +155,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<AssociateVpcs> associateVpcs; 
+        private String creationTime; 
         private DhcpOptions dhcpOptions; 
         private String dhcpOptionsSetDescription; 
         private String dhcpOptionsSetId; 
@@ -159,6 +171,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
 
         private Builder(GetDhcpOptionsSetResponseBody model) {
             this.associateVpcs = model.associateVpcs;
+            this.creationTime = model.creationTime;
             this.dhcpOptions = model.dhcpOptions;
             this.dhcpOptionsSetDescription = model.dhcpOptionsSetDescription;
             this.dhcpOptionsSetId = model.dhcpOptionsSetId;
@@ -175,6 +188,14 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
          */
         public Builder associateVpcs(java.util.List<AssociateVpcs> associateVpcs) {
             this.associateVpcs = associateVpcs;
+            return this;
+        }
+
+        /**
+         * CreationTime.
+         */
+        public Builder creationTime(String creationTime) {
+            this.creationTime = creationTime;
             return this;
         }
 

@@ -371,6 +371,9 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AssociateVpcCount")
         private Integer associateVpcCount;
 
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
+        private String creationTime;
+
         @com.aliyun.core.annotation.NameInMap("DhcpOptions")
         private DhcpOptions dhcpOptions;
 
@@ -397,6 +400,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
 
         private DhcpOptionsSets(Builder builder) {
             this.associateVpcCount = builder.associateVpcCount;
+            this.creationTime = builder.creationTime;
             this.dhcpOptions = builder.dhcpOptions;
             this.dhcpOptionsSetDescription = builder.dhcpOptionsSetDescription;
             this.dhcpOptionsSetId = builder.dhcpOptionsSetId;
@@ -420,6 +424,13 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
          */
         public Integer getAssociateVpcCount() {
             return this.associateVpcCount;
+        }
+
+        /**
+         * @return creationTime
+         */
+        public String getCreationTime() {
+            return this.creationTime;
         }
 
         /**
@@ -480,6 +491,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer associateVpcCount; 
+            private String creationTime; 
             private DhcpOptions dhcpOptions; 
             private String dhcpOptionsSetDescription; 
             private String dhcpOptionsSetId; 
@@ -494,6 +506,7 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
 
             private Builder(DhcpOptionsSets model) {
                 this.associateVpcCount = model.associateVpcCount;
+                this.creationTime = model.creationTime;
                 this.dhcpOptions = model.dhcpOptions;
                 this.dhcpOptionsSetDescription = model.dhcpOptionsSetDescription;
                 this.dhcpOptionsSetId = model.dhcpOptionsSetId;
@@ -512,6 +525,14 @@ public class ListDhcpOptionsSetsResponseBody extends TeaModel {
              */
             public Builder associateVpcCount(Integer associateVpcCount) {
                 this.associateVpcCount = associateVpcCount;
+                return this;
+            }
+
+            /**
+             * CreationTime.
+             */
+            public Builder creationTime(String creationTime) {
+                this.creationTime = creationTime;
                 return this;
             }
 
