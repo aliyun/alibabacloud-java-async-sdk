@@ -56,6 +56,10 @@ public class TransitVisaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class TransitVisaResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(TransitVisaResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -219,6 +236,14 @@ public class TransitVisaResponseBody extends TeaModel {
         public static final class Builder {
             private String cityCode; 
             private Integer visaType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cityCode = model.cityCode;
+                this.visaType = model.visaType;
+            } 
 
             /**
              * city_code.

@@ -56,6 +56,10 @@ public class AncillarySuggestResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class AncillarySuggestResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AncillarySuggestResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Request ID</p>
@@ -274,6 +291,17 @@ public class AncillarySuggestResponseBody extends TeaModel {
             private Boolean isAllWeight; 
             private Double price; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaggageAncillary model) {
+                this.baggageAmount = model.baggageAmount;
+                this.baggageWeight = model.baggageWeight;
+                this.baggageWeightUnit = model.baggageWeightUnit;
+                this.isAllWeight = model.isAllWeight;
+                this.price = model.price;
+            } 
+
             /**
              * <p>baggage quantity, values such as: 3, 2, 1, 0, -2.     -2 indicates weight-based</p>
              * 
@@ -392,6 +420,15 @@ public class AncillarySuggestResponseBody extends TeaModel {
             private Integer ancillaryType; 
             private BaggageAncillary baggageAncillary; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ancillary model) {
+                this.ancillaryId = model.ancillaryId;
+                this.ancillaryType = model.ancillaryType;
+                this.baggageAncillary = model.baggageAncillary;
+            } 
+
             /**
              * <p>Ancillary product ID</p>
              * 
@@ -473,6 +510,14 @@ public class AncillarySuggestResponseBody extends TeaModel {
             private Ancillary ancillary; 
             private java.util.List<String> segmentIdList; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegAncillaryMapList model) {
+                this.ancillary = model.ancillary;
+                this.segmentIdList = model.segmentIdList;
+            } 
+
             /**
              * <p>Ancillary product</p>
              */
@@ -539,6 +584,14 @@ public class AncillarySuggestResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<SegAncillaryMapList> segAncillaryMapList; 
             private String solutionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.segAncillaryMapList = model.segAncillaryMapList;
+                this.solutionId = model.solutionId;
+            } 
 
             /**
              * <p>ancillary detail list</p>

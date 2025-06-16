@@ -56,6 +56,10 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(FlightChangeOfOrderResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -352,6 +369,25 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
             private String oldDepartureTime; 
             private String oldFlightNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightChangeDetail model) {
+                this.changeReason = model.changeReason;
+                this.changeTime = model.changeTime;
+                this.changeType = model.changeType;
+                this.newArrivalAirport = model.newArrivalAirport;
+                this.newArrivalTime = model.newArrivalTime;
+                this.newDepartureAirport = model.newDepartureAirport;
+                this.newDepartureTime = model.newDepartureTime;
+                this.newFlightNo = model.newFlightNo;
+                this.oldArrivalAirport = model.oldArrivalAirport;
+                this.oldArrivalTime = model.oldArrivalTime;
+                this.oldDepartureAirport = model.oldDepartureAirport;
+                this.oldDepartureTime = model.oldDepartureTime;
+                this.oldFlightNo = model.oldFlightNo;
+            } 
+
             /**
              * change_reason.
              */
@@ -506,6 +542,14 @@ public class FlightChangeOfOrderResponseBody extends TeaModel {
         public static final class Builder {
             private FlightChangeDetail flightChangeDetail; 
             private Long orderNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.flightChangeDetail = model.flightChangeDetail;
+                this.orderNum = model.orderNum;
+            } 
 
             /**
              * flight_change_detail.

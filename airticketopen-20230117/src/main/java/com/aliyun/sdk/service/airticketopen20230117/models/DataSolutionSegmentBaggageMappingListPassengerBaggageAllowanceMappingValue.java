@@ -60,6 +60,10 @@ public class DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappi
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return baggageAmount
      */
@@ -125,6 +129,20 @@ public class DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappi
         private Integer carryOnWeight; 
         private String carryOnWeightUnit; 
         private Boolean isAllCarryOnWeight; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue model) {
+            this.baggageAmount = model.baggageAmount;
+            this.baggageWeight = model.baggageWeight;
+            this.baggageWeightUnit = model.baggageWeightUnit;
+            this.isAllWeight = model.isAllWeight;
+            this.carryOnAmount = model.carryOnAmount;
+            this.carryOnWeight = model.carryOnWeight;
+            this.carryOnWeightUnit = model.carryOnWeightUnit;
+            this.isAllCarryOnWeight = model.isAllCarryOnWeight;
+        } 
 
         /**
          * <p>checked baggage quantity</p>

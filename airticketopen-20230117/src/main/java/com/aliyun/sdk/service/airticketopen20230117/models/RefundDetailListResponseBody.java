@@ -56,6 +56,10 @@ public class RefundDetailListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class RefundDetailListResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefundDetailListResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>request ID</p>
@@ -298,6 +315,19 @@ public class RefundDetailListResponseBody extends TeaModel {
             private String transactionNo; 
             private Long utcCreateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.isMultiRefund = model.isMultiRefund;
+                this.orderNum = model.orderNum;
+                this.refundOrderNum = model.refundOrderNum;
+                this.refundOrderStatus = model.refundOrderStatus;
+                this.relatedRefundOrderNum = model.relatedRefundOrderNum;
+                this.transactionNo = model.transactionNo;
+                this.utcCreateTime = model.utcCreateTime;
+            } 
+
             /**
              * <p>whether it is a supplementary refund order (if the refund amount is not enough, you can use RefundApply to create a supplementary refund order)</p>
              * 
@@ -454,6 +484,16 @@ public class RefundDetailListResponseBody extends TeaModel {
             private Integer totalCount; 
             private Integer totalPage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Pagination model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+                this.totalPage = model.totalPage;
+            } 
+
             /**
              * <p>current page index</p>
              * 
@@ -548,6 +588,14 @@ public class RefundDetailListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<List> list; 
             private Pagination pagination; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pagination = model.pagination;
+            } 
 
             /**
              * <p>refund order list</p>

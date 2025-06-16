@@ -56,6 +56,10 @@ public class CollectFlightLowestPriceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class CollectFlightLowestPriceResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CollectFlightLowestPriceResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.

@@ -56,6 +56,10 @@ public class RefundDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class RefundDetailResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefundDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -247,6 +264,15 @@ public class RefundDetailResponseBody extends TeaModel {
             private String firstName; 
             private String lastName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Passenger model) {
+                this.document = model.document;
+                this.firstName = model.firstName;
+                this.lastName = model.lastName;
+            } 
+
             /**
              * <p>credential number</p>
              * 
@@ -343,6 +369,15 @@ public class RefundDetailResponseBody extends TeaModel {
             private Double originalOrderRefundFee; 
             private Passenger passenger; 
 
+            private Builder() {
+            } 
+
+            private Builder(PassengerMultiRefundDetails model) {
+                this.changeOrderRefundFee = model.changeOrderRefundFee;
+                this.originalOrderRefundFee = model.originalOrderRefundFee;
+                this.passenger = model.passenger;
+            } 
+
             /**
              * <p>amount of the supplementary refund for the change order</p>
              * 
@@ -436,6 +471,15 @@ public class RefundDetailResponseBody extends TeaModel {
             private String multiRefundTransactionNo; 
             private java.util.List<PassengerMultiRefundDetails> passengerMultiRefundDetails; 
 
+            private Builder() {
+            } 
+
+            private Builder(MultiRefundDetails model) {
+                this.multiRefundOrderNum = model.multiRefundOrderNum;
+                this.multiRefundTransactionNo = model.multiRefundTransactionNo;
+                this.passengerMultiRefundDetails = model.passengerMultiRefundDetails;
+            } 
+
             /**
              * <p>supplementary refund order number</p>
              * 
@@ -528,6 +572,15 @@ public class RefundDetailResponseBody extends TeaModel {
             private String document; 
             private String firstName; 
             private String lastName; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerRefundDetailsPassenger model) {
+                this.document = model.document;
+                this.firstName = model.firstName;
+                this.lastName = model.lastName;
+            } 
 
             /**
              * <p>credential number</p>
@@ -673,6 +726,19 @@ public class RefundDetailResponseBody extends TeaModel {
             private Double nonRefundableTicketFee; 
             private Double refundToBuyerMoney; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundFee model) {
+                this.alreadyUsedTotalFee = model.alreadyUsedTotalFee;
+                this.modifyRefundToBuyerMoney = model.modifyRefundToBuyerMoney;
+                this.nonRefundableChangeServiceFee = model.nonRefundableChangeServiceFee;
+                this.nonRefundableChangeUpgradeFee = model.nonRefundableChangeUpgradeFee;
+                this.nonRefundableTaxFee = model.nonRefundableTaxFee;
+                this.nonRefundableTicketFee = model.nonRefundableTicketFee;
+                this.refundToBuyerMoney = model.refundToBuyerMoney;
+            } 
+
             /**
              * <p>total price of the used flight tickets</p>
              * 
@@ -800,6 +866,14 @@ public class RefundDetailResponseBody extends TeaModel {
         public static final class Builder {
             private PassengerRefundDetailsPassenger passenger; 
             private RefundFee refundFee; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerRefundDetails model) {
+                this.passenger = model.passenger;
+                this.refundFee = model.refundFee;
+            } 
 
             /**
              * <p>information of the passenger applying for a refund</p>
@@ -1108,6 +1182,34 @@ public class RefundDetailResponseBody extends TeaModel {
             private String stopCityList; 
             private Integer stopQuantity; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentList model) {
+                this.arrivalAirport = model.arrivalAirport;
+                this.arrivalCity = model.arrivalCity;
+                this.arrivalTerminal = model.arrivalTerminal;
+                this.arrivalTime = model.arrivalTime;
+                this.availability = model.availability;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.codeShare = model.codeShare;
+                this.departureAirport = model.departureAirport;
+                this.departureCity = model.departureCity;
+                this.departureTerminal = model.departureTerminal;
+                this.departureTime = model.departureTime;
+                this.equipType = model.equipType;
+                this.flightDuration = model.flightDuration;
+                this.marketingAirline = model.marketingAirline;
+                this.marketingFlightNo = model.marketingFlightNo;
+                this.marketingFlightNoInt = model.marketingFlightNoInt;
+                this.operatingAirline = model.operatingAirline;
+                this.operatingFlightNo = model.operatingFlightNo;
+                this.segmentId = model.segmentId;
+                this.stopCityList = model.stopCityList;
+                this.stopQuantity = model.stopQuantity;
+            } 
+
             /**
              * <p>arrival airport code (capitalized)</p>
              * 
@@ -1401,6 +1503,14 @@ public class RefundDetailResponseBody extends TeaModel {
             private java.util.List<SegmentList> segmentList; 
             private Integer transferCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundJourneys model) {
+                this.segmentList = model.segmentList;
+                this.transferCount = model.transferCount;
+            } 
+
             /**
              * <p>segment list</p>
              */
@@ -1614,6 +1724,26 @@ public class RefundDetailResponseBody extends TeaModel {
             private Integer status; 
             private String transactionNo; 
             private Long utcCreateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.containMultiRefund = model.containMultiRefund;
+                this.multiRefundDetails = model.multiRefundDetails;
+                this.orderNum = model.orderNum;
+                this.passengerRefundDetails = model.passengerRefundDetails;
+                this.paySuccessUtcTime = model.paySuccessUtcTime;
+                this.refundAttachmentUrls = model.refundAttachmentUrls;
+                this.refundJourneys = model.refundJourneys;
+                this.refundOrderNum = model.refundOrderNum;
+                this.refundReason = model.refundReason;
+                this.refundType = model.refundType;
+                this.refuseReason = model.refuseReason;
+                this.status = model.status;
+                this.transactionNo = model.transactionNo;
+                this.utcCreateTime = model.utcCreateTime;
+            } 
 
             /**
              * <p>whether it is a supplementary refund order (if the refund amount is not enough, you can use RefundApply to create a supplementary refund order)</p>

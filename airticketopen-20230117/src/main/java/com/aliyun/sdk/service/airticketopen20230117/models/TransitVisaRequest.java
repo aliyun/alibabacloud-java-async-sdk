@@ -45,7 +45,7 @@ public class TransitVisaRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -296,6 +296,24 @@ public class TransitVisaRequest extends Request {
             private String operatingAirline; 
             private String stopCityList; 
             private String ticketingAirline; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightSegmentParamList model) {
+                this.arrivalAirport = model.arrivalAirport;
+                this.arrivalTerminal = model.arrivalTerminal;
+                this.arrivalTime = model.arrivalTime;
+                this.codeShare = model.codeShare;
+                this.departureAirport = model.departureAirport;
+                this.departureTerminal = model.departureTerminal;
+                this.departureTime = model.departureTime;
+                this.marketingAirline = model.marketingAirline;
+                this.marketingFlightNo = model.marketingFlightNo;
+                this.operatingAirline = model.operatingAirline;
+                this.stopCityList = model.stopCityList;
+                this.ticketingAirline = model.ticketingAirline;
+            } 
 
             /**
              * <p>This parameter is required.</p>

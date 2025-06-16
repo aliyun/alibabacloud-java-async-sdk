@@ -56,6 +56,10 @@ public class LuggageDirectResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class LuggageDirectResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(LuggageDirectResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -219,6 +236,14 @@ public class LuggageDirectResponseBody extends TeaModel {
         public static final class Builder {
             private String cityCode; 
             private Integer directType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cityCode = model.cityCode;
+                this.directType = model.directType;
+            } 
 
             /**
              * city_code.

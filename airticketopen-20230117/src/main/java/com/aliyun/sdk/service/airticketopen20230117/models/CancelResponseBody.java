@@ -56,6 +56,10 @@ public class CancelResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class CancelResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CancelResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>request ID</p>
@@ -225,6 +242,13 @@ public class CancelResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long orderNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.orderNum = model.orderNum;
+            } 
 
             /**
              * <p>order number</p>

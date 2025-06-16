@@ -46,7 +46,7 @@ public class CollectFlightLowestPriceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -286,6 +286,23 @@ public class CollectFlightLowestPriceRequest extends Request {
             private String solutionId; 
             private Double suezTotalPrice; 
             private Integer tripType; 
+
+            private Builder() {
+            } 
+
+            private Builder(LowestPriceFlightInfoList model) {
+                this.arrivalCity = model.arrivalCity;
+                this.departureCity = model.departureCity;
+                this.departureDate = model.departureDate;
+                this.departureFlightNumber = model.departureFlightNumber;
+                this.marketTotalPrice = model.marketTotalPrice;
+                this.requestId = model.requestId;
+                this.returnDate = model.returnDate;
+                this.returnFlightNumber = model.returnFlightNumber;
+                this.solutionId = model.solutionId;
+                this.suezTotalPrice = model.suezTotalPrice;
+                this.tripType = model.tripType;
+            } 
 
             /**
              * <p>This parameter is required.</p>

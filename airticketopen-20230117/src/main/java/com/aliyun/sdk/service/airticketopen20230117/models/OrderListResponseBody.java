@@ -56,6 +56,10 @@ public class OrderListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class OrderListResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(OrderListResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>request ID</p>
@@ -261,6 +278,16 @@ public class OrderListResponseBody extends TeaModel {
             private String credentialNum; 
             private Integer credentialType; 
             private String expireDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Credential model) {
+                this.certIssuePlace = model.certIssuePlace;
+                this.credentialNum = model.credentialNum;
+                this.credentialType = model.credentialType;
+                this.expireDate = model.expireDate;
+            } 
 
             /**
              * <p>issuing place (two-letter code)</p>
@@ -440,6 +467,21 @@ public class OrderListResponseBody extends TeaModel {
             private String mobilePhoneNumber; 
             private String nationality; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerList model) {
+                this.birthday = model.birthday;
+                this.credential = model.credential;
+                this.firstName = model.firstName;
+                this.gender = model.gender;
+                this.lastName = model.lastName;
+                this.mobileCountryCode = model.mobileCountryCode;
+                this.mobilePhoneNumber = model.mobilePhoneNumber;
+                this.nationality = model.nationality;
+                this.type = model.type;
+            } 
 
             /**
              * <p>date of birth (yyyyMMdd)</p>
@@ -720,6 +762,25 @@ public class OrderListResponseBody extends TeaModel {
             private Double totalPrice; 
             private String transactionNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.bookTime = model.bookTime;
+                this.orderNum = model.orderNum;
+                this.orderStatus = model.orderStatus;
+                this.outOrderNum = model.outOrderNum;
+                this.passengerList = model.passengerList;
+                this.payStatus = model.payStatus;
+                this.payTime = model.payTime;
+                this.promotionPrice = model.promotionPrice;
+                this.realPayPrice = model.realPayPrice;
+                this.sessionNick = model.sessionNick;
+                this.succeedTime = model.succeedTime;
+                this.totalPrice = model.totalPrice;
+                this.transactionNo = model.transactionNo;
+            } 
+
             /**
              * <p>book time(timestamp)</p>
              * 
@@ -944,6 +1005,16 @@ public class OrderListResponseBody extends TeaModel {
             private Integer totalCount; 
             private Integer totalPage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Pagination model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+                this.totalPage = model.totalPage;
+            } 
+
             /**
              * <p>current page index</p>
              * 
@@ -1038,6 +1109,14 @@ public class OrderListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<List> list; 
             private Pagination pagination; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pagination = model.pagination;
+            } 
 
             /**
              * <p>order list</p>

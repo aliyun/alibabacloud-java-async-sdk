@@ -56,6 +56,10 @@ public class GetTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class GetTokenResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTokenResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Request RequestId</p>
@@ -249,6 +266,15 @@ public class GetTokenResponseBody extends TeaModel {
             private Long expireTime; 
             private Long generateTime; 
             private String token; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.expireTime = model.expireTime;
+                this.generateTime = model.generateTime;
+                this.token = model.token;
+            } 
 
             /**
              * <p>Remaining valid time of the token in seconds</p>

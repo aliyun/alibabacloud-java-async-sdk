@@ -75,7 +75,7 @@ public class ChangeApplyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -312,6 +312,15 @@ public class ChangeApplyRequest extends Request {
             private String firstName; 
             private String lastName; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangePassengerList model) {
+                this.document = model.document;
+                this.firstName = model.firstName;
+                this.lastName = model.lastName;
+            } 
+
             /**
              * document.
              */
@@ -541,6 +550,26 @@ public class ChangeApplyRequest extends Request {
             private String marketingFlightNo; 
             private String operatingFlightNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentList model) {
+                this.arrivalAirport = model.arrivalAirport;
+                this.arrivalCity = model.arrivalCity;
+                this.arriveTerminal = model.arriveTerminal;
+                this.arriveTime = model.arriveTime;
+                this.arriveTimeStr = model.arriveTimeStr;
+                this.codeShare = model.codeShare;
+                this.departureAirport = model.departureAirport;
+                this.departureCity = model.departureCity;
+                this.departureDate = model.departureDate;
+                this.departureTerminal = model.departureTerminal;
+                this.departureTime = model.departureTime;
+                this.departureTimeStr = model.departureTimeStr;
+                this.marketingFlightNo = model.marketingFlightNo;
+                this.operatingFlightNo = model.operatingFlightNo;
+            } 
+
             /**
              * arrival_airport.
              */
@@ -704,6 +733,13 @@ public class ChangeApplyRequest extends Request {
         public static final class Builder {
             private java.util.List<SegmentList> segmentList; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangedJourneys model) {
+                this.segmentList = model.segmentList;
+            } 
+
             /**
              * segment_list.
              */
@@ -774,6 +810,15 @@ public class ChangeApplyRequest extends Request {
             private String email; 
             private String mobileCountryCode; 
             private String mobilePhoneNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contact model) {
+                this.email = model.email;
+                this.mobileCountryCode = model.mobileCountryCode;
+                this.mobilePhoneNum = model.mobilePhoneNum;
+            } 
 
             /**
              * email.

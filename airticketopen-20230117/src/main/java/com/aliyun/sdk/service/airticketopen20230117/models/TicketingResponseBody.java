@@ -56,6 +56,10 @@ public class TicketingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class TicketingResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(TicketingResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>request ID</p>
@@ -237,6 +254,14 @@ public class TicketingResponseBody extends TeaModel {
         public static final class Builder {
             private Long orderNum; 
             private String transactionNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.orderNum = model.orderNum;
+                this.transactionNo = model.transactionNo;
+            } 
 
             /**
              * <p>order number</p>

@@ -70,7 +70,7 @@ public class EnrichRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -384,6 +384,20 @@ public class EnrichRequest extends Request {
             private String departureTime; 
             private String marketingFlightNo; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentParamList model) {
+                this.arrivalAirport = model.arrivalAirport;
+                this.arrivalCity = model.arrivalCity;
+                this.cabin = model.cabin;
+                this.childCabin = model.childCabin;
+                this.departureAirport = model.departureAirport;
+                this.departureCity = model.departureCity;
+                this.departureTime = model.departureTime;
+                this.marketingFlightNo = model.marketingFlightNo;
+            } 
+
             /**
              * <p>arrival airport code (capitalized)</p>
              * 
@@ -551,6 +565,16 @@ public class EnrichRequest extends Request {
             private String departureCity; 
             private String departureDate; 
             private java.util.List<SegmentParamList> segmentParamList; 
+
+            private Builder() {
+            } 
+
+            private Builder(JourneyParamList model) {
+                this.arrivalCity = model.arrivalCity;
+                this.departureCity = model.departureCity;
+                this.departureDate = model.departureDate;
+                this.segmentParamList = model.segmentParamList;
+            } 
 
             /**
              * <p>arrival city code (capitalized)</p>

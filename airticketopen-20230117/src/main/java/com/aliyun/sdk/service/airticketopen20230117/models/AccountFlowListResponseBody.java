@@ -56,6 +56,10 @@ public class AccountFlowListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class AccountFlowListResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(AccountFlowListResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -340,6 +357,24 @@ public class AccountFlowListResponseBody extends TeaModel {
             private String outOrderNum; 
             private Long refundOrderNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.afterAvailableAmount = model.afterAvailableAmount;
+                this.beforeAvailableAmount = model.beforeAvailableAmount;
+                this.changeOrderNum = model.changeOrderNum;
+                this.flowId = model.flowId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.opAmount = model.opAmount;
+                this.opType = model.opType;
+                this.orderNum = model.orderNum;
+                this.orderType = model.orderType;
+                this.outOrderNum = model.outOrderNum;
+                this.refundOrderNum = model.refundOrderNum;
+            } 
+
             /**
              * after_available_amount.
              */
@@ -511,6 +546,16 @@ public class AccountFlowListResponseBody extends TeaModel {
             private Integer totalCount; 
             private Integer totalPage; 
 
+            private Builder() {
+            } 
+
+            private Builder(Pagination model) {
+                this.currentPage = model.currentPage;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+                this.totalPage = model.totalPage;
+            } 
+
             /**
              * current_page.
              */
@@ -593,6 +638,14 @@ public class AccountFlowListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<List> list; 
             private Pagination pagination; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.list = model.list;
+                this.pagination = model.pagination;
+            } 
 
             /**
              * list.

@@ -64,7 +64,7 @@ public class RefundApplyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -283,6 +283,16 @@ public class RefundApplyRequest extends Request {
             private String departureAirport; 
             private String departureCity; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentList model) {
+                this.arrivalAirport = model.arrivalAirport;
+                this.arrivalCity = model.arrivalCity;
+                this.departureAirport = model.departureAirport;
+                this.departureCity = model.departureCity;
+            } 
+
             /**
              * <p>arrival airport code (capitalized)</p>
              * <p>This parameter is required.</p>
@@ -371,6 +381,13 @@ public class RefundApplyRequest extends Request {
         public static final class Builder {
             private java.util.List<SegmentList> segmentList; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundJourneys model) {
+                this.segmentList = model.segmentList;
+            } 
+
             /**
              * <p>segment list</p>
              * <p>This parameter is required.</p>
@@ -444,6 +461,15 @@ public class RefundApplyRequest extends Request {
             private String document; 
             private String firstName; 
             private String lastName; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundPassengerList model) {
+                this.document = model.document;
+                this.firstName = model.firstName;
+                this.lastName = model.lastName;
+            } 
 
             /**
              * <p>credential number</p>
@@ -543,6 +569,15 @@ public class RefundApplyRequest extends Request {
             private java.util.List<String> file; 
             private Integer refundTypeId; 
             private String remark; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundType model) {
+                this.file = model.file;
+                this.refundTypeId = model.refundTypeId;
+                this.remark = model.remark;
+            } 
 
             /**
              * <p>attachment file URLs</p>

@@ -56,6 +56,10 @@ public class BookResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class BookResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BookResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>request ID</p>
@@ -226,6 +243,13 @@ public class BookResponseBody extends TeaModel {
         public static final class Builder {
             private Long orderNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrderList model) {
+                this.orderNum = model.orderNum;
+            } 
+
             /**
              * <p>order number</p>
              * 
@@ -276,6 +300,13 @@ public class BookResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<OrderList> orderList; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.orderList = model.orderList;
+            } 
+
             /**
              * <p>order information list</p>
              */
@@ -322,6 +353,13 @@ public class BookResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long orderNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorDataOrderList model) {
+                this.orderNum = model.orderNum;
+            } 
 
             /**
              * <p>order number</p>
@@ -372,6 +410,13 @@ public class BookResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ErrorDataOrderList> orderList; 
+
+            private Builder() {
+            } 
+
+            private Builder(ErrorData model) {
+                this.orderList = model.orderList;
+            } 
 
             /**
              * <p>order information list. When the same input parameters are used to repeat a Book, if the booking has already been successful, the order number will be returned.</p>

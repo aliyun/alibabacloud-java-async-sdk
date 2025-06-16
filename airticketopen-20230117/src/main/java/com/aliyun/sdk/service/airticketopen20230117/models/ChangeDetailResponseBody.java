@@ -56,6 +56,10 @@ public class ChangeDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class ChangeDetailResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChangeDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -232,6 +249,15 @@ public class ChangeDetailResponseBody extends TeaModel {
             private Double taxFee; 
             private Double upgradeFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeFee model) {
+                this.serviceFee = model.serviceFee;
+                this.taxFee = model.taxFee;
+                this.upgradeFee = model.upgradeFee;
+            } 
+
             /**
              * service_fee.
              */
@@ -319,6 +345,15 @@ public class ChangeDetailResponseBody extends TeaModel {
             private String firstName; 
             private String lastName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Passenger model) {
+                this.document = model.document;
+                this.firstName = model.firstName;
+                this.lastName = model.lastName;
+            } 
+
             /**
              * document.
              */
@@ -393,6 +428,14 @@ public class ChangeDetailResponseBody extends TeaModel {
         public static final class Builder {
             private ChangeFee changeFee; 
             private Passenger passenger; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChangeFeeDetails model) {
+                this.changeFee = model.changeFee;
+                this.passenger = model.passenger;
+            } 
 
             /**
              * change_fee.
@@ -472,6 +515,15 @@ public class ChangeDetailResponseBody extends TeaModel {
             private String document; 
             private String firstName; 
             private String lastName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChangePassengers model) {
+                this.document = model.document;
+                this.firstName = model.firstName;
+                this.lastName = model.lastName;
+            } 
 
             /**
              * document.
@@ -788,6 +840,34 @@ public class ChangeDetailResponseBody extends TeaModel {
             private String stopCityList; 
             private Integer stopQuantity; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentList model) {
+                this.arrivalAirport = model.arrivalAirport;
+                this.arrivalCity = model.arrivalCity;
+                this.arrivalTerminal = model.arrivalTerminal;
+                this.arrivalTime = model.arrivalTime;
+                this.availability = model.availability;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.codeShare = model.codeShare;
+                this.departureAirport = model.departureAirport;
+                this.departureCity = model.departureCity;
+                this.departureTerminal = model.departureTerminal;
+                this.departureTime = model.departureTime;
+                this.equipType = model.equipType;
+                this.flightDuration = model.flightDuration;
+                this.marketingAirline = model.marketingAirline;
+                this.marketingFlightNo = model.marketingFlightNo;
+                this.marketingFlightNoInt = model.marketingFlightNoInt;
+                this.operatingAirline = model.operatingAirline;
+                this.operatingFlightNo = model.operatingFlightNo;
+                this.segmentId = model.segmentId;
+                this.stopCityList = model.stopCityList;
+                this.stopQuantity = model.stopQuantity;
+            } 
+
             /**
              * arrival_airport.
              */
@@ -1015,6 +1095,14 @@ public class ChangeDetailResponseBody extends TeaModel {
             private java.util.List<SegmentList> segmentList; 
             private Integer transferCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangedJourneys model) {
+                this.segmentList = model.segmentList;
+                this.transferCount = model.transferCount;
+            } 
+
             /**
              * segment_list.
              */
@@ -1093,6 +1181,15 @@ public class ChangeDetailResponseBody extends TeaModel {
             private String email; 
             private String mobileCountryCode; 
             private String mobilePhoneNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contact model) {
+                this.email = model.email;
+                this.mobileCountryCode = model.mobileCountryCode;
+                this.mobilePhoneNum = model.mobilePhoneNum;
+            } 
 
             /**
              * email.
@@ -1409,6 +1506,34 @@ public class ChangeDetailResponseBody extends TeaModel {
             private String stopCityList; 
             private Integer stopQuantity; 
 
+            private Builder() {
+            } 
+
+            private Builder(LastJourneysSegmentList model) {
+                this.arrivalAirport = model.arrivalAirport;
+                this.arrivalCity = model.arrivalCity;
+                this.arrivalTerminal = model.arrivalTerminal;
+                this.arrivalTime = model.arrivalTime;
+                this.availability = model.availability;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.codeShare = model.codeShare;
+                this.departureAirport = model.departureAirport;
+                this.departureCity = model.departureCity;
+                this.departureTerminal = model.departureTerminal;
+                this.departureTime = model.departureTime;
+                this.equipType = model.equipType;
+                this.flightDuration = model.flightDuration;
+                this.marketingAirline = model.marketingAirline;
+                this.marketingFlightNo = model.marketingFlightNo;
+                this.marketingFlightNoInt = model.marketingFlightNoInt;
+                this.operatingAirline = model.operatingAirline;
+                this.operatingFlightNo = model.operatingFlightNo;
+                this.segmentId = model.segmentId;
+                this.stopCityList = model.stopCityList;
+                this.stopQuantity = model.stopQuantity;
+            } 
+
             /**
              * arrival_airport.
              */
@@ -1635,6 +1760,14 @@ public class ChangeDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<LastJourneysSegmentList> segmentList; 
             private Integer transferCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(LastJourneys model) {
+                this.segmentList = model.segmentList;
+                this.transferCount = model.transferCount;
+            } 
 
             /**
              * segment_list.
@@ -1943,6 +2076,34 @@ public class ChangeDetailResponseBody extends TeaModel {
             private String stopCityList; 
             private Integer stopQuantity; 
 
+            private Builder() {
+            } 
+
+            private Builder(OriginalJourneysSegmentList model) {
+                this.arrivalAirport = model.arrivalAirport;
+                this.arrivalCity = model.arrivalCity;
+                this.arrivalTerminal = model.arrivalTerminal;
+                this.arrivalTime = model.arrivalTime;
+                this.availability = model.availability;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.codeShare = model.codeShare;
+                this.departureAirport = model.departureAirport;
+                this.departureCity = model.departureCity;
+                this.departureTerminal = model.departureTerminal;
+                this.departureTime = model.departureTime;
+                this.equipType = model.equipType;
+                this.flightDuration = model.flightDuration;
+                this.marketingAirline = model.marketingAirline;
+                this.marketingFlightNo = model.marketingFlightNo;
+                this.marketingFlightNoInt = model.marketingFlightNoInt;
+                this.operatingAirline = model.operatingAirline;
+                this.operatingFlightNo = model.operatingFlightNo;
+                this.segmentId = model.segmentId;
+                this.stopCityList = model.stopCityList;
+                this.stopQuantity = model.stopQuantity;
+            } 
+
             /**
              * arrival_airport.
              */
@@ -2169,6 +2330,14 @@ public class ChangeDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<OriginalJourneysSegmentList> segmentList; 
             private Integer transferCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginalJourneys model) {
+                this.segmentList = model.segmentList;
+                this.transferCount = model.transferCount;
+            } 
 
             /**
              * segment_list.
@@ -2428,6 +2597,30 @@ public class ChangeDetailResponseBody extends TeaModel {
             private Long paySuccessUtcTime; 
             private Double totalAmount; 
             private String transactionNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.changeFeeDetails = model.changeFeeDetails;
+                this.changeOrderNum = model.changeOrderNum;
+                this.changePassengers = model.changePassengers;
+                this.changeReasonType = model.changeReasonType;
+                this.changedJourneys = model.changedJourneys;
+                this.closeReason = model.closeReason;
+                this.closeUtcTime = model.closeUtcTime;
+                this.contact = model.contact;
+                this.createUtcTime = model.createUtcTime;
+                this.lastConfirmUtcTime = model.lastConfirmUtcTime;
+                this.lastJourneys = model.lastJourneys;
+                this.orderNum = model.orderNum;
+                this.orderStatus = model.orderStatus;
+                this.originalJourneys = model.originalJourneys;
+                this.payStatus = model.payStatus;
+                this.paySuccessUtcTime = model.paySuccessUtcTime;
+                this.totalAmount = model.totalAmount;
+                this.transactionNo = model.transactionNo;
+            } 
 
             /**
              * change_fee_details.

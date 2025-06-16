@@ -56,6 +56,10 @@ public class FileUploadResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class FileUploadResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(FileUploadResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -207,6 +224,13 @@ public class FileUploadResponseBody extends TeaModel {
 
         public static final class Builder {
             private String uploadedFileUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.uploadedFileUrl = model.uploadedFileUrl;
+            } 
 
             /**
              * uploaded_file_url.

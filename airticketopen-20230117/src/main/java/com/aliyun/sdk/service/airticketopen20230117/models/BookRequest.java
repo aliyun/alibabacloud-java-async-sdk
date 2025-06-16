@@ -69,7 +69,7 @@ public class BookRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -317,6 +317,17 @@ public class BookRequest extends Request {
             private String mobileCountryCode; 
             private String mobilePhoneNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(Contact model) {
+                this.email = model.email;
+                this.firstName = model.firstName;
+                this.lastName = model.lastName;
+                this.mobileCountryCode = model.mobileCountryCode;
+                this.mobilePhoneNum = model.mobilePhoneNum;
+            } 
+
             /**
              * <p>email address</p>
              * 
@@ -423,6 +434,14 @@ public class BookRequest extends Request {
             private String ancillaryId; 
             private Integer ancillaryType; 
 
+            private Builder() {
+            } 
+
+            private Builder(BookAncillaryReqItem model) {
+                this.ancillaryId = model.ancillaryId;
+                this.ancillaryType = model.ancillaryType;
+            } 
+
             /**
              * <p>ancillary product ID, returned by AncillarySuggest.</p>
              * 
@@ -520,6 +539,16 @@ public class BookRequest extends Request {
             private String credentialNum; 
             private Integer credentialType; 
             private String expireDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Credential model) {
+                this.certIssuePlace = model.certIssuePlace;
+                this.credentialNum = model.credentialNum;
+                this.credentialType = model.credentialType;
+                this.expireDate = model.expireDate;
+            } 
 
             /**
              * <p>place of issue, two-letter code</p>
@@ -706,6 +735,21 @@ public class BookRequest extends Request {
             private String nationality; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(PassengerAncillaryPurchaseMapListPassengerList model) {
+                this.birthday = model.birthday;
+                this.credential = model.credential;
+                this.firstName = model.firstName;
+                this.gender = model.gender;
+                this.lastName = model.lastName;
+                this.mobileCountryCode = model.mobileCountryCode;
+                this.mobilePhoneNumber = model.mobilePhoneNumber;
+                this.nationality = model.nationality;
+                this.type = model.type;
+            } 
+
             /**
              * <p>date of birth (yyyyMMdd)</p>
              * 
@@ -858,6 +902,14 @@ public class BookRequest extends Request {
             private BookAncillaryReqItem bookAncillaryReqItem; 
             private java.util.List<PassengerAncillaryPurchaseMapListPassengerList> passengerList; 
 
+            private Builder() {
+            } 
+
+            private Builder(PassengerAncillaryPurchaseMapList model) {
+                this.bookAncillaryReqItem = model.bookAncillaryReqItem;
+                this.passengerList = model.passengerList;
+            } 
+
             /**
              * <p>ancillary information</p>
              */
@@ -949,6 +1001,16 @@ public class BookRequest extends Request {
             private String credentialNum; 
             private Integer credentialType; 
             private String expireDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerListCredential model) {
+                this.certIssuePlace = model.certIssuePlace;
+                this.credentialNum = model.credentialNum;
+                this.credentialType = model.credentialType;
+                this.expireDate = model.expireDate;
+            } 
 
             /**
              * <p>place of issue, two-letter code</p>
@@ -1134,6 +1196,21 @@ public class BookRequest extends Request {
             private String mobilePhoneNumber; 
             private String nationality; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerList model) {
+                this.birthday = model.birthday;
+                this.credential = model.credential;
+                this.firstName = model.firstName;
+                this.gender = model.gender;
+                this.lastName = model.lastName;
+                this.mobileCountryCode = model.mobileCountryCode;
+                this.mobilePhoneNumber = model.mobilePhoneNumber;
+                this.nationality = model.nationality;
+                this.type = model.type;
+            } 
 
             /**
              * <p>date of birth (yyyyMMdd)</p>

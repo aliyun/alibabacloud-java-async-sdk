@@ -71,7 +71,7 @@ public class SearchRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -350,6 +350,17 @@ public class SearchRequest extends Request {
             private String departureCity; 
             private String departureDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(AirLegs model) {
+                this.arrivalAirportList = model.arrivalAirportList;
+                this.arrivalCity = model.arrivalCity;
+                this.departureAirportList = model.departureAirportList;
+                this.departureCity = model.departureCity;
+                this.departureDate = model.departureDate;
+            } 
+
             /**
              * <p>arrival airport [IATA airport code] list</p>
              * 
@@ -470,6 +481,15 @@ public class SearchRequest extends Request {
             private java.util.List<String> airlineExcludedList; 
             private java.util.List<String> airlinePreferList; 
             private String serviceQuality; 
+
+            private Builder() {
+            } 
+
+            private Builder(SearchControlOptions model) {
+                this.airlineExcludedList = model.airlineExcludedList;
+                this.airlinePreferList = model.airlinePreferList;
+                this.serviceQuality = model.serviceQuality;
+            } 
 
             /**
              * <p>excluded airlines list</p>

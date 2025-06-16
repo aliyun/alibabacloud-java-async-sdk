@@ -56,6 +56,10 @@ public class RefundApplyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class RefundApplyResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefundApplyResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>request ID</p>
@@ -250,6 +267,15 @@ public class RefundApplyResponseBody extends TeaModel {
             private String firstName; 
             private String lastName; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundPassengers model) {
+                this.document = model.document;
+                this.firstName = model.firstName;
+                this.lastName = model.lastName;
+            } 
+
             /**
              * <p>credential number</p>
              * 
@@ -358,6 +384,16 @@ public class RefundApplyResponseBody extends TeaModel {
             private java.util.List<RefundPassengers> refundPassengers; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundResults model) {
+                this.failReason = model.failReason;
+                this.refundOrderNum = model.refundOrderNum;
+                this.refundPassengers = model.refundPassengers;
+                this.status = model.status;
+            } 
+
             /**
              * <p>reason for refund application failure</p>
              * 
@@ -451,6 +487,14 @@ public class RefundApplyResponseBody extends TeaModel {
         public static final class Builder {
             private Long orderNum; 
             private java.util.List<RefundResults> refundResults; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.orderNum = model.orderNum;
+                this.refundResults = model.refundResults;
+            } 
 
             /**
              * <p>order number</p>

@@ -56,6 +56,10 @@ public class OrderDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class OrderDetailResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(OrderDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>request ID</p>
@@ -274,6 +291,17 @@ public class OrderDetailResponseBody extends TeaModel {
             private Boolean isAllWeight; 
             private Double price; 
 
+            private Builder() {
+            } 
+
+            private Builder(BaggageAncillary model) {
+                this.baggageAmount = model.baggageAmount;
+                this.baggageWeight = model.baggageWeight;
+                this.baggageWeightUnit = model.baggageWeightUnit;
+                this.isAllWeight = model.isAllWeight;
+                this.price = model.price;
+            } 
+
             /**
              * baggage_amount.
              */
@@ -376,6 +404,15 @@ public class OrderDetailResponseBody extends TeaModel {
             private String ancillaryId; 
             private Integer ancillaryType; 
             private BaggageAncillary baggageAncillary; 
+
+            private Builder() {
+            } 
+
+            private Builder(Ancillary model) {
+                this.ancillaryId = model.ancillaryId;
+                this.ancillaryType = model.ancillaryType;
+                this.baggageAncillary = model.baggageAncillary;
+            } 
 
             /**
              * <p>ancillay_id</p>
@@ -481,6 +518,16 @@ public class OrderDetailResponseBody extends TeaModel {
             private String credentialNum; 
             private Integer credentialType; 
             private String expireDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Credential model) {
+                this.certIssuePlace = model.certIssuePlace;
+                this.credentialNum = model.credentialNum;
+                this.credentialType = model.credentialType;
+                this.expireDate = model.expireDate;
+            } 
 
             /**
              * <p>place of issue, two-letter code</p>
@@ -661,6 +708,21 @@ public class OrderDetailResponseBody extends TeaModel {
             private String nationality; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Passenger model) {
+                this.birthday = model.birthday;
+                this.credential = model.credential;
+                this.firstName = model.firstName;
+                this.gender = model.gender;
+                this.lastName = model.lastName;
+                this.mobileCountryCode = model.mobileCountryCode;
+                this.mobilePhoneNumber = model.mobilePhoneNumber;
+                this.nationality = model.nationality;
+                this.type = model.type;
+            } 
+
             /**
              * <p>date of birth (yyyyMMdd)</p>
              * 
@@ -820,6 +882,15 @@ public class OrderDetailResponseBody extends TeaModel {
             private Passenger passenger; 
             private java.util.List<String> segmentIdList; 
 
+            private Builder() {
+            } 
+
+            private Builder(AncillaryItemDetailList model) {
+                this.ancillary = model.ancillary;
+                this.passenger = model.passenger;
+                this.segmentIdList = model.segmentIdList;
+            } 
+
             /**
              * <p>the ancillary buyer booked</p>
              */
@@ -894,6 +965,14 @@ public class OrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Double sellPrice; 
             private Double tax; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightPrice model) {
+                this.sellPrice = model.sellPrice;
+                this.tax = model.tax;
+            } 
 
             /**
              * <p>selling price</p>
@@ -1003,6 +1082,17 @@ public class OrderDetailResponseBody extends TeaModel {
             private String cabinClassName; 
             private String cabinQuantity; 
             private String segmentId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightSegmentCabinRelation model) {
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.cabinClassName = model.cabinClassName;
+                this.cabinQuantity = model.cabinQuantity;
+                this.segmentId = model.segmentId;
+            } 
 
             /**
              * <p>RBD</p>
@@ -1133,6 +1223,16 @@ public class OrderDetailResponseBody extends TeaModel {
             private String credentialNum; 
             private Integer credentialType; 
             private String expireDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerCredential model) {
+                this.certIssuePlace = model.certIssuePlace;
+                this.credentialNum = model.credentialNum;
+                this.credentialType = model.credentialType;
+                this.expireDate = model.expireDate;
+            } 
 
             /**
              * <p>place of issue, two-letter code</p>
@@ -1312,6 +1412,21 @@ public class OrderDetailResponseBody extends TeaModel {
             private String mobilePhoneNumber; 
             private String nationality; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(FlightItemDetailListPassenger model) {
+                this.birthday = model.birthday;
+                this.credential = model.credential;
+                this.firstName = model.firstName;
+                this.gender = model.gender;
+                this.lastName = model.lastName;
+                this.mobileCountryCode = model.mobileCountryCode;
+                this.mobilePhoneNumber = model.mobilePhoneNumber;
+                this.nationality = model.nationality;
+                this.type = model.type;
+            } 
 
             /**
              * <p>date of birth (yyyyMMdd)</p>
@@ -1520,6 +1635,19 @@ public class OrderDetailResponseBody extends TeaModel {
             private String ticketAirLine; 
             private java.util.List<String> ticketNos; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlightItemDetailList model) {
+                this.bPnrList = model.bPnrList;
+                this.cPnrList = model.cPnrList;
+                this.flightPrice = model.flightPrice;
+                this.flightSegmentCabinRelation = model.flightSegmentCabinRelation;
+                this.passenger = model.passenger;
+                this.ticketAirLine = model.ticketAirLine;
+                this.ticketNos = model.ticketNos;
+            } 
+
             /**
              * <p>b PNR(airline booking code) list</p>
              */
@@ -1653,6 +1781,16 @@ public class OrderDetailResponseBody extends TeaModel {
             private String credentialNum; 
             private Integer credentialType; 
             private String expireDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerListCredential model) {
+                this.certIssuePlace = model.certIssuePlace;
+                this.credentialNum = model.credentialNum;
+                this.credentialType = model.credentialType;
+                this.expireDate = model.expireDate;
+            } 
 
             /**
              * <p>place of issue, two-letter code</p>
@@ -1832,6 +1970,21 @@ public class OrderDetailResponseBody extends TeaModel {
             private String mobilePhoneNumber; 
             private String nationality; 
             private Integer type; 
+
+            private Builder() {
+            } 
+
+            private Builder(PassengerList model) {
+                this.birthday = model.birthday;
+                this.credential = model.credential;
+                this.firstName = model.firstName;
+                this.gender = model.gender;
+                this.lastName = model.lastName;
+                this.mobileCountryCode = model.mobileCountryCode;
+                this.mobilePhoneNumber = model.mobilePhoneNumber;
+                this.nationality = model.nationality;
+                this.type = model.type;
+            } 
 
             /**
              * <p>date of birth (yyyyMMdd)</p>
@@ -2220,6 +2373,34 @@ public class OrderDetailResponseBody extends TeaModel {
             private String stopCityList; 
             private Integer stopQuantity; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentList model) {
+                this.arrivalAirport = model.arrivalAirport;
+                this.arrivalCity = model.arrivalCity;
+                this.arrivalTerminal = model.arrivalTerminal;
+                this.arrivalTime = model.arrivalTime;
+                this.availability = model.availability;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.codeShare = model.codeShare;
+                this.departureAirport = model.departureAirport;
+                this.departureCity = model.departureCity;
+                this.departureTerminal = model.departureTerminal;
+                this.departureTime = model.departureTime;
+                this.equipType = model.equipType;
+                this.flightDuration = model.flightDuration;
+                this.marketingAirline = model.marketingAirline;
+                this.marketingFlightNo = model.marketingFlightNo;
+                this.marketingFlightNoInt = model.marketingFlightNoInt;
+                this.operatingAirline = model.operatingAirline;
+                this.operatingFlightNo = model.operatingFlightNo;
+                this.segmentId = model.segmentId;
+                this.stopCityList = model.stopCityList;
+                this.stopQuantity = model.stopQuantity;
+            } 
+
             /**
              * <p>arrival airport code (capitalized)</p>
              * 
@@ -2513,6 +2694,14 @@ public class OrderDetailResponseBody extends TeaModel {
             private java.util.List<SegmentList> segmentList; 
             private Integer transferCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(JourneyList model) {
+                this.segmentList = model.segmentList;
+                this.transferCount = model.transferCount;
+            } 
+
             /**
              * <p>segment list</p>
              */
@@ -2582,6 +2771,14 @@ public class OrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Integer luggageDirectInfoType; 
             private java.util.List<String> segmentIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SegmentBaggageCheckInInfoList model) {
+                this.luggageDirectInfoType = model.luggageDirectInfoType;
+                this.segmentIdList = model.segmentIdList;
+            } 
 
             /**
              * <p>through check-in baggage policy type</p>
@@ -2659,6 +2856,14 @@ public class OrderDetailResponseBody extends TeaModel {
             private java.util.Map<String, DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping; 
             private java.util.List<String> segmentIdList; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentBaggageMappingList model) {
+                this.passengerBaggageAllowanceMapping = model.passengerBaggageAllowanceMapping;
+                this.segmentIdList = model.segmentIdList;
+            } 
+
             /**
              * <p>baggage rule mapping, key is passenger type, value is baggage allowance details</p>
              */
@@ -2725,6 +2930,14 @@ public class OrderDetailResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.Map<String, DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap; 
             private java.util.List<String> segmentIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SegmentRefundChangeRuleMappingList model) {
+                this.refundChangeRuleMap = model.refundChangeRuleMap;
+                this.segmentIdList = model.segmentIdList;
+            } 
 
             /**
              * <p>change and refund policy mapping, key is passenger type, value is change and refund policy details</p>
@@ -2924,6 +3137,25 @@ public class OrderDetailResponseBody extends TeaModel {
             private java.util.List<SegmentBaggageMappingList> segmentBaggageMappingList; 
             private java.util.List<SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList; 
             private String solutionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Solution model) {
+                this.adultPrice = model.adultPrice;
+                this.adultTax = model.adultTax;
+                this.childPrice = model.childPrice;
+                this.childTax = model.childTax;
+                this.infantPrice = model.infantPrice;
+                this.infantTax = model.infantTax;
+                this.journeyList = model.journeyList;
+                this.productTypeDescription = model.productTypeDescription;
+                this.refundTicketCouponDescription = model.refundTicketCouponDescription;
+                this.segmentBaggageCheckInInfoList = model.segmentBaggageCheckInInfoList;
+                this.segmentBaggageMappingList = model.segmentBaggageMappingList;
+                this.segmentRefundChangeRuleMappingList = model.segmentRefundChangeRuleMappingList;
+                this.solutionId = model.solutionId;
+            } 
 
             /**
              * <p>adult fare</p>
@@ -3298,6 +3530,30 @@ public class OrderDetailResponseBody extends TeaModel {
             private Long succeedTime; 
             private Double totalPrice; 
             private String transactionNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.ancillaryItemDetailList = model.ancillaryItemDetailList;
+                this.baggageAllowanceMap = model.baggageAllowanceMap;
+                this.bookTime = model.bookTime;
+                this.flightItemDetailList = model.flightItemDetailList;
+                this.orderNum = model.orderNum;
+                this.orderStatus = model.orderStatus;
+                this.outOrderNum = model.outOrderNum;
+                this.passengerList = model.passengerList;
+                this.payStatus = model.payStatus;
+                this.payTime = model.payTime;
+                this.promotionPrice = model.promotionPrice;
+                this.realPayPrice = model.realPayPrice;
+                this.refundChangeRuleMap = model.refundChangeRuleMap;
+                this.sessionNick = model.sessionNick;
+                this.solution = model.solution;
+                this.succeedTime = model.succeedTime;
+                this.totalPrice = model.totalPrice;
+                this.transactionNo = model.transactionNo;
+            } 
 
             /**
              * <p>ancillary product fulfillment details</p>

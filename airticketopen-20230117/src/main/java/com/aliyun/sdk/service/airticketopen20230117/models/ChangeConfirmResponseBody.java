@@ -56,6 +56,10 @@ public class ChangeConfirmResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class ChangeConfirmResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChangeConfirmResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -219,6 +236,14 @@ public class ChangeConfirmResponseBody extends TeaModel {
         public static final class Builder {
             private Double payAmount; 
             private String transactionNo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.payAmount = model.payAmount;
+                this.transactionNo = model.transactionNo;
+            } 
 
             /**
              * pay_amount.

@@ -44,6 +44,10 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return refundRuleAllUnusedList
      */
@@ -77,6 +81,16 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
         private java.util.List<RefundRulePartUnusedList> refundRulePartUnusedList; 
         private java.util.List<ChangeRuleInUnusedList> changeRuleInUnusedList; 
         private java.util.List<ChangeRuleOutUnusedList> changeRuleOutUnusedList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataRefundChangeRuleMapValue model) {
+            this.refundRuleAllUnusedList = model.refundRuleAllUnusedList;
+            this.refundRulePartUnusedList = model.refundRulePartUnusedList;
+            this.changeRuleInUnusedList = model.changeRuleInUnusedList;
+            this.changeRuleOutUnusedList = model.changeRuleOutUnusedList;
+        } 
 
         /**
          * <p>refund rule for fully-unused tickets</p>
@@ -231,6 +245,20 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             private Double refundFee; 
             private Boolean canReturnAllTax; 
             private Double returnPartTaxFee; 
+
+            private Builder() {
+            } 
+
+            private Builder(RefundRuleAllUnusedList model) {
+                this.type = model.type;
+                this.timeUnit = model.timeUnit;
+                this.ruleStartTime = model.ruleStartTime;
+                this.ruleEndTime = model.ruleEndTime;
+                this.canRefund = model.canRefund;
+                this.refundFee = model.refundFee;
+                this.canReturnAllTax = model.canReturnAllTax;
+                this.returnPartTaxFee = model.returnPartTaxFee;
+            } 
 
             /**
              * <p>type: 0 - fully-unused ticket; 1 - partially used ticket</p>
@@ -443,6 +471,20 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             private Boolean canReturnAllTax; 
             private Double returnPartTaxFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(RefundRulePartUnusedList model) {
+                this.type = model.type;
+                this.timeUnit = model.timeUnit;
+                this.ruleStartTime = model.ruleStartTime;
+                this.ruleEndTime = model.ruleEndTime;
+                this.canRefund = model.canRefund;
+                this.refundFee = model.refundFee;
+                this.canReturnAllTax = model.canReturnAllTax;
+                this.returnPartTaxFee = model.returnPartTaxFee;
+            } 
+
             /**
              * <p>type: 0 - fully-unused ticket; 1 - partially used ticket</p>
              * 
@@ -630,6 +672,18 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             private Boolean canChange; 
             private Double changeFee; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeRuleInUnusedList model) {
+                this.type = model.type;
+                this.timeUnit = model.timeUnit;
+                this.ruleStartTime = model.ruleStartTime;
+                this.ruleEndTime = model.ruleEndTime;
+                this.canChange = model.canChange;
+                this.changeFee = model.changeFee;
+            } 
+
             /**
              * <p>type: 2 - outbound segment unused; 3 - inbound segment unused</p>
              * 
@@ -794,6 +848,18 @@ public class DataRefundChangeRuleMapValue extends TeaModel {
             private Integer ruleEndTime; 
             private Boolean canChange; 
             private Double changeFee; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChangeRuleOutUnusedList model) {
+                this.type = model.type;
+                this.timeUnit = model.timeUnit;
+                this.ruleStartTime = model.ruleStartTime;
+                this.ruleEndTime = model.ruleEndTime;
+                this.canChange = model.canChange;
+                this.changeFee = model.changeFee;
+            } 
 
             /**
              * <p>type: 2 - outbound segment unused; 3 - inbound segment unused</p>

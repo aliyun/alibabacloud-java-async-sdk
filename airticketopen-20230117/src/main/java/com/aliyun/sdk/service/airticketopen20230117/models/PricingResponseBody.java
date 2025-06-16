@@ -56,6 +56,10 @@ public class PricingResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class PricingResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(PricingResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * <p>request ID</p>
@@ -286,6 +303,18 @@ public class PricingResponseBody extends TeaModel {
             private Double infantPrice; 
             private Double infantTax; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangedPriceInfo model) {
+                this.adultPrice = model.adultPrice;
+                this.adultTax = model.adultTax;
+                this.childPrice = model.childPrice;
+                this.childTax = model.childTax;
+                this.infantPrice = model.infantPrice;
+                this.infantTax = model.infantTax;
+            } 
+
             /**
              * <p>adult fare</p>
              * 
@@ -450,6 +479,18 @@ public class PricingResponseBody extends TeaModel {
             private Double childTax; 
             private Double infantPrice; 
             private Double infantTax; 
+
+            private Builder() {
+            } 
+
+            private Builder(OriginalPriceInfo model) {
+                this.adultPrice = model.adultPrice;
+                this.adultTax = model.adultTax;
+                this.childPrice = model.childPrice;
+                this.childTax = model.childTax;
+                this.infantPrice = model.infantPrice;
+                this.infantTax = model.infantTax;
+            } 
 
             /**
              * <p>adult fare</p>
@@ -808,6 +849,34 @@ public class PricingResponseBody extends TeaModel {
             private String stopCityList; 
             private Integer stopQuantity; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentList model) {
+                this.arrivalAirport = model.arrivalAirport;
+                this.arrivalCity = model.arrivalCity;
+                this.arrivalTerminal = model.arrivalTerminal;
+                this.arrivalTime = model.arrivalTime;
+                this.availability = model.availability;
+                this.cabin = model.cabin;
+                this.cabinClass = model.cabinClass;
+                this.codeShare = model.codeShare;
+                this.departureAirport = model.departureAirport;
+                this.departureCity = model.departureCity;
+                this.departureTerminal = model.departureTerminal;
+                this.departureTime = model.departureTime;
+                this.equipType = model.equipType;
+                this.flightDuration = model.flightDuration;
+                this.marketingAirline = model.marketingAirline;
+                this.marketingFlightNo = model.marketingFlightNo;
+                this.marketingFlightNoInt = model.marketingFlightNoInt;
+                this.operatingAirline = model.operatingAirline;
+                this.operatingFlightNo = model.operatingFlightNo;
+                this.segmentId = model.segmentId;
+                this.stopCityList = model.stopCityList;
+                this.stopQuantity = model.stopQuantity;
+            } 
+
             /**
              * <p>arrival airport code (capitalized)</p>
              * 
@@ -1101,6 +1170,14 @@ public class PricingResponseBody extends TeaModel {
             private java.util.List<SegmentList> segmentList; 
             private Integer transferCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(JourneyList model) {
+                this.segmentList = model.segmentList;
+                this.transferCount = model.transferCount;
+            } 
+
             /**
              * <p>segment list</p>
              */
@@ -1170,6 +1247,14 @@ public class PricingResponseBody extends TeaModel {
         public static final class Builder {
             private Integer luggageDirectInfoType; 
             private java.util.List<String> segmentIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SegmentBaggageCheckInInfoList model) {
+                this.luggageDirectInfoType = model.luggageDirectInfoType;
+                this.segmentIdList = model.segmentIdList;
+            } 
 
             /**
              * <p>through check-in baggage policy type</p>
@@ -1247,6 +1332,14 @@ public class PricingResponseBody extends TeaModel {
             private java.util.Map<String, DataSolutionSegmentBaggageMappingListPassengerBaggageAllowanceMappingValue> passengerBaggageAllowanceMapping; 
             private java.util.List<String> segmentIdList; 
 
+            private Builder() {
+            } 
+
+            private Builder(SegmentBaggageMappingList model) {
+                this.passengerBaggageAllowanceMapping = model.passengerBaggageAllowanceMapping;
+                this.segmentIdList = model.segmentIdList;
+            } 
+
             /**
              * <p>baggage rule mapping, key is passenger type, value is baggage allowance details</p>
              */
@@ -1313,6 +1406,14 @@ public class PricingResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.Map<String, DataSolutionSegmentRefundChangeRuleMappingListRefundChangeRuleMapValue> refundChangeRuleMap; 
             private java.util.List<String> segmentIdList; 
+
+            private Builder() {
+            } 
+
+            private Builder(SegmentRefundChangeRuleMappingList model) {
+                this.refundChangeRuleMap = model.refundChangeRuleMap;
+                this.segmentIdList = model.segmentIdList;
+            } 
 
             /**
              * <p>change and refund policy mapping, key is passenger type, value is change and refund policy detail</p>
@@ -1512,6 +1613,25 @@ public class PricingResponseBody extends TeaModel {
             private java.util.List<SegmentBaggageMappingList> segmentBaggageMappingList; 
             private java.util.List<SegmentRefundChangeRuleMappingList> segmentRefundChangeRuleMappingList; 
             private String solutionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Solution model) {
+                this.adultPrice = model.adultPrice;
+                this.adultTax = model.adultTax;
+                this.childPrice = model.childPrice;
+                this.childTax = model.childTax;
+                this.infantPrice = model.infantPrice;
+                this.infantTax = model.infantTax;
+                this.journeyList = model.journeyList;
+                this.productTypeDescription = model.productTypeDescription;
+                this.refundTicketCouponDescription = model.refundTicketCouponDescription;
+                this.segmentBaggageCheckInInfoList = model.segmentBaggageCheckInInfoList;
+                this.segmentBaggageMappingList = model.segmentBaggageMappingList;
+                this.segmentRefundChangeRuleMappingList = model.segmentRefundChangeRuleMappingList;
+                this.solutionId = model.solutionId;
+            } 
 
             /**
              * <p>adult fare</p>
@@ -1730,6 +1850,17 @@ public class PricingResponseBody extends TeaModel {
             private OriginalPriceInfo originalPriceInfo; 
             private String remainSeats; 
             private Solution solution; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.changedPriceInfo = model.changedPriceInfo;
+                this.isChanged = model.isChanged;
+                this.originalPriceInfo = model.originalPriceInfo;
+                this.remainSeats = model.remainSeats;
+                this.solution = model.solution;
+            } 
 
             /**
              * <p>price information after the price change</p>

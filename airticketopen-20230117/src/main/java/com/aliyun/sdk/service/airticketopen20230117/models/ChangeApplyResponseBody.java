@@ -56,6 +56,10 @@ public class ChangeApplyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -113,6 +117,19 @@ public class ChangeApplyResponseBody extends TeaModel {
         private String errorMsg; 
         private Integer status; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChangeApplyResponseBody model) {
+            this.requestId = model.requestId;
+            this.data = model.data;
+            this.errorCode = model.errorCode;
+            this.errorData = model.errorData;
+            this.errorMsg = model.errorMsg;
+            this.status = model.status;
+            this.success = model.success;
+        } 
 
         /**
          * RequestId.
@@ -232,6 +249,15 @@ public class ChangeApplyResponseBody extends TeaModel {
             private String firstName; 
             private String lastName; 
 
+            private Builder() {
+            } 
+
+            private Builder(Passengers model) {
+                this.document = model.document;
+                this.firstName = model.firstName;
+                this.lastName = model.lastName;
+            } 
+
             /**
              * document.
              */
@@ -331,6 +357,16 @@ public class ChangeApplyResponseBody extends TeaModel {
             private String failReason; 
             private java.util.List<Passengers> passengers; 
 
+            private Builder() {
+            } 
+
+            private Builder(ChangeOrders model) {
+                this.changeOrderNum = model.changeOrderNum;
+                this.changeOrderStatus = model.changeOrderStatus;
+                this.failReason = model.failReason;
+                this.passengers = model.passengers;
+            } 
+
             /**
              * change_order_num.
              */
@@ -413,6 +449,14 @@ public class ChangeApplyResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ChangeOrders> changeOrders; 
             private Long orderNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.changeOrders = model.changeOrders;
+                this.orderNum = model.orderNum;
+            } 
 
             /**
              * change_orders.
