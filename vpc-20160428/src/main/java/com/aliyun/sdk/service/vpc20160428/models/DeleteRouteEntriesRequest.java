@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteRouteEntriesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -44,6 +48,7 @@ public class DeleteRouteEntriesRequest extends Request {
 
     private DeleteRouteEntriesRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -63,6 +68,13 @@ public class DeleteRouteEntriesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -108,6 +120,7 @@ public class DeleteRouteEntriesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteRouteEntriesRequest, Builder> {
+        private Boolean dryRun; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -121,6 +134,7 @@ public class DeleteRouteEntriesRequest extends Request {
 
         private Builder(DeleteRouteEntriesRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -128,6 +142,15 @@ public class DeleteRouteEntriesRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.routeEntries = request.routeEntries;
         } 
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * OwnerAccount.

@@ -327,7 +327,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("OwnerId")
-        private String ownerId;
+        private Long ownerId;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -420,7 +420,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
         /**
          * @return ownerId
          */
-        public String getOwnerId() {
+        public Long getOwnerId() {
             return this.ownerId;
         }
 
@@ -467,7 +467,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             private String instanceChargeType; 
             private String ipv6GatewayId; 
             private String name; 
-            private String ownerId; 
+            private Long ownerId; 
             private String regionId; 
             private String resourceGroupId; 
             private String status; 
@@ -579,7 +579,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
             /**
              * OwnerId.
              */
-            public Builder ownerId(String ownerId) {
+            public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
                 return this;
             }

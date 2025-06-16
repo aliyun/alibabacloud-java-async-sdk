@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateRouteEntriesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -27,6 +31,7 @@ public class CreateRouteEntriesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     @com.aliyun.core.annotation.Query
@@ -44,6 +49,7 @@ public class CreateRouteEntriesRequest extends Request {
 
     private CreateRouteEntriesRequest(Builder builder) {
         super(builder);
+        this.dryRun = builder.dryRun;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -63,6 +69,13 @@ public class CreateRouteEntriesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -108,6 +121,7 @@ public class CreateRouteEntriesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateRouteEntriesRequest, Builder> {
+        private Boolean dryRun; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -121,6 +135,7 @@ public class CreateRouteEntriesRequest extends Request {
 
         private Builder(CreateRouteEntriesRequest request) {
             super(request);
+            this.dryRun = request.dryRun;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -128,6 +143,15 @@ public class CreateRouteEntriesRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.routeEntries = request.routeEntries;
         } 
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
+            return this;
+        }
 
         /**
          * OwnerAccount.
@@ -150,6 +174,7 @@ public class CreateRouteEntriesRequest extends Request {
         /**
          * <p>The region ID of the route table.</p>
          * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

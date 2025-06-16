@@ -207,6 +207,9 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationPortRange")
         private String destinationPortRange;
 
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
+        private String ipVersion;
+
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
@@ -235,6 +238,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             this.action = builder.action;
             this.destinationCidrBlock = builder.destinationCidrBlock;
             this.destinationPortRange = builder.destinationPortRange;
+            this.ipVersion = builder.ipVersion;
             this.priority = builder.priority;
             this.protocol = builder.protocol;
             this.sourceCidrBlock = builder.sourceCidrBlock;
@@ -272,6 +276,13 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
          */
         public String getDestinationPortRange() {
             return this.destinationPortRange;
+        }
+
+        /**
+         * @return ipVersion
+         */
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         /**
@@ -334,6 +345,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             private String action; 
             private String destinationCidrBlock; 
             private String destinationPortRange; 
+            private String ipVersion; 
             private Integer priority; 
             private String protocol; 
             private String sourceCidrBlock; 
@@ -350,6 +362,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
                 this.action = model.action;
                 this.destinationCidrBlock = model.destinationCidrBlock;
                 this.destinationPortRange = model.destinationPortRange;
+                this.ipVersion = model.ipVersion;
                 this.priority = model.priority;
                 this.protocol = model.protocol;
                 this.sourceCidrBlock = model.sourceCidrBlock;
@@ -394,6 +407,14 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
              */
             public Builder destinationPortRange(String destinationPortRange) {
                 this.destinationPortRange = destinationPortRange;
+                return this;
+            }
+
+            /**
+             * IpVersion.
+             */
+            public Builder ipVersion(String ipVersion) {
+                this.ipVersion = ipVersion;
                 return this;
             }
 
@@ -524,6 +545,9 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationPortRange")
         private String destinationPortRange;
 
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
+        private String ipVersion;
+
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
@@ -552,6 +576,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             this.action = builder.action;
             this.destinationCidrBlock = builder.destinationCidrBlock;
             this.destinationPortRange = builder.destinationPortRange;
+            this.ipVersion = builder.ipVersion;
             this.priority = builder.priority;
             this.protocol = builder.protocol;
             this.sourceCidrBlock = builder.sourceCidrBlock;
@@ -589,6 +614,13 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
          */
         public String getDestinationPortRange() {
             return this.destinationPortRange;
+        }
+
+        /**
+         * @return ipVersion
+         */
+        public String getIpVersion() {
+            return this.ipVersion;
         }
 
         /**
@@ -651,6 +683,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
             private String action; 
             private String destinationCidrBlock; 
             private String destinationPortRange; 
+            private String ipVersion; 
             private Integer priority; 
             private String protocol; 
             private String sourceCidrBlock; 
@@ -667,6 +700,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
                 this.action = model.action;
                 this.destinationCidrBlock = model.destinationCidrBlock;
                 this.destinationPortRange = model.destinationPortRange;
+                this.ipVersion = model.ipVersion;
                 this.priority = model.priority;
                 this.protocol = model.protocol;
                 this.sourceCidrBlock = model.sourceCidrBlock;
@@ -711,6 +745,14 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
              */
             public Builder destinationPortRange(String destinationPortRange) {
                 this.destinationPortRange = destinationPortRange;
+                return this;
+            }
+
+            /**
+             * IpVersion.
+             */
+            public Builder ipVersion(String ipVersion) {
+                this.ipVersion = ipVersion;
                 return this;
             }
 

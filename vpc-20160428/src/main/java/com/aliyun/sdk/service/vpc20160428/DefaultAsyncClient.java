@@ -3183,7 +3183,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can only delete a connection over an Express Connect circuit that is in the <strong>Rejected</strong>, <strong>Canceled</strong>, <strong>AllocationFailed</strong>, or <strong>Terminated</strong> state.</p>
+     * <p>You can only delete a connection over an Express Connect circuit that is in the <strong>Allocated</strong>, <strong>Confirmed</strong>, <strong>Rejected</strong>, <strong>Canceled</strong>, <strong>AllocationFailed</strong>, and <strong>Terminated</strong> states.</p>
      * 
      * @param request the request parameters of DeletePhysicalConnection  DeletePhysicalConnectionRequest
      * @return DeletePhysicalConnectionResponse
@@ -5338,9 +5338,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>VPN网关发起诊断</p>
-     * 
      * @param request the request parameters of DiagnoseVpnGateway  DiagnoseVpnGatewayRequest
      * @return DiagnoseVpnGatewayResponse
      */

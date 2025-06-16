@@ -35,6 +35,10 @@ public class CreateSslVpnServerRequest extends Request {
     private Boolean compress;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableMultiFactorAuth")
     private Boolean enableMultiFactorAuth;
 
@@ -99,6 +103,7 @@ public class CreateSslVpnServerRequest extends Request {
         this.clientIpPool = builder.clientIpPool;
         this.clientToken = builder.clientToken;
         this.compress = builder.compress;
+        this.dryRun = builder.dryRun;
         this.enableMultiFactorAuth = builder.enableMultiFactorAuth;
         this.iDaaSApplicationId = builder.iDaaSApplicationId;
         this.iDaaSInstanceId = builder.iDaaSInstanceId;
@@ -154,6 +159,13 @@ public class CreateSslVpnServerRequest extends Request {
      */
     public Boolean getCompress() {
         return this.compress;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -259,6 +271,7 @@ public class CreateSslVpnServerRequest extends Request {
         private String clientIpPool; 
         private String clientToken; 
         private Boolean compress; 
+        private Boolean dryRun; 
         private Boolean enableMultiFactorAuth; 
         private String iDaaSApplicationId; 
         private String iDaaSInstanceId; 
@@ -284,6 +297,7 @@ public class CreateSslVpnServerRequest extends Request {
             this.clientIpPool = request.clientIpPool;
             this.clientToken = request.clientToken;
             this.compress = request.compress;
+            this.dryRun = request.dryRun;
             this.enableMultiFactorAuth = request.enableMultiFactorAuth;
             this.iDaaSApplicationId = request.iDaaSApplicationId;
             this.iDaaSInstanceId = request.iDaaSInstanceId;
@@ -418,6 +432,15 @@ public class CreateSslVpnServerRequest extends Request {
         public Builder compress(Boolean compress) {
             this.putQueryParameter("Compress", compress);
             this.compress = compress;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

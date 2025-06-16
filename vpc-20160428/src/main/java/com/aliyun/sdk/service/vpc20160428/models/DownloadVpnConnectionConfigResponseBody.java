@@ -97,6 +97,219 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
      *
      * <p>DownloadVpnConnectionConfigResponseBody</p>
      */
+    public static class BgpConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LocalAsn")
+        private String localAsn;
+
+        @com.aliyun.core.annotation.NameInMap("LocalBgpIp")
+        private String localBgpIp;
+
+        @com.aliyun.core.annotation.NameInMap("PeerAsn")
+        private String peerAsn;
+
+        @com.aliyun.core.annotation.NameInMap("PeerBgpIp")
+        private String peerBgpIp;
+
+        @com.aliyun.core.annotation.NameInMap("TunnelCidr")
+        private String tunnelCidr;
+
+        @com.aliyun.core.annotation.NameInMap("TunnelId")
+        private String tunnelId;
+
+        private BgpConfig(Builder builder) {
+            this.localAsn = builder.localAsn;
+            this.localBgpIp = builder.localBgpIp;
+            this.peerAsn = builder.peerAsn;
+            this.peerBgpIp = builder.peerBgpIp;
+            this.tunnelCidr = builder.tunnelCidr;
+            this.tunnelId = builder.tunnelId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BgpConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return localAsn
+         */
+        public String getLocalAsn() {
+            return this.localAsn;
+        }
+
+        /**
+         * @return localBgpIp
+         */
+        public String getLocalBgpIp() {
+            return this.localBgpIp;
+        }
+
+        /**
+         * @return peerAsn
+         */
+        public String getPeerAsn() {
+            return this.peerAsn;
+        }
+
+        /**
+         * @return peerBgpIp
+         */
+        public String getPeerBgpIp() {
+            return this.peerBgpIp;
+        }
+
+        /**
+         * @return tunnelCidr
+         */
+        public String getTunnelCidr() {
+            return this.tunnelCidr;
+        }
+
+        /**
+         * @return tunnelId
+         */
+        public String getTunnelId() {
+            return this.tunnelId;
+        }
+
+        public static final class Builder {
+            private String localAsn; 
+            private String localBgpIp; 
+            private String peerAsn; 
+            private String peerBgpIp; 
+            private String tunnelCidr; 
+            private String tunnelId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BgpConfig model) {
+                this.localAsn = model.localAsn;
+                this.localBgpIp = model.localBgpIp;
+                this.peerAsn = model.peerAsn;
+                this.peerBgpIp = model.peerBgpIp;
+                this.tunnelCidr = model.tunnelCidr;
+                this.tunnelId = model.tunnelId;
+            } 
+
+            /**
+             * LocalAsn.
+             */
+            public Builder localAsn(String localAsn) {
+                this.localAsn = localAsn;
+                return this;
+            }
+
+            /**
+             * LocalBgpIp.
+             */
+            public Builder localBgpIp(String localBgpIp) {
+                this.localBgpIp = localBgpIp;
+                return this;
+            }
+
+            /**
+             * PeerAsn.
+             */
+            public Builder peerAsn(String peerAsn) {
+                this.peerAsn = peerAsn;
+                return this;
+            }
+
+            /**
+             * PeerBgpIp.
+             */
+            public Builder peerBgpIp(String peerBgpIp) {
+                this.peerBgpIp = peerBgpIp;
+                return this;
+            }
+
+            /**
+             * TunnelCidr.
+             */
+            public Builder tunnelCidr(String tunnelCidr) {
+                this.tunnelCidr = tunnelCidr;
+                return this;
+            }
+
+            /**
+             * TunnelId.
+             */
+            public Builder tunnelId(String tunnelId) {
+                this.tunnelId = tunnelId;
+                return this;
+            }
+
+            public BgpConfig build() {
+                return new BgpConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DownloadVpnConnectionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DownloadVpnConnectionConfigResponseBody</p>
+     */
+    public static class BgpConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BgpConfig")
+        private java.util.List<BgpConfig> bgpConfig;
+
+        private BgpConfigs(Builder builder) {
+            this.bgpConfig = builder.bgpConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BgpConfigs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bgpConfig
+         */
+        public java.util.List<BgpConfig> getBgpConfig() {
+            return this.bgpConfig;
+        }
+
+        public static final class Builder {
+            private java.util.List<BgpConfig> bgpConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(BgpConfigs model) {
+                this.bgpConfig = model.bgpConfig;
+            } 
+
+            /**
+             * BgpConfig.
+             */
+            public Builder bgpConfig(java.util.List<BgpConfig> bgpConfig) {
+                this.bgpConfig = bgpConfig;
+                return this;
+            }
+
+            public BgpConfigs build() {
+                return new BgpConfigs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DownloadVpnConnectionConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DownloadVpnConnectionConfigResponseBody</p>
+     */
     public static class IkeConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IkeAuthAlg")
         private String ikeAuthAlg;
@@ -1063,6 +1276,9 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
      * <p>DownloadVpnConnectionConfigResponseBody</p>
      */
     public static class VpnConnectionConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BgpConfigs")
+        private BgpConfigs bgpConfigs;
+
         @com.aliyun.core.annotation.NameInMap("IkeConfig")
         private IkeConfig ikeConfig;
 
@@ -1085,6 +1301,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         private TunnelsConfig tunnelsConfig;
 
         private VpnConnectionConfig(Builder builder) {
+            this.bgpConfigs = builder.bgpConfigs;
             this.ikeConfig = builder.ikeConfig;
             this.ipsecConfig = builder.ipsecConfig;
             this.local = builder.local;
@@ -1100,6 +1317,13 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
 
         public static VpnConnectionConfig create() {
             return builder().build();
+        }
+
+        /**
+         * @return bgpConfigs
+         */
+        public BgpConfigs getBgpConfigs() {
+            return this.bgpConfigs;
         }
 
         /**
@@ -1152,6 +1376,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private BgpConfigs bgpConfigs; 
             private IkeConfig ikeConfig; 
             private IpsecConfig ipsecConfig; 
             private String local; 
@@ -1164,6 +1389,7 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
             } 
 
             private Builder(VpnConnectionConfig model) {
+                this.bgpConfigs = model.bgpConfigs;
                 this.ikeConfig = model.ikeConfig;
                 this.ipsecConfig = model.ipsecConfig;
                 this.local = model.local;
@@ -1172,6 +1398,14 @@ public class DownloadVpnConnectionConfigResponseBody extends TeaModel {
                 this.remoteSubnet = model.remoteSubnet;
                 this.tunnelsConfig = model.tunnelsConfig;
             } 
+
+            /**
+             * BgpConfigs.
+             */
+            public Builder bgpConfigs(BgpConfigs bgpConfigs) {
+                this.bgpConfigs = bgpConfigs;
+                return this;
+            }
 
             /**
              * <p>The configurations of Phase 1 negotiations.</p>

@@ -42,7 +42,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     private String name;
 
     @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private String ownerId;
+    private Long ownerId;
 
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -151,7 +151,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
     /**
      * @return ownerId
      */
-    public String getOwnerId() {
+    public Long getOwnerId() {
         return this.ownerId;
     }
 
@@ -206,7 +206,7 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         private String instanceChargeType; 
         private String ipv6GatewayId; 
         private String name; 
-        private String ownerId; 
+        private Long ownerId; 
         private String regionId; 
         private String requestId; 
         private String resourceGroupId; 
@@ -332,9 +332,15 @@ public class DescribeIpv6GatewayAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * OwnerId.
+         * <p>The ID of the Alibaba Cloud account to which the IPv6 gateway belongs.</p>
+         * <blockquote>
+         * <p> This value is of the Long type. In some languages, the precision may be lost. Use this value with caution.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2546073170691****</p>
          */
-        public Builder ownerId(String ownerId) {
+        public Builder ownerId(Long ownerId) {
             this.ownerId = ownerId;
             return this;
         }

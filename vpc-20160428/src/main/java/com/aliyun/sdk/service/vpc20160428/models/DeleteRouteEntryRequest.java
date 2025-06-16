@@ -22,6 +22,10 @@ public class DeleteRouteEntryRequest extends Request {
     private String destinationCidrBlock;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NextHopId")
     private String nextHopId;
 
@@ -60,6 +64,7 @@ public class DeleteRouteEntryRequest extends Request {
     private DeleteRouteEntryRequest(Builder builder) {
         super(builder);
         this.destinationCidrBlock = builder.destinationCidrBlock;
+        this.dryRun = builder.dryRun;
         this.nextHopId = builder.nextHopId;
         this.nextHopList = builder.nextHopList;
         this.ownerAccount = builder.ownerAccount;
@@ -89,6 +94,13 @@ public class DeleteRouteEntryRequest extends Request {
      */
     public String getDestinationCidrBlock() {
         return this.destinationCidrBlock;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -156,6 +168,7 @@ public class DeleteRouteEntryRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteRouteEntryRequest, Builder> {
         private String destinationCidrBlock; 
+        private Boolean dryRun; 
         private String nextHopId; 
         private java.util.List<NextHopList> nextHopList; 
         private String ownerAccount; 
@@ -173,6 +186,7 @@ public class DeleteRouteEntryRequest extends Request {
         private Builder(DeleteRouteEntryRequest request) {
             super(request);
             this.destinationCidrBlock = request.destinationCidrBlock;
+            this.dryRun = request.dryRun;
             this.nextHopId = request.nextHopId;
             this.nextHopList = request.nextHopList;
             this.ownerAccount = request.ownerAccount;
@@ -193,6 +207,15 @@ public class DeleteRouteEntryRequest extends Request {
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);
             this.destinationCidrBlock = destinationCidrBlock;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

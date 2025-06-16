@@ -34,6 +34,10 @@ public class CreateVpnConnectionRequest extends Request {
     private String customerGatewayId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
+    private Boolean dryRun;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EffectImmediately")
     private Boolean effectImmediately;
 
@@ -119,6 +123,7 @@ public class CreateVpnConnectionRequest extends Request {
         this.bgpConfig = builder.bgpConfig;
         this.clientToken = builder.clientToken;
         this.customerGatewayId = builder.customerGatewayId;
+        this.dryRun = builder.dryRun;
         this.effectImmediately = builder.effectImmediately;
         this.enableDpd = builder.enableDpd;
         this.enableNatTraversal = builder.enableNatTraversal;
@@ -179,6 +184,13 @@ public class CreateVpnConnectionRequest extends Request {
      */
     public String getCustomerGatewayId() {
         return this.customerGatewayId;
+    }
+
+    /**
+     * @return dryRun
+     */
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     /**
@@ -319,6 +331,7 @@ public class CreateVpnConnectionRequest extends Request {
         private String bgpConfig; 
         private String clientToken; 
         private String customerGatewayId; 
+        private Boolean dryRun; 
         private Boolean effectImmediately; 
         private Boolean enableDpd; 
         private Boolean enableNatTraversal; 
@@ -349,6 +362,7 @@ public class CreateVpnConnectionRequest extends Request {
             this.bgpConfig = request.bgpConfig;
             this.clientToken = request.clientToken;
             this.customerGatewayId = request.customerGatewayId;
+            this.dryRun = request.dryRun;
             this.effectImmediately = request.effectImmediately;
             this.enableDpd = request.enableDpd;
             this.enableNatTraversal = request.enableNatTraversal;
@@ -446,6 +460,15 @@ public class CreateVpnConnectionRequest extends Request {
         public Builder customerGatewayId(String customerGatewayId) {
             this.putQueryParameter("CustomerGatewayId", customerGatewayId);
             this.customerGatewayId = customerGatewayId;
+            return this;
+        }
+
+        /**
+         * DryRun.
+         */
+        public Builder dryRun(Boolean dryRun) {
+            this.putQueryParameter("DryRun", dryRun);
+            this.dryRun = dryRun;
             return this;
         }
 

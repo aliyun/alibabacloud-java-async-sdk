@@ -260,7 +260,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
-         * <p>The list of outbound rules.</p>
+         * <p>The information about the outbound rules.</p>
          */
         public Builder egressRules(java.util.List<EgressRules> egressRules) {
             this.putQueryParameter("EgressRules", egressRules);
@@ -269,7 +269,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
-         * <p>The list of inbound rules.</p>
+         * <p>The information about inbound rules.</p>
          */
         public Builder ingressRules(java.util.List<IngressRules> ingressRules) {
             this.putQueryParameter("IngressRules", ingressRules);
@@ -397,6 +397,9 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DestinationPortRange")
         private String destinationPortRange;
 
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
+        private String ipVersion;
+
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
@@ -413,6 +416,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             this.action = builder.action;
             this.destinationCidrBlock = builder.destinationCidrBlock;
             this.destinationPortRange = builder.destinationPortRange;
+            this.ipVersion = builder.ipVersion;
             this.priority = builder.priority;
             this.protocol = builder.protocol;
             this.sourceCidrBlock = builder.sourceCidrBlock;
@@ -449,6 +453,13 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
+         * @return ipVersion
+         */
+        public String getIpVersion() {
+            return this.ipVersion;
+        }
+
+        /**
          * @return priority
          */
         public Integer getPriority() {
@@ -480,6 +491,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             private String action; 
             private String destinationCidrBlock; 
             private String destinationPortRange; 
+            private String ipVersion; 
             private Integer priority; 
             private String protocol; 
             private String sourceCidrBlock; 
@@ -492,6 +504,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
                 this.action = model.action;
                 this.destinationCidrBlock = model.destinationCidrBlock;
                 this.destinationPortRange = model.destinationPortRange;
+                this.ipVersion = model.ipVersion;
                 this.priority = model.priority;
                 this.protocol = model.protocol;
                 this.sourceCidrBlock = model.sourceCidrBlock;
@@ -499,7 +512,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             } 
 
             /**
-             * <p>The action of the outbound rule. Valid values:</p>
+             * <p>The collection policy of the outbound rule. Valid value:</p>
              * <ul>
              * <li><strong>accept</strong>: collects network traffic.</li>
              * <li><strong>drop</strong>: does not collect network traffic.</li>
@@ -525,9 +538,9 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * <p>The destination port range of the outbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to only <strong>-1/-1</strong>. The value -1/-1 specifies all ports.</p>
+             * <p>The destination port range of the outbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to only -1/-1, which specifies all ports.</p>
              * <blockquote>
-             * <p> If you set <strong>EgressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
+             * <p> If <strong>EgressRules.N.Protocol</strong> is set to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to specify this parameter. This indicates that all ports are available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -539,8 +552,15 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * <p>The priority of the outbound rule. A smaller value indicates a higher priority.</p>
-             * <p>The maximum value of <strong>N</strong> is <strong>10</strong>. You can configure up to 10 outbound rules for a filter.</p>
+             * IpVersion.
+             */
+            public Builder ipVersion(String ipVersion) {
+                this.ipVersion = ipVersion;
+                return this;
+            }
+
+            /**
+             * <p>The priority of the outbound rule. A smaller value indicates a higher priority. The maximum value of <strong>N</strong> is <strong>10</strong>. You can configure up to 10 outbound rules for a filter.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -551,12 +571,12 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * <p>The protocol that is used by the outbound traffic to be mirrored. Valid values:</p>
+             * <p>The type of the protocol that is used by the outbound traffic that you want to mirror. Valid value:</p>
              * <ul>
              * <li><strong>ALL</strong>: all protocols</li>
-             * <li><strong>ICMP</strong>: ICMP</li>
-             * <li><strong>TCP</strong>: TCP</li>
-             * <li><strong>UDP</strong>: UDP</li>
+             * <li><strong>ICMP</strong>: Internet Control Message Protocol.</li>
+             * <li><strong>TCP</strong>: Transmission Control Protocol.</li>
+             * <li><strong>UDP</strong>: User Datagram Protocol.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -579,9 +599,9 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * <p>The source port range of the outbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to only <strong>-1/-1</strong>. The value -1/-1 specifies all ports.</p>
+             * <p>The source port range of the outbound traffic. Valid values: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>. You cannot set this parameter to only -1/-1, which specifies all ports.</p>
              * <blockquote>
-             * <p> If you set <strong>EgressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
+             * <p> If <strong>EgressRules.N.Protocol</strong> is set to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to specify this parameter. This indicates that all ports are available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -615,6 +635,9 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DestinationPortRange")
         private String destinationPortRange;
 
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
+        private String ipVersion;
+
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
@@ -631,6 +654,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             this.action = builder.action;
             this.destinationCidrBlock = builder.destinationCidrBlock;
             this.destinationPortRange = builder.destinationPortRange;
+            this.ipVersion = builder.ipVersion;
             this.priority = builder.priority;
             this.protocol = builder.protocol;
             this.sourceCidrBlock = builder.sourceCidrBlock;
@@ -667,6 +691,13 @@ public class CreateTrafficMirrorFilterRequest extends Request {
         }
 
         /**
+         * @return ipVersion
+         */
+        public String getIpVersion() {
+            return this.ipVersion;
+        }
+
+        /**
          * @return priority
          */
         public Integer getPriority() {
@@ -698,6 +729,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             private String action; 
             private String destinationCidrBlock; 
             private String destinationPortRange; 
+            private String ipVersion; 
             private Integer priority; 
             private String protocol; 
             private String sourceCidrBlock; 
@@ -710,6 +742,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
                 this.action = model.action;
                 this.destinationCidrBlock = model.destinationCidrBlock;
                 this.destinationPortRange = model.destinationPortRange;
+                this.ipVersion = model.ipVersion;
                 this.priority = model.priority;
                 this.protocol = model.protocol;
                 this.sourceCidrBlock = model.sourceCidrBlock;
@@ -717,7 +750,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             } 
 
             /**
-             * <p>The action of the inbound rule. Valid values:</p>
+             * <p>The collection policy of the inbound rule. Valid value:</p>
              * <ul>
              * <li><strong>accept</strong>: collects network traffic.</li>
              * <li><strong>drop</strong>: does not collect network traffic.</li>
@@ -743,7 +776,7 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * <p>The destination port range of the inbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>.</p>
+             * <p>The destination port range of the inbound traffic. Valid value: <strong>1</strong> to <strong>65535</strong>. Separate the first port and last port with a forward slash (/). For example, <strong>1/200</strong> or <strong>80/80</strong>.</p>
              * <blockquote>
              * <p> If you set <strong>IngressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
              * </blockquote>
@@ -757,8 +790,15 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * <p>The priority of the inbound rule. A smaller value indicates a higher priority.</p>
-             * <p>The maximum value of <strong>N</strong> is <strong>10</strong>. You can configure up to 10 inbound rules for a filter.</p>
+             * IpVersion.
+             */
+            public Builder ipVersion(String ipVersion) {
+                this.ipVersion = ipVersion;
+                return this;
+            }
+
+            /**
+             * <p>The priority of the inbound rule. A smaller value indicates a higher priority. The maximum value of <strong>N</strong> is <strong>10</strong>. You can configure up to 10 inbound rules for a filter.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -769,12 +809,12 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * <p>The protocol that is used by the inbound traffic to be mirrored. Valid values:</p>
+             * <p>The type of the protocol is used by the inbound traffic that you want to mirror. Valid value:</p>
              * <ul>
              * <li><strong>ALL</strong>: all protocols</li>
-             * <li><strong>ICMP</strong>: ICMP</li>
-             * <li><strong>TCP</strong>: TCP</li>
-             * <li><strong>UDP</strong>: UDP</li>
+             * <li><strong>ICMP</strong>: Internet Control Message Protocol.</li>
+             * <li><strong>TCP</strong>: Transmission Control Protocol.</li>
+             * <li><strong>UDP</strong>: User Datagram Protocol.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -797,9 +837,9 @@ public class CreateTrafficMirrorFilterRequest extends Request {
             }
 
             /**
-             * <p>The source port range of the inbound traffic. Valid values for a port: <strong>1</strong> to <strong>65535</strong>. Separate the first port and the last port with a forward slash (/). Examples: <strong>1/200</strong> and <strong>80/80</strong>.</p>
+             * <p>The source port range of the inbound traffic. Valid value: <strong>1</strong> to <strong>65535</strong>. Separate the first port and last port with a forward slash (/). For example, <strong>1/200</strong> or <strong>80/80</strong>.</p>
              * <blockquote>
-             * <p> If you set <strong>IngressRules.N.Protocol</strong> to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to set this parameter. In this case, all ports are available.</p>
+             * <p> If <strong>IngressRules.N.Protocol</strong> is set to <strong>ALL</strong> or <strong>ICMP</strong>, you do not need to specify this parameter. This indicates that all ports are available.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

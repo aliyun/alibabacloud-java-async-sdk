@@ -67,6 +67,10 @@ public class ListVpcGatewayEndpointsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private String vpcId;
+
     private ListVpcGatewayEndpointsRequest(Builder builder) {
         super(builder);
         this.endpointId = builder.endpointId;
@@ -81,6 +85,7 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.serviceName = builder.serviceName;
         this.tags = builder.tags;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -180,6 +185,13 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         return this.tags;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<ListVpcGatewayEndpointsRequest, Builder> {
         private String endpointId; 
         private String endpointName; 
@@ -193,6 +205,7 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         private Long resourceOwnerId; 
         private String serviceName; 
         private java.util.List<Tags> tags; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -212,6 +225,7 @@ public class ListVpcGatewayEndpointsRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.serviceName = request.serviceName;
             this.tags = request.tags;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -347,6 +361,15 @@ public class ListVpcGatewayEndpointsRequest extends Request {
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 
