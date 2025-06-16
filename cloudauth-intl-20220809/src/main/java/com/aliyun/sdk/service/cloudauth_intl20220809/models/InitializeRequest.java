@@ -118,6 +118,10 @@ public class InitializeRequest extends Request {
     private String ocr;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pages")
+    private String pages;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProcedurePriority")
     private String procedurePriority;
 
@@ -188,6 +192,7 @@ public class InitializeRequest extends Request {
         this.metaInfo = builder.metaInfo;
         this.model = builder.model;
         this.ocr = builder.ocr;
+        this.pages = builder.pages;
         this.procedurePriority = builder.procedurePriority;
         this.productCode = builder.productCode;
         this.productFlow = builder.productFlow;
@@ -390,6 +395,13 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return pages
+     */
+    public String getPages() {
+        return this.pages;
+    }
+
+    /**
      * @return procedurePriority
      */
     public String getProcedurePriority() {
@@ -492,6 +504,7 @@ public class InitializeRequest extends Request {
         private String metaInfo; 
         private String model; 
         private String ocr; 
+        private String pages; 
         private String procedurePriority; 
         private String productCode; 
         private String productFlow; 
@@ -535,6 +548,7 @@ public class InitializeRequest extends Request {
             this.metaInfo = request.metaInfo;
             this.model = request.model;
             this.ocr = request.ocr;
+            this.pages = request.pages;
             this.procedurePriority = request.procedurePriority;
             this.productCode = request.productCode;
             this.productFlow = request.productFlow;
@@ -776,6 +790,15 @@ public class InitializeRequest extends Request {
         public Builder ocr(String ocr) {
             this.putQueryParameter("Ocr", ocr);
             this.ocr = ocr;
+            return this;
+        }
+
+        /**
+         * Pages.
+         */
+        public Builder pages(String pages) {
+            this.putQueryParameter("Pages", pages);
+            this.pages = pages;
             return this;
         }
 
