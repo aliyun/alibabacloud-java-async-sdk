@@ -134,6 +134,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExportAnalysisTagDetailByTaskIdResponse> exportAnalysisTagDetailByTaskId(ExportAnalysisTagDetailByTaskIdRequest request);
 
     /**
+     * @param request the request parameters of ExportAuditContentResult  ExportAuditContentResultRequest
+     * @return ExportAuditContentResultResponse
+     */
+    CompletableFuture<ExportAuditContentResultResponse> exportAuditContentResult(ExportAuditContentResultRequest request);
+
+    /**
      * @param request the request parameters of ExportCustomSourceAnalysisTask  ExportCustomSourceAnalysisTaskRequest
      * @return ExportCustomSourceAnalysisTaskResponse
      */
@@ -326,6 +332,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPropertiesResponse> getProperties(GetPropertiesRequest request);
 
     /**
+     * @param request the request parameters of GetSmartAuditResult  GetSmartAuditResultRequest
+     * @return GetSmartAuditResultResponse
+     */
+    CompletableFuture<GetSmartAuditResultResponse> getSmartAuditResult(GetSmartAuditResultRequest request);
+
+    /**
      * @param request the request parameters of GetSmartClipTask  GetSmartClipTaskRequest
      * @return GetSmartClipTaskResponse
      */
@@ -384,6 +396,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAsyncTasksResponse
      */
     CompletableFuture<ListAsyncTasksResponse> listAsyncTasks(ListAsyncTasksRequest request);
+
+    /**
+     * @param request the request parameters of ListAuditContentErrorTypes  ListAuditContentErrorTypesRequest
+     * @return ListAuditContentErrorTypesResponse
+     */
+    CompletableFuture<ListAuditContentErrorTypesResponse> listAuditContentErrorTypes(ListAuditContentErrorTypesRequest request);
 
     /**
      * @param request the request parameters of ListBuildConfigs  ListBuildConfigsRequest
@@ -896,6 +914,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitEnterpriseVocAnalysisTaskResponse
      */
     CompletableFuture<SubmitEnterpriseVocAnalysisTaskResponse> submitEnterpriseVocAnalysisTask(SubmitEnterpriseVocAnalysisTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitSmartAudit  SubmitSmartAuditRequest
+     * @return SubmitSmartAuditResponse
+     */
+    CompletableFuture<SubmitSmartAuditResponse> submitSmartAudit(SubmitSmartAuditRequest request);
 
     /**
      * @param request the request parameters of SubmitSmartClipTask  SubmitSmartClipTaskRequest
