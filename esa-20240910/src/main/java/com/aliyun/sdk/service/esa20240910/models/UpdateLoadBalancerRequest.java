@@ -257,7 +257,7 @@ public class UpdateLoadBalancerRequest extends Request {
         } 
 
         /**
-         * <p>Configuration for failover across pools.</p>
+         * <p>Configuration for fallback across pools.</p>
          */
         public Builder adaptiveRouting(AdaptiveRouting adaptiveRouting) {
             String adaptiveRoutingShrink = shrink(adaptiveRouting, "AdaptiveRouting", "json");
@@ -280,7 +280,7 @@ public class UpdateLoadBalancerRequest extends Request {
          * <p>Detailed description of the load balancer, for easier management and identification.</p>
          * 
          * <strong>example:</strong>
-         * <p>负载均衡器描述</p>
+         * <p>Load balancer description</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -422,7 +422,7 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
-         * <p>Address pool corresponding to the secondary region. When multiple secondary regions share the same address pool, the keys can be concatenated with commas.</p>
+         * <p>Address pool corresponding to the secondary region. When multiple secondary regions share the same address pool, the regions can be concatenated with commas as the key.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;AL,MO&quot;: [92298024898****],&quot;CN-SH,CN-SX,CN-SC&quot;:[92304347804****,92843536908****]}</p>
@@ -492,7 +492,7 @@ public class UpdateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * <p>Whether to failover across pools.</p>
+             * <p>Whether to fallback across pools.</p>
              * <ul>
              * <li>true: Yes.</li>
              * <li>false: No.</li>
@@ -541,6 +541,9 @@ public class UpdateLoadBalancerRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
+        @com.aliyun.core.annotation.NameInMap("MonitoringRegion")
+        private String monitoringRegion;
+
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
@@ -561,6 +564,7 @@ public class UpdateLoadBalancerRequest extends Request {
             this.header = builder.header;
             this.interval = builder.interval;
             this.method = builder.method;
+            this.monitoringRegion = builder.monitoringRegion;
             this.path = builder.path;
             this.port = builder.port;
             this.timeout = builder.timeout;
@@ -625,6 +629,13 @@ public class UpdateLoadBalancerRequest extends Request {
         }
 
         /**
+         * @return monitoringRegion
+         */
+        public String getMonitoringRegion() {
+            return this.monitoringRegion;
+        }
+
+        /**
          * @return path
          */
         public String getPath() {
@@ -660,6 +671,7 @@ public class UpdateLoadBalancerRequest extends Request {
             private Object header; 
             private Integer interval; 
             private String method; 
+            private String monitoringRegion; 
             private String path; 
             private Integer port; 
             private Integer timeout; 
@@ -676,6 +688,7 @@ public class UpdateLoadBalancerRequest extends Request {
                 this.header = model.header;
                 this.interval = model.interval;
                 this.method = model.method;
+                this.monitoringRegion = model.monitoringRegion;
                 this.path = model.path;
                 this.port = model.port;
                 this.timeout = model.timeout;
@@ -769,6 +782,14 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
+             * MonitoringRegion.
+             */
+            public Builder monitoringRegion(String monitoringRegion) {
+                this.monitoringRegion = monitoringRegion;
+                return this;
+            }
+
+            /**
              * <p>Monitor check path, such as /healthcheck, which is the HTTP request path.</p>
              * 
              * <strong>example:</strong>
@@ -802,7 +823,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>Monitor protocol type, such as HTTP, used for health checks. When set to &quot;off&quot;, no check is performed.</p>
+             * <p>Monitor protocol type, such as HTTP, used for health checks. When set to &quot;off&quot;, no checks are performed.</p>
              * 
              * <strong>example:</strong>
              * <p>HTTP</p>
@@ -872,7 +893,7 @@ public class UpdateLoadBalancerRequest extends Request {
             } 
 
             /**
-             * <p>The default round-robin weight, used for all pools that do not have a specific weight set. Value range: integers between 0-100.</p>
+             * <p>Default round-robin weight, used for all pools that do not have a separately specified weight. Value range: integers between 0-100.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>
@@ -883,7 +904,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>Weight configuration for each backend server pool, where the key is the pool ID and the value is the weight coefficient. The weight coefficient represents the proportion of relative traffic distribution.</p>
+             * <p>Weight configuration for each backend server pool, where the key is the pool ID and the value is the weight factor. The weight factor represents the proportion of relative traffic distribution.</p>
              */
             public Builder poolWeights(java.util.Map<String, Integer> poolWeights) {
                 this.poolWeights = poolWeights;
@@ -1207,7 +1228,7 @@ public class UpdateLoadBalancerRequest extends Request {
              * <p>Rule content, using conditional expressions to match user requests. This parameter does not need to be set when adding global configurations. There are two usage scenarios:</p>
              * <ul>
              * <li>Match all incoming requests: Set the value to true</li>
-             * <li>Match specific requests: Set the value to a custom expression, for example: (http.host eq &quot;video.example.com&quot;)</li>
+             * <li>Match specific requests: Set the value to a custom expression, e.g., (http.host eq &quot;video.example.com&quot;)</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1245,7 +1266,7 @@ public class UpdateLoadBalancerRequest extends Request {
             }
 
             /**
-             * <p>The execution order of the rule. It can be left empty, in which case the rules will be executed in the order they appear in the list. If specified, it must be a positive integer, with higher values indicating higher priority.</p>
+             * <p>The execution order of the rule. It can be left blank, in which case the rules will be executed in the order they appear in the list. If specified, it must be a positive integer, with higher values indicating higher priority.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

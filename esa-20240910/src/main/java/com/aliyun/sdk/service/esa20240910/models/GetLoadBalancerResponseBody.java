@@ -569,6 +569,9 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
+        @com.aliyun.core.annotation.NameInMap("MonitoringRegion")
+        private String monitoringRegion;
+
         @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
@@ -589,6 +592,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             this.header = builder.header;
             this.interval = builder.interval;
             this.method = builder.method;
+            this.monitoringRegion = builder.monitoringRegion;
             this.path = builder.path;
             this.port = builder.port;
             this.timeout = builder.timeout;
@@ -653,6 +657,13 @@ public class GetLoadBalancerResponseBody extends TeaModel {
         }
 
         /**
+         * @return monitoringRegion
+         */
+        public String getMonitoringRegion() {
+            return this.monitoringRegion;
+        }
+
+        /**
          * @return path
          */
         public String getPath() {
@@ -688,6 +699,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
             private Object header; 
             private Integer interval; 
             private String method; 
+            private String monitoringRegion; 
             private String path; 
             private Integer port; 
             private Integer timeout; 
@@ -704,6 +716,7 @@ public class GetLoadBalancerResponseBody extends TeaModel {
                 this.header = model.header;
                 this.interval = model.interval;
                 this.method = model.method;
+                this.monitoringRegion = model.monitoringRegion;
                 this.path = model.path;
                 this.port = model.port;
                 this.timeout = model.timeout;
@@ -793,6 +806,14 @@ public class GetLoadBalancerResponseBody extends TeaModel {
              */
             public Builder method(String method) {
                 this.method = method;
+                return this;
+            }
+
+            /**
+             * MonitoringRegion.
+             */
+            public Builder monitoringRegion(String monitoringRegion) {
+                this.monitoringRegion = monitoringRegion;
                 return this;
             }
 
