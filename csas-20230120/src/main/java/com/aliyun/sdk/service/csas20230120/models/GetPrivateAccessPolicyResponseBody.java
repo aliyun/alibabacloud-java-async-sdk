@@ -67,7 +67,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
         } 
 
         /**
-         * Policy.
+         * <p>Intranet access policy.</p>
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -75,7 +75,10 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the current request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7E9D7ACD-53D5-56EF-A913-79D148D06299</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * IdpId.
+             * <p>The identity provider ID for the custom user group. This field is required when the custom user group type is <strong>department</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder idpId(Integer idpId) {
                 this.idpId = idpId;
@@ -175,7 +181,10 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Relation.
+             * <p>Custom user group relationship. Values: - <strong>Equal</strong>: Equal to. - <strong>Unequal</strong>: Not equal to.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -183,7 +192,16 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupType.
+             * <p>Type of the custom user group. Values:</p>
+             * <ul>
+             * <li><strong>username</strong>: Username.</li>
+             * <li><strong>department</strong>: Department.</li>
+             * <li><strong>email</strong>: Email.</li>
+             * <li><strong>telephone</strong>: Telephone.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder userGroupType(String userGroupType) {
                 this.userGroupType = userGroupType;
@@ -191,7 +209,16 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the custom user group attribute.</p>
+             * <ul>
+             * <li>When the user group type is <strong>username</strong>, it represents the value of the username. The length should be 1 to 128 characters, supporting Chinese and case-sensitive English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</li>
+             * <li>When the user group type is <strong>department</strong>, it represents the value of the department. For example: OU=Department1,OU=SASE DingTalk.</li>
+             * <li>When the user group type is <strong>email</strong>, it represents the value of the email. For example: <a href="mailto:username@example.com">username@example.com</a>.</li>
+             * <li>When the user group type is <strong>telephone</strong>, it represents the value of the phone number. For example: 13900001234.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OU=部门1,OU=SASE钉钉</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -479,7 +506,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             } 
 
             /**
-             * ApplicationIds.
+             * <p>A collection of application IDs for the private access policy. This field has a value when the application type is Application.</p>
              */
             public Builder applicationIds(java.util.List<String> applicationIds) {
                 this.applicationIds = applicationIds;
@@ -487,7 +514,14 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationType.
+             * <p>The application type of the private access policy. Possible values:</p>
+             * <ul>
+             * <li><strong>Application</strong>: Application.</li>
+             * <li><strong>Tag</strong>: Tag.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Application</p>
              */
             public Builder applicationType(String applicationType) {
                 this.applicationType = applicationType;
@@ -495,7 +529,10 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>Intranet access policy creation time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-07-29 11:26:02</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -503,7 +540,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CustomUserAttributes.
+             * <p>Collection of custom user group attributes. Multiple custom user group attributes are combined with an OR relationship and take effect as a set.</p>
              */
             public Builder customUserAttributes(java.util.List<CustomUserAttributes> customUserAttributes) {
                 this.customUserAttributes = customUserAttributes;
@@ -511,7 +548,10 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>Intranet access policy description.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -519,7 +559,14 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceAttributeAction.
+             * <p>The action to take if the security baseline is not met. Possible values:</p>
+             * <ul>
+             * <li><strong>Block</strong>: Block.</li>
+             * <li><strong>Observe</strong>: Observe.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Block</p>
              */
             public Builder deviceAttributeAction(String deviceAttributeAction) {
                 this.deviceAttributeAction = deviceAttributeAction;
@@ -527,7 +574,10 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceAttributeId.
+             * <p>The ID of the security baseline policy.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dag-d3f64e8bdd4a****</p>
              */
             public Builder deviceAttributeId(String deviceAttributeId) {
                 this.deviceAttributeId = deviceAttributeId;
@@ -535,7 +585,10 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Intranet access policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private_access_policy_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -543,7 +596,14 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyAction.
+             * <p>Intranet access policy action. Values:</p>
+             * <ul>
+             * <li><strong>Block</strong>: Block.</li>
+             * <li><strong>Allow</strong>: Allow.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Allow</p>
              */
             public Builder policyAction(String policyAction) {
                 this.policyAction = policyAction;
@@ -551,7 +611,10 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>Intranet access policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-policy-63b2f1844b86****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -559,7 +622,10 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>Intranet access policy priority. A value of 1 indicates the highest priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -567,7 +633,14 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Intranet access policy status. Values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -575,7 +648,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * TagIds.
+             * <p>A collection of tag IDs for the private access policy. This field has a value when the application type is Tag.</p>
              */
             public Builder tagIds(java.util.List<String> tagIds) {
                 this.tagIds = tagIds;
@@ -583,7 +656,10 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerTemplateId.
+             * <p>The trigger template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dag-d3f64e8bdd4a****</p>
              */
             public Builder triggerTemplateId(String triggerTemplateId) {
                 this.triggerTemplateId = triggerTemplateId;
@@ -591,7 +667,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * TrustedProcessGroupIds.
+             * <p>A list of trusted process group IDs.</p>
              */
             public Builder trustedProcessGroupIds(java.util.List<String> trustedProcessGroupIds) {
                 this.trustedProcessGroupIds = trustedProcessGroupIds;
@@ -599,7 +675,14 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * TrustedProcessStatus.
+             * <p>The status of the trusted process switch. Possible values:</p>
+             * <ul>
+             * <li><strong>Enabled</strong>: Enabled.</li>
+             * <li><strong>Disabled</strong>: Disabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder trustedProcessStatus(String trustedProcessStatus) {
                 this.trustedProcessStatus = trustedProcessStatus;
@@ -607,7 +690,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * TrustedSoftwareIds.
+             * <p>A list of trusted software IDs.</p>
              */
             public Builder trustedSoftwareIds(java.util.List<String> trustedSoftwareIds) {
                 this.trustedSoftwareIds = trustedSoftwareIds;
@@ -615,7 +698,7 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupIds.
+             * <p>Collection of user group IDs for the intranet access policy. This field is populated when the user group type is Normal.</p>
              */
             public Builder userGroupIds(java.util.List<String> userGroupIds) {
                 this.userGroupIds = userGroupIds;
@@ -623,7 +706,14 @@ public class GetPrivateAccessPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupMode.
+             * <p>User group type for the intranet access policy. Values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: Normal user group.</li>
+             * <li><strong>Custom</strong>: Custom user group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Normal</p>
              */
             public Builder userGroupMode(String userGroupMode) {
                 this.userGroupMode = userGroupMode;

@@ -695,7 +695,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * TrustedProcessGroupIds.
+             * <p>List of trusted process group IDs.</p>
              */
             public Builder trustedProcessGroupIds(java.util.List<String> trustedProcessGroupIds) {
                 this.trustedProcessGroupIds = trustedProcessGroupIds;
@@ -703,7 +703,14 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * TrustedProcessStatus.
+             * <p>Trusted process switch status. Values: </p>
+             * <ul>
+             * <li><strong>Enabled</strong>: On.</li>
+             * <li><strong>Disabled</strong>: Off.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Enabled</p>
              */
             public Builder trustedProcessStatus(String trustedProcessStatus) {
                 this.trustedProcessStatus = trustedProcessStatus;
@@ -711,7 +718,7 @@ public class ListPrivateAccessPolicesResponseBody extends TeaModel {
             }
 
             /**
-             * TrustedSoftwareIds.
+             * <p>List of trusted software IDs.</p>
              */
             public Builder trustedSoftwareIds(java.util.List<String> trustedSoftwareIds) {
                 this.trustedSoftwareIds = trustedSoftwareIds;

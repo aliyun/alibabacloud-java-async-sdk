@@ -80,7 +80,7 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         } 
 
         /**
-         * Polices.
+         * <p>List of authorized policies.</p>
          */
         public Builder polices(java.util.List<Polices> polices) {
             this.polices = polices;
@@ -88,7 +88,7 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>9D852F87-AFB5-51B8-AACD-F7D0EFB8277D</p>
@@ -99,7 +99,10 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>Total number of authorized policies.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -191,7 +194,10 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * IdpId.
+             * <p>The identity provider ID of the user group. This value exists when the custom user group type is <strong>department</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
              */
             public Builder idpId(Integer idpId) {
                 this.idpId = idpId;
@@ -199,7 +205,14 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Relation.
+             * <p>Relation of the user group. Values:</p>
+             * <ul>
+             * <li><strong>Equal</strong>: Equal.</li>
+             * <li><strong>Unequal</strong>: Not equal.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Equal</p>
              */
             public Builder relation(String relation) {
                 this.relation = relation;
@@ -207,7 +220,16 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupType.
+             * <p>Type of the user group. Values:</p>
+             * <ul>
+             * <li><strong>username</strong>: Username.</li>
+             * <li><strong>department</strong>: Department.</li>
+             * <li><strong>email</strong>: Email.</li>
+             * <li><strong>telephone</strong>: Telephone.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>department</p>
              */
             public Builder userGroupType(String userGroupType) {
                 this.userGroupType = userGroupType;
@@ -215,7 +237,16 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The value of the user group attribute.</p>
+             * <ul>
+             * <li>When the user group type is <strong>username</strong>, it represents the value of the username. The length is 1 to 128 characters, supporting Chinese and case-sensitive English letters, and can include numbers, periods (.), underscores (_), and hyphens (-).</li>
+             * <li>When the user group type is <strong>department</strong>, it represents the value of the department. For example: OU=Department1,OU=SASE DingTalk.</li>
+             * <li>When the user group type is <strong>email</strong>, it represents the value of the email. For example: <a href="mailto:username@example.com">username@example.com</a>.</li>
+             * <li>When the user group type is <strong>telephone</strong>, it represents the value of the phone number. For example: 13900001234.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OU=部门1,OU=SASE钉钉</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -386,7 +417,7 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomUserAttributes.
+             * <p>Set of custom user group attributes. Multiple custom user group attributes are in an OR relationship, effective as a union.</p>
              */
             public Builder customUserAttributes(java.util.List<CustomUserAttributes> customUserAttributes) {
                 this.customUserAttributes = customUserAttributes;
@@ -394,7 +425,10 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceAttributeName.
+             * <p>Associated security baseline.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>device_attribute_name</p>
              */
             public Builder deviceAttributeName(String deviceAttributeName) {
                 this.deviceAttributeName = deviceAttributeName;
@@ -402,7 +436,10 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * MatchedUserGroup.
+             * <p>Associated user group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user_group_name</p>
              */
             public Builder matchedUserGroup(String matchedUserGroup) {
                 this.matchedUserGroup = matchedUserGroup;
@@ -410,7 +447,10 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>Intranet access policy name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>private_access_policy_name</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -418,7 +458,14 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyAction.
+             * <p>Action of the intranet access policy. Values:</p>
+             * <ul>
+             * <li><strong>Block</strong>: Block.</li>
+             * <li><strong>Allow</strong>: Allow.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Allow</p>
              */
             public Builder policyAction(String policyAction) {
                 this.policyAction = policyAction;
@@ -426,7 +473,10 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyId.
+             * <p>Intranet access policy ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pa-policy-1b0d0e8b4bcf****</p>
              */
             public Builder policyId(String policyId) {
                 this.policyId = policyId;
@@ -434,7 +484,10 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * <p>Priority of the intranet access policy. The number 1 indicates the highest priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Long priority) {
                 this.priority = priority;
@@ -442,7 +495,7 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TrustedProcessGroupIds.
+             * <p>List of trusted process group IDs.</p>
              */
             public Builder trustedProcessGroupIds(java.util.List<String> trustedProcessGroupIds) {
                 this.trustedProcessGroupIds = trustedProcessGroupIds;
@@ -450,7 +503,7 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TrustedSoftwareIds.
+             * <p>List of trusted software IDs.</p>
              */
             public Builder trustedSoftwareIds(java.util.List<String> trustedSoftwareIds) {
                 this.trustedSoftwareIds = trustedSoftwareIds;
@@ -458,7 +511,14 @@ public class ListUserPrivateAccessPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * UserGroupMode.
+             * <p>Type of the user group for the intranet access policy. Values:</p>
+             * <ul>
+             * <li><strong>Normal</strong>: Normal user group.</li>
+             * <li><strong>Custom</strong>: Custom user group.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder userGroupMode(String userGroupMode) {
                 this.userGroupMode = userGroupMode;
