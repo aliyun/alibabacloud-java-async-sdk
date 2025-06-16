@@ -702,6 +702,9 @@ public class CreateArtifactRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SourceImageId")
         private String sourceImageId;
 
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
+        private Long systemDiskSize;
+
         private ArtifactBuildProperty(Builder builder) {
             this.buildArgs = builder.buildArgs;
             this.codeRepo = builder.codeRepo;
@@ -711,6 +714,7 @@ public class CreateArtifactRequest extends Request {
             this.regionId = builder.regionId;
             this.sourceContainerImage = builder.sourceContainerImage;
             this.sourceImageId = builder.sourceImageId;
+            this.systemDiskSize = builder.systemDiskSize;
         }
 
         public static Builder builder() {
@@ -777,6 +781,13 @@ public class CreateArtifactRequest extends Request {
             return this.sourceImageId;
         }
 
+        /**
+         * @return systemDiskSize
+         */
+        public Long getSystemDiskSize() {
+            return this.systemDiskSize;
+        }
+
         public static final class Builder {
             private java.util.List<BuildArgs> buildArgs; 
             private CodeRepo codeRepo; 
@@ -786,6 +797,7 @@ public class CreateArtifactRequest extends Request {
             private String regionId; 
             private String sourceContainerImage; 
             private String sourceImageId; 
+            private Long systemDiskSize; 
 
             private Builder() {
             } 
@@ -799,6 +811,7 @@ public class CreateArtifactRequest extends Request {
                 this.regionId = model.regionId;
                 this.sourceContainerImage = model.sourceContainerImage;
                 this.sourceImageId = model.sourceImageId;
+                this.systemDiskSize = model.systemDiskSize;
             } 
 
             /**
@@ -917,6 +930,14 @@ public class CreateArtifactRequest extends Request {
              */
             public Builder sourceImageId(String sourceImageId) {
                 this.sourceImageId = sourceImageId;
+                return this;
+            }
+
+            /**
+             * SystemDiskSize.
+             */
+            public Builder systemDiskSize(Long systemDiskSize) {
+                this.systemDiskSize = systemDiskSize;
                 return this;
             }
 
