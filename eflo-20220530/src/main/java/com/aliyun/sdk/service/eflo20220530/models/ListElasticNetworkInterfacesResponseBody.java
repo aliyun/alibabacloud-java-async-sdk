@@ -216,7 +216,10 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-test</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -224,7 +227,10 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>Tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-value</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -633,7 +639,10 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2l4sq6l7unhi</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -663,7 +672,7 @@ public class ListElasticNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

@@ -216,7 +216,10 @@ public class ListErsResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myTest</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -224,7 +227,10 @@ public class ListErsResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -579,7 +585,7 @@ public class ListErsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The list of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

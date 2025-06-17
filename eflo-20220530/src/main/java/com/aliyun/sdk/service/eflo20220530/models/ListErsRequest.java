@@ -329,7 +329,7 @@ public class ListErsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>List of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -397,7 +397,10 @@ public class ListErsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-er</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -405,7 +408,10 @@ public class ListErsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-xxxxx</p>
              */
             public Builder value(String value) {
                 this.value = value;

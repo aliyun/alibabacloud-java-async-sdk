@@ -1525,7 +1525,10 @@ public class GetErResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1533,7 +1536,10 @@ public class GetErResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1903,7 +1909,7 @@ public class GetErResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>List of Tags</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

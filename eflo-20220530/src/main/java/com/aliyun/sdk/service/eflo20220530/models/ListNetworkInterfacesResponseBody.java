@@ -528,7 +528,10 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -536,7 +539,10 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1081,7 +1087,10 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>Resource group instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-1234567890</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1119,7 +1128,7 @@ public class ListNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>List of tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

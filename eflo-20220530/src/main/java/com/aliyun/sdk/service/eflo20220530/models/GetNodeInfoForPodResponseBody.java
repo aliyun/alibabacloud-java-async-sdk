@@ -370,7 +370,10 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
             }
 
             /**
-             * HdeniIpv6SipQuota.
+             * <p>Lingjun Hdeni Network Interface IPV6 address Quota</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder hdeniIpv6SipQuota(Integer hdeniIpv6SipQuota) {
                 this.hdeniIpv6SipQuota = hdeniIpv6SipQuota;
@@ -389,7 +392,10 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
             }
 
             /**
-             * HdeniSipQuota.
+             * <p>Lingjun Hdeni Network Interface IPV4 address Quota</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder hdeniSipQuota(Integer hdeniSipQuota) {
                 this.hdeniSipQuota = hdeniSipQuota;
@@ -397,7 +403,10 @@ public class GetNodeInfoForPodResponseBody extends TeaModel {
             }
 
             /**
-             * LeniIpv6SipQuota.
+             * <p>Lingjun Elastic Network Interface IPV6 address Quota</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder leniIpv6SipQuota(Integer leniIpv6SipQuota) {
                 this.leniIpv6SipQuota = leniIpv6SipQuota;

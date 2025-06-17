@@ -285,7 +285,10 @@ public class ListNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzzka6bnjvbi</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -306,7 +309,7 @@ public class ListNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -386,7 +389,10 @@ public class ListNetworkInterfacesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -394,7 +400,10 @@ public class ListNetworkInterfacesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-test</p>
              */
             public Builder value(String value) {
                 this.value = value;

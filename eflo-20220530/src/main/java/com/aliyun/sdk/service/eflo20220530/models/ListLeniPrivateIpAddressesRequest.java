@@ -231,7 +231,10 @@ public class ListLeniPrivateIpAddressesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>Resource group instance ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmynvzeknccpy</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

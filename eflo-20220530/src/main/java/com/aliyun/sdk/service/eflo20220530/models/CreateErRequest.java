@@ -195,7 +195,7 @@ public class CreateErRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>List of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -263,7 +263,10 @@ public class CreateErRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -271,7 +274,10 @@ public class CreateErRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value-test</p>
              */
             public Builder value(String value) {
                 this.value = value;

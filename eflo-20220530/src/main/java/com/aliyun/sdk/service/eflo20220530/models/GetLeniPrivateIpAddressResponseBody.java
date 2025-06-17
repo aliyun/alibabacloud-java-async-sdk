@@ -408,7 +408,10 @@ public class GetLeniPrivateIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>Resource group instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmzzka6bnjvbi</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;

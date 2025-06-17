@@ -332,7 +332,10 @@ public class ListElasticNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmzmcpv7odnta</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);
@@ -361,7 +364,7 @@ public class ListElasticNetworkInterfacesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>List of Tags</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -482,7 +485,10 @@ public class ListElasticNetworkInterfacesRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-test</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -490,7 +496,10 @@ public class ListElasticNetworkInterfacesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>key-value</p>
              */
             public Builder value(String value) {
                 this.value = value;

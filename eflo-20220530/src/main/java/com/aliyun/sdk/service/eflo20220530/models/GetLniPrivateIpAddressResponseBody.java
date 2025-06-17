@@ -421,7 +421,10 @@ public class GetLniPrivateIpAddressResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>Resource group instance ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2l4sq6l7unhi</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
