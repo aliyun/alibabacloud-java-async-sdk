@@ -74,7 +74,10 @@ public class DescribeInstanceLogRequest extends Request {
         } 
 
         /**
-         * ContainerId.
+         * <p>The ID of the sidecar container. You can call the <a href="https://help.aliyun.com/document_detail/2834847.html">DescribeApplicationInstances</a> to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sidecar-test-01</p>
          */
         public Builder containerId(String containerId) {
             this.putQueryParameter("ContainerId", containerId);

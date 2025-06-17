@@ -851,6 +851,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
+     * @param request the request parameters of UpdateAppMode  UpdateAppModeRequest
+     * @return UpdateAppModeResponse
+     */
+    CompletableFuture<UpdateAppModeResponse> updateAppMode(UpdateAppModeRequest request);
+
+    /**
      * @param request the request parameters of UpdateAppSecurityGroup  UpdateAppSecurityGroupRequest
      * @return UpdateAppSecurityGroupResponse
      */

@@ -1497,7 +1497,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The applications.</p>
+             * <p>The queried applications.</p>
              */
             public Builder applications(java.util.List<Applications> applications) {
                 this.applications = applications;
