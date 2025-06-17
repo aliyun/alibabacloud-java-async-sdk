@@ -20,6 +20,12 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
+    private String createTime;
+
+    @com.aliyun.core.annotation.NameInMap("FinishTime")
+    private String finishTime;
+
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
@@ -37,6 +43,8 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
 
     private MediaConvertOutputGroupDetail(Builder builder) {
         this.code = builder.code;
+        this.createTime = builder.createTime;
+        this.finishTime = builder.finishTime;
         this.message = builder.message;
         this.name = builder.name;
         this.outputs = builder.outputs;
@@ -61,6 +69,20 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return createTime
+     */
+    public String getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * @return finishTime
+     */
+    public String getFinishTime() {
+        return this.finishTime;
     }
 
     /**
@@ -100,6 +122,8 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private String createTime; 
+        private String finishTime; 
         private String message; 
         private String name; 
         private java.util.List<MediaConvertOutputDetail> outputs; 
@@ -111,6 +135,8 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
 
         private Builder(MediaConvertOutputGroupDetail model) {
             this.code = model.code;
+            this.createTime = model.createTime;
+            this.finishTime = model.finishTime;
             this.message = model.message;
             this.name = model.name;
             this.outputs = model.outputs;
@@ -123,6 +149,22 @@ public class MediaConvertOutputGroupDetail extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * CreateTime.
+         */
+        public Builder createTime(String createTime) {
+            this.createTime = createTime;
+            return this;
+        }
+
+        /**
+         * FinishTime.
+         */
+        public Builder finishTime(String finishTime) {
+            this.finishTime = finishTime;
             return this;
         }
 

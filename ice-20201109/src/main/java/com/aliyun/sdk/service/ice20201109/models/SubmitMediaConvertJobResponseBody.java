@@ -101,6 +101,9 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Inputs")
         private java.util.List<MediaConvertInput> inputs;
 
+        @com.aliyun.core.annotation.NameInMap("JobName")
+        private String jobName;
+
         @com.aliyun.core.annotation.NameInMap("OutputGroups")
         private java.util.List<MediaConvertOutputGroup> outputGroups;
 
@@ -109,6 +112,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
 
         private Config(Builder builder) {
             this.inputs = builder.inputs;
+            this.jobName = builder.jobName;
             this.outputGroups = builder.outputGroups;
             this.outputs = builder.outputs;
         }
@@ -129,6 +133,13 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobName
+         */
+        public String getJobName() {
+            return this.jobName;
+        }
+
+        /**
          * @return outputGroups
          */
         public java.util.List<MediaConvertOutputGroup> getOutputGroups() {
@@ -144,6 +155,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MediaConvertInput> inputs; 
+            private String jobName; 
             private java.util.List<MediaConvertOutputGroup> outputGroups; 
             private java.util.List<MediaConvertOutput> outputs; 
 
@@ -152,6 +164,7 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
 
             private Builder(Config model) {
                 this.inputs = model.inputs;
+                this.jobName = model.jobName;
                 this.outputGroups = model.outputGroups;
                 this.outputs = model.outputs;
             } 
@@ -161,6 +174,14 @@ public class SubmitMediaConvertJobResponseBody extends TeaModel {
              */
             public Builder inputs(java.util.List<MediaConvertInput> inputs) {
                 this.inputs = inputs;
+                return this;
+            }
+
+            /**
+             * JobName.
+             */
+            public Builder jobName(String jobName) {
+                this.jobName = jobName;
                 return this;
             }
 

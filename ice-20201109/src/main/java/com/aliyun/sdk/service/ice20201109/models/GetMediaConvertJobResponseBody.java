@@ -101,6 +101,9 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Inputs")
         private java.util.List<MediaConvertInput> inputs;
 
+        @com.aliyun.core.annotation.NameInMap("JobName")
+        private String jobName;
+
         @com.aliyun.core.annotation.NameInMap("OutputGroups")
         private java.util.List<MediaConvertOutputGroup> outputGroups;
 
@@ -109,6 +112,7 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
 
         private Config(Builder builder) {
             this.inputs = builder.inputs;
+            this.jobName = builder.jobName;
             this.outputGroups = builder.outputGroups;
             this.outputs = builder.outputs;
         }
@@ -129,6 +133,13 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return jobName
+         */
+        public String getJobName() {
+            return this.jobName;
+        }
+
+        /**
          * @return outputGroups
          */
         public java.util.List<MediaConvertOutputGroup> getOutputGroups() {
@@ -144,6 +155,7 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MediaConvertInput> inputs; 
+            private String jobName; 
             private java.util.List<MediaConvertOutputGroup> outputGroups; 
             private java.util.List<MediaConvertOutput> outputs; 
 
@@ -152,6 +164,7 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
 
             private Builder(Config model) {
                 this.inputs = model.inputs;
+                this.jobName = model.jobName;
                 this.outputGroups = model.outputGroups;
                 this.outputs = model.outputs;
             } 
@@ -161,6 +174,14 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
              */
             public Builder inputs(java.util.List<MediaConvertInput> inputs) {
                 this.inputs = inputs;
+                return this;
+            }
+
+            /**
+             * JobName.
+             */
+            public Builder jobName(String jobName) {
+                this.jobName = jobName;
                 return this;
             }
 
@@ -203,6 +224,12 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private Config config;
 
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
+        private String finishTime;
+
         @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
@@ -214,6 +241,9 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("OutputGroupDetails")
         private java.util.List<MediaConvertOutputGroupDetail> outputGroupDetails;
+
+        @com.aliyun.core.annotation.NameInMap("Percent")
+        private Integer percent;
 
         @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
@@ -231,10 +261,13 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
             this.clientToken = builder.clientToken;
             this.code = builder.code;
             this.config = builder.config;
+            this.createTime = builder.createTime;
+            this.finishTime = builder.finishTime;
             this.jobId = builder.jobId;
             this.message = builder.message;
             this.outputDetails = builder.outputDetails;
             this.outputGroupDetails = builder.outputGroupDetails;
+            this.percent = builder.percent;
             this.pipelineId = builder.pipelineId;
             this.requestId = builder.requestId;
             this.state = builder.state;
@@ -271,6 +304,20 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return finishTime
+         */
+        public String getFinishTime() {
+            return this.finishTime;
+        }
+
+        /**
          * @return jobId
          */
         public String getJobId() {
@@ -296,6 +343,13 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
          */
         public java.util.List<MediaConvertOutputGroupDetail> getOutputGroupDetails() {
             return this.outputGroupDetails;
+        }
+
+        /**
+         * @return percent
+         */
+        public Integer getPercent() {
+            return this.percent;
         }
 
         /**
@@ -330,10 +384,13 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
             private String clientToken; 
             private String code; 
             private Config config; 
+            private String createTime; 
+            private String finishTime; 
             private String jobId; 
             private String message; 
             private java.util.List<MediaConvertOutputDetail> outputDetails; 
             private java.util.List<MediaConvertOutputGroupDetail> outputGroupDetails; 
+            private Integer percent; 
             private String pipelineId; 
             private String requestId; 
             private String state; 
@@ -346,10 +403,13 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
                 this.clientToken = model.clientToken;
                 this.code = model.code;
                 this.config = model.config;
+                this.createTime = model.createTime;
+                this.finishTime = model.finishTime;
                 this.jobId = model.jobId;
                 this.message = model.message;
                 this.outputDetails = model.outputDetails;
                 this.outputGroupDetails = model.outputGroupDetails;
+                this.percent = model.percent;
                 this.pipelineId = model.pipelineId;
                 this.requestId = model.requestId;
                 this.state = model.state;
@@ -383,6 +443,22 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
              */
             public Builder config(Config config) {
                 this.config = config;
+                return this;
+            }
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * FinishTime.
+             */
+            public Builder finishTime(String finishTime) {
+                this.finishTime = finishTime;
                 return this;
             }
 
@@ -421,6 +497,14 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
              */
             public Builder outputGroupDetails(java.util.List<MediaConvertOutputGroupDetail> outputGroupDetails) {
                 this.outputGroupDetails = outputGroupDetails;
+                return this;
+            }
+
+            /**
+             * Percent.
+             */
+            public Builder percent(Integer percent) {
+                this.percent = percent;
                 return this;
             }
 

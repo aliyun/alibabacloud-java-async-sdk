@@ -147,7 +147,7 @@ public class ListSearchLibResponseBody extends TeaModel {
         }
 
         /**
-         * <p>总数。</p>
+         * <p>The total number of entries returned.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
