@@ -179,6 +179,9 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegDate")
         private String regDate;
 
+        @com.aliyun.core.annotation.NameInMap("RenewPrice")
+        private Double renewPrice;
+
         @com.aliyun.core.annotation.NameInMap("Reserved")
         private Boolean reserved;
 
@@ -193,6 +196,9 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ShortName")
         private String shortName;
+
+        @com.aliyun.core.annotation.NameInMap("SnatchNo")
+        private String snatchNo;
 
         @com.aliyun.core.annotation.NameInMap("SnatchTypeDesc")
         private String snatchTypeDesc;
@@ -241,11 +247,13 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
             this.productId = builder.productId;
             this.publishTime = builder.publishTime;
             this.regDate = builder.regDate;
+            this.renewPrice = builder.renewPrice;
             this.reserved = builder.reserved;
             this.rmbPrice = builder.rmbPrice;
             this.s360Weight = builder.s360Weight;
             this.seoAttributes = builder.seoAttributes;
             this.shortName = builder.shortName;
+            this.snatchNo = builder.snatchNo;
             this.snatchTypeDesc = builder.snatchTypeDesc;
             this.sougouAntiLink = builder.sougouAntiLink;
             this.sougouIndex = builder.sougouIndex;
@@ -459,6 +467,13 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
         }
 
         /**
+         * @return renewPrice
+         */
+        public Double getRenewPrice() {
+            return this.renewPrice;
+        }
+
+        /**
          * @return reserved
          */
         public Boolean getReserved() {
@@ -491,6 +506,13 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
          */
         public String getShortName() {
             return this.shortName;
+        }
+
+        /**
+         * @return snatchNo
+         */
+        public String getSnatchNo() {
+            return this.snatchNo;
         }
 
         /**
@@ -564,11 +586,13 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
             private String productId; 
             private String publishTime; 
             private String regDate; 
+            private Double renewPrice; 
             private Boolean reserved; 
             private Double rmbPrice; 
             private Integer s360Weight; 
             private String seoAttributes; 
             private String shortName; 
+            private String snatchNo; 
             private String snatchTypeDesc; 
             private Integer sougouAntiLink; 
             private Integer sougouIndex; 
@@ -608,11 +632,13 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
                 this.productId = model.productId;
                 this.publishTime = model.publishTime;
                 this.regDate = model.regDate;
+                this.renewPrice = model.renewPrice;
                 this.reserved = model.reserved;
                 this.rmbPrice = model.rmbPrice;
                 this.s360Weight = model.s360Weight;
                 this.seoAttributes = model.seoAttributes;
                 this.shortName = model.shortName;
+                this.snatchNo = model.snatchNo;
                 this.snatchTypeDesc = model.snatchTypeDesc;
                 this.sougouAntiLink = model.sougouAntiLink;
                 this.sougouIndex = model.sougouIndex;
@@ -846,6 +872,14 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
             }
 
             /**
+             * RenewPrice.
+             */
+            public Builder renewPrice(Double renewPrice) {
+                this.renewPrice = renewPrice;
+                return this;
+            }
+
+            /**
              * Reserved.
              */
             public Builder reserved(Boolean reserved) {
@@ -882,6 +916,14 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
              */
             public Builder shortName(String shortName) {
                 this.shortName = shortName;
+                return this;
+            }
+
+            /**
+             * SnatchNo.
+             */
+            public Builder snatchNo(String snatchNo) {
+                this.snatchNo = snatchNo;
                 return this;
             }
 

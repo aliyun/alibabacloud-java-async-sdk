@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AcceptDemandResponse> acceptDemand(AcceptDemandRequest request);
 
     /**
+     * @param request the request parameters of BatchIntrudeDomains  BatchIntrudeDomainsRequest
+     * @return BatchIntrudeDomainsResponse
+     */
+    CompletableFuture<BatchIntrudeDomainsResponse> batchIntrudeDomains(BatchIntrudeDomainsRequest request);
+
+    /**
      * @param request the request parameters of BidDomain  BidDomainRequest
      * @return BidDomainResponse
      */
@@ -138,6 +144,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryExchangeRateResponse
      */
     CompletableFuture<QueryExchangeRateResponse> queryExchangeRate(QueryExchangeRateRequest request);
+
+    /**
+     * @param request the request parameters of QueryExportAuctionDetail  QueryExportAuctionDetailRequest
+     * @return QueryExportAuctionDetailResponse
+     */
+    CompletableFuture<QueryExportAuctionDetailResponse> queryExportAuctionDetail(QueryExportAuctionDetailRequest request);
 
     /**
      * @param request the request parameters of QueryExportDomainExpireSnatchs  QueryExportDomainExpireSnatchsRequest
