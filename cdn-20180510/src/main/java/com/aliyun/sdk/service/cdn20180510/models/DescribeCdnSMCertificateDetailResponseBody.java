@@ -64,6 +64,10 @@ public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certExpireTime
      */
@@ -137,6 +141,21 @@ public class DescribeCdnSMCertificateDetailResponseBody extends TeaModel {
         private String requestId; 
         private String sans; 
         private String signCertificate; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnSMCertificateDetailResponseBody model) {
+            this.certExpireTime = model.certExpireTime;
+            this.certIdentifier = model.certIdentifier;
+            this.certName = model.certName;
+            this.certOrg = model.certOrg;
+            this.commonName = model.commonName;
+            this.encryptCertificate = model.encryptCertificate;
+            this.requestId = model.requestId;
+            this.sans = model.sans;
+            this.signCertificate = model.signCertificate;
+        } 
 
         /**
          * <p>The expiration time of the certificate. The time is displayed in UTC.</p>

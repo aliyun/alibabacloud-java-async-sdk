@@ -36,6 +36,10 @@ public class DescribeCustomDomainSampleRateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -53,6 +57,14 @@ public class DescribeCustomDomainSampleRateResponseBody extends TeaModel {
     public static final class Builder {
         private Content content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCustomDomainSampleRateResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Content.
@@ -120,6 +132,14 @@ public class DescribeCustomDomainSampleRateResponseBody extends TeaModel {
             private String domainName; 
             private Float sampleRate; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainContent model) {
+                this.domainName = model.domainName;
+                this.sampleRate = model.sampleRate;
+            } 
+
             /**
              * DomainName.
              */
@@ -153,8 +173,20 @@ public class DescribeCustomDomainSampleRateResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DomainContent")
         private java.util.List<DomainContent> domainContent;
 
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
+        private Long pageNumber;
+
+        @com.aliyun.core.annotation.NameInMap("PageSize")
+        private Long pageSize;
+
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
+        private Long totalCount;
+
         private Content(Builder builder) {
             this.domainContent = builder.domainContent;
+            this.pageNumber = builder.pageNumber;
+            this.pageSize = builder.pageSize;
+            this.totalCount = builder.totalCount;
         }
 
         public static Builder builder() {
@@ -172,14 +204,72 @@ public class DescribeCustomDomainSampleRateResponseBody extends TeaModel {
             return this.domainContent;
         }
 
+        /**
+         * @return pageNumber
+         */
+        public Long getPageNumber() {
+            return this.pageNumber;
+        }
+
+        /**
+         * @return pageSize
+         */
+        public Long getPageSize() {
+            return this.pageSize;
+        }
+
+        /**
+         * @return totalCount
+         */
+        public Long getTotalCount() {
+            return this.totalCount;
+        }
+
         public static final class Builder {
             private java.util.List<DomainContent> domainContent; 
+            private Long pageNumber; 
+            private Long pageSize; 
+            private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.domainContent = model.domainContent;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * DomainContent.
              */
             public Builder domainContent(java.util.List<DomainContent> domainContent) {
                 this.domainContent = domainContent;
+                return this;
+            }
+
+            /**
+             * PageNumber.
+             */
+            public Builder pageNumber(Long pageNumber) {
+                this.pageNumber = pageNumber;
+                return this;
+            }
+
+            /**
+             * PageSize.
+             */
+            public Builder pageSize(Long pageSize) {
+                this.pageSize = pageSize;
+                return this;
+            }
+
+            /**
+             * TotalCount.
+             */
+            public Builder totalCount(Long totalCount) {
+                this.totalCount = totalCount;
                 return this;
             }
 

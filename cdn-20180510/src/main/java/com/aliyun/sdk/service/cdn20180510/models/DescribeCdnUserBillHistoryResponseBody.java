@@ -36,6 +36,10 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return billHistoryData
      */
@@ -53,6 +57,14 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
     public static final class Builder {
         private BillHistoryData billHistoryData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnUserBillHistoryResponseBody model) {
+            this.billHistoryData = model.billHistoryData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The billing history returned.</p>
@@ -158,6 +170,17 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
             private String chargeType; 
             private Float count; 
             private Float flow; 
+
+            private Builder() {
+            } 
+
+            private Builder(BillingDataItem model) {
+                this.bandwidth = model.bandwidth;
+                this.cdnRegion = model.cdnRegion;
+                this.chargeType = model.chargeType;
+                this.count = model.count;
+                this.flow = model.flow;
+            } 
 
             /**
              * <p>The bandwidth. Unit: bit/s.</p>
@@ -269,6 +292,13 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<BillingDataItem> billingDataItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(BillingData model) {
+                this.billingDataItem = model.billingDataItem;
+            } 
+
             /**
              * BillingDataItem.
              */
@@ -352,6 +382,16 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
             private BillingData billingData; 
             private String dimension; 
 
+            private Builder() {
+            } 
+
+            private Builder(BillHistoryDataItem model) {
+                this.billTime = model.billTime;
+                this.billType = model.billType;
+                this.billingData = model.billingData;
+                this.dimension = model.dimension;
+            } 
+
             /**
              * <p>The beginning of the time range that was queried.</p>
              * 
@@ -431,6 +471,13 @@ public class DescribeCdnUserBillHistoryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BillHistoryDataItem> billHistoryDataItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(BillHistoryData model) {
+                this.billHistoryDataItem = model.billHistoryDataItem;
+            } 
 
             /**
              * BillHistoryDataItem.

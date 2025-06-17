@@ -52,6 +52,10 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cdnIp
      */
@@ -101,6 +105,18 @@ public class DescribeIpInfoResponseBody extends TeaModel {
         private String region; 
         private String regionEname; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIpInfoResponseBody model) {
+            this.cdnIp = model.cdnIp;
+            this.ISP = model.ISP;
+            this.ispEname = model.ispEname;
+            this.region = model.region;
+            this.regionEname = model.regionEname;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the IP address belongs to an Alibaba Cloud CDN POP.</p>

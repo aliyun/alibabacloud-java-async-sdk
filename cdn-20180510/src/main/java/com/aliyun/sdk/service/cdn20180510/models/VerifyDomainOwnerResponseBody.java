@@ -36,6 +36,10 @@ public class VerifyDomainOwnerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -53,6 +57,14 @@ public class VerifyDomainOwnerResponseBody extends TeaModel {
     public static final class Builder {
         private String content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(VerifyDomainOwnerResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The verification result.</p>

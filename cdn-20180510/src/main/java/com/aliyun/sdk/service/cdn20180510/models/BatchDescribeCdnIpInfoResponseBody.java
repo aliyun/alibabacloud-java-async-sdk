@@ -36,6 +36,10 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipInfoList
      */
@@ -53,6 +57,14 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<IpInfoList> ipInfoList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchDescribeCdnIpInfoResponseBody model) {
+            this.ipInfoList = model.ipInfoList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The results about IP addresses returned.</p>
@@ -170,6 +182,18 @@ public class BatchDescribeCdnIpInfoResponseBody extends TeaModel {
             private String ipAddress; 
             private String ispName; 
             private String province; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpInfoList model) {
+                this.cdnIp = model.cdnIp;
+                this.city = model.city;
+                this.country = model.country;
+                this.ipAddress = model.ipAddress;
+                this.ispName = model.ispName;
+                this.province = model.province;
+            } 
 
             /**
              * <p>Indicates whether the IP address belongs to an Alibaba Cloud CDN point of presence (POP).</p>

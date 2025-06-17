@@ -573,6 +573,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteCustomDomainSampleRate  DeleteCustomDomainSampleRateRequest
+     * @return DeleteCustomDomainSampleRateResponse
+     */
+    @Override
+    public CompletableFuture<DeleteCustomDomainSampleRateResponse> deleteCustomDomainSampleRate(DeleteCustomDomainSampleRateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteCustomDomainSampleRate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteCustomDomainSampleRateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteCustomDomainSampleRateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteFCTrigger  DeleteFCTriggerRequest
      * @return DeleteFCTriggerResponse
      */

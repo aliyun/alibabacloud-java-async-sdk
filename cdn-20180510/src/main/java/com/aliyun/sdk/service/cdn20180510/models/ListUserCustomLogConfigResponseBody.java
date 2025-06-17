@@ -36,6 +36,10 @@ public class ListUserCustomLogConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configIds
      */
@@ -53,6 +57,14 @@ public class ListUserCustomLogConfigResponseBody extends TeaModel {
     public static final class Builder {
         private ConfigIds configIds; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserCustomLogConfigResponseBody model) {
+            this.configIds = model.configIds;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of log configuration IDs.</p>
@@ -110,6 +122,13 @@ public class ListUserCustomLogConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> configId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConfigIds model) {
+                this.configId = model.configId;
+            } 
 
             /**
              * ConfigId.

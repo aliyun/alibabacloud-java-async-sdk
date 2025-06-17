@@ -36,6 +36,10 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return billTypeData
      */
@@ -53,6 +57,14 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
     public static final class Builder {
         private BillTypeData billTypeData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnUserBillTypeResponseBody model) {
+            this.billTypeData = model.billTypeData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Details about the metering methods returned.</p>
@@ -170,6 +182,18 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
             private String endTime; 
             private String product; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(BillTypeDataItem model) {
+                this.billType = model.billType;
+                this.billingCycle = model.billingCycle;
+                this.dimension = model.dimension;
+                this.endTime = model.endTime;
+                this.product = model.product;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The metering method.</p>
@@ -301,6 +325,13 @@ public class DescribeCdnUserBillTypeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BillTypeDataItem> billTypeDataItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(BillTypeData model) {
+                this.billTypeDataItem = model.billTypeDataItem;
+            } 
 
             /**
              * BillTypeDataItem.

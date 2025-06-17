@@ -36,6 +36,10 @@ public class PushObjectCacheResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pushTaskId
      */
@@ -53,6 +57,14 @@ public class PushObjectCacheResponseBody extends TeaModel {
     public static final class Builder {
         private String pushTaskId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(PushObjectCacheResponseBody model) {
+            this.pushTaskId = model.pushTaskId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the prefetch task. If multiple tasks are returned, the IDs are separated by commas (,). The task IDs are merged based on the following rules:</p>

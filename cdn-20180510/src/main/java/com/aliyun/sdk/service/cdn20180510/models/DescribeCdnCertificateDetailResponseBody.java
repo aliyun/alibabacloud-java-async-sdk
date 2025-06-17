@@ -48,6 +48,10 @@ public class DescribeCdnCertificateDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cert
      */
@@ -89,6 +93,17 @@ public class DescribeCdnCertificateDetailResponseBody extends TeaModel {
         private String certName; 
         private String key; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnCertificateDetailResponseBody model) {
+            this.cert = model.cert;
+            this.certId = model.certId;
+            this.certName = model.certName;
+            this.key = model.key;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The certificate.</p>

@@ -36,6 +36,10 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -53,6 +57,14 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
     public static final class Builder {
         private Content content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRealtimeLogDeliveryInfosResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about real-time log delivery.</p>
@@ -135,6 +147,15 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
             private String project; 
             private String region; 
 
+            private Builder() {
+            } 
+
+            private Builder(RealtimeLogDeliveryInfos model) {
+                this.logstore = model.logstore;
+                this.project = model.project;
+                this.region = model.region;
+            } 
+
             /**
              * <p>The name of the Logstore that collects log data from Alibaba Cloud CDN in real time.</p>
              * 
@@ -206,6 +227,13 @@ public class ListRealtimeLogDeliveryInfosResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RealtimeLogDeliveryInfos> realtimeLogDeliveryInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.realtimeLogDeliveryInfos = model.realtimeLogDeliveryInfos;
+            } 
 
             /**
              * RealtimeLogDeliveryInfos.

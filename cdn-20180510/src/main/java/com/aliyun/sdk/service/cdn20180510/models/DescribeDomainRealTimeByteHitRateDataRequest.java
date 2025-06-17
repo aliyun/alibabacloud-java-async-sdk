@@ -45,7 +45,7 @@ public class DescribeDomainRealTimeByteHitRateDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

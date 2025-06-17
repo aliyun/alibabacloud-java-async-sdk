@@ -36,6 +36,10 @@ public class DescribeCdnConditionIPBInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return datas
      */
@@ -53,6 +57,14 @@ public class DescribeCdnConditionIPBInfoResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Datas> datas; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnConditionIPBInfoResponseBody model) {
+            this.datas = model.datas;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data that is returned.</p>
@@ -110,6 +122,13 @@ public class DescribeCdnConditionIPBInfoResponseBody extends TeaModel {
 
         public static final class Builder {
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Datas model) {
+                this.value = model.value;
+            } 
 
             /**
              * <p>The configuration value.</p>

@@ -48,6 +48,10 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activityLog
      */
@@ -89,6 +93,17 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainCcActivityLogResponseBody model) {
+            this.activityLog = model.activityLog;
+            this.pageIndex = model.pageIndex;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The list of rate limiting logs.</p>
@@ -251,6 +266,19 @@ public class DescribeDomainCcActivityLogResponseBody extends TeaModel {
             private String triggerObject; 
             private Long ttl; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActivityLog model) {
+                this.action = model.action;
+                this.domainName = model.domainName;
+                this.ruleName = model.ruleName;
+                this.timeStamp = model.timeStamp;
+                this.triggerObject = model.triggerObject;
+                this.ttl = model.ttl;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The action that was triggered.</p>

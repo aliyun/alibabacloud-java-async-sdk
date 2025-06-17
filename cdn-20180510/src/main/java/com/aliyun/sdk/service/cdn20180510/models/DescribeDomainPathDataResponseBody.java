@@ -64,6 +64,10 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -137,6 +141,21 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainPathDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.pathDataPerInterval = model.pathDataPerInterval;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The time interval. Unit: seconds.</p>
@@ -308,6 +327,16 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
             private String time; 
             private Integer traffic; 
 
+            private Builder() {
+            } 
+
+            private Builder(UsageData model) {
+                this.acc = model.acc;
+                this.path = model.path;
+                this.time = model.time;
+                this.traffic = model.traffic;
+            } 
+
             /**
              * <p>The number of visits to the URL.</p>
              * 
@@ -390,6 +419,13 @@ public class DescribeDomainPathDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<UsageData> usageData; 
+
+            private Builder() {
+            } 
+
+            private Builder(PathDataPerInterval model) {
+                this.usageData = model.usageData;
+            } 
 
             /**
              * UsageData.

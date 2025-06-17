@@ -36,6 +36,10 @@ public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainConfigList
      */
@@ -53,6 +57,14 @@ public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
     public static final class Builder {
         private DomainConfigList domainConfigList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchSetCdnDomainConfigResponseBody model) {
+            this.domainConfigList = model.domainConfigList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of domain configurations.</p>
@@ -135,6 +147,15 @@ public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
             private String domainName; 
             private String functionName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainConfigModel model) {
+                this.configId = model.configId;
+                this.domainName = model.domainName;
+                this.functionName = model.functionName;
+            } 
+
             /**
              * <p>The ID of the configuration.</p>
              * 
@@ -206,6 +227,13 @@ public class BatchSetCdnDomainConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DomainConfigModel> domainConfigModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainConfigList model) {
+                this.domainConfigModel = model.domainConfigModel;
+            } 
 
             /**
              * DomainConfigModel.

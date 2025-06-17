@@ -40,6 +40,10 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainConfigs
      */
@@ -65,6 +69,15 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
         private java.util.List<DomainConfigs> domainConfigs; 
         private String domainName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnDomainStagingConfigResponseBody model) {
+            this.domainConfigs = model.domainConfigs;
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The domain name configurations.</p>
@@ -145,6 +158,14 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String argName; 
             private String argValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(FunctionArgs model) {
+                this.argName = model.argName;
+                this.argValue = model.argValue;
+            } 
 
             /**
              * <p>The configuration name.</p>
@@ -254,6 +275,17 @@ public class DescribeCdnDomainStagingConfigResponseBody extends TeaModel {
             private String functionName; 
             private String parentId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainConfigs model) {
+                this.configId = model.configId;
+                this.functionArgs = model.functionArgs;
+                this.functionName = model.functionName;
+                this.parentId = model.parentId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The configuration ID.</p>

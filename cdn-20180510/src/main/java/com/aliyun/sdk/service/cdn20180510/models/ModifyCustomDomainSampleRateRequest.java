@@ -22,9 +22,9 @@ public class ModifyCustomDomainSampleRateRequest extends Request {
     private String baseConfigID;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainNames")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String domainName;
+    private String domainNames;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SampleRate")
@@ -38,7 +38,7 @@ public class ModifyCustomDomainSampleRateRequest extends Request {
     private ModifyCustomDomainSampleRateRequest(Builder builder) {
         super(builder);
         this.baseConfigID = builder.baseConfigID;
-        this.domainName = builder.domainName;
+        this.domainNames = builder.domainNames;
         this.sampleRate = builder.sampleRate;
         this.sinkID = builder.sinkID;
     }
@@ -51,7 +51,7 @@ public class ModifyCustomDomainSampleRateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -64,10 +64,10 @@ public class ModifyCustomDomainSampleRateRequest extends Request {
     }
 
     /**
-     * @return domainName
+     * @return domainNames
      */
-    public String getDomainName() {
-        return this.domainName;
+    public String getDomainNames() {
+        return this.domainNames;
     }
 
     /**
@@ -86,7 +86,7 @@ public class ModifyCustomDomainSampleRateRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyCustomDomainSampleRateRequest, Builder> {
         private String baseConfigID; 
-        private String domainName; 
+        private String domainNames; 
         private Float sampleRate; 
         private Long sinkID; 
 
@@ -97,7 +97,7 @@ public class ModifyCustomDomainSampleRateRequest extends Request {
         private Builder(ModifyCustomDomainSampleRateRequest request) {
             super(request);
             this.baseConfigID = request.baseConfigID;
-            this.domainName = request.domainName;
+            this.domainNames = request.domainNames;
             this.sampleRate = request.sampleRate;
             this.sinkID = request.sinkID;
         } 
@@ -114,9 +114,9 @@ public class ModifyCustomDomainSampleRateRequest extends Request {
         /**
          * <p>This parameter is required.</p>
          */
-        public Builder domainName(String domainName) {
-            this.putBodyParameter("DomainName", domainName);
-            this.domainName = domainName;
+        public Builder domainNames(String domainNames) {
+            this.putBodyParameter("DomainNames", domainNames);
+            this.domainNames = domainNames;
             return this;
         }
 

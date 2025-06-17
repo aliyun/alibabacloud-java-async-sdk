@@ -36,6 +36,10 @@ public class CreateCdnDeliverTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return deliverId
      */
@@ -53,6 +57,14 @@ public class CreateCdnDeliverTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String deliverId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCdnDeliverTaskResponseBody model) {
+            this.deliverId = model.deliverId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the tracking task.</p>

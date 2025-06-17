@@ -40,6 +40,10 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return outPutDomains
      */
@@ -65,6 +69,15 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
         private java.util.List<OutPutDomains> outPutDomains; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnWafDomainResponseBody model) {
+            this.outPutDomains = model.outPutDomains;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the accelerated domain name.</p>
@@ -181,6 +194,17 @@ public class DescribeCdnWafDomainResponseBody extends TeaModel {
             private String domain; 
             private String status; 
             private String wafStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(OutPutDomains model) {
+                this.aclStatus = model.aclStatus;
+                this.ccStatus = model.ccStatus;
+                this.domain = model.domain;
+                this.status = model.status;
+                this.wafStatus = model.wafStatus;
+            } 
 
             /**
              * <p>The status of the access control list (ACL) feature. Valid values:</p>

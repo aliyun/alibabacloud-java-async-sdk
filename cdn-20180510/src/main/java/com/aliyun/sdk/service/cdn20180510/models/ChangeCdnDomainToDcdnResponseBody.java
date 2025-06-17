@@ -36,6 +36,10 @@ public class ChangeCdnDomainToDcdnResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -53,6 +57,14 @@ public class ChangeCdnDomainToDcdnResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.Map<String, ?> content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChangeCdnDomainToDcdnResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The content of the migration instructions.</p>

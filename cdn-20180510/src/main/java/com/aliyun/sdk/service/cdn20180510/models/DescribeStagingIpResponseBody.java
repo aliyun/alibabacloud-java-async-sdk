@@ -36,6 +36,10 @@ public class DescribeStagingIpResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return IPV4s
      */
@@ -53,6 +57,14 @@ public class DescribeStagingIpResponseBody extends TeaModel {
     public static final class Builder {
         private IPV4s IPV4s; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStagingIpResponseBody model) {
+            this.IPV4s = model.IPV4s;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>IPv4 addresses.</p>
@@ -110,6 +122,13 @@ public class DescribeStagingIpResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> IPV4; 
+
+            private Builder() {
+            } 
+
+            private Builder(IPV4s model) {
+                this.IPV4 = model.IPV4;
+            } 
 
             /**
              * IPV4.

@@ -36,6 +36,10 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configs
      */
@@ -53,6 +57,14 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Configs> configs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnUserConfigsResponseBody model) {
+            this.configs = model.configs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The user configurations.</p>
@@ -134,6 +146,15 @@ public class DescribeCdnUserConfigsResponseBody extends TeaModel {
             private String argName; 
             private String argValue; 
             private String functionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configs model) {
+                this.argName = model.argName;
+                this.argValue = model.argValue;
+                this.functionName = model.functionName;
+            } 
 
             /**
              * <p>The name of the configuration.</p>

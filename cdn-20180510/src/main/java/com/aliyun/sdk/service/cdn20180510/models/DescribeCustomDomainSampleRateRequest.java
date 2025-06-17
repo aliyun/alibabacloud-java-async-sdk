@@ -18,12 +18,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeCustomDomainSampleRateRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DomainName")
-    private String domainName;
+    @com.aliyun.core.annotation.NameInMap("DomainNames")
+    private String domainNames;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Long pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    private Long pageSize;
 
     private DescribeCustomDomainSampleRateRequest(Builder builder) {
         super(builder);
-        this.domainName = builder.domainName;
+        this.domainNames = builder.domainNames;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
     }
 
     public static Builder builder() {
@@ -34,20 +44,36 @@ public class DescribeCustomDomainSampleRateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
-     * @return domainName
+     * @return domainNames
      */
-    public String getDomainName() {
-        return this.domainName;
+    public String getDomainNames() {
+        return this.domainNames;
+    }
+
+    /**
+     * @return pageNumber
+     */
+    public Long getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     public static final class Builder extends Request.Builder<DescribeCustomDomainSampleRateRequest, Builder> {
-        private String domainName; 
+        private String domainNames; 
+        private Long pageNumber; 
+        private Long pageSize; 
 
         private Builder() {
             super();
@@ -55,15 +81,35 @@ public class DescribeCustomDomainSampleRateRequest extends Request {
 
         private Builder(DescribeCustomDomainSampleRateRequest request) {
             super(request);
-            this.domainName = request.domainName;
+            this.domainNames = request.domainNames;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
         } 
 
         /**
-         * DomainName.
+         * DomainNames.
          */
-        public Builder domainName(String domainName) {
-            this.putQueryParameter("DomainName", domainName);
-            this.domainName = domainName;
+        public Builder domainNames(String domainNames) {
+            this.putQueryParameter("DomainNames", domainNames);
+            this.domainNames = domainNames;
+            return this;
+        }
+
+        /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Long pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 

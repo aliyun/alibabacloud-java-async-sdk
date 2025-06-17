@@ -44,6 +44,10 @@ public class DescribeCdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribeCdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
         private String description; 
         private java.util.List<IPBlockInfo> IPBlockInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnFullDomainsBlockIPHistoryResponseBody model) {
+            this.code = model.code;
+            this.description = model.description;
+            this.IPBlockInfo = model.IPBlockInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -186,6 +200,15 @@ public class DescribeCdnFullDomainsBlockIPHistoryResponseBody extends TeaModel {
             private String blockIP; 
             private String deliverTime; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(IPBlockInfo model) {
+                this.blockIP = model.blockIP;
+                this.deliverTime = model.deliverTime;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The blocked IP address or CIDR block.</p>

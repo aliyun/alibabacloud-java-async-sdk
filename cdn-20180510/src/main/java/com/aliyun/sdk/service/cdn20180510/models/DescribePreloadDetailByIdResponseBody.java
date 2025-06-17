@@ -40,6 +40,10 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private java.util.List<UrlDetails> urlDetails; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePreloadDetailByIdResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.urlDetails = model.urlDetails;
+        } 
 
         /**
          * <p>The ID of the request. You can use the ID to query logs and troubleshoot issues.</p>
@@ -157,6 +170,15 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             private String description; 
             private String success; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Urls model) {
+                this.description = model.description;
+                this.success = model.success;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The details of resource prefetch.</p>
@@ -317,6 +339,20 @@ public class DescribePreloadDetailByIdResponseBody extends TeaModel {
             private String status; 
             private String taskId; 
             private java.util.List<Urls> urls; 
+
+            private Builder() {
+            } 
+
+            private Builder(UrlDetails model) {
+                this.creationTime = model.creationTime;
+                this.domain = model.domain;
+                this.endTime = model.endTime;
+                this.process = model.process;
+                this.retCode = model.retCode;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.urls = model.urls;
+            } 
 
             /**
              * <p>The time when the task was created. The time is displayed in UTC.</p>

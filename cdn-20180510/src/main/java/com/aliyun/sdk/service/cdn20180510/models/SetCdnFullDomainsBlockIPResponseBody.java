@@ -40,6 +40,10 @@ public class SetCdnFullDomainsBlockIPResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -65,6 +69,15 @@ public class SetCdnFullDomainsBlockIPResponseBody extends TeaModel {
         private Integer code; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetCdnFullDomainsBlockIPResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status code. The status code 0 indicates that the call is successful. If another status code is returned, the call fails.</p>

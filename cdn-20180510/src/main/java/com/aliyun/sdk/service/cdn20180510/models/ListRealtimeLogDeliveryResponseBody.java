@@ -36,6 +36,10 @@ public class ListRealtimeLogDeliveryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -53,6 +57,14 @@ public class ListRealtimeLogDeliveryResponseBody extends TeaModel {
     public static final class Builder {
         private Content content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRealtimeLogDeliveryResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The logging information.</p>
@@ -171,6 +183,18 @@ public class ListRealtimeLogDeliveryResponseBody extends TeaModel {
             private String region; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(RealtimeLogDeliveryInfo model) {
+                this.dmId = model.dmId;
+                this.domain = model.domain;
+                this.logstore = model.logstore;
+                this.project = model.project;
+                this.region = model.region;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The domain ID.</p>
              * 
@@ -275,6 +299,13 @@ public class ListRealtimeLogDeliveryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RealtimeLogDeliveryInfo> realtimeLogDeliveryInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.realtimeLogDeliveryInfo = model.realtimeLogDeliveryInfo;
+            } 
 
             /**
              * RealtimeLogDeliveryInfo.

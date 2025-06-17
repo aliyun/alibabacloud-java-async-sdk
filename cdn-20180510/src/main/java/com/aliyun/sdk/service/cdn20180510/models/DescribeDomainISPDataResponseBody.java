@@ -52,6 +52,10 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -101,6 +105,18 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private Value value; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainISPDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.value = model.value;
+        } 
 
         /**
          * <p>The time interval. Unit: seconds.</p>
@@ -335,6 +351,24 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
             private String totalBytes; 
             private String totalQuery; 
 
+            private Builder() {
+            } 
+
+            private Builder(ISPProportionData model) {
+                this.avgObjectSize = model.avgObjectSize;
+                this.avgResponseRate = model.avgResponseRate;
+                this.avgResponseTime = model.avgResponseTime;
+                this.bps = model.bps;
+                this.bytesProportion = model.bytesProportion;
+                this.ISP = model.ISP;
+                this.ispEname = model.ispEname;
+                this.proportion = model.proportion;
+                this.qps = model.qps;
+                this.reqErrRate = model.reqErrRate;
+                this.totalBytes = model.totalBytes;
+                this.totalQuery = model.totalQuery;
+            } 
+
             /**
              * <p>The average response size. Unit: bytes.</p>
              * 
@@ -505,6 +539,13 @@ public class DescribeDomainISPDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ISPProportionData> ISPProportionData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Value model) {
+                this.ISPProportionData = model.ISPProportionData;
+            } 
 
             /**
              * ISPProportionData.

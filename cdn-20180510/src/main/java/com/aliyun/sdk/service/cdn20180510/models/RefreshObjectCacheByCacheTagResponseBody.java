@@ -36,6 +36,10 @@ public class RefreshObjectCacheByCacheTagResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return refreshTaskId
      */
@@ -53,6 +57,14 @@ public class RefreshObjectCacheByCacheTagResponseBody extends TeaModel {
     public static final class Builder {
         private String refreshTaskId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RefreshObjectCacheByCacheTagResponseBody model) {
+            this.refreshTaskId = model.refreshTaskId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the refresh task. If multiple tasks are returned, the task IDs are separated by commas (,). The task IDs are merged based on the following rules:</p>

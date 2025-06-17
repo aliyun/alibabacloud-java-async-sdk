@@ -40,6 +40,10 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bpsDataInterval
      */
@@ -65,6 +69,15 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
         private BpsDataInterval bpsDataInterval; 
         private String dataInterval; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainBpsDataByLayerResponseBody model) {
+            this.bpsDataInterval = model.bpsDataInterval;
+            this.dataInterval = model.dataInterval;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned at each time interval.</p>
@@ -158,6 +171,15 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
             private String trafficValue; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.timeStamp = model.timeStamp;
+                this.trafficValue = model.trafficValue;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The timestamp of the returned data.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeDomainBpsDataByLayerResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(BpsDataInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

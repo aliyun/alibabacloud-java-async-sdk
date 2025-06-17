@@ -23,6 +23,12 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ChangingChargeType")
     private String changingChargeType;
 
+    @com.aliyun.core.annotation.NameInMap("ChangingDynamicBillingType")
+    private String changingDynamicBillingType;
+
+    @com.aliyun.core.annotation.NameInMap("DynamicBillingType")
+    private String dynamicBillingType;
+
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
@@ -41,6 +47,8 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
     private DescribeCdnServiceResponseBody(Builder builder) {
         this.changingAffectTime = builder.changingAffectTime;
         this.changingChargeType = builder.changingChargeType;
+        this.changingDynamicBillingType = builder.changingDynamicBillingType;
+        this.dynamicBillingType = builder.dynamicBillingType;
         this.instanceId = builder.instanceId;
         this.internetChargeType = builder.internetChargeType;
         this.openingTime = builder.openingTime;
@@ -56,6 +64,10 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return changingAffectTime
      */
@@ -68,6 +80,20 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
      */
     public String getChangingChargeType() {
         return this.changingChargeType;
+    }
+
+    /**
+     * @return changingDynamicBillingType
+     */
+    public String getChangingDynamicBillingType() {
+        return this.changingDynamicBillingType;
+    }
+
+    /**
+     * @return dynamicBillingType
+     */
+    public String getDynamicBillingType() {
+        return this.dynamicBillingType;
     }
 
     /**
@@ -108,11 +134,28 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
     public static final class Builder {
         private String changingAffectTime; 
         private String changingChargeType; 
+        private String changingDynamicBillingType; 
+        private String dynamicBillingType; 
         private String instanceId; 
         private String internetChargeType; 
         private String openingTime; 
         private OperationLocks operationLocks; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnServiceResponseBody model) {
+            this.changingAffectTime = model.changingAffectTime;
+            this.changingChargeType = model.changingChargeType;
+            this.changingDynamicBillingType = model.changingDynamicBillingType;
+            this.dynamicBillingType = model.dynamicBillingType;
+            this.instanceId = model.instanceId;
+            this.internetChargeType = model.internetChargeType;
+            this.openingTime = model.openingTime;
+            this.operationLocks = model.operationLocks;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The time when the metering method for the next cycle takes effect. The time is displayed in GMT.</p>
@@ -137,6 +180,22 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
          */
         public Builder changingChargeType(String changingChargeType) {
             this.changingChargeType = changingChargeType;
+            return this;
+        }
+
+        /**
+         * ChangingDynamicBillingType.
+         */
+        public Builder changingDynamicBillingType(String changingDynamicBillingType) {
+            this.changingDynamicBillingType = changingDynamicBillingType;
+            return this;
+        }
+
+        /**
+         * DynamicBillingType.
+         */
+        public Builder dynamicBillingType(String dynamicBillingType) {
+            this.dynamicBillingType = dynamicBillingType;
             return this;
         }
 
@@ -234,6 +293,13 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
         public static final class Builder {
             private String lockReason; 
 
+            private Builder() {
+            } 
+
+            private Builder(LockReason model) {
+                this.lockReason = model.lockReason;
+            } 
+
             /**
              * <p>The reason why the service is locked. A value of financial indicates that the service is locked due to overdue payments.</p>
              * 
@@ -283,6 +349,13 @@ public class DescribeCdnServiceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LockReason> lockReason; 
+
+            private Builder() {
+            } 
+
+            private Builder(OperationLocks model) {
+                this.lockReason = model.lockReason;
+            } 
 
             /**
              * <p>The reason why the service is locked. A value of financial indicates that the service is locked due to overdue payments.</p>

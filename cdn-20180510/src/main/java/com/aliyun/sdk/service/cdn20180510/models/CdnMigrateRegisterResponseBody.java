@@ -40,6 +40,10 @@ public class CdnMigrateRegisterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainName
      */
@@ -65,6 +69,15 @@ public class CdnMigrateRegisterResponseBody extends TeaModel {
         private String domainName; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(CdnMigrateRegisterResponseBody model) {
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The accelerated domain name. You can specify only one domain name.</p>

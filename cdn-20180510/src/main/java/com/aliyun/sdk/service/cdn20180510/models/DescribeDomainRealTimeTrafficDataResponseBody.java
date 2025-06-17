@@ -52,6 +52,10 @@ public class DescribeDomainRealTimeTrafficDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -101,6 +105,18 @@ public class DescribeDomainRealTimeTrafficDataResponseBody extends TeaModel {
         private RealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainRealTimeTrafficDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.realTimeTrafficDataPerInterval = model.realTimeTrafficDataPerInterval;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -216,6 +232,14 @@ public class DescribeDomainRealTimeTrafficDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The timestamp of the returned data.</p>
              * 
@@ -276,6 +300,13 @@ public class DescribeDomainRealTimeTrafficDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(RealTimeTrafficDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

@@ -36,6 +36,10 @@ public class DescribeCdnOrderCommodityCodeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderCommodityCode
      */
@@ -53,6 +57,14 @@ public class DescribeCdnOrderCommodityCodeResponseBody extends TeaModel {
     public static final class Builder {
         private String orderCommodityCode; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnOrderCommodityCodeResponseBody model) {
+            this.orderCommodityCode = model.orderCommodityCode;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The commodity code that includes the organization unit.</p>

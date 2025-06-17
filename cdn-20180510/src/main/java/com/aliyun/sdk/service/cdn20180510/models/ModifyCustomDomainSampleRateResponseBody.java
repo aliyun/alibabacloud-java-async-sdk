@@ -17,10 +17,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyCustomDomainSampleRateResponseBody</p>
  */
 public class ModifyCustomDomainSampleRateResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Content")
+    private Content content;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyCustomDomainSampleRateResponseBody(Builder builder) {
+        this.content = builder.content;
         this.requestId = builder.requestId;
     }
 
@@ -32,6 +36,17 @@ public class ModifyCustomDomainSampleRateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return content
+     */
+    public Content getContent() {
+        return this.content;
+    }
+
     /**
      * @return requestId
      */
@@ -40,7 +55,24 @@ public class ModifyCustomDomainSampleRateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Content content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyCustomDomainSampleRateResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
+
+        /**
+         * Content.
+         */
+        public Builder content(Content content) {
+            this.content = content;
+            return this;
+        }
 
         /**
          * RequestId.
@@ -56,4 +88,154 @@ public class ModifyCustomDomainSampleRateResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ModifyCustomDomainSampleRateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyCustomDomainSampleRateResponseBody</p>
+     */
+    public static class ContentContent extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DomainName")
+        private String domainName;
+
+        @com.aliyun.core.annotation.NameInMap("ErrMessage")
+        private String errMessage;
+
+        @com.aliyun.core.annotation.NameInMap("SampleRate")
+        private Float sampleRate;
+
+        private ContentContent(Builder builder) {
+            this.domainName = builder.domainName;
+            this.errMessage = builder.errMessage;
+            this.sampleRate = builder.sampleRate;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContentContent create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domainName
+         */
+        public String getDomainName() {
+            return this.domainName;
+        }
+
+        /**
+         * @return errMessage
+         */
+        public String getErrMessage() {
+            return this.errMessage;
+        }
+
+        /**
+         * @return sampleRate
+         */
+        public Float getSampleRate() {
+            return this.sampleRate;
+        }
+
+        public static final class Builder {
+            private String domainName; 
+            private String errMessage; 
+            private Float sampleRate; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContentContent model) {
+                this.domainName = model.domainName;
+                this.errMessage = model.errMessage;
+                this.sampleRate = model.sampleRate;
+            } 
+
+            /**
+             * DomainName.
+             */
+            public Builder domainName(String domainName) {
+                this.domainName = domainName;
+                return this;
+            }
+
+            /**
+             * ErrMessage.
+             */
+            public Builder errMessage(String errMessage) {
+                this.errMessage = errMessage;
+                return this;
+            }
+
+            /**
+             * SampleRate.
+             */
+            public Builder sampleRate(Float sampleRate) {
+                this.sampleRate = sampleRate;
+                return this;
+            }
+
+            public ContentContent build() {
+                return new ContentContent(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyCustomDomainSampleRateResponseBody} extends {@link TeaModel}
+     *
+     * <p>ModifyCustomDomainSampleRateResponseBody</p>
+     */
+    public static class Content extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("content")
+        private java.util.List<ContentContent> content;
+
+        private Content(Builder builder) {
+            this.content = builder.content;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Content create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public java.util.List<ContentContent> getContent() {
+            return this.content;
+        }
+
+        public static final class Builder {
+            private java.util.List<ContentContent> content; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.content = model.content;
+            } 
+
+            /**
+             * content.
+             */
+            public Builder content(java.util.List<ContentContent> content) {
+                this.content = content;
+                return this;
+            }
+
+            public Content build() {
+                return new Content(this);
+            } 
+
+        } 
+
+    }
 }

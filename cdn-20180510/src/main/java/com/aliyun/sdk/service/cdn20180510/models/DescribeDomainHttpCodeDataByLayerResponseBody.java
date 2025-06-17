@@ -40,6 +40,10 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -65,6 +69,15 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
         private String dataInterval; 
         private HttpCodeDataInterval httpCodeDataInterval; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainHttpCodeDataByLayerResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.httpCodeDataInterval = model.httpCodeDataInterval;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -158,6 +171,15 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
             private String totalValue; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.timeStamp = model.timeStamp;
+                this.totalValue = model.totalValue;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The timestamp of the data returned.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeDomainHttpCodeDataByLayerResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(HttpCodeDataInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

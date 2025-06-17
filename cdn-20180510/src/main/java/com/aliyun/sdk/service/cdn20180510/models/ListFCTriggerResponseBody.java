@@ -36,6 +36,10 @@ public class ListFCTriggerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return FCTriggers
      */
@@ -53,6 +57,14 @@ public class ListFCTriggerResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<FCTriggers> FCTriggers; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListFCTriggerResponseBody model) {
+            this.FCTriggers = model.FCTriggers;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The Function Compute triggers that are set for Alibaba Cloud CDN events.</p>
@@ -170,6 +182,18 @@ public class ListFCTriggerResponseBody extends TeaModel {
             private String roleARN; 
             private String sourceArn; 
             private String triggerARN; 
+
+            private Builder() {
+            } 
+
+            private Builder(FCTriggers model) {
+                this.eventMetaName = model.eventMetaName;
+                this.eventMetaVersion = model.eventMetaVersion;
+                this.notes = model.notes;
+                this.roleARN = model.roleARN;
+                this.sourceArn = model.sourceArn;
+                this.triggerARN = model.triggerARN;
+            } 
 
             /**
              * <p>The name of the event.</p>

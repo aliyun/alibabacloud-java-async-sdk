@@ -36,6 +36,10 @@ public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domains
      */
@@ -53,6 +57,14 @@ public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
     public static final class Builder {
         private Domains domains; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDomainsByLogConfigIdResponseBody model) {
+            this.domains = model.domains;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The domain names.</p>
@@ -110,6 +122,13 @@ public class ListDomainsByLogConfigIdResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> domain; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.domain = model.domain;
+            } 
 
             /**
              * Domain.

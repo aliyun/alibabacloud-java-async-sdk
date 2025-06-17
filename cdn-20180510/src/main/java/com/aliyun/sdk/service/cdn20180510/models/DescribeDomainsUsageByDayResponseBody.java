@@ -56,6 +56,10 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -113,6 +117,19 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
         private String startTime; 
         private UsageByDays usageByDays; 
         private UsageTotal usageTotal; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainsUsageByDayResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.usageByDays = model.usageByDays;
+            this.usageTotal = model.usageTotal;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -331,6 +348,22 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             private String totalAccess; 
             private String totalTraffic; 
 
+            private Builder() {
+            } 
+
+            private Builder(UsageByDay model) {
+                this.bytesHitRate = model.bytesHitRate;
+                this.maxBps = model.maxBps;
+                this.maxBpsTime = model.maxBpsTime;
+                this.maxSrcBps = model.maxSrcBps;
+                this.maxSrcBpsTime = model.maxSrcBpsTime;
+                this.qps = model.qps;
+                this.requestHitRate = model.requestHitRate;
+                this.timeStamp = model.timeStamp;
+                this.totalAccess = model.totalAccess;
+                this.totalTraffic = model.totalTraffic;
+            } 
+
             /**
              * <p>The byte hit ratio. The byte hit ratio is measured in percentage.</p>
              * 
@@ -480,6 +513,13 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<UsageByDay> usageByDay; 
 
+            private Builder() {
+            } 
+
+            private Builder(UsageByDays model) {
+                this.usageByDay = model.usageByDay;
+            } 
+
             /**
              * UsageByDay.
              */
@@ -610,6 +650,20 @@ public class DescribeDomainsUsageByDayResponseBody extends TeaModel {
             private String requestHitRate; 
             private String totalAccess; 
             private String totalTraffic; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsageTotal model) {
+                this.bytesHitRate = model.bytesHitRate;
+                this.maxBps = model.maxBps;
+                this.maxBpsTime = model.maxBpsTime;
+                this.maxSrcBps = model.maxSrcBps;
+                this.maxSrcBpsTime = model.maxSrcBpsTime;
+                this.requestHitRate = model.requestHitRate;
+                this.totalAccess = model.totalAccess;
+                this.totalTraffic = model.totalTraffic;
+            } 
 
             /**
              * <p>The byte hit ratio. The byte hit ratio is measured in percentage.</p>

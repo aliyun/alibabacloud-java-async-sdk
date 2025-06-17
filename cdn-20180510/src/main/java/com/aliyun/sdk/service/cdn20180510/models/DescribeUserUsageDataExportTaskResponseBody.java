@@ -36,6 +36,10 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UsageDataPerPage usageDataPerPage; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserUsageDataExportTaskResponseBody model) {
+            this.requestId = model.requestId;
+            this.usageDataPerPage = model.usageDataPerPage;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
         public static final class Builder {
             private String endTime; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskConfig model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The end of the time range that was queried.</p>
@@ -256,6 +276,19 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
             private String taskName; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataItem model) {
+                this.createTime = model.createTime;
+                this.downloadUrl = model.downloadUrl;
+                this.status = model.status;
+                this.taskConfig = model.taskConfig;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The time when the task was created.</p>
              * 
@@ -374,6 +407,13 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DataItem> dataItem; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataItem = model.dataItem;
+            } 
+
             /**
              * DataItem.
              */
@@ -456,6 +496,16 @@ public class DescribeUserUsageDataExportTaskResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsageDataPerPage model) {
+                this.data = model.data;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The information about the tasks.</p>

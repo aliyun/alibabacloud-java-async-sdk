@@ -40,6 +40,10 @@ public class DescribeCdnMigrateRegisterStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainName
      */
@@ -65,6 +69,15 @@ public class DescribeCdnMigrateRegisterStatusResponseBody extends TeaModel {
         private String domainName; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnMigrateRegisterStatusResponseBody model) {
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The accelerated domain name.</p>

@@ -40,6 +40,10 @@ public class DescribeUserVipsByDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainName
      */
@@ -65,6 +69,15 @@ public class DescribeUserVipsByDomainResponseBody extends TeaModel {
         private String domainName; 
         private String requestId; 
         private Vips vips; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserVipsByDomainResponseBody model) {
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+            this.vips = model.vips;
+        } 
 
         /**
          * <p>The domain name.</p>
@@ -133,6 +146,13 @@ public class DescribeUserVipsByDomainResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> vip; 
+
+            private Builder() {
+            } 
+
+            private Builder(Vips model) {
+                this.vip = model.vip;
+            } 
 
             /**
              * Vip.

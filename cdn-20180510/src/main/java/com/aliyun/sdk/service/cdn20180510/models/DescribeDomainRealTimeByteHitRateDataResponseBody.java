@@ -36,6 +36,10 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainRealTimeByteHitRateDataResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -123,6 +135,14 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
             private Float byteHitRate; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(ByteHitRateDataModel model) {
+                this.byteHitRate = model.byteHitRate;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The byte hit ratio. The byte hit ratio is measured in percentage.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeDomainRealTimeByteHitRateDataResponseBody extends TeaModel 
 
         public static final class Builder {
             private java.util.List<ByteHitRateDataModel> byteHitRateDataModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.byteHitRateDataModel = model.byteHitRateDataModel;
+            } 
 
             /**
              * ByteHitRateDataModel.

@@ -36,6 +36,10 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configs
      */
@@ -53,6 +57,14 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
     public static final class Builder {
         private Configs configs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserConfigsResponseBody model) {
+            this.configs = model.configs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configurations of the specified feature.</p>
@@ -135,6 +147,15 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
             private String enable; 
             private String prefix; 
 
+            private Builder() {
+            } 
+
+            private Builder(OssLogConfig model) {
+                this.bucket = model.bucket;
+                this.enable = model.enable;
+                this.prefix = model.prefix;
+            } 
+
             /**
              * <p>The name of the bucket.</p>
              * 
@@ -207,6 +228,13 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
         public static final class Builder {
             private String enable; 
 
+            private Builder() {
+            } 
+
+            private Builder(WafConfig model) {
+                this.enable = model.enable;
+            } 
+
             /**
              * <p>Indicates whether WAF is enabled.</p>
              * 
@@ -268,6 +296,14 @@ public class DescribeUserConfigsResponseBody extends TeaModel {
         public static final class Builder {
             private OssLogConfig ossLogConfig; 
             private WafConfig wafConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(Configs model) {
+                this.ossLogConfig = model.ossLogConfig;
+                this.wafConfig = model.wafConfig;
+            } 
 
             /**
              * <p>The configurations of Object Storage Service (OSS).</p>

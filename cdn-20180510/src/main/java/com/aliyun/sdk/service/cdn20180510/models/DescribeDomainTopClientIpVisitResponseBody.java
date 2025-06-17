@@ -36,6 +36,10 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clientIpList
      */
@@ -53,6 +57,14 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ClientIpList> clientIpList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainTopClientIpVisitResponseBody model) {
+            this.clientIpList = model.clientIpList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>A list of client IP addresses.</p>
@@ -146,6 +158,16 @@ public class DescribeDomainTopClientIpVisitResponseBody extends TeaModel {
             private String clientIp; 
             private Integer rank; 
             private Long traffic; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClientIpList model) {
+                this.acc = model.acc;
+                this.clientIp = model.clientIp;
+                this.rank = model.rank;
+                this.traffic = model.traffic;
+            } 
 
             /**
              * <p>The total number of requests.</p>

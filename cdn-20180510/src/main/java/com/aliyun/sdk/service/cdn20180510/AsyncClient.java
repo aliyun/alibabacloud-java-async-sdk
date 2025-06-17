@@ -265,6 +265,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteCdnSubTaskResponse> deleteCdnSubTask(DeleteCdnSubTaskRequest request);
 
     /**
+     * @param request the request parameters of DeleteCustomDomainSampleRate  DeleteCustomDomainSampleRateRequest
+     * @return DeleteCustomDomainSampleRateResponse
+     */
+    CompletableFuture<DeleteCustomDomainSampleRateResponse> deleteCustomDomainSampleRate(DeleteCustomDomainSampleRateRequest request);
+
+    /**
      * @param request the request parameters of DeleteFCTrigger  DeleteFCTriggerRequest
      * @return DeleteFCTriggerResponse
      */

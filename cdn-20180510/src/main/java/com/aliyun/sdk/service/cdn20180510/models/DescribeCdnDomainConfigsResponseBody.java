@@ -36,6 +36,10 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainConfigs
      */
@@ -53,6 +57,14 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
     public static final class Builder {
         private DomainConfigs domainConfigs; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnDomainConfigsResponseBody model) {
+            this.domainConfigs = model.domainConfigs;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configurations of the domain name.</p>
@@ -123,6 +135,14 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             private String argName; 
             private String argValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(FunctionArg model) {
+                this.argName = model.argName;
+                this.argValue = model.argValue;
+            } 
+
             /**
              * <p>The parameter name, which is the configuration item of <strong>functionName</strong>. You can configure multiple configuration items.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FunctionArg> functionArg; 
+
+            private Builder() {
+            } 
+
+            private Builder(FunctionArgs model) {
+                this.functionArg = model.functionArg;
+            } 
 
             /**
              * FunctionArg.
@@ -278,6 +305,17 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
             private String functionName; 
             private String parentId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainConfig model) {
+                this.configId = model.configId;
+                this.functionArgs = model.functionArgs;
+                this.functionName = model.functionName;
+                this.parentId = model.parentId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the configuration.</p>
@@ -377,6 +415,13 @@ public class DescribeCdnDomainConfigsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DomainConfig> domainConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainConfigs model) {
+                this.domainConfig = model.domainConfig;
+            } 
 
             /**
              * DomainConfig.

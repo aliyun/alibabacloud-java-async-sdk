@@ -36,6 +36,10 @@ public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainRealTimeBpsDataResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data returned.</p>
@@ -123,6 +135,14 @@ public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
             private Float bps; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(BpsModel model) {
+                this.bps = model.bps;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The bandwidth. Unit: bit/s.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeDomainRealTimeBpsDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BpsModel> bpsModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bpsModel = model.bpsModel;
+            } 
 
             /**
              * BpsModel.

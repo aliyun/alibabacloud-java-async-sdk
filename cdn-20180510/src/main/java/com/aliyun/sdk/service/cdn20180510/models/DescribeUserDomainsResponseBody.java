@@ -48,6 +48,10 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domains
      */
@@ -89,6 +93,17 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserDomainsResponseBody model) {
+            this.domains = model.domains;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of the accelerated domain names returned.</p>
@@ -228,6 +243,17 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             private String type; 
             private String weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(Source model) {
+                this.content = model.content;
+                this.port = model.port;
+                this.priority = model.priority;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The address of the origin server.</p>
              * 
@@ -321,6 +347,13 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Source> source; 
+
+            private Builder() {
+            } 
+
+            private Builder(Sources model) {
+                this.source = model.source;
+            } 
 
             /**
              * Source.
@@ -512,6 +545,25 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
             private String sandbox; 
             private Sources sources; 
             private String sslProtocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageData model) {
+                this.cdnType = model.cdnType;
+                this.cname = model.cname;
+                this.coverage = model.coverage;
+                this.description = model.description;
+                this.domainId = model.domainId;
+                this.domainName = model.domainName;
+                this.domainStatus = model.domainStatus;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sandbox = model.sandbox;
+                this.sources = model.sources;
+                this.sslProtocol = model.sslProtocol;
+            } 
 
             /**
              * <p>The type of the workload accelerated by Alibaba Cloud CDN. Valid values:</p>
@@ -715,6 +767,13 @@ public class DescribeUserDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PageData> pageData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.pageData = model.pageData;
+            } 
 
             /**
              * PageData.

@@ -60,6 +60,10 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return detailData
      */
@@ -125,6 +129,20 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
         private String overseasMax95Bps; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainMax95BpsDataResponseBody model) {
+            this.detailData = model.detailData;
+            this.domainName = model.domainName;
+            this.domesticMax95Bps = model.domesticMax95Bps;
+            this.endTime = model.endTime;
+            this.max95Bps = model.max95Bps;
+            this.overseasMax95Bps = model.overseasMax95Bps;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>Details of the 95th percentile bandwidth.</p>
@@ -285,6 +303,16 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
             private String max95BpsPeakTime; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Max95Detail model) {
+                this.area = model.area;
+                this.max95Bps = model.max95Bps;
+                this.max95BpsPeakTime = model.max95BpsPeakTime;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>Region of the 95th percentile bandwidth.</p>
              * 
@@ -367,6 +395,13 @@ public class DescribeDomainMax95BpsDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Max95Detail> max95Detail; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetailData model) {
+                this.max95Detail = model.max95Detail;
+            } 
 
             /**
              * Max95Detail.

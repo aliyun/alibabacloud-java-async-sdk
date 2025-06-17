@@ -36,6 +36,10 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateListModel
      */
@@ -53,6 +57,14 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
     public static final class Builder {
         private CertificateListModel certificateListModel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnSMCertificateListResponseBody model) {
+            this.certificateListModel = model.certificateListModel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The type of the certificate information.</p>
@@ -147,6 +159,16 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
             private String common; 
             private String issuer; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cert model) {
+                this.certIdentifier = model.certIdentifier;
+                this.certName = model.certName;
+                this.common = model.common;
+                this.issuer = model.issuer;
+            } 
+
             /**
              * <p>The ID of the certificate.</p>
              * 
@@ -230,6 +252,13 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Cert> cert; 
 
+            private Builder() {
+            } 
+
+            private Builder(CertList model) {
+                this.cert = model.cert;
+            } 
+
             /**
              * Cert.
              */
@@ -288,6 +317,14 @@ public class DescribeCdnSMCertificateListResponseBody extends TeaModel {
         public static final class Builder {
             private CertList certList; 
             private Integer count; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertificateListModel model) {
+                this.certList = model.certList;
+                this.count = model.count;
+            } 
 
             /**
              * <p>The list of certificates.</p>

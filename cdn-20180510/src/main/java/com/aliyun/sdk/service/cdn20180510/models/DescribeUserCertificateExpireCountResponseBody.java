@@ -40,6 +40,10 @@ public class DescribeUserCertificateExpireCountResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return expireWithin30DaysCount
      */
@@ -65,6 +69,15 @@ public class DescribeUserCertificateExpireCountResponseBody extends TeaModel {
         private Integer expireWithin30DaysCount; 
         private Integer expiredCount; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserCertificateExpireCountResponseBody model) {
+            this.expireWithin30DaysCount = model.expireWithin30DaysCount;
+            this.expiredCount = model.expiredCount;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of domain names whose SSL certificates are about to expires within 30 days.</p>

@@ -36,6 +36,10 @@ public class ModifyCdnDomainOwnerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -53,6 +57,14 @@ public class ModifyCdnDomainOwnerResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.Map<String, ?> content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyCdnDomainOwnerResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The description of the domain name transfer.</p>

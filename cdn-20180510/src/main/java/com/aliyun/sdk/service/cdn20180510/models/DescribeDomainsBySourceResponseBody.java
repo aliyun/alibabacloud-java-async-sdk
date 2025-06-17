@@ -40,6 +40,10 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainsList
      */
@@ -65,6 +69,15 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         private DomainsList domainsList; 
         private String requestId; 
         private String sources; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainsBySourceResponseBody model) {
+            this.domainsList = model.domainsList;
+            this.requestId = model.requestId;
+            this.sources = model.sources;
+        } 
 
         /**
          * <p>The domain names corresponding to each origin server.</p>
@@ -194,6 +207,18 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             private String status; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainInfo model) {
+                this.cdnType = model.cdnType;
+                this.createTime = model.createTime;
+                this.domainCname = model.domainCname;
+                this.domainName = model.domainName;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The workload type of the accelerated domain name. Valid values:</p>
              * <ul>
@@ -312,6 +337,13 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<DomainInfo> domainInfo; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainInfos model) {
+                this.domainInfo = model.domainInfo;
+            } 
+
             /**
              * domainInfo.
              */
@@ -358,6 +390,13 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> domainNames; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.domainNames = model.domainNames;
+            } 
 
             /**
              * domainNames.
@@ -430,6 +469,15 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
             private Domains domains; 
             private String source; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainsData model) {
+                this.domainInfos = model.domainInfos;
+                this.domains = model.domains;
+                this.source = model.source;
+            } 
+
             /**
              * <p>Information about the domain name.</p>
              */
@@ -495,6 +543,13 @@ public class DescribeDomainsBySourceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DomainsData> domainsData; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainsList model) {
+                this.domainsData = model.domainsData;
+            } 
 
             /**
              * DomainsData.

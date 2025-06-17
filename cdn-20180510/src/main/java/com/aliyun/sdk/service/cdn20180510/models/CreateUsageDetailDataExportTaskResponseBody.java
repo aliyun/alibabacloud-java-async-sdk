@@ -44,6 +44,10 @@ public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -77,6 +81,16 @@ public class CreateUsageDetailDataExportTaskResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private String taskId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateUsageDetailDataExportTaskResponseBody model) {
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.taskId = model.taskId;
+        } 
 
         /**
          * <p>The end of the time range for which the data was queried.</p>

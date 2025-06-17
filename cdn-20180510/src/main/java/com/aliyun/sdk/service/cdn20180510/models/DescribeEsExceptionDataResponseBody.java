@@ -36,6 +36,10 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contents
      */
@@ -53,6 +57,14 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Contents> contents; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEsExceptionDataResponseBody model) {
+            this.contents = model.contents;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The content of the script for which an error was reported.</p>
@@ -134,6 +146,15 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
             private java.util.List<String> columns; 
             private String name; 
             private java.util.List<String> points; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contents model) {
+                this.columns = model.columns;
+                this.name = model.name;
+                this.points = model.points;
+            } 
 
             /**
              * <p>Information about the time column and the error column name.</p>

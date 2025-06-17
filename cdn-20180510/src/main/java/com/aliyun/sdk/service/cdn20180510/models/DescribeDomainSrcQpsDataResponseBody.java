@@ -52,6 +52,10 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -101,6 +105,18 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
         private String requestId; 
         private SrcQpsDataPerInterval srcQpsDataPerInterval; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainSrcQpsDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.srcQpsDataPerInterval = model.srcQpsDataPerInterval;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -215,6 +231,14 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The timestamp of the data returned.</p>
              * 
@@ -275,6 +299,13 @@ public class DescribeDomainSrcQpsDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(SrcQpsDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

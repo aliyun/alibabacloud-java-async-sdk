@@ -48,6 +48,10 @@ public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domains
      */
@@ -89,6 +93,17 @@ public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnDeletedDomainsResponseBody model) {
+            this.domains = model.domains;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of accelerated domain names and the time each domain name was last modified.</p>
@@ -192,6 +207,14 @@ public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
             private String domainName; 
             private String gmtModified; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageData model) {
+                this.domainName = model.domainName;
+                this.gmtModified = model.gmtModified;
+            } 
+
             /**
              * <p>The accelerated domain name.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeCdnDeletedDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PageData> pageData; 
+
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.pageData = model.pageData;
+            } 
 
             /**
              * PageData.

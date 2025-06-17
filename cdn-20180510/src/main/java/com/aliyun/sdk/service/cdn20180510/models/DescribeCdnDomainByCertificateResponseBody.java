@@ -36,6 +36,10 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certInfos
      */
@@ -53,6 +57,14 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
     public static final class Builder {
         private CertInfos certInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnDomainByCertificateResponseBody model) {
+            this.certInfos = model.certInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the certificate.</p>
@@ -207,6 +219,21 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
             private String domainNames; 
             private String issuer; 
 
+            private Builder() {
+            } 
+
+            private Builder(CertInfo model) {
+                this.certCaIsLegacy = model.certCaIsLegacy;
+                this.certExpireTime = model.certExpireTime;
+                this.certExpired = model.certExpired;
+                this.certStartTime = model.certStartTime;
+                this.certSubjectCommonName = model.certSubjectCommonName;
+                this.certType = model.certType;
+                this.domainList = model.domainList;
+                this.domainNames = model.domainNames;
+                this.issuer = model.issuer;
+            } 
+
             /**
              * <p>Indicates whether the SSL certificate is obsolete. Valid values:</p>
              * <ul>
@@ -352,6 +379,13 @@ public class DescribeCdnDomainByCertificateResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CertInfo> certInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertInfos model) {
+                this.certInfo = model.certInfo;
+            } 
 
             /**
              * CertInfo.

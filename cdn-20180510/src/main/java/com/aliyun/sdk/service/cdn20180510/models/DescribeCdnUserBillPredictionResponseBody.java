@@ -48,6 +48,10 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return billPredictionData
      */
@@ -89,6 +93,17 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
         private String endTime; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnUserBillPredictionResponseBody model) {
+            this.billPredictionData = model.billPredictionData;
+            this.billType = model.billType;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The estimated bill data.</p>
@@ -219,6 +234,15 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
             private String timeStp; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(BillPredictionDataItem model) {
+                this.area = model.area;
+                this.timeStp = model.timeStp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The billable region.</p>
              * 
@@ -290,6 +314,13 @@ public class DescribeCdnUserBillPredictionResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BillPredictionDataItem> billPredictionDataItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(BillPredictionData model) {
+                this.billPredictionDataItem = model.billPredictionDataItem;
+            } 
 
             /**
              * BillPredictionDataItem.

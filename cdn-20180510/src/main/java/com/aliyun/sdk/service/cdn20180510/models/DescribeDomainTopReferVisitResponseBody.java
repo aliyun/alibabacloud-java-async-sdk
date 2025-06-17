@@ -44,6 +44,10 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainName
      */
@@ -77,6 +81,16 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private TopReferList topReferList; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainTopReferVisitResponseBody model) {
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.topReferList = model.topReferList;
+        } 
 
         /**
          * <p>The accelerated domain name.</p>
@@ -205,6 +219,17 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
             private String visitData; 
             private Float visitProportion; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReferList model) {
+                this.flow = model.flow;
+                this.flowProportion = model.flowProportion;
+                this.referDetail = model.referDetail;
+                this.visitData = model.visitData;
+                this.visitProportion = model.visitProportion;
+            } 
+
             /**
              * <p>The amount of network traffic. Unit: bytes.</p>
              * 
@@ -298,6 +323,13 @@ public class DescribeDomainTopReferVisitResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ReferList> referList; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopReferList model) {
+                this.referList = model.referList;
+            } 
 
             /**
              * ReferList.

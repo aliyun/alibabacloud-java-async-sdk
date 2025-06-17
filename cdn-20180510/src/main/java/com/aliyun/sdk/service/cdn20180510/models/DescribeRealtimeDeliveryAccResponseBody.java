@@ -36,6 +36,10 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return reatTimeDeliveryAccData
      */
@@ -53,6 +57,14 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
     public static final class Builder {
         private ReatTimeDeliveryAccData reatTimeDeliveryAccData; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRealtimeDeliveryAccResponseBody model) {
+            this.reatTimeDeliveryAccData = model.reatTimeDeliveryAccData;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The statistics about real-time log deliveries.</p>
@@ -135,6 +147,15 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
             private Integer successNum; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccData model) {
+                this.failedNum = model.failedNum;
+                this.successNum = model.successNum;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The number of failed attempts to deliver log data to Log Service.</p>
              * 
@@ -206,6 +227,13 @@ public class DescribeRealtimeDeliveryAccResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AccData> accData; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReatTimeDeliveryAccData model) {
+                this.accData = model.accData;
+            } 
 
             /**
              * AccData.

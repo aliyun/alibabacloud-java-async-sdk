@@ -48,6 +48,10 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return logstore
      */
@@ -89,6 +93,17 @@ public class DescribeDomainRealtimeLogDeliveryResponseBody extends TeaModel {
         private String region; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainRealtimeLogDeliveryResponseBody model) {
+            this.logstore = model.logstore;
+            this.project = model.project;
+            this.region = model.region;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * <p>The name of the Logstore where log entries are stored.</p>

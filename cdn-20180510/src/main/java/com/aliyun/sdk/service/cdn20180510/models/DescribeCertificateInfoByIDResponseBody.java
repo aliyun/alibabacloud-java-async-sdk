@@ -36,6 +36,10 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certInfos
      */
@@ -53,6 +57,14 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
     public static final class Builder {
         private CertInfos certInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCertificateInfoByIDResponseBody model) {
+            this.certInfos = model.certInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the certificate.</p>
@@ -183,6 +195,19 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
             private String domainList; 
             private String httpsCrt; 
 
+            private Builder() {
+            } 
+
+            private Builder(CertInfo model) {
+                this.certExpireTime = model.certExpireTime;
+                this.certId = model.certId;
+                this.certName = model.certName;
+                this.certType = model.certType;
+                this.createTime = model.createTime;
+                this.domainList = model.domainList;
+                this.httpsCrt = model.httpsCrt;
+            } 
+
             /**
              * <p>The time at which the certificate expires.</p>
              * 
@@ -303,6 +328,13 @@ public class DescribeCertificateInfoByIDResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CertInfo> certInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertInfos model) {
+                this.certInfo = model.certInfo;
+            } 
 
             /**
              * CertInfo.

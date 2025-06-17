@@ -36,6 +36,10 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return getDomainDetailModel
      */
@@ -53,6 +57,14 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
     public static final class Builder {
         private GetDomainDetailModel getDomainDetailModel; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnDomainDetailResponseBody model) {
+            this.getDomainDetailModel = model.getDomainDetailModel;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the accelerated domain name.</p>
@@ -171,6 +183,18 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             private String type; 
             private String weight; 
 
+            private Builder() {
+            } 
+
+            private Builder(SourceModel model) {
+                this.content = model.content;
+                this.enabled = model.enabled;
+                this.port = model.port;
+                this.priority = model.priority;
+                this.type = model.type;
+                this.weight = model.weight;
+            } 
+
             /**
              * <p>The address of the origin server.</p>
              * 
@@ -281,6 +305,13 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SourceModel> sourceModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceModels model) {
+                this.sourceModel = model.sourceModel;
+            } 
 
             /**
              * SourceModel.
@@ -460,6 +491,24 @@ public class DescribeCdnDomainDetailResponseBody extends TeaModel {
             private String scope; 
             private String serverCertificateStatus; 
             private SourceModels sourceModels; 
+
+            private Builder() {
+            } 
+
+            private Builder(GetDomainDetailModel model) {
+                this.cdnType = model.cdnType;
+                this.cname = model.cname;
+                this.description = model.description;
+                this.domainName = model.domainName;
+                this.domainStatus = model.domainStatus;
+                this.gmtCreated = model.gmtCreated;
+                this.gmtModified = model.gmtModified;
+                this.httpsCname = model.httpsCname;
+                this.resourceGroupId = model.resourceGroupId;
+                this.scope = model.scope;
+                this.serverCertificateStatus = model.serverCertificateStatus;
+                this.sourceModels = model.sourceModels;
+            } 
 
             /**
              * <p>The workload type of the accelerated domain name. Valid values:</p>

@@ -60,6 +60,10 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return allUrlList
      */
@@ -125,6 +129,20 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
         private Url300List url300List; 
         private Url400List url400List; 
         private Url500List url500List; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainTopUrlVisitResponseBody model) {
+            this.allUrlList = model.allUrlList;
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.url200List = model.url200List;
+            this.url300List = model.url300List;
+            this.url400List = model.url400List;
+            this.url500List = model.url500List;
+        } 
 
         /**
          * <p>A list of frequently requested URLs.</p>
@@ -285,6 +303,17 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             private String visitData; 
             private Float visitProportion; 
 
+            private Builder() {
+            } 
+
+            private Builder(UrlList model) {
+                this.flow = model.flow;
+                this.flowProportion = model.flowProportion;
+                this.urlDetail = model.urlDetail;
+                this.visitData = model.visitData;
+                this.visitProportion = model.visitProportion;
+            } 
+
             /**
              * <p>The amount of network traffic. Unit: bytes.</p>
              * 
@@ -378,6 +407,13 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<UrlList> urlList; 
+
+            private Builder() {
+            } 
+
+            private Builder(AllUrlList model) {
+                this.urlList = model.urlList;
+            } 
 
             /**
              * UrlList.
@@ -474,6 +510,17 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             private String visitData; 
             private Float visitProportion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Url200ListUrlList model) {
+                this.flow = model.flow;
+                this.flowProportion = model.flowProportion;
+                this.urlDetail = model.urlDetail;
+                this.visitData = model.visitData;
+                this.visitProportion = model.visitProportion;
+            } 
+
             /**
              * <p>The amount of network traffic. Unit: bytes.</p>
              * 
@@ -567,6 +614,13 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Url200ListUrlList> urlList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Url200List model) {
+                this.urlList = model.urlList;
+            } 
 
             /**
              * UrlList.
@@ -663,6 +717,17 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             private String visitData; 
             private Float visitProportion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Url300ListUrlList model) {
+                this.flow = model.flow;
+                this.flowProportion = model.flowProportion;
+                this.urlDetail = model.urlDetail;
+                this.visitData = model.visitData;
+                this.visitProportion = model.visitProportion;
+            } 
+
             /**
              * <p>The amount of network traffic. Unit: bytes.</p>
              * 
@@ -756,6 +821,13 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Url300ListUrlList> urlList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Url300List model) {
+                this.urlList = model.urlList;
+            } 
 
             /**
              * UrlList.
@@ -852,6 +924,17 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             private String visitData; 
             private Float visitProportion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Url400ListUrlList model) {
+                this.flow = model.flow;
+                this.flowProportion = model.flowProportion;
+                this.urlDetail = model.urlDetail;
+                this.visitData = model.visitData;
+                this.visitProportion = model.visitProportion;
+            } 
+
             /**
              * <p>The amount of network traffic. Unit: bytes.</p>
              * 
@@ -945,6 +1028,13 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Url400ListUrlList> urlList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Url400List model) {
+                this.urlList = model.urlList;
+            } 
 
             /**
              * UrlList.
@@ -1041,6 +1131,17 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
             private String visitData; 
             private Float visitProportion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Url500ListUrlList model) {
+                this.flow = model.flow;
+                this.flowProportion = model.flowProportion;
+                this.urlDetail = model.urlDetail;
+                this.visitData = model.visitData;
+                this.visitProportion = model.visitProportion;
+            } 
+
             /**
              * <p>The amount of network traffic. Unit: bytes.</p>
              * 
@@ -1134,6 +1235,13 @@ public class DescribeDomainTopUrlVisitResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Url500ListUrlList> urlList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Url500List model) {
+                this.urlList = model.urlList;
+            } 
 
             /**
              * UrlList.

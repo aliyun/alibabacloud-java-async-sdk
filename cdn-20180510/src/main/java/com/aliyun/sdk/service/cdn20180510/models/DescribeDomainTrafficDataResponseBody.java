@@ -52,6 +52,10 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -101,6 +105,18 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
         private TrafficDataPerInterval trafficDataPerInterval; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainTrafficDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.trafficDataPerInterval = model.trafficDataPerInterval;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -275,6 +291,19 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.domesticValue = model.domesticValue;
+                this.httpsDomesticValue = model.httpsDomesticValue;
+                this.httpsOverseasValue = model.httpsOverseasValue;
+                this.httpsValue = model.httpsValue;
+                this.overseasValue = model.overseasValue;
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The amount of network traffic in the Chinese mainland.</p>
              * 
@@ -390,6 +419,13 @@ public class DescribeDomainTrafficDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

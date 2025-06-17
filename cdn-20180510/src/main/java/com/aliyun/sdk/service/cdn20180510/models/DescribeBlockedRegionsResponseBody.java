@@ -36,6 +36,10 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return infoList
      */
@@ -53,6 +57,14 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
     public static final class Builder {
         private InfoList infoList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeBlockedRegionsResponseBody model) {
+            this.infoList = model.infoList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information returned.</p>
@@ -135,6 +147,15 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
             private String countriesAndRegions; 
             private String countriesAndRegionsName; 
 
+            private Builder() {
+            } 
+
+            private Builder(InfoItem model) {
+                this.continent = model.continent;
+                this.countriesAndRegions = model.countriesAndRegions;
+                this.countriesAndRegionsName = model.countriesAndRegionsName;
+            } 
+
             /**
              * <p>The district to which the country or region belongs.</p>
              * 
@@ -206,6 +227,13 @@ public class DescribeBlockedRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<InfoItem> infoItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(InfoList model) {
+                this.infoItem = model.infoItem;
+            } 
 
             /**
              * InfoItem.

@@ -48,6 +48,10 @@ public class GetGrayDomainFunctionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainConfigList
      */
@@ -89,6 +93,17 @@ public class GetGrayDomainFunctionResponseBody extends TeaModel {
         private String progression; 
         private String requestId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGrayDomainFunctionResponseBody model) {
+            this.domainConfigList = model.domainConfigList;
+            this.domainName = model.domainName;
+            this.progression = model.progression;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
 
         /**
          * DomainConfigList.
@@ -179,6 +194,14 @@ public class GetGrayDomainFunctionResponseBody extends TeaModel {
         public static final class Builder {
             private String argName; 
             private String argValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(FunctionArgs model) {
+                this.argName = model.argName;
+                this.argValue = model.argValue;
+            } 
 
             /**
              * ArgName.
@@ -282,6 +305,17 @@ public class GetGrayDomainFunctionResponseBody extends TeaModel {
             private String functionName; 
             private String parentId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainConfigList model) {
+                this.configId = model.configId;
+                this.functionArgs = model.functionArgs;
+                this.functionName = model.functionName;
+                this.parentId = model.parentId;
+                this.status = model.status;
+            } 
 
             /**
              * ConfigId.

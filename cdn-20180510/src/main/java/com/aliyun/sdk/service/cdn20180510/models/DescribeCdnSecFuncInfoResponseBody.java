@@ -48,6 +48,10 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -89,6 +93,17 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
         private String httpStatus; 
         private String requestId; 
         private String retCode; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnSecFuncInfoResponseBody model) {
+            this.content = model.content;
+            this.description = model.description;
+            this.httpStatus = model.httpStatus;
+            this.requestId = model.requestId;
+            this.retCode = model.retCode;
+        } 
 
         /**
          * <p>Queried data.</p>
@@ -195,6 +210,14 @@ public class DescribeCdnSecFuncInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String label; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.label = model.label;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag.</p>

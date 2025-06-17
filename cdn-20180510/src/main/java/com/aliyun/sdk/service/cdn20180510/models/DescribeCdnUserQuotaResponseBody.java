@@ -76,6 +76,10 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return blockQuota
      */
@@ -173,6 +177,24 @@ public class DescribeCdnUserQuotaResponseBody extends TeaModel {
         private Integer refreshUrlQuota; 
         private Integer refreshUrlRemain; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnUserQuotaResponseBody model) {
+            this.blockQuota = model.blockQuota;
+            this.blockRemain = model.blockRemain;
+            this.domainQuota = model.domainQuota;
+            this.ignoreParamsQuota = model.ignoreParamsQuota;
+            this.ignoreParamsRemain = model.ignoreParamsRemain;
+            this.preloadQuota = model.preloadQuota;
+            this.preloadRemain = model.preloadRemain;
+            this.refreshDirQuota = model.refreshDirQuota;
+            this.refreshDirRemain = model.refreshDirRemain;
+            this.refreshUrlQuota = model.refreshUrlQuota;
+            this.refreshUrlRemain = model.refreshUrlRemain;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The maximum number of URLs and directories that can be blocked.</p>

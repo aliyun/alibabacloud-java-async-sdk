@@ -36,6 +36,10 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainLogDetails
      */
@@ -53,6 +57,14 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
     public static final class Builder {
         private DomainLogDetails domainLogDetails; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnDomainAtoaLogsResponseBody model) {
+            this.domainLogDetails = model.domainLogDetails;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DomainLogDetails.
@@ -156,6 +168,17 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
             private Long logSize; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogInfoDetail model) {
+                this.endTime = model.endTime;
+                this.logName = model.logName;
+                this.logPath = model.logPath;
+                this.logSize = model.logSize;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * EndTime.
              */
@@ -235,6 +258,13 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<LogInfoDetail> logInfoDetail; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogInfos model) {
+                this.logInfoDetail = model.logInfoDetail;
+            } 
+
             /**
              * LogInfoDetail.
              */
@@ -305,6 +335,15 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
             private Long pageIndex; 
             private Long pageSize; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfos model) {
+                this.pageIndex = model.pageIndex;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * PageIndex.
@@ -405,6 +444,16 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
             private LogInfos logInfos; 
             private PageInfos pageInfos; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainLogDetail model) {
+                this.domainName = model.domainName;
+                this.logCount = model.logCount;
+                this.logInfos = model.logInfos;
+                this.pageInfos = model.pageInfos;
+            } 
+
             /**
              * DomainName.
              */
@@ -475,6 +524,13 @@ public class DescribeCdnDomainAtoaLogsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DomainLogDetail> domainLogDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainLogDetails model) {
+                this.domainLogDetail = model.domainLogDetail;
+            } 
 
             /**
              * DomainLogDetail.

@@ -36,6 +36,10 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return FCTrigger
      */
@@ -53,6 +57,14 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
     public static final class Builder {
         private FCTrigger FCTrigger; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFCTriggerResponseBody model) {
+            this.FCTrigger = model.FCTrigger;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The Function Compute trigger that you want to query.</p>
@@ -170,6 +182,18 @@ public class DescribeFCTriggerResponseBody extends TeaModel {
             private String roleARN; 
             private String sourceArn; 
             private String triggerARN; 
+
+            private Builder() {
+            } 
+
+            private Builder(FCTrigger model) {
+                this.eventMetaName = model.eventMetaName;
+                this.eventMetaVersion = model.eventMetaVersion;
+                this.notes = model.notes;
+                this.roleARN = model.roleARN;
+                this.sourceArn = model.sourceArn;
+                this.triggerARN = model.triggerARN;
+            } 
 
             /**
              * <p>The name of the event.</p>

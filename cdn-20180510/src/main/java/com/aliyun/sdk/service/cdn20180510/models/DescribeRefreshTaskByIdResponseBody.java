@@ -40,6 +40,10 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Tasks> tasks; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRefreshTaskByIdResponseBody model) {
+            this.requestId = model.requestId;
+            this.tasks = model.tasks;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -205,6 +218,19 @@ public class DescribeRefreshTaskByIdResponseBody extends TeaModel {
             private String process; 
             private String status; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tasks model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.objectPath = model.objectPath;
+                this.objectType = model.objectType;
+                this.process = model.process;
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The time when the task was created. The time is displayed in UTC.</p>

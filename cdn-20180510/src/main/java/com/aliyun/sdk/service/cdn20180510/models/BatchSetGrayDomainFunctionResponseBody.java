@@ -36,6 +36,10 @@ public class BatchSetGrayDomainFunctionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainConfigList
      */
@@ -53,6 +57,14 @@ public class BatchSetGrayDomainFunctionResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DomainConfigList> domainConfigList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BatchSetGrayDomainFunctionResponseBody model) {
+            this.domainConfigList = model.domainConfigList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * DomainConfigList.
@@ -131,6 +143,15 @@ public class BatchSetGrayDomainFunctionResponseBody extends TeaModel {
             private Long configId; 
             private String domainName; 
             private String functionName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainConfigList model) {
+                this.configId = model.configId;
+                this.domainName = model.domainName;
+                this.functionName = model.functionName;
+            } 
 
             /**
              * ConfigId.

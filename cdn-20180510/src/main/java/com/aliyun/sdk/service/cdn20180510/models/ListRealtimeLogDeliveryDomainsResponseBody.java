@@ -36,6 +36,10 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -53,6 +57,14 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
     public static final class Builder {
         private Content content; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRealtimeLogDeliveryDomainsResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the accelerated domain names.</p>
@@ -123,6 +135,14 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
             private String domainName; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Domains model) {
+                this.domainName = model.domainName;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The domain name.</p>
              * 
@@ -187,6 +207,13 @@ public class ListRealtimeLogDeliveryDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Domains> domains; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.domains = model.domains;
+            } 
 
             /**
              * Domains.

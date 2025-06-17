@@ -36,6 +36,10 @@ public class DescribeCdnTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cdnTypes
      */
@@ -53,6 +57,14 @@ public class DescribeCdnTypesResponseBody extends TeaModel {
     public static final class Builder {
         private CdnTypes cdnTypes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnTypesResponseBody model) {
+            this.cdnTypes = model.cdnTypes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The types of the domain names.</p>
@@ -123,6 +135,14 @@ public class DescribeCdnTypesResponseBody extends TeaModel {
             private String desc; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(CdnType model) {
+                this.desc = model.desc;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The description of the domain name type.</p>
              * 
@@ -183,6 +203,13 @@ public class DescribeCdnTypesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<CdnType> cdnType; 
+
+            private Builder() {
+            } 
+
+            private Builder(CdnTypes model) {
+                this.cdnType = model.cdnType;
+            } 
 
             /**
              * CdnType.

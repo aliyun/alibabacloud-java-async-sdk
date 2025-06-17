@@ -52,6 +52,10 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -101,6 +105,18 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
         private RealTimeHttpCodeData realTimeHttpCodeData; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainRealTimeHttpCodeDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.realTimeHttpCodeData = model.realTimeHttpCodeData;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -228,6 +244,15 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
             private String count; 
             private String proportion; 
 
+            private Builder() {
+            } 
+
+            private Builder(RealTimeCodeProportionData model) {
+                this.code = model.code;
+                this.count = model.count;
+                this.proportion = model.proportion;
+            } 
+
             /**
              * <p>The HTTP status code returned.</p>
              * 
@@ -300,6 +325,13 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<RealTimeCodeProportionData> realTimeCodeProportionData; 
 
+            private Builder() {
+            } 
+
+            private Builder(Value model) {
+                this.realTimeCodeProportionData = model.realTimeCodeProportionData;
+            } 
+
             /**
              * RealTimeCodeProportionData.
              */
@@ -359,6 +391,14 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
             private String timeStamp; 
             private Value value; 
 
+            private Builder() {
+            } 
+
+            private Builder(UsageData model) {
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The timestamp of the data returned.</p>
              * 
@@ -416,6 +456,13 @@ public class DescribeDomainRealTimeHttpCodeDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<UsageData> usageData; 
+
+            private Builder() {
+            } 
+
+            private Builder(RealTimeHttpCodeData model) {
+                this.usageData = model.usageData;
+            } 
 
             /**
              * UsageData.

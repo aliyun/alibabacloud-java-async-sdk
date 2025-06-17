@@ -36,6 +36,10 @@ public class DescribeIpStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipStatus
      */
@@ -53,6 +57,14 @@ public class DescribeIpStatusResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<IpStatus> ipStatus; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIpStatusResponseBody model) {
+            this.ipStatus = model.ipStatus;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status of the IP addresses of the POPs.</p>
@@ -122,6 +134,14 @@ public class DescribeIpStatusResponseBody extends TeaModel {
         public static final class Builder {
             private String ip; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpStatus model) {
+                this.ip = model.ip;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The IP address of the POP.</p>

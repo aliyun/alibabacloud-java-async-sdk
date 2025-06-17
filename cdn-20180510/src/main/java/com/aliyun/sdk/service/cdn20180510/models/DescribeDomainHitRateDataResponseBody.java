@@ -52,6 +52,10 @@ public class DescribeDomainHitRateDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataInterval
      */
@@ -101,6 +105,18 @@ public class DescribeDomainHitRateDataResponseBody extends TeaModel {
         private HitRateInterval hitRateInterval; 
         private String requestId; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainHitRateDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.hitRateInterval = model.hitRateInterval;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>The time interval between the data entries returned. Unit: seconds.</p>
@@ -227,6 +243,15 @@ public class DescribeDomainHitRateDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.httpsValue = model.httpsValue;
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The byte hit ratio of HTTPS requests.</p>
              * 
@@ -298,6 +323,13 @@ public class DescribeDomainHitRateDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(HitRateInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.

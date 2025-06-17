@@ -48,6 +48,10 @@ public class DescribeDomainCustomLogConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configId
      */
@@ -89,6 +93,17 @@ public class DescribeDomainCustomLogConfigResponseBody extends TeaModel {
         private String requestId; 
         private String sample; 
         private String tag; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainCustomLogConfigResponseBody model) {
+            this.configId = model.configId;
+            this.remark = model.remark;
+            this.requestId = model.requestId;
+            this.sample = model.sample;
+            this.tag = model.tag;
+        } 
 
         /**
          * <p>The ID of the log configuration.</p>

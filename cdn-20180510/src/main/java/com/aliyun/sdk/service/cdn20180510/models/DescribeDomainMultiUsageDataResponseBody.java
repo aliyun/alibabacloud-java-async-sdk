@@ -48,6 +48,10 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -89,6 +93,17 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
         private RequestPerInterval requestPerInterval; 
         private String startTime; 
         private TrafficPerInterval trafficPerInterval; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainMultiUsageDataResponseBody model) {
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.requestPerInterval = model.requestPerInterval;
+            this.startTime = model.startTime;
+            this.trafficPerInterval = model.trafficPerInterval;
+        } 
 
         /**
          * <p>The end of the time range that was queried.</p>
@@ -213,6 +228,16 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestDataModule model) {
+                this.domain = model.domain;
+                this.request = model.request;
+                this.timeStamp = model.timeStamp;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The accelerated domain name.</p>
              * 
@@ -298,6 +323,13 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<RequestDataModule> requestDataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestPerInterval model) {
+                this.requestDataModule = model.requestDataModule;
+            } 
 
             /**
              * RequestDataModule.
@@ -393,6 +425,17 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
             private String domain; 
             private String timeStamp; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficDataModule model) {
+                this.area = model.area;
+                this.bps = model.bps;
+                this.domain = model.domain;
+                this.timeStamp = model.timeStamp;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The name of the region.</p>
@@ -494,6 +537,13 @@ public class DescribeDomainMultiUsageDataResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<TrafficDataModule> trafficDataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficPerInterval model) {
+                this.trafficDataModule = model.trafficDataModule;
+            } 
 
             /**
              * TrafficDataModule.

@@ -44,6 +44,10 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bpsDataList
      */
@@ -77,6 +81,16 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
         private String domainName; 
         private String requestId; 
         private String timeStamp; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainBpsDataByTimeStampResponseBody model) {
+            this.bpsDataList = model.bpsDataList;
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+            this.timeStamp = model.timeStamp;
+        } 
 
         /**
          * <p>A list of bandwidth values by ISP and region.</p>
@@ -193,6 +207,16 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
             private String locationName; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(BpsDataModel model) {
+                this.bps = model.bps;
+                this.ispName = model.ispName;
+                this.locationName = model.locationName;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
              * <p>The bandwidth value.</p>
              * 
@@ -275,6 +299,13 @@ public class DescribeDomainBpsDataByTimeStampResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<BpsDataModel> bpsDataModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(BpsDataList model) {
+                this.bpsDataModel = model.bpsDataModel;
+            } 
 
             /**
              * BpsDataModel.

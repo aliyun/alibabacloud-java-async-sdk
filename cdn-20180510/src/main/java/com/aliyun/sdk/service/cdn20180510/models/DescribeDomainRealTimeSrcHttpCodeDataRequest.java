@@ -27,14 +27,6 @@ public class DescribeDomainRealTimeSrcHttpCodeDataRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("IspNameEn")
-    private String ispNameEn;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("LocationNameEn")
-    private String locationNameEn;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
@@ -42,8 +34,6 @@ public class DescribeDomainRealTimeSrcHttpCodeDataRequest extends Request {
         super(builder);
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
-        this.ispNameEn = builder.ispNameEn;
-        this.locationNameEn = builder.locationNameEn;
         this.startTime = builder.startTime;
     }
 
@@ -55,7 +45,7 @@ public class DescribeDomainRealTimeSrcHttpCodeDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -75,20 +65,6 @@ public class DescribeDomainRealTimeSrcHttpCodeDataRequest extends Request {
     }
 
     /**
-     * @return ispNameEn
-     */
-    public String getIspNameEn() {
-        return this.ispNameEn;
-    }
-
-    /**
-     * @return locationNameEn
-     */
-    public String getLocationNameEn() {
-        return this.locationNameEn;
-    }
-
-    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -98,8 +74,6 @@ public class DescribeDomainRealTimeSrcHttpCodeDataRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDomainRealTimeSrcHttpCodeDataRequest, Builder> {
         private String domainName; 
         private String endTime; 
-        private String ispNameEn; 
-        private String locationNameEn; 
         private String startTime; 
 
         private Builder() {
@@ -110,8 +84,6 @@ public class DescribeDomainRealTimeSrcHttpCodeDataRequest extends Request {
             super(request);
             this.domainName = request.domainName;
             this.endTime = request.endTime;
-            this.ispNameEn = request.ispNameEn;
-            this.locationNameEn = request.locationNameEn;
             this.startTime = request.startTime;
         } 
 
@@ -140,30 +112,6 @@ public class DescribeDomainRealTimeSrcHttpCodeDataRequest extends Request {
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
-            return this;
-        }
-
-        /**
-         * <p>The name of the Internet service provider (ISP). You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query ISPs. If you leave this parameter empty, all ISPs are queried.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>unicom</p>
-         */
-        public Builder ispNameEn(String ispNameEn) {
-            this.putQueryParameter("IspNameEn", ispNameEn);
-            this.ispNameEn = ispNameEn;
-            return this;
-        }
-
-        /**
-         * <p>The name of the region. You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query regions. If you leave this parameter empty, all regions are queried.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>beijing</p>
-         */
-        public Builder locationNameEn(String locationNameEn) {
-            this.putQueryParameter("LocationNameEn", locationNameEn);
-            this.locationNameEn = locationNameEn;
             return this;
         }
 

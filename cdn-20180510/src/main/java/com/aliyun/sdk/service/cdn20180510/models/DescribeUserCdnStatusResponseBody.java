@@ -48,6 +48,10 @@ public class DescribeUserCdnStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enabled
      */
@@ -89,6 +93,17 @@ public class DescribeUserCdnStatusResponseBody extends TeaModel {
         private Boolean inDebtOverdue; 
         private Boolean onService; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeUserCdnStatusResponseBody model) {
+            this.enabled = model.enabled;
+            this.inDebt = model.inDebt;
+            this.inDebtOverdue = model.inDebtOverdue;
+            this.onService = model.onService;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whetherAlibaba Cloud CDN is activated.</p>

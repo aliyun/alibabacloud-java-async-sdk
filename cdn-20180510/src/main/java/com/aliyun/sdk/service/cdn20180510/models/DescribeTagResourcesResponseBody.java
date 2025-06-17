@@ -36,6 +36,10 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TagResources> tagResources; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTagResourcesResponseBody model) {
+            this.requestId = model.requestId;
+            this.tagResources = model.tagResources;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -195,6 +215,14 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         public static final class Builder {
             private String resourceId; 
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagResources model) {
+                this.resourceId = model.resourceId;
+                this.tag = model.tag;
+            } 
 
             /**
              * <p>The ID of the resource.</p>

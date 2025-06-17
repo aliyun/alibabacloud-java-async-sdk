@@ -44,6 +44,10 @@ public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commonName
      */
@@ -77,6 +81,16 @@ public class CreateCdnCertificateSigningRequestResponseBody extends TeaModel {
         private String csr; 
         private String pubMd5; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCdnCertificateSigningRequestResponseBody model) {
+            this.commonName = model.commonName;
+            this.csr = model.csr;
+            this.pubMd5 = model.pubMd5;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The Common Name of the certificate.</p>

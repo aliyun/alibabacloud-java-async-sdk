@@ -40,6 +40,10 @@ public class DescribeCdnRegionAndIspResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isps
      */
@@ -65,6 +69,15 @@ public class DescribeCdnRegionAndIspResponseBody extends TeaModel {
         private Isps isps; 
         private Regions regions; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCdnRegionAndIspResponseBody model) {
+            this.isps = model.isps;
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The list of ISPs.</p>
@@ -143,6 +156,14 @@ public class DescribeCdnRegionAndIspResponseBody extends TeaModel {
             private String nameEn; 
             private String nameZh; 
 
+            private Builder() {
+            } 
+
+            private Builder(Isp model) {
+                this.nameEn = model.nameEn;
+                this.nameZh = model.nameZh;
+            } 
+
             /**
              * <p>The English name of the ISP.</p>
              * 
@@ -200,6 +221,13 @@ public class DescribeCdnRegionAndIspResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Isp> isp; 
+
+            private Builder() {
+            } 
+
+            private Builder(Isps model) {
+                this.isp = model.isp;
+            } 
 
             /**
              * Isp.
@@ -260,6 +288,14 @@ public class DescribeCdnRegionAndIspResponseBody extends TeaModel {
             private String nameEn; 
             private String nameZh; 
 
+            private Builder() {
+            } 
+
+            private Builder(Region model) {
+                this.nameEn = model.nameEn;
+                this.nameZh = model.nameZh;
+            } 
+
             /**
              * <p>The English name of the region.</p>
              * 
@@ -317,6 +353,13 @@ public class DescribeCdnRegionAndIspResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Region> region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.region = model.region;
+            } 
 
             /**
              * Region.

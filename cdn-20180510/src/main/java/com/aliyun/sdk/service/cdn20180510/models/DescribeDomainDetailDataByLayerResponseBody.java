@@ -36,6 +36,10 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainDetailDataByLayerResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The number of IPv6 requests per second.</p>
@@ -230,6 +242,23 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
             private Float qps; 
             private String timeStamp; 
             private Long traf; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.acc = model.acc;
+                this.bps = model.bps;
+                this.domainName = model.domainName;
+                this.httpCode = model.httpCode;
+                this.ipv6Acc = model.ipv6Acc;
+                this.ipv6Bps = model.ipv6Bps;
+                this.ipv6Qps = model.ipv6Qps;
+                this.ipv6Traf = model.ipv6Traf;
+                this.qps = model.qps;
+                this.timeStamp = model.timeStamp;
+                this.traf = model.traf;
+            } 
 
             /**
              * <p>The timestamp of the data returned.</p>
@@ -423,6 +452,13 @@ public class DescribeDomainDetailDataByLayerResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
