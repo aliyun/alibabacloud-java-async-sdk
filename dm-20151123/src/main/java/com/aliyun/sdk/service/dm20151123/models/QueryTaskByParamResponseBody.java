@@ -176,6 +176,12 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
+        @com.aliyun.core.annotation.NameInMap("IpPoolId")
+        private String ipPoolId;
+
+        @com.aliyun.core.annotation.NameInMap("IpPoolName")
+        private String ipPoolName;
+
         @com.aliyun.core.annotation.NameInMap("ReceiversName")
         private String receiversName;
 
@@ -200,6 +206,8 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         private Task(Builder builder) {
             this.addressType = builder.addressType;
             this.createTime = builder.createTime;
+            this.ipPoolId = builder.ipPoolId;
+            this.ipPoolName = builder.ipPoolName;
             this.receiversName = builder.receiversName;
             this.requestCount = builder.requestCount;
             this.tagName = builder.tagName;
@@ -229,6 +237,20 @@ public class QueryTaskByParamResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return ipPoolId
+         */
+        public String getIpPoolId() {
+            return this.ipPoolId;
+        }
+
+        /**
+         * @return ipPoolName
+         */
+        public String getIpPoolName() {
+            return this.ipPoolName;
         }
 
         /**
@@ -283,6 +305,8 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         public static final class Builder {
             private String addressType; 
             private String createTime; 
+            private String ipPoolId; 
+            private String ipPoolName; 
             private String receiversName; 
             private String requestCount; 
             private String tagName; 
@@ -297,6 +321,8 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             private Builder(Task model) {
                 this.addressType = model.addressType;
                 this.createTime = model.createTime;
+                this.ipPoolId = model.ipPoolId;
+                this.ipPoolName = model.ipPoolName;
                 this.receiversName = model.receiversName;
                 this.requestCount = model.requestCount;
                 this.tagName = model.tagName;
@@ -325,6 +351,22 @@ public class QueryTaskByParamResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * IpPoolId.
+             */
+            public Builder ipPoolId(String ipPoolId) {
+                this.ipPoolId = ipPoolId;
+                return this;
+            }
+
+            /**
+             * IpPoolName.
+             */
+            public Builder ipPoolName(String ipPoolName) {
+                this.ipPoolName = ipPoolName;
                 return this;
             }
 

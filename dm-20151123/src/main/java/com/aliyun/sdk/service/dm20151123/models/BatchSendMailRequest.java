@@ -36,6 +36,10 @@ public class BatchSendMailRequest extends Request {
     private String headers;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpPoolId")
+    private String ipPoolId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
@@ -83,6 +87,7 @@ public class BatchSendMailRequest extends Request {
         this.addressType = builder.addressType;
         this.clickTrace = builder.clickTrace;
         this.headers = builder.headers;
+        this.ipPoolId = builder.ipPoolId;
         this.ownerId = builder.ownerId;
         this.receiversName = builder.receiversName;
         this.replyAddress = builder.replyAddress;
@@ -134,6 +139,13 @@ public class BatchSendMailRequest extends Request {
      */
     public String getHeaders() {
         return this.headers;
+    }
+
+    /**
+     * @return ipPoolId
+     */
+    public String getIpPoolId() {
+        return this.ipPoolId;
     }
 
     /**
@@ -211,6 +223,7 @@ public class BatchSendMailRequest extends Request {
         private Integer addressType; 
         private String clickTrace; 
         private String headers; 
+        private String ipPoolId; 
         private Long ownerId; 
         private String receiversName; 
         private String replyAddress; 
@@ -232,6 +245,7 @@ public class BatchSendMailRequest extends Request {
             this.addressType = request.addressType;
             this.clickTrace = request.clickTrace;
             this.headers = request.headers;
+            this.ipPoolId = request.ipPoolId;
             this.ownerId = request.ownerId;
             this.receiversName = request.receiversName;
             this.replyAddress = request.replyAddress;
@@ -301,6 +315,15 @@ public class BatchSendMailRequest extends Request {
         public Builder headers(String headers) {
             this.putQueryParameter("Headers", headers);
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * IpPoolId.
+         */
+        public Builder ipPoolId(String ipPoolId) {
+            this.putQueryParameter("IpPoolId", ipPoolId);
+            this.ipPoolId = ipPoolId;
             return this;
         }
 
