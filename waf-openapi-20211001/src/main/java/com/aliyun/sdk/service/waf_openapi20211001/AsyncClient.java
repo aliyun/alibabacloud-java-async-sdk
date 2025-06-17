@@ -509,6 +509,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstanceResponse> describeInstance(DescribeInstanceRequest request);
 
     /**
+     * @param request the request parameters of DescribeIpAbroadCountryInfos  DescribeIpAbroadCountryInfosRequest
+     * @return DescribeIpAbroadCountryInfosResponse
+     */
+    CompletableFuture<DescribeIpAbroadCountryInfosResponse> describeIpAbroadCountryInfos(DescribeIpAbroadCountryInfosRequest request);
+
+    /**
      * @param request the request parameters of DescribeMajorProtectionBlackIps  DescribeMajorProtectionBlackIpsRequest
      * @return DescribeMajorProtectionBlackIpsResponse
      */
