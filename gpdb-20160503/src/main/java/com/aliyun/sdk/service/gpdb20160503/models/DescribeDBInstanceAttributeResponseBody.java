@@ -323,6 +323,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
         private String instanceNetworkType;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
+        private String instanceSpec;
+
         @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
@@ -468,6 +471,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.hostType = builder.hostType;
             this.idleTime = builder.idleTime;
             this.instanceNetworkType = builder.instanceNetworkType;
+            this.instanceSpec = builder.instanceSpec;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
             this.maintainEndTime = builder.maintainEndTime;
@@ -724,6 +728,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getInstanceNetworkType() {
             return this.instanceNetworkType;
+        }
+
+        /**
+         * @return instanceSpec
+         */
+        public String getInstanceSpec() {
+            return this.instanceSpec;
         }
 
         /**
@@ -1023,6 +1034,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String hostType; 
             private Integer idleTime; 
             private String instanceNetworkType; 
+            private String instanceSpec; 
             private String lockMode; 
             private String lockReason; 
             private String maintainEndTime; 
@@ -1096,6 +1108,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.hostType = model.hostType;
                 this.idleTime = model.idleTime;
                 this.instanceNetworkType = model.instanceNetworkType;
+                this.instanceSpec = model.instanceSpec;
                 this.lockMode = model.lockMode;
                 this.lockReason = model.lockReason;
                 this.maintainEndTime = model.maintainEndTime;
@@ -1524,6 +1537,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder instanceNetworkType(String instanceNetworkType) {
                 this.instanceNetworkType = instanceNetworkType;
+                return this;
+            }
+
+            /**
+             * InstanceSpec.
+             */
+            public Builder instanceSpec(String instanceSpec) {
+                this.instanceSpec = instanceSpec;
                 return this;
             }
 
