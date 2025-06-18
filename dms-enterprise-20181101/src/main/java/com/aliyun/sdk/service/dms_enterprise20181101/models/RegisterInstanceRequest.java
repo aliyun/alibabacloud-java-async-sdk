@@ -106,6 +106,10 @@ public class RegisterInstanceRequest extends Request {
     private Integer queryTimeout;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroup")
+    private String resourceGroup;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SafeRule")
     @com.aliyun.core.annotation.Validation(required = true)
     private String safeRule;
@@ -159,6 +163,7 @@ public class RegisterInstanceRequest extends Request {
         this.networkType = builder.networkType;
         this.port = builder.port;
         this.queryTimeout = builder.queryTimeout;
+        this.resourceGroup = builder.resourceGroup;
         this.safeRule = builder.safeRule;
         this.sid = builder.sid;
         this.skipTest = builder.skipTest;
@@ -316,6 +321,13 @@ public class RegisterInstanceRequest extends Request {
     }
 
     /**
+     * @return resourceGroup
+     */
+    public String getResourceGroup() {
+        return this.resourceGroup;
+    }
+
+    /**
      * @return safeRule
      */
     public String getSafeRule() {
@@ -391,6 +403,7 @@ public class RegisterInstanceRequest extends Request {
         private String networkType; 
         private Integer port; 
         private Integer queryTimeout; 
+        private String resourceGroup; 
         private String safeRule; 
         private String sid; 
         private Boolean skipTest; 
@@ -425,6 +438,7 @@ public class RegisterInstanceRequest extends Request {
             this.networkType = request.networkType;
             this.port = request.port;
             this.queryTimeout = request.queryTimeout;
+            this.resourceGroup = request.resourceGroup;
             this.safeRule = request.safeRule;
             this.sid = request.sid;
             this.skipTest = request.skipTest;
@@ -716,6 +730,15 @@ public class RegisterInstanceRequest extends Request {
         public Builder queryTimeout(Integer queryTimeout) {
             this.putQueryParameter("QueryTimeout", queryTimeout);
             this.queryTimeout = queryTimeout;
+            return this;
+        }
+
+        /**
+         * ResourceGroup.
+         */
+        public Builder resourceGroup(String resourceGroup) {
+            this.putQueryParameter("ResourceGroup", resourceGroup);
+            this.resourceGroup = resourceGroup;
             return this;
         }
 

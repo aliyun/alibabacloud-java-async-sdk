@@ -431,6 +431,9 @@ public class GetInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SellSitd")
         private String sellSitd;
 
+        @com.aliyun.core.annotation.NameInMap("SellTrust")
+        private String sellTrust;
+
         @com.aliyun.core.annotation.NameInMap("Sid")
         private String sid;
 
@@ -468,6 +471,7 @@ public class GetInstanceResponseBody extends TeaModel {
             this.queryTimeout = builder.queryTimeout;
             this.safeRuleId = builder.safeRuleId;
             this.sellSitd = builder.sellSitd;
+            this.sellTrust = builder.sellTrust;
             this.sid = builder.sid;
             this.standardGroup = builder.standardGroup;
             this.state = builder.state;
@@ -631,6 +635,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return sellTrust
+         */
+        public String getSellTrust() {
+            return this.sellTrust;
+        }
+
+        /**
          * @return sid
          */
         public String getSid() {
@@ -687,6 +698,7 @@ public class GetInstanceResponseBody extends TeaModel {
             private Integer queryTimeout; 
             private String safeRuleId; 
             private String sellSitd; 
+            private String sellTrust; 
             private String sid; 
             private StandardGroup standardGroup; 
             private String state; 
@@ -718,6 +730,7 @@ public class GetInstanceResponseBody extends TeaModel {
                 this.queryTimeout = model.queryTimeout;
                 this.safeRuleId = model.safeRuleId;
                 this.sellSitd = model.sellSitd;
+                this.sellTrust = model.sellTrust;
                 this.sid = model.sid;
                 this.standardGroup = model.standardGroup;
                 this.state = model.state;
@@ -963,6 +976,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder sellSitd(String sellSitd) {
                 this.sellSitd = sellSitd;
+                return this;
+            }
+
+            /**
+             * SellTrust.
+             */
+            public Builder sellTrust(String sellTrust) {
+                this.sellTrust = sellTrust;
                 return this;
             }
 
