@@ -59,6 +59,78 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AsyncCreateClipsTask  AsyncCreateClipsTaskRequest
+     * @return AsyncCreateClipsTaskResponse
+     */
+    @Override
+    public CompletableFuture<AsyncCreateClipsTaskResponse> asyncCreateClipsTask(AsyncCreateClipsTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AsyncCreateClipsTask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AsyncCreateClipsTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AsyncCreateClipsTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AsyncCreateClipsTimeLine  AsyncCreateClipsTimeLineRequest
+     * @return AsyncCreateClipsTimeLineResponse
+     */
+    @Override
+    public CompletableFuture<AsyncCreateClipsTimeLineResponse> asyncCreateClipsTimeLine(AsyncCreateClipsTimeLineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AsyncCreateClipsTimeLine").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AsyncCreateClipsTimeLineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AsyncCreateClipsTimeLineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AsyncEditTimeline  AsyncEditTimelineRequest
+     * @return AsyncEditTimelineResponse
+     */
+    @Override
+    public CompletableFuture<AsyncEditTimelineResponse> asyncEditTimeline(AsyncEditTimelineRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AsyncEditTimeline").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AsyncEditTimelineResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AsyncEditTimelineResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of AsyncUploadVideo  AsyncUploadVideoRequest
+     * @return AsyncUploadVideoResponse
+     */
+    @Override
+    public CompletableFuture<AsyncUploadVideoResponse> asyncUploadVideo(AsyncUploadVideoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AsyncUploadVideo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AsyncUploadVideoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AsyncUploadVideoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CancelAsyncTask  CancelAsyncTaskRequest
      * @return CancelAsyncTaskResponse
      */
@@ -611,6 +683,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GenerateViewPointResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAutoClipsTaskInfo  GetAutoClipsTaskInfoRequest
+     * @return GetAutoClipsTaskInfoResponse
+     */
+    @Override
+    public CompletableFuture<GetAutoClipsTaskInfoResponse> getAutoClipsTaskInfo(GetAutoClipsTaskInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAutoClipsTaskInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAutoClipsTaskInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAutoClipsTaskInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

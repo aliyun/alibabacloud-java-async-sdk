@@ -26,6 +26,30 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddDatasetDocumentResponse> addDatasetDocument(AddDatasetDocumentRequest request);
 
     /**
+     * @param request the request parameters of AsyncCreateClipsTask  AsyncCreateClipsTaskRequest
+     * @return AsyncCreateClipsTaskResponse
+     */
+    CompletableFuture<AsyncCreateClipsTaskResponse> asyncCreateClipsTask(AsyncCreateClipsTaskRequest request);
+
+    /**
+     * @param request the request parameters of AsyncCreateClipsTimeLine  AsyncCreateClipsTimeLineRequest
+     * @return AsyncCreateClipsTimeLineResponse
+     */
+    CompletableFuture<AsyncCreateClipsTimeLineResponse> asyncCreateClipsTimeLine(AsyncCreateClipsTimeLineRequest request);
+
+    /**
+     * @param request the request parameters of AsyncEditTimeline  AsyncEditTimelineRequest
+     * @return AsyncEditTimelineResponse
+     */
+    CompletableFuture<AsyncEditTimelineResponse> asyncEditTimeline(AsyncEditTimelineRequest request);
+
+    /**
+     * @param request the request parameters of AsyncUploadVideo  AsyncUploadVideoRequest
+     * @return AsyncUploadVideoResponse
+     */
+    CompletableFuture<AsyncUploadVideoResponse> asyncUploadVideo(AsyncUploadVideoRequest request);
+
+    /**
      * @param request the request parameters of CancelAsyncTask  CancelAsyncTaskRequest
      * @return CancelAsyncTaskResponse
      */
@@ -210,6 +234,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GenerateViewPointResponse
      */
     CompletableFuture<GenerateViewPointResponse> generateViewPoint(GenerateViewPointRequest request);
+
+    /**
+     * @param request the request parameters of GetAutoClipsTaskInfo  GetAutoClipsTaskInfoRequest
+     * @return GetAutoClipsTaskInfoResponse
+     */
+    CompletableFuture<GetAutoClipsTaskInfoResponse> getAutoClipsTaskInfo(GetAutoClipsTaskInfoRequest request);
 
     /**
      * @param request the request parameters of GetCategoriesByTaskId  GetCategoriesByTaskIdRequest
