@@ -23,6 +23,10 @@ public class DeleteContactFlowRequest extends Request {
     private String contactFlowId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
+    private Boolean force;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -30,6 +34,7 @@ public class DeleteContactFlowRequest extends Request {
     private DeleteContactFlowRequest(Builder builder) {
         super(builder);
         this.contactFlowId = builder.contactFlowId;
+        this.force = builder.force;
         this.instanceId = builder.instanceId;
     }
 
@@ -54,6 +59,13 @@ public class DeleteContactFlowRequest extends Request {
     }
 
     /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -62,6 +74,7 @@ public class DeleteContactFlowRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteContactFlowRequest, Builder> {
         private String contactFlowId; 
+        private Boolean force; 
         private String instanceId; 
 
         private Builder() {
@@ -71,6 +84,7 @@ public class DeleteContactFlowRequest extends Request {
         private Builder(DeleteContactFlowRequest request) {
             super(request);
             this.contactFlowId = request.contactFlowId;
+            this.force = request.force;
             this.instanceId = request.instanceId;
         } 
 
@@ -83,6 +97,15 @@ public class DeleteContactFlowRequest extends Request {
         public Builder contactFlowId(String contactFlowId) {
             this.putQueryParameter("ContactFlowId", contactFlowId);
             this.contactFlowId = contactFlowId;
+            return this;
+        }
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
             return this;
         }
 

@@ -37,6 +37,10 @@ public class ListContactFlowsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchPattern")
+    private String searchPattern;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
@@ -50,6 +54,7 @@ public class ListContactFlowsRequest extends Request {
         this.orderByField = builder.orderByField;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.searchPattern = builder.searchPattern;
         this.sortOrder = builder.sortOrder;
         this.type = builder.type;
     }
@@ -96,6 +101,13 @@ public class ListContactFlowsRequest extends Request {
     }
 
     /**
+     * @return searchPattern
+     */
+    public String getSearchPattern() {
+        return this.searchPattern;
+    }
+
+    /**
      * @return sortOrder
      */
     public String getSortOrder() {
@@ -114,6 +126,7 @@ public class ListContactFlowsRequest extends Request {
         private String orderByField; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String searchPattern; 
         private String sortOrder; 
         private String type; 
 
@@ -127,6 +140,7 @@ public class ListContactFlowsRequest extends Request {
             this.orderByField = request.orderByField;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.searchPattern = request.searchPattern;
             this.sortOrder = request.sortOrder;
             this.type = request.type;
         } 
@@ -173,6 +187,15 @@ public class ListContactFlowsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * SearchPattern.
+         */
+        public Builder searchPattern(String searchPattern) {
+            this.putQueryParameter("SearchPattern", searchPattern);
+            this.searchPattern = searchPattern;
             return this;
         }
 
