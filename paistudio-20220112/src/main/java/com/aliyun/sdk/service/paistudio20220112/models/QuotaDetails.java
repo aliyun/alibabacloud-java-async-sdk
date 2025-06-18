@@ -38,6 +38,9 @@ public class QuotaDetails extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SelfAllocatedQuota")
     private ResourceAmount selfAllocatedQuota;
 
+    @com.aliyun.core.annotation.NameInMap("SelfSubmittedQuota")
+    private ResourceAmount selfSubmittedQuota;
+
     @com.aliyun.core.annotation.NameInMap("UsedQuota")
     private ResourceAmount usedQuota;
 
@@ -49,6 +52,7 @@ public class QuotaDetails extends TeaModel {
         this.desiredMinQuota = builder.desiredMinQuota;
         this.requestedQuota = builder.requestedQuota;
         this.selfAllocatedQuota = builder.selfAllocatedQuota;
+        this.selfSubmittedQuota = builder.selfSubmittedQuota;
         this.usedQuota = builder.usedQuota;
     }
 
@@ -114,6 +118,13 @@ public class QuotaDetails extends TeaModel {
     }
 
     /**
+     * @return selfSubmittedQuota
+     */
+    public ResourceAmount getSelfSubmittedQuota() {
+        return this.selfSubmittedQuota;
+    }
+
+    /**
      * @return usedQuota
      */
     public ResourceAmount getUsedQuota() {
@@ -128,6 +139,7 @@ public class QuotaDetails extends TeaModel {
         private ResourceAmount desiredMinQuota; 
         private ResourceAmount requestedQuota; 
         private ResourceAmount selfAllocatedQuota; 
+        private ResourceAmount selfSubmittedQuota; 
         private ResourceAmount usedQuota; 
 
         private Builder() {
@@ -141,6 +153,7 @@ public class QuotaDetails extends TeaModel {
             this.desiredMinQuota = model.desiredMinQuota;
             this.requestedQuota = model.requestedQuota;
             this.selfAllocatedQuota = model.selfAllocatedQuota;
+            this.selfSubmittedQuota = model.selfSubmittedQuota;
             this.usedQuota = model.usedQuota;
         } 
 
@@ -197,6 +210,14 @@ public class QuotaDetails extends TeaModel {
          */
         public Builder selfAllocatedQuota(ResourceAmount selfAllocatedQuota) {
             this.selfAllocatedQuota = selfAllocatedQuota;
+            return this;
+        }
+
+        /**
+         * SelfSubmittedQuota.
+         */
+        public Builder selfSubmittedQuota(ResourceAmount selfSubmittedQuota) {
+            this.selfSubmittedQuota = selfSubmittedQuota;
             return this;
         }
 

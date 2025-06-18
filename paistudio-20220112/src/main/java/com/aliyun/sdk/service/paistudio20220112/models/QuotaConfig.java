@@ -26,14 +26,23 @@ public class QuotaConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DefaultGPUDriver")
     private String defaultGPUDriver;
 
+    @com.aliyun.core.annotation.NameInMap("EnableGPUShare")
+    private Boolean enableGPUShare;
+
     @com.aliyun.core.annotation.NameInMap("EnablePreemptSubquotaWorkloads")
     private Boolean enablePreemptSubquotaWorkloads;
 
     @com.aliyun.core.annotation.NameInMap("EnableSubQuotaPreemption")
     private Boolean enableSubQuotaPreemption;
 
+    @com.aliyun.core.annotation.NameInMap("OversoldUsageInfo")
+    private OversoldUsageConfig oversoldUsageInfo;
+
     @com.aliyun.core.annotation.NameInMap("ResourceSpecs")
     private java.util.List<WorkspaceSpecs> resourceSpecs;
+
+    @com.aliyun.core.annotation.NameInMap("SelfQuotaPreemptionConfig")
+    private SelfQuotaPreemptionConfig selfQuotaPreemptionConfig;
 
     @com.aliyun.core.annotation.NameInMap("SubQuotaPreemptionConfig")
     private SubQuotaPreemptionConfig subQuotaPreemptionConfig;
@@ -51,9 +60,12 @@ public class QuotaConfig extends TeaModel {
         this.ACS = builder.ACS;
         this.clusterId = builder.clusterId;
         this.defaultGPUDriver = builder.defaultGPUDriver;
+        this.enableGPUShare = builder.enableGPUShare;
         this.enablePreemptSubquotaWorkloads = builder.enablePreemptSubquotaWorkloads;
         this.enableSubQuotaPreemption = builder.enableSubQuotaPreemption;
+        this.oversoldUsageInfo = builder.oversoldUsageInfo;
         this.resourceSpecs = builder.resourceSpecs;
+        this.selfQuotaPreemptionConfig = builder.selfQuotaPreemptionConfig;
         this.subQuotaPreemptionConfig = builder.subQuotaPreemptionConfig;
         this.supportGPUDrivers = builder.supportGPUDrivers;
         this.supportRDMA = builder.supportRDMA;
@@ -94,6 +106,13 @@ public class QuotaConfig extends TeaModel {
     }
 
     /**
+     * @return enableGPUShare
+     */
+    public Boolean getEnableGPUShare() {
+        return this.enableGPUShare;
+    }
+
+    /**
      * @return enablePreemptSubquotaWorkloads
      */
     public Boolean getEnablePreemptSubquotaWorkloads() {
@@ -108,10 +127,24 @@ public class QuotaConfig extends TeaModel {
     }
 
     /**
+     * @return oversoldUsageInfo
+     */
+    public OversoldUsageConfig getOversoldUsageInfo() {
+        return this.oversoldUsageInfo;
+    }
+
+    /**
      * @return resourceSpecs
      */
     public java.util.List<WorkspaceSpecs> getResourceSpecs() {
         return this.resourceSpecs;
+    }
+
+    /**
+     * @return selfQuotaPreemptionConfig
+     */
+    public SelfQuotaPreemptionConfig getSelfQuotaPreemptionConfig() {
+        return this.selfQuotaPreemptionConfig;
     }
 
     /**
@@ -146,9 +179,12 @@ public class QuotaConfig extends TeaModel {
         private ACS ACS; 
         private String clusterId; 
         private String defaultGPUDriver; 
+        private Boolean enableGPUShare; 
         private Boolean enablePreemptSubquotaWorkloads; 
         private Boolean enableSubQuotaPreemption; 
+        private OversoldUsageConfig oversoldUsageInfo; 
         private java.util.List<WorkspaceSpecs> resourceSpecs; 
+        private SelfQuotaPreemptionConfig selfQuotaPreemptionConfig; 
         private SubQuotaPreemptionConfig subQuotaPreemptionConfig; 
         private java.util.List<String> supportGPUDrivers; 
         private Boolean supportRDMA; 
@@ -161,9 +197,12 @@ public class QuotaConfig extends TeaModel {
             this.ACS = model.ACS;
             this.clusterId = model.clusterId;
             this.defaultGPUDriver = model.defaultGPUDriver;
+            this.enableGPUShare = model.enableGPUShare;
             this.enablePreemptSubquotaWorkloads = model.enablePreemptSubquotaWorkloads;
             this.enableSubQuotaPreemption = model.enableSubQuotaPreemption;
+            this.oversoldUsageInfo = model.oversoldUsageInfo;
             this.resourceSpecs = model.resourceSpecs;
+            this.selfQuotaPreemptionConfig = model.selfQuotaPreemptionConfig;
             this.subQuotaPreemptionConfig = model.subQuotaPreemptionConfig;
             this.supportGPUDrivers = model.supportGPUDrivers;
             this.supportRDMA = model.supportRDMA;
@@ -195,6 +234,14 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
+         * EnableGPUShare.
+         */
+        public Builder enableGPUShare(Boolean enableGPUShare) {
+            this.enableGPUShare = enableGPUShare;
+            return this;
+        }
+
+        /**
          * EnablePreemptSubquotaWorkloads.
          */
         public Builder enablePreemptSubquotaWorkloads(Boolean enablePreemptSubquotaWorkloads) {
@@ -211,10 +258,26 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
+         * OversoldUsageInfo.
+         */
+        public Builder oversoldUsageInfo(OversoldUsageConfig oversoldUsageInfo) {
+            this.oversoldUsageInfo = oversoldUsageInfo;
+            return this;
+        }
+
+        /**
          * ResourceSpecs.
          */
         public Builder resourceSpecs(java.util.List<WorkspaceSpecs> resourceSpecs) {
             this.resourceSpecs = resourceSpecs;
+            return this;
+        }
+
+        /**
+         * SelfQuotaPreemptionConfig.
+         */
+        public Builder selfQuotaPreemptionConfig(SelfQuotaPreemptionConfig selfQuotaPreemptionConfig) {
+            this.selfQuotaPreemptionConfig = selfQuotaPreemptionConfig;
             return this;
         }
 

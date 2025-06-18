@@ -23,6 +23,12 @@ public class MachineGroup extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DefaultDriver")
     private String defaultDriver;
 
+    @com.aliyun.core.annotation.NameInMap("DiskCapacity")
+    private Long diskCapacity;
+
+    @com.aliyun.core.annotation.NameInMap("DiskPL")
+    private String diskPL;
+
     @com.aliyun.core.annotation.NameInMap("EcsCount")
     private Long ecsCount;
 
@@ -74,6 +80,8 @@ public class MachineGroup extends TeaModel {
     private MachineGroup(Builder builder) {
         this.creatorID = builder.creatorID;
         this.defaultDriver = builder.defaultDriver;
+        this.diskCapacity = builder.diskCapacity;
+        this.diskPL = builder.diskPL;
         this.ecsCount = builder.ecsCount;
         this.ecsSpec = builder.ecsSpec;
         this.gmtCreatedTime = builder.gmtCreatedTime;
@@ -116,6 +124,20 @@ public class MachineGroup extends TeaModel {
      */
     public String getDefaultDriver() {
         return this.defaultDriver;
+    }
+
+    /**
+     * @return diskCapacity
+     */
+    public Long getDiskCapacity() {
+        return this.diskCapacity;
+    }
+
+    /**
+     * @return diskPL
+     */
+    public String getDiskPL() {
+        return this.diskPL;
     }
 
     /**
@@ -233,6 +255,8 @@ public class MachineGroup extends TeaModel {
     public static final class Builder {
         private String creatorID; 
         private String defaultDriver; 
+        private Long diskCapacity; 
+        private String diskPL; 
         private Long ecsCount; 
         private String ecsSpec; 
         private String gmtCreatedTime; 
@@ -256,6 +280,8 @@ public class MachineGroup extends TeaModel {
         private Builder(MachineGroup model) {
             this.creatorID = model.creatorID;
             this.defaultDriver = model.defaultDriver;
+            this.diskCapacity = model.diskCapacity;
+            this.diskPL = model.diskPL;
             this.ecsCount = model.ecsCount;
             this.ecsSpec = model.ecsSpec;
             this.gmtCreatedTime = model.gmtCreatedTime;
@@ -287,6 +313,22 @@ public class MachineGroup extends TeaModel {
          */
         public Builder defaultDriver(String defaultDriver) {
             this.defaultDriver = defaultDriver;
+            return this;
+        }
+
+        /**
+         * DiskCapacity.
+         */
+        public Builder diskCapacity(Long diskCapacity) {
+            this.diskCapacity = diskCapacity;
+            return this;
+        }
+
+        /**
+         * DiskPL.
+         */
+        public Builder diskPL(String diskPL) {
+            this.diskPL = diskPL;
             return this;
         }
 

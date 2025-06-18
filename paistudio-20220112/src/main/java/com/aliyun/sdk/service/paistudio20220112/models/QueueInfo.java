@@ -59,6 +59,9 @@ public class QueueInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.NameInMap("UseOversoldResource")
+    private Boolean useOversoldResource;
+
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
@@ -80,6 +83,9 @@ public class QueueInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
+    @com.aliyun.core.annotation.NameInMap("WorkspaceName")
+    private String workspaceName;
+
     private QueueInfo(Builder builder) {
         this.code = builder.code;
         this.codeType = builder.codeType;
@@ -95,6 +101,7 @@ public class QueueInfo extends TeaModel {
         this.reason = builder.reason;
         this.resource = builder.resource;
         this.status = builder.status;
+        this.useOversoldResource = builder.useOversoldResource;
         this.userId = builder.userId;
         this.userName = builder.userName;
         this.workloadId = builder.workloadId;
@@ -102,6 +109,7 @@ public class QueueInfo extends TeaModel {
         this.workloadStatus = builder.workloadStatus;
         this.workloadType = builder.workloadType;
         this.workspaceId = builder.workspaceId;
+        this.workspaceName = builder.workspaceName;
     }
 
     public static Builder builder() {
@@ -215,6 +223,13 @@ public class QueueInfo extends TeaModel {
     }
 
     /**
+     * @return useOversoldResource
+     */
+    public Boolean getUseOversoldResource() {
+        return this.useOversoldResource;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -263,6 +278,13 @@ public class QueueInfo extends TeaModel {
         return this.workspaceId;
     }
 
+    /**
+     * @return workspaceName
+     */
+    public String getWorkspaceName() {
+        return this.workspaceName;
+    }
+
     public static final class Builder {
         private String code; 
         private String codeType; 
@@ -278,6 +300,7 @@ public class QueueInfo extends TeaModel {
         private String reason; 
         private ResourceAmount resource; 
         private String status; 
+        private Boolean useOversoldResource; 
         private String userId; 
         private String userName; 
         private String workloadId; 
@@ -285,6 +308,7 @@ public class QueueInfo extends TeaModel {
         private String workloadStatus; 
         private String workloadType; 
         private String workspaceId; 
+        private String workspaceName; 
 
         private Builder() {
         } 
@@ -304,6 +328,7 @@ public class QueueInfo extends TeaModel {
             this.reason = model.reason;
             this.resource = model.resource;
             this.status = model.status;
+            this.useOversoldResource = model.useOversoldResource;
             this.userId = model.userId;
             this.userName = model.userName;
             this.workloadId = model.workloadId;
@@ -311,6 +336,7 @@ public class QueueInfo extends TeaModel {
             this.workloadStatus = model.workloadStatus;
             this.workloadType = model.workloadType;
             this.workspaceId = model.workspaceId;
+            this.workspaceName = model.workspaceName;
         } 
 
         /**
@@ -426,6 +452,14 @@ public class QueueInfo extends TeaModel {
         }
 
         /**
+         * UseOversoldResource.
+         */
+        public Builder useOversoldResource(Boolean useOversoldResource) {
+            this.useOversoldResource = useOversoldResource;
+            return this;
+        }
+
+        /**
          * UserId.
          */
         public Builder userId(String userId) {
@@ -478,6 +512,14 @@ public class QueueInfo extends TeaModel {
          */
         public Builder workspaceId(String workspaceId) {
             this.workspaceId = workspaceId;
+            return this;
+        }
+
+        /**
+         * WorkspaceName.
+         */
+        public Builder workspaceName(String workspaceName) {
+            this.workspaceName = workspaceName;
             return this;
         }
 

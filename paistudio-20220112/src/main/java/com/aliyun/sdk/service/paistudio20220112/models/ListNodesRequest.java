@@ -22,6 +22,10 @@ public class ListNodesRequest extends Request {
     private String acceleratorType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvailabilityZone")
+    private String availabilityZone;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FilterByQuotaId")
     private String filterByQuotaId;
 
@@ -32,6 +36,10 @@ public class ListNodesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GPUType")
     private String GPUType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HyperZone")
+    private String hyperZone;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MachineGroupIds")
@@ -88,9 +96,11 @@ public class ListNodesRequest extends Request {
     private ListNodesRequest(Builder builder) {
         super(builder);
         this.acceleratorType = builder.acceleratorType;
+        this.availabilityZone = builder.availabilityZone;
         this.filterByQuotaId = builder.filterByQuotaId;
         this.filterByResourceGroupIds = builder.filterByResourceGroupIds;
         this.GPUType = builder.GPUType;
+        this.hyperZone = builder.hyperZone;
         this.machineGroupIds = builder.machineGroupIds;
         this.nodeNames = builder.nodeNames;
         this.nodeStatuses = builder.nodeStatuses;
@@ -127,6 +137,13 @@ public class ListNodesRequest extends Request {
     }
 
     /**
+     * @return availabilityZone
+     */
+    public String getAvailabilityZone() {
+        return this.availabilityZone;
+    }
+
+    /**
      * @return filterByQuotaId
      */
     public String getFilterByQuotaId() {
@@ -145,6 +162,13 @@ public class ListNodesRequest extends Request {
      */
     public String getGPUType() {
         return this.GPUType;
+    }
+
+    /**
+     * @return hyperZone
+     */
+    public String getHyperZone() {
+        return this.hyperZone;
     }
 
     /**
@@ -240,9 +264,11 @@ public class ListNodesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListNodesRequest, Builder> {
         private String acceleratorType; 
+        private String availabilityZone; 
         private String filterByQuotaId; 
         private String filterByResourceGroupIds; 
         private String GPUType; 
+        private String hyperZone; 
         private String machineGroupIds; 
         private String nodeNames; 
         private String nodeStatuses; 
@@ -264,9 +290,11 @@ public class ListNodesRequest extends Request {
         private Builder(ListNodesRequest request) {
             super(request);
             this.acceleratorType = request.acceleratorType;
+            this.availabilityZone = request.availabilityZone;
             this.filterByQuotaId = request.filterByQuotaId;
             this.filterByResourceGroupIds = request.filterByResourceGroupIds;
             this.GPUType = request.GPUType;
+            this.hyperZone = request.hyperZone;
             this.machineGroupIds = request.machineGroupIds;
             this.nodeNames = request.nodeNames;
             this.nodeStatuses = request.nodeStatuses;
@@ -288,6 +316,15 @@ public class ListNodesRequest extends Request {
         public Builder acceleratorType(String acceleratorType) {
             this.putQueryParameter("AcceleratorType", acceleratorType);
             this.acceleratorType = acceleratorType;
+            return this;
+        }
+
+        /**
+         * AvailabilityZone.
+         */
+        public Builder availabilityZone(String availabilityZone) {
+            this.putQueryParameter("AvailabilityZone", availabilityZone);
+            this.availabilityZone = availabilityZone;
             return this;
         }
 
@@ -315,6 +352,15 @@ public class ListNodesRequest extends Request {
         public Builder GPUType(String GPUType) {
             this.putQueryParameter("GPUType", GPUType);
             this.GPUType = GPUType;
+            return this;
+        }
+
+        /**
+         * HyperZone.
+         */
+        public Builder hyperZone(String hyperZone) {
+            this.putQueryParameter("HyperZone", hyperZone);
+            this.hyperZone = hyperZone;
             return this;
         }
 

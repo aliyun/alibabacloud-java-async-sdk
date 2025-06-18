@@ -20,6 +20,9 @@ public class Node extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AcceleratorType")
     private String acceleratorType;
 
+    @com.aliyun.core.annotation.NameInMap("AvailabilityZone")
+    private String availabilityZone;
+
     @com.aliyun.core.annotation.NameInMap("BoundQuotas")
     private java.util.List<QuotaIdName> boundQuotas;
 
@@ -46,6 +49,9 @@ public class Node extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
+
+    @com.aliyun.core.annotation.NameInMap("HyperZone")
+    private String hyperZone;
 
     @com.aliyun.core.annotation.NameInMap("IsBound")
     private Boolean isBound;
@@ -109,6 +115,7 @@ public class Node extends TeaModel {
 
     private Node(Builder builder) {
         this.acceleratorType = builder.acceleratorType;
+        this.availabilityZone = builder.availabilityZone;
         this.boundQuotas = builder.boundQuotas;
         this.CPU = builder.CPU;
         this.creatorId = builder.creatorId;
@@ -118,6 +125,7 @@ public class Node extends TeaModel {
         this.gmtCreateTime = builder.gmtCreateTime;
         this.gmtExpiredTime = builder.gmtExpiredTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
+        this.hyperZone = builder.hyperZone;
         this.isBound = builder.isBound;
         this.limitCPU = builder.limitCPU;
         this.limitGPU = builder.limitGPU;
@@ -157,6 +165,13 @@ public class Node extends TeaModel {
      */
     public String getAcceleratorType() {
         return this.acceleratorType;
+    }
+
+    /**
+     * @return availabilityZone
+     */
+    public String getAvailabilityZone() {
+        return this.availabilityZone;
     }
 
     /**
@@ -220,6 +235,13 @@ public class Node extends TeaModel {
      */
     public String getGmtModifiedTime() {
         return this.gmtModifiedTime;
+    }
+
+    /**
+     * @return hyperZone
+     */
+    public String getHyperZone() {
+        return this.hyperZone;
     }
 
     /**
@@ -364,6 +386,7 @@ public class Node extends TeaModel {
 
     public static final class Builder {
         private String acceleratorType; 
+        private String availabilityZone; 
         private java.util.List<QuotaIdName> boundQuotas; 
         private String CPU; 
         private String creatorId; 
@@ -373,6 +396,7 @@ public class Node extends TeaModel {
         private String gmtCreateTime; 
         private String gmtExpiredTime; 
         private String gmtModifiedTime; 
+        private String hyperZone; 
         private Boolean isBound; 
         private String limitCPU; 
         private String limitGPU; 
@@ -399,6 +423,7 @@ public class Node extends TeaModel {
 
         private Builder(Node model) {
             this.acceleratorType = model.acceleratorType;
+            this.availabilityZone = model.availabilityZone;
             this.boundQuotas = model.boundQuotas;
             this.CPU = model.CPU;
             this.creatorId = model.creatorId;
@@ -408,6 +433,7 @@ public class Node extends TeaModel {
             this.gmtCreateTime = model.gmtCreateTime;
             this.gmtExpiredTime = model.gmtExpiredTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
+            this.hyperZone = model.hyperZone;
             this.isBound = model.isBound;
             this.limitCPU = model.limitCPU;
             this.limitGPU = model.limitGPU;
@@ -435,6 +461,14 @@ public class Node extends TeaModel {
          */
         public Builder acceleratorType(String acceleratorType) {
             this.acceleratorType = acceleratorType;
+            return this;
+        }
+
+        /**
+         * AvailabilityZone.
+         */
+        public Builder availabilityZone(String availabilityZone) {
+            this.availabilityZone = availabilityZone;
             return this;
         }
 
@@ -507,6 +541,14 @@ public class Node extends TeaModel {
          */
         public Builder gmtModifiedTime(String gmtModifiedTime) {
             this.gmtModifiedTime = gmtModifiedTime;
+            return this;
+        }
+
+        /**
+         * HyperZone.
+         */
+        public Builder hyperZone(String hyperZone) {
+            this.hyperZone = hyperZone;
             return this;
         }
 
