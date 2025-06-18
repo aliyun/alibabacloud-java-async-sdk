@@ -786,7 +786,7 @@ public class UpdateConnectionRequest extends Request {
             } 
 
             /**
-             * <p>The parameters that are configured for the request.</p>
+             * <p>The parameters that are configured for the request body.</p>
              */
             public Builder bodyParameters(java.util.List<BodyParameters> bodyParameters) {
                 this.bodyParameters = bodyParameters;

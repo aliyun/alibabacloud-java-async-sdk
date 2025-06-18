@@ -868,6 +868,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this API operation to query all custom event sources.</p>
+     * 
      * @param request the request parameters of TestEventSourceConfig  TestEventSourceConfigRequest
      * @return TestEventSourceConfigResponse
      */

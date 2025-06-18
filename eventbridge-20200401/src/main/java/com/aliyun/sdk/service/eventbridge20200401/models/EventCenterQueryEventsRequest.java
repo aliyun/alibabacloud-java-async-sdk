@@ -103,7 +103,7 @@ public class EventCenterQueryEventsRequest extends Request {
         } 
 
         /**
-         * <p>The parameters in the request body.</p>
+         * <p>The request body.</p>
          * <p>This parameter is required.</p>
          */
         public Builder body(EventCenterQueryEventsRequestBody body) {
@@ -758,7 +758,7 @@ public class EventCenterQueryEventsRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to further split the data set based on the column name.</p>
+             * <p>Specifies whether to further split the dataset based on the column name.</p>
              */
             public Builder breakdowns(java.util.List<String> breakdowns) {
                 this.breakdowns = breakdowns;
@@ -856,7 +856,7 @@ public class EventCenterQueryEventsRequest extends Request {
             }
 
             /**
-             * <p>The time range during which events are queried. Unit: milliseconds. Minimum value: 1000.</p>
+             * <p>The time range during which events are queried. Minimum value: 1000. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1000000</p>

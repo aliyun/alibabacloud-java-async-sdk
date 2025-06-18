@@ -106,7 +106,14 @@ public class TestEventSourceConfigResponseBody extends TeaModel {
         } 
 
         /**
-         * Code.
+         * <p>The response code. Valid values:</p>
+         * <ul>
+         * <li>Success: The request was successful.</li>
+         * <li>Other codes indicate that the request failed. For information about error codes, see Error codes.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -114,7 +121,7 @@ public class TestEventSourceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The update result.</p>
          */
         public Builder data(java.util.List<Data> data) {
             this.data = data;
@@ -122,7 +129,10 @@ public class TestEventSourceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -130,7 +140,10 @@ public class TestEventSourceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FF942675-F937-549C-A942-EB94FFE28DD3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +151,10 @@ public class TestEventSourceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. If the operation was successful, the value true is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -217,7 +233,10 @@ public class TestEventSourceConfigResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckItem.
+             * <p>The name of the check item.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CHECK_CONNECTION</p>
              */
             public Builder checkItem(String checkItem) {
                 this.checkItem = checkItem;
@@ -225,7 +244,10 @@ public class TestEventSourceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * <p>The error message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Connection established successfully.</p>
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -233,7 +255,10 @@ public class TestEventSourceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * IsSucceed.
+             * <p>Indicates whether the check item is executed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isSucceed(String isSucceed) {
                 this.isSucceed = isSucceed;

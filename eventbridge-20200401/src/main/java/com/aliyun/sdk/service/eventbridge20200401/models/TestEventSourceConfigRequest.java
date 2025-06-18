@@ -59,7 +59,7 @@ public class TestEventSourceConfigRequest extends Request {
         } 
 
         /**
-         * SourceMySQLParameters.
+         * <p>The parameters that are configured if you specify MySQL as the event source.</p>
          */
         public Builder sourceMySQLParameters(SourceMySQLParameters sourceMySQLParameters) {
             String sourceMySQLParametersShrink = shrink(sourceMySQLParameters, "SourceMySQLParameters", "json");
@@ -245,7 +245,10 @@ public class TestEventSourceConfigRequest extends Request {
             } 
 
             /**
-             * DatabaseName.
+             * <p>The database name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database1</p>
              */
             public Builder databaseName(String databaseName) {
                 this.databaseName = databaseName;
@@ -253,7 +256,10 @@ public class TestEventSourceConfigRequest extends Request {
             }
 
             /**
-             * HostName.
+             * <p>The endpoint of the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rm-bp1vxxx.mysql.rds.aliyuncs.com</p>
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -261,7 +267,15 @@ public class TestEventSourceConfigRequest extends Request {
             }
 
             /**
-             * NetworkType.
+             * <p>The network type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>PrivateNetwork</li>
+             * <li>PublicNetwork</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivateNetwork</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -269,7 +283,10 @@ public class TestEventSourceConfigRequest extends Request {
             }
 
             /**
-             * Password.
+             * <p>The password that is used for authentication.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1234xxx</p>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -277,7 +294,10 @@ public class TestEventSourceConfigRequest extends Request {
             }
 
             /**
-             * Port.
+             * <p>The port that is used to connect to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -285,7 +305,10 @@ public class TestEventSourceConfigRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -293,7 +316,10 @@ public class TestEventSourceConfigRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-xxx</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -301,7 +327,10 @@ public class TestEventSourceConfigRequest extends Request {
             }
 
             /**
-             * TableNames.
+             * <p>The table name. The name must be prefixed with the database name. ${DatabaseName}.${TableName}</p>
+             * 
+             * <strong>example:</strong>
+             * <p>database1.table1</p>
              */
             public Builder tableNames(String tableNames) {
                 this.tableNames = tableNames;
@@ -309,7 +338,10 @@ public class TestEventSourceConfigRequest extends Request {
             }
 
             /**
-             * User.
+             * <p>The username that is used to log on to the database.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user***</p>
              */
             public Builder user(String user) {
                 this.user = user;
@@ -317,7 +349,10 @@ public class TestEventSourceConfigRequest extends Request {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1gb7xxx</p>
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -325,7 +360,7 @@ public class TestEventSourceConfigRequest extends Request {
             }
 
             /**
-             * <p>VPC ID。</p>
+             * <p>The virtual private cloud (VPC) ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-xxx</p>

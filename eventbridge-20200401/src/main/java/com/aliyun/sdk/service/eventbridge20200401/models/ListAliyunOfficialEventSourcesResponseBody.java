@@ -117,7 +117,7 @@ public class ListAliyunOfficialEventSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;

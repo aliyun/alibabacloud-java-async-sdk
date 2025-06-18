@@ -106,7 +106,11 @@ public class ListRulesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The error code. The value Success indicates that the request is successful.</p>
+         * <p>The response code.</p>
+         * <ul>
+         * <li><strong>Success</strong>: The request was successful.</li>
+         * <li><strong>Other codes</strong>: The request failed. For more information about error codes, see Error codes.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -117,7 +121,7 @@ public class ListRulesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The data returned.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -266,7 +270,14 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorsTolerance.
+             * <p>The fault tolerance policy. Valid values:</p>
+             * <ul>
+             * <li><strong>ALL</strong>: Fault tolerance is allowed. If an error occurs in an event, event processing is not blocked. If the event fails to be sent after the maximum number of retries specified by the retry policy is reached, the event is delivered to the dead-letter queue or discarded based on your configurations.</li>
+             * <li><strong>NONE</strong>: Fault tolerance is prohibited. If an error occurs in an event and the event fails to be sent after the maximum number of retries specified by the retry policy is reached, event processing is blocked.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ALL</p>
              */
             public Builder errorsTolerance(String errorsTolerance) {
                 this.errorsTolerance = errorsTolerance;
@@ -498,8 +509,11 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The event pattern, in JSON format. Valid values: stringEqual pattern stringExpression pattern Each field can have a maximum of five expressions in the map data structure.</p>
-             * <p>Each field can have a maximum of five expressions in the map data structure.</p>
+             * <p>The event pattern, in JSON format. Valid values:</p>
+             * <ul>
+             * <li><strong>stringEqual</strong>: Up to five expressions in the map data structure can be specified in each field.</li>
+             * <li><strong>stringExpression</strong>: Up to five expressions in the map data structure can be specified in each field.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>{&quot;source&quot;:[&quot;acs.oss&quot;],&quot;type&quot;:[&quot;oss:BucketQueried:GetBucketStat&quot;]}</p>
@@ -532,7 +546,11 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The status of the event rule. Valid values: ENABLE: The event rule is enabled. It is the default state of the event rule. DISABLE: The event rule is disabled.</p>
+             * <p>The status of the event rule. Valid values:</p>
+             * <ul>
+             * <li><strong>ENABLE</strong> (default)</li>
+             * <li><strong>DISABLE</strong></li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ENABLE</p>
@@ -634,7 +652,7 @@ public class ListRulesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rules.</p>
+             * <p>The event rules.</p>
              */
             public Builder rules(java.util.List<Rules> rules) {
                 this.rules = rules;

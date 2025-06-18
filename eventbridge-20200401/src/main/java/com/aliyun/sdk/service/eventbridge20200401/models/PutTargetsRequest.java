@@ -116,7 +116,7 @@ public class PutTargetsRequest extends Request {
         }
 
         /**
-         * <p>The event targets to be created or updated. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/limits">Limits.</a></p>
+         * <p>The event targets to be created or updated. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
          * <p>This parameter is required.</p>
          */
         public Builder targets(java.util.List<Targets> targets) {
@@ -173,7 +173,10 @@ public class PutTargetsRequest extends Request {
             } 
 
             /**
-             * Concurrency.
+             * <p>The concurrency.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder concurrency(Long concurrency) {
                 this.concurrency = concurrency;
@@ -279,7 +282,7 @@ public class PutTargetsRequest extends Request {
             } 
 
             /**
-             * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue. Events that are not processed or whose maximum retries have been exceeded are written to the dead-letter queue.</p>
+             * <p>The Alibaba Cloud Resource Name (ARN) of the dead-letter queue. Events that are not processed or whose maximum retries are exceeded are written to the dead-letter queue.</p>
              * 
              * <strong>example:</strong>
              * <p>acs:mns:cn-hangzhou:123456789098****:/queues/deadletterqueue or acs:mq:cn-hangzhou:123456789098****:/instances/MQ_INST_123456789098****_BX8QbBPL/topic/deadlettertopic or acs:alikafka:cn-hangzhou:123456789098****:instance/alikafka_post-cn-123456/topic/deadlettertopic or acs:eventbridge:cn-hangzhou:123456789098****:eventbus/deadletterbus</p>
@@ -407,7 +410,7 @@ public class PutTargetsRequest extends Request {
             } 
 
             /**
-             * <p>The method that is used to deliver events to the event target. For more information,see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters">Event target parameters.</a></p>
+             * <p>The format of input parameters for the event target. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>TEMPLATE</p>
@@ -418,7 +421,7 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The resource parameter of the event target. For more information,see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters">Event target parameters.</a></p>
+             * <p>The resource key of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>body</p>
@@ -429,7 +432,7 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The template based on which events are delivered to the event target.</p>
+             * <p>The structure of the template for the event target.</p>
              * 
              * <strong>example:</strong>
              * <p>The value of ${key} is ${value}!</p>
@@ -440,7 +443,7 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The value of the event target parameter.</p>
+             * <p>The event target.</p>
              * 
              * <strong>example:</strong>
              * <p>{&quot;key&quot;=&quot;value&quot;}</p>
@@ -590,7 +593,7 @@ public class PutTargetsRequest extends Request {
             } 
 
             /**
-             * ConcurrentConfig.
+             * <p>The concurrency configuration.</p>
              */
             public Builder concurrentConfig(ConcurrentConfig concurrentConfig) {
                 this.concurrentConfig = concurrentConfig;
@@ -598,7 +601,7 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The dead-letter queue. Events that are not processed or whose maximum retries have been exceeded are written to the dead-letter queue. The dead-letter queue feature supports the following queue types: Message Queue for Apache RocketMQ, Message Service, Message Queue for Apache Kafka, and event bus.</p>
+             * <p>The dead-letter queue. Events that are not processed or whose maximum retries are exceeded are written to the dead-letter queue. You can use queues in ApsaraMQ for RocketMQ, Simple Message Queue (SMQ, formerly MNS), and ApsaraMQ for Kafka as dead-letter queues. You can also use event buses in EventBridge as dead-letter queues.</p>
              */
             public Builder deadLetterQueue(DeadLetterQueue deadLetterQueue) {
                 this.deadLetterQueue = deadLetterQueue;
@@ -619,10 +622,8 @@ public class PutTargetsRequest extends Request {
             /**
              * <p>The fault tolerance policy. Valid values:</p>
              * <ul>
-             * <li><p><strong>ALL</strong>: ignores the error. Fault tolerance is allowed. If an error occurs, event processing is not blocked. If the message exceeds the number of retries specified by the retry policy, the message is delivered to a dead-letter queue or discarded based on your configurations.</p>
-             * </li>
-             * <li><p><strong>NONE</strong>: does not ignore the error. Fault tolerance is prohibited. If an error occurs and the message exceeds the number of retries specified by the retry policy, event processing is blocked.</p>
-             * </li>
+             * <li><strong>ALL</strong>: allows fault tolerance. If an error occurs, event processing is not blocked. If the message exceeds the number of retries specified by the retry policy, the message is delivered to a dead-letter queue or discarded based on your configurations.</li>
+             * <li><strong>NONE</strong>: prohibits fault tolerance. If an error occurs and the message exceeds the number of retries specified by the retry policy, event processing is blocked.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -634,7 +635,7 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The ID of the custom event target.</p>
+             * <p>The ID of the event target.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -654,12 +655,10 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The retry policy for pushing the event. Valid values:</p>
+             * <p>The retry policy to be used to push events. Valid values:</p>
              * <ul>
-             * <li><p><strong>BACKOFF_RETRY</strong>: backoff retry. A failed event can be retried up to three times. The interval between two consecutive retries is a random value from 10 to 20. Unit: seconds.</p>
-             * </li>
-             * <li><p><strong>EXPONENTIAL_DECAY_RETRY</strong>: exponential decay retry. The request can be retried up to 176 times. The interval between two consecutive retries exponentially increases to 512 seconds, and the total retry time is one day. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 512, ..., and 512 seconds. The interval of 512 seconds can be used up to one hundred and sixty-seven times in total.</p>
-             * </li>
+             * <li><strong>BACKOFF_RETRY</strong>: backoff retry. A failed event can be retried up to three times. The interval between two consecutive retries is a random value from 10 seconds to 20 seconds.</li>
+             * <li><strong>EXPONENTIAL_DECAY_RETRY</strong>: exponential decay retry. A failed event can be retried up to 176 times. The interval between two consecutive retries exponentially increases to a maximum of 512 seconds. The total retry time is 1 day. The specific retry intervals are 1, 2, 4, 8, 16, 32, 64, 128, 256, and 512 seconds. The interval of 512 seconds is used for 167 retries.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -671,7 +670,7 @@ public class PutTargetsRequest extends Request {
             }
 
             /**
-             * <p>The type of the event target. For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/latest/event-target-parameters">Event target parameters.</a></p>
+             * <p>The type of the event target. For more information, see <a href="https://help.aliyun.com/document_detail/185887.html">Event target parameters</a>.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>

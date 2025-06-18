@@ -196,7 +196,7 @@ public class CreateEventStreamingRequest extends Request {
         }
 
         /**
-         * <p>The configurations of the runtime environment.</p>
+         * <p>The parameters that are configured for the runtime environment.</p>
          */
         public Builder runOptions(RunOptions runOptions) {
             String runOptionsShrink = shrink(runOptions, "RunOptions", "json");
@@ -306,7 +306,7 @@ public class CreateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The maximum number of events that is allowed in the batch window. When this threshold is reached, data in the window is pushed to the downstream service. When multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.</p>
+             * <p>The maximum number of events that are allowed in the batch window. When this threshold is reached, data in the window is pushed to the downstream service. If multiple batch windows exist, data is pushed if the triggering conditions are met in one of the windows.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -317,7 +317,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The maximum period of time during which events are allowed in the batch window. Unit: seconds. When this threshold is reached, data in the window is pushed to the downstream service. When multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.</p>
+             * <p>The maximum period of time during which events are allowed in the batch window. Unit: seconds. When this threshold is reached, data in the window is pushed to the downstream service. If multiple batch windows exist, data is pushed if the triggering conditions are met in one of the windows.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -329,6 +329,102 @@ public class CreateEventStreamingRequest extends Request {
 
             public BatchWindow build() {
                 return new BatchWindow(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class BusinessOption extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BusinessMode")
+        private String businessMode;
+
+        @com.aliyun.core.annotation.NameInMap("MaxCapacityUnitCount")
+        private Long maxCapacityUnitCount;
+
+        @com.aliyun.core.annotation.NameInMap("MinCapacityUnitCount")
+        private Long minCapacityUnitCount;
+
+        private BusinessOption(Builder builder) {
+            this.businessMode = builder.businessMode;
+            this.maxCapacityUnitCount = builder.maxCapacityUnitCount;
+            this.minCapacityUnitCount = builder.minCapacityUnitCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BusinessOption create() {
+            return builder().build();
+        }
+
+        /**
+         * @return businessMode
+         */
+        public String getBusinessMode() {
+            return this.businessMode;
+        }
+
+        /**
+         * @return maxCapacityUnitCount
+         */
+        public Long getMaxCapacityUnitCount() {
+            return this.maxCapacityUnitCount;
+        }
+
+        /**
+         * @return minCapacityUnitCount
+         */
+        public Long getMinCapacityUnitCount() {
+            return this.minCapacityUnitCount;
+        }
+
+        public static final class Builder {
+            private String businessMode; 
+            private Long maxCapacityUnitCount; 
+            private Long minCapacityUnitCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(BusinessOption model) {
+                this.businessMode = model.businessMode;
+                this.maxCapacityUnitCount = model.maxCapacityUnitCount;
+                this.minCapacityUnitCount = model.minCapacityUnitCount;
+            } 
+
+            /**
+             * BusinessMode.
+             */
+            public Builder businessMode(String businessMode) {
+                this.businessMode = businessMode;
+                return this;
+            }
+
+            /**
+             * MaxCapacityUnitCount.
+             */
+            public Builder maxCapacityUnitCount(Long maxCapacityUnitCount) {
+                this.maxCapacityUnitCount = maxCapacityUnitCount;
+                return this;
+            }
+
+            /**
+             * MinCapacityUnitCount.
+             */
+            public Builder minCapacityUnitCount(Long minCapacityUnitCount) {
+                this.minCapacityUnitCount = minCapacityUnitCount;
+                return this;
+            }
+
+            public BusinessOption build() {
+                return new BusinessOption(this);
             } 
 
         } 
@@ -594,6 +690,9 @@ public class CreateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("BatchWindow")
         private BatchWindow batchWindow;
 
+        @com.aliyun.core.annotation.NameInMap("BusinessOption")
+        private BusinessOption businessOption;
+
         @com.aliyun.core.annotation.NameInMap("DeadLetterQueue")
         private DeadLetterQueue deadLetterQueue;
 
@@ -611,6 +710,7 @@ public class CreateEventStreamingRequest extends Request {
 
         private RunOptions(Builder builder) {
             this.batchWindow = builder.batchWindow;
+            this.businessOption = builder.businessOption;
             this.deadLetterQueue = builder.deadLetterQueue;
             this.errorsTolerance = builder.errorsTolerance;
             this.maximumTasks = builder.maximumTasks;
@@ -631,6 +731,13 @@ public class CreateEventStreamingRequest extends Request {
          */
         public BatchWindow getBatchWindow() {
             return this.batchWindow;
+        }
+
+        /**
+         * @return businessOption
+         */
+        public BusinessOption getBusinessOption() {
+            return this.businessOption;
         }
 
         /**
@@ -670,6 +777,7 @@ public class CreateEventStreamingRequest extends Request {
 
         public static final class Builder {
             private BatchWindow batchWindow; 
+            private BusinessOption businessOption; 
             private DeadLetterQueue deadLetterQueue; 
             private String errorsTolerance; 
             private Long maximumTasks; 
@@ -681,6 +789,7 @@ public class CreateEventStreamingRequest extends Request {
 
             private Builder(RunOptions model) {
                 this.batchWindow = model.batchWindow;
+                this.businessOption = model.businessOption;
                 this.deadLetterQueue = model.deadLetterQueue;
                 this.errorsTolerance = model.errorsTolerance;
                 this.maximumTasks = model.maximumTasks;
@@ -697,7 +806,15 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether dead-letter queues are enabled. By default, dead-letter queues are disabled. Events that fail to be pushed are discarded after the maximum number of retries that is specified by the retry policy is reached.</p>
+             * BusinessOption.
+             */
+            public Builder businessOption(BusinessOption businessOption) {
+                this.businessOption = businessOption;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable dead-letter queues. By default, dead-letter queues are disabled. Messages that fail to be pushed after the allowed retries as specified by the retry policy are discarded.</p>
              */
             public Builder deadLetterQueue(DeadLetterQueue deadLetterQueue) {
                 this.deadLetterQueue = deadLetterQueue;
@@ -720,7 +837,7 @@ public class CreateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The maximum number of concurrent threads.</p>
+             * <p>The maximum number of concurrent tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -2889,6 +3006,1563 @@ public class CreateEventStreamingRequest extends Request {
 
             public SinkDataHubParameters build() {
                 return new SinkDataHubParameters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class BeHttpEndpoint extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private BeHttpEndpoint(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BeHttpEndpoint create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(BeHttpEndpoint model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The topic type. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public BeHttpEndpoint build() {
+                return new BeHttpEndpoint(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class SinkDorisParametersBody extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SinkDorisParametersBody(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkDorisParametersBody create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkDorisParametersBody model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The topic type. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SinkDorisParametersBody build() {
+                return new SinkDorisParametersBody(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class Database extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Database(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Database create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Database model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The topic type. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Database build() {
+                return new Database(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class FeHttpEndpoint extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private FeHttpEndpoint(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FeHttpEndpoint create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(FeHttpEndpoint model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The topic type. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public FeHttpEndpoint build() {
+                return new FeHttpEndpoint(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class NetworkType extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private NetworkType(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkType model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The topic type. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public NetworkType build() {
+                return new NetworkType(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class Password extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Password(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Password create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Password model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The topic type. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Password build() {
+                return new Password(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class QueryEndpoint extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private QueryEndpoint(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QueryEndpoint create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryEndpoint model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The topic type. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public QueryEndpoint build() {
+                return new QueryEndpoint(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class SecurityGroupId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SecurityGroupId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityGroupId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The topic type. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SecurityGroupId build() {
+                return new SecurityGroupId(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class Table extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Table(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Table create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Table model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The topic type. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Table build() {
+                return new Table(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class UserName extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private UserName(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserName create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserName model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The topic type. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public UserName build() {
+                return new UserName(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class VSwitchIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private VSwitchIds(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VSwitchIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchIds model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The topic type. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VSwitchIds build() {
+                return new VSwitchIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class VpcId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private VpcId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpcId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The topic type. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VpcId build() {
+                return new VpcId(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>CreateEventStreamingRequest</p>
+     */
+    public static class SinkDorisParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BeHttpEndpoint")
+        private BeHttpEndpoint beHttpEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("Body")
+        private SinkDorisParametersBody body;
+
+        @com.aliyun.core.annotation.NameInMap("Database")
+        private Database database;
+
+        @com.aliyun.core.annotation.NameInMap("FeHttpEndpoint")
+        private FeHttpEndpoint feHttpEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        private NetworkType networkType;
+
+        @com.aliyun.core.annotation.NameInMap("Password")
+        private Password password;
+
+        @com.aliyun.core.annotation.NameInMap("QueryEndpoint")
+        private QueryEndpoint queryEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private SecurityGroupId securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Table")
+        private Table table;
+
+        @com.aliyun.core.annotation.NameInMap("UserName")
+        private UserName userName;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private VSwitchIds vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private VpcId vpcId;
+
+        private SinkDorisParameters(Builder builder) {
+            this.beHttpEndpoint = builder.beHttpEndpoint;
+            this.body = builder.body;
+            this.database = builder.database;
+            this.feHttpEndpoint = builder.feHttpEndpoint;
+            this.networkType = builder.networkType;
+            this.password = builder.password;
+            this.queryEndpoint = builder.queryEndpoint;
+            this.securityGroupId = builder.securityGroupId;
+            this.table = builder.table;
+            this.userName = builder.userName;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkDorisParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return beHttpEndpoint
+         */
+        public BeHttpEndpoint getBeHttpEndpoint() {
+            return this.beHttpEndpoint;
+        }
+
+        /**
+         * @return body
+         */
+        public SinkDorisParametersBody getBody() {
+            return this.body;
+        }
+
+        /**
+         * @return database
+         */
+        public Database getDatabase() {
+            return this.database;
+        }
+
+        /**
+         * @return feHttpEndpoint
+         */
+        public FeHttpEndpoint getFeHttpEndpoint() {
+            return this.feHttpEndpoint;
+        }
+
+        /**
+         * @return networkType
+         */
+        public NetworkType getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
+         * @return password
+         */
+        public Password getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return queryEndpoint
+         */
+        public QueryEndpoint getQueryEndpoint() {
+            return this.queryEndpoint;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public SecurityGroupId getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return table
+         */
+        public Table getTable() {
+            return this.table;
+        }
+
+        /**
+         * @return userName
+         */
+        public UserName getUserName() {
+            return this.userName;
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public VSwitchIds getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public VpcId getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private BeHttpEndpoint beHttpEndpoint; 
+            private SinkDorisParametersBody body; 
+            private Database database; 
+            private FeHttpEndpoint feHttpEndpoint; 
+            private NetworkType networkType; 
+            private Password password; 
+            private QueryEndpoint queryEndpoint; 
+            private SecurityGroupId securityGroupId; 
+            private Table table; 
+            private UserName userName; 
+            private VSwitchIds vSwitchIds; 
+            private VpcId vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkDorisParameters model) {
+                this.beHttpEndpoint = model.beHttpEndpoint;
+                this.body = model.body;
+                this.database = model.database;
+                this.feHttpEndpoint = model.feHttpEndpoint;
+                this.networkType = model.networkType;
+                this.password = model.password;
+                this.queryEndpoint = model.queryEndpoint;
+                this.securityGroupId = model.securityGroupId;
+                this.table = model.table;
+                this.userName = model.userName;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * BeHttpEndpoint.
+             */
+            public Builder beHttpEndpoint(BeHttpEndpoint beHttpEndpoint) {
+                this.beHttpEndpoint = beHttpEndpoint;
+                return this;
+            }
+
+            /**
+             * <p>The BLOB topic.</p>
+             */
+            public Builder body(SinkDorisParametersBody body) {
+                this.body = body;
+                return this;
+            }
+
+            /**
+             * Database.
+             */
+            public Builder database(Database database) {
+                this.database = database;
+                return this;
+            }
+
+            /**
+             * FeHttpEndpoint.
+             */
+            public Builder feHttpEndpoint(FeHttpEndpoint feHttpEndpoint) {
+                this.feHttpEndpoint = feHttpEndpoint;
+                return this;
+            }
+
+            /**
+             * NetworkType.
+             */
+            public Builder networkType(NetworkType networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * Password.
+             */
+            public Builder password(Password password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * QueryEndpoint.
+             */
+            public Builder queryEndpoint(QueryEndpoint queryEndpoint) {
+                this.queryEndpoint = queryEndpoint;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(SecurityGroupId securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * Table.
+             */
+            public Builder table(Table table) {
+                this.table = table;
+                return this;
+            }
+
+            /**
+             * UserName.
+             */
+            public Builder userName(UserName userName) {
+                this.userName = userName;
+                return this;
+            }
+
+            /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(VSwitchIds vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(VpcId vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public SinkDorisParameters build() {
+                return new SinkDorisParameters(this);
             } 
 
         } 
@@ -6656,7 +8330,7 @@ public class CreateEventStreamingRequest extends Request {
      *
      * <p>CreateEventStreamingRequest</p>
      */
-    public static class NetworkType extends TeaModel {
+    public static class SinkPrometheusParametersNetworkType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -6666,7 +8340,7 @@ public class CreateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private NetworkType(Builder builder) {
+        private SinkPrometheusParametersNetworkType(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -6676,7 +8350,7 @@ public class CreateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static NetworkType create() {
+        public static SinkPrometheusParametersNetworkType create() {
             return builder().build();
         }
 
@@ -6709,7 +8383,7 @@ public class CreateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(NetworkType model) {
+            private Builder(SinkPrometheusParametersNetworkType model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -6745,8 +8419,8 @@ public class CreateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public NetworkType build() {
-                return new NetworkType(this);
+            public SinkPrometheusParametersNetworkType build() {
+                return new SinkPrometheusParametersNetworkType(this);
             } 
 
         } 
@@ -6758,7 +8432,7 @@ public class CreateEventStreamingRequest extends Request {
      *
      * <p>CreateEventStreamingRequest</p>
      */
-    public static class Password extends TeaModel {
+    public static class SinkPrometheusParametersPassword extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -6768,7 +8442,7 @@ public class CreateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private Password(Builder builder) {
+        private SinkPrometheusParametersPassword(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -6778,7 +8452,7 @@ public class CreateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static Password create() {
+        public static SinkPrometheusParametersPassword create() {
             return builder().build();
         }
 
@@ -6811,7 +8485,7 @@ public class CreateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(Password model) {
+            private Builder(SinkPrometheusParametersPassword model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -6847,8 +8521,8 @@ public class CreateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public Password build() {
-                return new Password(this);
+            public SinkPrometheusParametersPassword build() {
+                return new SinkPrometheusParametersPassword(this);
             } 
 
         } 
@@ -6860,7 +8534,7 @@ public class CreateEventStreamingRequest extends Request {
      *
      * <p>CreateEventStreamingRequest</p>
      */
-    public static class SecurityGroupId extends TeaModel {
+    public static class SinkPrometheusParametersSecurityGroupId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -6870,7 +8544,7 @@ public class CreateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private SecurityGroupId(Builder builder) {
+        private SinkPrometheusParametersSecurityGroupId(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -6880,7 +8554,7 @@ public class CreateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static SecurityGroupId create() {
+        public static SinkPrometheusParametersSecurityGroupId create() {
             return builder().build();
         }
 
@@ -6913,7 +8587,7 @@ public class CreateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(SecurityGroupId model) {
+            private Builder(SinkPrometheusParametersSecurityGroupId model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -6949,8 +8623,8 @@ public class CreateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public SecurityGroupId build() {
-                return new SecurityGroupId(this);
+            public SinkPrometheusParametersSecurityGroupId build() {
+                return new SinkPrometheusParametersSecurityGroupId(this);
             } 
 
         } 
@@ -7265,7 +8939,7 @@ public class CreateEventStreamingRequest extends Request {
      *
      * <p>CreateEventStreamingRequest</p>
      */
-    public static class VpcId extends TeaModel {
+    public static class SinkPrometheusParametersVpcId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -7275,7 +8949,7 @@ public class CreateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private VpcId(Builder builder) {
+        private SinkPrometheusParametersVpcId(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -7285,7 +8959,7 @@ public class CreateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static VpcId create() {
+        public static SinkPrometheusParametersVpcId create() {
             return builder().build();
         }
 
@@ -7318,7 +8992,7 @@ public class CreateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(VpcId model) {
+            private Builder(SinkPrometheusParametersVpcId model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -7354,8 +9028,8 @@ public class CreateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public VpcId build() {
-                return new VpcId(this);
+            public SinkPrometheusParametersVpcId build() {
+                return new SinkPrometheusParametersVpcId(this);
             } 
 
         } 
@@ -7378,13 +9052,13 @@ public class CreateEventStreamingRequest extends Request {
         private HeaderParameters headerParameters;
 
         @com.aliyun.core.annotation.NameInMap("NetworkType")
-        private NetworkType networkType;
+        private SinkPrometheusParametersNetworkType networkType;
 
         @com.aliyun.core.annotation.NameInMap("Password")
-        private Password password;
+        private SinkPrometheusParametersPassword password;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
-        private SecurityGroupId securityGroupId;
+        private SinkPrometheusParametersSecurityGroupId securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("URL")
         private URL URL;
@@ -7396,7 +9070,7 @@ public class CreateEventStreamingRequest extends Request {
         private VSwitchId vSwitchId;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
-        private VpcId vpcId;
+        private SinkPrometheusParametersVpcId vpcId;
 
         private SinkPrometheusParameters(Builder builder) {
             this.authorizationType = builder.authorizationType;
@@ -7443,21 +9117,21 @@ public class CreateEventStreamingRequest extends Request {
         /**
          * @return networkType
          */
-        public NetworkType getNetworkType() {
+        public SinkPrometheusParametersNetworkType getNetworkType() {
             return this.networkType;
         }
 
         /**
          * @return password
          */
-        public Password getPassword() {
+        public SinkPrometheusParametersPassword getPassword() {
             return this.password;
         }
 
         /**
          * @return securityGroupId
          */
-        public SecurityGroupId getSecurityGroupId() {
+        public SinkPrometheusParametersSecurityGroupId getSecurityGroupId() {
             return this.securityGroupId;
         }
 
@@ -7485,7 +9159,7 @@ public class CreateEventStreamingRequest extends Request {
         /**
          * @return vpcId
          */
-        public VpcId getVpcId() {
+        public SinkPrometheusParametersVpcId getVpcId() {
             return this.vpcId;
         }
 
@@ -7493,13 +9167,13 @@ public class CreateEventStreamingRequest extends Request {
             private AuthorizationType authorizationType; 
             private Data data; 
             private HeaderParameters headerParameters; 
-            private NetworkType networkType; 
-            private Password password; 
-            private SecurityGroupId securityGroupId; 
+            private SinkPrometheusParametersNetworkType networkType; 
+            private SinkPrometheusParametersPassword password; 
+            private SinkPrometheusParametersSecurityGroupId securityGroupId; 
             private URL URL; 
             private Username username; 
             private VSwitchId vSwitchId; 
-            private VpcId vpcId; 
+            private SinkPrometheusParametersVpcId vpcId; 
 
             private Builder() {
             } 
@@ -7544,7 +9218,7 @@ public class CreateEventStreamingRequest extends Request {
             /**
              * <p>The network type.</p>
              */
-            public Builder networkType(NetworkType networkType) {
+            public Builder networkType(SinkPrometheusParametersNetworkType networkType) {
                 this.networkType = networkType;
                 return this;
             }
@@ -7552,7 +9226,7 @@ public class CreateEventStreamingRequest extends Request {
             /**
              * <p>The password.</p>
              */
-            public Builder password(Password password) {
+            public Builder password(SinkPrometheusParametersPassword password) {
                 this.password = password;
                 return this;
             }
@@ -7560,7 +9234,7 @@ public class CreateEventStreamingRequest extends Request {
             /**
              * <p>The ID of the security group to which the Managed Service for Prometheus instance belongs.</p>
              */
-            public Builder securityGroupId(SecurityGroupId securityGroupId) {
+            public Builder securityGroupId(SinkPrometheusParametersSecurityGroupId securityGroupId) {
                 this.securityGroupId = securityGroupId;
                 return this;
             }
@@ -7592,7 +9266,7 @@ public class CreateEventStreamingRequest extends Request {
             /**
              * <p>The ID of the VPC to which the Managed Service for Prometheus instance belongs.</p>
              */
-            public Builder vpcId(VpcId vpcId) {
+            public Builder vpcId(SinkPrometheusParametersVpcId vpcId) {
                 this.vpcId = vpcId;
                 return this;
             }
@@ -10703,7 +12377,7 @@ public class CreateEventStreamingRequest extends Request {
      *
      * <p>CreateEventStreamingRequest</p>
      */
-    public static class VSwitchIds extends TeaModel {
+    public static class SinkRocketMQParametersVSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -10713,7 +12387,7 @@ public class CreateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private VSwitchIds(Builder builder) {
+        private SinkRocketMQParametersVSwitchIds(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -10723,7 +12397,7 @@ public class CreateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static VSwitchIds create() {
+        public static SinkRocketMQParametersVSwitchIds create() {
             return builder().build();
         }
 
@@ -10756,7 +12430,7 @@ public class CreateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(VSwitchIds model) {
+            private Builder(SinkRocketMQParametersVSwitchIds model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -10792,8 +12466,8 @@ public class CreateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public VSwitchIds build() {
-                return new VSwitchIds(this);
+            public SinkRocketMQParametersVSwitchIds build() {
+                return new SinkRocketMQParametersVSwitchIds(this);
             } 
 
         } 
@@ -10951,7 +12625,7 @@ public class CreateEventStreamingRequest extends Request {
         private SinkRocketMQParametersTopic topic;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private VSwitchIds vSwitchIds;
+        private SinkRocketMQParametersVSwitchIds vSwitchIds;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private SinkRocketMQParametersVpcId vpcId;
@@ -11084,7 +12758,7 @@ public class CreateEventStreamingRequest extends Request {
         /**
          * @return vSwitchIds
          */
-        public VSwitchIds getVSwitchIds() {
+        public SinkRocketMQParametersVSwitchIds getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -11110,7 +12784,7 @@ public class CreateEventStreamingRequest extends Request {
             private ShardingKey shardingKey; 
             private SinkRocketMQParametersTags tags; 
             private SinkRocketMQParametersTopic topic; 
-            private VSwitchIds vSwitchIds; 
+            private SinkRocketMQParametersVSwitchIds vSwitchIds; 
             private SinkRocketMQParametersVpcId vpcId; 
 
             private Builder() {
@@ -11254,7 +12928,7 @@ public class CreateEventStreamingRequest extends Request {
             /**
              * <p>The ID of the vSwitch with which the ApsaraMQ for RocketMQ instance is associated.</p>
              */
-            public Builder vSwitchIds(VSwitchIds vSwitchIds) {
+            public Builder vSwitchIds(SinkRocketMQParametersVSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }
@@ -12208,6 +13882,9 @@ public class CreateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SinkDataHubParameters")
         private SinkDataHubParameters sinkDataHubParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SinkDorisParameters")
+        private SinkDorisParameters sinkDorisParameters;
+
         @com.aliyun.core.annotation.NameInMap("SinkFcParameters")
         private SinkFcParameters sinkFcParameters;
 
@@ -12245,6 +13922,7 @@ public class CreateEventStreamingRequest extends Request {
             this.sinkCustomizedKafkaParameters = builder.sinkCustomizedKafkaParameters;
             this.sinkDashVectorParameters = builder.sinkDashVectorParameters;
             this.sinkDataHubParameters = builder.sinkDataHubParameters;
+            this.sinkDorisParameters = builder.sinkDorisParameters;
             this.sinkFcParameters = builder.sinkFcParameters;
             this.sinkFnfParameters = builder.sinkFnfParameters;
             this.sinkKafkaParameters = builder.sinkKafkaParameters;
@@ -12305,6 +13983,13 @@ public class CreateEventStreamingRequest extends Request {
          */
         public SinkDataHubParameters getSinkDataHubParameters() {
             return this.sinkDataHubParameters;
+        }
+
+        /**
+         * @return sinkDorisParameters
+         */
+        public SinkDorisParameters getSinkDorisParameters() {
+            return this.sinkDorisParameters;
         }
 
         /**
@@ -12384,6 +14069,7 @@ public class CreateEventStreamingRequest extends Request {
             private SinkCustomizedKafkaParameters sinkCustomizedKafkaParameters; 
             private SinkDashVectorParameters sinkDashVectorParameters; 
             private SinkDataHubParameters sinkDataHubParameters; 
+            private SinkDorisParameters sinkDorisParameters; 
             private SinkFcParameters sinkFcParameters; 
             private SinkFnfParameters sinkFnfParameters; 
             private SinkKafkaParameters sinkKafkaParameters; 
@@ -12405,6 +14091,7 @@ public class CreateEventStreamingRequest extends Request {
                 this.sinkCustomizedKafkaParameters = model.sinkCustomizedKafkaParameters;
                 this.sinkDashVectorParameters = model.sinkDashVectorParameters;
                 this.sinkDataHubParameters = model.sinkDataHubParameters;
+                this.sinkDorisParameters = model.sinkDorisParameters;
                 this.sinkFcParameters = model.sinkFcParameters;
                 this.sinkFnfParameters = model.sinkFnfParameters;
                 this.sinkKafkaParameters = model.sinkKafkaParameters;
@@ -12462,6 +14149,14 @@ public class CreateEventStreamingRequest extends Request {
              */
             public Builder sinkDataHubParameters(SinkDataHubParameters sinkDataHubParameters) {
                 this.sinkDataHubParameters = sinkDataHubParameters;
+                return this;
+            }
+
+            /**
+             * SinkDorisParameters.
+             */
+            public Builder sinkDorisParameters(SinkDorisParameters sinkDorisParameters) {
+                this.sinkDorisParameters = sinkDorisParameters;
                 return this;
             }
 

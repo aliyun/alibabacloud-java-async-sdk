@@ -80,7 +80,7 @@ public class UpdateConnectionResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The response code. The value Success indicates that the request was successful.</p>
+         * <p>The response code. Valid value: 200, which indicates that the request was successful.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>

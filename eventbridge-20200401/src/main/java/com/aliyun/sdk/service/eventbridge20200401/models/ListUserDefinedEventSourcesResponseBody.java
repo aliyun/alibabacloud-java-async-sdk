@@ -121,7 +121,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * <p>The data returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -724,7 +724,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the MNS queue.</p>
+             * <p>The name of the SMQ queue.</p>
              * 
              * <strong>example:</strong>
              * <p>queue.openapi-sign-callback</p>
@@ -735,7 +735,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the region where the MNS queue resides.</p>
+             * <p>The ID of the region where the SMQ queue resides.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -1818,7 +1818,7 @@ public class ListUserDefinedEventSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The parameters that are returned if Message Service (MNS) is specified as the event source.</p>
+             * <p>The parameters that are returned if Simple Message Queue (formerly MNS) (SMQ) is specified as the event source.</p>
              */
             public Builder sourceMNSParameters(SourceMNSParameters sourceMNSParameters) {
                 this.sourceMNSParameters = sourceMNSParameters;

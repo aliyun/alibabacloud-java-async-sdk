@@ -368,6 +368,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TestEventPatternResponse> testEventPattern(TestEventPatternRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this API operation to query all custom event sources.</p>
+     * 
      * @param request the request parameters of TestEventSourceConfig  TestEventSourceConfigRequest
      * @return TestEventSourceConfigResponse
      */

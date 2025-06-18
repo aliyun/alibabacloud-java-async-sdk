@@ -265,6 +265,9 @@ public class UpdateEventSourceRequest extends Request {
 
         /**
          * <p>The configurations of the external data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;ConsumePosition&quot;:&quot;end&quot;,&quot;LogStore&quot;:&quot;oss_log&quot;,&quot;Project&quot;:&quot;slsaudit-center-5795350335281001-cn-beijing&quot;,&quot;RoleName&quot;:&quot;sls-beijing-tf&quot;}</p>
          */
         public Builder externalSourceConfig(java.util.Map<String, ?> externalSourceConfig) {
             String externalSourceConfigShrink = shrink(externalSourceConfig, "ExternalSourceConfig", "json");
@@ -275,6 +278,9 @@ public class UpdateEventSourceRequest extends Request {
 
         /**
          * <p>The type of the external data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS</p>
          */
         public Builder externalSourceType(String externalSourceType) {
             this.putBodyParameter("ExternalSourceType", externalSourceType);
@@ -284,6 +290,9 @@ public class UpdateEventSourceRequest extends Request {
 
         /**
          * <p>Specifies whether to connect to an external data source.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder linkedExternalSource(Boolean linkedExternalSource) {
             this.putBodyParameter("LinkedExternalSource", linkedExternalSource);

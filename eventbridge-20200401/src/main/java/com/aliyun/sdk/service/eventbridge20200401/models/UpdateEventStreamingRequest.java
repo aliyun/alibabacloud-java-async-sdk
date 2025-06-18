@@ -197,6 +197,25 @@ public class UpdateEventStreamingRequest extends Request {
         /**
          * <p>The rule that is used to filter events. If you leave this parameter empty, all events are matched.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *     &quot;source&quot;: [
+         *         {
+         *             &quot;prefix&quot;: &quot;acs:mns&quot;
+         *         }
+         *     ],
+         *     &quot;type&quot;: [
+         *         {
+         *             &quot;prefix&quot;: &quot;mns:Queue&quot;
+         *         }
+         *     ],
+         *     &quot;subject&quot;: [
+         *         {
+         *             &quot;prefix&quot;: &quot;acs:mns:cn-hangzhou:123456789098****:queues/zeus&quot;
+         *         }
+         *     ]
+         * }</p>
          */
         public Builder filterPattern(String filterPattern) {
             this.putBodyParameter("FilterPattern", filterPattern);
@@ -306,7 +325,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The maximum number of events that are allowed in the batch window. When this threshold is reached, data in the window is pushed to the downstream service. When multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.</p>
+             * <p>The maximum number of events that are allowed in the batch window. When this threshold is reached, data in the window is pushed to the downstream service. If multiple batch windows exist, data is pushed if the triggering conditions are met in one of the windows.</p>
              * 
              * <strong>example:</strong>
              * <p>100</p>
@@ -317,7 +336,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The maximum period of time during which events are allowed in the batch window. Unit: seconds. When this threshold is reached, data in the window is pushed to the downstream service. When multiple batch windows exist, data is pushed if triggering conditions are met in one of the windows.</p>
+             * <p>The maximum period of time during which events are allowed in the batch window. Unit: seconds. When this threshold is reached, data in the window is pushed to the downstream service. If multiple batch windows exist, data is pushed if the triggering conditions are met in one of the windows.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -329,6 +348,102 @@ public class UpdateEventStreamingRequest extends Request {
 
             public BatchWindow build() {
                 return new BatchWindow(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class BusinessOption extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BusinessMode")
+        private String businessMode;
+
+        @com.aliyun.core.annotation.NameInMap("MaxCapacityUnitCount")
+        private Long maxCapacityUnitCount;
+
+        @com.aliyun.core.annotation.NameInMap("MinCapacityUnitCount")
+        private Long minCapacityUnitCount;
+
+        private BusinessOption(Builder builder) {
+            this.businessMode = builder.businessMode;
+            this.maxCapacityUnitCount = builder.maxCapacityUnitCount;
+            this.minCapacityUnitCount = builder.minCapacityUnitCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BusinessOption create() {
+            return builder().build();
+        }
+
+        /**
+         * @return businessMode
+         */
+        public String getBusinessMode() {
+            return this.businessMode;
+        }
+
+        /**
+         * @return maxCapacityUnitCount
+         */
+        public Long getMaxCapacityUnitCount() {
+            return this.maxCapacityUnitCount;
+        }
+
+        /**
+         * @return minCapacityUnitCount
+         */
+        public Long getMinCapacityUnitCount() {
+            return this.minCapacityUnitCount;
+        }
+
+        public static final class Builder {
+            private String businessMode; 
+            private Long maxCapacityUnitCount; 
+            private Long minCapacityUnitCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(BusinessOption model) {
+                this.businessMode = model.businessMode;
+                this.maxCapacityUnitCount = model.maxCapacityUnitCount;
+                this.minCapacityUnitCount = model.minCapacityUnitCount;
+            } 
+
+            /**
+             * BusinessMode.
+             */
+            public Builder businessMode(String businessMode) {
+                this.businessMode = businessMode;
+                return this;
+            }
+
+            /**
+             * MaxCapacityUnitCount.
+             */
+            public Builder maxCapacityUnitCount(Long maxCapacityUnitCount) {
+                this.maxCapacityUnitCount = maxCapacityUnitCount;
+                return this;
+            }
+
+            /**
+             * MinCapacityUnitCount.
+             */
+            public Builder minCapacityUnitCount(Long minCapacityUnitCount) {
+                this.minCapacityUnitCount = minCapacityUnitCount;
+                return this;
+            }
+
+            public BusinessOption build() {
+                return new BusinessOption(this);
             } 
 
         } 
@@ -437,7 +552,14 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Network.
+             * <p>The network type of the dead-letter queue. Valid values:</p>
+             * <ul>
+             * <li>PrivateNetwork</li>
+             * <li>PublicNetwork</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivateNetwork</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -445,7 +567,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2vcgdxz7o1n9zapp****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -453,7 +578,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-m5ev8asdc6h12345****</p>
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -461,7 +589,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zehizpoendb3****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -590,6 +721,9 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("BatchWindow")
         private BatchWindow batchWindow;
 
+        @com.aliyun.core.annotation.NameInMap("BusinessOption")
+        private BusinessOption businessOption;
+
         @com.aliyun.core.annotation.NameInMap("DeadLetterQueue")
         private DeadLetterQueue deadLetterQueue;
 
@@ -607,6 +741,7 @@ public class UpdateEventStreamingRequest extends Request {
 
         private RunOptions(Builder builder) {
             this.batchWindow = builder.batchWindow;
+            this.businessOption = builder.businessOption;
             this.deadLetterQueue = builder.deadLetterQueue;
             this.errorsTolerance = builder.errorsTolerance;
             this.maximumTasks = builder.maximumTasks;
@@ -627,6 +762,13 @@ public class UpdateEventStreamingRequest extends Request {
          */
         public BatchWindow getBatchWindow() {
             return this.batchWindow;
+        }
+
+        /**
+         * @return businessOption
+         */
+        public BusinessOption getBusinessOption() {
+            return this.businessOption;
         }
 
         /**
@@ -666,6 +808,7 @@ public class UpdateEventStreamingRequest extends Request {
 
         public static final class Builder {
             private BatchWindow batchWindow; 
+            private BusinessOption businessOption; 
             private DeadLetterQueue deadLetterQueue; 
             private String errorsTolerance; 
             private Long maximumTasks; 
@@ -677,6 +820,7 @@ public class UpdateEventStreamingRequest extends Request {
 
             private Builder(RunOptions model) {
                 this.batchWindow = model.batchWindow;
+                this.businessOption = model.businessOption;
                 this.deadLetterQueue = model.deadLetterQueue;
                 this.errorsTolerance = model.errorsTolerance;
                 this.maximumTasks = model.maximumTasks;
@@ -693,7 +837,15 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether dead-letter queues are enabled. By default, dead-letter queues are disabled. Events that fail to be pushed are discarded after the maximum number of retries that is specified by the retry policy is reached.</p>
+             * BusinessOption.
+             */
+            public Builder businessOption(BusinessOption businessOption) {
+                this.businessOption = businessOption;
+                return this;
+            }
+
+            /**
+             * <p>Specifies whether to enable dead-letter queues. By default, dead-letter queues are disabled. Events that fail to be pushed are discarded after the maximum number of retries that is specified by the retry policy is reached.</p>
              */
             public Builder deadLetterQueue(DeadLetterQueue deadLetterQueue) {
                 this.deadLetterQueue = deadLetterQueue;
@@ -811,7 +963,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -819,7 +974,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -827,7 +985,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The timestamp that specifies the time from which messages are consumed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1570761026400</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -907,7 +1068,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -915,7 +1079,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -923,7 +1090,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The ID of the consumer group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>GID_EVENTBRIDGE_1736234******</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1003,7 +1173,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1011,7 +1184,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1019,7 +1195,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The name of the topic on the Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Mytopic</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1190,7 +1369,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * ConsumeTimestamp.
+             * <p>The timestamp that specifies the time from which messages are consumed.</p>
              */
             public Builder consumeTimestamp(ConsumeTimestamp consumeTimestamp) {
                 this.consumeTimestamp = consumeTimestamp;
@@ -1198,7 +1377,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Group.
+             * <p>The ID of the consumer group.</p>
              */
             public Builder group(Group group) {
                 this.group = group;
@@ -1206,7 +1385,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceEndpoint.
+             * <p>The endpoint that is used to access the Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1:9876</p>
              */
             public Builder instanceEndpoint(String instanceEndpoint) {
                 this.instanceEndpoint = instanceEndpoint;
@@ -1214,7 +1396,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstancePassword.
+             * <p>The password that is used to access the Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder instancePassword(String instancePassword) {
                 this.instancePassword = instancePassword;
@@ -1222,7 +1407,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceUsername.
+             * <p>The username that is used to access the Apache RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder instanceUsername(String instanceUsername) {
                 this.instanceUsername = instanceUsername;
@@ -1230,7 +1418,14 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * NetworkType.
+             * <p>The network type.</p>
+             * <ul>
+             * <li>PublicNetwork</li>
+             * <li>PrivateNetwork</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivateNetwork</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -1238,7 +1433,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2ze5bmpw6adn0q******</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -1246,7 +1444,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Topic.
+             * <p>The name of the topic on the Apache RocketMQ instance.</p>
              */
             public Builder topic(Topic topic) {
                 this.topic = topic;
@@ -1254,7 +1452,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * VSwitchId.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf62oqt1twuevrt******</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1262,7 +1463,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zeccak5pb0j3ay******</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1329,7 +1533,14 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Config.
+             * <p>The connector configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *           &quot;connector.class&quot;: &quot;com.mongodb.kafka.connect.MongoSinkConnector&quot;,
+             *           &quot;tasks.max&quot;: &quot;1&quot;,
+             *           &quot;topics&quot;: &quot;sourceA,sourceB&quot;
+             *         }</p>
              */
             public Builder config(java.util.Map<String, ?> config) {
                 this.config = config;
@@ -1337,7 +1548,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The connector name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mongo-sink</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1417,7 +1631,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * ConnectorPackageUrl.
+             * <p>The download link of the ZIP package that includes Object Storage Service (OSS) resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;<a href="https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&Expires=1725539627&Signature=rb8q3OpV2i3gZJ">https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&amp;Expires=1725539627&amp;Signature=rb8q3OpV2i3gZJ</a>&quot;</p>
              */
             public Builder connectorPackageUrl(String connectorPackageUrl) {
                 this.connectorPackageUrl = connectorPackageUrl;
@@ -1425,7 +1642,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * ConnectorParameters.
+             * <p>The parameters that are configured for the parsing of the .properties file in the ZIP package.</p>
              */
             public Builder connectorParameters(ConnectorParameters connectorParameters) {
                 this.connectorParameters = connectorParameters;
@@ -1433,7 +1650,17 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * WorkerParameters.
+             * <p>The instance configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *         &quot;group.id&quot;: &quot;connect-eb-cluster-KAFKA_CONNECTORC&quot;,
+             *         &quot;offset.storage.topic&quot;: &quot;connect-eb-offset-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+             *         &quot;config.storage.topic&quot;: &quot;connect-eb-config-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+             *         &quot;status.storage.topic&quot;: &quot;connect-eb-status-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+             *         &quot;consumer.group.id&quot;: &quot;connector-eb-cluster-KAFKA_CONNECTOR_yjqC8K5ewC-mongo-sink&quot;,
+             *         &quot;bootstrap.servers&quot;: &quot;alikafka-post:9092&quot;
+             *       }</p>
              */
             public Builder workerParameters(java.util.Map<String, ?> workerParameters) {
                 this.workerParameters = workerParameters;
@@ -1487,7 +1714,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * InstanceId.
+             * <p>The ID of the ApsaraMQ for Kafka instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>90be1f96-4229-4535-bb76-34b4f6fb2b71</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1567,7 +1797,15 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The method that you want to use to transform events. Valid values:</p>
+             * <ul>
+             * <li>JSONPATH</li>
+             * <li>CONSTANT</li>
+             * <li>TEMPLATE</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TEMPLATE</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1575,7 +1813,21 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>The schema template. This parameter is required only if you set Form to TEMPLATE. After the event content is transformed, the data must be an array in the JSON format. Each schema corresponds to a JSON object. The properties include only the name, type, and value fields. The value of the type field can be only of the INT, FLOAT, STRING, or BOOL type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[
+             *   {
+             *     &quot;name&quot;: &quot;schema1&quot;,
+             *     &quot;type&quot;: &quot;INT&quot;,
+             *     &quot;value&quot;: &quot;${value1}&quot;
+             *   },
+             *   {
+             *     &quot;name&quot;: &quot;schema2&quot;,
+             *     &quot;type&quot;: &quot;FLOAT&quot;,
+             *     &quot;value&quot;: &quot;${value2}&quot;
+             *   }
+             * ]</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1583,7 +1835,20 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <ul>
+             * <li>If you set Form to CONSTANT, specify a constant.</li>
+             * <li>If you set Form to JSONPATH, specify a JSONPath rule.</li>
+             * <li>If you set Form to TEMPLATE, specify variables for the template.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The value of this parameter cannot exceed 10,240 characters in length.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *   &quot;value1&quot;:&quot;v1&quot;,
+             *   &quot;value2&quot;:&quot;v2&quot;
+             * }</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1663,7 +1928,14 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The method that you want to use to transform events. Valid values:</p>
+             * <ul>
+             * <li>JSONPATH</li>
+             * <li>CONSTANT</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1671,7 +1943,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>None.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1679,7 +1951,16 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <ul>
+             * <li>If you set Form to CONSTANT, specify a constant.</li>
+             * <li>If you set Form to JSONPATH, specify a JSONPath rule.</li>
+             * </ul>
+             * <blockquote>
+             * <p> The value of this parameter cannot exceed 10,240 characters in length.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>default</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1759,7 +2040,14 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The method that you want to use to transform events. Valid values:</p>
+             * <ul>
+             * <li>JSONPATH</li>
+             * <li>TEMPLATE</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>JSONPATH</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1767,7 +2055,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>The template that you want to use to specify primary key IDs. This parameter is required only if you set Form to TEMPLATE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>${ID}</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1775,7 +2066,13 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>If you set Form to JSONPATH, specify a JSONPath rule. If you set Form to TEMPLATE, specify variables for the template.</p>
+             * <blockquote>
+             * <p> The value of this parameter cannot exceed 10,240 characters in length.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>$.data.requestId</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1855,7 +2152,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The method that you want to use to transform events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSONPATH</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -1863,7 +2163,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>None.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -1871,7 +2171,13 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The JSONPath rule that you want to use to extract content.</p>
+             * <blockquote>
+             * <p> The value of this parameter cannot exceed 10,240 characters in length.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>$.data.messageBody</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2029,7 +2335,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * ApiKey.
+             * <p>The API key that you want to create in the DashVector console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Q34nExQH7sQ****</p>
              */
             public Builder apiKey(String apiKey) {
                 this.apiKey = apiKey;
@@ -2037,7 +2346,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Collection.
+             * <p>The collection name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>collection1</p>
              */
             public Builder collection(String collection) {
                 this.collection = collection;
@@ -2045,7 +2357,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * DashVectorSchemaParameters.
+             * <p>The parameters in the Schema field of the table when data is inserted into DashVector. After the event content is transformed, the data must be in JSON format.</p>
              */
             public Builder dashVectorSchemaParameters(DashVectorSchemaParameters dashVectorSchemaParameters) {
                 this.dashVectorSchemaParameters = dashVectorSchemaParameters;
@@ -2053,7 +2365,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the DashVector instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vrs-cn-lbj3ru1***</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -2061,7 +2376,14 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Network.
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li>PrivateNetwork</li>
+             * <li>PublicNetwork</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PublicNetwork</p>
              */
             public Builder network(String network) {
                 this.network = network;
@@ -2069,7 +2391,14 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Operation.
+             * <p>The type of operation that you want to perform on the DashVector database. Valid values:</p>
+             * <ul>
+             * <li>Delete</li>
+             * <li>Upsert</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Upsert</p>
              */
             public Builder operation(String operation) {
                 this.operation = operation;
@@ -2077,7 +2406,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Partition.
+             * <p>The partition. Default value: default.</p>
              */
             public Builder partition(Partition partition) {
                 this.partition = partition;
@@ -2085,7 +2414,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * PrimaryKeyId.
+             * <p>The ID of the primary key that you want to use when you insert or delete records. If you do not specify this parameter, a random primary key ID is returned.</p>
              */
             public Builder primaryKeyId(PrimaryKeyId primaryKeyId) {
                 this.primaryKeyId = primaryKeyId;
@@ -2093,7 +2422,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Vector.
+             * <p>The vector that is recorded when data is inserted into DashVector.</p>
              */
             public Builder vector(Vector vector) {
                 this.vector = vector;
@@ -2173,7 +2502,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The method that you want to use to transform events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ORIGINAL</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2181,7 +2513,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>None.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2189,7 +2521,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The data is of the BLOB type, and a template is defined for the record.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2269,7 +2601,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2277,7 +2612,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>The template based on which you want events to be transformed.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2285,7 +2620,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value before event transformation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Key_1&quot;:{&quot;form&quot;:&quot;CONSTANT&quot;,&quot;value&quot;:&quot;demoKey&quot;},&quot;Value_1&quot;:{&quot;form&quot;:&quot;JSONPATH&quot;,&quot;value&quot;:&quot;$.data.value&quot;}}</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2365,7 +2703,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The method that you want to use to transform events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2373,7 +2714,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>The template based on which you want events to be transformed.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2381,7 +2722,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value before event transformation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>JSON</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2461,7 +2805,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2469,7 +2816,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>None.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2477,7 +2824,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The name of the DataHub project.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-project</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2557,7 +2907,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2565,7 +2918,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>None.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2573,7 +2926,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The role name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-role</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2653,7 +3009,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2661,7 +3020,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>None.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2669,7 +3028,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The name of the DataHub topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo-topic</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2749,7 +3111,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The method that you want to use to transform events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TEMPLATE</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2757,7 +3122,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;${k1}&quot;,&quot;k2&quot;:&quot;${k2}&quot;}</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2765,7 +3133,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The data is of the TUBLE type, and a schema is defined for the DataHub topic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;k1&quot;:&quot;value1&quot;,&quot;k2&quot;:&quot;value2&quot;}</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2845,7 +3216,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Form.
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -2853,7 +3227,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Template.
+             * <p>None.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -2861,7 +3235,14 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The data type of the DataHub topic. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3006,7 +3387,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Body.
+             * <p>The data is of the BLOB type, and a template is defined for the record.</p>
              */
             public Builder body(SinkDataHubParametersBody body) {
                 this.body = body;
@@ -3014,7 +3395,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * ContentSchema.
+             * <p>The key-value pair of custom logs. This parameter takes effect only if you set ContentType to KeyValue. Each key-value pair is in the Key_n, Value_n format.</p>
              */
             public Builder contentSchema(ContentSchema contentSchema) {
                 this.contentSchema = contentSchema;
@@ -3022,7 +3403,11 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * ContentType.
+             * <p>The data format. Valid values:</p>
+             * <ul>
+             * <li>JSON</li>
+             * <li>KeyValue</li>
+             * </ul>
              */
             public Builder contentType(ContentType contentType) {
                 this.contentType = contentType;
@@ -3030,7 +3415,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Project.
+             * <p>The name of the DataHub project.</p>
              */
             public Builder project(Project project) {
                 this.project = project;
@@ -3038,7 +3423,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * RoleName.
+             * <p>The role name.</p>
              */
             public Builder roleName(RoleName roleName) {
                 this.roleName = roleName;
@@ -3046,7 +3431,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Topic.
+             * <p>The name of the DataHub topic.</p>
              */
             public Builder topic(SinkDataHubParametersTopic topic) {
                 this.topic = topic;
@@ -3054,7 +3439,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * TopicSchema.
+             * <p>The data is of the TUBLE type, and a schema is defined for the DataHub topic.</p>
              */
             public Builder topicSchema(TopicSchema topicSchema) {
                 this.topicSchema = topicSchema;
@@ -3062,7 +3447,11 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * TopicType.
+             * <p>The data type of the DataHub topic. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
              */
             public Builder topicType(TopicType topicType) {
                 this.topicType = topicType;
@@ -3071,6 +3460,1579 @@ public class UpdateEventStreamingRequest extends Request {
 
             public SinkDataHubParameters build() {
                 return new SinkDataHubParameters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class BeHttpEndpoint extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private BeHttpEndpoint(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BeHttpEndpoint create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(BeHttpEndpoint model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The data type of the DataHub topic. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public BeHttpEndpoint build() {
+                return new BeHttpEndpoint(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class SinkDorisParametersBody extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SinkDorisParametersBody(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkDorisParametersBody create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkDorisParametersBody model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The data type of the DataHub topic. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SinkDorisParametersBody build() {
+                return new SinkDorisParametersBody(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class Database extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Database(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Database create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Database model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The data type of the DataHub topic. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Database build() {
+                return new Database(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class FeHttpEndpoint extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private FeHttpEndpoint(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FeHttpEndpoint create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(FeHttpEndpoint model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The data type of the DataHub topic. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public FeHttpEndpoint build() {
+                return new FeHttpEndpoint(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class NetworkType extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private NetworkType(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NetworkType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkType model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The data type of the DataHub topic. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public NetworkType build() {
+                return new NetworkType(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class Password extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Password(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Password create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Password model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The data type of the DataHub topic. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Password build() {
+                return new Password(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class QueryEndpoint extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private QueryEndpoint(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QueryEndpoint create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(QueryEndpoint model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The data type of the DataHub topic. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public QueryEndpoint build() {
+                return new QueryEndpoint(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class SecurityGroupId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SecurityGroupId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityGroupId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityGroupId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The data type of the DataHub topic. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SecurityGroupId build() {
+                return new SecurityGroupId(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class Table extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Table(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Table create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Table model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The data type of the DataHub topic. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Table build() {
+                return new Table(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class UserName extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private UserName(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static UserName create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserName model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The data type of the DataHub topic. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public UserName build() {
+                return new UserName(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class VSwitchIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private VSwitchIds(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VSwitchIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VSwitchIds model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The data type of the DataHub topic. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VSwitchIds build() {
+                return new VSwitchIds(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class VpcId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private VpcId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpcId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VpcId model) {
+                this.form = model.form;
+                this.template = model.template;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>CONSTANT</p>
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * <p>None.</p>
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * <p>The data type of the DataHub topic. Valid values:</p>
+             * <ul>
+             * <li>TUPLE</li>
+             * <li>BLOB</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TUPLE</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VpcId build() {
+                return new VpcId(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link UpdateEventStreamingRequest} extends {@link TeaModel}
+     *
+     * <p>UpdateEventStreamingRequest</p>
+     */
+    public static class SinkDorisParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BeHttpEndpoint")
+        private BeHttpEndpoint beHttpEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("Body")
+        private SinkDorisParametersBody body;
+
+        @com.aliyun.core.annotation.NameInMap("Database")
+        private Database database;
+
+        @com.aliyun.core.annotation.NameInMap("FeHttpEndpoint")
+        private FeHttpEndpoint feHttpEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        private NetworkType networkType;
+
+        @com.aliyun.core.annotation.NameInMap("Password")
+        private Password password;
+
+        @com.aliyun.core.annotation.NameInMap("QueryEndpoint")
+        private QueryEndpoint queryEndpoint;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private SecurityGroupId securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("Table")
+        private Table table;
+
+        @com.aliyun.core.annotation.NameInMap("UserName")
+        private UserName userName;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private VSwitchIds vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private VpcId vpcId;
+
+        private SinkDorisParameters(Builder builder) {
+            this.beHttpEndpoint = builder.beHttpEndpoint;
+            this.body = builder.body;
+            this.database = builder.database;
+            this.feHttpEndpoint = builder.feHttpEndpoint;
+            this.networkType = builder.networkType;
+            this.password = builder.password;
+            this.queryEndpoint = builder.queryEndpoint;
+            this.securityGroupId = builder.securityGroupId;
+            this.table = builder.table;
+            this.userName = builder.userName;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkDorisParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return beHttpEndpoint
+         */
+        public BeHttpEndpoint getBeHttpEndpoint() {
+            return this.beHttpEndpoint;
+        }
+
+        /**
+         * @return body
+         */
+        public SinkDorisParametersBody getBody() {
+            return this.body;
+        }
+
+        /**
+         * @return database
+         */
+        public Database getDatabase() {
+            return this.database;
+        }
+
+        /**
+         * @return feHttpEndpoint
+         */
+        public FeHttpEndpoint getFeHttpEndpoint() {
+            return this.feHttpEndpoint;
+        }
+
+        /**
+         * @return networkType
+         */
+        public NetworkType getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
+         * @return password
+         */
+        public Password getPassword() {
+            return this.password;
+        }
+
+        /**
+         * @return queryEndpoint
+         */
+        public QueryEndpoint getQueryEndpoint() {
+            return this.queryEndpoint;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public SecurityGroupId getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return table
+         */
+        public Table getTable() {
+            return this.table;
+        }
+
+        /**
+         * @return userName
+         */
+        public UserName getUserName() {
+            return this.userName;
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public VSwitchIds getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public VpcId getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private BeHttpEndpoint beHttpEndpoint; 
+            private SinkDorisParametersBody body; 
+            private Database database; 
+            private FeHttpEndpoint feHttpEndpoint; 
+            private NetworkType networkType; 
+            private Password password; 
+            private QueryEndpoint queryEndpoint; 
+            private SecurityGroupId securityGroupId; 
+            private Table table; 
+            private UserName userName; 
+            private VSwitchIds vSwitchIds; 
+            private VpcId vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SinkDorisParameters model) {
+                this.beHttpEndpoint = model.beHttpEndpoint;
+                this.body = model.body;
+                this.database = model.database;
+                this.feHttpEndpoint = model.feHttpEndpoint;
+                this.networkType = model.networkType;
+                this.password = model.password;
+                this.queryEndpoint = model.queryEndpoint;
+                this.securityGroupId = model.securityGroupId;
+                this.table = model.table;
+                this.userName = model.userName;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+            } 
+
+            /**
+             * BeHttpEndpoint.
+             */
+            public Builder beHttpEndpoint(BeHttpEndpoint beHttpEndpoint) {
+                this.beHttpEndpoint = beHttpEndpoint;
+                return this;
+            }
+
+            /**
+             * <p>The data is of the BLOB type, and a template is defined for the record.</p>
+             */
+            public Builder body(SinkDorisParametersBody body) {
+                this.body = body;
+                return this;
+            }
+
+            /**
+             * Database.
+             */
+            public Builder database(Database database) {
+                this.database = database;
+                return this;
+            }
+
+            /**
+             * FeHttpEndpoint.
+             */
+            public Builder feHttpEndpoint(FeHttpEndpoint feHttpEndpoint) {
+                this.feHttpEndpoint = feHttpEndpoint;
+                return this;
+            }
+
+            /**
+             * <p>The network type.</p>
+             * <ul>
+             * <li>PublicNetwork</li>
+             * <li>PrivateNetwork</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PrivateNetwork</p>
+             */
+            public Builder networkType(NetworkType networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * Password.
+             */
+            public Builder password(Password password) {
+                this.password = password;
+                return this;
+            }
+
+            /**
+             * QueryEndpoint.
+             */
+            public Builder queryEndpoint(QueryEndpoint queryEndpoint) {
+                this.queryEndpoint = queryEndpoint;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-2ze5bmpw6adn0q******</p>
+             */
+            public Builder securityGroupId(SecurityGroupId securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * Table.
+             */
+            public Builder table(Table table) {
+                this.table = table;
+                return this;
+            }
+
+            /**
+             * UserName.
+             */
+            public Builder userName(UserName userName) {
+                this.userName = userName;
+                return this;
+            }
+
+            /**
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-m5ev8asdc6h12345****</p>
+             */
+            public Builder vSwitchIds(VSwitchIds vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-2zeccak5pb0j3ay******</p>
+             */
+            public Builder vpcId(VpcId vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public SinkDorisParameters build() {
+                return new SinkDorisParameters(this);
             } 
 
         } 
@@ -3164,7 +5126,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The value before event transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -3354,10 +5316,16 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * <p>The method that you want to use to transform events. Valid values:</p>
+             * <ul>
+             * <li>ORIGINAL: complete event</li>
+             * <li>JSONPATH: partial event</li>
+             * <li>CONSTANT: constant</li>
+             * <li>TEMPLATE: template</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>CONSTANT</p>
+             * <p>JSONPATH</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -3365,10 +5333,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              * 
              * <strong>example:</strong>
-             * <p>None</p>
+             * <p>$.data.key</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -3376,10 +5344,12 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The delivery concurrency. Minimum value: 1.</p>
+             * <p>The value before event transformation.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>{
+             *       &quot;key&quot;: &quot;value&quot;
+             * }</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -3919,7 +5889,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The message body that you want to deliver to the function.</p>
+             * <p>The message body that you want to deliver to Function Compute.</p>
              */
             public Builder body(SinkFcParametersBody body) {
                 this.body = body;
@@ -3935,7 +5905,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * DataFormat.
+             * <p>The rule that you want to use to transform the format of event content.</p>
              */
             public Builder dataFormat(DataFormat dataFormat) {
                 this.dataFormat = dataFormat;
@@ -4058,7 +6028,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4160,7 +6130,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4364,7 +6334,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4679,7 +6649,13 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
+             * <p>The method that you want to use to transform events. Valid values:</p>
+             * <ul>
+             * <li>ORIGINAL: complete event</li>
+             * <li>JSONPATH: partial event</li>
+             * <li>CONSTANT: constant</li>
+             * <li>TEMPLATE: template</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>CONSTANT</p>
@@ -4690,7 +6666,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -4698,15 +6677,12 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ACK mode.</p>
-             * <ul>
-             * <li>If you set this parameter to 0, no response is returned from the broker. In this mode, the performance is high, but the risk of data loss is also high.</li>
-             * <li>If you set this parameter to 1, a response is returned when data is written to the leader. In this mode, the performance and the risk of data loss are moderate. Data loss may occur if a failure occurs on the leader.</li>
-             * <li>If you set this parameter to all, a response is returned when data is written to the leader and synchronized to the followers. In this mode, the performance is low, but the risk of data loss is also low. Data loss occurs if the leader and the followers fail at the same time.</li>
-             * </ul>
+             * <p>The value before event transformation.</p>
              * 
              * <strong>example:</strong>
-             * <p>1</p>
+             * <p>{
+             *       &quot;key&quot;: &quot;value&quot;
+             * }</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -5103,7 +7079,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              * 
              * <strong>example:</strong>
              * <p>The value of ${key} is ${value}!</p>
@@ -5114,7 +7090,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The value before event transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -5251,7 +7227,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Headers.
+             * <p>The metadata added to messages in the ApsaraMQ for Kafka instance.</p>
              */
             public Builder headers(Headers headers) {
                 this.headers = headers;
@@ -5374,7 +7350,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              * 
              * <strong>example:</strong>
              * <p>The value of ${key} is ${value}!</p>
@@ -5385,7 +7361,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The value before event transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -5591,7 +7567,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the MNS queue.</p>
+             * <p>The name of the SMQ queue.</p>
              * 
              * <strong>example:</strong>
              * <p>MyQueue</p>
@@ -5674,7 +7650,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The message content.</p>
+             * <p>The message body.</p>
              */
             public Builder body(SinkMNSParametersBody body) {
                 this.body = body;
@@ -5690,7 +7666,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the MNS queue.</p>
+             * <p>The name of the SMQ queue.</p>
              */
             public Builder queueName(QueueName queueName) {
                 this.queueName = queueName;
@@ -5781,7 +7757,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5789,10 +7768,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the MNS queue.</p>
+             * <p>The value of the raw data.</p>
              * 
              * <strong>example:</strong>
-             * <p>MyQueue</p>
+             * <p>{&quot;key&quot;: &quot;value&quot;}</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -5883,7 +7862,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5891,10 +7873,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the MNS queue.</p>
+             * <p>The value of the message ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>MyQueue</p>
+             * <p>12345</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -5985,7 +7967,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -5993,10 +7978,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the MNS queue.</p>
+             * <p>The attribute value.</p>
              * 
              * <strong>example:</strong>
-             * <p>MyQueue</p>
+             * <p>{&quot;env&quot;: &quot;prod&quot;}</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -6087,7 +8072,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The value of ${key} is ${value}!</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -6095,10 +8083,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the MNS queue.</p>
+             * <p>The routing key.</p>
              * 
              * <strong>example:</strong>
-             * <p>MyQueue</p>
+             * <p>{&quot;Form&quot;: &quot;CONSTANT&quot;, &quot;Value&quot;: &quot;my-routing-key&quot;}</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -6347,7 +8335,14 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * AuthType.
+             * <p>The authentication type. Valid values:</p>
+             * <ul>
+             * <li>ACL</li>
+             * <li>N/A</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACL</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -6355,7 +8350,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The message content.</p>
+             * <p>The message body.</p>
              */
             public Builder body(SinkOpenSourceRabbitMQParametersBody body) {
                 this.body = body;
@@ -6363,7 +8358,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Endpoint.
+             * <p>The endpoint used to access the open source RabbitMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1:9876</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -6371,7 +8369,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Exchange.
+             * <p>The name of the exchange on the open source RabbitMQ instance. This parameter is valid only if you set TargetType to Exchange.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-exchange</p>
              */
             public Builder exchange(String exchange) {
                 this.exchange = exchange;
@@ -6379,7 +8380,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * MessageId.
+             * <p>The message ID.</p>
              */
             public Builder messageId(MessageId messageId) {
                 this.messageId = messageId;
@@ -6387,7 +8388,14 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * NetworkType.
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li>PrivateNetwork</li>
+             * <li>PublicNetwork</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>PublicNetwork</p>
              */
             public Builder networkType(String networkType) {
                 this.networkType = networkType;
@@ -6395,7 +8403,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Password.
+             * <p>The password that is used to access the open source RabbitMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder password(String password) {
                 this.password = password;
@@ -6403,7 +8414,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Properties.
+             * <p>The attributes of the message.</p>
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -6411,7 +8422,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the MNS queue.</p>
+             * <p>The name of the queue on the open source RabbitMQ instance. This parameter is valid only if you set TargetType to Queue.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my-queue</p>
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -6419,7 +8433,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * RoutingKey.
+             * <p>The routing key.</p>
              */
             public Builder routingKey(RoutingKey routingKey) {
                 this.routingKey = routingKey;
@@ -6427,7 +8441,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * <p>The ID of the security group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>sg-uf6of9452b2pba82c ****</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -6435,7 +8452,14 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * TargetType.
+             * <p>The type of the resource to which you want to deliver messages. Valid values:</p>
+             * <ul>
+             * <li><strong>Exchange</strong>: Messages are routed to the event target using an exchange.</li>
+             * <li><strong>Queue</strong>: Messages are delivered to a specific queue.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Exchange</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -6443,7 +8467,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Username.
+             * <p>The username that is used to access the open source RabbitMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>admin</p>
              */
             public Builder username(String username) {
                 this.username = username;
@@ -6451,7 +8478,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The vSwitch ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-uf6of9452b2pba82c ****</p>
              */
             public Builder vSwitchIds(String vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
@@ -6459,7 +8489,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * VirtualHostName.
+             * <p>The name of the virtual host of the open source RabbitMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Vhost1</p>
              */
             public Builder virtualHostName(String virtualHostName) {
                 this.virtualHostName = virtualHostName;
@@ -6467,7 +8500,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6of9452b2pba82c ****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -6751,10 +8787,16 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The method that you want to use to transform events. Default value: JSONPATH.</p>
+             * <p>The method that you want to use to transform events.</p>
+             * <p><strong>Valid values:</strong></p>
+             * <ul>
+             * <li>JSONPATH</li>
+             * <li>CONSTANT</li>
+             * <li>TEMPLATE</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>JSONPATH</p>
+             * <p>TEMPLATE</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -6762,7 +8804,12 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template that you want to use for HTTP request headers. This parameter is required only if you set Form to TEMPLATE. After the event content is transformed, the data must be in JSON format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *     &quot;user_name&quot;:&quot;${name}&quot;
+             * }</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -6770,10 +8817,12 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The metric data.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>$.data</p>
+             * <ul>
+             * <li>If you set Form to CONSTANT, specify a constant.</li>
+             * <li>If you set Form to JSONPATH, specify a JSONPath rule.</li>
+             * <li>If you set Form to TEMPLATE, specify variables for the template.</li>
+             * </ul>
+             * <p>Note: The value of this parameter cannot exceed 10,240 characters in length.</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -6793,7 +8842,7 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
-    public static class NetworkType extends TeaModel {
+    public static class SinkPrometheusParametersNetworkType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -6803,7 +8852,7 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private NetworkType(Builder builder) {
+        private SinkPrometheusParametersNetworkType(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -6813,7 +8862,7 @@ public class UpdateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static NetworkType create() {
+        public static SinkPrometheusParametersNetworkType create() {
             return builder().build();
         }
 
@@ -6846,7 +8895,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(NetworkType model) {
+            private Builder(SinkPrometheusParametersNetworkType model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -6872,7 +8921,11 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The network type.</p>
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li>PublicNetwork</li>
+             * <li>PrivateNetwork</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>PrivateNetwork</p>
@@ -6882,8 +8935,8 @@ public class UpdateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public NetworkType build() {
-                return new NetworkType(this);
+            public SinkPrometheusParametersNetworkType build() {
+                return new SinkPrometheusParametersNetworkType(this);
             } 
 
         } 
@@ -6895,7 +8948,7 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
-    public static class Password extends TeaModel {
+    public static class SinkPrometheusParametersPassword extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -6905,7 +8958,7 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private Password(Builder builder) {
+        private SinkPrometheusParametersPassword(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -6915,7 +8968,7 @@ public class UpdateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static Password create() {
+        public static SinkPrometheusParametersPassword create() {
             return builder().build();
         }
 
@@ -6948,7 +9001,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(Password model) {
+            private Builder(SinkPrometheusParametersPassword model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -6984,8 +9037,8 @@ public class UpdateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public Password build() {
-                return new Password(this);
+            public SinkPrometheusParametersPassword build() {
+                return new SinkPrometheusParametersPassword(this);
             } 
 
         } 
@@ -6997,7 +9050,7 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
-    public static class SecurityGroupId extends TeaModel {
+    public static class SinkPrometheusParametersSecurityGroupId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -7007,7 +9060,7 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private SecurityGroupId(Builder builder) {
+        private SinkPrometheusParametersSecurityGroupId(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -7017,7 +9070,7 @@ public class UpdateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static SecurityGroupId create() {
+        public static SinkPrometheusParametersSecurityGroupId create() {
             return builder().build();
         }
 
@@ -7050,7 +9103,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(SecurityGroupId model) {
+            private Builder(SinkPrometheusParametersSecurityGroupId model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -7076,7 +9129,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the security group to which the Managed Service for Prometheus instance belongs.</p>
+             * <p>The ID of the security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-mw43*****</p>
@@ -7086,8 +9139,8 @@ public class UpdateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public SecurityGroupId build() {
-                return new SecurityGroupId(this);
+            public SinkPrometheusParametersSecurityGroupId build() {
+                return new SinkPrometheusParametersSecurityGroupId(this);
             } 
 
         } 
@@ -7379,7 +9432,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the vSwitch with which the Managed Service for Prometheus instance is associated.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-dwaafds****</p>
@@ -7402,7 +9455,7 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
-    public static class VpcId extends TeaModel {
+    public static class SinkPrometheusParametersVpcId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -7412,7 +9465,7 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private VpcId(Builder builder) {
+        private SinkPrometheusParametersVpcId(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -7422,7 +9475,7 @@ public class UpdateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static VpcId create() {
+        public static SinkPrometheusParametersVpcId create() {
             return builder().build();
         }
 
@@ -7455,7 +9508,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(VpcId model) {
+            private Builder(SinkPrometheusParametersVpcId model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -7481,7 +9534,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC to which the Managed Service for Prometheus instance belongs.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-adw1awdw*****</p>
@@ -7491,8 +9544,8 @@ public class UpdateEventStreamingRequest extends Request {
                 return this;
             }
 
-            public VpcId build() {
-                return new VpcId(this);
+            public SinkPrometheusParametersVpcId build() {
+                return new SinkPrometheusParametersVpcId(this);
             } 
 
         } 
@@ -7515,13 +9568,13 @@ public class UpdateEventStreamingRequest extends Request {
         private HeaderParameters headerParameters;
 
         @com.aliyun.core.annotation.NameInMap("NetworkType")
-        private NetworkType networkType;
+        private SinkPrometheusParametersNetworkType networkType;
 
         @com.aliyun.core.annotation.NameInMap("Password")
-        private Password password;
+        private SinkPrometheusParametersPassword password;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
-        private SecurityGroupId securityGroupId;
+        private SinkPrometheusParametersSecurityGroupId securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("URL")
         private URL URL;
@@ -7533,7 +9586,7 @@ public class UpdateEventStreamingRequest extends Request {
         private VSwitchId vSwitchId;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
-        private VpcId vpcId;
+        private SinkPrometheusParametersVpcId vpcId;
 
         private SinkPrometheusParameters(Builder builder) {
             this.authorizationType = builder.authorizationType;
@@ -7580,21 +9633,21 @@ public class UpdateEventStreamingRequest extends Request {
         /**
          * @return networkType
          */
-        public NetworkType getNetworkType() {
+        public SinkPrometheusParametersNetworkType getNetworkType() {
             return this.networkType;
         }
 
         /**
          * @return password
          */
-        public Password getPassword() {
+        public SinkPrometheusParametersPassword getPassword() {
             return this.password;
         }
 
         /**
          * @return securityGroupId
          */
-        public SecurityGroupId getSecurityGroupId() {
+        public SinkPrometheusParametersSecurityGroupId getSecurityGroupId() {
             return this.securityGroupId;
         }
 
@@ -7622,7 +9675,7 @@ public class UpdateEventStreamingRequest extends Request {
         /**
          * @return vpcId
          */
-        public VpcId getVpcId() {
+        public SinkPrometheusParametersVpcId getVpcId() {
             return this.vpcId;
         }
 
@@ -7630,13 +9683,13 @@ public class UpdateEventStreamingRequest extends Request {
             private AuthorizationType authorizationType; 
             private Data data; 
             private HeaderParameters headerParameters; 
-            private NetworkType networkType; 
-            private Password password; 
-            private SecurityGroupId securityGroupId; 
+            private SinkPrometheusParametersNetworkType networkType; 
+            private SinkPrometheusParametersPassword password; 
+            private SinkPrometheusParametersSecurityGroupId securityGroupId; 
             private URL URL; 
             private Username username; 
             private VSwitchId vSwitchId; 
-            private VpcId vpcId; 
+            private SinkPrometheusParametersVpcId vpcId; 
 
             private Builder() {
             } 
@@ -7671,7 +9724,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * HeaderParameters.
+             * <p>The parameters that are configured for the request header.</p>
              */
             public Builder headerParameters(HeaderParameters headerParameters) {
                 this.headerParameters = headerParameters;
@@ -7681,7 +9734,7 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The network type.</p>
              */
-            public Builder networkType(NetworkType networkType) {
+            public Builder networkType(SinkPrometheusParametersNetworkType networkType) {
                 this.networkType = networkType;
                 return this;
             }
@@ -7689,15 +9742,15 @@ public class UpdateEventStreamingRequest extends Request {
             /**
              * <p>The password.</p>
              */
-            public Builder password(Password password) {
+            public Builder password(SinkPrometheusParametersPassword password) {
                 this.password = password;
                 return this;
             }
 
             /**
-             * <p>The ID of the security group to which the Managed Service for Prometheus instance belongs.</p>
+             * <p>The ID of the security group.</p>
              */
-            public Builder securityGroupId(SecurityGroupId securityGroupId) {
+            public Builder securityGroupId(SinkPrometheusParametersSecurityGroupId securityGroupId) {
                 this.securityGroupId = securityGroupId;
                 return this;
             }
@@ -7719,7 +9772,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the vSwitch with which the Managed Service for Prometheus instance is associated.</p>
+             * <p>The vSwitch ID.</p>
              */
             public Builder vSwitchId(VSwitchId vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -7727,9 +9780,9 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC to which the Managed Service for Prometheus instance belongs.</p>
+             * <p>The VPC ID.</p>
              */
-            public Builder vpcId(VpcId vpcId) {
+            public Builder vpcId(SinkPrometheusParametersVpcId vpcId) {
                 this.vpcId = vpcId;
                 return this;
             }
@@ -7818,7 +9871,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              * 
              * <strong>example:</strong>
              * <p>The value of ${key} is ${value}!</p>
@@ -7829,7 +9882,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The value before event transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -8140,7 +10193,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The value before event transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -8247,7 +10300,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The value before event transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -8555,7 +10608,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The type of the resource to which events are delivered. Valid values:</p>
+             * <p>The type of the resource to which you want to deliver events. Valid values:</p>
              * <ul>
              * <li>Exchange</li>
              * <li>Queue</li>
@@ -8822,7 +10875,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The message content.</p>
+             * <p>The message body.</p>
              */
             public Builder body(SinkRabbitMQParametersBody body) {
                 this.body = body;
@@ -8854,7 +10907,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The properties that you want to use to filter messages.</p>
+             * <p>The attributes that you want to use to filter messages.</p>
              */
             public Builder properties(SinkRabbitMQParametersProperties properties) {
                 this.properties = properties;
@@ -8878,7 +10931,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The type of the resource to which events are delivered.</p>
+             * <p>The type of the resource to which you want to deliver events.</p>
              */
             public Builder targetType(TargetType targetType) {
                 this.targetType = targetType;
@@ -8977,7 +11030,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -8985,10 +11041,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the vhost of the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The timestamp that specifies the time from which messages are consumed.</p>
              * 
              * <strong>example:</strong>
-             * <p>rabbit-host</p>
+             * <p>1570761026400</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -9079,7 +11135,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -9087,10 +11146,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the vhost of the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The ID of the consumer group.</p>
              * 
              * <strong>example:</strong>
-             * <p>rabbit-host</p>
+             * <p>GID_EVENTBRIDGE_1736234******</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -9181,7 +11240,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>None.</p>
+             * <p>The template based on which you want events to be transformed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -9189,10 +11251,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the vhost of the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The name of the topic on the ApsaraMQ for RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>rabbit-host</p>
+             * <p>Mytopic</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -9298,7 +11360,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * ConsumeTimestamp.
+             * <p>The timestamp that specifies the time from which messages are consumed.</p>
              */
             public Builder consumeTimestamp(SinkRocketMQCheckpointParametersConsumeTimestamp consumeTimestamp) {
                 this.consumeTimestamp = consumeTimestamp;
@@ -9306,7 +11368,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Group.
+             * <p>The ID of the consumer group.</p>
              */
             public Builder group(SinkRocketMQCheckpointParametersGroup group) {
                 this.group = group;
@@ -9314,7 +11376,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+             * <p>The ID of the ApsaraMQ for RocketMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MQ_INST_164901546557****_BAAN****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -9322,7 +11387,14 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type. Valid values:</p>
+             * <ul>
+             * <li>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance</li>
+             * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Cloud_4</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -9330,7 +11402,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The name of the topic on the ApsaraMQ for Kafka instance.</p>
+             * <p>The name of the topic on the ApsaraMQ for RocketMQ instance.</p>
              */
             public Builder topic(SinkRocketMQCheckpointParametersTopic topic) {
                 this.topic = topic;
@@ -9421,7 +11493,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              * 
              * <strong>example:</strong>
              * <p>The value of ${key} is ${value}!</p>
@@ -9432,7 +11504,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The value before event transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -9517,10 +11589,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The method that you want to use to transform events.</p>
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
-             * <p>TEMPLATE</p>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -9528,10 +11600,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              * 
              * <strong>example:</strong>
-             * <p>The value of ${key} is ${value}!</p>
+             * <p>None</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -9539,12 +11611,14 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The type of the message delivery order. Valid values:</p>
+             * <ul>
+             * <li><strong>Orderly</strong></li>
+             * <li><strong>Concurrently</strong></li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{
-             *       &quot;key&quot;: &quot;value&quot;
-             * }</p>
+             * <p>Concurrently</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -9624,10 +11698,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The method that you want to use to transform events.</p>
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
-             * <p>TEMPLATE</p>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -9635,10 +11709,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The value of ${key} is ${value}!</p>
+             * <p>None.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -9646,12 +11717,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The endpoint that is used to access the instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>{
-             *       &quot;key&quot;: &quot;value&quot;
-             * }</p>
+             * <p>vbr-8vbsvkkbpf3vb0zef****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -9852,10 +11921,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The password that is used to access the instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>MQ_INST_164901546557****_BAAN****</p>
+             * <p>admin****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -9954,10 +12023,15 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The instance type. Valid values:</p>
+             * <ul>
+             * <li>Cloud_4 (default): ApsaraMQ for RocketMQ 4.0 instance</li>
+             * <li>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance</li>
+             * <li>SelfBuilt: self-managed Apache RocketMQ cluster</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>MQ_INST_164901546557****_BAAN****</p>
+             * <p>Cloud_4</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -10056,10 +12130,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The username that is used to access the instance.</p>
              * 
              * <strong>example:</strong>
-             * <p>MQ_INST_164901546557****_BAAN****</p>
+             * <p>admin</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -10150,7 +12224,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              * 
              * <strong>example:</strong>
              * <p>The value of ${key} is ${value}!</p>
@@ -10161,7 +12235,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The value before event transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -10246,10 +12320,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The method that you want to use to transform events.</p>
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
-             * <p>TEMPLATE</p>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -10257,10 +12331,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The value of ${key} is ${value}!</p>
+             * <p>None.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -10268,12 +12339,14 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li>PublicNetwork</li>
+             * <li>PrivateNetwork</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>{
-             *       &quot;key&quot;: &quot;value&quot;
-             * }</p>
+             * <p>PublicNetwork</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -10364,7 +12437,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              * 
              * <strong>example:</strong>
              * <p>The value of ${key} is ${value}!</p>
@@ -10375,7 +12448,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The value before event transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -10460,10 +12533,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The method that you want to use to transform events.</p>
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
-             * <p>TEMPLATE</p>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -10471,10 +12544,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>The value of ${key} is ${value}!</p>
+             * <p>None.</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -10482,12 +12552,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The ID of the security group.</p>
              * 
              * <strong>example:</strong>
-             * <p>{
-             *       &quot;key&quot;: &quot;value&quot;
-             * }</p>
+             * <p>b4bf375515f6440f942e3a20c33d****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -10567,10 +12635,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The method that you want to use to transform events.</p>
+             * <p>The method that you want to use to transform events. Default value: CONSTANT.</p>
              * 
              * <strong>example:</strong>
-             * <p>TEMPLATE</p>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -10578,10 +12646,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              * 
              * <strong>example:</strong>
-             * <p>The value of ${key} is ${value}!</p>
+             * <p>None</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -10589,12 +12657,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The value of the sharding key.</p>
              * 
              * <strong>example:</strong>
-             * <p>{
-             *       &quot;key&quot;: &quot;value&quot;
-             * }</p>
+             * <p>order_id</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -10685,7 +12751,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              * 
              * <strong>example:</strong>
              * <p>The value of ${key} is ${value}!</p>
@@ -10696,7 +12762,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The value before event transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -10800,7 +12866,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic on the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The name of the topic on the ApsaraMQ for RocketMQ instance.</p>
              * 
              * <strong>example:</strong>
              * <p>Mytopic</p>
@@ -10823,7 +12889,7 @@ public class UpdateEventStreamingRequest extends Request {
      *
      * <p>UpdateEventStreamingRequest</p>
      */
-    public static class VSwitchIds extends TeaModel {
+    public static class SinkRocketMQParametersVSwitchIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
 
@@ -10833,7 +12899,7 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        private VSwitchIds(Builder builder) {
+        private SinkRocketMQParametersVSwitchIds(Builder builder) {
             this.form = builder.form;
             this.template = builder.template;
             this.value = builder.value;
@@ -10843,7 +12909,7 @@ public class UpdateEventStreamingRequest extends Request {
             return new Builder();
         }
 
-        public static VSwitchIds create() {
+        public static SinkRocketMQParametersVSwitchIds create() {
             return builder().build();
         }
 
@@ -10876,7 +12942,7 @@ public class UpdateEventStreamingRequest extends Request {
             private Builder() {
             } 
 
-            private Builder(VSwitchIds model) {
+            private Builder(SinkRocketMQParametersVSwitchIds model) {
                 this.form = model.form;
                 this.template = model.template;
                 this.value = model.value;
@@ -10902,18 +12968,18 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic on the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The vSwitch ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>Mytopic</p>
+             * <p>vbr-8vb835n3zf9shwl****mp</p>
              */
             public Builder value(String value) {
                 this.value = value;
                 return this;
             }
 
-            public VSwitchIds build() {
-                return new VSwitchIds(this);
+            public SinkRocketMQParametersVSwitchIds build() {
+                return new SinkRocketMQParametersVSwitchIds(this);
             } 
 
         } 
@@ -11004,10 +13070,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic on the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The VPC ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>Mytopic</p>
+             * <p>vbr-8vb835n3zf9shwlvb****</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -11071,7 +13137,7 @@ public class UpdateEventStreamingRequest extends Request {
         private SinkRocketMQParametersTopic topic;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchIds")
-        private VSwitchIds vSwitchIds;
+        private SinkRocketMQParametersVSwitchIds vSwitchIds;
 
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private SinkRocketMQParametersVpcId vpcId;
@@ -11204,7 +13270,7 @@ public class UpdateEventStreamingRequest extends Request {
         /**
          * @return vSwitchIds
          */
-        public VSwitchIds getVSwitchIds() {
+        public SinkRocketMQParametersVSwitchIds getVSwitchIds() {
             return this.vSwitchIds;
         }
 
@@ -11230,7 +13296,7 @@ public class UpdateEventStreamingRequest extends Request {
             private ShardingKey shardingKey; 
             private Tags tags; 
             private SinkRocketMQParametersTopic topic; 
-            private VSwitchIds vSwitchIds; 
+            private SinkRocketMQParametersVSwitchIds vSwitchIds; 
             private SinkRocketMQParametersVpcId vpcId; 
 
             private Builder() {
@@ -11256,7 +13322,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * <p>The message content.</p>
+             * <p>The message body.</p>
              */
             public Builder body(SinkRocketMQParametersBody body) {
                 this.body = body;
@@ -11264,7 +13330,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * DeliveryOrderType.
+             * <p>The type of the message delivery order. This parameter is optional. Default value: Concurrently.</p>
              */
             public Builder deliveryOrderType(DeliveryOrderType deliveryOrderType) {
                 this.deliveryOrderType = deliveryOrderType;
@@ -11272,7 +13338,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceEndpoint.
+             * <p>The endpoint that is used to access the instance.</p>
              */
             public Builder instanceEndpoint(InstanceEndpoint instanceEndpoint) {
                 this.instanceEndpoint = instanceEndpoint;
@@ -11288,7 +13354,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstancePassword.
+             * <p>The password that is used to access the instance.</p>
              */
             public Builder instancePassword(InstancePassword instancePassword) {
                 this.instancePassword = instancePassword;
@@ -11296,7 +13362,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type.</p>
              */
             public Builder instanceType(InstanceType instanceType) {
                 this.instanceType = instanceType;
@@ -11304,7 +13370,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceUsername.
+             * <p>The username that is used to access the instance.</p>
              */
             public Builder instanceUsername(InstanceUsername instanceUsername) {
                 this.instanceUsername = instanceUsername;
@@ -11320,7 +13386,11 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Network.
+             * <p>The network type. Valid values:</p>
+             * <ul>
+             * <li>PublicNetwork</li>
+             * <li>PrivateNetwork</li>
+             * </ul>
              */
             public Builder network(Network network) {
                 this.network = network;
@@ -11328,7 +13398,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The properties that you want to use to filter messages.</p>
+             * <p>The attributes that you want to use to filter messages.</p>
              */
             public Builder properties(SinkRocketMQParametersProperties properties) {
                 this.properties = properties;
@@ -11336,7 +13406,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the security group to which the Managed Service for Prometheus instance belongs.</p>
+             * <p>The ID of the security group.</p>
              */
             public Builder securityGroupId(SinkRocketMQParametersSecurityGroupId securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -11344,7 +13414,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * ShardingKey.
+             * <p>The sharding key.</p>
+             * <blockquote>
+             * <p> If you set DeliveryOrderType to Orderly, this parameter is required. If you specify ApsaraMQ for RocketMQ as the event source, you can leave this parameter empty. In this case, the combined value of BrokerName and QueueId is used as the sharding key.</p>
+             * </blockquote>
              */
             public Builder shardingKey(ShardingKey shardingKey) {
                 this.shardingKey = shardingKey;
@@ -11360,7 +13433,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The topic on the ApsaraMQ for RocketMQ instance.</p>
+             * <p>The name of the topic on the ApsaraMQ for RocketMQ instance.</p>
              */
             public Builder topic(SinkRocketMQParametersTopic topic) {
                 this.topic = topic;
@@ -11368,15 +13441,15 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * VSwitchIds.
+             * <p>The vSwitch ID.</p>
              */
-            public Builder vSwitchIds(VSwitchIds vSwitchIds) {
+            public Builder vSwitchIds(SinkRocketMQParametersVSwitchIds vSwitchIds) {
                 this.vSwitchIds = vSwitchIds;
                 return this;
             }
 
             /**
-             * <p>The ID of the VPC to which the Managed Service for Prometheus instance belongs.</p>
+             * <p>The virtual private cloud (VPC) ID.</p>
              */
             public Builder vpcId(SinkRocketMQParametersVpcId vpcId) {
                 this.vpcId = vpcId;
@@ -11467,7 +13540,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              * 
              * <strong>example:</strong>
              * <p>The value of ${key} is ${value}!</p>
@@ -11478,7 +13551,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The value before event transformation.</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -11566,7 +13639,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The method that you want to use to transform events.</p>
              * 
              * <strong>example:</strong>
-             * <p>TEMPLATE</p>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -11574,10 +13647,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              * 
              * <strong>example:</strong>
-             * <p>The value of ${key} is ${value}!</p>
+             * <p>None</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11585,12 +13658,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The key-value pair of custom logs.</p>
              * 
              * <strong>example:</strong>
-             * <p>{
-             *       &quot;key&quot;: &quot;value&quot;
-             * }</p>
+             * <p>{&quot;Key_1&quot;:{&quot;form&quot;:&quot;CONSTANT&quot;,&quot;value&quot;:&quot;demoKey&quot;},&quot;Value_1&quot;:{&quot;form&quot;:&quot;JSONPATH&quot;,&quot;value&quot;:&quot;$.data.value&quot;}}</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -11673,7 +13744,7 @@ public class UpdateEventStreamingRequest extends Request {
              * <p>The method that you want to use to transform events.</p>
              * 
              * <strong>example:</strong>
-             * <p>TEMPLATE</p>
+             * <p>CONSTANT</p>
              */
             public Builder form(String form) {
                 this.form = form;
@@ -11681,10 +13752,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The template based on which you want to transform events.</p>
+             * <p>The template based on which you want events to be transformed.</p>
              * 
              * <strong>example:</strong>
-             * <p>The value of ${key} is ${value}!</p>
+             * <p>None</p>
              */
             public Builder template(String template) {
                 this.template = template;
@@ -11692,12 +13763,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The value before transformation.</p>
+             * <p>The format of the Simple Log Service data.</p>
              * 
              * <strong>example:</strong>
-             * <p>{
-             *       &quot;key&quot;: &quot;value&quot;
-             * }</p>
+             * <p>JSON</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -12245,7 +14314,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * ContentSchema.
+             * <p>The key-value pair of custom logs. This parameter takes effect only if you set ContentType to KeyValue. Each key-value pair is in the Key_n, Value_n format.</p>
              */
             public Builder contentSchema(SinkSLSParametersContentSchema contentSchema) {
                 this.contentSchema = contentSchema;
@@ -12253,7 +14322,11 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * ContentType.
+             * <p>The format of the Simple Log Service data. Valid values:</p>
+             * <ul>
+             * <li>JSON</li>
+             * <li>KeyValue</li>
+             * </ul>
              */
             public Builder contentType(SinkSLSParametersContentType contentType) {
                 this.contentType = contentType;
@@ -12324,6 +14397,9 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SinkDataHubParameters")
         private SinkDataHubParameters sinkDataHubParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SinkDorisParameters")
+        private SinkDorisParameters sinkDorisParameters;
+
         @com.aliyun.core.annotation.NameInMap("SinkFcParameters")
         private SinkFcParameters sinkFcParameters;
 
@@ -12361,6 +14437,7 @@ public class UpdateEventStreamingRequest extends Request {
             this.sinkCustomizedKafkaParameters = builder.sinkCustomizedKafkaParameters;
             this.sinkDashVectorParameters = builder.sinkDashVectorParameters;
             this.sinkDataHubParameters = builder.sinkDataHubParameters;
+            this.sinkDorisParameters = builder.sinkDorisParameters;
             this.sinkFcParameters = builder.sinkFcParameters;
             this.sinkFnfParameters = builder.sinkFnfParameters;
             this.sinkKafkaParameters = builder.sinkKafkaParameters;
@@ -12421,6 +14498,13 @@ public class UpdateEventStreamingRequest extends Request {
          */
         public SinkDataHubParameters getSinkDataHubParameters() {
             return this.sinkDataHubParameters;
+        }
+
+        /**
+         * @return sinkDorisParameters
+         */
+        public SinkDorisParameters getSinkDorisParameters() {
+            return this.sinkDorisParameters;
         }
 
         /**
@@ -12500,6 +14584,7 @@ public class UpdateEventStreamingRequest extends Request {
             private SinkCustomizedKafkaParameters sinkCustomizedKafkaParameters; 
             private SinkDashVectorParameters sinkDashVectorParameters; 
             private SinkDataHubParameters sinkDataHubParameters; 
+            private SinkDorisParameters sinkDorisParameters; 
             private SinkFcParameters sinkFcParameters; 
             private SinkFnfParameters sinkFnfParameters; 
             private SinkKafkaParameters sinkKafkaParameters; 
@@ -12521,6 +14606,7 @@ public class UpdateEventStreamingRequest extends Request {
                 this.sinkCustomizedKafkaParameters = model.sinkCustomizedKafkaParameters;
                 this.sinkDashVectorParameters = model.sinkDashVectorParameters;
                 this.sinkDataHubParameters = model.sinkDataHubParameters;
+                this.sinkDorisParameters = model.sinkDorisParameters;
                 this.sinkFcParameters = model.sinkFcParameters;
                 this.sinkFnfParameters = model.sinkFnfParameters;
                 this.sinkKafkaParameters = model.sinkKafkaParameters;
@@ -12534,7 +14620,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * SinkApacheRocketMQCheckpointParameters.
+             * <p>The parameters that are configured if you specify Apache RocketMQ (Offset Data) as the event target.</p>
              */
             public Builder sinkApacheRocketMQCheckpointParameters(SinkApacheRocketMQCheckpointParameters sinkApacheRocketMQCheckpointParameters) {
                 this.sinkApacheRocketMQCheckpointParameters = sinkApacheRocketMQCheckpointParameters;
@@ -12542,7 +14628,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * SinkBaiLianParameters.
+             * <p>The parameters that are configured if you specify BaiLian as the event target.</p>
              */
             public Builder sinkBaiLianParameters(SinkBaiLianParameters sinkBaiLianParameters) {
                 this.sinkBaiLianParameters = sinkBaiLianParameters;
@@ -12550,7 +14636,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * SinkCustomizedKafkaConnectorParameters.
+             * <p>The parameters that are configured if you specify Kafka Sink Connect as the event target.</p>
              */
             public Builder sinkCustomizedKafkaConnectorParameters(SinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters) {
                 this.sinkCustomizedKafkaConnectorParameters = sinkCustomizedKafkaConnectorParameters;
@@ -12558,7 +14644,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * SinkCustomizedKafkaParameters.
+             * <p>The parameters that are configured if you specify Kafka Source Connect as the event target.</p>
              */
             public Builder sinkCustomizedKafkaParameters(SinkCustomizedKafkaParameters sinkCustomizedKafkaParameters) {
                 this.sinkCustomizedKafkaParameters = sinkCustomizedKafkaParameters;
@@ -12566,7 +14652,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * SinkDashVectorParameters.
+             * <p>The parameters that are configured if you specify DashVector as the event target.</p>
              */
             public Builder sinkDashVectorParameters(SinkDashVectorParameters sinkDashVectorParameters) {
                 this.sinkDashVectorParameters = sinkDashVectorParameters;
@@ -12574,10 +14660,18 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * SinkDataHubParameters.
+             * <p>The parameters that are configured if you specify DataHub as the event target.</p>
              */
             public Builder sinkDataHubParameters(SinkDataHubParameters sinkDataHubParameters) {
                 this.sinkDataHubParameters = sinkDataHubParameters;
+                return this;
+            }
+
+            /**
+             * <p>The type of the event source.</p>
+             */
+            public Builder sinkDorisParameters(SinkDorisParameters sinkDorisParameters) {
+                this.sinkDorisParameters = sinkDorisParameters;
                 return this;
             }
 
@@ -12606,7 +14700,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The parameters that are configured if you specify MNS as the event target.</p>
+             * <p>The parameters that are configured if you specify Simple Message Queue (SMQ, formerly MNS) as the event target.</p>
              */
             public Builder sinkMNSParameters(SinkMNSParameters sinkMNSParameters) {
                 this.sinkMNSParameters = sinkMNSParameters;
@@ -12614,7 +14708,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * SinkOpenSourceRabbitMQParameters.
+             * <p>The parameters that are configured if you specify open source RabbitMQ as the event target.</p>
              */
             public Builder sinkOpenSourceRabbitMQParameters(SinkOpenSourceRabbitMQParameters sinkOpenSourceRabbitMQParameters) {
                 this.sinkOpenSourceRabbitMQParameters = sinkOpenSourceRabbitMQParameters;
@@ -12638,7 +14732,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * SinkRocketMQCheckpointParameters.
+             * <p>The parameters that are configured if you specify ApsaraMQ for RocketMQ (Offset Data) as the event target.</p>
              */
             public Builder sinkRocketMQCheckpointParameters(SinkRocketMQCheckpointParameters sinkRocketMQCheckpointParameters) {
                 this.sinkRocketMQCheckpointParameters = sinkRocketMQCheckpointParameters;
@@ -12812,7 +14906,7 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * InstanceEndpoint.
+             * <p>The endpoint that is used to access the instance.</p>
              */
             public Builder instanceEndpoint(String instanceEndpoint) {
                 this.instanceEndpoint = instanceEndpoint;
@@ -12820,7 +14914,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstancePassword.
+             * <p>The password that is used to access the instance.</p>
              */
             public Builder instancePassword(String instancePassword) {
                 this.instancePassword = instancePassword;
@@ -12828,7 +14922,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceUsername.
+             * <p>The username that is used to access the instance.</p>
              */
             public Builder instanceUsername(String instanceUsername) {
                 this.instanceUsername = instanceUsername;
@@ -12852,7 +14946,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the security group to which the Managed Service for Prometheus instance belongs.</p>
+             * <p>The ID of the security group.</p>
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -12868,7 +14962,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the vSwitch with which the Managed Service for Prometheus instance is associated.</p>
+             * <p>The vSwitch ID.</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -12876,7 +14970,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC to which the Managed Service for Prometheus instance belongs.</p>
+             * <p>VPC ID。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-adw1awdw*****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -12943,7 +15040,14 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * Config.
+             * <p>The connector configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *           &quot;connector.class&quot;: &quot;com.mongodb.kafka.connect.MongoSinkConnector&quot;,
+             *           &quot;tasks.max&quot;: &quot;1&quot;,
+             *           &quot;topics&quot;: &quot;sourceA,sourceB&quot;
+             *         }</p>
              */
             public Builder config(java.util.Map<String, ?> config) {
                 this.config = config;
@@ -12951,7 +15055,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Name.
+             * <p>The connector name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mongo-sink</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -13031,7 +15138,10 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * ConnectorPackageUrl.
+             * <p>The download link of the ZIP package that includes Object Storage Service (OSS) resources.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;<a href="https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&Expires=1725539627&Signature=rb8q3OpV2i3gZJ">https://examplebucket.oss-cn-hangzhou.aliyuncs.com/testDoc/Old_Homebrew/2024-06-26%2022%3A34%3A08/opt/homebrew/homebrew/Library/Homebrew/test/support/fixtures/cask/AppWithBinary.zip?OSSAccessKeyId=ri&amp;Expires=1725539627&amp;Signature=rb8q3OpV2i3gZJ</a>&quot;</p>
              */
             public Builder connectorPackageUrl(String connectorPackageUrl) {
                 this.connectorPackageUrl = connectorPackageUrl;
@@ -13039,7 +15149,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * ConnectorParameters.
+             * <p>The parameters that are configured for the parsing of the .properties file in the ZIP package.</p>
              */
             public Builder connectorParameters(SourceCustomizedKafkaConnectorParametersConnectorParameters connectorParameters) {
                 this.connectorParameters = connectorParameters;
@@ -13047,7 +15157,17 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * WorkerParameters.
+             * <p>The instance configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{
+             *         &quot;group.id&quot;: &quot;connect-eb-cluster-KAFKA_CONNECTORC&quot;,
+             *         &quot;offset.storage.topic&quot;: &quot;connect-eb-offset-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+             *         &quot;config.storage.topic&quot;: &quot;connect-eb-config-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+             *         &quot;status.storage.topic&quot;: &quot;connect-eb-status-KAFKA_CONNECTOR_yjqC8K5ewC&quot;,
+             *         &quot;consumer.group.id&quot;: &quot;connector-eb-cluster-KAFKA_CONNECTOR_yjqC8K5ewC-mongo-sink&quot;,
+             *         &quot;bootstrap.servers&quot;: &quot;alikafka-post:9092&quot;
+             *       }</p>
              */
             public Builder workerParameters(java.util.Map<String, ?> workerParameters) {
                 this.workerParameters = workerParameters;
@@ -14221,7 +16341,14 @@ public class UpdateEventStreamingRequest extends Request {
             } 
 
             /**
-             * AuthType.
+             * <p>The authentication type. Valid values:</p>
+             * <ul>
+             * <li>ACL</li>
+             * <li>N/A</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ACL</p>
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -14237,7 +16364,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * Endpoint.
+             * <p>The endpoint used to access the open source RabbitMQ instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1:9876</p>
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -14316,10 +16446,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC to which the ApsaraMQ for Kafka instance belongs.</p>
+             * <p>VPC ID。</p>
              * 
              * <strong>example:</strong>
-             * <p>vpc-2ze6p0o345nykmekxtuop</p>
+             * <p>vpc-m5e3sv4b12345****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -14723,7 +16853,7 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * InstanceType.
+             * <p>The instance type.</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -15322,10 +17452,10 @@ public class UpdateEventStreamingRequest extends Request {
             }
 
             /**
-             * <p>The ID of the VPC to which the ApsaraMQ for Kafka instance belongs.</p>
+             * <p>VPC ID。</p>
              * 
              * <strong>example:</strong>
-             * <p>vpc-2ze6p0o345nykmekxtuop</p>
+             * <p>vpc-m5e3sv4b12345****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

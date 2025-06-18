@@ -114,7 +114,7 @@ public class CheckServiceLinkedRoleForProductResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -204,7 +204,10 @@ public class CheckServiceLinkedRoleForProductResponseBody extends TeaModel {
             } 
 
             /**
-             * CheckPass.
+             * <p>Indicates whether the service-linked role exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder checkPass(Boolean checkPass) {
                 this.checkPass = checkPass;
@@ -212,7 +215,10 @@ public class CheckServiceLinkedRoleForProductResponseBody extends TeaModel {
             }
 
             /**
-             * StsRoleName.
+             * <p>The name of the service-linked role.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AliyunServiceRoleForEventBridgeConnectVPC</p>
              */
             public Builder stsRoleName(String stsRoleName) {
                 this.stsRoleName = stsRoleName;

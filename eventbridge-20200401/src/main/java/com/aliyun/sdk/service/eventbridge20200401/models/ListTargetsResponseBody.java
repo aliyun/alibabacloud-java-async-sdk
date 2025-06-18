@@ -211,7 +211,10 @@ public class ListTargetsResponseBody extends TeaModel {
             } 
 
             /**
-             * Concurrency.
+             * <p>The maximum number of concurrent events allowed in the event target.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder concurrency(Long concurrency) {
                 this.concurrency = concurrency;
@@ -485,7 +488,7 @@ public class ListTargetsResponseBody extends TeaModel {
             } 
 
             /**
-             * ConcurrentConfig.
+             * <p>The concurrency configuration.</p>
              */
             public Builder concurrentConfig(ConcurrentConfig concurrentConfig) {
                 this.concurrentConfig = concurrentConfig;
