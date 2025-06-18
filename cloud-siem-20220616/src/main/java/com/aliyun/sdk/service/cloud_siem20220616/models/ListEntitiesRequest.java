@@ -64,6 +64,10 @@ public class ListEntitiesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RoleType")
     private Integer roleType;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
+    private String tags;
+
     private ListEntitiesRequest(Builder builder) {
         super(builder);
         this.currentPage = builder.currentPage;
@@ -77,6 +81,7 @@ public class ListEntitiesRequest extends Request {
         this.regionId = builder.regionId;
         this.roleFor = builder.roleFor;
         this.roleType = builder.roleType;
+        this.tags = builder.tags;
     }
 
     public static Builder builder() {
@@ -169,6 +174,13 @@ public class ListEntitiesRequest extends Request {
         return this.roleType;
     }
 
+    /**
+     * @return tags
+     */
+    public String getTags() {
+        return this.tags;
+    }
+
     public static final class Builder extends Request.Builder<ListEntitiesRequest, Builder> {
         private Integer currentPage; 
         private String entityName; 
@@ -181,6 +193,7 @@ public class ListEntitiesRequest extends Request {
         private String regionId; 
         private Long roleFor; 
         private Integer roleType; 
+        private String tags; 
 
         private Builder() {
             super();
@@ -199,6 +212,7 @@ public class ListEntitiesRequest extends Request {
             this.regionId = request.regionId;
             this.roleFor = request.roleFor;
             this.roleType = request.roleType;
+            this.tags = request.tags;
         } 
 
         /**
@@ -306,6 +320,15 @@ public class ListEntitiesRequest extends Request {
         public Builder roleType(Integer roleType) {
             this.putBodyParameter("RoleType", roleType);
             this.roleType = roleType;
+            return this;
+        }
+
+        /**
+         * Tags.
+         */
+        public Builder tags(String tags) {
+            this.putBodyParameter("Tags", tags);
+            this.tags = tags;
             return this;
         }
 

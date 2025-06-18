@@ -296,11 +296,20 @@ public class ListEntitiesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IncidentUuid")
         private String incidentUuid;
 
+        @com.aliyun.core.annotation.NameInMap("IsAsset")
+        private String isAsset;
+
+        @com.aliyun.core.annotation.NameInMap("IsMalware")
+        private String isMalware;
+
         @com.aliyun.core.annotation.NameInMap("MalwareType")
         private String malwareType;
 
         @com.aliyun.core.annotation.NameInMap("SubUserId")
         private Long subUserId;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private String tags;
 
         private ResponseData(Builder builder) {
             this.alertNum = builder.alertNum;
@@ -317,8 +326,11 @@ public class ListEntitiesResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
             this.incidentUuid = builder.incidentUuid;
+            this.isAsset = builder.isAsset;
+            this.isMalware = builder.isMalware;
             this.malwareType = builder.malwareType;
             this.subUserId = builder.subUserId;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -428,6 +440,20 @@ public class ListEntitiesResponseBody extends TeaModel {
         }
 
         /**
+         * @return isAsset
+         */
+        public String getIsAsset() {
+            return this.isAsset;
+        }
+
+        /**
+         * @return isMalware
+         */
+        public String getIsMalware() {
+            return this.isMalware;
+        }
+
+        /**
          * @return malwareType
          */
         public String getMalwareType() {
@@ -439,6 +465,13 @@ public class ListEntitiesResponseBody extends TeaModel {
          */
         public Long getSubUserId() {
             return this.subUserId;
+        }
+
+        /**
+         * @return tags
+         */
+        public String getTags() {
+            return this.tags;
         }
 
         public static final class Builder {
@@ -456,8 +489,11 @@ public class ListEntitiesResponseBody extends TeaModel {
             private String gmtModified; 
             private Long id; 
             private String incidentUuid; 
+            private String isAsset; 
+            private String isMalware; 
             private String malwareType; 
             private Long subUserId; 
+            private String tags; 
 
             private Builder() {
             } 
@@ -477,8 +513,11 @@ public class ListEntitiesResponseBody extends TeaModel {
                 this.gmtModified = model.gmtModified;
                 this.id = model.id;
                 this.incidentUuid = model.incidentUuid;
+                this.isAsset = model.isAsset;
+                this.isMalware = model.isMalware;
                 this.malwareType = model.malwareType;
                 this.subUserId = model.subUserId;
+                this.tags = model.tags;
             } 
 
             /**
@@ -594,6 +633,22 @@ public class ListEntitiesResponseBody extends TeaModel {
             }
 
             /**
+             * IsAsset.
+             */
+            public Builder isAsset(String isAsset) {
+                this.isAsset = isAsset;
+                return this;
+            }
+
+            /**
+             * IsMalware.
+             */
+            public Builder isMalware(String isMalware) {
+                this.isMalware = isMalware;
+                return this;
+            }
+
+            /**
              * MalwareType.
              */
             public Builder malwareType(String malwareType) {
@@ -606,6 +661,14 @@ public class ListEntitiesResponseBody extends TeaModel {
              */
             public Builder subUserId(Long subUserId) {
                 this.subUserId = subUserId;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(String tags) {
+                this.tags = tags;
                 return this;
             }
 
