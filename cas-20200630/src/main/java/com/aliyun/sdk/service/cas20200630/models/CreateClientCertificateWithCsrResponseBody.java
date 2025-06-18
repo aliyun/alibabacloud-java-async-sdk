@@ -132,7 +132,12 @@ public class CreateClientCertificateWithCsrResponseBody extends TeaModel {
         } 
 
         /**
-         * CertKmcRep1.
+         * <p>CertKmcRep1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userSeal=MHkCIEu94PQAahFWuFk%</p>
+         * <hr>
+         * <p>EtFw%2FkMMBjw8i5bFfSkV%2FIUrcOJD</p>
          */
         public Builder certKmcRep1(String certKmcRep1) {
             this.certKmcRep1 = certKmcRep1;
@@ -140,7 +145,12 @@ public class CreateClientCertificateWithCsrResponseBody extends TeaModel {
         }
 
         /**
-         * CertSignBufKmc.
+         * <p>Cert Sign Buf Kmc.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>userSeal=MHkCIEu94PQAahFWuFk%</p>
+         * <hr>
+         * <p>EtFw%2FkMMBjw8i5bFfSkV%2FIUrcOJD</p>
          */
         public Builder certSignBufKmc(String certSignBufKmc) {
             this.certSignBufKmc = certSignBufKmc;

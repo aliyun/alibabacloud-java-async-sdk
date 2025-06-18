@@ -234,6 +234,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCAInstanceStatusResponse> getCAInstanceStatus(GetCAInstanceStatusRequest request);
 
     /**
+     * @param request the request parameters of ListCert  ListCertRequest
+     * @return ListCertResponse
+     */
+    CompletableFuture<ListCertResponse> listCert(ListCertRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call the ListClientCertificate operation to perform a paged query of the details about all client certificates and server certificates that you create. The details include the unique identifier, serial number, user information, content, and status of each certificate.</p>
      * <h2>Limits</h2>
@@ -266,5 +272,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateCACertificateStatusResponse
      */
     CompletableFuture<UpdateCACertificateStatusResponse> updateCACertificateStatus(UpdateCACertificateStatusRequest request);
+
+    /**
+     * @param request the request parameters of UploadPcaCertToCas  UploadPcaCertToCasRequest
+     * @return UploadPcaCertToCasResponse
+     */
+    CompletableFuture<UploadPcaCertToCasResponse> uploadPcaCertToCas(UploadPcaCertToCasRequest request);
 
 }
