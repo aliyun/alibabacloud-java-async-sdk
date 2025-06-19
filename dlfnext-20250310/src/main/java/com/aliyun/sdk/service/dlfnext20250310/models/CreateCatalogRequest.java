@@ -29,11 +29,16 @@ public class CreateCatalogRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("options")
     private java.util.Map<String, String> options;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
+    private String type;
+
     private CreateCatalogRequest(Builder builder) {
         super(builder);
         this.name = builder.name;
         this.optimizationConfig = builder.optimizationConfig;
         this.options = builder.options;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -70,10 +75,18 @@ public class CreateCatalogRequest extends Request {
         return this.options;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<CreateCatalogRequest, Builder> {
         private String name; 
         private java.util.Map<String, String> optimizationConfig; 
         private java.util.Map<String, String> options; 
+        private String type; 
 
         private Builder() {
             super();
@@ -84,6 +97,7 @@ public class CreateCatalogRequest extends Request {
             this.name = request.name;
             this.optimizationConfig = request.optimizationConfig;
             this.options = request.options;
+            this.type = request.type;
         } 
 
         /**
@@ -110,6 +124,15 @@ public class CreateCatalogRequest extends Request {
         public Builder options(java.util.Map<String, String> options) {
             this.putBodyParameter("options", options);
             this.options = options;
+            return this;
+        }
+
+        /**
+         * type.
+         */
+        public Builder type(String type) {
+            this.putBodyParameter("type", type);
+            this.type = type;
             return this;
         }
 

@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link Catalog} extends {@link TeaModel}
+ * {@link Namespace} extends {@link TeaModel}
  *
- * <p>Catalog</p>
+ * <p>Namespace</p>
  */
-public class Catalog extends TeaModel {
+public class Namespace extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("createdAt")
     private Long createdAt;
 
@@ -25,6 +25,9 @@ public class Catalog extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("id")
     private String id;
+
+    @com.aliyun.core.annotation.NameInMap("location")
+    private String location;
 
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
@@ -35,27 +38,20 @@ public class Catalog extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("owner")
     private String owner;
 
-    @com.aliyun.core.annotation.NameInMap("status")
-    private String status;
-
-    @com.aliyun.core.annotation.NameInMap("type")
-    private String type;
-
     @com.aliyun.core.annotation.NameInMap("updatedAt")
     private Long updatedAt;
 
     @com.aliyun.core.annotation.NameInMap("updatedBy")
     private String updatedBy;
 
-    private Catalog(Builder builder) {
+    private Namespace(Builder builder) {
         this.createdAt = builder.createdAt;
         this.createdBy = builder.createdBy;
         this.id = builder.id;
+        this.location = builder.location;
         this.name = builder.name;
         this.options = builder.options;
         this.owner = builder.owner;
-        this.status = builder.status;
-        this.type = builder.type;
         this.updatedAt = builder.updatedAt;
         this.updatedBy = builder.updatedBy;
     }
@@ -64,7 +60,7 @@ public class Catalog extends TeaModel {
         return new Builder();
     }
 
-    public static Catalog create() {
+    public static Namespace create() {
         return builder().build();
     }
 
@@ -94,6 +90,13 @@ public class Catalog extends TeaModel {
     }
 
     /**
+     * @return location
+     */
+    public String getLocation() {
+        return this.location;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -115,20 +118,6 @@ public class Catalog extends TeaModel {
     }
 
     /**
-     * @return status
-     */
-    public String getStatus() {
-        return this.status;
-    }
-
-    /**
-     * @return type
-     */
-    public String getType() {
-        return this.type;
-    }
-
-    /**
      * @return updatedAt
      */
     public Long getUpdatedAt() {
@@ -146,26 +135,24 @@ public class Catalog extends TeaModel {
         private Long createdAt; 
         private String createdBy; 
         private String id; 
+        private String location; 
         private String name; 
         private java.util.Map<String, String> options; 
         private String owner; 
-        private String status; 
-        private String type; 
         private Long updatedAt; 
         private String updatedBy; 
 
         private Builder() {
         } 
 
-        private Builder(Catalog model) {
+        private Builder(Namespace model) {
             this.createdAt = model.createdAt;
             this.createdBy = model.createdBy;
             this.id = model.id;
+            this.location = model.location;
             this.name = model.name;
             this.options = model.options;
             this.owner = model.owner;
-            this.status = model.status;
-            this.type = model.type;
             this.updatedAt = model.updatedAt;
             this.updatedBy = model.updatedBy;
         } 
@@ -195,6 +182,14 @@ public class Catalog extends TeaModel {
         }
 
         /**
+         * location.
+         */
+        public Builder location(String location) {
+            this.location = location;
+            return this;
+        }
+
+        /**
          * name.
          */
         public Builder name(String name) {
@@ -219,22 +214,6 @@ public class Catalog extends TeaModel {
         }
 
         /**
-         * status.
-         */
-        public Builder status(String status) {
-            this.status = status;
-            return this;
-        }
-
-        /**
-         * type.
-         */
-        public Builder type(String type) {
-            this.type = type;
-            return this;
-        }
-
-        /**
          * updatedAt.
          */
         public Builder updatedAt(Long updatedAt) {
@@ -250,8 +229,8 @@ public class Catalog extends TeaModel {
             return this;
         }
 
-        public Catalog build() {
-            return new Catalog(this);
+        public Namespace build() {
+            return new Namespace(this);
         } 
 
     } 
