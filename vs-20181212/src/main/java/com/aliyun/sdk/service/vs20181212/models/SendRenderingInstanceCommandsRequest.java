@@ -23,14 +23,25 @@ public class SendRenderingInstanceCommandsRequest extends Request {
     private String commands;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
+    private String mode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String renderingInstanceId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
+    @com.aliyun.core.annotation.Validation(maximum = 3600)
+    private Integer timeout;
+
     private SendRenderingInstanceCommandsRequest(Builder builder) {
         super(builder);
         this.commands = builder.commands;
+        this.mode = builder.mode;
         this.renderingInstanceId = builder.renderingInstanceId;
+        this.timeout = builder.timeout;
     }
 
     public static Builder builder() {
@@ -54,15 +65,31 @@ public class SendRenderingInstanceCommandsRequest extends Request {
     }
 
     /**
+     * @return mode
+     */
+    public String getMode() {
+        return this.mode;
+    }
+
+    /**
      * @return renderingInstanceId
      */
     public String getRenderingInstanceId() {
         return this.renderingInstanceId;
     }
 
+    /**
+     * @return timeout
+     */
+    public Integer getTimeout() {
+        return this.timeout;
+    }
+
     public static final class Builder extends Request.Builder<SendRenderingInstanceCommandsRequest, Builder> {
         private String commands; 
+        private String mode; 
         private String renderingInstanceId; 
+        private Integer timeout; 
 
         private Builder() {
             super();
@@ -71,7 +98,9 @@ public class SendRenderingInstanceCommandsRequest extends Request {
         private Builder(SendRenderingInstanceCommandsRequest request) {
             super(request);
             this.commands = request.commands;
+            this.mode = request.mode;
             this.renderingInstanceId = request.renderingInstanceId;
+            this.timeout = request.timeout;
         } 
 
         /**
@@ -87,6 +116,15 @@ public class SendRenderingInstanceCommandsRequest extends Request {
         }
 
         /**
+         * Mode.
+         */
+        public Builder mode(String mode) {
+            this.putQueryParameter("Mode", mode);
+            this.mode = mode;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -95,6 +133,15 @@ public class SendRenderingInstanceCommandsRequest extends Request {
         public Builder renderingInstanceId(String renderingInstanceId) {
             this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
             this.renderingInstanceId = renderingInstanceId;
+            return this;
+        }
+
+        /**
+         * Timeout.
+         */
+        public Builder timeout(Integer timeout) {
+            this.putQueryParameter("Timeout", timeout);
+            this.timeout = timeout;
             return this;
         }
 

@@ -12,13 +12,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link SendRenderingInstanceCommandsResponseBody} extends {@link TeaModel}
+ * {@link GetRenderingInstanceCommandsStatusResponseBody} extends {@link TeaModel}
  *
- * <p>SendRenderingInstanceCommandsResponseBody</p>
+ * <p>GetRenderingInstanceCommandsStatusResponseBody</p>
  */
-public class SendRenderingInstanceCommandsResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("CmdId")
-    private String cmdId;
+public class GetRenderingInstanceCommandsStatusResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Message")
+    private String message;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -26,17 +26,21 @@ public class SendRenderingInstanceCommandsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Result")
     private String result;
 
-    private SendRenderingInstanceCommandsResponseBody(Builder builder) {
-        this.cmdId = builder.cmdId;
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
+
+    private GetRenderingInstanceCommandsStatusResponseBody(Builder builder) {
+        this.message = builder.message;
         this.requestId = builder.requestId;
         this.result = builder.result;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static SendRenderingInstanceCommandsResponseBody create() {
+    public static GetRenderingInstanceCommandsStatusResponseBody create() {
         return builder().build();
     }
 
@@ -45,10 +49,10 @@ public class SendRenderingInstanceCommandsResponseBody extends TeaModel {
     }
 
     /**
-     * @return cmdId
+     * @return message
      */
-    public String getCmdId() {
-        return this.cmdId;
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -65,30 +69,42 @@ public class SendRenderingInstanceCommandsResponseBody extends TeaModel {
         return this.result;
     }
 
+    /**
+     * @return status
+     */
+    public String getStatus() {
+        return this.status;
+    }
+
     public static final class Builder {
-        private String cmdId; 
+        private String message; 
         private String requestId; 
         private String result; 
+        private String status; 
 
         private Builder() {
         } 
 
-        private Builder(SendRenderingInstanceCommandsResponseBody model) {
-            this.cmdId = model.cmdId;
+        private Builder(GetRenderingInstanceCommandsStatusResponseBody model) {
+            this.message = model.message;
             this.requestId = model.requestId;
             this.result = model.result;
+            this.status = model.status;
         } 
 
         /**
-         * CmdId.
+         * Message.
          */
-        public Builder cmdId(String cmdId) {
-            this.cmdId = cmdId;
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>Id of the request</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,8 +119,16 @@ public class SendRenderingInstanceCommandsResponseBody extends TeaModel {
             return this;
         }
 
-        public SendRenderingInstanceCommandsResponseBody build() {
-            return new SendRenderingInstanceCommandsResponseBody(this);
+        /**
+         * Status.
+         */
+        public Builder status(String status) {
+            this.status = status;
+            return this;
+        }
+
+        public GetRenderingInstanceCommandsStatusResponseBody build() {
+            return new GetRenderingInstanceCommandsStatusResponseBody(this);
         } 
 
     } 

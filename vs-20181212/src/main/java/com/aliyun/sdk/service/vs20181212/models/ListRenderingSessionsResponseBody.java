@@ -122,6 +122,9 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
+        @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
+        private String renderingInstanceId;
+
         @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
@@ -131,6 +134,7 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         private Sessions(Builder builder) {
             this.appId = builder.appId;
             this.clientId = builder.clientId;
+            this.renderingInstanceId = builder.renderingInstanceId;
             this.sessionId = builder.sessionId;
             this.startTime = builder.startTime;
         }
@@ -158,6 +162,13 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return renderingInstanceId
+         */
+        public String getRenderingInstanceId() {
+            return this.renderingInstanceId;
+        }
+
+        /**
          * @return sessionId
          */
         public String getSessionId() {
@@ -174,6 +185,7 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         public static final class Builder {
             private String appId; 
             private String clientId; 
+            private String renderingInstanceId; 
             private String sessionId; 
             private String startTime; 
 
@@ -183,6 +195,7 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
             private Builder(Sessions model) {
                 this.appId = model.appId;
                 this.clientId = model.clientId;
+                this.renderingInstanceId = model.renderingInstanceId;
                 this.sessionId = model.sessionId;
                 this.startTime = model.startTime;
             } 
@@ -200,6 +213,14 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
              */
             public Builder clientId(String clientId) {
                 this.clientId = clientId;
+                return this;
+            }
+
+            /**
+             * RenderingInstanceId.
+             */
+            public Builder renderingInstanceId(String renderingInstanceId) {
+                this.renderingInstanceId = renderingInstanceId;
                 return this;
             }
 

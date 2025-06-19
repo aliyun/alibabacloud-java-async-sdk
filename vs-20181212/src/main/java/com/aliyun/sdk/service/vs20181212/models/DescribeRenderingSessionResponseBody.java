@@ -38,6 +38,9 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PortMappings")
     private java.util.List<PortMappings> portMappings;
 
+    @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
+    private String renderingInstanceId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -58,6 +61,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         this.isp = builder.isp;
         this.location = builder.location;
         this.portMappings = builder.portMappings;
+        this.renderingInstanceId = builder.renderingInstanceId;
         this.requestId = builder.requestId;
         this.sessionId = builder.sessionId;
         this.startTime = builder.startTime;
@@ -126,6 +130,13 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
     }
 
     /**
+     * @return renderingInstanceId
+     */
+    public String getRenderingInstanceId() {
+        return this.renderingInstanceId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -161,6 +172,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
         private String isp; 
         private Location location; 
         private java.util.List<PortMappings> portMappings; 
+        private String renderingInstanceId; 
         private String requestId; 
         private String sessionId; 
         private String startTime; 
@@ -177,6 +189,7 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
             this.isp = model.isp;
             this.location = model.location;
             this.portMappings = model.portMappings;
+            this.renderingInstanceId = model.renderingInstanceId;
             this.requestId = model.requestId;
             this.sessionId = model.sessionId;
             this.startTime = model.startTime;
@@ -236,6 +249,14 @@ public class DescribeRenderingSessionResponseBody extends TeaModel {
          */
         public Builder portMappings(java.util.List<PortMappings> portMappings) {
             this.portMappings = portMappings;
+            return this;
+        }
+
+        /**
+         * RenderingInstanceId.
+         */
+        public Builder renderingInstanceId(String renderingInstanceId) {
+            this.renderingInstanceId = renderingInstanceId;
             return this;
         }
 

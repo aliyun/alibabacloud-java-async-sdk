@@ -674,6 +674,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ForbidVsStreamResponse> forbidVsStream(ForbidVsStreamRequest request);
 
     /**
+     * @param request the request parameters of GetRenderingInstanceCommandsStatus  GetRenderingInstanceCommandsStatusRequest
+     * @return GetRenderingInstanceCommandsStatusResponse
+     */
+    CompletableFuture<GetRenderingInstanceCommandsStatusResponse> getRenderingInstanceCommandsStatus(GetRenderingInstanceCommandsStatusRequest request);
+
+    /**
      * @param request the request parameters of GetRenderingInstanceStreamingInfo  GetRenderingInstanceStreamingInfoRequest
      * @return GetRenderingInstanceStreamingInfoResponse
      */

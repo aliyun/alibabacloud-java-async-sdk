@@ -40,6 +40,10 @@ public class ListRenderingSessionsRequest extends Request {
     private String projectId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenderingInstanceId")
+    private String renderingInstanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
@@ -54,6 +58,7 @@ public class ListRenderingSessionsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.projectId = builder.projectId;
+        this.renderingInstanceId = builder.renderingInstanceId;
         this.sessionId = builder.sessionId;
         this.state = builder.state;
     }
@@ -107,6 +112,13 @@ public class ListRenderingSessionsRequest extends Request {
     }
 
     /**
+     * @return renderingInstanceId
+     */
+    public String getRenderingInstanceId() {
+        return this.renderingInstanceId;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -126,6 +138,7 @@ public class ListRenderingSessionsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String projectId; 
+        private String renderingInstanceId; 
         private String sessionId; 
         private String state; 
 
@@ -140,6 +153,7 @@ public class ListRenderingSessionsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.projectId = request.projectId;
+            this.renderingInstanceId = request.renderingInstanceId;
             this.sessionId = request.sessionId;
             this.state = request.state;
         } 
@@ -189,6 +203,15 @@ public class ListRenderingSessionsRequest extends Request {
         public Builder projectId(String projectId) {
             this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
+            return this;
+        }
+
+        /**
+         * RenderingInstanceId.
+         */
+        public Builder renderingInstanceId(String renderingInstanceId) {
+            this.putQueryParameter("RenderingInstanceId", renderingInstanceId);
+            this.renderingInstanceId = renderingInstanceId;
             return this;
         }
 
