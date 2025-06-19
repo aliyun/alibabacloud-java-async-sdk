@@ -374,6 +374,12 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DatabaseNames")
         private java.util.List<String> databaseNames;
 
+        @com.aliyun.core.annotation.NameInMap("EstimatedRows")
+        private Long estimatedRows;
+
+        @com.aliyun.core.annotation.NameInMap("ExpireLogsDays")
+        private Integer expireLogsDays;
+
         @com.aliyun.core.annotation.NameInMap("SimpleData")
         private String simpleData;
 
@@ -383,11 +389,17 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TableSchema")
         private TableSchema tableSchema;
 
+        @com.aliyun.core.annotation.NameInMap("WaitTimeout")
+        private Integer waitTimeout;
+
         private SourceMySQLDiscovery(Builder builder) {
             this.databaseNames = builder.databaseNames;
+            this.estimatedRows = builder.estimatedRows;
+            this.expireLogsDays = builder.expireLogsDays;
             this.simpleData = builder.simpleData;
             this.tableNames = builder.tableNames;
             this.tableSchema = builder.tableSchema;
+            this.waitTimeout = builder.waitTimeout;
         }
 
         public static Builder builder() {
@@ -403,6 +415,20 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
          */
         public java.util.List<String> getDatabaseNames() {
             return this.databaseNames;
+        }
+
+        /**
+         * @return estimatedRows
+         */
+        public Long getEstimatedRows() {
+            return this.estimatedRows;
+        }
+
+        /**
+         * @return expireLogsDays
+         */
+        public Integer getExpireLogsDays() {
+            return this.expireLogsDays;
         }
 
         /**
@@ -426,20 +452,33 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
             return this.tableSchema;
         }
 
+        /**
+         * @return waitTimeout
+         */
+        public Integer getWaitTimeout() {
+            return this.waitTimeout;
+        }
+
         public static final class Builder {
             private java.util.List<String> databaseNames; 
+            private Long estimatedRows; 
+            private Integer expireLogsDays; 
             private String simpleData; 
             private java.util.List<String> tableNames; 
             private TableSchema tableSchema; 
+            private Integer waitTimeout; 
 
             private Builder() {
             } 
 
             private Builder(SourceMySQLDiscovery model) {
                 this.databaseNames = model.databaseNames;
+                this.estimatedRows = model.estimatedRows;
+                this.expireLogsDays = model.expireLogsDays;
                 this.simpleData = model.simpleData;
                 this.tableNames = model.tableNames;
                 this.tableSchema = model.tableSchema;
+                this.waitTimeout = model.waitTimeout;
             } 
 
             /**
@@ -447,6 +486,22 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
              */
             public Builder databaseNames(java.util.List<String> databaseNames) {
                 this.databaseNames = databaseNames;
+                return this;
+            }
+
+            /**
+             * EstimatedRows.
+             */
+            public Builder estimatedRows(Long estimatedRows) {
+                this.estimatedRows = estimatedRows;
+                return this;
+            }
+
+            /**
+             * ExpireLogsDays.
+             */
+            public Builder expireLogsDays(Integer expireLogsDays) {
+                this.expireLogsDays = expireLogsDays;
                 return this;
             }
 
@@ -471,6 +526,14 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
              */
             public Builder tableSchema(TableSchema tableSchema) {
                 this.tableSchema = tableSchema;
+                return this;
+            }
+
+            /**
+             * WaitTimeout.
+             */
+            public Builder waitTimeout(Integer waitTimeout) {
+                this.waitTimeout = waitTimeout;
                 return this;
             }
 
