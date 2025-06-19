@@ -23,6 +23,9 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
     private String addressIPVersion;
 
+    @com.aliyun.core.annotation.NameInMap("AddressType")
+    private String addressType;
+
     @com.aliyun.core.annotation.NameInMap("BackendServers")
     private java.util.List<BackendServers> backendServers;
 
@@ -56,6 +59,9 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
     private String loadBalancerStatus;
 
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerType")
+    private String loadBalancerType;
+
     @com.aliyun.core.annotation.NameInMap("NetworkId")
     private String networkId;
 
@@ -71,6 +77,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     private DescribeLoadBalancerAttributeResponseBody(Builder builder) {
         this.address = builder.address;
         this.addressIPVersion = builder.addressIPVersion;
+        this.addressType = builder.addressType;
         this.backendServers = builder.backendServers;
         this.bandwidth = builder.bandwidth;
         this.createTime = builder.createTime;
@@ -82,6 +89,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         this.loadBalancerName = builder.loadBalancerName;
         this.loadBalancerSpec = builder.loadBalancerSpec;
         this.loadBalancerStatus = builder.loadBalancerStatus;
+        this.loadBalancerType = builder.loadBalancerType;
         this.networkId = builder.networkId;
         this.payType = builder.payType;
         this.requestId = builder.requestId;
@@ -112,6 +120,13 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
      */
     public String getAddressIPVersion() {
         return this.addressIPVersion;
+    }
+
+    /**
+     * @return addressType
+     */
+    public String getAddressType() {
+        return this.addressType;
     }
 
     /**
@@ -192,6 +207,13 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return loadBalancerType
+     */
+    public String getLoadBalancerType() {
+        return this.loadBalancerType;
+    }
+
+    /**
      * @return networkId
      */
     public String getNetworkId() {
@@ -222,6 +244,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private String address; 
         private String addressIPVersion; 
+        private String addressType; 
         private java.util.List<BackendServers> backendServers; 
         private Integer bandwidth; 
         private String createTime; 
@@ -233,6 +256,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         private String loadBalancerName; 
         private String loadBalancerSpec; 
         private String loadBalancerStatus; 
+        private String loadBalancerType; 
         private String networkId; 
         private String payType; 
         private String requestId; 
@@ -244,6 +268,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         private Builder(DescribeLoadBalancerAttributeResponseBody model) {
             this.address = model.address;
             this.addressIPVersion = model.addressIPVersion;
+            this.addressType = model.addressType;
             this.backendServers = model.backendServers;
             this.bandwidth = model.bandwidth;
             this.createTime = model.createTime;
@@ -255,6 +280,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
             this.loadBalancerName = model.loadBalancerName;
             this.loadBalancerSpec = model.loadBalancerSpec;
             this.loadBalancerStatus = model.loadBalancerStatus;
+            this.loadBalancerType = model.loadBalancerType;
             this.networkId = model.networkId;
             this.payType = model.payType;
             this.requestId = model.requestId;
@@ -280,6 +306,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.addressIPVersion = addressIPVersion;
+            return this;
+        }
+
+        /**
+         * AddressType.
+         */
+        public Builder addressType(String addressType) {
+            this.addressType = addressType;
             return this;
         }
 
@@ -396,6 +430,14 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
          */
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.loadBalancerStatus = loadBalancerStatus;
+            return this;
+        }
+
+        /**
+         * LoadBalancerType.
+         */
+        public Builder loadBalancerType(String loadBalancerType) {
+            this.loadBalancerType = loadBalancerType;
             return this;
         }
 

@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateLoadBalancerRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillingCycle")
+    private String billingCycle;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -36,6 +40,10 @@ public class CreateLoadBalancerRequest extends Request {
     private String loadBalancerSpec;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerType")
+    private String loadBalancerType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String networkId;
@@ -52,10 +60,12 @@ public class CreateLoadBalancerRequest extends Request {
 
     private CreateLoadBalancerRequest(Builder builder) {
         super(builder);
+        this.billingCycle = builder.billingCycle;
         this.clientToken = builder.clientToken;
         this.ensRegionId = builder.ensRegionId;
         this.loadBalancerName = builder.loadBalancerName;
         this.loadBalancerSpec = builder.loadBalancerSpec;
+        this.loadBalancerType = builder.loadBalancerType;
         this.networkId = builder.networkId;
         this.payType = builder.payType;
         this.vSwitchId = builder.vSwitchId;
@@ -72,6 +82,13 @@ public class CreateLoadBalancerRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return billingCycle
+     */
+    public String getBillingCycle() {
+        return this.billingCycle;
     }
 
     /**
@@ -103,6 +120,13 @@ public class CreateLoadBalancerRequest extends Request {
     }
 
     /**
+     * @return loadBalancerType
+     */
+    public String getLoadBalancerType() {
+        return this.loadBalancerType;
+    }
+
+    /**
      * @return networkId
      */
     public String getNetworkId() {
@@ -124,10 +148,12 @@ public class CreateLoadBalancerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateLoadBalancerRequest, Builder> {
+        private String billingCycle; 
         private String clientToken; 
         private String ensRegionId; 
         private String loadBalancerName; 
         private String loadBalancerSpec; 
+        private String loadBalancerType; 
         private String networkId; 
         private String payType; 
         private String vSwitchId; 
@@ -138,14 +164,25 @@ public class CreateLoadBalancerRequest extends Request {
 
         private Builder(CreateLoadBalancerRequest request) {
             super(request);
+            this.billingCycle = request.billingCycle;
             this.clientToken = request.clientToken;
             this.ensRegionId = request.ensRegionId;
             this.loadBalancerName = request.loadBalancerName;
             this.loadBalancerSpec = request.loadBalancerSpec;
+            this.loadBalancerType = request.loadBalancerType;
             this.networkId = request.networkId;
             this.payType = request.payType;
             this.vSwitchId = request.vSwitchId;
         } 
+
+        /**
+         * BillingCycle.
+         */
+        public Builder billingCycle(String billingCycle) {
+            this.putQueryParameter("BillingCycle", billingCycle);
+            this.billingCycle = billingCycle;
+            return this;
+        }
 
         /**
          * <p>The client token that is used to ensure the idempotence of the request. This prevents repeated operations caused by multiple retries.</p>
@@ -203,6 +240,15 @@ public class CreateLoadBalancerRequest extends Request {
         public Builder loadBalancerSpec(String loadBalancerSpec) {
             this.putQueryParameter("LoadBalancerSpec", loadBalancerSpec);
             this.loadBalancerSpec = loadBalancerSpec;
+            return this;
+        }
+
+        /**
+         * LoadBalancerType.
+         */
+        public Builder loadBalancerType(String loadBalancerType) {
+            this.putQueryParameter("LoadBalancerType", loadBalancerType);
+            this.loadBalancerType = loadBalancerType;
             return this;
         }
 

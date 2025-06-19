@@ -43,6 +43,10 @@ public class DescribeLoadBalancersRequest extends Request {
     private String loadBalancerStatus;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerType")
+    private String loadBalancerType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NetworkId")
     private String networkId;
 
@@ -71,6 +75,7 @@ public class DescribeLoadBalancersRequest extends Request {
         this.loadBalancerId = builder.loadBalancerId;
         this.loadBalancerName = builder.loadBalancerName;
         this.loadBalancerStatus = builder.loadBalancerStatus;
+        this.loadBalancerType = builder.loadBalancerType;
         this.networkId = builder.networkId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -134,6 +139,13 @@ public class DescribeLoadBalancersRequest extends Request {
     }
 
     /**
+     * @return loadBalancerType
+     */
+    public String getLoadBalancerType() {
+        return this.loadBalancerType;
+    }
+
+    /**
      * @return networkId
      */
     public String getNetworkId() {
@@ -175,6 +187,7 @@ public class DescribeLoadBalancersRequest extends Request {
         private String loadBalancerId; 
         private String loadBalancerName; 
         private String loadBalancerStatus; 
+        private String loadBalancerType; 
         private String networkId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -193,6 +206,7 @@ public class DescribeLoadBalancersRequest extends Request {
             this.loadBalancerId = request.loadBalancerId;
             this.loadBalancerName = request.loadBalancerName;
             this.loadBalancerStatus = request.loadBalancerStatus;
+            this.loadBalancerType = request.loadBalancerType;
             this.networkId = request.networkId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -270,6 +284,15 @@ public class DescribeLoadBalancersRequest extends Request {
         public Builder loadBalancerStatus(String loadBalancerStatus) {
             this.putQueryParameter("LoadBalancerStatus", loadBalancerStatus);
             this.loadBalancerStatus = loadBalancerStatus;
+            return this;
+        }
+
+        /**
+         * LoadBalancerType.
+         */
+        public Builder loadBalancerType(String loadBalancerType) {
+            this.putQueryParameter("LoadBalancerType", loadBalancerType);
+            this.loadBalancerType = loadBalancerType;
             return this;
         }
 
