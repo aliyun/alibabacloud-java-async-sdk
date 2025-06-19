@@ -1515,6 +1515,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMediaBasicInfosResponse> listMediaBasicInfos(ListMediaBasicInfosRequest request);
 
     /**
+     * @param request the request parameters of ListMediaConvertJobs  ListMediaConvertJobsRequest
+     * @return ListMediaConvertJobsResponse
+     */
+    CompletableFuture<ListMediaConvertJobsResponse> listMediaConvertJobs(ListMediaConvertJobsRequest request);
+
+    /**
      * @param request the request parameters of ListMediaInfoJobs  ListMediaInfoJobsRequest
      * @return ListMediaInfoJobsResponse
      */

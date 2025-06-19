@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class StartWorkflowRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkipInputVerification")
+    private Boolean skipInputVerification;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskInput")
     private String taskInput;
 
@@ -31,6 +35,7 @@ public class StartWorkflowRequest extends Request {
 
     private StartWorkflowRequest(Builder builder) {
         super(builder);
+        this.skipInputVerification = builder.skipInputVerification;
         this.taskInput = builder.taskInput;
         this.userData = builder.userData;
         this.workflowId = builder.workflowId;
@@ -47,6 +52,13 @@ public class StartWorkflowRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return skipInputVerification
+     */
+    public Boolean getSkipInputVerification() {
+        return this.skipInputVerification;
     }
 
     /**
@@ -71,6 +83,7 @@ public class StartWorkflowRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StartWorkflowRequest, Builder> {
+        private Boolean skipInputVerification; 
         private String taskInput; 
         private String userData; 
         private String workflowId; 
@@ -81,10 +94,20 @@ public class StartWorkflowRequest extends Request {
 
         private Builder(StartWorkflowRequest request) {
             super(request);
+            this.skipInputVerification = request.skipInputVerification;
             this.taskInput = request.taskInput;
             this.userData = request.userData;
             this.workflowId = request.workflowId;
         } 
+
+        /**
+         * SkipInputVerification.
+         */
+        public Builder skipInputVerification(Boolean skipInputVerification) {
+            this.putQueryParameter("SkipInputVerification", skipInputVerification);
+            this.skipInputVerification = skipInputVerification;
+            return this;
+        }
 
         /**
          * <p>The workflow input. Only media assets are supported.</p>
