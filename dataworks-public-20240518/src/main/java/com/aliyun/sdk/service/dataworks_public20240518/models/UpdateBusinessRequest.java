@@ -153,7 +153,8 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * <p>The workflow ID. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the ID.</p>
+         * <p>The workflow ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +167,8 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * <p>The name of the workflow. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the name.</p>
+         * <p>The name of the workflow.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the name.</p>
          * 
          * <strong>example:</strong>
          * <p>MyBusiness</p>
@@ -190,7 +192,8 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * <p>The owner of the workflow. You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the owner.</p>
+         * <p>The owner of the workflow.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/173945.html">ListBusiness</a> operation to query the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>348428****</p>
@@ -202,7 +205,7 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * <p>The DataWorks workspace ID. You can log on to the DataWorks console and go to the Workspace page to query the ID. You must configure either this parameter or the ProjectIdentifier parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Workspace page to obtain the workspace ID. You must configure either this parameter or the <code>ProjectIdentifier</code> parameter to determine the DataWorks workspace to which the operation is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -214,7 +217,7 @@ public class UpdateBusinessRequest extends Request {
         }
 
         /**
-         * <p>The name of the DataWorks workspace. You can log on to the DataWorks console and go to the Workspace page to query the workspace name. You must configure either this parameter or the ProjectId parameter to determine the DataWorks workspace to which the operation is applied.</p>
+         * <p>The name of the DataWorks workspace. You can log on to the <a href="https://dataworks.console.aliyun.com/workspace/list">DataWorks console</a> and go to the Workspace page to obtain the name. You must configure either this parameter or the <code>ProjectId</code> parameter to determine the DataWorks workspace to which the operation is applied.</p>
          * 
          * <strong>example:</strong>
          * <p>dw_project</p>

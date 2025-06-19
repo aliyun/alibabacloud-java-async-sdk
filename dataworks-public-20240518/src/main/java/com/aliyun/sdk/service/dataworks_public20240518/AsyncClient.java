@@ -804,6 +804,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetProjectRoleResponse> getProjectRole(GetProjectRoleRequest request);
 
     /**
+     * @param request the request parameters of GetRerunWorkflowInstancesResult  GetRerunWorkflowInstancesResultRequest
+     * @return GetRerunWorkflowInstancesResultResponse
+     */
+    CompletableFuture<GetRerunWorkflowInstancesResultResponse> getRerunWorkflowInstancesResult(GetRerunWorkflowInstancesResultRequest request);
+
+    /**
      * @param request the request parameters of GetResource  GetResourceRequest
      * @return GetResourceResponse
      */
@@ -828,6 +834,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRouteResponse> getRoute(GetRouteRequest request);
 
     /**
+     * <b>description</b> :
+     * <ol>
+     * <li>This API operation is available for all DataWorks editions.</li>
+     * <li>You can call this API operation to query the information only about MaxCompute and Hologres schemas.</li>
+     * </ol>
+     * 
      * @param request the request parameters of GetSchema  GetSchemaRequest
      * @return GetSchemaResponse
      */
@@ -1406,6 +1418,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RerunTaskInstancesResponse
      */
     CompletableFuture<RerunTaskInstancesResponse> rerunTaskInstances(RerunTaskInstancesRequest request);
+
+    /**
+     * @param request the request parameters of RerunWorkflowInstances  RerunWorkflowInstancesRequest
+     * @return RerunWorkflowInstancesResponse
+     */
+    CompletableFuture<RerunWorkflowInstancesResponse> rerunWorkflowInstances(RerunWorkflowInstancesRequest request);
 
     /**
      * <b>description</b> :

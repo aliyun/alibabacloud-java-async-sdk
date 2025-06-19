@@ -151,7 +151,10 @@ public class UpdateBusinessResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether the request was successful. Valid values:</p>
-         * <p>true<br>false</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

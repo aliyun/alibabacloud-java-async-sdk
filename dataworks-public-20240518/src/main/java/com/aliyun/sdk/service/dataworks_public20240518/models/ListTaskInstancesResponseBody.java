@@ -398,6 +398,9 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RuntimeResource")
         private RuntimeResource runtimeResource;
 
+        @com.aliyun.core.annotation.NameInMap("ScriptParameters")
+        private String scriptParameters;
+
         @com.aliyun.core.annotation.NameInMap("StartedTime")
         private Long startedTime;
 
@@ -424,6 +427,12 @@ public class ListTaskInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("TriggerType")
         private String triggerType;
+
+        @com.aliyun.core.annotation.NameInMap("WaitingResourceTime")
+        private Long waitingResourceTime;
+
+        @com.aliyun.core.annotation.NameInMap("WaitingTriggerTime")
+        private Long waitingTriggerTime;
 
         @com.aliyun.core.annotation.NameInMap("WorkflowId")
         private Long workflowId;
@@ -457,6 +466,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             this.runNumber = builder.runNumber;
             this.runtime = builder.runtime;
             this.runtimeResource = builder.runtimeResource;
+            this.scriptParameters = builder.scriptParameters;
             this.startedTime = builder.startedTime;
             this.status = builder.status;
             this.taskId = builder.taskId;
@@ -466,6 +476,8 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             this.triggerRecurrence = builder.triggerRecurrence;
             this.triggerTime = builder.triggerTime;
             this.triggerType = builder.triggerType;
+            this.waitingResourceTime = builder.waitingResourceTime;
+            this.waitingTriggerTime = builder.waitingTriggerTime;
             this.workflowId = builder.workflowId;
             this.workflowInstanceId = builder.workflowInstanceId;
             this.workflowInstanceType = builder.workflowInstanceType;
@@ -614,6 +626,13 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return scriptParameters
+         */
+        public String getScriptParameters() {
+            return this.scriptParameters;
+        }
+
+        /**
          * @return startedTime
          */
         public Long getStartedTime() {
@@ -677,6 +696,20 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return waitingResourceTime
+         */
+        public Long getWaitingResourceTime() {
+            return this.waitingResourceTime;
+        }
+
+        /**
+         * @return waitingTriggerTime
+         */
+        public Long getWaitingTriggerTime() {
+            return this.waitingTriggerTime;
+        }
+
+        /**
          * @return workflowId
          */
         public Long getWorkflowId() {
@@ -724,6 +757,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             private Integer runNumber; 
             private Runtime runtime; 
             private RuntimeResource runtimeResource; 
+            private String scriptParameters; 
             private Long startedTime; 
             private String status; 
             private Long taskId; 
@@ -733,6 +767,8 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             private String triggerRecurrence; 
             private Long triggerTime; 
             private String triggerType; 
+            private Long waitingResourceTime; 
+            private Long waitingTriggerTime; 
             private Long workflowId; 
             private Long workflowInstanceId; 
             private String workflowInstanceType; 
@@ -761,6 +797,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
                 this.runNumber = model.runNumber;
                 this.runtime = model.runtime;
                 this.runtimeResource = model.runtimeResource;
+                this.scriptParameters = model.scriptParameters;
                 this.startedTime = model.startedTime;
                 this.status = model.status;
                 this.taskId = model.taskId;
@@ -770,6 +807,8 @@ public class ListTaskInstancesResponseBody extends TeaModel {
                 this.triggerRecurrence = model.triggerRecurrence;
                 this.triggerTime = model.triggerTime;
                 this.triggerType = model.triggerType;
+                this.waitingResourceTime = model.waitingResourceTime;
+                this.waitingTriggerTime = model.waitingTriggerTime;
                 this.workflowId = model.workflowId;
                 this.workflowInstanceId = model.workflowInstanceId;
                 this.workflowInstanceType = model.workflowInstanceType;
@@ -988,6 +1027,14 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * ScriptParameters.
+             */
+            public Builder scriptParameters(String scriptParameters) {
+                this.scriptParameters = scriptParameters;
+                return this;
+            }
+
+            /**
              * <p>The time when the instance started to run.</p>
              * 
              * <strong>example:</strong>
@@ -1106,6 +1153,22 @@ public class ListTaskInstancesResponseBody extends TeaModel {
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
+                return this;
+            }
+
+            /**
+             * WaitingResourceTime.
+             */
+            public Builder waitingResourceTime(Long waitingResourceTime) {
+                this.waitingResourceTime = waitingResourceTime;
+                return this;
+            }
+
+            /**
+             * WaitingTriggerTime.
+             */
+            public Builder waitingTriggerTime(Long waitingTriggerTime) {
+                this.waitingTriggerTime = waitingTriggerTime;
                 return this;
             }
 

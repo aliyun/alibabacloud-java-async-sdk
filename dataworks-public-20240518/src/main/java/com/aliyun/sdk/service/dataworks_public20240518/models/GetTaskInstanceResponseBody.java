@@ -1007,6 +1007,12 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TriggerType")
         private String triggerType;
 
+        @com.aliyun.core.annotation.NameInMap("WaitingResourceTime")
+        private Long waitingResourceTime;
+
+        @com.aliyun.core.annotation.NameInMap("WaitingTriggerTime")
+        private Long waitingTriggerTime;
+
         @com.aliyun.core.annotation.NameInMap("WorkflowId")
         private Long workflowId;
 
@@ -1052,6 +1058,8 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             this.triggerRecurrence = builder.triggerRecurrence;
             this.triggerTime = builder.triggerTime;
             this.triggerType = builder.triggerType;
+            this.waitingResourceTime = builder.waitingResourceTime;
+            this.waitingTriggerTime = builder.waitingTriggerTime;
             this.workflowId = builder.workflowId;
             this.workflowInstanceId = builder.workflowInstanceId;
             this.workflowInstanceType = builder.workflowInstanceType;
@@ -1291,6 +1299,20 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return waitingResourceTime
+         */
+        public Long getWaitingResourceTime() {
+            return this.waitingResourceTime;
+        }
+
+        /**
+         * @return waitingTriggerTime
+         */
+        public Long getWaitingTriggerTime() {
+            return this.waitingTriggerTime;
+        }
+
+        /**
          * @return workflowId
          */
         public Long getWorkflowId() {
@@ -1351,6 +1373,8 @@ public class GetTaskInstanceResponseBody extends TeaModel {
             private String triggerRecurrence; 
             private Long triggerTime; 
             private String triggerType; 
+            private Long waitingResourceTime; 
+            private Long waitingTriggerTime; 
             private Long workflowId; 
             private Long workflowInstanceId; 
             private String workflowInstanceType; 
@@ -1392,6 +1416,8 @@ public class GetTaskInstanceResponseBody extends TeaModel {
                 this.triggerRecurrence = model.triggerRecurrence;
                 this.triggerTime = model.triggerTime;
                 this.triggerType = model.triggerType;
+                this.waitingResourceTime = model.waitingResourceTime;
+                this.waitingTriggerTime = model.waitingTriggerTime;
                 this.workflowId = model.workflowId;
                 this.workflowInstanceId = model.workflowInstanceId;
                 this.workflowInstanceType = model.workflowInstanceType;
@@ -1755,6 +1781,22 @@ public class GetTaskInstanceResponseBody extends TeaModel {
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
+                return this;
+            }
+
+            /**
+             * WaitingResourceTime.
+             */
+            public Builder waitingResourceTime(Long waitingResourceTime) {
+                this.waitingResourceTime = waitingResourceTime;
+                return this;
+            }
+
+            /**
+             * WaitingTriggerTime.
+             */
+            public Builder waitingTriggerTime(Long waitingTriggerTime) {
+                this.waitingTriggerTime = waitingTriggerTime;
                 return this;
             }
 

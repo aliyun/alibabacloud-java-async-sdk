@@ -590,7 +590,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+             * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the ID.</p>
              * 
              * <strong>example:</strong>
              * <p>344247</p>
@@ -789,7 +789,7 @@ public class ListResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The file resources.</p>
+             * <p>The queried file resources.</p>
              */
             public Builder resources(java.util.List<Resources> resources) {
                 this.resources = resources;

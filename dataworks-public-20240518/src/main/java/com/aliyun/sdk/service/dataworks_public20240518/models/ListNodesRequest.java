@@ -183,7 +183,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The container ID. This parameter specifies a filter condition.</p>
+         * <p>The container ID, which is a filter condition. If you do not want to use this condition for filtering, you do not need to configure this parameter. The container ID that you specify is unrelated to the resource group ID indicated by the ResourceGroupId parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>860438872620113XXXX</p>
@@ -241,12 +241,11 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The scheduling type. This parameter specifies a filter condition.</p>
-         * <p>Valid values:</p>
+         * <p>The scheduling type, which is a filter condition. Valid values:</p>
          * <ul>
-         * <li>Normal: Nodes are scheduled as expected.</li>
-         * <li>Pause: Nodes are paused, and the running of their descendant nodes is blocked.</li>
-         * <li>Skip: Nodes are dry run. The system does not actually run the nodes but directly prompts that the nodes are successfully run. The running duration of the nodes is 0 seconds. In addition, the nodes do not occupy resources or block the running of their descendant nodes.</li>
+         * <li>Normal: The nodes are scheduled as expected.</li>
+         * <li>Pause: The nodes are paused, and the running of their descendant nodes is blocked.</li>
+         * <li>Skip: The nodes are dry run. The system does not actually run the nodes, but directly returns a success response. The running duration of the nodes is 0 seconds. In addition, the nodes do not occupy resources or block the running of their descendant nodes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -259,7 +258,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The rerun mode. Valid values:</p>
+         * <p>The rerun property, which is a filter condition. If you do not want to use this condition for filtering, you do not need to configure this parameter. Valid values:</p>
          * <ul>
          * <li>Allowed: The nodes can be rerun regardless of whether they are successfully run or fail to run.</li>
          * <li>FailureAllowed: The nodes can be rerun only after they fail to run.</li>
@@ -276,8 +275,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The scene of the node. This parameter determines the location of the node.</p>
-         * <p>Valid values:</p>
+         * <p>The location of the nodes in the left-side navigation pane of the Data Studio page, which is a filter condition. If you do not want to use this condition for filtering, you do not need to configure this parameter. Valid values:</p>
          * <ul>
          * <li>DataworksProject</li>
          * <li>DataworksManualWorkflow</li>
