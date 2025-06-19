@@ -119,7 +119,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>An array that consists of the details about the CA certificate.</p>
+         * <p>The details about the CA certificates.</p>
          */
         public Builder certificateList(java.util.List<CertificateList> certificateList) {
             this.certificateList = certificateList;
@@ -200,6 +200,9 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Algorithm")
         private String algorithm;
 
+        @com.aliyun.core.annotation.NameInMap("Alias")
+        private String alias;
+
         @com.aliyun.core.annotation.NameInMap("BeforeDate")
         private Long beforeDate;
 
@@ -263,6 +266,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         private CertificateList(Builder builder) {
             this.afterDate = builder.afterDate;
             this.algorithm = builder.algorithm;
+            this.alias = builder.alias;
             this.beforeDate = builder.beforeDate;
             this.certificateType = builder.certificateType;
             this.commonName = builder.commonName;
@@ -305,6 +309,13 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
          */
         public String getAlgorithm() {
             return this.algorithm;
+        }
+
+        /**
+         * @return alias
+         */
+        public String getAlias() {
+            return this.alias;
         }
 
         /**
@@ -450,6 +461,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
         public static final class Builder {
             private Long afterDate; 
             private String algorithm; 
+            private String alias; 
             private Long beforeDate; 
             private String certificateType; 
             private String commonName; 
@@ -477,6 +489,7 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
             private Builder(CertificateList model) {
                 this.afterDate = model.afterDate;
                 this.algorithm = model.algorithm;
+                this.alias = model.alias;
                 this.beforeDate = model.beforeDate;
                 this.certificateType = model.certificateType;
                 this.commonName = model.commonName;
@@ -527,6 +540,17 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
             }
 
             /**
+             * <p>The alias of the CA.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Aliyun_CA</p>
+             */
+            public Builder alias(String alias) {
+                this.alias = alias;
+                return this;
+            }
+
+            /**
              * <p>The issuance date of the CA certificate. This value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
              * <strong>example:</strong>
@@ -540,8 +564,8 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
             /**
              * <p>The type of the CA certificate. Valid values:</p>
              * <ul>
-             * <li><strong>ROOT</strong>: root CA certificate</li>
-             * <li><strong>SUB_ROOT</strong>: intermediate CA certificate</li>
+             * <li><strong>ROOT</strong>: a root CA certificate.</li>
+             * <li><strong>SUB_ROOT</strong>: an intermediate CA certificate.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -728,11 +752,11 @@ public class DescribeCACertificateListResponseBody extends TeaModel {
             /**
              * <p>The Distinguished Name (DN) attribute of the CA certificate, which indicates the user information of the certificate. The DN attribute contains the following information:</p>
              * <ul>
-             * <li><strong>C</strong>: the country code in which the organization is located</li>
-             * <li><strong>O</strong>: the name of the organization</li>
-             * <li><strong>OU</strong>: the name of the department or branch in the organization</li>
-             * <li><strong>L</strong>: the name of the city in which the organization is located</li>
-             * <li><strong>CN</strong>: the common name or abbreviation of the organization</li>
+             * <li><strong>C</strong>: the code of the country in which the organization is located.</li>
+             * <li><strong>O</strong>: the name of the organization.</li>
+             * <li><strong>OU</strong>: the name of the department or branch in the organization.</li>
+             * <li><strong>L</strong>: the name of the city in which the organization is located.</li>
+             * <li><strong>CN</strong>: the common name or abbreviation of the organization.</li>
              * </ul>
              * 
              * <strong>example:</strong>

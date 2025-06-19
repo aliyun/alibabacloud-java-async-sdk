@@ -143,7 +143,15 @@ public class DescribeCACertificateListRequest extends Request {
         } 
 
         /**
-         * CaStatus.
+         * <p>CaStatus.</p>
+         * <ul>
+         * <li>issue：inUse.</li>
+         * <li>forbidden ：forbidden.</li>
+         * <li>revoke：revoked.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>issue</p>
          */
         public Builder caStatus(String caStatus) {
             this.putQueryParameter("CaStatus", caStatus);
@@ -152,7 +160,15 @@ public class DescribeCACertificateListRequest extends Request {
         }
 
         /**
-         * CertType.
+         * <p>The type of the certificate. Valid values:</p>
+         * <ul>
+         * <li>root：rootCA.</li>
+         * <li>subRoot：subCA.</li>
+         * <li>externalCa：import.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>subRoot</p>
          */
         public Builder certType(String certType) {
             this.putQueryParameter("CertType", certType);
@@ -161,7 +177,7 @@ public class DescribeCACertificateListRequest extends Request {
         }
 
         /**
-         * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
+         * <p>The page number. Default value: <strong>1</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -173,9 +189,9 @@ public class DescribeCACertificateListRequest extends Request {
         }
 
         /**
-         * <p>The unique identifier of the client certificate or server certificate that you want to revoke.</p>
+         * <p>The unique identifier of the CA certificate.</p>
          * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/330884.html">ListClientCertificate</a> operation to query the unique identifiers of all client certificates and server certificates.</p>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/328095.html">DescribeCACertificateList</a> operation to query the unique identifiers of all CA certificates.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -188,7 +204,15 @@ public class DescribeCACertificateListRequest extends Request {
         }
 
         /**
-         * IssuerType.
+         * <p>The CA Issuer Type.</p>
+         * <ul>
+         * <li>local：Private certificate.</li>
+         * <li>iTrusChina： Compliance CA.</li>
+         * <li>external：External Import.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>local</p>
          */
         public Builder issuerType(String issuerType) {
             this.putQueryParameter("IssuerType", issuerType);
@@ -197,7 +221,7 @@ public class DescribeCACertificateListRequest extends Request {
         }
 
         /**
-         * <p>The number of CA certificates to return on each page. Default value: <strong>20</strong>.</p>
+         * <p>The number of CA certificates per page. Default value: <strong>20</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -209,7 +233,14 @@ public class DescribeCACertificateListRequest extends Request {
         }
 
         /**
-         * ValidStatus.
+         * <p>valid time.</p>
+         * <ul>
+         * <li>valid：means in the valid period.</li>
+         * <li>notValid：means expired.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>valid</p>
          */
         public Builder validStatus(String validStatus) {
             this.putQueryParameter("ValidStatus", validStatus);
