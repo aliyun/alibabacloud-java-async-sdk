@@ -56,6 +56,10 @@ public class ListClustersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private String vpcId;
+
     private ListClustersRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
@@ -67,6 +71,7 @@ public class ListClustersRequest extends Request {
         this.requestPars = builder.requestPars;
         this.resourceGroupId = builder.resourceGroupId;
         this.tag = builder.tag;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -145,6 +150,13 @@ public class ListClustersRequest extends Request {
         return this.tag;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<ListClustersRequest, Builder> {
         private String acceptLanguage; 
         private String clusterAliasName; 
@@ -155,6 +167,7 @@ public class ListClustersRequest extends Request {
         private String requestPars; 
         private String resourceGroupId; 
         private java.util.List<Tag> tag; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -171,6 +184,7 @@ public class ListClustersRequest extends Request {
             this.requestPars = request.requestPars;
             this.resourceGroupId = request.resourceGroupId;
             this.tag = request.tag;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -279,6 +293,15 @@ public class ListClustersRequest extends Request {
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 
