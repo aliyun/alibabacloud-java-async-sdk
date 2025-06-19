@@ -22,6 +22,10 @@ public class CreateRunRequest extends Request {
     private String accountId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("allowStructViewContent")
+    private Boolean allowStructViewContent;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("assistantId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String assistantId;
@@ -50,6 +54,7 @@ public class CreateRunRequest extends Request {
     private CreateRunRequest(Builder builder) {
         super(builder);
         this.accountId = builder.accountId;
+        this.allowStructViewContent = builder.allowStructViewContent;
         this.assistantId = builder.assistantId;
         this.originalAssistantId = builder.originalAssistantId;
         this.sourceIdOfOriginalAssistantId = builder.sourceIdOfOriginalAssistantId;
@@ -76,6 +81,13 @@ public class CreateRunRequest extends Request {
      */
     public String getAccountId() {
         return this.accountId;
+    }
+
+    /**
+     * @return allowStructViewContent
+     */
+    public Boolean getAllowStructViewContent() {
+        return this.allowStructViewContent;
     }
 
     /**
@@ -122,6 +134,7 @@ public class CreateRunRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateRunRequest, Builder> {
         private String accountId; 
+        private Boolean allowStructViewContent; 
         private String assistantId; 
         private String originalAssistantId; 
         private String sourceIdOfOriginalAssistantId; 
@@ -136,6 +149,7 @@ public class CreateRunRequest extends Request {
         private Builder(CreateRunRequest request) {
             super(request);
             this.accountId = request.accountId;
+            this.allowStructViewContent = request.allowStructViewContent;
             this.assistantId = request.assistantId;
             this.originalAssistantId = request.originalAssistantId;
             this.sourceIdOfOriginalAssistantId = request.sourceIdOfOriginalAssistantId;
@@ -150,6 +164,15 @@ public class CreateRunRequest extends Request {
         public Builder accountId(String accountId) {
             this.putHeaderParameter("accountId", accountId);
             this.accountId = accountId;
+            return this;
+        }
+
+        /**
+         * allowStructViewContent.
+         */
+        public Builder allowStructViewContent(Boolean allowStructViewContent) {
+            this.putBodyParameter("allowStructViewContent", allowStructViewContent);
+            this.allowStructViewContent = allowStructViewContent;
             return this;
         }
 

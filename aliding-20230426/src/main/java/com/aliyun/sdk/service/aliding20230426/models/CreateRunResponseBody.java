@@ -1909,12 +1909,862 @@ public class CreateRunResponseBody extends TeaModel {
      *
      * <p>CreateRunResponseBody</p>
      */
+    public static class PartsDataPart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("data")
+        private Object data;
+
+        private PartsDataPart(Builder builder) {
+            this.data = builder.data;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PartsDataPart create() {
+            return builder().build();
+        }
+
+        /**
+         * @return data
+         */
+        public Object getData() {
+            return this.data;
+        }
+
+        public static final class Builder {
+            private Object data; 
+
+            private Builder() {
+            } 
+
+            private Builder(PartsDataPart model) {
+                this.data = model.data;
+            } 
+
+            /**
+             * data.
+             */
+            public Builder data(Object data) {
+                this.data = data;
+                return this;
+            }
+
+            public PartsDataPart build() {
+                return new PartsDataPart(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRunResponseBody</p>
+     */
+    public static class PartsReasonPart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("reason")
+        private String reason;
+
+        private PartsReasonPart(Builder builder) {
+            this.reason = builder.reason;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PartsReasonPart create() {
+            return builder().build();
+        }
+
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
+        public static final class Builder {
+            private String reason; 
+
+            private Builder() {
+            } 
+
+            private Builder(PartsReasonPart model) {
+                this.reason = model.reason;
+            } 
+
+            /**
+             * reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
+                return this;
+            }
+
+            public PartsReasonPart build() {
+                return new PartsReasonPart(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRunResponseBody</p>
+     */
+    public static class RecommendPartRecommends extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("mobileUrl")
+        private String mobileUrl;
+
+        @com.aliyun.core.annotation.NameInMap("text")
+        private String text;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
+        private RecommendPartRecommends(Builder builder) {
+            this.mobileUrl = builder.mobileUrl;
+            this.text = builder.text;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RecommendPartRecommends create() {
+            return builder().build();
+        }
+
+        /**
+         * @return mobileUrl
+         */
+        public String getMobileUrl() {
+            return this.mobileUrl;
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String mobileUrl; 
+            private String text; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecommendPartRecommends model) {
+                this.mobileUrl = model.mobileUrl;
+                this.text = model.text;
+                this.url = model.url;
+            } 
+
+            /**
+             * mobileUrl.
+             */
+            public Builder mobileUrl(String mobileUrl) {
+                this.mobileUrl = mobileUrl;
+                return this;
+            }
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public RecommendPartRecommends build() {
+                return new RecommendPartRecommends(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRunResponseBody</p>
+     */
+    public static class PartsRecommendPart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("recommends")
+        private java.util.List<RecommendPartRecommends> recommends;
+
+        private PartsRecommendPart(Builder builder) {
+            this.recommends = builder.recommends;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PartsRecommendPart create() {
+            return builder().build();
+        }
+
+        /**
+         * @return recommends
+         */
+        public java.util.List<RecommendPartRecommends> getRecommends() {
+            return this.recommends;
+        }
+
+        public static final class Builder {
+            private java.util.List<RecommendPartRecommends> recommends; 
+
+            private Builder() {
+            } 
+
+            private Builder(PartsRecommendPart model) {
+                this.recommends = model.recommends;
+            } 
+
+            /**
+             * recommends.
+             */
+            public Builder recommends(java.util.List<RecommendPartRecommends> recommends) {
+                this.recommends = recommends;
+                return this;
+            }
+
+            public PartsRecommendPart build() {
+                return new PartsRecommendPart(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRunResponseBody</p>
+     */
+    public static class ReferencePartReferences extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("index")
+        private String index;
+
+        @com.aliyun.core.annotation.NameInMap("name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("sourceCode")
+        private String sourceCode;
+
+        @com.aliyun.core.annotation.NameInMap("sourceIcon")
+        private String sourceIcon;
+
+        @com.aliyun.core.annotation.NameInMap("summary")
+        private String summary;
+
+        @com.aliyun.core.annotation.NameInMap("title")
+        private String title;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
+
+        private ReferencePartReferences(Builder builder) {
+            this.index = builder.index;
+            this.name = builder.name;
+            this.sourceCode = builder.sourceCode;
+            this.sourceIcon = builder.sourceIcon;
+            this.summary = builder.summary;
+            this.title = builder.title;
+            this.url = builder.url;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReferencePartReferences create() {
+            return builder().build();
+        }
+
+        /**
+         * @return index
+         */
+        public String getIndex() {
+            return this.index;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return sourceCode
+         */
+        public String getSourceCode() {
+            return this.sourceCode;
+        }
+
+        /**
+         * @return sourceIcon
+         */
+        public String getSourceIcon() {
+            return this.sourceIcon;
+        }
+
+        /**
+         * @return summary
+         */
+        public String getSummary() {
+            return this.summary;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        public static final class Builder {
+            private String index; 
+            private String name; 
+            private String sourceCode; 
+            private String sourceIcon; 
+            private String summary; 
+            private String title; 
+            private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReferencePartReferences model) {
+                this.index = model.index;
+                this.name = model.name;
+                this.sourceCode = model.sourceCode;
+                this.sourceIcon = model.sourceIcon;
+                this.summary = model.summary;
+                this.title = model.title;
+                this.url = model.url;
+            } 
+
+            /**
+             * index.
+             */
+            public Builder index(String index) {
+                this.index = index;
+                return this;
+            }
+
+            /**
+             * name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * sourceCode.
+             */
+            public Builder sourceCode(String sourceCode) {
+                this.sourceCode = sourceCode;
+                return this;
+            }
+
+            /**
+             * sourceIcon.
+             */
+            public Builder sourceIcon(String sourceIcon) {
+                this.sourceIcon = sourceIcon;
+                return this;
+            }
+
+            /**
+             * summary.
+             */
+            public Builder summary(String summary) {
+                this.summary = summary;
+                return this;
+            }
+
+            /**
+             * title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            public ReferencePartReferences build() {
+                return new ReferencePartReferences(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRunResponseBody</p>
+     */
+    public static class PartsReferencePart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("references")
+        private java.util.List<ReferencePartReferences> references;
+
+        private PartsReferencePart(Builder builder) {
+            this.references = builder.references;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PartsReferencePart create() {
+            return builder().build();
+        }
+
+        /**
+         * @return references
+         */
+        public java.util.List<ReferencePartReferences> getReferences() {
+            return this.references;
+        }
+
+        public static final class Builder {
+            private java.util.List<ReferencePartReferences> references; 
+
+            private Builder() {
+            } 
+
+            private Builder(PartsReferencePart model) {
+                this.references = model.references;
+            } 
+
+            /**
+             * references.
+             */
+            public Builder references(java.util.List<ReferencePartReferences> references) {
+                this.references = references;
+                return this;
+            }
+
+            public PartsReferencePart build() {
+                return new PartsReferencePart(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRunResponseBody</p>
+     */
+    public static class PartsTextPart extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("text")
+        private String text;
+
+        private PartsTextPart(Builder builder) {
+            this.text = builder.text;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PartsTextPart create() {
+            return builder().build();
+        }
+
+        /**
+         * @return text
+         */
+        public String getText() {
+            return this.text;
+        }
+
+        public static final class Builder {
+            private String text; 
+
+            private Builder() {
+            } 
+
+            private Builder(PartsTextPart model) {
+                this.text = model.text;
+            } 
+
+            /**
+             * text.
+             */
+            public Builder text(String text) {
+                this.text = text;
+                return this;
+            }
+
+            public PartsTextPart build() {
+                return new PartsTextPart(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRunResponseBody</p>
+     */
+    public static class ContentStructParts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("append")
+        private Boolean append;
+
+        @com.aliyun.core.annotation.NameInMap("dataPart")
+        private PartsDataPart dataPart;
+
+        @com.aliyun.core.annotation.NameInMap("finish")
+        private Boolean finish;
+
+        @com.aliyun.core.annotation.NameInMap("partDesc")
+        private String partDesc;
+
+        @com.aliyun.core.annotation.NameInMap("partId")
+        private String partId;
+
+        @com.aliyun.core.annotation.NameInMap("reasonPart")
+        private PartsReasonPart reasonPart;
+
+        @com.aliyun.core.annotation.NameInMap("recommendPart")
+        private PartsRecommendPart recommendPart;
+
+        @com.aliyun.core.annotation.NameInMap("referencePart")
+        private PartsReferencePart referencePart;
+
+        @com.aliyun.core.annotation.NameInMap("textPart")
+        private PartsTextPart textPart;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String type;
+
+        private ContentStructParts(Builder builder) {
+            this.append = builder.append;
+            this.dataPart = builder.dataPart;
+            this.finish = builder.finish;
+            this.partDesc = builder.partDesc;
+            this.partId = builder.partId;
+            this.reasonPart = builder.reasonPart;
+            this.recommendPart = builder.recommendPart;
+            this.referencePart = builder.referencePart;
+            this.textPart = builder.textPart;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContentStructParts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return append
+         */
+        public Boolean getAppend() {
+            return this.append;
+        }
+
+        /**
+         * @return dataPart
+         */
+        public PartsDataPart getDataPart() {
+            return this.dataPart;
+        }
+
+        /**
+         * @return finish
+         */
+        public Boolean getFinish() {
+            return this.finish;
+        }
+
+        /**
+         * @return partDesc
+         */
+        public String getPartDesc() {
+            return this.partDesc;
+        }
+
+        /**
+         * @return partId
+         */
+        public String getPartId() {
+            return this.partId;
+        }
+
+        /**
+         * @return reasonPart
+         */
+        public PartsReasonPart getReasonPart() {
+            return this.reasonPart;
+        }
+
+        /**
+         * @return recommendPart
+         */
+        public PartsRecommendPart getRecommendPart() {
+            return this.recommendPart;
+        }
+
+        /**
+         * @return referencePart
+         */
+        public PartsReferencePart getReferencePart() {
+            return this.referencePart;
+        }
+
+        /**
+         * @return textPart
+         */
+        public PartsTextPart getTextPart() {
+            return this.textPart;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Boolean append; 
+            private PartsDataPart dataPart; 
+            private Boolean finish; 
+            private String partDesc; 
+            private String partId; 
+            private PartsReasonPart reasonPart; 
+            private PartsRecommendPart recommendPart; 
+            private PartsReferencePart referencePart; 
+            private PartsTextPart textPart; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContentStructParts model) {
+                this.append = model.append;
+                this.dataPart = model.dataPart;
+                this.finish = model.finish;
+                this.partDesc = model.partDesc;
+                this.partId = model.partId;
+                this.reasonPart = model.reasonPart;
+                this.recommendPart = model.recommendPart;
+                this.referencePart = model.referencePart;
+                this.textPart = model.textPart;
+                this.type = model.type;
+            } 
+
+            /**
+             * append.
+             */
+            public Builder append(Boolean append) {
+                this.append = append;
+                return this;
+            }
+
+            /**
+             * dataPart.
+             */
+            public Builder dataPart(PartsDataPart dataPart) {
+                this.dataPart = dataPart;
+                return this;
+            }
+
+            /**
+             * finish.
+             */
+            public Builder finish(Boolean finish) {
+                this.finish = finish;
+                return this;
+            }
+
+            /**
+             * partDesc.
+             */
+            public Builder partDesc(String partDesc) {
+                this.partDesc = partDesc;
+                return this;
+            }
+
+            /**
+             * partId.
+             */
+            public Builder partId(String partId) {
+                this.partId = partId;
+                return this;
+            }
+
+            /**
+             * reasonPart.
+             */
+            public Builder reasonPart(PartsReasonPart reasonPart) {
+                this.reasonPart = reasonPart;
+                return this;
+            }
+
+            /**
+             * recommendPart.
+             */
+            public Builder recommendPart(PartsRecommendPart recommendPart) {
+                this.recommendPart = recommendPart;
+                return this;
+            }
+
+            /**
+             * referencePart.
+             */
+            public Builder referencePart(PartsReferencePart referencePart) {
+                this.referencePart = referencePart;
+                return this;
+            }
+
+            /**
+             * textPart.
+             */
+            public Builder textPart(PartsTextPart textPart) {
+                this.textPart = textPart;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>textPart</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public ContentStructParts build() {
+                return new ContentStructParts(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRunResponseBody</p>
+     */
+    public static class ContentStruct extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("parts")
+        private java.util.List<ContentStructParts> parts;
+
+        private ContentStruct(Builder builder) {
+            this.parts = builder.parts;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ContentStruct create() {
+            return builder().build();
+        }
+
+        /**
+         * @return parts
+         */
+        public java.util.List<ContentStructParts> getParts() {
+            return this.parts;
+        }
+
+        public static final class Builder {
+            private java.util.List<ContentStructParts> parts; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContentStruct model) {
+                this.parts = model.parts;
+            } 
+
+            /**
+             * parts.
+             */
+            public Builder parts(java.util.List<ContentStructParts> parts) {
+                this.parts = parts;
+                return this;
+            }
+
+            public ContentStruct build() {
+                return new ContentStruct(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateRunResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateRunResponseBody</p>
+     */
     public static class Messages extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("content")
         private Content content;
 
         @com.aliyun.core.annotation.NameInMap("contentDesc")
         private String contentDesc;
+
+        @com.aliyun.core.annotation.NameInMap("contentStruct")
+        private ContentStruct contentStruct;
 
         @com.aliyun.core.annotation.NameInMap("createAt")
         private Long createAt;
@@ -1934,6 +2784,7 @@ public class CreateRunResponseBody extends TeaModel {
         private Messages(Builder builder) {
             this.content = builder.content;
             this.contentDesc = builder.contentDesc;
+            this.contentStruct = builder.contentStruct;
             this.createAt = builder.createAt;
             this.id = builder.id;
             this.role = builder.role;
@@ -1961,6 +2812,13 @@ public class CreateRunResponseBody extends TeaModel {
          */
         public String getContentDesc() {
             return this.contentDesc;
+        }
+
+        /**
+         * @return contentStruct
+         */
+        public ContentStruct getContentStruct() {
+            return this.contentStruct;
         }
 
         /**
@@ -2001,6 +2859,7 @@ public class CreateRunResponseBody extends TeaModel {
         public static final class Builder {
             private Content content; 
             private String contentDesc; 
+            private ContentStruct contentStruct; 
             private Long createAt; 
             private String id; 
             private String role; 
@@ -2013,6 +2872,7 @@ public class CreateRunResponseBody extends TeaModel {
             private Builder(Messages model) {
                 this.content = model.content;
                 this.contentDesc = model.contentDesc;
+                this.contentStruct = model.contentStruct;
                 this.createAt = model.createAt;
                 this.id = model.id;
                 this.role = model.role;
@@ -2033,6 +2893,14 @@ public class CreateRunResponseBody extends TeaModel {
              */
             public Builder contentDesc(String contentDesc) {
                 this.contentDesc = contentDesc;
+                return this;
+            }
+
+            /**
+             * contentStruct.
+             */
+            public Builder contentStruct(ContentStruct contentStruct) {
+                this.contentStruct = contentStruct;
                 return this;
             }
 
