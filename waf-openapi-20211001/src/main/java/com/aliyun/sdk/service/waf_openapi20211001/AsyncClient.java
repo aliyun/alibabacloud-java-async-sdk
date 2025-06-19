@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCloudResourceResponse> createCloudResource(CreateCloudResourceRequest request);
 
     /**
+     * @param request the request parameters of CreateDefenseResource  CreateDefenseResourceRequest
+     * @return CreateDefenseResourceResponse
+     */
+    CompletableFuture<CreateDefenseResourceResponse> createDefenseResource(CreateDefenseResourceRequest request);
+
+    /**
      * @param request the request parameters of CreateDefenseResourceGroup  CreateDefenseResourceGroupRequest
      * @return CreateDefenseResourceGroupResponse
      */
@@ -123,6 +129,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteCloudResourceResponse
      */
     CompletableFuture<DeleteCloudResourceResponse> deleteCloudResource(DeleteCloudResourceRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDefenseResource  DeleteDefenseResourceRequest
+     * @return DeleteDefenseResourceResponse
+     */
+    CompletableFuture<DeleteDefenseResourceResponse> deleteDefenseResource(DeleteDefenseResourceRequest request);
 
     /**
      * @param request the request parameters of DeleteDefenseResourceGroup  DeleteDefenseResourceGroupRequest
