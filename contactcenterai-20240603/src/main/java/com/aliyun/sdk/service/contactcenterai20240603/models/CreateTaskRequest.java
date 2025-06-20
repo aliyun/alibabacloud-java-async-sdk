@@ -1229,6 +1229,9 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String fileName;
 
+        @com.aliyun.core.annotation.NameInMap("languageHints")
+        private String languageHints;
+
         @com.aliyun.core.annotation.NameInMap("level")
         private String level;
 
@@ -1253,6 +1256,7 @@ public class CreateTaskRequest extends Request {
             this.autoSplit = builder.autoSplit;
             this.clientChannel = builder.clientChannel;
             this.fileName = builder.fileName;
+            this.languageHints = builder.languageHints;
             this.level = builder.level;
             this.roleIdentification = builder.roleIdentification;
             this.serviceChannel = builder.serviceChannel;
@@ -1295,6 +1299,13 @@ public class CreateTaskRequest extends Request {
          */
         public String getFileName() {
             return this.fileName;
+        }
+
+        /**
+         * @return languageHints
+         */
+        public String getLanguageHints() {
+            return this.languageHints;
         }
 
         /**
@@ -1344,6 +1355,7 @@ public class CreateTaskRequest extends Request {
             private Integer autoSplit; 
             private Integer clientChannel; 
             private String fileName; 
+            private String languageHints; 
             private String level; 
             private Boolean roleIdentification; 
             private Integer serviceChannel; 
@@ -1359,6 +1371,7 @@ public class CreateTaskRequest extends Request {
                 this.autoSplit = model.autoSplit;
                 this.clientChannel = model.clientChannel;
                 this.fileName = model.fileName;
+                this.languageHints = model.languageHints;
                 this.level = model.level;
                 this.roleIdentification = model.roleIdentification;
                 this.serviceChannel = model.serviceChannel;
@@ -1399,6 +1412,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
+                return this;
+            }
+
+            /**
+             * languageHints.
+             */
+            public Builder languageHints(String languageHints) {
+                this.languageHints = languageHints;
                 return this;
             }
 

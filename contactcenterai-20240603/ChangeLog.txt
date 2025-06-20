@@ -1,3 +1,6 @@
+2025-06-20 Version: 3.0.20
+- Generated java-async 2024-06-03 for ContactCenterAI.
+
 2025-06-11 Version: 3.0.19
 - Generated java-async 2024-06-03 for ContactCenterAI.
 
