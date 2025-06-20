@@ -131,8 +131,16 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String vSwitchId;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String vpcId;
 
         private DiscoveredResourceProfileList(Builder builder) {
             this.accountId = builder.accountId;
@@ -146,7 +154,9 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             this.resourceType = builder.resourceType;
             this.tags = builder.tags;
             this.updateTime = builder.updateTime;
+            this.vSwitchId = builder.vSwitchId;
             this.version = builder.version;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -235,10 +245,24 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         }
 
         /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
          * @return version
          */
         public Long getVersion() {
             return this.version;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
         }
 
         public static final class Builder {
@@ -253,7 +277,9 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             private String resourceType; 
             private String tags; 
             private Long updateTime; 
+            private String vSwitchId; 
             private Long version; 
+            private String vpcId; 
 
             private Builder() {
             } 
@@ -270,7 +296,9 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
                 this.resourceType = model.resourceType;
                 this.tags = model.tags;
                 this.updateTime = model.updateTime;
+                this.vSwitchId = model.vSwitchId;
                 this.version = model.version;
+                this.vpcId = model.vpcId;
             } 
 
             /**
@@ -403,6 +431,17 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-t4n7pokxxxxxxxxxxxxxx</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
              * <p>The version of the resource change.</p>
              * 
              * <strong>example:</strong>
@@ -410,6 +449,17 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
              */
             public Builder version(Long version) {
                 this.version = version;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-t4nhheyvay74fp7n0hxxx</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 

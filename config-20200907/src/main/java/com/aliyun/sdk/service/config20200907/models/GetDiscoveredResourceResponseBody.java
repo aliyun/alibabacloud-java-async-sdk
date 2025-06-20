@@ -134,6 +134,14 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String vpcId;
+
         private DiscoveredResourceDetail(Builder builder) {
             this.accountId = builder.accountId;
             this.availabilityZone = builder.availabilityZone;
@@ -147,6 +155,8 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
             this.resourceStatus = builder.resourceStatus;
             this.resourceType = builder.resourceType;
             this.tags = builder.tags;
+            this.vSwitchId = builder.vSwitchId;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -241,6 +251,20 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
             return this.tags;
         }
 
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private Long accountId; 
             private String availabilityZone; 
@@ -254,6 +278,8 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
             private String resourceStatus; 
             private String resourceType; 
             private String tags; 
+            private String vSwitchId; 
+            private String vpcId; 
 
             private Builder() {
             } 
@@ -271,6 +297,8 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
                 this.resourceStatus = model.resourceStatus;
                 this.resourceType = model.resourceType;
                 this.tags = model.tags;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
             } 
 
             /**
@@ -416,6 +444,28 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
              */
             public Builder tags(String tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-t4n7pokxxxxxxxxxxxxxx</p>
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-t4nhheyvay74fp7n0hxxx</p>
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 
