@@ -132,7 +132,7 @@ public class DescribeVscResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of the compute node where the Vsc is located</p>
+         * <p>The ID of the compute node in which the VSC resides.</p>
          * 
          * <strong>example:</strong>
          * <p>e01-cn-kvw44e6dn04</p>
@@ -143,7 +143,7 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
@@ -154,7 +154,7 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Resource Group ID</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2k3rqlvv6ytq</p>
@@ -165,7 +165,13 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Status of the Vsc</p>
+         * <p>The VSC status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Creating</li>
+         * <li>Normal</li>
+         * <li>Deleting</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -176,7 +182,7 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Vsc ID</p>
+         * <p>The VSC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-001</p>
@@ -187,7 +193,7 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Custom name of the Vsc</p>
+         * <p>The custom name of the VSC.</p>
          * 
          * <strong>example:</strong>
          * <p>test_name</p>
@@ -198,7 +204,7 @@ public class DescribeVscResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Vsc type</p>
+         * <p>The VSC type.</p>
          * 
          * <strong>example:</strong>
          * <p>primary</p>

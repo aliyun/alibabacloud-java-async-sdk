@@ -171,7 +171,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Cluster ID</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i119982311660892626523</p>
@@ -182,7 +182,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Cluster Name</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard_Cluster</p>
@@ -193,7 +193,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Start Time</p>
+         * <p>The create time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-30T02:00:00.852Z</p>
@@ -204,7 +204,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Task Failure Message</p>
+         * <p>The error message returned for failed tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>Releasing [prod_main_mid_26e234cf] in region [cn-beijing] with weight [0]</p>
@@ -215,7 +215,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of node IDs</p>
+         * <p>The IDs of the nodes.</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.nodeIds = nodeIds;
@@ -223,7 +223,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A7FD7411-9395-52E8-AF42-EB3A4A55446D</p>
@@ -234,7 +234,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Execution Steps</p>
+         * <p>The steps.</p>
          */
         public Builder steps(java.util.List<Steps> steps) {
             this.steps = steps;
@@ -242,7 +242,14 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Task State</p>
+         * <p>The task status.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>running</li>
+         * <li>execution_success</li>
+         * <li>execution_fail</li>
+         * <li>waiting_to_run</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>running</p>
@@ -253,7 +260,25 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Task Type</p>
+         * <p>The task type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>reclone_node_sub_task</li>
+         * <li>initialize_bare_cluster</li>
+         * <li>extend_bare_cluster</li>
+         * <li>reclone_node</li>
+         * <li>reboot_node</li>
+         * <li>extend_ack_edge_cluster</li>
+         * <li>extend_cluster</li>
+         * <li>initialize_ack_edge_cluster</li>
+         * <li>cut_node_sub_task</li>
+         * <li>reboot_node_sub_task</li>
+         * <li>reclone_ack_edge_node</li>
+         * <li>initialize_cluster</li>
+         * <li>cut_cluster</li>
+         * <li>reclone_bare_node</li>
+         * <li>cut_bare_cluster</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>cut_cluster</p>
@@ -264,7 +289,7 @@ public class DescribeTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Update Time</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-30T03:40:14.852Z</p>
@@ -385,7 +410,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Creation Time</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-30T2:00:00.852Z</p>
@@ -396,7 +421,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Subtask Failure Message</p>
+             * <p>The error message returned for failed sub tasks.</p>
              * 
              * <strong>example:</strong>
              * <p>Releasing [prod_main_mid_26e234cf] in region [cn-beijing] with weight [0]</p>
@@ -407,7 +432,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task ID</p>
+             * <p>The task ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i158805051661047928377</p>
@@ -418,7 +443,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task Execution State</p>
+             * <p>The task status.</p>
              * 
              * <strong>example:</strong>
              * <p>running</p>
@@ -429,7 +454,25 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task Type</p>
+             * <p>The task type.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>reclone_node_sub_task</li>
+             * <li>initialize_bare_cluster</li>
+             * <li>extend_bare_cluster</li>
+             * <li>reclone_node</li>
+             * <li>reboot_node</li>
+             * <li>extend_ack_edge_cluster</li>
+             * <li>extend_cluster</li>
+             * <li>initialize_ack_edge_cluster</li>
+             * <li>cut_node_sub_task</li>
+             * <li>reboot_node_sub_task</li>
+             * <li>reclone_ack_edge_node</li>
+             * <li>initialize_cluster</li>
+             * <li>cut_cluster</li>
+             * <li>reclone_bare_node</li>
+             * <li>cut_bare_cluster</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>cut_node_sub_task</p>
@@ -440,7 +483,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Update Time</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-30T02:20:14.852Z</p>
@@ -588,7 +631,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Step Failure Message</p>
+             * <p>The error message of the step.</p>
              * 
              * <strong>example:</strong>
              * <p>get taskinfo failed</p>
@@ -599,10 +642,27 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Stage Tag</p>
+             * <p>The stage marker.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>机器释放: Machine release.</li>
+             * <li>节点并发初始化: Node concurrent initialization.</li>
+             * <li>节点释放: Node release.</li>
+             * <li>机器替换: Machine replacement.</li>
+             * <li>节点缩容: Node scale-in.</li>
+             * <li>提前续费: Early renewal.</li>
+             * <li>物理机清理: Physical machine cleanup.</li>
+             * <li>节点清理: Node cleanup.</li>
+             * <li>创建K8s集群: Create Kubernetes cluster.</li>
+             * <li>网络初始化: Network initialization.</li>
+             * <li>节点重启: Node restart.</li>
+             * <li>节点退订: Node unsubscribe.</li>
+             * <li>集群扩容: Cluster scale-out.</li>
+             * <li>异常机器释放: Abnormal machine release.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
-             * <p>Node scaling</p>
+             * <p>节点缩容</p>
              */
             public Builder stageTag(String stageTag) {
                 this.stageTag = stageTag;
@@ -610,7 +670,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Start Time</p>
+             * <p>The start time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-30T2:00:00.852Z</p>
@@ -621,7 +681,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Step Name</p>
+             * <p>The name of the step.</p>
              * 
              * <strong>example:</strong>
              * <p>create_vpd</p>
@@ -632,7 +692,12 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Step Execution State</p>
+             * <p>The step status.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>execution_success</li>
+             * <li>execution_failed</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>execution_success</p>
@@ -643,7 +708,12 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Step Type</p>
+             * <p>The type of the step.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>normal: A normal step has only one successor step.</li>
+             * <li>dispersive: A dispersive step has multiple successor steps.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>normal</p>
@@ -654,7 +724,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Subtasks</p>
+             * <p>The sub tasks.</p>
              */
             public Builder subTasks(java.util.List<SubTasks> subTasks) {
                 this.subTasks = subTasks;
@@ -662,7 +732,7 @@ public class DescribeTaskResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Update Time</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>2022-11-30T02:20:14.852Z</p>

@@ -67,7 +67,7 @@ public class CreateNetTestTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE*****</p>
@@ -78,7 +78,7 @@ public class CreateNetTestTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>启动测试任务ID，网络测试任务的唯一标志。</p>
+         * <p>The ID of the test task. The unique identifier of a network test task.</p>
          * 
          * <strong>example:</strong>
          * <p>dr-uf6i0tv2refv8wz*****</p>

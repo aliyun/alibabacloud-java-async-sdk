@@ -124,10 +124,7 @@ public class ListDiagnosticResultsRequest extends Request {
         }
 
         /**
-         * <p>Type of diagnosis</p>
-         * 
-         * <strong>example:</strong>
-         * <p>NetDiag</p>
+         * DiagType.
          */
         public Builder diagType(String diagType) {
             this.putBodyParameter("DiagType", diagType);
@@ -136,11 +133,9 @@ public class ListDiagnosticResultsRequest extends Request {
         }
 
         /**
-         * <p>Number of items per page in a paginated query. The maximum value is 100.</p>
-         * <p>Default value:</p>
          * <ul>
-         * <li>If no value is set or the set value is less than 20, the default is 20.</li>
-         * <li>If the set value is greater than 100, the default is 100.</li>
+         * <li></li>
+         * <li></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,10 +148,7 @@ public class ListDiagnosticResultsRequest extends Request {
         }
 
         /**
-         * <p>Query token (Token), the value should be the NextToken parameter value returned from the previous API call.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a3f2224a5ec7224116c4f5246120abe4</p>
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putBodyParameter("NextToken", nextToken);
@@ -165,10 +157,7 @@ public class ListDiagnosticResultsRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfmywpvugkh7kq</p>
+         * ResourceGroupId.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("ResourceGroupId", resourceGroupId);

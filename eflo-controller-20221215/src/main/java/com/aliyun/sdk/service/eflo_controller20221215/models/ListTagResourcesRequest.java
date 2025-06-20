@@ -117,7 +117,7 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Query token (Token), the value should be the NextToken returned from the previous API call</p>
+         * <p>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</p>
@@ -129,7 +129,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -142,7 +142,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>List of resource IDs</p>
+         * <p>The IDs of the resources.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -151,7 +151,15 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Resource type</p>
+         * <p>The resource type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Node</li>
+         * <li>Vcc</li>
+         * <li>Cluster</li>
+         * <li>Subnet</li>
+         * <li>Vpd</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +172,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>List of tags</p>
+         * <p>The tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -232,7 +240,7 @@ public class ListTagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>Tag key</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>PodName</p>
@@ -243,7 +251,7 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * <p>Tag value</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>WFT-OTC</p>

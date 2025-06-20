@@ -97,7 +97,7 @@ public class DeleteVscRequest extends Request {
         }
 
         /**
-         * <p>Idempotent parameter</p>
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -109,7 +109,7 @@ public class DeleteVscRequest extends Request {
         }
 
         /**
-         * <p>The VscId to be deleted</p>
+         * <p>The ID of the VSC that you want to delete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

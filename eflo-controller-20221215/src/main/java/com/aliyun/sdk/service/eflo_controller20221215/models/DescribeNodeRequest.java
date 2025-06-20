@@ -83,7 +83,7 @@ public class DescribeNodeRequest extends Request {
         }
 
         /**
-         * <p>Node ID</p>
+         * <p>The node ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

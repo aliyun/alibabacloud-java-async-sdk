@@ -110,7 +110,7 @@ public class ShrinkClusterRequest extends Request {
         }
 
         /**
-         * <p>Cluster ID</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i15dfa12e8f27c44f4a006c2c8bb</p>
@@ -122,7 +122,7 @@ public class ShrinkClusterRequest extends Request {
         }
 
         /**
-         * <p>Whether to allow skipping failed node tasks, default value is False</p>
+         * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -134,7 +134,7 @@ public class ShrinkClusterRequest extends Request {
         }
 
         /**
-         * <p>Node group information</p>
+         * <p>The node groups.</p>
          */
         public Builder nodeGroups(java.util.List<NodeGroups> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
@@ -190,7 +190,7 @@ public class ShrinkClusterRequest extends Request {
             } 
 
             /**
-             * <p>Node ID</p>
+             * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01poc-cn-zmb2ypjdc01</p>
@@ -260,7 +260,7 @@ public class ShrinkClusterRequest extends Request {
             } 
 
             /**
-             * <p>Node group ID</p>
+             * <p>The node group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ng-3b6fbd24b1b845a0</p>
@@ -271,7 +271,7 @@ public class ShrinkClusterRequest extends Request {
             }
 
             /**
-             * <p>List of nodes</p>
+             * <p>The nodes.</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;

@@ -110,7 +110,7 @@ public class RebootNodesRequest extends Request {
         }
 
         /**
-         * <p>Cluster ID</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i15b480fbd2fcdbc2869cd80</p>
@@ -122,7 +122,7 @@ public class RebootNodesRequest extends Request {
         }
 
         /**
-         * <p>Whether to allow skipping failed node tasks, default value is False</p>
+         * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -134,7 +134,7 @@ public class RebootNodesRequest extends Request {
         }
 
         /**
-         * <p>List of nodes</p>
+         * <p>The nodes.</p>
          */
         public Builder nodes(java.util.List<String> nodes) {
             String nodesShrink = shrink(nodes, "Nodes", "json");

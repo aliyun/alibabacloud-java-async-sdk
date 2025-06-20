@@ -112,7 +112,7 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>Cluster ID</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,6 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>Node ID.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodeGroup(NodeGroup nodeGroup) {
@@ -136,7 +135,7 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>Node information</p>
+         * NodeUnit.
          */
         public Builder nodeUnit(java.util.Map<String, ?> nodeUnit) {
             String nodeUnitShrink = shrink(nodeUnit, "NodeUnit", "json");
@@ -218,7 +217,9 @@ public class CreateNodeGroupRequest extends Request {
             } 
 
             /**
-             * <p>Disk performance level</p>
+             * <ul>
+             * <li></li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>cloud_essd</p>
@@ -229,13 +230,10 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>The performance level of the disk if the disk is an ESSD. Valid values:</p>
              * <ul>
-             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li></li>
+             * <li></li>
              * </ul>
-             * <p>Default value: PL1.</p>
-             * <p>For information about ESSD performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>.</p>
              * 
              * <strong>example:</strong>
              * <p>PL!</p>
@@ -246,10 +244,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>System disk size</p>
-             * 
-             * <strong>example:</strong>
-             * <p>250</p>
+             * Size.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -424,7 +419,6 @@ public class CreateNodeGroupRequest extends Request {
             } 
 
             /**
-             * <p>Availability Zone</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -436,7 +430,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Whether file storage mounting is supported</p>
+             * <p>Indicates whether file storage mounting is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -447,7 +441,6 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Image ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -459,10 +452,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>The name of the key pair.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test-keypair</p>
+             * KeyPairName.
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -478,7 +468,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Machine type</p>
+             * <p>The instance type.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -490,10 +480,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Node group description</p>
-             * 
-             * <strong>example:</strong>
-             * <p>describe for node group</p>
+             * NodeGroupDescription.
              */
             public Builder nodeGroupDescription(String nodeGroupDescription) {
                 this.nodeGroupDescription = nodeGroupDescription;
@@ -501,7 +488,6 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Node group name</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -513,7 +499,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>SystemDisk</p>
+             * SystemDisk.
              */
             public Builder systemDisk(SystemDisk systemDisk) {
                 this.systemDisk = systemDisk;
@@ -521,12 +507,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>user data</p>
-             * 
-             * <strong>example:</strong>
-             * <p>#!/bin/bash
-             * uptime
-             * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</p>
+             * UserData.
              */
             public Builder userData(String userData) {
                 this.userData = userData;

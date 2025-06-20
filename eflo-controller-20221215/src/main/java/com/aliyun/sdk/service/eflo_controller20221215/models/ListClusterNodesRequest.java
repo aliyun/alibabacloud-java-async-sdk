@@ -153,7 +153,7 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>Cluster ID</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>Number of items per page in a paginated query, with a default value of 20.</p>
+         * <p>The number of entries per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -178,7 +178,7 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>Query token (Token), which is the value of the NextToken parameter returned by the previous API call.</p>
+         * <p>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</p>
          * 
          * <strong>example:</strong>
          * <p>AAAAAdQ3Z+oPlg49gsr2y8jb6wY=</p>
@@ -190,7 +190,7 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>Node group ID</p>
+         * <p>The node group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ng-ec3c96ff0aa4c60d</p>
@@ -202,7 +202,7 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>resource group id</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-xxkxkllss</p>
@@ -214,7 +214,7 @@ public class ListClusterNodesRequest extends Request {
         }
 
         /**
-         * <p>tag information</p>
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -284,7 +284,7 @@ public class ListClusterNodesRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag object</p>
+             * <p>The tag key for the node.</p>
              * 
              * <strong>example:</strong>
              * <p>aa_key</p>
@@ -295,7 +295,7 @@ public class ListClusterNodesRequest extends Request {
             }
 
             /**
-             * <p>The value of tag object</p>
+             * <p>The tag value for the node.</p>
              * 
              * <strong>example:</strong>
              * <p>aa_value</p>

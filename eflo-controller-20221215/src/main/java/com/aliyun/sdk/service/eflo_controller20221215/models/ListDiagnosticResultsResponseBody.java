@@ -93,7 +93,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Diagnostic information</p>
+         * DiagnosticResults.
          */
         public Builder diagnosticResults(java.util.List<DiagnosticResults> diagnosticResults) {
             this.diagnosticResults = diagnosticResults;
@@ -101,10 +101,10 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>分页查询时每页行数。最大值为100。</p>
-         * <p>默认值：</p>
-         * <p>•当不设置值或设置的值小于20时，默认值为20。</p>
-         * <p>•当设置的值大于100时，默认值为100。</p>
+         * <ul>
+         * <li></li>
+         * <li></li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -115,10 +115,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>NextToken for the next page. Include this value when requesting the next page.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>a3f2224a5ec7224116c4f5246120abe4</p>
+         * NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -126,10 +123,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
-         * 
-         * <strong>example:</strong>
-         * <p>AC4F0004-7BCE-52E0-891B-CAC7D64E3368</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -299,10 +293,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Cluster ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>i118578141694745246055</p>
+             * ClusterId.
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -310,10 +301,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cluster name</p>
-             * 
-             * <strong>example:</strong>
-             * <p>pjlab-lingjun</p>
+             * ClusterName.
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -321,10 +309,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time of the diagnostic task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-01-15T02:01:12Z</p>
+             * CreationTime.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -332,10 +317,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Diagnosis content. For example, in network diagnosis, there are static configuration checks, dynamic operation checks, etc.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>diagcontent</p>
+             * DiagContent.
              */
             public Builder diagContent(String diagContent) {
                 this.diagContent = diagContent;
@@ -343,10 +325,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Diagnosis ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>123</p>
+             * DiagId.
              */
             public Builder diagId(String diagId) {
                 this.diagId = diagId;
@@ -354,10 +333,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Diagnosis result, success or failure.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Success</p>
+             * DiagResult.
              */
             public Builder diagResult(String diagResult) {
                 this.diagResult = diagResult;
@@ -365,10 +341,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Completion time of the diagnostic task.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>2024-10-16T02:04Z</p>
+             * FinishedTime.
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -376,10 +349,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>e01-cn-bl03ofg6206</p>
+             * ResourceId.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -387,10 +357,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Service name.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>proxy-rps.mos.csvw.com</p>
+             * ServerName.
              */
             public Builder serverName(String serverName) {
                 this.serverName = serverName;
@@ -398,10 +365,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Governance status</p>
-             * 
-             * <strong>example:</strong>
-             * <p>succeed</p>
+             * Status.
              */
             public Builder status(String status) {
                 this.status = status;

@@ -124,7 +124,7 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * <p>Cluster ID</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i15dfa12e8f27c44f4a006c2c8bb</p>
@@ -136,7 +136,7 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * <p>Whether to allow skipping failed node tasks, default value is False</p>
+         * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -148,7 +148,7 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * <p>Node list</p>
+         * <p>The nodes.</p>
          */
         public Builder nodes(java.util.List<Nodes> nodes) {
             String nodesShrink = shrink(nodes, "Nodes", "json");
@@ -158,7 +158,7 @@ public class ReimageNodesRequest extends Request {
         }
 
         /**
-         * <p>Custom data</p>
+         * <p>The user data.</p>
          * 
          * <strong>example:</strong>
          * <p>#!/bin/sh
@@ -256,7 +256,7 @@ public class ReimageNodesRequest extends Request {
             } 
 
             /**
-             * <p>Hostname</p>
+             * <p>The hostname.</p>
              * 
              * <strong>example:</strong>
              * <p>457db5ca-241d-11ed-9fd7-acde48001122</p>
@@ -267,7 +267,7 @@ public class ReimageNodesRequest extends Request {
             }
 
             /**
-             * <p>System image ID</p>
+             * <p>The system image ID.</p>
              * 
              * <strong>example:</strong>
              * <p>m-8vbf8rpv2nn14y7oybjy</p>
@@ -278,7 +278,7 @@ public class ReimageNodesRequest extends Request {
             }
 
             /**
-             * <p>Login password</p>
+             * <p>The logon password.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -289,7 +289,7 @@ public class ReimageNodesRequest extends Request {
             }
 
             /**
-             * <p>Node ID</p>
+             * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-zvp2tgykr0b</p>

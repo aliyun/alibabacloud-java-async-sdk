@@ -96,7 +96,7 @@ public class ApproveOperationRequest extends Request {
         }
 
         /**
-         * <p>Node ID</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e01-cn-zvp2tgykr08</p>
@@ -108,7 +108,11 @@ public class ApproveOperationRequest extends Request {
         }
 
         /**
-         * <p>Operation Type</p>
+         * <p>The O&amp;M operation type</p>
+         * <p>Valid value:</p>
+         * <ul>
+         * <li>RepairMachine</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RepairMachine</p>

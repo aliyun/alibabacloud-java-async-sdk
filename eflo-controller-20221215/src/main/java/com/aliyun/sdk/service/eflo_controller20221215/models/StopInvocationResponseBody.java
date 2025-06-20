@@ -54,7 +54,7 @@ public class StopInvocationResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A7FD7411-9395-52E8-AF42-EB3A4A55446D</p>

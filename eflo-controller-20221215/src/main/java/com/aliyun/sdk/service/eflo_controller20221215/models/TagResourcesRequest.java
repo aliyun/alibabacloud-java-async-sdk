@@ -105,7 +105,7 @@ public class TagResourcesRequest extends Request {
         } 
 
         /**
-         * <p>Region ID</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>List of resource IDs</p>
+         * <p>The IDs of the resources.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -128,7 +128,15 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Resource type</p>
+         * <p>The resource type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Node</li>
+         * <li>Vcc</li>
+         * <li>Cluster</li>
+         * <li>Vpd</li>
+         * <li>Subnet</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,7 +149,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * <p>Tags</p>
+         * <p>The tags.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -210,7 +218,7 @@ public class TagResourcesRequest extends Request {
             } 
 
             /**
-             * <p>Tag key</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>app</p>
@@ -221,7 +229,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * <p>Tag value</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>v3</p>

@@ -67,7 +67,7 @@ public class CreateDiagnosticTaskResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Diagnosis ID</p>
+         * <p>The ID of the diagnostics task.</p>
          * 
          * <strong>example:</strong>
          * <p>diag-i150553931717380274931</p>
@@ -78,7 +78,7 @@ public class CreateDiagnosticTaskResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>A511C02A-0127-51AA-A9F9-966382C9A1B5</p>

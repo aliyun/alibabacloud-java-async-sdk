@@ -82,7 +82,7 @@ public class ListMachineTypesRequest extends Request {
         }
 
         /**
-         * <p>Machine name</p>
+         * <p>The name of the instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>efg1.nvga1</p>

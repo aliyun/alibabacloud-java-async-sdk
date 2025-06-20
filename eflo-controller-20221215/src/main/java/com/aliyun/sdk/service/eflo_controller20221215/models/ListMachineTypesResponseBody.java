@@ -80,7 +80,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details of the machine types</p>
+         * <p>The instance types.</p>
          */
         public Builder machineTypes(java.util.List<MachineTypes> machineTypes) {
             this.machineTypes = machineTypes;
@@ -88,7 +88,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>NextToken for the next page, include this value when requesting the next page</p>
+         * <p>The token that is used in the next request to retrieve a new page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>a3f2224a5ec7224116c4f5246120abe4</p>
@@ -99,7 +99,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Id of the request</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>F16BA4D8-FF50-53B6-A026-F443FE31006C</p>
@@ -272,7 +272,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Number of bonds</p>
+             * <p>The number of bonds.</p>
              * 
              * <strong>example:</strong>
              * <p>2</p>
@@ -283,7 +283,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>CPU information</p>
+             * <p>The CPU information.</p>
              * 
              * <strong>example:</strong>
              * <p>2x Intel Icelake 8369B 32C CPU</p>
@@ -294,7 +294,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Disk information</p>
+             * <p>The disk information.</p>
              * 
              * <strong>example:</strong>
              * <p>2x 480GB SATA SSD</p>
@@ -305,7 +305,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>GPU information</p>
+             * <p>The GPU information.</p>
              * 
              * <strong>example:</strong>
              * <p>8x NVIDIA SXM4 80GB A100 GPU</p>
@@ -316,7 +316,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Memory information</p>
+             * <p>The storage information.</p>
              * 
              * <strong>example:</strong>
              * <p>32x 64GB DDR4 3200 Memory</p>
@@ -327,7 +327,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Machine name</p>
+             * <p>The name of the instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>efg1.nvga1</p>
@@ -338,7 +338,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Network information</p>
+             * <p>The network information.</p>
              * 
              * <strong>example:</strong>
              * <p>2x 100Gbps DP NIC</p>
@@ -349,7 +349,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of nodes</p>
+             * <p>The number of nodes.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -360,7 +360,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of CPU cores</p>
+             * <p>The number of vCPUs.</p>
              * 
              * <strong>example:</strong>
              * <p>48</p>
@@ -371,7 +371,7 @@ public class ListMachineTypesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Type of machine</p>
+             * <p>The access type.</p>
              * 
              * <strong>example:</strong>
              * <p>Public</p>

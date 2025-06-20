@@ -80,7 +80,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The query token value returned by this call.</p>
+         * <p>The returned pagination token which can be used in the next request to retrieve a new page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>a3f2224a5ec7224116c4f5246120abe4</p>
@@ -91,7 +91,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of nodes</p>
+         * <p>The nodes.</p>
          */
         public Builder nodes(java.util.List<Nodes> nodes) {
             this.nodes = nodes;
@@ -99,7 +99,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AA14CB86-70C4-5CB7-9E7B-6CCA77F3512B</p>
@@ -168,7 +168,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The key of tag object</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>aa_key</p>
@@ -179,7 +179,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The value of tag object</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>aa_vakye</p>
@@ -366,7 +366,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Product Code</p>
+             * <p>The commodity code.</p>
              * 
              * <strong>example:</strong>
              * <p>bccluster_eflocomputing_public_cn</p>
@@ -377,7 +377,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1652321554</p>
@@ -388,7 +388,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Expiration time of the machine</p>
+             * <p>The time when the node expires.</p>
              * 
              * <strong>example:</strong>
              * <p>1673107200</p>
@@ -399,7 +399,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cluster number</p>
+             * <p>The cluster number.</p>
              * 
              * <strong>example:</strong>
              * <p>A1</p>
@@ -410,7 +410,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Machine type</p>
+             * <p>The instance type.</p>
              * 
              * <strong>example:</strong>
              * <p>efg1.nvga1</p>
@@ -421,7 +421,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node ID</p>
+             * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-7pp2x193801</p>
@@ -432,7 +432,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Node status</p>
+             * <p>The node status.</p>
              * 
              * <strong>example:</strong>
              * <p>Unused</p>
@@ -443,7 +443,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Resource group ID</p>
+             * <p>The resource group ID.</p>
              * 
              * <strong>example:</strong>
              * <p>rg-aekzkkbrpl4owgy</p>
@@ -454,7 +454,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Machine SN</p>
+             * <p>The serial number of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>sn_pozkHBgicd</p>
@@ -465,7 +465,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Tags Info</p>
+             * <p>The tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -473,7 +473,7 @@ public class ListFreeNodesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Availability zone ID</p>
+             * <p>The zone ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-j</p>

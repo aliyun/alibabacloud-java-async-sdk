@@ -158,7 +158,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Cluster ID</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i118913031696573280136</p>
@@ -169,7 +169,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Device creation time.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-15T10:17:56</p>
@@ -180,7 +180,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Diagnostic ID</p>
+         * <p>The diagnostic task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>diag-i155363241720059671316</p>
@@ -191,7 +191,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Diagnostic Information</p>
+         * <p>The diagnostic information.</p>
          */
         public Builder diagnosticResults(java.util.List<?> diagnosticResults) {
             this.diagnosticResults = diagnosticResults;
@@ -199,7 +199,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Diagnostic State</p>
+         * <p>The diagnostic status.</p>
          * 
          * <strong>example:</strong>
          * <p>Fault</p>
@@ -210,7 +210,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Diagnostic Type</p>
+         * <p>The type of the diagnostic task.</p>
          * 
          * <strong>example:</strong>
          * <p>CheckByAiJobLogs</p>
@@ -221,7 +221,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>End time of node anomaly issues. Represented according to the ISO8601 standard, in a timezone-aware format, formatted as yyyy-MM-ddTHH:mm:ss+0800</p>
+         * <p>The end time of the instance exception. The time format with time zone based on the ISO8601 standard. The format is yyyy-MM-ddTHH:mm:ss +0800.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-11T10:00:30</p>
@@ -232,7 +232,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of Node IDs</p>
+         * <p>The node IDs.</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             this.nodeIds = nodeIds;
@@ -240,7 +240,7 @@ public class DescribeDiagnosticResultResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>8F065DDD-6996-5973-9691-9EC57BD0072E</p>

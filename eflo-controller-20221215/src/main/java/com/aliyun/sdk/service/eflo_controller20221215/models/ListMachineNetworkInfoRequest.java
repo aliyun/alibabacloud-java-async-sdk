@@ -82,7 +82,7 @@ public class ListMachineNetworkInfoRequest extends Request {
         }
 
         /**
-         * <p>Array</p>
+         * MachineHpnInfo.
          */
         public Builder machineHpnInfo(java.util.List<MachineHpnInfo> machineHpnInfo) {
             String machineHpnInfoShrink = shrink(machineHpnInfo, "MachineHpnInfo", "json");
@@ -164,10 +164,7 @@ public class ListMachineNetworkInfoRequest extends Request {
             } 
 
             /**
-             * <p>Cluster ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>C1</p>
+             * HpnZone.
              */
             public Builder hpnZone(String hpnZone) {
                 this.hpnZone = hpnZone;
@@ -175,10 +172,7 @@ public class ListMachineNetworkInfoRequest extends Request {
             }
 
             /**
-             * <p>Machine type</p>
-             * 
-             * <strong>example:</strong>
-             * <p>efg2.C48cNHmcn</p>
+             * MachineType.
              */
             public Builder machineType(String machineType) {
                 this.machineType = machineType;
@@ -186,10 +180,7 @@ public class ListMachineNetworkInfoRequest extends Request {
             }
 
             /**
-             * <p>Region ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-heyuan</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -180,7 +180,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * <p>Cluster ID</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i119982311660892626523</p>
@@ -192,7 +192,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * <p>Cluster name</p>
+         * <p>The cluster name.</p>
          * 
          * <strong>example:</strong>
          * <p>Eflo-YJ-Test-Cluster</p>
@@ -204,7 +204,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * <p>Required when the test type is communication library testing</p>
+         * <p>Specify when NetTestType is CommTest.</p>
          */
         public Builder commTest(CommTest commTest) {
             String commTestShrink = shrink(commTest, "CommTest", "json");
@@ -214,7 +214,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * <p>Fill in this field when the network test type is delay testing.</p>
+         * <p>Specify when NetTestType is DelayTest.</p>
          */
         public Builder delayTest(DelayTest delayTest) {
             String delayTestShrink = shrink(delayTest, "DelayTest", "json");
@@ -224,8 +224,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * <p>Network test type.
-         * For example: DelayTest for latency testing, TrafficTest for traffic testing, CommTest for communication library testing.</p>
+         * <p>The type of the network test. Valid values: DelayTest, TrafficTest, and CommTest.</p>
          * 
          * <strong>example:</strong>
          * <p>DelayTest</p>
@@ -237,7 +236,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * <p>Network mode</p>
+         * <p>The network mode.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -249,7 +248,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * <p>Test port number.</p>
+         * <p>The port number.</p>
          * 
          * <strong>example:</strong>
          * <p>23604</p>
@@ -261,7 +260,7 @@ public class CreateNetTestTaskRequest extends Request {
         }
 
         /**
-         * <p>This field is empty if the TrafficModel is Fullmesh.</p>
+         * <p>If the TrafficModel is Fullmesh, leave this parameter empty.</p>
          */
         public Builder trafficTest(TrafficTest trafficTest) {
             String trafficTestShrink = shrink(trafficTest, "TrafficTest", "json");
@@ -356,7 +355,7 @@ public class CreateNetTestTaskRequest extends Request {
             } 
 
             /**
-             * <p>IP address.</p>
+             * <p>The IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>169.253.253.15</p>
@@ -367,7 +366,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Node ID.</p>
+             * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-tw-bqisacl3z6l</p>
@@ -378,7 +377,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Resource ID</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>i111670831721110797708</p>
@@ -389,7 +388,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Service name.</p>
+             * <p>The name of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>VBw</p>
@@ -485,7 +484,7 @@ public class CreateNetTestTaskRequest extends Request {
             } 
 
             /**
-             * <p>Number of GPUs</p>
+             * <p>The number of GPUs.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -496,7 +495,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Resource ID</p>
+             * <p>The host IDs.</p>
              */
             public Builder hosts(java.util.List<Hosts> hosts) {
                 this.hosts = hosts;
@@ -504,7 +503,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Communication library model</p>
+             * <p>The communication library model.</p>
              * 
              * <strong>example:</strong>
              * <p>intention_v4</p>
@@ -515,7 +514,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Communication library test category: ACCL or NCCL</p>
+             * <p>The CommTest type, which can be ACCL or NCCL.</p>
              * 
              * <strong>example:</strong>
              * <p>ACCL</p>
@@ -624,7 +623,7 @@ public class CreateNetTestTaskRequest extends Request {
             } 
 
             /**
-             * <p>Network interface bond port</p>
+             * <p>The bonding of network interface card.</p>
              * 
              * <strong>example:</strong>
              * <p>bond1</p>
@@ -635,7 +634,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Node IP</p>
+             * <p>The IP address of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>125.210.225.48</p>
@@ -646,7 +645,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Node ID.</p>
+             * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-fou43an0a05</p>
@@ -657,7 +656,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Resource ID</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-bcd3u1aee06</p>
@@ -668,7 +667,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Service name.</p>
+             * <p>The name of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>NQU</p>
@@ -725,7 +724,7 @@ public class CreateNetTestTaskRequest extends Request {
             } 
 
             /**
-             * <p>输入测试节点的hosts</p>
+             * <p>The hosts of the test node.</p>
              */
             public Builder hosts(java.util.List<DelayTestHosts> hosts) {
                 this.hosts = hosts;
@@ -831,7 +830,7 @@ public class CreateNetTestTaskRequest extends Request {
             } 
 
             /**
-             * <p>Network card bond interface</p>
+             * <p>The bonding of network interface card.</p>
              * 
              * <strong>example:</strong>
              * <p>bond1</p>
@@ -842,7 +841,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Node IP</p>
+             * <p>The IP address of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.1</p>
@@ -853,7 +852,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Node ID</p>
+             * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-tw-w5elqg7pw18</p>
@@ -864,7 +863,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Resource ID</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-20s41p6cx01</p>
@@ -875,7 +874,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Service name.</p>
+             * <p>The name of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>xMv</p>
@@ -984,7 +983,7 @@ public class CreateNetTestTaskRequest extends Request {
             } 
 
             /**
-             * <p>Network card bond interface</p>
+             * <p>The bonding of network interface card.</p>
              * 
              * <strong>example:</strong>
              * <p>bond1</p>
@@ -995,7 +994,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Node IP</p>
+             * <p>The IP address of the node.</p>
              * 
              * <strong>example:</strong>
              * <p>47.121.110.190</p>
@@ -1006,7 +1005,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Node ID</p>
+             * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-tw-bqisacl3z6l</p>
@@ -1017,7 +1016,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Resource ID</p>
+             * <p>The resource ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-wwo3etaqu0b</p>
@@ -1028,7 +1027,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Service name.</p>
+             * <p>The name of the service.</p>
              * 
              * <strong>example:</strong>
              * <p>xMv</p>
@@ -1163,7 +1162,7 @@ public class CreateNetTestTaskRequest extends Request {
             } 
 
             /**
-             * <p>Resource ID.</p>
+             * <p>The client IDs.</p>
              */
             public Builder clients(java.util.List<Clients> clients) {
                 this.clients = clients;
@@ -1171,7 +1170,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>The duration of the workflow task in seconds.</p>
+             * <p>The running duration of the pipeline job. Unit: seconds.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1182,8 +1181,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Enter True/False when the protocol is RDMA, 
-             * this field is empty when the protocol is TCP.</p>
+             * <p>If the protocol is RDMA, enter True or False. If the protocol is TCP, leave this field empty.</p>
              * 
              * <strong>example:</strong>
              * <p>False</p>
@@ -1194,7 +1192,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Network protocol, either RDMA or TCP.</p>
+             * <p>The network protocol, which can be RDMA or TCP.</p>
              * 
              * <strong>example:</strong>
              * <p>TCP</p>
@@ -1205,7 +1203,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Enter the number of concurrent connections when the protocol is TCP, or enter the configured QP value when the protocol is RDMA.</p>
+             * <p>If the protocol is TCP, enter the number of concurrent connections. If the protocol is RDMA, enter the configured QP value.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -1216,7 +1214,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Service list</p>
+             * <p>The services.</p>
              */
             public Builder servers(java.util.List<Servers> servers) {
                 this.servers = servers;
@@ -1224,7 +1222,7 @@ public class CreateNetTestTaskRequest extends Request {
             }
 
             /**
-             * <p>Traffic model, either MTON or Fullmesh.</p>
+             * <p>The traffic model, which can be MTON or Fullmesh.</p>
              * 
              * <strong>example:</strong>
              * <p>Fullmesh</p>

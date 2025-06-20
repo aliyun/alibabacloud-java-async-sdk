@@ -110,7 +110,7 @@ public class CreateSessionRequest extends Request {
         }
 
         /**
-         * <p>Instance ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e01-cn-kvw44e6dn04</p>
@@ -122,12 +122,10 @@ public class CreateSessionRequest extends Request {
         }
 
         /**
-         * <p>Session type corresponding to the session package.</p>
+         * <p>The type of the session corresponding to the session package.</p>
          * 
          * <strong>example:</strong>
-         * <p>N	两种：
-         * Sol：基于串口[默认]
-         * Assistant：基于云助手</p>
+         * <p>Valid values: Sol (default): based on serial port Assistant: based on cloud assistant</p>
          */
         public Builder sessionType(String sessionType) {
             this.putBodyParameter("SessionType", sessionType);
@@ -136,7 +134,7 @@ public class CreateSessionRequest extends Request {
         }
 
         /**
-         * <p>Initiation time, 13-digit timestamp.</p>
+         * <p>The start time. The value is a 13-digit timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1669340937156</p>

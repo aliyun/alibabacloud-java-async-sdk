@@ -97,7 +97,7 @@ public class StopInvocationRequest extends Request {
         }
 
         /**
-         * <p>Command execution ID.</p>
+         * <p>The execution ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class StopInvocationRequest extends Request {
         }
 
         /**
-         * <p>List of nodes.</p>
+         * <p>The nodes.</p>
          */
         public Builder nodeIdList(java.util.List<String> nodeIdList) {
             String nodeIdListShrink = shrink(nodeIdList, "NodeIdList", "json");

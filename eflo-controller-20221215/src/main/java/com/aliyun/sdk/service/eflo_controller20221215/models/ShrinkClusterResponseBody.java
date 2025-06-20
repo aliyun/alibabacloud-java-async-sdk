@@ -67,7 +67,7 @@ public class ShrinkClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>CC9FEF89-9BE5-5E03-845E-238B48D7599B</p>
@@ -78,7 +78,7 @@ public class ShrinkClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>task id</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i159136551662516768776</p>

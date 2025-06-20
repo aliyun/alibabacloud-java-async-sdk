@@ -124,7 +124,7 @@ public class CreateDiagnosticTaskRequest extends Request {
         }
 
         /**
-         * <p>Log information</p>
+         * <p>The log information.</p>
          */
         public Builder aiJobLogInfo(AiJobLogInfo aiJobLogInfo) {
             String aiJobLogInfoShrink = shrink(aiJobLogInfo, "AiJobLogInfo", "json");
@@ -134,7 +134,7 @@ public class CreateDiagnosticTaskRequest extends Request {
         }
 
         /**
-         * <p>Cluster ID</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i118913031696573280136</p>
@@ -146,7 +146,7 @@ public class CreateDiagnosticTaskRequest extends Request {
         }
 
         /**
-         * <p>Diagnostic type.</p>
+         * <p>The diagnostics type.</p>
          * 
          * <strong>example:</strong>
          * <p>CheckByAiJobLogs</p>
@@ -158,7 +158,7 @@ public class CreateDiagnosticTaskRequest extends Request {
         }
 
         /**
-         * <p>List of node IDs</p>
+         * <p>The IDs of the nodes.</p>
          */
         public Builder nodeIds(java.util.List<String> nodeIds) {
             String nodeIdsShrink = shrink(nodeIds, "NodeIds", "simple");
@@ -227,7 +227,7 @@ public class CreateDiagnosticTaskRequest extends Request {
             } 
 
             /**
-             * <p>Sent date, in the format yyyymmdd.</p>
+             * <p>The sending date in the yyyymmdd format.</p>
              * 
              * <strong>example:</strong>
              * <p>2024-08-05T10:10:01</p>
@@ -238,7 +238,7 @@ public class CreateDiagnosticTaskRequest extends Request {
             }
 
             /**
-             * <p>Log content</p>
+             * <p>The log content.</p>
              * 
              * <strong>example:</strong>
              * <p>success</p>
@@ -321,7 +321,7 @@ public class CreateDiagnosticTaskRequest extends Request {
             } 
 
             /**
-             * <p>Instance ID</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>null</p>
@@ -332,7 +332,7 @@ public class CreateDiagnosticTaskRequest extends Request {
             }
 
             /**
-             * <p>Log object</p>
+             * <p>The logs.</p>
              */
             public Builder logs(java.util.List<Logs> logs) {
                 this.logs = logs;
@@ -340,7 +340,7 @@ public class CreateDiagnosticTaskRequest extends Request {
             }
 
             /**
-             * <p>Node ID</p>
+             * <p>The node ID.</p>
              * 
              * <strong>example:</strong>
              * <p>e01-tw-p2p2al5u1hn</p>
@@ -423,7 +423,7 @@ public class CreateDiagnosticTaskRequest extends Request {
             } 
 
             /**
-             * <p>Task logs</p>
+             * <p>The task logs.</p>
              */
             public Builder aiJobLogs(java.util.List<AiJobLogs> aiJobLogs) {
                 this.aiJobLogs = aiJobLogs;
@@ -431,9 +431,9 @@ public class CreateDiagnosticTaskRequest extends Request {
             }
 
             /**
-             * <p>End time. In timestamp format, unit: seconds.</p>
+             * <p>The end time. The value is in the timestamp format. Unit: seconds.</p>
              * <blockquote>
-             * <p>Must be on the hour or half-hour mark.</p>
+             * <p> This timestamp must indicate a point in time that is accurate to the minute.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -445,9 +445,9 @@ public class CreateDiagnosticTaskRequest extends Request {
             }
 
             /**
-             * <p>Start time. In timestamp format, unit: seconds.</p>
+             * <p>The start time. The value is in the timestamp format. Unit: seconds.</p>
              * <blockquote>
-             * <p>Must be on the hour or half-hour mark.</p>
+             * <p> This timestamp must indicate a point in time that is accurate to the minute.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>

@@ -67,7 +67,7 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Array</p>
+         * MachineNetworkInfo.
          */
         public Builder machineNetworkInfo(java.util.List<MachineNetworkInfo> machineNetworkInfo) {
             this.machineNetworkInfo = machineNetworkInfo;
@@ -75,7 +75,7 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ID of the request</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
@@ -209,10 +209,7 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>Cluster network</p>
-             * 
-             * <strong>example:</strong>
-             * <p>vpc/acl</p>
+             * ClusterNet.
              */
             public Builder clusterNet(String clusterNet) {
                 this.clusterNet = clusterNet;
@@ -220,10 +217,7 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether jumbo frame capability is enabled</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * EnableJumboFrame.
              */
             public Builder enableJumboFrame(Boolean enableJumboFrame) {
                 this.enableJumboFrame = enableJumboFrame;
@@ -231,10 +225,7 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cluster ID</p>
-             * 
-             * <strong>example:</strong>
-             * <p>B1</p>
+             * HpnZone.
              */
             public Builder hpnZone(String hpnZone) {
                 this.hpnZone = hpnZone;
@@ -242,10 +233,7 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Whether it is in DPU mode</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
+             * IsDpuMode.
              */
             public Builder isDpuMode(Boolean isDpuMode) {
                 this.isDpuMode = isDpuMode;
@@ -253,10 +241,7 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Machine type</p>
-             * 
-             * <strong>example:</strong>
-             * <p>efg1.nvga8n</p>
+             * MachineType.
              */
             public Builder machineType(String machineType) {
                 this.machineType = machineType;
@@ -264,10 +249,7 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Network architecture</p>
-             * 
-             * <strong>example:</strong>
-             * <p>XX-7.0</p>
+             * NetArch.
              */
             public Builder netArch(String netArch) {
                 this.netArch = netArch;
@@ -275,10 +257,7 @@ public class ListMachineNetworkInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>地域ID。</p>
-             * 
-             * <strong>example:</strong>
-             * <p>cn-heyuan</p>
+             * RegionId.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

@@ -83,7 +83,7 @@ public class DescribeVscRequest extends Request {
         }
 
         /**
-         * <p>The VscId to be queried</p>
+         * <p>The VSC ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

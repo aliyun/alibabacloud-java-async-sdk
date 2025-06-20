@@ -166,7 +166,7 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * <p>Cluster number</p>
+         * <p>The cluster number.</p>
          * 
          * <strong>example:</strong>
          * <p>A1</p>
@@ -178,7 +178,7 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * <p>Machine type</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>mock-machine-type2</p>
@@ -190,7 +190,7 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * <p>Number of items per page for paginated queries, default is 20.</p>
+         * <p>The number of entries per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -202,7 +202,7 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * <p>Query token (Token), the value should be the NextToken parameter value returned from the previous API call.</p>
+         * <p>The token that determines the start position of the query. Set this parameter to the value of the NextToken parameter that is returned from the last call.</p>
          * 
          * <strong>example:</strong>
          * <p>a3f2224a5ec7224116c4f5246120abe4</p>
@@ -214,7 +214,7 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * <p>return array of operating states</p>
+         * <p>The types of the returned nodes that are not used.</p>
          */
         public Builder operatingStates(java.util.List<String> operatingStates) {
             this.putBodyParameter("OperatingStates", operatingStates);
@@ -223,7 +223,7 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * <p>Resource group ID</p>
+         * <p>The resource group ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxno4vh5muoq</p>
@@ -235,7 +235,7 @@ public class ListFreeNodesRequest extends Request {
         }
 
         /**
-         * <p>Tag information</p>
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -304,7 +304,7 @@ public class ListFreeNodesRequest extends Request {
             } 
 
             /**
-             * <p>The key of tag object</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>key_aa</p>
@@ -315,7 +315,7 @@ public class ListFreeNodesRequest extends Request {
             }
 
             /**
-             * <p>The value of tag object</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>value_aa</p>

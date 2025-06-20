@@ -67,7 +67,7 @@ public class StopNodesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Request ID</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4FD06DF0-9167-5C6F-A145-F30CA4A15D54</p>
@@ -78,7 +78,7 @@ public class StopNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Task ID</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>i155847351716171893489</p>

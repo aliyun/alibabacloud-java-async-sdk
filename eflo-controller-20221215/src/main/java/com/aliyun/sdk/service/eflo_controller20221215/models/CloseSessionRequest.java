@@ -96,10 +96,7 @@ public class CloseSessionRequest extends Request {
         }
 
         /**
-         * <p>Session ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>i207023871669364793713</p>
+         * SessionId.
          */
         public Builder sessionId(String sessionId) {
             this.putBodyParameter("SessionId", sessionId);
@@ -108,10 +105,7 @@ public class CloseSessionRequest extends Request {
         }
 
         /**
-         * <p>Session token</p>
-         * 
-         * <strong>example:</strong>
-         * <p>03f53c719015a9ad4f4f55d66cac2dac161b18e8065ca75a3220b89de389c980</p>
+         * SessionToken.
          */
         public Builder sessionToken(String sessionToken) {
             this.putBodyParameter("SessionToken", sessionToken);

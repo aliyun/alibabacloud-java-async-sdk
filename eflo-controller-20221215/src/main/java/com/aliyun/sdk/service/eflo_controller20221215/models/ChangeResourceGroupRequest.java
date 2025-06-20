@@ -104,7 +104,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * <p>System-defined parameter. Value: <strong>ChangeResourceGroup</strong>.</p>
+         * <p>The ID of the resource group into which you want to change.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>$.parameters[1].schema.example</p>
+         * <p>The resource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>Resource Group Change</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -143,7 +143,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * <p>$.parameters[3].schema.enumValueTitles</p>
+         * <p>The resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>Node</p>
