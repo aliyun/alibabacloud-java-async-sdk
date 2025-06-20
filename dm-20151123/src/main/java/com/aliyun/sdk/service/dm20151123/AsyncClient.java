@@ -275,12 +275,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetSuppressionListLevelResponse> setSuppressionListLevel(SetSuppressionListLevelRequest request);
 
     /**
-     * @param request the request parameters of SingleSendMail  SingleSendMailRequest
-     * @return SingleSendMailResponse
-     */
-    CompletableFuture<SingleSendMailResponse> singleSendMail(SingleSendMailRequest request);
-
-    /**
      * @param request the request parameters of UpdateIpProtection  UpdateIpProtectionRequest
      * @return UpdateIpProtectionResponse
      */
