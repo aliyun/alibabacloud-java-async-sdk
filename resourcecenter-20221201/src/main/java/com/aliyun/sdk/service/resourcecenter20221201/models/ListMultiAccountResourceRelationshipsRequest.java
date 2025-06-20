@@ -148,7 +148,12 @@ public class ListMultiAccountResourceRelationshipsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 500.</p>
+         * <p>Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -157,7 +162,10 @@ public class ListMultiAccountResourceRelationshipsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -166,6 +174,7 @@ public class ListMultiAccountResourceRelationshipsRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +187,7 @@ public class ListMultiAccountResourceRelationshipsRequest extends Request {
         }
 
         /**
-         * RelatedResourceFilter.
+         * <p>The filter conditions for resources associated with the resource.</p>
          */
         public Builder relatedResourceFilter(java.util.List<RelatedResourceFilter> relatedResourceFilter) {
             this.putQueryParameter("RelatedResourceFilter", relatedResourceFilter);
@@ -187,6 +196,7 @@ public class ListMultiAccountResourceRelationshipsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -199,6 +209,7 @@ public class ListMultiAccountResourceRelationshipsRequest extends Request {
         }
 
         /**
+         * <p>The type of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +222,13 @@ public class ListMultiAccountResourceRelationshipsRequest extends Request {
         }
 
         /**
+         * <p>The search scope. Valid values:</p>
+         * <ul>
+         * <li>ID of a resource directory: Resources within the management account and all members of the resource directory are searched. You can call the <a href="https://help.aliyun.com/document_detail/159995.html">GetResourceDirectory</a> operation to query the ID.</li>
+         * <li>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to query the ID.</li>
+         * <li>ID of a folder: Resources within all members in the folder are searched. You can call the <a href="https://help.aliyun.com/document_detail/159997.html">ListFoldersForParent</a> operation to query the ID.</li>
+         * <li>ID of a member: Resources within the member are searched. You can call the <a href="https://help.aliyun.com/document_detail/160016.html">ListAccounts</a> operation to query the ID.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +313,10 @@ public class ListMultiAccountResourceRelationshipsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the filter condition. For more information, see <code>Supported filter parameters</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RelatedResourceRegionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -303,7 +324,10 @@ public class ListMultiAccountResourceRelationshipsRequest extends Request {
             }
 
             /**
-             * MatchType.
+             * <p>The matching method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Equals</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -311,7 +335,7 @@ public class ListMultiAccountResourceRelationshipsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The values of the filter condition.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

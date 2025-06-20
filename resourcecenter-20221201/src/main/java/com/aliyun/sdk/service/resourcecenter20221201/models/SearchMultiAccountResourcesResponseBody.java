@@ -359,6 +359,9 @@ public class SearchMultiAccountResourcesResponseBody extends TeaModel {
 
             /**
              * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.2</p>
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;

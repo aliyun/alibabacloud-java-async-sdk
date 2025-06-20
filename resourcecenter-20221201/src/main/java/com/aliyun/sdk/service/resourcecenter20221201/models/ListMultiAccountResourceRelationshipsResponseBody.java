@@ -106,7 +106,10 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -114,7 +117,10 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -122,7 +128,10 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BCAB07BA-82FA-5DC0-9322-FB7ED726481D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +139,7 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
         }
 
         /**
-         * ResourceRelationships.
+         * <p>The resource relationships.</p>
          */
         public Builder resourceRelationships(java.util.List<ResourceRelationships> resourceRelationships) {
             this.resourceRelationships = resourceRelationships;
@@ -138,7 +147,16 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
         }
 
         /**
-         * Scope.
+         * <p>The search scope. Valid values:</p>
+         * <ul>
+         * <li>ID of a resource directory: Resources within the management account and all members of the resource directory are searched.</li>
+         * <li>ID of the Root folder: Resources within all members in the Root folder and the subfolders of the Root folder are searched.</li>
+         * <li>ID of a folder: Resources within all members in the folder are searched.</li>
+         * <li>ID of a member: Resources within the member are searched.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>rd-r4****</p>
          */
         public Builder scope(String scope) {
             this.scope = scope;
@@ -269,7 +287,10 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
             } 
 
             /**
-             * AccountId.
+             * <p>The ID of the management account or member.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>193396142051****</p>
              */
             public Builder accountId(String accountId) {
                 this.accountId = accountId;
@@ -277,7 +298,10 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -285,7 +309,10 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
             }
 
             /**
-             * RelatedResourceId.
+             * <p>The ID of the associated resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6m5okksddm6c9lh7***</p>
              */
             public Builder relatedResourceId(String relatedResourceId) {
                 this.relatedResourceId = relatedResourceId;
@@ -293,7 +320,10 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
             }
 
             /**
-             * RelatedResourceRegionId.
+             * <p>The region ID of the associated resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder relatedResourceRegionId(String relatedResourceRegionId) {
                 this.relatedResourceRegionId = relatedResourceRegionId;
@@ -301,7 +331,10 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
             }
 
             /**
-             * RelatedResourceType.
+             * <p>The type of the associated resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::VPC::VPC</p>
              */
             public Builder relatedResourceType(String relatedResourceType) {
                 this.relatedResourceType = relatedResourceType;
@@ -309,7 +342,10 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
             }
 
             /**
-             * ResourceId.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-eb3hji****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -317,7 +353,10 @@ public class ListMultiAccountResourceRelationshipsResponseBody extends TeaModel 
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ACK::Cluster</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

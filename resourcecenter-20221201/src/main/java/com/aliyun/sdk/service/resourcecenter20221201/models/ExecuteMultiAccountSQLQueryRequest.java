@@ -119,7 +119,12 @@ public class ExecuteMultiAccountSQLQueryRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries to return on each page.</p>
+         * <p>Valid values: 1 to 1000.</p>
+         * <p>Default value: 1000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -128,7 +133,10 @@ public class ExecuteMultiAccountSQLQueryRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

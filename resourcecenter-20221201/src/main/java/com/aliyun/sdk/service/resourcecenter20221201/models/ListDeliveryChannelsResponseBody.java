@@ -1,0 +1,254 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.resourcecenter20221201.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link ListDeliveryChannelsResponseBody} extends {@link TeaModel}
+ *
+ * <p>ListDeliveryChannelsResponseBody</p>
+ */
+public class ListDeliveryChannelsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("DeliveryChannels")
+    private java.util.List<DeliveryChannels> deliveryChannels;
+
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String nextToken;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    private ListDeliveryChannelsResponseBody(Builder builder) {
+        this.deliveryChannels = builder.deliveryChannels;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
+        this.requestId = builder.requestId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListDeliveryChannelsResponseBody create() {
+        return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return deliveryChannels
+     */
+    public java.util.List<DeliveryChannels> getDeliveryChannels() {
+        return this.deliveryChannels;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    public static final class Builder {
+        private java.util.List<DeliveryChannels> deliveryChannels; 
+        private Integer maxResults; 
+        private String nextToken; 
+        private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDeliveryChannelsResponseBody model) {
+            this.deliveryChannels = model.deliveryChannels;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
+
+        /**
+         * DeliveryChannels.
+         */
+        public Builder deliveryChannels(java.util.List<DeliveryChannels> deliveryChannels) {
+            this.deliveryChannels = deliveryChannels;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        public ListDeliveryChannelsResponseBody build() {
+            return new ListDeliveryChannelsResponseBody(this);
+        } 
+
+    } 
+
+    /**
+     * 
+     * {@link ListDeliveryChannelsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListDeliveryChannelsResponseBody</p>
+     */
+    public static class DeliveryChannels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private String createTime;
+
+        @com.aliyun.core.annotation.NameInMap("DeliveryChannelDescription")
+        private String deliveryChannelDescription;
+
+        @com.aliyun.core.annotation.NameInMap("DeliveryChannelId")
+        private String deliveryChannelId;
+
+        @com.aliyun.core.annotation.NameInMap("DeliveryChannelName")
+        private String deliveryChannelName;
+
+        private DeliveryChannels(Builder builder) {
+            this.createTime = builder.createTime;
+            this.deliveryChannelDescription = builder.deliveryChannelDescription;
+            this.deliveryChannelId = builder.deliveryChannelId;
+            this.deliveryChannelName = builder.deliveryChannelName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DeliveryChannels create() {
+            return builder().build();
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
+         * @return deliveryChannelDescription
+         */
+        public String getDeliveryChannelDescription() {
+            return this.deliveryChannelDescription;
+        }
+
+        /**
+         * @return deliveryChannelId
+         */
+        public String getDeliveryChannelId() {
+            return this.deliveryChannelId;
+        }
+
+        /**
+         * @return deliveryChannelName
+         */
+        public String getDeliveryChannelName() {
+            return this.deliveryChannelName;
+        }
+
+        public static final class Builder {
+            private String createTime; 
+            private String deliveryChannelDescription; 
+            private String deliveryChannelId; 
+            private String deliveryChannelName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeliveryChannels model) {
+                this.createTime = model.createTime;
+                this.deliveryChannelDescription = model.deliveryChannelDescription;
+                this.deliveryChannelId = model.deliveryChannelId;
+                this.deliveryChannelName = model.deliveryChannelName;
+            } 
+
+            /**
+             * CreateTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DeliveryChannelDescription.
+             */
+            public Builder deliveryChannelDescription(String deliveryChannelDescription) {
+                this.deliveryChannelDescription = deliveryChannelDescription;
+                return this;
+            }
+
+            /**
+             * DeliveryChannelId.
+             */
+            public Builder deliveryChannelId(String deliveryChannelId) {
+                this.deliveryChannelId = deliveryChannelId;
+                return this;
+            }
+
+            /**
+             * DeliveryChannelName.
+             */
+            public Builder deliveryChannelName(String deliveryChannelName) {
+                this.deliveryChannelName = deliveryChannelName;
+                return this;
+            }
+
+            public DeliveryChannels build() {
+                return new DeliveryChannels(this);
+            } 
+
+        } 
+
+    }
+}

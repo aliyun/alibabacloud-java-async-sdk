@@ -133,7 +133,12 @@ public class ListResourceRelationshipsRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * <p>Valid values: 1 to 500.</p>
+         * <p>Default value: 20.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -142,7 +147,10 @@ public class ListResourceRelationshipsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -151,6 +159,7 @@ public class ListResourceRelationshipsRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -163,7 +172,7 @@ public class ListResourceRelationshipsRequest extends Request {
         }
 
         /**
-         * RelatedResourceFilter.
+         * <p>The filter conditions for resources associated with the resource.</p>
          */
         public Builder relatedResourceFilter(java.util.List<RelatedResourceFilter> relatedResourceFilter) {
             this.putQueryParameter("RelatedResourceFilter", relatedResourceFilter);
@@ -172,6 +181,7 @@ public class ListResourceRelationshipsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,6 +194,7 @@ public class ListResourceRelationshipsRequest extends Request {
         }
 
         /**
+         * <p>The type of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -268,7 +279,10 @@ public class ListResourceRelationshipsRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the filter condition. For more information, see <code>Supported filter parameters</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RelatedResourceRegionId</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -276,7 +290,10 @@ public class ListResourceRelationshipsRequest extends Request {
             }
 
             /**
-             * MatchType.
+             * <p>The matching method.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Equals</p>
              */
             public Builder matchType(String matchType) {
                 this.matchType = matchType;
@@ -284,7 +301,7 @@ public class ListResourceRelationshipsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The values of the filter condition.</p>
              */
             public Builder value(java.util.List<String> value) {
                 this.value = value;

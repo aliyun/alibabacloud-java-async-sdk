@@ -93,7 +93,10 @@ public class ListResourceRelationshipsResponseBody extends TeaModel {
         } 
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +104,10 @@ public class ListResourceRelationshipsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>eyJzZWFyY2hBZnRlcnMiOlsiMTAwMTU2Nzk4MTU1OSJd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +115,10 @@ public class ListResourceRelationshipsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>682A3004-38E3-5122-9A11-CCDFAB9C3C4F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +126,7 @@ public class ListResourceRelationshipsResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceRelationships.
+         * <p>The resource relationships.</p>
          */
         public Builder resourceRelationships(java.util.List<ResourceRelationships> resourceRelationships) {
             this.resourceRelationships = resourceRelationships;
@@ -235,7 +244,10 @@ public class ListResourceRelationshipsResponseBody extends TeaModel {
             } 
 
             /**
-             * RegionId.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -243,7 +255,10 @@ public class ListResourceRelationshipsResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedResourceId.
+             * <p>The ID of the associated resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf6m5okksddm6c9lh7***</p>
              */
             public Builder relatedResourceId(String relatedResourceId) {
                 this.relatedResourceId = relatedResourceId;
@@ -251,7 +266,10 @@ public class ListResourceRelationshipsResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedResourceRegionId.
+             * <p>The region ID of the associated resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder relatedResourceRegionId(String relatedResourceRegionId) {
                 this.relatedResourceRegionId = relatedResourceRegionId;
@@ -259,7 +277,10 @@ public class ListResourceRelationshipsResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedResourceType.
+             * <p>The type of the associated resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::VPC::VPC</p>
              */
             public Builder relatedResourceType(String relatedResourceType) {
                 this.relatedResourceType = relatedResourceType;
@@ -267,7 +288,10 @@ public class ListResourceRelationshipsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>m-eb3hji****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -275,7 +299,10 @@ public class ListResourceRelationshipsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACS::ACK::Cluster</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

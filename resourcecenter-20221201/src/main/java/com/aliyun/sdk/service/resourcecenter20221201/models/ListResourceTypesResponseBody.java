@@ -304,7 +304,7 @@ public class ListResourceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedResourceTypes.
+             * <p>The name of supported related resource types.</p>
              */
             public Builder relatedResourceTypes(java.util.List<String> relatedResourceTypes) {
                 this.relatedResourceTypes = relatedResourceTypes;

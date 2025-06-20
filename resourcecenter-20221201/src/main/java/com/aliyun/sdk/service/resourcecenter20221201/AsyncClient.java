@@ -26,10 +26,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssociateDefaultFilterResponse> associateDefaultFilter(AssociateDefaultFilterRequest request);
 
     /**
+     * @param request the request parameters of CreateDeliveryChannel  CreateDeliveryChannelRequest
+     * @return CreateDeliveryChannelResponse
+     */
+    CompletableFuture<CreateDeliveryChannelResponse> createDeliveryChannel(CreateDeliveryChannelRequest request);
+
+    /**
      * @param request the request parameters of CreateFilter  CreateFilterRequest
      * @return CreateFilterResponse
      */
     CompletableFuture<CreateFilterResponse> createFilter(CreateFilterRequest request);
+
+    /**
+     * @param request the request parameters of CreateMultiAccountDeliveryChannel  CreateMultiAccountDeliveryChannelRequest
+     * @return CreateMultiAccountDeliveryChannelResponse
+     */
+    CompletableFuture<CreateMultiAccountDeliveryChannelResponse> createMultiAccountDeliveryChannel(CreateMultiAccountDeliveryChannelRequest request);
 
     /**
      * @param request the request parameters of CreateSavedQuery  CreateSavedQueryRequest
@@ -38,10 +50,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSavedQueryResponse> createSavedQuery(CreateSavedQueryRequest request);
 
     /**
+     * @param request the request parameters of DeleteDeliveryChannel  DeleteDeliveryChannelRequest
+     * @return DeleteDeliveryChannelResponse
+     */
+    CompletableFuture<DeleteDeliveryChannelResponse> deleteDeliveryChannel(DeleteDeliveryChannelRequest request);
+
+    /**
      * @param request the request parameters of DeleteFilter  DeleteFilterRequest
      * @return DeleteFilterResponse
      */
     CompletableFuture<DeleteFilterResponse> deleteFilter(DeleteFilterRequest request);
+
+    /**
+     * @param request the request parameters of DeleteMultiAccountDeliveryChannel  DeleteMultiAccountDeliveryChannelRequest
+     * @return DeleteMultiAccountDeliveryChannelResponse
+     */
+    CompletableFuture<DeleteMultiAccountDeliveryChannelResponse> deleteMultiAccountDeliveryChannel(DeleteMultiAccountDeliveryChannelRequest request);
 
     /**
      * @param request the request parameters of DeleteSavedQuery  DeleteSavedQueryRequest
@@ -95,10 +119,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ExecuteSQLQueryResponse> executeSQLQuery(ExecuteSQLQueryRequest request);
 
     /**
+     * @param request the request parameters of GetDeliveryChannel  GetDeliveryChannelRequest
+     * @return GetDeliveryChannelResponse
+     */
+    CompletableFuture<GetDeliveryChannelResponse> getDeliveryChannel(GetDeliveryChannelRequest request);
+
+    /**
+     * @param request the request parameters of GetDeliveryChannelStatistics  GetDeliveryChannelStatisticsRequest
+     * @return GetDeliveryChannelStatisticsResponse
+     */
+    CompletableFuture<GetDeliveryChannelStatisticsResponse> getDeliveryChannelStatistics(GetDeliveryChannelStatisticsRequest request);
+
+    /**
      * @param request the request parameters of GetExampleQuery  GetExampleQueryRequest
      * @return GetExampleQueryResponse
      */
     CompletableFuture<GetExampleQueryResponse> getExampleQuery(GetExampleQueryRequest request);
+
+    /**
+     * @param request the request parameters of GetMultiAccountDeliveryChannel  GetMultiAccountDeliveryChannelRequest
+     * @return GetMultiAccountDeliveryChannelResponse
+     */
+    CompletableFuture<GetMultiAccountDeliveryChannelResponse> getMultiAccountDeliveryChannel(GetMultiAccountDeliveryChannelRequest request);
+
+    /**
+     * @param request the request parameters of GetMultiAccountDeliveryChannelStatistics  GetMultiAccountDeliveryChannelStatisticsRequest
+     * @return GetMultiAccountDeliveryChannelStatisticsResponse
+     */
+    CompletableFuture<GetMultiAccountDeliveryChannelStatisticsResponse> getMultiAccountDeliveryChannelStatistics(GetMultiAccountDeliveryChannelStatisticsRequest request);
 
     /**
      * @param request the request parameters of GetMultiAccountResourceCenterServiceStatus  GetMultiAccountResourceCenterServiceStatusRequest
@@ -137,6 +185,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSavedQueryResponse> getSavedQuery(GetSavedQueryRequest request);
 
     /**
+     * @param request the request parameters of ListDeliveryChannels  ListDeliveryChannelsRequest
+     * @return ListDeliveryChannelsResponse
+     */
+    CompletableFuture<ListDeliveryChannelsResponse> listDeliveryChannels(ListDeliveryChannelsRequest request);
+
+    /**
      * @param request the request parameters of ListExampleQueries  ListExampleQueriesRequest
      * @return ListExampleQueriesResponse
      */
@@ -149,12 +203,26 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListFiltersResponse> listFilters(ListFiltersRequest request);
 
     /**
+     * @param request the request parameters of ListMultiAccountDeliveryChannels  ListMultiAccountDeliveryChannelsRequest
+     * @return ListMultiAccountDeliveryChannelsResponse
+     */
+    CompletableFuture<ListMultiAccountDeliveryChannelsResponse> listMultiAccountDeliveryChannels(ListMultiAccountDeliveryChannelsRequest request);
+
+    /**
      * @param request the request parameters of ListMultiAccountResourceGroups  ListMultiAccountResourceGroupsRequest
      * @return ListMultiAccountResourceGroupsResponse
      */
     CompletableFuture<ListMultiAccountResourceGroupsResponse> listMultiAccountResourceGroups(ListMultiAccountResourceGroupsRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  Before you use a RAM user or a RAM role to call the operation, you must make sure that the RAM user or RAM role is granted the required permissions. For more information, see <a href="https://help.aliyun.com/document_detail/600556.html">Grant a RAM user the permissions to use Resource Center</a>.</p>
+     * <ul>
+     * <li>By default, the operation returns up to 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the search. For more information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only resources that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Resources that meet any value of the filter condition are returned.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListMultiAccountResourceRelationships  ListMultiAccountResourceRelationshipsRequest
      * @return ListMultiAccountResourceRelationshipsResponse
      */
@@ -173,6 +241,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMultiAccountTagValuesResponse> listMultiAccountTagValues(ListMultiAccountTagValuesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  You can call this operation to query only the resource relationships on which the current account has access permissions.</p>
+     * <ul>
+     * <li>By default, this operation returns up to 20 entries. You can configure the <code>MaxResults</code> parameter to specify the maximum number of entries to return.</li>
+     * <li>If the response does not contain the <code>NextToken</code> parameter, all entries are returned. Otherwise, more entries exist. If you want to obtain the entries, you can call the operation again to initiate another query request. In the request, set the <code>NextToken</code> parameter to the value of <code>NextToken</code> in the last response of the operation. If you do not configure the <code>NextToken</code> parameter, entries on the first page are returned by default.</li>
+     * <li>You can specify one or more filter conditions to narrow the query scope. For information about supported filter parameters and matching methods, see the Supported filter parameters section. Multiple filter conditions have logical <code>AND</code> relations. Only entries that meet all filter conditions are returned. The values of a filter condition have logical <code>OR</code> relations. Entries that meet any value of the filter condition are returned.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListResourceRelationships  ListResourceRelationshipsRequest
      * @return ListResourceRelationshipsResponse
      */
@@ -234,10 +310,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchResourcesResponse> searchResources(SearchResourcesRequest request);
 
     /**
+     * @param request the request parameters of UpdateDeliveryChannel  UpdateDeliveryChannelRequest
+     * @return UpdateDeliveryChannelResponse
+     */
+    CompletableFuture<UpdateDeliveryChannelResponse> updateDeliveryChannel(UpdateDeliveryChannelRequest request);
+
+    /**
      * @param request the request parameters of UpdateFilter  UpdateFilterRequest
      * @return UpdateFilterResponse
      */
     CompletableFuture<UpdateFilterResponse> updateFilter(UpdateFilterRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMultiAccountDeliveryChannel  UpdateMultiAccountDeliveryChannelRequest
+     * @return UpdateMultiAccountDeliveryChannelResponse
+     */
+    CompletableFuture<UpdateMultiAccountDeliveryChannelResponse> updateMultiAccountDeliveryChannel(UpdateMultiAccountDeliveryChannelRequest request);
 
     /**
      * @param request the request parameters of UpdateSavedQuery  UpdateSavedQueryRequest
