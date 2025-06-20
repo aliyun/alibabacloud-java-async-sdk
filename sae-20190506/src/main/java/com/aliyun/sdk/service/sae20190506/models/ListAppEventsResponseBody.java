@@ -205,6 +205,9 @@ public class ListAppEventsResponseBody extends TeaModel {
      * <p>ListAppEventsResponseBody</p>
      */
     public static class AppEventEntity extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CauseAnalysis")
+        private String causeAnalysis;
+
         @com.aliyun.core.annotation.NameInMap("EventType")
         private String eventType;
 
@@ -227,6 +230,7 @@ public class ListAppEventsResponseBody extends TeaModel {
         private String reason;
 
         private AppEventEntity(Builder builder) {
+            this.causeAnalysis = builder.causeAnalysis;
             this.eventType = builder.eventType;
             this.firstTimestamp = builder.firstTimestamp;
             this.lastTimestamp = builder.lastTimestamp;
@@ -242,6 +246,13 @@ public class ListAppEventsResponseBody extends TeaModel {
 
         public static AppEventEntity create() {
             return builder().build();
+        }
+
+        /**
+         * @return causeAnalysis
+         */
+        public String getCauseAnalysis() {
+            return this.causeAnalysis;
         }
 
         /**
@@ -294,6 +305,7 @@ public class ListAppEventsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String causeAnalysis; 
             private String eventType; 
             private String firstTimestamp; 
             private String lastTimestamp; 
@@ -306,6 +318,7 @@ public class ListAppEventsResponseBody extends TeaModel {
             } 
 
             private Builder(AppEventEntity model) {
+                this.causeAnalysis = model.causeAnalysis;
                 this.eventType = model.eventType;
                 this.firstTimestamp = model.firstTimestamp;
                 this.lastTimestamp = model.lastTimestamp;
@@ -314,6 +327,14 @@ public class ListAppEventsResponseBody extends TeaModel {
                 this.objectName = model.objectName;
                 this.reason = model.reason;
             } 
+
+            /**
+             * CauseAnalysis.
+             */
+            public Builder causeAnalysis(String causeAnalysis) {
+                this.causeAnalysis = causeAnalysis;
+                return this;
+            }
 
             /**
              * <p>The type of the event. Valid values:</p>
