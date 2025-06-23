@@ -27,6 +27,10 @@ public class DescribeDomainTopAttackListRequest extends Request {
     private Long endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
+    private Long interval;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -39,6 +43,7 @@ public class DescribeDomainTopAttackListRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.endTime = builder.endTime;
+        this.interval = builder.interval;
         this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
     }
@@ -71,6 +76,13 @@ public class DescribeDomainTopAttackListRequest extends Request {
     }
 
     /**
+     * @return interval
+     */
+    public Long getInterval() {
+        return this.interval;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -87,6 +99,7 @@ public class DescribeDomainTopAttackListRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeDomainTopAttackListRequest, Builder> {
         private String regionId; 
         private Long endTime; 
+        private Long interval; 
         private String resourceGroupId; 
         private Long startTime; 
 
@@ -98,6 +111,7 @@ public class DescribeDomainTopAttackListRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.endTime = request.endTime;
+            this.interval = request.interval;
             this.resourceGroupId = request.resourceGroupId;
             this.startTime = request.startTime;
         } 
@@ -124,6 +138,15 @@ public class DescribeDomainTopAttackListRequest extends Request {
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * Interval.
+         */
+        public Builder interval(Long interval) {
+            this.putQueryParameter("Interval", interval);
+            this.interval = interval;
             return this;
         }
 
