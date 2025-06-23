@@ -94,6 +94,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ChangeDomainDkimRecord  ChangeDomainDkimRecordRequest
+     * @return ChangeDomainDkimRecordResponse
+     */
+    @Override
+    public CompletableFuture<ChangeDomainDkimRecordResponse> changeDomainDkimRecord(ChangeDomainDkimRecordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ChangeDomainDkimRecord").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChangeDomainDkimRecordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChangeDomainDkimRecordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CheckDomain  CheckDomainRequest
      * @return CheckDomainResponse
      */

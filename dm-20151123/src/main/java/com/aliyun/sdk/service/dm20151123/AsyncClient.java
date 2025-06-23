@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<BatchSendMailResponse> batchSendMail(BatchSendMailRequest request);
 
     /**
+     * @param request the request parameters of ChangeDomainDkimRecord  ChangeDomainDkimRecordRequest
+     * @return ChangeDomainDkimRecordResponse
+     */
+    CompletableFuture<ChangeDomainDkimRecordResponse> changeDomainDkimRecord(ChangeDomainDkimRecordRequest request);
+
+    /**
      * @param request the request parameters of CheckDomain  CheckDomainRequest
      * @return CheckDomainResponse
      */

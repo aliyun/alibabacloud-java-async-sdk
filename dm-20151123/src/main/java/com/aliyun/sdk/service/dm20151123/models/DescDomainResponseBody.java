@@ -41,6 +41,9 @@ public class DescDomainResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DkimRR")
     private String dkimRR;
 
+    @com.aliyun.core.annotation.NameInMap("DkimRsaLength")
+    private Integer dkimRsaLength;
+
     @com.aliyun.core.annotation.NameInMap("DmarcAuthStatus")
     private Integer dmarcAuthStatus;
 
@@ -113,6 +116,7 @@ public class DescDomainResponseBody extends TeaModel {
         this.dkimAuthStatus = builder.dkimAuthStatus;
         this.dkimPublicKey = builder.dkimPublicKey;
         this.dkimRR = builder.dkimRR;
+        this.dkimRsaLength = builder.dkimRsaLength;
         this.dmarcAuthStatus = builder.dmarcAuthStatus;
         this.dmarcHostRecord = builder.dmarcHostRecord;
         this.dmarcRecord = builder.dmarcRecord;
@@ -202,6 +206,13 @@ public class DescDomainResponseBody extends TeaModel {
      */
     public String getDkimRR() {
         return this.dkimRR;
+    }
+
+    /**
+     * @return dkimRsaLength
+     */
+    public Integer getDkimRsaLength() {
+        return this.dkimRsaLength;
     }
 
     /**
@@ -360,6 +371,7 @@ public class DescDomainResponseBody extends TeaModel {
         private String dkimAuthStatus; 
         private String dkimPublicKey; 
         private String dkimRR; 
+        private Integer dkimRsaLength; 
         private Integer dmarcAuthStatus; 
         private String dmarcHostRecord; 
         private String dmarcRecord; 
@@ -394,6 +406,7 @@ public class DescDomainResponseBody extends TeaModel {
             this.dkimAuthStatus = model.dkimAuthStatus;
             this.dkimPublicKey = model.dkimPublicKey;
             this.dkimRR = model.dkimRR;
+            this.dkimRsaLength = model.dkimRsaLength;
             this.dmarcAuthStatus = model.dmarcAuthStatus;
             this.dmarcHostRecord = model.dmarcHostRecord;
             this.dmarcRecord = model.dmarcRecord;
@@ -503,6 +516,14 @@ public class DescDomainResponseBody extends TeaModel {
          */
         public Builder dkimRR(String dkimRR) {
             this.dkimRR = dkimRR;
+            return this;
+        }
+
+        /**
+         * DkimRsaLength.
+         */
+        public Builder dkimRsaLength(Integer dkimRsaLength) {
+            this.dkimRsaLength = dkimRsaLength;
             return this;
         }
 
