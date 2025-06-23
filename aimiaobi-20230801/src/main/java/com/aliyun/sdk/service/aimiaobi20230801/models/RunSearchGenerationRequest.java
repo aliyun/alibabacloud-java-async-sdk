@@ -1259,6 +1259,9 @@ public class RunSearchGenerationRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("EnableThinking")
         private Boolean enableThinking;
 
+        @com.aliyun.core.annotation.NameInMap("ExcludeGenerateOptions")
+        private java.util.List<String> excludeGenerateOptions;
+
         @com.aliyun.core.annotation.NameInMap("GenerateLevel")
         private String generateLevel;
 
@@ -1273,6 +1276,7 @@ public class RunSearchGenerationRequest extends Request {
 
         private ChatConfig(Builder builder) {
             this.enableThinking = builder.enableThinking;
+            this.excludeGenerateOptions = builder.excludeGenerateOptions;
             this.generateLevel = builder.generateLevel;
             this.generateTechnology = builder.generateTechnology;
             this.searchModels = builder.searchModels;
@@ -1292,6 +1296,13 @@ public class RunSearchGenerationRequest extends Request {
          */
         public Boolean getEnableThinking() {
             return this.enableThinking;
+        }
+
+        /**
+         * @return excludeGenerateOptions
+         */
+        public java.util.List<String> getExcludeGenerateOptions() {
+            return this.excludeGenerateOptions;
         }
 
         /**
@@ -1324,6 +1335,7 @@ public class RunSearchGenerationRequest extends Request {
 
         public static final class Builder {
             private Boolean enableThinking; 
+            private java.util.List<String> excludeGenerateOptions; 
             private String generateLevel; 
             private String generateTechnology; 
             private java.util.List<String> searchModels; 
@@ -1334,6 +1346,7 @@ public class RunSearchGenerationRequest extends Request {
 
             private Builder(ChatConfig model) {
                 this.enableThinking = model.enableThinking;
+                this.excludeGenerateOptions = model.excludeGenerateOptions;
                 this.generateLevel = model.generateLevel;
                 this.generateTechnology = model.generateTechnology;
                 this.searchModels = model.searchModels;
@@ -1345,6 +1358,14 @@ public class RunSearchGenerationRequest extends Request {
              */
             public Builder enableThinking(Boolean enableThinking) {
                 this.enableThinking = enableThinking;
+                return this;
+            }
+
+            /**
+             * ExcludeGenerateOptions.
+             */
+            public Builder excludeGenerateOptions(java.util.List<String> excludeGenerateOptions) {
+                this.excludeGenerateOptions = excludeGenerateOptions;
                 return this;
             }
 
