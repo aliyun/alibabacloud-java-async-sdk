@@ -35,6 +35,10 @@ public class GetConnectionTicketRequest extends Request {
     private String appInstanceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppPolicyId")
+    private String appPolicyId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppVersion")
     private String appVersion;
 
@@ -121,6 +125,7 @@ public class GetConnectionTicketRequest extends Request {
         this.appId = builder.appId;
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceId = builder.appInstanceId;
+        this.appPolicyId = builder.appPolicyId;
         this.appVersion = builder.appVersion;
         this.autoConnectInQueue = builder.autoConnectInQueue;
         this.bizRegionId = builder.bizRegionId;
@@ -182,6 +187,13 @@ public class GetConnectionTicketRequest extends Request {
      */
     public String getAppInstanceId() {
         return this.appInstanceId;
+    }
+
+    /**
+     * @return appPolicyId
+     */
+    public String getAppPolicyId() {
+        return this.appPolicyId;
     }
 
     /**
@@ -329,6 +341,7 @@ public class GetConnectionTicketRequest extends Request {
         private String appId; 
         private String appInstanceGroupId; 
         private String appInstanceId; 
+        private String appPolicyId; 
         private String appVersion; 
         private Boolean autoConnectInQueue; 
         private String bizRegionId; 
@@ -360,6 +373,7 @@ public class GetConnectionTicketRequest extends Request {
             this.appId = request.appId;
             this.appInstanceGroupId = request.appInstanceGroupId;
             this.appInstanceId = request.appInstanceId;
+            this.appPolicyId = request.appPolicyId;
             this.appVersion = request.appVersion;
             this.autoConnectInQueue = request.autoConnectInQueue;
             this.bizRegionId = request.bizRegionId;
@@ -415,6 +429,15 @@ public class GetConnectionTicketRequest extends Request {
         public Builder appInstanceId(String appInstanceId) {
             this.putBodyParameter("AppInstanceId", appInstanceId);
             this.appInstanceId = appInstanceId;
+            return this;
+        }
+
+        /**
+         * AppPolicyId.
+         */
+        public Builder appPolicyId(String appPolicyId) {
+            this.putBodyParameter("AppPolicyId", appPolicyId);
+            this.appPolicyId = appPolicyId;
             return this;
         }
 
