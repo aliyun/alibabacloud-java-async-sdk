@@ -215,8 +215,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
         @com.aliyun.core.annotation.NameInMap("InstanceState")
         private String instanceState;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private String instanceType;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
@@ -230,6 +236,9 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
+        @com.aliyun.core.annotation.NameInMap("SessionId")
+        private String sessionId;
+
         @com.aliyun.core.annotation.NameInMap("StaTime")
         private String staTime;
 
@@ -239,20 +248,27 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsedTime")
         private Long usedTime;
 
+        @com.aliyun.core.annotation.NameInMap("UsedTimeWithScale")
+        private Long usedTimeWithScale;
+
         private Deductions(Builder builder) {
             this.cpu = builder.cpu;
             this.desktopId = builder.desktopId;
             this.desktopName = builder.desktopName;
             this.desktopType = builder.desktopType;
             this.endTime = builder.endTime;
+            this.instanceId = builder.instanceId;
             this.instanceState = builder.instanceState;
+            this.instanceType = builder.instanceType;
             this.memory = builder.memory;
             this.osType = builder.osType;
             this.regionId = builder.regionId;
             this.resourceType = builder.resourceType;
+            this.sessionId = builder.sessionId;
             this.staTime = builder.staTime;
             this.usedCoreTime = builder.usedCoreTime;
             this.usedTime = builder.usedTime;
+            this.usedTimeWithScale = builder.usedTimeWithScale;
         }
 
         public static Builder builder() {
@@ -299,10 +315,24 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
          * @return instanceState
          */
         public String getInstanceState() {
             return this.instanceState;
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
         }
 
         /**
@@ -334,6 +364,13 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return sessionId
+         */
+        public String getSessionId() {
+            return this.sessionId;
+        }
+
+        /**
          * @return staTime
          */
         public String getStaTime() {
@@ -354,20 +391,31 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
             return this.usedTime;
         }
 
+        /**
+         * @return usedTimeWithScale
+         */
+        public Long getUsedTimeWithScale() {
+            return this.usedTimeWithScale;
+        }
+
         public static final class Builder {
             private Integer cpu; 
             private String desktopId; 
             private String desktopName; 
             private String desktopType; 
             private String endTime; 
+            private String instanceId; 
             private String instanceState; 
+            private String instanceType; 
             private Long memory; 
             private String osType; 
             private String regionId; 
             private String resourceType; 
+            private String sessionId; 
             private String staTime; 
             private Float usedCoreTime; 
             private Long usedTime; 
+            private Long usedTimeWithScale; 
 
             private Builder() {
             } 
@@ -378,14 +426,18 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
                 this.desktopName = model.desktopName;
                 this.desktopType = model.desktopType;
                 this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
                 this.instanceState = model.instanceState;
+                this.instanceType = model.instanceType;
                 this.memory = model.memory;
                 this.osType = model.osType;
                 this.regionId = model.regionId;
                 this.resourceType = model.resourceType;
+                this.sessionId = model.sessionId;
                 this.staTime = model.staTime;
                 this.usedCoreTime = model.usedCoreTime;
                 this.usedTime = model.usedTime;
+                this.usedTimeWithScale = model.usedTimeWithScale;
             } 
 
             /**
@@ -429,10 +481,26 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
              * InstanceState.
              */
             public Builder instanceState(String instanceState) {
                 this.instanceState = instanceState;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
                 return this;
             }
 
@@ -469,6 +537,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
             }
 
             /**
+             * SessionId.
+             */
+            public Builder sessionId(String sessionId) {
+                this.sessionId = sessionId;
+                return this;
+            }
+
+            /**
              * StaTime.
              */
             public Builder staTime(String staTime) {
@@ -489,6 +565,14 @@ public class DescribePackageDeductionsResponseBody extends TeaModel {
              */
             public Builder usedTime(Long usedTime) {
                 this.usedTime = usedTime;
+                return this;
+            }
+
+            /**
+             * UsedTimeWithScale.
+             */
+            public Builder usedTimeWithScale(Long usedTimeWithScale) {
+                this.usedTimeWithScale = usedTimeWithScale;
                 return this;
             }
 

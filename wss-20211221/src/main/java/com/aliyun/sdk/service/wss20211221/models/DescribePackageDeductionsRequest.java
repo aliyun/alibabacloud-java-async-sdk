@@ -40,8 +40,11 @@ public class DescribePackageDeductionsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
+    private java.util.List<String> resourceTypes;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
@@ -55,6 +58,7 @@ public class DescribePackageDeductionsRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.resourceType = builder.resourceType;
+        this.resourceTypes = builder.resourceTypes;
         this.startTime = builder.startTime;
     }
 
@@ -114,6 +118,13 @@ public class DescribePackageDeductionsRequest extends Request {
     }
 
     /**
+     * @return resourceTypes
+     */
+    public java.util.List<String> getResourceTypes() {
+        return this.resourceTypes;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -127,6 +138,7 @@ public class DescribePackageDeductionsRequest extends Request {
         private Integer pageNum; 
         private Integer pageSize; 
         private String resourceType; 
+        private java.util.List<String> resourceTypes; 
         private Long startTime; 
 
         private Builder() {
@@ -141,6 +153,7 @@ public class DescribePackageDeductionsRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.resourceType = request.resourceType;
+            this.resourceTypes = request.resourceTypes;
             this.startTime = request.startTime;
         } 
 
@@ -190,14 +203,20 @@ public class DescribePackageDeductionsRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>CorePackage</p>
+         * ResourceType.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
             this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * ResourceTypes.
+         */
+        public Builder resourceTypes(java.util.List<String> resourceTypes) {
+            this.putQueryParameter("ResourceTypes", resourceTypes);
+            this.resourceTypes = resourceTypes;
             return this;
         }
 
