@@ -35,6 +35,10 @@ public class UpdateUserDeliveryTaskRequest extends Request {
     private String fieldName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FilterVer")
+    private String filterVer;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TaskName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
@@ -45,6 +49,7 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         this.details = builder.details;
         this.discardRate = builder.discardRate;
         this.fieldName = builder.fieldName;
+        this.filterVer = builder.filterVer;
         this.taskName = builder.taskName;
     }
 
@@ -90,6 +95,13 @@ public class UpdateUserDeliveryTaskRequest extends Request {
     }
 
     /**
+     * @return filterVer
+     */
+    public String getFilterVer() {
+        return this.filterVer;
+    }
+
+    /**
      * @return taskName
      */
     public String getTaskName() {
@@ -101,6 +113,7 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         private String details; 
         private Float discardRate; 
         private String fieldName; 
+        private String filterVer; 
         private String taskName; 
 
         private Builder() {
@@ -113,6 +126,7 @@ public class UpdateUserDeliveryTaskRequest extends Request {
             this.details = request.details;
             this.discardRate = request.discardRate;
             this.fieldName = request.fieldName;
+            this.filterVer = request.filterVer;
             this.taskName = request.taskName;
         } 
 
@@ -165,6 +179,15 @@ public class UpdateUserDeliveryTaskRequest extends Request {
         public Builder fieldName(String fieldName) {
             this.putBodyParameter("FieldName", fieldName);
             this.fieldName = fieldName;
+            return this;
+        }
+
+        /**
+         * FilterVer.
+         */
+        public Builder filterVer(String filterVer) {
+            this.putBodyParameter("FilterVer", filterVer);
+            this.filterVer = filterVer;
             return this;
         }
 

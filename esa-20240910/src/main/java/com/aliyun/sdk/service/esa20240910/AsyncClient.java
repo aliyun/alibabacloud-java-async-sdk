@@ -325,6 +325,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateSlrRoleForRealtimeLogResponse> createSlrRoleForRealtimeLog(CreateSlrRoleForRealtimeLogRequest request);
 
     /**
+     * @param request the request parameters of CreateUrlObservation  CreateUrlObservationRequest
+     * @return CreateUrlObservationResponse
+     */
+    CompletableFuture<CreateUrlObservationResponse> createUrlObservation(CreateUrlObservationRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This API operation allows you to deliver logs to destinations such as Simple Log Service (SLS), HTTP servers, Object Storage Service (OSS), Amazon Simple Storage Service (S3), and Kafka. You can specify the task name, log fields to deliver, data center, discard rate, delivery type, and delivery details.</p>
      * <ul>
@@ -614,6 +620,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteSiteOriginClientCertificateResponse
      */
     CompletableFuture<DeleteSiteOriginClientCertificateResponse> deleteSiteOriginClientCertificate(DeleteSiteOriginClientCertificateRequest request);
+
+    /**
+     * @param request the request parameters of DeleteUrlObservation  DeleteUrlObservationRequest
+     * @return DeleteUrlObservationResponse
+     */
+    CompletableFuture<DeleteUrlObservationResponse> deleteUrlObservation(DeleteUrlObservationRequest request);
 
     /**
      * <b>description</b> :
@@ -1306,6 +1318,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCompressionRulesResponse> listCompressionRules(ListCompressionRulesRequest request);
 
     /**
+     * @param request the request parameters of ListESAIPInfo  ListESAIPInfoRequest
+     * @return ListESAIPInfoResponse
+     */
+    CompletableFuture<ListESAIPInfoResponse> listESAIPInfo(ListESAIPInfoRequest request);
+
+    /**
      * @param request the request parameters of ListEdgeContainerAppRecords  ListEdgeContainerAppRecordsRequest
      * @return ListEdgeContainerAppRecordsResponse
      */
@@ -1560,6 +1578,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUploadTasksResponse> listUploadTasks(ListUploadTasksRequest request);
 
     /**
+     * @param request the request parameters of ListUrlObservations  ListUrlObservationsRequest
+     * @return ListUrlObservationsResponse
+     */
+    CompletableFuture<ListUrlObservationsResponse> listUrlObservations(ListUrlObservationsRequest request);
+
+    /**
      * @param request the request parameters of ListUserDeliveryTasks  ListUserDeliveryTasksRequest
      * @return ListUserDeliveryTasksResponse
      */
@@ -1765,6 +1789,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopScheduledPreloadExecutionResponse
      */
     CompletableFuture<StopScheduledPreloadExecutionResponse> stopScheduledPreloadExecution(StopScheduledPreloadExecutionRequest request);
+
+    /**
+     * @param request the request parameters of TagResources  TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
     /**
      * @param request the request parameters of UntagResources  UntagResourcesRequest
@@ -2038,6 +2068,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateTieredCacheResponse
      */
     CompletableFuture<UpdateTieredCacheResponse> updateTieredCache(UpdateTieredCacheRequest request);
+
+    /**
+     * @param request the request parameters of UpdateUrlObservation  UpdateUrlObservationRequest
+     * @return UpdateUrlObservationResponse
+     */
+    CompletableFuture<UpdateUrlObservationResponse> updateUrlObservation(UpdateUrlObservationRequest request);
 
     /**
      * @param request the request parameters of UpdateUserDeliveryTask  UpdateUserDeliveryTaskRequest

@@ -24,7 +24,6 @@ public class CreateSiteDeliveryTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DataCenter")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String dataCenter;
 
     @com.aliyun.core.annotation.Body
@@ -40,6 +39,10 @@ public class CreateSiteDeliveryTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("FieldName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String fieldName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FilterVer")
+    private String filterVer;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("HttpDelivery")
@@ -78,6 +81,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         this.deliveryType = builder.deliveryType;
         this.discardRate = builder.discardRate;
         this.fieldName = builder.fieldName;
+        this.filterVer = builder.filterVer;
         this.httpDelivery = builder.httpDelivery;
         this.kafkaDelivery = builder.kafkaDelivery;
         this.ossDelivery = builder.ossDelivery;
@@ -136,6 +140,13 @@ public class CreateSiteDeliveryTaskRequest extends Request {
     }
 
     /**
+     * @return filterVer
+     */
+    public String getFilterVer() {
+        return this.filterVer;
+    }
+
+    /**
      * @return httpDelivery
      */
     public HttpDelivery getHttpDelivery() {
@@ -190,6 +201,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         private String deliveryType; 
         private Float discardRate; 
         private String fieldName; 
+        private String filterVer; 
         private HttpDelivery httpDelivery; 
         private KafkaDelivery kafkaDelivery; 
         private OssDelivery ossDelivery; 
@@ -209,6 +221,7 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             this.deliveryType = request.deliveryType;
             this.discardRate = request.discardRate;
             this.fieldName = request.fieldName;
+            this.filterVer = request.filterVer;
             this.httpDelivery = request.httpDelivery;
             this.kafkaDelivery = request.kafkaDelivery;
             this.ossDelivery = request.ossDelivery;
@@ -243,7 +256,6 @@ public class CreateSiteDeliveryTaskRequest extends Request {
          * <li>cn: the Chinese mainland.</li>
          * <li>oversea: outside the Chinese mainland.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn</p>
@@ -297,6 +309,15 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         public Builder fieldName(String fieldName) {
             this.putBodyParameter("FieldName", fieldName);
             this.fieldName = fieldName;
+            return this;
+        }
+
+        /**
+         * FilterVer.
+         */
+        public Builder filterVer(String filterVer) {
+            this.putBodyParameter("FilterVer", filterVer);
+            this.filterVer = filterVer;
             return this;
         }
 
@@ -507,11 +528,20 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("HeaderParam")
         private java.util.Map<String, HttpDeliveryHeaderParamValue> headerParam;
 
+        @com.aliyun.core.annotation.NameInMap("LastLogSplit")
+        private Boolean lastLogSplit;
+
         @com.aliyun.core.annotation.NameInMap("LogBodyPrefix")
         private String logBodyPrefix;
 
         @com.aliyun.core.annotation.NameInMap("LogBodySuffix")
         private String logBodySuffix;
+
+        @com.aliyun.core.annotation.NameInMap("LogSplit")
+        private Boolean logSplit;
+
+        @com.aliyun.core.annotation.NameInMap("LogSplitWords")
+        private String logSplitWords;
 
         @com.aliyun.core.annotation.NameInMap("MaxBatchMB")
         private Long maxBatchMB;
@@ -538,8 +568,11 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             this.compress = builder.compress;
             this.destUrl = builder.destUrl;
             this.headerParam = builder.headerParam;
+            this.lastLogSplit = builder.lastLogSplit;
             this.logBodyPrefix = builder.logBodyPrefix;
             this.logBodySuffix = builder.logBodySuffix;
+            this.logSplit = builder.logSplit;
+            this.logSplitWords = builder.logSplitWords;
             this.maxBatchMB = builder.maxBatchMB;
             this.maxBatchSize = builder.maxBatchSize;
             this.maxRetry = builder.maxRetry;
@@ -579,6 +612,13 @@ public class CreateSiteDeliveryTaskRequest extends Request {
         }
 
         /**
+         * @return lastLogSplit
+         */
+        public Boolean getLastLogSplit() {
+            return this.lastLogSplit;
+        }
+
+        /**
          * @return logBodyPrefix
          */
         public String getLogBodyPrefix() {
@@ -590,6 +630,20 @@ public class CreateSiteDeliveryTaskRequest extends Request {
          */
         public String getLogBodySuffix() {
             return this.logBodySuffix;
+        }
+
+        /**
+         * @return logSplit
+         */
+        public Boolean getLogSplit() {
+            return this.logSplit;
+        }
+
+        /**
+         * @return logSplitWords
+         */
+        public String getLogSplitWords() {
+            return this.logSplitWords;
         }
 
         /**
@@ -645,8 +699,11 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             private String compress; 
             private String destUrl; 
             private java.util.Map<String, HttpDeliveryHeaderParamValue> headerParam; 
+            private Boolean lastLogSplit; 
             private String logBodyPrefix; 
             private String logBodySuffix; 
+            private Boolean logSplit; 
+            private String logSplitWords; 
             private Long maxBatchMB; 
             private Long maxBatchSize; 
             private Long maxRetry; 
@@ -662,8 +719,11 @@ public class CreateSiteDeliveryTaskRequest extends Request {
                 this.compress = model.compress;
                 this.destUrl = model.destUrl;
                 this.headerParam = model.headerParam;
+                this.lastLogSplit = model.lastLogSplit;
                 this.logBodyPrefix = model.logBodyPrefix;
                 this.logBodySuffix = model.logBodySuffix;
+                this.logSplit = model.logSplit;
+                this.logSplitWords = model.logSplitWords;
                 this.maxBatchMB = model.maxBatchMB;
                 this.maxBatchSize = model.maxBatchSize;
                 this.maxRetry = model.maxRetry;
@@ -704,6 +764,14 @@ public class CreateSiteDeliveryTaskRequest extends Request {
             }
 
             /**
+             * LastLogSplit.
+             */
+            public Builder lastLogSplit(Boolean lastLogSplit) {
+                this.lastLogSplit = lastLogSplit;
+                return this;
+            }
+
+            /**
              * <p>The prefix of the log delivery package.</p>
              * 
              * <strong>example:</strong>
@@ -722,6 +790,22 @@ public class CreateSiteDeliveryTaskRequest extends Request {
              */
             public Builder logBodySuffix(String logBodySuffix) {
                 this.logBodySuffix = logBodySuffix;
+                return this;
+            }
+
+            /**
+             * LogSplit.
+             */
+            public Builder logSplit(Boolean logSplit) {
+                this.logSplit = logSplit;
+                return this;
+            }
+
+            /**
+             * LogSplitWords.
+             */
+            public Builder logSplitWords(String logSplitWords) {
+                this.logSplitWords = logSplitWords;
                 return this;
             }
 

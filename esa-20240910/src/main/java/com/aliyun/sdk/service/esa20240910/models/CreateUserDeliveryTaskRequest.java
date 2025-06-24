@@ -24,7 +24,6 @@ public class CreateUserDeliveryTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DataCenter")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String dataCenter;
 
     @com.aliyun.core.annotation.Body
@@ -44,6 +43,10 @@ public class CreateUserDeliveryTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("FieldName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String fieldName;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FilterVer")
+    private String filterVer;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("HttpDelivery")
@@ -78,6 +81,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
         this.details = builder.details;
         this.discardRate = builder.discardRate;
         this.fieldName = builder.fieldName;
+        this.filterVer = builder.filterVer;
         this.httpDelivery = builder.httpDelivery;
         this.kafkaDelivery = builder.kafkaDelivery;
         this.ossDelivery = builder.ossDelivery;
@@ -142,6 +146,13 @@ public class CreateUserDeliveryTaskRequest extends Request {
     }
 
     /**
+     * @return filterVer
+     */
+    public String getFilterVer() {
+        return this.filterVer;
+    }
+
+    /**
      * @return httpDelivery
      */
     public HttpDelivery getHttpDelivery() {
@@ -190,6 +201,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
         private String details; 
         private Float discardRate; 
         private String fieldName; 
+        private String filterVer; 
         private HttpDelivery httpDelivery; 
         private KafkaDelivery kafkaDelivery; 
         private OssDelivery ossDelivery; 
@@ -209,6 +221,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
             this.details = request.details;
             this.discardRate = request.discardRate;
             this.fieldName = request.fieldName;
+            this.filterVer = request.filterVer;
             this.httpDelivery = request.httpDelivery;
             this.kafkaDelivery = request.kafkaDelivery;
             this.ossDelivery = request.ossDelivery;
@@ -242,7 +255,6 @@ public class CreateUserDeliveryTaskRequest extends Request {
          * <li>cn: the Chinese mainland.</li>
          * <li>sg: outside the Chinese mainland.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn</p>
@@ -305,6 +317,15 @@ public class CreateUserDeliveryTaskRequest extends Request {
         public Builder fieldName(String fieldName) {
             this.putBodyParameter("FieldName", fieldName);
             this.fieldName = fieldName;
+            return this;
+        }
+
+        /**
+         * FilterVer.
+         */
+        public Builder filterVer(String filterVer) {
+            this.putBodyParameter("FilterVer", filterVer);
+            this.filterVer = filterVer;
             return this;
         }
 
@@ -500,7 +521,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
         private java.util.Map<String, HttpDeliveryHeaderParamValue> headerParam;
 
         @com.aliyun.core.annotation.NameInMap("LastLogSplit")
-        private String lastLogSplit;
+        private Boolean lastLogSplit;
 
         @com.aliyun.core.annotation.NameInMap("LogBodyPrefix")
         private String logBodyPrefix;
@@ -509,13 +530,10 @@ public class CreateUserDeliveryTaskRequest extends Request {
         private String logBodySuffix;
 
         @com.aliyun.core.annotation.NameInMap("LogSplit")
-        private String logSplit;
+        private Boolean logSplit;
 
         @com.aliyun.core.annotation.NameInMap("LogSplitWords")
         private String logSplitWords;
-
-        @com.aliyun.core.annotation.NameInMap("MaxBackoffMS")
-        private Long maxBackoffMS;
 
         @com.aliyun.core.annotation.NameInMap("MaxBatchMB")
         private Long maxBatchMB;
@@ -526,23 +544,14 @@ public class CreateUserDeliveryTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("MaxRetry")
         private Long maxRetry;
 
-        @com.aliyun.core.annotation.NameInMap("MinBackoffMS")
-        private Long minBackoffMS;
-
         @com.aliyun.core.annotation.NameInMap("QueryParam")
         private java.util.Map<String, HttpDeliveryQueryParamValue> queryParam;
-
-        @com.aliyun.core.annotation.NameInMap("ResponseBodyKey")
-        private String responseBodyKey;
 
         @com.aliyun.core.annotation.NameInMap("StandardAuthOn")
         private Boolean standardAuthOn;
 
         @com.aliyun.core.annotation.NameInMap("StandardAuthParam")
         private StandardAuthParam standardAuthParam;
-
-        @com.aliyun.core.annotation.NameInMap("SuccessCode")
-        private Long successCode;
 
         @com.aliyun.core.annotation.NameInMap("TransformTimeout")
         private Long transformTimeout;
@@ -556,16 +565,12 @@ public class CreateUserDeliveryTaskRequest extends Request {
             this.logBodySuffix = builder.logBodySuffix;
             this.logSplit = builder.logSplit;
             this.logSplitWords = builder.logSplitWords;
-            this.maxBackoffMS = builder.maxBackoffMS;
             this.maxBatchMB = builder.maxBatchMB;
             this.maxBatchSize = builder.maxBatchSize;
             this.maxRetry = builder.maxRetry;
-            this.minBackoffMS = builder.minBackoffMS;
             this.queryParam = builder.queryParam;
-            this.responseBodyKey = builder.responseBodyKey;
             this.standardAuthOn = builder.standardAuthOn;
             this.standardAuthParam = builder.standardAuthParam;
-            this.successCode = builder.successCode;
             this.transformTimeout = builder.transformTimeout;
         }
 
@@ -601,7 +606,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
         /**
          * @return lastLogSplit
          */
-        public String getLastLogSplit() {
+        public Boolean getLastLogSplit() {
             return this.lastLogSplit;
         }
 
@@ -622,7 +627,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
         /**
          * @return logSplit
          */
-        public String getLogSplit() {
+        public Boolean getLogSplit() {
             return this.logSplit;
         }
 
@@ -631,13 +636,6 @@ public class CreateUserDeliveryTaskRequest extends Request {
          */
         public String getLogSplitWords() {
             return this.logSplitWords;
-        }
-
-        /**
-         * @return maxBackoffMS
-         */
-        public Long getMaxBackoffMS() {
-            return this.maxBackoffMS;
         }
 
         /**
@@ -662,24 +660,10 @@ public class CreateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * @return minBackoffMS
-         */
-        public Long getMinBackoffMS() {
-            return this.minBackoffMS;
-        }
-
-        /**
          * @return queryParam
          */
         public java.util.Map<String, HttpDeliveryQueryParamValue> getQueryParam() {
             return this.queryParam;
-        }
-
-        /**
-         * @return responseBodyKey
-         */
-        public String getResponseBodyKey() {
-            return this.responseBodyKey;
         }
 
         /**
@@ -697,13 +681,6 @@ public class CreateUserDeliveryTaskRequest extends Request {
         }
 
         /**
-         * @return successCode
-         */
-        public Long getSuccessCode() {
-            return this.successCode;
-        }
-
-        /**
          * @return transformTimeout
          */
         public Long getTransformTimeout() {
@@ -714,21 +691,17 @@ public class CreateUserDeliveryTaskRequest extends Request {
             private String compress; 
             private String destUrl; 
             private java.util.Map<String, HttpDeliveryHeaderParamValue> headerParam; 
-            private String lastLogSplit; 
+            private Boolean lastLogSplit; 
             private String logBodyPrefix; 
             private String logBodySuffix; 
-            private String logSplit; 
+            private Boolean logSplit; 
             private String logSplitWords; 
-            private Long maxBackoffMS; 
             private Long maxBatchMB; 
             private Long maxBatchSize; 
             private Long maxRetry; 
-            private Long minBackoffMS; 
             private java.util.Map<String, HttpDeliveryQueryParamValue> queryParam; 
-            private String responseBodyKey; 
             private Boolean standardAuthOn; 
             private StandardAuthParam standardAuthParam; 
-            private Long successCode; 
             private Long transformTimeout; 
 
             private Builder() {
@@ -743,16 +716,12 @@ public class CreateUserDeliveryTaskRequest extends Request {
                 this.logBodySuffix = model.logBodySuffix;
                 this.logSplit = model.logSplit;
                 this.logSplitWords = model.logSplitWords;
-                this.maxBackoffMS = model.maxBackoffMS;
                 this.maxBatchMB = model.maxBatchMB;
                 this.maxBatchSize = model.maxBatchSize;
                 this.maxRetry = model.maxRetry;
-                this.minBackoffMS = model.minBackoffMS;
                 this.queryParam = model.queryParam;
-                this.responseBodyKey = model.responseBodyKey;
                 this.standardAuthOn = model.standardAuthOn;
                 this.standardAuthParam = model.standardAuthParam;
-                this.successCode = model.successCode;
                 this.transformTimeout = model.transformTimeout;
             } 
 
@@ -792,7 +761,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
              * <strong>example:</strong>
              * <p>\n</p>
              */
-            public Builder lastLogSplit(String lastLogSplit) {
+            public Builder lastLogSplit(Boolean lastLogSplit) {
                 this.lastLogSplit = lastLogSplit;
                 return this;
             }
@@ -825,7 +794,7 @@ public class CreateUserDeliveryTaskRequest extends Request {
              * <strong>example:</strong>
              * <p>true</p>
              */
-            public Builder logSplit(String logSplit) {
+            public Builder logSplit(Boolean logSplit) {
                 this.logSplit = logSplit;
                 return this;
             }
@@ -838,17 +807,6 @@ public class CreateUserDeliveryTaskRequest extends Request {
              */
             public Builder logSplitWords(String logSplitWords) {
                 this.logSplitWords = logSplitWords;
-                return this;
-            }
-
-            /**
-             * <p>The maximum backoff time. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1000</p>
-             */
-            public Builder maxBackoffMS(Long maxBackoffMS) {
-                this.maxBackoffMS = maxBackoffMS;
                 return this;
             }
 
@@ -886,32 +844,10 @@ public class CreateUserDeliveryTaskRequest extends Request {
             }
 
             /**
-             * <p>The minimum backoff time. Unit: milliseconds.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>100</p>
-             */
-            public Builder minBackoffMS(Long minBackoffMS) {
-                this.minBackoffMS = minBackoffMS;
-                return this;
-            }
-
-            /**
              * <p>The custom query parameters.</p>
              */
             public Builder queryParam(java.util.Map<String, HttpDeliveryQueryParamValue> queryParam) {
                 this.queryParam = queryParam;
-                return this;
-            }
-
-            /**
-             * <p>The response field key used for success check.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>err_code</p>
-             */
-            public Builder responseBodyKey(String responseBodyKey) {
-                this.responseBodyKey = responseBodyKey;
                 return this;
             }
 
@@ -931,17 +867,6 @@ public class CreateUserDeliveryTaskRequest extends Request {
              */
             public Builder standardAuthParam(StandardAuthParam standardAuthParam) {
                 this.standardAuthParam = standardAuthParam;
-                return this;
-            }
-
-            /**
-             * <p>The custom code for a success.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>200</p>
-             */
-            public Builder successCode(Long successCode) {
-                this.successCode = successCode;
                 return this;
             }
 

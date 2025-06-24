@@ -31,6 +31,10 @@ public class UpdateSiteDeliveryTaskRequest extends Request {
     private String fieldName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FilterVer")
+    private String filterVer;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SiteId")
     private Long siteId;
 
@@ -44,6 +48,7 @@ public class UpdateSiteDeliveryTaskRequest extends Request {
         this.businessType = builder.businessType;
         this.discardRate = builder.discardRate;
         this.fieldName = builder.fieldName;
+        this.filterVer = builder.filterVer;
         this.siteId = builder.siteId;
         this.taskName = builder.taskName;
     }
@@ -83,6 +88,13 @@ public class UpdateSiteDeliveryTaskRequest extends Request {
     }
 
     /**
+     * @return filterVer
+     */
+    public String getFilterVer() {
+        return this.filterVer;
+    }
+
+    /**
      * @return siteId
      */
     public Long getSiteId() {
@@ -100,6 +112,7 @@ public class UpdateSiteDeliveryTaskRequest extends Request {
         private String businessType; 
         private Float discardRate; 
         private String fieldName; 
+        private String filterVer; 
         private Long siteId; 
         private String taskName; 
 
@@ -112,6 +125,7 @@ public class UpdateSiteDeliveryTaskRequest extends Request {
             this.businessType = request.businessType;
             this.discardRate = request.discardRate;
             this.fieldName = request.fieldName;
+            this.filterVer = request.filterVer;
             this.siteId = request.siteId;
             this.taskName = request.taskName;
         } 
@@ -156,6 +170,15 @@ public class UpdateSiteDeliveryTaskRequest extends Request {
         public Builder fieldName(String fieldName) {
             this.putBodyParameter("FieldName", fieldName);
             this.fieldName = fieldName;
+            return this;
+        }
+
+        /**
+         * FilterVer.
+         */
+        public Builder filterVer(String filterVer) {
+            this.putBodyParameter("FilterVer", filterVer);
+            this.filterVer = filterVer;
             return this;
         }
 

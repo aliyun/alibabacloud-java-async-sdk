@@ -38,6 +38,12 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FilterRules")
     private String filterRules;
 
+    @com.aliyun.core.annotation.NameInMap("FilterVer")
+    private String filterVer;
+
+    @com.aliyun.core.annotation.NameInMap("RawRule")
+    private String rawRule;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -58,6 +64,8 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
         this.discardRate = builder.discardRate;
         this.fieldList = builder.fieldList;
         this.filterRules = builder.filterRules;
+        this.filterVer = builder.filterVer;
+        this.rawRule = builder.rawRule;
         this.requestId = builder.requestId;
         this.sinkConfig = builder.sinkConfig;
         this.status = builder.status;
@@ -126,6 +134,20 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
     }
 
     /**
+     * @return filterVer
+     */
+    public String getFilterVer() {
+        return this.filterVer;
+    }
+
+    /**
+     * @return rawRule
+     */
+    public String getRawRule() {
+        return this.rawRule;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -161,6 +183,8 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
         private Float discardRate; 
         private String fieldList; 
         private String filterRules; 
+        private String filterVer; 
+        private String rawRule; 
         private String requestId; 
         private Object sinkConfig; 
         private String status; 
@@ -177,6 +201,8 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
             this.discardRate = model.discardRate;
             this.fieldList = model.fieldList;
             this.filterRules = model.filterRules;
+            this.filterVer = model.filterVer;
+            this.rawRule = model.rawRule;
             this.requestId = model.requestId;
             this.sinkConfig = model.sinkConfig;
             this.status = model.status;
@@ -272,6 +298,22 @@ public class GetUserDeliveryTaskResponseBody extends TeaModel {
          */
         public Builder filterRules(String filterRules) {
             this.filterRules = filterRules;
+            return this;
+        }
+
+        /**
+         * FilterVer.
+         */
+        public Builder filterVer(String filterVer) {
+            this.filterVer = filterVer;
+            return this;
+        }
+
+        /**
+         * RawRule.
+         */
+        public Builder rawRule(String rawRule) {
+            this.rawRule = rawRule;
             return this;
         }
 
