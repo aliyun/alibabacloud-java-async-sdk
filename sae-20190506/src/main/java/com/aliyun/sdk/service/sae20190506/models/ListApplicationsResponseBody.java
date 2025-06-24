@@ -365,6 +365,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instances")
         private Integer instances;
 
+        @com.aliyun.core.annotation.NameInMap("IsStateful")
+        private Boolean isStateful;
+
         @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
@@ -407,6 +410,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.baseAppId = builder.baseAppId;
             this.cpu = builder.cpu;
             this.instances = builder.instances;
+            this.isStateful = builder.isStateful;
             this.mem = builder.mem;
             this.mseEnabled = builder.mseEnabled;
             this.namespaceId = builder.namespaceId;
@@ -482,6 +486,13 @@ public class ListApplicationsResponseBody extends TeaModel {
          */
         public Integer getInstances() {
             return this.instances;
+        }
+
+        /**
+         * @return isStateful
+         */
+        public Boolean getIsStateful() {
+            return this.isStateful;
         }
 
         /**
@@ -570,6 +581,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String baseAppId; 
             private Integer cpu; 
             private Integer instances; 
+            private Boolean isStateful; 
             private Integer mem; 
             private Boolean mseEnabled; 
             private String namespaceId; 
@@ -594,6 +606,7 @@ public class ListApplicationsResponseBody extends TeaModel {
                 this.baseAppId = model.baseAppId;
                 this.cpu = model.cpu;
                 this.instances = model.instances;
+                this.isStateful = model.isStateful;
                 this.mem = model.mem;
                 this.mseEnabled = model.mseEnabled;
                 this.namespaceId = model.namespaceId;
@@ -668,6 +681,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder instances(Integer instances) {
                 this.instances = instances;
+                return this;
+            }
+
+            /**
+             * IsStateful.
+             */
+            public Builder isStateful(Boolean isStateful) {
+                this.isStateful = isStateful;
                 return this;
             }
 
@@ -890,6 +911,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Instances")
         private Integer instances;
 
+        @com.aliyun.core.annotation.NameInMap("IsStateful")
+        private Boolean isStateful;
+
         @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
@@ -923,6 +947,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<ApplicationsTags> tags;
 
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
         private Applications(Builder builder) {
             this.appDeletingStatus = builder.appDeletingStatus;
             this.appDescription = builder.appDescription;
@@ -936,6 +963,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.enableIdle = builder.enableIdle;
             this.imageUrl = builder.imageUrl;
             this.instances = builder.instances;
+            this.isStateful = builder.isStateful;
             this.mem = builder.mem;
             this.mseEnabled = builder.mseEnabled;
             this.mseNamespaceId = builder.mseNamespaceId;
@@ -947,6 +975,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.runningInstances = builder.runningInstances;
             this.tags = builder.tags;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -1042,6 +1071,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return isStateful
+         */
+        public Boolean getIsStateful() {
+            return this.isStateful;
+        }
+
+        /**
          * @return mem
          */
         public Integer getMem() {
@@ -1118,6 +1154,13 @@ public class ListApplicationsResponseBody extends TeaModel {
             return this.tags;
         }
 
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private Boolean appDeletingStatus; 
             private String appDescription; 
@@ -1131,6 +1174,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String enableIdle; 
             private String imageUrl; 
             private Integer instances; 
+            private Boolean isStateful; 
             private Integer mem; 
             private Boolean mseEnabled; 
             private String mseNamespaceId; 
@@ -1142,6 +1186,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String regionId; 
             private Integer runningInstances; 
             private java.util.List<ApplicationsTags> tags; 
+            private String vpcId; 
 
             private Builder() {
             } 
@@ -1159,6 +1204,7 @@ public class ListApplicationsResponseBody extends TeaModel {
                 this.enableIdle = model.enableIdle;
                 this.imageUrl = model.imageUrl;
                 this.instances = model.instances;
+                this.isStateful = model.isStateful;
                 this.mem = model.mem;
                 this.mseEnabled = model.mseEnabled;
                 this.mseNamespaceId = model.mseNamespaceId;
@@ -1170,6 +1216,7 @@ public class ListApplicationsResponseBody extends TeaModel {
                 this.regionId = model.regionId;
                 this.runningInstances = model.runningInstances;
                 this.tags = model.tags;
+                this.vpcId = model.vpcId;
             } 
 
             /**
@@ -1300,6 +1347,14 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
+             * IsStateful.
+             */
+            public Builder isStateful(Boolean isStateful) {
+                this.isStateful = isStateful;
+                return this;
+            }
+
+            /**
              * <p>The memory size that is required by each instance. Unit: MB. This parameter cannot be set to 0. The values of this parameter correspond to the values of the Cpu parameter:</p>
              * <ul>
              * <li>This parameter is set to <strong>1024</strong> if the Cpu parameter is set to 500 or 1000.</li>
@@ -1408,6 +1463,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder tags(java.util.List<ApplicationsTags> tags) {
                 this.tags = tags;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 
