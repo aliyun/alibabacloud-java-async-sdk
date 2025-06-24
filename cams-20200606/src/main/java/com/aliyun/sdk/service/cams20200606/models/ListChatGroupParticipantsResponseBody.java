@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ChatappMigrationVerifiedResponseBody} extends {@link TeaModel}
+ * {@link ListChatGroupParticipantsResponseBody} extends {@link TeaModel}
  *
- * <p>ChatappMigrationVerifiedResponseBody</p>
+ * <p>ListChatGroupParticipantsResponseBody</p>
  */
-public class ChatappMigrationVerifiedResponseBody extends TeaModel {
+public class ListChatGroupParticipantsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
@@ -32,19 +32,23 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ChatappMigrationVerifiedResponseBody(Builder builder) {
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
+
+    private ListChatGroupParticipantsResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ChatappMigrationVerifiedResponseBody create() {
+    public static ListChatGroupParticipantsResponseBody create() {
         return builder().build();
     }
 
@@ -87,29 +91,35 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
 
         private Builder() {
         } 
 
-        private Builder(ChatappMigrationVerifiedResponseBody model) {
+        private Builder(ListChatGroupParticipantsResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
             this.requestId = model.requestId;
+            this.success = model.success;
         } 
 
         /**
-         * <p>The details about the access denial.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>None</p>
+         * AccessDeniedDetail.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -117,14 +127,7 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
-         * <ul>
-         * <li>A value of OK indicates that the call is successful.</li>
-         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -132,7 +135,7 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned data.</p>
+         * Data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -140,10 +143,7 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>SUCCESS</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,38 +151,97 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ChatappMigrationVerifiedResponseBody build() {
-            return new ChatappMigrationVerifiedResponseBody(this);
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
+        public ListChatGroupParticipantsResponseBody build() {
+            return new ListChatGroupParticipantsResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link ChatappMigrationVerifiedResponseBody} extends {@link TeaModel}
+     * {@link ListChatGroupParticipantsResponseBody} extends {@link TeaModel}
      *
-     * <p>ChatappMigrationVerifiedResponseBody</p>
+     * <p>ListChatGroupParticipantsResponseBody</p>
+     */
+    public static class List extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ParticipantNumber")
+        private String participantNumber;
+
+        private List(Builder builder) {
+            this.participantNumber = builder.participantNumber;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static List create() {
+            return builder().build();
+        }
+
+        /**
+         * @return participantNumber
+         */
+        public String getParticipantNumber() {
+            return this.participantNumber;
+        }
+
+        public static final class Builder {
+            private String participantNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.participantNumber = model.participantNumber;
+            } 
+
+            /**
+             * ParticipantNumber.
+             */
+            public Builder participantNumber(String participantNumber) {
+                this.participantNumber = participantNumber;
+                return this;
+            }
+
+            public List build() {
+                return new List(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListChatGroupParticipantsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListChatGroupParticipantsResponseBody</p>
      */
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Id")
-        private String id;
+        @com.aliyun.core.annotation.NameInMap("List")
+        private java.util.List<List> list;
 
-        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
-        private String phoneNumber;
+        @com.aliyun.core.annotation.NameInMap("Total")
+        private Long total;
 
         private Data(Builder builder) {
-            this.id = builder.id;
-            this.phoneNumber = builder.phoneNumber;
+            this.list = builder.list;
+            this.total = builder.total;
         }
 
         public static Builder builder() {
@@ -194,50 +253,44 @@ public class ChatappMigrationVerifiedResponseBody extends TeaModel {
         }
 
         /**
-         * @return id
+         * @return list
          */
-        public String getId() {
-            return this.id;
+        public java.util.List<List> getList() {
+            return this.list;
         }
 
         /**
-         * @return phoneNumber
+         * @return total
          */
-        public String getPhoneNumber() {
-            return this.phoneNumber;
+        public Long getTotal() {
+            return this.total;
         }
 
         public static final class Builder {
-            private String id; 
-            private String phoneNumber; 
+            private java.util.List<List> list; 
+            private Long total; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
-                this.id = model.id;
-                this.phoneNumber = model.phoneNumber;
+                this.list = model.list;
+                this.total = model.total;
             } 
 
             /**
-             * <p>The ID of the phone number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>82828893332</p>
+             * List.
              */
-            public Builder id(String id) {
-                this.id = id;
+            public Builder list(java.util.List<List> list) {
+                this.list = list;
                 return this;
             }
 
             /**
-             * <p>The phone number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>8613800001234</p>
+             * Total.
              */
-            public Builder phoneNumber(String phoneNumber) {
-                this.phoneNumber = phoneNumber;
+            public Builder total(Long total) {
+                this.total = total;
                 return this;
             }
 

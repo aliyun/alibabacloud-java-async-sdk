@@ -90,6 +90,10 @@ public class SendChatappMessageRequest extends Request {
     private ProductAction productAction;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RecipientType")
+    private String recipientType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
@@ -146,6 +150,7 @@ public class SendChatappMessageRequest extends Request {
         this.messageType = builder.messageType;
         this.payload = builder.payload;
         this.productAction = builder.productAction;
+        this.recipientType = builder.recipientType;
         this.tag = builder.tag;
         this.taskId = builder.taskId;
         this.templateCode = builder.templateCode;
@@ -290,6 +295,13 @@ public class SendChatappMessageRequest extends Request {
     }
 
     /**
+     * @return recipientType
+     */
+    public String getRecipientType() {
+        return this.recipientType;
+    }
+
+    /**
      * @return tag
      */
     public String getTag() {
@@ -370,6 +382,7 @@ public class SendChatappMessageRequest extends Request {
         private String messageType; 
         private java.util.List<String> payload; 
         private ProductAction productAction; 
+        private String recipientType; 
         private String tag; 
         private String taskId; 
         private String templateCode; 
@@ -403,6 +416,7 @@ public class SendChatappMessageRequest extends Request {
             this.messageType = request.messageType;
             this.payload = request.payload;
             this.productAction = request.productAction;
+            this.recipientType = request.recipientType;
             this.tag = request.tag;
             this.taskId = request.taskId;
             this.templateCode = request.templateCode;
@@ -685,6 +699,15 @@ public class SendChatappMessageRequest extends Request {
             String productActionShrink = shrink(productAction, "ProductAction", "json");
             this.putBodyParameter("ProductAction", productActionShrink);
             this.productAction = productAction;
+            return this;
+        }
+
+        /**
+         * RecipientType.
+         */
+        public Builder recipientType(String recipientType) {
+            this.putBodyParameter("RecipientType", recipientType);
+            this.recipientType = recipientType;
             return this;
         }
 

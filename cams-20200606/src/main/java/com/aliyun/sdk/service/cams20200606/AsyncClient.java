@@ -20,6 +20,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddChatGroup  AddChatGroupRequest
+     * @return AddChatGroupResponse
+     */
+    CompletableFuture<AddChatGroupResponse> addChatGroup(AddChatGroupRequest request);
+
+    /**
+     * @param request the request parameters of AddChatGroupInviteLink  AddChatGroupInviteLinkRequest
+     * @return AddChatGroupInviteLinkResponse
+     */
+    CompletableFuture<AddChatGroupInviteLinkResponse> addChatGroupInviteLink(AddChatGroupInviteLinkRequest request);
+
+    /**
      * @param request the request parameters of AddChatappPhoneNumber  AddChatappPhoneNumberRequest
      * @return AddChatappPhoneNumberResponse
      */
@@ -148,6 +160,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreatePhoneMessageQrdlResponse
      */
     CompletableFuture<CreatePhoneMessageQrdlResponse> createPhoneMessageQrdl(CreatePhoneMessageQrdlRequest request);
+
+    /**
+     * @param request the request parameters of DeleteChatGroup  DeleteChatGroupRequest
+     * @return DeleteChatGroupResponse
+     */
+    CompletableFuture<DeleteChatGroupResponse> deleteChatGroup(DeleteChatGroupRequest request);
+
+    /**
+     * @param request the request parameters of DeleteChatGroupInviteLink  DeleteChatGroupInviteLinkRequest
+     * @return DeleteChatGroupInviteLinkResponse
+     */
+    CompletableFuture<DeleteChatGroupInviteLinkResponse> deleteChatGroupInviteLink(DeleteChatGroupInviteLinkRequest request);
+
+    /**
+     * @param request the request parameters of DeleteChatGroupParticipants  DeleteChatGroupParticipantsRequest
+     * @return DeleteChatGroupParticipantsResponse
+     */
+    CompletableFuture<DeleteChatGroupParticipantsResponse> deleteChatGroupParticipants(DeleteChatGroupParticipantsRequest request);
 
     /**
      * <b>description</b> :
@@ -348,6 +378,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<IsvGetAppIdResponse> isvGetAppId(IsvGetAppIdRequest request);
 
     /**
+     * @param request the request parameters of ListChatGroup  ListChatGroupRequest
+     * @return ListChatGroupResponse
+     */
+    CompletableFuture<ListChatGroupResponse> listChatGroup(ListChatGroupRequest request);
+
+    /**
+     * @param request the request parameters of ListChatGroupParticipants  ListChatGroupParticipantsRequest
+     * @return ListChatGroupParticipantsResponse
+     */
+    CompletableFuture<ListChatGroupParticipantsResponse> listChatGroupParticipants(ListChatGroupParticipantsRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
      * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
@@ -516,6 +558,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateAccountWebhookResponse
      */
     CompletableFuture<UpdateAccountWebhookResponse> updateAccountWebhook(UpdateAccountWebhookRequest request);
+
+    /**
+     * @param request the request parameters of UpdateChatGroup  UpdateChatGroupRequest
+     * @return UpdateChatGroupResponse
+     */
+    CompletableFuture<UpdateChatGroupResponse> updateChatGroup(UpdateChatGroupRequest request);
 
     /**
      * <b>description</b> :
