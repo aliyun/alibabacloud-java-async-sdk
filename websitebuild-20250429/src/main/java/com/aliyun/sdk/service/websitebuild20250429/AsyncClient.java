@@ -20,6 +20,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CreateLogoTask  CreateLogoTaskRequest
+     * @return CreateLogoTaskResponse
+     */
+    CompletableFuture<CreateLogoTaskResponse> createLogoTask(CreateLogoTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetCreateLogoTask  GetCreateLogoTaskRequest
+     * @return GetCreateLogoTaskResponse
+     */
+    CompletableFuture<GetCreateLogoTaskResponse> getCreateLogoTask(GetCreateLogoTaskRequest request);
+
+    /**
      * @param request the request parameters of OperateAppInstanceForPartner  OperateAppInstanceForPartnerRequest
      * @return OperateAppInstanceForPartnerResponse
      */
