@@ -155,6 +155,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetLdpsResourceCostResponse> getLdpsResourceCost(GetLdpsResourceCostRequest request);
 
     /**
+     * @param request the request parameters of GetLindormEngineConfig  GetLindormEngineConfigRequest
+     * @return GetLindormEngineConfigResponse
+     */
+    CompletableFuture<GetLindormEngineConfigResponse> getLindormEngineConfig(GetLindormEngineConfigRequest request);
+
+    /**
      * <b>description</b> :
      * <p>If the version of the underlying storage engine in a Lindorm cluster is 4.1.9 or later, the storage usage values returned for the LStorageUsageList parameter prevail.</p>
      * 
@@ -234,6 +240,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTagResourcesResponse
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of MigrateSingleZoneToMultiZone  MigrateSingleZoneToMultiZoneRequest
+     * @return MigrateSingleZoneToMultiZoneResponse
+     */
+    CompletableFuture<MigrateSingleZoneToMultiZoneResponse> migrateSingleZoneToMultiZone(MigrateSingleZoneToMultiZoneRequest request);
 
     /**
      * @param request the request parameters of ModifyAutoScalingConfig  ModifyAutoScalingConfigRequest

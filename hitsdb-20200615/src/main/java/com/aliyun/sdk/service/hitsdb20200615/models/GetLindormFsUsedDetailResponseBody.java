@@ -539,6 +539,12 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Used")
         private String used;
 
+        @com.aliyun.core.annotation.NameInMap("UsedLindormColumn3")
+        private String usedLindormColumn3;
+
+        @com.aliyun.core.annotation.NameInMap("UsedLindormMessage3")
+        private String usedLindormMessage3;
+
         @com.aliyun.core.annotation.NameInMap("UsedLindormSearch")
         private String usedLindormSearch;
 
@@ -551,6 +557,9 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UsedLindormTsdb")
         private String usedLindormTsdb;
 
+        @com.aliyun.core.annotation.NameInMap("UsedLindormVector3")
+        private String usedLindormVector3;
+
         @com.aliyun.core.annotation.NameInMap("UsedOther")
         private String usedOther;
 
@@ -558,10 +567,13 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             this.capacity = builder.capacity;
             this.diskType = builder.diskType;
             this.used = builder.used;
+            this.usedLindormColumn3 = builder.usedLindormColumn3;
+            this.usedLindormMessage3 = builder.usedLindormMessage3;
             this.usedLindormSearch = builder.usedLindormSearch;
             this.usedLindormSpark = builder.usedLindormSpark;
             this.usedLindormTable = builder.usedLindormTable;
             this.usedLindormTsdb = builder.usedLindormTsdb;
+            this.usedLindormVector3 = builder.usedLindormVector3;
             this.usedOther = builder.usedOther;
         }
 
@@ -595,6 +607,20 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return usedLindormColumn3
+         */
+        public String getUsedLindormColumn3() {
+            return this.usedLindormColumn3;
+        }
+
+        /**
+         * @return usedLindormMessage3
+         */
+        public String getUsedLindormMessage3() {
+            return this.usedLindormMessage3;
+        }
+
+        /**
          * @return usedLindormSearch
          */
         public String getUsedLindormSearch() {
@@ -623,6 +649,13 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return usedLindormVector3
+         */
+        public String getUsedLindormVector3() {
+            return this.usedLindormVector3;
+        }
+
+        /**
          * @return usedOther
          */
         public String getUsedOther() {
@@ -633,10 +666,13 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             private String capacity; 
             private String diskType; 
             private String used; 
+            private String usedLindormColumn3; 
+            private String usedLindormMessage3; 
             private String usedLindormSearch; 
             private String usedLindormSpark; 
             private String usedLindormTable; 
             private String usedLindormTsdb; 
+            private String usedLindormVector3; 
             private String usedOther; 
 
             private Builder() {
@@ -646,10 +682,13 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
                 this.capacity = model.capacity;
                 this.diskType = model.diskType;
                 this.used = model.used;
+                this.usedLindormColumn3 = model.usedLindormColumn3;
+                this.usedLindormMessage3 = model.usedLindormMessage3;
                 this.usedLindormSearch = model.usedLindormSearch;
                 this.usedLindormSpark = model.usedLindormSpark;
                 this.usedLindormTable = model.usedLindormTable;
                 this.usedLindormTsdb = model.usedLindormTsdb;
+                this.usedLindormVector3 = model.usedLindormVector3;
                 this.usedOther = model.usedOther;
             } 
 
@@ -695,6 +734,22 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
             }
 
             /**
+             * UsedLindormColumn3.
+             */
+            public Builder usedLindormColumn3(String usedLindormColumn3) {
+                this.usedLindormColumn3 = usedLindormColumn3;
+                return this;
+            }
+
+            /**
+             * UsedLindormMessage3.
+             */
+            public Builder usedLindormMessage3(String usedLindormMessage3) {
+                this.usedLindormMessage3 = usedLindormMessage3;
+                return this;
+            }
+
+            /**
              * <p>The storage usage of the search engine. Unit: bytes.</p>
              * 
              * <strong>example:</strong>
@@ -735,6 +790,14 @@ public class GetLindormFsUsedDetailResponseBody extends TeaModel {
              */
             public Builder usedLindormTsdb(String usedLindormTsdb) {
                 this.usedLindormTsdb = usedLindormTsdb;
+                return this;
+            }
+
+            /**
+             * UsedLindormVector3.
+             */
+            public Builder usedLindormVector3(String usedLindormVector3) {
+                this.usedLindormVector3 = usedLindormVector3;
                 return this;
             }
 
