@@ -1049,6 +1049,9 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
      * <p>GetAppInstanceGroupResponseBody</p>
      */
     public static class AppInstanceGroupModels extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessType")
+        private String accessType;
+
         @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
@@ -1075,6 +1078,9 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Apps")
         private java.util.List<Apps> apps;
+
+        @com.aliyun.core.annotation.NameInMap("AuthMode")
+        private String authMode;
 
         @com.aliyun.core.annotation.NameInMap("ChargeResourceMode")
         private String chargeResourceMode;
@@ -1152,6 +1158,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         private java.util.List<Tags> tags;
 
         private AppInstanceGroupModels(Builder builder) {
+            this.accessType = builder.accessType;
             this.amount = builder.amount;
             this.appCenterImageId = builder.appCenterImageId;
             this.appCenterImageName = builder.appCenterImageName;
@@ -1161,6 +1168,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             this.appInstanceTypeName = builder.appInstanceTypeName;
             this.appPolicyId = builder.appPolicyId;
             this.apps = builder.apps;
+            this.authMode = builder.authMode;
             this.chargeResourceMode = builder.chargeResourceMode;
             this.chargeType = builder.chargeType;
             this.expiredTime = builder.expiredTime;
@@ -1194,6 +1202,13 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
 
         public static AppInstanceGroupModels create() {
             return builder().build();
+        }
+
+        /**
+         * @return accessType
+         */
+        public String getAccessType() {
+            return this.accessType;
         }
 
         /**
@@ -1257,6 +1272,13 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
          */
         public java.util.List<Apps> getApps() {
             return this.apps;
+        }
+
+        /**
+         * @return authMode
+         */
+        public String getAuthMode() {
+            return this.authMode;
         }
 
         /**
@@ -1435,6 +1457,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accessType; 
             private Integer amount; 
             private String appCenterImageId; 
             private String appCenterImageName; 
@@ -1444,6 +1467,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             private String appInstanceTypeName; 
             private String appPolicyId; 
             private java.util.List<Apps> apps; 
+            private String authMode; 
             private String chargeResourceMode; 
             private String chargeType; 
             private String expiredTime; 
@@ -1474,6 +1498,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
             } 
 
             private Builder(AppInstanceGroupModels model) {
+                this.accessType = model.accessType;
                 this.amount = model.amount;
                 this.appCenterImageId = model.appCenterImageId;
                 this.appCenterImageName = model.appCenterImageName;
@@ -1483,6 +1508,7 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
                 this.appInstanceTypeName = model.appInstanceTypeName;
                 this.appPolicyId = model.appPolicyId;
                 this.apps = model.apps;
+                this.authMode = model.authMode;
                 this.chargeResourceMode = model.chargeResourceMode;
                 this.chargeType = model.chargeType;
                 this.expiredTime = model.expiredTime;
@@ -1509,6 +1535,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
                 this.status = model.status;
                 this.tags = model.tags;
             } 
+
+            /**
+             * AccessType.
+             */
+            public Builder accessType(String accessType) {
+                this.accessType = accessType;
+                return this;
+            }
 
             /**
              * Amount.
@@ -1579,6 +1613,14 @@ public class GetAppInstanceGroupResponseBody extends TeaModel {
              */
             public Builder apps(java.util.List<Apps> apps) {
                 this.apps = apps;
+                return this;
+            }
+
+            /**
+             * AuthMode.
+             */
+            public Builder authMode(String authMode) {
+                this.authMode = authMode;
                 return this;
             }
 

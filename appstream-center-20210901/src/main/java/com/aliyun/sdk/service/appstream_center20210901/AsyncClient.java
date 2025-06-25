@@ -20,40 +20,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
-     * @param request the request parameters of AccessPageSetAcl  AccessPageSetAclRequest
-     * @return AccessPageSetAclResponse
-     */
-    CompletableFuture<AccessPageSetAclResponse> accessPageSetAcl(AccessPageSetAclRequest request);
-
-    /**
      * @param request the request parameters of ApproveOtaTask  ApproveOtaTaskRequest
      * @return ApproveOtaTaskResponse
      */
     CompletableFuture<ApproveOtaTaskResponse> approveOtaTask(ApproveOtaTaskRequest request);
 
     /**
-     * @param request the request parameters of AskSessionPackagePrice  AskSessionPackagePriceRequest
-     * @return AskSessionPackagePriceResponse
-     */
-    CompletableFuture<AskSessionPackagePriceResponse> askSessionPackagePrice(AskSessionPackagePriceRequest request);
-
-    /**
      * @param request the request parameters of AuthorizeInstanceGroup  AuthorizeInstanceGroupRequest
      * @return AuthorizeInstanceGroupResponse
      */
     CompletableFuture<AuthorizeInstanceGroupResponse> authorizeInstanceGroup(AuthorizeInstanceGroupRequest request);
-
-    /**
-     * @param request the request parameters of BuySessionPackage  BuySessionPackageRequest
-     * @return BuySessionPackageResponse
-     */
-    CompletableFuture<BuySessionPackageResponse> buySessionPackage(BuySessionPackageRequest request);
-
-    /**
-     * @param request the request parameters of CreateAccessPage  CreateAccessPageRequest
-     * @return CreateAccessPageResponse
-     */
-    CompletableFuture<CreateAccessPageResponse> createAccessPage(CreateAccessPageRequest request);
 
     /**
      * @param request the request parameters of CreateAppInstanceGroup  CreateAppInstanceGroupRequest
@@ -66,12 +42,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateImageFromAppInstanceGroupResponse
      */
     CompletableFuture<CreateImageFromAppInstanceGroupResponse> createImageFromAppInstanceGroup(CreateImageFromAppInstanceGroupRequest request);
-
-    /**
-     * @param request the request parameters of DeleteAccessPage  DeleteAccessPageRequest
-     * @return DeleteAccessPageResponse
-     */
-    CompletableFuture<DeleteAccessPageResponse> deleteAccessPage(DeleteAccessPageRequest request);
 
     /**
      * <b>description</b> :
@@ -92,12 +62,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAppInstancesResponse
      */
     CompletableFuture<DeleteAppInstancesResponse> deleteAppInstances(DeleteAppInstancesRequest request);
-
-    /**
-     * @param request the request parameters of GetAccessPageSession  GetAccessPageSessionRequest
-     * @return GetAccessPageSessionResponse
-     */
-    CompletableFuture<GetAccessPageSessionResponse> getAccessPageSession(GetAccessPageSessionRequest request);
 
     /**
      * @param request the request parameters of GetAppInstanceGroup  GetAppInstanceGroupRequest
@@ -141,12 +105,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetResourceRenewPriceResponse> getResourceRenewPrice(GetResourceRenewPriceRequest request);
 
     /**
-     * @param request the request parameters of ListAccessPages  ListAccessPagesRequest
-     * @return ListAccessPagesResponse
-     */
-    CompletableFuture<ListAccessPagesResponse> listAccessPages(ListAccessPagesRequest request);
-
-    /**
      * @param request the request parameters of ListAppInstanceGroup  ListAppInstanceGroupRequest
      * @return ListAppInstanceGroupResponse
      */
@@ -157,6 +115,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAppInstancesResponse
      */
     CompletableFuture<ListAppInstancesResponse> listAppInstances(ListAppInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListAuthorizedUserGroups  ListAuthorizedUserGroupsRequest
+     * @return ListAuthorizedUserGroupsResponse
+     */
+    CompletableFuture<ListAuthorizedUserGroupsResponse> listAuthorizedUserGroups(ListAuthorizedUserGroupsRequest request);
 
     /**
      * @param request the request parameters of ListBindInfo  ListBindInfoRequest
@@ -198,12 +162,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListRegionsResponse
      */
     CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
-
-    /**
-     * @param request the request parameters of ListSessionPackages  ListSessionPackagesRequest
-     * @return ListSessionPackagesResponse
-     */
-    CompletableFuture<ListSessionPackagesResponse> listSessionPackages(ListSessionPackagesRequest request);
 
     /**
      * @param request the request parameters of ListTagCloudResources  ListTagCloudResourcesRequest

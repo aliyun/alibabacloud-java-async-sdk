@@ -26,6 +26,9 @@ public class GetConnectionTicketResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppInstancePersistentId")
     private String appInstancePersistentId;
 
+    @com.aliyun.core.annotation.NameInMap("AvatarId")
+    private String avatarId;
+
     @com.aliyun.core.annotation.NameInMap("BizRegionId")
     private String bizRegionId;
 
@@ -51,6 +54,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstanceId = builder.appInstanceId;
         this.appInstancePersistentId = builder.appInstancePersistentId;
+        this.avatarId = builder.avatarId;
         this.bizRegionId = builder.bizRegionId;
         this.osType = builder.osType;
         this.requestId = builder.requestId;
@@ -91,6 +95,13 @@ public class GetConnectionTicketResponseBody extends TeaModel {
      */
     public String getAppInstancePersistentId() {
         return this.appInstancePersistentId;
+    }
+
+    /**
+     * @return avatarId
+     */
+    public String getAvatarId() {
+        return this.avatarId;
     }
 
     /**
@@ -146,6 +157,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
         private String appInstanceGroupId; 
         private String appInstanceId; 
         private String appInstancePersistentId; 
+        private String avatarId; 
         private String bizRegionId; 
         private String osType; 
         private String requestId; 
@@ -161,6 +173,7 @@ public class GetConnectionTicketResponseBody extends TeaModel {
             this.appInstanceGroupId = model.appInstanceGroupId;
             this.appInstanceId = model.appInstanceId;
             this.appInstancePersistentId = model.appInstancePersistentId;
+            this.avatarId = model.avatarId;
             this.bizRegionId = model.bizRegionId;
             this.osType = model.osType;
             this.requestId = model.requestId;
@@ -200,6 +213,14 @@ public class GetConnectionTicketResponseBody extends TeaModel {
          */
         public Builder appInstancePersistentId(String appInstancePersistentId) {
             this.appInstancePersistentId = appInstancePersistentId;
+            return this;
+        }
+
+        /**
+         * AvatarId.
+         */
+        public Builder avatarId(String avatarId) {
+            this.avatarId = avatarId;
             return this;
         }
 

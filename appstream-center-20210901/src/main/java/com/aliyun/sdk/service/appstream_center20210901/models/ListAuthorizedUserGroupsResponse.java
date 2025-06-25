@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListAccessPagesResponse} extends {@link TeaModel}
+ * {@link ListAuthorizedUserGroupsResponse} extends {@link TeaModel}
  *
- * <p>ListAccessPagesResponse</p>
+ * <p>ListAuthorizedUserGroupsResponse</p>
  */
-public class ListAccessPagesResponse extends Response {
+public class ListAuthorizedUserGroupsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class ListAccessPagesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListAccessPagesResponseBody body;
+    private ListAuthorizedUserGroupsResponseBody body;
 
-    private ListAccessPagesResponse(BuilderImpl builder) {
+    private ListAuthorizedUserGroupsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListAccessPagesResponse create() {
+    public static ListAuthorizedUserGroupsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class ListAccessPagesResponse extends Response {
     /**
      * @return body
      */
-    public ListAccessPagesResponseBody getBody() {
+    public ListAuthorizedUserGroupsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListAccessPagesResponse, Builder> {
+    public interface Builder extends Response.Builder<ListAuthorizedUserGroupsResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListAccessPagesResponseBody body);
+        Builder body(ListAuthorizedUserGroupsResponseBody body);
 
         @Override
-        ListAccessPagesResponse build();
+        ListAuthorizedUserGroupsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListAccessPagesResponse, Builder>
+            extends Response.BuilderImpl<ListAuthorizedUserGroupsResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ListAccessPagesResponseBody body; 
+        private ListAuthorizedUserGroupsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListAccessPagesResponse response) {
+        private BuilderImpl(ListAuthorizedUserGroupsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ListAccessPagesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListAccessPagesResponseBody body) {
+        public Builder body(ListAuthorizedUserGroupsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListAccessPagesResponse build() {
-            return new ListAccessPagesResponse(this);
+        public ListAuthorizedUserGroupsResponse build() {
+            return new ListAuthorizedUserGroupsResponse(this);
         } 
 
     } 

@@ -39,6 +39,10 @@ public class GetConnectionTicketRequest extends Request {
     private String appInstancePersistentId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppPolicyId")
+    private String appPolicyId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AppStartParam")
     private String appStartParam;
 
@@ -71,6 +75,7 @@ public class GetConnectionTicketRequest extends Request {
         this.appInstanceGroupIdList = builder.appInstanceGroupIdList;
         this.appInstanceId = builder.appInstanceId;
         this.appInstancePersistentId = builder.appInstancePersistentId;
+        this.appPolicyId = builder.appPolicyId;
         this.appStartParam = builder.appStartParam;
         this.appVersion = builder.appVersion;
         this.bizRegionId = builder.bizRegionId;
@@ -128,6 +133,13 @@ public class GetConnectionTicketRequest extends Request {
     }
 
     /**
+     * @return appPolicyId
+     */
+    public String getAppPolicyId() {
+        return this.appPolicyId;
+    }
+
+    /**
      * @return appStartParam
      */
     public String getAppStartParam() {
@@ -175,6 +187,7 @@ public class GetConnectionTicketRequest extends Request {
         private java.util.List<String> appInstanceGroupIdList; 
         private String appInstanceId; 
         private String appInstancePersistentId; 
+        private String appPolicyId; 
         private String appStartParam; 
         private String appVersion; 
         private String bizRegionId; 
@@ -193,6 +206,7 @@ public class GetConnectionTicketRequest extends Request {
             this.appInstanceGroupIdList = request.appInstanceGroupIdList;
             this.appInstanceId = request.appInstanceId;
             this.appInstancePersistentId = request.appInstancePersistentId;
+            this.appPolicyId = request.appPolicyId;
             this.appStartParam = request.appStartParam;
             this.appVersion = request.appVersion;
             this.bizRegionId = request.bizRegionId;
@@ -267,6 +281,15 @@ public class GetConnectionTicketRequest extends Request {
         public Builder appInstancePersistentId(String appInstancePersistentId) {
             this.putBodyParameter("AppInstancePersistentId", appInstancePersistentId);
             this.appInstancePersistentId = appInstancePersistentId;
+            return this;
+        }
+
+        /**
+         * AppPolicyId.
+         */
+        public Builder appPolicyId(String appPolicyId) {
+            this.putBodyParameter("AppPolicyId", appPolicyId);
+            this.appPolicyId = appPolicyId;
             return this;
         }
 

@@ -27,13 +27,25 @@ public class AuthorizeInstanceGroupRequest extends Request {
     private String appInstancePersistentId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuthorizeUserGroupIds")
+    private java.util.List<String> authorizeUserGroupIds;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AuthorizeUserIds")
     private java.util.List<String> authorizeUserIds;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AvatarId")
+    private String avatarId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProductType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String productType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UnAuthorizeUserGroupIds")
+    private java.util.List<String> unAuthorizeUserGroupIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UnAuthorizeUserIds")
@@ -47,8 +59,11 @@ public class AuthorizeInstanceGroupRequest extends Request {
         super(builder);
         this.appInstanceGroupId = builder.appInstanceGroupId;
         this.appInstancePersistentId = builder.appInstancePersistentId;
+        this.authorizeUserGroupIds = builder.authorizeUserGroupIds;
         this.authorizeUserIds = builder.authorizeUserIds;
+        this.avatarId = builder.avatarId;
         this.productType = builder.productType;
+        this.unAuthorizeUserGroupIds = builder.unAuthorizeUserGroupIds;
         this.unAuthorizeUserIds = builder.unAuthorizeUserIds;
         this.userMeta = builder.userMeta;
     }
@@ -81,6 +96,13 @@ public class AuthorizeInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return authorizeUserGroupIds
+     */
+    public java.util.List<String> getAuthorizeUserGroupIds() {
+        return this.authorizeUserGroupIds;
+    }
+
+    /**
      * @return authorizeUserIds
      */
     public java.util.List<String> getAuthorizeUserIds() {
@@ -88,10 +110,24 @@ public class AuthorizeInstanceGroupRequest extends Request {
     }
 
     /**
+     * @return avatarId
+     */
+    public String getAvatarId() {
+        return this.avatarId;
+    }
+
+    /**
      * @return productType
      */
     public String getProductType() {
         return this.productType;
+    }
+
+    /**
+     * @return unAuthorizeUserGroupIds
+     */
+    public java.util.List<String> getUnAuthorizeUserGroupIds() {
+        return this.unAuthorizeUserGroupIds;
     }
 
     /**
@@ -111,8 +147,11 @@ public class AuthorizeInstanceGroupRequest extends Request {
     public static final class Builder extends Request.Builder<AuthorizeInstanceGroupRequest, Builder> {
         private String appInstanceGroupId; 
         private String appInstancePersistentId; 
+        private java.util.List<String> authorizeUserGroupIds; 
         private java.util.List<String> authorizeUserIds; 
+        private String avatarId; 
         private String productType; 
+        private java.util.List<String> unAuthorizeUserGroupIds; 
         private java.util.List<String> unAuthorizeUserIds; 
         private UserMeta userMeta; 
 
@@ -124,8 +163,11 @@ public class AuthorizeInstanceGroupRequest extends Request {
             super(request);
             this.appInstanceGroupId = request.appInstanceGroupId;
             this.appInstancePersistentId = request.appInstancePersistentId;
+            this.authorizeUserGroupIds = request.authorizeUserGroupIds;
             this.authorizeUserIds = request.authorizeUserIds;
+            this.avatarId = request.avatarId;
             this.productType = request.productType;
+            this.unAuthorizeUserGroupIds = request.unAuthorizeUserGroupIds;
             this.unAuthorizeUserIds = request.unAuthorizeUserIds;
             this.userMeta = request.userMeta;
         } 
@@ -155,11 +197,29 @@ public class AuthorizeInstanceGroupRequest extends Request {
         }
 
         /**
+         * AuthorizeUserGroupIds.
+         */
+        public Builder authorizeUserGroupIds(java.util.List<String> authorizeUserGroupIds) {
+            this.putBodyParameter("AuthorizeUserGroupIds", authorizeUserGroupIds);
+            this.authorizeUserGroupIds = authorizeUserGroupIds;
+            return this;
+        }
+
+        /**
          * <p>The IDs of the users that you want to add to the authorization list of the delivery group. You can specify 1 to 100 user IDs.</p>
          */
         public Builder authorizeUserIds(java.util.List<String> authorizeUserIds) {
             this.putBodyParameter("AuthorizeUserIds", authorizeUserIds);
             this.authorizeUserIds = authorizeUserIds;
+            return this;
+        }
+
+        /**
+         * AvatarId.
+         */
+        public Builder avatarId(String avatarId) {
+            this.putBodyParameter("AvatarId", avatarId);
+            this.avatarId = avatarId;
             return this;
         }
 
@@ -172,6 +232,15 @@ public class AuthorizeInstanceGroupRequest extends Request {
         public Builder productType(String productType) {
             this.putBodyParameter("ProductType", productType);
             this.productType = productType;
+            return this;
+        }
+
+        /**
+         * UnAuthorizeUserGroupIds.
+         */
+        public Builder unAuthorizeUserGroupIds(java.util.List<String> unAuthorizeUserGroupIds) {
+            this.putBodyParameter("UnAuthorizeUserGroupIds", unAuthorizeUserGroupIds);
+            this.unAuthorizeUserGroupIds = unAuthorizeUserGroupIds;
             return this;
         }
 
