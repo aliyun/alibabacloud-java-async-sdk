@@ -705,7 +705,10 @@ public class DescribeDiagnosisRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryProperties.
+             * <p>The query properties.</p>
+             * <blockquote>
+             * <p> For information about common properties, see <a href="https://help.aliyun.com/document_detail/408955.html">Config and hint configuration parameters</a>.</p>
+             * </blockquote>
              */
             public Builder queryProperties(java.util.List<QueryProperties> queryProperties) {
                 this.queryProperties = queryProperties;

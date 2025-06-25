@@ -80,7 +80,7 @@ public class DescribeLLMSimilarQuestionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Items.
+         * <p>The queried similar questions.</p>
          */
         public Builder items(java.util.List<Items> items) {
             this.items = items;
@@ -88,7 +88,10 @@ public class DescribeLLMSimilarQuestionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>96A55627-28E9-5E47-B8F6-D786BE551349</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class DescribeLLMSimilarQuestionsResponseBody extends TeaModel {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4847</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -227,7 +233,7 @@ public class DescribeLLMSimilarQuestionsResponseBody extends TeaModel {
             } 
 
             /**
-             * Answer.
+             * <p>The answer to the similar question.</p>
              */
             public Builder answer(String answer) {
                 this.answer = answer;
@@ -235,7 +241,10 @@ public class DescribeLLMSimilarQuestionsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the similar question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2389899</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -243,7 +252,10 @@ public class DescribeLLMSimilarQuestionsResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * <p>The similarity of the similar question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.58</p>
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -251,7 +263,7 @@ public class DescribeLLMSimilarQuestionsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * <p>The source of the similar question.</p>
              */
             public Builder source(String source) {
                 this.source = source;
@@ -259,7 +271,7 @@ public class DescribeLLMSimilarQuestionsResponseBody extends TeaModel {
             }
 
             /**
-             * Summary.
+             * <p>The summary of the similar question.</p>
              */
             public Builder summary(String summary) {
                 this.summary = summary;
@@ -267,7 +279,7 @@ public class DescribeLLMSimilarQuestionsResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * <p>The content of the similar question.</p>
              */
             public Builder title(String title) {
                 this.title = title;
@@ -275,7 +287,10 @@ public class DescribeLLMSimilarQuestionsResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * <p>The URL of the answer to the similar question.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://www.aliyun.com/product">www.aliyun.com/product</a></p>
              */
             public Builder url(String url) {
                 this.url = url;

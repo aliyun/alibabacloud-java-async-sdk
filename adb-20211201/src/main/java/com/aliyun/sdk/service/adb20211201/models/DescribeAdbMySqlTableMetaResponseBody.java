@@ -93,7 +93,14 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         } 
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, a success message is returned.****</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,7 +108,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FED790E-FB61-4721-8C1C-07C627FA5A19</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +119,14 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -117,7 +134,7 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
         }
 
         /**
-         * TableMeta.
+         * <p>The queried table metadata.</p>
          */
         public Builder tableMeta(TableMeta tableMeta) {
             this.tableMeta = tableMeta;
@@ -352,7 +369,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the table was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-14 02:18:08.0</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -360,7 +380,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * DistributeColumn.
+             * <p>The distribution key column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>customer_id</p>
              */
             public Builder distributeColumn(String distributeColumn) {
                 this.distributeColumn = distributeColumn;
@@ -368,7 +391,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * DistributeType.
+             * <p>The distribution type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hash</p>
              */
             public Builder distributeType(String distributeType) {
                 this.distributeType = distributeType;
@@ -376,7 +402,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * IsAllIndex.
+             * <p>Indicates whether full-column indexes are used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isAllIndex(Boolean isAllIndex) {
                 this.isAllIndex = isAllIndex;
@@ -384,7 +413,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * IsDictEncode.
+             * <p>Indicates whether dictionary encoding is used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDictEncode(Boolean isDictEncode) {
                 this.isDictEncode = isDictEncode;
@@ -392,7 +424,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * IsFullTextDict.
+             * <p>Indicates whether full-text indexes are used.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isFullTextDict(Boolean isFullTextDict) {
                 this.isFullTextDict = isFullTextDict;
@@ -400,7 +435,14 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * IsHidden.
+             * <p>Indicates whether pages are hidden.</p>
+             * <ul>
+             * <li><strong>false</strong></li>
+             * <li><strong>true</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isHidden(Boolean isHidden) {
                 this.isHidden = isHidden;
@@ -408,7 +450,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionColumn.
+             * <p>The partition key column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DATE_FORMAT(login_time, &quot;%Y%m%d&quot;)</p>
              */
             public Builder partitionColumn(String partitionColumn) {
                 this.partitionColumn = partitionColumn;
@@ -416,7 +461,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionType.
+             * <p>The type of the partition.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>value</p>
              */
             public Builder partitionType(String partitionType) {
                 this.partitionType = partitionType;
@@ -424,7 +472,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKeyColumn.
+             * <p>The primary key column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>login_time,customer_id,phone_num</p>
              */
             public Builder primaryKeyColumn(String primaryKeyColumn) {
                 this.primaryKeyColumn = primaryKeyColumn;
@@ -432,7 +483,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * TableEngine.
+             * <p>The table engine.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>XUANWU</p>
              */
             public Builder tableEngine(String tableEngine) {
                 this.tableEngine = tableEngine;
@@ -440,7 +494,12 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * TableName.
+             * <p>The name of the table.</p>
+             * <p>**</p>
+             * <hr>
+             * 
+             * <strong>example:</strong>
+             * <p>external_supplier</p>
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -448,7 +507,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * TableSchema.
+             * <p>The database to which the table belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>tpch</p>
              */
             public Builder tableSchema(String tableSchema) {
                 this.tableSchema = tableSchema;
@@ -456,7 +518,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * TableType.
+             * <p>The type of the table.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>fact_table</p>
              */
             public Builder tableType(String tableType) {
                 this.tableType = tableType;
@@ -464,7 +529,10 @@ public class DescribeAdbMySqlTableMetaResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the table was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-07-25 02:07:23.0</p>
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

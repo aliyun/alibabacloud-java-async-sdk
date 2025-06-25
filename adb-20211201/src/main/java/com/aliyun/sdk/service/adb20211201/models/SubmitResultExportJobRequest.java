@@ -175,7 +175,10 @@ public class SubmitResultExportJobRequest extends Request {
         }
 
         /**
-         * <p>The export type.</p>
+         * <p>The type of the result set export job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SLS</p>
          */
         public Builder exportType(String exportType) {
             this.putBodyParameter("ExportType", exportType);

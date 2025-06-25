@@ -106,7 +106,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried data.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;

@@ -106,7 +106,7 @@ public class GetDatabaseObjectsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The queried databases.</p>
+         * <p>The returned data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -247,7 +247,7 @@ public class GetDatabaseObjectsResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The queried database.</p>
+             * <p>The queried databases.</p>
              */
             public Builder databaseSummaryModels(java.util.List<DatabaseSummaryModel> databaseSummaryModels) {
                 this.databaseSummaryModels = databaseSummaryModels;

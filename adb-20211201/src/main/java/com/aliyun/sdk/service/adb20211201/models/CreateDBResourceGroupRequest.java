@@ -475,7 +475,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * MaxGpuQuantity.
+         * <p>A reserved parameter.</p>
          */
         public Builder maxGpuQuantity(Integer maxGpuQuantity) {
             this.putQueryParameter("MaxGpuQuantity", maxGpuQuantity);
@@ -512,7 +512,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * MinGpuQuantity.
+         * <p>A reserved parameter.</p>
          */
         public Builder minGpuQuantity(Integer minGpuQuantity) {
             this.putQueryParameter("MinGpuQuantity", minGpuQuantity);
@@ -556,7 +556,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * SpecName.
+         * <p>A reserved parameter.</p>
          */
         public Builder specName(String specName) {
             this.putQueryParameter("SpecName", specName);
@@ -565,7 +565,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * TargetResourceGroupName.
+         * <p>A reserved parameter.</p>
          */
         public Builder targetResourceGroupName(String targetResourceGroupName) {
             this.putQueryParameter("TargetResourceGroupName", targetResourceGroupName);

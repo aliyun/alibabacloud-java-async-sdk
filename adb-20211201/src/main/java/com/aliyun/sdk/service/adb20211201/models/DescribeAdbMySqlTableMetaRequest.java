@@ -105,6 +105,10 @@ public class DescribeAdbMySqlTableMetaRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,6 +121,10 @@ public class DescribeAdbMySqlTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,6 +137,7 @@ public class DescribeAdbMySqlTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The name of the database.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,6 +150,10 @@ public class DescribeAdbMySqlTableMetaRequest extends Request {
         }
 
         /**
+         * <p>The name of the table.</p>
+         * <blockquote>
+         * <p> If you leave this parameter empty, the information about all the current tables in the cluster is returned.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

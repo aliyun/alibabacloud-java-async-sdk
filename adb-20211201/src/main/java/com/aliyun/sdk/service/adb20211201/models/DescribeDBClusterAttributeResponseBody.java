@@ -603,6 +603,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      * <p>DescribeDBClusterAttributeResponseBody</p>
      */
     public static class DBCluster extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AINodeNumber")
+        private Integer AINodeNumber;
+
+        @com.aliyun.core.annotation.NameInMap("AINodeSpec")
+        private String AINodeSpec;
+
         @com.aliyun.core.annotation.NameInMap("ClickhouseEngineCacheSize")
         private Integer clickhouseEngineCacheSize;
 
@@ -742,6 +748,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String zoneId;
 
         private DBCluster(Builder builder) {
+            this.AINodeNumber = builder.AINodeNumber;
+            this.AINodeSpec = builder.AINodeSpec;
             this.clickhouseEngineCacheSize = builder.clickhouseEngineCacheSize;
             this.clickhouseEngineEnabled = builder.clickhouseEngineEnabled;
             this.commodityCode = builder.commodityCode;
@@ -796,6 +804,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         public static DBCluster create() {
             return builder().build();
+        }
+
+        /**
+         * @return AINodeNumber
+         */
+        public Integer getAINodeNumber() {
+            return this.AINodeNumber;
+        }
+
+        /**
+         * @return AINodeSpec
+         */
+        public String getAINodeSpec() {
+            return this.AINodeSpec;
         }
 
         /**
@@ -1121,6 +1143,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer AINodeNumber; 
+            private String AINodeSpec; 
             private Integer clickhouseEngineCacheSize; 
             private Boolean clickhouseEngineEnabled; 
             private String commodityCode; 
@@ -1172,6 +1196,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             } 
 
             private Builder(DBCluster model) {
+                this.AINodeNumber = model.AINodeNumber;
+                this.AINodeSpec = model.AINodeSpec;
                 this.clickhouseEngineCacheSize = model.clickhouseEngineCacheSize;
                 this.clickhouseEngineEnabled = model.clickhouseEngineEnabled;
                 this.commodityCode = model.commodityCode;
@@ -1219,6 +1245,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
                 this.vSwitchId = model.vSwitchId;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * AINodeNumber.
+             */
+            public Builder AINodeNumber(Integer AINodeNumber) {
+                this.AINodeNumber = AINodeNumber;
+                return this;
+            }
+
+            /**
+             * AINodeSpec.
+             */
+            public Builder AINodeSpec(String AINodeSpec) {
+                this.AINodeSpec = AINodeSpec;
+                return this;
+            }
 
             /**
              * <p>The cache size of the ClickHouse wide table engine. Unit: GB. If a value of -1 is returned, the ClickHouse wide table engine is disabled. If a value other than -1 is returned, this parameter indicates the disk cache size.</p>

@@ -1343,7 +1343,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The network type of the cluster. <strong>VPC</strong> is returned.</p>
+             * <p>The network type of the cluster. Only <strong>VPC</strong> is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>VPC</p>
@@ -1357,22 +1357,10 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              * <p>The status of the cluster. Valid values:</p>
              * <ul>
              * <li><strong>Preparing</strong></li>
-             * </ul>
-             * <!---->
-             * 
-             * <ul>
              * <li><strong>Creating</strong></li>
              * <li><strong>Running</strong></li>
              * <li><strong>Deleting</strong></li>
-             * </ul>
-             * <!---->
-             * 
-             * <ul>
              * <li><strong>Restoring</strong></li>
-             * </ul>
-             * <!---->
-             * 
-             * <ul>
              * <li><strong>ClassChanging</strong></li>
              * <li><strong>NetAddressCreating</strong></li>
              * <li><strong>NetAddressDeleting</strong></li>
@@ -1432,7 +1420,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The engine version of the AnalyticDB for MySQL Data Lakehouse Edition cluster. <strong>5.0</strong> is returned.</p>
+             * <p>The version number corresponding to the edition of the cluster. Only <strong>5.0</strong> is supported.</p>
              * 
              * <strong>example:</strong>
              * <p>5.0</p>
@@ -1646,8 +1634,8 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             /**
              * <p>The service type of the cluster. Valid values:</p>
              * <ul>
-             * <li>LegacyForm</li>
-             * <li>IntegrationForm</li>
+             * <li><strong>LegacyForm</strong></li>
+             * <li><strong>IntegrationForm</strong></li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -1759,7 +1747,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The job progress.</p>
+             * <p>The information about the job.</p>
              */
             public Builder taskInfo(TaskInfo taskInfo) {
                 this.taskInfo = taskInfo;
@@ -1767,7 +1755,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the cluster that resides in the VPC.</p>
+             * <p>The VPC endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>am-bp163885f8q21****-controller</p>

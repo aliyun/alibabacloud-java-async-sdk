@@ -132,7 +132,10 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
         } 
 
         /**
-         * IndexCount.
+         * <p>The number of indexes.````</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder indexCount(Integer indexCount) {
             this.indexCount = indexCount;
@@ -140,7 +143,7 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * Indexes.
+         * <p>The queried indexes.</p>
          */
         public Builder indexes(java.util.List<Indexes> indexes) {
             this.indexes = indexes;
@@ -148,7 +151,14 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message. Valid values:</p>
+         * <ul>
+         * <li>If the request was successful, a success message is returned.****</li>
+         * <li>If the request failed, an error message is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Success</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -156,7 +166,10 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F0983B43-B2EC-536A-8791-142B5CF1E9B6</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -164,7 +177,12 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * Schema.
+         * <p>The name of the database.</p>
+         * <p>**</p>
+         * <p>****\</p>
+         * 
+         * <strong>example:</strong>
+         * <p>adb_demo</p>
          */
         public Builder schema(String schema) {
             this.schema = schema;
@@ -172,7 +190,14 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -180,7 +205,10 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * TableName.
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder tableName(String tableName) {
             this.tableName = tableName;
@@ -259,7 +287,10 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
             } 
 
             /**
-             * Column.
+             * <p>The name of the column.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>preclcu</p>
              */
             public Builder column(String column) {
                 this.column = column;
@@ -267,7 +298,10 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the index.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ttl</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -275,7 +309,10 @@ public class DescribeAdbMySqlIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The index type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal</p>
              */
             public Builder type(String type) {
                 this.type = type;

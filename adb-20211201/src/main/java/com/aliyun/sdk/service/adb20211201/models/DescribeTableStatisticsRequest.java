@@ -146,6 +146,10 @@ public class DescribeTableStatisticsRequest extends Request {
         } 
 
         /**
+         * <p>The cluster ID.</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +162,10 @@ public class DescribeTableStatisticsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * <p>The keyword that is used to query information by table name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>you_table_name</p>
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -167,7 +174,25 @@ public class DescribeTableStatisticsRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order by which to sort query results. Specify the parameter value in the JSON format.</p>
+         * <p>Example:</p>
+         * <pre><code>[
+         * 
+         *     {
+         * 
+         *         &quot;Field&quot;:&quot;Name&quot;,
+         * 
+         *         &quot;Type&quot;:&quot;Asc&quot;
+         * 
+         *     }
+         * 
+         * ]
+         * </code></pre>
+         * <p>Field specifies the field by which to sort the query results. Set the value to Name. Type specifies the sorting order. Valid values: Desc and Asc.</p>
+         * <p>Field and Type are case-insensitive.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Desc&quot;}]</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -176,7 +201,10 @@ public class DescribeTableStatisticsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -185,7 +213,10 @@ public class DescribeTableStatisticsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -194,7 +225,13 @@ public class DescribeTableStatisticsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The region ID</p>
+         * <blockquote>
+         * <p> You can call the <a href="https://help.aliyun.com/document_detail/612393.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -203,7 +240,10 @@ public class DescribeTableStatisticsRequest extends Request {
         }
 
         /**
-         * SchemaName.
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder schemaName(String schemaName) {
             this.putQueryParameter("SchemaName", schemaName);
