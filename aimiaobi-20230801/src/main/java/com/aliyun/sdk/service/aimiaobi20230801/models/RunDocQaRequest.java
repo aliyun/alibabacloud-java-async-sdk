@@ -34,6 +34,10 @@ public class RunDocQaRequest extends Request {
     private java.util.List<String> docIds;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelName")
+    private String modelName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Query")
     @com.aliyun.core.annotation.Validation(required = true)
     private String query;
@@ -63,6 +67,7 @@ public class RunDocQaRequest extends Request {
         this.categoryIds = builder.categoryIds;
         this.conversationContexts = builder.conversationContexts;
         this.docIds = builder.docIds;
+        this.modelName = builder.modelName;
         this.query = builder.query;
         this.referenceContent = builder.referenceContent;
         this.searchSource = builder.searchSource;
@@ -112,6 +117,13 @@ public class RunDocQaRequest extends Request {
     }
 
     /**
+     * @return modelName
+     */
+    public String getModelName() {
+        return this.modelName;
+    }
+
+    /**
      * @return query
      */
     public String getQuery() {
@@ -151,6 +163,7 @@ public class RunDocQaRequest extends Request {
         private java.util.List<String> categoryIds; 
         private java.util.List<ConversationContexts> conversationContexts; 
         private java.util.List<String> docIds; 
+        private String modelName; 
         private String query; 
         private String referenceContent; 
         private String searchSource; 
@@ -167,6 +180,7 @@ public class RunDocQaRequest extends Request {
             this.categoryIds = request.categoryIds;
             this.conversationContexts = request.conversationContexts;
             this.docIds = request.docIds;
+            this.modelName = request.modelName;
             this.query = request.query;
             this.referenceContent = request.referenceContent;
             this.searchSource = request.searchSource;
@@ -210,6 +224,15 @@ public class RunDocQaRequest extends Request {
             String docIdsShrink = shrink(docIds, "DocIds", "json");
             this.putBodyParameter("DocIds", docIdsShrink);
             this.docIds = docIds;
+            return this;
+        }
+
+        /**
+         * ModelName.
+         */
+        public Builder modelName(String modelName) {
+            this.putBodyParameter("ModelName", modelName);
+            this.modelName = modelName;
             return this;
         }
 

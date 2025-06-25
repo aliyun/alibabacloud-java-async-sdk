@@ -26,6 +26,10 @@ public class RunGenerateQuestionsRequest extends Request {
     private String docId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelName")
+    private String modelName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ReferenceContent")
     private String referenceContent;
 
@@ -42,6 +46,7 @@ public class RunGenerateQuestionsRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.docId = builder.docId;
+        this.modelName = builder.modelName;
         this.referenceContent = builder.referenceContent;
         this.sessionId = builder.sessionId;
         this.workspaceId = builder.workspaceId;
@@ -75,6 +80,13 @@ public class RunGenerateQuestionsRequest extends Request {
     }
 
     /**
+     * @return modelName
+     */
+    public String getModelName() {
+        return this.modelName;
+    }
+
+    /**
      * @return referenceContent
      */
     public String getReferenceContent() {
@@ -98,6 +110,7 @@ public class RunGenerateQuestionsRequest extends Request {
     public static final class Builder extends Request.Builder<RunGenerateQuestionsRequest, Builder> {
         private String regionId; 
         private String docId; 
+        private String modelName; 
         private String referenceContent; 
         private String sessionId; 
         private String workspaceId; 
@@ -110,6 +123,7 @@ public class RunGenerateQuestionsRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.docId = request.docId;
+            this.modelName = request.modelName;
             this.referenceContent = request.referenceContent;
             this.sessionId = request.sessionId;
             this.workspaceId = request.workspaceId;
@@ -130,6 +144,15 @@ public class RunGenerateQuestionsRequest extends Request {
         public Builder docId(String docId) {
             this.putBodyParameter("DocId", docId);
             this.docId = docId;
+            return this;
+        }
+
+        /**
+         * ModelName.
+         */
+        public Builder modelName(String modelName) {
+            this.putBodyParameter("ModelName", modelName);
+            this.modelName = modelName;
             return this;
         }
 

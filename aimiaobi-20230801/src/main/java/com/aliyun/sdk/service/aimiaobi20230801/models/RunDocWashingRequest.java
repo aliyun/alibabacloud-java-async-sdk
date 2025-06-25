@@ -22,6 +22,10 @@ public class RunDocWashingRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelId")
+    private String modelId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Prompt")
     private String prompt;
 
@@ -58,6 +62,7 @@ public class RunDocWashingRequest extends Request {
     private RunDocWashingRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.modelId = builder.modelId;
         this.prompt = builder.prompt;
         this.referenceContent = builder.referenceContent;
         this.sessionId = builder.sessionId;
@@ -86,6 +91,13 @@ public class RunDocWashingRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return modelId
+     */
+    public String getModelId() {
+        return this.modelId;
     }
 
     /**
@@ -146,6 +158,7 @@ public class RunDocWashingRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunDocWashingRequest, Builder> {
         private String regionId; 
+        private String modelId; 
         private String prompt; 
         private String referenceContent; 
         private String sessionId; 
@@ -162,6 +175,7 @@ public class RunDocWashingRequest extends Request {
         private Builder(RunDocWashingRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.modelId = request.modelId;
             this.prompt = request.prompt;
             this.referenceContent = request.referenceContent;
             this.sessionId = request.sessionId;
@@ -178,6 +192,15 @@ public class RunDocWashingRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ModelId.
+         */
+        public Builder modelId(String modelId) {
+            this.putBodyParameter("ModelId", modelId);
+            this.modelId = modelId;
             return this;
         }
 

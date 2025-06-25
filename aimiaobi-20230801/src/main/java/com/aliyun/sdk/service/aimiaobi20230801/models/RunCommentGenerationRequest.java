@@ -39,6 +39,10 @@ public class RunCommentGenerationRequest extends Request {
     private java.util.Map<String, ?> lengthRange;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelId")
+    private String modelId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NumComments")
     @com.aliyun.core.annotation.Validation(required = true)
     private String numComments;
@@ -78,6 +82,7 @@ public class RunCommentGenerationRequest extends Request {
         this.extraInfo = builder.extraInfo;
         this.length = builder.length;
         this.lengthRange = builder.lengthRange;
+        this.modelId = builder.modelId;
         this.numComments = builder.numComments;
         this.sentiment = builder.sentiment;
         this.sessionId = builder.sessionId;
@@ -136,6 +141,13 @@ public class RunCommentGenerationRequest extends Request {
     }
 
     /**
+     * @return modelId
+     */
+    public String getModelId() {
+        return this.modelId;
+    }
+
+    /**
      * @return numComments
      */
     public String getNumComments() {
@@ -190,6 +202,7 @@ public class RunCommentGenerationRequest extends Request {
         private String extraInfo; 
         private String length; 
         private java.util.Map<String, ?> lengthRange; 
+        private String modelId; 
         private String numComments; 
         private java.util.Map<String, ?> sentiment; 
         private String sessionId; 
@@ -209,6 +222,7 @@ public class RunCommentGenerationRequest extends Request {
             this.extraInfo = request.extraInfo;
             this.length = request.length;
             this.lengthRange = request.lengthRange;
+            this.modelId = request.modelId;
             this.numComments = request.numComments;
             this.sentiment = request.sentiment;
             this.sessionId = request.sessionId;
@@ -264,6 +278,15 @@ public class RunCommentGenerationRequest extends Request {
             String lengthRangeShrink = shrink(lengthRange, "LengthRange", "json");
             this.putBodyParameter("LengthRange", lengthRangeShrink);
             this.lengthRange = lengthRange;
+            return this;
+        }
+
+        /**
+         * ModelId.
+         */
+        public Builder modelId(String modelId) {
+            this.putBodyParameter("ModelId", modelId);
+            this.modelId = modelId;
             return this;
         }
 

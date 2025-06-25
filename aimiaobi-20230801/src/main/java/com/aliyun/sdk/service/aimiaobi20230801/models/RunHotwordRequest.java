@@ -26,6 +26,10 @@ public class RunHotwordRequest extends Request {
     private String docId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelName")
+    private String modelName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Prompt")
     private String prompt;
 
@@ -46,6 +50,7 @@ public class RunHotwordRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.docId = builder.docId;
+        this.modelName = builder.modelName;
         this.prompt = builder.prompt;
         this.referenceContent = builder.referenceContent;
         this.sessionId = builder.sessionId;
@@ -80,6 +85,13 @@ public class RunHotwordRequest extends Request {
     }
 
     /**
+     * @return modelName
+     */
+    public String getModelName() {
+        return this.modelName;
+    }
+
+    /**
      * @return prompt
      */
     public String getPrompt() {
@@ -110,6 +122,7 @@ public class RunHotwordRequest extends Request {
     public static final class Builder extends Request.Builder<RunHotwordRequest, Builder> {
         private String regionId; 
         private String docId; 
+        private String modelName; 
         private String prompt; 
         private String referenceContent; 
         private String sessionId; 
@@ -123,6 +136,7 @@ public class RunHotwordRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.docId = request.docId;
+            this.modelName = request.modelName;
             this.prompt = request.prompt;
             this.referenceContent = request.referenceContent;
             this.sessionId = request.sessionId;
@@ -144,6 +158,15 @@ public class RunHotwordRequest extends Request {
         public Builder docId(String docId) {
             this.putBodyParameter("DocId", docId);
             this.docId = docId;
+            return this;
+        }
+
+        /**
+         * ModelName.
+         */
+        public Builder modelName(String modelName) {
+            this.putBodyParameter("ModelName", modelName);
+            this.modelName = modelName;
             return this;
         }
 

@@ -31,6 +31,10 @@ public class RunDocBrainmapRequest extends Request {
     private String docId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelName")
+    private String modelName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("NodeNumber")
     private Integer nodeNumber;
 
@@ -61,6 +65,7 @@ public class RunDocBrainmapRequest extends Request {
         this.regionId = builder.regionId;
         this.cleanCache = builder.cleanCache;
         this.docId = builder.docId;
+        this.modelName = builder.modelName;
         this.nodeNumber = builder.nodeNumber;
         this.prompt = builder.prompt;
         this.sessionId = builder.sessionId;
@@ -101,6 +106,13 @@ public class RunDocBrainmapRequest extends Request {
      */
     public String getDocId() {
         return this.docId;
+    }
+
+    /**
+     * @return modelName
+     */
+    public String getModelName() {
+        return this.modelName;
     }
 
     /**
@@ -149,6 +161,7 @@ public class RunDocBrainmapRequest extends Request {
         private String regionId; 
         private Boolean cleanCache; 
         private String docId; 
+        private String modelName; 
         private Integer nodeNumber; 
         private String prompt; 
         private String sessionId; 
@@ -165,6 +178,7 @@ public class RunDocBrainmapRequest extends Request {
             this.regionId = request.regionId;
             this.cleanCache = request.cleanCache;
             this.docId = request.docId;
+            this.modelName = request.modelName;
             this.nodeNumber = request.nodeNumber;
             this.prompt = request.prompt;
             this.sessionId = request.sessionId;
@@ -200,6 +214,15 @@ public class RunDocBrainmapRequest extends Request {
         public Builder docId(String docId) {
             this.putBodyParameter("DocId", docId);
             this.docId = docId;
+            return this;
+        }
+
+        /**
+         * ModelName.
+         */
+        public Builder modelName(String modelName) {
+            this.putBodyParameter("ModelName", modelName);
+            this.modelName = modelName;
             return this;
         }
 

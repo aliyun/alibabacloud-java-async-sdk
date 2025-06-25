@@ -31,6 +31,10 @@ public class RunMultiDocIntroductionRequest extends Request {
     private String keyPointPrompt;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelName")
+    private String modelName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SessionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
@@ -49,6 +53,7 @@ public class RunMultiDocIntroductionRequest extends Request {
         this.regionId = builder.regionId;
         this.docIds = builder.docIds;
         this.keyPointPrompt = builder.keyPointPrompt;
+        this.modelName = builder.modelName;
         this.sessionId = builder.sessionId;
         this.summaryPrompt = builder.summaryPrompt;
         this.workspaceId = builder.workspaceId;
@@ -89,6 +94,13 @@ public class RunMultiDocIntroductionRequest extends Request {
     }
 
     /**
+     * @return modelName
+     */
+    public String getModelName() {
+        return this.modelName;
+    }
+
+    /**
      * @return sessionId
      */
     public String getSessionId() {
@@ -113,6 +125,7 @@ public class RunMultiDocIntroductionRequest extends Request {
         private String regionId; 
         private java.util.List<String> docIds; 
         private String keyPointPrompt; 
+        private String modelName; 
         private String sessionId; 
         private String summaryPrompt; 
         private String workspaceId; 
@@ -126,6 +139,7 @@ public class RunMultiDocIntroductionRequest extends Request {
             this.regionId = request.regionId;
             this.docIds = request.docIds;
             this.keyPointPrompt = request.keyPointPrompt;
+            this.modelName = request.modelName;
             this.sessionId = request.sessionId;
             this.summaryPrompt = request.summaryPrompt;
             this.workspaceId = request.workspaceId;
@@ -156,6 +170,15 @@ public class RunMultiDocIntroductionRequest extends Request {
         public Builder keyPointPrompt(String keyPointPrompt) {
             this.putBodyParameter("KeyPointPrompt", keyPointPrompt);
             this.keyPointPrompt = keyPointPrompt;
+            return this;
+        }
+
+        /**
+         * ModelName.
+         */
+        public Builder modelName(String modelName) {
+            this.putBodyParameter("ModelName", modelName);
+            this.modelName = modelName;
             return this;
         }
 
