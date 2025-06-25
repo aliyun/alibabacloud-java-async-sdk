@@ -119,8 +119,14 @@ public class GetHostAccountResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrivateKeyFingerprint")
         private String privateKeyFingerprint;
 
+        @com.aliyun.core.annotation.NameInMap("PrivilegeType")
+        private String privilegeType;
+
         @com.aliyun.core.annotation.NameInMap("ProtocolName")
         private String protocolName;
+
+        @com.aliyun.core.annotation.NameInMap("RotationMode")
+        private String rotationMode;
 
         private HostAccount(Builder builder) {
             this.hasPassword = builder.hasPassword;
@@ -130,7 +136,9 @@ public class GetHostAccountResponseBody extends TeaModel {
             this.hostShareKeyId = builder.hostShareKeyId;
             this.hostShareKeyName = builder.hostShareKeyName;
             this.privateKeyFingerprint = builder.privateKeyFingerprint;
+            this.privilegeType = builder.privilegeType;
             this.protocolName = builder.protocolName;
+            this.rotationMode = builder.rotationMode;
         }
 
         public static Builder builder() {
@@ -191,10 +199,24 @@ public class GetHostAccountResponseBody extends TeaModel {
         }
 
         /**
+         * @return privilegeType
+         */
+        public String getPrivilegeType() {
+            return this.privilegeType;
+        }
+
+        /**
          * @return protocolName
          */
         public String getProtocolName() {
             return this.protocolName;
+        }
+
+        /**
+         * @return rotationMode
+         */
+        public String getRotationMode() {
+            return this.rotationMode;
         }
 
         public static final class Builder {
@@ -205,7 +227,9 @@ public class GetHostAccountResponseBody extends TeaModel {
             private String hostShareKeyId; 
             private String hostShareKeyName; 
             private String privateKeyFingerprint; 
+            private String privilegeType; 
             private String protocolName; 
+            private String rotationMode; 
 
             private Builder() {
             } 
@@ -218,7 +242,9 @@ public class GetHostAccountResponseBody extends TeaModel {
                 this.hostShareKeyId = model.hostShareKeyId;
                 this.hostShareKeyName = model.hostShareKeyName;
                 this.privateKeyFingerprint = model.privateKeyFingerprint;
+                this.privilegeType = model.privilegeType;
                 this.protocolName = model.protocolName;
+                this.rotationMode = model.rotationMode;
             } 
 
             /**
@@ -303,6 +329,14 @@ public class GetHostAccountResponseBody extends TeaModel {
             }
 
             /**
+             * PrivilegeType.
+             */
+            public Builder privilegeType(String privilegeType) {
+                this.privilegeType = privilegeType;
+                return this;
+            }
+
+            /**
              * <p>The protocol that is used by the host. Valid values:</p>
              * <ul>
              * <li><strong>SSH</strong></li>
@@ -314,6 +348,14 @@ public class GetHostAccountResponseBody extends TeaModel {
              */
             public Builder protocolName(String protocolName) {
                 this.protocolName = protocolName;
+                return this;
+            }
+
+            /**
+             * RotationMode.
+             */
+            public Builder rotationMode(String rotationMode) {
+                this.rotationMode = rotationMode;
                 return this;
             }
 

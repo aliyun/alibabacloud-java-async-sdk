@@ -49,6 +49,10 @@ public class CreateHostAccountRequest extends Request {
     private String privateKey;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivilegeType")
+    private String privilegeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProtocolName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String protocolName;
@@ -56,6 +60,10 @@ public class CreateHostAccountRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RotationMode")
+    private String rotationMode;
 
     private CreateHostAccountRequest(Builder builder) {
         super(builder);
@@ -66,8 +74,10 @@ public class CreateHostAccountRequest extends Request {
         this.passPhrase = builder.passPhrase;
         this.password = builder.password;
         this.privateKey = builder.privateKey;
+        this.privilegeType = builder.privilegeType;
         this.protocolName = builder.protocolName;
         this.regionId = builder.regionId;
+        this.rotationMode = builder.rotationMode;
     }
 
     public static Builder builder() {
@@ -133,6 +143,13 @@ public class CreateHostAccountRequest extends Request {
     }
 
     /**
+     * @return privilegeType
+     */
+    public String getPrivilegeType() {
+        return this.privilegeType;
+    }
+
+    /**
      * @return protocolName
      */
     public String getProtocolName() {
@@ -146,6 +163,13 @@ public class CreateHostAccountRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return rotationMode
+     */
+    public String getRotationMode() {
+        return this.rotationMode;
+    }
+
     public static final class Builder extends Request.Builder<CreateHostAccountRequest, Builder> {
         private String hostAccountName; 
         private String hostId; 
@@ -154,8 +178,10 @@ public class CreateHostAccountRequest extends Request {
         private String passPhrase; 
         private String password; 
         private String privateKey; 
+        private String privilegeType; 
         private String protocolName; 
         private String regionId; 
+        private String rotationMode; 
 
         private Builder() {
             super();
@@ -170,8 +196,10 @@ public class CreateHostAccountRequest extends Request {
             this.passPhrase = request.passPhrase;
             this.password = request.password;
             this.privateKey = request.privateKey;
+            this.privilegeType = request.privilegeType;
             this.protocolName = request.protocolName;
             this.regionId = request.regionId;
+            this.rotationMode = request.rotationMode;
         } 
 
         /**
@@ -274,6 +302,15 @@ public class CreateHostAccountRequest extends Request {
         }
 
         /**
+         * PrivilegeType.
+         */
+        public Builder privilegeType(String privilegeType) {
+            this.putQueryParameter("PrivilegeType", privilegeType);
+            this.privilegeType = privilegeType;
+            return this;
+        }
+
+        /**
          * <p>The protocol of the host to which you want to add a host account.</p>
          * <p>Valid values:</p>
          * <ul>
@@ -303,6 +340,15 @@ public class CreateHostAccountRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RotationMode.
+         */
+        public Builder rotationMode(String rotationMode) {
+            this.putQueryParameter("RotationMode", rotationMode);
+            this.rotationMode = rotationMode;
             return this;
         }
 

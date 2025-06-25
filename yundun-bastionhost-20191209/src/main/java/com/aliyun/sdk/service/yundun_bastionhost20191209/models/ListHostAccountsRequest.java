@@ -27,6 +27,10 @@ public class ListHostAccountsRequest extends Request {
     private String hostId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostIds")
+    private String hostIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -51,6 +55,7 @@ public class ListHostAccountsRequest extends Request {
         super(builder);
         this.hostAccountName = builder.hostAccountName;
         this.hostId = builder.hostId;
+        this.hostIds = builder.hostIds;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -83,6 +88,13 @@ public class ListHostAccountsRequest extends Request {
      */
     public String getHostId() {
         return this.hostId;
+    }
+
+    /**
+     * @return hostIds
+     */
+    public String getHostIds() {
+        return this.hostIds;
     }
 
     /**
@@ -123,6 +135,7 @@ public class ListHostAccountsRequest extends Request {
     public static final class Builder extends Request.Builder<ListHostAccountsRequest, Builder> {
         private String hostAccountName; 
         private String hostId; 
+        private String hostIds; 
         private String instanceId; 
         private String pageNumber; 
         private String pageSize; 
@@ -137,6 +150,7 @@ public class ListHostAccountsRequest extends Request {
             super(request);
             this.hostAccountName = request.hostAccountName;
             this.hostId = request.hostId;
+            this.hostIds = request.hostIds;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -169,6 +183,15 @@ public class ListHostAccountsRequest extends Request {
         public Builder hostId(String hostId) {
             this.putQueryParameter("HostId", hostId);
             this.hostId = hostId;
+            return this;
+        }
+
+        /**
+         * HostIds.
+         */
+        public Builder hostIds(String hostIds) {
+            this.putQueryParameter("HostIds", hostIds);
+            this.hostIds = hostIds;
             return this;
         }
 

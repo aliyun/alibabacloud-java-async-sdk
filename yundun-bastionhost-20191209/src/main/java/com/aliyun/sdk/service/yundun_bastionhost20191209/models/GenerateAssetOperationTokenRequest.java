@@ -359,7 +359,7 @@ public class GenerateAssetOperationTokenRequest extends Request {
          * <li><strong>SID</strong></li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is available only for bastion hosts that run V3.2.44 or later.</p>
+         * <p> This parameter is available only for Bastionhost V3.2.44 and later.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -375,10 +375,10 @@ public class GenerateAssetOperationTokenRequest extends Request {
          * <p>The O&amp;M logon method. Valid values:</p>
          * <ul>
          * <li><strong>WebToken</strong>: O&amp;M token-based logon.</li>
-         * <li><strong>Sso</strong>: Local client-based logon.</li>
+         * <li><strong>Sso</strong>: local client-based logon.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is available only for bastion hosts that run V3.2.44 or later. If you do not specify this parameter, the default value WebToken is used.</p>
+         * <p> This parameter is available only for Bastionhost V3.2.44 and later. If you do not specify this parameter, the default value WebToken is used.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -391,7 +391,10 @@ public class GenerateAssetOperationTokenRequest extends Request {
         }
 
         /**
-         * OperationNote.
+         * <p>The logon remarks. This parameter is required if an administrator enables the feature of logon remarks on the Control Policies page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>comment</p>
          */
         public Builder operationNote(String operationNote) {
             this.putQueryParameter("OperationNote", operationNote);
@@ -421,7 +424,7 @@ public class GenerateAssetOperationTokenRequest extends Request {
          * <li><strong>sftp</strong>: Perform O&amp;M operations on Linux assets by connecting to a bastion host from a Secure File Transfer Protocol (SFTP) client.</li>
          * </ul>
          * <blockquote>
-         * <p> This parameter is available only for bastion hosts that run V3.2.44 or later.</p>
+         * <p> This parameter is available only for Bastionhost V3.2.44 and later.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -298,7 +298,16 @@ public class ModifyHostRequest extends Request {
         }
 
         /**
-         * PrefKex.
+         * <p>The preferred key exchange algorithm of the host. If you set OSType to Linux, you can modify this parameter. Valid values:</p>
+         * <ul>
+         * <li><strong>default</strong></li>
+         * <li><strong>diffie-hellman-group1-sha1</strong></li>
+         * <li><strong>diffie-hellman-group14-sha1</strong></li>
+         * <li><strong>diffie-hellman-group-exchange-sha1</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         public Builder prefKex(String prefKex) {
             this.putQueryParameter("PrefKex", prefKex);

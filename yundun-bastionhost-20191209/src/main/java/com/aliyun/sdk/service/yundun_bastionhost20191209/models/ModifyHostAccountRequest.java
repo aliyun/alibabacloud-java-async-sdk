@@ -48,8 +48,16 @@ public class ModifyHostAccountRequest extends Request {
     private String privateKey;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivilegeType")
+    private String privilegeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RotationMode")
+    private String rotationMode;
 
     private ModifyHostAccountRequest(Builder builder) {
         super(builder);
@@ -60,7 +68,9 @@ public class ModifyHostAccountRequest extends Request {
         this.passPhrase = builder.passPhrase;
         this.password = builder.password;
         this.privateKey = builder.privateKey;
+        this.privilegeType = builder.privilegeType;
         this.regionId = builder.regionId;
+        this.rotationMode = builder.rotationMode;
     }
 
     public static Builder builder() {
@@ -126,10 +136,24 @@ public class ModifyHostAccountRequest extends Request {
     }
 
     /**
+     * @return privilegeType
+     */
+    public String getPrivilegeType() {
+        return this.privilegeType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return rotationMode
+     */
+    public String getRotationMode() {
+        return this.rotationMode;
     }
 
     public static final class Builder extends Request.Builder<ModifyHostAccountRequest, Builder> {
@@ -140,7 +164,9 @@ public class ModifyHostAccountRequest extends Request {
         private String passPhrase; 
         private String password; 
         private String privateKey; 
+        private String privilegeType; 
         private String regionId; 
+        private String rotationMode; 
 
         private Builder() {
             super();
@@ -155,7 +181,9 @@ public class ModifyHostAccountRequest extends Request {
             this.passPhrase = request.passPhrase;
             this.password = request.password;
             this.privateKey = request.privateKey;
+            this.privilegeType = request.privilegeType;
             this.regionId = request.regionId;
+            this.rotationMode = request.rotationMode;
         } 
 
         /**
@@ -260,6 +288,15 @@ public class ModifyHostAccountRequest extends Request {
         }
 
         /**
+         * PrivilegeType.
+         */
+        public Builder privilegeType(String privilegeType) {
+            this.putQueryParameter("PrivilegeType", privilegeType);
+            this.privilegeType = privilegeType;
+            return this;
+        }
+
+        /**
          * <p>The region ID of the bastion host in which you want to query the details of the host account.</p>
          * <blockquote>
          * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
@@ -271,6 +308,15 @@ public class ModifyHostAccountRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * RotationMode.
+         */
+        public Builder rotationMode(String rotationMode) {
+            this.putQueryParameter("RotationMode", rotationMode);
+            this.rotationMode = rotationMode;
             return this;
         }
 
