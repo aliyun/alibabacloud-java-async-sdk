@@ -1340,6 +1340,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CameraRedirect")
         private String cameraRedirect;
 
+        @com.aliyun.core.annotation.NameInMap("ClientControlMenu")
+        private String clientControlMenu;
+
         @com.aliyun.core.annotation.NameInMap("ClientTypes")
         private java.util.List<ClientTypes> clientTypes;
 
@@ -1348,6 +1351,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ColorEnhancement")
         private String colorEnhancement;
+
+        @com.aliyun.core.annotation.NameInMap("CpdDriveClipboard")
+        private String cpdDriveClipboard;
 
         @com.aliyun.core.annotation.NameInMap("CpuDownGradeDuration")
         private Integer cpuDownGradeDuration;
@@ -1408,6 +1414,15 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("FileTransfer")
         private String fileTransfer;
+
+        @com.aliyun.core.annotation.NameInMap("FileTransferAddress")
+        private String fileTransferAddress;
+
+        @com.aliyun.core.annotation.NameInMap("FileTransferSpeed")
+        private String fileTransferSpeed;
+
+        @com.aliyun.core.annotation.NameInMap("FileTransferSpeedLocation")
+        private String fileTransferSpeedLocation;
 
         @com.aliyun.core.annotation.NameInMap("GpuAcceleration")
         private String gpuAcceleration;
@@ -1556,6 +1571,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScopeValue")
         private java.util.List<String> scopeValue;
 
+        @com.aliyun.core.annotation.NameInMap("ScreenDisplayMode")
+        private String screenDisplayMode;
+
         @com.aliyun.core.annotation.NameInMap("SmoothEnhancement")
         private String smoothEnhancement;
 
@@ -1573,6 +1591,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("UsbSupplyRedirectRule")
         private java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule;
+
+        @com.aliyun.core.annotation.NameInMap("UseTime")
+        private String useTime;
 
         @com.aliyun.core.annotation.NameInMap("VideoEncAvgKbps")
         private Integer videoEncAvgKbps;
@@ -1646,9 +1667,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.authorizeAccessPolicyRules = builder.authorizeAccessPolicyRules;
             this.authorizeSecurityPolicyRules = builder.authorizeSecurityPolicyRules;
             this.cameraRedirect = builder.cameraRedirect;
+            this.clientControlMenu = builder.clientControlMenu;
             this.clientTypes = builder.clientTypes;
             this.clipboard = builder.clipboard;
             this.colorEnhancement = builder.colorEnhancement;
+            this.cpdDriveClipboard = builder.cpdDriveClipboard;
             this.cpuDownGradeDuration = builder.cpuDownGradeDuration;
             this.cpuProcessors = builder.cpuProcessors;
             this.cpuProtectedMode = builder.cpuProtectedMode;
@@ -1669,6 +1692,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.endUserGroupCoordinate = builder.endUserGroupCoordinate;
             this.fileMigrate = builder.fileMigrate;
             this.fileTransfer = builder.fileTransfer;
+            this.fileTransferAddress = builder.fileTransferAddress;
+            this.fileTransferSpeed = builder.fileTransferSpeed;
+            this.fileTransferSpeedLocation = builder.fileTransferSpeedLocation;
             this.gpuAcceleration = builder.gpuAcceleration;
             this.html5Access = builder.html5Access;
             this.html5FileTransfer = builder.html5FileTransfer;
@@ -1718,12 +1744,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.safeMenu = builder.safeMenu;
             this.scope = builder.scope;
             this.scopeValue = builder.scopeValue;
+            this.screenDisplayMode = builder.screenDisplayMode;
             this.smoothEnhancement = builder.smoothEnhancement;
             this.statusMonitor = builder.statusMonitor;
             this.streamingMode = builder.streamingMode;
             this.targetFps = builder.targetFps;
             this.usbRedirect = builder.usbRedirect;
             this.usbSupplyRedirectRule = builder.usbSupplyRedirectRule;
+            this.useTime = builder.useTime;
             this.videoEncAvgKbps = builder.videoEncAvgKbps;
             this.videoEncMaxQP = builder.videoEncMaxQP;
             this.videoEncMinQP = builder.videoEncMinQP;
@@ -1792,6 +1820,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return clientControlMenu
+         */
+        public String getClientControlMenu() {
+            return this.clientControlMenu;
+        }
+
+        /**
          * @return clientTypes
          */
         public java.util.List<ClientTypes> getClientTypes() {
@@ -1810,6 +1845,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getColorEnhancement() {
             return this.colorEnhancement;
+        }
+
+        /**
+         * @return cpdDriveClipboard
+         */
+        public String getCpdDriveClipboard() {
+            return this.cpdDriveClipboard;
         }
 
         /**
@@ -1950,6 +1992,27 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getFileTransfer() {
             return this.fileTransfer;
+        }
+
+        /**
+         * @return fileTransferAddress
+         */
+        public String getFileTransferAddress() {
+            return this.fileTransferAddress;
+        }
+
+        /**
+         * @return fileTransferSpeed
+         */
+        public String getFileTransferSpeed() {
+            return this.fileTransferSpeed;
+        }
+
+        /**
+         * @return fileTransferSpeedLocation
+         */
+        public String getFileTransferSpeedLocation() {
+            return this.fileTransferSpeedLocation;
         }
 
         /**
@@ -2296,6 +2359,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return screenDisplayMode
+         */
+        public String getScreenDisplayMode() {
+            return this.screenDisplayMode;
+        }
+
+        /**
          * @return smoothEnhancement
          */
         public String getSmoothEnhancement() {
@@ -2335,6 +2405,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public java.util.List<UsbSupplyRedirectRule> getUsbSupplyRedirectRule() {
             return this.usbSupplyRedirectRule;
+        }
+
+        /**
+         * @return useTime
+         */
+        public String getUseTime() {
+            return this.useTime;
         }
 
         /**
@@ -2497,9 +2574,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private java.util.List<AuthorizeAccessPolicyRules> authorizeAccessPolicyRules; 
             private java.util.List<AuthorizeSecurityPolicyRules> authorizeSecurityPolicyRules; 
             private String cameraRedirect; 
+            private String clientControlMenu; 
             private java.util.List<ClientTypes> clientTypes; 
             private String clipboard; 
             private String colorEnhancement; 
+            private String cpdDriveClipboard; 
             private Integer cpuDownGradeDuration; 
             private java.util.List<String> cpuProcessors; 
             private String cpuProtectedMode; 
@@ -2520,6 +2599,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String endUserGroupCoordinate; 
             private String fileMigrate; 
             private String fileTransfer; 
+            private String fileTransferAddress; 
+            private String fileTransferSpeed; 
+            private String fileTransferSpeedLocation; 
             private String gpuAcceleration; 
             private String html5Access; 
             private String html5FileTransfer; 
@@ -2569,12 +2651,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String safeMenu; 
             private String scope; 
             private java.util.List<String> scopeValue; 
+            private String screenDisplayMode; 
             private String smoothEnhancement; 
             private String statusMonitor; 
             private String streamingMode; 
             private Integer targetFps; 
             private String usbRedirect; 
             private java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule; 
+            private String useTime; 
             private Integer videoEncAvgKbps; 
             private Integer videoEncMaxQP; 
             private Integer videoEncMinQP; 
@@ -2607,9 +2691,11 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.authorizeAccessPolicyRules = model.authorizeAccessPolicyRules;
                 this.authorizeSecurityPolicyRules = model.authorizeSecurityPolicyRules;
                 this.cameraRedirect = model.cameraRedirect;
+                this.clientControlMenu = model.clientControlMenu;
                 this.clientTypes = model.clientTypes;
                 this.clipboard = model.clipboard;
                 this.colorEnhancement = model.colorEnhancement;
+                this.cpdDriveClipboard = model.cpdDriveClipboard;
                 this.cpuDownGradeDuration = model.cpuDownGradeDuration;
                 this.cpuProcessors = model.cpuProcessors;
                 this.cpuProtectedMode = model.cpuProtectedMode;
@@ -2630,6 +2716,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.endUserGroupCoordinate = model.endUserGroupCoordinate;
                 this.fileMigrate = model.fileMigrate;
                 this.fileTransfer = model.fileTransfer;
+                this.fileTransferAddress = model.fileTransferAddress;
+                this.fileTransferSpeed = model.fileTransferSpeed;
+                this.fileTransferSpeedLocation = model.fileTransferSpeedLocation;
                 this.gpuAcceleration = model.gpuAcceleration;
                 this.html5Access = model.html5Access;
                 this.html5FileTransfer = model.html5FileTransfer;
@@ -2679,12 +2768,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
                 this.safeMenu = model.safeMenu;
                 this.scope = model.scope;
                 this.scopeValue = model.scopeValue;
+                this.screenDisplayMode = model.screenDisplayMode;
                 this.smoothEnhancement = model.smoothEnhancement;
                 this.statusMonitor = model.statusMonitor;
                 this.streamingMode = model.streamingMode;
                 this.targetFps = model.targetFps;
                 this.usbRedirect = model.usbRedirect;
                 this.usbSupplyRedirectRule = model.usbSupplyRedirectRule;
+                this.useTime = model.useTime;
                 this.videoEncAvgKbps = model.videoEncAvgKbps;
                 this.videoEncMaxQP = model.videoEncMaxQP;
                 this.videoEncMinQP = model.videoEncMinQP;
@@ -2772,6 +2863,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * ClientControlMenu.
+             */
+            public Builder clientControlMenu(String clientControlMenu) {
+                this.clientControlMenu = clientControlMenu;
+                return this;
+            }
+
+            /**
              * <p>The logon method control rules to limit the type of the Alibaba Cloud Workspace client used by end users to connect to cloud computers.</p>
              */
             public Builder clientTypes(java.util.List<ClientTypes> clientTypes) {
@@ -2810,6 +2909,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder colorEnhancement(String colorEnhancement) {
                 this.colorEnhancement = colorEnhancement;
+                return this;
+            }
+
+            /**
+             * CpdDriveClipboard.
+             */
+            public Builder cpdDriveClipboard(String cpdDriveClipboard) {
+                this.cpdDriveClipboard = cpdDriveClipboard;
                 return this;
             }
 
@@ -3044,6 +3151,30 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder fileTransfer(String fileTransfer) {
                 this.fileTransfer = fileTransfer;
+                return this;
+            }
+
+            /**
+             * FileTransferAddress.
+             */
+            public Builder fileTransferAddress(String fileTransferAddress) {
+                this.fileTransferAddress = fileTransferAddress;
+                return this;
+            }
+
+            /**
+             * FileTransferSpeed.
+             */
+            public Builder fileTransferSpeed(String fileTransferSpeed) {
+                this.fileTransferSpeed = fileTransferSpeed;
+                return this;
+            }
+
+            /**
+             * FileTransferSpeedLocation.
+             */
+            public Builder fileTransferSpeedLocation(String fileTransferSpeedLocation) {
+                this.fileTransferSpeedLocation = fileTransferSpeedLocation;
                 return this;
             }
 
@@ -3693,6 +3824,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * ScreenDisplayMode.
+             */
+            public Builder screenDisplayMode(String screenDisplayMode) {
+                this.screenDisplayMode = screenDisplayMode;
+                return this;
+            }
+
+            /**
              * <p>Indicates whether the Smooth Enhancement switch is turned on.</p>
              * <p>Valid values:</p>
              * <ul>
@@ -3771,6 +3910,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder usbSupplyRedirectRule(java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule) {
                 this.usbSupplyRedirectRule = usbSupplyRedirectRule;
+                return this;
+            }
+
+            /**
+             * UseTime.
+             */
+            public Builder useTime(String useTime) {
+                this.useTime = useTime;
                 return this;
             }
 

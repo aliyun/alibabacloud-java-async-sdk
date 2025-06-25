@@ -43,6 +43,10 @@ public class ModifyCenterPolicyRequest extends Request {
     private String cameraRedirect;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientControlMenu")
+    private String clientControlMenu;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientType")
     private java.util.List<ClientType> clientType;
 
@@ -53,6 +57,10 @@ public class ModifyCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ColorEnhancement")
     private String colorEnhancement;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CpdDriveClipboard")
+    private String cpdDriveClipboard;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CpuDownGradeDuration")
@@ -125,6 +133,18 @@ public class ModifyCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FileMigrate")
     private String fileMigrate;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileTransferAddress")
+    private String fileTransferAddress;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileTransferSpeed")
+    private String fileTransferSpeed;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileTransferSpeedLocation")
+    private String fileTransferSpeedLocation;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GpuAcceleration")
@@ -318,6 +338,10 @@ public class ModifyCenterPolicyRequest extends Request {
     private java.util.List<String> scopeValue;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScreenDisplayMode")
+    private String screenDisplayMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SessionMaxRateKbps")
     private Integer sessionMaxRateKbps;
 
@@ -348,6 +372,10 @@ public class ModifyCenterPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UsbSupplyRedirectRule")
     private java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseTime")
+    private String useTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VideoEncAvgKbps")
@@ -445,9 +473,11 @@ public class ModifyCenterPolicyRequest extends Request {
         this.authorizeSecurityPolicyRule = builder.authorizeSecurityPolicyRule;
         this.businessType = builder.businessType;
         this.cameraRedirect = builder.cameraRedirect;
+        this.clientControlMenu = builder.clientControlMenu;
         this.clientType = builder.clientType;
         this.clipboard = builder.clipboard;
         this.colorEnhancement = builder.colorEnhancement;
+        this.cpdDriveClipboard = builder.cpdDriveClipboard;
         this.cpuDownGradeDuration = builder.cpuDownGradeDuration;
         this.cpuProcessors = builder.cpuProcessors;
         this.cpuProtectedMode = builder.cpuProtectedMode;
@@ -466,6 +496,9 @@ public class ModifyCenterPolicyRequest extends Request {
         this.endUserApplyAdminCoordinate = builder.endUserApplyAdminCoordinate;
         this.endUserGroupCoordinate = builder.endUserGroupCoordinate;
         this.fileMigrate = builder.fileMigrate;
+        this.fileTransferAddress = builder.fileTransferAddress;
+        this.fileTransferSpeed = builder.fileTransferSpeed;
+        this.fileTransferSpeedLocation = builder.fileTransferSpeedLocation;
         this.gpuAcceleration = builder.gpuAcceleration;
         this.html5FileTransfer = builder.html5FileTransfer;
         this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
@@ -513,6 +546,7 @@ public class ModifyCenterPolicyRequest extends Request {
         this.safeMenu = builder.safeMenu;
         this.scope = builder.scope;
         this.scopeValue = builder.scopeValue;
+        this.screenDisplayMode = builder.screenDisplayMode;
         this.sessionMaxRateKbps = builder.sessionMaxRateKbps;
         this.smoothEnhancement = builder.smoothEnhancement;
         this.statusMonitor = builder.statusMonitor;
@@ -521,6 +555,7 @@ public class ModifyCenterPolicyRequest extends Request {
         this.taskbar = builder.taskbar;
         this.usbRedirect = builder.usbRedirect;
         this.usbSupplyRedirectRule = builder.usbSupplyRedirectRule;
+        this.useTime = builder.useTime;
         this.videoEncAvgKbps = builder.videoEncAvgKbps;
         this.videoEncMaxQP = builder.videoEncMaxQP;
         this.videoEncMinQP = builder.videoEncMinQP;
@@ -601,6 +636,13 @@ public class ModifyCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return clientControlMenu
+     */
+    public String getClientControlMenu() {
+        return this.clientControlMenu;
+    }
+
+    /**
      * @return clientType
      */
     public java.util.List<ClientType> getClientType() {
@@ -619,6 +661,13 @@ public class ModifyCenterPolicyRequest extends Request {
      */
     public String getColorEnhancement() {
         return this.colorEnhancement;
+    }
+
+    /**
+     * @return cpdDriveClipboard
+     */
+    public String getCpdDriveClipboard() {
+        return this.cpdDriveClipboard;
     }
 
     /**
@@ -745,6 +794,27 @@ public class ModifyCenterPolicyRequest extends Request {
      */
     public String getFileMigrate() {
         return this.fileMigrate;
+    }
+
+    /**
+     * @return fileTransferAddress
+     */
+    public String getFileTransferAddress() {
+        return this.fileTransferAddress;
+    }
+
+    /**
+     * @return fileTransferSpeed
+     */
+    public String getFileTransferSpeed() {
+        return this.fileTransferSpeed;
+    }
+
+    /**
+     * @return fileTransferSpeedLocation
+     */
+    public String getFileTransferSpeedLocation() {
+        return this.fileTransferSpeedLocation;
     }
 
     /**
@@ -1077,6 +1147,13 @@ public class ModifyCenterPolicyRequest extends Request {
     }
 
     /**
+     * @return screenDisplayMode
+     */
+    public String getScreenDisplayMode() {
+        return this.screenDisplayMode;
+    }
+
+    /**
      * @return sessionMaxRateKbps
      */
     public Integer getSessionMaxRateKbps() {
@@ -1130,6 +1207,13 @@ public class ModifyCenterPolicyRequest extends Request {
      */
     public java.util.List<UsbSupplyRedirectRule> getUsbSupplyRedirectRule() {
         return this.usbSupplyRedirectRule;
+    }
+
+    /**
+     * @return useTime
+     */
+    public String getUseTime() {
+        return this.useTime;
     }
 
     /**
@@ -1293,9 +1377,11 @@ public class ModifyCenterPolicyRequest extends Request {
         private java.util.List<AuthorizeSecurityPolicyRule> authorizeSecurityPolicyRule; 
         private Integer businessType; 
         private String cameraRedirect; 
+        private String clientControlMenu; 
         private java.util.List<ClientType> clientType; 
         private String clipboard; 
         private String colorEnhancement; 
+        private String cpdDriveClipboard; 
         private Integer cpuDownGradeDuration; 
         private java.util.List<String> cpuProcessors; 
         private String cpuProtectedMode; 
@@ -1314,6 +1400,9 @@ public class ModifyCenterPolicyRequest extends Request {
         private String endUserApplyAdminCoordinate; 
         private String endUserGroupCoordinate; 
         private String fileMigrate; 
+        private String fileTransferAddress; 
+        private String fileTransferSpeed; 
+        private String fileTransferSpeedLocation; 
         private String gpuAcceleration; 
         private String html5FileTransfer; 
         private String internetCommunicationProtocol; 
@@ -1361,6 +1450,7 @@ public class ModifyCenterPolicyRequest extends Request {
         private String safeMenu; 
         private String scope; 
         private java.util.List<String> scopeValue; 
+        private String screenDisplayMode; 
         private Integer sessionMaxRateKbps; 
         private String smoothEnhancement; 
         private String statusMonitor; 
@@ -1369,6 +1459,7 @@ public class ModifyCenterPolicyRequest extends Request {
         private String taskbar; 
         private String usbRedirect; 
         private java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule; 
+        private String useTime; 
         private Integer videoEncAvgKbps; 
         private Integer videoEncMaxQP; 
         private Integer videoEncMinQP; 
@@ -1404,9 +1495,11 @@ public class ModifyCenterPolicyRequest extends Request {
             this.authorizeSecurityPolicyRule = request.authorizeSecurityPolicyRule;
             this.businessType = request.businessType;
             this.cameraRedirect = request.cameraRedirect;
+            this.clientControlMenu = request.clientControlMenu;
             this.clientType = request.clientType;
             this.clipboard = request.clipboard;
             this.colorEnhancement = request.colorEnhancement;
+            this.cpdDriveClipboard = request.cpdDriveClipboard;
             this.cpuDownGradeDuration = request.cpuDownGradeDuration;
             this.cpuProcessors = request.cpuProcessors;
             this.cpuProtectedMode = request.cpuProtectedMode;
@@ -1425,6 +1518,9 @@ public class ModifyCenterPolicyRequest extends Request {
             this.endUserApplyAdminCoordinate = request.endUserApplyAdminCoordinate;
             this.endUserGroupCoordinate = request.endUserGroupCoordinate;
             this.fileMigrate = request.fileMigrate;
+            this.fileTransferAddress = request.fileTransferAddress;
+            this.fileTransferSpeed = request.fileTransferSpeed;
+            this.fileTransferSpeedLocation = request.fileTransferSpeedLocation;
             this.gpuAcceleration = request.gpuAcceleration;
             this.html5FileTransfer = request.html5FileTransfer;
             this.internetCommunicationProtocol = request.internetCommunicationProtocol;
@@ -1472,6 +1568,7 @@ public class ModifyCenterPolicyRequest extends Request {
             this.safeMenu = request.safeMenu;
             this.scope = request.scope;
             this.scopeValue = request.scopeValue;
+            this.screenDisplayMode = request.screenDisplayMode;
             this.sessionMaxRateKbps = request.sessionMaxRateKbps;
             this.smoothEnhancement = request.smoothEnhancement;
             this.statusMonitor = request.statusMonitor;
@@ -1480,6 +1577,7 @@ public class ModifyCenterPolicyRequest extends Request {
             this.taskbar = request.taskbar;
             this.usbRedirect = request.usbRedirect;
             this.usbSupplyRedirectRule = request.usbSupplyRedirectRule;
+            this.useTime = request.useTime;
             this.videoEncAvgKbps = request.videoEncAvgKbps;
             this.videoEncMaxQP = request.videoEncMaxQP;
             this.videoEncMinQP = request.videoEncMinQP;
@@ -1596,6 +1694,15 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
+         * ClientControlMenu.
+         */
+        public Builder clientControlMenu(String clientControlMenu) {
+            this.putQueryParameter("ClientControlMenu", clientControlMenu);
+            this.clientControlMenu = clientControlMenu;
+            return this;
+        }
+
+        /**
          * <p>The types of Alibaba Cloud Workspace clients that end users can use to connect to cloud computers.</p>
          */
         public Builder clientType(java.util.List<ClientType> clientType) {
@@ -1637,6 +1744,15 @@ public class ModifyCenterPolicyRequest extends Request {
         public Builder colorEnhancement(String colorEnhancement) {
             this.putQueryParameter("ColorEnhancement", colorEnhancement);
             this.colorEnhancement = colorEnhancement;
+            return this;
+        }
+
+        /**
+         * CpdDriveClipboard.
+         */
+        public Builder cpdDriveClipboard(String cpdDriveClipboard) {
+            this.putQueryParameter("CpdDriveClipboard", cpdDriveClipboard);
+            this.cpdDriveClipboard = cpdDriveClipboard;
             return this;
         }
 
@@ -1894,6 +2010,33 @@ public class ModifyCenterPolicyRequest extends Request {
         public Builder fileMigrate(String fileMigrate) {
             this.putQueryParameter("FileMigrate", fileMigrate);
             this.fileMigrate = fileMigrate;
+            return this;
+        }
+
+        /**
+         * FileTransferAddress.
+         */
+        public Builder fileTransferAddress(String fileTransferAddress) {
+            this.putQueryParameter("FileTransferAddress", fileTransferAddress);
+            this.fileTransferAddress = fileTransferAddress;
+            return this;
+        }
+
+        /**
+         * FileTransferSpeed.
+         */
+        public Builder fileTransferSpeed(String fileTransferSpeed) {
+            this.putQueryParameter("FileTransferSpeed", fileTransferSpeed);
+            this.fileTransferSpeed = fileTransferSpeed;
+            return this;
+        }
+
+        /**
+         * FileTransferSpeedLocation.
+         */
+        public Builder fileTransferSpeedLocation(String fileTransferSpeedLocation) {
+            this.putQueryParameter("FileTransferSpeedLocation", fileTransferSpeedLocation);
+            this.fileTransferSpeedLocation = fileTransferSpeedLocation;
             return this;
         }
 
@@ -2555,6 +2698,15 @@ public class ModifyCenterPolicyRequest extends Request {
         }
 
         /**
+         * ScreenDisplayMode.
+         */
+        public Builder screenDisplayMode(String screenDisplayMode) {
+            this.putQueryParameter("ScreenDisplayMode", screenDisplayMode);
+            this.screenDisplayMode = screenDisplayMode;
+            return this;
+        }
+
+        /**
          * <p>The bandwidth peak allowed for sessions. Unit: Kbit/s. Valid values: 2000 to 100000.</p>
          * 
          * <strong>example:</strong>
@@ -2672,6 +2824,15 @@ public class ModifyCenterPolicyRequest extends Request {
         public Builder usbSupplyRedirectRule(java.util.List<UsbSupplyRedirectRule> usbSupplyRedirectRule) {
             this.putQueryParameter("UsbSupplyRedirectRule", usbSupplyRedirectRule);
             this.usbSupplyRedirectRule = usbSupplyRedirectRule;
+            return this;
+        }
+
+        /**
+         * UseTime.
+         */
+        public Builder useTime(String useTime) {
+            this.putQueryParameter("UseTime", useTime);
+            this.useTime = useTime;
             return this;
         }
 

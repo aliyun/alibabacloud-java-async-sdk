@@ -3798,7 +3798,7 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="~~ModifyTemplate~~">ModifyTemplate</a> operation.</p>
+     * <p>You can use this operation to modify only the name and description of a custom cloud computer template. To change other parameters of the template, use the <a href="https://help.aliyun.com/document_detail/2925841.html">ModifyTemplate</a> operation.</p>
      * 
      * @param request the request parameters of ModifyTemplateBaseInfo  ModifyTemplateBaseInfoRequest
      * @return ModifyTemplateBaseInfoResponse
