@@ -39,6 +39,10 @@ public class CreateApplicationRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProcessVariables")
+    private java.util.Map<String, ?> processVariables;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -58,6 +62,7 @@ public class CreateApplicationRequest extends Request {
         this.configuration = builder.configuration;
         this.instances = builder.instances;
         this.name = builder.name;
+        this.processVariables = builder.processVariables;
         this.resourceGroupId = builder.resourceGroupId;
         this.templateId = builder.templateId;
         this.variables = builder.variables;
@@ -112,6 +117,13 @@ public class CreateApplicationRequest extends Request {
     }
 
     /**
+     * @return processVariables
+     */
+    public java.util.Map<String, ?> getProcessVariables() {
+        return this.processVariables;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -138,6 +150,7 @@ public class CreateApplicationRequest extends Request {
         private java.util.Map<String, String> configuration; 
         private java.util.List<Instances> instances; 
         private String name; 
+        private java.util.Map<String, ?> processVariables; 
         private String resourceGroupId; 
         private String templateId; 
         private java.util.Map<String, ?> variables; 
@@ -153,6 +166,7 @@ public class CreateApplicationRequest extends Request {
             this.configuration = request.configuration;
             this.instances = request.instances;
             this.name = request.name;
+            this.processVariables = request.processVariables;
             this.resourceGroupId = request.resourceGroupId;
             this.templateId = request.templateId;
             this.variables = request.variables;
@@ -219,6 +233,16 @@ public class CreateApplicationRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * ProcessVariables.
+         */
+        public Builder processVariables(java.util.Map<String, ?> processVariables) {
+            String processVariablesShrink = shrink(processVariables, "ProcessVariables", "json");
+            this.putBodyParameter("ProcessVariables", processVariablesShrink);
+            this.processVariables = processVariables;
             return this;
         }
 
