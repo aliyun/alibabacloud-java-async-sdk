@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateApiExportResponse> createApiExport(CreateApiExportRequest request);
 
     /**
+     * @param request the request parameters of CreateCerts  CreateCertsRequest
+     * @return CreateCertsResponse
+     */
+    CompletableFuture<CreateCertsResponse> createCerts(CreateCertsRequest request);
+
+    /**
      * @param request the request parameters of CreateCloudResource  CreateCloudResourceRequest
      * @return CreateCloudResourceResponse
      */
@@ -423,6 +429,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDomainDetailResponse
      */
     CompletableFuture<DescribeDomainDetailResponse> describeDomainDetail(DescribeDomainDetailRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDomainUsedPorts  DescribeDomainUsedPortsRequest
+     * @return DescribeDomainUsedPortsResponse
+     */
+    CompletableFuture<DescribeDomainUsedPortsResponse> describeDomainUsedPorts(DescribeDomainUsedPortsRequest request);
 
     /**
      * @param request the request parameters of DescribeDomains  DescribeDomainsRequest
