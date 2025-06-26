@@ -581,6 +581,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAICoachTaskSessionResourceUsage  GetAICoachTaskSessionResourceUsageRequest
+     * @return GetAICoachTaskSessionResourceUsageResponse
+     */
+    @Override
+    public CompletableFuture<GetAICoachTaskSessionResourceUsageResponse> getAICoachTaskSessionResourceUsage(GetAICoachTaskSessionResourceUsageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetAICoachTaskSessionResourceUsage").setMethod(HttpMethod.GET).setPathRegex("/yic/yic-console/openService/v1/aicoach/getSessionResourceUsage").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAICoachTaskSessionResourceUsageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAICoachTaskSessionResourceUsageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetIllustration  GetIllustrationRequest
      * @return GetIllustrationResponse
      */

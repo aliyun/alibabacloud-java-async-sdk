@@ -35,6 +35,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("coverUrl")
     private String coverUrl;
 
+    @com.aliyun.core.annotation.NameInMap("customReplyRules")
+    private java.util.List<CustomReplyRules> customReplyRules;
+
     @com.aliyun.core.annotation.NameInMap("dialogueInputTextLimit")
     private Integer dialogueInputTextLimit;
 
@@ -135,6 +138,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         this.closingRemarks = builder.closingRemarks;
         this.completeStrategy = builder.completeStrategy;
         this.coverUrl = builder.coverUrl;
+        this.customReplyRules = builder.customReplyRules;
         this.dialogueInputTextLimit = builder.dialogueInputTextLimit;
         this.dialogueTextFlag = builder.dialogueTextFlag;
         this.dialogueTipFlag = builder.dialogueTipFlag;
@@ -220,6 +224,13 @@ public class GetAICoachScriptResponseBody extends TeaModel {
      */
     public String getCoverUrl() {
         return this.coverUrl;
+    }
+
+    /**
+     * @return customReplyRules
+     */
+    public java.util.List<CustomReplyRules> getCustomReplyRules() {
+        return this.customReplyRules;
     }
 
     /**
@@ -446,6 +457,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         private String closingRemarks; 
         private CompleteStrategy completeStrategy; 
         private String coverUrl; 
+        private java.util.List<CustomReplyRules> customReplyRules; 
         private Integer dialogueInputTextLimit; 
         private Boolean dialogueTextFlag; 
         private Boolean dialogueTipFlag; 
@@ -488,6 +500,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             this.closingRemarks = model.closingRemarks;
             this.completeStrategy = model.completeStrategy;
             this.coverUrl = model.coverUrl;
+            this.customReplyRules = model.customReplyRules;
             this.dialogueInputTextLimit = model.dialogueInputTextLimit;
             this.dialogueTextFlag = model.dialogueTextFlag;
             this.dialogueTipFlag = model.dialogueTipFlag;
@@ -566,6 +579,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
          */
         public Builder coverUrl(String coverUrl) {
             this.coverUrl = coverUrl;
+            return this;
+        }
+
+        /**
+         * customReplyRules.
+         */
+        public Builder customReplyRules(java.util.List<CustomReplyRules> customReplyRules) {
+            this.customReplyRules = customReplyRules;
             return this;
         }
 
@@ -1052,6 +1073,477 @@ public class GetAICoachScriptResponseBody extends TeaModel {
 
             public CompleteStrategy build() {
                 return new CompleteStrategy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAICoachScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAICoachScriptResponseBody</p>
+     */
+    public static class Parameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("assessPointId")
+        private String assessPointId;
+
+        @com.aliyun.core.annotation.NameInMap("customContent")
+        private String customContent;
+
+        private Parameters(Builder builder) {
+            this.assessPointId = builder.assessPointId;
+            this.customContent = builder.customContent;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Parameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assessPointId
+         */
+        public String getAssessPointId() {
+            return this.assessPointId;
+        }
+
+        /**
+         * @return customContent
+         */
+        public String getCustomContent() {
+            return this.customContent;
+        }
+
+        public static final class Builder {
+            private String assessPointId; 
+            private String customContent; 
+
+            private Builder() {
+            } 
+
+            private Builder(Parameters model) {
+                this.assessPointId = model.assessPointId;
+                this.customContent = model.customContent;
+            } 
+
+            /**
+             * assessPointId.
+             */
+            public Builder assessPointId(String assessPointId) {
+                this.assessPointId = assessPointId;
+                return this;
+            }
+
+            /**
+             * customContent.
+             */
+            public Builder customContent(String customContent) {
+                this.customContent = customContent;
+                return this;
+            }
+
+            public Parameters build() {
+                return new Parameters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAICoachScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAICoachScriptResponseBody</p>
+     */
+    public static class Action extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("parameters")
+        private Parameters parameters;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private Action(Builder builder) {
+            this.parameters = builder.parameters;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Action create() {
+            return builder().build();
+        }
+
+        /**
+         * @return parameters
+         */
+        public Parameters getParameters() {
+            return this.parameters;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private Parameters parameters; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Action model) {
+                this.parameters = model.parameters;
+                this.type = model.type;
+            } 
+
+            /**
+             * parameters.
+             */
+            public Builder parameters(Parameters parameters) {
+                this.parameters = parameters;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public Action build() {
+                return new Action(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAICoachScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAICoachScriptResponseBody</p>
+     */
+    public static class MainConditionParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("assessPointId")
+        private String assessPointId;
+
+        private MainConditionParameters(Builder builder) {
+            this.assessPointId = builder.assessPointId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MainConditionParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return assessPointId
+         */
+        public String getAssessPointId() {
+            return this.assessPointId;
+        }
+
+        public static final class Builder {
+            private String assessPointId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MainConditionParameters model) {
+                this.assessPointId = model.assessPointId;
+            } 
+
+            /**
+             * assessPointId.
+             */
+            public Builder assessPointId(String assessPointId) {
+                this.assessPointId = assessPointId;
+                return this;
+            }
+
+            public MainConditionParameters build() {
+                return new MainConditionParameters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAICoachScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAICoachScriptResponseBody</p>
+     */
+    public static class MainCondition extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("parameters")
+        private MainConditionParameters parameters;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private MainCondition(Builder builder) {
+            this.parameters = builder.parameters;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MainCondition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return parameters
+         */
+        public MainConditionParameters getParameters() {
+            return this.parameters;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private MainConditionParameters parameters; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(MainCondition model) {
+                this.parameters = model.parameters;
+                this.type = model.type;
+            } 
+
+            /**
+             * parameters.
+             */
+            public Builder parameters(MainConditionParameters parameters) {
+                this.parameters = parameters;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public MainCondition build() {
+                return new MainCondition(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAICoachScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAICoachScriptResponseBody</p>
+     */
+    public static class SubCondition extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private SubCondition(Builder builder) {
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SubCondition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SubCondition model) {
+                this.type = model.type;
+            } 
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public SubCondition build() {
+                return new SubCondition(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetAICoachScriptResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetAICoachScriptResponseBody</p>
+     */
+    public static class CustomReplyRules extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("action")
+        private Action action;
+
+        @com.aliyun.core.annotation.NameInMap("logic")
+        private String logic;
+
+        @com.aliyun.core.annotation.NameInMap("mainCondition")
+        private MainCondition mainCondition;
+
+        @com.aliyun.core.annotation.NameInMap("priority")
+        private Integer priority;
+
+        @com.aliyun.core.annotation.NameInMap("subCondition")
+        private SubCondition subCondition;
+
+        private CustomReplyRules(Builder builder) {
+            this.action = builder.action;
+            this.logic = builder.logic;
+            this.mainCondition = builder.mainCondition;
+            this.priority = builder.priority;
+            this.subCondition = builder.subCondition;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CustomReplyRules create() {
+            return builder().build();
+        }
+
+        /**
+         * @return action
+         */
+        public Action getAction() {
+            return this.action;
+        }
+
+        /**
+         * @return logic
+         */
+        public String getLogic() {
+            return this.logic;
+        }
+
+        /**
+         * @return mainCondition
+         */
+        public MainCondition getMainCondition() {
+            return this.mainCondition;
+        }
+
+        /**
+         * @return priority
+         */
+        public Integer getPriority() {
+            return this.priority;
+        }
+
+        /**
+         * @return subCondition
+         */
+        public SubCondition getSubCondition() {
+            return this.subCondition;
+        }
+
+        public static final class Builder {
+            private Action action; 
+            private String logic; 
+            private MainCondition mainCondition; 
+            private Integer priority; 
+            private SubCondition subCondition; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomReplyRules model) {
+                this.action = model.action;
+                this.logic = model.logic;
+                this.mainCondition = model.mainCondition;
+                this.priority = model.priority;
+                this.subCondition = model.subCondition;
+            } 
+
+            /**
+             * action.
+             */
+            public Builder action(Action action) {
+                this.action = action;
+                return this;
+            }
+
+            /**
+             * logic.
+             */
+            public Builder logic(String logic) {
+                this.logic = logic;
+                return this;
+            }
+
+            /**
+             * mainCondition.
+             */
+            public Builder mainCondition(MainCondition mainCondition) {
+                this.mainCondition = mainCondition;
+                return this;
+            }
+
+            /**
+             * priority.
+             */
+            public Builder priority(Integer priority) {
+                this.priority = priority;
+                return this;
+            }
+
+            /**
+             * subCondition.
+             */
+            public Builder subCondition(SubCondition subCondition) {
+                this.subCondition = subCondition;
+                return this;
+            }
+
+            public CustomReplyRules build() {
+                return new CustomReplyRules(this);
             } 
 
         } 
@@ -1627,14 +2119,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
      *
      * <p>GetAICoachScriptResponseBody</p>
      */
-    public static class Parameters extends TeaModel {
+    public static class AnswerListParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
-        private Parameters(Builder builder) {
+        private AnswerListParameters(Builder builder) {
             this.name = builder.name;
             this.value = builder.value;
         }
@@ -1643,7 +2135,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Parameters create() {
+        public static AnswerListParameters create() {
             return builder().build();
         }
 
@@ -1668,7 +2160,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(Parameters model) {
+            private Builder(AnswerListParameters model) {
                 this.name = model.name;
                 this.value = model.value;
             } 
@@ -1689,8 +2181,8 @@ public class GetAICoachScriptResponseBody extends TeaModel {
                 return this;
             }
 
-            public Parameters build() {
-                return new Parameters(this);
+            public AnswerListParameters build() {
+                return new AnswerListParameters(this);
             } 
 
         } 
@@ -1719,7 +2211,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         private String operators;
 
         @com.aliyun.core.annotation.NameInMap("parameters")
-        private java.util.List<Parameters> parameters;
+        private java.util.List<AnswerListParameters> parameters;
 
         @com.aliyun.core.annotation.NameInMap("type")
         private String type;
@@ -1784,7 +2276,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         /**
          * @return parameters
          */
-        public java.util.List<Parameters> getParameters() {
+        public java.util.List<AnswerListParameters> getParameters() {
             return this.parameters;
         }
 
@@ -1808,7 +2300,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             private String name; 
             private java.util.List<String> nameList; 
             private String operators; 
-            private java.util.List<Parameters> parameters; 
+            private java.util.List<AnswerListParameters> parameters; 
             private String type; 
             private Integer weight; 
 
@@ -1869,7 +2361,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             /**
              * parameters.
              */
-            public Builder parameters(java.util.List<Parameters> parameters) {
+            public Builder parameters(java.util.List<AnswerListParameters> parameters) {
                 this.parameters = parameters;
                 return this;
             }
@@ -2384,6 +2876,9 @@ public class GetAICoachScriptResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("assessmentPointEnabled")
         private Boolean assessmentPointEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("customReplyRuleEnabled")
+        private Boolean customReplyRuleEnabled;
+
         @com.aliyun.core.annotation.NameInMap("expressiveness")
         private Integer expressiveness;
 
@@ -2410,6 +2905,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             this.abilityEvaluationEnabled = builder.abilityEvaluationEnabled;
             this.assessmentPoint = builder.assessmentPoint;
             this.assessmentPointEnabled = builder.assessmentPointEnabled;
+            this.customReplyRuleEnabled = builder.customReplyRuleEnabled;
             this.expressiveness = builder.expressiveness;
             this.expressivenessEnabled = builder.expressivenessEnabled;
             this.pointDeductionRule = builder.pointDeductionRule;
@@ -2453,6 +2949,13 @@ public class GetAICoachScriptResponseBody extends TeaModel {
          */
         public Boolean getAssessmentPointEnabled() {
             return this.assessmentPointEnabled;
+        }
+
+        /**
+         * @return customReplyRuleEnabled
+         */
+        public Boolean getCustomReplyRuleEnabled() {
+            return this.customReplyRuleEnabled;
         }
 
         /**
@@ -2509,6 +3012,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
             private Boolean abilityEvaluationEnabled; 
             private Integer assessmentPoint; 
             private Boolean assessmentPointEnabled; 
+            private Boolean customReplyRuleEnabled; 
             private Integer expressiveness; 
             private Boolean expressivenessEnabled; 
             private Integer pointDeductionRule; 
@@ -2525,6 +3029,7 @@ public class GetAICoachScriptResponseBody extends TeaModel {
                 this.abilityEvaluationEnabled = model.abilityEvaluationEnabled;
                 this.assessmentPoint = model.assessmentPoint;
                 this.assessmentPointEnabled = model.assessmentPointEnabled;
+                this.customReplyRuleEnabled = model.customReplyRuleEnabled;
                 this.expressiveness = model.expressiveness;
                 this.expressivenessEnabled = model.expressivenessEnabled;
                 this.pointDeductionRule = model.pointDeductionRule;
@@ -2563,6 +3068,14 @@ public class GetAICoachScriptResponseBody extends TeaModel {
              */
             public Builder assessmentPointEnabled(Boolean assessmentPointEnabled) {
                 this.assessmentPointEnabled = assessmentPointEnabled;
+                return this;
+            }
+
+            /**
+             * customReplyRuleEnabled.
+             */
+            public Builder customReplyRuleEnabled(Boolean customReplyRuleEnabled) {
+                this.customReplyRuleEnabled = customReplyRuleEnabled;
                 return this;
             }
 
