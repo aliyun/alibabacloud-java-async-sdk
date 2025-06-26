@@ -347,6 +347,12 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("rt")
+        private Long rt;
+
+        @com.aliyun.core.annotation.NameInMap("usages")
+        private java.util.Map<String, Long> usages;
+
         private Data(Builder builder) {
             this.clusterCount = builder.clusterCount;
             this.clusterResults = builder.clusterResults;
@@ -354,6 +360,8 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
             this.maxClusteredTopicNewsSize = builder.maxClusteredTopicNewsSize;
             this.parsedNewsSize = builder.parsedNewsSize;
             this.status = builder.status;
+            this.rt = builder.rt;
+            this.usages = builder.usages;
         }
 
         public static Builder builder() {
@@ -406,6 +414,20 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return rt
+         */
+        public Long getRt() {
+            return this.rt;
+        }
+
+        /**
+         * @return usages
+         */
+        public java.util.Map<String, Long> getUsages() {
+            return this.usages;
+        }
+
         public static final class Builder {
             private Integer clusterCount; 
             private java.util.List<ClusterResults> clusterResults; 
@@ -413,6 +435,8 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
             private Integer maxClusteredTopicNewsSize; 
             private Integer parsedNewsSize; 
             private String status; 
+            private Long rt; 
+            private java.util.Map<String, Long> usages; 
 
             private Builder() {
             } 
@@ -424,6 +448,8 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
                 this.maxClusteredTopicNewsSize = model.maxClusteredTopicNewsSize;
                 this.parsedNewsSize = model.parsedNewsSize;
                 this.status = model.status;
+                this.rt = model.rt;
+                this.usages = model.usages;
             } 
 
             /**
@@ -471,6 +497,22 @@ public class GetCustomSourceTopicAnalysisTaskResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * rt.
+             */
+            public Builder rt(Long rt) {
+                this.rt = rt;
+                return this;
+            }
+
+            /**
+             * usages.
+             */
+            public Builder usages(java.util.Map<String, Long> usages) {
+                this.usages = usages;
                 return this;
             }
 

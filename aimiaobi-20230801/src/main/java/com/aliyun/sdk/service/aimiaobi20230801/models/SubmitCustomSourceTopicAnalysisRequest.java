@@ -22,6 +22,10 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AnalysisTypes")
+    private java.util.List<String> analysisTypes;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FileType")
     private String fileType;
 
@@ -45,6 +49,7 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
     private SubmitCustomSourceTopicAnalysisRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.analysisTypes = builder.analysisTypes;
         this.fileType = builder.fileType;
         this.fileUrl = builder.fileUrl;
         this.maxTopicSize = builder.maxTopicSize;
@@ -70,6 +75,13 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return analysisTypes
+     */
+    public java.util.List<String> getAnalysisTypes() {
+        return this.analysisTypes;
     }
 
     /**
@@ -109,6 +121,7 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
 
     public static final class Builder extends Request.Builder<SubmitCustomSourceTopicAnalysisRequest, Builder> {
         private String regionId; 
+        private java.util.List<String> analysisTypes; 
         private String fileType; 
         private String fileUrl; 
         private Integer maxTopicSize; 
@@ -122,6 +135,7 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
         private Builder(SubmitCustomSourceTopicAnalysisRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.analysisTypes = request.analysisTypes;
             this.fileType = request.fileType;
             this.fileUrl = request.fileUrl;
             this.maxTopicSize = request.maxTopicSize;
@@ -135,6 +149,16 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AnalysisTypes.
+         */
+        public Builder analysisTypes(java.util.List<String> analysisTypes) {
+            String analysisTypesShrink = shrink(analysisTypes, "AnalysisTypes", "json");
+            this.putBodyParameter("AnalysisTypes", analysisTypesShrink);
+            this.analysisTypes = analysisTypes;
             return this;
         }
 
@@ -264,6 +288,9 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PubTime")
         private String pubTime;
 
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
         @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
@@ -274,6 +301,7 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
             this.comments = builder.comments;
             this.content = builder.content;
             this.pubTime = builder.pubTime;
+            this.source = builder.source;
             this.title = builder.title;
             this.url = builder.url;
         }
@@ -308,6 +336,13 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
         }
 
         /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
+        }
+
+        /**
          * @return title
          */
         public String getTitle() {
@@ -325,6 +360,7 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
             private java.util.List<Comments> comments; 
             private String content; 
             private String pubTime; 
+            private String source; 
             private String title; 
             private String url; 
 
@@ -335,6 +371,7 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
                 this.comments = model.comments;
                 this.content = model.content;
                 this.pubTime = model.pubTime;
+                this.source = model.source;
                 this.title = model.title;
                 this.url = model.url;
             } 
@@ -360,6 +397,14 @@ public class SubmitCustomSourceTopicAnalysisRequest extends Request {
              */
             public Builder pubTime(String pubTime) {
                 this.pubTime = pubTime;
+                return this;
+            }
+
+            /**
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
                 return this;
             }
 
