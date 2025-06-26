@@ -34,6 +34,10 @@ public class InitializeRequest extends Request {
     private String callbackUrl;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChameleonFrameEnable")
+    private String chameleonFrameEnable;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Crop")
     private String crop;
 
@@ -171,6 +175,7 @@ public class InitializeRequest extends Request {
         this.authorize = builder.authorize;
         this.callbackToken = builder.callbackToken;
         this.callbackUrl = builder.callbackUrl;
+        this.chameleonFrameEnable = builder.chameleonFrameEnable;
         this.crop = builder.crop;
         this.dateOfBirth = builder.dateOfBirth;
         this.dateOfExpiry = builder.dateOfExpiry;
@@ -245,6 +250,13 @@ public class InitializeRequest extends Request {
      */
     public String getCallbackUrl() {
         return this.callbackUrl;
+    }
+
+    /**
+     * @return chameleonFrameEnable
+     */
+    public String getChameleonFrameEnable() {
+        return this.chameleonFrameEnable;
     }
 
     /**
@@ -483,6 +495,7 @@ public class InitializeRequest extends Request {
         private String authorize; 
         private String callbackToken; 
         private String callbackUrl; 
+        private String chameleonFrameEnable; 
         private String crop; 
         private String dateOfBirth; 
         private String dateOfExpiry; 
@@ -527,6 +540,7 @@ public class InitializeRequest extends Request {
             this.authorize = request.authorize;
             this.callbackToken = request.callbackToken;
             this.callbackUrl = request.callbackUrl;
+            this.chameleonFrameEnable = request.chameleonFrameEnable;
             this.crop = request.crop;
             this.dateOfBirth = request.dateOfBirth;
             this.dateOfExpiry = request.dateOfExpiry;
@@ -595,6 +609,15 @@ public class InitializeRequest extends Request {
         public Builder callbackUrl(String callbackUrl) {
             this.putQueryParameter("CallbackUrl", callbackUrl);
             this.callbackUrl = callbackUrl;
+            return this;
+        }
+
+        /**
+         * ChameleonFrameEnable.
+         */
+        public Builder chameleonFrameEnable(String chameleonFrameEnable) {
+            this.putQueryParameter("ChameleonFrameEnable", chameleonFrameEnable);
+            this.chameleonFrameEnable = chameleonFrameEnable;
             return this;
         }
 
