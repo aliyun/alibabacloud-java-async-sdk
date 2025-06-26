@@ -19,11 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class GetChatListRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("currentPage")
-    private String currentPage;
+    private Integer currentPage;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("pageSize")
-    private String pageSize;
+    private Integer pageSize;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("sessionId")
@@ -53,14 +53,14 @@ public class GetChatListRequest extends Request {
     /**
      * @return currentPage
      */
-    public String getCurrentPage() {
+    public Integer getCurrentPage() {
         return this.currentPage;
     }
 
     /**
      * @return pageSize
      */
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
@@ -72,8 +72,8 @@ public class GetChatListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetChatListRequest, Builder> {
-        private String currentPage; 
-        private String pageSize; 
+        private Integer currentPage; 
+        private Integer pageSize; 
         private String sessionId; 
 
         private Builder() {
@@ -93,7 +93,7 @@ public class GetChatListRequest extends Request {
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder currentPage(String currentPage) {
+        public Builder currentPage(Integer currentPage) {
             this.putBodyParameter("currentPage", currentPage);
             this.currentPage = currentPage;
             return this;
@@ -105,7 +105,7 @@ public class GetChatListRequest extends Request {
          * <strong>example:</strong>
          * <p>10</p>
          */
-        public Builder pageSize(String pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("pageSize", pageSize);
             this.pageSize = pageSize;
             return this;
