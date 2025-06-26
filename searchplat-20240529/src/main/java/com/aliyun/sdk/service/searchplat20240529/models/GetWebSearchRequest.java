@@ -28,9 +28,21 @@ public class GetWebSearchRequest extends Request {
     private String serviceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("content_type")
+    private String contentType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("history")
+    private java.util.List<History> history;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("query")
     @com.aliyun.core.annotation.Validation(required = true)
     private String query;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("query_rewrite")
+    private Boolean queryRewrite;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("top_k")
@@ -44,7 +56,10 @@ public class GetWebSearchRequest extends Request {
         super(builder);
         this.workspaceName = builder.workspaceName;
         this.serviceId = builder.serviceId;
+        this.contentType = builder.contentType;
+        this.history = builder.history;
         this.query = builder.query;
+        this.queryRewrite = builder.queryRewrite;
         this.topK = builder.topK;
         this.way = builder.way;
     }
@@ -77,10 +92,31 @@ public class GetWebSearchRequest extends Request {
     }
 
     /**
+     * @return contentType
+     */
+    public String getContentType() {
+        return this.contentType;
+    }
+
+    /**
+     * @return history
+     */
+    public java.util.List<History> getHistory() {
+        return this.history;
+    }
+
+    /**
      * @return query
      */
     public String getQuery() {
         return this.query;
+    }
+
+    /**
+     * @return queryRewrite
+     */
+    public Boolean getQueryRewrite() {
+        return this.queryRewrite;
     }
 
     /**
@@ -100,7 +136,10 @@ public class GetWebSearchRequest extends Request {
     public static final class Builder extends Request.Builder<GetWebSearchRequest, Builder> {
         private String workspaceName; 
         private String serviceId; 
+        private String contentType; 
+        private java.util.List<History> history; 
         private String query; 
+        private Boolean queryRewrite; 
         private Long topK; 
         private String way; 
 
@@ -112,7 +151,10 @@ public class GetWebSearchRequest extends Request {
             super(request);
             this.workspaceName = request.workspaceName;
             this.serviceId = request.serviceId;
+            this.contentType = request.contentType;
+            this.history = request.history;
             this.query = request.query;
+            this.queryRewrite = request.queryRewrite;
             this.topK = request.topK;
             this.way = request.way;
         } 
@@ -136,11 +178,38 @@ public class GetWebSearchRequest extends Request {
         }
 
         /**
+         * content_type.
+         */
+        public Builder contentType(String contentType) {
+            this.putBodyParameter("content_type", contentType);
+            this.contentType = contentType;
+            return this;
+        }
+
+        /**
+         * history.
+         */
+        public Builder history(java.util.List<History> history) {
+            this.putBodyParameter("history", history);
+            this.history = history;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          */
         public Builder query(String query) {
             this.putBodyParameter("query", query);
             this.query = query;
+            return this;
+        }
+
+        /**
+         * query_rewrite.
+         */
+        public Builder queryRewrite(Boolean queryRewrite) {
+            this.putBodyParameter("query_rewrite", queryRewrite);
+            this.queryRewrite = queryRewrite;
             return this;
         }
 
@@ -169,4 +238,79 @@ public class GetWebSearchRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link GetWebSearchRequest} extends {@link TeaModel}
+     *
+     * <p>GetWebSearchRequest</p>
+     */
+    public static class History extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("role")
+        private String role;
+
+        private History(Builder builder) {
+            this.content = builder.content;
+            this.role = builder.role;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static History create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private String role; 
+
+            private Builder() {
+            } 
+
+            private Builder(History model) {
+                this.content = model.content;
+                this.role = model.role;
+            } 
+
+            /**
+             * content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * role.
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            public History build() {
+                return new History(this);
+            } 
+
+        } 
+
+    }
 }

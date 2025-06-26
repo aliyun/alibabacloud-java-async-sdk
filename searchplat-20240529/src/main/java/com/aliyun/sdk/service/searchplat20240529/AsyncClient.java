@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of CreateAudioAsrTask  CreateAudioAsrTaskRequest
+     * @return CreateAudioAsrTaskResponse
+     */
+    CompletableFuture<CreateAudioAsrTaskResponse> createAudioAsrTask(CreateAudioAsrTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateDocumentAnalyzeTask  CreateDocumentAnalyzeTaskRequest
      * @return CreateDocumentAnalyzeTaskResponse
      */
@@ -30,6 +36,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateImageAnalyzeTaskResponse
      */
     CompletableFuture<CreateImageAnalyzeTaskResponse> createImageAnalyzeTask(CreateImageAnalyzeTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateVideoSnapshotTask  CreateVideoSnapshotTaskRequest
+     * @return CreateVideoSnapshotTaskResponse
+     */
+    CompletableFuture<CreateVideoSnapshotTaskResponse> createVideoSnapshotTask(CreateVideoSnapshotTaskRequest request);
+
+    /**
+     * @param request the request parameters of GetAudioAsrTaskStatus  GetAudioAsrTaskStatusRequest
+     * @return GetAudioAsrTaskStatusResponse
+     */
+    CompletableFuture<GetAudioAsrTaskStatusResponse> getAudioAsrTaskStatus(GetAudioAsrTaskStatusRequest request);
 
     /**
      * @param request the request parameters of GetDocumentAnalyzeTaskStatus  GetDocumentAnalyzeTaskStatusRequest
@@ -96,6 +114,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetTextSparseEmbeddingResponse
      */
     CompletableFuture<GetTextSparseEmbeddingResponse> getTextSparseEmbedding(GetTextSparseEmbeddingRequest request);
+
+    /**
+     * @param request the request parameters of GetVideoSnapshotTaskStatus  GetVideoSnapshotTaskStatusRequest
+     * @return GetVideoSnapshotTaskStatusResponse
+     */
+    CompletableFuture<GetVideoSnapshotTaskStatusResponse> getVideoSnapshotTaskStatus(GetVideoSnapshotTaskStatusRequest request);
 
     /**
      * @param request the request parameters of GetWebSearch  GetWebSearchRequest
