@@ -249,6 +249,10 @@ public class CreateSessionClusterRequest extends Request {
 
         /**
          * <p>The automatic startup configuration.</p>
+         * <ul>
+         * <li></li>
+         * <li></li>
+         * </ul>
          */
         public Builder autoStartConfiguration(AutoStartConfiguration autoStartConfiguration) {
             this.putBodyParameter("autoStartConfiguration", autoStartConfiguration);

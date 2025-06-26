@@ -110,10 +110,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListJobRunsResponse> listJobRuns(ListJobRunsRequest request);
 
     /**
+     * @param request the request parameters of ListKyuubiServices  ListKyuubiServicesRequest
+     * @return ListKyuubiServicesResponse
+     */
+    CompletableFuture<ListKyuubiServicesResponse> listKyuubiServices(ListKyuubiServicesRequest request);
+
+    /**
      * @param request the request parameters of ListKyuubiSparkApplications  ListKyuubiSparkApplicationsRequest
      * @return ListKyuubiSparkApplicationsResponse
      */
     CompletableFuture<ListKyuubiSparkApplicationsResponse> listKyuubiSparkApplications(ListKyuubiSparkApplicationsRequest request);
+
+    /**
+     * @param request the request parameters of ListKyuubiToken  ListKyuubiTokenRequest
+     * @return ListKyuubiTokenResponse
+     */
+    CompletableFuture<ListKyuubiTokenResponse> listKyuubiToken(ListKyuubiTokenRequest request);
 
     /**
      * @param request the request parameters of ListLogContents  ListLogContentsRequest

@@ -310,6 +310,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListKyuubiServices  ListKyuubiServicesRequest
+     * @return ListKyuubiServicesResponse
+     */
+    @Override
+    public CompletableFuture<ListKyuubiServicesResponse> listKyuubiServices(ListKyuubiServicesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListKyuubiServices").setMethod(HttpMethod.GET).setPathRegex("/api/v1/kyuubi/{workspaceId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListKyuubiServicesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListKyuubiServicesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListKyuubiSparkApplications  ListKyuubiSparkApplicationsRequest
      * @return ListKyuubiSparkApplicationsResponse
      */
@@ -322,6 +340,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListKyuubiSparkApplicationsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListKyuubiToken  ListKyuubiTokenRequest
+     * @return ListKyuubiTokenResponse
+     */
+    @Override
+    public CompletableFuture<ListKyuubiTokenResponse> listKyuubiToken(ListKyuubiTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListKyuubiToken").setMethod(HttpMethod.GET).setPathRegex("/api/v1/workspaces/{workspaceId}/kyuubiService/{kyuubiServiceId}/token").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListKyuubiTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListKyuubiTokenResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

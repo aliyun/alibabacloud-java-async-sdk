@@ -31,6 +31,10 @@ public class ListJobRunsRequest extends Request {
     private EndTime endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isWorkflow")
+    private String isWorkflow;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("jobRunDeploymentId")
     private String jobRunDeploymentId;
 
@@ -79,6 +83,7 @@ public class ListJobRunsRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.creator = builder.creator;
         this.endTime = builder.endTime;
+        this.isWorkflow = builder.isWorkflow;
         this.jobRunDeploymentId = builder.jobRunDeploymentId;
         this.jobRunId = builder.jobRunId;
         this.maxResults = builder.maxResults;
@@ -124,6 +129,13 @@ public class ListJobRunsRequest extends Request {
      */
     public EndTime getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return isWorkflow
+     */
+    public String getIsWorkflow() {
+        return this.isWorkflow;
     }
 
     /**
@@ -207,6 +219,7 @@ public class ListJobRunsRequest extends Request {
         private String workspaceId; 
         private String creator; 
         private EndTime endTime; 
+        private String isWorkflow; 
         private String jobRunDeploymentId; 
         private String jobRunId; 
         private Integer maxResults; 
@@ -228,6 +241,7 @@ public class ListJobRunsRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.creator = request.creator;
             this.endTime = request.endTime;
+            this.isWorkflow = request.isWorkflow;
             this.jobRunDeploymentId = request.jobRunDeploymentId;
             this.jobRunId = request.jobRunId;
             this.maxResults = request.maxResults;
@@ -273,6 +287,15 @@ public class ListJobRunsRequest extends Request {
             String endTimeShrink = shrink(endTime, "endTime", "json");
             this.putQueryParameter("endTime", endTimeShrink);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * isWorkflow.
+         */
+        public Builder isWorkflow(String isWorkflow) {
+            this.putQueryParameter("isWorkflow", isWorkflow);
+            this.isWorkflow = isWorkflow;
             return this;
         }
 

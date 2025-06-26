@@ -38,8 +38,24 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
     private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("minDuration")
+    private Long minDuration;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("orderBy")
+    private java.util.List<String> orderBy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceQueueId")
+    private String resourceQueueId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sort")
+    private String sort;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("startTime")
@@ -52,7 +68,11 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         this.applicationId = builder.applicationId;
         this.applicationName = builder.applicationName;
         this.maxResults = builder.maxResults;
+        this.minDuration = builder.minDuration;
         this.nextToken = builder.nextToken;
+        this.orderBy = builder.orderBy;
+        this.resourceQueueId = builder.resourceQueueId;
+        this.sort = builder.sort;
         this.startTime = builder.startTime;
     }
 
@@ -105,10 +125,38 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
     }
 
     /**
+     * @return minDuration
+     */
+    public Long getMinDuration() {
+        return this.minDuration;
+    }
+
+    /**
      * @return nextToken
      */
     public String getNextToken() {
         return this.nextToken;
+    }
+
+    /**
+     * @return orderBy
+     */
+    public java.util.List<String> getOrderBy() {
+        return this.orderBy;
+    }
+
+    /**
+     * @return resourceQueueId
+     */
+    public String getResourceQueueId() {
+        return this.resourceQueueId;
+    }
+
+    /**
+     * @return sort
+     */
+    public String getSort() {
+        return this.sort;
     }
 
     /**
@@ -124,7 +172,11 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         private String applicationId; 
         private String applicationName; 
         private Integer maxResults; 
+        private Long minDuration; 
         private String nextToken; 
+        private java.util.List<String> orderBy; 
+        private String resourceQueueId; 
+        private String sort; 
         private StartTime startTime; 
 
         private Builder() {
@@ -138,7 +190,11 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
             this.applicationId = request.applicationId;
             this.applicationName = request.applicationName;
             this.maxResults = request.maxResults;
+            this.minDuration = request.minDuration;
             this.nextToken = request.nextToken;
+            this.orderBy = request.orderBy;
+            this.resourceQueueId = request.resourceQueueId;
+            this.sort = request.sort;
             this.startTime = request.startTime;
         } 
 
@@ -203,6 +259,15 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         }
 
         /**
+         * minDuration.
+         */
+        public Builder minDuration(Long minDuration) {
+            this.putQueryParameter("minDuration", minDuration);
+            this.minDuration = minDuration;
+            return this;
+        }
+
+        /**
          * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +276,34 @@ public class ListKyuubiSparkApplicationsRequest extends Request {
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
             this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
+         * orderBy.
+         */
+        public Builder orderBy(java.util.List<String> orderBy) {
+            String orderByShrink = shrink(orderBy, "orderBy", "json");
+            this.putQueryParameter("orderBy", orderByShrink);
+            this.orderBy = orderBy;
+            return this;
+        }
+
+        /**
+         * resourceQueueId.
+         */
+        public Builder resourceQueueId(String resourceQueueId) {
+            this.putQueryParameter("resourceQueueId", resourceQueueId);
+            this.resourceQueueId = resourceQueueId;
+            return this;
+        }
+
+        /**
+         * sort.
+         */
+        public Builder sort(String sort) {
+            this.putQueryParameter("sort", sort);
+            this.sort = sort;
             return this;
         }
 
