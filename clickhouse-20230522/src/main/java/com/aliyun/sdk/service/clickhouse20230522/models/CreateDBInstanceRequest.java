@@ -305,10 +305,6 @@ public class CreateDBInstanceRequest extends Request {
 
         /**
          * <p>The engine type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>clickhouse</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>clickhouse</p>

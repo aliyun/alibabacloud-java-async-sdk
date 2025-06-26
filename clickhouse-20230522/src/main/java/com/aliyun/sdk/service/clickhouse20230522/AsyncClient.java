@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request);
 
     /**
+     * @param request the request parameters of CreateBackupPolicy  CreateBackupPolicyRequest
+     * @return CreateBackupPolicyResponse
+     */
+    CompletableFuture<CreateBackupPolicyResponse> createBackupPolicy(CreateBackupPolicyRequest request);
+
+    /**
      * @param request the request parameters of CreateDB  CreateDBRequest
      * @return CreateDBResponse
      */
@@ -48,6 +54,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteAccountResponse
      */
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
+
+    /**
+     * @param request the request parameters of DeleteBackupPolicy  DeleteBackupPolicyRequest
+     * @return DeleteBackupPolicyResponse
+     */
+    CompletableFuture<DeleteBackupPolicyResponse> deleteBackupPolicy(DeleteBackupPolicyRequest request);
 
     /**
      * @param request the request parameters of DeleteDB  DeleteDBRequest
@@ -80,10 +92,34 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAccountsResponse> describeAccounts(DescribeAccountsRequest request);
 
     /**
+     * @param request the request parameters of DescribeBackupPolicy  DescribeBackupPolicyRequest
+     * @return DescribeBackupPolicyResponse
+     */
+    CompletableFuture<DescribeBackupPolicyResponse> describeBackupPolicy(DescribeBackupPolicyRequest request);
+
+    /**
+     * @param request the request parameters of DescribeBackups  DescribeBackupsRequest
+     * @return DescribeBackupsResponse
+     */
+    CompletableFuture<DescribeBackupsResponse> describeBackups(DescribeBackupsRequest request);
+
+    /**
      * @param request the request parameters of DescribeDBInstanceAttribute  DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
      */
     CompletableFuture<DescribeDBInstanceAttributeResponse> describeDBInstanceAttribute(DescribeDBInstanceAttributeRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDBInstanceConfig  DescribeDBInstanceConfigRequest
+     * @return DescribeDBInstanceConfigResponse
+     */
+    CompletableFuture<DescribeDBInstanceConfigResponse> describeDBInstanceConfig(DescribeDBInstanceConfigRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDBInstanceConfigChangeLog  DescribeDBInstanceConfigChangeLogRequest
+     * @return DescribeDBInstanceConfigChangeLogResponse
+     */
+    CompletableFuture<DescribeDBInstanceConfigChangeLogResponse> describeDBInstanceConfigChangeLog(DescribeDBInstanceConfigChangeLogRequest request);
 
     /**
      * @param request the request parameters of DescribeDBInstanceDataSources  DescribeDBInstanceDataSourcesRequest
@@ -146,6 +182,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAccountDescriptionResponse> modifyAccountDescription(ModifyAccountDescriptionRequest request);
 
     /**
+     * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
+     * @return ModifyBackupPolicyResponse
+     */
+    CompletableFuture<ModifyBackupPolicyResponse> modifyBackupPolicy(ModifyBackupPolicyRequest request);
+
+    /**
      * @param request the request parameters of ModifyDBInstanceAttribute  ModifyDBInstanceAttributeRequest
      * @return ModifyDBInstanceAttributeResponse
      */
@@ -156,6 +198,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyDBInstanceClassResponse
      */
     CompletableFuture<ModifyDBInstanceClassResponse> modifyDBInstanceClass(ModifyDBInstanceClassRequest request);
+
+    /**
+     * @param request the request parameters of ModifyDBInstanceConfig  ModifyDBInstanceConfigRequest
+     * @return ModifyDBInstanceConfigResponse
+     */
+    CompletableFuture<ModifyDBInstanceConfigResponse> modifyDBInstanceConfig(ModifyDBInstanceConfigRequest request);
 
     /**
      * @param request the request parameters of ModifyDBInstanceConnectionString  ModifyDBInstanceConnectionStringRequest
