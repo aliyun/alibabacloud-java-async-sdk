@@ -49,6 +49,10 @@ public class RunAgentRequest extends Request {
     private String userContent;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userInputs")
+    private java.util.Map<String, ?> userInputs;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("versionId")
     private String versionId;
 
@@ -61,6 +65,7 @@ public class RunAgentRequest extends Request {
         this.threadId = builder.threadId;
         this.useDraft = builder.useDraft;
         this.userContent = builder.userContent;
+        this.userInputs = builder.userInputs;
         this.versionId = builder.versionId;
     }
 
@@ -127,6 +132,13 @@ public class RunAgentRequest extends Request {
     }
 
     /**
+     * @return userInputs
+     */
+    public java.util.Map<String, ?> getUserInputs() {
+        return this.userInputs;
+    }
+
+    /**
      * @return versionId
      */
     public String getVersionId() {
@@ -141,6 +153,7 @@ public class RunAgentRequest extends Request {
         private String threadId; 
         private Boolean useDraft; 
         private String userContent; 
+        private java.util.Map<String, ?> userInputs; 
         private String versionId; 
 
         private Builder() {
@@ -156,6 +169,7 @@ public class RunAgentRequest extends Request {
             this.threadId = request.threadId;
             this.useDraft = request.useDraft;
             this.userContent = request.userContent;
+            this.userInputs = request.userInputs;
             this.versionId = request.versionId;
         } 
 
@@ -225,6 +239,15 @@ public class RunAgentRequest extends Request {
         public Builder userContent(String userContent) {
             this.putBodyParameter("userContent", userContent);
             this.userContent = userContent;
+            return this;
+        }
+
+        /**
+         * userInputs.
+         */
+        public Builder userInputs(java.util.Map<String, ?> userInputs) {
+            this.putBodyParameter("userInputs", userInputs);
+            this.userInputs = userInputs;
             return this;
         }
 
