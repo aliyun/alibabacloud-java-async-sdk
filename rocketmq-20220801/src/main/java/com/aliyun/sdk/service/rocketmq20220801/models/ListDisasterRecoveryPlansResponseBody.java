@@ -350,6 +350,9 @@ public class ListDisasterRecoveryPlansResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("authType")
         private String authType;
 
+        @com.aliyun.core.annotation.NameInMap("consumerGroupId")
+        private String consumerGroupId;
+
         @com.aliyun.core.annotation.NameInMap("endpointUrl")
         private String endpointUrl;
 
@@ -388,6 +391,7 @@ public class ListDisasterRecoveryPlansResponseBody extends TeaModel {
 
         private Instances(Builder builder) {
             this.authType = builder.authType;
+            this.consumerGroupId = builder.consumerGroupId;
             this.endpointUrl = builder.endpointUrl;
             this.instanceId = builder.instanceId;
             this.instanceRole = builder.instanceRole;
@@ -415,6 +419,13 @@ public class ListDisasterRecoveryPlansResponseBody extends TeaModel {
          */
         public String getAuthType() {
             return this.authType;
+        }
+
+        /**
+         * @return consumerGroupId
+         */
+        public String getConsumerGroupId() {
+            return this.consumerGroupId;
         }
 
         /**
@@ -503,6 +514,7 @@ public class ListDisasterRecoveryPlansResponseBody extends TeaModel {
 
         public static final class Builder {
             private String authType; 
+            private String consumerGroupId; 
             private String endpointUrl; 
             private String instanceId; 
             private String instanceRole; 
@@ -521,6 +533,7 @@ public class ListDisasterRecoveryPlansResponseBody extends TeaModel {
 
             private Builder(Instances model) {
                 this.authType = model.authType;
+                this.consumerGroupId = model.consumerGroupId;
                 this.endpointUrl = model.endpointUrl;
                 this.instanceId = model.instanceId;
                 this.instanceRole = model.instanceRole;
@@ -543,6 +556,14 @@ public class ListDisasterRecoveryPlansResponseBody extends TeaModel {
              */
             public Builder authType(String authType) {
                 this.authType = authType;
+                return this;
+            }
+
+            /**
+             * consumerGroupId.
+             */
+            public Builder consumerGroupId(String consumerGroupId) {
+                this.consumerGroupId = consumerGroupId;
                 return this;
             }
 

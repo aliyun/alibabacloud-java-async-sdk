@@ -110,6 +110,7 @@ public class AddDisasterRecoveryItemRequest extends Request {
      */
     public static class Topics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consumerGroupId")
+        @Deprecated
         private String consumerGroupId;
 
         @com.aliyun.core.annotation.NameInMap("deliveryOrderType")

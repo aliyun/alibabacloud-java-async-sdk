@@ -267,6 +267,7 @@ public class GetDisasterRecoveryItemResponseBody extends TeaModel {
      */
     public static class Topics extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("consumerGroupId")
+        @Deprecated
         private String consumerGroupId;
 
         @com.aliyun.core.annotation.NameInMap("deliveryOrderType")
