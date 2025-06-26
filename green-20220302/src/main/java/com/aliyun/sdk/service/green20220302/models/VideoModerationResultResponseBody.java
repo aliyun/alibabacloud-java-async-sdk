@@ -1189,12 +1189,149 @@ public class VideoModerationResultResponseBody extends TeaModel {
      *
      * <p>VideoModerationResultResponseBody</p>
      */
+    public static class PublicFigureLocation extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("H")
+        private Integer h;
+
+        @com.aliyun.core.annotation.NameInMap("W")
+        private Integer w;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        private Integer x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        private Integer y;
+
+        private PublicFigureLocation(Builder builder) {
+            this.h = builder.h;
+            this.w = builder.w;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PublicFigureLocation create() {
+            return builder().build();
+        }
+
+        /**
+         * @return h
+         */
+        public Integer getH() {
+            return this.h;
+        }
+
+        /**
+         * @return w
+         */
+        public Integer getW() {
+            return this.w;
+        }
+
+        /**
+         * @return x
+         */
+        public Integer getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Integer getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private Integer h; 
+            private Integer w; 
+            private Integer x; 
+            private Integer y; 
+
+            private Builder() {
+            } 
+
+            private Builder(PublicFigureLocation model) {
+                this.h = model.h;
+                this.w = model.w;
+                this.x = model.x;
+                this.y = model.y;
+            } 
+
+            /**
+             * <p>The height of the text area. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
+             */
+            public Builder h(Integer h) {
+                this.h = h;
+                return this;
+            }
+
+            /**
+             * <p>The width of the text area. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
+             */
+            public Builder w(Integer w) {
+                this.w = w;
+                return this;
+            }
+
+            /**
+             * <p>The distance from the top-left corner of the text area to the y-axis, with the top-left corner of the image as the origin. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
+             */
+            public Builder x(Integer x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * <p>The distance from the top-left corner of the text area to the x-axis, with the top-left corner of the image as the origin. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>222</p>
+             */
+            public Builder y(Integer y) {
+                this.y = y;
+                return this;
+            }
+
+            public PublicFigureLocation build() {
+                return new PublicFigureLocation(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link VideoModerationResultResponseBody} extends {@link TeaModel}
+     *
+     * <p>VideoModerationResultResponseBody</p>
+     */
     public static class PublicFigure extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FigureId")
         private String figureId;
 
+        @com.aliyun.core.annotation.NameInMap("FigureName")
+        private String figureName;
+
+        @com.aliyun.core.annotation.NameInMap("Location")
+        private java.util.List<PublicFigureLocation> location;
+
         private PublicFigure(Builder builder) {
             this.figureId = builder.figureId;
+            this.figureName = builder.figureName;
+            this.location = builder.location;
         }
 
         public static Builder builder() {
@@ -1212,14 +1349,32 @@ public class VideoModerationResultResponseBody extends TeaModel {
             return this.figureId;
         }
 
+        /**
+         * @return figureName
+         */
+        public String getFigureName() {
+            return this.figureName;
+        }
+
+        /**
+         * @return location
+         */
+        public java.util.List<PublicFigureLocation> getLocation() {
+            return this.location;
+        }
+
         public static final class Builder {
             private String figureId; 
+            private String figureName; 
+            private java.util.List<PublicFigureLocation> location; 
 
             private Builder() {
             } 
 
             private Builder(PublicFigure model) {
                 this.figureId = model.figureId;
+                this.figureName = model.figureName;
+                this.location = model.location;
             } 
 
             /**
@@ -1230,6 +1385,22 @@ public class VideoModerationResultResponseBody extends TeaModel {
              */
             public Builder figureId(String figureId) {
                 this.figureId = figureId;
+                return this;
+            }
+
+            /**
+             * FigureName.
+             */
+            public Builder figureName(String figureName) {
+                this.figureName = figureName;
+                return this;
+            }
+
+            /**
+             * <p>The location of the logo.</p>
+             */
+            public Builder location(java.util.List<PublicFigureLocation> location) {
+                this.location = location;
                 return this;
             }
 
