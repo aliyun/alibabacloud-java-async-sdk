@@ -156,6 +156,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePolicyAttachmentResponse> deletePolicyAttachment(DeletePolicyAttachmentRequest request);
 
     /**
+     * @param request the request parameters of DeleteService  DeleteServiceRequest
+     * @return DeleteServiceResponse
+     */
+    CompletableFuture<DeleteServiceResponse> deleteService(DeleteServiceRequest request);
+
+    /**
      * @param request the request parameters of DeployHttpApi  DeployHttpApiRequest
      * @return DeployHttpApiResponse
      */

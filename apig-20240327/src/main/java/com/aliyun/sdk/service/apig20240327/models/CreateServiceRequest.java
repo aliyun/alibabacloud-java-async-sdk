@@ -179,6 +179,9 @@ public class CreateServiceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("addresses")
         private java.util.List<String> addresses;
 
+        @com.aliyun.core.annotation.NameInMap("agentServiceConfig")
+        private AgentServiceConfig agentServiceConfig;
+
         @com.aliyun.core.annotation.NameInMap("aiServiceConfig")
         private AiServiceConfig aiServiceConfig;
 
@@ -199,6 +202,7 @@ public class CreateServiceRequest extends Request {
 
         private ServiceConfigs(Builder builder) {
             this.addresses = builder.addresses;
+            this.agentServiceConfig = builder.agentServiceConfig;
             this.aiServiceConfig = builder.aiServiceConfig;
             this.dnsServers = builder.dnsServers;
             this.groupName = builder.groupName;
@@ -220,6 +224,13 @@ public class CreateServiceRequest extends Request {
          */
         public java.util.List<String> getAddresses() {
             return this.addresses;
+        }
+
+        /**
+         * @return agentServiceConfig
+         */
+        public AgentServiceConfig getAgentServiceConfig() {
+            return this.agentServiceConfig;
         }
 
         /**
@@ -266,6 +277,7 @@ public class CreateServiceRequest extends Request {
 
         public static final class Builder {
             private java.util.List<String> addresses; 
+            private AgentServiceConfig agentServiceConfig; 
             private AiServiceConfig aiServiceConfig; 
             private java.util.List<String> dnsServers; 
             private String groupName; 
@@ -278,6 +290,7 @@ public class CreateServiceRequest extends Request {
 
             private Builder(ServiceConfigs model) {
                 this.addresses = model.addresses;
+                this.agentServiceConfig = model.agentServiceConfig;
                 this.aiServiceConfig = model.aiServiceConfig;
                 this.dnsServers = model.dnsServers;
                 this.groupName = model.groupName;
@@ -291,6 +304,14 @@ public class CreateServiceRequest extends Request {
              */
             public Builder addresses(java.util.List<String> addresses) {
                 this.addresses = addresses;
+                return this;
+            }
+
+            /**
+             * agentServiceConfig.
+             */
+            public Builder agentServiceConfig(AgentServiceConfig agentServiceConfig) {
+                this.agentServiceConfig = agentServiceConfig;
                 return this;
             }
 

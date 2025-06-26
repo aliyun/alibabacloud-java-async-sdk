@@ -20,6 +20,9 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("addresses")
     private java.util.List<String> addresses;
 
+    @com.aliyun.core.annotation.NameInMap("agentServiceConfig")
+    private AgentServiceConfig agentServiceConfig;
+
     @com.aliyun.core.annotation.NameInMap("aiServiceConfig")
     private AiServiceConfig aiServiceConfig;
 
@@ -70,6 +73,7 @@ public class Service extends TeaModel {
 
     private Service(Builder builder) {
         this.addresses = builder.addresses;
+        this.agentServiceConfig = builder.agentServiceConfig;
         this.aiServiceConfig = builder.aiServiceConfig;
         this.createTimestamp = builder.createTimestamp;
         this.gatewayId = builder.gatewayId;
@@ -105,6 +109,13 @@ public class Service extends TeaModel {
      */
     public java.util.List<String> getAddresses() {
         return this.addresses;
+    }
+
+    /**
+     * @return agentServiceConfig
+     */
+    public AgentServiceConfig getAgentServiceConfig() {
+        return this.agentServiceConfig;
     }
 
     /**
@@ -221,6 +232,7 @@ public class Service extends TeaModel {
 
     public static final class Builder {
         private java.util.List<String> addresses; 
+        private AgentServiceConfig agentServiceConfig; 
         private AiServiceConfig aiServiceConfig; 
         private Long createTimestamp; 
         private String gatewayId; 
@@ -243,6 +255,7 @@ public class Service extends TeaModel {
 
         private Builder(Service model) {
             this.addresses = model.addresses;
+            this.agentServiceConfig = model.agentServiceConfig;
             this.aiServiceConfig = model.aiServiceConfig;
             this.createTimestamp = model.createTimestamp;
             this.gatewayId = model.gatewayId;
@@ -266,6 +279,14 @@ public class Service extends TeaModel {
          */
         public Builder addresses(java.util.List<String> addresses) {
             this.addresses = addresses;
+            return this;
+        }
+
+        /**
+         * agentServiceConfig.
+         */
+        public Builder agentServiceConfig(AgentServiceConfig agentServiceConfig) {
+            this.agentServiceConfig = agentServiceConfig;
             return this;
         }
 

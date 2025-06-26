@@ -59,7 +59,7 @@ public class GetGatewayRequest extends Request {
         } 
 
         /**
-         * <p>Cloud-native API Gateway ID.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-cpv4sqdl*****</p>

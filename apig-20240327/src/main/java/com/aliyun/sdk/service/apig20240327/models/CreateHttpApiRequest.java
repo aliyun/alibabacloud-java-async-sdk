@@ -22,6 +22,10 @@ public class CreateHttpApiRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("agentProtocols")
+    private java.util.List<String> agentProtocols;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("aiProtocols")
     private java.util.List<String> aiProtocols;
 
@@ -73,6 +77,7 @@ public class CreateHttpApiRequest extends Request {
     private CreateHttpApiRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.agentProtocols = builder.agentProtocols;
         this.aiProtocols = builder.aiProtocols;
         this.authConfig = builder.authConfig;
         this.basePath = builder.basePath;
@@ -105,6 +110,13 @@ public class CreateHttpApiRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return agentProtocols
+     */
+    public java.util.List<String> getAgentProtocols() {
+        return this.agentProtocols;
     }
 
     /**
@@ -193,6 +205,7 @@ public class CreateHttpApiRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateHttpApiRequest, Builder> {
         private String regionId; 
+        private java.util.List<String> agentProtocols; 
         private java.util.List<String> aiProtocols; 
         private AuthConfig authConfig; 
         private String basePath; 
@@ -213,6 +226,7 @@ public class CreateHttpApiRequest extends Request {
         private Builder(CreateHttpApiRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.agentProtocols = request.agentProtocols;
             this.aiProtocols = request.aiProtocols;
             this.authConfig = request.authConfig;
             this.basePath = request.basePath;
@@ -233,6 +247,15 @@ public class CreateHttpApiRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * agentProtocols.
+         */
+        public Builder agentProtocols(java.util.List<String> agentProtocols) {
+            this.putBodyParameter("agentProtocols", agentProtocols);
+            this.agentProtocols = agentProtocols;
             return this;
         }
 

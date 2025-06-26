@@ -23,6 +23,10 @@ public class UpdateHttpApiRequest extends Request {
     private String httpApiId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("agentProtocols")
+    private java.util.List<String> agentProtocols;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("aiProtocols")
     private java.util.List<String> aiProtocols;
 
@@ -66,6 +70,7 @@ public class UpdateHttpApiRequest extends Request {
     private UpdateHttpApiRequest(Builder builder) {
         super(builder);
         this.httpApiId = builder.httpApiId;
+        this.agentProtocols = builder.agentProtocols;
         this.aiProtocols = builder.aiProtocols;
         this.authConfig = builder.authConfig;
         this.basePath = builder.basePath;
@@ -96,6 +101,13 @@ public class UpdateHttpApiRequest extends Request {
      */
     public String getHttpApiId() {
         return this.httpApiId;
+    }
+
+    /**
+     * @return agentProtocols
+     */
+    public java.util.List<String> getAgentProtocols() {
+        return this.agentProtocols;
     }
 
     /**
@@ -170,6 +182,7 @@ public class UpdateHttpApiRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateHttpApiRequest, Builder> {
         private String httpApiId; 
+        private java.util.List<String> agentProtocols; 
         private java.util.List<String> aiProtocols; 
         private AuthConfig authConfig; 
         private String basePath; 
@@ -188,6 +201,7 @@ public class UpdateHttpApiRequest extends Request {
         private Builder(UpdateHttpApiRequest request) {
             super(request);
             this.httpApiId = request.httpApiId;
+            this.agentProtocols = request.agentProtocols;
             this.aiProtocols = request.aiProtocols;
             this.authConfig = request.authConfig;
             this.basePath = request.basePath;
@@ -210,6 +224,15 @@ public class UpdateHttpApiRequest extends Request {
         public Builder httpApiId(String httpApiId) {
             this.putPathParameter("httpApiId", httpApiId);
             this.httpApiId = httpApiId;
+            return this;
+        }
+
+        /**
+         * agentProtocols.
+         */
+        public Builder agentProtocols(java.util.List<String> agentProtocols) {
+            this.putBodyParameter("agentProtocols", agentProtocols);
+            this.agentProtocols = agentProtocols;
             return this;
         }
 
