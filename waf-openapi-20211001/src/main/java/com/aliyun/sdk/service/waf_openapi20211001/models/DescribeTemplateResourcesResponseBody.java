@@ -17,15 +17,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTemplateResourcesResponseBody</p>
  */
 public class DescribeTemplateResourcesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List<String> resources;
 
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
     private DescribeTemplateResourcesResponseBody(Builder builder) {
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.resources = builder.resources;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -38,6 +50,20 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -54,17 +80,46 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
         return this.resources;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
+        private Integer maxResults; 
+        private String nextToken; 
         private String requestId; 
         private java.util.List<String> resources; 
+        private Integer totalCount; 
 
         private Builder() {
         } 
 
         private Builder(DescribeTemplateResourcesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
             this.requestId = model.requestId;
             this.resources = model.resources;
+            this.totalCount = model.totalCount;
         } 
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
 
         /**
          * <p>The ID of the request.</p>
@@ -82,6 +137,14 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
          */
         public Builder resources(java.util.List<String> resources) {
             this.resources = resources;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 

@@ -377,6 +377,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDefenseResourceNamesResponse> describeDefenseResourceNames(DescribeDefenseResourceNamesRequest request);
 
     /**
+     * @param request the request parameters of DescribeDefenseResourceOwnerUid  DescribeDefenseResourceOwnerUidRequest
+     * @return DescribeDefenseResourceOwnerUidResponse
+     */
+    CompletableFuture<DescribeDefenseResourceOwnerUidResponse> describeDefenseResourceOwnerUid(DescribeDefenseResourceOwnerUidRequest request);
+
+    /**
      * @param request the request parameters of DescribeDefenseResourceTemplates  DescribeDefenseResourceTemplatesRequest
      * @return DescribeDefenseResourceTemplatesResponse
      */

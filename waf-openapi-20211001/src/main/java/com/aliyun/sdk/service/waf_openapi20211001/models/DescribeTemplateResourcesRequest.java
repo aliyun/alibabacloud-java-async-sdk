@@ -23,8 +23,21 @@ public class DescribeTemplateResourcesRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
+    private String resource;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
@@ -43,7 +56,10 @@ public class DescribeTemplateResourcesRequest extends Request {
     private DescribeTemplateResourcesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
+        this.resource = builder.resource;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.resourceType = builder.resourceType;
         this.templateId = builder.templateId;
@@ -70,10 +86,31 @@ public class DescribeTemplateResourcesRequest extends Request {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return resource
+     */
+    public String getResource() {
+        return this.resource;
     }
 
     /**
@@ -99,7 +136,10 @@ public class DescribeTemplateResourcesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeTemplateResourcesRequest, Builder> {
         private String instanceId; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String regionId; 
+        private String resource; 
         private String resourceManagerResourceGroupId; 
         private String resourceType; 
         private Long templateId; 
@@ -111,7 +151,10 @@ public class DescribeTemplateResourcesRequest extends Request {
         private Builder(DescribeTemplateResourcesRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.regionId = request.regionId;
+            this.resource = request.resource;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.resourceType = request.resourceType;
             this.templateId = request.templateId;
@@ -134,6 +177,24 @@ public class DescribeTemplateResourcesRequest extends Request {
         }
 
         /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
+            return this;
+        }
+
+        /**
          * <p>The region where the WAF instance resides. Valid values:</p>
          * <ul>
          * <li><strong>cn-hangzhou:</strong> the Chinese mainland.</li>
@@ -146,6 +207,15 @@ public class DescribeTemplateResourcesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Resource.
+         */
+        public Builder resource(String resource) {
+            this.putQueryParameter("Resource", resource);
+            this.resource = resource;
             return this;
         }
 

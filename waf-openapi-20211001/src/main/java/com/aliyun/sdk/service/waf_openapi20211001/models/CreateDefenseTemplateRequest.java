@@ -59,6 +59,14 @@ public class CreateDefenseTemplateRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String templateType;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnbindResourceGroups")
+    private java.util.List<String> unbindResourceGroups;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnbindResources")
+    private java.util.List<String> unbindResources;
+
     private CreateDefenseTemplateRequest(Builder builder) {
         super(builder);
         this.defenseScene = builder.defenseScene;
@@ -70,6 +78,8 @@ public class CreateDefenseTemplateRequest extends Request {
         this.templateOrigin = builder.templateOrigin;
         this.templateStatus = builder.templateStatus;
         this.templateType = builder.templateType;
+        this.unbindResourceGroups = builder.unbindResourceGroups;
+        this.unbindResources = builder.unbindResources;
     }
 
     public static Builder builder() {
@@ -148,6 +158,20 @@ public class CreateDefenseTemplateRequest extends Request {
         return this.templateType;
     }
 
+    /**
+     * @return unbindResourceGroups
+     */
+    public java.util.List<String> getUnbindResourceGroups() {
+        return this.unbindResourceGroups;
+    }
+
+    /**
+     * @return unbindResources
+     */
+    public java.util.List<String> getUnbindResources() {
+        return this.unbindResources;
+    }
+
     public static final class Builder extends Request.Builder<CreateDefenseTemplateRequest, Builder> {
         private String defenseScene; 
         private String description; 
@@ -158,6 +182,8 @@ public class CreateDefenseTemplateRequest extends Request {
         private String templateOrigin; 
         private Integer templateStatus; 
         private String templateType; 
+        private java.util.List<String> unbindResourceGroups; 
+        private java.util.List<String> unbindResources; 
 
         private Builder() {
             super();
@@ -174,6 +200,8 @@ public class CreateDefenseTemplateRequest extends Request {
             this.templateOrigin = request.templateOrigin;
             this.templateStatus = request.templateStatus;
             this.templateType = request.templateType;
+            this.unbindResourceGroups = request.unbindResourceGroups;
+            this.unbindResources = request.unbindResources;
         } 
 
         /**
@@ -302,6 +330,24 @@ public class CreateDefenseTemplateRequest extends Request {
         public Builder templateType(String templateType) {
             this.putQueryParameter("TemplateType", templateType);
             this.templateType = templateType;
+            return this;
+        }
+
+        /**
+         * UnbindResourceGroups.
+         */
+        public Builder unbindResourceGroups(java.util.List<String> unbindResourceGroups) {
+            this.putQueryParameter("UnbindResourceGroups", unbindResourceGroups);
+            this.unbindResourceGroups = unbindResourceGroups;
+            return this;
+        }
+
+        /**
+         * UnbindResources.
+         */
+        public Builder unbindResources(java.util.List<String> unbindResources) {
+            this.putQueryParameter("UnbindResources", unbindResources);
+            this.unbindResources = unbindResources;
             return this;
         }
 

@@ -439,7 +439,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
      */
     public static class Listen extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CertId")
-        private Long certId;
+        private String certId;
 
         @com.aliyun.core.annotation.NameInMap("CipherSuite")
         private Long cipherSuite;
@@ -520,7 +520,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return certId
          */
-        public Long getCertId() {
+        public String getCertId() {
             return this.certId;
         }
 
@@ -637,7 +637,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long certId; 
+            private String certId; 
             private Long cipherSuite; 
             private java.util.List<String> customCiphers; 
             private Boolean enableTLSv3; 
@@ -684,7 +684,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>123</p>
              */
-            public Builder certId(Long certId) {
+            public Builder certId(String certId) {
                 this.certId = certId;
                 return this;
             }

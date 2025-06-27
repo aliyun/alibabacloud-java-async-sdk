@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDefenseRulesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefenseType")
+    private String defenseType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -48,6 +52,7 @@ public class DescribeDefenseRulesRequest extends Request {
 
     private DescribeDefenseRulesRequest(Builder builder) {
         super(builder);
+        this.defenseType = builder.defenseType;
         this.instanceId = builder.instanceId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -68,6 +73,13 @@ public class DescribeDefenseRulesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return defenseType
+     */
+    public String getDefenseType() {
+        return this.defenseType;
     }
 
     /**
@@ -120,6 +132,7 @@ public class DescribeDefenseRulesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDefenseRulesRequest, Builder> {
+        private String defenseType; 
         private String instanceId; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -134,6 +147,7 @@ public class DescribeDefenseRulesRequest extends Request {
 
         private Builder(DescribeDefenseRulesRequest request) {
             super(request);
+            this.defenseType = request.defenseType;
             this.instanceId = request.instanceId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -142,6 +156,15 @@ public class DescribeDefenseRulesRequest extends Request {
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.ruleType = request.ruleType;
         } 
+
+        /**
+         * DefenseType.
+         */
+        public Builder defenseType(String defenseType) {
+            this.putQueryParameter("DefenseType", defenseType);
+            this.defenseType = defenseType;
+            return this;
+        }
 
         /**
          * <p>The ID of the Web Application Firewall (WAF) instance.</p>
