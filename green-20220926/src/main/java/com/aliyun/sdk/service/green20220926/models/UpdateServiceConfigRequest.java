@@ -54,6 +54,10 @@ public class UpdateServiceConfigRequest extends Request {
     private String serviceCode;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceConfig")
+    private String serviceConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VideoConfig")
     private String videoConfig;
 
@@ -68,6 +72,7 @@ public class UpdateServiceConfigRequest extends Request {
         this.scene = builder.scene;
         this.sceneConfig = builder.sceneConfig;
         this.serviceCode = builder.serviceCode;
+        this.serviceConfig = builder.serviceConfig;
         this.videoConfig = builder.videoConfig;
     }
 
@@ -148,6 +153,13 @@ public class UpdateServiceConfigRequest extends Request {
     }
 
     /**
+     * @return serviceConfig
+     */
+    public String getServiceConfig() {
+        return this.serviceConfig;
+    }
+
+    /**
      * @return videoConfig
      */
     public String getVideoConfig() {
@@ -164,6 +176,7 @@ public class UpdateServiceConfigRequest extends Request {
         private String scene; 
         private String sceneConfig; 
         private String serviceCode; 
+        private String serviceConfig; 
         private String videoConfig; 
 
         private Builder() {
@@ -181,6 +194,7 @@ public class UpdateServiceConfigRequest extends Request {
             this.scene = request.scene;
             this.sceneConfig = request.sceneConfig;
             this.serviceCode = request.serviceCode;
+            this.serviceConfig = request.serviceConfig;
             this.videoConfig = request.videoConfig;
         } 
 
@@ -262,6 +276,15 @@ public class UpdateServiceConfigRequest extends Request {
         public Builder serviceCode(String serviceCode) {
             this.putBodyParameter("ServiceCode", serviceCode);
             this.serviceCode = serviceCode;
+            return this;
+        }
+
+        /**
+         * ServiceConfig.
+         */
+        public Builder serviceConfig(String serviceConfig) {
+            this.putBodyParameter("ServiceConfig", serviceConfig);
+            this.serviceConfig = serviceConfig;
             return this;
         }
 

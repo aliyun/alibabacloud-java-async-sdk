@@ -368,6 +368,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServiceConfigsResponse> listServiceConfigs(ListServiceConfigsRequest request);
 
     /**
+     * @param request the request parameters of LlmStreamChat  LlmStreamChatRequest
+     * @return LlmStreamChatResponse
+     */
+    CompletableFuture<LlmStreamChatResponse> llmStreamChat(LlmStreamChatRequest request);
+
+    ResponseIterable<LlmStreamChatResponseBody> llmStreamChatWithResponseIterable(LlmStreamChatRequest request);
+
+    /**
      * @param request the request parameters of ModifyAnswerLib  ModifyAnswerLibRequest
      * @return ModifyAnswerLibResponse
      */

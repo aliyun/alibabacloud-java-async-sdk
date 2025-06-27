@@ -44,6 +44,9 @@ public class GetServiceConfResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ServiceCode")
     private String serviceCode;
 
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
+    private String serviceType;
+
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
@@ -60,6 +63,7 @@ public class GetServiceConfResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceType = builder.resourceType;
         this.serviceCode = builder.serviceCode;
+        this.serviceType = builder.serviceType;
         this.success = builder.success;
         this.uid = builder.uid;
     }
@@ -140,6 +144,13 @@ public class GetServiceConfResponseBody extends TeaModel {
     }
 
     /**
+     * @return serviceType
+     */
+    public String getServiceType() {
+        return this.serviceType;
+    }
+
+    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -163,6 +174,7 @@ public class GetServiceConfResponseBody extends TeaModel {
         private String requestId; 
         private String resourceType; 
         private String serviceCode; 
+        private String serviceType; 
         private Boolean success; 
         private String uid; 
 
@@ -179,6 +191,7 @@ public class GetServiceConfResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.resourceType = model.resourceType;
             this.serviceCode = model.serviceCode;
+            this.serviceType = model.serviceType;
             this.success = model.success;
             this.uid = model.uid;
         } 
@@ -252,6 +265,14 @@ public class GetServiceConfResponseBody extends TeaModel {
          */
         public Builder serviceCode(String serviceCode) {
             this.serviceCode = serviceCode;
+            return this;
+        }
+
+        /**
+         * ServiceType.
+         */
+        public Builder serviceType(String serviceType) {
+            this.serviceType = serviceType;
             return this;
         }
 

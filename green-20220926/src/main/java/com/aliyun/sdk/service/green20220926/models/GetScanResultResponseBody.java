@@ -314,6 +314,12 @@ public class GetScanResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
+        @com.aliyun.core.annotation.NameInMap("GuardFileUrls")
+        private java.util.List<String> guardFileUrls;
+
+        @com.aliyun.core.annotation.NameInMap("GuardImageUrls")
+        private java.util.List<String> guardImageUrls;
+
         @com.aliyun.core.annotation.NameInMap("ImageLabels")
         private java.util.List<java.util.Map<String, ?>> imageLabels;
 
@@ -325,6 +331,12 @@ public class GetScanResultResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
+
+        @com.aliyun.core.annotation.NameInMap("MaliciousFileLevel")
+        private String maliciousFileLevel;
+
+        @com.aliyun.core.annotation.NameInMap("MaliciousUrlLevel")
+        private String maliciousUrlLevel;
 
         @com.aliyun.core.annotation.NameInMap("ManualOnly")
         private Boolean manualOnly;
@@ -433,10 +445,14 @@ public class GetScanResultResponseBody extends TeaModel {
             this.extra = builder.extra;
             this.frameCount = builder.frameCount;
             this.gmtCreate = builder.gmtCreate;
+            this.guardFileUrls = builder.guardFileUrls;
+            this.guardImageUrls = builder.guardImageUrls;
             this.imageLabels = builder.imageLabels;
             this.imageService = builder.imageService;
             this.imageUrl = builder.imageUrl;
             this.labels = builder.labels;
+            this.maliciousFileLevel = builder.maliciousFileLevel;
+            this.maliciousUrlLevel = builder.maliciousUrlLevel;
             this.manualOnly = builder.manualOnly;
             this.noLabels = builder.noLabels;
             this.offset = builder.offset;
@@ -570,6 +586,20 @@ public class GetScanResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return guardFileUrls
+         */
+        public java.util.List<String> getGuardFileUrls() {
+            return this.guardFileUrls;
+        }
+
+        /**
+         * @return guardImageUrls
+         */
+        public java.util.List<String> getGuardImageUrls() {
+            return this.guardImageUrls;
+        }
+
+        /**
          * @return imageLabels
          */
         public java.util.List<java.util.Map<String, ?>> getImageLabels() {
@@ -595,6 +625,20 @@ public class GetScanResultResponseBody extends TeaModel {
          */
         public String getLabels() {
             return this.labels;
+        }
+
+        /**
+         * @return maliciousFileLevel
+         */
+        public String getMaliciousFileLevel() {
+            return this.maliciousFileLevel;
+        }
+
+        /**
+         * @return maliciousUrlLevel
+         */
+        public String getMaliciousUrlLevel() {
+            return this.maliciousUrlLevel;
         }
 
         /**
@@ -828,10 +872,14 @@ public class GetScanResultResponseBody extends TeaModel {
             private java.util.Map<String, ?> extra; 
             private Long frameCount; 
             private String gmtCreate; 
+            private java.util.List<String> guardFileUrls; 
+            private java.util.List<String> guardImageUrls; 
             private java.util.List<java.util.Map<String, ?>> imageLabels; 
             private String imageService; 
             private String imageUrl; 
             private String labels; 
+            private String maliciousFileLevel; 
+            private String maliciousUrlLevel; 
             private Boolean manualOnly; 
             private java.util.List<String> noLabels; 
             private Long offset; 
@@ -881,10 +929,14 @@ public class GetScanResultResponseBody extends TeaModel {
                 this.extra = model.extra;
                 this.frameCount = model.frameCount;
                 this.gmtCreate = model.gmtCreate;
+                this.guardFileUrls = model.guardFileUrls;
+                this.guardImageUrls = model.guardImageUrls;
                 this.imageLabels = model.imageLabels;
                 this.imageService = model.imageService;
                 this.imageUrl = model.imageUrl;
                 this.labels = model.labels;
+                this.maliciousFileLevel = model.maliciousFileLevel;
+                this.maliciousUrlLevel = model.maliciousUrlLevel;
                 this.manualOnly = model.manualOnly;
                 this.noLabels = model.noLabels;
                 this.offset = model.offset;
@@ -1026,6 +1078,22 @@ public class GetScanResultResponseBody extends TeaModel {
             }
 
             /**
+             * GuardFileUrls.
+             */
+            public Builder guardFileUrls(java.util.List<String> guardFileUrls) {
+                this.guardFileUrls = guardFileUrls;
+                return this;
+            }
+
+            /**
+             * GuardImageUrls.
+             */
+            public Builder guardImageUrls(java.util.List<String> guardImageUrls) {
+                this.guardImageUrls = guardImageUrls;
+                return this;
+            }
+
+            /**
              * ImageLabels.
              */
             public Builder imageLabels(java.util.List<java.util.Map<String, ?>> imageLabels) {
@@ -1057,6 +1125,22 @@ public class GetScanResultResponseBody extends TeaModel {
              */
             public Builder labels(String labels) {
                 this.labels = labels;
+                return this;
+            }
+
+            /**
+             * MaliciousFileLevel.
+             */
+            public Builder maliciousFileLevel(String maliciousFileLevel) {
+                this.maliciousFileLevel = maliciousFileLevel;
+                return this;
+            }
+
+            /**
+             * MaliciousUrlLevel.
+             */
+            public Builder maliciousUrlLevel(String maliciousUrlLevel) {
+                this.maliciousUrlLevel = maliciousUrlLevel;
                 return this;
             }
 
