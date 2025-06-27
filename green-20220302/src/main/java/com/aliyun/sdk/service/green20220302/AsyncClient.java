@@ -108,6 +108,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ManualModerationResultResponse> manualModerationResult(ManualModerationResultRequest request);
 
     /**
+     * @param request the request parameters of MultiModalGuard  MultiModalGuardRequest
+     * @return MultiModalGuardResponse
+     */
+    CompletableFuture<MultiModalGuardResponse> multiModalGuard(MultiModalGuardRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you call this operation, make sure that you are familiar with the <a href="https://help.aliyun.com/document_detail/464388.html?#section-itm-m2s-ugq">billing</a> of Text Moderation 2.0.</p>
      * 
