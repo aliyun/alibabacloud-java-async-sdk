@@ -589,6 +589,67 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
      *
      * <p>DescribeLaunchTemplateVersionsResponseBody</p>
      */
+    public static class ImageOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LoginAsNonRoot")
+        private Boolean loginAsNonRoot;
+
+        private ImageOptions(Builder builder) {
+            this.loginAsNonRoot = builder.loginAsNonRoot;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return loginAsNonRoot
+         */
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
+        }
+
+        public static final class Builder {
+            private Boolean loginAsNonRoot; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageOptions model) {
+                this.loginAsNonRoot = model.loginAsNonRoot;
+            } 
+
+            /**
+             * <p>Specifies whether the instance that uses the image supports logons of the ecs-user user. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
+                this.loginAsNonRoot = loginAsNonRoot;
+                return this;
+            }
+
+            public ImageOptions build() {
+                return new ImageOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeLaunchTemplateVersionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLaunchTemplateVersionsResponseBody</p>
+     */
     public static class SecurityGroupIds extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private java.util.List<String> securityGroupId;
@@ -1195,6 +1256,9 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
+        @com.aliyun.core.annotation.NameInMap("ImageOptions")
+        private ImageOptions imageOptions;
+
         @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
         private String imageOwnerAlias;
 
@@ -1333,6 +1397,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             this.httpPutResponseHopLimit = builder.httpPutResponseHopLimit;
             this.httpTokens = builder.httpTokens;
             this.imageId = builder.imageId;
+            this.imageOptions = builder.imageOptions;
             this.imageOwnerAlias = builder.imageOwnerAlias;
             this.instanceChargeType = builder.instanceChargeType;
             this.instanceName = builder.instanceName;
@@ -1480,6 +1545,13 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
          */
         public String getImageId() {
             return this.imageId;
+        }
+
+        /**
+         * @return imageOptions
+         */
+        public ImageOptions getImageOptions() {
+            return this.imageOptions;
         }
 
         /**
@@ -1784,6 +1856,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
             private Integer httpPutResponseHopLimit; 
             private String httpTokens; 
             private String imageId; 
+            private ImageOptions imageOptions; 
             private String imageOwnerAlias; 
             private String instanceChargeType; 
             private String instanceName; 
@@ -1844,6 +1917,7 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
                 this.httpPutResponseHopLimit = model.httpPutResponseHopLimit;
                 this.httpTokens = model.httpTokens;
                 this.imageId = model.imageId;
+                this.imageOptions = model.imageOptions;
                 this.imageOwnerAlias = model.imageOwnerAlias;
                 this.instanceChargeType = model.instanceChargeType;
                 this.instanceName = model.instanceName;
@@ -2072,6 +2146,14 @@ public class DescribeLaunchTemplateVersionsResponseBody extends TeaModel {
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * <p>Details about the image options.</p>
+             */
+            public Builder imageOptions(ImageOptions imageOptions) {
+                this.imageOptions = imageOptions;
                 return this;
             }
 

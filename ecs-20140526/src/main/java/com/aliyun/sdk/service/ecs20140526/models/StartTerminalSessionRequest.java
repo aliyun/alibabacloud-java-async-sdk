@@ -253,7 +253,14 @@ public class StartTerminalSessionRequest extends Request {
         }
 
         /**
-         * ConnectionType.
+         * <p>The network type of the WebSocket URL required to connect to the instance. Valid values:</p>
+         * <ul>
+         * <li>Internet (default)</li>
+         * <li>Intranet</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Intranet</p>
          */
         public Builder connectionType(String connectionType) {
             this.putQueryParameter("ConnectionType", connectionType);

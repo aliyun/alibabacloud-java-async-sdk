@@ -82,6 +82,10 @@ public class CreateLaunchTemplateRequest extends Request {
     private String imageId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageOptions")
+    private ImageOptions imageOptions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
     private String imageOwnerAlias;
 
@@ -254,6 +258,7 @@ public class CreateLaunchTemplateRequest extends Request {
         this.httpPutResponseHopLimit = builder.httpPutResponseHopLimit;
         this.httpTokens = builder.httpTokens;
         this.imageId = builder.imageId;
+        this.imageOptions = builder.imageOptions;
         this.imageOwnerAlias = builder.imageOwnerAlias;
         this.instanceChargeType = builder.instanceChargeType;
         this.instanceName = builder.instanceName;
@@ -417,6 +422,13 @@ public class CreateLaunchTemplateRequest extends Request {
      */
     public String getImageId() {
         return this.imageId;
+    }
+
+    /**
+     * @return imageOptions
+     */
+    public ImageOptions getImageOptions() {
+        return this.imageOptions;
     }
 
     /**
@@ -702,6 +714,7 @@ public class CreateLaunchTemplateRequest extends Request {
         private Integer httpPutResponseHopLimit; 
         private String httpTokens; 
         private String imageId; 
+        private ImageOptions imageOptions; 
         private String imageOwnerAlias; 
         private String instanceChargeType; 
         private String instanceName; 
@@ -763,6 +776,7 @@ public class CreateLaunchTemplateRequest extends Request {
             this.httpPutResponseHopLimit = request.httpPutResponseHopLimit;
             this.httpTokens = request.httpTokens;
             this.imageId = request.imageId;
+            this.imageOptions = request.imageOptions;
             this.imageOwnerAlias = request.imageOwnerAlias;
             this.instanceChargeType = request.instanceChargeType;
             this.instanceName = request.instanceName;
@@ -1036,6 +1050,15 @@ public class CreateLaunchTemplateRequest extends Request {
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * <p>Details about the image options.</p>
+         */
+        public Builder imageOptions(ImageOptions imageOptions) {
+            this.putQueryParameter("ImageOptions", imageOptions);
+            this.imageOptions = imageOptions;
             return this;
         }
 
@@ -2315,6 +2338,67 @@ public class CreateLaunchTemplateRequest extends Request {
 
             public DataDisk build() {
                 return new DataDisk(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateLaunchTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>CreateLaunchTemplateRequest</p>
+     */
+    public static class ImageOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LoginAsNonRoot")
+        private Boolean loginAsNonRoot;
+
+        private ImageOptions(Builder builder) {
+            this.loginAsNonRoot = builder.loginAsNonRoot;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ImageOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return loginAsNonRoot
+         */
+        public Boolean getLoginAsNonRoot() {
+            return this.loginAsNonRoot;
+        }
+
+        public static final class Builder {
+            private Boolean loginAsNonRoot; 
+
+            private Builder() {
+            } 
+
+            private Builder(ImageOptions model) {
+                this.loginAsNonRoot = model.loginAsNonRoot;
+            } 
+
+            /**
+             * <p>Specifies whether the instance that uses the image supports logons of the ecs-user user. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
+                this.loginAsNonRoot = loginAsNonRoot;
+                return this;
+            }
+
+            public ImageOptions build() {
+                return new ImageOptions(this);
             } 
 
         } 

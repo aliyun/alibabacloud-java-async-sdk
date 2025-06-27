@@ -183,10 +183,6 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
 
         /**
          * <p>The resource type supported by the diagnostic metric set.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>instance</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>instance</p>
@@ -200,8 +196,8 @@ public class DescribeDiagnosticMetricSetsRequest extends Request {
         /**
          * <p>The type of the diagnostic metric set. Valid values:</p>
          * <ul>
-         * <li>User: user-defined diagnostic metric set</li>
-         * <li>Common: common diagnostic metric set</li>
+         * <li>User: custom diagnostic metric set</li>
+         * <li>Common: public diagnostic metric set</li>
          * </ul>
          * <p>Default value: User.</p>
          * 
