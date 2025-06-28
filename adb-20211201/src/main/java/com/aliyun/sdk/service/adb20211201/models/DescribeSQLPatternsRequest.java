@@ -55,6 +55,10 @@ public class DescribeSQLPatternsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
+    private String userName;
+
     private DescribeSQLPatternsRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
@@ -66,6 +70,7 @@ public class DescribeSQLPatternsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.startTime = builder.startTime;
+        this.userName = builder.userName;
     }
 
     public static Builder builder() {
@@ -144,6 +149,13 @@ public class DescribeSQLPatternsRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return userName
+     */
+    public String getUserName() {
+        return this.userName;
+    }
+
     public static final class Builder extends Request.Builder<DescribeSQLPatternsRequest, Builder> {
         private String DBClusterId; 
         private String endTime; 
@@ -154,6 +166,7 @@ public class DescribeSQLPatternsRequest extends Request {
         private Integer pageSize; 
         private String regionId; 
         private String startTime; 
+        private String userName; 
 
         private Builder() {
             super();
@@ -170,6 +183,7 @@ public class DescribeSQLPatternsRequest extends Request {
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.startTime = request.startTime;
+            this.userName = request.userName;
         } 
 
         /**
@@ -326,6 +340,15 @@ public class DescribeSQLPatternsRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * UserName.
+         */
+        public Builder userName(String userName) {
+            this.putQueryParameter("UserName", userName);
+            this.userName = userName;
             return this;
         }
 
