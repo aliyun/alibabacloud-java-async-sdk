@@ -91,7 +91,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The queried resource groups.</p>
+         * <p>The queried resource group.</p>
          */
         public Builder groupsInfo(java.util.List<GroupsInfo> groupsInfo) {
             this.groupsInfo = groupsInfo;
@@ -402,7 +402,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterMode.
+             * <p>The working mode of the resource group. Valid values:</p>
+             * <ul>
+             * <li><strong>Disable</strong> (default)</li>
+             * <li><strong>AutoScale</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AutoScale</p>
              */
             public Builder clusterMode(String clusterMode) {
                 this.clusterMode = clusterMode;
@@ -410,7 +417,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterSizeResource.
+             * <p>The resource specifications of a single compute cluster. Unit: ACU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16ACU</p>
              */
             public Builder clusterSizeResource(String clusterSizeResource) {
                 this.clusterSizeResource = clusterSizeResource;
@@ -418,7 +428,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionString.
+             * <p>The endpoint of the resource group.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of Engine is SparkWarehouse.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>amv-bp1nw64y******.ads.aliyuncs.com</p>
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -437,7 +453,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticMinComputeResource.
+             * <p>The minimum amount of elastic computing resources. Unit: ACU.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16ACU</p>
              */
             public Builder elasticMinComputeResource(String elasticMinComputeResource) {
                 this.elasticMinComputeResource = elasticMinComputeResource;
@@ -445,7 +464,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * <p>The engine of the resource group. Valid values:</p>
+             * <ul>
+             * <li><strong>AnalyticDB</strong> (default)</li>
+             * <li><strong>SparkWarehouse</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>AnalyticDB</p>
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -453,7 +479,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * EngineParams.
+             * <p>The Spark application configuration parameters that can be applied to all Spark jobs executed in the resource group. If you want to configure parameters for a specific Spark job, you can specify values for the parameters in the code editor when you submit the job.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;spark.adb.version&quot;:&quot;3.5&quot;}</p>
              */
             public Builder engineParams(java.util.Map<String, ?> engineParams) {
                 this.engineParams = engineParams;
@@ -474,12 +503,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             /**
              * <p>The query execution mode. Valid values:</p>
              * <ul>
-             * <li><strong>interactive</strong></li>
-             * <li><strong>batch</strong> (default)</li>
+             * <li><strong>interactive</strong> (default)</li>
+             * <li><strong>batch</strong></li>
+             * <li><strong>job</strong></li>
              * </ul>
-             * <blockquote>
-             * <p>For more information, see <a href="https://help.aliyun.com/document_detail/189502.html">Query execution modes</a>.</p>
-             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>interactive</p>
@@ -509,7 +536,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MaxClusterCount.
+             * <p>The maximum number of compute clusters that are allowed in the resource group. Maximum value: 10.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder maxClusterCount(Integer maxClusterCount) {
                 this.maxClusterCount = maxClusterCount;
@@ -517,7 +547,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MaxComputeResource.
+             * <p>The maximum amount of reserved computing resources, which refers to the amount of resources that are not allocated in the cluster. Unit: ACU.</p>
+             * <ul>
+             * <li>If the value of GroupType is <strong>interactive</strong>, the amount of reserved computing resources that are not allocated in the cluster is returned in increments of 16ACU.</li>
+             * <li>If the value of GroupType is <strong>job</strong>, the amount of reserved computing resources that are not allocated in the cluster is returned in increments of 8ACU.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>32ACU</p>
              */
             public Builder maxComputeResource(String maxComputeResource) {
                 this.maxComputeResource = maxComputeResource;
@@ -525,7 +562,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MinClusterCount.
+             * <p>The minimum number of compute clusters that are required in the resource group. Minimum value: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder minClusterCount(Integer minClusterCount) {
                 this.minClusterCount = minClusterCount;
@@ -533,7 +573,14 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * MinComputeResource.
+             * <p>The minimum amount of reserved computing resources. Unit: AnalyticDB compute unit (ACU).</p>
+             * <ul>
+             * <li>If the value of GroupType is <strong>interactive</strong>, 16ACU is returned.</li>
+             * <li>If the value of GroupType is <strong>job</strong>, 0ACU is returned.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0ACU</p>
              */
             public Builder minComputeResource(String minComputeResource) {
                 this.minComputeResource = minComputeResource;
@@ -552,7 +599,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * <p>The port number of the resource group.</p>
+             * <blockquote>
+             * <p> This parameter is returned only when the value of Engine is SparkWarehouse.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>3306</p>
              */
             public Builder port(String port) {
                 this.port = port;
@@ -560,7 +613,10 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * RunningClusterCount.
+             * <p>The number of compute clusters running in the resource group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder runningClusterCount(Integer runningClusterCount) {
                 this.runningClusterCount = runningClusterCount;
@@ -568,7 +624,17 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the resource group. Valid values:</p>
+             * <ul>
+             * <li><strong>Pending</strong></li>
+             * <li><strong>Running</strong></li>
+             * <li><strong>Scaling</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Running</p>
              */
             public Builder status(String status) {
                 this.status = status;

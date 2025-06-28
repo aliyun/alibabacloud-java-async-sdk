@@ -295,7 +295,14 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * ClusterMode.
+         * <p>The working mode of the resource group. Valid values:</p>
+         * <ul>
+         * <li><strong>Disable</strong> (default)</li>
+         * <li><strong>AutoScale</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AutoScale</p>
          */
         public Builder clusterMode(String clusterMode) {
             this.putQueryParameter("ClusterMode", clusterMode);
@@ -304,7 +311,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * ClusterSizeResource.
+         * <p>The resource specifications of a single compute cluster. Unit: ACU.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16ACU</p>
          */
         public Builder clusterSizeResource(String clusterSizeResource) {
             this.putQueryParameter("ClusterSizeResource", clusterSizeResource);
@@ -329,7 +339,14 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * Engine.
+         * <p>The engine of the resource group. Valid values:</p>
+         * <ul>
+         * <li><strong>AnalyticDB</strong> (default)</li>
+         * <li><strong>SparkWarehouse</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AnalyticDB</p>
          */
         public Builder engine(String engine) {
             this.putQueryParameter("Engine", engine);
@@ -338,7 +355,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * EngineParams.
+         * <p>The Spark application configuration parameters that can be applied to all Spark jobs executed in the resource group. If you want to configure parameters for a specific Spark job, you can specify values for the parameters in the code editor when you submit the job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;spark.adb.version&quot;:&quot;3.5&quot;}</p>
          */
         public Builder engineParams(java.util.Map<String, ?> engineParams) {
             String engineParamsShrink = shrink(engineParams, "EngineParams", "json");
@@ -370,6 +390,7 @@ public class CreateDBResourceGroupRequest extends Request {
          * <ul>
          * <li><strong>interactive</strong> (default)</li>
          * <li><strong>batch</strong></li>
+         * <li><strong>job</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -382,7 +403,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * MaxClusterCount.
+         * <p>The maximum number of compute clusters that are allowed in the resource group. Maximum value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder maxClusterCount(Integer maxClusterCount) {
             this.putQueryParameter("MaxClusterCount", maxClusterCount);
@@ -391,7 +415,14 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * MaxComputeResource.
+         * <p>The maximum amount of reserved computing resources, which refers to the amount of resources that are not allocated in the cluster. Unit: ACU.</p>
+         * <ul>
+         * <li>When GroupType is set to interactive, set this parameter to a value in increments of 16ACU.</li>
+         * <li>When GroupType is set to job, set this parameter to a value in increments of 8ACU.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>32ACU</p>
          */
         public Builder maxComputeResource(String maxComputeResource) {
             this.putQueryParameter("MaxComputeResource", maxComputeResource);
@@ -400,7 +431,10 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * MinClusterCount.
+         * <p>The minimum number of compute clusters that are required in the resource group. Minimum value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder minClusterCount(Integer minClusterCount) {
             this.putQueryParameter("MinClusterCount", minClusterCount);
@@ -409,7 +443,14 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * MinComputeResource.
+         * <p>The minimum amount of reserved computing resources. Unit: AnalyticDB compute unit (ACU).</p>
+         * <ul>
+         * <li>When GroupType is set to interactive, set this parameter to 16ACU.</li>
+         * <li>When GroupType is set to job, set this parameter to 0ACU.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0ACU</p>
          */
         public Builder minComputeResource(String minComputeResource) {
             this.putQueryParameter("MinComputeResource", minComputeResource);

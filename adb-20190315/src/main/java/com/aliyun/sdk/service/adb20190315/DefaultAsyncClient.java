@@ -285,8 +285,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Precautions</h2>
-     * <p>This operation is applicable only for elastic clusters of 32 cores or more.</p>
+     * <p>This operation is suitable for the following editions:</p>
+     * <ul>
+     * <li><strong>Enterprise Edition</strong>.</li>
+     * <li><strong>Basic Edition</strong>.</li>
+     * <li><strong>Data Lakehouse Edition</strong>.</li>
+     * <li><strong>Data Warehouse Edition in elastic mode</strong>: 32 cores and 128 GB or more.</li>
+     * </ul>
      * 
      * @param request the request parameters of CreateDBResourceGroup  CreateDBResourceGroupRequest
      * @return CreateDBResourceGroupResponse
@@ -1074,8 +1079,13 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3></h3>
-     * <p>You can call this operation only for AnalyticDB for MySQL clusters in elastic mode for Cluster Edition that have 32 cores or more.</p>
+     * <p>This operation is suitable for the following editions:</p>
+     * <ul>
+     * <li><strong>Enterprise Edition</strong>.</li>
+     * <li><strong>Basic Edition</strong>.</li>
+     * <li><strong>Data Lakehouse Edition</strong>.</li>
+     * <li><strong>Data Warehouse Edition in elastic mode</strong>: 32 cores and 128 GB or more.</li>
+     * </ul>
      * 
      * @param request the request parameters of DescribeDBResourceGroup  DescribeDBResourceGroupRequest
      * @return DescribeDBResourceGroupResponse
@@ -2457,10 +2467,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h2>Precautions</h2>
+     * <p>This operation is suitable for the following editions:</p>
      * <ul>
-     * <li>This operation is applicable only for elastic clusters of 32 cores or more.</li>
-     * <li>The number of nodes cannot be changed for the default resource group USER_DEFAULT.</li>
+     * <li><strong>Enterprise Edition</strong>.</li>
+     * <li><strong>Basic Edition</strong>.</li>
+     * <li><strong>Data Lakehouse Edition</strong>.</li>
+     * <li><strong>Data Warehouse Edition in elastic mode</strong>: 32 cores and 128 GB or more. The number of nodes cannot be modified for the default resource group USER_DEFAULT.</li>
      * </ul>
      * 
      * @param request the request parameters of ModifyDBResourceGroup  ModifyDBResourceGroupRequest
