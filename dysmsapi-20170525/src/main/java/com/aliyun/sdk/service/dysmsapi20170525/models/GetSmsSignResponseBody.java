@@ -59,6 +59,9 @@ public class GetSmsSignResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SignCode")
     private String signCode;
 
+    @com.aliyun.core.annotation.NameInMap("SignIspRegisterDetailList")
+    private java.util.List<SignIspRegisterDetailList> signIspRegisterDetailList;
+
     @com.aliyun.core.annotation.NameInMap("SignName")
     private String signName;
 
@@ -89,6 +92,7 @@ public class GetSmsSignResponseBody extends TeaModel {
         this.remark = builder.remark;
         this.requestId = builder.requestId;
         this.signCode = builder.signCode;
+        this.signIspRegisterDetailList = builder.signIspRegisterDetailList;
         this.signName = builder.signName;
         this.signStatus = builder.signStatus;
         this.signTag = builder.signTag;
@@ -207,6 +211,13 @@ public class GetSmsSignResponseBody extends TeaModel {
     }
 
     /**
+     * @return signIspRegisterDetailList
+     */
+    public java.util.List<SignIspRegisterDetailList> getSignIspRegisterDetailList() {
+        return this.signIspRegisterDetailList;
+    }
+
+    /**
      * @return signName
      */
     public String getSignName() {
@@ -256,6 +267,7 @@ public class GetSmsSignResponseBody extends TeaModel {
         private String remark; 
         private String requestId; 
         private String signCode; 
+        private java.util.List<SignIspRegisterDetailList> signIspRegisterDetailList; 
         private String signName; 
         private Long signStatus; 
         private String signTag; 
@@ -280,6 +292,7 @@ public class GetSmsSignResponseBody extends TeaModel {
             this.remark = model.remark;
             this.requestId = model.requestId;
             this.signCode = model.signCode;
+            this.signIspRegisterDetailList = model.signIspRegisterDetailList;
             this.signName = model.signName;
             this.signStatus = model.signStatus;
             this.signTag = model.signTag;
@@ -428,6 +441,14 @@ public class GetSmsSignResponseBody extends TeaModel {
          */
         public Builder signCode(String signCode) {
             this.signCode = signCode;
+            return this;
+        }
+
+        /**
+         * SignIspRegisterDetailList.
+         */
+        public Builder signIspRegisterDetailList(java.util.List<SignIspRegisterDetailList> signIspRegisterDetailList) {
+            this.signIspRegisterDetailList = signIspRegisterDetailList;
             return this;
         }
 
@@ -586,6 +607,198 @@ public class GetSmsSignResponseBody extends TeaModel {
 
             public AuditInfo build() {
                 return new AuditInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetSmsSignResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmsSignResponseBody</p>
+     */
+    public static class RegisterStatusReasons extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
+        private String reasonCode;
+
+        @com.aliyun.core.annotation.NameInMap("ReasonDescList")
+        private java.util.List<String> reasonDescList;
+
+        private RegisterStatusReasons(Builder builder) {
+            this.reasonCode = builder.reasonCode;
+            this.reasonDescList = builder.reasonDescList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RegisterStatusReasons create() {
+            return builder().build();
+        }
+
+        /**
+         * @return reasonCode
+         */
+        public String getReasonCode() {
+            return this.reasonCode;
+        }
+
+        /**
+         * @return reasonDescList
+         */
+        public java.util.List<String> getReasonDescList() {
+            return this.reasonDescList;
+        }
+
+        public static final class Builder {
+            private String reasonCode; 
+            private java.util.List<String> reasonDescList; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegisterStatusReasons model) {
+                this.reasonCode = model.reasonCode;
+                this.reasonDescList = model.reasonDescList;
+            } 
+
+            /**
+             * ReasonCode.
+             */
+            public Builder reasonCode(String reasonCode) {
+                this.reasonCode = reasonCode;
+                return this;
+            }
+
+            /**
+             * ReasonDescList.
+             */
+            public Builder reasonDescList(java.util.List<String> reasonDescList) {
+                this.reasonDescList = reasonDescList;
+                return this;
+            }
+
+            public RegisterStatusReasons build() {
+                return new RegisterStatusReasons(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetSmsSignResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetSmsSignResponseBody</p>
+     */
+    public static class SignIspRegisterDetailList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("OperatorCode")
+        private String operatorCode;
+
+        @com.aliyun.core.annotation.NameInMap("OperatorCompleteTime")
+        private String operatorCompleteTime;
+
+        @com.aliyun.core.annotation.NameInMap("RegisterStatus")
+        private Integer registerStatus;
+
+        @com.aliyun.core.annotation.NameInMap("RegisterStatusReasons")
+        private java.util.List<RegisterStatusReasons> registerStatusReasons;
+
+        private SignIspRegisterDetailList(Builder builder) {
+            this.operatorCode = builder.operatorCode;
+            this.operatorCompleteTime = builder.operatorCompleteTime;
+            this.registerStatus = builder.registerStatus;
+            this.registerStatusReasons = builder.registerStatusReasons;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SignIspRegisterDetailList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return operatorCode
+         */
+        public String getOperatorCode() {
+            return this.operatorCode;
+        }
+
+        /**
+         * @return operatorCompleteTime
+         */
+        public String getOperatorCompleteTime() {
+            return this.operatorCompleteTime;
+        }
+
+        /**
+         * @return registerStatus
+         */
+        public Integer getRegisterStatus() {
+            return this.registerStatus;
+        }
+
+        /**
+         * @return registerStatusReasons
+         */
+        public java.util.List<RegisterStatusReasons> getRegisterStatusReasons() {
+            return this.registerStatusReasons;
+        }
+
+        public static final class Builder {
+            private String operatorCode; 
+            private String operatorCompleteTime; 
+            private Integer registerStatus; 
+            private java.util.List<RegisterStatusReasons> registerStatusReasons; 
+
+            private Builder() {
+            } 
+
+            private Builder(SignIspRegisterDetailList model) {
+                this.operatorCode = model.operatorCode;
+                this.operatorCompleteTime = model.operatorCompleteTime;
+                this.registerStatus = model.registerStatus;
+                this.registerStatusReasons = model.registerStatusReasons;
+            } 
+
+            /**
+             * OperatorCode.
+             */
+            public Builder operatorCode(String operatorCode) {
+                this.operatorCode = operatorCode;
+                return this;
+            }
+
+            /**
+             * OperatorCompleteTime.
+             */
+            public Builder operatorCompleteTime(String operatorCompleteTime) {
+                this.operatorCompleteTime = operatorCompleteTime;
+                return this;
+            }
+
+            /**
+             * RegisterStatus.
+             */
+            public Builder registerStatus(Integer registerStatus) {
+                this.registerStatus = registerStatus;
+                return this;
+            }
+
+            /**
+             * RegisterStatusReasons.
+             */
+            public Builder registerStatusReasons(java.util.List<RegisterStatusReasons> registerStatusReasons) {
+                this.registerStatusReasons = registerStatusReasons;
+                return this;
+            }
+
+            public SignIspRegisterDetailList build() {
+                return new SignIspRegisterDetailList(this);
             } 
 
         } 
