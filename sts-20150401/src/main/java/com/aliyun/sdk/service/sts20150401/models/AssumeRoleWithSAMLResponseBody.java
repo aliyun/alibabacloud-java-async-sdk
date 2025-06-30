@@ -29,11 +29,15 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SAMLAssertionInfo")
     private SAMLAssertionInfo SAMLAssertionInfo;
 
+    @com.aliyun.core.annotation.NameInMap("SourceIdentity")
+    private String sourceIdentity;
+
     private AssumeRoleWithSAMLResponseBody(Builder builder) {
         this.assumedRoleUser = builder.assumedRoleUser;
         this.credentials = builder.credentials;
         this.requestId = builder.requestId;
         this.SAMLAssertionInfo = builder.SAMLAssertionInfo;
+        this.sourceIdentity = builder.sourceIdentity;
     }
 
     public static Builder builder() {
@@ -76,11 +80,19 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
         return this.SAMLAssertionInfo;
     }
 
+    /**
+     * @return sourceIdentity
+     */
+    public String getSourceIdentity() {
+        return this.sourceIdentity;
+    }
+
     public static final class Builder {
         private AssumedRoleUser assumedRoleUser; 
         private Credentials credentials; 
         private String requestId; 
         private SAMLAssertionInfo SAMLAssertionInfo; 
+        private String sourceIdentity; 
 
         private Builder() {
         } 
@@ -90,6 +102,7 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
             this.credentials = model.credentials;
             this.requestId = model.requestId;
             this.SAMLAssertionInfo = model.SAMLAssertionInfo;
+            this.sourceIdentity = model.sourceIdentity;
         } 
 
         /**
@@ -124,6 +137,14 @@ public class AssumeRoleWithSAMLResponseBody extends TeaModel {
          */
         public Builder SAMLAssertionInfo(SAMLAssertionInfo SAMLAssertionInfo) {
             this.SAMLAssertionInfo = SAMLAssertionInfo;
+            return this;
+        }
+
+        /**
+         * SourceIdentity.
+         */
+        public Builder sourceIdentity(String sourceIdentity) {
+            this.sourceIdentity = sourceIdentity;
             return this;
         }
 

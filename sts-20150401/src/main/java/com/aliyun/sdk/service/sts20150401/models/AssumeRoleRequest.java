@@ -39,6 +39,10 @@ public class AssumeRoleRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String roleSessionName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIdentity")
+    private String sourceIdentity;
+
     private AssumeRoleRequest(Builder builder) {
         super(builder);
         this.durationSeconds = builder.durationSeconds;
@@ -46,6 +50,7 @@ public class AssumeRoleRequest extends Request {
         this.policy = builder.policy;
         this.roleArn = builder.roleArn;
         this.roleSessionName = builder.roleSessionName;
+        this.sourceIdentity = builder.sourceIdentity;
     }
 
     public static Builder builder() {
@@ -96,12 +101,20 @@ public class AssumeRoleRequest extends Request {
         return this.roleSessionName;
     }
 
+    /**
+     * @return sourceIdentity
+     */
+    public String getSourceIdentity() {
+        return this.sourceIdentity;
+    }
+
     public static final class Builder extends Request.Builder<AssumeRoleRequest, Builder> {
         private Long durationSeconds; 
         private String externalId; 
         private String policy; 
         private String roleArn; 
         private String roleSessionName; 
+        private String sourceIdentity; 
 
         private Builder() {
             super();
@@ -114,6 +127,7 @@ public class AssumeRoleRequest extends Request {
             this.policy = request.policy;
             this.roleArn = request.roleArn;
             this.roleSessionName = request.roleSessionName;
+            this.sourceIdentity = request.sourceIdentity;
         } 
 
         /**
@@ -194,6 +208,15 @@ public class AssumeRoleRequest extends Request {
         public Builder roleSessionName(String roleSessionName) {
             this.putQueryParameter("RoleSessionName", roleSessionName);
             this.roleSessionName = roleSessionName;
+            return this;
+        }
+
+        /**
+         * SourceIdentity.
+         */
+        public Builder sourceIdentity(String sourceIdentity) {
+            this.putQueryParameter("SourceIdentity", sourceIdentity);
+            this.sourceIdentity = sourceIdentity;
             return this;
         }
 

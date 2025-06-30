@@ -29,11 +29,15 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SourceIdentity")
+    private String sourceIdentity;
+
     private AssumeRoleWithOIDCResponseBody(Builder builder) {
         this.assumedRoleUser = builder.assumedRoleUser;
         this.credentials = builder.credentials;
         this.OIDCTokenInfo = builder.OIDCTokenInfo;
         this.requestId = builder.requestId;
+        this.sourceIdentity = builder.sourceIdentity;
     }
 
     public static Builder builder() {
@@ -76,11 +80,19 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return sourceIdentity
+     */
+    public String getSourceIdentity() {
+        return this.sourceIdentity;
+    }
+
     public static final class Builder {
         private AssumedRoleUser assumedRoleUser; 
         private Credentials credentials; 
         private OIDCTokenInfo OIDCTokenInfo; 
         private String requestId; 
+        private String sourceIdentity; 
 
         private Builder() {
         } 
@@ -90,6 +102,7 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
             this.credentials = model.credentials;
             this.OIDCTokenInfo = model.OIDCTokenInfo;
             this.requestId = model.requestId;
+            this.sourceIdentity = model.sourceIdentity;
         } 
 
         /**
@@ -124,6 +137,14 @@ public class AssumeRoleWithOIDCResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SourceIdentity.
+         */
+        public Builder sourceIdentity(String sourceIdentity) {
+            this.sourceIdentity = sourceIdentity;
             return this;
         }
 
