@@ -27,24 +27,11 @@ public class IntlFlightOtaSearchRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("cabin_type")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer cabinType;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("direct_only")
-    private Boolean directOnly;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("language")
-    private String language;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("need_share_flight")
-    private Boolean needShareFlight;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("search_journeys")
@@ -54,10 +41,6 @@ public class IntlFlightOtaSearchRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("search_passenger_list")
     private java.util.List<SearchPassengerList> searchPassengerList;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("supplier_code")
-    private String supplierCode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("trip_type")
@@ -73,13 +56,9 @@ public class IntlFlightOtaSearchRequest extends Request {
         this.btripUserId = builder.btripUserId;
         this.buyerName = builder.buyerName;
         this.cabinType = builder.cabinType;
-        this.directOnly = builder.directOnly;
         this.isvName = builder.isvName;
-        this.language = builder.language;
-        this.needShareFlight = builder.needShareFlight;
         this.searchJourneys = builder.searchJourneys;
         this.searchPassengerList = builder.searchPassengerList;
-        this.supplierCode = builder.supplierCode;
         this.tripType = builder.tripType;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
@@ -119,31 +98,10 @@ public class IntlFlightOtaSearchRequest extends Request {
     }
 
     /**
-     * @return directOnly
-     */
-    public Boolean getDirectOnly() {
-        return this.directOnly;
-    }
-
-    /**
      * @return isvName
      */
     public String getIsvName() {
         return this.isvName;
-    }
-
-    /**
-     * @return language
-     */
-    public String getLanguage() {
-        return this.language;
-    }
-
-    /**
-     * @return needShareFlight
-     */
-    public Boolean getNeedShareFlight() {
-        return this.needShareFlight;
     }
 
     /**
@@ -158,13 +116,6 @@ public class IntlFlightOtaSearchRequest extends Request {
      */
     public java.util.List<SearchPassengerList> getSearchPassengerList() {
         return this.searchPassengerList;
-    }
-
-    /**
-     * @return supplierCode
-     */
-    public String getSupplierCode() {
-        return this.supplierCode;
     }
 
     /**
@@ -185,13 +136,9 @@ public class IntlFlightOtaSearchRequest extends Request {
         private String btripUserId; 
         private String buyerName; 
         private Integer cabinType; 
-        private Boolean directOnly; 
         private String isvName; 
-        private String language; 
-        private Boolean needShareFlight; 
         private java.util.List<SearchJourneys> searchJourneys; 
         private java.util.List<SearchPassengerList> searchPassengerList; 
-        private String supplierCode; 
         private Integer tripType; 
         private String xAcsBtripCorpToken; 
 
@@ -204,13 +151,9 @@ public class IntlFlightOtaSearchRequest extends Request {
             this.btripUserId = request.btripUserId;
             this.buyerName = request.buyerName;
             this.cabinType = request.cabinType;
-            this.directOnly = request.directOnly;
             this.isvName = request.isvName;
-            this.language = request.language;
-            this.needShareFlight = request.needShareFlight;
             this.searchJourneys = request.searchJourneys;
             this.searchPassengerList = request.searchPassengerList;
-            this.supplierCode = request.supplierCode;
             this.tripType = request.tripType;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
@@ -234,23 +177,11 @@ public class IntlFlightOtaSearchRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>0</p>
+         * cabin_type.
          */
         public Builder cabinType(Integer cabinType) {
             this.putQueryParameter("cabin_type", cabinType);
             this.cabinType = cabinType;
-            return this;
-        }
-
-        /**
-         * direct_only.
-         */
-        public Builder directOnly(Boolean directOnly) {
-            this.putQueryParameter("direct_only", directOnly);
-            this.directOnly = directOnly;
             return this;
         }
 
@@ -260,24 +191,6 @@ public class IntlFlightOtaSearchRequest extends Request {
         public Builder isvName(String isvName) {
             this.putQueryParameter("isv_name", isvName);
             this.isvName = isvName;
-            return this;
-        }
-
-        /**
-         * language.
-         */
-        public Builder language(String language) {
-            this.putQueryParameter("language", language);
-            this.language = language;
-            return this;
-        }
-
-        /**
-         * need_share_flight.
-         */
-        public Builder needShareFlight(Boolean needShareFlight) {
-            this.putQueryParameter("need_share_flight", needShareFlight);
-            this.needShareFlight = needShareFlight;
             return this;
         }
 
@@ -298,15 +211,6 @@ public class IntlFlightOtaSearchRequest extends Request {
             String searchPassengerListShrink = shrink(searchPassengerList, "search_passenger_list", "json");
             this.putQueryParameter("search_passenger_list", searchPassengerListShrink);
             this.searchPassengerList = searchPassengerList;
-            return this;
-        }
-
-        /**
-         * supplier_code.
-         */
-        public Builder supplierCode(String supplierCode) {
-            this.putQueryParameter("supplier_code", supplierCode);
-            this.supplierCode = supplierCode;
             return this;
         }
 
@@ -352,9 +256,6 @@ public class IntlFlightOtaSearchRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String arrCityCode;
 
-        @com.aliyun.core.annotation.NameInMap("cabin_type")
-        private Integer cabinType;
-
         @com.aliyun.core.annotation.NameInMap("dep_airport_code")
         private String depAirportCode;
 
@@ -376,7 +277,6 @@ public class IntlFlightOtaSearchRequest extends Request {
         private SelectedFlights(Builder builder) {
             this.arrAirportCode = builder.arrAirportCode;
             this.arrCityCode = builder.arrCityCode;
-            this.cabinType = builder.cabinType;
             this.depAirportCode = builder.depAirportCode;
             this.depCityCode = builder.depCityCode;
             this.flightTime = builder.flightTime;
@@ -404,13 +304,6 @@ public class IntlFlightOtaSearchRequest extends Request {
          */
         public String getArrCityCode() {
             return this.arrCityCode;
-        }
-
-        /**
-         * @return cabinType
-         */
-        public Integer getCabinType() {
-            return this.cabinType;
         }
 
         /**
@@ -451,7 +344,6 @@ public class IntlFlightOtaSearchRequest extends Request {
         public static final class Builder {
             private String arrAirportCode; 
             private String arrCityCode; 
-            private Integer cabinType; 
             private String depAirportCode; 
             private String depCityCode; 
             private String flightTime; 
@@ -464,7 +356,6 @@ public class IntlFlightOtaSearchRequest extends Request {
             private Builder(SelectedFlights model) {
                 this.arrAirportCode = model.arrAirportCode;
                 this.arrCityCode = model.arrCityCode;
-                this.cabinType = model.cabinType;
                 this.depAirportCode = model.depAirportCode;
                 this.depCityCode = model.depCityCode;
                 this.flightTime = model.flightTime;
@@ -488,17 +379,6 @@ public class IntlFlightOtaSearchRequest extends Request {
              */
             public Builder arrCityCode(String arrCityCode) {
                 this.arrCityCode = arrCityCode;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>0</p>
-             */
-            public Builder cabinType(Integer cabinType) {
-                this.cabinType = cabinType;
                 return this;
             }
 

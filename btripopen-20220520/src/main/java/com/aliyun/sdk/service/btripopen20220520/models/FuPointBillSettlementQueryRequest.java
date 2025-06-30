@@ -26,6 +26,10 @@ public class FuPointBillSettlementQueryRequest extends Request {
     private String cooperatorId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("order_id")
+    private Long orderId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("page_no")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNo;
@@ -59,6 +63,7 @@ public class FuPointBillSettlementQueryRequest extends Request {
         super(builder);
         this.billBatch = builder.billBatch;
         this.cooperatorId = builder.cooperatorId;
+        this.orderId = builder.orderId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.periodEnd = builder.periodEnd;
@@ -93,6 +98,13 @@ public class FuPointBillSettlementQueryRequest extends Request {
      */
     public String getCooperatorId() {
         return this.cooperatorId;
+    }
+
+    /**
+     * @return orderId
+     */
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -147,6 +159,7 @@ public class FuPointBillSettlementQueryRequest extends Request {
     public static final class Builder extends Request.Builder<FuPointBillSettlementQueryRequest, Builder> {
         private String billBatch; 
         private String cooperatorId; 
+        private Long orderId; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String periodEnd; 
@@ -163,6 +176,7 @@ public class FuPointBillSettlementQueryRequest extends Request {
             super(request);
             this.billBatch = request.billBatch;
             this.cooperatorId = request.cooperatorId;
+            this.orderId = request.orderId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.periodEnd = request.periodEnd;
@@ -187,6 +201,15 @@ public class FuPointBillSettlementQueryRequest extends Request {
         public Builder cooperatorId(String cooperatorId) {
             this.putQueryParameter("cooperator_id", cooperatorId);
             this.cooperatorId = cooperatorId;
+            return this;
+        }
+
+        /**
+         * order_id.
+         */
+        public Builder orderId(Long orderId) {
+            this.putQueryParameter("order_id", orderId);
+            this.orderId = orderId;
             return this;
         }
 

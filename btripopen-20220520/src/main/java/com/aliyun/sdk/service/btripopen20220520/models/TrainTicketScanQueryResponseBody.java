@@ -209,11 +209,23 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("department")
         private String department;
 
+        @com.aliyun.core.annotation.NameInMap("fee_type_show_code")
+        private Integer feeTypeShowCode;
+
         @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
+        @com.aliyun.core.annotation.NameInMap("invoice_date")
+        private String invoiceDate;
+
+        @com.aliyun.core.annotation.NameInMap("invoice_material")
+        private Integer invoiceMaterial;
+
         @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
+
+        @com.aliyun.core.annotation.NameInMap("ofd_url")
+        private String ofdUrl;
 
         @com.aliyun.core.annotation.NameInMap("order_id")
         private Long orderId;
@@ -224,11 +236,20 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("passenger")
         private String passenger;
 
+        @com.aliyun.core.annotation.NameInMap("pdf_url")
+        private String pdfUrl;
+
         @com.aliyun.core.annotation.NameInMap("price")
         private String price;
 
         @com.aliyun.core.annotation.NameInMap("project")
         private String project;
+
+        @com.aliyun.core.annotation.NameInMap("purchaser_name")
+        private String purchaserName;
+
+        @com.aliyun.core.annotation.NameInMap("purchaser_tax_no")
+        private String purchaserTaxNo;
 
         @com.aliyun.core.annotation.NameInMap("seat")
         private String seat;
@@ -260,13 +281,20 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             this.depStation = builder.depStation;
             this.depTime = builder.depTime;
             this.department = builder.department;
+            this.feeTypeShowCode = builder.feeTypeShowCode;
             this.id = builder.id;
+            this.invoiceDate = builder.invoiceDate;
+            this.invoiceMaterial = builder.invoiceMaterial;
             this.invoiceTitle = builder.invoiceTitle;
+            this.ofdUrl = builder.ofdUrl;
             this.orderId = builder.orderId;
             this.ossUrl = builder.ossUrl;
             this.passenger = builder.passenger;
+            this.pdfUrl = builder.pdfUrl;
             this.price = builder.price;
             this.project = builder.project;
+            this.purchaserName = builder.purchaserName;
+            this.purchaserTaxNo = builder.purchaserTaxNo;
             this.seat = builder.seat;
             this.seatNo = builder.seatNo;
             this.serialNumber = builder.serialNumber;
@@ -341,6 +369,13 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return feeTypeShowCode
+         */
+        public Integer getFeeTypeShowCode() {
+            return this.feeTypeShowCode;
+        }
+
+        /**
          * @return id
          */
         public String getId() {
@@ -348,10 +383,31 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return invoiceDate
+         */
+        public String getInvoiceDate() {
+            return this.invoiceDate;
+        }
+
+        /**
+         * @return invoiceMaterial
+         */
+        public Integer getInvoiceMaterial() {
+            return this.invoiceMaterial;
+        }
+
+        /**
          * @return invoiceTitle
          */
         public String getInvoiceTitle() {
             return this.invoiceTitle;
+        }
+
+        /**
+         * @return ofdUrl
+         */
+        public String getOfdUrl() {
+            return this.ofdUrl;
         }
 
         /**
@@ -376,6 +432,13 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return pdfUrl
+         */
+        public String getPdfUrl() {
+            return this.pdfUrl;
+        }
+
+        /**
          * @return price
          */
         public String getPrice() {
@@ -387,6 +450,20 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
          */
         public String getProject() {
             return this.project;
+        }
+
+        /**
+         * @return purchaserName
+         */
+        public String getPurchaserName() {
+            return this.purchaserName;
+        }
+
+        /**
+         * @return purchaserTaxNo
+         */
+        public String getPurchaserTaxNo() {
+            return this.purchaserTaxNo;
         }
 
         /**
@@ -447,13 +524,20 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             private String depStation; 
             private String depTime; 
             private String department; 
+            private Integer feeTypeShowCode; 
             private String id; 
+            private String invoiceDate; 
+            private Integer invoiceMaterial; 
             private String invoiceTitle; 
+            private String ofdUrl; 
             private Long orderId; 
             private String ossUrl; 
             private String passenger; 
+            private String pdfUrl; 
             private String price; 
             private String project; 
+            private String purchaserName; 
+            private String purchaserTaxNo; 
             private String seat; 
             private String seatNo; 
             private String serialNumber; 
@@ -474,13 +558,20 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
                 this.depStation = model.depStation;
                 this.depTime = model.depTime;
                 this.department = model.department;
+                this.feeTypeShowCode = model.feeTypeShowCode;
                 this.id = model.id;
+                this.invoiceDate = model.invoiceDate;
+                this.invoiceMaterial = model.invoiceMaterial;
                 this.invoiceTitle = model.invoiceTitle;
+                this.ofdUrl = model.ofdUrl;
                 this.orderId = model.orderId;
                 this.ossUrl = model.ossUrl;
                 this.passenger = model.passenger;
+                this.pdfUrl = model.pdfUrl;
                 this.price = model.price;
                 this.project = model.project;
+                this.purchaserName = model.purchaserName;
+                this.purchaserTaxNo = model.purchaserTaxNo;
                 this.seat = model.seat;
                 this.seatNo = model.seatNo;
                 this.serialNumber = model.serialNumber;
@@ -555,6 +646,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * fee_type_show_code.
+             */
+            public Builder feeTypeShowCode(Integer feeTypeShowCode) {
+                this.feeTypeShowCode = feeTypeShowCode;
+                return this;
+            }
+
+            /**
              * id.
              */
             public Builder id(String id) {
@@ -563,10 +662,34 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * invoice_date.
+             */
+            public Builder invoiceDate(String invoiceDate) {
+                this.invoiceDate = invoiceDate;
+                return this;
+            }
+
+            /**
+             * invoice_material.
+             */
+            public Builder invoiceMaterial(Integer invoiceMaterial) {
+                this.invoiceMaterial = invoiceMaterial;
+                return this;
+            }
+
+            /**
              * invoice_title.
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
+                return this;
+            }
+
+            /**
+             * ofd_url.
+             */
+            public Builder ofdUrl(String ofdUrl) {
+                this.ofdUrl = ofdUrl;
                 return this;
             }
 
@@ -595,6 +718,14 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * pdf_url.
+             */
+            public Builder pdfUrl(String pdfUrl) {
+                this.pdfUrl = pdfUrl;
+                return this;
+            }
+
+            /**
              * price.
              */
             public Builder price(String price) {
@@ -607,6 +738,22 @@ public class TrainTicketScanQueryResponseBody extends TeaModel {
              */
             public Builder project(String project) {
                 this.project = project;
+                return this;
+            }
+
+            /**
+             * purchaser_name.
+             */
+            public Builder purchaserName(String purchaserName) {
+                this.purchaserName = purchaserName;
+                return this;
+            }
+
+            /**
+             * purchaser_tax_no.
+             */
+            public Builder purchaserTaxNo(String purchaserTaxNo) {
+                this.purchaserTaxNo = purchaserTaxNo;
                 return this;
             }
 

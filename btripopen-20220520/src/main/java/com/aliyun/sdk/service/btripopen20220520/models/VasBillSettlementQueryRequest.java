@@ -12,14 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link MealBillSettlementQueryRequest} extends {@link RequestModel}
+ * {@link VasBillSettlementQueryRequest} extends {@link RequestModel}
  *
- * <p>MealBillSettlementQueryRequest</p>
+ * <p>VasBillSettlementQueryRequest</p>
  */
-public class MealBillSettlementQueryRequest extends Request {
+public class VasBillSettlementQueryRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("bill_batch")
     private String billBatch;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("cooperator_id")
+    private String cooperatorId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("order_id")
@@ -32,7 +36,7 @@ public class MealBillSettlementQueryRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("page_size")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
@@ -52,12 +56,13 @@ public class MealBillSettlementQueryRequest extends Request {
     private Boolean scrollMod;
 
     @com.aliyun.core.annotation.Header
-    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-so-corp-token")
-    private String xAcsBtripSoCorpToken;
+    @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
+    private String xAcsBtripCorpToken;
 
-    private MealBillSettlementQueryRequest(Builder builder) {
+    private VasBillSettlementQueryRequest(Builder builder) {
         super(builder);
         this.billBatch = builder.billBatch;
+        this.cooperatorId = builder.cooperatorId;
         this.orderId = builder.orderId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
@@ -65,14 +70,14 @@ public class MealBillSettlementQueryRequest extends Request {
         this.periodStart = builder.periodStart;
         this.scrollId = builder.scrollId;
         this.scrollMod = builder.scrollMod;
-        this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
+        this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static MealBillSettlementQueryRequest create() {
+    public static VasBillSettlementQueryRequest create() {
         return builder().build();
     }
 
@@ -86,6 +91,13 @@ public class MealBillSettlementQueryRequest extends Request {
      */
     public String getBillBatch() {
         return this.billBatch;
+    }
+
+    /**
+     * @return cooperatorId
+     */
+    public String getCooperatorId() {
+        return this.cooperatorId;
     }
 
     /**
@@ -138,14 +150,15 @@ public class MealBillSettlementQueryRequest extends Request {
     }
 
     /**
-     * @return xAcsBtripSoCorpToken
+     * @return xAcsBtripCorpToken
      */
-    public String getXAcsBtripSoCorpToken() {
-        return this.xAcsBtripSoCorpToken;
+    public String getXAcsBtripCorpToken() {
+        return this.xAcsBtripCorpToken;
     }
 
-    public static final class Builder extends Request.Builder<MealBillSettlementQueryRequest, Builder> {
+    public static final class Builder extends Request.Builder<VasBillSettlementQueryRequest, Builder> {
         private String billBatch; 
+        private String cooperatorId; 
         private Long orderId; 
         private Integer pageNo; 
         private Integer pageSize; 
@@ -153,15 +166,16 @@ public class MealBillSettlementQueryRequest extends Request {
         private String periodStart; 
         private String scrollId; 
         private Boolean scrollMod; 
-        private String xAcsBtripSoCorpToken; 
+        private String xAcsBtripCorpToken; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(MealBillSettlementQueryRequest request) {
+        private Builder(VasBillSettlementQueryRequest request) {
             super(request);
             this.billBatch = request.billBatch;
+            this.cooperatorId = request.cooperatorId;
             this.orderId = request.orderId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
@@ -169,7 +183,7 @@ public class MealBillSettlementQueryRequest extends Request {
             this.periodStart = request.periodStart;
             this.scrollId = request.scrollId;
             this.scrollMod = request.scrollMod;
-            this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
+            this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
         /**
@@ -178,6 +192,15 @@ public class MealBillSettlementQueryRequest extends Request {
         public Builder billBatch(String billBatch) {
             this.putQueryParameter("bill_batch", billBatch);
             this.billBatch = billBatch;
+            return this;
+        }
+
+        /**
+         * cooperator_id.
+         */
+        public Builder cooperatorId(String cooperatorId) {
+            this.putQueryParameter("cooperator_id", cooperatorId);
+            this.cooperatorId = cooperatorId;
             return this;
         }
 
@@ -206,7 +229,7 @@ public class MealBillSettlementQueryRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>100</p>
+         * <p>30</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("page_size", pageSize);
@@ -251,17 +274,17 @@ public class MealBillSettlementQueryRequest extends Request {
         }
 
         /**
-         * x-acs-btrip-so-corp-token.
+         * x-acs-btrip-corp-token.
          */
-        public Builder xAcsBtripSoCorpToken(String xAcsBtripSoCorpToken) {
-            this.putHeaderParameter("x-acs-btrip-so-corp-token", xAcsBtripSoCorpToken);
-            this.xAcsBtripSoCorpToken = xAcsBtripSoCorpToken;
+        public Builder xAcsBtripCorpToken(String xAcsBtripCorpToken) {
+            this.putHeaderParameter("x-acs-btrip-corp-token", xAcsBtripCorpToken);
+            this.xAcsBtripCorpToken = xAcsBtripCorpToken;
             return this;
         }
 
         @Override
-        public MealBillSettlementQueryRequest build() {
-            return new MealBillSettlementQueryRequest(this);
+        public VasBillSettlementQueryRequest build() {
+            return new VasBillSettlementQueryRequest(this);
         } 
 
     } 

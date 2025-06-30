@@ -17,29 +17,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IntlFlightOrderPayResponseBody</p>
  */
 public class IntlFlightOrderPayResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("message")
+    private String message;
+
     @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @com.aliyun.core.annotation.NameInMap("request_id")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
-
-    @com.aliyun.core.annotation.NameInMap("result_code")
-    private String resultCode;
-
-    @com.aliyun.core.annotation.NameInMap("result_msg")
-    private String resultMsg;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @com.aliyun.core.annotation.NameInMap("trace_id")
+    @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
     private IntlFlightOrderPayResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
         this.module = builder.module;
         this.requestId = builder.requestId;
-        this.resultCode = builder.resultCode;
-        this.resultMsg = builder.resultMsg;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -57,6 +57,20 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
      * @return module
      */
     public Module getModule() {
@@ -68,20 +82,6 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
-    }
-
-    /**
-     * @return resultCode
-     */
-    public String getResultCode() {
-        return this.resultCode;
-    }
-
-    /**
-     * @return resultMsg
-     */
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     /**
@@ -99,10 +99,10 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String code; 
+        private String message; 
         private Module module; 
         private String requestId; 
-        private String resultCode; 
-        private String resultMsg; 
         private Boolean success; 
         private String traceId; 
 
@@ -110,13 +110,29 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
         } 
 
         private Builder(IntlFlightOrderPayResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
             this.module = model.module;
             this.requestId = model.requestId;
-            this.resultCode = model.resultCode;
-            this.resultMsg = model.resultMsg;
             this.success = model.success;
             this.traceId = model.traceId;
         } 
+
+        /**
+         * code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
 
         /**
          * module.
@@ -127,26 +143,10 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * requestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * result_code.
-         */
-        public Builder resultCode(String resultCode) {
-            this.resultCode = resultCode;
-            return this;
-        }
-
-        /**
-         * result_msg.
-         */
-        public Builder resultMsg(String resultMsg) {
-            this.resultMsg = resultMsg;
             return this;
         }
 
@@ -159,7 +159,7 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
         }
 
         /**
-         * trace_id.
+         * traceId.
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
@@ -179,11 +179,15 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
      * <p>IntlFlightOrderPayResponseBody</p>
      */
     public static class Module extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("price")
-        private Long price;
+        @com.aliyun.core.annotation.NameInMap("actual_pay_price")
+        private Long actualPayPrice;
+
+        @com.aliyun.core.annotation.NameInMap("pay_status")
+        private Integer payStatus;
 
         private Module(Builder builder) {
-            this.price = builder.price;
+            this.actualPayPrice = builder.actualPayPrice;
+            this.payStatus = builder.payStatus;
         }
 
         public static Builder builder() {
@@ -195,27 +199,44 @@ public class IntlFlightOrderPayResponseBody extends TeaModel {
         }
 
         /**
-         * @return price
+         * @return actualPayPrice
          */
-        public Long getPrice() {
-            return this.price;
+        public Long getActualPayPrice() {
+            return this.actualPayPrice;
+        }
+
+        /**
+         * @return payStatus
+         */
+        public Integer getPayStatus() {
+            return this.payStatus;
         }
 
         public static final class Builder {
-            private Long price; 
+            private Long actualPayPrice; 
+            private Integer payStatus; 
 
             private Builder() {
             } 
 
             private Builder(Module model) {
-                this.price = model.price;
+                this.actualPayPrice = model.actualPayPrice;
+                this.payStatus = model.payStatus;
             } 
 
             /**
-             * price.
+             * actual_pay_price.
              */
-            public Builder price(Long price) {
-                this.price = price;
+            public Builder actualPayPrice(Long actualPayPrice) {
+                this.actualPayPrice = actualPayPrice;
+                return this;
+            }
+
+            /**
+             * pay_status.
+             */
+            public Builder payStatus(Integer payStatus) {
+                this.payStatus = payStatus;
                 return this;
             }
 

@@ -17,62 +17,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IntlFlightCreateOrderRequest</p>
  */
 public class IntlFlightCreateOrderRequest extends Request {
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("async_create_order_key")
     private String asyncCreateOrderKey;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("async_create_order_mode")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean asyncCreateOrderMode;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String btripUserId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buyer_name")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String buyerName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("contact_info")
+    @com.aliyun.core.annotation.Validation(required = true)
     private ContactInfo contactInfo;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("cost_center")
-    private CostCenter costCenter;
-
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("extra_info")
     private java.util.Map<String, String> extraInfo;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("language")
-    private String language;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order_price")
+    private Long orderPrice;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ota_item_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String otaItemId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("passenger_list")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<PassengerList> passengerList;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("render_key")
     private String renderKey;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("total_price_cent")
-    private Long totalPriceCent;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("user_id")
-    private String userId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("user_name")
-    private String userName;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
@@ -82,18 +78,16 @@ public class IntlFlightCreateOrderRequest extends Request {
         super(builder);
         this.asyncCreateOrderKey = builder.asyncCreateOrderKey;
         this.asyncCreateOrderMode = builder.asyncCreateOrderMode;
+        this.btripUserId = builder.btripUserId;
+        this.buyerName = builder.buyerName;
         this.contactInfo = builder.contactInfo;
-        this.costCenter = builder.costCenter;
         this.extraInfo = builder.extraInfo;
         this.isvName = builder.isvName;
-        this.language = builder.language;
+        this.orderPrice = builder.orderPrice;
         this.otaItemId = builder.otaItemId;
         this.outOrderId = builder.outOrderId;
         this.passengerList = builder.passengerList;
         this.renderKey = builder.renderKey;
-        this.totalPriceCent = builder.totalPriceCent;
-        this.userId = builder.userId;
-        this.userName = builder.userName;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
 
@@ -125,17 +119,24 @@ public class IntlFlightCreateOrderRequest extends Request {
     }
 
     /**
+     * @return btripUserId
+     */
+    public String getBtripUserId() {
+        return this.btripUserId;
+    }
+
+    /**
+     * @return buyerName
+     */
+    public String getBuyerName() {
+        return this.buyerName;
+    }
+
+    /**
      * @return contactInfo
      */
     public ContactInfo getContactInfo() {
         return this.contactInfo;
-    }
-
-    /**
-     * @return costCenter
-     */
-    public CostCenter getCostCenter() {
-        return this.costCenter;
     }
 
     /**
@@ -153,10 +154,10 @@ public class IntlFlightCreateOrderRequest extends Request {
     }
 
     /**
-     * @return language
+     * @return orderPrice
      */
-    public String getLanguage() {
-        return this.language;
+    public Long getOrderPrice() {
+        return this.orderPrice;
     }
 
     /**
@@ -188,27 +189,6 @@ public class IntlFlightCreateOrderRequest extends Request {
     }
 
     /**
-     * @return totalPriceCent
-     */
-    public Long getTotalPriceCent() {
-        return this.totalPriceCent;
-    }
-
-    /**
-     * @return userId
-     */
-    public String getUserId() {
-        return this.userId;
-    }
-
-    /**
-     * @return userName
-     */
-    public String getUserName() {
-        return this.userName;
-    }
-
-    /**
      * @return xAcsBtripCorpToken
      */
     public String getXAcsBtripCorpToken() {
@@ -218,18 +198,16 @@ public class IntlFlightCreateOrderRequest extends Request {
     public static final class Builder extends Request.Builder<IntlFlightCreateOrderRequest, Builder> {
         private String asyncCreateOrderKey; 
         private Boolean asyncCreateOrderMode; 
+        private String btripUserId; 
+        private String buyerName; 
         private ContactInfo contactInfo; 
-        private CostCenter costCenter; 
         private java.util.Map<String, String> extraInfo; 
         private String isvName; 
-        private String language; 
+        private Long orderPrice; 
         private String otaItemId; 
         private String outOrderId; 
         private java.util.List<PassengerList> passengerList; 
         private String renderKey; 
-        private Long totalPriceCent; 
-        private String userId; 
-        private String userName; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -240,18 +218,16 @@ public class IntlFlightCreateOrderRequest extends Request {
             super(request);
             this.asyncCreateOrderKey = request.asyncCreateOrderKey;
             this.asyncCreateOrderMode = request.asyncCreateOrderMode;
+            this.btripUserId = request.btripUserId;
+            this.buyerName = request.buyerName;
             this.contactInfo = request.contactInfo;
-            this.costCenter = request.costCenter;
             this.extraInfo = request.extraInfo;
             this.isvName = request.isvName;
-            this.language = request.language;
+            this.orderPrice = request.orderPrice;
             this.otaItemId = request.otaItemId;
             this.outOrderId = request.outOrderId;
             this.passengerList = request.passengerList;
             this.renderKey = request.renderKey;
-            this.totalPriceCent = request.totalPriceCent;
-            this.userId = request.userId;
-            this.userName = request.userName;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
@@ -259,8 +235,17 @@ public class IntlFlightCreateOrderRequest extends Request {
          * async_create_order_key.
          */
         public Builder asyncCreateOrderKey(String asyncCreateOrderKey) {
-            this.putQueryParameter("async_create_order_key", asyncCreateOrderKey);
+            this.putBodyParameter("async_create_order_key", asyncCreateOrderKey);
             this.asyncCreateOrderKey = asyncCreateOrderKey;
+            return this;
+        }
+
+        /**
+         * async_create_order_mode.
+         */
+        public Builder asyncCreateOrderMode(Boolean asyncCreateOrderMode) {
+            this.putBodyParameter("async_create_order_mode", asyncCreateOrderMode);
+            this.asyncCreateOrderMode = asyncCreateOrderMode;
             return this;
         }
 
@@ -268,31 +253,33 @@ public class IntlFlightCreateOrderRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>false</p>
+         * <p>10001</p>
          */
-        public Builder asyncCreateOrderMode(Boolean asyncCreateOrderMode) {
-            this.putQueryParameter("async_create_order_mode", asyncCreateOrderMode);
-            this.asyncCreateOrderMode = asyncCreateOrderMode;
+        public Builder btripUserId(String btripUserId) {
+            this.putBodyParameter("btrip_user_id", btripUserId);
+            this.btripUserId = btripUserId;
             return this;
         }
 
         /**
-         * contact_info.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZHANG/SAN</p>
+         */
+        public Builder buyerName(String buyerName) {
+            this.putBodyParameter("buyer_name", buyerName);
+            this.buyerName = buyerName;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          */
         public Builder contactInfo(ContactInfo contactInfo) {
             String contactInfoShrink = shrink(contactInfo, "contact_info", "json");
-            this.putQueryParameter("contact_info", contactInfoShrink);
+            this.putBodyParameter("contact_info", contactInfoShrink);
             this.contactInfo = contactInfo;
-            return this;
-        }
-
-        /**
-         * cost_center.
-         */
-        public Builder costCenter(CostCenter costCenter) {
-            String costCenterShrink = shrink(costCenter, "cost_center", "json");
-            this.putQueryParameter("cost_center", costCenterShrink);
-            this.costCenter = costCenter;
             return this;
         }
 
@@ -301,7 +288,7 @@ public class IntlFlightCreateOrderRequest extends Request {
          */
         public Builder extraInfo(java.util.Map<String, String> extraInfo) {
             String extraInfoShrink = shrink(extraInfo, "extra_info", "json");
-            this.putQueryParameter("extra_info", extraInfoShrink);
+            this.putBodyParameter("extra_info", extraInfoShrink);
             this.extraInfo = extraInfo;
             return this;
         }
@@ -310,25 +297,25 @@ public class IntlFlightCreateOrderRequest extends Request {
          * isv_name.
          */
         public Builder isvName(String isvName) {
-            this.putQueryParameter("isv_name", isvName);
+            this.putBodyParameter("isv_name", isvName);
             this.isvName = isvName;
             return this;
         }
 
         /**
-         * language.
+         * order_price.
          */
-        public Builder language(String language) {
-            this.putQueryParameter("language", language);
-            this.language = language;
+        public Builder orderPrice(Long orderPrice) {
+            this.putBodyParameter("order_price", orderPrice);
+            this.orderPrice = orderPrice;
             return this;
         }
 
         /**
-         * ota_item_id.
+         * <p>This parameter is required.</p>
          */
         public Builder otaItemId(String otaItemId) {
-            this.putQueryParameter("ota_item_id", otaItemId);
+            this.putBodyParameter("ota_item_id", otaItemId);
             this.otaItemId = otaItemId;
             return this;
         }
@@ -337,17 +324,17 @@ public class IntlFlightCreateOrderRequest extends Request {
          * out_order_id.
          */
         public Builder outOrderId(String outOrderId) {
-            this.putQueryParameter("out_order_id", outOrderId);
+            this.putBodyParameter("out_order_id", outOrderId);
             this.outOrderId = outOrderId;
             return this;
         }
 
         /**
-         * passenger_list.
+         * <p>This parameter is required.</p>
          */
         public Builder passengerList(java.util.List<PassengerList> passengerList) {
             String passengerListShrink = shrink(passengerList, "passenger_list", "json");
-            this.putQueryParameter("passenger_list", passengerListShrink);
+            this.putBodyParameter("passenger_list", passengerListShrink);
             this.passengerList = passengerList;
             return this;
         }
@@ -356,35 +343,8 @@ public class IntlFlightCreateOrderRequest extends Request {
          * render_key.
          */
         public Builder renderKey(String renderKey) {
-            this.putQueryParameter("render_key", renderKey);
+            this.putBodyParameter("render_key", renderKey);
             this.renderKey = renderKey;
-            return this;
-        }
-
-        /**
-         * total_price_cent.
-         */
-        public Builder totalPriceCent(Long totalPriceCent) {
-            this.putQueryParameter("total_price_cent", totalPriceCent);
-            this.totalPriceCent = totalPriceCent;
-            return this;
-        }
-
-        /**
-         * user_id.
-         */
-        public Builder userId(String userId) {
-            this.putQueryParameter("user_id", userId);
-            this.userId = userId;
-            return this;
-        }
-
-        /**
-         * user_name.
-         */
-        public Builder userName(String userName) {
-            this.putQueryParameter("user_name", userName);
-            this.userName = userName;
             return this;
         }
 
@@ -423,15 +383,10 @@ public class IntlFlightCreateOrderRequest extends Request {
         @com.aliyun.core.annotation.Validation(required = true)
         private String contactPhone;
 
-        @com.aliyun.core.annotation.NameInMap("send_msg_to_passenger")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private Boolean sendMsgToPassenger;
-
         private ContactInfo(Builder builder) {
             this.contactEmail = builder.contactEmail;
             this.contactName = builder.contactName;
             this.contactPhone = builder.contactPhone;
-            this.sendMsgToPassenger = builder.sendMsgToPassenger;
         }
 
         public static Builder builder() {
@@ -463,18 +418,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             return this.contactPhone;
         }
 
-        /**
-         * @return sendMsgToPassenger
-         */
-        public Boolean getSendMsgToPassenger() {
-            return this.sendMsgToPassenger;
-        }
-
         public static final class Builder {
             private String contactEmail; 
             private String contactName; 
             private String contactPhone; 
-            private Boolean sendMsgToPassenger; 
 
             private Builder() {
             } 
@@ -483,14 +430,10 @@ public class IntlFlightCreateOrderRequest extends Request {
                 this.contactEmail = model.contactEmail;
                 this.contactName = model.contactName;
                 this.contactPhone = model.contactPhone;
-                this.sendMsgToPassenger = model.sendMsgToPassenger;
             } 
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p><a href="mailto:XXX@aliyun.com">XXX@aliyun.com</a></p>
              */
             public Builder contactEmail(String contactEmail) {
                 this.contactEmail = contactEmail;
@@ -507,23 +450,9 @@ public class IntlFlightCreateOrderRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>13812341234</p>
              */
             public Builder contactPhone(String contactPhone) {
                 this.contactPhone = contactPhone;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>true</p>
-             */
-            public Builder sendMsgToPassenger(Boolean sendMsgToPassenger) {
-                this.sendMsgToPassenger = sendMsgToPassenger;
                 return this;
             }
 
@@ -540,90 +469,7 @@ public class IntlFlightCreateOrderRequest extends Request {
      *
      * <p>IntlFlightCreateOrderRequest</p>
      */
-    public static class CostCenter extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("cost_center_name")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private String costCenterName;
-
-        @com.aliyun.core.annotation.NameInMap("cost_center_number")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private String costCenterNumber;
-
-        private CostCenter(Builder builder) {
-            this.costCenterName = builder.costCenterName;
-            this.costCenterNumber = builder.costCenterNumber;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static CostCenter create() {
-            return builder().build();
-        }
-
-        /**
-         * @return costCenterName
-         */
-        public String getCostCenterName() {
-            return this.costCenterName;
-        }
-
-        /**
-         * @return costCenterNumber
-         */
-        public String getCostCenterNumber() {
-            return this.costCenterNumber;
-        }
-
-        public static final class Builder {
-            private String costCenterName; 
-            private String costCenterNumber; 
-
-            private Builder() {
-            } 
-
-            private Builder(CostCenter model) {
-                this.costCenterName = model.costCenterName;
-                this.costCenterNumber = model.costCenterNumber;
-            } 
-
-            /**
-             * <p>This parameter is required.</p>
-             */
-            public Builder costCenterName(String costCenterName) {
-                this.costCenterName = costCenterName;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>312434</p>
-             */
-            public Builder costCenterNumber(String costCenterNumber) {
-                this.costCenterNumber = costCenterNumber;
-                return this;
-            }
-
-            public CostCenter build() {
-                return new CostCenter(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link IntlFlightCreateOrderRequest} extends {@link TeaModel}
-     *
-     * <p>IntlFlightCreateOrderRequest</p>
-     */
     public static class CertInfo extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("cert_nation")
-        private String certNation;
-
         @com.aliyun.core.annotation.NameInMap("cert_no")
         @com.aliyun.core.annotation.Validation(required = true)
         private String certNo;
@@ -633,18 +479,18 @@ public class IntlFlightCreateOrderRequest extends Request {
         private Integer certType;
 
         @com.aliyun.core.annotation.NameInMap("cert_valid_date")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String certValidDate;
 
-        @com.aliyun.core.annotation.NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("issue_place")
         @com.aliyun.core.annotation.Validation(required = true)
-        private String name;
+        private String issuePlace;
 
         private CertInfo(Builder builder) {
-            this.certNation = builder.certNation;
             this.certNo = builder.certNo;
             this.certType = builder.certType;
             this.certValidDate = builder.certValidDate;
-            this.name = builder.name;
+            this.issuePlace = builder.issuePlace;
         }
 
         public static Builder builder() {
@@ -653,13 +499,6 @@ public class IntlFlightCreateOrderRequest extends Request {
 
         public static CertInfo create() {
             return builder().build();
-        }
-
-        /**
-         * @return certNation
-         */
-        public String getCertNation() {
-            return this.certNation;
         }
 
         /**
@@ -684,43 +523,33 @@ public class IntlFlightCreateOrderRequest extends Request {
         }
 
         /**
-         * @return name
+         * @return issuePlace
          */
-        public String getName() {
-            return this.name;
+        public String getIssuePlace() {
+            return this.issuePlace;
         }
 
         public static final class Builder {
-            private String certNation; 
             private String certNo; 
             private Integer certType; 
             private String certValidDate; 
-            private String name; 
+            private String issuePlace; 
 
             private Builder() {
             } 
 
             private Builder(CertInfo model) {
-                this.certNation = model.certNation;
                 this.certNo = model.certNo;
                 this.certType = model.certType;
                 this.certValidDate = model.certValidDate;
-                this.name = model.name;
+                this.issuePlace = model.issuePlace;
             } 
-
-            /**
-             * cert_nation.
-             */
-            public Builder certNation(String certNation) {
-                this.certNation = certNation;
-                return this;
-            }
 
             /**
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>H123456</p>
+             * <p>E1234567</p>
              */
             public Builder certNo(String certNo) {
                 this.certNo = certNo;
@@ -739,7 +568,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * cert_valid_date.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2029-12-31</p>
              */
             public Builder certValidDate(String certValidDate) {
                 this.certValidDate = certValidDate;
@@ -750,10 +582,10 @@ public class IntlFlightCreateOrderRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>ZHANG/SAN</p>
+             * <p>中国大陆</p>
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder issuePlace(String issuePlace) {
+                this.issuePlace = issuePlace;
                 return this;
             }
 
@@ -770,220 +602,41 @@ public class IntlFlightCreateOrderRequest extends Request {
      *
      * <p>IntlFlightCreateOrderRequest</p>
      */
-    public static class SubsidiaryCertInfoList extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("cert_nation")
-        private String certNation;
-
-        @com.aliyun.core.annotation.NameInMap("cert_no")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private String certNo;
-
-        @com.aliyun.core.annotation.NameInMap("cert_type")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private Integer certType;
-
-        @com.aliyun.core.annotation.NameInMap("cert_valid_date")
-        private String certValidDate;
-
-        @com.aliyun.core.annotation.NameInMap("name")
-        @com.aliyun.core.annotation.Validation(required = true)
-        private String name;
-
-        private SubsidiaryCertInfoList(Builder builder) {
-            this.certNation = builder.certNation;
-            this.certNo = builder.certNo;
-            this.certType = builder.certType;
-            this.certValidDate = builder.certValidDate;
-            this.name = builder.name;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static SubsidiaryCertInfoList create() {
-            return builder().build();
-        }
-
-        /**
-         * @return certNation
-         */
-        public String getCertNation() {
-            return this.certNation;
-        }
-
-        /**
-         * @return certNo
-         */
-        public String getCertNo() {
-            return this.certNo;
-        }
-
-        /**
-         * @return certType
-         */
-        public Integer getCertType() {
-            return this.certType;
-        }
-
-        /**
-         * @return certValidDate
-         */
-        public String getCertValidDate() {
-            return this.certValidDate;
-        }
-
-        /**
-         * @return name
-         */
-        public String getName() {
-            return this.name;
-        }
-
-        public static final class Builder {
-            private String certNation; 
-            private String certNo; 
-            private Integer certType; 
-            private String certValidDate; 
-            private String name; 
-
-            private Builder() {
-            } 
-
-            private Builder(SubsidiaryCertInfoList model) {
-                this.certNation = model.certNation;
-                this.certNo = model.certNo;
-                this.certType = model.certType;
-                this.certValidDate = model.certValidDate;
-                this.name = model.name;
-            } 
-
-            /**
-             * cert_nation.
-             */
-            public Builder certNation(String certNation) {
-                this.certNation = certNation;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>H123456</p>
-             */
-            public Builder certNo(String certNo) {
-                this.certNo = certNo;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
-             */
-            public Builder certType(Integer certType) {
-                this.certType = certType;
-                return this;
-            }
-
-            /**
-             * cert_valid_date.
-             */
-            public Builder certValidDate(String certValidDate) {
-                this.certValidDate = certValidDate;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>ZHANG/SAN</p>
-             */
-            public Builder name(String name) {
-                this.name = name;
-                return this;
-            }
-
-            public SubsidiaryCertInfoList build() {
-                return new SubsidiaryCertInfoList(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link IntlFlightCreateOrderRequest} extends {@link TeaModel}
-     *
-     * <p>IntlFlightCreateOrderRequest</p>
-     */
     public static class PassengerList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("birthday")
         @com.aliyun.core.annotation.Validation(required = true)
         private String birthday;
 
-        @com.aliyun.core.annotation.NameInMap("cascade_dept_mask")
-        private String cascadeDeptMask;
-
-        @com.aliyun.core.annotation.NameInMap("cascade_dept_name")
-        private String cascadeDeptName;
-
         @com.aliyun.core.annotation.NameInMap("cert_info")
         @com.aliyun.core.annotation.Validation(required = true)
         private CertInfo certInfo;
 
-        @com.aliyun.core.annotation.NameInMap("cost_center_name")
-        private String costCenterName;
-
-        @com.aliyun.core.annotation.NameInMap("cost_center_number")
-        private String costCenterNumber;
-
-        @com.aliyun.core.annotation.NameInMap("dept_id")
-        private String deptId;
-
-        @com.aliyun.core.annotation.NameInMap("dept_name")
-        private String deptName;
+        @com.aliyun.core.annotation.NameInMap("full_name")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String fullName;
 
         @com.aliyun.core.annotation.NameInMap("gender")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer gender;
-
-        @com.aliyun.core.annotation.NameInMap("invoice_id")
-        private String invoiceId;
-
-        @com.aliyun.core.annotation.NameInMap("invoice_title")
-        private String invoiceTitle;
 
         @com.aliyun.core.annotation.NameInMap("job_no")
         private String jobNo;
 
-        @com.aliyun.core.annotation.NameInMap("mobile_country_code")
-        private String mobileCountryCode;
-
         @com.aliyun.core.annotation.NameInMap("nationality")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String nationality;
 
         @com.aliyun.core.annotation.NameInMap("nationality_code")
-        private String nationalityCode;
-
-        @com.aliyun.core.annotation.NameInMap("passenger_type")
         @com.aliyun.core.annotation.Validation(required = true)
-        private Integer passengerType;
+        private String nationalityCode;
 
         @com.aliyun.core.annotation.NameInMap("phone")
         @com.aliyun.core.annotation.Validation(required = true)
         private String phone;
 
-        @com.aliyun.core.annotation.NameInMap("project_code")
-        private String projectCode;
-
-        @com.aliyun.core.annotation.NameInMap("project_title")
-        private String projectTitle;
-
-        @com.aliyun.core.annotation.NameInMap("subsidiary_cert_info_list")
-        private java.util.List<SubsidiaryCertInfoList> subsidiaryCertInfoList;
+        @com.aliyun.core.annotation.NameInMap("type")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private Integer type;
 
         @com.aliyun.core.annotation.NameInMap("user_id")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -994,25 +647,14 @@ public class IntlFlightCreateOrderRequest extends Request {
 
         private PassengerList(Builder builder) {
             this.birthday = builder.birthday;
-            this.cascadeDeptMask = builder.cascadeDeptMask;
-            this.cascadeDeptName = builder.cascadeDeptName;
             this.certInfo = builder.certInfo;
-            this.costCenterName = builder.costCenterName;
-            this.costCenterNumber = builder.costCenterNumber;
-            this.deptId = builder.deptId;
-            this.deptName = builder.deptName;
+            this.fullName = builder.fullName;
             this.gender = builder.gender;
-            this.invoiceId = builder.invoiceId;
-            this.invoiceTitle = builder.invoiceTitle;
             this.jobNo = builder.jobNo;
-            this.mobileCountryCode = builder.mobileCountryCode;
             this.nationality = builder.nationality;
             this.nationalityCode = builder.nationalityCode;
-            this.passengerType = builder.passengerType;
             this.phone = builder.phone;
-            this.projectCode = builder.projectCode;
-            this.projectTitle = builder.projectTitle;
-            this.subsidiaryCertInfoList = builder.subsidiaryCertInfoList;
+            this.type = builder.type;
             this.userId = builder.userId;
             this.userType = builder.userType;
         }
@@ -1033,20 +675,6 @@ public class IntlFlightCreateOrderRequest extends Request {
         }
 
         /**
-         * @return cascadeDeptMask
-         */
-        public String getCascadeDeptMask() {
-            return this.cascadeDeptMask;
-        }
-
-        /**
-         * @return cascadeDeptName
-         */
-        public String getCascadeDeptName() {
-            return this.cascadeDeptName;
-        }
-
-        /**
          * @return certInfo
          */
         public CertInfo getCertInfo() {
@@ -1054,31 +682,10 @@ public class IntlFlightCreateOrderRequest extends Request {
         }
 
         /**
-         * @return costCenterName
+         * @return fullName
          */
-        public String getCostCenterName() {
-            return this.costCenterName;
-        }
-
-        /**
-         * @return costCenterNumber
-         */
-        public String getCostCenterNumber() {
-            return this.costCenterNumber;
-        }
-
-        /**
-         * @return deptId
-         */
-        public String getDeptId() {
-            return this.deptId;
-        }
-
-        /**
-         * @return deptName
-         */
-        public String getDeptName() {
-            return this.deptName;
+        public String getFullName() {
+            return this.fullName;
         }
 
         /**
@@ -1089,31 +696,10 @@ public class IntlFlightCreateOrderRequest extends Request {
         }
 
         /**
-         * @return invoiceId
-         */
-        public String getInvoiceId() {
-            return this.invoiceId;
-        }
-
-        /**
-         * @return invoiceTitle
-         */
-        public String getInvoiceTitle() {
-            return this.invoiceTitle;
-        }
-
-        /**
          * @return jobNo
          */
         public String getJobNo() {
             return this.jobNo;
-        }
-
-        /**
-         * @return mobileCountryCode
-         */
-        public String getMobileCountryCode() {
-            return this.mobileCountryCode;
         }
 
         /**
@@ -1131,13 +717,6 @@ public class IntlFlightCreateOrderRequest extends Request {
         }
 
         /**
-         * @return passengerType
-         */
-        public Integer getPassengerType() {
-            return this.passengerType;
-        }
-
-        /**
          * @return phone
          */
         public String getPhone() {
@@ -1145,24 +724,10 @@ public class IntlFlightCreateOrderRequest extends Request {
         }
 
         /**
-         * @return projectCode
+         * @return type
          */
-        public String getProjectCode() {
-            return this.projectCode;
-        }
-
-        /**
-         * @return projectTitle
-         */
-        public String getProjectTitle() {
-            return this.projectTitle;
-        }
-
-        /**
-         * @return subsidiaryCertInfoList
-         */
-        public java.util.List<SubsidiaryCertInfoList> getSubsidiaryCertInfoList() {
-            return this.subsidiaryCertInfoList;
+        public Integer getType() {
+            return this.type;
         }
 
         /**
@@ -1181,25 +746,14 @@ public class IntlFlightCreateOrderRequest extends Request {
 
         public static final class Builder {
             private String birthday; 
-            private String cascadeDeptMask; 
-            private String cascadeDeptName; 
             private CertInfo certInfo; 
-            private String costCenterName; 
-            private String costCenterNumber; 
-            private String deptId; 
-            private String deptName; 
+            private String fullName; 
             private Integer gender; 
-            private String invoiceId; 
-            private String invoiceTitle; 
             private String jobNo; 
-            private String mobileCountryCode; 
             private String nationality; 
             private String nationalityCode; 
-            private Integer passengerType; 
             private String phone; 
-            private String projectCode; 
-            private String projectTitle; 
-            private java.util.List<SubsidiaryCertInfoList> subsidiaryCertInfoList; 
+            private Integer type; 
             private String userId; 
             private Integer userType; 
 
@@ -1208,25 +762,14 @@ public class IntlFlightCreateOrderRequest extends Request {
 
             private Builder(PassengerList model) {
                 this.birthday = model.birthday;
-                this.cascadeDeptMask = model.cascadeDeptMask;
-                this.cascadeDeptName = model.cascadeDeptName;
                 this.certInfo = model.certInfo;
-                this.costCenterName = model.costCenterName;
-                this.costCenterNumber = model.costCenterNumber;
-                this.deptId = model.deptId;
-                this.deptName = model.deptName;
+                this.fullName = model.fullName;
                 this.gender = model.gender;
-                this.invoiceId = model.invoiceId;
-                this.invoiceTitle = model.invoiceTitle;
                 this.jobNo = model.jobNo;
-                this.mobileCountryCode = model.mobileCountryCode;
                 this.nationality = model.nationality;
                 this.nationalityCode = model.nationalityCode;
-                this.passengerType = model.passengerType;
                 this.phone = model.phone;
-                this.projectCode = model.projectCode;
-                this.projectTitle = model.projectTitle;
-                this.subsidiaryCertInfoList = model.subsidiaryCertInfoList;
+                this.type = model.type;
                 this.userId = model.userId;
                 this.userType = model.userType;
             } 
@@ -1235,26 +778,10 @@ public class IntlFlightCreateOrderRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>2020-01-01</p>
+             * <p>1998-12-28</p>
              */
             public Builder birthday(String birthday) {
                 this.birthday = birthday;
-                return this;
-            }
-
-            /**
-             * cascade_dept_mask.
-             */
-            public Builder cascadeDeptMask(String cascadeDeptMask) {
-                this.cascadeDeptMask = cascadeDeptMask;
-                return this;
-            }
-
-            /**
-             * cascade_dept_name.
-             */
-            public Builder cascadeDeptName(String cascadeDeptName) {
-                this.cascadeDeptName = cascadeDeptName;
                 return this;
             }
 
@@ -1268,9 +795,12 @@ public class IntlFlightCreateOrderRequest extends Request {
 
             /**
              * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ZHANG/SAN</p>
              */
-            public Builder costCenterName(String costCenterName) {
-                this.costCenterName = costCenterName;
+            public Builder fullName(String fullName) {
+                this.fullName = fullName;
                 return this;
             }
 
@@ -1278,50 +808,10 @@ public class IntlFlightCreateOrderRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>312434</p>
-             */
-            public Builder costCenterNumber(String costCenterNumber) {
-                this.costCenterNumber = costCenterNumber;
-                return this;
-            }
-
-            /**
-             * dept_id.
-             */
-            public Builder deptId(String deptId) {
-                this.deptId = deptId;
-                return this;
-            }
-
-            /**
-             * dept_name.
-             */
-            public Builder deptName(String deptName) {
-                this.deptName = deptName;
-                return this;
-            }
-
-            /**
-             * gender.
+             * <p>0</p>
              */
             public Builder gender(Integer gender) {
                 this.gender = gender;
-                return this;
-            }
-
-            /**
-             * invoice_id.
-             */
-            public Builder invoiceId(String invoiceId) {
-                this.invoiceId = invoiceId;
-                return this;
-            }
-
-            /**
-             * invoice_title.
-             */
-            public Builder invoiceTitle(String invoiceTitle) {
-                this.invoiceTitle = invoiceTitle;
                 return this;
             }
 
@@ -1334,15 +824,10 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * mobile_country_code.
-             */
-            public Builder mobileCountryCode(String mobileCountryCode) {
-                this.mobileCountryCode = mobileCountryCode;
-                return this;
-            }
-
-            /**
-             * nationality.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>中国大陆</p>
              */
             public Builder nationality(String nationality) {
                 this.nationality = nationality;
@@ -1350,7 +835,7 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * nationality_code.
+             * <p>This parameter is required.</p>
              */
             public Builder nationalityCode(String nationalityCode) {
                 this.nationalityCode = nationalityCode;
@@ -1361,18 +846,7 @@ public class IntlFlightCreateOrderRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>0</p>
-             */
-            public Builder passengerType(Integer passengerType) {
-                this.passengerType = passengerType;
-                return this;
-            }
-
-            /**
-             * <p>This parameter is required.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>18012341234</p>
+             * <p>13100008888</p>
              */
             public Builder phone(String phone) {
                 this.phone = phone;
@@ -1380,26 +854,13 @@ public class IntlFlightCreateOrderRequest extends Request {
             }
 
             /**
-             * project_code.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
-            public Builder projectCode(String projectCode) {
-                this.projectCode = projectCode;
-                return this;
-            }
-
-            /**
-             * project_title.
-             */
-            public Builder projectTitle(String projectTitle) {
-                this.projectTitle = projectTitle;
-                return this;
-            }
-
-            /**
-             * subsidiary_cert_info_list.
-             */
-            public Builder subsidiaryCertInfoList(java.util.List<SubsidiaryCertInfoList> subsidiaryCertInfoList) {
-                this.subsidiaryCertInfoList = subsidiaryCertInfoList;
+            public Builder type(Integer type) {
+                this.type = type;
                 return this;
             }
 
@@ -1407,7 +868,7 @@ public class IntlFlightCreateOrderRequest extends Request {
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
-             * <p>13123123212</p>
+             * <p>12292812036903456</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;

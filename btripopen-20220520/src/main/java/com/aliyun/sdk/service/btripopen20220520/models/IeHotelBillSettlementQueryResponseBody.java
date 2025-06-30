@@ -179,6 +179,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
      * <p>IeHotelBillSettlementQueryResponseBody</p>
      */
     public static class DataList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("adjust_time")
+        private String adjustTime;
+
         @com.aliyun.core.annotation.NameInMap("alipay_trade_no")
         private String alipayTradeNo;
 
@@ -205,6 +208,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("average_nights")
         private Double averageNights;
+
+        @com.aliyun.core.annotation.NameInMap("base_location")
+        private String baseLocation;
 
         @com.aliyun.core.annotation.NameInMap("bill_record_time")
         private String billRecordTime;
@@ -272,11 +278,17 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cost_center_number")
         private String costCenterNumber;
 
+        @com.aliyun.core.annotation.NameInMap("cost_department")
+        private String costDepartment;
+
         @com.aliyun.core.annotation.NameInMap("country")
         private String country;
 
         @com.aliyun.core.annotation.NameInMap("country_code")
         private String countryCode;
+
+        @com.aliyun.core.annotation.NameInMap("custom_content")
+        private String customContent;
 
         @com.aliyun.core.annotation.NameInMap("deductible_tax")
         private Double deductibleTax;
@@ -326,6 +338,9 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("main_apply_id")
         private String mainApplyId;
 
+        @com.aliyun.core.annotation.NameInMap("mapping_company_code")
+        private String mappingCompanyCode;
+
         @com.aliyun.core.annotation.NameInMap("nights")
         private Integer nights;
 
@@ -359,8 +374,17 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("person_settle_price")
         private Double personSettlePrice;
 
+        @com.aliyun.core.annotation.NameInMap("position")
+        private String position;
+
+        @com.aliyun.core.annotation.NameInMap("position_level")
+        private String positionLevel;
+
         @com.aliyun.core.annotation.NameInMap("primary_id")
         private Long primaryId;
+
+        @com.aliyun.core.annotation.NameInMap("processor_oa_code")
+        private String processorOaCode;
 
         @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
@@ -459,6 +483,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         private String voucherTypeDesc;
 
         private DataList(Builder builder) {
+            this.adjustTime = builder.adjustTime;
             this.alipayTradeNo = builder.alipayTradeNo;
             this.amountCurrency = builder.amountCurrency;
             this.applyArrCityCode = builder.applyArrCityCode;
@@ -468,6 +493,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             this.applyExtendField = builder.applyExtendField;
             this.applyId = builder.applyId;
             this.averageNights = builder.averageNights;
+            this.baseLocation = builder.baseLocation;
             this.billRecordTime = builder.billRecordTime;
             this.bookMode = builder.bookMode;
             this.bookReason = builder.bookReason;
@@ -490,8 +516,10 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             this.corpTotalFee = builder.corpTotalFee;
             this.costCenter = builder.costCenter;
             this.costCenterNumber = builder.costCenterNumber;
+            this.costDepartment = builder.costDepartment;
             this.country = builder.country;
             this.countryCode = builder.countryCode;
+            this.customContent = builder.customContent;
             this.deductibleTax = builder.deductibleTax;
             this.department = builder.department;
             this.departmentId = builder.departmentId;
@@ -508,6 +536,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             this.isNegotiation = builder.isNegotiation;
             this.isShareStr = builder.isShareStr;
             this.mainApplyId = builder.mainApplyId;
+            this.mappingCompanyCode = builder.mappingCompanyCode;
             this.nights = builder.nights;
             this.orderId = builder.orderId;
             this.orderPrice = builder.orderPrice;
@@ -519,7 +548,10 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             this.paymentDepartmentName = builder.paymentDepartmentName;
             this.personRefundFee = builder.personRefundFee;
             this.personSettlePrice = builder.personSettlePrice;
+            this.position = builder.position;
+            this.positionLevel = builder.positionLevel;
             this.primaryId = builder.primaryId;
+            this.processorOaCode = builder.processorOaCode;
             this.projectCode = builder.projectCode;
             this.projectName = builder.projectName;
             this.promotionFee = builder.promotionFee;
@@ -560,6 +592,13 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
 
         public static DataList create() {
             return builder().build();
+        }
+
+        /**
+         * @return adjustTime
+         */
+        public String getAdjustTime() {
+            return this.adjustTime;
         }
 
         /**
@@ -623,6 +662,13 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public Double getAverageNights() {
             return this.averageNights;
+        }
+
+        /**
+         * @return baseLocation
+         */
+        public String getBaseLocation() {
+            return this.baseLocation;
         }
 
         /**
@@ -780,6 +826,13 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return costDepartment
+         */
+        public String getCostDepartment() {
+            return this.costDepartment;
+        }
+
+        /**
          * @return country
          */
         public String getCountry() {
@@ -791,6 +844,13 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getCountryCode() {
             return this.countryCode;
+        }
+
+        /**
+         * @return customContent
+         */
+        public String getCustomContent() {
+            return this.customContent;
         }
 
         /**
@@ -906,6 +966,13 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return mappingCompanyCode
+         */
+        public String getMappingCompanyCode() {
+            return this.mappingCompanyCode;
+        }
+
+        /**
          * @return nights
          */
         public Integer getNights() {
@@ -983,10 +1050,31 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return position
+         */
+        public String getPosition() {
+            return this.position;
+        }
+
+        /**
+         * @return positionLevel
+         */
+        public String getPositionLevel() {
+            return this.positionLevel;
+        }
+
+        /**
          * @return primaryId
          */
         public Long getPrimaryId() {
             return this.primaryId;
+        }
+
+        /**
+         * @return processorOaCode
+         */
+        public String getProcessorOaCode() {
+            return this.processorOaCode;
         }
 
         /**
@@ -1214,6 +1302,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String adjustTime; 
             private String alipayTradeNo; 
             private String amountCurrency; 
             private String applyArrCityCode; 
@@ -1223,6 +1312,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             private String applyExtendField; 
             private String applyId; 
             private Double averageNights; 
+            private String baseLocation; 
             private String billRecordTime; 
             private String bookMode; 
             private String bookReason; 
@@ -1245,8 +1335,10 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             private Double corpTotalFee; 
             private String costCenter; 
             private String costCenterNumber; 
+            private String costDepartment; 
             private String country; 
             private String countryCode; 
+            private String customContent; 
             private Double deductibleTax; 
             private String department; 
             private String departmentId; 
@@ -1263,6 +1355,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             private String isNegotiation; 
             private String isShareStr; 
             private String mainApplyId; 
+            private String mappingCompanyCode; 
             private Integer nights; 
             private String orderId; 
             private Double orderPrice; 
@@ -1274,7 +1367,10 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             private String paymentDepartmentName; 
             private Double personRefundFee; 
             private Double personSettlePrice; 
+            private String position; 
+            private String positionLevel; 
             private Long primaryId; 
+            private String processorOaCode; 
             private String projectCode; 
             private String projectName; 
             private Double promotionFee; 
@@ -1312,6 +1408,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             } 
 
             private Builder(DataList model) {
+                this.adjustTime = model.adjustTime;
                 this.alipayTradeNo = model.alipayTradeNo;
                 this.amountCurrency = model.amountCurrency;
                 this.applyArrCityCode = model.applyArrCityCode;
@@ -1321,6 +1418,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
                 this.applyExtendField = model.applyExtendField;
                 this.applyId = model.applyId;
                 this.averageNights = model.averageNights;
+                this.baseLocation = model.baseLocation;
                 this.billRecordTime = model.billRecordTime;
                 this.bookMode = model.bookMode;
                 this.bookReason = model.bookReason;
@@ -1343,8 +1441,10 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
                 this.corpTotalFee = model.corpTotalFee;
                 this.costCenter = model.costCenter;
                 this.costCenterNumber = model.costCenterNumber;
+                this.costDepartment = model.costDepartment;
                 this.country = model.country;
                 this.countryCode = model.countryCode;
+                this.customContent = model.customContent;
                 this.deductibleTax = model.deductibleTax;
                 this.department = model.department;
                 this.departmentId = model.departmentId;
@@ -1361,6 +1461,7 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
                 this.isNegotiation = model.isNegotiation;
                 this.isShareStr = model.isShareStr;
                 this.mainApplyId = model.mainApplyId;
+                this.mappingCompanyCode = model.mappingCompanyCode;
                 this.nights = model.nights;
                 this.orderId = model.orderId;
                 this.orderPrice = model.orderPrice;
@@ -1372,7 +1473,10 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
                 this.paymentDepartmentName = model.paymentDepartmentName;
                 this.personRefundFee = model.personRefundFee;
                 this.personSettlePrice = model.personSettlePrice;
+                this.position = model.position;
+                this.positionLevel = model.positionLevel;
                 this.primaryId = model.primaryId;
+                this.processorOaCode = model.processorOaCode;
                 this.projectCode = model.projectCode;
                 this.projectName = model.projectName;
                 this.promotionFee = model.promotionFee;
@@ -1406,6 +1510,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
                 this.voucherType = model.voucherType;
                 this.voucherTypeDesc = model.voucherTypeDesc;
             } 
+
+            /**
+             * adjust_time.
+             */
+            public Builder adjustTime(String adjustTime) {
+                this.adjustTime = adjustTime;
+                return this;
+            }
 
             /**
              * alipay_trade_no.
@@ -1476,6 +1588,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder averageNights(Double averageNights) {
                 this.averageNights = averageNights;
+                return this;
+            }
+
+            /**
+             * base_location.
+             */
+            public Builder baseLocation(String baseLocation) {
+                this.baseLocation = baseLocation;
                 return this;
             }
 
@@ -1656,6 +1776,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * cost_department.
+             */
+            public Builder costDepartment(String costDepartment) {
+                this.costDepartment = costDepartment;
+                return this;
+            }
+
+            /**
              * country.
              */
             public Builder country(String country) {
@@ -1668,6 +1796,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
+                return this;
+            }
+
+            /**
+             * custom_content.
+             */
+            public Builder customContent(String customContent) {
+                this.customContent = customContent;
                 return this;
             }
 
@@ -1800,6 +1936,14 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * mapping_company_code.
+             */
+            public Builder mappingCompanyCode(String mappingCompanyCode) {
+                this.mappingCompanyCode = mappingCompanyCode;
+                return this;
+            }
+
+            /**
              * nights.
              */
             public Builder nights(Integer nights) {
@@ -1888,10 +2032,34 @@ public class IeHotelBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * position.
+             */
+            public Builder position(String position) {
+                this.position = position;
+                return this;
+            }
+
+            /**
+             * position_level.
+             */
+            public Builder positionLevel(String positionLevel) {
+                this.positionLevel = positionLevel;
+                return this;
+            }
+
+            /**
              * primary_id.
              */
             public Builder primaryId(Long primaryId) {
                 this.primaryId = primaryId;
+                return this;
+            }
+
+            /**
+             * processor_oa_code.
+             */
+            public Builder processorOaCode(String processorOaCode) {
+                this.processorOaCode = processorOaCode;
                 return this;
             }
 

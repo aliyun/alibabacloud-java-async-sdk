@@ -17,19 +17,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IntlFlightOrderCancelRequest</p>
  */
 public class IntlFlightOrderCancelRequest extends Request {
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
+    private String btripUserId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buyer_name")
+    private String buyerName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("memo")
-    private String memo;
-
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
 
@@ -39,8 +44,9 @@ public class IntlFlightOrderCancelRequest extends Request {
 
     private IntlFlightOrderCancelRequest(Builder builder) {
         super(builder);
+        this.btripUserId = builder.btripUserId;
+        this.buyerName = builder.buyerName;
         this.isvName = builder.isvName;
-        this.memo = builder.memo;
         this.orderId = builder.orderId;
         this.outOrderId = builder.outOrderId;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
@@ -60,17 +66,24 @@ public class IntlFlightOrderCancelRequest extends Request {
     }
 
     /**
+     * @return btripUserId
+     */
+    public String getBtripUserId() {
+        return this.btripUserId;
+    }
+
+    /**
+     * @return buyerName
+     */
+    public String getBuyerName() {
+        return this.buyerName;
+    }
+
+    /**
      * @return isvName
      */
     public String getIsvName() {
         return this.isvName;
-    }
-
-    /**
-     * @return memo
-     */
-    public String getMemo() {
-        return this.memo;
     }
 
     /**
@@ -95,8 +108,9 @@ public class IntlFlightOrderCancelRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<IntlFlightOrderCancelRequest, Builder> {
+        private String btripUserId; 
+        private String buyerName; 
         private String isvName; 
-        private String memo; 
         private String orderId; 
         private String outOrderId; 
         private String xAcsBtripCorpToken; 
@@ -107,36 +121,46 @@ public class IntlFlightOrderCancelRequest extends Request {
 
         private Builder(IntlFlightOrderCancelRequest request) {
             super(request);
+            this.btripUserId = request.btripUserId;
+            this.buyerName = request.buyerName;
             this.isvName = request.isvName;
-            this.memo = request.memo;
             this.orderId = request.orderId;
             this.outOrderId = request.outOrderId;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
         /**
+         * btrip_user_id.
+         */
+        public Builder btripUserId(String btripUserId) {
+            this.putBodyParameter("btrip_user_id", btripUserId);
+            this.btripUserId = btripUserId;
+            return this;
+        }
+
+        /**
+         * buyer_name.
+         */
+        public Builder buyerName(String buyerName) {
+            this.putBodyParameter("buyer_name", buyerName);
+            this.buyerName = buyerName;
+            return this;
+        }
+
+        /**
          * isv_name.
          */
         public Builder isvName(String isvName) {
-            this.putQueryParameter("isv_name", isvName);
+            this.putBodyParameter("isv_name", isvName);
             this.isvName = isvName;
             return this;
         }
 
         /**
-         * memo.
-         */
-        public Builder memo(String memo) {
-            this.putQueryParameter("memo", memo);
-            this.memo = memo;
-            return this;
-        }
-
-        /**
-         * order_id.
+         * <p>This parameter is required.</p>
          */
         public Builder orderId(String orderId) {
-            this.putQueryParameter("order_id", orderId);
+            this.putBodyParameter("order_id", orderId);
             this.orderId = orderId;
             return this;
         }
@@ -145,7 +169,7 @@ public class IntlFlightOrderCancelRequest extends Request {
          * out_order_id.
          */
         public Builder outOrderId(String outOrderId) {
-            this.putQueryParameter("out_order_id", outOrderId);
+            this.putBodyParameter("out_order_id", outOrderId);
             this.outOrderId = outOrderId;
             return this;
         }

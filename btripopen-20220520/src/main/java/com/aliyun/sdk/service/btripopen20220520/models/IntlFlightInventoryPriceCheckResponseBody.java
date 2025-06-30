@@ -17,17 +17,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IntlFlightInventoryPriceCheckResponseBody</p>
  */
 public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("message")
+    private String message;
+
     @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
-
-    @com.aliyun.core.annotation.NameInMap("result_code")
-    private String resultCode;
-
-    @com.aliyun.core.annotation.NameInMap("result_msg")
-    private String resultMsg;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -36,10 +36,10 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
     private String traceId;
 
     private IntlFlightInventoryPriceCheckResponseBody(Builder builder) {
+        this.code = builder.code;
+        this.message = builder.message;
         this.module = builder.module;
         this.requestId = builder.requestId;
-        this.resultCode = builder.resultCode;
-        this.resultMsg = builder.resultMsg;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -57,6 +57,20 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
     }
 
     /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
+    }
+
+    /**
      * @return module
      */
     public Module getModule() {
@@ -68,20 +82,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
      */
     public String getRequestId() {
         return this.requestId;
-    }
-
-    /**
-     * @return resultCode
-     */
-    public String getResultCode() {
-        return this.resultCode;
-    }
-
-    /**
-     * @return resultMsg
-     */
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     /**
@@ -99,10 +99,10 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String code; 
+        private String message; 
         private Module module; 
         private String requestId; 
-        private String resultCode; 
-        private String resultMsg; 
         private Boolean success; 
         private String traceId; 
 
@@ -110,13 +110,29 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         } 
 
         private Builder(IntlFlightInventoryPriceCheckResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
             this.module = model.module;
             this.requestId = model.requestId;
-            this.resultCode = model.resultCode;
-            this.resultMsg = model.resultMsg;
             this.success = model.success;
             this.traceId = model.traceId;
         } 
+
+        /**
+         * code.
+         */
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
+            return this;
+        }
 
         /**
          * module.
@@ -131,22 +147,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * result_code.
-         */
-        public Builder resultCode(String resultCode) {
-            this.resultCode = resultCode;
-            return this;
-        }
-
-        /**
-         * result_msg.
-         */
-        public Builder resultMsg(String resultMsg) {
-            this.resultMsg = resultMsg;
             return this;
         }
 
@@ -179,12 +179,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
      * <p>IntlFlightInventoryPriceCheckResponseBody</p>
      */
     public static class ChangedPrice extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("build_price")
-        private Long buildPrice;
-
-        @com.aliyun.core.annotation.NameInMap("oil_price")
-        private Long oilPrice;
-
         @com.aliyun.core.annotation.NameInMap("tax_price")
         private Long taxPrice;
 
@@ -192,8 +186,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         private Long ticketPrice;
 
         private ChangedPrice(Builder builder) {
-            this.buildPrice = builder.buildPrice;
-            this.oilPrice = builder.oilPrice;
             this.taxPrice = builder.taxPrice;
             this.ticketPrice = builder.ticketPrice;
         }
@@ -204,20 +196,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
 
         public static ChangedPrice create() {
             return builder().build();
-        }
-
-        /**
-         * @return buildPrice
-         */
-        public Long getBuildPrice() {
-            return this.buildPrice;
-        }
-
-        /**
-         * @return oilPrice
-         */
-        public Long getOilPrice() {
-            return this.oilPrice;
         }
 
         /**
@@ -235,8 +213,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long buildPrice; 
-            private Long oilPrice; 
             private Long taxPrice; 
             private Long ticketPrice; 
 
@@ -244,27 +220,9 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
             } 
 
             private Builder(ChangedPrice model) {
-                this.buildPrice = model.buildPrice;
-                this.oilPrice = model.oilPrice;
                 this.taxPrice = model.taxPrice;
                 this.ticketPrice = model.ticketPrice;
             } 
-
-            /**
-             * build_price.
-             */
-            public Builder buildPrice(Long buildPrice) {
-                this.buildPrice = buildPrice;
-                return this;
-            }
-
-            /**
-             * oil_price.
-             */
-            public Builder oilPrice(Long oilPrice) {
-                this.oilPrice = oilPrice;
-                return this;
-            }
 
             /**
              * tax_price.
@@ -296,12 +254,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
      * <p>IntlFlightInventoryPriceCheckResponseBody</p>
      */
     public static class OriginalPrice extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("build_price")
-        private Long buildPrice;
-
-        @com.aliyun.core.annotation.NameInMap("oil_price")
-        private Long oilPrice;
-
         @com.aliyun.core.annotation.NameInMap("tax_price")
         private Long taxPrice;
 
@@ -309,8 +261,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         private Long ticketPrice;
 
         private OriginalPrice(Builder builder) {
-            this.buildPrice = builder.buildPrice;
-            this.oilPrice = builder.oilPrice;
             this.taxPrice = builder.taxPrice;
             this.ticketPrice = builder.ticketPrice;
         }
@@ -321,20 +271,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
 
         public static OriginalPrice create() {
             return builder().build();
-        }
-
-        /**
-         * @return buildPrice
-         */
-        public Long getBuildPrice() {
-            return this.buildPrice;
-        }
-
-        /**
-         * @return oilPrice
-         */
-        public Long getOilPrice() {
-            return this.oilPrice;
         }
 
         /**
@@ -352,8 +288,6 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long buildPrice; 
-            private Long oilPrice; 
             private Long taxPrice; 
             private Long ticketPrice; 
 
@@ -361,27 +295,9 @@ public class IntlFlightInventoryPriceCheckResponseBody extends TeaModel {
             } 
 
             private Builder(OriginalPrice model) {
-                this.buildPrice = model.buildPrice;
-                this.oilPrice = model.oilPrice;
                 this.taxPrice = model.taxPrice;
                 this.ticketPrice = model.ticketPrice;
             } 
-
-            /**
-             * build_price.
-             */
-            public Builder buildPrice(Long buildPrice) {
-                this.buildPrice = buildPrice;
-                return this;
-            }
-
-            /**
-             * oil_price.
-             */
-            public Builder oilPrice(Long oilPrice) {
-                this.oilPrice = oilPrice;
-                return this;
-            }
 
             /**
              * tax_price.

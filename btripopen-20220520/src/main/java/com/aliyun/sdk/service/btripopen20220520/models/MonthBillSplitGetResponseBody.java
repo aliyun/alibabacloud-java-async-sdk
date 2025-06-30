@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link IntlFlightOrderCancelResponseBody} extends {@link TeaModel}
+ * {@link MonthBillSplitGetResponseBody} extends {@link TeaModel}
  *
- * <p>IntlFlightOrderCancelResponseBody</p>
+ * <p>MonthBillSplitGetResponseBody</p>
  */
-public class IntlFlightOrderCancelResponseBody extends TeaModel {
+public class MonthBillSplitGetResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
@@ -24,7 +24,7 @@ public class IntlFlightOrderCancelResponseBody extends TeaModel {
     private String message;
 
     @com.aliyun.core.annotation.NameInMap("module")
-    private Module module;
+    private java.util.List<Module> module;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
@@ -35,7 +35,7 @@ public class IntlFlightOrderCancelResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
-    private IntlFlightOrderCancelResponseBody(Builder builder) {
+    private MonthBillSplitGetResponseBody(Builder builder) {
         this.code = builder.code;
         this.message = builder.message;
         this.module = builder.module;
@@ -48,7 +48,7 @@ public class IntlFlightOrderCancelResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static IntlFlightOrderCancelResponseBody create() {
+    public static MonthBillSplitGetResponseBody create() {
         return builder().build();
     }
 
@@ -73,7 +73,7 @@ public class IntlFlightOrderCancelResponseBody extends TeaModel {
     /**
      * @return module
      */
-    public Module getModule() {
+    public java.util.List<Module> getModule() {
         return this.module;
     }
 
@@ -101,7 +101,7 @@ public class IntlFlightOrderCancelResponseBody extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
-        private Module module; 
+        private java.util.List<Module> module; 
         private String requestId; 
         private Boolean success; 
         private String traceId; 
@@ -109,7 +109,7 @@ public class IntlFlightOrderCancelResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(IntlFlightOrderCancelResponseBody model) {
+        private Builder(MonthBillSplitGetResponseBody model) {
             this.code = model.code;
             this.message = model.message;
             this.module = model.module;
@@ -137,7 +137,7 @@ public class IntlFlightOrderCancelResponseBody extends TeaModel {
         /**
          * module.
          */
-        public Builder module(Module module) {
+        public Builder module(java.util.List<Module> module) {
             this.module = module;
             return this;
         }
@@ -166,24 +166,36 @@ public class IntlFlightOrderCancelResponseBody extends TeaModel {
             return this;
         }
 
-        public IntlFlightOrderCancelResponseBody build() {
-            return new IntlFlightOrderCancelResponseBody(this);
+        public MonthBillSplitGetResponseBody build() {
+            return new MonthBillSplitGetResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link IntlFlightOrderCancelResponseBody} extends {@link TeaModel}
+     * {@link MonthBillSplitGetResponseBody} extends {@link TeaModel}
      *
-     * <p>IntlFlightOrderCancelResponseBody</p>
+     * <p>MonthBillSplitGetResponseBody</p>
      */
     public static class Module extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("cancel_time")
-        private String cancelTime;
+        @com.aliyun.core.annotation.NameInMap("bill_split_key")
+        private String billSplitKey;
+
+        @com.aliyun.core.annotation.NameInMap("end_date")
+        private String endDate;
+
+        @com.aliyun.core.annotation.NameInMap("start_date")
+        private String startDate;
+
+        @com.aliyun.core.annotation.NameInMap("url")
+        private String url;
 
         private Module(Builder builder) {
-            this.cancelTime = builder.cancelTime;
+            this.billSplitKey = builder.billSplitKey;
+            this.endDate = builder.endDate;
+            this.startDate = builder.startDate;
+            this.url = builder.url;
         }
 
         public static Builder builder() {
@@ -195,27 +207,78 @@ public class IntlFlightOrderCancelResponseBody extends TeaModel {
         }
 
         /**
-         * @return cancelTime
+         * @return billSplitKey
          */
-        public String getCancelTime() {
-            return this.cancelTime;
+        public String getBillSplitKey() {
+            return this.billSplitKey;
+        }
+
+        /**
+         * @return endDate
+         */
+        public String getEndDate() {
+            return this.endDate;
+        }
+
+        /**
+         * @return startDate
+         */
+        public String getStartDate() {
+            return this.startDate;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
         }
 
         public static final class Builder {
-            private String cancelTime; 
+            private String billSplitKey; 
+            private String endDate; 
+            private String startDate; 
+            private String url; 
 
             private Builder() {
             } 
 
             private Builder(Module model) {
-                this.cancelTime = model.cancelTime;
+                this.billSplitKey = model.billSplitKey;
+                this.endDate = model.endDate;
+                this.startDate = model.startDate;
+                this.url = model.url;
             } 
 
             /**
-             * cancel_time.
+             * bill_split_key.
              */
-            public Builder cancelTime(String cancelTime) {
-                this.cancelTime = cancelTime;
+            public Builder billSplitKey(String billSplitKey) {
+                this.billSplitKey = billSplitKey;
+                return this;
+            }
+
+            /**
+             * end_date.
+             */
+            public Builder endDate(String endDate) {
+                this.endDate = endDate;
+                return this;
+            }
+
+            /**
+             * start_date.
+             */
+            public Builder startDate(String startDate) {
+                this.startDate = startDate;
+                return this;
+            }
+
+            /**
+             * url.
+             */
+            public Builder url(String url) {
+                this.url = url;
                 return this;
             }
 

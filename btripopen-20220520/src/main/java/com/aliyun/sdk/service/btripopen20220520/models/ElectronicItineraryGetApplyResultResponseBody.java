@@ -194,6 +194,9 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("itinerary_status")
         private Integer itineraryStatus;
 
+        @com.aliyun.core.annotation.NameInMap("remark")
+        private String remark;
+
         @com.aliyun.core.annotation.NameInMap("ticket_no")
         private String ticketNo;
 
@@ -201,6 +204,7 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
             this.failedCode = builder.failedCode;
             this.failedReason = builder.failedReason;
             this.itineraryStatus = builder.itineraryStatus;
+            this.remark = builder.remark;
             this.ticketNo = builder.ticketNo;
         }
 
@@ -234,6 +238,13 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
         }
 
         /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
+        /**
          * @return ticketNo
          */
         public String getTicketNo() {
@@ -244,6 +255,7 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
             private Integer failedCode; 
             private String failedReason; 
             private Integer itineraryStatus; 
+            private String remark; 
             private String ticketNo; 
 
             private Builder() {
@@ -253,6 +265,7 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
                 this.failedCode = model.failedCode;
                 this.failedReason = model.failedReason;
                 this.itineraryStatus = model.itineraryStatus;
+                this.remark = model.remark;
                 this.ticketNo = model.ticketNo;
             } 
 
@@ -277,6 +290,14 @@ public class ElectronicItineraryGetApplyResultResponseBody extends TeaModel {
              */
             public Builder itineraryStatus(Integer itineraryStatus) {
                 this.itineraryStatus = itineraryStatus;
+                return this;
+            }
+
+            /**
+             * remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 

@@ -248,6 +248,9 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("train_invoice_fee")
         private String trainInvoiceFee;
 
+        @com.aliyun.core.annotation.NameInMap("vacation_normal_invoice_fee")
+        private String vacationNormalInvoiceFee;
+
         @com.aliyun.core.annotation.NameInMap("vas_mall_special_invoice_fee")
         private String vasMallSpecialInvoiceFee;
 
@@ -279,6 +282,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             this.telephone = builder.telephone;
             this.trainAccelerationPackageInvoiceFee = builder.trainAccelerationPackageInvoiceFee;
             this.trainInvoiceFee = builder.trainInvoiceFee;
+            this.vacationNormalInvoiceFee = builder.vacationNormalInvoiceFee;
             this.vasMallSpecialInvoiceFee = builder.vasMallSpecialInvoiceFee;
             this.vehicleInvoiceFee = builder.vehicleInvoiceFee;
             this.vehicleNormalInvoiceFee = builder.vehicleNormalInvoiceFee;
@@ -440,6 +444,13 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return vacationNormalInvoiceFee
+         */
+        public String getVacationNormalInvoiceFee() {
+            return this.vacationNormalInvoiceFee;
+        }
+
+        /**
          * @return vasMallSpecialInvoiceFee
          */
         public String getVasMallSpecialInvoiceFee() {
@@ -482,6 +493,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             private String telephone; 
             private String trainAccelerationPackageInvoiceFee; 
             private String trainInvoiceFee; 
+            private String vacationNormalInvoiceFee; 
             private String vasMallSpecialInvoiceFee; 
             private String vehicleInvoiceFee; 
             private String vehicleNormalInvoiceFee; 
@@ -511,6 +523,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
                 this.telephone = model.telephone;
                 this.trainAccelerationPackageInvoiceFee = model.trainAccelerationPackageInvoiceFee;
                 this.trainInvoiceFee = model.trainInvoiceFee;
+                this.vacationNormalInvoiceFee = model.vacationNormalInvoiceFee;
                 this.vasMallSpecialInvoiceFee = model.vasMallSpecialInvoiceFee;
                 this.vehicleInvoiceFee = model.vehicleInvoiceFee;
                 this.vehicleNormalInvoiceFee = model.vehicleNormalInvoiceFee;
@@ -681,6 +694,14 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
              */
             public Builder trainInvoiceFee(String trainInvoiceFee) {
                 this.trainInvoiceFee = trainInvoiceFee;
+                return this;
+            }
+
+            /**
+             * vacation_normal_invoice_fee.
+             */
+            public Builder vacationNormalInvoiceFee(String vacationNormalInvoiceFee) {
+                this.vacationNormalInvoiceFee = vacationNormalInvoiceFee;
                 return this;
             }
 

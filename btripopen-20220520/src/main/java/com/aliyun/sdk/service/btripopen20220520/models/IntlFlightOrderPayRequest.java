@@ -17,25 +17,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IntlFlightOrderPayRequest</p>
  */
 public class IntlFlightOrderPayRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ext_params")
-    private java.util.Map<String, ?> extParams;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("btrip_user_id")
+    private String btripUserId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buyer_name")
+    private String buyerName;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("isv_name")
     private String isvName;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("order_id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order_price")
+    private Long orderPrice;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("out_order_id")
     private String outOrderId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("total_price")
-    private Long totalPrice;
 
     @com.aliyun.core.annotation.Header
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
@@ -43,11 +48,12 @@ public class IntlFlightOrderPayRequest extends Request {
 
     private IntlFlightOrderPayRequest(Builder builder) {
         super(builder);
-        this.extParams = builder.extParams;
+        this.btripUserId = builder.btripUserId;
+        this.buyerName = builder.buyerName;
         this.isvName = builder.isvName;
         this.orderId = builder.orderId;
+        this.orderPrice = builder.orderPrice;
         this.outOrderId = builder.outOrderId;
-        this.totalPrice = builder.totalPrice;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
 
@@ -65,10 +71,17 @@ public class IntlFlightOrderPayRequest extends Request {
     }
 
     /**
-     * @return extParams
+     * @return btripUserId
      */
-    public java.util.Map<String, ?> getExtParams() {
-        return this.extParams;
+    public String getBtripUserId() {
+        return this.btripUserId;
+    }
+
+    /**
+     * @return buyerName
+     */
+    public String getBuyerName() {
+        return this.buyerName;
     }
 
     /**
@@ -86,17 +99,17 @@ public class IntlFlightOrderPayRequest extends Request {
     }
 
     /**
+     * @return orderPrice
+     */
+    public Long getOrderPrice() {
+        return this.orderPrice;
+    }
+
+    /**
      * @return outOrderId
      */
     public String getOutOrderId() {
         return this.outOrderId;
-    }
-
-    /**
-     * @return totalPrice
-     */
-    public Long getTotalPrice() {
-        return this.totalPrice;
     }
 
     /**
@@ -107,11 +120,12 @@ public class IntlFlightOrderPayRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<IntlFlightOrderPayRequest, Builder> {
-        private java.util.Map<String, ?> extParams; 
+        private String btripUserId; 
+        private String buyerName; 
         private String isvName; 
         private String orderId; 
+        private Long orderPrice; 
         private String outOrderId; 
-        private Long totalPrice; 
         private String xAcsBtripCorpToken; 
 
         private Builder() {
@@ -120,21 +134,30 @@ public class IntlFlightOrderPayRequest extends Request {
 
         private Builder(IntlFlightOrderPayRequest request) {
             super(request);
-            this.extParams = request.extParams;
+            this.btripUserId = request.btripUserId;
+            this.buyerName = request.buyerName;
             this.isvName = request.isvName;
             this.orderId = request.orderId;
+            this.orderPrice = request.orderPrice;
             this.outOrderId = request.outOrderId;
-            this.totalPrice = request.totalPrice;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
 
         /**
-         * ext_params.
+         * btrip_user_id.
          */
-        public Builder extParams(java.util.Map<String, ?> extParams) {
-            String extParamsShrink = shrink(extParams, "ext_params", "json");
-            this.putQueryParameter("ext_params", extParamsShrink);
-            this.extParams = extParams;
+        public Builder btripUserId(String btripUserId) {
+            this.putBodyParameter("btrip_user_id", btripUserId);
+            this.btripUserId = btripUserId;
+            return this;
+        }
+
+        /**
+         * buyer_name.
+         */
+        public Builder buyerName(String buyerName) {
+            this.putBodyParameter("buyer_name", buyerName);
+            this.buyerName = buyerName;
             return this;
         }
 
@@ -142,17 +165,26 @@ public class IntlFlightOrderPayRequest extends Request {
          * isv_name.
          */
         public Builder isvName(String isvName) {
-            this.putQueryParameter("isv_name", isvName);
+            this.putBodyParameter("isv_name", isvName);
             this.isvName = isvName;
             return this;
         }
 
         /**
-         * order_id.
+         * <p>This parameter is required.</p>
          */
         public Builder orderId(String orderId) {
-            this.putQueryParameter("order_id", orderId);
+            this.putBodyParameter("order_id", orderId);
             this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * order_price.
+         */
+        public Builder orderPrice(Long orderPrice) {
+            this.putBodyParameter("order_price", orderPrice);
+            this.orderPrice = orderPrice;
             return this;
         }
 
@@ -160,17 +192,8 @@ public class IntlFlightOrderPayRequest extends Request {
          * out_order_id.
          */
         public Builder outOrderId(String outOrderId) {
-            this.putQueryParameter("out_order_id", outOrderId);
+            this.putBodyParameter("out_order_id", outOrderId);
             this.outOrderId = outOrderId;
-            return this;
-        }
-
-        /**
-         * total_price.
-         */
-        public Builder totalPrice(Long totalPrice) {
-            this.putQueryParameter("total_price", totalPrice);
-            this.totalPrice = totalPrice;
             return this;
         }
 

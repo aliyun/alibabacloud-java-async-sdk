@@ -26,6 +26,10 @@ public class IeHotelBillSettlementQueryRequest extends Request {
     private Integer category;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("order_id")
+    private Long orderId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("page_no")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNo;
@@ -58,6 +62,7 @@ public class IeHotelBillSettlementQueryRequest extends Request {
         super(builder);
         this.billBatch = builder.billBatch;
         this.category = builder.category;
+        this.orderId = builder.orderId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.periodEnd = builder.periodEnd;
@@ -92,6 +97,13 @@ public class IeHotelBillSettlementQueryRequest extends Request {
      */
     public Integer getCategory() {
         return this.category;
+    }
+
+    /**
+     * @return orderId
+     */
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -146,6 +158,7 @@ public class IeHotelBillSettlementQueryRequest extends Request {
     public static final class Builder extends Request.Builder<IeHotelBillSettlementQueryRequest, Builder> {
         private String billBatch; 
         private Integer category; 
+        private Long orderId; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String periodEnd; 
@@ -162,6 +175,7 @@ public class IeHotelBillSettlementQueryRequest extends Request {
             super(request);
             this.billBatch = request.billBatch;
             this.category = request.category;
+            this.orderId = request.orderId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.periodEnd = request.periodEnd;
@@ -186,6 +200,15 @@ public class IeHotelBillSettlementQueryRequest extends Request {
         public Builder category(Integer category) {
             this.putQueryParameter("category", category);
             this.category = category;
+            return this;
+        }
+
+        /**
+         * order_id.
+         */
+        public Builder orderId(Long orderId) {
+            this.putQueryParameter("order_id", orderId);
+            this.orderId = orderId;
             return this;
         }
 

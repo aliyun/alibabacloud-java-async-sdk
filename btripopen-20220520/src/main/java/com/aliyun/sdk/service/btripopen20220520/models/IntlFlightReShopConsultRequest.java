@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link IntlFlightOrderDetailRequest} extends {@link RequestModel}
+ * {@link IntlFlightReShopConsultRequest} extends {@link RequestModel}
  *
- * <p>IntlFlightOrderDetailRequest</p>
+ * <p>IntlFlightReShopConsultRequest</p>
  */
-public class IntlFlightOrderDetailRequest extends Request {
+public class IntlFlightReShopConsultRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("btrip_user_id")
     private String btripUserId;
@@ -42,7 +42,7 @@ public class IntlFlightOrderDetailRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("x-acs-btrip-corp-token")
     private String xAcsBtripCorpToken;
 
-    private IntlFlightOrderDetailRequest(Builder builder) {
+    private IntlFlightReShopConsultRequest(Builder builder) {
         super(builder);
         this.btripUserId = builder.btripUserId;
         this.buyerName = builder.buyerName;
@@ -56,7 +56,7 @@ public class IntlFlightOrderDetailRequest extends Request {
         return new Builder();
     }
 
-    public static IntlFlightOrderDetailRequest create() {
+    public static IntlFlightReShopConsultRequest create() {
         return builder().build();
     }
 
@@ -107,7 +107,7 @@ public class IntlFlightOrderDetailRequest extends Request {
         return this.xAcsBtripCorpToken;
     }
 
-    public static final class Builder extends Request.Builder<IntlFlightOrderDetailRequest, Builder> {
+    public static final class Builder extends Request.Builder<IntlFlightReShopConsultRequest, Builder> {
         private String btripUserId; 
         private String buyerName; 
         private String isvName; 
@@ -119,7 +119,7 @@ public class IntlFlightOrderDetailRequest extends Request {
             super();
         } 
 
-        private Builder(IntlFlightOrderDetailRequest request) {
+        private Builder(IntlFlightReShopConsultRequest request) {
             super(request);
             this.btripUserId = request.btripUserId;
             this.buyerName = request.buyerName;
@@ -160,7 +160,7 @@ public class IntlFlightOrderDetailRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1012000000000000</p>
+         * <p>1003038202430742196</p>
          */
         public Builder orderId(String orderId) {
             this.putQueryParameter("order_id", orderId);
@@ -187,8 +187,8 @@ public class IntlFlightOrderDetailRequest extends Request {
         }
 
         @Override
-        public IntlFlightOrderDetailRequest build() {
-            return new IntlFlightOrderDetailRequest(this);
+        public IntlFlightReShopConsultRequest build() {
+            return new IntlFlightReShopConsultRequest(this);
         } 
 
     } 

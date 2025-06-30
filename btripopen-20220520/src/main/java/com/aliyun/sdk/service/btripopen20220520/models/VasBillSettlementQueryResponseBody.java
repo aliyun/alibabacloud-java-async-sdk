@@ -12,25 +12,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link FuPointBillSettlementQueryResponseBody} extends {@link TeaModel}
+ * {@link VasBillSettlementQueryResponseBody} extends {@link TeaModel}
  *
- * <p>FuPointBillSettlementQueryResponseBody</p>
+ * <p>VasBillSettlementQueryResponseBody</p>
  */
-public class FuPointBillSettlementQueryResponseBody extends TeaModel {
+public class VasBillSettlementQueryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
-    private Integer code;
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("message")
+    private String message;
 
     @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
-    @com.aliyun.core.annotation.NameInMap("more_page")
-    private Boolean morePage;
-
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
-
-    @com.aliyun.core.annotation.NameInMap("result_msg")
-    private String resultMsg;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -38,12 +35,11 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("traceId")
     private String traceId;
 
-    private FuPointBillSettlementQueryResponseBody(Builder builder) {
+    private VasBillSettlementQueryResponseBody(Builder builder) {
         this.code = builder.code;
+        this.message = builder.message;
         this.module = builder.module;
-        this.morePage = builder.morePage;
         this.requestId = builder.requestId;
-        this.resultMsg = builder.resultMsg;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -52,7 +48,7 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static FuPointBillSettlementQueryResponseBody create() {
+    public static VasBillSettlementQueryResponseBody create() {
         return builder().build();
     }
 
@@ -63,8 +59,15 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
     /**
      * @return code
      */
-    public Integer getCode() {
+    public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -75,24 +78,10 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
     }
 
     /**
-     * @return morePage
-     */
-    public Boolean getMorePage() {
-        return this.morePage;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
-    }
-
-    /**
-     * @return resultMsg
-     */
-    public String getResultMsg() {
-        return this.resultMsg;
     }
 
     /**
@@ -110,23 +99,21 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer code; 
+        private String code; 
+        private String message; 
         private Module module; 
-        private Boolean morePage; 
         private String requestId; 
-        private String resultMsg; 
         private Boolean success; 
         private String traceId; 
 
         private Builder() {
         } 
 
-        private Builder(FuPointBillSettlementQueryResponseBody model) {
+        private Builder(VasBillSettlementQueryResponseBody model) {
             this.code = model.code;
+            this.message = model.message;
             this.module = model.module;
-            this.morePage = model.morePage;
             this.requestId = model.requestId;
-            this.resultMsg = model.resultMsg;
             this.success = model.success;
             this.traceId = model.traceId;
         } 
@@ -134,24 +121,24 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         /**
          * code.
          */
-        public Builder code(Integer code) {
+        public Builder code(String code) {
             this.code = code;
             return this;
         }
 
         /**
-         * <p>module。</p>
+         * message.
          */
-        public Builder module(Module module) {
-            this.module = module;
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
         /**
-         * more_page.
+         * module.
          */
-        public Builder morePage(Boolean morePage) {
-            this.morePage = morePage;
+        public Builder module(Module module) {
+            this.module = module;
             return this;
         }
 
@@ -160,14 +147,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * result_msg.
-         */
-        public Builder resultMsg(String resultMsg) {
-            this.resultMsg = resultMsg;
             return this;
         }
 
@@ -183,24 +162,24 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
          * <p>trace_id</p>
          * 
          * <strong>example:</strong>
-         * <p>213e382517240341253056547e41fc</p>
+         * <p>3b52152017470153218107062d0096</p>
          */
         public Builder traceId(String traceId) {
             this.traceId = traceId;
             return this;
         }
 
-        public FuPointBillSettlementQueryResponseBody build() {
-            return new FuPointBillSettlementQueryResponseBody(this);
+        public VasBillSettlementQueryResponseBody build() {
+            return new VasBillSettlementQueryResponseBody(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link FuPointBillSettlementQueryResponseBody} extends {@link TeaModel}
+     * {@link VasBillSettlementQueryResponseBody} extends {@link TeaModel}
      *
-     * <p>FuPointBillSettlementQueryResponseBody</p>
+     * <p>VasBillSettlementQueryResponseBody</p>
      */
     public static class Items extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("adjust_time")
@@ -230,20 +209,8 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("apply_id")
         private String applyId;
 
-        @com.aliyun.core.annotation.NameInMap("approver_email")
-        private String approverEmail;
-
-        @com.aliyun.core.annotation.NameInMap("approver_id")
-        private String approverId;
-
-        @com.aliyun.core.annotation.NameInMap("approver_name")
-        private String approverName;
-
-        @com.aliyun.core.annotation.NameInMap("award_num")
-        private Double awardNum;
-
-        @com.aliyun.core.annotation.NameInMap("basis_amount")
-        private String basisAmount;
+        @com.aliyun.core.annotation.NameInMap("belong_business")
+        private String belongBusiness;
 
         @com.aliyun.core.annotation.NameInMap("bill_record_time")
         private String billRecordTime;
@@ -275,9 +242,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category_desc")
         private String categoryDesc;
 
-        @com.aliyun.core.annotation.NameInMap("category_order_settle_price")
-        private String categoryOrderSettlePrice;
-
         @com.aliyun.core.annotation.NameInMap("cost_center")
         private String costCenter;
 
@@ -286,9 +250,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("cost_department")
         private String costDepartment;
-
-        @com.aliyun.core.annotation.NameInMap("deductible_tax")
-        private Double deductibleTax;
 
         @com.aliyun.core.annotation.NameInMap("department")
         private String department;
@@ -302,23 +263,11 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("fee_type_desc")
         private String feeTypeDesc;
 
-        @com.aliyun.core.annotation.NameInMap("foreigners_tag")
-        private String foreignersTag;
-
-        @com.aliyun.core.annotation.NameInMap("grant_num")
-        private Double grantNum;
-
         @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
         @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
-
-        @com.aliyun.core.annotation.NameInMap("location")
-        private String location;
-
-        @com.aliyun.core.annotation.NameInMap("make_invoice")
-        private String makeInvoice;
 
         @com.aliyun.core.annotation.NameInMap("mapping_company_code")
         private String mappingCompanyCode;
@@ -326,14 +275,11 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("order_id")
         private String orderId;
 
+        @com.aliyun.core.annotation.NameInMap("order_price")
+        private Double orderPrice;
+
         @com.aliyun.core.annotation.NameInMap("order_status_desc")
         private String orderStatusDesc;
-
-        @com.aliyun.core.annotation.NameInMap("origin_category")
-        private String originCategory;
-
-        @com.aliyun.core.annotation.NameInMap("origin_order_id")
-        private String originOrderId;
 
         @com.aliyun.core.annotation.NameInMap("over_apply_id")
         private String overApplyId;
@@ -350,26 +296,29 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("processor_oa_code")
         private String processorOaCode;
 
+        @com.aliyun.core.annotation.NameInMap("product_count")
+        private Integer productCount;
+
+        @com.aliyun.core.annotation.NameInMap("product_id")
+        private String productId;
+
+        @com.aliyun.core.annotation.NameInMap("product_name")
+        private String productName;
+
         @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
         @com.aliyun.core.annotation.NameInMap("project_name")
         private String projectName;
 
+        @com.aliyun.core.annotation.NameInMap("promotion_fee")
+        private Double promotionFee;
+
         @com.aliyun.core.annotation.NameInMap("purchase_order_id")
         private String purchaseOrderId;
 
         @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
-
-        @com.aliyun.core.annotation.NameInMap("save_amount")
-        private Double saveAmount;
-
-        @com.aliyun.core.annotation.NameInMap("scene_id")
-        private String sceneId;
-
-        @com.aliyun.core.annotation.NameInMap("scene_name")
-        private String sceneName;
 
         @com.aliyun.core.annotation.NameInMap("settle_type_desc")
         private String settleTypeDesc;
@@ -386,11 +335,8 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("settlement_type")
         private String settlementType;
 
-        @com.aliyun.core.annotation.NameInMap("show_sub_order_id")
-        private String showSubOrderId;
-
-        @com.aliyun.core.annotation.NameInMap("sio")
-        private String sio;
+        @com.aliyun.core.annotation.NameInMap("specification")
+        private String specification;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
@@ -413,11 +359,8 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("trade_action_desc")
         private String tradeActionDesc;
 
-        @com.aliyun.core.annotation.NameInMap("trade_reason")
-        private String tradeReason;
-
-        @com.aliyun.core.annotation.NameInMap("traveler_email")
-        private String travelerEmail;
+        @com.aliyun.core.annotation.NameInMap("trade_remark")
+        private String tradeRemark;
 
         @com.aliyun.core.annotation.NameInMap("traveler_id")
         private String travelerId;
@@ -450,11 +393,7 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             this.applyDepCityName = builder.applyDepCityName;
             this.applyExtendField = builder.applyExtendField;
             this.applyId = builder.applyId;
-            this.approverEmail = builder.approverEmail;
-            this.approverId = builder.approverId;
-            this.approverName = builder.approverName;
-            this.awardNum = builder.awardNum;
-            this.basisAmount = builder.basisAmount;
+            this.belongBusiness = builder.belongBusiness;
             this.billRecordTime = builder.billRecordTime;
             this.billingEntity = builder.billingEntity;
             this.bookMode = builder.bookMode;
@@ -465,45 +404,38 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             this.capitalDirection = builder.capitalDirection;
             this.cascadeDepartment = builder.cascadeDepartment;
             this.categoryDesc = builder.categoryDesc;
-            this.categoryOrderSettlePrice = builder.categoryOrderSettlePrice;
             this.costCenter = builder.costCenter;
             this.costCenterNumber = builder.costCenterNumber;
             this.costDepartment = builder.costDepartment;
-            this.deductibleTax = builder.deductibleTax;
             this.department = builder.department;
             this.departmentId = builder.departmentId;
             this.feeType = builder.feeType;
             this.feeTypeDesc = builder.feeTypeDesc;
-            this.foreignersTag = builder.foreignersTag;
-            this.grantNum = builder.grantNum;
             this.index = builder.index;
             this.invoiceTitle = builder.invoiceTitle;
-            this.location = builder.location;
-            this.makeInvoice = builder.makeInvoice;
             this.mappingCompanyCode = builder.mappingCompanyCode;
             this.orderId = builder.orderId;
+            this.orderPrice = builder.orderPrice;
             this.orderStatusDesc = builder.orderStatusDesc;
-            this.originCategory = builder.originCategory;
-            this.originOrderId = builder.originOrderId;
             this.overApplyId = builder.overApplyId;
             this.paymentDepartmentId = builder.paymentDepartmentId;
             this.paymentDepartmentName = builder.paymentDepartmentName;
             this.primaryId = builder.primaryId;
             this.processorOaCode = builder.processorOaCode;
+            this.productCount = builder.productCount;
+            this.productId = builder.productId;
+            this.productName = builder.productName;
             this.projectCode = builder.projectCode;
             this.projectName = builder.projectName;
+            this.promotionFee = builder.promotionFee;
             this.purchaseOrderId = builder.purchaseOrderId;
             this.remark = builder.remark;
-            this.saveAmount = builder.saveAmount;
-            this.sceneId = builder.sceneId;
-            this.sceneName = builder.sceneName;
             this.settleTypeDesc = builder.settleTypeDesc;
             this.settlementFee = builder.settlementFee;
             this.settlementGrantFee = builder.settlementGrantFee;
             this.settlementTime = builder.settlementTime;
             this.settlementType = builder.settlementType;
-            this.showSubOrderId = builder.showSubOrderId;
-            this.sio = builder.sio;
+            this.specification = builder.specification;
             this.status = builder.status;
             this.statusDesc = builder.statusDesc;
             this.subOrderId = builder.subOrderId;
@@ -511,8 +443,7 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             this.thirdInvoiceId = builder.thirdInvoiceId;
             this.thirdItineraryId = builder.thirdItineraryId;
             this.tradeActionDesc = builder.tradeActionDesc;
-            this.tradeReason = builder.tradeReason;
-            this.travelerEmail = builder.travelerEmail;
+            this.tradeRemark = builder.tradeRemark;
             this.travelerId = builder.travelerId;
             this.travelerJobNo = builder.travelerJobNo;
             this.travelerMemberType = builder.travelerMemberType;
@@ -594,38 +525,10 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
-         * @return approverEmail
+         * @return belongBusiness
          */
-        public String getApproverEmail() {
-            return this.approverEmail;
-        }
-
-        /**
-         * @return approverId
-         */
-        public String getApproverId() {
-            return this.approverId;
-        }
-
-        /**
-         * @return approverName
-         */
-        public String getApproverName() {
-            return this.approverName;
-        }
-
-        /**
-         * @return awardNum
-         */
-        public Double getAwardNum() {
-            return this.awardNum;
-        }
-
-        /**
-         * @return basisAmount
-         */
-        public String getBasisAmount() {
-            return this.basisAmount;
+        public String getBelongBusiness() {
+            return this.belongBusiness;
         }
 
         /**
@@ -699,13 +602,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
-         * @return categoryOrderSettlePrice
-         */
-        public String getCategoryOrderSettlePrice() {
-            return this.categoryOrderSettlePrice;
-        }
-
-        /**
          * @return costCenter
          */
         public String getCostCenter() {
@@ -724,13 +620,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getCostDepartment() {
             return this.costDepartment;
-        }
-
-        /**
-         * @return deductibleTax
-         */
-        public Double getDeductibleTax() {
-            return this.deductibleTax;
         }
 
         /**
@@ -762,20 +651,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
-         * @return foreignersTag
-         */
-        public String getForeignersTag() {
-            return this.foreignersTag;
-        }
-
-        /**
-         * @return grantNum
-         */
-        public Double getGrantNum() {
-            return this.grantNum;
-        }
-
-        /**
          * @return index
          */
         public String getIndex() {
@@ -787,20 +662,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getInvoiceTitle() {
             return this.invoiceTitle;
-        }
-
-        /**
-         * @return location
-         */
-        public String getLocation() {
-            return this.location;
-        }
-
-        /**
-         * @return makeInvoice
-         */
-        public String getMakeInvoice() {
-            return this.makeInvoice;
         }
 
         /**
@@ -818,24 +679,17 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return orderPrice
+         */
+        public Double getOrderPrice() {
+            return this.orderPrice;
+        }
+
+        /**
          * @return orderStatusDesc
          */
         public String getOrderStatusDesc() {
             return this.orderStatusDesc;
-        }
-
-        /**
-         * @return originCategory
-         */
-        public String getOriginCategory() {
-            return this.originCategory;
-        }
-
-        /**
-         * @return originOrderId
-         */
-        public String getOriginOrderId() {
-            return this.originOrderId;
         }
 
         /**
@@ -874,6 +728,27 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return productCount
+         */
+        public Integer getProductCount() {
+            return this.productCount;
+        }
+
+        /**
+         * @return productId
+         */
+        public String getProductId() {
+            return this.productId;
+        }
+
+        /**
+         * @return productName
+         */
+        public String getProductName() {
+            return this.productName;
+        }
+
+        /**
          * @return projectCode
          */
         public String getProjectCode() {
@@ -888,6 +763,13 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return promotionFee
+         */
+        public Double getPromotionFee() {
+            return this.promotionFee;
+        }
+
+        /**
          * @return purchaseOrderId
          */
         public String getPurchaseOrderId() {
@@ -899,27 +781,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getRemark() {
             return this.remark;
-        }
-
-        /**
-         * @return saveAmount
-         */
-        public Double getSaveAmount() {
-            return this.saveAmount;
-        }
-
-        /**
-         * @return sceneId
-         */
-        public String getSceneId() {
-            return this.sceneId;
-        }
-
-        /**
-         * @return sceneName
-         */
-        public String getSceneName() {
-            return this.sceneName;
         }
 
         /**
@@ -958,17 +819,10 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
-         * @return showSubOrderId
+         * @return specification
          */
-        public String getShowSubOrderId() {
-            return this.showSubOrderId;
-        }
-
-        /**
-         * @return sio
-         */
-        public String getSio() {
-            return this.sio;
+        public String getSpecification() {
+            return this.specification;
         }
 
         /**
@@ -1021,17 +875,10 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
-         * @return tradeReason
+         * @return tradeRemark
          */
-        public String getTradeReason() {
-            return this.tradeReason;
-        }
-
-        /**
-         * @return travelerEmail
-         */
-        public String getTravelerEmail() {
-            return this.travelerEmail;
+        public String getTradeRemark() {
+            return this.tradeRemark;
         }
 
         /**
@@ -1093,11 +940,7 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             private String applyDepCityName; 
             private String applyExtendField; 
             private String applyId; 
-            private String approverEmail; 
-            private String approverId; 
-            private String approverName; 
-            private Double awardNum; 
-            private String basisAmount; 
+            private String belongBusiness; 
             private String billRecordTime; 
             private String billingEntity; 
             private String bookMode; 
@@ -1108,45 +951,38 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             private String capitalDirection; 
             private String cascadeDepartment; 
             private String categoryDesc; 
-            private String categoryOrderSettlePrice; 
             private String costCenter; 
             private String costCenterNumber; 
             private String costDepartment; 
-            private Double deductibleTax; 
             private String department; 
             private String departmentId; 
             private String feeType; 
             private String feeTypeDesc; 
-            private String foreignersTag; 
-            private Double grantNum; 
             private String index; 
             private String invoiceTitle; 
-            private String location; 
-            private String makeInvoice; 
             private String mappingCompanyCode; 
             private String orderId; 
+            private Double orderPrice; 
             private String orderStatusDesc; 
-            private String originCategory; 
-            private String originOrderId; 
             private String overApplyId; 
             private String paymentDepartmentId; 
             private String paymentDepartmentName; 
             private Long primaryId; 
             private String processorOaCode; 
+            private Integer productCount; 
+            private String productId; 
+            private String productName; 
             private String projectCode; 
             private String projectName; 
+            private Double promotionFee; 
             private String purchaseOrderId; 
             private String remark; 
-            private Double saveAmount; 
-            private String sceneId; 
-            private String sceneName; 
             private String settleTypeDesc; 
             private Double settlementFee; 
             private Double settlementGrantFee; 
             private String settlementTime; 
             private String settlementType; 
-            private String showSubOrderId; 
-            private String sio; 
+            private String specification; 
             private Integer status; 
             private String statusDesc; 
             private String subOrderId; 
@@ -1154,8 +990,7 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             private String thirdInvoiceId; 
             private String thirdItineraryId; 
             private String tradeActionDesc; 
-            private String tradeReason; 
-            private String travelerEmail; 
+            private String tradeRemark; 
             private String travelerId; 
             private String travelerJobNo; 
             private String travelerMemberType; 
@@ -1177,11 +1012,7 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
                 this.applyDepCityName = model.applyDepCityName;
                 this.applyExtendField = model.applyExtendField;
                 this.applyId = model.applyId;
-                this.approverEmail = model.approverEmail;
-                this.approverId = model.approverId;
-                this.approverName = model.approverName;
-                this.awardNum = model.awardNum;
-                this.basisAmount = model.basisAmount;
+                this.belongBusiness = model.belongBusiness;
                 this.billRecordTime = model.billRecordTime;
                 this.billingEntity = model.billingEntity;
                 this.bookMode = model.bookMode;
@@ -1192,45 +1023,38 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
                 this.capitalDirection = model.capitalDirection;
                 this.cascadeDepartment = model.cascadeDepartment;
                 this.categoryDesc = model.categoryDesc;
-                this.categoryOrderSettlePrice = model.categoryOrderSettlePrice;
                 this.costCenter = model.costCenter;
                 this.costCenterNumber = model.costCenterNumber;
                 this.costDepartment = model.costDepartment;
-                this.deductibleTax = model.deductibleTax;
                 this.department = model.department;
                 this.departmentId = model.departmentId;
                 this.feeType = model.feeType;
                 this.feeTypeDesc = model.feeTypeDesc;
-                this.foreignersTag = model.foreignersTag;
-                this.grantNum = model.grantNum;
                 this.index = model.index;
                 this.invoiceTitle = model.invoiceTitle;
-                this.location = model.location;
-                this.makeInvoice = model.makeInvoice;
                 this.mappingCompanyCode = model.mappingCompanyCode;
                 this.orderId = model.orderId;
+                this.orderPrice = model.orderPrice;
                 this.orderStatusDesc = model.orderStatusDesc;
-                this.originCategory = model.originCategory;
-                this.originOrderId = model.originOrderId;
                 this.overApplyId = model.overApplyId;
                 this.paymentDepartmentId = model.paymentDepartmentId;
                 this.paymentDepartmentName = model.paymentDepartmentName;
                 this.primaryId = model.primaryId;
                 this.processorOaCode = model.processorOaCode;
+                this.productCount = model.productCount;
+                this.productId = model.productId;
+                this.productName = model.productName;
                 this.projectCode = model.projectCode;
                 this.projectName = model.projectName;
+                this.promotionFee = model.promotionFee;
                 this.purchaseOrderId = model.purchaseOrderId;
                 this.remark = model.remark;
-                this.saveAmount = model.saveAmount;
-                this.sceneId = model.sceneId;
-                this.sceneName = model.sceneName;
                 this.settleTypeDesc = model.settleTypeDesc;
                 this.settlementFee = model.settlementFee;
                 this.settlementGrantFee = model.settlementGrantFee;
                 this.settlementTime = model.settlementTime;
                 this.settlementType = model.settlementType;
-                this.showSubOrderId = model.showSubOrderId;
-                this.sio = model.sio;
+                this.specification = model.specification;
                 this.status = model.status;
                 this.statusDesc = model.statusDesc;
                 this.subOrderId = model.subOrderId;
@@ -1238,8 +1062,7 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
                 this.thirdInvoiceId = model.thirdInvoiceId;
                 this.thirdItineraryId = model.thirdItineraryId;
                 this.tradeActionDesc = model.tradeActionDesc;
-                this.tradeReason = model.tradeReason;
-                this.travelerEmail = model.travelerEmail;
+                this.tradeRemark = model.tradeRemark;
                 this.travelerId = model.travelerId;
                 this.travelerJobNo = model.travelerJobNo;
                 this.travelerMemberType = model.travelerMemberType;
@@ -1322,42 +1145,10 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * approver_email.
+             * belong_business.
              */
-            public Builder approverEmail(String approverEmail) {
-                this.approverEmail = approverEmail;
-                return this;
-            }
-
-            /**
-             * approver_id.
-             */
-            public Builder approverId(String approverId) {
-                this.approverId = approverId;
-                return this;
-            }
-
-            /**
-             * approver_name.
-             */
-            public Builder approverName(String approverName) {
-                this.approverName = approverName;
-                return this;
-            }
-
-            /**
-             * award_num.
-             */
-            public Builder awardNum(Double awardNum) {
-                this.awardNum = awardNum;
-                return this;
-            }
-
-            /**
-             * basis_amount.
-             */
-            public Builder basisAmount(String basisAmount) {
-                this.basisAmount = basisAmount;
+            public Builder belongBusiness(String belongBusiness) {
+                this.belongBusiness = belongBusiness;
                 return this;
             }
 
@@ -1442,14 +1233,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * category_order_settle_price.
-             */
-            public Builder categoryOrderSettlePrice(String categoryOrderSettlePrice) {
-                this.categoryOrderSettlePrice = categoryOrderSettlePrice;
-                return this;
-            }
-
-            /**
              * cost_center.
              */
             public Builder costCenter(String costCenter) {
@@ -1470,14 +1253,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder costDepartment(String costDepartment) {
                 this.costDepartment = costDepartment;
-                return this;
-            }
-
-            /**
-             * deductible_tax.
-             */
-            public Builder deductibleTax(Double deductibleTax) {
-                this.deductibleTax = deductibleTax;
                 return this;
             }
 
@@ -1514,22 +1289,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * foreigners_tag.
-             */
-            public Builder foreignersTag(String foreignersTag) {
-                this.foreignersTag = foreignersTag;
-                return this;
-            }
-
-            /**
-             * grant_num.
-             */
-            public Builder grantNum(Double grantNum) {
-                this.grantNum = grantNum;
-                return this;
-            }
-
-            /**
              * index.
              */
             public Builder index(String index) {
@@ -1542,22 +1301,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder invoiceTitle(String invoiceTitle) {
                 this.invoiceTitle = invoiceTitle;
-                return this;
-            }
-
-            /**
-             * <p>Location</p>
-             */
-            public Builder location(String location) {
-                this.location = location;
-                return this;
-            }
-
-            /**
-             * make_invoice.
-             */
-            public Builder makeInvoice(String makeInvoice) {
-                this.makeInvoice = makeInvoice;
                 return this;
             }
 
@@ -1578,26 +1321,18 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * order_price.
+             */
+            public Builder orderPrice(Double orderPrice) {
+                this.orderPrice = orderPrice;
+                return this;
+            }
+
+            /**
              * order_status_desc.
              */
             public Builder orderStatusDesc(String orderStatusDesc) {
                 this.orderStatusDesc = orderStatusDesc;
-                return this;
-            }
-
-            /**
-             * origin_category.
-             */
-            public Builder originCategory(String originCategory) {
-                this.originCategory = originCategory;
-                return this;
-            }
-
-            /**
-             * origin_order_id.
-             */
-            public Builder originOrderId(String originOrderId) {
-                this.originOrderId = originOrderId;
                 return this;
             }
 
@@ -1642,6 +1377,30 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * product_count.
+             */
+            public Builder productCount(Integer productCount) {
+                this.productCount = productCount;
+                return this;
+            }
+
+            /**
+             * product_id.
+             */
+            public Builder productId(String productId) {
+                this.productId = productId;
+                return this;
+            }
+
+            /**
+             * product_name.
+             */
+            public Builder productName(String productName) {
+                this.productName = productName;
+                return this;
+            }
+
+            /**
              * project_code.
              */
             public Builder projectCode(String projectCode) {
@@ -1658,6 +1417,14 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * promotion_fee.
+             */
+            public Builder promotionFee(Double promotionFee) {
+                this.promotionFee = promotionFee;
+                return this;
+            }
+
+            /**
              * purchase_order_id.
              */
             public Builder purchaseOrderId(String purchaseOrderId) {
@@ -1670,30 +1437,6 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder remark(String remark) {
                 this.remark = remark;
-                return this;
-            }
-
-            /**
-             * save_amount.
-             */
-            public Builder saveAmount(Double saveAmount) {
-                this.saveAmount = saveAmount;
-                return this;
-            }
-
-            /**
-             * scene_id.
-             */
-            public Builder sceneId(String sceneId) {
-                this.sceneId = sceneId;
-                return this;
-            }
-
-            /**
-             * scene_name.
-             */
-            public Builder sceneName(String sceneName) {
-                this.sceneName = sceneName;
                 return this;
             }
 
@@ -1738,21 +1481,10 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * show_sub_order_id.
+             * specification.
              */
-            public Builder showSubOrderId(String showSubOrderId) {
-                this.showSubOrderId = showSubOrderId;
-                return this;
-            }
-
-            /**
-             * <p>SIO</p>
-             * 
-             * <strong>example:</strong>
-             * <p>SIO</p>
-             */
-            public Builder sio(String sio) {
-                this.sio = sio;
+            public Builder specification(String specification) {
+                this.specification = specification;
                 return this;
             }
 
@@ -1813,18 +1545,10 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
-             * trade_reason.
+             * trade_remark.
              */
-            public Builder tradeReason(String tradeReason) {
-                this.tradeReason = tradeReason;
-                return this;
-            }
-
-            /**
-             * traveler_email.
-             */
-            public Builder travelerEmail(String travelerEmail) {
-                this.travelerEmail = travelerEmail;
+            public Builder tradeRemark(String tradeRemark) {
+                this.tradeRemark = tradeRemark;
                 return this;
             }
 
@@ -1893,9 +1617,9 @@ public class FuPointBillSettlementQueryResponseBody extends TeaModel {
     }
     /**
      * 
-     * {@link FuPointBillSettlementQueryResponseBody} extends {@link TeaModel}
+     * {@link VasBillSettlementQueryResponseBody} extends {@link TeaModel}
      *
-     * <p>FuPointBillSettlementQueryResponseBody</p>
+     * <p>VasBillSettlementQueryResponseBody</p>
      */
     public static class Module extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("category")

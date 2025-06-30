@@ -836,6 +836,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<IntlFlightOtaSearchResponse> intlFlightOtaSearch(IntlFlightOtaSearchRequest request);
 
     /**
+     * @param request the request parameters of IntlFlightReShopConsult  IntlFlightReShopConsultRequest
+     * @return IntlFlightReShopConsultResponse
+     */
+    CompletableFuture<IntlFlightReShopConsultResponse> intlFlightReShopConsult(IntlFlightReShopConsultRequest request);
+
+    /**
      * @param request the request parameters of IntlFlightSegmentAvailableCert  IntlFlightSegmentAvailableCertRequest
      * @return IntlFlightSegmentAvailableCertResponse
      */
@@ -942,6 +948,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return MonthBillGetResponse
      */
     CompletableFuture<MonthBillGetResponse> monthBillGet(MonthBillGetRequest request);
+
+    /**
+     * @param request the request parameters of MonthBillSplitGet  MonthBillSplitGetRequest
+     * @return MonthBillSplitGetResponse
+     */
+    CompletableFuture<MonthBillSplitGetResponse> monthBillSplitGet(MonthBillSplitGetRequest request);
 
     /**
      * @param request the request parameters of OrderRefundDetailQuery  OrderRefundDetailQueryRequest
@@ -1224,6 +1236,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UserQueryResponse
      */
     CompletableFuture<UserQueryResponse> userQuery(UserQueryRequest request);
+
+    /**
+     * @param request the request parameters of VasBillSettlementQuery  VasBillSettlementQueryRequest
+     * @return VasBillSettlementQueryResponse
+     */
+    CompletableFuture<VasBillSettlementQueryResponse> vasBillSettlementQuery(VasBillSettlementQueryRequest request);
 
     /**
      * @param request the request parameters of VatInvoiceScanQuery  VatInvoiceScanQueryRequest

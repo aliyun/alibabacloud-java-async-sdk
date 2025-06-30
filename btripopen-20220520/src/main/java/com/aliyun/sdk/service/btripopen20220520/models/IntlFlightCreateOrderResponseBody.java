@@ -17,20 +17,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IntlFlightCreateOrderResponseBody</p>
  */
 public class IntlFlightCreateOrderResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("http_status_code")
-    private Integer httpStatusCode;
+    @com.aliyun.core.annotation.NameInMap("code")
+    private String code;
+
+    @com.aliyun.core.annotation.NameInMap("message")
+    private String message;
 
     @com.aliyun.core.annotation.NameInMap("module")
     private Module module;
 
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
-
-    @com.aliyun.core.annotation.NameInMap("result_code")
-    private String resultCode;
-
-    @com.aliyun.core.annotation.NameInMap("result_msg")
-    private String resultMsg;
 
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
@@ -39,11 +36,10 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
     private String traceId;
 
     private IntlFlightCreateOrderResponseBody(Builder builder) {
-        this.httpStatusCode = builder.httpStatusCode;
+        this.code = builder.code;
+        this.message = builder.message;
         this.module = builder.module;
         this.requestId = builder.requestId;
-        this.resultCode = builder.resultCode;
-        this.resultMsg = builder.resultMsg;
         this.success = builder.success;
         this.traceId = builder.traceId;
     }
@@ -61,10 +57,17 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
     }
 
     /**
-     * @return httpStatusCode
+     * @return code
      */
-    public Integer getHttpStatusCode() {
-        return this.httpStatusCode;
+    public String getCode() {
+        return this.code;
+    }
+
+    /**
+     * @return message
+     */
+    public String getMessage() {
+        return this.message;
     }
 
     /**
@@ -82,20 +85,6 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
     }
 
     /**
-     * @return resultCode
-     */
-    public String getResultCode() {
-        return this.resultCode;
-    }
-
-    /**
-     * @return resultMsg
-     */
-    public String getResultMsg() {
-        return this.resultMsg;
-    }
-
-    /**
      * @return success
      */
     public Boolean getSuccess() {
@@ -110,11 +99,10 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Integer httpStatusCode; 
+        private String code; 
+        private String message; 
         private Module module; 
         private String requestId; 
-        private String resultCode; 
-        private String resultMsg; 
         private Boolean success; 
         private String traceId; 
 
@@ -122,20 +110,27 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
         } 
 
         private Builder(IntlFlightCreateOrderResponseBody model) {
-            this.httpStatusCode = model.httpStatusCode;
+            this.code = model.code;
+            this.message = model.message;
             this.module = model.module;
             this.requestId = model.requestId;
-            this.resultCode = model.resultCode;
-            this.resultMsg = model.resultMsg;
             this.success = model.success;
             this.traceId = model.traceId;
         } 
 
         /**
-         * http_status_code.
+         * code.
          */
-        public Builder httpStatusCode(Integer httpStatusCode) {
-            this.httpStatusCode = httpStatusCode;
+        public Builder code(String code) {
+            this.code = code;
+            return this;
+        }
+
+        /**
+         * message.
+         */
+        public Builder message(String message) {
+            this.message = message;
             return this;
         }
 
@@ -152,22 +147,6 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * result_code.
-         */
-        public Builder resultCode(String resultCode) {
-            this.resultCode = resultCode;
-            return this;
-        }
-
-        /**
-         * result_msg.
-         */
-        public Builder resultMsg(String resultMsg) {
-            this.resultMsg = resultMsg;
             return this;
         }
 
@@ -203,14 +182,14 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("async_create_order_key")
         private String asyncCreateOrderKey;
 
-        @com.aliyun.core.annotation.NameInMap("latest_pay_time")
-        private String latestPayTime;
-
         @com.aliyun.core.annotation.NameInMap("order_id")
-        private Long orderId;
+        private String orderId;
 
         @com.aliyun.core.annotation.NameInMap("out_order_id")
         private String outOrderId;
+
+        @com.aliyun.core.annotation.NameInMap("pay_latest_time")
+        private String payLatestTime;
 
         @com.aliyun.core.annotation.NameInMap("pay_status")
         private Integer payStatus;
@@ -223,9 +202,9 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
 
         private Module(Builder builder) {
             this.asyncCreateOrderKey = builder.asyncCreateOrderKey;
-            this.latestPayTime = builder.latestPayTime;
             this.orderId = builder.orderId;
             this.outOrderId = builder.outOrderId;
+            this.payLatestTime = builder.payLatestTime;
             this.payStatus = builder.payStatus;
             this.status = builder.status;
             this.totalPrice = builder.totalPrice;
@@ -247,16 +226,9 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
         }
 
         /**
-         * @return latestPayTime
-         */
-        public String getLatestPayTime() {
-            return this.latestPayTime;
-        }
-
-        /**
          * @return orderId
          */
-        public Long getOrderId() {
+        public String getOrderId() {
             return this.orderId;
         }
 
@@ -265,6 +237,13 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
          */
         public String getOutOrderId() {
             return this.outOrderId;
+        }
+
+        /**
+         * @return payLatestTime
+         */
+        public String getPayLatestTime() {
+            return this.payLatestTime;
         }
 
         /**
@@ -290,9 +269,9 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
 
         public static final class Builder {
             private String asyncCreateOrderKey; 
-            private String latestPayTime; 
-            private Long orderId; 
+            private String orderId; 
             private String outOrderId; 
+            private String payLatestTime; 
             private Integer payStatus; 
             private Integer status; 
             private Long totalPrice; 
@@ -302,9 +281,9 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
 
             private Builder(Module model) {
                 this.asyncCreateOrderKey = model.asyncCreateOrderKey;
-                this.latestPayTime = model.latestPayTime;
                 this.orderId = model.orderId;
                 this.outOrderId = model.outOrderId;
+                this.payLatestTime = model.payLatestTime;
                 this.payStatus = model.payStatus;
                 this.status = model.status;
                 this.totalPrice = model.totalPrice;
@@ -319,17 +298,9 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
             }
 
             /**
-             * latest_pay_time.
-             */
-            public Builder latestPayTime(String latestPayTime) {
-                this.latestPayTime = latestPayTime;
-                return this;
-            }
-
-            /**
              * order_id.
              */
-            public Builder orderId(Long orderId) {
+            public Builder orderId(String orderId) {
                 this.orderId = orderId;
                 return this;
             }
@@ -339,6 +310,14 @@ public class IntlFlightCreateOrderResponseBody extends TeaModel {
              */
             public Builder outOrderId(String outOrderId) {
                 this.outOrderId = outOrderId;
+                return this;
+            }
+
+            /**
+             * pay_latest_time.
+             */
+            public Builder payLatestTime(String payLatestTime) {
+                this.payLatestTime = payLatestTime;
                 return this;
             }
 

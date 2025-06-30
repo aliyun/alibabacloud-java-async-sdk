@@ -200,6 +200,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
      * <p>IeFlightBillSettlementQueryResponseBody</p>
      */
     public static class DataList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("adjust_time")
+        private String adjustTime;
+
         @com.aliyun.core.annotation.NameInMap("advance_day")
         private Integer advanceDay;
 
@@ -253,6 +256,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
+
+        @com.aliyun.core.annotation.NameInMap("base_location")
+        private String baseLocation;
 
         @com.aliyun.core.annotation.NameInMap("bill_record_time")
         private String billRecordTime;
@@ -308,8 +314,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cost_center_number")
         private String costCenterNumber;
 
+        @com.aliyun.core.annotation.NameInMap("cost_department")
+        private String costDepartment;
+
         @com.aliyun.core.annotation.NameInMap("coupon")
         private Double coupon;
+
+        @com.aliyun.core.annotation.NameInMap("custom_content")
+        private String customContent;
 
         @com.aliyun.core.annotation.NameInMap("deductible_tax")
         private Double deductibleTax;
@@ -377,6 +389,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
 
+        @com.aliyun.core.annotation.NameInMap("mapping_company_code")
+        private String mappingCompanyCode;
+
         @com.aliyun.core.annotation.NameInMap("most_difference_dept_time")
         private String mostDifferenceDeptTime;
 
@@ -413,8 +428,17 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("payment_department_name")
         private String paymentDepartmentName;
 
+        @com.aliyun.core.annotation.NameInMap("position")
+        private String position;
+
+        @com.aliyun.core.annotation.NameInMap("position_level")
+        private String positionLevel;
+
         @com.aliyun.core.annotation.NameInMap("primary_id")
         private Long primaryId;
+
+        @com.aliyun.core.annotation.NameInMap("processor_oa_code")
+        private String processorOaCode;
 
         @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
@@ -513,6 +537,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         private String voyageName;
 
         private DataList(Builder builder) {
+            this.adjustTime = builder.adjustTime;
             this.advanceDay = builder.advanceDay;
             this.airlineCorpCode = builder.airlineCorpCode;
             this.airlineCorpName = builder.airlineCorpName;
@@ -531,6 +556,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.arrDate = builder.arrDate;
             this.arrStation = builder.arrStation;
             this.arrTime = builder.arrTime;
+            this.baseLocation = builder.baseLocation;
             this.billRecordTime = builder.billRecordTime;
             this.bookMode = builder.bookMode;
             this.bookTime = builder.bookTime;
@@ -549,7 +575,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.corpPayOrderFee = builder.corpPayOrderFee;
             this.costCenter = builder.costCenter;
             this.costCenterNumber = builder.costCenterNumber;
+            this.costDepartment = builder.costDepartment;
             this.coupon = builder.coupon;
+            this.customContent = builder.customContent;
             this.deductibleTax = builder.deductibleTax;
             this.depAirportCode = builder.depAirportCode;
             this.depCityCode = builder.depCityCode;
@@ -572,6 +600,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.insuranceNumber = builder.insuranceNumber;
             this.insuranceProductName = builder.insuranceProductName;
             this.invoiceTitle = builder.invoiceTitle;
+            this.mappingCompanyCode = builder.mappingCompanyCode;
             this.mostDifferenceDeptTime = builder.mostDifferenceDeptTime;
             this.mostDifferenceDiscount = builder.mostDifferenceDiscount;
             this.mostDifferenceFlightNo = builder.mostDifferenceFlightNo;
@@ -584,7 +613,10 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             this.overApplyId = builder.overApplyId;
             this.paymentDepartmentId = builder.paymentDepartmentId;
             this.paymentDepartmentName = builder.paymentDepartmentName;
+            this.position = builder.position;
+            this.positionLevel = builder.positionLevel;
             this.primaryId = builder.primaryId;
+            this.processorOaCode = builder.processorOaCode;
             this.projectCode = builder.projectCode;
             this.projectName = builder.projectName;
             this.refundChangeCost = builder.refundChangeCost;
@@ -625,6 +657,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
 
         public static DataList create() {
             return builder().build();
+        }
+
+        /**
+         * @return adjustTime
+         */
+        public String getAdjustTime() {
+            return this.adjustTime;
         }
 
         /**
@@ -754,6 +793,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return baseLocation
+         */
+        public String getBaseLocation() {
+            return this.baseLocation;
+        }
+
+        /**
          * @return billRecordTime
          */
         public String getBillRecordTime() {
@@ -880,10 +926,24 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return costDepartment
+         */
+        public String getCostDepartment() {
+            return this.costDepartment;
+        }
+
+        /**
          * @return coupon
          */
         public Double getCoupon() {
             return this.coupon;
+        }
+
+        /**
+         * @return customContent
+         */
+        public String getCustomContent() {
+            return this.customContent;
         }
 
         /**
@@ -1041,6 +1101,13 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return mappingCompanyCode
+         */
+        public String getMappingCompanyCode() {
+            return this.mappingCompanyCode;
+        }
+
+        /**
          * @return mostDifferenceDeptTime
          */
         public String getMostDifferenceDeptTime() {
@@ -1125,10 +1192,31 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return position
+         */
+        public String getPosition() {
+            return this.position;
+        }
+
+        /**
+         * @return positionLevel
+         */
+        public String getPositionLevel() {
+            return this.positionLevel;
+        }
+
+        /**
          * @return primaryId
          */
         public Long getPrimaryId() {
             return this.primaryId;
+        }
+
+        /**
+         * @return processorOaCode
+         */
+        public String getProcessorOaCode() {
+            return this.processorOaCode;
         }
 
         /**
@@ -1356,6 +1444,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String adjustTime; 
             private Integer advanceDay; 
             private String airlineCorpCode; 
             private String airlineCorpName; 
@@ -1374,6 +1463,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private String arrDate; 
             private String arrStation; 
             private String arrTime; 
+            private String baseLocation; 
             private String billRecordTime; 
             private String bookMode; 
             private String bookTime; 
@@ -1392,7 +1482,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private Double corpPayOrderFee; 
             private String costCenter; 
             private String costCenterNumber; 
+            private String costDepartment; 
             private Double coupon; 
+            private String customContent; 
             private Double deductibleTax; 
             private String depAirportCode; 
             private String depCityCode; 
@@ -1415,6 +1507,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private String insuranceNumber; 
             private String insuranceProductName; 
             private String invoiceTitle; 
+            private String mappingCompanyCode; 
             private String mostDifferenceDeptTime; 
             private String mostDifferenceDiscount; 
             private String mostDifferenceFlightNo; 
@@ -1427,7 +1520,10 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             private String overApplyId; 
             private String paymentDepartmentId; 
             private String paymentDepartmentName; 
+            private String position; 
+            private String positionLevel; 
             private Long primaryId; 
+            private String processorOaCode; 
             private String projectCode; 
             private String projectName; 
             private Double refundChangeCost; 
@@ -1465,6 +1561,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             } 
 
             private Builder(DataList model) {
+                this.adjustTime = model.adjustTime;
                 this.advanceDay = model.advanceDay;
                 this.airlineCorpCode = model.airlineCorpCode;
                 this.airlineCorpName = model.airlineCorpName;
@@ -1483,6 +1580,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
                 this.arrDate = model.arrDate;
                 this.arrStation = model.arrStation;
                 this.arrTime = model.arrTime;
+                this.baseLocation = model.baseLocation;
                 this.billRecordTime = model.billRecordTime;
                 this.bookMode = model.bookMode;
                 this.bookTime = model.bookTime;
@@ -1501,7 +1599,9 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
                 this.corpPayOrderFee = model.corpPayOrderFee;
                 this.costCenter = model.costCenter;
                 this.costCenterNumber = model.costCenterNumber;
+                this.costDepartment = model.costDepartment;
                 this.coupon = model.coupon;
+                this.customContent = model.customContent;
                 this.deductibleTax = model.deductibleTax;
                 this.depAirportCode = model.depAirportCode;
                 this.depCityCode = model.depCityCode;
@@ -1524,6 +1624,7 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
                 this.insuranceNumber = model.insuranceNumber;
                 this.insuranceProductName = model.insuranceProductName;
                 this.invoiceTitle = model.invoiceTitle;
+                this.mappingCompanyCode = model.mappingCompanyCode;
                 this.mostDifferenceDeptTime = model.mostDifferenceDeptTime;
                 this.mostDifferenceDiscount = model.mostDifferenceDiscount;
                 this.mostDifferenceFlightNo = model.mostDifferenceFlightNo;
@@ -1536,7 +1637,10 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
                 this.overApplyId = model.overApplyId;
                 this.paymentDepartmentId = model.paymentDepartmentId;
                 this.paymentDepartmentName = model.paymentDepartmentName;
+                this.position = model.position;
+                this.positionLevel = model.positionLevel;
                 this.primaryId = model.primaryId;
+                this.processorOaCode = model.processorOaCode;
                 this.projectCode = model.projectCode;
                 this.projectName = model.projectName;
                 this.refundChangeCost = model.refundChangeCost;
@@ -1570,6 +1674,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
                 this.voucherTypeDesc = model.voucherTypeDesc;
                 this.voyageName = model.voyageName;
             } 
+
+            /**
+             * adjust_time.
+             */
+            public Builder adjustTime(String adjustTime) {
+                this.adjustTime = adjustTime;
+                return this;
+            }
 
             /**
              * advance_day.
@@ -1712,6 +1824,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder arrTime(String arrTime) {
                 this.arrTime = arrTime;
+                return this;
+            }
+
+            /**
+             * base_location.
+             */
+            public Builder baseLocation(String baseLocation) {
+                this.baseLocation = baseLocation;
                 return this;
             }
 
@@ -1860,10 +1980,26 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * cost_department.
+             */
+            public Builder costDepartment(String costDepartment) {
+                this.costDepartment = costDepartment;
+                return this;
+            }
+
+            /**
              * coupon.
              */
             public Builder coupon(Double coupon) {
                 this.coupon = coupon;
+                return this;
+            }
+
+            /**
+             * custom_content.
+             */
+            public Builder customContent(String customContent) {
+                this.customContent = customContent;
                 return this;
             }
 
@@ -2044,6 +2180,14 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * mapping_company_code.
+             */
+            public Builder mappingCompanyCode(String mappingCompanyCode) {
+                this.mappingCompanyCode = mappingCompanyCode;
+                return this;
+            }
+
+            /**
              * most_difference_dept_time.
              */
             public Builder mostDifferenceDeptTime(String mostDifferenceDeptTime) {
@@ -2140,10 +2284,34 @@ public class IeFlightBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * position.
+             */
+            public Builder position(String position) {
+                this.position = position;
+                return this;
+            }
+
+            /**
+             * position_level.
+             */
+            public Builder positionLevel(String positionLevel) {
+                this.positionLevel = positionLevel;
+                return this;
+            }
+
+            /**
              * primary_id.
              */
             public Builder primaryId(Long primaryId) {
                 this.primaryId = primaryId;
+                return this;
+            }
+
+            /**
+             * processor_oa_code.
+             */
+            public Builder processorOaCode(String processorOaCode) {
+                this.processorOaCode = processorOaCode;
                 return this;
             }
 

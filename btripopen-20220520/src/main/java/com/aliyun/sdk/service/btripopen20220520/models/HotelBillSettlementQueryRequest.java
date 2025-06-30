@@ -22,6 +22,10 @@ public class HotelBillSettlementQueryRequest extends Request {
     private String billBatch;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("order_id")
+    private Long orderId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("page_no")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNo;
@@ -54,6 +58,7 @@ public class HotelBillSettlementQueryRequest extends Request {
     private HotelBillSettlementQueryRequest(Builder builder) {
         super(builder);
         this.billBatch = builder.billBatch;
+        this.orderId = builder.orderId;
         this.pageNo = builder.pageNo;
         this.pageSize = builder.pageSize;
         this.periodEnd = builder.periodEnd;
@@ -81,6 +86,13 @@ public class HotelBillSettlementQueryRequest extends Request {
      */
     public String getBillBatch() {
         return this.billBatch;
+    }
+
+    /**
+     * @return orderId
+     */
+    public Long getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -134,6 +146,7 @@ public class HotelBillSettlementQueryRequest extends Request {
 
     public static final class Builder extends Request.Builder<HotelBillSettlementQueryRequest, Builder> {
         private String billBatch; 
+        private Long orderId; 
         private Integer pageNo; 
         private Integer pageSize; 
         private String periodEnd; 
@@ -149,6 +162,7 @@ public class HotelBillSettlementQueryRequest extends Request {
         private Builder(HotelBillSettlementQueryRequest request) {
             super(request);
             this.billBatch = request.billBatch;
+            this.orderId = request.orderId;
             this.pageNo = request.pageNo;
             this.pageSize = request.pageSize;
             this.periodEnd = request.periodEnd;
@@ -164,6 +178,15 @@ public class HotelBillSettlementQueryRequest extends Request {
         public Builder billBatch(String billBatch) {
             this.putQueryParameter("bill_batch", billBatch);
             this.billBatch = billBatch;
+            return this;
+        }
+
+        /**
+         * order_id.
+         */
+        public Builder orderId(Long orderId) {
+            this.putQueryParameter("order_id", orderId);
+            this.orderId = orderId;
             return this;
         }
 

@@ -178,9 +178,87 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
      *
      * <p>IntlFlightListingSearchResponseBody</p>
      */
+    public static class AgreementPriceCodes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        private AgreementPriceCodes(Builder builder) {
+            this.code = builder.code;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AgreementPriceCodes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AgreementPriceCodes model) {
+                this.code = model.code;
+                this.type = model.type;
+            } 
+
+            /**
+             * code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public AgreementPriceCodes build() {
+                return new AgreementPriceCodes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link IntlFlightListingSearchResponseBody} extends {@link TeaModel}
+     *
+     * <p>IntlFlightListingSearchResponseBody</p>
+     */
     public static class BestPriceItem extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("agreement_price_codes")
-        private java.util.List<String> agreementPriceCodes;
+        private java.util.List<AgreementPriceCodes> agreementPriceCodes;
+
+        @com.aliyun.core.annotation.NameInMap("item_id")
+        private String itemId;
 
         @com.aliyun.core.annotation.NameInMap("item_type")
         private String itemType;
@@ -190,6 +268,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
         private BestPriceItem(Builder builder) {
             this.agreementPriceCodes = builder.agreementPriceCodes;
+            this.itemId = builder.itemId;
             this.itemType = builder.itemType;
             this.shoppingItemMap = builder.shoppingItemMap;
         }
@@ -205,8 +284,15 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         /**
          * @return agreementPriceCodes
          */
-        public java.util.List<String> getAgreementPriceCodes() {
+        public java.util.List<AgreementPriceCodes> getAgreementPriceCodes() {
             return this.agreementPriceCodes;
+        }
+
+        /**
+         * @return itemId
+         */
+        public String getItemId() {
+            return this.itemId;
         }
 
         /**
@@ -224,7 +310,8 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List<String> agreementPriceCodes; 
+            private java.util.List<AgreementPriceCodes> agreementPriceCodes; 
+            private String itemId; 
             private String itemType; 
             private java.util.Map<String, ModuleFlightItemListBestPriceItemShoppingItemMapValue> shoppingItemMap; 
 
@@ -233,6 +320,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
             private Builder(BestPriceItem model) {
                 this.agreementPriceCodes = model.agreementPriceCodes;
+                this.itemId = model.itemId;
                 this.itemType = model.itemType;
                 this.shoppingItemMap = model.shoppingItemMap;
             } 
@@ -240,8 +328,16 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             /**
              * agreement_price_codes.
              */
-            public Builder agreementPriceCodes(java.util.List<String> agreementPriceCodes) {
+            public Builder agreementPriceCodes(java.util.List<AgreementPriceCodes> agreementPriceCodes) {
                 this.agreementPriceCodes = agreementPriceCodes;
+                return this;
+            }
+
+            /**
+             * item_id.
+             */
+            public Builder itemId(String itemId) {
+                this.itemId = itemId;
                 return this;
             }
 
@@ -275,27 +371,19 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
      * <p>IntlFlightListingSearchResponseBody</p>
      */
     public static class AirlineInfo extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
-        private String airlineChineseName;
-
-        @com.aliyun.core.annotation.NameInMap("airline_chinese_short_name")
-        private String airlineChineseShortName;
-
         @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
 
-        @com.aliyun.core.annotation.NameInMap("airline_icon")
-        private String airlineIcon;
+        @com.aliyun.core.annotation.NameInMap("airline_name")
+        private String airlineName;
 
-        @com.aliyun.core.annotation.NameInMap("cheap_flight")
-        private Boolean cheapFlight;
+        @com.aliyun.core.annotation.NameInMap("short_name")
+        private String shortName;
 
         private AirlineInfo(Builder builder) {
-            this.airlineChineseName = builder.airlineChineseName;
-            this.airlineChineseShortName = builder.airlineChineseShortName;
             this.airlineCode = builder.airlineCode;
-            this.airlineIcon = builder.airlineIcon;
-            this.cheapFlight = builder.cheapFlight;
+            this.airlineName = builder.airlineName;
+            this.shortName = builder.shortName;
         }
 
         public static Builder builder() {
@@ -307,20 +395,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
 
         /**
-         * @return airlineChineseName
-         */
-        public String getAirlineChineseName() {
-            return this.airlineChineseName;
-        }
-
-        /**
-         * @return airlineChineseShortName
-         */
-        public String getAirlineChineseShortName() {
-            return this.airlineChineseShortName;
-        }
-
-        /**
          * @return airlineCode
          */
         public String getAirlineCode() {
@@ -328,52 +402,32 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
 
         /**
-         * @return airlineIcon
+         * @return airlineName
          */
-        public String getAirlineIcon() {
-            return this.airlineIcon;
+        public String getAirlineName() {
+            return this.airlineName;
         }
 
         /**
-         * @return cheapFlight
+         * @return shortName
          */
-        public Boolean getCheapFlight() {
-            return this.cheapFlight;
+        public String getShortName() {
+            return this.shortName;
         }
 
         public static final class Builder {
-            private String airlineChineseName; 
-            private String airlineChineseShortName; 
             private String airlineCode; 
-            private String airlineIcon; 
-            private Boolean cheapFlight; 
+            private String airlineName; 
+            private String shortName; 
 
             private Builder() {
             } 
 
             private Builder(AirlineInfo model) {
-                this.airlineChineseName = model.airlineChineseName;
-                this.airlineChineseShortName = model.airlineChineseShortName;
                 this.airlineCode = model.airlineCode;
-                this.airlineIcon = model.airlineIcon;
-                this.cheapFlight = model.cheapFlight;
+                this.airlineName = model.airlineName;
+                this.shortName = model.shortName;
             } 
-
-            /**
-             * airline_chinese_name.
-             */
-            public Builder airlineChineseName(String airlineChineseName) {
-                this.airlineChineseName = airlineChineseName;
-                return this;
-            }
-
-            /**
-             * airline_chinese_short_name.
-             */
-            public Builder airlineChineseShortName(String airlineChineseShortName) {
-                this.airlineChineseShortName = airlineChineseShortName;
-                return this;
-            }
 
             /**
              * airline_code.
@@ -384,18 +438,18 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             }
 
             /**
-             * airline_icon.
+             * airline_name.
              */
-            public Builder airlineIcon(String airlineIcon) {
-                this.airlineIcon = airlineIcon;
+            public Builder airlineName(String airlineName) {
+                this.airlineName = airlineName;
                 return this;
             }
 
             /**
-             * cheap_flight.
+             * short_name.
              */
-            public Builder cheapFlight(Boolean cheapFlight) {
-                this.cheapFlight = cheapFlight;
+            public Builder shortName(String shortName) {
+                this.shortName = shortName;
                 return this;
             }
 
@@ -647,27 +701,19 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
      * <p>IntlFlightListingSearchResponseBody</p>
      */
     public static class OperatingAirlineInfo extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("airline_chinese_name")
-        private String airlineChineseName;
-
-        @com.aliyun.core.annotation.NameInMap("airline_chinese_short_name")
-        private String airlineChineseShortName;
-
         @com.aliyun.core.annotation.NameInMap("airline_code")
         private String airlineCode;
 
-        @com.aliyun.core.annotation.NameInMap("airline_icon")
-        private String airlineIcon;
+        @com.aliyun.core.annotation.NameInMap("airline_name")
+        private String airlineName;
 
-        @com.aliyun.core.annotation.NameInMap("cheap_flight")
-        private Boolean cheapFlight;
+        @com.aliyun.core.annotation.NameInMap("short_name")
+        private String shortName;
 
         private OperatingAirlineInfo(Builder builder) {
-            this.airlineChineseName = builder.airlineChineseName;
-            this.airlineChineseShortName = builder.airlineChineseShortName;
             this.airlineCode = builder.airlineCode;
-            this.airlineIcon = builder.airlineIcon;
-            this.cheapFlight = builder.cheapFlight;
+            this.airlineName = builder.airlineName;
+            this.shortName = builder.shortName;
         }
 
         public static Builder builder() {
@@ -679,20 +725,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
 
         /**
-         * @return airlineChineseName
-         */
-        public String getAirlineChineseName() {
-            return this.airlineChineseName;
-        }
-
-        /**
-         * @return airlineChineseShortName
-         */
-        public String getAirlineChineseShortName() {
-            return this.airlineChineseShortName;
-        }
-
-        /**
          * @return airlineCode
          */
         public String getAirlineCode() {
@@ -700,52 +732,32 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
 
         /**
-         * @return airlineIcon
+         * @return airlineName
          */
-        public String getAirlineIcon() {
-            return this.airlineIcon;
+        public String getAirlineName() {
+            return this.airlineName;
         }
 
         /**
-         * @return cheapFlight
+         * @return shortName
          */
-        public Boolean getCheapFlight() {
-            return this.cheapFlight;
+        public String getShortName() {
+            return this.shortName;
         }
 
         public static final class Builder {
-            private String airlineChineseName; 
-            private String airlineChineseShortName; 
             private String airlineCode; 
-            private String airlineIcon; 
-            private Boolean cheapFlight; 
+            private String airlineName; 
+            private String shortName; 
 
             private Builder() {
             } 
 
             private Builder(OperatingAirlineInfo model) {
-                this.airlineChineseName = model.airlineChineseName;
-                this.airlineChineseShortName = model.airlineChineseShortName;
                 this.airlineCode = model.airlineCode;
-                this.airlineIcon = model.airlineIcon;
-                this.cheapFlight = model.cheapFlight;
+                this.airlineName = model.airlineName;
+                this.shortName = model.shortName;
             } 
-
-            /**
-             * airline_chinese_name.
-             */
-            public Builder airlineChineseName(String airlineChineseName) {
-                this.airlineChineseName = airlineChineseName;
-                return this;
-            }
-
-            /**
-             * airline_chinese_short_name.
-             */
-            public Builder airlineChineseShortName(String airlineChineseShortName) {
-                this.airlineChineseShortName = airlineChineseShortName;
-                return this;
-            }
 
             /**
              * airline_code.
@@ -756,18 +768,18 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             }
 
             /**
-             * airline_icon.
+             * airline_name.
              */
-            public Builder airlineIcon(String airlineIcon) {
-                this.airlineIcon = airlineIcon;
+            public Builder airlineName(String airlineName) {
+                this.airlineName = airlineName;
                 return this;
             }
 
             /**
-             * cheap_flight.
+             * short_name.
              */
-            public Builder cheapFlight(Boolean cheapFlight) {
-                this.cheapFlight = cheapFlight;
+            public Builder shortName(String shortName) {
+                this.shortName = shortName;
                 return this;
             }
 
@@ -859,7 +871,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
      *
      * <p>IntlFlightListingSearchResponseBody</p>
      */
-    public static class FlightStopInfo extends TeaModel {
+    public static class FlightStopInfoList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("stop_airport")
         private String stopAirport;
 
@@ -878,9 +890,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("stop_city_name")
         private String stopCityName;
 
-        @com.aliyun.core.annotation.NameInMap("stop_city_names")
-        private java.util.List<String> stopCityNames;
-
         @com.aliyun.core.annotation.NameInMap("stop_dep_term")
         private String stopDepTerm;
 
@@ -890,14 +899,13 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("stop_time")
         private String stopTime;
 
-        private FlightStopInfo(Builder builder) {
+        private FlightStopInfoList(Builder builder) {
             this.stopAirport = builder.stopAirport;
             this.stopAirportName = builder.stopAirportName;
             this.stopArrTerm = builder.stopArrTerm;
             this.stopArrTime = builder.stopArrTime;
             this.stopCityCode = builder.stopCityCode;
             this.stopCityName = builder.stopCityName;
-            this.stopCityNames = builder.stopCityNames;
             this.stopDepTerm = builder.stopDepTerm;
             this.stopDepTime = builder.stopDepTime;
             this.stopTime = builder.stopTime;
@@ -907,7 +915,7 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static FlightStopInfo create() {
+        public static FlightStopInfoList create() {
             return builder().build();
         }
 
@@ -954,13 +962,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
 
         /**
-         * @return stopCityNames
-         */
-        public java.util.List<String> getStopCityNames() {
-            return this.stopCityNames;
-        }
-
-        /**
          * @return stopDepTerm
          */
         public String getStopDepTerm() {
@@ -988,7 +989,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private String stopArrTime; 
             private String stopCityCode; 
             private String stopCityName; 
-            private java.util.List<String> stopCityNames; 
             private String stopDepTerm; 
             private String stopDepTime; 
             private String stopTime; 
@@ -996,14 +996,13 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private Builder() {
             } 
 
-            private Builder(FlightStopInfo model) {
+            private Builder(FlightStopInfoList model) {
                 this.stopAirport = model.stopAirport;
                 this.stopAirportName = model.stopAirportName;
                 this.stopArrTerm = model.stopArrTerm;
                 this.stopArrTime = model.stopArrTime;
                 this.stopCityCode = model.stopCityCode;
                 this.stopCityName = model.stopCityName;
-                this.stopCityNames = model.stopCityNames;
                 this.stopDepTerm = model.stopDepTerm;
                 this.stopDepTime = model.stopDepTime;
                 this.stopTime = model.stopTime;
@@ -1058,14 +1057,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             }
 
             /**
-             * stop_city_names.
-             */
-            public Builder stopCityNames(java.util.List<String> stopCityNames) {
-                this.stopCityNames = stopCityNames;
-                return this;
-            }
-
-            /**
              * stop_dep_term.
              */
             public Builder stopDepTerm(String stopDepTerm) {
@@ -1089,8 +1080,8 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
                 return this;
             }
 
-            public FlightStopInfo build() {
-                return new FlightStopInfo(this);
+            public FlightStopInfoList build() {
+                return new FlightStopInfoList(this);
             } 
 
         } 
@@ -1118,9 +1109,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
 
-        @com.aliyun.core.annotation.NameInMap("baggage_desc")
-        private String baggageDesc;
-
         @com.aliyun.core.annotation.NameInMap("dep_airport_info")
         private DepAirportInfo depAirportInfo;
 
@@ -1145,8 +1133,8 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("flight_size")
         private String flightSize;
 
-        @com.aliyun.core.annotation.NameInMap("flight_stop_info")
-        private FlightStopInfo flightStopInfo;
+        @com.aliyun.core.annotation.NameInMap("flight_stop_info_list")
+        private java.util.List<FlightStopInfoList> flightStopInfoList;
 
         @com.aliyun.core.annotation.NameInMap("flight_type")
         private String flightType;
@@ -1156,12 +1144,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("meal_desc")
         private String mealDesc;
-
-        @com.aliyun.core.annotation.NameInMap("miles")
-        private Integer miles;
-
-        @com.aliyun.core.annotation.NameInMap("on_time_rate")
-        private String onTimeRate;
 
         @com.aliyun.core.annotation.NameInMap("one_more")
         private Integer oneMore;
@@ -1187,19 +1169,12 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("total_time")
         private String totalTime;
 
-        @com.aliyun.core.annotation.NameInMap("transfer_time")
-        private String transferTime;
-
-        @com.aliyun.core.annotation.NameInMap("transfer_time_number")
-        private Integer transferTimeNumber;
-
         private FlightSegmentInfos(Builder builder) {
             this.airlineInfo = builder.airlineInfo;
             this.arrAirportInfo = builder.arrAirportInfo;
             this.arrCityCode = builder.arrCityCode;
             this.arrCityName = builder.arrCityName;
             this.arrTime = builder.arrTime;
-            this.baggageDesc = builder.baggageDesc;
             this.depAirportInfo = builder.depAirportInfo;
             this.depCityCode = builder.depCityCode;
             this.depCityName = builder.depCityName;
@@ -1208,12 +1183,10 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             this.flightNo = builder.flightNo;
             this.flightShareInfo = builder.flightShareInfo;
             this.flightSize = builder.flightSize;
-            this.flightStopInfo = builder.flightStopInfo;
+            this.flightStopInfoList = builder.flightStopInfoList;
             this.flightType = builder.flightType;
             this.manufacturer = builder.manufacturer;
             this.mealDesc = builder.mealDesc;
-            this.miles = builder.miles;
-            this.onTimeRate = builder.onTimeRate;
             this.oneMore = builder.oneMore;
             this.oneMoreShow = builder.oneMoreShow;
             this.segmentIndex = builder.segmentIndex;
@@ -1222,8 +1195,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             this.shortFlightSize = builder.shortFlightSize;
             this.stop = builder.stop;
             this.totalTime = builder.totalTime;
-            this.transferTime = builder.transferTime;
-            this.transferTimeNumber = builder.transferTimeNumber;
         }
 
         public static Builder builder() {
@@ -1267,13 +1238,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
          */
         public String getArrTime() {
             return this.arrTime;
-        }
-
-        /**
-         * @return baggageDesc
-         */
-        public String getBaggageDesc() {
-            return this.baggageDesc;
         }
 
         /**
@@ -1333,10 +1297,10 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
         }
 
         /**
-         * @return flightStopInfo
+         * @return flightStopInfoList
          */
-        public FlightStopInfo getFlightStopInfo() {
-            return this.flightStopInfo;
+        public java.util.List<FlightStopInfoList> getFlightStopInfoList() {
+            return this.flightStopInfoList;
         }
 
         /**
@@ -1358,20 +1322,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
          */
         public String getMealDesc() {
             return this.mealDesc;
-        }
-
-        /**
-         * @return miles
-         */
-        public Integer getMiles() {
-            return this.miles;
-        }
-
-        /**
-         * @return onTimeRate
-         */
-        public String getOnTimeRate() {
-            return this.onTimeRate;
         }
 
         /**
@@ -1430,27 +1380,12 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             return this.totalTime;
         }
 
-        /**
-         * @return transferTime
-         */
-        public String getTransferTime() {
-            return this.transferTime;
-        }
-
-        /**
-         * @return transferTimeNumber
-         */
-        public Integer getTransferTimeNumber() {
-            return this.transferTimeNumber;
-        }
-
         public static final class Builder {
             private AirlineInfo airlineInfo; 
             private ArrAirportInfo arrAirportInfo; 
             private String arrCityCode; 
             private String arrCityName; 
             private String arrTime; 
-            private String baggageDesc; 
             private DepAirportInfo depAirportInfo; 
             private String depCityCode; 
             private String depCityName; 
@@ -1459,12 +1394,10 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private String flightNo; 
             private FlightShareInfo flightShareInfo; 
             private String flightSize; 
-            private FlightStopInfo flightStopInfo; 
+            private java.util.List<FlightStopInfoList> flightStopInfoList; 
             private String flightType; 
             private String manufacturer; 
             private String mealDesc; 
-            private Integer miles; 
-            private String onTimeRate; 
             private Integer oneMore; 
             private String oneMoreShow; 
             private Integer segmentIndex; 
@@ -1473,8 +1406,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             private String shortFlightSize; 
             private Boolean stop; 
             private String totalTime; 
-            private String transferTime; 
-            private Integer transferTimeNumber; 
 
             private Builder() {
             } 
@@ -1485,7 +1416,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
                 this.arrCityCode = model.arrCityCode;
                 this.arrCityName = model.arrCityName;
                 this.arrTime = model.arrTime;
-                this.baggageDesc = model.baggageDesc;
                 this.depAirportInfo = model.depAirportInfo;
                 this.depCityCode = model.depCityCode;
                 this.depCityName = model.depCityName;
@@ -1494,12 +1424,10 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
                 this.flightNo = model.flightNo;
                 this.flightShareInfo = model.flightShareInfo;
                 this.flightSize = model.flightSize;
-                this.flightStopInfo = model.flightStopInfo;
+                this.flightStopInfoList = model.flightStopInfoList;
                 this.flightType = model.flightType;
                 this.manufacturer = model.manufacturer;
                 this.mealDesc = model.mealDesc;
-                this.miles = model.miles;
-                this.onTimeRate = model.onTimeRate;
                 this.oneMore = model.oneMore;
                 this.oneMoreShow = model.oneMoreShow;
                 this.segmentIndex = model.segmentIndex;
@@ -1508,8 +1436,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
                 this.shortFlightSize = model.shortFlightSize;
                 this.stop = model.stop;
                 this.totalTime = model.totalTime;
-                this.transferTime = model.transferTime;
-                this.transferTimeNumber = model.transferTimeNumber;
             } 
 
             /**
@@ -1549,14 +1475,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
              */
             public Builder arrTime(String arrTime) {
                 this.arrTime = arrTime;
-                return this;
-            }
-
-            /**
-             * baggage_desc.
-             */
-            public Builder baggageDesc(String baggageDesc) {
-                this.baggageDesc = baggageDesc;
                 return this;
             }
 
@@ -1628,10 +1546,10 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
             }
 
             /**
-             * flight_stop_info.
+             * flight_stop_info_list.
              */
-            public Builder flightStopInfo(FlightStopInfo flightStopInfo) {
-                this.flightStopInfo = flightStopInfo;
+            public Builder flightStopInfoList(java.util.List<FlightStopInfoList> flightStopInfoList) {
+                this.flightStopInfoList = flightStopInfoList;
                 return this;
             }
 
@@ -1656,22 +1574,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
              */
             public Builder mealDesc(String mealDesc) {
                 this.mealDesc = mealDesc;
-                return this;
-            }
-
-            /**
-             * miles.
-             */
-            public Builder miles(Integer miles) {
-                this.miles = miles;
-                return this;
-            }
-
-            /**
-             * on_time_rate.
-             */
-            public Builder onTimeRate(String onTimeRate) {
-                this.onTimeRate = onTimeRate;
                 return this;
             }
 
@@ -1736,22 +1638,6 @@ public class IntlFlightListingSearchResponseBody extends TeaModel {
              */
             public Builder totalTime(String totalTime) {
                 this.totalTime = totalTime;
-                return this;
-            }
-
-            /**
-             * transfer_time.
-             */
-            public Builder transferTime(String transferTime) {
-                this.transferTime = transferTime;
-                return this;
-            }
-
-            /**
-             * transfer_time_number.
-             */
-            public Builder transferTimeNumber(Integer transferTimeNumber) {
-                this.transferTimeNumber = transferTimeNumber;
                 return this;
             }
 

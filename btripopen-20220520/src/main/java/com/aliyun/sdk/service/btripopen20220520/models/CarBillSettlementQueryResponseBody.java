@@ -179,6 +179,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
      * <p>CarBillSettlementQueryResponseBody</p>
      */
     public static class DataList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("adjust_time")
+        private String adjustTime;
+
         @com.aliyun.core.annotation.NameInMap("alipay_trade_no")
         private String alipayTradeNo;
 
@@ -214,6 +217,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("arr_time")
         private String arrTime;
+
+        @com.aliyun.core.annotation.NameInMap("base_location")
+        private String baseLocation;
 
         @com.aliyun.core.annotation.NameInMap("bill_record_time")
         private String billRecordTime;
@@ -257,11 +263,17 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cost_center_number")
         private String costCenterNumber;
 
+        @com.aliyun.core.annotation.NameInMap("cost_department")
+        private String costDepartment;
+
         @com.aliyun.core.annotation.NameInMap("coupon")
         private Double coupon;
 
         @com.aliyun.core.annotation.NameInMap("coupon_price")
         private Double couponPrice;
+
+        @com.aliyun.core.annotation.NameInMap("custom_content")
+        private String customContent;
 
         @com.aliyun.core.annotation.NameInMap("deductible_tax")
         private Double deductibleTax;
@@ -314,6 +326,9 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("level_name")
         private String levelName;
 
+        @com.aliyun.core.annotation.NameInMap("mapping_company_code")
+        private String mappingCompanyCode;
+
         @com.aliyun.core.annotation.NameInMap("memo")
         private String memo;
 
@@ -335,14 +350,26 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("person_settle_fee")
         private Double personSettleFee;
 
+        @com.aliyun.core.annotation.NameInMap("position")
+        private String position;
+
+        @com.aliyun.core.annotation.NameInMap("position_level")
+        private String positionLevel;
+
         @com.aliyun.core.annotation.NameInMap("primary_id")
         private Long primaryId;
+
+        @com.aliyun.core.annotation.NameInMap("processor_oa_code")
+        private String processorOaCode;
 
         @com.aliyun.core.annotation.NameInMap("project_code")
         private String projectCode;
 
         @com.aliyun.core.annotation.NameInMap("project_name")
         private String projectName;
+
+        @com.aliyun.core.annotation.NameInMap("protocol_discount_fee")
+        private Double protocolDiscountFee;
 
         @com.aliyun.core.annotation.NameInMap("provider_name")
         private String providerName;
@@ -444,6 +471,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         private String voucherTypeDesc;
 
         private DataList(Builder builder) {
+            this.adjustTime = builder.adjustTime;
             this.alipayTradeNo = builder.alipayTradeNo;
             this.applyArrCityCode = builder.applyArrCityCode;
             this.applyArrCityName = builder.applyArrCityName;
@@ -456,6 +484,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             this.arrDate = builder.arrDate;
             this.arrLocation = builder.arrLocation;
             this.arrTime = builder.arrTime;
+            this.baseLocation = builder.baseLocation;
             this.billRecordTime = builder.billRecordTime;
             this.billingEntity = builder.billingEntity;
             this.bookModel = builder.bookModel;
@@ -470,8 +499,10 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             this.categoryDesc = builder.categoryDesc;
             this.costCenter = builder.costCenter;
             this.costCenterNumber = builder.costCenterNumber;
+            this.costDepartment = builder.costDepartment;
             this.coupon = builder.coupon;
             this.couponPrice = builder.couponPrice;
+            this.customContent = builder.customContent;
             this.deductibleTax = builder.deductibleTax;
             this.depCityCode = builder.depCityCode;
             this.department = builder.department;
@@ -489,6 +520,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             this.index = builder.index;
             this.invoiceTitle = builder.invoiceTitle;
             this.levelName = builder.levelName;
+            this.mappingCompanyCode = builder.mappingCompanyCode;
             this.memo = builder.memo;
             this.orderId = builder.orderId;
             this.orderPrice = builder.orderPrice;
@@ -496,9 +528,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             this.paymentDepartmentId = builder.paymentDepartmentId;
             this.paymentDepartmentName = builder.paymentDepartmentName;
             this.personSettleFee = builder.personSettleFee;
+            this.position = builder.position;
+            this.positionLevel = builder.positionLevel;
             this.primaryId = builder.primaryId;
+            this.processorOaCode = builder.processorOaCode;
             this.projectCode = builder.projectCode;
             this.projectName = builder.projectName;
+            this.protocolDiscountFee = builder.protocolDiscountFee;
             this.providerName = builder.providerName;
             this.realDriveDistance = builder.realDriveDistance;
             this.realFromAddr = builder.realFromAddr;
@@ -540,6 +576,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
 
         public static DataList create() {
             return builder().build();
+        }
+
+        /**
+         * @return adjustTime
+         */
+        public String getAdjustTime() {
+            return this.adjustTime;
         }
 
         /**
@@ -624,6 +667,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getArrTime() {
             return this.arrTime;
+        }
+
+        /**
+         * @return baseLocation
+         */
+        public String getBaseLocation() {
+            return this.baseLocation;
         }
 
         /**
@@ -725,6 +775,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return costDepartment
+         */
+        public String getCostDepartment() {
+            return this.costDepartment;
+        }
+
+        /**
          * @return coupon
          */
         public Double getCoupon() {
@@ -736,6 +793,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         public Double getCouponPrice() {
             return this.couponPrice;
+        }
+
+        /**
+         * @return customContent
+         */
+        public String getCustomContent() {
+            return this.customContent;
         }
 
         /**
@@ -858,6 +922,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return mappingCompanyCode
+         */
+        public String getMappingCompanyCode() {
+            return this.mappingCompanyCode;
+        }
+
+        /**
          * @return memo
          */
         public String getMemo() {
@@ -907,10 +978,31 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return position
+         */
+        public String getPosition() {
+            return this.position;
+        }
+
+        /**
+         * @return positionLevel
+         */
+        public String getPositionLevel() {
+            return this.positionLevel;
+        }
+
+        /**
          * @return primaryId
          */
         public Long getPrimaryId() {
             return this.primaryId;
+        }
+
+        /**
+         * @return processorOaCode
+         */
+        public String getProcessorOaCode() {
+            return this.processorOaCode;
         }
 
         /**
@@ -925,6 +1017,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getProjectName() {
             return this.projectName;
+        }
+
+        /**
+         * @return protocolDiscountFee
+         */
+        public Double getProtocolDiscountFee() {
+            return this.protocolDiscountFee;
         }
 
         /**
@@ -1159,6 +1258,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String adjustTime; 
             private String alipayTradeNo; 
             private String applyArrCityCode; 
             private String applyArrCityName; 
@@ -1171,6 +1271,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private String arrDate; 
             private String arrLocation; 
             private String arrTime; 
+            private String baseLocation; 
             private String billRecordTime; 
             private String billingEntity; 
             private String bookModel; 
@@ -1185,8 +1286,10 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private String categoryDesc; 
             private String costCenter; 
             private String costCenterNumber; 
+            private String costDepartment; 
             private Double coupon; 
             private Double couponPrice; 
+            private String customContent; 
             private Double deductibleTax; 
             private String depCityCode; 
             private String department; 
@@ -1204,6 +1307,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private String index; 
             private String invoiceTitle; 
             private String levelName; 
+            private String mappingCompanyCode; 
             private String memo; 
             private String orderId; 
             private Double orderPrice; 
@@ -1211,9 +1315,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             private String paymentDepartmentId; 
             private String paymentDepartmentName; 
             private Double personSettleFee; 
+            private String position; 
+            private String positionLevel; 
             private Long primaryId; 
+            private String processorOaCode; 
             private String projectCode; 
             private String projectName; 
+            private Double protocolDiscountFee; 
             private String providerName; 
             private String realDriveDistance; 
             private String realFromAddr; 
@@ -1252,6 +1360,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             } 
 
             private Builder(DataList model) {
+                this.adjustTime = model.adjustTime;
                 this.alipayTradeNo = model.alipayTradeNo;
                 this.applyArrCityCode = model.applyArrCityCode;
                 this.applyArrCityName = model.applyArrCityName;
@@ -1264,6 +1373,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
                 this.arrDate = model.arrDate;
                 this.arrLocation = model.arrLocation;
                 this.arrTime = model.arrTime;
+                this.baseLocation = model.baseLocation;
                 this.billRecordTime = model.billRecordTime;
                 this.billingEntity = model.billingEntity;
                 this.bookModel = model.bookModel;
@@ -1278,8 +1388,10 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
                 this.categoryDesc = model.categoryDesc;
                 this.costCenter = model.costCenter;
                 this.costCenterNumber = model.costCenterNumber;
+                this.costDepartment = model.costDepartment;
                 this.coupon = model.coupon;
                 this.couponPrice = model.couponPrice;
+                this.customContent = model.customContent;
                 this.deductibleTax = model.deductibleTax;
                 this.depCityCode = model.depCityCode;
                 this.department = model.department;
@@ -1297,6 +1409,7 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
                 this.index = model.index;
                 this.invoiceTitle = model.invoiceTitle;
                 this.levelName = model.levelName;
+                this.mappingCompanyCode = model.mappingCompanyCode;
                 this.memo = model.memo;
                 this.orderId = model.orderId;
                 this.orderPrice = model.orderPrice;
@@ -1304,9 +1417,13 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
                 this.paymentDepartmentId = model.paymentDepartmentId;
                 this.paymentDepartmentName = model.paymentDepartmentName;
                 this.personSettleFee = model.personSettleFee;
+                this.position = model.position;
+                this.positionLevel = model.positionLevel;
                 this.primaryId = model.primaryId;
+                this.processorOaCode = model.processorOaCode;
                 this.projectCode = model.projectCode;
                 this.projectName = model.projectName;
+                this.protocolDiscountFee = model.protocolDiscountFee;
                 this.providerName = model.providerName;
                 this.realDriveDistance = model.realDriveDistance;
                 this.realFromAddr = model.realFromAddr;
@@ -1341,6 +1458,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
                 this.voucherType = model.voucherType;
                 this.voucherTypeDesc = model.voucherTypeDesc;
             } 
+
+            /**
+             * adjust_time.
+             */
+            public Builder adjustTime(String adjustTime) {
+                this.adjustTime = adjustTime;
+                return this;
+            }
 
             /**
              * alipay_trade_no.
@@ -1435,6 +1560,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder arrTime(String arrTime) {
                 this.arrTime = arrTime;
+                return this;
+            }
+
+            /**
+             * base_location.
+             */
+            public Builder baseLocation(String baseLocation) {
+                this.baseLocation = baseLocation;
                 return this;
             }
 
@@ -1551,6 +1684,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * cost_department.
+             */
+            public Builder costDepartment(String costDepartment) {
+                this.costDepartment = costDepartment;
+                return this;
+            }
+
+            /**
              * coupon.
              */
             public Builder coupon(Double coupon) {
@@ -1563,6 +1704,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder couponPrice(Double couponPrice) {
                 this.couponPrice = couponPrice;
+                return this;
+            }
+
+            /**
+             * custom_content.
+             */
+            public Builder customContent(String customContent) {
+                this.customContent = customContent;
                 return this;
             }
 
@@ -1703,6 +1852,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * mapping_company_code.
+             */
+            public Builder mappingCompanyCode(String mappingCompanyCode) {
+                this.mappingCompanyCode = mappingCompanyCode;
+                return this;
+            }
+
+            /**
              * memo.
              */
             public Builder memo(String memo) {
@@ -1759,10 +1916,34 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * position.
+             */
+            public Builder position(String position) {
+                this.position = position;
+                return this;
+            }
+
+            /**
+             * position_level.
+             */
+            public Builder positionLevel(String positionLevel) {
+                this.positionLevel = positionLevel;
+                return this;
+            }
+
+            /**
              * primary_id.
              */
             public Builder primaryId(Long primaryId) {
                 this.primaryId = primaryId;
+                return this;
+            }
+
+            /**
+             * processor_oa_code.
+             */
+            public Builder processorOaCode(String processorOaCode) {
+                this.processorOaCode = processorOaCode;
                 return this;
             }
 
@@ -1779,6 +1960,14 @@ public class CarBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
+                return this;
+            }
+
+            /**
+             * protocol_discount_fee.
+             */
+            public Builder protocolDiscountFee(Double protocolDiscountFee) {
+                this.protocolDiscountFee = protocolDiscountFee;
                 return this;
             }
 

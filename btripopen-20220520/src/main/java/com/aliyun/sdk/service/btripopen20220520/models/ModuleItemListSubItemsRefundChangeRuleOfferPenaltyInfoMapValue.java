@@ -59,6 +59,18 @@ public class ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue exte
     @com.aliyun.core.annotation.NameInMap("time_unit_code")
     private Integer timeUnitCode;
 
+    @com.aliyun.core.annotation.NameInMap("title")
+    private String title;
+
+    @com.aliyun.core.annotation.NameInMap("dep_time")
+    private String depTime;
+
+    @com.aliyun.core.annotation.NameInMap("segment_number")
+    private String segmentNumber;
+
+    @com.aliyun.core.annotation.NameInMap("desc_infos")
+    private java.util.Map<String, String> descInfos;
+
     private ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue(Builder builder) {
         this.struct = builder.struct;
         this.cancelFeeInd = builder.cancelFeeInd;
@@ -74,6 +86,10 @@ public class ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue exte
         this.startTime = builder.startTime;
         this.endTime = builder.endTime;
         this.timeUnitCode = builder.timeUnitCode;
+        this.title = builder.title;
+        this.depTime = builder.depTime;
+        this.segmentNumber = builder.segmentNumber;
+        this.descInfos = builder.descInfos;
     }
 
     public static Builder builder() {
@@ -186,6 +202,34 @@ public class ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue exte
         return this.timeUnitCode;
     }
 
+    /**
+     * @return title
+     */
+    public String getTitle() {
+        return this.title;
+    }
+
+    /**
+     * @return depTime
+     */
+    public String getDepTime() {
+        return this.depTime;
+    }
+
+    /**
+     * @return segmentNumber
+     */
+    public String getSegmentNumber() {
+        return this.segmentNumber;
+    }
+
+    /**
+     * @return descInfos
+     */
+    public java.util.Map<String, String> getDescInfos() {
+        return this.descInfos;
+    }
+
     public static final class Builder {
         private Boolean struct; 
         private Boolean cancelFeeInd; 
@@ -201,6 +245,10 @@ public class ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue exte
         private Integer startTime; 
         private Integer endTime; 
         private Integer timeUnitCode; 
+        private String title; 
+        private String depTime; 
+        private String segmentNumber; 
+        private java.util.Map<String, String> descInfos; 
 
         private Builder() {
         } 
@@ -220,6 +268,10 @@ public class ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue exte
             this.startTime = model.startTime;
             this.endTime = model.endTime;
             this.timeUnitCode = model.timeUnitCode;
+            this.title = model.title;
+            this.depTime = model.depTime;
+            this.segmentNumber = model.segmentNumber;
+            this.descInfos = model.descInfos;
         } 
 
         /**
@@ -331,6 +383,38 @@ public class ModuleItemListSubItemsRefundChangeRuleOfferPenaltyInfoMapValue exte
          */
         public Builder timeUnitCode(Integer timeUnitCode) {
             this.timeUnitCode = timeUnitCode;
+            return this;
+        }
+
+        /**
+         * title.
+         */
+        public Builder title(String title) {
+            this.title = title;
+            return this;
+        }
+
+        /**
+         * dep_time.
+         */
+        public Builder depTime(String depTime) {
+            this.depTime = depTime;
+            return this;
+        }
+
+        /**
+         * segment_number.
+         */
+        public Builder segmentNumber(String segmentNumber) {
+            this.segmentNumber = segmentNumber;
+            return this;
+        }
+
+        /**
+         * desc_infos.
+         */
+        public Builder descInfos(java.util.Map<String, String> descInfos) {
+            this.descInfos = descInfos;
             return this;
         }
 

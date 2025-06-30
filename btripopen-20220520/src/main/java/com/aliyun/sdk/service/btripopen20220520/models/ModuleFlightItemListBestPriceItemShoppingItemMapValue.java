@@ -182,15 +182,15 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
      * <p>ModuleFlightItemListBestPriceItemShoppingItemMapValue</p>
      */
     public static class SegmentPosition extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("segment_index")
-        private Integer segmentIndex;
-
         @com.aliyun.core.annotation.NameInMap("journey_index")
         private Integer journeyIndex;
 
+        @com.aliyun.core.annotation.NameInMap("segment_index")
+        private Integer segmentIndex;
+
         private SegmentPosition(Builder builder) {
-            this.segmentIndex = builder.segmentIndex;
             this.journeyIndex = builder.journeyIndex;
+            this.segmentIndex = builder.segmentIndex;
         }
 
         public static Builder builder() {
@@ -202,44 +202,44 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         }
 
         /**
-         * @return segmentIndex
-         */
-        public Integer getSegmentIndex() {
-            return this.segmentIndex;
-        }
-
-        /**
          * @return journeyIndex
          */
         public Integer getJourneyIndex() {
             return this.journeyIndex;
         }
 
+        /**
+         * @return segmentIndex
+         */
+        public Integer getSegmentIndex() {
+            return this.segmentIndex;
+        }
+
         public static final class Builder {
-            private Integer segmentIndex; 
             private Integer journeyIndex; 
+            private Integer segmentIndex; 
 
             private Builder() {
             } 
 
             private Builder(SegmentPosition model) {
-                this.segmentIndex = model.segmentIndex;
                 this.journeyIndex = model.journeyIndex;
+                this.segmentIndex = model.segmentIndex;
             } 
-
-            /**
-             * segment_index.
-             */
-            public Builder segmentIndex(Integer segmentIndex) {
-                this.segmentIndex = segmentIndex;
-                return this;
-            }
 
             /**
              * journey_index.
              */
             public Builder journeyIndex(Integer journeyIndex) {
                 this.journeyIndex = journeyIndex;
+                return this;
+            }
+
+            /**
+             * segment_index.
+             */
+            public Builder segmentIndex(Integer segmentIndex) {
+                this.segmentIndex = segmentIndex;
                 return this;
             }
 
@@ -256,7 +256,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
      *
      * <p>ModuleFlightItemListBestPriceItemShoppingItemMapValue</p>
      */
-    public static class Cabin extends TeaModel {
+    public static class CabinInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cabin")
         private String cabin;
 
@@ -269,7 +269,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         @com.aliyun.core.annotation.NameInMap("quantity")
         private String quantity;
 
-        private Cabin(Builder builder) {
+        private CabinInfo(Builder builder) {
             this.cabin = builder.cabin;
             this.cabinClass = builder.cabinClass;
             this.cabinClassName = builder.cabinClassName;
@@ -280,7 +280,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
             return new Builder();
         }
 
-        public static Cabin create() {
+        public static CabinInfo create() {
             return builder().build();
         }
 
@@ -321,7 +321,7 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
             private Builder() {
             } 
 
-            private Builder(Cabin model) {
+            private Builder(CabinInfo model) {
                 this.cabin = model.cabin;
                 this.cabinClass = model.cabinClass;
                 this.cabinClassName = model.cabinClassName;
@@ -360,8 +360,8 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
                 return this;
             }
 
-            public Cabin build() {
-                return new Cabin(this);
+            public CabinInfo build() {
+                return new CabinInfo(this);
             } 
 
         } 
@@ -377,12 +377,12 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         @com.aliyun.core.annotation.NameInMap("segment_position")
         private SegmentPosition segmentPosition;
 
-        @com.aliyun.core.annotation.NameInMap("cabin")
-        private Cabin cabin;
+        @com.aliyun.core.annotation.NameInMap("cabin_info")
+        private CabinInfo cabinInfo;
 
         private CabinQuantityList(Builder builder) {
             this.segmentPosition = builder.segmentPosition;
-            this.cabin = builder.cabin;
+            this.cabinInfo = builder.cabinInfo;
         }
 
         public static Builder builder() {
@@ -401,22 +401,22 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         }
 
         /**
-         * @return cabin
+         * @return cabinInfo
          */
-        public Cabin getCabin() {
-            return this.cabin;
+        public CabinInfo getCabinInfo() {
+            return this.cabinInfo;
         }
 
         public static final class Builder {
             private SegmentPosition segmentPosition; 
-            private Cabin cabin; 
+            private CabinInfo cabinInfo; 
 
             private Builder() {
             } 
 
             private Builder(CabinQuantityList model) {
                 this.segmentPosition = model.segmentPosition;
-                this.cabin = model.cabin;
+                this.cabinInfo = model.cabinInfo;
             } 
 
             /**
@@ -428,10 +428,10 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
             }
 
             /**
-             * cabin.
+             * cabin_info.
              */
-            public Builder cabin(Cabin cabin) {
-                this.cabin = cabin;
+            public Builder cabinInfo(CabinInfo cabinInfo) {
+                this.cabinInfo = cabinInfo;
                 return this;
             }
 
@@ -1160,18 +1160,18 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
      * <p>ModuleFlightItemListBestPriceItemShoppingItemMapValue</p>
      */
     public static class SegmentPriceListSearchPrice extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ticket_price")
-        private Integer ticketPrice;
-
         @com.aliyun.core.annotation.NameInMap("sell_price")
         private Integer sellPrice;
+
+        @com.aliyun.core.annotation.NameInMap("ticket_price")
+        private Integer ticketPrice;
 
         @com.aliyun.core.annotation.NameInMap("tax")
         private Integer tax;
 
         private SegmentPriceListSearchPrice(Builder builder) {
-            this.ticketPrice = builder.ticketPrice;
             this.sellPrice = builder.sellPrice;
+            this.ticketPrice = builder.ticketPrice;
             this.tax = builder.tax;
         }
 
@@ -1184,17 +1184,17 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         }
 
         /**
-         * @return ticketPrice
-         */
-        public Integer getTicketPrice() {
-            return this.ticketPrice;
-        }
-
-        /**
          * @return sellPrice
          */
         public Integer getSellPrice() {
             return this.sellPrice;
+        }
+
+        /**
+         * @return ticketPrice
+         */
+        public Integer getTicketPrice() {
+            return this.ticketPrice;
         }
 
         /**
@@ -1205,32 +1205,32 @@ public class ModuleFlightItemListBestPriceItemShoppingItemMapValue extends TeaMo
         }
 
         public static final class Builder {
-            private Integer ticketPrice; 
             private Integer sellPrice; 
+            private Integer ticketPrice; 
             private Integer tax; 
 
             private Builder() {
             } 
 
             private Builder(SegmentPriceListSearchPrice model) {
-                this.ticketPrice = model.ticketPrice;
                 this.sellPrice = model.sellPrice;
+                this.ticketPrice = model.ticketPrice;
                 this.tax = model.tax;
             } 
-
-            /**
-             * ticket_price.
-             */
-            public Builder ticketPrice(Integer ticketPrice) {
-                this.ticketPrice = ticketPrice;
-                return this;
-            }
 
             /**
              * sell_price.
              */
             public Builder sellPrice(Integer sellPrice) {
                 this.sellPrice = sellPrice;
+                return this;
+            }
+
+            /**
+             * ticket_price.
+             */
+            public Builder ticketPrice(Integer ticketPrice) {
+                this.ticketPrice = ticketPrice;
                 return this;
             }
 
