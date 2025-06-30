@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListClusterAgentInstallRecordsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("agent_config_id")
+    private String agentConfigId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("cluster_id")
     private String clusterId;
 
@@ -39,6 +43,7 @@ public class ListClusterAgentInstallRecordsRequest extends Request {
 
     private ListClusterAgentInstallRecordsRequest(Builder builder) {
         super(builder);
+        this.agentConfigId = builder.agentConfigId;
         this.clusterId = builder.clusterId;
         this.current = builder.current;
         this.pageSize = builder.pageSize;
@@ -57,6 +62,13 @@ public class ListClusterAgentInstallRecordsRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return agentConfigId
+     */
+    public String getAgentConfigId() {
+        return this.agentConfigId;
     }
 
     /**
@@ -95,6 +107,7 @@ public class ListClusterAgentInstallRecordsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListClusterAgentInstallRecordsRequest, Builder> {
+        private String agentConfigId; 
         private String clusterId; 
         private Long current; 
         private Long pageSize; 
@@ -107,12 +120,22 @@ public class ListClusterAgentInstallRecordsRequest extends Request {
 
         private Builder(ListClusterAgentInstallRecordsRequest request) {
             super(request);
+            this.agentConfigId = request.agentConfigId;
             this.clusterId = request.clusterId;
             this.current = request.current;
             this.pageSize = request.pageSize;
             this.pluginId = request.pluginId;
             this.pluginVersion = request.pluginVersion;
         } 
+
+        /**
+         * agent_config_id.
+         */
+        public Builder agentConfigId(String agentConfigId) {
+            this.putQueryParameter("agent_config_id", agentConfigId);
+            this.agentConfigId = agentConfigId;
+            return this;
+        }
 
         /**
          * cluster_id.

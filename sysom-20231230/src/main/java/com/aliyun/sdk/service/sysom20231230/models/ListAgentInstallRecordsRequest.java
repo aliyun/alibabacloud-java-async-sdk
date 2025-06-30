@@ -38,6 +38,10 @@ public class ListAgentInstallRecordsRequest extends Request {
     private String pluginVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
+    private String region;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
@@ -48,6 +52,7 @@ public class ListAgentInstallRecordsRequest extends Request {
         this.pageSize = builder.pageSize;
         this.pluginId = builder.pluginId;
         this.pluginVersion = builder.pluginVersion;
+        this.region = builder.region;
         this.status = builder.status;
     }
 
@@ -100,6 +105,13 @@ public class ListAgentInstallRecordsRequest extends Request {
     }
 
     /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -112,6 +124,7 @@ public class ListAgentInstallRecordsRequest extends Request {
         private Long pageSize; 
         private String pluginId; 
         private String pluginVersion; 
+        private String region; 
         private String status; 
 
         private Builder() {
@@ -125,6 +138,7 @@ public class ListAgentInstallRecordsRequest extends Request {
             this.pageSize = request.pageSize;
             this.pluginId = request.pluginId;
             this.pluginVersion = request.pluginVersion;
+            this.region = request.region;
             this.status = request.status;
         } 
 
@@ -170,6 +184,15 @@ public class ListAgentInstallRecordsRequest extends Request {
         public Builder pluginVersion(String pluginVersion) {
             this.putQueryParameter("plugin_version", pluginVersion);
             this.pluginVersion = pluginVersion;
+            return this;
+        }
+
+        /**
+         * region.
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("region", region);
+            this.region = region;
             return this;
         }
 

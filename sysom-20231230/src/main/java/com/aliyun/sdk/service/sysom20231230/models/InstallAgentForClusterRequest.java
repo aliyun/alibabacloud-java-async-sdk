@@ -30,6 +30,10 @@ public class InstallAgentForClusterRequest extends Request {
     private String clusterId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("config_id")
+    private String configId;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("grayscale_config")
     private String grayscaleConfig;
 
@@ -38,6 +42,7 @@ public class InstallAgentForClusterRequest extends Request {
         this.agentId = builder.agentId;
         this.agentVersion = builder.agentVersion;
         this.clusterId = builder.clusterId;
+        this.configId = builder.configId;
         this.grayscaleConfig = builder.grayscaleConfig;
     }
 
@@ -76,6 +81,13 @@ public class InstallAgentForClusterRequest extends Request {
     }
 
     /**
+     * @return configId
+     */
+    public String getConfigId() {
+        return this.configId;
+    }
+
+    /**
      * @return grayscaleConfig
      */
     public String getGrayscaleConfig() {
@@ -86,6 +98,7 @@ public class InstallAgentForClusterRequest extends Request {
         private String agentId; 
         private String agentVersion; 
         private String clusterId; 
+        private String configId; 
         private String grayscaleConfig; 
 
         private Builder() {
@@ -97,6 +110,7 @@ public class InstallAgentForClusterRequest extends Request {
             this.agentId = request.agentId;
             this.agentVersion = request.agentVersion;
             this.clusterId = request.clusterId;
+            this.configId = request.configId;
             this.grayscaleConfig = request.grayscaleConfig;
         } 
 
@@ -124,6 +138,15 @@ public class InstallAgentForClusterRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("cluster_id", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * config_id.
+         */
+        public Builder configId(String configId) {
+            this.putBodyParameter("config_id", configId);
+            this.configId = configId;
             return this;
         }
 

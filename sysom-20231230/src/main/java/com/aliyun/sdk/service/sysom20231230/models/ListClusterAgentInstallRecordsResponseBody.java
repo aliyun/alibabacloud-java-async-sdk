@@ -158,6 +158,12 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
      * <p>ListClusterAgentInstallRecordsResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("agent_config_id")
+        private String agentConfigId;
+
+        @com.aliyun.core.annotation.NameInMap("agent_config_name")
+        private String agentConfigName;
+
         @com.aliyun.core.annotation.NameInMap("cluster_id")
         private String clusterId;
 
@@ -177,6 +183,8 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         private String updatedAt;
 
         private Data(Builder builder) {
+            this.agentConfigId = builder.agentConfigId;
+            this.agentConfigName = builder.agentConfigName;
             this.clusterId = builder.clusterId;
             this.createdAt = builder.createdAt;
             this.grayscaleConfig = builder.grayscaleConfig;
@@ -191,6 +199,20 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return agentConfigId
+         */
+        public String getAgentConfigId() {
+            return this.agentConfigId;
+        }
+
+        /**
+         * @return agentConfigName
+         */
+        public String getAgentConfigName() {
+            return this.agentConfigName;
         }
 
         /**
@@ -236,6 +258,8 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String agentConfigId; 
+            private String agentConfigName; 
             private String clusterId; 
             private String createdAt; 
             private String grayscaleConfig; 
@@ -247,6 +271,8 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.agentConfigId = model.agentConfigId;
+                this.agentConfigName = model.agentConfigName;
                 this.clusterId = model.clusterId;
                 this.createdAt = model.createdAt;
                 this.grayscaleConfig = model.grayscaleConfig;
@@ -254,6 +280,22 @@ public class ListClusterAgentInstallRecordsResponseBody extends TeaModel {
                 this.pluginVersion = model.pluginVersion;
                 this.updatedAt = model.updatedAt;
             } 
+
+            /**
+             * agent_config_id.
+             */
+            public Builder agentConfigId(String agentConfigId) {
+                this.agentConfigId = agentConfigId;
+                return this;
+            }
+
+            /**
+             * agent_config_name.
+             */
+            public Builder agentConfigName(String agentConfigName) {
+                this.agentConfigName = agentConfigName;
+                return this;
+            }
 
             /**
              * cluster_id.
