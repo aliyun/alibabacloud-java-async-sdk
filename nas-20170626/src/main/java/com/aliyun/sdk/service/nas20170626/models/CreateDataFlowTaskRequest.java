@@ -61,6 +61,10 @@ public class CreateDataFlowTaskRequest extends Request {
     private String fileSystemId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Includes")
+    private String includes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SrcTaskId")
     private String srcTaskId;
 
@@ -80,6 +84,7 @@ public class CreateDataFlowTaskRequest extends Request {
         this.dstDirectory = builder.dstDirectory;
         this.entryList = builder.entryList;
         this.fileSystemId = builder.fileSystemId;
+        this.includes = builder.includes;
         this.srcTaskId = builder.srcTaskId;
         this.taskAction = builder.taskAction;
     }
@@ -92,7 +97,7 @@ public class CreateDataFlowTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -168,6 +173,13 @@ public class CreateDataFlowTaskRequest extends Request {
     }
 
     /**
+     * @return includes
+     */
+    public String getIncludes() {
+        return this.includes;
+    }
+
+    /**
      * @return srcTaskId
      */
     public String getSrcTaskId() {
@@ -192,6 +204,7 @@ public class CreateDataFlowTaskRequest extends Request {
         private String dstDirectory; 
         private String entryList; 
         private String fileSystemId; 
+        private String includes; 
         private String srcTaskId; 
         private String taskAction; 
 
@@ -211,6 +224,7 @@ public class CreateDataFlowTaskRequest extends Request {
             this.dstDirectory = request.dstDirectory;
             this.entryList = request.entryList;
             this.fileSystemId = request.fileSystemId;
+            this.includes = request.includes;
             this.srcTaskId = request.srcTaskId;
             this.taskAction = request.taskAction;
         } 
@@ -411,6 +425,15 @@ public class CreateDataFlowTaskRequest extends Request {
         public Builder fileSystemId(String fileSystemId) {
             this.putQueryParameter("FileSystemId", fileSystemId);
             this.fileSystemId = fileSystemId;
+            return this;
+        }
+
+        /**
+         * Includes.
+         */
+        public Builder includes(String includes) {
+            this.putQueryParameter("Includes", includes);
+            this.includes = includes;
             return this;
         }
 

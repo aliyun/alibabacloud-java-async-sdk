@@ -36,6 +36,10 @@ public class CreateDataFlowResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataFlowId
      */
@@ -53,6 +57,14 @@ public class CreateDataFlowResponseBody extends TeaModel {
     public static final class Builder {
         private String dataFlowId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDataFlowResponseBody model) {
+            this.dataFlowId = model.dataFlowId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The dataflow ID.</p>

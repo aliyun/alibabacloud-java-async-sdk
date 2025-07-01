@@ -76,6 +76,10 @@ public class CreateFileSystemRequest extends Request {
     private String storageType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
@@ -103,6 +107,7 @@ public class CreateFileSystemRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.snapshotId = builder.snapshotId;
         this.storageType = builder.storageType;
+        this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
         this.zoneId = builder.zoneId;
@@ -116,7 +121,7 @@ public class CreateFileSystemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -220,6 +225,13 @@ public class CreateFileSystemRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return vSwitchId
      */
     public String getVSwitchId() {
@@ -255,6 +267,7 @@ public class CreateFileSystemRequest extends Request {
         private String resourceGroupId; 
         private String snapshotId; 
         private String storageType; 
+        private java.util.List<Tag> tag; 
         private String vSwitchId; 
         private String vpcId; 
         private String zoneId; 
@@ -279,6 +292,7 @@ public class CreateFileSystemRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.snapshotId = request.snapshotId;
             this.storageType = request.storageType;
+            this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
             this.zoneId = request.zoneId;
@@ -406,8 +420,8 @@ public class CreateFileSystemRequest extends Request {
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>Extreme NAS file system: All regions support KMS-managed keys.</li>
-         * <li>General-purpose NAS file system: KMS-managed keys are supported in the following regions: China (Chengdu), China (Qingdao), China (Hohhot), China (Ulanqab), China (Heyuan), China (Hangzhou), China (Shanghai), China (Beijing), China (Zhangjiakou), China (Shenzhen), China (Guangzhou), China (Hong Kong), Japan (Tokyo), Philippines (Manila), Thailand (Bangkok), Malaysia (Kuala Lumpur), US (Silicon Valley), Indonesia (Jakarta), UK (London), Singapore, US (Virginia), Germany (Frankfurt),  and China East 1 Finance.</li>
+         * <li>Extreme NAS file systems: All regions except China East 1 Finance support KMS-managed keys.</li>
+         * <li>General-purpose NAS file systems: All regions support KMS-managed keys.</li>
          * </ul>
          * </blockquote>
          * 
@@ -442,7 +456,7 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * <p>The ID of the KMS-managed key.</p>
+         * <p>The ID of the KMS key.</p>
          * <p>This parameter is required only if the EncryptType parameter is set to 2.</p>
          * 
          * <strong>example:</strong>
@@ -486,9 +500,9 @@ public class CreateFileSystemRequest extends Request {
 
         /**
          * <p>The snapshot ID.</p>
-         * <p>This parameter is available only for Extreme NAS file systems.</p>
+         * <p>This parameter is available only for advanced Extreme NAS file systems.</p>
          * <blockquote>
-         * <p>You can create a file system from a snapshot. In this case, the version of the file system is the same as that of the source file system. For example, the source file system of the snapshot uses version 1. To create a file system of version 2, you can create File System A from the snapshot and create File System B of version 2. You can then copy the data and migrate your business from File System A to File System B.</p>
+         * <p> You can create a file system from a snapshot. In this case, the version of the file system is the same as that of the source file system. For example, the source file system of the snapshot uses version 1. To create a file system of version 2, you can create File System A from the snapshot and create File System B of version 2. You can then copy the data and migrate your business from File System A to File System B.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -518,7 +532,17 @@ public class CreateFileSystemRequest extends Request {
         }
 
         /**
-         * <p>The ID of the vSwitch.</p>
+         * <p>An array of tags.</p>
+         * <p>You can specify up to 20 tags. If you specify multiple tags, each tag key must be unique.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
+         * <p>The vSwitch ID.</p>
          * <p>This parameter is reserved and does not take effect. You do not need to configure this parameter.</p>
          * 
          * <strong>example:</strong>
@@ -571,4 +595,98 @@ public class CreateFileSystemRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link CreateFileSystemRequest} extends {@link TeaModel}
+     *
+     * <p>CreateFileSystemRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key.</p>
+             * <p>Limits:</p>
+             * <ul>
+             * <li>The tag key cannot be null or an empty string.</li>
+             * <li>The tag key can be up to 128 characters in length.</li>
+             * <li>The tag key cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
+             * <li>The tag key cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>nastest</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * <p>Limits:</p>
+             * <ul>
+             * <li>The tag value cannot be null or an empty string.</li>
+             * <li>The tag value can be up to 128 characters in length.</li>
+             * <li>The tag value cannot contain <code>http://</code> or <code>https://</code>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>testValue</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

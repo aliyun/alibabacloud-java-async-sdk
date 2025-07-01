@@ -48,6 +48,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileSystems
      */
@@ -89,6 +93,17 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFileSystemsResponseBody model) {
+            this.fileSystems = model.fileSystems;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried file systems.</p>
@@ -204,6 +219,15 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String searchBase; 
             private String URI; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ldap model) {
+                this.bindDN = model.bindDN;
+                this.searchBase = model.searchBase;
+                this.URI = model.URI;
+            } 
+
             /**
              * <p>An LDAP entry.</p>
              * 
@@ -300,6 +324,15 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private String ecsId; 
             private String ecsIp; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClientMasterNode model) {
+                this.defaultPasswd = model.defaultPasswd;
+                this.ecsId = model.ecsId;
+                this.ecsIp = model.ecsIp;
+            } 
+
             /**
              * <p>The default logon password of the ECS instance on the client management node.</p>
              * 
@@ -372,6 +405,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ClientMasterNode> clientMasterNode; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClientMasterNodes model) {
+                this.clientMasterNode = model.clientMasterNode;
+            } 
+
             /**
              * ClientMasterNode.
              */
@@ -430,6 +470,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -491,6 +539,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -634,6 +689,21 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private Tags tags; 
             private String vpcId; 
             private String vswId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountTarget model) {
+                this.accessGroupName = model.accessGroupName;
+                this.clientMasterNodes = model.clientMasterNodes;
+                this.dualStackMountTargetDomain = model.dualStackMountTargetDomain;
+                this.mountTargetDomain = model.mountTargetDomain;
+                this.networkType = model.networkType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+                this.vswId = model.vswId;
+            } 
 
             /**
              * <p>The name of the permission group that is attached to the mount target.</p>
@@ -780,6 +850,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<MountTarget> mountTarget; 
 
+            private Builder() {
+            } 
+
+            private Builder(MountTargets model) {
+                this.mountTarget = model.mountTarget;
+            } 
+
             /**
              * MountTarget.
              */
@@ -826,6 +903,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean enableOplock; 
+
+            private Builder() {
+            } 
+
+            private Builder(Options model) {
+                this.enableOplock = model.enableOplock;
+            } 
 
             /**
              * <p>Specifies whether to enable the oplock feature. Valid values:</p>
@@ -932,6 +1016,17 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private Long size; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Package model) {
+                this.expiredTime = model.expiredTime;
+                this.packageId = model.packageId;
+                this.packageType = model.packageType;
+                this.size = model.size;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The end time of the validity period for the storage plan.</p>
              * 
@@ -1031,6 +1126,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Package> _package; 
 
+            private Builder() {
+            } 
+
+            private Builder(Packages model) {
+                this._package = model._package;
+            } 
+
             /**
              * Package.
              */
@@ -1077,6 +1179,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> supportedFeature; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportedFeatures model) {
+                this.supportedFeature = model.supportedFeature;
+            } 
 
             /**
              * SupportedFeature.
@@ -1136,6 +1245,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagsTag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -1198,6 +1315,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<TagsTag> tag; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileSystemTags model) {
+                this.tag = model.tag;
+            } 
+
             /**
              * Tag.
              */
@@ -1244,6 +1368,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> vswId; 
+
+            private Builder() {
+            } 
+
+            private Builder(VswIds model) {
+                this.vswId = model.vswId;
+            } 
 
             /**
              * <p>The ID of the vSwitch.</p>
@@ -1357,6 +1488,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
+        @com.aliyun.core.annotation.NameInMap("VscTarget")
+        private String vscTarget;
+
         @com.aliyun.core.annotation.NameInMap("VswIds")
         private VswIds vswIds;
 
@@ -1393,6 +1527,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             this.tags = builder.tags;
             this.version = builder.version;
             this.vpcId = builder.vpcId;
+            this.vscTarget = builder.vscTarget;
             this.vswIds = builder.vswIds;
             this.zoneId = builder.zoneId;
         }
@@ -1609,6 +1744,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return vscTarget
+         */
+        public String getVscTarget() {
+            return this.vscTarget;
+        }
+
+        /**
          * @return vswIds
          */
         public VswIds getVswIds() {
@@ -1652,8 +1794,47 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private FileSystemTags tags; 
             private String version; 
             private String vpcId; 
+            private String vscTarget; 
             private VswIds vswIds; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileSystem model) {
+                this.accessPointCount = model.accessPointCount;
+                this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.bandwidth = model.bandwidth;
+                this.capacity = model.capacity;
+                this.chargeType = model.chargeType;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.encryptType = model.encryptType;
+                this.expiredTime = model.expiredTime;
+                this.fileSystemId = model.fileSystemId;
+                this.fileSystemType = model.fileSystemType;
+                this.KMSKeyId = model.KMSKeyId;
+                this.ldap = model.ldap;
+                this.meteredArchiveSize = model.meteredArchiveSize;
+                this.meteredIASize = model.meteredIASize;
+                this.meteredSize = model.meteredSize;
+                this.mountTargets = model.mountTargets;
+                this.options = model.options;
+                this.packages = model.packages;
+                this.protocolType = model.protocolType;
+                this.quorumVswId = model.quorumVswId;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.storageType = model.storageType;
+                this.supportedFeatures = model.supportedFeatures;
+                this.tags = model.tags;
+                this.version = model.version;
+                this.vpcId = model.vpcId;
+                this.vscTarget = model.vscTarget;
+                this.vswIds = model.vswIds;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>Number of access points.</p>
@@ -2012,6 +2193,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             }
 
             /**
+             * VscTarget.
+             */
+            public Builder vscTarget(String vscTarget) {
+                this.vscTarget = vscTarget;
+                return this;
+            }
+
+            /**
              * <p>A collection of vSwitch IDs.</p>
              */
             public Builder vswIds(VswIds vswIds) {
@@ -2068,6 +2257,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FileSystem> fileSystem; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileSystems model) {
+                this.fileSystem = model.fileSystem;
+            } 
 
             /**
              * FileSystem.

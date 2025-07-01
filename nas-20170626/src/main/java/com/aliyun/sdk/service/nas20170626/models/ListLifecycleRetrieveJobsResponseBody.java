@@ -48,6 +48,10 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lifecycleRetrieveJobs
      */
@@ -89,6 +93,17 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListLifecycleRetrieveJobsResponseBody model) {
+            this.lifecycleRetrieveJobs = model.lifecycleRetrieveJobs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the data retrieval tasks.</p>
@@ -275,6 +290,21 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             private String status; 
             private String storageType; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(LifecycleRetrieveJobs model) {
+                this.createTime = model.createTime;
+                this.discoveredFileCount = model.discoveredFileCount;
+                this.fileSystemId = model.fileSystemId;
+                this.jobId = model.jobId;
+                this.paths = model.paths;
+                this.retrievedFileCount = model.retrievedFileCount;
+                this.status = model.status;
+                this.storageType = model.storageType;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the task was created.</p>

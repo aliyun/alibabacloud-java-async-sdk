@@ -36,6 +36,10 @@ public class CreateSnapshotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateSnapshotResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String snapshotId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSnapshotResponseBody model) {
+            this.requestId = model.requestId;
+            this.snapshotId = model.snapshotId;
+        } 
 
         /**
          * <p>The request ID.</p>

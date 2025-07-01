@@ -48,6 +48,10 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobs
      */
@@ -89,6 +93,17 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
         private Long pageSize; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRecycleBinJobsResponseBody model) {
+            this.jobs = model.jobs;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the jobs of the recycle bin.</p>
@@ -275,6 +290,21 @@ public class ListRecycleBinJobsResponseBody extends TeaModel {
             private String progress; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Jobs model) {
+                this.createTime = model.createTime;
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.fileId = model.fileId;
+                this.fileName = model.fileName;
+                this.id = model.id;
+                this.progress = model.progress;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The time when the job was created.</p>

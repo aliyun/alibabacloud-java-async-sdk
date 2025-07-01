@@ -48,6 +48,10 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clients
      */
@@ -89,6 +93,17 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeMountedClientsResponseBody model) {
+            this.clients = model.clients;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried clients.</p>
@@ -180,6 +195,13 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
         public static final class Builder {
             private String clientIP; 
 
+            private Builder() {
+            } 
+
+            private Builder(Client model) {
+                this.clientIP = model.clientIP;
+            } 
+
             /**
              * <p>The IP address of the client.</p>
              * 
@@ -229,6 +251,13 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Client> client; 
+
+            private Builder() {
+            } 
+
+            private Builder(Clients model) {
+                this.client = model.client;
+            } 
 
             /**
              * Client.

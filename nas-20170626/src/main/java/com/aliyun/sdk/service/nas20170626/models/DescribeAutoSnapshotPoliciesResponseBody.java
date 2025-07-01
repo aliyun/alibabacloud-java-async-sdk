@@ -48,6 +48,10 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoSnapshotPolicies
      */
@@ -89,6 +93,17 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoSnapshotPoliciesResponseBody model) {
+            this.autoSnapshotPolicies = model.autoSnapshotPolicies;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried automatic snapshot policies.</p>
@@ -288,6 +303,22 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             private String status; 
             private String timePoints; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoSnapshotPolicy model) {
+                this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.autoSnapshotPolicyName = model.autoSnapshotPolicyName;
+                this.createTime = model.createTime;
+                this.fileSystemNums = model.fileSystemNums;
+                this.fileSystemType = model.fileSystemType;
+                this.regionId = model.regionId;
+                this.repeatWeekdays = model.repeatWeekdays;
+                this.retentionDays = model.retentionDays;
+                this.status = model.status;
+                this.timePoints = model.timePoints;
+            } 
+
             /**
              * <p>The ID of the automatic snapshot policy.</p>
              * 
@@ -452,6 +483,13 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AutoSnapshotPolicy> autoSnapshotPolicy; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoSnapshotPolicies model) {
+                this.autoSnapshotPolicy = model.autoSnapshotPolicy;
+            } 
 
             /**
              * AutoSnapshotPolicy.

@@ -56,7 +56,7 @@ public class DescribeMountTargetsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -123,7 +123,7 @@ public class DescribeMountTargetsRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
+         * <p>1ca404****-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
             this.putQueryParameter("DualStackMountTargetDomain", dualStackMountTargetDomain);
@@ -156,7 +156,7 @@ public class DescribeMountTargetsRequest extends Request {
          * <p>The domain name of the mount target.</p>
          * 
          * <strong>example:</strong>
-         * <p>1ca404a666-x****.cn-hangzhou.nas.aliyuncs.com</p>
+         * <p>1ca404****-x****.cn-hangzhou.nas.aliyuncs.com</p>
          */
         public Builder mountTargetDomain(String mountTargetDomain) {
             this.putQueryParameter("MountTargetDomain", mountTargetDomain);

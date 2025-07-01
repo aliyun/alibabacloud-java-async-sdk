@@ -40,6 +40,10 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return entries
      */
@@ -65,6 +69,15 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
         private java.util.List<Entries> entries; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDirectoriesAndFilesResponseBody model) {
+            this.entries = model.entries;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the files or directories.</p>
@@ -277,6 +290,25 @@ public class ListDirectoriesAndFilesResponseBody extends TeaModel {
             private Long size; 
             private String storageType; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Entries model) {
+                this.atime = model.atime;
+                this.ctime = model.ctime;
+                this.fileId = model.fileId;
+                this.hasArchiveFile = model.hasArchiveFile;
+                this.hasInfrequentAccessFile = model.hasInfrequentAccessFile;
+                this.inode = model.inode;
+                this.mtime = model.mtime;
+                this.name = model.name;
+                this.owner = model.owner;
+                this.retrieveTime = model.retrieveTime;
+                this.size = model.size;
+                this.storageType = model.storageType;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The time when the file was queried.</p>

@@ -40,6 +40,10 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<ProtocolMountTargets> protocolMountTargets; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProtocolMountTargetResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.protocolMountTargets = model.protocolMountTargets;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -265,6 +278,24 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
             private String status; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProtocolMountTargets model) {
+                this.accessGroupName = model.accessGroupName;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.exportId = model.exportId;
+                this.fsetId = model.fsetId;
+                this.path = model.path;
+                this.protocolMountTargetDomain = model.protocolMountTargetDomain;
+                this.protocolServiceId = model.protocolServiceId;
+                this.protocolType = model.protocolType;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The permission group that is associated with the export directory of the protocol service.</p>

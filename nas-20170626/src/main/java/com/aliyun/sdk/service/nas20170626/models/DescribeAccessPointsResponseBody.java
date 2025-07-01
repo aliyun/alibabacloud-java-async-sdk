@@ -45,6 +45,10 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessPoints
      */
@@ -78,6 +82,16 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccessPointsResponseBody model) {
+            this.accessPoints = model.accessPoints;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the access point.</p>
@@ -183,6 +197,15 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             private java.util.List<Integer> posixSecondaryGroupIds; 
             private Integer posixUserId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PosixUser model) {
+                this.posixGroupId = model.posixGroupId;
+                this.posixSecondaryGroupIds = model.posixSecondaryGroupIds;
+                this.posixUserId = model.posixUserId;
+            } 
+
             /**
              * <p>The ID of the POSIX user group.</p>
              * 
@@ -275,6 +298,15 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             private Long ownerGroupId; 
             private Long ownerUserId; 
             private String permission; 
+
+            private Builder() {
+            } 
+
+            private Builder(RootPathPermission model) {
+                this.ownerGroupId = model.ownerGroupId;
+                this.ownerUserId = model.ownerUserId;
+                this.permission = model.permission;
+            } 
 
             /**
              * <p>The ID of the owner group.</p>
@@ -527,6 +559,28 @@ public class DescribeAccessPointsResponseBody extends TeaModel {
             private String status; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessPoints model) {
+                this.ARN = model.ARN;
+                this.accessGroup = model.accessGroup;
+                this.accessPointId = model.accessPointId;
+                this.accessPointName = model.accessPointName;
+                this.createTime = model.createTime;
+                this.domainName = model.domainName;
+                this.enabledRam = model.enabledRam;
+                this.fileSystemId = model.fileSystemId;
+                this.modifyTime = model.modifyTime;
+                this.posixUser = model.posixUser;
+                this.rootPath = model.rootPath;
+                this.rootPathPermission = model.rootPathPermission;
+                this.rootPathStatus = model.rootPathStatus;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the access point.</p>

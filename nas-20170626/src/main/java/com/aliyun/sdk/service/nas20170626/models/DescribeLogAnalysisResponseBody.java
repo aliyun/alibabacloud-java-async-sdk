@@ -52,6 +52,10 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return analyses
      */
@@ -101,6 +105,18 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLogAnalysisResponseBody model) {
+            this.analyses = model.analyses;
+            this.code = model.code;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The collection of log dump information.</p>
@@ -239,6 +255,16 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             private String region; 
             private String roleArn; 
 
+            private Builder() {
+            } 
+
+            private Builder(MetaValue model) {
+                this.logstore = model.logstore;
+                this.project = model.project;
+                this.region = model.region;
+                this.roleArn = model.roleArn;
+            } 
+
             /**
              * <p>The name of the dedicated Logstore that is used to store NAS operation logs.</p>
              * 
@@ -334,6 +360,14 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
             private String metaKey; 
             private MetaValue metaValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Analysis model) {
+                this.metaKey = model.metaKey;
+                this.metaValue = model.metaValue;
+            } 
+
             /**
              * <p>The ID of the file system.</p>
              * 
@@ -391,6 +425,13 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Analysis> analysis; 
+
+            private Builder() {
+            } 
+
+            private Builder(Analyses model) {
+                this.analysis = model.analysis;
+            } 
 
             /**
              * Analysis.

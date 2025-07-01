@@ -36,6 +36,10 @@ public class CreateAccessPointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessPoint
      */
@@ -53,6 +57,14 @@ public class CreateAccessPointResponseBody extends TeaModel {
     public static final class Builder {
         private AccessPoint accessPoint; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAccessPointResponseBody model) {
+            this.accessPoint = model.accessPoint;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The access point.</p>
@@ -122,6 +134,14 @@ public class CreateAccessPointResponseBody extends TeaModel {
         public static final class Builder {
             private String accessPointDomain; 
             private String accessPointId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessPoint model) {
+                this.accessPointDomain = model.accessPointDomain;
+                this.accessPointId = model.accessPointId;
+            } 
 
             /**
              * <p>The domain name of the access point.</p>

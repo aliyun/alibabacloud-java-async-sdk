@@ -36,6 +36,10 @@ public class CreateProtocolMountTargetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return exportId
      */
@@ -53,6 +57,14 @@ public class CreateProtocolMountTargetResponseBody extends TeaModel {
     public static final class Builder {
         private String exportId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateProtocolMountTargetResponseBody model) {
+            this.exportId = model.exportId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the export directory for the protocol service.</p>

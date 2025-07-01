@@ -36,6 +36,10 @@ public class CreateAccessGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessGroupName
      */
@@ -53,6 +57,14 @@ public class CreateAccessGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String accessGroupName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAccessGroupResponseBody model) {
+            this.accessGroupName = model.accessGroupName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The name of the permission group.</p>

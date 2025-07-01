@@ -36,6 +36,10 @@ public class DescribeZonesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class DescribeZonesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Zones zones; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeZonesResponseBody model) {
+            this.requestId = model.requestId;
+            this.zones = model.zones;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -110,6 +122,13 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(Capacity model) {
+                this.protocol = model.protocol;
+            } 
 
             /**
              * Protocol.
@@ -169,6 +188,14 @@ public class DescribeZonesResponseBody extends TeaModel {
         public static final class Builder {
             private String protocolType; 
             private String storageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceType model) {
+                this.protocolType = model.protocolType;
+                this.storageType = model.storageType;
+            } 
 
             /**
              * <p>The protocol type.</p>
@@ -247,6 +274,13 @@ public class DescribeZonesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<InstanceType> instanceType; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypes model) {
+                this.instanceType = model.instanceType;
+            } 
+
             /**
              * InstanceType.
              */
@@ -293,6 +327,13 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> protocol; 
+
+            private Builder() {
+            } 
+
+            private Builder(Performance model) {
+                this.protocol = model.protocol;
+            } 
 
             /**
              * Protocol.
@@ -377,6 +418,16 @@ public class DescribeZonesResponseBody extends TeaModel {
             private Performance performance; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Zone model) {
+                this.capacity = model.capacity;
+                this.instanceTypes = model.instanceTypes;
+                this.performance = model.performance;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
              * <p>This parameter is reserved. You can ignore this parameter.</p>
              */
@@ -450,6 +501,13 @@ public class DescribeZonesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Zone> zone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.zone = model.zone;
+            } 
 
             /**
              * Zone.

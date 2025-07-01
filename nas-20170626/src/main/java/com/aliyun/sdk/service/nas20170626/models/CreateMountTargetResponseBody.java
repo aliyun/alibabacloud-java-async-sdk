@@ -40,6 +40,10 @@ public class CreateMountTargetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mountTargetDomain
      */
@@ -65,6 +69,15 @@ public class CreateMountTargetResponseBody extends TeaModel {
         private String mountTargetDomain; 
         private MountTargetExtra mountTargetExtra; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateMountTargetResponseBody model) {
+            this.mountTargetDomain = model.mountTargetDomain;
+            this.mountTargetExtra = model.mountTargetExtra;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The IPv4 domain name of the mount target.</p>
@@ -133,6 +146,13 @@ public class CreateMountTargetResponseBody extends TeaModel {
 
         public static final class Builder {
             private String dualStackMountTargetDomain; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountTargetExtra model) {
+                this.dualStackMountTargetDomain = model.dualStackMountTargetDomain;
+            } 
 
             /**
              * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>

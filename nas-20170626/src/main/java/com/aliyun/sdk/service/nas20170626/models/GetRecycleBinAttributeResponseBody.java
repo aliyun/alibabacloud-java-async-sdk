@@ -36,6 +36,10 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return recycleBinAttribute
      */
@@ -53,6 +57,14 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
     public static final class Builder {
         private RecycleBinAttribute recycleBinAttribute; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRecycleBinAttributeResponseBody model) {
+            this.recycleBinAttribute = model.recycleBinAttribute;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The description of the recycle bin.</p>
@@ -170,6 +182,18 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
             private Long secondarySize; 
             private Long size; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecycleBinAttribute model) {
+                this.archiveSize = model.archiveSize;
+                this.enableTime = model.enableTime;
+                this.reservedDays = model.reservedDays;
+                this.secondarySize = model.secondarySize;
+                this.size = model.size;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The size of the archived data that is dumped to the recycle bin. Unit: bytes.</p>

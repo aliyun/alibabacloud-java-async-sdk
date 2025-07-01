@@ -45,7 +45,7 @@ public class ModifyFileSystemRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -174,6 +174,13 @@ public class ModifyFileSystemRequest extends Request {
 
         public static final class Builder {
             private Boolean enableOplock; 
+
+            private Builder() {
+            } 
+
+            private Builder(Options model) {
+                this.enableOplock = model.enableOplock;
+            } 
 
             /**
              * <p>Specifies whether to enable the oplock feature. Valid values:</p>

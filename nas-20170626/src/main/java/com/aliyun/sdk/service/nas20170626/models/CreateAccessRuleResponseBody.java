@@ -36,6 +36,10 @@ public class CreateAccessRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessRuleId
      */
@@ -53,6 +57,14 @@ public class CreateAccessRuleResponseBody extends TeaModel {
     public static final class Builder {
         private String accessRuleId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAccessRuleResponseBody model) {
+            this.accessRuleId = model.accessRuleId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The rule ID.</p>

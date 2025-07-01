@@ -48,6 +48,10 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return lifecyclePolicies
      */
@@ -89,6 +93,17 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLifecyclePoliciesResponseBody model) {
+            this.lifecyclePolicies = model.lifecyclePolicies;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried lifecycle policies.</p>
@@ -251,6 +266,19 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
             private String path; 
             private java.util.List<String> paths; 
             private String storageType; 
+
+            private Builder() {
+            } 
+
+            private Builder(LifecyclePolicies model) {
+                this.createTime = model.createTime;
+                this.fileSystemId = model.fileSystemId;
+                this.lifecyclePolicyName = model.lifecyclePolicyName;
+                this.lifecycleRuleName = model.lifecycleRuleName;
+                this.path = model.path;
+                this.paths = model.paths;
+                this.storageType = model.storageType;
+            } 
 
             /**
              * <p>The time when the lifecycle policy was created.</p>

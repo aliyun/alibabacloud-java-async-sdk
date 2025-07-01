@@ -52,6 +52,10 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileSystemStatistics
      */
@@ -101,6 +105,18 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFileSystemStatisticsResponseBody model) {
+            this.fileSystemStatistics = model.fileSystemStatistics;
+            this.fileSystems = model.fileSystems;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The statistics of file systems.</p>
@@ -248,6 +264,17 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             private Long meteredSize; 
             private Integer totalCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileSystemStatistic model) {
+                this.expiredCount = model.expiredCount;
+                this.expiringCount = model.expiringCount;
+                this.fileSystemType = model.fileSystemType;
+                this.meteredSize = model.meteredSize;
+                this.totalCount = model.totalCount;
+            } 
+
             /**
              * <p>The number of expired file systems.</p>
              * 
@@ -345,6 +372,13 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<FileSystemStatistic> fileSystemStatistic; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileSystemStatistics model) {
+                this.fileSystemStatistic = model.fileSystemStatistic;
+            } 
+
             /**
              * FileSystemStatistic.
              */
@@ -428,6 +462,16 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             private Long size; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Package model) {
+                this.expiredTime = model.expiredTime;
+                this.packageId = model.packageId;
+                this.size = model.size;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The end time of the validity period for the storage plan.</p>
              * 
@@ -510,6 +554,13 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Package> _package; 
+
+            private Builder() {
+            } 
+
+            private Builder(Packages model) {
+                this._package = model._package;
+            } 
 
             /**
              * Package.
@@ -725,6 +776,27 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
             private String status; 
             private String storageType; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileSystem model) {
+                this.capacity = model.capacity;
+                this.chargeType = model.chargeType;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.expiredTime = model.expiredTime;
+                this.fileSystemId = model.fileSystemId;
+                this.fileSystemType = model.fileSystemType;
+                this.meteredIASize = model.meteredIASize;
+                this.meteredSize = model.meteredSize;
+                this.packages = model.packages;
+                this.protocolType = model.protocolType;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.storageType = model.storageType;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>The capacity of the file system.</p>
@@ -962,6 +1034,13 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<FileSystem> fileSystem; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileSystems model) {
+                this.fileSystem = model.fileSystem;
+            } 
 
             /**
              * FileSystem.

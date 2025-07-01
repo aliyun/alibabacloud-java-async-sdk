@@ -40,6 +40,10 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return entries
      */
@@ -65,6 +69,15 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
         private java.util.List<Entries> entries; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRecycledDirectoriesAndFilesResponseBody model) {
+            this.entries = model.entries;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about files or directories in the recycle bin.</p>
@@ -230,6 +243,21 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
             private String name; 
             private Long size; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Entries model) {
+                this.aTime = model.aTime;
+                this.cTime = model.cTime;
+                this.deleteTime = model.deleteTime;
+                this.fileId = model.fileId;
+                this.inode = model.inode;
+                this.mTime = model.mTime;
+                this.name = model.name;
+                this.size = model.size;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The time when the file or directory was last accessed.</p>

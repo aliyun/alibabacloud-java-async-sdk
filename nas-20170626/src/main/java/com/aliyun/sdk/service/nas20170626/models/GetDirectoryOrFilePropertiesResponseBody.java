@@ -36,6 +36,10 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return entry
      */
@@ -54,8 +58,16 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         private Entry entry; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetDirectoryOrFilePropertiesResponseBody model) {
+            this.entry = model.entry;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The details about the files or directories.</p>
+         * <p>The details about the file or directory.</p>
          */
         public Builder entry(Entry entry) {
             this.entry = entry;
@@ -231,6 +243,23 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             private String storageType; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Entry model) {
+                this.aTime = model.aTime;
+                this.cTime = model.cTime;
+                this.hasArchiveFile = model.hasArchiveFile;
+                this.hasInfrequentAccessFile = model.hasInfrequentAccessFile;
+                this.inode = model.inode;
+                this.mTime = model.mTime;
+                this.name = model.name;
+                this.retrieveTime = model.retrieveTime;
+                this.size = model.size;
+                this.storageType = model.storageType;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The time when the file was queried.</p>
              * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
@@ -245,7 +274,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The time when the raw data was modified.</p>
+             * <p>The time when the metadata was modified.</p>
              * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
              * <p>This parameter is returned only if the value of the Type parameter is File.</p>
              * 
@@ -353,12 +382,12 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage type of the file.</p>
+             * <p>The storage class of the file.</p>
              * <p>This parameter is returned only if the value of the Type parameter is File.</p>
              * <p>Valid values:</p>
              * <ul>
              * <li>standard: General-purpose NAS file system</li>
-             * <li>InfrequentAccess: IA storage medium</li>
+             * <li>InfrequentAccess: the IA storage class.</li>
              * </ul>
              * 
              * <strong>example:</strong>

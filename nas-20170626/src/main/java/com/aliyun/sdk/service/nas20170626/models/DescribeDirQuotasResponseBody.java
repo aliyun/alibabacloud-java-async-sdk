@@ -48,6 +48,10 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dirQuotaInfos
      */
@@ -89,6 +93,17 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDirQuotasResponseBody model) {
+            this.dirQuotaInfos = model.dirQuotaInfos;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried directory quotas.</p>
@@ -264,6 +279,20 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             private String userId; 
             private String userType; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserQuotaInfos model) {
+                this.fileCountLimit = model.fileCountLimit;
+                this.fileCountReal = model.fileCountReal;
+                this.quotaType = model.quotaType;
+                this.sizeLimit = model.sizeLimit;
+                this.sizeReal = model.sizeReal;
+                this.sizeRealInByte = model.sizeRealInByte;
+                this.userId = model.userId;
+                this.userType = model.userType;
+            } 
+
             /**
              * <p>The maximum number of files that a user can create in the directory.</p>
              * 
@@ -430,6 +459,16 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             private String path; 
             private String status; 
             private java.util.List<UserQuotaInfos> userQuotaInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(DirQuotaInfos model) {
+                this.dirInode = model.dirInode;
+                this.path = model.path;
+                this.status = model.status;
+                this.userQuotaInfos = model.userQuotaInfos;
+            } 
 
             /**
              * <p>The inode number of the directory.</p>

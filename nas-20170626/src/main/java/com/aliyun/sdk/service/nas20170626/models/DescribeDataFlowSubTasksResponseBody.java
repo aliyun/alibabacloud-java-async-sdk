@@ -40,6 +40,10 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataFlowSubTask
      */
@@ -65,6 +69,15 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
         private DataFlowSubTask dataFlowSubTask; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataFlowSubTasksResponseBody model) {
+            this.dataFlowSubTask = model.dataFlowSubTask;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about data streaming tasks.</p>
@@ -157,6 +170,15 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             private String checksum; 
             private Long modifyTime; 
             private Long size; 
+
+            private Builder() {
+            } 
+
+            private Builder(FileDetail model) {
+                this.checksum = model.checksum;
+                this.modifyTime = model.modifyTime;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The checksum. Format example: crc64:123456.</p>
@@ -265,6 +287,16 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             private Long averageSpeed; 
             private Long bytesDone; 
             private Long bytesTotal; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProgressStats model) {
+                this.actualBytes = model.actualBytes;
+                this.averageSpeed = model.averageSpeed;
+                this.bytesDone = model.bytesDone;
+                this.bytesTotal = model.bytesTotal;
+            } 
 
             /**
              * <p>The actual amount of data for which the data flow task is complete. Unit: bytes.</p>
@@ -505,6 +537,26 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataFlowSubTaskDataFlowSubTask model) {
+                this.createTime = model.createTime;
+                this.dataFlowId = model.dataFlowId;
+                this.dataFlowSubTaskId = model.dataFlowSubTaskId;
+                this.dataFlowTaskId = model.dataFlowTaskId;
+                this.dstFilePath = model.dstFilePath;
+                this.endTime = model.endTime;
+                this.errorMsg = model.errorMsg;
+                this.fileDetail = model.fileDetail;
+                this.fileSystemId = model.fileSystemId;
+                this.progress = model.progress;
+                this.progressStats = model.progressStats;
+                this.srcFilePath = model.srcFilePath;
+                this.startTime = model.startTime;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The time when the data streaming task was created.</p>
              * 
@@ -709,6 +761,13 @@ public class DescribeDataFlowSubTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataFlowSubTaskDataFlowSubTask> dataFlowSubTask; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataFlowSubTask model) {
+                this.dataFlowSubTask = model.dataFlowSubTask;
+            } 
 
             /**
              * <p>The details about data streaming tasks.</p>

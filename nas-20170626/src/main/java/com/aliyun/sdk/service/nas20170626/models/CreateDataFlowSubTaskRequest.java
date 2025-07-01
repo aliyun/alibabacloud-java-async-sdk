@@ -74,7 +74,7 @@ public class CreateDataFlowSubTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -334,6 +334,14 @@ public class CreateDataFlowSubTaskRequest extends Request {
         public static final class Builder {
             private Long modifyTime; 
             private Long size; 
+
+            private Builder() {
+            } 
+
+            private Builder(Condition model) {
+                this.modifyTime = model.modifyTime;
+                this.size = model.size;
+            } 
 
             /**
              * <p>The modification time. The value must be a UNIX timestamp. Unit: ns.</p>

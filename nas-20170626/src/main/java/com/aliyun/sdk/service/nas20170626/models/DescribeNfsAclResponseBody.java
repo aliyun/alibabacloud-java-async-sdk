@@ -36,6 +36,10 @@ public class DescribeNfsAclResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acl
      */
@@ -53,6 +57,14 @@ public class DescribeNfsAclResponseBody extends TeaModel {
     public static final class Builder {
         private Acl acl; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeNfsAclResponseBody model) {
+            this.acl = model.acl;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the ACL feature.</p>
@@ -110,6 +122,13 @@ public class DescribeNfsAclResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(Acl model) {
+                this.enabled = model.enabled;
+            } 
 
             /**
              * <p>Indicates whether the NFS ACL feature is enabled.</p>

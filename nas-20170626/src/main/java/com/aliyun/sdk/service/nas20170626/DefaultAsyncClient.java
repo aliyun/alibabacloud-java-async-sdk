@@ -65,34 +65,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI AddTags is deprecated, please use NAS::2017-06-26::TagResources instead.  * @description >  The tag feature has been upgraded and this document will be unpublished. For more information, see TagResources.
-     * *   Each tag consists of a tag key (TagKey) and a tag value (TagValue).
-     * *   Placeholders at the start and end of each TagKey and TagValue are automatically removed. Placeholders include the spacebar ( ), tab (\\t), line break (\\n), and carriage return (\\r).
-     * *   You must specify a tag key. You can leave a tag value empty.
-     * *   The tag key and tag value are not case-sensitive.
-     * *   A tag key can be up to 64 characters in length and a tag value can be up to 128 characters in length.
-     * *   You can add a maximum of 10 tags to a file system. If you add two tags with the same tag key, the newly added tag will overwrite the existing tag.
-     * *   If you remove a tag from all linked file systems, the tag is automatically deleted.
-     * 
-     * @param request the request parameters of AddTags  AddTagsRequest
-     * @return AddTagsResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<AddTagsResponse> addTags(AddTagsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AddTags").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AddTagsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<AddTagsResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * <b>description</b> :
      * <p>  The snapshot feature is in public preview and is provided free of charge. <a href="https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement">File Storage NAS Service Level Agreement (SLA)</a> is not guaranteed in public preview.</p>
      * <ul>
@@ -1080,9 +1052,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.7.0 and later support this operation. After you delete a fileset, all data in the fileset is deleted and cannot be restored. Proceed with caution.</p>
+     * <p>  Only Cloud Parallel File Storage (CPFS) for Lingjun V2.7.0 and later support this operation. After you delete a fileset, all data in the fileset is deleted and cannot be restored. Proceed with caution.</p>
      * <ul>
      * <li>If deletion protection is enabled for the fileset, you must disable deletion protection before you delete the fileset.</li>
+     * <li>After you delete a fileset of CPFS for Lingjun, the storage space is not immediately released and will be recycled within 24 hours. If you want to release storage space immediately, you can clear the data in the fileset and then delete the fileset. Deleted data cannot be restored. Proceed with caution.</li>
      * </ul>
      * 
      * @param request the request parameters of DeleteFileset  DeleteFilesetRequest
@@ -2386,7 +2359,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI RemoveClientFromBlackList is deprecated  * @description The IP address of a client to remove from the blacklist.
+     * @deprecated OpenAPI RemoveClientFromBlackList is deprecated  * @description The API operation is available only for CPFS file systems.
      * 
      * @param request the request parameters of RemoveClientFromBlackList  RemoveClientFromBlackListRequest
      * @return RemoveClientFromBlackListResponse
@@ -2401,28 +2374,6 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<RemoveClientFromBlackListResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @deprecated OpenAPI RemoveTags is deprecated, please use NAS::2017-06-26::UntagResources instead.  * @description >  The tag feature has been upgraded and this document will be unpublished. For more information, see UntagResources.
-     * A request ID is returned even if the tag that you want to remove or the associated file system does not exist. For example, if the associated file system does not exist, or the TagKey and TagValue cannot be found, a request ID is still returned.
-     * 
-     * @param request the request parameters of RemoveTags  RemoveTagsRequest
-     * @return RemoveTagsResponse
-     */
-    @Deprecated
-    @Override
-    public CompletableFuture<RemoveTagsResponse> removeTags(RemoveTagsRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("RemoveTags").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RemoveTagsResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<RemoveTagsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2498,12 +2449,12 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>  Only Cloud Parallel File Storage (CPFS) for LINGJUN V2.7.0 and later support this operation.</p>
+     * <p>  Only Cloud Parallel File Storage (CPFS) for Lingjun V2.7.0 and later support this operation.</p>
      * <ul>
-     * <li>The minimum capacity quota of a fileset is 10 GiB, and the maximum capacity quota is 1,000 TiB. The scaling step size is 1 GiB. The capacity quota cannot exceed the total capacity of the file system.</li>
+     * <li>The minimum capacity quota of a fileset is 10 GiB. The scaling step size is 1 GiB.</li>
      * <li>A fileset supports a minimum of 10,000 files or directories and a maximum of 10 billion files or directories. The scaling step size is 1.</li>
      * <li>When you modify a directory quota, you must set the quota capacity or the file quantity to be greater than the capacity or file quantity that has been used.</li>
-     * <li>The quota statistics have a 5-minute latency. The actual usage takes effect after 5 minutes.</li>
+     * <li>The quota statistics have a 15-minute latency. The actual usage takes effect after 15 minutes.</li>
      * </ul>
      * 
      * @param request the request parameters of SetFilesetQuota  SetFilesetQuotaRequest

@@ -48,6 +48,10 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return packages
      */
@@ -89,6 +93,17 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeStoragePackagesResponseBody model) {
+            this.packages = model.packages;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of storage plans.</p>
@@ -252,6 +267,19 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
             private String status; 
             private String storageType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Package model) {
+                this.expiredTime = model.expiredTime;
+                this.fileSystemId = model.fileSystemId;
+                this.packageId = model.packageId;
+                this.size = model.size;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.storageType = model.storageType;
+            } 
+
             /**
              * <p>The end time of the validity period for the storage plan.</p>
              * 
@@ -378,6 +406,13 @@ public class DescribeStoragePackagesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Package> _package; 
+
+            private Builder() {
+            } 
+
+            private Builder(Packages model) {
+                this._package = model._package;
+            } 
 
             /**
              * Package.

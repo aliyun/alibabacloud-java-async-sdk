@@ -36,6 +36,10 @@ public class DescribeSmbAclResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return acl
      */
@@ -53,6 +57,14 @@ public class DescribeSmbAclResponseBody extends TeaModel {
     public static final class Builder {
         private Acl acl; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSmbAclResponseBody model) {
+            this.acl = model.acl;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the ACL feature.</p>
@@ -170,6 +182,18 @@ public class DescribeSmbAclResponseBody extends TeaModel {
             private String homeDirPath; 
             private Boolean rejectUnencryptedAccess; 
             private String superAdminSid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Acl model) {
+                this.enableAnonymousAccess = model.enableAnonymousAccess;
+                this.enabled = model.enabled;
+                this.encryptData = model.encryptData;
+                this.homeDirPath = model.homeDirPath;
+                this.rejectUnencryptedAccess = model.rejectUnencryptedAccess;
+                this.superAdminSid = model.superAdminSid;
+            } 
 
             /**
              * <p>Indicates whether the file system allows anonymous access. Valid values:</p>

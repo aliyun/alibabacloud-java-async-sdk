@@ -36,6 +36,10 @@ public class CreateDataFlowSubTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataFlowSubTaskId
      */
@@ -53,6 +57,14 @@ public class CreateDataFlowSubTaskResponseBody extends TeaModel {
     public static final class Builder {
         private String dataFlowSubTaskId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDataFlowSubTaskResponseBody model) {
+            this.dataFlowSubTaskId = model.dataFlowSubTaskId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the data streaming task.</p>

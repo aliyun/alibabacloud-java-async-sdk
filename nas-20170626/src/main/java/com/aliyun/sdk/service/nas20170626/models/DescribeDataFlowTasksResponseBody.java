@@ -40,6 +40,10 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private TaskInfo taskInfo; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataFlowTasksResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.taskInfo = model.taskInfo;
+        } 
 
         /**
          * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
@@ -218,6 +231,20 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             private Long filesTotal; 
             private Long remainTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProgressStats model) {
+                this.actualBytes = model.actualBytes;
+                this.actualFiles = model.actualFiles;
+                this.averageSpeed = model.averageSpeed;
+                this.bytesDone = model.bytesDone;
+                this.bytesTotal = model.bytesTotal;
+                this.filesDone = model.filesDone;
+                this.filesTotal = model.filesTotal;
+                this.remainTime = model.remainTime;
+            } 
+
             /**
              * <p>The actual amount of data for which the data flow task is complete. Unit: bytes.</p>
              * 
@@ -357,6 +384,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             private String name; 
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(Report model) {
+                this.name = model.name;
+                this.path = model.path;
+            } 
+
             /**
              * <p>The name of the report.</p>
              * <ul>
@@ -427,6 +462,13 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Report> report; 
 
+            private Builder() {
+            } 
+
+            private Builder(Reports model) {
+                this.report = model.report;
+            } 
+
             /**
              * Report.
              */
@@ -482,6 +524,9 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FsPath")
         private String fsPath;
 
+        @com.aliyun.core.annotation.NameInMap("Includes")
+        private String includes;
+
         @com.aliyun.core.annotation.NameInMap("Originator")
         private String originator;
 
@@ -525,6 +570,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             this.fileSystemPath = builder.fileSystemPath;
             this.filesystemId = builder.filesystemId;
             this.fsPath = builder.fsPath;
+            this.includes = builder.includes;
             this.originator = builder.originator;
             this.progress = builder.progress;
             this.progressStats = builder.progressStats;
@@ -623,6 +669,13 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
         }
 
         /**
+         * @return includes
+         */
+        public String getIncludes() {
+            return this.includes;
+        }
+
+        /**
          * @return originator
          */
         public String getOriginator() {
@@ -704,6 +757,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             private String fileSystemPath; 
             private String filesystemId; 
             private String fsPath; 
+            private String includes; 
             private String originator; 
             private Long progress; 
             private ProgressStats progressStats; 
@@ -714,6 +768,34 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
             private String status; 
             private String taskAction; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Task model) {
+                this.conflictPolicy = model.conflictPolicy;
+                this.createTime = model.createTime;
+                this.dataFlowId = model.dataFlowId;
+                this.dataType = model.dataType;
+                this.directory = model.directory;
+                this.dstDirectory = model.dstDirectory;
+                this.endTime = model.endTime;
+                this.errorMsg = model.errorMsg;
+                this.fileSystemPath = model.fileSystemPath;
+                this.filesystemId = model.filesystemId;
+                this.fsPath = model.fsPath;
+                this.includes = model.includes;
+                this.originator = model.originator;
+                this.progress = model.progress;
+                this.progressStats = model.progressStats;
+                this.reportPath = model.reportPath;
+                this.reports = model.reports;
+                this.sourceStorage = model.sourceStorage;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.taskAction = model.taskAction;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The conflict policy for files with the same name. Valid values:</p>
@@ -856,6 +938,14 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
              */
             public Builder fsPath(String fsPath) {
                 this.fsPath = fsPath;
+                return this;
+            }
+
+            /**
+             * Includes.
+             */
+            public Builder includes(String includes) {
+                this.includes = includes;
                 return this;
             }
 
@@ -1056,6 +1146,13 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Task> task; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskInfo model) {
+                this.task = model.task;
+            } 
 
             /**
              * Task.

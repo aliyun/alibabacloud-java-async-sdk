@@ -40,6 +40,10 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return entries
      */
@@ -65,6 +69,15 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
         private java.util.List<Entries> entries; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRecentlyRecycledDirectoriesResponseBody model) {
+            this.entries = model.entries;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the directories that are recently deleted.</p>
@@ -170,6 +183,16 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
             private String lastDeleteTime; 
             private String name; 
             private String path; 
+
+            private Builder() {
+            } 
+
+            private Builder(Entries model) {
+                this.fileId = model.fileId;
+                this.lastDeleteTime = model.lastDeleteTime;
+                this.name = model.name;
+                this.path = model.path;
+            } 
 
             /**
              * <p>The ID of the directory.</p>

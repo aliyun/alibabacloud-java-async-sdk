@@ -36,6 +36,10 @@ public class CreateProtocolServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return protocolServiceId
      */
@@ -53,6 +57,14 @@ public class CreateProtocolServiceResponseBody extends TeaModel {
     public static final class Builder {
         private String protocolServiceId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateProtocolServiceResponseBody model) {
+            this.protocolServiceId = model.protocolServiceId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the protocol service.</p>

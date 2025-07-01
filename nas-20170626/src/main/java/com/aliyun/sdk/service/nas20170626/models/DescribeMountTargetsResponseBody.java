@@ -48,6 +48,10 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return mountTargets
      */
@@ -90,8 +94,19 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeMountTargetsResponseBody model) {
+            this.mountTargets = model.mountTargets;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>The information about mount targets.</p>
+         * <p>The queried mount targets.</p>
          */
         public Builder mountTargets(MountTargets mountTargets) {
             this.mountTargets = mountTargets;
@@ -204,6 +219,15 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             private String ecsId; 
             private String ecsIp; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClientMasterNode model) {
+                this.defaultPasswd = model.defaultPasswd;
+                this.ecsId = model.ecsId;
+                this.ecsIp = model.ecsIp;
+            } 
+
             /**
              * <p>The default logon password of the ECS instance.</p>
              * 
@@ -276,6 +300,13 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ClientMasterNode> clientMasterNode; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClientMasterNodes model) {
+                this.clientMasterNode = model.clientMasterNode;
+            } 
+
             /**
              * ClientMasterNode.
              */
@@ -286,6 +317,152 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
 
             public ClientMasterNodes build() {
                 return new ClientMasterNodes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeMountTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMountTargetsResponseBody</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The tag key. Limits:</p>
+             * <ul>
+             * <li>The tag key cannot be null or an empty string.</li>
+             * <li>The tag key can be up to 128 characters in length.</li>
+             * <li>The key value cannot start with aliyun or acs:.</li>
+             * <li>The key value cannot contain http:// or https://.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>nastest</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The tag value.</p>
+             * <p>Limits:</p>
+             * <ul>
+             * <li>The tag value can be up to 128 characters in length.</li>
+             * <li>The tag value cannot contain http:// or https://.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>mounttargettest</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeMountTargetsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeMountTargetsResponseBody</p>
+     */
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List<Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List<Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
             } 
 
         } 
@@ -319,6 +496,9 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private Tags tags;
+
         @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
@@ -333,6 +513,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             this.mountTargetDomain = builder.mountTargetDomain;
             this.networkType = builder.networkType;
             this.status = builder.status;
+            this.tags = builder.tags;
             this.vpcId = builder.vpcId;
             this.vswId = builder.vswId;
         }
@@ -395,6 +576,13 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -416,8 +604,25 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
             private String mountTargetDomain; 
             private String networkType; 
             private String status; 
+            private Tags tags; 
             private String vpcId; 
             private String vswId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountTarget model) {
+                this.accessGroup = model.accessGroup;
+                this.clientMasterNodes = model.clientMasterNodes;
+                this.dualStackMountTargetDomain = model.dualStackMountTargetDomain;
+                this.IPVersion = model.IPVersion;
+                this.mountTargetDomain = model.mountTargetDomain;
+                this.networkType = model.networkType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.vpcId = model.vpcId;
+                this.vswId = model.vswId;
+            } 
 
             /**
              * <p>The name of the permission group that is attached to the mount target.</p>
@@ -442,7 +647,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
              * <p>The dual-stack (IPv4 and IPv6) domain name of the mount target.</p>
              * 
              * <strong>example:</strong>
-             * <p>174494b666-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
+             * <p>1ca404****-x****.dualstack.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder dualStackMountTargetDomain(String dualStackMountTargetDomain) {
                 this.dualStackMountTargetDomain = dualStackMountTargetDomain;
@@ -468,7 +673,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
              * <p>The IPv4 domain name of the mount target.</p>
              * 
              * <strong>example:</strong>
-             * <p>1ca404a666-w****.cn-hangzhou.nas.aliyuncs.com</p>
+             * <p>1ca404****-w****.cn-hangzhou.nas.aliyuncs.com</p>
              */
             public Builder mountTargetDomain(String mountTargetDomain) {
                 this.mountTargetDomain = mountTargetDomain;
@@ -506,6 +711,14 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * <p>An array of tags. The array may contain up to 20 tags. If the array contains multiple tags, each tag key is unique.</p>
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -569,6 +782,13 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MountTarget> mountTarget; 
+
+            private Builder() {
+            } 
+
+            private Builder(MountTargets model) {
+                this.mountTarget = model.mountTarget;
+            } 
 
             /**
              * MountTarget.

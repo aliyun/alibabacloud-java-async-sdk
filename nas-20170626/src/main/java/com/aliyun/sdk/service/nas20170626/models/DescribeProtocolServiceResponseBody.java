@@ -40,6 +40,10 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -65,6 +69,15 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
         private String nextToken; 
         private java.util.List<ProtocolServices> protocolServices; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeProtocolServiceResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.protocolServices = model.protocolServices;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
@@ -277,6 +290,25 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
             private Integer protocolThroughput; 
             private String protocolType; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProtocolServices model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.fileSystemId = model.fileSystemId;
+                this.instanceBaseThroughput = model.instanceBaseThroughput;
+                this.instanceBurstThroughput = model.instanceBurstThroughput;
+                this.instanceRAM = model.instanceRAM;
+                this.modifyTime = model.modifyTime;
+                this.mountTargetCount = model.mountTargetCount;
+                this.protocolServiceId = model.protocolServiceId;
+                this.protocolSpec = model.protocolSpec;
+                this.protocolThroughput = model.protocolThroughput;
+                this.protocolType = model.protocolType;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the protocol service was created. The time is displayed in UTC.</p>

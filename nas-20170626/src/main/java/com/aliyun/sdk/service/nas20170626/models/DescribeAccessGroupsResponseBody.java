@@ -48,6 +48,10 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessGroups
      */
@@ -89,6 +93,17 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccessGroupsResponseBody model) {
+            this.accessGroups = model.accessGroups;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried permission groups.</p>
@@ -264,6 +279,20 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
             private String regionId; 
             private Integer ruleCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessGroup model) {
+                this.accessGroupName = model.accessGroupName;
+                this.accessGroupType = model.accessGroupType;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.fileSystemType = model.fileSystemType;
+                this.mountTargetCount = model.mountTargetCount;
+                this.regionId = model.regionId;
+                this.ruleCount = model.ruleCount;
+            } 
+
             /**
              * <p>The name of the permission group.</p>
              * 
@@ -399,6 +428,13 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AccessGroup> accessGroup; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessGroups model) {
+                this.accessGroup = model.accessGroup;
+            } 
 
             /**
              * AccessGroup.

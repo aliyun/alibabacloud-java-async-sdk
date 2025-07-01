@@ -36,6 +36,10 @@ public class CreateFilesetResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fsetId
      */
@@ -53,6 +57,14 @@ public class CreateFilesetResponseBody extends TeaModel {
     public static final class Builder {
         private String fsetId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFilesetResponseBody model) {
+            this.fsetId = model.fsetId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The fileset ID.</p>

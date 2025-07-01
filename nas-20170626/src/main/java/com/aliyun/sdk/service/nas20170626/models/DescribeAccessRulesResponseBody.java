@@ -48,6 +48,10 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessRules
      */
@@ -89,6 +93,17 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAccessRulesResponseBody model) {
+            this.accessRules = model.accessRules;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The rules in the permission group.</p>
@@ -276,6 +291,21 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             private String sourceCidrIp; 
             private String userAccess; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessRule model) {
+                this.accessGroupName = model.accessGroupName;
+                this.accessRuleId = model.accessRuleId;
+                this.fileSystemType = model.fileSystemType;
+                this.ipv6SourceCidrIp = model.ipv6SourceCidrIp;
+                this.priority = model.priority;
+                this.RWAccess = model.RWAccess;
+                this.regionId = model.regionId;
+                this.sourceCidrIp = model.sourceCidrIp;
+                this.userAccess = model.userAccess;
+            } 
+
             /**
              * <p>The name of the permission group.</p>
              * 
@@ -429,6 +459,13 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AccessRule> accessRule; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessRules model) {
+                this.accessRule = model.accessRule;
+            } 
 
             /**
              * AccessRule.

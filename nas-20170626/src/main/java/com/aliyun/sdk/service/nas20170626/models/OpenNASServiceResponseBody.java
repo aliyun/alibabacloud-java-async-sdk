@@ -40,6 +40,10 @@ public class OpenNASServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -65,6 +69,15 @@ public class OpenNASServiceResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OpenNASServiceResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about the failed permission verification.</p>

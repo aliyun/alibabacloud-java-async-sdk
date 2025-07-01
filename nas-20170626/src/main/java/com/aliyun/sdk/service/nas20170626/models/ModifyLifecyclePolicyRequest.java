@@ -29,7 +29,6 @@ public class ModifyLifecyclePolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LifecycleRuleName")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String lifecycleRuleName;
 
     @com.aliyun.core.annotation.Query
@@ -57,7 +56,7 @@ public class ModifyLifecyclePolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -153,7 +152,6 @@ public class ModifyLifecyclePolicyRequest extends Request {
          * <li>DEFAULT_ATIME_60: Files that are not accessed in the last 60 days are dumped to the IA storage medium.</li>
          * <li>DEFAULT_ATIME_90: Files that are not accessed in the last 90 days are dumped to the IA storage medium.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_ATIME_14</p>

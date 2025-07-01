@@ -40,6 +40,10 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataFlowInfo
      */
@@ -65,6 +69,15 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         private DataFlowInfo dataFlowInfo; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDataFlowsResponseBody model) {
+            this.dataFlowInfo = model.dataFlowInfo;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details about data flows.</p>
@@ -134,6 +147,13 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
         public static final class Builder {
             private String refreshPath; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoRefresh model) {
+                this.refreshPath = model.refreshPath;
+            } 
+
             /**
              * <p>The automatic update directory. CPFS automatically checks whether the source data only in the directory is updated and imports the updated data.</p>
              * <p>Limits:</p>
@@ -192,6 +212,13 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AutoRefresh> autoRefresh; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataFlowAutoRefresh model) {
+                this.autoRefresh = model.autoRefresh;
+            } 
 
             /**
              * AutoRefresh.
@@ -432,6 +459,29 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
             private String status; 
             private Long throughput; 
             private String updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataFlow model) {
+                this.autoRefresh = model.autoRefresh;
+                this.autoRefreshInterval = model.autoRefreshInterval;
+                this.autoRefreshPolicy = model.autoRefreshPolicy;
+                this.createTime = model.createTime;
+                this.dataFlowId = model.dataFlowId;
+                this.description = model.description;
+                this.errorMessage = model.errorMessage;
+                this.fileSystemId = model.fileSystemId;
+                this.fileSystemPath = model.fileSystemPath;
+                this.fsetDescription = model.fsetDescription;
+                this.fsetId = model.fsetId;
+                this.sourceSecurityType = model.sourceSecurityType;
+                this.sourceStorage = model.sourceStorage;
+                this.sourceStoragePath = model.sourceStoragePath;
+                this.status = model.status;
+                this.throughput = model.throughput;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The details about automatic update policies.</p>
@@ -735,6 +785,13 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<DataFlow> dataFlow; 
+
+            private Builder() {
+            } 
+
+            private Builder(DataFlowInfo model) {
+                this.dataFlow = model.dataFlow;
+            } 
 
             /**
              * DataFlow.

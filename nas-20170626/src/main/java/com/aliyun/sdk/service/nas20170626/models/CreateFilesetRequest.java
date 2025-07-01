@@ -67,7 +67,7 @@ public class CreateFilesetRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -318,6 +318,14 @@ public class CreateFilesetRequest extends Request {
         public static final class Builder {
             private Long fileCountLimit; 
             private Long sizeLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.fileCountLimit = model.fileCountLimit;
+                this.sizeLimit = model.sizeLimit;
+            } 
 
             /**
              * <p>The number of files of the quota. Valid values:</p>

@@ -45,6 +45,10 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return entries
      */
@@ -78,6 +82,16 @@ public class DescribeFilesetsResponseBody extends TeaModel {
         private String fileSystemId; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeFilesetsResponseBody model) {
+            this.entries = model.entries;
+            this.fileSystemId = model.fileSystemId;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The fileset information.</p>
@@ -177,10 +191,20 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             private Long fileCountLimit; 
             private Long sizeLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(Quota model) {
+                this.fileCountLimit = model.fileCountLimit;
+                this.sizeLimit = model.sizeLimit;
+            } 
+
             /**
-             * <p>The limit of the file quantity of the quota. Valid values:</p>
-             * <p>Minimum value: 10000.</p>
-             * <p>Maximum value: 10000000000.</p>
+             * <p>The file quantity quota. Valid values:</p>
+             * <ul>
+             * <li>Minimum value: 10000.</li>
+             * <li>Maximum value: 10000000000.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>10000</p>
@@ -191,10 +215,11 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The limit of the quota capacity. Unit: bytes.</p>
-             * <p>Minimum value: 10737418240 (10 GiB).</p>
-             * <p>Maximum value: 1073741824000 (1024000 GiB).</p>
-             * <p>Step size: 1073741824 (1 GiB).</p>
+             * <p>The capacity quota. Unit: bytes.</p>
+             * <ul>
+             * <li>Minimum value: 10737418240 (10 GiB).</li>
+             * <li>Step size: 1073741824 (1 GiB).</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>10737418240</p>
@@ -363,6 +388,23 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             private String status; 
             private String updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Entrie model) {
+                this.createTime = model.createTime;
+                this.deletionProtection = model.deletionProtection;
+                this.description = model.description;
+                this.fileCountUsage = model.fileCountUsage;
+                this.fileSystemId = model.fileSystemId;
+                this.fileSystemPath = model.fileSystemPath;
+                this.fsetId = model.fsetId;
+                this.quota = model.quota;
+                this.spaceUsage = model.spaceUsage;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The time when the fileset was created.</p>
              * <p>The time follows the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format.</p>
@@ -461,7 +503,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
             /**
              * <p>The quota information.</p>
              * <blockquote>
-             * <p> Only CPFS for LINGJUN V2.7.0 and later support this parameter.</p>
+             * <p> Only CPFS for Lingjun V2.7.0 and later support this parameter.</p>
              * </blockquote>
              */
             public Builder quota(Quota quota) {
@@ -550,6 +592,13 @@ public class DescribeFilesetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Entrie> entrie; 
+
+            private Builder() {
+            } 
+
+            private Builder(Entries model) {
+                this.entrie = model.entrie;
+            } 
 
             /**
              * Entrie.

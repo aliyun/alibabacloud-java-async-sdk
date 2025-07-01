@@ -48,6 +48,10 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageNumber
      */
@@ -89,6 +93,17 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         private String requestId; 
         private Snapshots snapshots; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeSnapshotsResponseBody model) {
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.snapshots = model.snapshots;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The page number.</p>
@@ -348,6 +363,27 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String sourceFileSystemVersion; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Snapshot model) {
+                this.completedTime = model.completedTime;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.encryptType = model.encryptType;
+                this.fileSystemType = model.fileSystemType;
+                this.progress = model.progress;
+                this.remainTime = model.remainTime;
+                this.retentionDays = model.retentionDays;
+                this.snapshotId = model.snapshotId;
+                this.snapshotName = model.snapshotName;
+                this.snapshotType = model.snapshotType;
+                this.sourceFileSystemId = model.sourceFileSystemId;
+                this.sourceFileSystemSize = model.sourceFileSystemSize;
+                this.sourceFileSystemVersion = model.sourceFileSystemVersion;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The time when snapshot creation was complete.</p>
              * <p>The time follows the <a href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> standard in UTC. The time is displayed in the <code>yyyy-MM-ddThh:mmZ</code> format.</p>
@@ -581,6 +617,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Snapshot> snapshot; 
+
+            private Builder() {
+            } 
+
+            private Builder(Snapshots model) {
+                this.snapshot = model.snapshot;
+            } 
 
             /**
              * Snapshot.

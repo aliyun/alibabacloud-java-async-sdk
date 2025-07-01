@@ -36,6 +36,10 @@ public class CreateFileSystemResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fileSystemId
      */
@@ -53,6 +57,14 @@ public class CreateFileSystemResponseBody extends TeaModel {
     public static final class Builder {
         private String fileSystemId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateFileSystemResponseBody model) {
+            this.fileSystemId = model.fileSystemId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the file system that is created.</p>

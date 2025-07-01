@@ -69,7 +69,7 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -285,6 +285,13 @@ public class ApplyDataFlowAutoRefreshRequest extends Request {
 
         public static final class Builder {
             private String refreshPath; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoRefreshs model) {
+                this.refreshPath = model.refreshPath;
+            } 
 
             /**
              * <p>The automatic update directory. CPFS automatically checks whether the source data only in the directory is updated and imports the updated data.</p>

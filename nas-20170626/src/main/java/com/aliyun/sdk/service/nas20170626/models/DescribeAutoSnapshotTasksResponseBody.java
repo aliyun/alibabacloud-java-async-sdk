@@ -48,6 +48,10 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoSnapshotTasks
      */
@@ -89,6 +93,17 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoSnapshotTasksResponseBody model) {
+            this.autoSnapshotTasks = model.autoSnapshotTasks;
+            this.pageNumber = model.pageNumber;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried automatic snapshot tasks.</p>
@@ -192,6 +207,14 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
             private String autoSnapshotPolicyId; 
             private String sourceFileSystemId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoSnapshotTask model) {
+                this.autoSnapshotPolicyId = model.autoSnapshotPolicyId;
+                this.sourceFileSystemId = model.sourceFileSystemId;
+            } 
+
             /**
              * <p>The ID of the automatic snapshot policy.</p>
              * 
@@ -252,6 +275,13 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AutoSnapshotTask> autoSnapshotTask; 
+
+            private Builder() {
+            } 
+
+            private Builder(AutoSnapshotTasks model) {
+                this.autoSnapshotTask = model.autoSnapshotTask;
+            } 
 
             /**
              * AutoSnapshotTask.
