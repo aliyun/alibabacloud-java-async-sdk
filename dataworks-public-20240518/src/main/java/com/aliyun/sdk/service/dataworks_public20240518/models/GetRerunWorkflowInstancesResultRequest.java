@@ -83,6 +83,7 @@ public class GetRerunWorkflowInstancesResultRequest extends Request {
         }
 
         /**
+         * <p>The operation ID used to asynchronously query the result of the workflow instance rerun. This value is obtained from the RerunWorkflowInstances operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

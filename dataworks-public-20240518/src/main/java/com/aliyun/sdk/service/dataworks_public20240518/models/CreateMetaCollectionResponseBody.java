@@ -67,7 +67,10 @@ public class CreateMetaCollectionResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The ID of the created collection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>category.123</p>
          */
         public Builder id(String id) {
             this.id = id;

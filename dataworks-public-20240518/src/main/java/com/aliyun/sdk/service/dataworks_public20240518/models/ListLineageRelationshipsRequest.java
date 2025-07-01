@@ -183,6 +183,7 @@ public class ListLineageRelationshipsRequest extends Request {
         }
 
         /**
+         * <p>The destination entity ID. For more information, see the table ID or field ID in the response returned by the ListTables or ListColumns operation. You can also specify a custom entity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -245,6 +246,7 @@ public class ListLineageRelationshipsRequest extends Request {
         }
 
         /**
+         * <p>The source entity ID. For more information, see the table ID or field ID in the response returned by the ListTables or ListColumns operation. You can also specify a custom entity ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

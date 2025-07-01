@@ -125,7 +125,7 @@ public class UpdateMetaCollectionRequest extends Request {
         }
 
         /**
-         * Administrators.
+         * <p>The collection administrator IDs. This parameter is available only for data albums. The administrator must be an account within the same tenant.</p>
          */
         public Builder administrators(java.util.List<String> administrators) {
             String administratorsShrink = shrink(administrators, "Administrators", "simple");
@@ -144,6 +144,7 @@ public class UpdateMetaCollectionRequest extends Request {
         }
 
         /**
+         * <p>The collection ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

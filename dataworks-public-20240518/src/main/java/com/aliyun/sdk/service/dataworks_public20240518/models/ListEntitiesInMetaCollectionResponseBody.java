@@ -67,7 +67,7 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -233,7 +233,10 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The entity ID. Entities can only be tables. This parameter is left empty if the entity is deleted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dlf-table:123456789:test_catalog:test_database::test_table</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -257,7 +260,10 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the entity.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dlf-table</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -350,7 +356,7 @@ public class ListEntitiesInMetaCollectionResponseBody extends TeaModel {
             } 
 
             /**
-             * Entities.
+             * <p>The entities in the collection.</p>
              */
             public Builder entities(java.util.List<Entities> entities) {
                 this.entities = entities;

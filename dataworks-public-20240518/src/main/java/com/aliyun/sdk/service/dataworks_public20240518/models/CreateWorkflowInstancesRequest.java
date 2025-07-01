@@ -722,6 +722,9 @@ public class CreateWorkflowInstancesRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
+        @com.aliyun.core.annotation.NameInMap("PriorityWeightStrategy")
+        private String priorityWeightStrategy;
+
         @com.aliyun.core.annotation.NameInMap("RootTaskIds")
         private java.util.List<Long> rootTaskIds;
 
@@ -742,6 +745,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             this.order = builder.order;
             this.parallelism = builder.parallelism;
             this.priority = builder.priority;
+            this.priorityWeightStrategy = builder.priorityWeightStrategy;
             this.rootTaskIds = builder.rootTaskIds;
             this.runPolicy = builder.runPolicy;
             this.runtimeResource = builder.runtimeResource;
@@ -826,6 +830,13 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
+         * @return priorityWeightStrategy
+         */
+        public String getPriorityWeightStrategy() {
+            return this.priorityWeightStrategy;
+        }
+
+        /**
          * @return rootTaskIds
          */
         public java.util.List<Long> getRootTaskIds() {
@@ -857,6 +868,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             private String order; 
             private Integer parallelism; 
             private Integer priority; 
+            private String priorityWeightStrategy; 
             private java.util.List<Long> rootTaskIds; 
             private RunPolicy runPolicy; 
             private String runtimeResource; 
@@ -875,6 +887,7 @@ public class CreateWorkflowInstancesRequest extends Request {
                 this.order = model.order;
                 this.parallelism = model.parallelism;
                 this.priority = model.priority;
+                this.priorityWeightStrategy = model.priorityWeightStrategy;
                 this.rootTaskIds = model.rootTaskIds;
                 this.runPolicy = model.runPolicy;
                 this.runtimeResource = model.runtimeResource;
@@ -976,6 +989,14 @@ public class CreateWorkflowInstancesRequest extends Request {
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
+                return this;
+            }
+
+            /**
+             * PriorityWeightStrategy.
+             */
+            public Builder priorityWeightStrategy(String priorityWeightStrategy) {
+                this.priorityWeightStrategy = priorityWeightStrategy;
                 return this;
             }
 

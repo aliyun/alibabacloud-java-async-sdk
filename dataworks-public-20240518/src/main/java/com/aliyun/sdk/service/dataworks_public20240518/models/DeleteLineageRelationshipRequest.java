@@ -83,6 +83,7 @@ public class DeleteLineageRelationshipRequest extends Request {
         }
 
         /**
+         * <p>The lineage ID. For more information, see the response returned by the ListLineageRelationships operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

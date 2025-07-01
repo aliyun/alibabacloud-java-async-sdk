@@ -147,7 +147,10 @@ public class CreateMetaCollectionRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * <p>The ID of the collection of an ancestor node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>category.123</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);

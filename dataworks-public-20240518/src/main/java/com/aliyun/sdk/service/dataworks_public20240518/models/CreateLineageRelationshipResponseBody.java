@@ -80,7 +80,10 @@ public class CreateLineageRelationshipResponseBody extends TeaModel {
         } 
 
         /**
-         * Id.
+         * <p>The lineage ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110xxxx:custom-table.xxxxx:maxcompute-table.project.test_big_lineage_080901:custom-sqlxx.00001</p>
          */
         public Builder id(String id) {
             this.id = id;

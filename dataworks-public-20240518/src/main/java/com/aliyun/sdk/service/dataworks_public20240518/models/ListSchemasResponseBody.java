@@ -80,7 +80,7 @@ public class ListSchemasResponseBody extends TeaModel {
         } 
 
         /**
-         * PagingInfo.
+         * <p>The pagination information.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -88,7 +88,10 @@ public class ListSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>235BBA5E-3428-XXXXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -96,7 +99,10 @@ public class ListSchemasResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request was successful.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -196,7 +202,10 @@ public class ListSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -204,7 +213,7 @@ public class ListSchemasResponseBody extends TeaModel {
             }
 
             /**
-             * Schemas.
+             * <p>The schemas.</p>
              */
             public Builder schemas(java.util.List<Schema> schemas) {
                 this.schemas = schemas;

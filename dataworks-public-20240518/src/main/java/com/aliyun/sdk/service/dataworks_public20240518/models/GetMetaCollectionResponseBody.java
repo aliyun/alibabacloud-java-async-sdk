@@ -67,7 +67,7 @@ public class GetMetaCollectionResponseBody extends TeaModel {
         } 
 
         /**
-         * MetaCollection.
+         * <p>The information about the collection.</p>
          */
         public Builder metaCollection(MetaCollection metaCollection) {
             this.metaCollection = metaCollection;
@@ -267,7 +267,10 @@ public class GetMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The collection ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category.123</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -291,7 +294,10 @@ public class GetMetaCollectionResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The ID of the collection of the ancestor node. This parameter can be left empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category.12</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;

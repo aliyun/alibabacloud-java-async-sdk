@@ -67,7 +67,10 @@ public class GetRerunWorkflowInstancesResultResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID, used for log tracing and troubleshooting.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -75,7 +78,7 @@ public class GetRerunWorkflowInstancesResultResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The result of the workflow instance rerun.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -141,7 +144,10 @@ public class GetRerunWorkflowInstancesResultResponseBody extends TeaModel {
             } 
 
             /**
-             * FailureMessage.
+             * <p>The failure message. Returned if the rerun fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Invalid Param xxx</p>
              */
             public Builder failureMessage(String failureMessage) {
                 this.failureMessage = failureMessage;
@@ -149,7 +155,10 @@ public class GetRerunWorkflowInstancesResultResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status. NotRun Success Failure</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder status(String status) {
                 this.status = status;

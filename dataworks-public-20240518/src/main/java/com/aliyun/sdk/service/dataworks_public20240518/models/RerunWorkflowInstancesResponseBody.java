@@ -67,7 +67,10 @@ public class RerunWorkflowInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * OperationId.
+         * <p>The operation ID. You can use this value to query the creation result via the GetRerunWorkflowInstancesResult operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e15ad21c-b0e9-4792-8f55-b037xxxxxxxx</p>
          */
         public Builder operationId(String operationId) {
             this.operationId = operationId;
@@ -75,7 +78,10 @@ public class RerunWorkflowInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID. Used for troubleshooting and log tracking.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>22C97E95-F023-56B5-8852-B1A77A17XXXX</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

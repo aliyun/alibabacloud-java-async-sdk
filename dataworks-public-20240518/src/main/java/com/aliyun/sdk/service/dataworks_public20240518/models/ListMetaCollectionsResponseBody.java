@@ -67,7 +67,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
         } 
 
         /**
-         * Data.
+         * <p>The data.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -243,7 +243,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the collection was created. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1668568601000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -267,7 +270,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The ID of the collection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category.123</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -275,7 +281,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * <p>The time when the collection was modified. The value is a UNIX timestamp. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1668568601000</p>
              */
             public Builder modifyTime(Long modifyTime) {
                 this.modifyTime = modifyTime;
@@ -291,7 +300,10 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * ParentId.
+             * <p>The ID of the collection of the ancestor node. This parameter can be left empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>category.1</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -392,7 +404,7 @@ public class ListMetaCollectionsResponseBody extends TeaModel {
             } 
 
             /**
-             * MetaCollections.
+             * <p>The collections.</p>
              */
             public Builder metaCollections(java.util.List<MetaCollections> metaCollections) {
                 this.metaCollections = metaCollections;

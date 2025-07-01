@@ -83,6 +83,7 @@ public class GetMetaCollectionRequest extends Request {
         }
 
         /**
+         * <p>The collection ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

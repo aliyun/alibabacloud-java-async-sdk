@@ -195,7 +195,15 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * DstEntityId.
+         * <p>The destination entity ID. For more information, see the table ID or field ID in the response returned by the ListTables or ListColumns operation. You can also specify a custom entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table:123456XXX::test_project::test_tbl
+         * dlf-table:123456XXX:test_catalog:test_db::test_tbl
+         * hms-table:c-abc123xxx::test_db::test_tbl
+         * holo-table:h-abc123xxx::test_db:test_schema:test_tbl
+         * custom-api:api123
+         * custom-table:table456</p>
          */
         public Builder dstEntityId(String dstEntityId) {
             this.putQueryParameter("DstEntityId", dstEntityId);
@@ -258,7 +266,15 @@ public class ListLineagesRequest extends Request {
         }
 
         /**
-         * SrcEntityId.
+         * <p>The source entity ID. For more information, see the table ID or field ID in the response returned by the ListTables or ListColumns operation. You can also specify a custom entity ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>maxcompute-table:123456XXX::test_project::test_tbl
+         * dlf-table:123456XXX:test_catalog:test_db::test_tbl
+         * hms-table:c-abc123xxx::test_db::test_tbl
+         * holo-table:h-abc123xxx::test_db:test_schema:test_tbl
+         * custom-api:api123
+         * custom-table:table456</p>
          */
         public Builder srcEntityId(String srcEntityId) {
             this.putQueryParameter("SrcEntityId", srcEntityId);

@@ -96,7 +96,10 @@ public class RemoveEntityFromMetaCollectionRequest extends Request {
         }
 
         /**
-         * Id.
+         * <p>The entity ID. Currently, entities can only be tables. You can call the ListTables operation to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlf-table:123456789:test_catalog:test_database::test_table</p>
          */
         public Builder id(String id) {
             this.putQueryParameter("Id", id);
@@ -105,7 +108,10 @@ public class RemoveEntityFromMetaCollectionRequest extends Request {
         }
 
         /**
-         * MetaCollectionId.
+         * <p>The collection ID. You can call the ListMetaCollections operation to query the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>category.123</p>
          */
         public Builder metaCollectionId(String metaCollectionId) {
             this.putQueryParameter("MetaCollectionId", metaCollectionId);

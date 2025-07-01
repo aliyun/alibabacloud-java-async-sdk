@@ -130,7 +130,7 @@ public class CreateLineageRelationshipRequest extends Request {
         }
 
         /**
-         * Task.
+         * <p>The task information.</p>
          */
         public Builder task(LineageTask task) {
             String taskShrink = shrink(task, "Task", "json");

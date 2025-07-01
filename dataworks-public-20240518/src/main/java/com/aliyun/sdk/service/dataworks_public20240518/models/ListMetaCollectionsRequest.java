@@ -272,7 +272,10 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
-         * ParentId.
+         * <p>The ID of the collection of an ancestor node.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>category.123</p>
          */
         public Builder parentId(String parentId) {
             this.putQueryParameter("ParentId", parentId);
@@ -290,6 +293,12 @@ public class ListMetaCollectionsRequest extends Request {
         }
 
         /**
+         * <p>The type of the collection. Valid values:</p>
+         * <ul>
+         * <li>Category</li>
+         * <li>Album</li>
+         * <li>AlbumCategory</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

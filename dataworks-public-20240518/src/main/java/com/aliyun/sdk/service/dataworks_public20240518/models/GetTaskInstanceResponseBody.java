@@ -78,7 +78,7 @@ public class GetTaskInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the instance.</p>
+         * <p>The details of the task instance.</p>
          */
         public Builder taskInstance(TaskInstance taskInstance) {
             this.taskInstance = taskInstance;

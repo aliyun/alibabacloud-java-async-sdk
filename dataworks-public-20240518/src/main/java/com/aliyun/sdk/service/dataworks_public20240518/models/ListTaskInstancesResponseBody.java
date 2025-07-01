@@ -67,7 +67,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The pagination information.</p>
+         * <p>The pagination details.</p>
          */
         public Builder pagingInfo(PagingInfo pagingInfo) {
             this.pagingInfo = pagingInfo;
@@ -1333,7 +1333,7 @@ public class ListTaskInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The instances.</p>
+             * <p>The list of task instances.</p>
              */
             public Builder taskInstances(java.util.List<TaskInstances> taskInstances) {
                 this.taskInstances = taskInstances;

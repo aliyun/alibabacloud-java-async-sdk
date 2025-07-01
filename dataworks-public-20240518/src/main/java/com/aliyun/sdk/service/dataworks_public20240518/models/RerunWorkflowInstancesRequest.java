@@ -225,7 +225,10 @@ public class RerunWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Bizdate.
+         * <p>The business date used for matching manual workflow instances.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
          */
         public Builder bizdate(Long bizdate) {
             this.putBodyParameter("Bizdate", bizdate);
@@ -234,7 +237,10 @@ public class RerunWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * EndTriggerTime.
+         * <p>The end trigger time of the manual workflow instance used for matching. This parameter must be used together with the StartTriggerTime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
          */
         public Builder endTriggerTime(Long endTriggerTime) {
             this.putBodyParameter("EndTriggerTime", endTriggerTime);
@@ -243,7 +249,11 @@ public class RerunWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * EnvType.
+         * <p>The environment of the workspace. Valid values:</p>
+         * <p>Prod Dev</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prod</p>
          */
         public Builder envType(String envType) {
             this.putBodyParameter("EnvType", envType);
@@ -252,7 +262,7 @@ public class RerunWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Filter.
+         * <p>The match conditions for internal instances of manual workflow instances.</p>
          */
         public Builder filter(Filter filter) {
             String filterShrink = shrink(filter, "Filter", "json");
@@ -262,7 +272,7 @@ public class RerunWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Ids.
+         * <p>The instance IDs used for matching manual workflow instances.</p>
          */
         public Builder ids(java.util.List<Long> ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -272,7 +282,10 @@ public class RerunWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The manual workflow name, used for fuzzy matching.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder name(String name) {
             this.putBodyParameter("Name", name);
@@ -281,7 +294,11 @@ public class RerunWorkflowInstancesRequest extends Request {
         }
 
         /**
+         * <p>The project ID.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
          */
         public Builder projectId(Long projectId) {
             this.putBodyParameter("ProjectId", projectId);
@@ -290,7 +307,10 @@ public class RerunWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * StartTriggerTime.
+         * <p>The start trigger time (creation time) of the manual workflow instance used for matching. This parameter must be used together with EndTriggerTime.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1710239005403</p>
          */
         public Builder startTriggerTime(Long startTriggerTime) {
             this.putBodyParameter("StartTriggerTime", startTriggerTime);
@@ -299,7 +319,15 @@ public class RerunWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status used for matching manual workflow instances.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>Success</li>
+         * <li>Failure</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Failure</p>
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -308,6 +336,8 @@ public class RerunWorkflowInstancesRequest extends Request {
         }
 
         /**
+         * <p>The type of the workflow instance. Valid values:</p>
+         * <p>ManualWorkflow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -320,6 +350,7 @@ public class RerunWorkflowInstancesRequest extends Request {
         }
 
         /**
+         * <p>The workflow ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -430,7 +461,10 @@ public class RerunWorkflowInstancesRequest extends Request {
             } 
 
             /**
-             * RerunDownstreamEnabled.
+             * <p>Specifies whether to rerun the matched instances and all downstream instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder rerunDownstreamEnabled(Boolean rerunDownstreamEnabled) {
                 this.rerunDownstreamEnabled = rerunDownstreamEnabled;
@@ -438,7 +472,7 @@ public class RerunWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * TaskIds.
+             * <p>The internal task IDs used for matching manual workflow instances.</p>
              */
             public Builder taskIds(java.util.List<Long> taskIds) {
                 this.taskIds = taskIds;
@@ -446,7 +480,7 @@ public class RerunWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * TaskInstanceStatuses.
+             * <p>The statuses of internal tasks used for matching manual workflow instances.</p>
              */
             public Builder taskInstanceStatuses(java.util.List<String> taskInstanceStatuses) {
                 this.taskInstanceStatuses = taskInstanceStatuses;
@@ -454,7 +488,10 @@ public class RerunWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * TaskName.
+             * <p>The internal task name used for matching the manual workflow instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder taskName(String taskName) {
                 this.taskName = taskName;
@@ -462,7 +499,7 @@ public class RerunWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * TaskTypes.
+             * <p>Match internal tasks within the manual workflow by type.</p>
              */
             public Builder taskTypes(java.util.List<String> taskTypes) {
                 this.taskTypes = taskTypes;

@@ -199,6 +199,7 @@ public class ListPartitionsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the table to which the partitions belong. You can call the ListTables operation to query the ID. For more information, see <a href="https://help.aliyun.com/document_detail/2880092.html">Concepts related to metadata entities</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -112,6 +112,7 @@ public class AddEntityIntoMetaCollectionRequest extends Request {
         }
 
         /**
+         * <p>The entity ID. Currently, entities can only be tables. You can call the ListTables operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,6 +125,7 @@ public class AddEntityIntoMetaCollectionRequest extends Request {
         }
 
         /**
+         * <p>The collection ID. You can call the ListMetaCollections operation to query the ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

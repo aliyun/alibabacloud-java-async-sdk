@@ -140,6 +140,9 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("WorkflowId")
         private Long workflowId;
 
+        @com.aliyun.core.annotation.NameInMap("WorkflowParameters")
+        private String workflowParameters;
+
         private WorkflowInstances(Builder builder) {
             this.bizDate = builder.bizDate;
             this.createTime = builder.createTime;
@@ -155,6 +158,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             this.status = builder.status;
             this.type = builder.type;
             this.workflowId = builder.workflowId;
+            this.workflowParameters = builder.workflowParameters;
         }
 
         public static Builder builder() {
@@ -263,6 +267,13 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             return this.workflowId;
         }
 
+        /**
+         * @return workflowParameters
+         */
+        public String getWorkflowParameters() {
+            return this.workflowParameters;
+        }
+
         public static final class Builder {
             private Long bizDate; 
             private Long createTime; 
@@ -278,6 +289,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
             private String status; 
             private String type; 
             private Long workflowId; 
+            private String workflowParameters; 
 
             private Builder() {
             } 
@@ -297,6 +309,7 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
                 this.status = model.status;
                 this.type = model.type;
                 this.workflowId = model.workflowId;
+                this.workflowParameters = model.workflowParameters;
             } 
 
             /**
@@ -458,6 +471,14 @@ public class ListWorkflowInstancesResponseBody extends TeaModel {
              */
             public Builder workflowId(Long workflowId) {
                 this.workflowId = workflowId;
+                return this;
+            }
+
+            /**
+             * WorkflowParameters.
+             */
+            public Builder workflowParameters(String workflowParameters) {
+                this.workflowParameters = workflowParameters;
                 return this;
             }
 
