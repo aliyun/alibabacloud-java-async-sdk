@@ -22,6 +22,10 @@ public class ListParamsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Encrypted")
+    private Boolean encrypted;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Environment")
     private String environment;
 
@@ -50,6 +54,7 @@ public class ListParamsRequest extends Request {
     private ListParamsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.encrypted = builder.encrypted;
         this.environment = builder.environment;
         this.instanceId = builder.instanceId;
         this.name = builder.name;
@@ -76,6 +81,13 @@ public class ListParamsRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return encrypted
+     */
+    public Boolean getEncrypted() {
+        return this.encrypted;
     }
 
     /**
@@ -122,6 +134,7 @@ public class ListParamsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListParamsRequest, Builder> {
         private String regionId; 
+        private Boolean encrypted; 
         private String environment; 
         private String instanceId; 
         private String name; 
@@ -136,6 +149,7 @@ public class ListParamsRequest extends Request {
         private Builder(ListParamsRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.encrypted = request.encrypted;
             this.environment = request.environment;
             this.instanceId = request.instanceId;
             this.name = request.name;
@@ -150,6 +164,15 @@ public class ListParamsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Encrypted.
+         */
+        public Builder encrypted(Boolean encrypted) {
+            this.putQueryParameter("Encrypted", encrypted);
+            this.encrypted = encrypted;
             return this;
         }
 

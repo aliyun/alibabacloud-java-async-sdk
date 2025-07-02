@@ -958,6 +958,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GenerateAlgorithmCustomizationScript  GenerateAlgorithmCustomizationScriptRequest
+     * @return GenerateAlgorithmCustomizationScriptResponse
+     */
+    @Override
+    public CompletableFuture<GenerateAlgorithmCustomizationScriptResponse> generateAlgorithmCustomizationScript(GenerateAlgorithmCustomizationScriptRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GenerateAlgorithmCustomizationScript").setMethod(HttpMethod.POST).setPathRegex("/api/v1/algorithmcustomizations/{AlgorithmCustomizationId}/action/generatescript").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateAlgorithmCustomizationScriptResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GenerateAlgorithmCustomizationScriptResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GenerateTrafficControlTaskCode  GenerateTrafficControlTaskCodeRequest
      * @return GenerateTrafficControlTaskCodeResponse
      */

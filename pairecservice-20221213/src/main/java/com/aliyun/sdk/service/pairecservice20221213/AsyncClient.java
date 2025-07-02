@@ -326,6 +326,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteTrafficControlTaskResponse> deleteTrafficControlTask(DeleteTrafficControlTaskRequest request);
 
     /**
+     * @param request the request parameters of GenerateAlgorithmCustomizationScript  GenerateAlgorithmCustomizationScriptRequest
+     * @return GenerateAlgorithmCustomizationScriptResponse
+     */
+    CompletableFuture<GenerateAlgorithmCustomizationScriptResponse> generateAlgorithmCustomizationScript(GenerateAlgorithmCustomizationScriptRequest request);
+
+    /**
      * @param request the request parameters of GenerateTrafficControlTaskCode  GenerateTrafficControlTaskCodeRequest
      * @return GenerateTrafficControlTaskCodeResponse
      */

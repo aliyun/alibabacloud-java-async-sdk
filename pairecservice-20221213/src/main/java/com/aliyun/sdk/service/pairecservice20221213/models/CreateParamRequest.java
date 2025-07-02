@@ -38,6 +38,10 @@ public class CreateParamRequest extends Request {
     private String sceneId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
@@ -48,6 +52,7 @@ public class CreateParamRequest extends Request {
         this.instanceId = builder.instanceId;
         this.name = builder.name;
         this.sceneId = builder.sceneId;
+        this.type = builder.type;
         this.value = builder.value;
     }
 
@@ -100,6 +105,13 @@ public class CreateParamRequest extends Request {
     }
 
     /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
+    /**
      * @return value
      */
     public String getValue() {
@@ -112,6 +124,7 @@ public class CreateParamRequest extends Request {
         private String instanceId; 
         private String name; 
         private String sceneId; 
+        private String type; 
         private String value; 
 
         private Builder() {
@@ -125,6 +138,7 @@ public class CreateParamRequest extends Request {
             this.instanceId = request.instanceId;
             this.name = request.name;
             this.sceneId = request.sceneId;
+            this.type = request.type;
             this.value = request.value;
         } 
 
@@ -170,6 +184,15 @@ public class CreateParamRequest extends Request {
         public Builder sceneId(String sceneId) {
             this.putBodyParameter("SceneId", sceneId);
             this.sceneId = sceneId;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putBodyParameter("Type", type);
+            this.type = type;
             return this;
         }
 

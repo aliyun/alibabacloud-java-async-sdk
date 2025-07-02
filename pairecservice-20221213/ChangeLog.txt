@@ -1,3 +1,6 @@
+2025-07-02 Version: 3.0.5
+- Generated java-async 2022-12-13 for PaiRecService.
+
 2025-06-04 Version: 3.0.3
 - Generated java-async 2022-12-13 for PaiRecService.
 
