@@ -44,6 +44,10 @@ public class InstanceConfigDto extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configKey
      */
@@ -77,6 +81,16 @@ public class InstanceConfigDto extends TeaModel {
         private String configType; 
         private String configValue; 
         private String nodeGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstanceConfigDto model) {
+            this.configKey = model.configKey;
+            this.configType = model.configType;
+            this.configValue = model.configValue;
+            this.nodeGroupId = model.nodeGroupId;
+        } 
 
         /**
          * configKey.

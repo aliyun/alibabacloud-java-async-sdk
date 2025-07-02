@@ -32,6 +32,10 @@ public class ModifyDiskSizeRequest extends Request {
     private String nodeGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionOptionNo")
+    private String promotionOptionNo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Target")
     @com.aliyun.core.annotation.Validation(required = true, maximum = 65000)
     private Integer target;
@@ -41,6 +45,7 @@ public class ModifyDiskSizeRequest extends Request {
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.nodeGroupId = builder.nodeGroupId;
+        this.promotionOptionNo = builder.promotionOptionNo;
         this.target = builder.target;
     }
 
@@ -52,7 +57,7 @@ public class ModifyDiskSizeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -79,6 +84,13 @@ public class ModifyDiskSizeRequest extends Request {
     }
 
     /**
+     * @return promotionOptionNo
+     */
+    public String getPromotionOptionNo() {
+        return this.promotionOptionNo;
+    }
+
+    /**
      * @return target
      */
     public Integer getTarget() {
@@ -89,6 +101,7 @@ public class ModifyDiskSizeRequest extends Request {
         private String regionId; 
         private String instanceId; 
         private String nodeGroupId; 
+        private String promotionOptionNo; 
         private Integer target; 
 
         private Builder() {
@@ -100,6 +113,7 @@ public class ModifyDiskSizeRequest extends Request {
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.nodeGroupId = request.nodeGroupId;
+            this.promotionOptionNo = request.promotionOptionNo;
             this.target = request.target;
         } 
 
@@ -135,6 +149,15 @@ public class ModifyDiskSizeRequest extends Request {
         public Builder nodeGroupId(String nodeGroupId) {
             this.putQueryParameter("NodeGroupId", nodeGroupId);
             this.nodeGroupId = nodeGroupId;
+            return this;
+        }
+
+        /**
+         * PromotionOptionNo.
+         */
+        public Builder promotionOptionNo(String promotionOptionNo) {
+            this.putQueryParameter("PromotionOptionNo", promotionOptionNo);
+            this.promotionOptionNo = promotionOptionNo;
             return this;
         }
 

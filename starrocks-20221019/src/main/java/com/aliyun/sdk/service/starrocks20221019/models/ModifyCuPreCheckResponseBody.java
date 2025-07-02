@@ -56,6 +56,10 @@ public class ModifyCuPreCheckResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -113,6 +117,19 @@ public class ModifyCuPreCheckResponseBody extends TeaModel {
         private Integer httpStatusCode; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ModifyCuPreCheckResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.data = model.data;
+            this.errCode = model.errCode;
+            this.errMessage = model.errMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The detailed information about the failed permission verification.</p>
@@ -237,6 +254,14 @@ public class ModifyCuPreCheckResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean allow; 
             private String reason; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.allow = model.allow;
+                this.reason = model.reason;
+            } 
 
             /**
              * <p>Indicates whether the number of CUs can be modified.</p>

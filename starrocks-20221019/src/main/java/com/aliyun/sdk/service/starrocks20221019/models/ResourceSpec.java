@@ -56,6 +56,10 @@ public class ResourceSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cu
      */
@@ -113,6 +117,19 @@ public class ResourceSpec extends TeaModel {
         private String specType; 
         private String storagePerformanceLevel; 
         private Integer storageSize; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResourceSpec model) {
+            this.cu = model.cu;
+            this.diskNumber = model.diskNumber;
+            this.localStorageInstanceType = model.localStorageInstanceType;
+            this.nodeNumber = model.nodeNumber;
+            this.specType = model.specType;
+            this.storagePerformanceLevel = model.storagePerformanceLevel;
+            this.storageSize = model.storageSize;
+        } 
 
         /**
          * cu.
