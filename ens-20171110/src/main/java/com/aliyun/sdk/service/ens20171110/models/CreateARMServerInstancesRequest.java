@@ -53,6 +53,10 @@ public class CreateARMServerInstancesRequest extends Request {
     private String imageId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceBillingCycle")
+    private String instanceBillingCycle;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
@@ -72,12 +76,10 @@ public class CreateARMServerInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Integer period;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PeriodUnit")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String periodUnit;
 
     @com.aliyun.core.annotation.Query
@@ -109,6 +111,7 @@ public class CreateARMServerInstancesRequest extends Request {
         this.environmentVar = builder.environmentVar;
         this.frequency = builder.frequency;
         this.imageId = builder.imageId;
+        this.instanceBillingCycle = builder.instanceBillingCycle;
         this.instanceType = builder.instanceType;
         this.keyPairName = builder.keyPairName;
         this.nameSpace = builder.nameSpace;
@@ -191,6 +194,13 @@ public class CreateARMServerInstancesRequest extends Request {
     }
 
     /**
+     * @return instanceBillingCycle
+     */
+    public String getInstanceBillingCycle() {
+        return this.instanceBillingCycle;
+    }
+
+    /**
      * @return instanceType
      */
     public String getInstanceType() {
@@ -269,6 +279,7 @@ public class CreateARMServerInstancesRequest extends Request {
         private String environmentVar; 
         private Integer frequency; 
         private String imageId; 
+        private String instanceBillingCycle; 
         private String instanceType; 
         private String keyPairName; 
         private String nameSpace; 
@@ -294,6 +305,7 @@ public class CreateARMServerInstancesRequest extends Request {
             this.environmentVar = request.environmentVar;
             this.frequency = request.frequency;
             this.imageId = request.imageId;
+            this.instanceBillingCycle = request.instanceBillingCycle;
             this.instanceType = request.instanceType;
             this.keyPairName = request.keyPairName;
             this.nameSpace = request.nameSpace;
@@ -411,6 +423,15 @@ public class CreateARMServerInstancesRequest extends Request {
         }
 
         /**
+         * InstanceBillingCycle.
+         */
+        public Builder instanceBillingCycle(String instanceBillingCycle) {
+            this.putQueryParameter("InstanceBillingCycle", instanceBillingCycle);
+            this.instanceBillingCycle = instanceBillingCycle;
+            return this;
+        }
+
+        /**
          * <p>The specification of the Android in Container (AIC) instance. Examples:</p>
          * <ul>
          * <li>aic.cf52r.c1.np</li>
@@ -493,7 +514,6 @@ public class CreateARMServerInstancesRequest extends Request {
          * <li>If you set PeriodUnit to Day, you can set Period only to 3.</li>
          * <li>If you set PeriodUnit to Month, you can set Period to a value within the range of [1,9], or set the value to 12.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -511,7 +531,6 @@ public class CreateARMServerInstancesRequest extends Request {
          * <li>If you set PeriodUnit to Day, you can set Period only to 3.</li>
          * <li>If you set PeriodUnit to Month, you can set Period to a value within the range of [1,9], or set the value to 12.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
