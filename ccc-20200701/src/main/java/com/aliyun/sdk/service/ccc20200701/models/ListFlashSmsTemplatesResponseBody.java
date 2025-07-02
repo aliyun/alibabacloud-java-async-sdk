@@ -179,6 +179,9 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
      * <p>ListFlashSmsTemplatesResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TemplateDetails")
+        private String templateDetails;
+
         @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
@@ -186,6 +189,7 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         private String templateName;
 
         private Data(Builder builder) {
+            this.templateDetails = builder.templateDetails;
             this.templateId = builder.templateId;
             this.templateName = builder.templateName;
         }
@@ -196,6 +200,13 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return templateDetails
+         */
+        public String getTemplateDetails() {
+            return this.templateDetails;
         }
 
         /**
@@ -213,6 +224,7 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String templateDetails; 
             private String templateId; 
             private String templateName; 
 
@@ -220,9 +232,18 @@ public class ListFlashSmsTemplatesResponseBody extends TeaModel {
             } 
 
             private Builder(Data model) {
+                this.templateDetails = model.templateDetails;
                 this.templateId = model.templateId;
                 this.templateName = model.templateName;
             } 
+
+            /**
+             * TemplateDetails.
+             */
+            public Builder templateDetails(String templateDetails) {
+                this.templateDetails = templateDetails;
+                return this;
+            }
 
             /**
              * TemplateId.
