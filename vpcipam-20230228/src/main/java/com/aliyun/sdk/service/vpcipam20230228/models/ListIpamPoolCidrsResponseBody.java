@@ -52,6 +52,10 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -102,8 +106,23 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListIpamPoolCidrsResponseBody model) {
+            this.count = model.count;
+            this.ipamPoolCidrs = model.ipamPoolCidrs;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Count.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -111,7 +130,7 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * IpamPoolCidrs.
+         * <p>The IDs of IPAM pools.</p>
          */
         public Builder ipamPoolCidrs(java.util.List<IpamPoolCidrs> ipamPoolCidrs) {
             this.ipamPoolCidrs = ipamPoolCidrs;
@@ -119,7 +138,10 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -127,7 +149,14 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -135,7 +164,10 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9E7CCB95-62E0-534D-9B9A-71F27E8B71B1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +175,10 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -212,8 +247,20 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
             private String ipamPoolId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpamPoolCidrs model) {
+                this.cidr = model.cidr;
+                this.ipamPoolId = model.ipamPoolId;
+                this.status = model.status;
+            } 
+
             /**
-             * Cidr.
+             * <p>The provisioned CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0/24</p>
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -221,7 +268,10 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamPoolId.
+             * <p>The ID of the IPAM pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-pool-6rcq3tobayc20t****</p>
              */
             public Builder ipamPoolId(String ipamPoolId) {
                 this.ipamPoolId = ipamPoolId;
@@ -229,7 +279,14 @@ public class ListIpamPoolCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the CIDR block provisioned to the IPAM pool. Valid values:</p>
+             * <ul>
+             * <li><strong>Created</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;

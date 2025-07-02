@@ -32,6 +32,10 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,18 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ChangeResourceGroupResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BB2C39DE-CEB8-595A-981A-F2EFCBE7324E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

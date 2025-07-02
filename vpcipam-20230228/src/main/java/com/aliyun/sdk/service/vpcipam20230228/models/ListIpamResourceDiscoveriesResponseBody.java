@@ -52,6 +52,10 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -102,8 +106,23 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListIpamResourceDiscoveriesResponseBody model) {
+            this.count = model.count;
+            this.ipamResourceDiscoveries = model.ipamResourceDiscoveries;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Count.
+         * <p>The maximum number of entries on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -111,7 +130,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         }
 
         /**
-         * IpamResourceDiscoveries.
+         * <p>The list of resource discovery instances.</p>
          */
         public Builder ipamResourceDiscoveries(java.util.List<IpamResourceDiscoveries> ipamResourceDiscoveries) {
             this.ipamResourceDiscoveries = ipamResourceDiscoveries;
@@ -119,7 +138,10 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries on each page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -127,7 +149,14 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, there is no next page.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, it indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -135,7 +164,10 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86137597-443F-5B66-B9B6-8514E0C50B8F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +175,10 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -200,8 +235,19 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -209,7 +255,10 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -387,8 +436,29 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpamResourceDiscoveries model) {
+                this.createTime = model.createTime;
+                this.ipamResourceDiscoveryDescription = model.ipamResourceDiscoveryDescription;
+                this.ipamResourceDiscoveryId = model.ipamResourceDiscoveryId;
+                this.ipamResourceDiscoveryName = model.ipamResourceDiscoveryName;
+                this.ipamResourceDiscoveryStatus = model.ipamResourceDiscoveryStatus;
+                this.operatingRegionList = model.operatingRegionList;
+                this.ownerId = model.ownerId;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.shareType = model.shareType;
+                this.tags = model.tags;
+                this.type = model.type;
+            } 
+
             /**
-             * CreateTime.
+             * <p>The time when the resource was discovered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-07-01T02:05:23Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -396,7 +466,10 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * IpamResourceDiscoveryDescription.
+             * <p>The description of the resource discovery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test description</p>
              */
             public Builder ipamResourceDiscoveryDescription(String ipamResourceDiscoveryDescription) {
                 this.ipamResourceDiscoveryDescription = ipamResourceDiscoveryDescription;
@@ -404,7 +477,10 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * IpamResourceDiscoveryId.
+             * <p>The ID of resource discovery instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-res-disco-jt5f2af2u6nk2z321****</p>
              */
             public Builder ipamResourceDiscoveryId(String ipamResourceDiscoveryId) {
                 this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
@@ -412,7 +488,10 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * IpamResourceDiscoveryName.
+             * <p>The name of the resource discovery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ipamResourceDiscoveryName(String ipamResourceDiscoveryName) {
                 this.ipamResourceDiscoveryName = ipamResourceDiscoveryName;
@@ -420,7 +499,17 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * IpamResourceDiscoveryStatus.
+             * <p>The status of the resource discovery instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Created</strong></li>
+             * <li><strong>Modifying</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder ipamResourceDiscoveryStatus(String ipamResourceDiscoveryStatus) {
                 this.ipamResourceDiscoveryStatus = ipamResourceDiscoveryStatus;
@@ -428,7 +517,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * OperatingRegionList.
+             * <p>The list of resource discovery regions.</p>
              */
             public Builder operatingRegionList(java.util.List<String> operatingRegionList) {
                 this.operatingRegionList = operatingRegionList;
@@ -436,7 +525,10 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The Alibaba Cloud account that owns the resource discovery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1210123456******</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -444,7 +536,10 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the queried resource discovery instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -452,7 +547,10 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group that resource discovery belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aek2sermdd6****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -460,7 +558,15 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * <p>The sharing status of the resource.</p>
+             * <ul>
+             * <li>If the value is empty, the resource is as an average instance.</li>
+             * <li>If the value is Shared, the resource discovery comes from a shared source.</li>
+             * <li>If the value is Sharing, the resource discovery is being shared.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Shared</p>
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -468,7 +574,7 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag list.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;
@@ -476,7 +582,10 @@ public class ListIpamResourceDiscoveriesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of resource discovery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>system</p>
              */
             public Builder type(String type) {
                 this.type = type;

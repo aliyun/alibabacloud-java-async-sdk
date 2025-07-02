@@ -36,6 +36,10 @@ public class CreateIpamResourceDiscoveryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipamResourceDiscoveryId
      */
@@ -54,8 +58,19 @@ public class CreateIpamResourceDiscoveryResponseBody extends TeaModel {
         private String ipamResourceDiscoveryId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateIpamResourceDiscoveryResponseBody model) {
+            this.ipamResourceDiscoveryId = model.ipamResourceDiscoveryId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * IpamResourceDiscoveryId.
+         * <p>The ID of the instance for resource discovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-res-disco-jt5f2af2u6nk2z321****</p>
          */
         public Builder ipamResourceDiscoveryId(String ipamResourceDiscoveryId) {
             this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
@@ -63,7 +78,10 @@ public class CreateIpamResourceDiscoveryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BB2C39DE-CEB8-595A-981A-F2EFCBE7324E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

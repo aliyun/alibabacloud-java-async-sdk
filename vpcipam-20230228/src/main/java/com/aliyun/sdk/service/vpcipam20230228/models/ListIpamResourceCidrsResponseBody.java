@@ -52,6 +52,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -102,8 +106,23 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListIpamResourceCidrsResponseBody model) {
+            this.count = model.count;
+            this.ipamResourceCidrs = model.ipamResourceCidrs;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Count.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -111,7 +130,7 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * IpamResourceCidrs.
+         * <p>The list of resources in the IPAM pool.</p>
          */
         public Builder ipamResourceCidrs(java.util.List<IpamResourceCidrs> ipamResourceCidrs) {
             this.ipamResourceCidrs = ipamResourceCidrs;
@@ -119,7 +138,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -127,7 +149,14 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -135,7 +164,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>49A9DE56-B68C-5FFC-BC06-509D086F287C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +175,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -156,6 +191,102 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListIpamResourceCidrsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpamResourceCidrsResponseBody</p>
+     */
+    public static class IpCountDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FreeIpCount")
+        private String freeIpCount;
+
+        @com.aliyun.core.annotation.NameInMap("TotalIpCount")
+        private String totalIpCount;
+
+        @com.aliyun.core.annotation.NameInMap("UsedIpCount")
+        private String usedIpCount;
+
+        private IpCountDetail(Builder builder) {
+            this.freeIpCount = builder.freeIpCount;
+            this.totalIpCount = builder.totalIpCount;
+            this.usedIpCount = builder.usedIpCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IpCountDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return freeIpCount
+         */
+        public String getFreeIpCount() {
+            return this.freeIpCount;
+        }
+
+        /**
+         * @return totalIpCount
+         */
+        public String getTotalIpCount() {
+            return this.totalIpCount;
+        }
+
+        /**
+         * @return usedIpCount
+         */
+        public String getUsedIpCount() {
+            return this.usedIpCount;
+        }
+
+        public static final class Builder {
+            private String freeIpCount; 
+            private String totalIpCount; 
+            private String usedIpCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpCountDetail model) {
+                this.freeIpCount = model.freeIpCount;
+                this.totalIpCount = model.totalIpCount;
+                this.usedIpCount = model.usedIpCount;
+            } 
+
+            /**
+             * FreeIpCount.
+             */
+            public Builder freeIpCount(String freeIpCount) {
+                this.freeIpCount = freeIpCount;
+                return this;
+            }
+
+            /**
+             * TotalIpCount.
+             */
+            public Builder totalIpCount(String totalIpCount) {
+                this.totalIpCount = totalIpCount;
+                return this;
+            }
+
+            /**
+             * UsedIpCount.
+             */
+            public Builder usedIpCount(String usedIpCount) {
+                this.usedIpCount = usedIpCount;
+                return this;
+            }
+
+            public IpCountDetail build() {
+                return new IpCountDetail(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link ListIpamResourceCidrsResponseBody} extends {@link TeaModel}
@@ -212,8 +343,20 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             private String overlapResourceId; 
             private String overlapResourceRegion; 
 
+            private Builder() {
+            } 
+
+            private Builder(OverlapDetail model) {
+                this.overlapResourceCidr = model.overlapResourceCidr;
+                this.overlapResourceId = model.overlapResourceId;
+                this.overlapResourceRegion = model.overlapResourceRegion;
+            } 
+
             /**
-             * OverlapResourceCidr.
+             * <p>The CIDR that overlaps with the current resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0/24</p>
              */
             public Builder overlapResourceCidr(String overlapResourceCidr) {
                 this.overlapResourceCidr = overlapResourceCidr;
@@ -221,7 +364,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * OverlapResourceId.
+             * <p>Instance ID that overlaps with the current resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-aq3fjgnig5av6jb8d****</p>
              */
             public Builder overlapResourceId(String overlapResourceId) {
                 this.overlapResourceId = overlapResourceId;
@@ -229,7 +375,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * OverlapResourceRegion.
+             * <p>The region of instance that overlaps with the current resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder overlapResourceRegion(String overlapResourceRegion) {
                 this.overlapResourceRegion = overlapResourceRegion;
@@ -258,6 +407,9 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ComplianceStatus")
         private String complianceStatus;
+
+        @com.aliyun.core.annotation.NameInMap("IpCountDetail")
+        private IpCountDetail ipCountDetail;
 
         @com.aliyun.core.annotation.NameInMap("IpUsage")
         private String ipUsage;
@@ -308,6 +460,7 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             this.aliUid = builder.aliUid;
             this.cidr = builder.cidr;
             this.complianceStatus = builder.complianceStatus;
+            this.ipCountDetail = builder.ipCountDetail;
             this.ipUsage = builder.ipUsage;
             this.ipamAllocationId = builder.ipamAllocationId;
             this.ipamId = builder.ipamId;
@@ -352,6 +505,13 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
          */
         public String getComplianceStatus() {
             return this.complianceStatus;
+        }
+
+        /**
+         * @return ipCountDetail
+         */
+        public IpCountDetail getIpCountDetail() {
+            return this.ipCountDetail;
         }
 
         /**
@@ -463,6 +623,7 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             private Long aliUid; 
             private String cidr; 
             private String complianceStatus; 
+            private IpCountDetail ipCountDetail; 
             private String ipUsage; 
             private String ipamAllocationId; 
             private String ipamId; 
@@ -479,8 +640,36 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             private String status; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpamResourceCidrs model) {
+                this.aliUid = model.aliUid;
+                this.cidr = model.cidr;
+                this.complianceStatus = model.complianceStatus;
+                this.ipCountDetail = model.ipCountDetail;
+                this.ipUsage = model.ipUsage;
+                this.ipamAllocationId = model.ipamAllocationId;
+                this.ipamId = model.ipamId;
+                this.ipamPoolId = model.ipamPoolId;
+                this.ipamScopeId = model.ipamScopeId;
+                this.managementStatus = model.managementStatus;
+                this.overlapDetail = model.overlapDetail;
+                this.overlapStatus = model.overlapStatus;
+                this.resourceId = model.resourceId;
+                this.resourceOwnerId = model.resourceOwnerId;
+                this.resourceRegionId = model.resourceRegionId;
+                this.resourceType = model.resourceType;
+                this.sourceCidr = model.sourceCidr;
+                this.status = model.status;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * AliUid.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132193271328****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -488,7 +677,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * Cidr.
+             * <p>The CIDR block of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0/32</p>
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -496,7 +688,16 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * ComplianceStatus.
+             * <p>The compliance status of the resource.</p>
+             * <ul>
+             * <li><strong>Compliant</strong></li>
+             * <li><strong>Noncompliant</strong></li>
+             * <li><strong>Ignored</strong> Ignored resources are not monitored.</li>
+             * <li><strong>Unmanaged</strong>: The resource does not have a CIDR block allocated from the IPAM pool. IPAM does not monitor whether the CIDR block of the resource meets the allocation rules of the IP address pool.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Compliant</p>
              */
             public Builder complianceStatus(String complianceStatus) {
                 this.complianceStatus = complianceStatus;
@@ -504,7 +705,18 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * IpUsage.
+             * IpCountDetail.
+             */
+            public Builder ipCountDetail(IpCountDetail ipCountDetail) {
+                this.ipCountDetail = ipCountDetail;
+                return this;
+            }
+
+            /**
+             * <p>The IP usage that is displayed in decimal form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ipUsage(String ipUsage) {
                 this.ipUsage = ipUsage;
@@ -512,7 +724,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamAllocationId.
+             * <p>The ID of the instance to which CIDR blocks are allocated from the IPAM pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-pool-alloc-112za33e4****</p>
              */
             public Builder ipamAllocationId(String ipamAllocationId) {
                 this.ipamAllocationId = ipamAllocationId;
@@ -520,7 +735,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamId.
+             * <p>The ID of the IPAM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-uq5dcfc2eqhpf4****</p>
              */
             public Builder ipamId(String ipamId) {
                 this.ipamId = ipamId;
@@ -528,7 +746,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamPoolId.
+             * <p>The ID of the IPAM pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-pool-6rcq3tobayc20t***</p>
              */
             public Builder ipamPoolId(String ipamPoolId) {
                 this.ipamPoolId = ipamPoolId;
@@ -536,7 +757,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamScopeId.
+             * <p>The ID of the IPAM scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-scope-glfmcyldpm8lsy****</p>
              */
             public Builder ipamScopeId(String ipamScopeId) {
                 this.ipamScopeId = ipamScopeId;
@@ -544,7 +768,15 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * ManagementStatus.
+             * <p>The management status of the resource.</p>
+             * <ul>
+             * <li><strong>Managed</strong>: The resource has a CIDR block allocated from an IPAM pool. IPAM is monitoring whether the allocated CIDR block overlaps with other CIDR blocks and whether the allocated CIDR block meets the allocation rules.</li>
+             * <li><strong>Unmanaged</strong>: The resource does not have a CIDR block allocated from the IPAM pool. IPAM is monitoring whether the resource has CIDR blocks that meet the allocation rules. Monitor whether CIDR blocks overlap with each other.</li>
+             * <li><strong>Ignored</strong>: The resource is not monitored. Ignored resources are not monitored. If you ignore a resource, CIDR blocks allocated to the resource are returned to the IPAM pool and will not be automatically allocated to the resource (if automatic allocation rules are specified).</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Managed</p>
              */
             public Builder managementStatus(String managementStatus) {
                 this.managementStatus = managementStatus;
@@ -552,7 +784,7 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * OverlapDetail.
+             * <p>List of resources that overlap with the current resource.</p>
              */
             public Builder overlapDetail(java.util.List<OverlapDetail> overlapDetail) {
                 this.overlapDetail = overlapDetail;
@@ -560,7 +792,15 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * OverlapStatus.
+             * <p>The overlapping status of the resource.</p>
+             * <ul>
+             * <li><strong>Nonoverlapping</strong></li>
+             * <li><strong>Overlapping</strong></li>
+             * <li><strong>Ignored</strong> Ignored resources are not monitored.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Nonoverlapping</p>
              */
             public Builder overlapStatus(String overlapStatus) {
                 this.overlapStatus = overlapStatus;
@@ -568,7 +808,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp16qjewdsunr41m1****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -576,7 +819,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceOwnerId.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132193271328****</p>
              */
             public Builder resourceOwnerId(Long resourceOwnerId) {
                 this.resourceOwnerId = resourceOwnerId;
@@ -584,7 +830,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceRegionId.
+             * <p>The effective region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
@@ -592,7 +841,14 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of resource. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong></li>
+             * <li><strong>VSwitch</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -600,7 +856,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCidr.
+             * <p>The source CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0/24</p>
              */
             public Builder sourceCidr(String sourceCidr) {
                 this.sourceCidr = sourceCidr;
@@ -608,7 +867,14 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the resource in the IPAM pool. Valid values:</p>
+             * <ul>
+             * <li><strong>Created</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -616,7 +882,10 @@ public class ListIpamResourceCidrsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The VPC ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp1fjfnrg3av6zb9e****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

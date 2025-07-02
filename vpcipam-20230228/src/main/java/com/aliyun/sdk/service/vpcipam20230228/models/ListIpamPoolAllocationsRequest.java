@@ -66,7 +66,7 @@ public class ListIpamPoolAllocationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -145,7 +145,12 @@ public class ListIpamPoolAllocationsRequest extends Request {
         } 
 
         /**
-         * Cidr.
+         * <p>Specifies whether to query allocations by specifying allocated CIDR blocks.</p>
+         * <p>**</p>
+         * <p><strong>Usage notes</strong> Only IPv4 CIDR blocks are supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
          */
         public Builder cidr(String cidr) {
             this.putQueryParameter("Cidr", cidr);
@@ -154,7 +159,7 @@ public class ListIpamPoolAllocationsRequest extends Request {
         }
 
         /**
-         * IpamPoolAllocationIds.
+         * <p>The IDs of the instances to which CIDR blocks are allocated from the IPAM pool.</p>
          */
         public Builder ipamPoolAllocationIds(java.util.List<String> ipamPoolAllocationIds) {
             this.putQueryParameter("IpamPoolAllocationIds", ipamPoolAllocationIds);
@@ -163,7 +168,10 @@ public class ListIpamPoolAllocationsRequest extends Request {
         }
 
         /**
-         * IpamPoolAllocationName.
+         * <p>The name of  allocations.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test name</p>
          */
         public Builder ipamPoolAllocationName(String ipamPoolAllocationName) {
             this.putQueryParameter("IpamPoolAllocationName", ipamPoolAllocationName);
@@ -172,6 +180,7 @@ public class ListIpamPoolAllocationsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the IPAM pool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -184,7 +193,10 @@ public class ListIpamPoolAllocationsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -193,7 +205,14 @@ public class ListIpamPoolAllocationsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -202,6 +221,8 @@ public class ListIpamPoolAllocationsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where you want to perform the operation.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

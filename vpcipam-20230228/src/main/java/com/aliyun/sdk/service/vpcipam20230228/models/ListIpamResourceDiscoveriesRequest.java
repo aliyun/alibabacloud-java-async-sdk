@@ -96,7 +96,7 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -229,7 +229,7 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         } 
 
         /**
-         * IpamResourceDiscoveryIds.
+         * <p>The IDs of resource discovery instances. Valid values of N: 1 to 100. A maximum of 100 resource discoveries can be queried at a time.</p>
          */
         public Builder ipamResourceDiscoveryIds(java.util.List<String> ipamResourceDiscoveryIds) {
             this.putQueryParameter("IpamResourceDiscoveryIds", ipamResourceDiscoveryIds);
@@ -238,7 +238,11 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         }
 
         /**
-         * IpamResourceDiscoveryName.
+         * <p>The name of the resource discovery.</p>
+         * <p>The name must be 1 to 128 characters in length and cannot start with http:// or https://.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ipamResourceDiscoveryName(String ipamResourceDiscoveryName) {
             this.putQueryParameter("IpamResourceDiscoveryName", ipamResourceDiscoveryName);
@@ -247,7 +251,10 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         }
 
         /**
-         * IsShared.
+         * <p>Whether it is a shared resource discovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder isShared(Boolean isShared) {
             this.putQueryParameter("IsShared", isShared);
@@ -256,7 +263,10 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries on each page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -265,7 +275,14 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, there is no next page.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, it indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -292,6 +309,7 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where you want to query resource discovery. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -304,7 +322,10 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group that resource discovery belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2sermdd6****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -331,7 +352,7 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * <p>The tag.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -340,7 +361,17 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of resource discovery.</p>
+         * <blockquote>
+         * <p>Supported types:</p>
+         * <ul>
+         * <li>system: default resource discovery created by the system.</li>
+         * <li>custom: custom resource discovery created by users.</li>
+         * </ul>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>system</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -399,8 +430,20 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The key of the tag. You can specify at most 20 tag keys. It cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The tag key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -408,7 +451,11 @@ public class ListIpamResourceDiscoveriesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag. You can specify at most 20 tag values. The tag value cannot be an empty string.</p>
+             * <p>A tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

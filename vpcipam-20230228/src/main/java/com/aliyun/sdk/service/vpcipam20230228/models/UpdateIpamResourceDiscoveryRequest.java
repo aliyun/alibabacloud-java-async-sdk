@@ -91,7 +91,7 @@ public class UpdateIpamResourceDiscoveryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -215,7 +215,7 @@ public class UpdateIpamResourceDiscoveryRequest extends Request {
         } 
 
         /**
-         * AddOperatingRegion.
+         * <p>The list of effective regions to add.</p>
          */
         public Builder addOperatingRegion(java.util.List<String> addOperatingRegion) {
             this.putQueryParameter("AddOperatingRegion", addOperatingRegion);
@@ -224,7 +224,13 @@ public class UpdateIpamResourceDiscoveryRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -233,7 +239,14 @@ public class UpdateIpamResourceDiscoveryRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform the dry run. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Performs a dry run without modifying the resource discovery instance. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+         * <li><strong>false</strong> (default): Performs a dry run and the actual request. If the request passes the check, an HTTP 2xx status code is returned and the resource discovery instance is modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -242,7 +255,10 @@ public class UpdateIpamResourceDiscoveryRequest extends Request {
         }
 
         /**
-         * IpamResourceDiscoveryDescription.
+         * <p>The description of resource discovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test description</p>
          */
         public Builder ipamResourceDiscoveryDescription(String ipamResourceDiscoveryDescription) {
             this.putQueryParameter("IpamResourceDiscoveryDescription", ipamResourceDiscoveryDescription);
@@ -251,6 +267,7 @@ public class UpdateIpamResourceDiscoveryRequest extends Request {
         }
 
         /**
+         * <p>The ID of resource discovery instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -263,7 +280,10 @@ public class UpdateIpamResourceDiscoveryRequest extends Request {
         }
 
         /**
-         * IpamResourceDiscoveryName.
+         * <p>The name of the resource discovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder ipamResourceDiscoveryName(String ipamResourceDiscoveryName) {
             this.putQueryParameter("IpamResourceDiscoveryName", ipamResourceDiscoveryName);
@@ -290,6 +310,7 @@ public class UpdateIpamResourceDiscoveryRequest extends Request {
         }
 
         /**
+         * <p>The request region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -302,7 +323,7 @@ public class UpdateIpamResourceDiscoveryRequest extends Request {
         }
 
         /**
-         * RemoveOperatingRegion.
+         * <p>The list of effective regions to remove.</p>
          */
         public Builder removeOperatingRegion(java.util.List<String> removeOperatingRegion) {
             this.putQueryParameter("RemoveOperatingRegion", removeOperatingRegion);

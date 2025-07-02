@@ -40,6 +40,10 @@ public class OpenVpcIpamServiceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -66,8 +70,20 @@ public class OpenVpcIpamServiceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(OpenVpcIpamServiceResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Code.
+         * <p>Status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -75,7 +91,10 @@ public class OpenVpcIpamServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Information returned upon successful IPAM activation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>successful</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -83,7 +102,10 @@ public class OpenVpcIpamServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3F814C37-B032-5477-AF5A-2925D0593CD4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

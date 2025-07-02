@@ -32,6 +32,10 @@ public class TagResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,18 @@ public class TagResourcesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(TagResourcesResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BF872550-9700-52FD-839C-4D3F05543FA8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

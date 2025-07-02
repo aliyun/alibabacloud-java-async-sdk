@@ -36,6 +36,10 @@ public class GetIpamPoolNextAvailableCidrResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cidrBlock
      */
@@ -54,8 +58,19 @@ public class GetIpamPoolNextAvailableCidrResponseBody extends TeaModel {
         private String cidrBlock; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetIpamPoolNextAvailableCidrResponseBody model) {
+            this.cidrBlock = model.cidrBlock;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * CidrBlock.
+         * <p>Available CIDR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.68.0.0/26</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.cidrBlock = cidrBlock;
@@ -63,7 +78,10 @@ public class GetIpamPoolNextAvailableCidrResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>29FC6758-9B7C-5CC7-8CBF-4DD846FE7D82</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

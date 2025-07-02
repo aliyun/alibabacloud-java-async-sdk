@@ -82,7 +82,7 @@ public class ListTagResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -188,7 +188,10 @@ public class ListTagResourcesRequest extends Request {
         } 
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -197,7 +200,14 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>If a value is returned for NextToken, you must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -224,6 +234,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +247,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource IDs.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -263,6 +274,12 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><strong>IPAM</strong></li>
+         * <li><strong>IPAMSCOPE</strong></li>
+         * <li><strong>IPAMPOOL</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -275,7 +292,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag list.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -334,8 +351,23 @@ public class ListTagResourcesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with a <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <blockquote>
+             * <p> You must specify <strong>ResourceId.N</strong> or <strong>Tag.N</strong> that consists of <strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -343,7 +375,14 @@ public class ListTagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with a <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * <blockquote>
+             * <p> You must specify <strong>ResourceId.N</strong> or <strong>Tag.N</strong> that consists of <strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

@@ -91,7 +91,7 @@ public class CreateIpamResourceDiscoveryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -215,7 +215,13 @@ public class CreateIpamResourceDiscoveryRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -224,7 +230,14 @@ public class CreateIpamResourceDiscoveryRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform a dry run, without sending the actual request. Valid value:</p>
+         * <ul>
+         * <li><strong>true</strong>: Performs the dry run without creating a custom resource discovery instance. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+         * <li><strong>false</strong> (default): Performs a dry run and the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and a custom resource discovery instance is created.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -233,7 +246,10 @@ public class CreateIpamResourceDiscoveryRequest extends Request {
         }
 
         /**
-         * IpamResourceDiscoveryDescription.
+         * <p>The description of resource discovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>description</p>
          */
         public Builder ipamResourceDiscoveryDescription(String ipamResourceDiscoveryDescription) {
             this.putQueryParameter("IpamResourceDiscoveryDescription", ipamResourceDiscoveryDescription);
@@ -242,7 +258,10 @@ public class CreateIpamResourceDiscoveryRequest extends Request {
         }
 
         /**
-         * IpamResourceDiscoveryName.
+         * <p>The name of the resource discovery.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>name</p>
          */
         public Builder ipamResourceDiscoveryName(String ipamResourceDiscoveryName) {
             this.putQueryParameter("IpamResourceDiscoveryName", ipamResourceDiscoveryName);
@@ -251,6 +270,7 @@ public class CreateIpamResourceDiscoveryRequest extends Request {
         }
 
         /**
+         * <p>The list of effective regions.</p>
          * <p>This parameter is required.</p>
          */
         public Builder operatingRegionList(java.util.List<String> operatingRegionList) {
@@ -278,6 +298,10 @@ public class CreateIpamResourceDiscoveryRequest extends Request {
         }
 
         /**
+         * <p>The request region.</p>
+         * <blockquote>
+         * <p> The request region is the managed region of the resource discovery instance.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -290,7 +314,10 @@ public class CreateIpamResourceDiscoveryRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2sermdd6****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -317,7 +344,7 @@ public class CreateIpamResourceDiscoveryRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag information.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -376,8 +403,20 @@ public class CreateIpamResourceDiscoveryRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag keys. You can specify at most 20 tag keys. It cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -385,7 +424,11 @@ public class CreateIpamResourceDiscoveryRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value of the resource. You can specify up to 20 tag values. You can specify empty strings as tag values.</p>
+             * <p>The tag value can be up to 128 characters in length and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

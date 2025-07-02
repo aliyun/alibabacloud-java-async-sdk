@@ -52,6 +52,10 @@ public class ListIpamsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -102,8 +106,23 @@ public class ListIpamsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListIpamsResponseBody model) {
+            this.count = model.count;
+            this.ipams = model.ipams;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Count.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -215,6 +234,14 @@ public class ListIpamsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -457,6 +484,28 @@ public class ListIpamsResponseBody extends TeaModel {
             private Integer scopeCount; 
             private java.util.List<Tags> tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(Ipams model) {
+                this.createTime = model.createTime;
+                this.defaultResourceDiscoveryAssociationId = model.defaultResourceDiscoveryAssociationId;
+                this.defaultResourceDiscoveryId = model.defaultResourceDiscoveryId;
+                this.ipamDescription = model.ipamDescription;
+                this.ipamId = model.ipamId;
+                this.ipamName = model.ipamName;
+                this.ipamStatus = model.ipamStatus;
+                this.operatingRegionList = model.operatingRegionList;
+                this.ownerId = model.ownerId;
+                this.privateDefaultScopeId = model.privateDefaultScopeId;
+                this.publicDefaultScopeId = model.publicDefaultScopeId;
+                this.regionId = model.regionId;
+                this.resourceDiscoveryAssociationCount = model.resourceDiscoveryAssociationCount;
+                this.resourceGroupId = model.resourceGroupId;
+                this.scopeCount = model.scopeCount;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The time when the IPAM was created.</p>
              * 
@@ -469,7 +518,10 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultResourceDiscoveryAssociationId.
+             * <p>Default resource discovery association ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-res-disco-assoc-jt5fac8twugdbbgip****</p>
              */
             public Builder defaultResourceDiscoveryAssociationId(String defaultResourceDiscoveryAssociationId) {
                 this.defaultResourceDiscoveryAssociationId = defaultResourceDiscoveryAssociationId;
@@ -477,7 +529,10 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultResourceDiscoveryId.
+             * <p>Default resource discovery instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-res-disco-jt5f2af2u6nk2z321****</p>
              */
             public Builder defaultResourceDiscoveryId(String defaultResourceDiscoveryId) {
                 this.defaultResourceDiscoveryId = defaultResourceDiscoveryId;
@@ -587,7 +642,10 @@ public class ListIpamsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceDiscoveryAssociationCount.
+             * <p>Number of resource discovery associations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder resourceDiscoveryAssociationCount(Integer resourceDiscoveryAssociationCount) {
                 this.resourceDiscoveryAssociationCount = resourceDiscoveryAssociationCount;

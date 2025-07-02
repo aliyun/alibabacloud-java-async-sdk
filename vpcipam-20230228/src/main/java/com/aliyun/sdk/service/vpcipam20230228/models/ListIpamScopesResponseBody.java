@@ -52,6 +52,10 @@ public class ListIpamScopesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -102,8 +106,23 @@ public class ListIpamScopesResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListIpamScopesResponseBody model) {
+            this.count = model.count;
+            this.ipamScopes = model.ipamScopes;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Count.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -111,7 +130,7 @@ public class ListIpamScopesResponseBody extends TeaModel {
         }
 
         /**
-         * IpamScopes.
+         * <p>The IPAM scopes.</p>
          */
         public Builder ipamScopes(java.util.List<IpamScopes> ipamScopes) {
             this.ipamScopes = ipamScopes;
@@ -119,7 +138,10 @@ public class ListIpamScopesResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -127,7 +149,14 @@ public class ListIpamScopesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -135,7 +164,10 @@ public class ListIpamScopesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8859C501-97E7-53D4-B94B-2A9E16003B22</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +175,10 @@ public class ListIpamScopesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -200,8 +235,19 @@ public class ListIpamScopesResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -209,7 +255,10 @@ public class ListIpamScopesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -399,8 +448,30 @@ public class ListIpamScopesResponseBody extends TeaModel {
             private String status; 
             private java.util.List<Tags> tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpamScopes model) {
+                this.createTime = model.createTime;
+                this.ipamId = model.ipamId;
+                this.ipamScopeDescription = model.ipamScopeDescription;
+                this.ipamScopeId = model.ipamScopeId;
+                this.ipamScopeName = model.ipamScopeName;
+                this.ipamScopeType = model.ipamScopeType;
+                this.isDefault = model.isDefault;
+                this.ownerId = model.ownerId;
+                this.poolCount = model.poolCount;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
+
             /**
-             * CreateTime.
+             * <p>The time when the IPAM scope was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-04-18T03:12:37Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -408,7 +479,10 @@ public class ListIpamScopesResponseBody extends TeaModel {
             }
 
             /**
-             * IpamId.
+             * <p>The ID of the IPAM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-ccxbnsbhew0d6t****</p>
              */
             public Builder ipamId(String ipamId) {
                 this.ipamId = ipamId;
@@ -416,7 +490,10 @@ public class ListIpamScopesResponseBody extends TeaModel {
             }
 
             /**
-             * IpamScopeDescription.
+             * <p>The description of the IPAM scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test description</p>
              */
             public Builder ipamScopeDescription(String ipamScopeDescription) {
                 this.ipamScopeDescription = ipamScopeDescription;
@@ -424,7 +501,10 @@ public class ListIpamScopesResponseBody extends TeaModel {
             }
 
             /**
-             * IpamScopeId.
+             * <p>The ID of the IPAM scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-scope-glfmcyldpm8lsy****</p>
              */
             public Builder ipamScopeId(String ipamScopeId) {
                 this.ipamScopeId = ipamScopeId;
@@ -432,7 +512,10 @@ public class ListIpamScopesResponseBody extends TeaModel {
             }
 
             /**
-             * IpamScopeName.
+             * <p>The name of the IPAM scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ipamScopeName(String ipamScopeName) {
                 this.ipamScopeName = ipamScopeName;
@@ -440,7 +523,14 @@ public class ListIpamScopesResponseBody extends TeaModel {
             }
 
             /**
-             * IpamScopeType.
+             * <p>The type of the IPAM scope. Valid values:</p>
+             * <ul>
+             * <li><strong>public</strong></li>
+             * <li><strong>private</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder ipamScopeType(String ipamScopeType) {
                 this.ipamScopeType = ipamScopeType;
@@ -448,7 +538,14 @@ public class ListIpamScopesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * <p>Indicates whether the scope is the default scope. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -456,7 +553,10 @@ public class ListIpamScopesResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The Alibaba Cloud account that owns the IPAM scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1210123456******</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -464,7 +564,10 @@ public class ListIpamScopesResponseBody extends TeaModel {
             }
 
             /**
-             * PoolCount.
+             * <p>The number of pools in the IPAM scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder poolCount(Integer poolCount) {
                 this.poolCount = poolCount;
@@ -472,7 +575,10 @@ public class ListIpamScopesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the IPAM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -480,7 +586,10 @@ public class ListIpamScopesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxazb4ph6aiy****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -488,7 +597,16 @@ public class ListIpamScopesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the IPAM scope. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Created</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -496,7 +614,7 @@ public class ListIpamScopesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag list.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

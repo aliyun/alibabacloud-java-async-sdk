@@ -52,6 +52,10 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -102,8 +106,23 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListIpamDiscoveredResourceResponseBody model) {
+            this.count = model.count;
+            this.ipamDiscoveredResources = model.ipamDiscoveredResources;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Count.
+         * <p>The maximum number of entries on each page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -111,7 +130,7 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
         }
 
         /**
-         * IpamDiscoveredResources.
+         * <p>The list of resources.</p>
          */
         public Builder ipamDiscoveredResources(java.util.List<IpamDiscoveredResources> ipamDiscoveredResources) {
             this.ipamDiscoveredResources = ipamDiscoveredResources;
@@ -119,7 +138,10 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries on each page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -127,7 +149,14 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, there is no next page.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, it indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -135,7 +164,10 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3748DEFF-68BE-5EED-9937-7C1D0C21BAB4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +175,10 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -162,6 +197,102 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
      *
      * <p>ListIpamDiscoveredResourceResponseBody</p>
      */
+    public static class IpCountDetail extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FreeIpCount")
+        private String freeIpCount;
+
+        @com.aliyun.core.annotation.NameInMap("TotalIpCount")
+        private String totalIpCount;
+
+        @com.aliyun.core.annotation.NameInMap("UsedIpCount")
+        private String usedIpCount;
+
+        private IpCountDetail(Builder builder) {
+            this.freeIpCount = builder.freeIpCount;
+            this.totalIpCount = builder.totalIpCount;
+            this.usedIpCount = builder.usedIpCount;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static IpCountDetail create() {
+            return builder().build();
+        }
+
+        /**
+         * @return freeIpCount
+         */
+        public String getFreeIpCount() {
+            return this.freeIpCount;
+        }
+
+        /**
+         * @return totalIpCount
+         */
+        public String getTotalIpCount() {
+            return this.totalIpCount;
+        }
+
+        /**
+         * @return usedIpCount
+         */
+        public String getUsedIpCount() {
+            return this.usedIpCount;
+        }
+
+        public static final class Builder {
+            private String freeIpCount; 
+            private String totalIpCount; 
+            private String usedIpCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(IpCountDetail model) {
+                this.freeIpCount = model.freeIpCount;
+                this.totalIpCount = model.totalIpCount;
+                this.usedIpCount = model.usedIpCount;
+            } 
+
+            /**
+             * FreeIpCount.
+             */
+            public Builder freeIpCount(String freeIpCount) {
+                this.freeIpCount = freeIpCount;
+                return this;
+            }
+
+            /**
+             * TotalIpCount.
+             */
+            public Builder totalIpCount(String totalIpCount) {
+                this.totalIpCount = totalIpCount;
+                return this;
+            }
+
+            /**
+             * UsedIpCount.
+             */
+            public Builder usedIpCount(String usedIpCount) {
+                this.usedIpCount = usedIpCount;
+                return this;
+            }
+
+            public IpCountDetail build() {
+                return new IpCountDetail(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListIpamDiscoveredResourceResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListIpamDiscoveredResourceResponseBody</p>
+     */
     public static class IpamDiscoveredResources extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
@@ -171,6 +302,9 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("DiscoveryTime")
         private String discoveryTime;
+
+        @com.aliyun.core.annotation.NameInMap("IpCountDetail")
+        private IpCountDetail ipCountDetail;
 
         @com.aliyun.core.annotation.NameInMap("IpUsage")
         private String ipUsage;
@@ -200,6 +334,7 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             this.aliUid = builder.aliUid;
             this.cidr = builder.cidr;
             this.discoveryTime = builder.discoveryTime;
+            this.ipCountDetail = builder.ipCountDetail;
             this.ipUsage = builder.ipUsage;
             this.ipamResourceDiscoveryId = builder.ipamResourceDiscoveryId;
             this.resourceId = builder.resourceId;
@@ -237,6 +372,13 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
          */
         public String getDiscoveryTime() {
             return this.discoveryTime;
+        }
+
+        /**
+         * @return ipCountDetail
+         */
+        public IpCountDetail getIpCountDetail() {
+            return this.ipCountDetail;
         }
 
         /**
@@ -299,6 +441,7 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             private Long aliUid; 
             private String cidr; 
             private String discoveryTime; 
+            private IpCountDetail ipCountDetail; 
             private String ipUsage; 
             private String ipamResourceDiscoveryId; 
             private String resourceId; 
@@ -308,8 +451,29 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             private String sourceCidr; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpamDiscoveredResources model) {
+                this.aliUid = model.aliUid;
+                this.cidr = model.cidr;
+                this.discoveryTime = model.discoveryTime;
+                this.ipCountDetail = model.ipCountDetail;
+                this.ipUsage = model.ipUsage;
+                this.ipamResourceDiscoveryId = model.ipamResourceDiscoveryId;
+                this.resourceId = model.resourceId;
+                this.resourceOwnerId = model.resourceOwnerId;
+                this.resourceRegionId = model.resourceRegionId;
+                this.resourceType = model.resourceType;
+                this.sourceCidr = model.sourceCidr;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
-             * AliUid.
+             * <p>The ID of the Alibaba Cloud account.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132193271328****</p>
              */
             public Builder aliUid(Long aliUid) {
                 this.aliUid = aliUid;
@@ -317,7 +481,10 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Cidr.
+             * <p>The CIDR block of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0/32</p>
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -325,7 +492,13 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * DiscoveryTime.
+             * <p>The time when the resource was discovered.</p>
+             * <blockquote>
+             * <p> If the resource has not been modified since it was created, the discovery time remains unchanged.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-01 00:00:00</p>
              */
             public Builder discoveryTime(String discoveryTime) {
                 this.discoveryTime = discoveryTime;
@@ -333,7 +506,18 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * IpUsage.
+             * IpCountDetail.
+             */
+            public Builder ipCountDetail(IpCountDetail ipCountDetail) {
+                this.ipCountDetail = ipCountDetail;
+                return this;
+            }
+
+            /**
+             * <p>The IP usage in decimal form.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ipUsage(String ipUsage) {
                 this.ipUsage = ipUsage;
@@ -341,7 +525,10 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * IpamResourceDiscoveryId.
+             * <p>The ID of resource discovery instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-res-disco-jt5f2af2u6nk2z321****</p>
              */
             public Builder ipamResourceDiscoveryId(String ipamResourceDiscoveryId) {
                 this.ipamResourceDiscoveryId = ipamResourceDiscoveryId;
@@ -349,7 +536,10 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf611fp465c7dyb4z****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -357,7 +547,10 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceOwnerId.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132193271328****</p>
              */
             public Builder resourceOwnerId(Long resourceOwnerId) {
                 this.resourceOwnerId = resourceOwnerId;
@@ -365,7 +558,10 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceRegionId.
+             * <p>The ID of the region to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
@@ -373,7 +569,14 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong></li>
+             * <li><strong>VSwitch</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VPC</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -381,7 +584,10 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCidr.
+             * <p>The source CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0/24</p>
              */
             public Builder sourceCidr(String sourceCidr) {
                 this.sourceCidr = sourceCidr;
@@ -389,7 +595,10 @@ public class ListIpamDiscoveredResourceResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * <p>The ID of the VPC to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf611fp465c7dyb4z****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

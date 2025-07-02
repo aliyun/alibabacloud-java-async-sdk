@@ -84,6 +84,10 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cidr
      */
@@ -198,8 +202,31 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         private String sourceCidr; 
         private String status; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetIpamPoolAllocationResponseBody model) {
+            this.cidr = model.cidr;
+            this.creationTime = model.creationTime;
+            this.ipamPoolAllocationDescription = model.ipamPoolAllocationDescription;
+            this.ipamPoolAllocationId = model.ipamPoolAllocationId;
+            this.ipamPoolAllocationName = model.ipamPoolAllocationName;
+            this.ipamPoolId = model.ipamPoolId;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.resourceId = model.resourceId;
+            this.resourceOwnerId = model.resourceOwnerId;
+            this.resourceRegionId = model.resourceRegionId;
+            this.resourceType = model.resourceType;
+            this.sourceCidr = model.sourceCidr;
+            this.status = model.status;
+        } 
+
         /**
-         * Cidr.
+         * <p>The allocated CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
          */
         public Builder cidr(String cidr) {
             this.cidr = cidr;
@@ -207,7 +234,10 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * <p>The time when the instance was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-15T10:24:19+08:00</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -215,7 +245,11 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * IpamPoolAllocationDescription.
+         * <p>The description of the CIDR allocation of the IPAM pool.</p>
+         * <p>The description must be 1 to 256 characters in length and start with a letter, but cannot start with a <code>http://</code> or <code>https://</code>. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam pool allocation description</p>
          */
         public Builder ipamPoolAllocationDescription(String ipamPoolAllocationDescription) {
             this.ipamPoolAllocationDescription = ipamPoolAllocationDescription;
@@ -223,7 +257,10 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * IpamPoolAllocationId.
+         * <p>The ID of the instance to which CIDR blocks are allocated from the IPAM pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-pool-alloc-112za33e4****</p>
          */
         public Builder ipamPoolAllocationId(String ipamPoolAllocationId) {
             this.ipamPoolAllocationId = ipamPoolAllocationId;
@@ -231,7 +268,11 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * IpamPoolAllocationName.
+         * <p>The name of the CIDR allocation of the IPAM pool.</p>
+         * <p>It must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam pool allocation name</p>
          */
         public Builder ipamPoolAllocationName(String ipamPoolAllocationName) {
             this.ipamPoolAllocationName = ipamPoolAllocationName;
@@ -239,7 +280,10 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * IpamPoolId.
+         * <p>The ID of the IPAM pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-pool-6rcq3tobayc20t****</p>
          */
         public Builder ipamPoolId(String ipamPoolId) {
             this.ipamPoolId = ipamPoolId;
@@ -247,7 +291,13 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * RegionId.
+         * <p>The region of the IPAM pool.</p>
+         * <blockquote>
+         * <p> If the IPAM pool to which the CIDR block allocation belongs has the region attribute, this parameter is the region of the IPAM pool. If not, this parameter is the IPAM managed region.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -255,7 +305,10 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3748DEFF-68BE-5EED-9937-7C1D0C21BAB4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -263,7 +316,10 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceId.
+         * <p>The ID of the resource to which the CIDR block is allocated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp16qjewdsunr41m1****</p>
          */
         public Builder resourceId(String resourceId) {
             this.resourceId = resourceId;
@@ -271,7 +327,10 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceOwnerId.
+         * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1616080591216318</p>
          */
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.resourceOwnerId = resourceOwnerId;
@@ -279,7 +338,10 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceRegionId.
+         * <p>The effective region ID of the resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder resourceRegionId(String resourceRegionId) {
             this.resourceRegionId = resourceRegionId;
@@ -287,7 +349,15 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of the resource to which the CIDR block is allocated. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>IpamPool</strong></li>
+         * <li><strong>Custom</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -295,7 +365,10 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * SourceCidr.
+         * <p>The source CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
          */
         public Builder sourceCidr(String sourceCidr) {
             this.sourceCidr = sourceCidr;
@@ -303,7 +376,14 @@ public class GetIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>The instance state. Valid values:</p>
+         * <ul>
+         * <li><strong>Created</strong></li>
+         * <li><strong>Deleted</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Created</p>
          */
         public Builder status(String status) {
             this.status = status;

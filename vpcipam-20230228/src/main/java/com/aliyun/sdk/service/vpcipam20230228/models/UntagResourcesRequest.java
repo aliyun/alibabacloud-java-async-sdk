@@ -77,7 +77,7 @@ public class UntagResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -174,7 +174,14 @@ public class UntagResourcesRequest extends Request {
         } 
 
         /**
-         * All.
+         * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong> (default)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);
@@ -201,6 +208,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -213,6 +221,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource IDs.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -240,6 +249,12 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><strong>IPAM</strong></li>
+         * <li><strong>IPAMSCOPE</strong></li>
+         * <li><strong>IPAMPOOL</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -252,7 +267,7 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * TagKey.
+         * <p>The keys of the tags that you want to remove from the resource.</p>
          */
         public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);

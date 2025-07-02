@@ -76,7 +76,7 @@ public class ListIpamResourceDiscoveryAssociationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -173,7 +173,10 @@ public class ListIpamResourceDiscoveryAssociationsRequest extends Request {
         } 
 
         /**
-         * IpamId.
+         * <p>The ID of the IPAM.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-ccxbnsbhew0d6t****</p>
          */
         public Builder ipamId(String ipamId) {
             this.putQueryParameter("IpamId", ipamId);
@@ -182,7 +185,10 @@ public class ListIpamResourceDiscoveryAssociationsRequest extends Request {
         }
 
         /**
-         * IpamResourceDiscoveryId.
+         * <p>The ID of resource discovery instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-res-disco-jt5f2af2u6nk2z321****</p>
          */
         public Builder ipamResourceDiscoveryId(String ipamResourceDiscoveryId) {
             this.putQueryParameter("IpamResourceDiscoveryId", ipamResourceDiscoveryId);
@@ -191,7 +197,10 @@ public class ListIpamResourceDiscoveryAssociationsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries on each page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -200,7 +209,14 @@ public class ListIpamResourceDiscoveryAssociationsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If this is your first or only query, this parameter is left empty.</li>
+         * <li>If a next query is to be sent, the returned value is the value of NextToken that was returned last time this operation was called.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -227,6 +243,7 @@ public class ListIpamResourceDiscoveryAssociationsRequest extends Request {
         }
 
         /**
+         * <p>The request region.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

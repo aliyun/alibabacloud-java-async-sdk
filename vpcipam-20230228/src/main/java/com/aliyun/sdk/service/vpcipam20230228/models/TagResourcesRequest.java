@@ -73,7 +73,7 @@ public class TagResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -179,6 +179,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +192,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The IDs of the resources.</p>
          * <p>This parameter is required.</p>
          */
         public Builder resourceId(java.util.List<String> resourceId) {
@@ -218,6 +220,12 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><strong>IPAM</strong></li>
+         * <li><strong>IPAMSCOPE</strong></li>
+         * <li><strong>IPAMPOOL</strong></li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -230,6 +238,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
+         * <p>The tags to add to the resources.</p>
          * <p>This parameter is required.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
@@ -289,8 +298,20 @@ public class TagResourcesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with a <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -298,7 +319,11 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with a <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

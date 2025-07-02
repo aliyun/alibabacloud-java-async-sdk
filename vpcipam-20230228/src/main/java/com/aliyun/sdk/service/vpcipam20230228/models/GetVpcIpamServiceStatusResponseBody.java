@@ -36,6 +36,10 @@ public class GetVpcIpamServiceStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enabled
      */
@@ -54,8 +58,23 @@ public class GetVpcIpamServiceStatusResponseBody extends TeaModel {
         private Boolean enabled; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetVpcIpamServiceStatusResponseBody model) {
+            this.enabled = model.enabled;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Enabled.
+         * <p>Indicates whether IPAM is activated.</p>
+         * <ul>
+         * <li><strong>true</strong></li>
+         * <li><strong>false</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder enabled(Boolean enabled) {
             this.enabled = enabled;
@@ -63,7 +82,10 @@ public class GetVpcIpamServiceStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2FEE9FFF-57EE-5832-BE88-9308352F3B68</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

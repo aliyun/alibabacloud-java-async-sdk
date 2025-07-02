@@ -52,6 +52,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -102,8 +106,23 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListIpamPoolsResponseBody model) {
+            this.count = model.count;
+            this.ipamPools = model.ipamPools;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Count.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -111,7 +130,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * IpamPools.
+         * <p>The IPAM pools.</p>
          */
         public Builder ipamPools(java.util.List<IpamPools> ipamPools) {
             this.ipamPools = ipamPools;
@@ -119,7 +138,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -127,7 +149,14 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -135,7 +164,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B54867DE-83DC-56B4-A57E-69A03119D0B1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +175,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -200,8 +235,19 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -209,7 +255,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -519,8 +568,41 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             private String status; 
             private java.util.List<Tags> tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpamPools model) {
+                this.allocationDefaultCidrMask = model.allocationDefaultCidrMask;
+                this.allocationMaxCidrMask = model.allocationMaxCidrMask;
+                this.allocationMinCidrMask = model.allocationMinCidrMask;
+                this.autoImport = model.autoImport;
+                this.createTime = model.createTime;
+                this.hasSubPool = model.hasSubPool;
+                this.ipVersion = model.ipVersion;
+                this.ipamId = model.ipamId;
+                this.ipamPoolDescription = model.ipamPoolDescription;
+                this.ipamPoolId = model.ipamPoolId;
+                this.ipamPoolName = model.ipamPoolName;
+                this.ipamRegionId = model.ipamRegionId;
+                this.ipamScopeId = model.ipamScopeId;
+                this.ipamScopeType = model.ipamScopeType;
+                this.isShared = model.isShared;
+                this.ownerId = model.ownerId;
+                this.poolDepth = model.poolDepth;
+                this.poolRegionId = model.poolRegionId;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.sourceIpamPoolId = model.sourceIpamPoolId;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
+
             /**
-             * AllocationDefaultCidrMask.
+             * <p>The default network mask assigned to the IPAM pool.</p>
+             * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>28</p>
              */
             public Builder allocationDefaultCidrMask(Integer allocationDefaultCidrMask) {
                 this.allocationDefaultCidrMask = allocationDefaultCidrMask;
@@ -528,7 +610,11 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * AllocationMaxCidrMask.
+             * <p>The maximum network mask assigned to the IPAM pool.</p>
+             * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder allocationMaxCidrMask(Integer allocationMaxCidrMask) {
                 this.allocationMaxCidrMask = allocationMaxCidrMask;
@@ -536,7 +622,11 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * AllocationMinCidrMask.
+             * <p>The minimum network mask assigned to the IPAM pool.</p>
+             * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>8</p>
              */
             public Builder allocationMinCidrMask(Integer allocationMinCidrMask) {
                 this.allocationMinCidrMask = allocationMinCidrMask;
@@ -544,7 +634,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * AutoImport.
+             * <p>Whether the pool has the auto-import feature enabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder autoImport(Boolean autoImport) {
                 this.autoImport = autoImport;
@@ -552,7 +645,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the IPAM pool was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-04-19T16:49:01Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -560,7 +656,14 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * HasSubPool.
+             * <p>Indicates whether the pool is a subpool. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder hasSubPool(Boolean hasSubPool) {
                 this.hasSubPool = hasSubPool;
@@ -568,7 +671,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * IpVersion.
+             * <p>The IP version. Only <strong>IPv4</strong> may be returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IPv4</p>
              */
             public Builder ipVersion(String ipVersion) {
                 this.ipVersion = ipVersion;
@@ -576,7 +682,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamId.
+             * <p>The ID of the IPAM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-b5mtlx3q7xcnyr****</p>
              */
             public Builder ipamId(String ipamId) {
                 this.ipamId = ipamId;
@@ -584,7 +693,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamPoolDescription.
+             * <p>The description of the IPAM pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test description</p>
              */
             public Builder ipamPoolDescription(String ipamPoolDescription) {
                 this.ipamPoolDescription = ipamPoolDescription;
@@ -592,7 +704,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamPoolId.
+             * <p>The ID of the IPAM pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-pool-6rcq3tobayc20t****</p>
              */
             public Builder ipamPoolId(String ipamPoolId) {
                 this.ipamPoolId = ipamPoolId;
@@ -600,7 +715,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamPoolName.
+             * <p>The name of the IPAM pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ipamPoolName(String ipamPoolName) {
                 this.ipamPoolName = ipamPoolName;
@@ -608,7 +726,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamRegionId.
+             * <p>The ID of the region where the IPAM to which the IPAM pool belongs is hosted.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder ipamRegionId(String ipamRegionId) {
                 this.ipamRegionId = ipamRegionId;
@@ -616,7 +737,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamScopeId.
+             * <p>The ID of the IPAM scope.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-scope-glfmcyldpm8lsy****</p>
              */
             public Builder ipamScopeId(String ipamScopeId) {
                 this.ipamScopeId = ipamScopeId;
@@ -624,7 +748,14 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamScopeType.
+             * <p>The type of the IPAM scope. Valid values:</p>
+             * <ul>
+             * <li><strong>public</strong></li>
+             * <li><strong>private</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>private</p>
              */
             public Builder ipamScopeType(String ipamScopeType) {
                 this.ipamScopeType = ipamScopeType;
@@ -632,7 +763,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * IsShared.
+             * <p>Whether it is a shared pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isShared(Boolean isShared) {
                 this.isShared = isShared;
@@ -640,7 +774,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerId.
+             * <p>The Alibaba Cloud account of the owner for the IPAM pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1210123456******</p>
              */
             public Builder ownerId(Long ownerId) {
                 this.ownerId = ownerId;
@@ -648,7 +785,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * PoolDepth.
+             * <p>The depth of the IPAM pool. Valid values: <strong>0 to 10</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder poolDepth(Integer poolDepth) {
                 this.poolDepth = poolDepth;
@@ -656,7 +796,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * PoolRegionId.
+             * <p>The effective region of the IPAM pool. The ID of the effective region for the IPAM pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder poolRegionId(String poolRegionId) {
                 this.poolRegionId = poolRegionId;
@@ -664,7 +807,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region where the operation is called.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -672,7 +818,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The resource group ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-acfmxazb4ph6aiy****</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -680,7 +829,10 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceIpamPoolId.
+             * <p>The ID of the source IPAM pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-pool-lfnwi4jok1ss0g****</p>
              */
             public Builder sourceIpamPoolId(String sourceIpamPoolId) {
                 this.sourceIpamPoolId = sourceIpamPoolId;
@@ -688,7 +840,17 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the IPAM pool. Valid values:</p>
+             * <ul>
+             * <li><strong>Creating</strong></li>
+             * <li><strong>Created</strong>: indicates that the creation is complete.</li>
+             * <li><strong>Modifying</strong></li>
+             * <li><strong>Deleting</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -696,7 +858,7 @@ public class ListIpamPoolsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag list.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

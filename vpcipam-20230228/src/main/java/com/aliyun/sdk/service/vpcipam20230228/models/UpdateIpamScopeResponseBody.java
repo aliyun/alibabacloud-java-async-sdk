@@ -32,6 +32,10 @@ public class UpdateIpamScopeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,18 @@ public class UpdateIpamScopeResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateIpamScopeResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BA8054F5-852A-570A-ACFF-BCA63E0B02D5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

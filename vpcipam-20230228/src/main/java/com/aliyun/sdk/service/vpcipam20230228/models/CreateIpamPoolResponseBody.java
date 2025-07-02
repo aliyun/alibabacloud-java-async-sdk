@@ -36,6 +36,10 @@ public class CreateIpamPoolResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ipamPoolId
      */
@@ -54,8 +58,19 @@ public class CreateIpamPoolResponseBody extends TeaModel {
         private String ipamPoolId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateIpamPoolResponseBody model) {
+            this.ipamPoolId = model.ipamPoolId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * IpamPoolId.
+         * <p>The ID of the IPAM pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-pool-6rcq3tobayc20t****</p>
          */
         public Builder ipamPoolId(String ipamPoolId) {
             this.ipamPoolId = ipamPoolId;
@@ -63,7 +78,10 @@ public class CreateIpamPoolResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BB2C39DE-CEB8-595A-981A-F2EFCBE7324E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -63,7 +63,7 @@ public class ListIpamDiscoveredResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -133,6 +133,7 @@ public class ListIpamDiscoveredResourceRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the resource discovery instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +146,10 @@ public class ListIpamDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries on each page. Valid values: 1 to 100. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -154,7 +158,14 @@ public class ListIpamDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -163,6 +174,8 @@ public class ListIpamDiscoveredResourceRequest extends Request {
         }
 
         /**
+         * <p>The ID of the managed region of the IPAM pool.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -175,6 +188,7 @@ public class ListIpamDiscoveredResourceRequest extends Request {
         }
 
         /**
+         * <p>The region where resource discovery is performed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -187,7 +201,14 @@ public class ListIpamDiscoveredResourceRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The resource type. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>VSwitch</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

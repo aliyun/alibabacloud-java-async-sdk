@@ -52,6 +52,10 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return count
      */
@@ -102,8 +106,23 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListIpamPoolAllocationsResponseBody model) {
+            this.count = model.count;
+            this.ipamPoolAllocations = model.ipamPoolAllocations;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Count.
+         * <p>The number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(Long count) {
             this.count = count;
@@ -111,7 +130,7 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         }
 
         /**
-         * IpamPoolAllocations.
+         * <p>The IDs of the instances to which CIDR blocks are allocated from the IPAM pool.</p>
          */
         public Builder ipamPoolAllocations(java.util.List<IpamPoolAllocations> ipamPoolAllocations) {
             this.ipamPoolAllocations = ipamPoolAllocations;
@@ -119,7 +138,10 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Long maxResults) {
             this.maxResults = maxResults;
@@ -127,7 +149,14 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -135,7 +164,10 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3748DEFF-68BE-5EED-9937-7C1D0C21BAB4</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -143,7 +175,10 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -332,8 +367,30 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             private String sourceCidr; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(IpamPoolAllocations model) {
+                this.cidr = model.cidr;
+                this.creationTime = model.creationTime;
+                this.ipamPoolAllocationDescription = model.ipamPoolAllocationDescription;
+                this.ipamPoolAllocationId = model.ipamPoolAllocationId;
+                this.ipamPoolAllocationName = model.ipamPoolAllocationName;
+                this.ipamPoolId = model.ipamPoolId;
+                this.regionId = model.regionId;
+                this.resourceId = model.resourceId;
+                this.resourceOwnerId = model.resourceOwnerId;
+                this.resourceRegionId = model.resourceRegionId;
+                this.resourceType = model.resourceType;
+                this.sourceCidr = model.sourceCidr;
+                this.status = model.status;
+            } 
+
             /**
-             * Cidr.
+             * <p>The allocated CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.0/24</p>
              */
             public Builder cidr(String cidr) {
                 this.cidr = cidr;
@@ -341,7 +398,10 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-05-19T08:59:18Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -349,7 +409,10 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamPoolAllocationDescription.
+             * <p>The description of the allocation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test description</p>
              */
             public Builder ipamPoolAllocationDescription(String ipamPoolAllocationDescription) {
                 this.ipamPoolAllocationDescription = ipamPoolAllocationDescription;
@@ -357,7 +420,10 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamPoolAllocationId.
+             * <p>The ID of the instance to which CIDR blocks are allocated from the IPAM pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-pool-alloc-112za33e4****</p>
              */
             public Builder ipamPoolAllocationId(String ipamPoolAllocationId) {
                 this.ipamPoolAllocationId = ipamPoolAllocationId;
@@ -365,7 +431,10 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamPoolAllocationName.
+             * <p>The name of the allocation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test name</p>
              */
             public Builder ipamPoolAllocationName(String ipamPoolAllocationName) {
                 this.ipamPoolAllocationName = ipamPoolAllocationName;
@@ -373,7 +442,10 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             }
 
             /**
-             * IpamPoolId.
+             * <p>The ID of the IPAM pool.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ipam-pool-6rcq3tobayc20t****</p>
              */
             public Builder ipamPoolId(String ipamPoolId) {
                 this.ipamPoolId = ipamPoolId;
@@ -381,7 +453,10 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -389,7 +464,10 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The ID of the resource to which the CIDR block is allocated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-bp16qjewdsunr41m1****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -397,7 +475,10 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceOwnerId.
+             * <p>The ID of the Alibaba Cloud account to which the resource belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>132193271328****</p>
              */
             public Builder resourceOwnerId(Long resourceOwnerId) {
                 this.resourceOwnerId = resourceOwnerId;
@@ -405,7 +486,10 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceRegionId.
+             * <p>The effective region ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder resourceRegionId(String resourceRegionId) {
                 this.resourceRegionId = resourceRegionId;
@@ -413,7 +497,15 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The type of the resource to which the CIDR block is allocated. Valid values:</p>
+             * <ul>
+             * <li><strong>VPC</strong></li>
+             * <li><strong>IpamPool</strong></li>
+             * <li><strong>Custom</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Custom</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -421,7 +513,10 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceCidr.
+             * <p>The source CIDR block.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.0.0/16</p>
              */
             public Builder sourceCidr(String sourceCidr) {
                 this.sourceCidr = sourceCidr;
@@ -429,7 +524,14 @@ public class ListIpamPoolAllocationsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the instance. Valid values:</p>
+             * <ul>
+             * <li><strong>Created</strong></li>
+             * <li><strong>Deleted</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Created</p>
              */
             public Builder status(String status) {
                 this.status = status;

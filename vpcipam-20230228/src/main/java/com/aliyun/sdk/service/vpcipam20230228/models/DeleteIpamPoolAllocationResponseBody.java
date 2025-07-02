@@ -32,6 +32,10 @@ public class DeleteIpamPoolAllocationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,18 @@ public class DeleteIpamPoolAllocationResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteIpamPoolAllocationResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B90776C8-F703-51D5-893A-AD1CA699D535</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -73,7 +73,7 @@ public class ChangeResourceGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -161,6 +161,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the new resource group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -191,6 +192,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the IPAM instance is hosted. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -203,6 +205,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>The ID of the IPAM resource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -233,6 +236,17 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
+         * <p>Resource type, with values:</p>
+         * <ul>
+         * <li><p>Ipam:IPAM instance</p>
+         * </li>
+         * <li><p>IpamScope:IPAM scope</p>
+         * </li>
+         * <li><p>IpamPool:IPAM address pool</p>
+         * </li>
+         * <li><p>IpamResourceDiscovery:IPAM resource discovery</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

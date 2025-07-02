@@ -32,6 +32,10 @@ public class AssociateIpamResourceDiscoveryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,18 @@ public class AssociateIpamResourceDiscoveryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AssociateIpamResourceDiscoveryResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E897D16A-50EB-543F-B002-C5A26AB818FF</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

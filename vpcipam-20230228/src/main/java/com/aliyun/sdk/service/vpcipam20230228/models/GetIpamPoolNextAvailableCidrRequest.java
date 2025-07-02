@@ -56,7 +56,7 @@ public class GetIpamPoolNextAvailableCidrRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -117,7 +117,13 @@ public class GetIpamPoolNextAvailableCidrRequest extends Request {
         } 
 
         /**
-         * CidrBlock.
+         * <p>CIDR to be allocated.</p>
+         * <blockquote>
+         * <p> You must enter at least one of the CidrBlock and CidrMask fields.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>172.68.0.0/26</p>
          */
         public Builder cidrBlock(String cidrBlock) {
             this.putQueryParameter("CidrBlock", cidrBlock);
@@ -126,7 +132,13 @@ public class GetIpamPoolNextAvailableCidrRequest extends Request {
         }
 
         /**
-         * CidrMask.
+         * <p>The length of the CIDR mask to be allocated.</p>
+         * <blockquote>
+         * <p> You must enter at least one of the CidrBlock and CidrMask fields.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>26</p>
          */
         public Builder cidrMask(Integer cidrMask) {
             this.putQueryParameter("CidrMask", cidrMask);
@@ -135,7 +147,13 @@ public class GetIpamPoolNextAvailableCidrRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -144,6 +162,7 @@ public class GetIpamPoolNextAvailableCidrRequest extends Request {
         }
 
         /**
+         * <p>The ID of the IPAM pool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -156,6 +175,10 @@ public class GetIpamPoolNextAvailableCidrRequest extends Request {
         }
 
         /**
+         * <p>The region of the IPAM pool.</p>
+         * <blockquote>
+         * <p> If the IPAM pool has the region attribute, this parameter is set to the effective region of the IPAM pool. If not, this is set to the managed region.</p>
+         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

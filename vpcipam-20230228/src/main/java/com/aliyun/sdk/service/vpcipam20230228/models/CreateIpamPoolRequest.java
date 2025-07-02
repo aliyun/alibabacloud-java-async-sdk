@@ -126,7 +126,7 @@ public class CreateIpamPoolRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -313,7 +313,11 @@ public class CreateIpamPoolRequest extends Request {
         } 
 
         /**
-         * AllocationDefaultCidrMask.
+         * <p>The default network mask assigned to the IPAM pool.</p>
+         * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>28</p>
          */
         public Builder allocationDefaultCidrMask(Integer allocationDefaultCidrMask) {
             this.putQueryParameter("AllocationDefaultCidrMask", allocationDefaultCidrMask);
@@ -322,7 +326,11 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * AllocationMaxCidrMask.
+         * <p>The maximum network mask assigned to the IPAM pool.</p>
+         * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         public Builder allocationMaxCidrMask(Integer allocationMaxCidrMask) {
             this.putQueryParameter("AllocationMaxCidrMask", allocationMaxCidrMask);
@@ -331,7 +339,11 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * AllocationMinCidrMask.
+         * <p>The minimum network mask assigned to the IPAM pool.</p>
+         * <p>An IPv4 mask must be <strong>0 to 32</strong> bits in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder allocationMinCidrMask(Integer allocationMinCidrMask) {
             this.putQueryParameter("AllocationMinCidrMask", allocationMinCidrMask);
@@ -340,7 +352,10 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * AutoImport.
+         * <p>Whether the pool has the auto-import feature enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder autoImport(Boolean autoImport) {
             this.putQueryParameter("AutoImport", autoImport);
@@ -349,7 +364,13 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -358,7 +379,14 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -367,7 +395,10 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * IpVersion.
+         * <p>The IP version. Only <strong>IPv4</strong> is supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IPv4</p>
          */
         public Builder ipVersion(String ipVersion) {
             this.putQueryParameter("IpVersion", ipVersion);
@@ -376,7 +407,11 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * IpamPoolDescription.
+         * <p>The description of the IPAM pool.</p>
+         * <p>It must be 2 to 256 characters in length. It must start with a letter, but cannot start with a <code>http://</code> or <code>https://</code>. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test description</p>
          */
         public Builder ipamPoolDescription(String ipamPoolDescription) {
             this.putQueryParameter("IpamPoolDescription", ipamPoolDescription);
@@ -385,7 +420,11 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * IpamPoolName.
+         * <p>The name of the IPAM pool.</p>
+         * <p>It must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>abc</p>
          */
         public Builder ipamPoolName(String ipamPoolName) {
             this.putQueryParameter("IpamPoolName", ipamPoolName);
@@ -394,6 +433,7 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
+         * <p>The ID of the IPAM scope.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -424,7 +464,10 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * PoolRegionId.
+         * <p>The effective region of the IPAM pool.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder poolRegionId(String poolRegionId) {
             this.putQueryParameter("PoolRegionId", poolRegionId);
@@ -433,6 +476,7 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the IPAM instance is hosted. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -445,7 +489,10 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The resource group ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-acfmxazb4ph6aiy****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -472,7 +519,13 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * SourceIpamPoolId.
+         * <p>The ID of the source IPAM pool.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the pool is a parent pool.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-pool-6rcq3tobayc20t****</p>
          */
         public Builder sourceIpamPoolId(String sourceIpamPoolId) {
             this.putQueryParameter("SourceIpamPoolId", sourceIpamPoolId);
@@ -481,7 +534,7 @@ public class CreateIpamPoolRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tag list.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -540,8 +593,20 @@ public class CreateIpamPoolRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
+             * <p>The tag key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The tag key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceDept</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -549,7 +614,11 @@ public class CreateIpamPoolRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</p>
+             * <p>The tag value can be up to 128 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). It cannot start with a <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FinanceJoshua</p>
              */
             public Builder value(String value) {
                 this.value = value;

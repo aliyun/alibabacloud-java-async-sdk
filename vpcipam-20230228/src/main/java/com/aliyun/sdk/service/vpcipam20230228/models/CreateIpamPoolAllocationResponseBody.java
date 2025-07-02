@@ -44,6 +44,10 @@ public class CreateIpamPoolAllocationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cidr
      */
@@ -78,8 +82,21 @@ public class CreateIpamPoolAllocationResponseBody extends TeaModel {
         private String requestId; 
         private String sourceCidr; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateIpamPoolAllocationResponseBody model) {
+            this.cidr = model.cidr;
+            this.ipamPoolAllocationId = model.ipamPoolAllocationId;
+            this.requestId = model.requestId;
+            this.sourceCidr = model.sourceCidr;
+        } 
+
         /**
-         * Cidr.
+         * <p>The custom reserved CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.1.0/24</p>
          */
         public Builder cidr(String cidr) {
             this.cidr = cidr;
@@ -87,7 +104,10 @@ public class CreateIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * IpamPoolAllocationId.
+         * <p>The ID of the custom reserved CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-pool-alloc-112za33e4****</p>
          */
         public Builder ipamPoolAllocationId(String ipamPoolAllocationId) {
             this.ipamPoolAllocationId = ipamPoolAllocationId;
@@ -95,7 +115,10 @@ public class CreateIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CE9CDAE5-341E-5D0B-AC8A-2BAC707D3EB2</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -103,7 +126,10 @@ public class CreateIpamPoolAllocationResponseBody extends TeaModel {
         }
 
         /**
-         * SourceCidr.
+         * <p>The source CIDR block.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.0.0/16</p>
          */
         public Builder sourceCidr(String sourceCidr) {
             this.sourceCidr = sourceCidr;

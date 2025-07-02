@@ -61,7 +61,7 @@ public class UpdateIpamPoolAllocationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -131,7 +131,13 @@ public class UpdateIpamPoolAllocationRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+         * <blockquote>
+         * <p> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>123e4567-e89b-12d3-a456-426655440000</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -140,7 +146,14 @@ public class UpdateIpamPoolAllocationRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * <p>Specifies whether to precheck this request. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: performs a dry run without modifying the CIDR blocks of IPAM pools. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the DryRunOperation error code is returned.</li>
+         * <li><strong>false</strong> (default): performs a dry run and the actual request. If the request passes the check, an HTTP 2xx status code is returned and the CIDR allocation information of the IPAM address pool is modified.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -149,7 +162,11 @@ public class UpdateIpamPoolAllocationRequest extends Request {
         }
 
         /**
-         * IpamPoolAllocationDescription.
+         * <p>The description of the CIDR allocation of the IPAM pool.</p>
+         * <p>The description must be 1 to 256 characters in length and start with a letter, but cannot start with a <code>http://</code> or <code>https://</code>. This parameter is empty by default.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test description</p>
          */
         public Builder ipamPoolAllocationDescription(String ipamPoolAllocationDescription) {
             this.putQueryParameter("IpamPoolAllocationDescription", ipamPoolAllocationDescription);
@@ -158,6 +175,7 @@ public class UpdateIpamPoolAllocationRequest extends Request {
         }
 
         /**
+         * <p>The ID of the instance to which CIDR blocks are allocated from the IPAM pool.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,7 +188,11 @@ public class UpdateIpamPoolAllocationRequest extends Request {
         }
 
         /**
-         * IpamPoolAllocationName.
+         * <p>The name of the CIDR allocation of the IPAM pool.</p>
+         * <p>It must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test name</p>
          */
         public Builder ipamPoolAllocationName(String ipamPoolAllocationName) {
             this.putQueryParameter("IpamPoolAllocationName", ipamPoolAllocationName);
@@ -179,6 +201,7 @@ public class UpdateIpamPoolAllocationRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where you want to perform the operation. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

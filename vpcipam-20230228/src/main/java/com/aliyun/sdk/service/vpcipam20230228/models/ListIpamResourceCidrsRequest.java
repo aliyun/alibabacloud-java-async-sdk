@@ -75,7 +75,7 @@ public class ListIpamResourceCidrsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -172,7 +172,13 @@ public class ListIpamResourceCidrsRequest extends Request {
         } 
 
         /**
-         * IpamPoolId.
+         * <p>The ID of the IPAM pool.</p>
+         * <blockquote>
+         * <p> You must specify at least one of <strong>IpamScopeId</strong> and <strong>IpamPoolId</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-pool-6rcq3tobayc20t****</p>
          */
         public Builder ipamPoolId(String ipamPoolId) {
             this.putQueryParameter("IpamPoolId", ipamPoolId);
@@ -181,7 +187,13 @@ public class ListIpamResourceCidrsRequest extends Request {
         }
 
         /**
-         * IpamScopeId.
+         * <p>The ID of the IPAM scope.</p>
+         * <blockquote>
+         * <p> You must specify at least one of <strong>IpamScopeId</strong> and <strong>IpamPoolId</strong>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>ipam-scope-glfmcyldpm8lsy****</p>
          */
         public Builder ipamScopeId(String ipamScopeId) {
             this.putQueryParameter("IpamScopeId", ipamScopeId);
@@ -190,7 +202,10 @@ public class ListIpamResourceCidrsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -199,7 +214,14 @@ public class ListIpamResourceCidrsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>You do not need to specify this parameter for the first request.</li>
+         * <li>You must specify the token that is obtained from the previous query as the value of <strong>NextToken</strong>.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -208,6 +230,8 @@ public class ListIpamResourceCidrsRequest extends Request {
         }
 
         /**
+         * <p>The ID of the region where the IPAM instance is hosted.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -220,7 +244,10 @@ public class ListIpamResourceCidrsRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * <p>The resource ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp16qjewdsunr41m1****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -238,7 +265,14 @@ public class ListIpamResourceCidrsRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * <p>The type of resource. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong></li>
+         * <li><strong>VSwitch</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>VPC</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -247,7 +281,10 @@ public class ListIpamResourceCidrsRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The VPC ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-bp1fjfnrg3av6zb9e****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
