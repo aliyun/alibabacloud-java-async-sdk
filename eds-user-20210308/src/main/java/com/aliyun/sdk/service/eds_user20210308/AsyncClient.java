@@ -47,6 +47,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CheckUsedPropertyValueResponse> checkUsedPropertyValue(CheckUsedPropertyValueRequest request);
 
     /**
+     * @param request the request parameters of CreateGroup  CreateGroupRequest
+     * @return CreateGroupResponse
+     */
+    CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request);
+
+    /**
      * @param request the request parameters of CreateOrg  CreateOrgRequest
      * @return CreateOrgResponse
      */
@@ -87,6 +93,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteUserPropertyValueResponse
      */
     CompletableFuture<DeleteUserPropertyValueResponse> deleteUserPropertyValue(DeleteUserPropertyValueRequest request);
+
+    /**
+     * @param request the request parameters of DescribeGroupUser  DescribeGroupUserRequest
+     * @return DescribeGroupUserResponse
+     */
+    CompletableFuture<DescribeGroupUserResponse> describeGroupUser(DescribeGroupUserRequest request);
+
+    /**
+     * @param request the request parameters of DescribeGroups  DescribeGroupsRequest
+     * @return DescribeGroupsResponse
+     */
+    CompletableFuture<DescribeGroupsResponse> describeGroups(DescribeGroupsRequest request);
 
     /**
      * @param request the request parameters of DescribeMfaDevices  DescribeMfaDevicesRequest
@@ -167,6 +185,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<LockUsersResponse> lockUsers(LockUsersRequest request);
 
     /**
+     * @param request the request parameters of ModifyGroup  ModifyGroupRequest
+     * @return ModifyGroupResponse
+     */
+    CompletableFuture<ModifyGroupResponse> modifyGroup(ModifyGroupRequest request);
+
+    /**
      * @param request the request parameters of ModifyOrg  ModifyOrgRequest
      * @return ModifyOrgResponse
      */
@@ -185,10 +209,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MoveOrgResponse> moveOrg(MoveOrgRequest request);
 
     /**
+     * @param request the request parameters of MoveUserOrg  MoveUserOrgRequest
+     * @return MoveUserOrgResponse
+     */
+    CompletableFuture<MoveUserOrgResponse> moveUserOrg(MoveUserOrgRequest request);
+
+    /**
      * @param request the request parameters of QuerySyncStatusByAliUid  QuerySyncStatusByAliUidRequest
      * @return QuerySyncStatusByAliUidResponse
      */
     CompletableFuture<QuerySyncStatusByAliUidResponse> querySyncStatusByAliUid(QuerySyncStatusByAliUidRequest request);
+
+    /**
+     * @param request the request parameters of RemoveGroup  RemoveGroupRequest
+     * @return RemoveGroupResponse
+     */
+    CompletableFuture<RemoveGroupResponse> removeGroup(RemoveGroupRequest request);
 
     /**
      * <b>description</b> :
@@ -252,5 +288,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdatePropertyResponse
      */
     CompletableFuture<UpdatePropertyResponse> updateProperty(UpdatePropertyRequest request);
+
+    /**
+     * @param request the request parameters of UserBatchJoinGroup  UserBatchJoinGroupRequest
+     * @return UserBatchJoinGroupResponse
+     */
+    CompletableFuture<UserBatchJoinGroupResponse> userBatchJoinGroup(UserBatchJoinGroupRequest request);
+
+    /**
+     * @param request the request parameters of UserBatchQuitGroup  UserBatchQuitGroupRequest
+     * @return UserBatchQuitGroupResponse
+     */
+    CompletableFuture<UserBatchQuitGroupResponse> userBatchQuitGroup(UserBatchQuitGroupRequest request);
 
 }
