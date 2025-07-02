@@ -107,6 +107,9 @@ public class Function extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ossMountConfig")
     private OSSMountConfig ossMountConfig;
 
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
     @com.aliyun.core.annotation.NameInMap("role")
     private String role;
 
@@ -168,6 +171,7 @@ public class Function extends TeaModel {
         this.memorySize = builder.memorySize;
         this.nasConfig = builder.nasConfig;
         this.ossMountConfig = builder.ossMountConfig;
+        this.resourceGroupId = builder.resourceGroupId;
         this.role = builder.role;
         this.runtime = builder.runtime;
         this.sessionAffinity = builder.sessionAffinity;
@@ -403,6 +407,13 @@ public class Function extends TeaModel {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return role
      */
     public String getRole() {
@@ -503,6 +514,7 @@ public class Function extends TeaModel {
         private Integer memorySize; 
         private NASConfig nasConfig; 
         private OSSMountConfig ossMountConfig; 
+        private String resourceGroupId; 
         private String role; 
         private String runtime; 
         private String sessionAffinity; 
@@ -548,6 +560,7 @@ public class Function extends TeaModel {
             this.memorySize = model.memorySize;
             this.nasConfig = model.nasConfig;
             this.ossMountConfig = model.ossMountConfig;
+            this.resourceGroupId = model.resourceGroupId;
             this.role = model.role;
             this.runtime = model.runtime;
             this.sessionAffinity = model.sessionAffinity;
@@ -797,6 +810,14 @@ public class Function extends TeaModel {
          */
         public Builder ossMountConfig(OSSMountConfig ossMountConfig) {
             this.ossMountConfig = ossMountConfig;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

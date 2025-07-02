@@ -46,6 +46,10 @@ public class ListFunctionsRequest extends Request {
     private String prefix;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("runtime")
     private String runtime;
 
@@ -62,6 +66,7 @@ public class ListFunctionsRequest extends Request {
         this.limit = builder.limit;
         this.nextToken = builder.nextToken;
         this.prefix = builder.prefix;
+        this.resourceGroupId = builder.resourceGroupId;
         this.runtime = builder.runtime;
         this.tags = builder.tags;
     }
@@ -129,6 +134,13 @@ public class ListFunctionsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return runtime
      */
     public String getRuntime() {
@@ -150,6 +162,7 @@ public class ListFunctionsRequest extends Request {
         private Integer limit; 
         private String nextToken; 
         private String prefix; 
+        private String resourceGroupId; 
         private String runtime; 
         private java.util.List<Tag> tags; 
 
@@ -166,6 +179,7 @@ public class ListFunctionsRequest extends Request {
             this.limit = request.limit;
             this.nextToken = request.nextToken;
             this.prefix = request.prefix;
+            this.resourceGroupId = request.resourceGroupId;
             this.runtime = request.runtime;
             this.tags = request.tags;
         } 
@@ -253,6 +267,15 @@ public class ListFunctionsRequest extends Request {
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
             this.prefix = prefix;
+            return this;
+        }
+
+        /**
+         * resourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("resourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
