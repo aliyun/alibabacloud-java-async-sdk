@@ -26,6 +26,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddRecordTemplateResponse> addRecordTemplate(AddRecordTemplateRequest request);
 
     /**
+     * @param request the request parameters of CreateAppAgentTemplate  CreateAppAgentTemplateRequest
+     * @return CreateAppAgentTemplateResponse
+     */
+    CompletableFuture<CreateAppAgentTemplateResponse> createAppAgentTemplate(CreateAppAgentTemplateRequest request);
+
+    /**
      * @param request the request parameters of CreateAppLayout  CreateAppLayoutRequest
      * @return CreateAppLayoutResponse
      */
@@ -66,6 +72,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateMPULayoutResponse
      */
     CompletableFuture<CreateMPULayoutResponse> createMPULayout(CreateMPULayoutRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAppAgentTemplate  DeleteAppAgentTemplateRequest
+     * @return DeleteAppAgentTemplateResponse
+     */
+    CompletableFuture<DeleteAppAgentTemplateResponse> deleteAppAgentTemplate(DeleteAppAgentTemplateRequest request);
 
     /**
      * @param request the request parameters of DeleteAppLayout  DeleteAppLayoutRequest
@@ -126,6 +138,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeAllCallbackResponse
      */
     CompletableFuture<DescribeAllCallbackResponse> describeAllCallback(DescribeAllCallbackRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAppAgentFunctionStatus  DescribeAppAgentFunctionStatusRequest
+     * @return DescribeAppAgentFunctionStatusResponse
+     */
+    CompletableFuture<DescribeAppAgentFunctionStatusResponse> describeAppAgentFunctionStatus(DescribeAppAgentFunctionStatusRequest request);
+
+    /**
+     * @param request the request parameters of DescribeAppAgentTemplates  DescribeAppAgentTemplatesRequest
+     * @return DescribeAppAgentTemplatesResponse
+     */
+    CompletableFuture<DescribeAppAgentTemplatesResponse> describeAppAgentTemplates(DescribeAppAgentTemplatesRequest request);
 
     /**
      * @param request the request parameters of DescribeAppCallStatus  DescribeAppCallStatusRequest
@@ -470,6 +494,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EnableAutoLiveStreamRuleResponse> enableAutoLiveStreamRule(EnableAutoLiveStreamRuleRequest request);
 
     /**
+     * @param request the request parameters of GetAgent  GetAgentRequest
+     * @return GetAgentResponse
+     */
+    CompletableFuture<GetAgentResponse> getAgent(GetAgentRequest request);
+
+    /**
      * @param request the request parameters of GetMPUTaskStatus  GetMPUTaskStatusRequest
      * @return GetMPUTaskStatusResponse
      */
@@ -480,6 +510,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyAppResponse
      */
     CompletableFuture<ModifyAppResponse> modifyApp(ModifyAppRequest request);
+
+    /**
+     * @param request the request parameters of ModifyAppAgentFunctionStatus  ModifyAppAgentFunctionStatusRequest
+     * @return ModifyAppAgentFunctionStatusResponse
+     */
+    CompletableFuture<ModifyAppAgentFunctionStatusResponse> modifyAppAgentFunctionStatus(ModifyAppAgentFunctionStatusRequest request);
+
+    /**
+     * @param request the request parameters of ModifyAppAgentTemplate  ModifyAppAgentTemplateRequest
+     * @return ModifyAppAgentTemplateResponse
+     */
+    CompletableFuture<ModifyAppAgentTemplateResponse> modifyAppAgentTemplate(ModifyAppAgentTemplateRequest request);
 
     /**
      * @param request the request parameters of ModifyAppCallbackStatus  ModifyAppCallbackStatusRequest
@@ -536,6 +578,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyMPULayoutResponse> modifyMPULayout(ModifyMPULayoutRequest request);
 
     /**
+     * @param request the request parameters of NotifyAgent  NotifyAgentRequest
+     * @return NotifyAgentResponse
+     */
+    CompletableFuture<NotifyAgentResponse> notifyAgent(NotifyAgentRequest request);
+
+    /**
      * @param request the request parameters of RemoveTerminals  RemoveTerminalsRequest
      * @return RemoveTerminalsResponse
      */
@@ -546,6 +594,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RemoveUsersResponse
      */
     CompletableFuture<RemoveUsersResponse> removeUsers(RemoveUsersRequest request);
+
+    /**
+     * @param request the request parameters of StartAgent  StartAgentRequest
+     * @return StartAgentResponse
+     */
+    CompletableFuture<StartAgentResponse> startAgent(StartAgentRequest request);
 
     /**
      * @param request the request parameters of StartCategoryCallback  StartCategoryCallbackRequest
@@ -582,6 +636,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StartStreamingOutResponse
      */
     CompletableFuture<StartStreamingOutResponse> startStreamingOut(StartStreamingOutRequest request);
+
+    /**
+     * @param request the request parameters of StopAgent  StopAgentRequest
+     * @return StopAgentResponse
+     */
+    CompletableFuture<StopAgentResponse> stopAgent(StopAgentRequest request);
 
     /**
      * @param request the request parameters of StopCategoryCallback  StopCategoryCallbackRequest
@@ -624,6 +684,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return StopStreamingOutResponse
      */
     CompletableFuture<StopStreamingOutResponse> stopStreamingOut(StopStreamingOutRequest request);
+
+    /**
+     * @param request the request parameters of UpdateAgent  UpdateAgentRequest
+     * @return UpdateAgentResponse
+     */
+    CompletableFuture<UpdateAgentResponse> updateAgent(UpdateAgentRequest request);
 
     /**
      * @param request the request parameters of UpdateAutoLiveStreamRule  UpdateAutoLiveStreamRuleRequest
