@@ -456,6 +456,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("StorageType")
+        private String storageType;
+
         @com.aliyun.core.annotation.NameInMap("StorageUsed")
         private Long storageUsed;
 
@@ -523,6 +526,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.secondaryZone = builder.secondaryZone;
             this.series = builder.series;
             this.status = builder.status;
+            this.storageType = builder.storageType;
             this.storageUsed = builder.storageUsed;
             this.supportBinlogX = builder.supportBinlogX;
             this.tagSet = builder.tagSet;
@@ -789,6 +793,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        /**
          * @return storageUsed
          */
         public Long getStorageUsed() {
@@ -894,6 +905,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String secondaryZone; 
             private String series; 
             private String status; 
+            private String storageType; 
             private Long storageUsed; 
             private Boolean supportBinlogX; 
             private java.util.List<TagSet> tagSet; 
@@ -944,6 +956,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
                 this.secondaryZone = model.secondaryZone;
                 this.series = model.series;
                 this.status = model.status;
+                this.storageType = model.storageType;
                 this.storageUsed = model.storageUsed;
                 this.supportBinlogX = model.supportBinlogX;
                 this.tagSet = model.tagSet;
@@ -1234,6 +1247,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StorageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
                 return this;
             }
 

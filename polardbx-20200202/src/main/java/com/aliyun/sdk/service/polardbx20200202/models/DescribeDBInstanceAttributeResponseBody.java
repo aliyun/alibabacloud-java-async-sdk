@@ -730,6 +730,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("StorageType")
+        private String storageType;
+
         @com.aliyun.core.annotation.NameInMap("StorageUsed")
         private Long storageUsed;
 
@@ -803,6 +806,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.series = builder.series;
             this.specCategory = builder.specCategory;
             this.status = builder.status;
+            this.storageType = builder.storageType;
             this.storageUsed = builder.storageUsed;
             this.tagSet = builder.tagSet;
             this.tertiaryZone = builder.tertiaryZone;
@@ -1151,6 +1155,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return storageType
+         */
+        public String getStorageType() {
+            return this.storageType;
+        }
+
+        /**
          * @return storageUsed
          */
         public Long getStorageUsed() {
@@ -1254,6 +1265,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String series; 
             private String specCategory; 
             private String status; 
+            private String storageType; 
             private Long storageUsed; 
             private java.util.List<TagSet> tagSet; 
             private String tertiaryZone; 
@@ -1314,6 +1326,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.series = model.series;
                 this.specCategory = model.specCategory;
                 this.status = model.status;
+                this.storageType = model.storageType;
                 this.storageUsed = model.storageUsed;
                 this.tagSet = model.tagSet;
                 this.tertiaryZone = model.tertiaryZone;
@@ -1698,6 +1711,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * StorageType.
+             */
+            public Builder storageType(String storageType) {
+                this.storageType = storageType;
                 return this;
             }
 
