@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddressVerifyIntl  AddressVerifyIntlRequest
+     * @return AddressVerifyIntlResponse
+     */
+    CompletableFuture<AddressVerifyIntlResponse> addressVerifyIntl(AddressVerifyIntlRequest request);
+
+    /**
      * @param request the request parameters of BankMetaVerifyIntl  BankMetaVerifyIntlRequest
      * @return BankMetaVerifyIntlResponse
      */
