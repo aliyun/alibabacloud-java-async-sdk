@@ -22,6 +22,10 @@ public class PushObjectCacheRequest extends Request {
     private String area;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsistencyHash")
+    private Boolean consistencyHash;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("L2Preload")
     private Boolean l2Preload;
 
@@ -49,6 +53,7 @@ public class PushObjectCacheRequest extends Request {
     private PushObjectCacheRequest(Builder builder) {
         super(builder);
         this.area = builder.area;
+        this.consistencyHash = builder.consistencyHash;
         this.l2Preload = builder.l2Preload;
         this.objectPath = builder.objectPath;
         this.ownerId = builder.ownerId;
@@ -75,6 +80,13 @@ public class PushObjectCacheRequest extends Request {
      */
     public String getArea() {
         return this.area;
+    }
+
+    /**
+     * @return consistencyHash
+     */
+    public Boolean getConsistencyHash() {
+        return this.consistencyHash;
     }
 
     /**
@@ -121,6 +133,7 @@ public class PushObjectCacheRequest extends Request {
 
     public static final class Builder extends Request.Builder<PushObjectCacheRequest, Builder> {
         private String area; 
+        private Boolean consistencyHash; 
         private Boolean l2Preload; 
         private String objectPath; 
         private Long ownerId; 
@@ -135,6 +148,7 @@ public class PushObjectCacheRequest extends Request {
         private Builder(PushObjectCacheRequest request) {
             super(request);
             this.area = request.area;
+            this.consistencyHash = request.consistencyHash;
             this.l2Preload = request.l2Preload;
             this.objectPath = request.objectPath;
             this.ownerId = request.ownerId;
@@ -162,6 +176,15 @@ public class PushObjectCacheRequest extends Request {
         public Builder area(String area) {
             this.putQueryParameter("Area", area);
             this.area = area;
+            return this;
+        }
+
+        /**
+         * ConsistencyHash.
+         */
+        public Builder consistencyHash(Boolean consistencyHash) {
+            this.putQueryParameter("ConsistencyHash", consistencyHash);
+            this.consistencyHash = consistencyHash;
             return this;
         }
 
