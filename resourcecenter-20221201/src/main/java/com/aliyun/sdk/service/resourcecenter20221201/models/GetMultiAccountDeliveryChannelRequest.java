@@ -59,7 +59,10 @@ public class GetMultiAccountDeliveryChannelRequest extends Request {
         } 
 
         /**
-         * DeliveryChannelId.
+         * <p>The ID of the delivery channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-6q79dm4o9***</p>
          */
         public Builder deliveryChannelId(String deliveryChannelId) {
             this.putQueryParameter("DeliveryChannelId", deliveryChannelId);

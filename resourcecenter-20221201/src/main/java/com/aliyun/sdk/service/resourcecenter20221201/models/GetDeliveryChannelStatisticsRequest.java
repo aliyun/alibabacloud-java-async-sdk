@@ -60,6 +60,7 @@ public class GetDeliveryChannelStatisticsRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the delivery channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

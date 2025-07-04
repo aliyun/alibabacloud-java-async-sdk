@@ -26,6 +26,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AssociateDefaultFilterResponse> associateDefaultFilter(AssociateDefaultFilterRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the ResourceSnapshotDelivery.CustomExpression parameter empty.</li>
+     * <li>Custom delivery: Set the ResourceSnapshotDelivery.CustomExpression parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateDeliveryChannel  CreateDeliveryChannelRequest
      * @return CreateDeliveryChannelResponse
      */
@@ -38,6 +46,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFilterResponse> createFilter(CreateFilterRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service. Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
+     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateMultiAccountDeliveryChannel  CreateMultiAccountDeliveryChannelRequest
      * @return CreateMultiAccountDeliveryChannelResponse
      */
@@ -159,6 +175,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetMultiAccountResourceConfigurationResponse
      */
     CompletableFuture<GetMultiAccountResourceConfigurationResponse> getMultiAccountResourceConfiguration(GetMultiAccountResourceConfigurationRequest request);
+
+    /**
+     * @param request the request parameters of GetMultiAccountResourceCounts  GetMultiAccountResourceCountsRequest
+     * @return GetMultiAccountResourceCountsResponse
+     */
+    CompletableFuture<GetMultiAccountResourceCountsResponse> getMultiAccountResourceCounts(GetMultiAccountResourceCountsRequest request);
 
     /**
      * @param request the request parameters of GetResourceCenterServiceStatus  GetResourceCenterServiceStatusRequest
@@ -310,6 +332,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SearchResourcesResponse> searchResources(SearchResourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
+     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateDeliveryChannel  UpdateDeliveryChannelRequest
      * @return UpdateDeliveryChannelResponse
      */
@@ -322,6 +352,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateFilterResponse> updateFilter(UpdateFilterRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
+     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateMultiAccountDeliveryChannel  UpdateMultiAccountDeliveryChannelRequest
      * @return UpdateMultiAccountDeliveryChannelResponse
      */

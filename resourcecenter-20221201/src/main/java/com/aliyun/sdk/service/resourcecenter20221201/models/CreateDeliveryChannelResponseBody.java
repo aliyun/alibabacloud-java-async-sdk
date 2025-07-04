@@ -67,7 +67,10 @@ public class CreateDeliveryChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * DeliveryChannelId.
+         * <p>The ID of the delivery channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-0bzhsqpnk***</p>
          */
         public Builder deliveryChannelId(String deliveryChannelId) {
             this.deliveryChannelId = deliveryChannelId;
@@ -75,7 +78,10 @@ public class CreateDeliveryChannelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>42A89312-0616-591E-B614-07BC87D3D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -58,6 +58,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the ResourceSnapshotDelivery.CustomExpression parameter empty.</li>
+     * <li>Custom delivery: Set the ResourceSnapshotDelivery.CustomExpression parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateDeliveryChannel  CreateDeliveryChannelRequest
      * @return CreateDeliveryChannelResponse
      */
@@ -94,6 +102,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>In Resource Center, you can create multi-account delivery channels by using the management account of your resource directory or the delegated administrator account of Resource Center to deliver resource configuration change events and scheduled resource snapshots within the members in your resource directory to Object Storage Service (OSS) or Simple Log Service. Then, other Alibaba Cloud services consume standardized resource information from OSS or Simple Log Service.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
+     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateMultiAccountDeliveryChannel  CreateMultiAccountDeliveryChannelRequest
      * @return CreateMultiAccountDeliveryChannelResponse
      */
@@ -451,6 +467,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetMultiAccountResourceConfigurationResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetMultiAccountResourceCounts  GetMultiAccountResourceCountsRequest
+     * @return GetMultiAccountResourceCountsResponse
+     */
+    @Override
+    public CompletableFuture<GetMultiAccountResourceCountsResponse> getMultiAccountResourceCounts(GetMultiAccountResourceCountsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetMultiAccountResourceCounts").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetMultiAccountResourceCountsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetMultiAccountResourceCountsResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -834,6 +868,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
+     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateDeliveryChannel  UpdateDeliveryChannelRequest
      * @return UpdateDeliveryChannelResponse
      */
@@ -870,6 +912,14 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Resource delivery supports the delivery of resource configuration change events and scheduled resource snapshots.
+     * Scheduled resource snapshots support the following delivery scenarios:</p>
+     * <ul>
+     * <li>Standard delivery: Leave the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter empty.</li>
+     * <li>Custom delivery: Set the <code>ResourceSnapshotDelivery.CustomExpression</code> parameter to an appropriate value.</li>
+     * </ul>
+     * 
      * @param request the request parameters of UpdateMultiAccountDeliveryChannel  UpdateMultiAccountDeliveryChannelRequest
      * @return UpdateMultiAccountDeliveryChannelResponse
      */

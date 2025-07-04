@@ -54,7 +54,10 @@ public class DeleteMultiAccountDeliveryChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C5CDBF6-4DB7-53E9-ADDC-5919E3FAC***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

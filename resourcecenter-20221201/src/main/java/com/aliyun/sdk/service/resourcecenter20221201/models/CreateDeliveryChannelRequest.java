@@ -117,7 +117,7 @@ public class CreateDeliveryChannelRequest extends Request {
         } 
 
         /**
-         * DeliveryChannelDescription.
+         * <p>The description of the delivery channel.</p>
          */
         public Builder deliveryChannelDescription(String deliveryChannelDescription) {
             this.putQueryParameter("DeliveryChannelDescription", deliveryChannelDescription);
@@ -126,6 +126,7 @@ public class CreateDeliveryChannelRequest extends Request {
         }
 
         /**
+         * <p>The effective scope of the delivery channel.</p>
          * <p>This parameter is required.</p>
          */
         public Builder deliveryChannelFilter(DeliveryChannelFilter deliveryChannelFilter) {
@@ -135,6 +136,7 @@ public class CreateDeliveryChannelRequest extends Request {
         }
 
         /**
+         * <p>The name of the delivery channel.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +149,7 @@ public class CreateDeliveryChannelRequest extends Request {
         }
 
         /**
-         * ResourceChangeDelivery.
+         * <p>The configurations for delivery of resource configuration change events.</p>
          */
         public Builder resourceChangeDelivery(ResourceChangeDelivery resourceChangeDelivery) {
             this.putQueryParameter("ResourceChangeDelivery", resourceChangeDelivery);
@@ -156,7 +158,7 @@ public class CreateDeliveryChannelRequest extends Request {
         }
 
         /**
-         * ResourceSnapshotDelivery.
+         * <p>The configurations for delivery of scheduled resource snapshots.</p>
          */
         public Builder resourceSnapshotDelivery(ResourceSnapshotDelivery resourceSnapshotDelivery) {
             this.putQueryParameter("ResourceSnapshotDelivery", resourceSnapshotDelivery);
@@ -211,7 +213,11 @@ public class CreateDeliveryChannelRequest extends Request {
             } 
 
             /**
-             * ResourceTypes.
+             * <p>An array of effective resource types for the delivery channel.</p>
+             * <ul>
+             * <li>Example: [&quot;ACS::VPC::VPC&quot;, &quot;ACS::ECS::Instance&quot;].</li>
+             * <li>If you want to deliver items of all resource types supported by Resource Center, set this parameter to [&quot;ALL&quot;].</li>
+             * </ul>
              */
             public Builder resourceTypes(java.util.List<String> resourceTypes) {
                 this.resourceTypes = resourceTypes;
@@ -265,7 +271,14 @@ public class CreateDeliveryChannelRequest extends Request {
             } 
 
             /**
-             * OversizedDataOssTargetArn.
+             * <p>The ARN of the destination to which large files are delivered.</p>
+             * <ul>
+             * <li>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object.</li>
+             * <li>You need to set this parameter to the ARN of a bucket whose name is prefixed with resourcecenter-.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:oss:cn-hangzhou:191142248777****:resourcecenter-oss</p>
              */
             public Builder oversizedDataOssTargetArn(String oversizedDataOssTargetArn) {
                 this.oversizedDataOssTargetArn = oversizedDataOssTargetArn;
@@ -345,7 +358,7 @@ public class CreateDeliveryChannelRequest extends Request {
             } 
 
             /**
-             * SlsProperties.
+             * <p>The Simple Log Service configurations.</p>
              */
             public Builder slsProperties(SlsProperties slsProperties) {
                 this.slsProperties = slsProperties;
@@ -353,7 +366,14 @@ public class CreateDeliveryChannelRequest extends Request {
             }
 
             /**
-             * TargetArn.
+             * <p>The ARN of the delivery destination.</p>
+             * <ul>
+             * <li>If you set <code>TargetType</code> to <code>OSS</code>, you must set <code>TargetArn</code> to the ARN of a bucket whose name is prefixed with resourcecenter-.</li>
+             * <li>If you set <code>TargetType</code> to <code>SLS</code>, you must set <code>TargetArn</code> to the ARN of a Logstore whose name is prefixed with resourcecenter-.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:log:cn-hangzhou: 191142248777****:project/delivery/logstore/resourcecenter-sls</p>
              */
             public Builder targetArn(String targetArn) {
                 this.targetArn = targetArn;
@@ -361,7 +381,14 @@ public class CreateDeliveryChannelRequest extends Request {
             }
 
             /**
-             * TargetType.
+             * <p>The type of the delivery destination.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><code>SLS</code></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>SLS</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -415,7 +442,15 @@ public class CreateDeliveryChannelRequest extends Request {
             } 
 
             /**
-             * OversizedDataOssTargetArn.
+             * <p>The ARN of the destination to which large files are delivered.</p>
+             * <ul>
+             * <li>If the size of a resource configuration change event exceeds 1 MB, the event is delivered as an OSS object.</li>
+             * <li>You need to set this parameter to the ARN of a bucket whose name is prefixed with resourcecenter-.</li>
+             * <li>This parameter takes effect only if you use custom delivery for scheduled resource snapshots. You do not need to configure this parameter if you use standard delivery for scheduled resource snapshots.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:oss:cn-hangzhou:191142248777****:resourcecenter-oss</p>
              */
             public Builder oversizedDataOssTargetArn(String oversizedDataOssTargetArn) {
                 this.oversizedDataOssTargetArn = oversizedDataOssTargetArn;
@@ -521,7 +556,10 @@ public class CreateDeliveryChannelRequest extends Request {
             } 
 
             /**
-             * CustomExpression.
+             * <p>The custom expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from resources limit 100;</p>
              */
             public Builder customExpression(String customExpression) {
                 this.customExpression = customExpression;
@@ -529,7 +567,10 @@ public class CreateDeliveryChannelRequest extends Request {
             }
 
             /**
-             * DeliveryTime.
+             * <p>The delivery time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09:00Z</p>
              */
             public Builder deliveryTime(String deliveryTime) {
                 this.deliveryTime = deliveryTime;
@@ -537,7 +578,7 @@ public class CreateDeliveryChannelRequest extends Request {
             }
 
             /**
-             * SlsProperties.
+             * <p>The Simple Log Service configurations.</p>
              */
             public Builder slsProperties(ResourceSnapshotDeliverySlsProperties slsProperties) {
                 this.slsProperties = slsProperties;
@@ -545,7 +586,14 @@ public class CreateDeliveryChannelRequest extends Request {
             }
 
             /**
-             * TargetArn.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the delivery destination.</p>
+             * <ul>
+             * <li>If you set <code>TargetType</code> to <code>OSS</code>, you must set <code>TargetArn</code> to the ARN of a bucket whose name is prefixed with resourcecenter-.</li>
+             * <li>If you set <code>TargetType</code> to <code>SLS</code>, you must set <code>TargetArn</code> to the ARN of a Logstore whose name is prefixed with resourcecenter-.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:log:cn-hangzhou: 191142248777****:project/delivery/logstore/resourcecenter-sls</p>
              */
             public Builder targetArn(String targetArn) {
                 this.targetArn = targetArn;
@@ -553,7 +601,15 @@ public class CreateDeliveryChannelRequest extends Request {
             }
 
             /**
-             * TargetType.
+             * <p>The type of the delivery destination.</p>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li><code>OSS</code> for standard delivery</li>
+             * <li><code>OSS</code> or <code>SLS</code> for custom delivery</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

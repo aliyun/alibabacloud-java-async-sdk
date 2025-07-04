@@ -67,7 +67,7 @@ public class GetMultiAccountDeliveryChannelStatisticsResponseBody extends TeaMod
         } 
 
         /**
-         * DeliveryChannelStatistics.
+         * <p>The statistics on the delivery channel.</p>
          */
         public Builder deliveryChannelStatistics(DeliveryChannelStatistics deliveryChannelStatistics) {
             this.deliveryChannelStatistics = deliveryChannelStatistics;
@@ -75,7 +75,10 @@ public class GetMultiAccountDeliveryChannelStatisticsResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80DF0610-504C-56D7-BDCF-7C92FD687***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -167,7 +170,10 @@ public class GetMultiAccountDeliveryChannelStatisticsResponseBody extends TeaMod
             } 
 
             /**
-             * DeliveryChannelId.
+             * <p>The ID of the delivery channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc-6q79dm4o9***</p>
              */
             public Builder deliveryChannelId(String deliveryChannelId) {
                 this.deliveryChannelId = deliveryChannelId;
@@ -175,7 +181,10 @@ public class GetMultiAccountDeliveryChannelStatisticsResponseBody extends TeaMod
             }
 
             /**
-             * DeliveryChannelName.
+             * <p>The name of the delivery channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-multi-account-delivery</p>
              */
             public Builder deliveryChannelName(String deliveryChannelName) {
                 this.deliveryChannelName = deliveryChannelName;
@@ -183,7 +192,10 @@ public class GetMultiAccountDeliveryChannelStatisticsResponseBody extends TeaMod
             }
 
             /**
-             * LatestChangeDeliveryTime.
+             * <p>The last delivery time of resource configuration change events.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-03T16:05:15Z</p>
              */
             public Builder latestChangeDeliveryTime(String latestChangeDeliveryTime) {
                 this.latestChangeDeliveryTime = latestChangeDeliveryTime;
@@ -191,7 +203,10 @@ public class GetMultiAccountDeliveryChannelStatisticsResponseBody extends TeaMod
             }
 
             /**
-             * LatestSnapshotDeliveryTime.
+             * <p>The last delivery time of scheduled resource snapshots.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-06-03T16:00:00Z</p>
              */
             public Builder latestSnapshotDeliveryTime(String latestSnapshotDeliveryTime) {
                 this.latestSnapshotDeliveryTime = latestSnapshotDeliveryTime;

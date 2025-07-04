@@ -94,7 +94,7 @@ public class ListDeliveryChannelsResponseBody extends TeaModel {
         } 
 
         /**
-         * DeliveryChannels.
+         * <p>The delivery channels.</p>
          */
         public Builder deliveryChannels(java.util.List<DeliveryChannels> deliveryChannels) {
             this.deliveryChannels = deliveryChannels;
@@ -102,7 +102,10 @@ public class ListDeliveryChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The maximum number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -110,6 +113,7 @@ public class ListDeliveryChannelsResponseBody extends TeaModel {
         }
 
         /**
+         * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -121,7 +125,10 @@ public class ListDeliveryChannelsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17502A1B-7026-5551-8E1C-CCABD0CBC***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -213,7 +220,10 @@ public class ListDeliveryChannelsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreateTime.
+             * <p>The time when the delivery channel was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-06-20T08:46:29Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -221,7 +231,7 @@ public class ListDeliveryChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * DeliveryChannelDescription.
+             * <p>The description of the delivery channel.</p>
              */
             public Builder deliveryChannelDescription(String deliveryChannelDescription) {
                 this.deliveryChannelDescription = deliveryChannelDescription;
@@ -229,7 +239,10 @@ public class ListDeliveryChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * DeliveryChannelId.
+             * <p>The ID of the delivery channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dc-4m6ffpkgu***</p>
              */
             public Builder deliveryChannelId(String deliveryChannelId) {
                 this.deliveryChannelId = deliveryChannelId;
@@ -237,7 +250,10 @@ public class ListDeliveryChannelsResponseBody extends TeaModel {
             }
 
             /**
-             * DeliveryChannelName.
+             * <p>The name of the delivery channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-delivery-channel</p>
              */
             public Builder deliveryChannelName(String deliveryChannelName) {
                 this.deliveryChannelName = deliveryChannelName;

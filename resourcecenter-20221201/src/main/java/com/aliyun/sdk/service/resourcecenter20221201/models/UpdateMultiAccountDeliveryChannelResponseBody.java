@@ -54,7 +54,10 @@ public class UpdateMultiAccountDeliveryChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>36A3D9BE-B607-5993-B546-7E19EF65D***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

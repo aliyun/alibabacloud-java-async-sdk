@@ -54,7 +54,10 @@ public class UpdateDeliveryChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AD5F848D-CCDC-5464-93E1-4BA50A482***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

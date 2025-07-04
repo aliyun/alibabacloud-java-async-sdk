@@ -132,7 +132,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         } 
 
         /**
-         * DeliveryChannelDescription.
+         * <p>The description of the delivery channel.</p>
          */
         public Builder deliveryChannelDescription(String deliveryChannelDescription) {
             this.deliveryChannelDescription = deliveryChannelDescription;
@@ -140,7 +140,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         }
 
         /**
-         * DeliveryChannelFilter.
+         * <p>The effective scope of the delivery channel.</p>
          */
         public Builder deliveryChannelFilter(DeliveryChannelFilter deliveryChannelFilter) {
             this.deliveryChannelFilter = deliveryChannelFilter;
@@ -148,7 +148,10 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         }
 
         /**
-         * DeliveryChannelId.
+         * <p>The ID of the delivery channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dc-6q79dm4o9***</p>
          */
         public Builder deliveryChannelId(String deliveryChannelId) {
             this.deliveryChannelId = deliveryChannelId;
@@ -156,7 +159,10 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         }
 
         /**
-         * DeliveryChannelName.
+         * <p>The name of the delivery channel.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test-delivery-channel</p>
          */
         public Builder deliveryChannelName(String deliveryChannelName) {
             this.deliveryChannelName = deliveryChannelName;
@@ -164,7 +170,10 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FE3EAB47-D3A6-5FEA-8353-31C8C0D36***</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -172,7 +181,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceChangeDelivery.
+         * <p>The configurations for delivery of resource configuration change events.</p>
          */
         public Builder resourceChangeDelivery(ResourceChangeDelivery resourceChangeDelivery) {
             this.resourceChangeDelivery = resourceChangeDelivery;
@@ -180,7 +189,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceSnapshotDelivery.
+         * <p>The configurations for delivery of scheduled resource snapshots.</p>
          */
         public Builder resourceSnapshotDelivery(ResourceSnapshotDelivery resourceSnapshotDelivery) {
             this.resourceSnapshotDelivery = resourceSnapshotDelivery;
@@ -246,7 +255,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
             } 
 
             /**
-             * AccountScopes.
+             * <p>The effective account scopes of the delivery channel.</p>
              */
             public Builder accountScopes(java.util.List<String> accountScopes) {
                 this.accountScopes = accountScopes;
@@ -254,7 +263,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceTypes.
+             * <p>The effective resource types of the delivery channel.</p>
              */
             public Builder resourceTypes(java.util.List<String> resourceTypes) {
                 this.resourceTypes = resourceTypes;
@@ -308,7 +317,10 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
             } 
 
             /**
-             * OversizedDataOssTargetArn.
+             * <p>The Alibaba Cloud Resource Name (ARN) of the destination to which large files are delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:oss:cn-hangzhou:1911422487776***:resourcecenter-oss</p>
              */
             public Builder oversizedDataOssTargetArn(String oversizedDataOssTargetArn) {
                 this.oversizedDataOssTargetArn = oversizedDataOssTargetArn;
@@ -388,7 +400,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
             } 
 
             /**
-             * SlsProperties.
+             * <p>The Simple Log Service configurations.</p>
              */
             public Builder slsProperties(SlsProperties slsProperties) {
                 this.slsProperties = slsProperties;
@@ -396,7 +408,10 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
             }
 
             /**
-             * TargetArn.
+             * <p>The ARN of the delivery destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:log:cn-hangzhou: 1911422487776***:project/delivery/logstore/resourcecenter-sls</p>
              */
             public Builder targetArn(String targetArn) {
                 this.targetArn = targetArn;
@@ -404,7 +419,10 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * <p>The type of the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>SLS</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
@@ -458,7 +476,10 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
             } 
 
             /**
-             * OversizedDataOssTargetArn.
+             * <p>The ARN of the destination to which large files are delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:oss:cn-hangzhou:1911422487776***:resourcecenter-oss</p>
              */
             public Builder oversizedDataOssTargetArn(String oversizedDataOssTargetArn) {
                 this.oversizedDataOssTargetArn = oversizedDataOssTargetArn;
@@ -564,7 +585,10 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
             } 
 
             /**
-             * CustomExpression.
+             * <p>The custom expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>select * from resources limit 100;</p>
              */
             public Builder customExpression(String customExpression) {
                 this.customExpression = customExpression;
@@ -572,7 +596,10 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
             }
 
             /**
-             * DeliveryTime.
+             * <p>The delivery time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>09:00Z</p>
              */
             public Builder deliveryTime(String deliveryTime) {
                 this.deliveryTime = deliveryTime;
@@ -580,7 +607,7 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
             }
 
             /**
-             * SlsProperties.
+             * <p>The Simple Log Service configurations.</p>
              */
             public Builder slsProperties(ResourceSnapshotDeliverySlsProperties slsProperties) {
                 this.slsProperties = slsProperties;
@@ -588,7 +615,10 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
             }
 
             /**
-             * TargetArn.
+             * <p>The ARN of the delivery destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs:oss:cn-hangzhou:1911422487776***:resourcecenter-oss</p>
              */
             public Builder targetArn(String targetArn) {
                 this.targetArn = targetArn;
@@ -596,7 +626,10 @@ public class GetMultiAccountDeliveryChannelResponseBody extends TeaModel {
             }
 
             /**
-             * TargetType.
+             * <p>The type of the destination.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OSS</p>
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;
