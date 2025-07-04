@@ -34,6 +34,10 @@ public class RunLegalAdviceConsultationRequest extends Request {
     private Assistant assistant;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extra")
+    private Extra extra;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("stream")
     private Boolean stream;
 
@@ -47,6 +51,7 @@ public class RunLegalAdviceConsultationRequest extends Request {
         this.regionId = builder.regionId;
         this.appId = builder.appId;
         this.assistant = builder.assistant;
+        this.extra = builder.extra;
         this.stream = builder.stream;
         this.thread = builder.thread;
     }
@@ -93,6 +98,13 @@ public class RunLegalAdviceConsultationRequest extends Request {
     }
 
     /**
+     * @return extra
+     */
+    public Extra getExtra() {
+        return this.extra;
+    }
+
+    /**
      * @return stream
      */
     public Boolean getStream() {
@@ -111,6 +123,7 @@ public class RunLegalAdviceConsultationRequest extends Request {
         private String regionId; 
         private String appId; 
         private Assistant assistant; 
+        private Extra extra; 
         private Boolean stream; 
         private Thread thread; 
 
@@ -124,6 +137,7 @@ public class RunLegalAdviceConsultationRequest extends Request {
             this.regionId = request.regionId;
             this.appId = request.appId;
             this.assistant = request.assistant;
+            this.extra = request.extra;
             this.stream = request.stream;
             this.thread = request.thread;
         } 
@@ -162,6 +176,16 @@ public class RunLegalAdviceConsultationRequest extends Request {
             String assistantShrink = shrink(assistant, "assistant", "json");
             this.putBodyParameter("assistant", assistantShrink);
             this.assistant = assistant;
+            return this;
+        }
+
+        /**
+         * extra.
+         */
+        public Builder extra(Extra extra) {
+            String extraShrink = shrink(extra, "extra", "json");
+            this.putBodyParameter("extra", extraShrink);
+            this.extra = extra;
             return this;
         }
 
@@ -303,6 +327,81 @@ public class RunLegalAdviceConsultationRequest extends Request {
 
             public Assistant build() {
                 return new Assistant(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link RunLegalAdviceConsultationRequest} extends {@link TeaModel}
+     *
+     * <p>RunLegalAdviceConsultationRequest</p>
+     */
+    public static class Extra extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("deepThink")
+        private Boolean deepThink;
+
+        @com.aliyun.core.annotation.NameInMap("onlineSearch")
+        private Boolean onlineSearch;
+
+        private Extra(Builder builder) {
+            this.deepThink = builder.deepThink;
+            this.onlineSearch = builder.onlineSearch;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Extra create() {
+            return builder().build();
+        }
+
+        /**
+         * @return deepThink
+         */
+        public Boolean getDeepThink() {
+            return this.deepThink;
+        }
+
+        /**
+         * @return onlineSearch
+         */
+        public Boolean getOnlineSearch() {
+            return this.onlineSearch;
+        }
+
+        public static final class Builder {
+            private Boolean deepThink; 
+            private Boolean onlineSearch; 
+
+            private Builder() {
+            } 
+
+            private Builder(Extra model) {
+                this.deepThink = model.deepThink;
+                this.onlineSearch = model.onlineSearch;
+            } 
+
+            /**
+             * deepThink.
+             */
+            public Builder deepThink(Boolean deepThink) {
+                this.deepThink = deepThink;
+                return this;
+            }
+
+            /**
+             * onlineSearch.
+             */
+            public Builder onlineSearch(Boolean onlineSearch) {
+                this.onlineSearch = onlineSearch;
+                return this;
+            }
+
+            public Extra build() {
+                return new Extra(this);
             } 
 
         } 

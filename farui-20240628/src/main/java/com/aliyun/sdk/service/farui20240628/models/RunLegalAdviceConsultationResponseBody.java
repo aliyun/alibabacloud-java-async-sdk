@@ -41,6 +41,12 @@ public class RunLegalAdviceConsultationResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Usage")
     private Usage usage;
 
+    @com.aliyun.core.annotation.NameInMap("contents")
+    private String contents;
+
+    @com.aliyun.core.annotation.NameInMap("extra")
+    private String extra;
+
     @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private String httpStatusCode;
 
@@ -53,6 +59,8 @@ public class RunLegalAdviceConsultationResponseBody extends TeaModel {
         this.status = builder.status;
         this.success = builder.success;
         this.usage = builder.usage;
+        this.contents = builder.contents;
+        this.extra = builder.extra;
         this.httpStatusCode = builder.httpStatusCode;
     }
 
@@ -125,6 +133,20 @@ public class RunLegalAdviceConsultationResponseBody extends TeaModel {
     }
 
     /**
+     * @return contents
+     */
+    public String getContents() {
+        return this.contents;
+    }
+
+    /**
+     * @return extra
+     */
+    public String getExtra() {
+        return this.extra;
+    }
+
+    /**
      * @return httpStatusCode
      */
     public String getHttpStatusCode() {
@@ -140,6 +162,8 @@ public class RunLegalAdviceConsultationResponseBody extends TeaModel {
         private String status; 
         private Boolean success; 
         private Usage usage; 
+        private String contents; 
+        private String extra; 
         private String httpStatusCode; 
 
         private Builder() {
@@ -154,6 +178,8 @@ public class RunLegalAdviceConsultationResponseBody extends TeaModel {
             this.status = model.status;
             this.success = model.success;
             this.usage = model.usage;
+            this.contents = model.contents;
+            this.extra = model.extra;
             this.httpStatusCode = model.httpStatusCode;
         } 
 
@@ -218,6 +244,22 @@ public class RunLegalAdviceConsultationResponseBody extends TeaModel {
          */
         public Builder usage(Usage usage) {
             this.usage = usage;
+            return this;
+        }
+
+        /**
+         * contents.
+         */
+        public Builder contents(String contents) {
+            this.contents = contents;
+            return this;
+        }
+
+        /**
+         * extra.
+         */
+        public Builder extra(String extra) {
+            this.extra = extra;
             return this;
         }
 
