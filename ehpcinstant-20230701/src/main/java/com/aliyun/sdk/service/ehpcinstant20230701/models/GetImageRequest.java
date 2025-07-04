@@ -18,12 +18,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class GetImageRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdditionalRegionIds")
+    private java.util.List<String> additionalRegionIds;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageCategory")
     private String imageCategory;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
     @com.aliyun.core.annotation.Query
@@ -32,6 +35,7 @@ public class GetImageRequest extends Request {
 
     private GetImageRequest(Builder builder) {
         super(builder);
+        this.additionalRegionIds = builder.additionalRegionIds;
         this.imageCategory = builder.imageCategory;
         this.imageId = builder.imageId;
         this.imageType = builder.imageType;
@@ -48,6 +52,13 @@ public class GetImageRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return additionalRegionIds
+     */
+    public java.util.List<String> getAdditionalRegionIds() {
+        return this.additionalRegionIds;
     }
 
     /**
@@ -72,6 +83,7 @@ public class GetImageRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetImageRequest, Builder> {
+        private java.util.List<String> additionalRegionIds; 
         private String imageCategory; 
         private String imageId; 
         private String imageType; 
@@ -82,10 +94,21 @@ public class GetImageRequest extends Request {
 
         private Builder(GetImageRequest request) {
             super(request);
+            this.additionalRegionIds = request.additionalRegionIds;
             this.imageCategory = request.imageCategory;
             this.imageId = request.imageId;
             this.imageType = request.imageType;
         } 
+
+        /**
+         * AdditionalRegionIds.
+         */
+        public Builder additionalRegionIds(java.util.List<String> additionalRegionIds) {
+            String additionalRegionIdsShrink = shrink(additionalRegionIds, "AdditionalRegionIds", "json");
+            this.putQueryParameter("AdditionalRegionIds", additionalRegionIdsShrink);
+            this.additionalRegionIds = additionalRegionIds;
+            return this;
+        }
 
         /**
          * ImageCategory.
@@ -97,10 +120,7 @@ public class GetImageRequest extends Request {
         }
 
         /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>m-2ze74g5mvy4pjg*****</p>
+         * ImageId.
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);

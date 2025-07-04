@@ -22,12 +22,17 @@ public class DeleteJobsRequest extends Request {
     private java.util.List<String> executorIds;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobScheduler")
+    private String jobScheduler;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobSpec")
     private java.util.List<JobSpec> jobSpec;
 
     private DeleteJobsRequest(Builder builder) {
         super(builder);
         this.executorIds = builder.executorIds;
+        this.jobScheduler = builder.jobScheduler;
         this.jobSpec = builder.jobSpec;
     }
 
@@ -52,6 +57,13 @@ public class DeleteJobsRequest extends Request {
     }
 
     /**
+     * @return jobScheduler
+     */
+    public String getJobScheduler() {
+        return this.jobScheduler;
+    }
+
+    /**
      * @return jobSpec
      */
     public java.util.List<JobSpec> getJobSpec() {
@@ -60,6 +72,7 @@ public class DeleteJobsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteJobsRequest, Builder> {
         private java.util.List<String> executorIds; 
+        private String jobScheduler; 
         private java.util.List<JobSpec> jobSpec; 
 
         private Builder() {
@@ -69,6 +82,7 @@ public class DeleteJobsRequest extends Request {
         private Builder(DeleteJobsRequest request) {
             super(request);
             this.executorIds = request.executorIds;
+            this.jobScheduler = request.jobScheduler;
             this.jobSpec = request.jobSpec;
         } 
 
@@ -79,6 +93,15 @@ public class DeleteJobsRequest extends Request {
             String executorIdsShrink = shrink(executorIds, "ExecutorIds", "json");
             this.putQueryParameter("ExecutorIds", executorIdsShrink);
             this.executorIds = executorIds;
+            return this;
+        }
+
+        /**
+         * JobScheduler.
+         */
+        public Builder jobScheduler(String jobScheduler) {
+            this.putQueryParameter("JobScheduler", jobScheduler);
+            this.jobScheduler = jobScheduler;
             return this;
         }
 

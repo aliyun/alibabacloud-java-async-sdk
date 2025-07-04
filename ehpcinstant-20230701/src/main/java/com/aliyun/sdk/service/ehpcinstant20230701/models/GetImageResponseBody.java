@@ -136,6 +136,102 @@ public class GetImageResponseBody extends TeaModel {
      *
      * <p>GetImageResponseBody</p>
      */
+    public static class AdditionalRegionsInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ImageId")
+        private String imageId;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private AdditionalRegionsInfo(Builder builder) {
+            this.imageId = builder.imageId;
+            this.regionId = builder.regionId;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AdditionalRegionsInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return imageId
+         */
+        public String getImageId() {
+            return this.imageId;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String imageId; 
+            private String regionId; 
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdditionalRegionsInfo model) {
+                this.imageId = model.imageId;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
+
+            /**
+             * ImageId.
+             */
+            public Builder imageId(String imageId) {
+                this.imageId = imageId;
+                return this;
+            }
+
+            /**
+             * RegionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public AdditionalRegionsInfo build() {
+                return new AdditionalRegionsInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link GetImageResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetImageResponseBody</p>
+     */
     public static class RegistryCredential extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
@@ -647,6 +743,9 @@ public class GetImageResponseBody extends TeaModel {
      * <p>GetImageResponseBody</p>
      */
     public static class Image extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AdditionalRegionsInfo")
+        private java.util.List<AdditionalRegionsInfo> additionalRegionsInfo;
+
         @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
@@ -682,6 +781,7 @@ public class GetImageResponseBody extends TeaModel {
         private String version;
 
         private Image(Builder builder) {
+            this.additionalRegionsInfo = builder.additionalRegionsInfo;
             this.appId = builder.appId;
             this.containerImageSpec = builder.containerImageSpec;
             this.createTime = builder.createTime;
@@ -701,6 +801,13 @@ public class GetImageResponseBody extends TeaModel {
 
         public static Image create() {
             return builder().build();
+        }
+
+        /**
+         * @return additionalRegionsInfo
+         */
+        public java.util.List<AdditionalRegionsInfo> getAdditionalRegionsInfo() {
+            return this.additionalRegionsInfo;
         }
 
         /**
@@ -781,6 +888,7 @@ public class GetImageResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List<AdditionalRegionsInfo> additionalRegionsInfo; 
             private String appId; 
             private ContainerImageSpec containerImageSpec; 
             private String createTime; 
@@ -797,6 +905,7 @@ public class GetImageResponseBody extends TeaModel {
             } 
 
             private Builder(Image model) {
+                this.additionalRegionsInfo = model.additionalRegionsInfo;
                 this.appId = model.appId;
                 this.containerImageSpec = model.containerImageSpec;
                 this.createTime = model.createTime;
@@ -809,6 +918,14 @@ public class GetImageResponseBody extends TeaModel {
                 this.VMImageSpec = model.VMImageSpec;
                 this.version = model.version;
             } 
+
+            /**
+             * AdditionalRegionsInfo.
+             */
+            public Builder additionalRegionsInfo(java.util.List<AdditionalRegionsInfo> additionalRegionsInfo) {
+                this.additionalRegionsInfo = additionalRegionsInfo;
+                return this;
+            }
 
             /**
              * AppId.
