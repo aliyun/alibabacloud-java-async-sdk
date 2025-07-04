@@ -102,6 +102,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("custom_san")
+    @Deprecated
     private String customSan;
 
     @com.aliyun.core.annotation.Body
@@ -115,6 +116,7 @@ public class CreateClusterRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("enable_rrsa")
+    @Deprecated
     private Boolean enableRrsa;
 
     @com.aliyun.core.annotation.Body
@@ -124,6 +126,10 @@ public class CreateClusterRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("endpoint_public_access")
     private Boolean endpointPublicAccess;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("extra_sans")
+    private java.util.List<String> extraSans;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("format_disk")
@@ -331,6 +337,10 @@ public class CreateClusterRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("rrsa_config")
+    private RrsaConfig rrsaConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("runtime")
     private Runtime runtime;
 
@@ -499,6 +509,7 @@ public class CreateClusterRequest extends Request {
         this.enableRrsa = builder.enableRrsa;
         this.encryptionProviderKey = builder.encryptionProviderKey;
         this.endpointPublicAccess = builder.endpointPublicAccess;
+        this.extraSans = builder.extraSans;
         this.formatDisk = builder.formatDisk;
         this.imageId = builder.imageId;
         this.imageType = builder.imageType;
@@ -543,6 +554,7 @@ public class CreateClusterRequest extends Request {
         this.rdsInstances = builder.rdsInstances;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.rrsaConfig = builder.rrsaConfig;
         this.runtime = builder.runtime;
         this.securityGroupId = builder.securityGroupId;
         this.securityHardeningOs = builder.securityHardeningOs;
@@ -762,6 +774,13 @@ public class CreateClusterRequest extends Request {
      */
     public Boolean getEndpointPublicAccess() {
         return this.endpointPublicAccess;
+    }
+
+    /**
+     * @return extraSans
+     */
+    public java.util.List<String> getExtraSans() {
+        return this.extraSans;
     }
 
     /**
@@ -1073,6 +1092,13 @@ public class CreateClusterRequest extends Request {
     }
 
     /**
+     * @return rrsaConfig
+     */
+    public RrsaConfig getRrsaConfig() {
+        return this.rrsaConfig;
+    }
+
+    /**
      * @return runtime
      */
     public Runtime getRuntime() {
@@ -1315,6 +1341,7 @@ public class CreateClusterRequest extends Request {
         private Boolean enableRrsa; 
         private String encryptionProviderKey; 
         private Boolean endpointPublicAccess; 
+        private java.util.List<String> extraSans; 
         private Boolean formatDisk; 
         private String imageId; 
         private String imageType; 
@@ -1359,6 +1386,7 @@ public class CreateClusterRequest extends Request {
         private java.util.List<String> rdsInstances; 
         private String regionId; 
         private String resourceGroupId; 
+        private RrsaConfig rrsaConfig; 
         private Runtime runtime; 
         private String securityGroupId; 
         private Boolean securityHardeningOs; 
@@ -1422,6 +1450,7 @@ public class CreateClusterRequest extends Request {
             this.enableRrsa = request.enableRrsa;
             this.encryptionProviderKey = request.encryptionProviderKey;
             this.endpointPublicAccess = request.endpointPublicAccess;
+            this.extraSans = request.extraSans;
             this.formatDisk = request.formatDisk;
             this.imageId = request.imageId;
             this.imageType = request.imageType;
@@ -1466,6 +1495,7 @@ public class CreateClusterRequest extends Request {
             this.rdsInstances = request.rdsInstances;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.rrsaConfig = request.rrsaConfig;
             this.runtime = request.runtime;
             this.securityGroupId = request.securityGroupId;
             this.securityHardeningOs = request.securityHardeningOs;
@@ -1869,6 +1899,15 @@ public class CreateClusterRequest extends Request {
         public Builder endpointPublicAccess(Boolean endpointPublicAccess) {
             this.putBodyParameter("endpoint_public_access", endpointPublicAccess);
             this.endpointPublicAccess = endpointPublicAccess;
+            return this;
+        }
+
+        /**
+         * extra_sans.
+         */
+        public Builder extraSans(java.util.List<String> extraSans) {
+            this.putBodyParameter("extra_sans", extraSans);
+            this.extraSans = extraSans;
             return this;
         }
 
@@ -2520,6 +2559,15 @@ public class CreateClusterRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resource_group_id", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * rrsa_config.
+         */
+        public Builder rrsaConfig(RrsaConfig rrsaConfig) {
+            this.putBodyParameter("rrsa_config", rrsaConfig);
+            this.rrsaConfig = rrsaConfig;
             return this;
         }
 
@@ -3833,6 +3881,63 @@ public class CreateClusterRequest extends Request {
 
             public OperationPolicy build() {
                 return new OperationPolicy(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateClusterRequest} extends {@link TeaModel}
+     *
+     * <p>CreateClusterRequest</p>
+     */
+    public static class RrsaConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        private RrsaConfig(Builder builder) {
+            this.enabled = builder.enabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RrsaConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        public static final class Builder {
+            private Boolean enabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(RrsaConfig model) {
+                this.enabled = model.enabled;
+            } 
+
+            /**
+             * <p>Specifies whether to enable auto cluster update.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            public RrsaConfig build() {
+                return new RrsaConfig(this);
             } 
 
         } 
