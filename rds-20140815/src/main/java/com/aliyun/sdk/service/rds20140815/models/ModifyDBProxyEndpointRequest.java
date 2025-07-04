@@ -340,7 +340,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
         } 
 
         /**
-         * <p>Consistency read timeout, in milliseconds.</p>
+         * <p>The consistency read timeout period. Unit: milliseconds. Default value: <strong>10</strong> Unit: milliseconds. Valid values: <strong>0 to 60000</strong></p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -359,6 +359,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
          * <li><strong>ConnectionPersist</strong>: connection pooling</li>
          * <li><strong>TransactionReadSqlRouteOptimizeStatus</strong>: transaction splitting</li>
          * <li><strong>AZProximityAccess</strong>: nearest access</li>
+         * <li><strong>CausalConsistRead</strong>: read consistency</li>
          * </ul>
          * <p>Valid status values:</p>
          * <ul>
@@ -648,7 +649,7 @@ public class ModifyDBProxyEndpointRequest extends Request {
         }
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID of the zone in which the proxy endpoint is specified. The default value is the VPC ID that corresponds to the default terminal of the database proxy. You can call the DescribeDBInstanceAttribute operation to query the default VPC of an instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2zeusejj******</p>

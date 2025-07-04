@@ -75,7 +75,11 @@ public class AcceptRCInquiredSystemEventRequest extends Request {
         } 
 
         /**
+         * <p>The ID of the system event.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>e-2zeielxl1qzq8slb****</p>
          */
         public Builder eventId(String eventId) {
             this.putQueryParameter("EventId", eventId);
@@ -84,7 +88,11 @@ public class AcceptRCInquiredSystemEventRequest extends Request {
         }
 
         /**
+         * <p>The region ID of the system event.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

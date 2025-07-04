@@ -674,6 +674,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <blockquote>
+     * <p> This operation is no longer maintained. You can call the CreateDiagnosticReport operation of Database Autonomy Service (DAS) to create a diagnostic report.
+     * After you call this operation to create a diagnostic report, you can call the DescribeDiagnosticReportList operation to download the diagnostic report.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of CreateDiagnosticReport  CreateDiagnosticReportRequest
+     * @return CreateDiagnosticReportResponse
+     */
+    CompletableFuture<CreateDiagnosticReportResponse> createDiagnosticReport(CreateDiagnosticReportRequest request);
+
+    /**
+     * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
      * <ul>
      * <li>MySQL</li>
@@ -813,6 +825,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRCDeploymentSetResponse> createRCDeploymentSet(CreateRCDeploymentSetRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  The disk can be an ultra disk, an Enterprise SSD (ESSD), an SSD, or a Premium ESSD. By default, Premium ESSD is used.</p>
+     * <ul>
+     * <li>When you set InstanceChargeType to <strong>Prepaid</strong>, the disk billing method is subscription. You must set <strong>InstanceId</strong> to the ID of a subscription instance. The expiration time of the disk must be the same as that of the instance to which the disk is attached.</li>
+     * <li>When you set <strong>InstanceChargeType</strong> to Postpaid, the disk billing method is pay-as-you-go. You do not need to attach the disk to an instance. You can also attach the pay-as-you-go disk to an instance of any billing method based on your business requirements.</li>
+     * <li>The type and number of disks that can be attached to an instance vary based on instance specifications.</li>
+     * </ul>
+     * 
      * @param request the request parameters of CreateRCDisk  CreateRCDiskRequest
      * @return CreateRCDiskResponse
      */
@@ -994,10 +1014,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Supported database engines</h3>
-     * <p>RDS SQL Server</p>
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>SQL Server</p>
      * <blockquote>
-     * <p> This operation is available only for users that are added to the whitelist.</p>
+     * <p> **This operation is not supported for new users. **Select other methods to <a href="https://help.aliyun.com/document_detail/95718.html">reduce or save backup costs</a>. Users who are added to the whitelist can still use the backup file. Check the availability of the backup file before you delete it. After the backup file is deleted, you cannot retrieve it.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DeleteBackupFile  DeleteBackupFileRequest
@@ -1635,6 +1655,18 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engine</h3>
+     * <p>RDS PostgreSQL</p>
+     * <h3><a href="#"></a>References</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2928780.html">Assured serverless</a></p>
+     * 
+     * @param request the request parameters of DescribeComputeBurstConfig  DescribeComputeBurstConfigRequest
+     * @return DescribeComputeBurstConfigResponse
+     */
+    CompletableFuture<DescribeComputeBurstConfigResponse> describeComputeBurstConfig(DescribeComputeBurstConfigRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>ApsaraDB RDS for MySQL instances support cross-region backup and restoration. For more information, see <a href="https://help.aliyun.com/document_detail/120824.html">Back up an ApsaraDB RDS for MySQL instance across regions</a> and <a href="https://help.aliyun.com/document_detail/120875.html">Restore the data of an ApsaraDB RDS for MySQL instance across regions</a>.
      * Before you call this operation, make sure that the instance runs one of the following database engines:</p>
      * <ul>
@@ -1985,6 +2017,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <li>RDS PostgreSQL</li>
      * <li>RDS SQL Server</li>
      * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <ul>
+     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Use the SSL encryption feature for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/229518.html">Use the SSL encryption feature for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Use the SSL encryption feature for an ApsaraDB RDS for SQL Server instance</a></li>
+     * </ul>
      * 
      * @param request the request parameters of DescribeDBInstanceSSL  DescribeDBInstanceSSLRequest
      * @return DescribeDBInstanceSSLResponse
@@ -2204,6 +2242,15 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDetachedBackupsResponse
      */
     CompletableFuture<DescribeDetachedBackupsResponse> describeDetachedBackups(DescribeDetachedBackupsRequest request);
+
+    /**
+     * @deprecated OpenAPI DescribeDiagnosticReportList is deprecated  * @description >  This operation is phased out.
+     * 
+     * @param request the request parameters of DescribeDiagnosticReportList  DescribeDiagnosticReportListRequest
+     * @return DescribeDiagnosticReportListResponse
+     */
+    @Deprecated
+    CompletableFuture<DescribeDiagnosticReportListResponse> describeDiagnosticReportList(DescribeDiagnosticReportListRequest request);
 
     /**
      * <b>description</b> :
@@ -2689,6 +2736,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeQuickSaleConfigResponse> describeQuickSaleConfig(DescribeQuickSaleConfigRequest request);
 
     /**
+     * @param request the request parameters of DescribeRCCloudAssistantStatus  DescribeRCCloudAssistantStatusRequest
+     * @return DescribeRCCloudAssistantStatusResponse
+     */
+    CompletableFuture<DescribeRCCloudAssistantStatusResponse> describeRCCloudAssistantStatus(DescribeRCCloudAssistantStatusRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Kubeconfig files store identity and authentication information that is used by clients to access ACK clusters. To use kubectl to manage an ACK cluster, you must use the kubeconfig file to connect to the ACK cluster. We recommend that you keep kubeconfig files confidential and revoke kubeconfig files that are not in use. This helps prevent data leaks caused by the disclosure of kubeconfig files.</p>
      * 
@@ -2746,6 +2799,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRCInstanceDdosCountResponse> describeRCInstanceDdosCount(DescribeRCInstanceDdosCountRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>  You can query system events that were completed within the last 30 days. No limits apply to the time range for querying uncompleted system events.</p>
+     * <ul>
+     * <li>If you do not specify the EventCycleStatus or InstanceEventCycleStatus parameter, only system events in the Avoidated, Executed, Canceled, or Failed state are included in the query results by default.</li>
+     * <li>You can also specify the InstanceEventCycleStatus parameter in the request to query the system events that are in the Scheduled, Executing, or Inquiring state.</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeRCInstanceHistoryEvents  DescribeRCInstanceHistoryEventsRequest
      * @return DescribeRCInstanceHistoryEventsResponse
      */
@@ -2794,6 +2854,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeRCInstancesResponse> describeRCInstances(DescribeRCInstancesRequest request);
 
     /**
+     * @param request the request parameters of DescribeRCInvocationResults  DescribeRCInvocationResultsRequest
+     * @return DescribeRCInvocationResultsResponse
+     */
+    CompletableFuture<DescribeRCInvocationResultsResponse> describeRCInvocationResults(DescribeRCInvocationResultsRequest request);
+
+    /**
      * @param request the request parameters of DescribeRCMetricList  DescribeRCMetricListRequest
      * @return DescribeRCMetricListResponse
      */
@@ -2822,6 +2888,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeRCSnapshotsResponse
      */
     CompletableFuture<DescribeRCSnapshotsResponse> describeRCSnapshots(DescribeRCSnapshotsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRCVCluster  DescribeRCVClusterRequest
+     * @return DescribeRCVClusterResponse
+     */
+    CompletableFuture<DescribeRCVClusterResponse> describeRCVCluster(DescribeRCVClusterRequest request);
 
     /**
      * @deprecated OpenAPI DescribeRdsResourceSettings is deprecated  * @param request  the request parameters of DescribeRdsResourceSettings  DescribeRdsResourceSettingsRequest
@@ -3170,6 +3242,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUpgradeMajorVersionTasksResponse> describeUpgradeMajorVersionTasks(DescribeUpgradeMajorVersionTasksRequest request);
 
     /**
+     * @param request the request parameters of DescribeVSwitchList  DescribeVSwitchListRequest
+     * @return DescribeVSwitchListResponse
+     */
+    CompletableFuture<DescribeVSwitchListResponse> describeVSwitchList(DescribeVSwitchListRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
@@ -3336,6 +3414,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ImportUserBackupFileResponse
      */
     CompletableFuture<ImportUserBackupFileResponse> importUserBackupFile(ImportUserBackupFileRequest request);
+
+    /**
+     * @param request the request parameters of InstallRCCloudAssistant  InstallRCCloudAssistantRequest
+     * @return InstallRCCloudAssistantResponse
+     */
+    CompletableFuture<InstallRCCloudAssistantResponse> installRCCloudAssistant(InstallRCCloudAssistantRequest request);
 
     /**
      * <b>description</b> :
@@ -3627,6 +3711,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <h3><a href="#"></a>Supported database engines</h3>
+     * <ul>
+     * <li>RDS SQL Server</li>
+     * </ul>
+     * <h3><a href="#"></a>References</h3>
+     * <blockquote>
+     * <p> Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * </blockquote>
+     * 
+     * @param request the request parameters of ModifyBackupSetExpireTime  ModifyBackupSetExpireTimeRequest
+     * @return ModifyBackupSetExpireTimeResponse
+     */
+    CompletableFuture<ModifyBackupSetExpireTimeResponse> modifyBackupSetExpireTime(ModifyBackupSetExpireTimeRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h3><a href="#"></a>Supported database engines</h3>
      * <p>RDS SQL Server</p>
      * <h3><a href="#"></a>References</h3>
      * <blockquote>
@@ -3638,6 +3738,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyCollationTimeZoneResponse
      */
     CompletableFuture<ModifyCollationTimeZoneResponse> modifyCollationTimeZone(ModifyCollationTimeZoneRequest request);
+
+    /**
+     * @param request the request parameters of ModifyComputeBurstConfig  ModifyComputeBurstConfigRequest
+     * @return ModifyComputeBurstConfigResponse
+     */
+    CompletableFuture<ModifyComputeBurstConfigResponse> modifyComputeBurstConfig(ModifyComputeBurstConfigRequest request);
 
     /**
      * @param request the request parameters of ModifyCustinsResource  ModifyCustinsResourceRequest
@@ -4728,6 +4834,25 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>RedeployInstance is an <strong>asynchronous</strong> operation. It migrates data before it restarts the instance. If the instance is successfully redeployed, it enters the Running state. If the instance fails to be redeployed, it returns to the original physical server and the state before the redeployment.
+     * When you call this operation, take note of the following items:
+     * The instance must be in the Running or Stopped state. After the instance is redeployed, the state of the instance has the following changes:</p>
+     * <ul>
+     * <li>If the instance is in the Running state before redeployment, the instance enters the Stopped state.</li>
+     * <li>If the instance is in the Stopped state before redeployment, the instance enters the Starting state.</li>
+     * <li>If an instance receives notifications about simulated events that are created by calling the CreateSimulatedSystemEvent operation for the instance, you cannot call this operation to redeploy the instance.
+     * The following table lists the types and states of events that you can handle by calling the RedeployInstance operation.</li>
+     * <li>Instance redeployment due to system maintenance: SystemMaintenance.Redeploy. The event state is Inquiring or Scheduled.</li>
+     * <li>Instance redeployment due to system failures: SystemFailure.Redeploy. The event state is Inquiring.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of RedeployRCInstance  RedeployRCInstanceRequest
+     * @return RedeployRCInstanceResponse
+     */
+    CompletableFuture<RedeployRCInstanceResponse> redeployRCInstance(RedeployRCInstanceRequest request);
+
+    /**
+     * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
      * <li>MySQL</li>
@@ -5032,6 +5157,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RevokeRCSecurityGroupPermissionResponse
      */
     CompletableFuture<RevokeRCSecurityGroupPermissionResponse> revokeRCSecurityGroupPermission(RevokeRCSecurityGroupPermissionRequest request);
+
+    /**
+     * @param request the request parameters of RunRCCommand  RunRCCommandRequest
+     * @return RunRCCommandResponse
+     */
+    CompletableFuture<RunRCCommandResponse> runRCCommand(RunRCCommandRequest request);
 
     /**
      * <b>description</b> :

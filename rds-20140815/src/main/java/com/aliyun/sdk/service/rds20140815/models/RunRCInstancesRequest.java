@@ -55,6 +55,10 @@ public class RunRCInstancesRequest extends Request {
     private java.util.List<DataDisk> dataDisk;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
     private String deploymentSetId;
 
@@ -180,6 +184,7 @@ public class RunRCInstancesRequest extends Request {
         this.createExtraParam = builder.createExtraParam;
         this.createMode = builder.createMode;
         this.dataDisk = builder.dataDisk;
+        this.deletionProtection = builder.deletionProtection;
         this.deploymentSetId = builder.deploymentSetId;
         this.description = builder.description;
         this.dryRun = builder.dryRun;
@@ -284,6 +289,13 @@ public class RunRCInstancesRequest extends Request {
      */
     public java.util.List<DataDisk> getDataDisk() {
         return this.dataDisk;
+    }
+
+    /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     /**
@@ -492,6 +504,7 @@ public class RunRCInstancesRequest extends Request {
         private String createExtraParam; 
         private String createMode; 
         private java.util.List<DataDisk> dataDisk; 
+        private Boolean deletionProtection; 
         private String deploymentSetId; 
         private String description; 
         private Boolean dryRun; 
@@ -536,6 +549,7 @@ public class RunRCInstancesRequest extends Request {
             this.createExtraParam = request.createExtraParam;
             this.createMode = request.createMode;
             this.dataDisk = request.dataDisk;
+            this.deletionProtection = request.deletionProtection;
             this.deploymentSetId = request.deploymentSetId;
             this.description = request.description;
             this.dryRun = request.dryRun;
@@ -670,6 +684,15 @@ public class RunRCInstancesRequest extends Request {
             String dataDiskShrink = shrink(dataDisk, "DataDisk", "json");
             this.putQueryParameter("DataDisk", dataDiskShrink);
             this.dataDisk = dataDisk;
+            return this;
+        }
+
+        /**
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
             return this;
         }
 

@@ -113,6 +113,10 @@ public class DescribeDBInstancesRequest extends Request {
     private String payType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryAutoRenewal")
+    private Boolean queryAutoRenewal;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -178,6 +182,7 @@ public class DescribeDBInstancesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.payType = builder.payType;
+        this.queryAutoRenewal = builder.queryAutoRenewal;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -365,6 +370,13 @@ public class DescribeDBInstancesRequest extends Request {
     }
 
     /**
+     * @return queryAutoRenewal
+     */
+    public Boolean getQueryAutoRenewal() {
+        return this.queryAutoRenewal;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -458,6 +470,7 @@ public class DescribeDBInstancesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String payType; 
+        private Boolean queryAutoRenewal; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -498,6 +511,7 @@ public class DescribeDBInstancesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.payType = request.payType;
+            this.queryAutoRenewal = request.queryAutoRenewal;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -825,6 +839,15 @@ public class DescribeDBInstancesRequest extends Request {
         public Builder payType(String payType) {
             this.putQueryParameter("PayType", payType);
             this.payType = payType;
+            return this;
+        }
+
+        /**
+         * QueryAutoRenewal.
+         */
+        public Builder queryAutoRenewal(Boolean queryAutoRenewal) {
+            this.putQueryParameter("QueryAutoRenewal", queryAutoRenewal);
+            this.queryAutoRenewal = queryAutoRenewal;
             return this;
         }
 

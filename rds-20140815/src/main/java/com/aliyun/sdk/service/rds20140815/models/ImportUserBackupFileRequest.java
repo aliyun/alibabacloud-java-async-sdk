@@ -19,13 +19,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ImportUserBackupFileRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupFile")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String backupFile;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BucketRegion")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String bucketRegion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BuildReplication")
+    private Boolean buildReplication;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Comment")
@@ -39,6 +41,14 @@ public class ImportUserBackupFileRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EngineVersion")
     private String engineVersion;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MasterInfo")
+    private String masterInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
+    private String mode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -70,6 +80,10 @@ public class ImportUserBackupFileRequest extends Request {
     private Integer retention;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceInfo")
+    private String sourceInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
@@ -77,9 +91,12 @@ public class ImportUserBackupFileRequest extends Request {
         super(builder);
         this.backupFile = builder.backupFile;
         this.bucketRegion = builder.bucketRegion;
+        this.buildReplication = builder.buildReplication;
         this.comment = builder.comment;
         this.DBInstanceId = builder.DBInstanceId;
         this.engineVersion = builder.engineVersion;
+        this.masterInfo = builder.masterInfo;
+        this.mode = builder.mode;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
@@ -87,6 +104,7 @@ public class ImportUserBackupFileRequest extends Request {
         this.resourceOwnerId = builder.resourceOwnerId;
         this.restoreSize = builder.restoreSize;
         this.retention = builder.retention;
+        this.sourceInfo = builder.sourceInfo;
         this.zoneId = builder.zoneId;
     }
 
@@ -118,6 +136,13 @@ public class ImportUserBackupFileRequest extends Request {
     }
 
     /**
+     * @return buildReplication
+     */
+    public Boolean getBuildReplication() {
+        return this.buildReplication;
+    }
+
+    /**
      * @return comment
      */
     public String getComment() {
@@ -136,6 +161,20 @@ public class ImportUserBackupFileRequest extends Request {
      */
     public String getEngineVersion() {
         return this.engineVersion;
+    }
+
+    /**
+     * @return masterInfo
+     */
+    public String getMasterInfo() {
+        return this.masterInfo;
+    }
+
+    /**
+     * @return mode
+     */
+    public String getMode() {
+        return this.mode;
     }
 
     /**
@@ -188,6 +227,13 @@ public class ImportUserBackupFileRequest extends Request {
     }
 
     /**
+     * @return sourceInfo
+     */
+    public String getSourceInfo() {
+        return this.sourceInfo;
+    }
+
+    /**
      * @return zoneId
      */
     public String getZoneId() {
@@ -197,9 +243,12 @@ public class ImportUserBackupFileRequest extends Request {
     public static final class Builder extends Request.Builder<ImportUserBackupFileRequest, Builder> {
         private String backupFile; 
         private String bucketRegion; 
+        private Boolean buildReplication; 
         private String comment; 
         private String DBInstanceId; 
         private String engineVersion; 
+        private String masterInfo; 
+        private String mode; 
         private Long ownerId; 
         private String regionId; 
         private String resourceGroupId; 
@@ -207,6 +256,7 @@ public class ImportUserBackupFileRequest extends Request {
         private Long resourceOwnerId; 
         private Integer restoreSize; 
         private Integer retention; 
+        private String sourceInfo; 
         private String zoneId; 
 
         private Builder() {
@@ -217,9 +267,12 @@ public class ImportUserBackupFileRequest extends Request {
             super(request);
             this.backupFile = request.backupFile;
             this.bucketRegion = request.bucketRegion;
+            this.buildReplication = request.buildReplication;
             this.comment = request.comment;
             this.DBInstanceId = request.DBInstanceId;
             this.engineVersion = request.engineVersion;
+            this.masterInfo = request.masterInfo;
+            this.mode = request.mode;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
@@ -227,6 +280,7 @@ public class ImportUserBackupFileRequest extends Request {
             this.resourceOwnerId = request.resourceOwnerId;
             this.restoreSize = request.restoreSize;
             this.retention = request.retention;
+            this.sourceInfo = request.sourceInfo;
             this.zoneId = request.zoneId;
         } 
 
@@ -238,7 +292,6 @@ public class ImportUserBackupFileRequest extends Request {
          * <li><strong>Object</strong>: The path of the full backup file that is stored as an object in the OSS bucket. You can call the <a href="https://help.aliyun.com/document_detail/31980.html">GetObject</a> operation to query the path of the object.</li>
          * <li><strong>Location</strong>: The ID of the region in which the OSS bucket is located. You can call the <a href="https://help.aliyun.com/document_detail/31967.html">GetBucketLocation</a> operation to query the region of the bucket.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Bucket&quot;:&quot;test&quot;, &quot;Object&quot;:&quot;test/test_db_employees.xb&quot;,&quot;Location&quot;:&quot;ap-southeast-1&quot;}</p>
@@ -251,7 +304,6 @@ public class ImportUserBackupFileRequest extends Request {
 
         /**
          * <p>The region ID of the OSS bucket where the full backup file of the self-managed MySQL database is located. You can call the DescribeRegions operation to query the most recent region list.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -259,6 +311,15 @@ public class ImportUserBackupFileRequest extends Request {
         public Builder bucketRegion(String bucketRegion) {
             this.putQueryParameter("BucketRegion", bucketRegion);
             this.bucketRegion = bucketRegion;
+            return this;
+        }
+
+        /**
+         * BuildReplication.
+         */
+        public Builder buildReplication(Boolean buildReplication) {
+            this.putQueryParameter("BuildReplication", buildReplication);
+            this.buildReplication = buildReplication;
             return this;
         }
 
@@ -295,6 +356,24 @@ public class ImportUserBackupFileRequest extends Request {
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
             this.engineVersion = engineVersion;
+            return this;
+        }
+
+        /**
+         * MasterInfo.
+         */
+        public Builder masterInfo(String masterInfo) {
+            this.putQueryParameter("MasterInfo", masterInfo);
+            this.masterInfo = masterInfo;
+            return this;
+        }
+
+        /**
+         * Mode.
+         */
+        public Builder mode(String mode) {
+            this.putQueryParameter("Mode", mode);
+            this.mode = mode;
             return this;
         }
 
@@ -383,6 +462,15 @@ public class ImportUserBackupFileRequest extends Request {
         public Builder retention(Integer retention) {
             this.putQueryParameter("Retention", retention);
             this.retention = retention;
+            return this;
+        }
+
+        /**
+         * SourceInfo.
+         */
+        public Builder sourceInfo(String sourceInfo) {
+            this.putQueryParameter("SourceInfo", sourceInfo);
+            this.sourceInfo = sourceInfo;
             return this;
         }
 

@@ -311,6 +311,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
      * <p>DescribeDBInstancesResponseBody</p>
      */
     public static class DBInstance extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoRenewal")
+        private Boolean autoRenewal;
+
         @com.aliyun.core.annotation.NameInMap("BlueGreenDeploymentName")
         private String blueGreenDeploymentName;
 
@@ -480,6 +483,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private String zoneId;
 
         private DBInstance(Builder builder) {
+            this.autoRenewal = builder.autoRenewal;
             this.blueGreenDeploymentName = builder.blueGreenDeploymentName;
             this.blueInstanceName = builder.blueInstanceName;
             this.bpeEnabled = builder.bpeEnabled;
@@ -544,6 +548,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
 
         public static DBInstance create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoRenewal
+         */
+        public Boolean getAutoRenewal() {
+            return this.autoRenewal;
         }
 
         /**
@@ -939,6 +950,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean autoRenewal; 
             private String blueGreenDeploymentName; 
             private String blueInstanceName; 
             private String bpeEnabled; 
@@ -1000,6 +1012,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             } 
 
             private Builder(DBInstance model) {
+                this.autoRenewal = model.autoRenewal;
                 this.blueGreenDeploymentName = model.blueGreenDeploymentName;
                 this.blueInstanceName = model.blueInstanceName;
                 this.bpeEnabled = model.bpeEnabled;
@@ -1057,6 +1070,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
                 this.vpcName = model.vpcName;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * AutoRenewal.
+             */
+            public Builder autoRenewal(Boolean autoRenewal) {
+                this.autoRenewal = autoRenewal;
+                return this;
+            }
 
             /**
              * BlueGreenDeploymentName.

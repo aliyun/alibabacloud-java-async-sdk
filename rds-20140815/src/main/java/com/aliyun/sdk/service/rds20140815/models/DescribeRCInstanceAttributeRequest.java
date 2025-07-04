@@ -22,6 +22,10 @@ public class DescribeRCInstanceAttributeRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxDisksResults")
+    private Long maxDisksResults;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
@@ -32,6 +36,7 @@ public class DescribeRCInstanceAttributeRequest extends Request {
     private DescribeRCInstanceAttributeRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.maxDisksResults = builder.maxDisksResults;
         this.privateIpAddress = builder.privateIpAddress;
         this.regionId = builder.regionId;
     }
@@ -57,6 +62,13 @@ public class DescribeRCInstanceAttributeRequest extends Request {
     }
 
     /**
+     * @return maxDisksResults
+     */
+    public Long getMaxDisksResults() {
+        return this.maxDisksResults;
+    }
+
+    /**
      * @return privateIpAddress
      */
     public String getPrivateIpAddress() {
@@ -72,6 +84,7 @@ public class DescribeRCInstanceAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeRCInstanceAttributeRequest, Builder> {
         private String instanceId; 
+        private Long maxDisksResults; 
         private String privateIpAddress; 
         private String regionId; 
 
@@ -82,6 +95,7 @@ public class DescribeRCInstanceAttributeRequest extends Request {
         private Builder(DescribeRCInstanceAttributeRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.maxDisksResults = request.maxDisksResults;
             this.privateIpAddress = request.privateIpAddress;
             this.regionId = request.regionId;
         } 
@@ -95,6 +109,15 @@ public class DescribeRCInstanceAttributeRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MaxDisksResults.
+         */
+        public Builder maxDisksResults(Long maxDisksResults) {
+            this.putQueryParameter("MaxDisksResults", maxDisksResults);
+            this.maxDisksResults = maxDisksResults;
             return this;
         }
 

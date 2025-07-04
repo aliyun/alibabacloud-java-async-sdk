@@ -44,6 +44,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DedicatedHostAttribute")
     private DedicatedHostAttribute dedicatedHostAttribute;
 
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
     @com.aliyun.core.annotation.NameInMap("DeploymentSetId")
     private String deploymentSetId;
 
@@ -64,6 +67,12 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ExpiredTime")
     private String expiredTime;
+
+    @com.aliyun.core.annotation.NameInMap("Gpu")
+    private Integer gpu;
+
+    @com.aliyun.core.annotation.NameInMap("GpuTypes")
+    private String gpuTypes;
 
     @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
@@ -110,6 +119,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Memory")
     private Integer memory;
 
+    @com.aliyun.core.annotation.NameInMap("NodeType")
+    private String nodeType;
+
     @com.aliyun.core.annotation.NameInMap("OperationLocks")
     private OperationLocks operationLocks;
 
@@ -146,6 +158,9 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
+    @com.aliyun.core.annotation.NameInMap("UserData")
+    private String userData;
+
     @com.aliyun.core.annotation.NameInMap("VlanId")
     private String vlanId;
 
@@ -165,6 +180,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         this.dataDisks = builder.dataDisks;
         this.dbType = builder.dbType;
         this.dedicatedHostAttribute = builder.dedicatedHostAttribute;
+        this.deletionProtection = builder.deletionProtection;
         this.deploymentSetId = builder.deploymentSetId;
         this.description = builder.description;
         this.diskType = builder.diskType;
@@ -172,6 +188,8 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         this.eipAddress = builder.eipAddress;
         this.enableJumboFrame = builder.enableJumboFrame;
         this.expiredTime = builder.expiredTime;
+        this.gpu = builder.gpu;
+        this.gpuTypes = builder.gpuTypes;
         this.hostName = builder.hostName;
         this.hostType = builder.hostType;
         this.imageId = builder.imageId;
@@ -187,6 +205,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         this.ioOptimized = builder.ioOptimized;
         this.keyPairName = builder.keyPairName;
         this.memory = builder.memory;
+        this.nodeType = builder.nodeType;
         this.operationLocks = builder.operationLocks;
         this.publicIpAddress = builder.publicIpAddress;
         this.regionId = builder.regionId;
@@ -199,6 +218,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         this.stoppedMode = builder.stoppedMode;
         this.systemDisk = builder.systemDisk;
         this.tags = builder.tags;
+        this.userData = builder.userData;
         this.vlanId = builder.vlanId;
         this.vpcAttributes = builder.vpcAttributes;
         this.zoneId = builder.zoneId;
@@ -280,6 +300,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
+    }
+
+    /**
      * @return deploymentSetId
      */
     public String getDeploymentSetId() {
@@ -326,6 +353,20 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
      */
     public String getExpiredTime() {
         return this.expiredTime;
+    }
+
+    /**
+     * @return gpu
+     */
+    public Integer getGpu() {
+        return this.gpu;
+    }
+
+    /**
+     * @return gpuTypes
+     */
+    public String getGpuTypes() {
+        return this.gpuTypes;
     }
 
     /**
@@ -434,6 +475,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return nodeType
+     */
+    public String getNodeType() {
+        return this.nodeType;
+    }
+
+    /**
      * @return operationLocks
      */
     public OperationLocks getOperationLocks() {
@@ -518,6 +566,13 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return userData
+     */
+    public String getUserData() {
+        return this.userData;
+    }
+
+    /**
      * @return vlanId
      */
     public String getVlanId() {
@@ -548,6 +603,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         private DataDisks dataDisks; 
         private String dbType; 
         private DedicatedHostAttribute dedicatedHostAttribute; 
+        private Boolean deletionProtection; 
         private String deploymentSetId; 
         private String description; 
         private String diskType; 
@@ -555,6 +611,8 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         private EipAddress eipAddress; 
         private Boolean enableJumboFrame; 
         private String expiredTime; 
+        private Integer gpu; 
+        private String gpuTypes; 
         private String hostName; 
         private String hostType; 
         private String imageId; 
@@ -570,6 +628,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         private String ioOptimized; 
         private String keyPairName; 
         private Integer memory; 
+        private String nodeType; 
         private OperationLocks operationLocks; 
         private PublicIpAddress publicIpAddress; 
         private String regionId; 
@@ -582,6 +641,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         private String stoppedMode; 
         private SystemDisk systemDisk; 
         private Tags tags; 
+        private String userData; 
         private String vlanId; 
         private VpcAttributes vpcAttributes; 
         private String zoneId; 
@@ -599,6 +659,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             this.dataDisks = model.dataDisks;
             this.dbType = model.dbType;
             this.dedicatedHostAttribute = model.dedicatedHostAttribute;
+            this.deletionProtection = model.deletionProtection;
             this.deploymentSetId = model.deploymentSetId;
             this.description = model.description;
             this.diskType = model.diskType;
@@ -606,6 +667,8 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             this.eipAddress = model.eipAddress;
             this.enableJumboFrame = model.enableJumboFrame;
             this.expiredTime = model.expiredTime;
+            this.gpu = model.gpu;
+            this.gpuTypes = model.gpuTypes;
             this.hostName = model.hostName;
             this.hostType = model.hostType;
             this.imageId = model.imageId;
@@ -621,6 +684,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             this.ioOptimized = model.ioOptimized;
             this.keyPairName = model.keyPairName;
             this.memory = model.memory;
+            this.nodeType = model.nodeType;
             this.operationLocks = model.operationLocks;
             this.publicIpAddress = model.publicIpAddress;
             this.regionId = model.regionId;
@@ -633,6 +697,7 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
             this.stoppedMode = model.stoppedMode;
             this.systemDisk = model.systemDisk;
             this.tags = model.tags;
+            this.userData = model.userData;
             this.vlanId = model.vlanId;
             this.vpcAttributes = model.vpcAttributes;
             this.zoneId = model.zoneId;
@@ -726,6 +791,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
+
+        /**
          * <p>The ID of the deployment set.</p>
          * 
          * <strong>example:</strong>
@@ -800,6 +873,22 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder expiredTime(String expiredTime) {
             this.expiredTime = expiredTime;
+            return this;
+        }
+
+        /**
+         * Gpu.
+         */
+        public Builder gpu(Integer gpu) {
+            this.gpu = gpu;
+            return this;
+        }
+
+        /**
+         * GpuTypes.
+         */
+        public Builder gpuTypes(String gpuTypes) {
+            this.gpuTypes = gpuTypes;
             return this;
         }
 
@@ -982,6 +1071,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * NodeType.
+         */
+        public Builder nodeType(String nodeType) {
+            this.nodeType = nodeType;
+            return this;
+        }
+
+        /**
          * <p>The reasons why the instance is locked.</p>
          */
         public Builder operationLocks(OperationLocks operationLocks) {
@@ -1101,6 +1198,14 @@ public class DescribeRCInstanceAttributeResponseBody extends TeaModel {
          */
         public Builder tags(Tags tags) {
             this.tags = tags;
+            return this;
+        }
+
+        /**
+         * UserData.
+         */
+        public Builder userData(String userData) {
+            this.userData = userData;
             return this;
         }
 

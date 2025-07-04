@@ -410,6 +410,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
+        @com.aliyun.core.annotation.NameInMap("ExpectExpireTime")
+        private String expectExpireTime;
+
         @com.aliyun.core.annotation.NameInMap("HostInstanceID")
         private String hostInstanceID;
 
@@ -445,6 +448,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             this.encryption = builder.encryption;
             this.engine = builder.engine;
             this.engineVersion = builder.engineVersion;
+            this.expectExpireTime = builder.expectExpireTime;
             this.hostInstanceID = builder.hostInstanceID;
             this.isAvail = builder.isAvail;
             this.metaStatus = builder.metaStatus;
@@ -594,6 +598,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return expectExpireTime
+         */
+        public String getExpectExpireTime() {
+            return this.expectExpireTime;
+        }
+
+        /**
          * @return hostInstanceID
          */
         public String getHostInstanceID() {
@@ -648,6 +659,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String encryption; 
             private String engine; 
             private String engineVersion; 
+            private String expectExpireTime; 
             private String hostInstanceID; 
             private Integer isAvail; 
             private String metaStatus; 
@@ -677,6 +689,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
                 this.encryption = model.encryption;
                 this.engine = model.engine;
                 this.engineVersion = model.engineVersion;
+                this.expectExpireTime = model.expectExpireTime;
                 this.hostInstanceID = model.hostInstanceID;
                 this.isAvail = model.isAvail;
                 this.metaStatus = model.metaStatus;
@@ -926,6 +939,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
+                return this;
+            }
+
+            /**
+             * ExpectExpireTime.
+             */
+            public Builder expectExpireTime(String expectExpireTime) {
+                this.expectExpireTime = expectExpireTime;
                 return this;
             }
 

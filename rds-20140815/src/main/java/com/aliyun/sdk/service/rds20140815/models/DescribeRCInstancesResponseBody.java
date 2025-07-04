@@ -569,6 +569,9 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
+        @com.aliyun.core.annotation.NameInMap("NodeType")
+        private String nodeType;
+
         @com.aliyun.core.annotation.NameInMap("PublicIp")
         private String publicIp;
 
@@ -616,6 +619,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             this.instanceType = builder.instanceType;
             this.instanceTypeFamily = builder.instanceTypeFamily;
             this.memory = builder.memory;
+            this.nodeType = builder.nodeType;
             this.publicIp = builder.publicIp;
             this.regionId = builder.regionId;
             this.securityGroupId = builder.securityGroupId;
@@ -749,6 +753,13 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return nodeType
+         */
+        public String getNodeType() {
+            return this.nodeType;
+        }
+
+        /**
          * @return publicIp
          */
         public String getPublicIp() {
@@ -835,6 +846,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
             private String instanceType; 
             private String instanceTypeFamily; 
             private Integer memory; 
+            private String nodeType; 
             private String publicIp; 
             private String regionId; 
             private String securityGroupId; 
@@ -866,6 +878,7 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
                 this.instanceType = model.instanceType;
                 this.instanceTypeFamily = model.instanceTypeFamily;
                 this.memory = model.memory;
+                this.nodeType = model.nodeType;
                 this.publicIp = model.publicIp;
                 this.regionId = model.regionId;
                 this.securityGroupId = model.securityGroupId;
@@ -1024,6 +1037,14 @@ public class DescribeRCInstancesResponseBody extends TeaModel {
              */
             public Builder memory(Integer memory) {
                 this.memory = memory;
+                return this;
+            }
+
+            /**
+             * NodeType.
+             */
+            public Builder nodeType(String nodeType) {
+                this.nodeType = nodeType;
                 return this;
             }
 

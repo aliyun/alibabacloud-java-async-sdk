@@ -119,7 +119,7 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
         } 
 
         /**
-         * InstanceSystemEventSet.
+         * <p>Details about the instance system event.</p>
          */
         public Builder instanceSystemEventSet(java.util.List<InstanceSystemEventSet> instanceSystemEventSet) {
             this.instanceSystemEventSet = instanceSystemEventSet;
@@ -127,7 +127,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>The reserved parameter. This parameter is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -135,7 +138,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -143,7 +149,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -151,7 +160,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>866F5EB8-4650-4061-87F0-379F6F968BCE</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of instance events.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -225,7 +240,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The state code of the system event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -233,7 +251,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The state name of the system event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Executed</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -300,7 +321,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * Code.
+             * <p>The code of the system event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>34</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -308,7 +332,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the system event type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>InstanceExpiration.Stop</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -414,7 +441,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * CreationTime.
+             * <p>The time when the disk was created. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-26T03:33:56Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -422,7 +452,16 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceCategory.
+             * <p>The category of the cloud disk or local disk. Valid values:</p>
+             * <ul>
+             * <li><strong>cloud_efficiency</strong>: ultra disk</li>
+             * <li><strong>cloud_ssd</strong>: standard SSD</li>
+             * <li><strong>cloud_essd</strong>: ESSD</li>
+             * <li><strong>cloud_auto</strong>: Premium ESSD</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_auto</p>
              */
             public Builder deviceCategory(String deviceCategory) {
                 this.deviceCategory = deviceCategory;
@@ -430,7 +469,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceSize.
+             * <p>The size of the disk. Unit: GiB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>40</p>
              */
             public Builder deviceSize(String deviceSize) {
                 this.deviceSize = deviceSize;
@@ -438,7 +480,14 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DeviceType.
+             * <p>The disk type. Valid values:</p>
+             * <ul>
+             * <li><strong>system</strong>: system disk.</li>
+             * <li><strong>data</strong>: data disk.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>data</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -446,7 +495,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseTime.
+             * <p>The time when the disk was released. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-26T03:33:56Z</p>
              */
             public Builder releaseTime(String releaseTime) {
                 this.releaseTime = releaseTime;
@@ -669,7 +721,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * CanAccept.
+             * <p>Indicates whether the event can be handled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder canAccept(String canAccept) {
                 this.canAccept = canAccept;
@@ -677,7 +732,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * <p>The code of the security violation.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PR111</p>
              */
             public Builder code(String code) {
                 this.code = code;
@@ -685,7 +743,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Device.
+             * <p>The device name of the local disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/dev/vda</p>
              */
             public Builder device(String device) {
                 this.device = device;
@@ -693,7 +754,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * DiskId.
+             * <p>The ID of the local disk.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rcd-****</p>
              */
             public Builder diskId(String diskId) {
                 this.diskId = diskId;
@@ -701,7 +765,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * HostId.
+             * <p>The ID of the host.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>dh-bp1ewce1gk3iwv2****</p>
              */
             public Builder hostId(String hostId) {
                 this.hostId = hostId;
@@ -709,7 +776,14 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * HostType.
+             * <p>The type of the host. Valid values:</p>
+             * <ul>
+             * <li><strong>ddh</strong>: dedicated host</li>
+             * <li><strong>managehost</strong>: physical machine in a smart hosting pool</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ddh</p>
              */
             public Builder hostType(String hostType) {
                 this.hostType = hostType;
@@ -717,7 +791,7 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * InactiveDisks.
+             * <p>The inactive disks that have been released and whose data must be cleared.</p>
              */
             public Builder inactiveDisks(java.util.List<InactiveDisks> inactiveDisks) {
                 this.inactiveDisks = inactiveDisks;
@@ -725,7 +799,7 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * MigrationOptions.
+             * <p>The migration solutions of the instance.</p>
              */
             public Builder migrationOptions(java.util.List<String> migrationOptions) {
                 this.migrationOptions = migrationOptions;
@@ -733,7 +807,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * OnlineRepairPolicy.
+             * <p>The online repair policy for the damaged disk. Valid value: IsolateOnly, which indicates that damaged disks are isolated but not repaired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>IsolateOnly</p>
              */
             public Builder onlineRepairPolicy(String onlineRepairPolicy) {
                 this.onlineRepairPolicy = onlineRepairPolicy;
@@ -741,7 +818,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PunishDomain.
+             * <p>The illegal domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1228.test.com</p>
              */
             public Builder punishDomain(String punishDomain) {
                 this.punishDomain = punishDomain;
@@ -749,7 +829,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PunishType.
+             * <p>The type of the penalty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecs_message_alert</p>
              */
             public Builder punishType(String punishType) {
                 this.punishType = punishType;
@@ -757,7 +840,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * PunishUrl.
+             * <p>The illegal URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://1228.test.com/1">http://1228.test.com/1</a></p>
              */
             public Builder punishUrl(String punishUrl) {
                 this.punishUrl = punishUrl;
@@ -765,7 +851,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Rack.
+             * <p>The rack number of the cloud box.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>A01</p>
              */
             public Builder rack(String rack) {
                 this.rack = rack;
@@ -773,7 +862,14 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResponseResult.
+             * <p>The response result of the event. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: the event was handled.</li>
+             * <li><strong>false</strong>: the event failed to be handled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder responseResult(String responseResult) {
                 this.responseResult = responseResult;
@@ -970,7 +1066,7 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             } 
 
             /**
-             * EventCycleStatus.
+             * <p>The lifecycle state of the system event.</p>
              */
             public Builder eventCycleStatus(EventCycleStatus eventCycleStatus) {
                 this.eventCycleStatus = eventCycleStatus;
@@ -978,7 +1074,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventFinishTime.
+             * <p>The time when the system event ended. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-01T06:32:31Z</p>
              */
             public Builder eventFinishTime(String eventFinishTime) {
                 this.eventFinishTime = eventFinishTime;
@@ -986,7 +1085,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventId.
+             * <p>The ID of the system event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e-uf64yvznlao4jl2c****</p>
              */
             public Builder eventId(String eventId) {
                 this.eventId = eventId;
@@ -994,7 +1096,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventPublishTime.
+             * <p>The time when the system event was published. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-03-30T06:32:31Z</p>
              */
             public Builder eventPublishTime(String eventPublishTime) {
                 this.eventPublishTime = eventPublishTime;
@@ -1002,7 +1107,7 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * EventType.
+             * <p>The type of the system event.</p>
              */
             public Builder eventType(EventType eventType) {
                 this.eventType = eventType;
@@ -1010,7 +1115,7 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendedAttribute.
+             * <p>The extended attribute of the system event.</p>
              */
             public Builder extendedAttribute(ExtendedAttribute extendedAttribute) {
                 this.extendedAttribute = extendedAttribute;
@@ -1018,7 +1123,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ImpactLevel.
+             * <p>The impact level of the event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder impactLevel(String impactLevel) {
                 this.impactLevel = impactLevel;
@@ -1026,7 +1134,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The instance ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rc-yuf59nplc45t2tzn****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -1034,7 +1145,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * NotBefore.
+             * <p>The start time of the scheduled execution of the system event. Specify the time in the ISO 8601 standard in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-04-01T06:32:31Z</p>
              */
             public Builder notBefore(String notBefore) {
                 this.notBefore = notBefore;
@@ -1042,7 +1156,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * <p>The reason why the system event occurred.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>System maintenance is scheduled due to ***.</p>
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -1050,7 +1167,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ReasonCode.
+             * <p>The reason code category for the system event.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VPCMigrationEcs</p>
              */
             public Builder reasonCode(String reasonCode) {
                 this.reasonCode = reasonCode;
@@ -1058,7 +1178,10 @@ public class DescribeRCInstanceHistoryEventsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type. The value is fixed to INSTANCE.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>custom</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

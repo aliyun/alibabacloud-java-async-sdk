@@ -322,7 +322,7 @@ public class CreateRCDiskRequest extends Request {
         /**
          * <p>The data disk type. Valid values:</p>
          * <ul>
-         * <li><strong>cloud_efficiency</strong>: ultra disk</li>
+         * <li><strong>cloud_efficiency</strong>: ultra disk.</li>
          * <li><strong>cloud_ssd</strong>: standard SSD</li>
          * <li><strong>cloud_essd</strong>: ESSD</li>
          * <li><strong>cloud_auto</strong> (default): Premium ESSD</li>
@@ -350,7 +350,11 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The billing method. Set the value to <strong>Postpaid</strong>, which specifies the pay-as-you-go billing method.</p>
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li><strong>Postpaid</strong>: pay-as-you-go Pay-as-you-go disks do not require to be attached. You can also attach the pay-as-you-go disk to an instance of any billing method based on your business requirements.</li>
+         * <li><strong>Prepaid</strong>: subscription Subscription disks must be attached to a subscription instance. Set <strong>InstanceId</strong> to the ID of a subscription instance.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Postpaid</p>
@@ -362,7 +366,7 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance to which you want to attach the disk.</p>
+         * <p>The ID of the instance to which you want to attach the disk. If you set <strong>InstanceChargeType</strong> to <strong>Prepaid</strong>, you must set InstanceId to the ID of a subscription instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rc-v28c6k3jupp61m2t****</p>
@@ -430,7 +434,10 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-ac****</p>
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -470,6 +477,7 @@ public class CreateRCDiskRequest extends Request {
         /**
          * <p>The snapshot that you want to use to create the disk.</p>
          * <ul>
+         * <li>The snapshots of RDS Custom instances and the non-shared snapshots of ECS instances are supported.</li>
          * <li>If the size of the snapshot specified by <strong>SnapshotId</strong> is greater than the value of <strong>Size</strong>, the size of the created disk is equal to the specified snapshot size. If the snapshot size is less than the <strong>Size</strong> value, the size of the created disk is equal to the <strong>Size</strong> value.</li>
          * <li>You cannot create elastic ephemeral disks from snapshots.</li>
          * <li>Snapshots that were created on or before July 15, 2013 cannot be used to create disks.</li>
@@ -485,7 +493,7 @@ public class CreateRCDiskRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -566,7 +574,10 @@ public class CreateRCDiskRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The tag key. You can create N tag keys at a time. Valid values of N: <strong>1 to 20</strong>. The tag key cannot be an empty string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -574,7 +585,10 @@ public class CreateRCDiskRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The tag value. You can query N values at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. The tag value can be an empty string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue1</p>
              */
             public Builder value(String value) {
                 this.value = value;

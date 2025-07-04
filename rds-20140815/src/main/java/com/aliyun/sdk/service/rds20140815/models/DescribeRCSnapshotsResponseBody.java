@@ -169,6 +169,81 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
      *
      * <p>DescribeRCSnapshotsResponseBody</p>
      */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tag(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeRCSnapshotsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRCSnapshotsResponseBody</p>
+     */
     public static class Snapshots extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Available")
         private Boolean available;
@@ -194,6 +269,9 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
@@ -218,6 +296,9 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List<Tag> tag;
+
         @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
@@ -230,6 +311,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             this.instantAccess = builder.instantAccess;
             this.progress = builder.progress;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.snapshotId = builder.snapshotId;
             this.snapshotName = builder.snapshotName;
             this.snapshotType = builder.snapshotType;
@@ -238,6 +320,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             this.sourceDiskType = builder.sourceDiskType;
             this.sourceStorageType = builder.sourceStorageType;
             this.status = builder.status;
+            this.tag = builder.tag;
             this.usage = builder.usage;
         }
 
@@ -306,6 +389,13 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return snapshotId
          */
         public String getSnapshotId() {
@@ -362,6 +452,13 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tag
+         */
+        public java.util.List<Tag> getTag() {
+            return this.tag;
+        }
+
+        /**
          * @return usage
          */
         public String getUsage() {
@@ -377,6 +474,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             private Boolean instantAccess; 
             private String progress; 
             private String regionId; 
+            private String resourceGroupId; 
             private String snapshotId; 
             private String snapshotName; 
             private String snapshotType; 
@@ -385,6 +483,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             private String sourceDiskType; 
             private String sourceStorageType; 
             private String status; 
+            private java.util.List<Tag> tag; 
             private String usage; 
 
             private Builder() {
@@ -399,6 +498,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
                 this.instantAccess = model.instantAccess;
                 this.progress = model.progress;
                 this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
                 this.snapshotId = model.snapshotId;
                 this.snapshotName = model.snapshotName;
                 this.snapshotType = model.snapshotType;
@@ -407,6 +507,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
                 this.sourceDiskType = model.sourceDiskType;
                 this.sourceStorageType = model.sourceStorageType;
                 this.status = model.status;
+                this.tag = model.tag;
                 this.usage = model.usage;
             } 
 
@@ -512,6 +613,14 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceGroupId.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
              * <p>The snapshot ID.</p>
              * 
              * <strong>example:</strong>
@@ -613,6 +722,14 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List<Tag> tag) {
+                this.tag = tag;
                 return this;
             }
 

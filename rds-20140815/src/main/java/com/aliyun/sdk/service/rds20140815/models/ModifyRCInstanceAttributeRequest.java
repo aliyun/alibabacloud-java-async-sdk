@@ -18,12 +18,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyRCInstanceAttributeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    private java.util.List<String> instanceIds;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Password")
@@ -41,14 +49,21 @@ public class ModifyRCInstanceAttributeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
+    private java.util.List<String> securityGroupIds;
+
     private ModifyRCInstanceAttributeRequest(Builder builder) {
         super(builder);
+        this.deletionProtection = builder.deletionProtection;
         this.hostName = builder.hostName;
         this.instanceId = builder.instanceId;
+        this.instanceIds = builder.instanceIds;
         this.password = builder.password;
         this.reboot = builder.reboot;
         this.regionId = builder.regionId;
         this.securityGroupId = builder.securityGroupId;
+        this.securityGroupIds = builder.securityGroupIds;
     }
 
     public static Builder builder() {
@@ -65,6 +80,13 @@ public class ModifyRCInstanceAttributeRequest extends Request {
     }
 
     /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
+    }
+
+    /**
      * @return hostName
      */
     public String getHostName() {
@@ -76,6 +98,13 @@ public class ModifyRCInstanceAttributeRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return instanceIds
+     */
+    public java.util.List<String> getInstanceIds() {
+        return this.instanceIds;
     }
 
     /**
@@ -106,13 +135,23 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         return this.securityGroupId;
     }
 
+    /**
+     * @return securityGroupIds
+     */
+    public java.util.List<String> getSecurityGroupIds() {
+        return this.securityGroupIds;
+    }
+
     public static final class Builder extends Request.Builder<ModifyRCInstanceAttributeRequest, Builder> {
+        private Boolean deletionProtection; 
         private String hostName; 
         private String instanceId; 
+        private java.util.List<String> instanceIds; 
         private String password; 
         private Boolean reboot; 
         private String regionId; 
         private String securityGroupId; 
+        private java.util.List<String> securityGroupIds; 
 
         private Builder() {
             super();
@@ -120,13 +159,32 @@ public class ModifyRCInstanceAttributeRequest extends Request {
 
         private Builder(ModifyRCInstanceAttributeRequest request) {
             super(request);
+            this.deletionProtection = request.deletionProtection;
             this.hostName = request.hostName;
             this.instanceId = request.instanceId;
+            this.instanceIds = request.instanceIds;
             this.password = request.password;
             this.reboot = request.reboot;
             this.regionId = request.regionId;
             this.securityGroupId = request.securityGroupId;
+            this.securityGroupIds = request.securityGroupIds;
         } 
+
+        /**
+         * <p>Specifies whether to enable the release protection feature for the instance. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: enables the release protection feature.</li>
+         * <li><strong>false</strong> (default): does not enable the release protection feature.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
+            return this;
+        }
 
         /**
          * <p>The hostname of the instance.</p>
@@ -149,6 +207,16 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
+         */
+        public Builder instanceIds(java.util.List<String> instanceIds) {
+            String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
+            this.putQueryParameter("InstanceIds", instanceIdsShrink);
+            this.instanceIds = instanceIds;
             return this;
         }
 
@@ -197,11 +265,24 @@ public class ModifyRCInstanceAttributeRequest extends Request {
         }
 
         /**
-         * SecurityGroupId.
+         * <p>The ID of the security group to which the instance is added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-uf6av412xaxixu****</p>
          */
         public Builder securityGroupId(String securityGroupId) {
             this.putQueryParameter("SecurityGroupId", securityGroupId);
             this.securityGroupId = securityGroupId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupIds.
+         */
+        public Builder securityGroupIds(java.util.List<String> securityGroupIds) {
+            String securityGroupIdsShrink = shrink(securityGroupIds, "SecurityGroupIds", "json");
+            this.putQueryParameter("SecurityGroupIds", securityGroupIdsShrink);
+            this.securityGroupIds = securityGroupIds;
             return this;
         }
 

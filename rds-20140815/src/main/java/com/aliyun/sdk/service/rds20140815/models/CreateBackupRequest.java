@@ -22,6 +22,10 @@ public class CreateBackupRequest extends Request {
     private String backupMethod;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
+    private Long backupRetentionPeriod;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupStrategy")
     private String backupStrategy;
 
@@ -45,6 +49,7 @@ public class CreateBackupRequest extends Request {
     private CreateBackupRequest(Builder builder) {
         super(builder);
         this.backupMethod = builder.backupMethod;
+        this.backupRetentionPeriod = builder.backupRetentionPeriod;
         this.backupStrategy = builder.backupStrategy;
         this.backupType = builder.backupType;
         this.DBInstanceId = builder.DBInstanceId;
@@ -70,6 +75,13 @@ public class CreateBackupRequest extends Request {
      */
     public String getBackupMethod() {
         return this.backupMethod;
+    }
+
+    /**
+     * @return backupRetentionPeriod
+     */
+    public Long getBackupRetentionPeriod() {
+        return this.backupRetentionPeriod;
     }
 
     /**
@@ -109,6 +121,7 @@ public class CreateBackupRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateBackupRequest, Builder> {
         private String backupMethod; 
+        private Long backupRetentionPeriod; 
         private String backupStrategy; 
         private String backupType; 
         private String DBInstanceId; 
@@ -122,6 +135,7 @@ public class CreateBackupRequest extends Request {
         private Builder(CreateBackupRequest request) {
             super(request);
             this.backupMethod = request.backupMethod;
+            this.backupRetentionPeriod = request.backupRetentionPeriod;
             this.backupStrategy = request.backupStrategy;
             this.backupType = request.backupType;
             this.DBInstanceId = request.DBInstanceId;
@@ -152,6 +166,15 @@ public class CreateBackupRequest extends Request {
         public Builder backupMethod(String backupMethod) {
             this.putQueryParameter("BackupMethod", backupMethod);
             this.backupMethod = backupMethod;
+            return this;
+        }
+
+        /**
+         * BackupRetentionPeriod.
+         */
+        public Builder backupRetentionPeriod(Long backupRetentionPeriod) {
+            this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
+            this.backupRetentionPeriod = backupRetentionPeriod;
             return this;
         }
 

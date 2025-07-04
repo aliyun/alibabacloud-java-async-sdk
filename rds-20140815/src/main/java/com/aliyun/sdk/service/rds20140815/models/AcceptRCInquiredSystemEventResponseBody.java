@@ -17,14 +17,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AcceptRCInquiredSystemEventResponseBody</p>
  */
 public class AcceptRCInquiredSystemEventResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("OrderId")
-    private String orderId;
-
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AcceptRCInquiredSystemEventResponseBody(Builder builder) {
-        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
     }
 
@@ -41,13 +37,6 @@ public class AcceptRCInquiredSystemEventResponseBody extends TeaModel {
     }
 
     /**
-     * @return orderId
-     */
-    public String getOrderId() {
-        return this.orderId;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -55,27 +44,20 @@ public class AcceptRCInquiredSystemEventResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String orderId; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(AcceptRCInquiredSystemEventResponseBody model) {
-            this.orderId = model.orderId;
             this.requestId = model.requestId;
         } 
 
         /**
-         * OrderId.
-         */
-        public Builder orderId(String orderId) {
-            this.orderId = orderId;
-            return this;
-        }
-
-        /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -139,6 +139,10 @@ public class CreateDBInstanceRequest extends Request {
     private String engineVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalReplication")
+    private Boolean externalReplication;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceNetworkType")
     private String instanceNetworkType;
 
@@ -296,6 +300,7 @@ public class CreateDBInstanceRequest extends Request {
         this.encryptionKey = builder.encryptionKey;
         this.engine = builder.engine;
         this.engineVersion = builder.engineVersion;
+        this.externalReplication = builder.externalReplication;
         this.instanceNetworkType = builder.instanceNetworkType;
         this.ioAccelerationEnabled = builder.ioAccelerationEnabled;
         this.optimizedWrites = builder.optimizedWrites;
@@ -546,6 +551,13 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return externalReplication
+     */
+    public Boolean getExternalReplication() {
+        return this.externalReplication;
+    }
+
+    /**
      * @return instanceNetworkType
      */
     public String getInstanceNetworkType() {
@@ -792,6 +804,7 @@ public class CreateDBInstanceRequest extends Request {
         private String encryptionKey; 
         private String engine; 
         private String engineVersion; 
+        private Boolean externalReplication; 
         private String instanceNetworkType; 
         private String ioAccelerationEnabled; 
         private String optimizedWrites; 
@@ -859,6 +872,7 @@ public class CreateDBInstanceRequest extends Request {
             this.encryptionKey = request.encryptionKey;
             this.engine = request.engine;
             this.engineVersion = request.engineVersion;
+            this.externalReplication = request.externalReplication;
             this.instanceNetworkType = request.instanceNetworkType;
             this.ioAccelerationEnabled = request.ioAccelerationEnabled;
             this.optimizedWrites = request.optimizedWrites;
@@ -929,13 +943,13 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to enable the automatic payment feature. Valid values:</p>
+         * <p>Specifies whether to enable automatic payment. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables the feature. Make sure that your account balance is sufficient.</li>
-         * <li><strong>false</strong>: disables the feature. An unpaid order is generated.</li>
+         * <li><strong>true</strong>: enables the feature. Make sure that your account balance is sufficient when you enable automatic payment.</li>
+         * <li><strong>false</strong>: does not automatically complete the payment. An unpaid order is generated.</li>
          * </ul>
          * <blockquote>
-         * <p> Default value: true. If your account balance is insufficient, you can set the AutoPay parameter to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
+         * <p> Default value: true. If your account balance is insufficient, you can set AutoPay to false to generate an unpaid order. Then, you can log on to the ApsaraDB RDS console to complete the payment.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1072,10 +1086,11 @@ public class CreateDBInstanceRequest extends Request {
          * <li><strong>serverless_standard</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run MySQL and PostgreSQL.</li>
          * <li><strong>serverless_ha</strong>: RDS High-availability Edition for serverless instances. This edition is available only for instances that run SQL Server.</li>
          * </ul>
-         * <p>**</p>
-         * <p><strong>Note</strong> This parameter is required if PayType is set to Serverless.</p>
          * </li>
          * </ul>
+         * <blockquote>
+         * <p>This parameter is required if PayType is set to Serverless.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>HighAvailability</p>
@@ -1303,13 +1318,11 @@ public class CreateDBInstanceRequest extends Request {
          * </li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.</p>
-         * </li>
-         * <li><p>If you do not specify this parameter, the system automatically assigns the default time zone of the region in which the instance resides.</p>
-         * </li>
+         * <li>You can specify the time zone when you create a primary instance. You cannot specify the time zone when you create a read-only instance. Read-only instances inherit the time zone of their primary instance.</li>
+         * <li>If you do not specify this parameter, the system automatically assigns the default time zone of the region in which the instance resides.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>+08:00</p>
@@ -1354,9 +1367,9 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to perform a dry run. Valid values:</p>
+         * <p>Specifies whether to perform a dry run. Default value: false. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: performs a dry run but does not create the instance. The system checks items such as the request parameters, request format, service limits, and available resources.</li>
+         * <li><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, service limits, and insufficient inventory errors.</li>
          * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the instance is created.</li>
          * </ul>
          * 
@@ -1453,21 +1466,27 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * ExternalReplication.
+         */
+        public Builder externalReplication(Boolean externalReplication) {
+            this.putQueryParameter("ExternalReplication", externalReplication);
+            this.externalReplication = externalReplication;
+            return this;
+        }
+
+        /**
          * <p>The network type of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong></li>
-         * <li><strong>Classic</strong></li>
+         * <li><strong>VPC</strong>: a virtual private cloud (VPC)</li>
+         * <li><strong>Classic</strong>: the classic network</li>
          * </ul>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>If the instance runs MySQL and uses cloud disks, you must set this parameter to <strong>VPC</strong>.</p>
-         * </li>
-         * <li><p>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <strong>VPC</strong>.</p>
-         * </li>
-         * <li><p>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <strong>VPC</strong>.</p>
-         * </li>
+         * <li>If the instance runs MySQL and uses cloud disks, you must set this parameter to <strong>VPC</strong>.</li>
+         * <li>If the instance runs PostgreSQL or MariaDB, you must set this parameter to <strong>VPC</strong>.</li>
+         * <li>If the instance runs SQL Server Basic or SQL Server Web, you can set this parameter to VPC or Classic. If the instance runs other database engine, you must set this parameter to <strong>VPC</strong>.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>Classic</p>
@@ -1498,10 +1517,10 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The switch of the 16K atomic write function. Valid values:</p>
+         * <p>Specifies whether to enable the 16K atomic write feature. Valid values:</p>
          * <ul>
-         * <li><strong>optimized</strong></li>
-         * <li><strong>none</strong> (default)</li>
+         * <li><strong>optimized</strong>: enables the 16K atomic write feature.</li>
+         * <li><strong>none</strong> (default): does not enable the 16K atomic write feature.</li>
          * </ul>
          * <blockquote>
          * <p> For more information, see <a href="https://help.aliyun.com/document_detail/2858761.html">Use the 16K atomic write feature</a>.</p>
@@ -1663,7 +1682,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * <p>The settings of the serverless instance. This parameter is required when you create a serverless instance.</p>
+         * <p>The settings of the serverless instance. These parameters are required only when you create a serverless instance.</p>
          * <blockquote>
          * <p> ApsaraDB RDS for MariaDB does not support serverless instances.</p>
          * </blockquote>
@@ -2117,13 +2136,11 @@ public class CreateDBInstanceRequest extends Request {
              * <li><strong>false</strong> (default)</li>
              * </ul>
              * <blockquote>
-             * </blockquote>
              * <ul>
-             * <li><p>This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts approximately 30 to 120 seconds occurs during forced scaling. Process with caution.</p>
-             * </li>
-             * <li><p>The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.</p>
-             * </li>
+             * <li>This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts approximately 30 to 120 seconds occurs during forced scaling. Process with caution.</li>
+             * <li>The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.</li>
              * </ul>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>false</p>

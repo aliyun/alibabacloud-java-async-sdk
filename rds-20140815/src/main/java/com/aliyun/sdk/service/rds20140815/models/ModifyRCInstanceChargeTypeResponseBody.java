@@ -121,8 +121,8 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         /**
          * <p>The billing method.</p>
          * <ul>
-         * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
-         * <li><strong>PREPAY</strong>: subscription</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+         * <li><strong>PREPAY</strong>: subscription.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class ModifyRCInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The instance IDs.</p>
+         * <p>The list of instance IDs.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.instanceIds = instanceIds;

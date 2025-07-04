@@ -2259,7 +2259,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * BlueGreenDeploymentName.
+             * <p>This is a reserved parameter and is not in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder blueGreenDeploymentName(String blueGreenDeploymentName) {
                 this.blueGreenDeploymentName = blueGreenDeploymentName;
@@ -2267,7 +2270,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * BlueInstanceName.
+             * <p>This is a reserved parameter and is not in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder blueInstanceName(String blueInstanceName) {
                 this.blueInstanceName = blueInstanceName;
@@ -2364,7 +2370,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The storage compression mode.</p>
+             * <p>The storage compression mode of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>on, off</p>
@@ -2386,7 +2392,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ComputeBurstEnabled.
+             * <p>This is a reserved parameter and is not in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder computeBurstEnabled(Boolean computeBurstEnabled) {
                 this.computeBurstEnabled = computeBurstEnabled;
@@ -2742,7 +2751,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * GreenInstanceName.
+             * <p>This is a reserved parameter and is not in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder greenInstanceName(String greenInstanceName) {
                 this.greenInstanceName = greenInstanceName;
@@ -2955,7 +2967,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * <p>The OptimizedWritesInfo parameter contains the following fields:</p>
              * <ul>
              * <li><strong>optimized_writes</strong>: indicates whether the 16K atomic write feature is enabled for the current instance.</li>
-             * <li><strong>init_optimized_writes</strong>: indicates whether the 16K atomic write feature can be enabled for the current instance. If init_optimized_writes is set to false, the 16K atomic write switch is not displayed for specific instances in the console.</li>
+             * <li><strong>init_optimized_writes</strong>: indicates whether the 16K atomic write feature can be enabled for the current instance. If init_optimized_writes is set to false, the 16K atomic write switch is not displayed for the instance in the console.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3032,7 +3044,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ReadOnlyStatus.
+             * <p>This is a reserved parameter and is not in use.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>None</p>
              */
             public Builder readOnlyStatus(String readOnlyStatus) {
                 this.readOnlyStatus = readOnlyStatus;
@@ -3130,7 +3145,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the storage compression mode can be enabled for the instance.</p>
+             * <p>Indicates whether storage compression can be enabled for the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>true, false</p>

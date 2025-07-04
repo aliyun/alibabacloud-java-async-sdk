@@ -200,6 +200,9 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceStorage")
         private Integer DBInstanceStorage;
 
+        @com.aliyun.core.annotation.NameInMap("DBInstanceStorageType")
+        private String DBInstanceStorageType;
+
         @com.aliyun.core.annotation.NameInMap("DBInstanceType")
         private String DBInstanceType;
 
@@ -298,6 +301,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             this.DBInstanceNetType = builder.DBInstanceNetType;
             this.DBInstanceStatus = builder.DBInstanceStatus;
             this.DBInstanceStorage = builder.DBInstanceStorage;
+            this.DBInstanceStorageType = builder.DBInstanceStorageType;
             this.DBInstanceType = builder.DBInstanceType;
             this.DBMaxQuantity = builder.DBMaxQuantity;
             this.engine = builder.engine;
@@ -445,6 +449,13 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
          */
         public Integer getDBInstanceStorage() {
             return this.DBInstanceStorage;
+        }
+
+        /**
+         * @return DBInstanceStorageType
+         */
+        public String getDBInstanceStorageType() {
+            return this.DBInstanceStorageType;
         }
 
         /**
@@ -653,6 +664,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             private String DBInstanceNetType; 
             private String DBInstanceStatus; 
             private Integer DBInstanceStorage; 
+            private String DBInstanceStorageType; 
             private String DBInstanceType; 
             private Integer DBMaxQuantity; 
             private String engine; 
@@ -701,6 +713,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
                 this.DBInstanceNetType = model.DBInstanceNetType;
                 this.DBInstanceStatus = model.DBInstanceStatus;
                 this.DBInstanceStorage = model.DBInstanceStorage;
+                this.DBInstanceStorageType = model.DBInstanceStorageType;
                 this.DBInstanceType = model.DBInstanceType;
                 this.DBMaxQuantity = model.DBMaxQuantity;
                 this.engine = model.engine;
@@ -911,6 +924,14 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
              */
             public Builder DBInstanceStorage(Integer DBInstanceStorage) {
                 this.DBInstanceStorage = DBInstanceStorage;
+                return this;
+            }
+
+            /**
+             * DBInstanceStorageType.
+             */
+            public Builder DBInstanceStorageType(String DBInstanceStorageType) {
+                this.DBInstanceStorageType = DBInstanceStorageType;
                 return this;
             }
 

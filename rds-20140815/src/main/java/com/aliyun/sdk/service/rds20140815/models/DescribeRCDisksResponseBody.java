@@ -216,7 +216,10 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             } 
 
             /**
-             * TagKey.
+             * <p>The tag key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey1</p>
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -224,7 +227,10 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * <p>The tag value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue1</p>
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -891,7 +897,7 @@ public class DescribeRCDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * <p>The list of tags.</p>
              */
             public Builder tag(java.util.List<Tag> tag) {
                 this.tag = tag;

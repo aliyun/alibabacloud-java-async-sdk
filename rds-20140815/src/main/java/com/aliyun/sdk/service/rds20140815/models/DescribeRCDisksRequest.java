@@ -192,7 +192,7 @@ public class DescribeRCDisksRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The list of the tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -260,7 +260,10 @@ public class DescribeRCDisksRequest extends Request {
             } 
 
             /**
-             * Key.
+             * <p>The key of the tag. The tag key <strong>cannot be</strong> an empty string or a duplicate value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testkey1</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -268,7 +271,10 @@ public class DescribeRCDisksRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag. The tag value <strong>can be</strong> an empty string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testvalue1</p>
              */
             public Builder value(String value) {
                 this.value = value;
