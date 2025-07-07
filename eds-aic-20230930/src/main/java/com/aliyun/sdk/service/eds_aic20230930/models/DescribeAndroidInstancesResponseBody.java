@@ -439,6 +439,81 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeAndroidInstancesResponseBody</p>
      */
+    public static class PhoneDataInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PhoneDataId")
+        private String phoneDataId;
+
+        @com.aliyun.core.annotation.NameInMap("PhoneDataVolume")
+        private Integer phoneDataVolume;
+
+        private PhoneDataInfo(Builder builder) {
+            this.phoneDataId = builder.phoneDataId;
+            this.phoneDataVolume = builder.phoneDataVolume;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PhoneDataInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return phoneDataId
+         */
+        public String getPhoneDataId() {
+            return this.phoneDataId;
+        }
+
+        /**
+         * @return phoneDataVolume
+         */
+        public Integer getPhoneDataVolume() {
+            return this.phoneDataVolume;
+        }
+
+        public static final class Builder {
+            private String phoneDataId; 
+            private Integer phoneDataVolume; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhoneDataInfo model) {
+                this.phoneDataId = model.phoneDataId;
+                this.phoneDataVolume = model.phoneDataVolume;
+            } 
+
+            /**
+             * PhoneDataId.
+             */
+            public Builder phoneDataId(String phoneDataId) {
+                this.phoneDataId = phoneDataId;
+                return this;
+            }
+
+            /**
+             * PhoneDataVolume.
+             */
+            public Builder phoneDataVolume(Integer phoneDataVolume) {
+                this.phoneDataVolume = phoneDataVolume;
+                return this;
+            }
+
+            public PhoneDataInfo build() {
+                return new PhoneDataInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeAndroidInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeAndroidInstancesResponseBody</p>
+     */
     public static class Tags extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -602,6 +677,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PersistentAppInstanceId")
         private String persistentAppInstanceId;
 
+        @com.aliyun.core.annotation.NameInMap("PhoneDataInfo")
+        private PhoneDataInfo phoneDataInfo;
+
         @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
         private String policyGroupId;
 
@@ -625,6 +703,9 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("SessionStatus")
         private String sessionStatus;
+
+        @com.aliyun.core.annotation.NameInMap("StreamMode")
+        private Integer streamMode;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
@@ -663,6 +744,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.networkInterfaceIpv6Address = builder.networkInterfaceIpv6Address;
             this.officeSiteId = builder.officeSiteId;
             this.persistentAppInstanceId = builder.persistentAppInstanceId;
+            this.phoneDataInfo = builder.phoneDataInfo;
             this.policyGroupId = builder.policyGroupId;
             this.publicIpAddress = builder.publicIpAddress;
             this.publicIpv6Address = builder.publicIpv6Address;
@@ -671,6 +753,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             this.regionId = builder.regionId;
             this.renderingType = builder.renderingType;
             this.sessionStatus = builder.sessionStatus;
+            this.streamMode = builder.streamMode;
             this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
             this.zoneId = builder.zoneId;
@@ -874,6 +957,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return phoneDataInfo
+         */
+        public PhoneDataInfo getPhoneDataInfo() {
+            return this.phoneDataInfo;
+        }
+
+        /**
          * @return policyGroupId
          */
         public String getPolicyGroupId() {
@@ -930,6 +1020,13 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return streamMode
+         */
+        public Integer getStreamMode() {
+            return this.streamMode;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -978,6 +1075,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String networkInterfaceIpv6Address; 
             private String officeSiteId; 
             private String persistentAppInstanceId; 
+            private PhoneDataInfo phoneDataInfo; 
             private String policyGroupId; 
             private String publicIpAddress; 
             private String publicIpv6Address; 
@@ -986,6 +1084,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             private String regionId; 
             private String renderingType; 
             private String sessionStatus; 
+            private Integer streamMode; 
             private java.util.List<Tags> tags; 
             private String vSwitchId; 
             private String zoneId; 
@@ -1021,6 +1120,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
                 this.networkInterfaceIpv6Address = model.networkInterfaceIpv6Address;
                 this.officeSiteId = model.officeSiteId;
                 this.persistentAppInstanceId = model.persistentAppInstanceId;
+                this.phoneDataInfo = model.phoneDataInfo;
                 this.policyGroupId = model.policyGroupId;
                 this.publicIpAddress = model.publicIpAddress;
                 this.publicIpv6Address = model.publicIpv6Address;
@@ -1029,6 +1129,7 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
                 this.regionId = model.regionId;
                 this.renderingType = model.renderingType;
                 this.sessionStatus = model.sessionStatus;
+                this.streamMode = model.streamMode;
                 this.tags = model.tags;
                 this.vSwitchId = model.vSwitchId;
                 this.zoneId = model.zoneId;
@@ -1322,6 +1423,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * PhoneDataInfo.
+             */
+            public Builder phoneDataInfo(PhoneDataInfo phoneDataInfo) {
+                this.phoneDataInfo = phoneDataInfo;
+                return this;
+            }
+
+            /**
              * <p>The ID of the policy.</p>
              * 
              * <strong>example:</strong>
@@ -1410,6 +1519,14 @@ public class DescribeAndroidInstancesResponseBody extends TeaModel {
              */
             public Builder sessionStatus(String sessionStatus) {
                 this.sessionStatus = sessionStatus;
+                return this;
+            }
+
+            /**
+             * StreamMode.
+             */
+            public Builder streamMode(Integer streamMode) {
+                this.streamMode = streamMode;
                 return this;
             }
 

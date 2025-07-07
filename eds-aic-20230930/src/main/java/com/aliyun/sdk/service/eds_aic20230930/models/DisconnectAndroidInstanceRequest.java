@@ -18,12 +18,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DisconnectAndroidInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
+    private String endUserId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceIds")
-    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> instanceIds;
 
     private DisconnectAndroidInstanceRequest(Builder builder) {
         super(builder);
+        this.endUserId = builder.endUserId;
         this.instanceIds = builder.instanceIds;
     }
 
@@ -41,6 +45,13 @@ public class DisconnectAndroidInstanceRequest extends Request {
     }
 
     /**
+     * @return endUserId
+     */
+    public String getEndUserId() {
+        return this.endUserId;
+    }
+
+    /**
      * @return instanceIds
      */
     public java.util.List<String> getInstanceIds() {
@@ -48,6 +59,7 @@ public class DisconnectAndroidInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DisconnectAndroidInstanceRequest, Builder> {
+        private String endUserId; 
         private java.util.List<String> instanceIds; 
 
         private Builder() {
@@ -56,11 +68,21 @@ public class DisconnectAndroidInstanceRequest extends Request {
 
         private Builder(DisconnectAndroidInstanceRequest request) {
             super(request);
+            this.endUserId = request.endUserId;
             this.instanceIds = request.instanceIds;
         } 
 
         /**
-         * <p>This parameter is required.</p>
+         * EndUserId.
+         */
+        public Builder endUserId(String endUserId) {
+            this.putQueryParameter("EndUserId", endUserId);
+            this.endUserId = endUserId;
+            return this;
+        }
+
+        /**
+         * InstanceIds.
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

@@ -71,6 +71,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
     private Integer phoneCount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneDataVolume")
+    private Integer phoneDataVolume;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResolutionHeight")
     private Integer resolutionHeight;
 
@@ -87,6 +91,10 @@ public class CreateCloudPhoneNodeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ServerType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String serverType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamMode")
+    private Integer streamMode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
@@ -111,10 +119,12 @@ public class CreateCloudPhoneNodeRequest extends Request {
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
         this.phoneCount = builder.phoneCount;
+        this.phoneDataVolume = builder.phoneDataVolume;
         this.resolutionHeight = builder.resolutionHeight;
         this.resolutionWidth = builder.resolutionWidth;
         this.serverShareDataVolume = builder.serverShareDataVolume;
         this.serverType = builder.serverType;
+        this.streamMode = builder.streamMode;
         this.tag = builder.tag;
         this.vSwitchId = builder.vSwitchId;
     }
@@ -224,6 +234,13 @@ public class CreateCloudPhoneNodeRequest extends Request {
     }
 
     /**
+     * @return phoneDataVolume
+     */
+    public Integer getPhoneDataVolume() {
+        return this.phoneDataVolume;
+    }
+
+    /**
      * @return resolutionHeight
      */
     public Integer getResolutionHeight() {
@@ -249,6 +266,13 @@ public class CreateCloudPhoneNodeRequest extends Request {
      */
     public String getServerType() {
         return this.serverType;
+    }
+
+    /**
+     * @return streamMode
+     */
+    public Integer getStreamMode() {
+        return this.streamMode;
     }
 
     /**
@@ -279,10 +303,12 @@ public class CreateCloudPhoneNodeRequest extends Request {
         private Integer period; 
         private String periodUnit; 
         private Integer phoneCount; 
+        private Integer phoneDataVolume; 
         private Integer resolutionHeight; 
         private Integer resolutionWidth; 
         private Integer serverShareDataVolume; 
         private String serverType; 
+        private Integer streamMode; 
         private java.util.List<Tag> tag; 
         private String vSwitchId; 
 
@@ -305,10 +331,12 @@ public class CreateCloudPhoneNodeRequest extends Request {
             this.period = request.period;
             this.periodUnit = request.periodUnit;
             this.phoneCount = request.phoneCount;
+            this.phoneDataVolume = request.phoneDataVolume;
             this.resolutionHeight = request.resolutionHeight;
             this.resolutionWidth = request.resolutionWidth;
             this.serverShareDataVolume = request.serverShareDataVolume;
             this.serverType = request.serverType;
+            this.streamMode = request.streamMode;
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
         } 
@@ -493,6 +521,15 @@ public class CreateCloudPhoneNodeRequest extends Request {
         }
 
         /**
+         * PhoneDataVolume.
+         */
+        public Builder phoneDataVolume(Integer phoneDataVolume) {
+            this.putQueryParameter("PhoneDataVolume", phoneDataVolume);
+            this.phoneDataVolume = phoneDataVolume;
+            return this;
+        }
+
+        /**
          * <p>The resolution height. Unit: pixel.</p>
          * 
          * <strong>example:</strong>
@@ -542,6 +579,15 @@ public class CreateCloudPhoneNodeRequest extends Request {
         public Builder serverType(String serverType) {
             this.putQueryParameter("ServerType", serverType);
             this.serverType = serverType;
+            return this;
+        }
+
+        /**
+         * StreamMode.
+         */
+        public Builder streamMode(Integer streamMode) {
+            this.putQueryParameter("StreamMode", streamMode);
+            this.streamMode = streamMode;
             return this;
         }
 

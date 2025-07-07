@@ -248,6 +248,81 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
      *
      * <p>DescribeCloudPhoneNodesResponseBody</p>
      */
+    public static class PhoneDataInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PhoneDataId")
+        private String phoneDataId;
+
+        @com.aliyun.core.annotation.NameInMap("PhoneDataVolume")
+        private Integer phoneDataVolume;
+
+        private PhoneDataInfo(Builder builder) {
+            this.phoneDataId = builder.phoneDataId;
+            this.phoneDataVolume = builder.phoneDataVolume;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PhoneDataInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return phoneDataId
+         */
+        public String getPhoneDataId() {
+            return this.phoneDataId;
+        }
+
+        /**
+         * @return phoneDataVolume
+         */
+        public Integer getPhoneDataVolume() {
+            return this.phoneDataVolume;
+        }
+
+        public static final class Builder {
+            private String phoneDataId; 
+            private Integer phoneDataVolume; 
+
+            private Builder() {
+            } 
+
+            private Builder(PhoneDataInfo model) {
+                this.phoneDataId = model.phoneDataId;
+                this.phoneDataVolume = model.phoneDataVolume;
+            } 
+
+            /**
+             * PhoneDataId.
+             */
+            public Builder phoneDataId(String phoneDataId) {
+                this.phoneDataId = phoneDataId;
+                return this;
+            }
+
+            /**
+             * PhoneDataVolume.
+             */
+            public Builder phoneDataVolume(Integer phoneDataVolume) {
+                this.phoneDataVolume = phoneDataVolume;
+                return this;
+            }
+
+            public PhoneDataInfo build() {
+                return new PhoneDataInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCloudPhoneNodesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudPhoneNodesResponseBody</p>
+     */
     public static class NodeModel extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
@@ -285,6 +360,9 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PhoneCount")
         private Integer phoneCount;
 
+        @com.aliyun.core.annotation.NameInMap("PhoneDataInfo")
+        private PhoneDataInfo phoneDataInfo;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -319,6 +397,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             this.nodeId = builder.nodeId;
             this.nodeName = builder.nodeName;
             this.phoneCount = builder.phoneCount;
+            this.phoneDataInfo = builder.phoneDataInfo;
             this.regionId = builder.regionId;
             this.resolutionHeight = builder.resolutionHeight;
             this.resolutionWidth = builder.resolutionWidth;
@@ -421,6 +500,13 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return phoneDataInfo
+         */
+        public PhoneDataInfo getPhoneDataInfo() {
+            return this.phoneDataInfo;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -482,6 +568,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
             private String nodeId; 
             private String nodeName; 
             private Integer phoneCount; 
+            private PhoneDataInfo phoneDataInfo; 
             private String regionId; 
             private Integer resolutionHeight; 
             private Integer resolutionWidth; 
@@ -506,6 +593,7 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
                 this.nodeId = model.nodeId;
                 this.nodeName = model.nodeName;
                 this.phoneCount = model.phoneCount;
+                this.phoneDataInfo = model.phoneDataInfo;
                 this.regionId = model.regionId;
                 this.resolutionHeight = model.resolutionHeight;
                 this.resolutionWidth = model.resolutionWidth;
@@ -638,6 +726,14 @@ public class DescribeCloudPhoneNodesResponseBody extends TeaModel {
              */
             public Builder phoneCount(Integer phoneCount) {
                 this.phoneCount = phoneCount;
+                return this;
+            }
+
+            /**
+             * PhoneDataInfo.
+             */
+            public Builder phoneDataInfo(PhoneDataInfo phoneDataInfo) {
+                this.phoneDataInfo = phoneDataInfo;
                 return this;
             }
 

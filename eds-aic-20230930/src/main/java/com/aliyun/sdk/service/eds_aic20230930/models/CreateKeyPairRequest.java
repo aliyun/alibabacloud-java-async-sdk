@@ -19,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CreateKeyPairRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyPairName")
-    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 2)
     private String keyPairName;
 
     private CreateKeyPairRequest(Builder builder) {

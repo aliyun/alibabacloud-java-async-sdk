@@ -164,6 +164,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAppsResponse> deleteApps(DeleteAppsRequest request);
 
     /**
+     * @param request the request parameters of DeleteBackupFile  DeleteBackupFileRequest
+     * @return DeleteBackupFileResponse
+     */
+    CompletableFuture<DeleteBackupFileResponse> deleteBackupFile(DeleteBackupFileRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you proceed, make sure that the cloud phone matrix that you want to delete expired.</p>
      * 

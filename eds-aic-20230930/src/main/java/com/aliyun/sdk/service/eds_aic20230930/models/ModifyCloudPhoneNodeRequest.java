@@ -25,10 +25,15 @@ public class ModifyCloudPhoneNodeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamMode")
+    private Integer streamMode;
+
     private ModifyCloudPhoneNodeRequest(Builder builder) {
         super(builder);
         this.newNodeName = builder.newNodeName;
         this.nodeId = builder.nodeId;
+        this.streamMode = builder.streamMode;
     }
 
     public static Builder builder() {
@@ -58,9 +63,17 @@ public class ModifyCloudPhoneNodeRequest extends Request {
         return this.nodeId;
     }
 
+    /**
+     * @return streamMode
+     */
+    public Integer getStreamMode() {
+        return this.streamMode;
+    }
+
     public static final class Builder extends Request.Builder<ModifyCloudPhoneNodeRequest, Builder> {
         private String newNodeName; 
         private String nodeId; 
+        private Integer streamMode; 
 
         private Builder() {
             super();
@@ -70,6 +83,7 @@ public class ModifyCloudPhoneNodeRequest extends Request {
             super(request);
             this.newNodeName = request.newNodeName;
             this.nodeId = request.nodeId;
+            this.streamMode = request.streamMode;
         } 
 
         /**
@@ -93,6 +107,15 @@ public class ModifyCloudPhoneNodeRequest extends Request {
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
             this.nodeId = nodeId;
+            return this;
+        }
+
+        /**
+         * StreamMode.
+         */
+        public Builder streamMode(Integer streamMode) {
+            this.putQueryParameter("StreamMode", streamMode);
+            this.streamMode = streamMode;
             return this;
         }
 
