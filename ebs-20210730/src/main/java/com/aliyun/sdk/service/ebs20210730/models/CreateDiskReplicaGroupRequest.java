@@ -40,6 +40,10 @@ public class CreateDiskReplicaGroupRequest extends Request {
     private String destinationZoneId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableRtc")
+    private Boolean enableRtc;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupName")
     @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 2)
     private String groupName;
@@ -73,6 +77,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         this.description = builder.description;
         this.destinationRegionId = builder.destinationRegionId;
         this.destinationZoneId = builder.destinationZoneId;
+        this.enableRtc = builder.enableRtc;
         this.groupName = builder.groupName;
         this.RPO = builder.RPO;
         this.regionId = builder.regionId;
@@ -130,6 +135,13 @@ public class CreateDiskReplicaGroupRequest extends Request {
     }
 
     /**
+     * @return enableRtc
+     */
+    public Boolean getEnableRtc() {
+        return this.enableRtc;
+    }
+
+    /**
      * @return groupName
      */
     public String getGroupName() {
@@ -177,6 +189,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
         private String description; 
         private String destinationRegionId; 
         private String destinationZoneId; 
+        private Boolean enableRtc; 
         private String groupName; 
         private Long RPO; 
         private String regionId; 
@@ -195,6 +208,7 @@ public class CreateDiskReplicaGroupRequest extends Request {
             this.description = request.description;
             this.destinationRegionId = request.destinationRegionId;
             this.destinationZoneId = request.destinationZoneId;
+            this.enableRtc = request.enableRtc;
             this.groupName = request.groupName;
             this.RPO = request.RPO;
             this.regionId = request.regionId;
@@ -265,6 +279,15 @@ public class CreateDiskReplicaGroupRequest extends Request {
         public Builder destinationZoneId(String destinationZoneId) {
             this.putQueryParameter("DestinationZoneId", destinationZoneId);
             this.destinationZoneId = destinationZoneId;
+            return this;
+        }
+
+        /**
+         * EnableRtc.
+         */
+        public Builder enableRtc(Boolean enableRtc) {
+            this.putQueryParameter("EnableRtc", enableRtc);
+            this.enableRtc = enableRtc;
             return this;
         }
 

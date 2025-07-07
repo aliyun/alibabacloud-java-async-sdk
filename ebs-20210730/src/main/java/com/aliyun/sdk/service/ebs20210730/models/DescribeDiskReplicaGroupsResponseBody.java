@@ -287,6 +287,9 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationZoneId")
         private String destinationZoneId;
 
+        @com.aliyun.core.annotation.NameInMap("EnableRtc")
+        private Boolean enableRtc;
+
         @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
@@ -340,6 +343,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             this.description = builder.description;
             this.destinationRegionId = builder.destinationRegionId;
             this.destinationZoneId = builder.destinationZoneId;
+            this.enableRtc = builder.enableRtc;
             this.groupName = builder.groupName;
             this.lastRecoverPoint = builder.lastRecoverPoint;
             this.pairIds = builder.pairIds;
@@ -392,6 +396,13 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
          */
         public String getDestinationZoneId() {
             return this.destinationZoneId;
+        }
+
+        /**
+         * @return enableRtc
+         */
+        public Boolean getEnableRtc() {
+            return this.enableRtc;
         }
 
         /**
@@ -511,6 +522,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
             private String description; 
             private String destinationRegionId; 
             private String destinationZoneId; 
+            private Boolean enableRtc; 
             private String groupName; 
             private Long lastRecoverPoint; 
             private java.util.List<byte[]> pairIds; 
@@ -536,6 +548,7 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
                 this.description = model.description;
                 this.destinationRegionId = model.destinationRegionId;
                 this.destinationZoneId = model.destinationZoneId;
+                this.enableRtc = model.enableRtc;
                 this.groupName = model.groupName;
                 this.lastRecoverPoint = model.lastRecoverPoint;
                 this.pairIds = model.pairIds;
@@ -595,6 +608,14 @@ public class DescribeDiskReplicaGroupsResponseBody extends TeaModel {
              */
             public Builder destinationZoneId(String destinationZoneId) {
                 this.destinationZoneId = destinationZoneId;
+                return this;
+            }
+
+            /**
+             * EnableRtc.
+             */
+            public Builder enableRtc(Boolean enableRtc) {
+                this.enableRtc = enableRtc;
                 return this;
             }
 

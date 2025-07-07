@@ -296,6 +296,9 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestinationZoneId")
         private String destinationZoneId;
 
+        @com.aliyun.core.annotation.NameInMap("EnableRtc")
+        private Boolean enableRtc;
+
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private Long expiredTime;
 
@@ -361,6 +364,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             this.destinationDiskId = builder.destinationDiskId;
             this.destinationRegion = builder.destinationRegion;
             this.destinationZoneId = builder.destinationZoneId;
+            this.enableRtc = builder.enableRtc;
             this.expiredTime = builder.expiredTime;
             this.lastRecoverPoint = builder.lastRecoverPoint;
             this.pairName = builder.pairName;
@@ -437,6 +441,13 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
          */
         public String getDestinationZoneId() {
             return this.destinationZoneId;
+        }
+
+        /**
+         * @return enableRtc
+         */
+        public Boolean getEnableRtc() {
+            return this.enableRtc;
         }
 
         /**
@@ -580,6 +591,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
             private String destinationDiskId; 
             private String destinationRegion; 
             private String destinationZoneId; 
+            private Boolean enableRtc; 
             private Long expiredTime; 
             private Long lastRecoverPoint; 
             private String pairName; 
@@ -611,6 +623,7 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
                 this.destinationDiskId = model.destinationDiskId;
                 this.destinationRegion = model.destinationRegion;
                 this.destinationZoneId = model.destinationZoneId;
+                this.enableRtc = model.enableRtc;
                 this.expiredTime = model.expiredTime;
                 this.lastRecoverPoint = model.lastRecoverPoint;
                 this.pairName = model.pairName;
@@ -710,6 +723,14 @@ public class DescribeDiskReplicaPairsResponseBody extends TeaModel {
              */
             public Builder destinationZoneId(String destinationZoneId) {
                 this.destinationZoneId = destinationZoneId;
+                return this;
+            }
+
+            /**
+             * EnableRtc.
+             */
+            public Builder enableRtc(Boolean enableRtc) {
+                this.enableRtc = enableRtc;
                 return this;
             }
 

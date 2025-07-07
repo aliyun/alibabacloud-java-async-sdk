@@ -30,6 +30,10 @@ public class ModifyDiskReplicaPairRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableRtc")
+    private Boolean enableRtc;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PairName")
     private String pairName;
 
@@ -52,6 +56,7 @@ public class ModifyDiskReplicaPairRequest extends Request {
         this.bandwidth = builder.bandwidth;
         this.clientToken = builder.clientToken;
         this.description = builder.description;
+        this.enableRtc = builder.enableRtc;
         this.pairName = builder.pairName;
         this.RPO = builder.RPO;
         this.regionId = builder.regionId;
@@ -93,6 +98,13 @@ public class ModifyDiskReplicaPairRequest extends Request {
     }
 
     /**
+     * @return enableRtc
+     */
+    public Boolean getEnableRtc() {
+        return this.enableRtc;
+    }
+
+    /**
      * @return pairName
      */
     public String getPairName() {
@@ -124,6 +136,7 @@ public class ModifyDiskReplicaPairRequest extends Request {
         private Long bandwidth; 
         private String clientToken; 
         private String description; 
+        private Boolean enableRtc; 
         private String pairName; 
         private Long RPO; 
         private String regionId; 
@@ -138,6 +151,7 @@ public class ModifyDiskReplicaPairRequest extends Request {
             this.bandwidth = request.bandwidth;
             this.clientToken = request.clientToken;
             this.description = request.description;
+            this.enableRtc = request.enableRtc;
             this.pairName = request.pairName;
             this.RPO = request.RPO;
             this.regionId = request.regionId;
@@ -180,6 +194,15 @@ public class ModifyDiskReplicaPairRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * EnableRtc.
+         */
+        public Builder enableRtc(Boolean enableRtc) {
+            this.putQueryParameter("EnableRtc", enableRtc);
+            this.enableRtc = enableRtc;
             return this;
         }
 

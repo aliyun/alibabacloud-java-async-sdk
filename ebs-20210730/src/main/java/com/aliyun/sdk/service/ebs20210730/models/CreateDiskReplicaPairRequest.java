@@ -54,6 +54,10 @@ public class CreateDiskReplicaPairRequest extends Request {
     private String diskId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableRtc")
+    private Boolean enableRtc;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PairName")
     private String pairName;
 
@@ -97,6 +101,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         this.destinationRegionId = builder.destinationRegionId;
         this.destinationZoneId = builder.destinationZoneId;
         this.diskId = builder.diskId;
+        this.enableRtc = builder.enableRtc;
         this.pairName = builder.pairName;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -177,6 +182,13 @@ public class CreateDiskReplicaPairRequest extends Request {
     }
 
     /**
+     * @return enableRtc
+     */
+    public Boolean getEnableRtc() {
+        return this.enableRtc;
+    }
+
+    /**
      * @return pairName
      */
     public String getPairName() {
@@ -241,6 +253,7 @@ public class CreateDiskReplicaPairRequest extends Request {
         private String destinationRegionId; 
         private String destinationZoneId; 
         private String diskId; 
+        private Boolean enableRtc; 
         private String pairName; 
         private Long period; 
         private String periodUnit; 
@@ -264,6 +277,7 @@ public class CreateDiskReplicaPairRequest extends Request {
             this.destinationRegionId = request.destinationRegionId;
             this.destinationZoneId = request.destinationZoneId;
             this.diskId = request.diskId;
+            this.enableRtc = request.enableRtc;
             this.pairName = request.pairName;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
@@ -384,6 +398,15 @@ public class CreateDiskReplicaPairRequest extends Request {
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);
             this.diskId = diskId;
+            return this;
+        }
+
+        /**
+         * EnableRtc.
+         */
+        public Builder enableRtc(Boolean enableRtc) {
+            this.putQueryParameter("EnableRtc", enableRtc);
+            this.enableRtc = enableRtc;
             return this;
         }
 
