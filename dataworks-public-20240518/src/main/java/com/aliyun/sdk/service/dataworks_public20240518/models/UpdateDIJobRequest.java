@@ -21,7 +21,7 @@ public class UpdateDIJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DIJobId")
     @Deprecated
     private Long DIJobId;
@@ -38,7 +38,7 @@ public class UpdateDIJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("JobSettings")
     private JobSettings jobSettings;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
@@ -181,10 +181,13 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * DIJobId.
+         * <p>This parameter is deprecated. Use the Id parameter instead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11588</p>
          */
         public Builder DIJobId(Long DIJobId) {
-            this.putBodyParameter("DIJobId", DIJobId);
+            this.putQueryParameter("DIJobId", DIJobId);
             this.DIJobId = DIJobId;
             return this;
         }
@@ -221,10 +224,14 @@ public class UpdateDIJobRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * <p>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to obtain the workspace ID.</p>
+         * <p>You must configure this parameter to specify the DataWorks workspace to which the operation is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
-            this.putBodyParameter("ProjectId", projectId);
+            this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
             return this;
         }

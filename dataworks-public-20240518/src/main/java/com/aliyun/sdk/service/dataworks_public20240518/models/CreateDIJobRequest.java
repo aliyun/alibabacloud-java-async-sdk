@@ -30,12 +30,12 @@ public class CreateDIJobRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<DestinationDataSourceSettings> destinationDataSourceSettings;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DestinationDataSourceType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String destinationDataSourceType;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobName")
     @Deprecated
     private String jobName;
@@ -44,20 +44,20 @@ public class CreateDIJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("JobSettings")
     private JobSettings jobSettings;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("JobType")
     private String jobType;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MigrationType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String migrationType;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProjectId")
     private Long projectId;
 
@@ -71,7 +71,7 @@ public class CreateDIJobRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<SourceDataSourceSettings> sourceDataSourceSettings;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SourceDataSourceType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sourceDataSourceType;
@@ -291,19 +291,26 @@ public class CreateDIJobRequest extends Request {
         }
 
         /**
+         * <p>The destination type. Valid values: Hologres, OSS-HDFS, OSS, MaxCompute, LogHub, StarRocks, DataHub, AnalyticDB for MySQL, Kafka, and Hive.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hologres</p>
          */
         public Builder destinationDataSourceType(String destinationDataSourceType) {
-            this.putBodyParameter("DestinationDataSourceType", destinationDataSourceType);
+            this.putQueryParameter("DestinationDataSourceType", destinationDataSourceType);
             this.destinationDataSourceType = destinationDataSourceType;
             return this;
         }
 
         /**
-         * JobName.
+         * <p>This parameter is deprecated and is replaced by the Name parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql_to_holo_sync_8772</p>
          */
         public Builder jobName(String jobName) {
-            this.putBodyParameter("JobName", jobName);
+            this.putQueryParameter("JobName", jobName);
             this.jobName = jobName;
             return this;
         }
@@ -319,37 +326,63 @@ public class CreateDIJobRequest extends Request {
         }
 
         /**
-         * JobType.
+         * <p>The type of the task. This parameter is optional. Valid values:</p>
+         * <ul>
+         * <li>DatabaseRealtimeMigration: A real-time synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases at the source.</li>
+         * <li>DatabaseOfflineMigration: A batch synchronization task used to synchronize only full data, only incremental data, or full and incremental data in multiple tables of multiple databases at the source.</li>
+         * <li>SingleTableRealtimeMigration: A real-time synchronization task used to synchronize only data in single table at the source.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>DatabaseRealtimeMigration</p>
          */
         public Builder jobType(String jobType) {
-            this.putBodyParameter("JobType", jobType);
+            this.putQueryParameter("JobType", jobType);
             this.jobType = jobType;
             return this;
         }
 
         /**
+         * <p>The synchronization type. Valid values:</p>
+         * <ul>
+         * <li>FullAndRealtimeIncremental: full synchronization and real-time incremental synchronization of data in an entire database</li>
+         * <li>RealtimeIncremental: real-time incremental synchronization of data in a single table</li>
+         * <li>Full: full batch synchronization of data in an entire database</li>
+         * <li>OfflineIncremental: batch incremental synchronization of data in an entire database</li>
+         * <li>FullAndOfflineIncremental: full synchronization and batch incremental synchronization of data in an entire database</li>
+         * </ul>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FullAndRealtimeIncremental</p>
          */
         public Builder migrationType(String migrationType) {
-            this.putBodyParameter("MigrationType", migrationType);
+            this.putQueryParameter("MigrationType", migrationType);
             this.migrationType = migrationType;
             return this;
         }
 
         /**
-         * Name.
+         * <p>The name of the synchronization task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>mysql_to_holo_sync_8772</p>
          */
         public Builder name(String name) {
-            this.putBodyParameter("Name", name);
+            this.putQueryParameter("Name", name);
             this.name = name;
             return this;
         }
 
         /**
-         * ProjectId.
+         * <p>The DataWorks workspace ID. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the Workspace page to query the ID.</p>
+         * <p>You must configure this parameter to specify the DataWorks workspace to which the API operation is applied.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder projectId(Long projectId) {
-            this.putBodyParameter("ProjectId", projectId);
+            this.putQueryParameter("ProjectId", projectId);
             this.projectId = projectId;
             return this;
         }
@@ -375,10 +408,14 @@ public class CreateDIJobRequest extends Request {
         }
 
         /**
+         * <p>The source type. Valid values: PolarDB, MySQL, Kafka, LogHub, Hologres, Oracle, OceanBase, MongoDB, Redshift, Hive, SQL Server, Doris, and ClickHouse.</p>
          * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MySQL</p>
          */
         public Builder sourceDataSourceType(String sourceDataSourceType) {
-            this.putBodyParameter("SourceDataSourceType", sourceDataSourceType);
+            this.putQueryParameter("SourceDataSourceType", sourceDataSourceType);
             this.sourceDataSourceType = sourceDataSourceType;
             return this;
         }
@@ -742,7 +779,10 @@ public class CreateDIJobRequest extends Request {
             } 
 
             /**
-             * Name.
+             * <p>The name of the synchronization task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mysql_to_holo_sync_8772</p>
              */
             public Builder name(String name) {
                 this.name = name;
