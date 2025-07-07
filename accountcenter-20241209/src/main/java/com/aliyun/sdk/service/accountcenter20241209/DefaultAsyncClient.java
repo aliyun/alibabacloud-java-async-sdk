@@ -40,6 +40,258 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of EnterpriseAccountChangeLoginPassword  EnterpriseAccountChangeLoginPasswordRequest
+     * @return EnterpriseAccountChangeLoginPasswordResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseAccountChangeLoginPasswordResponse> enterpriseAccountChangeLoginPassword(EnterpriseAccountChangeLoginPasswordRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseAccountChangeLoginPassword").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseAccountChangeLoginPasswordResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseAccountChangeLoginPasswordResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseAccountChangeSecurityEmail  EnterpriseAccountChangeSecurityEmailRequest
+     * @return EnterpriseAccountChangeSecurityEmailResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseAccountChangeSecurityEmailResponse> enterpriseAccountChangeSecurityEmail(EnterpriseAccountChangeSecurityEmailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseAccountChangeSecurityEmail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseAccountChangeSecurityEmailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseAccountChangeSecurityEmailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseAccountChangeSecurityMobile  EnterpriseAccountChangeSecurityMobileRequest
+     * @return EnterpriseAccountChangeSecurityMobileResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseAccountChangeSecurityMobileResponse> enterpriseAccountChangeSecurityMobile(EnterpriseAccountChangeSecurityMobileRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseAccountChangeSecurityMobile").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseAccountChangeSecurityMobileResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseAccountChangeSecurityMobileResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseAccountQueryAccountGrantedRoles  EnterpriseAccountQueryAccountGrantedRolesRequest
+     * @return EnterpriseAccountQueryAccountGrantedRolesResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseAccountQueryAccountGrantedRolesResponse> enterpriseAccountQueryAccountGrantedRoles(EnterpriseAccountQueryAccountGrantedRolesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseAccountQueryAccountGrantedRoles").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseAccountQueryAccountGrantedRolesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseAccountQueryAccountGrantedRolesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseAccountQueryAccountsInfo  EnterpriseAccountQueryAccountsInfoRequest
+     * @return EnterpriseAccountQueryAccountsInfoResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseAccountQueryAccountsInfoResponse> enterpriseAccountQueryAccountsInfo(EnterpriseAccountQueryAccountsInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseAccountQueryAccountsInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseAccountQueryAccountsInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseAccountQueryAccountsInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseAccountQueryLoginSettings  EnterpriseAccountQueryLoginSettingsRequest
+     * @return EnterpriseAccountQueryLoginSettingsResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseAccountQueryLoginSettingsResponse> enterpriseAccountQueryLoginSettings(EnterpriseAccountQueryLoginSettingsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseAccountQueryLoginSettings").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseAccountQueryLoginSettingsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseAccountQueryLoginSettingsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseAccountRemoveMfa  EnterpriseAccountRemoveMfaRequest
+     * @return EnterpriseAccountRemoveMfaResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseAccountRemoveMfaResponse> enterpriseAccountRemoveMfa(EnterpriseAccountRemoveMfaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseAccountRemoveMfa").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseAccountRemoveMfaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseAccountRemoveMfaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseAccountSeparateEa  EnterpriseAccountSeparateEaRequest
+     * @return EnterpriseAccountSeparateEaResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseAccountSeparateEaResponse> enterpriseAccountSeparateEa(EnterpriseAccountSeparateEaRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseAccountSeparateEa").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseAccountSeparateEaResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseAccountSeparateEaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseAccountUpdateAccountAlias  EnterpriseAccountUpdateAccountAliasRequest
+     * @return EnterpriseAccountUpdateAccountAliasResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseAccountUpdateAccountAliasResponse> enterpriseAccountUpdateAccountAlias(EnterpriseAccountUpdateAccountAliasRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseAccountUpdateAccountAlias").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseAccountUpdateAccountAliasResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseAccountUpdateAccountAliasResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseAccountUpdateAccountBizRoleGrant  EnterpriseAccountUpdateAccountBizRoleGrantRequest
+     * @return EnterpriseAccountUpdateAccountBizRoleGrantResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseAccountUpdateAccountBizRoleGrantResponse> enterpriseAccountUpdateAccountBizRoleGrant(EnterpriseAccountUpdateAccountBizRoleGrantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseAccountUpdateAccountBizRoleGrant").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseAccountUpdateAccountBizRoleGrantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseAccountUpdateAccountBizRoleGrantResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseAccountUpdateIpMask  EnterpriseAccountUpdateIpMaskRequest
+     * @return EnterpriseAccountUpdateIpMaskResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseAccountUpdateIpMaskResponse> enterpriseAccountUpdateIpMask(EnterpriseAccountUpdateIpMaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseAccountUpdateIpMask").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseAccountUpdateIpMaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseAccountUpdateIpMaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseAccountUpdateOperateRiskControl  EnterpriseAccountUpdateOperateRiskControlRequest
+     * @return EnterpriseAccountUpdateOperateRiskControlResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseAccountUpdateOperateRiskControlResponse> enterpriseAccountUpdateOperateRiskControl(EnterpriseAccountUpdateOperateRiskControlRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseAccountUpdateOperateRiskControl").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseAccountUpdateOperateRiskControlResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseAccountUpdateOperateRiskControlResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseAccountUpdateSecurityMobileLoginStatus  EnterpriseAccountUpdateSecurityMobileLoginStatusRequest
+     * @return EnterpriseAccountUpdateSecurityMobileLoginStatusResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseAccountUpdateSecurityMobileLoginStatusResponse> enterpriseAccountUpdateSecurityMobileLoginStatus(EnterpriseAccountUpdateSecurityMobileLoginStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseAccountUpdateSecurityMobileLoginStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseAccountUpdateSecurityMobileLoginStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseAccountUpdateSecurityMobileLoginStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseAccountUpdateSessionExpireTime  EnterpriseAccountUpdateSessionExpireTimeRequest
+     * @return EnterpriseAccountUpdateSessionExpireTimeResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseAccountUpdateSessionExpireTimeResponse> enterpriseAccountUpdateSessionExpireTime(EnterpriseAccountUpdateSessionExpireTimeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseAccountUpdateSessionExpireTime").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseAccountUpdateSessionExpireTimeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseAccountUpdateSessionExpireTimeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of EnterpriseOrgQueryLoadTree  EnterpriseOrgQueryLoadTreeRequest
      * @return EnterpriseOrgQueryLoadTreeResponse
      */
@@ -70,6 +322,186 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<EnterpriseRegisterAccountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseRoleCreateBizRole  EnterpriseRoleCreateBizRoleRequest
+     * @return EnterpriseRoleCreateBizRoleResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseRoleCreateBizRoleResponse> enterpriseRoleCreateBizRole(EnterpriseRoleCreateBizRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseRoleCreateBizRole").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseRoleCreateBizRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseRoleCreateBizRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseRoleDeleteBizRole  EnterpriseRoleDeleteBizRoleRequest
+     * @return EnterpriseRoleDeleteBizRoleResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseRoleDeleteBizRoleResponse> enterpriseRoleDeleteBizRole(EnterpriseRoleDeleteBizRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseRoleDeleteBizRole").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseRoleDeleteBizRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseRoleDeleteBizRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseRoleQueryAccountForRoleGrantByPage  EnterpriseRoleQueryAccountForRoleGrantByPageRequest
+     * @return EnterpriseRoleQueryAccountForRoleGrantByPageResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseRoleQueryAccountForRoleGrantByPageResponse> enterpriseRoleQueryAccountForRoleGrantByPage(EnterpriseRoleQueryAccountForRoleGrantByPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseRoleQueryAccountForRoleGrantByPage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseRoleQueryAccountForRoleGrantByPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseRoleQueryAccountForRoleGrantByPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseRoleQueryBizRoleByPage  EnterpriseRoleQueryBizRoleByPageRequest
+     * @return EnterpriseRoleQueryBizRoleByPageResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseRoleQueryBizRoleByPageResponse> enterpriseRoleQueryBizRoleByPage(EnterpriseRoleQueryBizRoleByPageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseRoleQueryBizRoleByPage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseRoleQueryBizRoleByPageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseRoleQueryBizRoleByPageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseRoleQueryBizRoleDetail  EnterpriseRoleQueryBizRoleDetailRequest
+     * @return EnterpriseRoleQueryBizRoleDetailResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseRoleQueryBizRoleDetailResponse> enterpriseRoleQueryBizRoleDetail(EnterpriseRoleQueryBizRoleDetailRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseRoleQueryBizRoleDetail").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseRoleQueryBizRoleDetailResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseRoleQueryBizRoleDetailResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseRoleUpdateBizRole  EnterpriseRoleUpdateBizRoleRequest
+     * @return EnterpriseRoleUpdateBizRoleResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseRoleUpdateBizRoleResponse> enterpriseRoleUpdateBizRole(EnterpriseRoleUpdateBizRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseRoleUpdateBizRole").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseRoleUpdateBizRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseRoleUpdateBizRoleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseTodoDealAccountTodo  EnterpriseTodoDealAccountTodoRequest
+     * @return EnterpriseTodoDealAccountTodoResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseTodoDealAccountTodoResponse> enterpriseTodoDealAccountTodo(EnterpriseTodoDealAccountTodoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseTodoDealAccountTodo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseTodoDealAccountTodoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseTodoDealAccountTodoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseTodoQueryAccountTodoList  EnterpriseTodoQueryAccountTodoListRequest
+     * @return EnterpriseTodoQueryAccountTodoListResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseTodoQueryAccountTodoListResponse> enterpriseTodoQueryAccountTodoList(EnterpriseTodoQueryAccountTodoListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseTodoQueryAccountTodoList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseTodoQueryAccountTodoListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseTodoQueryAccountTodoListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseTodoQueryAccountTodoListByApplicant  EnterpriseTodoQueryAccountTodoListByApplicantRequest
+     * @return EnterpriseTodoQueryAccountTodoListByApplicantResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseTodoQueryAccountTodoListByApplicantResponse> enterpriseTodoQueryAccountTodoListByApplicant(EnterpriseTodoQueryAccountTodoListByApplicantRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseTodoQueryAccountTodoListByApplicant").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseTodoQueryAccountTodoListByApplicantResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseTodoQueryAccountTodoListByApplicantResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of EnterpriseUninvitedAdminInviteJoinEnterprise  EnterpriseUninvitedAdminInviteJoinEnterpriseRequest
+     * @return EnterpriseUninvitedAdminInviteJoinEnterpriseResponse
+     */
+    @Override
+    public CompletableFuture<EnterpriseUninvitedAdminInviteJoinEnterpriseResponse> enterpriseUninvitedAdminInviteJoinEnterprise(EnterpriseUninvitedAdminInviteJoinEnterpriseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("EnterpriseUninvitedAdminInviteJoinEnterprise").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(EnterpriseUninvitedAdminInviteJoinEnterpriseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<EnterpriseUninvitedAdminInviteJoinEnterpriseResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
