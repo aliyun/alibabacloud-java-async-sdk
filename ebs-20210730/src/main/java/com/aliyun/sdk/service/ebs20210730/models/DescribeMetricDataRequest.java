@@ -34,6 +34,10 @@ public class DescribeMetricDataRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupByLabels")
+    private java.util.List<String> groupByLabels;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetricName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
@@ -56,6 +60,7 @@ public class DescribeMetricDataRequest extends Request {
         this.aggreOverLineOps = builder.aggreOverLineOps;
         this.dimensions = builder.dimensions;
         this.endTime = builder.endTime;
+        this.groupByLabels = builder.groupByLabels;
         this.metricName = builder.metricName;
         this.period = builder.period;
         this.regionId = builder.regionId;
@@ -104,6 +109,13 @@ public class DescribeMetricDataRequest extends Request {
     }
 
     /**
+     * @return groupByLabels
+     */
+    public java.util.List<String> getGroupByLabels() {
+        return this.groupByLabels;
+    }
+
+    /**
      * @return metricName
      */
     public String getMetricName() {
@@ -136,6 +148,7 @@ public class DescribeMetricDataRequest extends Request {
         private String aggreOverLineOps; 
         private String dimensions; 
         private String endTime; 
+        private java.util.List<String> groupByLabels; 
         private String metricName; 
         private Integer period; 
         private String regionId; 
@@ -151,6 +164,7 @@ public class DescribeMetricDataRequest extends Request {
             this.aggreOverLineOps = request.aggreOverLineOps;
             this.dimensions = request.dimensions;
             this.endTime = request.endTime;
+            this.groupByLabels = request.groupByLabels;
             this.metricName = request.metricName;
             this.period = request.period;
             this.regionId = request.regionId;
@@ -158,17 +172,21 @@ public class DescribeMetricDataRequest extends Request {
         } 
 
         /**
-         * <p>Aggregation method in time dimension. Valid values:</p>
+         * <p>Aggregation method over time. Possible values include:</p>
          * <ul>
-         * <li>SUM</li>
-         * <li>COUNT</li>
-         * <li>AVG</li>
-         * <li>MAX</li>
-         * <li>MIN</li>
+         * <li>SUM_OVER_TIME</li>
+         * <li>COUNT_OVER_TIME</li>
+         * <li>AVG_OVER_TIME</li>
+         * <li>MAX_OVER_TIME</li>
+         * <li>MIN_OVER_TIME</li>
+         * <li>SUM_OVER_TIME_LCRO: Sum over a left-closed, right-open interval</li>
+         * <li>AVG_OVER_TIME_LCRO: Average over a left-closed, right-open interval</li>
+         * <li>SUM_OVER_TIME_LORC: Sum over a left-open, right-closed interval</li>
+         * <li>AVG_OVER_TIME_LORC: Average over a left-open, right-closed interval</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>SUM</p>
+         * <p>AVG_OVER_TIME</p>
          */
         public Builder aggreOps(String aggreOps) {
             this.putQueryParameter("AggreOps", aggreOps);
@@ -177,7 +195,18 @@ public class DescribeMetricDataRequest extends Request {
         }
 
         /**
-         * AggreOverLineOps.
+         * <p>Aggregation method between lines. Possible values include:</p>
+         * <ul>
+         * <li>NON: No aggregation</li>
+         * <li>SUM: Sum</li>
+         * <li>AVG: Average</li>
+         * <li>COUNT: Count</li>
+         * <li>MAX: Maximum</li>
+         * <li>MIN: Minimum</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>NON</p>
          */
         public Builder aggreOverLineOps(String aggreOverLineOps) {
             this.putQueryParameter("AggreOverLineOps", aggreOverLineOps);
@@ -186,10 +215,17 @@ public class DescribeMetricDataRequest extends Request {
         }
 
         /**
-         * <p>The dimension map in the JSON format. A dimension is a key-value pair. Valid dimension key: diskId.</p>
+         * <p>Dimension map, in JSON format, representing the dimensions being queried. The currently available keys are:</p>
+         * <ul>
+         * <li>DiskId: Cloud disk name, e.g., d-xxx.</li>
+         * <li>DeviceType: Type of cloud disk, system indicates system disk, data indicates data disk.</li>
+         * <li>DeviceCategory: Category of cloud disk, e.g., cloud_essd.</li>
+         * <li>EcsInstanceId: Name of the ECS instance where the disk is located, e.g., i-xxx.</li>
+         * </ul>
+         * <p>The returned results are the intersection of all dimension filter conditions.</p>
          * 
          * <strong>example:</strong>
-         * <p>{&quot;diskId&quot;:[&quot;d-bp14xxxx&quot;,&quot;d-bp11xxxx&quot;]}</p>
+         * <p>{&quot;DiskId&quot;:[&quot;d-bp14xxxx&quot;,&quot;d-bp11xxxx&quot;], &quot;DeviceCategory&quot;: [&quot;cloud_essd&quot;]}</p>
          */
         public Builder dimensions(String dimensions) {
             this.putQueryParameter("Dimensions", dimensions);
@@ -198,7 +234,7 @@ public class DescribeMetricDataRequest extends Request {
         }
 
         /**
-         * <p>The end of the time range to query. The specified time must be later than the current time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The end time point for obtaining metric data. It should not be later than the current moment. Represented according to the ISO 8601 standard, using UTC +0 time, in the format yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-11-21T02:00:00Z</p>
@@ -210,18 +246,26 @@ public class DescribeMetricDataRequest extends Request {
         }
 
         /**
-         * <p>The name of the metric. Valid values:</p>
+         * GroupByLabels.
+         */
+        public Builder groupByLabels(java.util.List<String> groupByLabels) {
+            String groupByLabelsShrink = shrink(groupByLabels, "GroupByLabels", "simple");
+            this.putQueryParameter("GroupByLabels", groupByLabelsShrink);
+            this.groupByLabels = groupByLabels;
+            return this;
+        }
+
+        /**
+         * <p>Metric name. Possible values include:</p>
          * <ul>
          * <li>disk_bps_percent</li>
          * <li>disk_iops_percent</li>
          * <li>disk_read_block_size</li>
          * <li>disk_read_bps</li>
          * <li>disk_read_iops</li>
-         * <li>disk_read_latency</li>
          * <li>disk_write_block_size</li>
          * <li>disk_write_bps</li>
          * <li>disk_write_iops</li>
-         * <li>disk_write_latency</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -235,7 +279,13 @@ public class DescribeMetricDataRequest extends Request {
         }
 
         /**
-         * <p>The interval at which metric data is collected. Unit: seconds. Default value: 60. Valid values: 60, 300, 600, and 3600, which support queries for time ranges of up to 2 hours, 2 hours, 1 day, and 7 days, respectively. For example, if you set Period to 60, the end time is less than 2 hours from the end time.</p>
+         * <p>The interval for obtaining metric data. Unit: seconds. The default value is 5 seconds. Possible values include:</p>
+         * <ul>
+         * <li>5: 5s precision query, can query up to 12 hours of data</li>
+         * <li>10: 10s precision query, can query up to 24 hours of data</li>
+         * <li>60: 60s precision query, can query up to 7 days of data</li>
+         * <li>3600: 3600s precision query, can query up to 30 days of data</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -247,7 +297,7 @@ public class DescribeMetricDataRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
+         * <p>Region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -259,7 +309,7 @@ public class DescribeMetricDataRequest extends Request {
         }
 
         /**
-         * <p>The beginning of the time range to query. You can specify a point in time that is up to one year apart from the current time. If StartTime and EndTime are both unspecified, the monitoring metric data of the last Period value is queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <p>The start time point for obtaining metric data. The earliest selectable time is one year before the current moment. When both StartTime and EndTime parameters are empty, it defaults to querying the most recent period&quot;s monitoring metrics. Represented according to the ISO 8601 standard, using UTC +0 time, in the format yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-11-21T01:50:00Z</p>

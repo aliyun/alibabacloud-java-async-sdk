@@ -21,10 +21,6 @@ public class ListReportsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("AppName")
-    private String appName;
-
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
@@ -48,7 +44,6 @@ public class ListReportsRequest extends Request {
     private ListReportsRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
-        this.appName = builder.appName;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.pageNumber = builder.pageNumber;
@@ -74,13 +69,6 @@ public class ListReportsRequest extends Request {
      */
     public String getAppId() {
         return this.appId;
-    }
-
-    /**
-     * @return appName
-     */
-    public String getAppName() {
-        return this.appName;
     }
 
     /**
@@ -120,7 +108,6 @@ public class ListReportsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListReportsRequest, Builder> {
         private String appId; 
-        private String appName; 
         private Integer maxResults; 
         private String nextToken; 
         private Integer pageNumber; 
@@ -134,7 +121,6 @@ public class ListReportsRequest extends Request {
         private Builder(ListReportsRequest request) {
             super(request);
             this.appId = request.appId;
-            this.appName = request.appName;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.pageNumber = request.pageNumber;
@@ -148,18 +134,6 @@ public class ListReportsRequest extends Request {
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
             this.appId = appId;
-            return this;
-        }
-
-        /**
-         * <p>App name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>App1</p>
-         */
-        public Builder appName(String appName) {
-            this.putBodyParameter("AppName", appName);
-            this.appName = appName;
             return this;
         }
 
