@@ -12,18 +12,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateSessionClusterRequest} extends {@link RequestModel}
+ * {@link CreateLivyComputeRequest} extends {@link RequestModel}
  *
- * <p>CreateSessionClusterRequest</p>
+ * <p>CreateLivyComputeRequest</p>
  */
-public class CreateSessionClusterRequest extends Request {
+public class CreateLivyComputeRequest extends Request {
     @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("workspaceId")
-    private String workspaceId;
+    @com.aliyun.core.annotation.NameInMap("workspaceBizId")
+    private String workspaceBizId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("applicationConfigs")
-    private java.util.List<ApplicationConfigs> applicationConfigs;
+    @com.aliyun.core.annotation.NameInMap("authType")
+    private String authType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("autoStartConfiguration")
@@ -34,28 +34,44 @@ public class CreateSessionClusterRequest extends Request {
     private AutoStopConfiguration autoStopConfiguration;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("cpuLimit")
+    private String cpuLimit;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("displayReleaseVersion")
     private String displayReleaseVersion;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("envId")
-    private String envId;
+    @com.aliyun.core.annotation.NameInMap("enablePublic")
+    private Boolean enablePublic;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("environmentId")
+    private String environmentId;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("fusion")
     private Boolean fusion;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("kind")
-    private String kind;
+    @com.aliyun.core.annotation.NameInMap("livyServerConf")
+    private String livyServerConf;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("livyVersion")
+    private String livyVersion;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("memoryLimit")
+    private String memoryLimit;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("publicEndpointEnabled")
-    private Boolean publicEndpointEnabled;
+    @com.aliyun.core.annotation.NameInMap("networkName")
+    private String networkName;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("queueName")
@@ -69,18 +85,22 @@ public class CreateSessionClusterRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("regionId")
     private String regionId;
 
-    private CreateSessionClusterRequest(Builder builder) {
+    private CreateLivyComputeRequest(Builder builder) {
         super(builder);
-        this.workspaceId = builder.workspaceId;
-        this.applicationConfigs = builder.applicationConfigs;
+        this.workspaceBizId = builder.workspaceBizId;
+        this.authType = builder.authType;
         this.autoStartConfiguration = builder.autoStartConfiguration;
         this.autoStopConfiguration = builder.autoStopConfiguration;
+        this.cpuLimit = builder.cpuLimit;
         this.displayReleaseVersion = builder.displayReleaseVersion;
-        this.envId = builder.envId;
+        this.enablePublic = builder.enablePublic;
+        this.environmentId = builder.environmentId;
         this.fusion = builder.fusion;
-        this.kind = builder.kind;
+        this.livyServerConf = builder.livyServerConf;
+        this.livyVersion = builder.livyVersion;
+        this.memoryLimit = builder.memoryLimit;
         this.name = builder.name;
-        this.publicEndpointEnabled = builder.publicEndpointEnabled;
+        this.networkName = builder.networkName;
         this.queueName = builder.queueName;
         this.releaseVersion = builder.releaseVersion;
         this.regionId = builder.regionId;
@@ -90,7 +110,7 @@ public class CreateSessionClusterRequest extends Request {
         return new Builder();
     }
 
-    public static CreateSessionClusterRequest create() {
+    public static CreateLivyComputeRequest create() {
         return builder().build();
     }
 
@@ -100,17 +120,17 @@ public class CreateSessionClusterRequest extends Request {
     }
 
     /**
-     * @return workspaceId
+     * @return workspaceBizId
      */
-    public String getWorkspaceId() {
-        return this.workspaceId;
+    public String getWorkspaceBizId() {
+        return this.workspaceBizId;
     }
 
     /**
-     * @return applicationConfigs
+     * @return authType
      */
-    public java.util.List<ApplicationConfigs> getApplicationConfigs() {
-        return this.applicationConfigs;
+    public String getAuthType() {
+        return this.authType;
     }
 
     /**
@@ -128,6 +148,13 @@ public class CreateSessionClusterRequest extends Request {
     }
 
     /**
+     * @return cpuLimit
+     */
+    public String getCpuLimit() {
+        return this.cpuLimit;
+    }
+
+    /**
      * @return displayReleaseVersion
      */
     public String getDisplayReleaseVersion() {
@@ -135,10 +162,17 @@ public class CreateSessionClusterRequest extends Request {
     }
 
     /**
-     * @return envId
+     * @return enablePublic
      */
-    public String getEnvId() {
-        return this.envId;
+    public Boolean getEnablePublic() {
+        return this.enablePublic;
+    }
+
+    /**
+     * @return environmentId
+     */
+    public String getEnvironmentId() {
+        return this.environmentId;
     }
 
     /**
@@ -149,10 +183,24 @@ public class CreateSessionClusterRequest extends Request {
     }
 
     /**
-     * @return kind
+     * @return livyServerConf
      */
-    public String getKind() {
-        return this.kind;
+    public String getLivyServerConf() {
+        return this.livyServerConf;
+    }
+
+    /**
+     * @return livyVersion
+     */
+    public String getLivyVersion() {
+        return this.livyVersion;
+    }
+
+    /**
+     * @return memoryLimit
+     */
+    public String getMemoryLimit() {
+        return this.memoryLimit;
     }
 
     /**
@@ -163,10 +211,10 @@ public class CreateSessionClusterRequest extends Request {
     }
 
     /**
-     * @return publicEndpointEnabled
+     * @return networkName
      */
-    public Boolean getPublicEndpointEnabled() {
-        return this.publicEndpointEnabled;
+    public String getNetworkName() {
+        return this.networkName;
     }
 
     /**
@@ -190,17 +238,21 @@ public class CreateSessionClusterRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<CreateSessionClusterRequest, Builder> {
-        private String workspaceId; 
-        private java.util.List<ApplicationConfigs> applicationConfigs; 
+    public static final class Builder extends Request.Builder<CreateLivyComputeRequest, Builder> {
+        private String workspaceBizId; 
+        private String authType; 
         private AutoStartConfiguration autoStartConfiguration; 
         private AutoStopConfiguration autoStopConfiguration; 
+        private String cpuLimit; 
         private String displayReleaseVersion; 
-        private String envId; 
+        private Boolean enablePublic; 
+        private String environmentId; 
         private Boolean fusion; 
-        private String kind; 
+        private String livyServerConf; 
+        private String livyVersion; 
+        private String memoryLimit; 
         private String name; 
-        private Boolean publicEndpointEnabled; 
+        private String networkName; 
         private String queueName; 
         private String releaseVersion; 
         private String regionId; 
@@ -209,50 +261,47 @@ public class CreateSessionClusterRequest extends Request {
             super();
         } 
 
-        private Builder(CreateSessionClusterRequest request) {
+        private Builder(CreateLivyComputeRequest request) {
             super(request);
-            this.workspaceId = request.workspaceId;
-            this.applicationConfigs = request.applicationConfigs;
+            this.workspaceBizId = request.workspaceBizId;
+            this.authType = request.authType;
             this.autoStartConfiguration = request.autoStartConfiguration;
             this.autoStopConfiguration = request.autoStopConfiguration;
+            this.cpuLimit = request.cpuLimit;
             this.displayReleaseVersion = request.displayReleaseVersion;
-            this.envId = request.envId;
+            this.enablePublic = request.enablePublic;
+            this.environmentId = request.environmentId;
             this.fusion = request.fusion;
-            this.kind = request.kind;
+            this.livyServerConf = request.livyServerConf;
+            this.livyVersion = request.livyVersion;
+            this.memoryLimit = request.memoryLimit;
             this.name = request.name;
-            this.publicEndpointEnabled = request.publicEndpointEnabled;
+            this.networkName = request.networkName;
             this.queueName = request.queueName;
             this.releaseVersion = request.releaseVersion;
             this.regionId = request.regionId;
         } 
 
         /**
-         * <p>The workspace ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>w-790b443d72394bfc</p>
+         * workspaceBizId.
          */
-        public Builder workspaceId(String workspaceId) {
-            this.putPathParameter("workspaceId", workspaceId);
-            this.workspaceId = workspaceId;
+        public Builder workspaceBizId(String workspaceBizId) {
+            this.putPathParameter("workspaceBizId", workspaceBizId);
+            this.workspaceBizId = workspaceBizId;
             return this;
         }
 
         /**
-         * <p>The Spark configurations.</p>
+         * authType.
          */
-        public Builder applicationConfigs(java.util.List<ApplicationConfigs> applicationConfigs) {
-            this.putBodyParameter("applicationConfigs", applicationConfigs);
-            this.applicationConfigs = applicationConfigs;
+        public Builder authType(String authType) {
+            this.putBodyParameter("authType", authType);
+            this.authType = authType;
             return this;
         }
 
         /**
-         * <p>Specifies whether to enable automatic startup.</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * autoStartConfiguration.
          */
         public Builder autoStartConfiguration(AutoStartConfiguration autoStartConfiguration) {
             this.putBodyParameter("autoStartConfiguration", autoStartConfiguration);
@@ -261,7 +310,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The automatic termination configuration.</p>
+         * autoStopConfiguration.
          */
         public Builder autoStopConfiguration(AutoStopConfiguration autoStopConfiguration) {
             this.putBodyParameter("autoStopConfiguration", autoStopConfiguration);
@@ -270,10 +319,16 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The version of the Spark engine.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>esr-3.3.1</p>
+         * cpuLimit.
+         */
+        public Builder cpuLimit(String cpuLimit) {
+            this.putBodyParameter("cpuLimit", cpuLimit);
+            this.cpuLimit = cpuLimit;
+            return this;
+        }
+
+        /**
+         * displayReleaseVersion.
          */
         public Builder displayReleaseVersion(String displayReleaseVersion) {
             this.putBodyParameter("displayReleaseVersion", displayReleaseVersion);
@@ -282,22 +337,25 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Python environment. This parameter takes effect only for notebook sessions.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>env-cpv569tlhtgndjl86t40</p>
+         * enablePublic.
          */
-        public Builder envId(String envId) {
-            this.putBodyParameter("envId", envId);
-            this.envId = envId;
+        public Builder enablePublic(Boolean enablePublic) {
+            this.putBodyParameter("enablePublic", enablePublic);
+            this.enablePublic = enablePublic;
             return this;
         }
 
         /**
-         * <p>Specifies whether to enable Fusion engine for acceleration.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>false</p>
+         * environmentId.
+         */
+        public Builder environmentId(String environmentId) {
+            this.putBodyParameter("environmentId", environmentId);
+            this.environmentId = environmentId;
+            return this;
+        }
+
+        /**
+         * fusion.
          */
         public Builder fusion(Boolean fusion) {
             this.putBodyParameter("fusion", fusion);
@@ -306,26 +364,34 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The session type.</p>
-         * <ul>
-         * <li>SQL</li>
-         * <li>NOTEBOOK</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>SQL</p>
+         * livyServerConf.
          */
-        public Builder kind(String kind) {
-            this.putBodyParameter("kind", kind);
-            this.kind = kind;
+        public Builder livyServerConf(String livyServerConf) {
+            this.putBodyParameter("livyServerConf", livyServerConf);
+            this.livyServerConf = livyServerConf;
             return this;
         }
 
         /**
-         * <p>The name of the job.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>spark_job_name</p>
+         * livyVersion.
+         */
+        public Builder livyVersion(String livyVersion) {
+            this.putBodyParameter("livyVersion", livyVersion);
+            this.livyVersion = livyVersion;
+            return this;
+        }
+
+        /**
+         * memoryLimit.
+         */
+        public Builder memoryLimit(String memoryLimit) {
+            this.putBodyParameter("memoryLimit", memoryLimit);
+            this.memoryLimit = memoryLimit;
+            return this;
+        }
+
+        /**
+         * name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -334,19 +400,16 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * publicEndpointEnabled.
+         * networkName.
          */
-        public Builder publicEndpointEnabled(Boolean publicEndpointEnabled) {
-            this.putBodyParameter("publicEndpointEnabled", publicEndpointEnabled);
-            this.publicEndpointEnabled = publicEndpointEnabled;
+        public Builder networkName(String networkName) {
+            this.putBodyParameter("networkName", networkName);
+            this.networkName = networkName;
             return this;
         }
 
         /**
-         * <p>The queue name.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>root_queue</p>
+         * queueName.
          */
         public Builder queueName(String queueName) {
             this.putBodyParameter("queueName", queueName);
@@ -355,10 +418,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The version number of Spark.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>esr-3.3.1</p>
+         * releaseVersion.
          */
         public Builder releaseVersion(String releaseVersion) {
             this.putBodyParameter("releaseVersion", releaseVersion);
@@ -367,10 +427,7 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         /**
-         * <p>The region ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * regionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -379,122 +436,17 @@ public class CreateSessionClusterRequest extends Request {
         }
 
         @Override
-        public CreateSessionClusterRequest build() {
-            return new CreateSessionClusterRequest(this);
+        public CreateLivyComputeRequest build() {
+            return new CreateLivyComputeRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link CreateSessionClusterRequest} extends {@link TeaModel}
+     * {@link CreateLivyComputeRequest} extends {@link TeaModel}
      *
-     * <p>CreateSessionClusterRequest</p>
-     */
-    public static class ApplicationConfigs extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("configFileName")
-        private String configFileName;
-
-        @com.aliyun.core.annotation.NameInMap("configItemKey")
-        private String configItemKey;
-
-        @com.aliyun.core.annotation.NameInMap("configItemValue")
-        private String configItemValue;
-
-        private ApplicationConfigs(Builder builder) {
-            this.configFileName = builder.configFileName;
-            this.configItemKey = builder.configItemKey;
-            this.configItemValue = builder.configItemValue;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ApplicationConfigs create() {
-            return builder().build();
-        }
-
-        /**
-         * @return configFileName
-         */
-        public String getConfigFileName() {
-            return this.configFileName;
-        }
-
-        /**
-         * @return configItemKey
-         */
-        public String getConfigItemKey() {
-            return this.configItemKey;
-        }
-
-        /**
-         * @return configItemValue
-         */
-        public String getConfigItemValue() {
-            return this.configItemValue;
-        }
-
-        public static final class Builder {
-            private String configFileName; 
-            private String configItemKey; 
-            private String configItemValue; 
-
-            private Builder() {
-            } 
-
-            private Builder(ApplicationConfigs model) {
-                this.configFileName = model.configFileName;
-                this.configItemKey = model.configItemKey;
-                this.configItemValue = model.configItemValue;
-            } 
-
-            /**
-             * <p>The name of the configuration file.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>spark-defaults.conf</p>
-             */
-            public Builder configFileName(String configFileName) {
-                this.configFileName = configFileName;
-                return this;
-            }
-
-            /**
-             * <p>The key of SparkConf.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>spark.app.name</p>
-             */
-            public Builder configItemKey(String configItemKey) {
-                this.configItemKey = configItemKey;
-                return this;
-            }
-
-            /**
-             * <p>The value of SparkConf.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>test</p>
-             */
-            public Builder configItemValue(String configItemValue) {
-                this.configItemValue = configItemValue;
-                return this;
-            }
-
-            public ApplicationConfigs build() {
-                return new ApplicationConfigs(this);
-            } 
-
-        } 
-
-    }
-    /**
-     * 
-     * {@link CreateSessionClusterRequest} extends {@link TeaModel}
-     *
-     * <p>CreateSessionClusterRequest</p>
+     * <p>CreateLivyComputeRequest</p>
      */
     public static class AutoStartConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enable")
@@ -530,14 +482,7 @@ public class CreateSessionClusterRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable automatic startup.</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * enable.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -553,16 +498,16 @@ public class CreateSessionClusterRequest extends Request {
     }
     /**
      * 
-     * {@link CreateSessionClusterRequest} extends {@link TeaModel}
+     * {@link CreateLivyComputeRequest} extends {@link TeaModel}
      *
-     * <p>CreateSessionClusterRequest</p>
+     * <p>CreateLivyComputeRequest</p>
      */
     public static class AutoStopConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
         @com.aliyun.core.annotation.NameInMap("idleTimeoutMinutes")
-        private Integer idleTimeoutMinutes;
+        private Long idleTimeoutMinutes;
 
         private AutoStopConfiguration(Builder builder) {
             this.enable = builder.enable;
@@ -587,13 +532,13 @@ public class CreateSessionClusterRequest extends Request {
         /**
          * @return idleTimeoutMinutes
          */
-        public Integer getIdleTimeoutMinutes() {
+        public Long getIdleTimeoutMinutes() {
             return this.idleTimeoutMinutes;
         }
 
         public static final class Builder {
             private Boolean enable; 
-            private Integer idleTimeoutMinutes; 
+            private Long idleTimeoutMinutes; 
 
             private Builder() {
             } 
@@ -604,14 +549,7 @@ public class CreateSessionClusterRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to enable automatic termination.</p>
-             * <ul>
-             * <li>true</li>
-             * <li>false</li>
-             * </ul>
-             * 
-             * <strong>example:</strong>
-             * <p>false</p>
+             * enable.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -619,12 +557,9 @@ public class CreateSessionClusterRequest extends Request {
             }
 
             /**
-             * <p>The idle timeout period. The session is automatically terminated when the idle timeout period is exceeded.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>60</p>
+             * idleTimeoutMinutes.
              */
-            public Builder idleTimeoutMinutes(Integer idleTimeoutMinutes) {
+            public Builder idleTimeoutMinutes(Long idleTimeoutMinutes) {
                 this.idleTimeoutMinutes = idleTimeoutMinutes;
                 return this;
             }

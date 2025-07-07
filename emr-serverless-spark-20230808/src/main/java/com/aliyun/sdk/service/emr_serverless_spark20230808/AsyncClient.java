@@ -32,6 +32,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CancelJobRunResponse> cancelJobRun(CancelJobRunRequest request);
 
     /**
+     * @param request the request parameters of CreateLivyCompute  CreateLivyComputeRequest
+     * @return CreateLivyComputeResponse
+     */
+    CompletableFuture<CreateLivyComputeResponse> createLivyCompute(CreateLivyComputeRequest request);
+
+    /**
+     * @param request the request parameters of CreateLivyComputeToken  CreateLivyComputeTokenRequest
+     * @return CreateLivyComputeTokenResponse
+     */
+    CompletableFuture<CreateLivyComputeTokenResponse> createLivyComputeToken(CreateLivyComputeTokenRequest request);
+
+    /**
      * @param request the request parameters of CreateProcessDefinitionWithSchedule  CreateProcessDefinitionWithScheduleRequest
      * @return CreateProcessDefinitionWithScheduleResponse
      */
@@ -56,6 +68,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateWorkspaceResponse> createWorkspace(CreateWorkspaceRequest request);
 
     /**
+     * @param request the request parameters of DeleteLivyCompute  DeleteLivyComputeRequest
+     * @return DeleteLivyComputeResponse
+     */
+    CompletableFuture<DeleteLivyComputeResponse> deleteLivyCompute(DeleteLivyComputeRequest request);
+
+    /**
+     * @param request the request parameters of DeleteLivyComputeToken  DeleteLivyComputeTokenRequest
+     * @return DeleteLivyComputeTokenResponse
+     */
+    CompletableFuture<DeleteLivyComputeTokenResponse> deleteLivyComputeToken(DeleteLivyComputeTokenRequest request);
+
+    /**
      * @param request the request parameters of EditWorkspaceQueue  EditWorkspaceQueueRequest
      * @return EditWorkspaceQueueResponse
      */
@@ -78,6 +102,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetJobRunResponse
      */
     CompletableFuture<GetJobRunResponse> getJobRun(GetJobRunRequest request);
+
+    /**
+     * @param request the request parameters of GetLivyCompute  GetLivyComputeRequest
+     * @return GetLivyComputeResponse
+     */
+    CompletableFuture<GetLivyComputeResponse> getLivyCompute(GetLivyComputeRequest request);
+
+    /**
+     * @param request the request parameters of GetLivyComputeToken  GetLivyComputeTokenRequest
+     * @return GetLivyComputeTokenResponse
+     */
+    CompletableFuture<GetLivyComputeTokenResponse> getLivyComputeToken(GetLivyComputeTokenRequest request);
 
     /**
      * @param request the request parameters of GetSessionCluster  GetSessionClusterRequest
@@ -128,6 +164,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListKyuubiTokenResponse> listKyuubiToken(ListKyuubiTokenRequest request);
 
     /**
+     * @param request the request parameters of ListLivyCompute  ListLivyComputeRequest
+     * @return ListLivyComputeResponse
+     */
+    CompletableFuture<ListLivyComputeResponse> listLivyCompute(ListLivyComputeRequest request);
+
+    /**
+     * @param request the request parameters of ListLivyComputeToken  ListLivyComputeTokenRequest
+     * @return ListLivyComputeTokenResponse
+     */
+    CompletableFuture<ListLivyComputeTokenResponse> listLivyComputeToken(ListLivyComputeTokenRequest request);
+
+    /**
      * @param request the request parameters of ListLogContents  ListLogContentsRequest
      * @return ListLogContentsResponse
      */
@@ -158,10 +206,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
 
     /**
+     * @param request the request parameters of RefreshLivyComputeToken  RefreshLivyComputeTokenRequest
+     * @return RefreshLivyComputeTokenResponse
+     */
+    CompletableFuture<RefreshLivyComputeTokenResponse> refreshLivyComputeToken(RefreshLivyComputeTokenRequest request);
+
+    /**
      * @param request the request parameters of StartJobRun  StartJobRunRequest
      * @return StartJobRunResponse
      */
     CompletableFuture<StartJobRunResponse> startJobRun(StartJobRunRequest request);
+
+    /**
+     * @param request the request parameters of StartLivyCompute  StartLivyComputeRequest
+     * @return StartLivyComputeResponse
+     */
+    CompletableFuture<StartLivyComputeResponse> startLivyCompute(StartLivyComputeRequest request);
 
     /**
      * @param request the request parameters of StartProcessInstance  StartProcessInstanceRequest
@@ -176,6 +236,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartSessionClusterResponse> startSessionCluster(StartSessionClusterRequest request);
 
     /**
+     * @param request the request parameters of StopLivyCompute  StopLivyComputeRequest
+     * @return StopLivyComputeResponse
+     */
+    CompletableFuture<StopLivyComputeResponse> stopLivyCompute(StopLivyComputeRequest request);
+
+    /**
      * @param request the request parameters of StopSessionCluster  StopSessionClusterRequest
      * @return StopSessionClusterResponse
      */
@@ -186,6 +252,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TerminateSqlStatementResponse
      */
     CompletableFuture<TerminateSqlStatementResponse> terminateSqlStatement(TerminateSqlStatementRequest request);
+
+    /**
+     * @param request the request parameters of UpdateLivyCompute  UpdateLivyComputeRequest
+     * @return UpdateLivyComputeResponse
+     */
+    CompletableFuture<UpdateLivyComputeResponse> updateLivyCompute(UpdateLivyComputeRequest request);
 
     /**
      * @param request the request parameters of UpdateProcessDefinitionWithSchedule  UpdateProcessDefinitionWithScheduleRequest

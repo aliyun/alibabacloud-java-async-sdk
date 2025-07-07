@@ -76,6 +76,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of CreateLivyCompute  CreateLivyComputeRequest
+     * @return CreateLivyComputeResponse
+     */
+    @Override
+    public CompletableFuture<CreateLivyComputeResponse> createLivyCompute(CreateLivyComputeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateLivyCompute").setMethod(HttpMethod.PUT).setPathRegex("/api/interactive/v1/workspace/{workspaceBizId}/livycompute").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateLivyComputeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateLivyComputeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of CreateLivyComputeToken  CreateLivyComputeTokenRequest
+     * @return CreateLivyComputeTokenResponse
+     */
+    @Override
+    public CompletableFuture<CreateLivyComputeTokenResponse> createLivyComputeToken(CreateLivyComputeTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("CreateLivyComputeToken").setMethod(HttpMethod.PUT).setPathRegex("/api/interactive/v1/workspace/{workspaceBizId}/livycompute/{livyComputeId}/token").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(CreateLivyComputeTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<CreateLivyComputeTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateProcessDefinitionWithSchedule  CreateProcessDefinitionWithScheduleRequest
      * @return CreateProcessDefinitionWithScheduleResponse
      */
@@ -148,6 +184,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteLivyCompute  DeleteLivyComputeRequest
+     * @return DeleteLivyComputeResponse
+     */
+    @Override
+    public CompletableFuture<DeleteLivyComputeResponse> deleteLivyCompute(DeleteLivyComputeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteLivyCompute").setMethod(HttpMethod.DELETE).setPathRegex("/api/interactive/v1/workspace/{workspaceBizId}/livycompute/{livyComputeId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteLivyComputeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteLivyComputeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteLivyComputeToken  DeleteLivyComputeTokenRequest
+     * @return DeleteLivyComputeTokenResponse
+     */
+    @Override
+    public CompletableFuture<DeleteLivyComputeTokenResponse> deleteLivyComputeToken(DeleteLivyComputeTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("DeleteLivyComputeToken").setMethod(HttpMethod.DELETE).setPathRegex("/api/interactive/v1/workspace/{workspaceBizId}/livycompute/{livyComputeId}/token/{tokenId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteLivyComputeTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteLivyComputeTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of EditWorkspaceQueue  EditWorkspaceQueueRequest
      * @return EditWorkspaceQueueResponse
      */
@@ -214,6 +286,42 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetJobRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetLivyCompute  GetLivyComputeRequest
+     * @return GetLivyComputeResponse
+     */
+    @Override
+    public CompletableFuture<GetLivyComputeResponse> getLivyCompute(GetLivyComputeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetLivyCompute").setMethod(HttpMethod.GET).setPathRegex("/api/interactive/v1/workspace/{workspaceBizId}/livycompute/{livyComputeId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLivyComputeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLivyComputeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetLivyComputeToken  GetLivyComputeTokenRequest
+     * @return GetLivyComputeTokenResponse
+     */
+    @Override
+    public CompletableFuture<GetLivyComputeTokenResponse> getLivyComputeToken(GetLivyComputeTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetLivyComputeToken").setMethod(HttpMethod.GET).setPathRegex("/api/interactive/v1/workspace/{workspaceBizId}/livycompute/{livyComputeId}/token/{tokenId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetLivyComputeTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetLivyComputeTokenResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -364,6 +472,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListLivyCompute  ListLivyComputeRequest
+     * @return ListLivyComputeResponse
+     */
+    @Override
+    public CompletableFuture<ListLivyComputeResponse> listLivyCompute(ListLivyComputeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListLivyCompute").setMethod(HttpMethod.GET).setPathRegex("/api/interactive/v1/workspace/{workspaceBizId}/livycompute").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListLivyComputeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListLivyComputeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ListLivyComputeToken  ListLivyComputeTokenRequest
+     * @return ListLivyComputeTokenResponse
+     */
+    @Override
+    public CompletableFuture<ListLivyComputeTokenResponse> listLivyComputeToken(ListLivyComputeTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListLivyComputeToken").setMethod(HttpMethod.GET).setPathRegex("/api/interactive/v1/workspace/{workspaceBizId}/livycompute/{livyComputeId}/token").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListLivyComputeTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListLivyComputeTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListLogContents  ListLogContentsRequest
      * @return ListLogContentsResponse
      */
@@ -454,6 +598,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of RefreshLivyComputeToken  RefreshLivyComputeTokenRequest
+     * @return RefreshLivyComputeTokenResponse
+     */
+    @Override
+    public CompletableFuture<RefreshLivyComputeTokenResponse> refreshLivyComputeToken(RefreshLivyComputeTokenRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RefreshLivyComputeToken").setMethod(HttpMethod.POST).setPathRegex("/api/interactive/v1/workspace/{workspaceBizId}/livycompute/{livyComputeId}/token/{tokenId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RefreshLivyComputeTokenResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RefreshLivyComputeTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StartJobRun  StartJobRunRequest
      * @return StartJobRunResponse
      */
@@ -466,6 +628,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<StartJobRunResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of StartLivyCompute  StartLivyComputeRequest
+     * @return StartLivyComputeResponse
+     */
+    @Override
+    public CompletableFuture<StartLivyComputeResponse> startLivyCompute(StartLivyComputeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartLivyCompute").setMethod(HttpMethod.POST).setPathRegex("/api/interactive/v1/workspace/{workspaceBizId}/livycompute/{livyComputeId}/start").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartLivyComputeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartLivyComputeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -508,6 +688,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of StopLivyCompute  StopLivyComputeRequest
+     * @return StopLivyComputeResponse
+     */
+    @Override
+    public CompletableFuture<StopLivyComputeResponse> stopLivyCompute(StopLivyComputeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StopLivyCompute").setMethod(HttpMethod.POST).setPathRegex("/api/interactive/v1/workspace/{workspaceBizId}/livycompute/{livyComputeId}/stop").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StopLivyComputeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StopLivyComputeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of StopSessionCluster  StopSessionClusterRequest
      * @return StopSessionClusterResponse
      */
@@ -538,6 +736,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TerminateSqlStatementResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateLivyCompute  UpdateLivyComputeRequest
+     * @return UpdateLivyComputeResponse
+     */
+    @Override
+    public CompletableFuture<UpdateLivyComputeResponse> updateLivyCompute(UpdateLivyComputeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateLivyCompute").setMethod(HttpMethod.POST).setPathRegex("/api/interactive/v1/workspace/{workspaceBizId}/livycompute/{livyComputeId}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateLivyComputeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateLivyComputeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

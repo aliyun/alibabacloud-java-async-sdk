@@ -776,7 +776,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The tags of the job.</p>
              */
             public Builder tags(java.util.List<Tag> tags) {
                 this.tags = tags;

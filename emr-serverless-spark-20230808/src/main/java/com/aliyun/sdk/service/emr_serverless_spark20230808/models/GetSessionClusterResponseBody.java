@@ -78,7 +78,7 @@ public class GetSessionClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The session.</p>
+         * <p>The session object.</p>
          */
         public Builder sessionCluster(SessionCluster sessionCluster) {
             this.sessionCluster = sessionCluster;
