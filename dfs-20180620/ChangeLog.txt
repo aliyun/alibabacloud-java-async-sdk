@@ -1,3 +1,6 @@
+2025-07-08 Version: 1.0.6
+- Generated java-async 2018-06-20 for DFS.
+
 2025-07-08 Version: 1.0.5
 - Generated java-async 2018-06-20 for DFS.
 
