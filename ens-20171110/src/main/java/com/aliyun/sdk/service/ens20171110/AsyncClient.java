@@ -1844,6 +1844,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveSDGResponse> removeSDG(RemoveSDGRequest request);
 
     /**
+     * @param request the request parameters of RemoveSDGs  RemoveSDGsRequest
+     * @return RemoveSDGsResponse
+     */
+    CompletableFuture<RemoveSDGsResponse> removeSDGs(RemoveSDGsRequest request);
+
+    /**
      * @param request the request parameters of RemoveVSwitchesFromEpnInstance  RemoveVSwitchesFromEpnInstanceRequest
      * @return RemoveVSwitchesFromEpnInstanceResponse
      */

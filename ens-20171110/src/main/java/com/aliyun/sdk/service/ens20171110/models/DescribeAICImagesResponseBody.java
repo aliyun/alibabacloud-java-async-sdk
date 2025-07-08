@@ -171,6 +171,9 @@ public class DescribeAICImagesResponseBody extends TeaModel {
      * <p>DescribeAICImagesResponseBody</p>
      */
     public static class Images extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AndroidVersion")
+        private String androidVersion;
+
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
@@ -190,6 +193,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         private String user;
 
         private Images(Builder builder) {
+            this.androidVersion = builder.androidVersion;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.imageId = builder.imageId;
@@ -204,6 +208,13 @@ public class DescribeAICImagesResponseBody extends TeaModel {
 
         public static Images create() {
             return builder().build();
+        }
+
+        /**
+         * @return androidVersion
+         */
+        public String getAndroidVersion() {
+            return this.androidVersion;
         }
 
         /**
@@ -249,6 +260,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String androidVersion; 
             private String creationTime; 
             private String description; 
             private String imageId; 
@@ -260,6 +272,7 @@ public class DescribeAICImagesResponseBody extends TeaModel {
             } 
 
             private Builder(Images model) {
+                this.androidVersion = model.androidVersion;
                 this.creationTime = model.creationTime;
                 this.description = model.description;
                 this.imageId = model.imageId;
@@ -267,6 +280,14 @@ public class DescribeAICImagesResponseBody extends TeaModel {
                 this.status = model.status;
                 this.user = model.user;
             } 
+
+            /**
+             * AndroidVersion.
+             */
+            public Builder androidVersion(String androidVersion) {
+                this.androidVersion = androidVersion;
+                return this;
+            }
 
             /**
              * <p>The time when the image was created.</p>
