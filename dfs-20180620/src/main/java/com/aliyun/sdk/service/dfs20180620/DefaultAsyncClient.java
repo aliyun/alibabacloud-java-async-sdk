@@ -61,6 +61,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of AttachVscToMountPoints  AttachVscToMountPointsRequest
+     * @return AttachVscToMountPointsResponse
+     */
+    @Override
+    public CompletableFuture<AttachVscToMountPointsResponse> attachVscToMountPoints(AttachVscToMountPointsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("AttachVscToMountPoints").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(AttachVscToMountPointsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<AttachVscToMountPointsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of BindVscMountPointAlias  BindVscMountPointAliasRequest
      * @return BindVscMountPointAliasResponse
      */
@@ -325,6 +343,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DeleteVscMountPointResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DescribeMountPointsVscAttachInfo  DescribeMountPointsVscAttachInfoRequest
+     * @return DescribeMountPointsVscAttachInfoResponse
+     */
+    @Override
+    public CompletableFuture<DescribeMountPointsVscAttachInfoResponse> describeMountPointsVscAttachInfo(DescribeMountPointsVscAttachInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeMountPointsVscAttachInfo").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeMountPointsVscAttachInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeMountPointsVscAttachInfoResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
