@@ -263,6 +263,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeKeyPairsResponse> describeKeyPairs(DescribeKeyPairsRequest request);
 
     /**
+     * @param request the request parameters of DescribeMetricLast  DescribeMetricLastRequest
+     * @return DescribeMetricLastResponse
+     */
+    CompletableFuture<DescribeMetricLastResponse> describeMetricLast(DescribeMetricLastRequest request);
+
+    /**
      * @param request the request parameters of DescribeRegions  DescribeRegionsRequest
      * @return DescribeRegionsResponse
      */
