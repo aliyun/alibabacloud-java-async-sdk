@@ -843,6 +843,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of StartAIDiffAnalysis  StartAIDiffAnalysisRequest
+     * @return StartAIDiffAnalysisResponse
+     */
+    @Override
+    public CompletableFuture<StartAIDiffAnalysisResponse> startAIDiffAnalysis(StartAIDiffAnalysisRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("StartAIDiffAnalysis").setMethod(HttpMethod.POST).setPathRegex("/api/v1/appObserv/aiAnalysis/diffAnalysis").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(StartAIDiffAnalysisResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<StartAIDiffAnalysisResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UninstallAgent  UninstallAgentRequest
      * @return UninstallAgentResponse
      */

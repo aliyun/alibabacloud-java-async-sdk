@@ -286,6 +286,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartAIAnalysisResponse> startAIAnalysis(StartAIAnalysisRequest request);
 
     /**
+     * @param request the request parameters of StartAIDiffAnalysis  StartAIDiffAnalysisRequest
+     * @return StartAIDiffAnalysisResponse
+     */
+    CompletableFuture<StartAIDiffAnalysisResponse> startAIDiffAnalysis(StartAIDiffAnalysisRequest request);
+
+    /**
      * @param request the request parameters of UninstallAgent  UninstallAgentRequest
      * @return UninstallAgentResponse
      */
