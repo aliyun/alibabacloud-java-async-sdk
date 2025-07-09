@@ -23,9 +23,13 @@ public class DescribeSqlAuditStatResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Long totalCount;
+
     private DescribeSqlAuditStatResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class DescribeSqlAuditStatResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Long getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+        private Long totalCount; 
 
         private Builder() {
         } 
@@ -64,6 +76,7 @@ public class DescribeSqlAuditStatResponseBody extends TeaModel {
         private Builder(DescribeSqlAuditStatResponseBody model) {
             this.data = model.data;
             this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
         } 
 
         /**
@@ -82,6 +95,14 @@ public class DescribeSqlAuditStatResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Long totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 

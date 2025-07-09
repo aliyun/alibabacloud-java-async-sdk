@@ -99,19 +99,19 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvgAffectedRows")
-        private Long avgAffectedRows;
+        private Double avgAffectedRows;
 
         @com.aliyun.core.annotation.NameInMap("AvgApplicationWaitTime")
         private Double avgApplicationWaitTime;
 
         @com.aliyun.core.annotation.NameInMap("AvgBlockCacheHit")
-        private Long avgBlockCacheHit;
+        private Double avgBlockCacheHit;
 
         @com.aliyun.core.annotation.NameInMap("AvgBlockIndexCacheHit")
-        private Long avgBlockIndexCacheHit;
+        private Double avgBlockIndexCacheHit;
 
         @com.aliyun.core.annotation.NameInMap("AvgBloomFilterCacheHit")
-        private Long avgBloomFilterCacheHit;
+        private Double avgBloomFilterCacheHit;
 
         @com.aliyun.core.annotation.NameInMap("AvgConcurrencyWaitTime")
         private Double avgConcurrencyWaitTime;
@@ -126,7 +126,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         private Double avgDecodeTime;
 
         @com.aliyun.core.annotation.NameInMap("AvgDiskReads")
-        private Long avgDiskReads;
+        private Double avgDiskReads;
 
         @com.aliyun.core.annotation.NameInMap("AvgElapsedTime")
         private Double avgElapsedTime;
@@ -144,10 +144,10 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         private Double avgGetPlanTime;
 
         @com.aliyun.core.annotation.NameInMap("AvgLogicalReads")
-        private Long avgLogicalReads;
+        private Double avgLogicalReads;
 
         @com.aliyun.core.annotation.NameInMap("AvgMemstoreReadRows")
-        private Long avgMemstoreReadRows;
+        private Double avgMemstoreReadRows;
 
         @com.aliyun.core.annotation.NameInMap("AvgNetTime")
         private Double avgNetTime;
@@ -162,19 +162,19 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         private Double avgQueueTime;
 
         @com.aliyun.core.annotation.NameInMap("AvgReturnRows")
-        private Long avgReturnRows;
+        private Double avgReturnRows;
 
         @com.aliyun.core.annotation.NameInMap("AvgRowCacheHit")
-        private Long avgRowCacheHit;
+        private Double avgRowCacheHit;
 
         @com.aliyun.core.annotation.NameInMap("AvgRpcCount")
-        private Long avgRpcCount;
+        private Double avgRpcCount;
 
         @com.aliyun.core.annotation.NameInMap("AvgScheduleTime")
         private Double avgScheduleTime;
 
         @com.aliyun.core.annotation.NameInMap("AvgSsstoreReadRows")
-        private Long avgSsstoreReadRows;
+        private Double avgSsstoreReadRows;
 
         @com.aliyun.core.annotation.NameInMap("AvgUsedWorkerCount")
         private Double avgUsedWorkerCount;
@@ -249,25 +249,25 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         private Long remotePlans;
 
         @com.aliyun.core.annotation.NameInMap("RetCode4012Count")
-        private Double retCode4012Count;
+        private Long retCode4012Count;
 
         @com.aliyun.core.annotation.NameInMap("RetCode4013Count")
-        private Double retCode4013Count;
+        private Long retCode4013Count;
 
         @com.aliyun.core.annotation.NameInMap("RetCode5001Count")
-        private Double retCode5001Count;
+        private Long retCode5001Count;
 
         @com.aliyun.core.annotation.NameInMap("RetCode5024Count")
-        private Double retCode5024Count;
+        private Long retCode5024Count;
 
         @com.aliyun.core.annotation.NameInMap("RetCode5167Count")
-        private Double retCode5167Count;
+        private Long retCode5167Count;
 
         @com.aliyun.core.annotation.NameInMap("RetCode5217Count")
-        private Double retCode5217Count;
+        private Long retCode5217Count;
 
         @com.aliyun.core.annotation.NameInMap("RetCode6002Count")
-        private Double retCode6002Count;
+        private Long retCode6002Count;
 
         @com.aliyun.core.annotation.NameInMap("RetryCount")
         private Long retryCount;
@@ -392,7 +392,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         /**
          * @return avgAffectedRows
          */
-        public Long getAvgAffectedRows() {
+        public Double getAvgAffectedRows() {
             return this.avgAffectedRows;
         }
 
@@ -406,21 +406,21 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         /**
          * @return avgBlockCacheHit
          */
-        public Long getAvgBlockCacheHit() {
+        public Double getAvgBlockCacheHit() {
             return this.avgBlockCacheHit;
         }
 
         /**
          * @return avgBlockIndexCacheHit
          */
-        public Long getAvgBlockIndexCacheHit() {
+        public Double getAvgBlockIndexCacheHit() {
             return this.avgBlockIndexCacheHit;
         }
 
         /**
          * @return avgBloomFilterCacheHit
          */
-        public Long getAvgBloomFilterCacheHit() {
+        public Double getAvgBloomFilterCacheHit() {
             return this.avgBloomFilterCacheHit;
         }
 
@@ -455,7 +455,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         /**
          * @return avgDiskReads
          */
-        public Long getAvgDiskReads() {
+        public Double getAvgDiskReads() {
             return this.avgDiskReads;
         }
 
@@ -497,14 +497,14 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         /**
          * @return avgLogicalReads
          */
-        public Long getAvgLogicalReads() {
+        public Double getAvgLogicalReads() {
             return this.avgLogicalReads;
         }
 
         /**
          * @return avgMemstoreReadRows
          */
-        public Long getAvgMemstoreReadRows() {
+        public Double getAvgMemstoreReadRows() {
             return this.avgMemstoreReadRows;
         }
 
@@ -539,21 +539,21 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         /**
          * @return avgReturnRows
          */
-        public Long getAvgReturnRows() {
+        public Double getAvgReturnRows() {
             return this.avgReturnRows;
         }
 
         /**
          * @return avgRowCacheHit
          */
-        public Long getAvgRowCacheHit() {
+        public Double getAvgRowCacheHit() {
             return this.avgRowCacheHit;
         }
 
         /**
          * @return avgRpcCount
          */
-        public Long getAvgRpcCount() {
+        public Double getAvgRpcCount() {
             return this.avgRpcCount;
         }
 
@@ -567,7 +567,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         /**
          * @return avgSsstoreReadRows
          */
-        public Long getAvgSsstoreReadRows() {
+        public Double getAvgSsstoreReadRows() {
             return this.avgSsstoreReadRows;
         }
 
@@ -742,49 +742,49 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         /**
          * @return retCode4012Count
          */
-        public Double getRetCode4012Count() {
+        public Long getRetCode4012Count() {
             return this.retCode4012Count;
         }
 
         /**
          * @return retCode4013Count
          */
-        public Double getRetCode4013Count() {
+        public Long getRetCode4013Count() {
             return this.retCode4013Count;
         }
 
         /**
          * @return retCode5001Count
          */
-        public Double getRetCode5001Count() {
+        public Long getRetCode5001Count() {
             return this.retCode5001Count;
         }
 
         /**
          * @return retCode5024Count
          */
-        public Double getRetCode5024Count() {
+        public Long getRetCode5024Count() {
             return this.retCode5024Count;
         }
 
         /**
          * @return retCode5167Count
          */
-        public Double getRetCode5167Count() {
+        public Long getRetCode5167Count() {
             return this.retCode5167Count;
         }
 
         /**
          * @return retCode5217Count
          */
-        public Double getRetCode5217Count() {
+        public Long getRetCode5217Count() {
             return this.retCode5217Count;
         }
 
         /**
          * @return retCode6002Count
          */
-        public Double getRetCode6002Count() {
+        public Long getRetCode6002Count() {
             return this.retCode6002Count;
         }
 
@@ -880,32 +880,32 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long avgAffectedRows; 
+            private Double avgAffectedRows; 
             private Double avgApplicationWaitTime; 
-            private Long avgBlockCacheHit; 
-            private Long avgBlockIndexCacheHit; 
-            private Long avgBloomFilterCacheHit; 
+            private Double avgBlockCacheHit; 
+            private Double avgBlockIndexCacheHit; 
+            private Double avgBloomFilterCacheHit; 
             private Double avgConcurrencyWaitTime; 
             private Double avgCpuTime; 
             private Double avgDbTime; 
             private Double avgDecodeTime; 
-            private Long avgDiskReads; 
+            private Double avgDiskReads; 
             private Double avgElapsedTime; 
             private Double avgExecuteTime; 
             private Double avgExecutorRpcCount; 
             private Double avgExpectedWorkerCount; 
             private Double avgGetPlanTime; 
-            private Long avgLogicalReads; 
-            private Long avgMemstoreReadRows; 
+            private Double avgLogicalReads; 
+            private Double avgMemstoreReadRows; 
             private Double avgNetTime; 
             private Double avgNetWaitTime; 
             private Double avgPartitionCount; 
             private Double avgQueueTime; 
-            private Long avgReturnRows; 
-            private Long avgRowCacheHit; 
-            private Long avgRpcCount; 
+            private Double avgReturnRows; 
+            private Double avgRowCacheHit; 
+            private Double avgRpcCount; 
             private Double avgScheduleTime; 
-            private Long avgSsstoreReadRows; 
+            private Double avgSsstoreReadRows; 
             private Double avgUsedWorkerCount; 
             private Double avgUserIoWaitTime; 
             private Double avgWaitCount; 
@@ -930,13 +930,13 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
             private Long missPlans; 
             private Double remotePlanPercentage; 
             private Long remotePlans; 
-            private Double retCode4012Count; 
-            private Double retCode4013Count; 
-            private Double retCode5001Count; 
-            private Double retCode5024Count; 
-            private Double retCode5167Count; 
-            private Double retCode5217Count; 
-            private Double retCode6002Count; 
+            private Long retCode4012Count; 
+            private Long retCode4013Count; 
+            private Long retCode5001Count; 
+            private Long retCode5024Count; 
+            private Long retCode5167Count; 
+            private Long retCode5217Count; 
+            private Long retCode6002Count; 
             private Long retryCount; 
             private String SQLId; 
             private String server; 
@@ -1033,7 +1033,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>9978.75</p>
              */
-            public Builder avgAffectedRows(Long avgAffectedRows) {
+            public Builder avgAffectedRows(Double avgAffectedRows) {
                 this.avgAffectedRows = avgAffectedRows;
                 return this;
             }
@@ -1055,7 +1055,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0.0</p>
              */
-            public Builder avgBlockCacheHit(Long avgBlockCacheHit) {
+            public Builder avgBlockCacheHit(Double avgBlockCacheHit) {
                 this.avgBlockCacheHit = avgBlockCacheHit;
                 return this;
             }
@@ -1066,7 +1066,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0.0</p>
              */
-            public Builder avgBlockIndexCacheHit(Long avgBlockIndexCacheHit) {
+            public Builder avgBlockIndexCacheHit(Double avgBlockIndexCacheHit) {
                 this.avgBlockIndexCacheHit = avgBlockIndexCacheHit;
                 return this;
             }
@@ -1077,7 +1077,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0.0</p>
              */
-            public Builder avgBloomFilterCacheHit(Long avgBloomFilterCacheHit) {
+            public Builder avgBloomFilterCacheHit(Double avgBloomFilterCacheHit) {
                 this.avgBloomFilterCacheHit = avgBloomFilterCacheHit;
                 return this;
             }
@@ -1132,7 +1132,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0.0</p>
              */
-            public Builder avgDiskReads(Long avgDiskReads) {
+            public Builder avgDiskReads(Double avgDiskReads) {
                 this.avgDiskReads = avgDiskReads;
                 return this;
             }
@@ -1198,7 +1198,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0.0</p>
              */
-            public Builder avgLogicalReads(Long avgLogicalReads) {
+            public Builder avgLogicalReads(Double avgLogicalReads) {
                 this.avgLogicalReads = avgLogicalReads;
                 return this;
             }
@@ -1209,7 +1209,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0.0</p>
              */
-            public Builder avgMemstoreReadRows(Long avgMemstoreReadRows) {
+            public Builder avgMemstoreReadRows(Double avgMemstoreReadRows) {
                 this.avgMemstoreReadRows = avgMemstoreReadRows;
                 return this;
             }
@@ -1264,7 +1264,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0.0</p>
              */
-            public Builder avgReturnRows(Long avgReturnRows) {
+            public Builder avgReturnRows(Double avgReturnRows) {
                 this.avgReturnRows = avgReturnRows;
                 return this;
             }
@@ -1275,7 +1275,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0.0</p>
              */
-            public Builder avgRowCacheHit(Long avgRowCacheHit) {
+            public Builder avgRowCacheHit(Double avgRowCacheHit) {
                 this.avgRowCacheHit = avgRowCacheHit;
                 return this;
             }
@@ -1286,7 +1286,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>8.0</p>
              */
-            public Builder avgRpcCount(Long avgRpcCount) {
+            public Builder avgRpcCount(Double avgRpcCount) {
                 this.avgRpcCount = avgRpcCount;
                 return this;
             }
@@ -1308,7 +1308,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0.0</p>
              */
-            public Builder avgSsstoreReadRows(Long avgSsstoreReadRows) {
+            public Builder avgSsstoreReadRows(Double avgSsstoreReadRows) {
                 this.avgSsstoreReadRows = avgSsstoreReadRows;
                 return this;
             }
@@ -1583,7 +1583,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder retCode4012Count(Double retCode4012Count) {
+            public Builder retCode4012Count(Long retCode4012Count) {
                 this.retCode4012Count = retCode4012Count;
                 return this;
             }
@@ -1594,7 +1594,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder retCode4013Count(Double retCode4013Count) {
+            public Builder retCode4013Count(Long retCode4013Count) {
                 this.retCode4013Count = retCode4013Count;
                 return this;
             }
@@ -1605,7 +1605,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder retCode5001Count(Double retCode5001Count) {
+            public Builder retCode5001Count(Long retCode5001Count) {
                 this.retCode5001Count = retCode5001Count;
                 return this;
             }
@@ -1616,7 +1616,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder retCode5024Count(Double retCode5024Count) {
+            public Builder retCode5024Count(Long retCode5024Count) {
                 this.retCode5024Count = retCode5024Count;
                 return this;
             }
@@ -1627,7 +1627,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder retCode5167Count(Double retCode5167Count) {
+            public Builder retCode5167Count(Long retCode5167Count) {
                 this.retCode5167Count = retCode5167Count;
                 return this;
             }
@@ -1638,7 +1638,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder retCode5217Count(Double retCode5217Count) {
+            public Builder retCode5217Count(Long retCode5217Count) {
                 this.retCode5217Count = retCode5217Count;
                 return this;
             }
@@ -1649,7 +1649,7 @@ public class DescribeOasSQLHistoryListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder retCode6002Count(Double retCode6002Count) {
+            public Builder retCode6002Count(Long retCode6002Count) {
                 this.retCode6002Count = retCode6002Count;
                 return this;
             }

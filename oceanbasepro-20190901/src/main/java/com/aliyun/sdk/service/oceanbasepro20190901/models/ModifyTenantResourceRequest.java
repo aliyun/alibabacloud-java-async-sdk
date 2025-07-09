@@ -32,6 +32,10 @@ public class ModifyTenantResourceRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Iops")
+    private String iops;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("LogDisk")
     private Long logDisk;
 
@@ -55,6 +59,7 @@ public class ModifyTenantResourceRequest extends Request {
         this.regionId = builder.regionId;
         this.cpu = builder.cpu;
         this.instanceId = builder.instanceId;
+        this.iops = builder.iops;
         this.logDisk = builder.logDisk;
         this.memory = builder.memory;
         this.readOnlyZoneList = builder.readOnlyZoneList;
@@ -96,6 +101,13 @@ public class ModifyTenantResourceRequest extends Request {
     }
 
     /**
+     * @return iops
+     */
+    public String getIops() {
+        return this.iops;
+    }
+
+    /**
      * @return logDisk
      */
     public Long getLogDisk() {
@@ -127,6 +139,7 @@ public class ModifyTenantResourceRequest extends Request {
         private String regionId; 
         private Integer cpu; 
         private String instanceId; 
+        private String iops; 
         private Long logDisk; 
         private Integer memory; 
         private String readOnlyZoneList; 
@@ -141,6 +154,7 @@ public class ModifyTenantResourceRequest extends Request {
             this.regionId = request.regionId;
             this.cpu = request.cpu;
             this.instanceId = request.instanceId;
+            this.iops = request.iops;
             this.logDisk = request.logDisk;
             this.memory = request.memory;
             this.readOnlyZoneList = request.readOnlyZoneList;
@@ -182,6 +196,15 @@ public class ModifyTenantResourceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Iops.
+         */
+        public Builder iops(String iops) {
+            this.putBodyParameter("Iops", iops);
+            this.iops = iops;
             return this;
         }
 

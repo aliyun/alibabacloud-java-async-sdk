@@ -30,6 +30,10 @@ public class DescribeSqlAuditStatRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OperatorType")
+    private String operatorType;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -50,6 +54,7 @@ public class DescribeSqlAuditStatRequest extends Request {
         this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
+        this.operatorType = builder.operatorType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.startTime = builder.startTime;
@@ -91,6 +96,13 @@ public class DescribeSqlAuditStatRequest extends Request {
     }
 
     /**
+     * @return operatorType
+     */
+    public String getOperatorType() {
+        return this.operatorType;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -122,6 +134,7 @@ public class DescribeSqlAuditStatRequest extends Request {
         private String regionId; 
         private String endTime; 
         private String instanceId; 
+        private String operatorType; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String startTime; 
@@ -136,6 +149,7 @@ public class DescribeSqlAuditStatRequest extends Request {
             this.regionId = request.regionId;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
+            this.operatorType = request.operatorType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.startTime = request.startTime;
@@ -166,6 +180,15 @@ public class DescribeSqlAuditStatRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * OperatorType.
+         */
+        public Builder operatorType(String operatorType) {
+            this.putBodyParameter("OperatorType", operatorType);
+            this.operatorType = operatorType;
             return this;
         }
 

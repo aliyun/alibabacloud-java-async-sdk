@@ -111,7 +111,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         private String database;
 
         @com.aliyun.core.annotation.NameInMap("DynamicSql")
-        private String dynamicSql;
+        private Boolean dynamicSql;
 
         @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private Long executeTime;
@@ -204,7 +204,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         /**
          * @return dynamicSql
          */
-        public String getDynamicSql() {
+        public Boolean getDynamicSql() {
             return this.dynamicSql;
         }
 
@@ -290,7 +290,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private String command; 
             private Long cpuTime; 
             private String database; 
-            private String dynamicSql; 
+            private Boolean dynamicSql; 
             private Long executeTime; 
             private String planId; 
             private String proxySessId; 
@@ -360,7 +360,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             /**
              * DynamicSql.
              */
-            public Builder dynamicSql(String dynamicSql) {
+            public Builder dynamicSql(Boolean dynamicSql) {
                 this.dynamicSql = dynamicSql;
                 return this;
             }
@@ -480,7 +480,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         private String database;
 
         @com.aliyun.core.annotation.NameInMap("DynamicSql")
-        private String dynamicSql;
+        private Boolean dynamicSql;
 
         @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private Long executeTime;
@@ -577,7 +577,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         /**
          * @return dynamicSql
          */
-        public String getDynamicSql() {
+        public Boolean getDynamicSql() {
             return this.dynamicSql;
         }
 
@@ -670,7 +670,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private String command; 
             private Long cpuTime; 
             private String database; 
-            private String dynamicSql; 
+            private Boolean dynamicSql; 
             private Long executeTime; 
             private String planId; 
             private java.util.List<ProcessSqlList> processSqlList; 
@@ -742,7 +742,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             /**
              * DynamicSql.
              */
-            public Builder dynamicSql(String dynamicSql) {
+            public Builder dynamicSql(Boolean dynamicSql) {
                 this.dynamicSql = dynamicSql;
                 return this;
             }
@@ -870,7 +870,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         private String database;
 
         @com.aliyun.core.annotation.NameInMap("DynamicSql")
-        private String dynamicSql;
+        private Boolean dynamicSql;
 
         @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private Long executeTime;
@@ -971,7 +971,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         /**
          * @return dynamicSql
          */
-        public String getDynamicSql() {
+        public Boolean getDynamicSql() {
             return this.dynamicSql;
         }
 
@@ -1071,7 +1071,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private String command; 
             private Long cpuTime; 
             private String database; 
-            private String dynamicSql; 
+            private Boolean dynamicSql; 
             private Long executeTime; 
             private String planId; 
             private java.util.List<ProcessSqlLists> processSqlLists; 
@@ -1160,7 +1160,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             /**
              * DynamicSql.
              */
-            public Builder dynamicSql(String dynamicSql) {
+            public Builder dynamicSql(Boolean dynamicSql) {
                 this.dynamicSql = dynamicSql;
                 return this;
             }

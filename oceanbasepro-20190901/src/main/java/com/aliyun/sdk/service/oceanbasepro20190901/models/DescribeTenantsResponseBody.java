@@ -146,6 +146,9 @@ public class DescribeTenantsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableReadOnlyReplica")
         private Boolean enableReadOnlyReplica;
 
+        @com.aliyun.core.annotation.NameInMap("Iops")
+        private Integer iops;
+
         @com.aliyun.core.annotation.NameInMap("Mem")
         private Integer mem;
 
@@ -191,6 +194,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             this.deployType = builder.deployType;
             this.description = builder.description;
             this.enableReadOnlyReplica = builder.enableReadOnlyReplica;
+            this.iops = builder.iops;
             this.mem = builder.mem;
             this.parameterTemplate = builder.parameterTemplate;
             this.primaryZone = builder.primaryZone;
@@ -267,6 +271,13 @@ public class DescribeTenantsResponseBody extends TeaModel {
          */
         public Boolean getEnableReadOnlyReplica() {
             return this.enableReadOnlyReplica;
+        }
+
+        /**
+         * @return iops
+         */
+        public Integer getIops() {
+            return this.iops;
         }
 
         /**
@@ -362,6 +373,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
             private String deployType; 
             private String description; 
             private Boolean enableReadOnlyReplica; 
+            private Integer iops; 
             private Integer mem; 
             private String parameterTemplate; 
             private String primaryZone; 
@@ -387,6 +399,7 @@ public class DescribeTenantsResponseBody extends TeaModel {
                 this.deployType = model.deployType;
                 this.description = model.description;
                 this.enableReadOnlyReplica = model.enableReadOnlyReplica;
+                this.iops = model.iops;
                 this.mem = model.mem;
                 this.parameterTemplate = model.parameterTemplate;
                 this.primaryZone = model.primaryZone;
@@ -498,6 +511,14 @@ public class DescribeTenantsResponseBody extends TeaModel {
              */
             public Builder enableReadOnlyReplica(Boolean enableReadOnlyReplica) {
                 this.enableReadOnlyReplica = enableReadOnlyReplica;
+                return this;
+            }
+
+            /**
+             * Iops.
+             */
+            public Builder iops(Integer iops) {
+                this.iops = iops;
                 return this;
             }
 

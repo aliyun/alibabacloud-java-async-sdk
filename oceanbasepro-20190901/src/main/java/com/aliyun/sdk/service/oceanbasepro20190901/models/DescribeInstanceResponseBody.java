@@ -2321,6 +2321,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceRole")
         private String instanceRole;
 
+        @com.aliyun.core.annotation.NameInMap("Iops")
+        private Integer iops;
+
         @com.aliyun.core.annotation.NameInMap("IsLatestObVersion")
         private Boolean isLatestObVersion;
 
@@ -2413,6 +2416,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.instanceRole = builder.instanceRole;
+            this.iops = builder.iops;
             this.isLatestObVersion = builder.isLatestObVersion;
             this.isTrustEcs = builder.isTrustEcs;
             this.isolationOptimization = builder.isolationOptimization;
@@ -2621,6 +2625,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return iops
+         */
+        public Integer getIops() {
+            return this.iops;
+        }
+
+        /**
          * @return isLatestObVersion
          */
         public Boolean getIsLatestObVersion() {
@@ -2800,6 +2811,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceName; 
             private String instanceRole; 
+            private Integer iops; 
             private Boolean isLatestObVersion; 
             private Boolean isTrustEcs; 
             private Boolean isolationOptimization; 
@@ -2852,6 +2864,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
                 this.instanceRole = model.instanceRole;
+                this.iops = model.iops;
                 this.isLatestObVersion = model.isLatestObVersion;
                 this.isTrustEcs = model.isTrustEcs;
                 this.isolationOptimization = model.isolationOptimization;
@@ -3172,6 +3185,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder instanceRole(String instanceRole) {
                 this.instanceRole = instanceRole;
+                return this;
+            }
+
+            /**
+             * Iops.
+             */
+            public Builder iops(Integer iops) {
+                this.iops = iops;
                 return this;
             }
 

@@ -674,7 +674,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         private Double executions;
 
         @com.aliyun.core.annotation.NameInMap("LastExecutedTime")
-        private Double lastExecutedTime;
+        private String lastExecutedTime;
 
         @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
@@ -823,7 +823,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
         /**
          * @return lastExecutedTime
          */
-        public Double getLastExecutedTime() {
+        public String getLastExecutedTime() {
             return this.lastExecutedTime;
         }
 
@@ -903,7 +903,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
             private String diagnosis; 
             private Boolean dynamicSql; 
             private Double executions; 
-            private Double lastExecutedTime; 
+            private String lastExecutedTime; 
             private String riskLevel; 
             private String sqlId; 
             private java.util.List<SqlList> sqlList; 
@@ -1079,7 +1079,7 @@ public class DescribeOasAnomalySQLListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>2023-04-12T04:38:38Z</p>
              */
-            public Builder lastExecutedTime(Double lastExecutedTime) {
+            public Builder lastExecutedTime(String lastExecutedTime) {
                 this.lastExecutedTime = lastExecutedTime;
                 return this;
             }

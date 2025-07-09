@@ -45,6 +45,10 @@ public class DescribeMetricsDataRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Limit")
     private String limit;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MetricScope")
+    private String metricScope;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Metrics")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -75,6 +79,7 @@ public class DescribeMetricsDataRequest extends Request {
         this.instanceId = builder.instanceId;
         this.labels = builder.labels;
         this.limit = builder.limit;
+        this.metricScope = builder.metricScope;
         this.metrics = builder.metrics;
         this.replicaType = builder.replicaType;
         this.sortMetricKey = builder.sortMetricKey;
@@ -138,6 +143,13 @@ public class DescribeMetricsDataRequest extends Request {
     }
 
     /**
+     * @return metricScope
+     */
+    public String getMetricScope() {
+        return this.metricScope;
+    }
+
+    /**
      * @return metrics
      */
     public String getMetrics() {
@@ -179,6 +191,7 @@ public class DescribeMetricsDataRequest extends Request {
         private String instanceId; 
         private String labels; 
         private String limit; 
+        private String metricScope; 
         private String metrics; 
         private String replicaType; 
         private String sortMetricKey; 
@@ -197,6 +210,7 @@ public class DescribeMetricsDataRequest extends Request {
             this.instanceId = request.instanceId;
             this.labels = request.labels;
             this.limit = request.limit;
+            this.metricScope = request.metricScope;
             this.metrics = request.metrics;
             this.replicaType = request.replicaType;
             this.sortMetricKey = request.sortMetricKey;
@@ -270,6 +284,15 @@ public class DescribeMetricsDataRequest extends Request {
         public Builder limit(String limit) {
             this.putQueryParameter("Limit", limit);
             this.limit = limit;
+            return this;
+        }
+
+        /**
+         * MetricScope.
+         */
+        public Builder metricScope(String metricScope) {
+            this.putBodyParameter("MetricScope", metricScope);
+            this.metricScope = metricScope;
             return this;
         }
 

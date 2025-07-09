@@ -201,10 +201,10 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
         private Double execPs;
 
         @com.aliyun.core.annotation.NameInMap("Executions")
-        private Double executions;
+        private Long executions;
 
         @com.aliyun.core.annotation.NameInMap("FailCount")
-        private Double failCount;
+        private Long failCount;
 
         @com.aliyun.core.annotation.NameInMap("FailPercentage")
         private Double failPercentage;
@@ -246,13 +246,13 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
         private Double missPlanPercentage;
 
         @com.aliyun.core.annotation.NameInMap("MissPlans")
-        private Double missPlans;
+        private Long missPlans;
 
         @com.aliyun.core.annotation.NameInMap("RemotePlanPercentage")
         private Double remotePlanPercentage;
 
         @com.aliyun.core.annotation.NameInMap("RemotePlans")
-        private Double remotePlans;
+        private Long remotePlans;
 
         @com.aliyun.core.annotation.NameInMap("RetCode4012Count")
         private Long retCode4012Count;
@@ -276,7 +276,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
         private Long retCode6002Count;
 
         @com.aliyun.core.annotation.NameInMap("RetryCount")
-        private Double retryCount;
+        private Long retryCount;
 
         @com.aliyun.core.annotation.NameInMap("RpcCount")
         private Double rpcCount;
@@ -658,14 +658,14 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
         /**
          * @return executions
          */
-        public Double getExecutions() {
+        public Long getExecutions() {
             return this.executions;
         }
 
         /**
          * @return failCount
          */
-        public Double getFailCount() {
+        public Long getFailCount() {
             return this.failCount;
         }
 
@@ -763,7 +763,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
         /**
          * @return missPlans
          */
-        public Double getMissPlans() {
+        public Long getMissPlans() {
             return this.missPlans;
         }
 
@@ -777,7 +777,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
         /**
          * @return remotePlans
          */
-        public Double getRemotePlans() {
+        public Long getRemotePlans() {
             return this.remotePlans;
         }
 
@@ -833,7 +833,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
         /**
          * @return retryCount
          */
-        public Double getRetryCount() {
+        public Long getRetryCount() {
             return this.retryCount;
         }
 
@@ -991,8 +991,8 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
             private String dbName; 
             private Double distPlanPercentage; 
             private Double execPs; 
-            private Double executions; 
-            private Double failCount; 
+            private Long executions; 
+            private Long failCount; 
             private Double failPercentage; 
             private Boolean inner; 
             private Double localPlanPercentage; 
@@ -1006,9 +1006,9 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
             private Double maxUserIoWaitTime; 
             private Double maxWaitTime; 
             private Double missPlanPercentage; 
-            private Double missPlans; 
+            private Long missPlans; 
             private Double remotePlanPercentage; 
-            private Double remotePlans; 
+            private Long remotePlans; 
             private Long retCode4012Count; 
             private Long retCode4013Count; 
             private Long retCode5001Count; 
@@ -1016,7 +1016,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
             private Long retCode5167Count; 
             private Long retCode5217Count; 
             private Long retCode6002Count; 
-            private Double retryCount; 
+            private Long retryCount; 
             private Double rpcCount; 
             private String server; 
             private String serverIp; 
@@ -1393,7 +1393,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
             /**
              * Executions.
              */
-            public Builder executions(Double executions) {
+            public Builder executions(Long executions) {
                 this.executions = executions;
                 return this;
             }
@@ -1401,7 +1401,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
             /**
              * FailCount.
              */
-            public Builder failCount(Double failCount) {
+            public Builder failCount(Long failCount) {
                 this.failCount = failCount;
                 return this;
             }
@@ -1513,7 +1513,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
             /**
              * MissPlans.
              */
-            public Builder missPlans(Double missPlans) {
+            public Builder missPlans(Long missPlans) {
                 this.missPlans = missPlans;
                 return this;
             }
@@ -1529,7 +1529,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
             /**
              * RemotePlans.
              */
-            public Builder remotePlans(Double remotePlans) {
+            public Builder remotePlans(Long remotePlans) {
                 this.remotePlans = remotePlans;
                 return this;
             }
@@ -1593,7 +1593,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
             /**
              * RetryCount.
              */
-            public Builder retryCount(Double retryCount) {
+            public Builder retryCount(Long retryCount) {
                 this.retryCount = retryCount;
                 return this;
             }
@@ -1854,10 +1854,10 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
         private Double execPs;
 
         @com.aliyun.core.annotation.NameInMap("Executions")
-        private Double executions;
+        private Long executions;
 
         @com.aliyun.core.annotation.NameInMap("FailCount")
-        private Double failCount;
+        private Long failCount;
 
         @com.aliyun.core.annotation.NameInMap("FailPercentage")
         private Double failPercentage;
@@ -1899,13 +1899,13 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
         private Double missPlanPercentage;
 
         @com.aliyun.core.annotation.NameInMap("MissPlans")
-        private Double missPlans;
+        private Long missPlans;
 
         @com.aliyun.core.annotation.NameInMap("RemotePlanPercentage")
         private Double remotePlanPercentage;
 
         @com.aliyun.core.annotation.NameInMap("RemotePlans")
-        private Double remotePlans;
+        private Long remotePlans;
 
         @com.aliyun.core.annotation.NameInMap("RetCode4012Count")
         private Long retCode4012Count;
@@ -1914,22 +1914,22 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
         private Long retCode4013Count;
 
         @com.aliyun.core.annotation.NameInMap("RetCode5001Count")
-        private Double retCode5001Count;
+        private Long retCode5001Count;
 
         @com.aliyun.core.annotation.NameInMap("RetCode5024Count")
-        private Double retCode5024Count;
+        private Long retCode5024Count;
 
         @com.aliyun.core.annotation.NameInMap("RetCode5167Count")
-        private Double retCode5167Count;
+        private Long retCode5167Count;
 
         @com.aliyun.core.annotation.NameInMap("RetCode5217Count")
-        private Double retCode5217Count;
+        private Long retCode5217Count;
 
         @com.aliyun.core.annotation.NameInMap("RetCode6002Count")
-        private Double retCode6002Count;
+        private Long retCode6002Count;
 
         @com.aliyun.core.annotation.NameInMap("RetryCount")
-        private Double retryCount;
+        private Long retryCount;
 
         @com.aliyun.core.annotation.NameInMap("RpcCount")
         private Double rpcCount;
@@ -2323,14 +2323,14 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
         /**
          * @return executions
          */
-        public Double getExecutions() {
+        public Long getExecutions() {
             return this.executions;
         }
 
         /**
          * @return failCount
          */
-        public Double getFailCount() {
+        public Long getFailCount() {
             return this.failCount;
         }
 
@@ -2428,7 +2428,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
         /**
          * @return missPlans
          */
-        public Double getMissPlans() {
+        public Long getMissPlans() {
             return this.missPlans;
         }
 
@@ -2442,7 +2442,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
         /**
          * @return remotePlans
          */
-        public Double getRemotePlans() {
+        public Long getRemotePlans() {
             return this.remotePlans;
         }
 
@@ -2463,42 +2463,42 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
         /**
          * @return retCode5001Count
          */
-        public Double getRetCode5001Count() {
+        public Long getRetCode5001Count() {
             return this.retCode5001Count;
         }
 
         /**
          * @return retCode5024Count
          */
-        public Double getRetCode5024Count() {
+        public Long getRetCode5024Count() {
             return this.retCode5024Count;
         }
 
         /**
          * @return retCode5167Count
          */
-        public Double getRetCode5167Count() {
+        public Long getRetCode5167Count() {
             return this.retCode5167Count;
         }
 
         /**
          * @return retCode5217Count
          */
-        public Double getRetCode5217Count() {
+        public Long getRetCode5217Count() {
             return this.retCode5217Count;
         }
 
         /**
          * @return retCode6002Count
          */
-        public Double getRetCode6002Count() {
+        public Long getRetCode6002Count() {
             return this.retCode6002Count;
         }
 
         /**
          * @return retryCount
          */
-        public Double getRetryCount() {
+        public Long getRetryCount() {
             return this.retryCount;
         }
 
@@ -2664,8 +2664,8 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
             private Double distPlanPercentage; 
             private Boolean dynamicSql; 
             private Double execPs; 
-            private Double executions; 
-            private Double failCount; 
+            private Long executions; 
+            private Long failCount; 
             private Double failPercentage; 
             private Boolean inner; 
             private Double localPlanPercentage; 
@@ -2679,17 +2679,17 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
             private Double maxUserIoWaitTime; 
             private Double maxWaitTime; 
             private Double missPlanPercentage; 
-            private Double missPlans; 
+            private Long missPlans; 
             private Double remotePlanPercentage; 
-            private Double remotePlans; 
+            private Long remotePlans; 
             private Long retCode4012Count; 
             private Long retCode4013Count; 
-            private Double retCode5001Count; 
-            private Double retCode5024Count; 
-            private Double retCode5167Count; 
-            private Double retCode5217Count; 
-            private Double retCode6002Count; 
-            private Double retryCount; 
+            private Long retCode5001Count; 
+            private Long retCode5024Count; 
+            private Long retCode5167Count; 
+            private Long retCode5217Count; 
+            private Long retCode6002Count; 
+            private Long retryCount; 
             private Double rpcCount; 
             private String server; 
             private String serverIp; 
@@ -3179,7 +3179,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>1</p>
              */
-            public Builder executions(Double executions) {
+            public Builder executions(Long executions) {
                 this.executions = executions;
                 return this;
             }
@@ -3190,7 +3190,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder failCount(Double failCount) {
+            public Builder failCount(Long failCount) {
                 this.failCount = failCount;
                 return this;
             }
@@ -3344,7 +3344,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder missPlans(Double missPlans) {
+            public Builder missPlans(Long missPlans) {
                 this.missPlans = missPlans;
                 return this;
             }
@@ -3366,7 +3366,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder remotePlans(Double remotePlans) {
+            public Builder remotePlans(Long remotePlans) {
                 this.remotePlans = remotePlans;
                 return this;
             }
@@ -3399,7 +3399,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder retCode5001Count(Double retCode5001Count) {
+            public Builder retCode5001Count(Long retCode5001Count) {
                 this.retCode5001Count = retCode5001Count;
                 return this;
             }
@@ -3410,7 +3410,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder retCode5024Count(Double retCode5024Count) {
+            public Builder retCode5024Count(Long retCode5024Count) {
                 this.retCode5024Count = retCode5024Count;
                 return this;
             }
@@ -3421,7 +3421,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder retCode5167Count(Double retCode5167Count) {
+            public Builder retCode5167Count(Long retCode5167Count) {
                 this.retCode5167Count = retCode5167Count;
                 return this;
             }
@@ -3432,7 +3432,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder retCode5217Count(Double retCode5217Count) {
+            public Builder retCode5217Count(Long retCode5217Count) {
                 this.retCode5217Count = retCode5217Count;
                 return this;
             }
@@ -3443,7 +3443,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder retCode6002Count(Double retCode6002Count) {
+            public Builder retCode6002Count(Long retCode6002Count) {
                 this.retCode6002Count = retCode6002Count;
                 return this;
             }
@@ -3454,7 +3454,7 @@ public class DescribeOasSlowSQLListResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>5</p>
              */
-            public Builder retryCount(Double retryCount) {
+            public Builder retryCount(Long retryCount) {
                 this.retryCount = retryCount;
                 return this;
             }

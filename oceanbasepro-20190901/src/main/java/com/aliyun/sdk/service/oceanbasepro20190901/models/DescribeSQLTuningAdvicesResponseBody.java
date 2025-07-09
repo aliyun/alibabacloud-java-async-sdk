@@ -105,7 +105,7 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
         private String minValue;
 
         @com.aliyun.core.annotation.NameInMap("Ndv")
-        private Float ndv;
+        private Double ndv;
 
         private Columns(Builder builder) {
             this.columnName = builder.columnName;
@@ -146,7 +146,7 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
         /**
          * @return ndv
          */
-        public Float getNdv() {
+        public Double getNdv() {
             return this.ndv;
         }
 
@@ -154,7 +154,7 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
             private String columnName; 
             private String maxValue; 
             private String minValue; 
-            private Float ndv; 
+            private Double ndv; 
 
             private Builder() {
             } 
@@ -196,7 +196,7 @@ public class DescribeSQLTuningAdvicesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>100</p>
              */
-            public Builder ndv(Float ndv) {
+            public Builder ndv(Double ndv) {
                 this.ndv = ndv;
                 return this;
             }

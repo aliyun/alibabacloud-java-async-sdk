@@ -1,3 +1,6 @@
+2025-07-09 Version: 11.0.0
+- Generated java-async 2019-09-01 for OceanBasePro.
+
 2025-06-11 Version: 10.0.0
 - Generated java-async 2019-09-01 for OceanBasePro.
 

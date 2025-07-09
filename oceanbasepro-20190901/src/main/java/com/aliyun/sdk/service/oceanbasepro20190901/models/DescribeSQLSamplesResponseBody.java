@@ -99,7 +99,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AffectedRows")
-        private Double affectedRows;
+        private Long affectedRows;
 
         @com.aliyun.core.annotation.NameInMap("ApplicationWaitTime")
         private Double applicationWaitTime;
@@ -117,7 +117,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         private String clientIp;
 
         @com.aliyun.core.annotation.NameInMap("ClientPort")
-        private String clientPort;
+        private Integer clientPort;
 
         @com.aliyun.core.annotation.NameInMap("ConcurrencyWaitTime")
         private Double concurrencyWaitTime;
@@ -147,7 +147,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         private Boolean executorRpc;
 
         @com.aliyun.core.annotation.NameInMap("ExpectedWorkerCount")
-        private Double expectedWorkerCount;
+        private Long expectedWorkerCount;
 
         @com.aliyun.core.annotation.NameInMap("FullSqlText")
         private String fullSqlText;
@@ -162,7 +162,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         private Boolean inner;
 
         @com.aliyun.core.annotation.NameInMap("MemstoreReadRows")
-        private Double memstoreReadRows;
+        private Long memstoreReadRows;
 
         @com.aliyun.core.annotation.NameInMap("NetTime")
         private Double netTime;
@@ -171,22 +171,22 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         private Double netWaitTime;
 
         @com.aliyun.core.annotation.NameInMap("ObDbId")
-        private Double obDbId;
+        private Long obDbId;
 
         @com.aliyun.core.annotation.NameInMap("ObServerId")
-        private Double obServerId;
+        private Long obServerId;
 
         @com.aliyun.core.annotation.NameInMap("ObUserId")
-        private Double obUserId;
+        private Long obUserId;
 
         @com.aliyun.core.annotation.NameInMap("ParamsValue")
         private String paramsValue;
 
         @com.aliyun.core.annotation.NameInMap("PartitionCount")
-        private Double partitionCount;
+        private Long partitionCount;
 
         @com.aliyun.core.annotation.NameInMap("PlanId")
-        private Double planId;
+        private Long planId;
 
         @com.aliyun.core.annotation.NameInMap("PlanType")
         private String planType;
@@ -195,25 +195,25 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         private Double queueTime;
 
         @com.aliyun.core.annotation.NameInMap("RequestId")
-        private String requestId;
+        private Long requestId;
 
         @com.aliyun.core.annotation.NameInMap("RequestTime")
         private String requestTime;
 
         @com.aliyun.core.annotation.NameInMap("RetCode")
-        private Double retCode;
+        private Integer retCode;
 
         @com.aliyun.core.annotation.NameInMap("RetryCount")
-        private Double retryCount;
+        private Long retryCount;
 
         @com.aliyun.core.annotation.NameInMap("ReturnRows")
-        private Double returnRows;
+        private Long returnRows;
 
         @com.aliyun.core.annotation.NameInMap("RowCacheHit")
         private Double rowCacheHit;
 
         @com.aliyun.core.annotation.NameInMap("RpcCount")
-        private Double rpcCount;
+        private Long rpcCount;
 
         @com.aliyun.core.annotation.NameInMap("ScheduleTime")
         private Double scheduleTime;
@@ -228,7 +228,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         private String sqlType;
 
         @com.aliyun.core.annotation.NameInMap("SsstoreReadRows")
-        private Double ssstoreReadRows;
+        private Long ssstoreReadRows;
 
         @com.aliyun.core.annotation.NameInMap("Statement")
         private String statement;
@@ -243,7 +243,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         private String transHash;
 
         @com.aliyun.core.annotation.NameInMap("UsedWorkerCount")
-        private Double usedWorkerCount;
+        private Long usedWorkerCount;
 
         @com.aliyun.core.annotation.NameInMap("UserIoWaitTime")
         private Double userIoWaitTime;
@@ -252,7 +252,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         private String userName;
 
         @com.aliyun.core.annotation.NameInMap("WaitCount")
-        private Double waitCount;
+        private Long waitCount;
 
         @com.aliyun.core.annotation.NameInMap("WaitEvent")
         private String waitEvent;
@@ -328,7 +328,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return affectedRows
          */
-        public Double getAffectedRows() {
+        public Long getAffectedRows() {
             return this.affectedRows;
         }
 
@@ -370,7 +370,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return clientPort
          */
-        public String getClientPort() {
+        public Integer getClientPort() {
             return this.clientPort;
         }
 
@@ -440,7 +440,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return expectedWorkerCount
          */
-        public Double getExpectedWorkerCount() {
+        public Long getExpectedWorkerCount() {
             return this.expectedWorkerCount;
         }
 
@@ -475,7 +475,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return memstoreReadRows
          */
-        public Double getMemstoreReadRows() {
+        public Long getMemstoreReadRows() {
             return this.memstoreReadRows;
         }
 
@@ -496,21 +496,21 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return obDbId
          */
-        public Double getObDbId() {
+        public Long getObDbId() {
             return this.obDbId;
         }
 
         /**
          * @return obServerId
          */
-        public Double getObServerId() {
+        public Long getObServerId() {
             return this.obServerId;
         }
 
         /**
          * @return obUserId
          */
-        public Double getObUserId() {
+        public Long getObUserId() {
             return this.obUserId;
         }
 
@@ -524,14 +524,14 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return partitionCount
          */
-        public Double getPartitionCount() {
+        public Long getPartitionCount() {
             return this.partitionCount;
         }
 
         /**
          * @return planId
          */
-        public Double getPlanId() {
+        public Long getPlanId() {
             return this.planId;
         }
 
@@ -552,7 +552,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return requestId
          */
-        public String getRequestId() {
+        public Long getRequestId() {
             return this.requestId;
         }
 
@@ -566,21 +566,21 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return retCode
          */
-        public Double getRetCode() {
+        public Integer getRetCode() {
             return this.retCode;
         }
 
         /**
          * @return retryCount
          */
-        public Double getRetryCount() {
+        public Long getRetryCount() {
             return this.retryCount;
         }
 
         /**
          * @return returnRows
          */
-        public Double getReturnRows() {
+        public Long getReturnRows() {
             return this.returnRows;
         }
 
@@ -594,7 +594,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return rpcCount
          */
-        public Double getRpcCount() {
+        public Long getRpcCount() {
             return this.rpcCount;
         }
 
@@ -629,7 +629,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return ssstoreReadRows
          */
-        public Double getSsstoreReadRows() {
+        public Long getSsstoreReadRows() {
             return this.ssstoreReadRows;
         }
 
@@ -664,7 +664,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return usedWorkerCount
          */
-        public Double getUsedWorkerCount() {
+        public Long getUsedWorkerCount() {
             return this.usedWorkerCount;
         }
 
@@ -685,7 +685,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         /**
          * @return waitCount
          */
-        public Double getWaitCount() {
+        public Long getWaitCount() {
             return this.waitCount;
         }
 
@@ -704,13 +704,13 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Double affectedRows; 
+            private Long affectedRows; 
             private Double applicationWaitTime; 
             private Double blockCacheHit; 
             private Double blockIndexCacheHit; 
             private Double bloomFilterCacheHit; 
             private String clientIp; 
-            private String clientPort; 
+            private Integer clientPort; 
             private Double concurrencyWaitTime; 
             private String consistencyLevel; 
             private Double cpuTime; 
@@ -720,42 +720,42 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
             private Double elapsedTime; 
             private Double executeTime; 
             private Boolean executorRpc; 
-            private Double expectedWorkerCount; 
+            private Long expectedWorkerCount; 
             private String fullSqlText; 
             private Double getPlanTime; 
             private Boolean hitPlan; 
             private Boolean inner; 
-            private Double memstoreReadRows; 
+            private Long memstoreReadRows; 
             private Double netTime; 
             private Double netWaitTime; 
-            private Double obDbId; 
-            private Double obServerId; 
-            private Double obUserId; 
+            private Long obDbId; 
+            private Long obServerId; 
+            private Long obUserId; 
             private String paramsValue; 
-            private Double partitionCount; 
-            private Double planId; 
+            private Long partitionCount; 
+            private Long planId; 
             private String planType; 
             private Double queueTime; 
-            private String requestId; 
+            private Long requestId; 
             private String requestTime; 
-            private Double retCode; 
-            private Double retryCount; 
-            private Double returnRows; 
+            private Integer retCode; 
+            private Long retryCount; 
+            private Long returnRows; 
             private Double rowCacheHit; 
-            private Double rpcCount; 
+            private Long rpcCount; 
             private Double scheduleTime; 
             private String server; 
             private String sqlText; 
             private String sqlType; 
-            private Double ssstoreReadRows; 
+            private Long ssstoreReadRows; 
             private String statement; 
             private Boolean tableScan; 
             private String traceId; 
             private String transHash; 
-            private Double usedWorkerCount; 
+            private Long usedWorkerCount; 
             private Double userIoWaitTime; 
             private String userName; 
-            private Double waitCount; 
+            private Long waitCount; 
             private String waitEvent; 
             private Double waitTime; 
 
@@ -825,7 +825,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>10000.0</p>
              */
-            public Builder affectedRows(Double affectedRows) {
+            public Builder affectedRows(Long affectedRows) {
                 this.affectedRows = affectedRows;
                 return this;
             }
@@ -891,7 +891,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>4****</p>
              */
-            public Builder clientPort(String clientPort) {
+            public Builder clientPort(Integer clientPort) {
                 this.clientPort = clientPort;
                 return this;
             }
@@ -1001,7 +1001,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder expectedWorkerCount(Double expectedWorkerCount) {
+            public Builder expectedWorkerCount(Long expectedWorkerCount) {
                 this.expectedWorkerCount = expectedWorkerCount;
                 return this;
             }
@@ -1059,7 +1059,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder memstoreReadRows(Double memstoreReadRows) {
+            public Builder memstoreReadRows(Long memstoreReadRows) {
                 this.memstoreReadRows = memstoreReadRows;
                 return this;
             }
@@ -1092,7 +1092,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>11006111****4828</p>
              */
-            public Builder obDbId(Double obDbId) {
+            public Builder obDbId(Long obDbId) {
                 this.obDbId = obDbId;
                 return this;
             }
@@ -1103,7 +1103,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>2</p>
              */
-            public Builder obServerId(Double obServerId) {
+            public Builder obServerId(Long obServerId) {
                 this.obServerId = obServerId;
                 return this;
             }
@@ -1114,7 +1114,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>100010</p>
              */
-            public Builder obUserId(Double obUserId) {
+            public Builder obUserId(Long obUserId) {
                 this.obUserId = obUserId;
                 return this;
             }
@@ -1136,7 +1136,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>1.0</p>
              */
-            public Builder partitionCount(Double partitionCount) {
+            public Builder partitionCount(Long partitionCount) {
                 this.partitionCount = partitionCount;
                 return this;
             }
@@ -1147,7 +1147,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>590****</p>
              */
-            public Builder planId(Double planId) {
+            public Builder planId(Long planId) {
                 this.planId = planId;
                 return this;
             }
@@ -1180,7 +1180,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>EE205C00-30E4-<strong><strong>-</strong></strong>-87E3A8A2AA0C</p>
              */
-            public Builder requestId(String requestId) {
+            public Builder requestId(Long requestId) {
                 this.requestId = requestId;
                 return this;
             }
@@ -1202,7 +1202,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder retCode(Double retCode) {
+            public Builder retCode(Integer retCode) {
                 this.retCode = retCode;
                 return this;
             }
@@ -1213,7 +1213,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder retryCount(Double retryCount) {
+            public Builder retryCount(Long retryCount) {
                 this.retryCount = retryCount;
                 return this;
             }
@@ -1224,7 +1224,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0.0</p>
              */
-            public Builder returnRows(Double returnRows) {
+            public Builder returnRows(Long returnRows) {
                 this.returnRows = returnRows;
                 return this;
             }
@@ -1246,7 +1246,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>8.0</p>
              */
-            public Builder rpcCount(Double rpcCount) {
+            public Builder rpcCount(Long rpcCount) {
                 this.rpcCount = rpcCount;
                 return this;
             }
@@ -1301,7 +1301,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>986190</p>
              */
-            public Builder ssstoreReadRows(Double ssstoreReadRows) {
+            public Builder ssstoreReadRows(Long ssstoreReadRows) {
                 this.ssstoreReadRows = ssstoreReadRows;
                 return this;
             }
@@ -1356,7 +1356,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0</p>
              */
-            public Builder usedWorkerCount(Double usedWorkerCount) {
+            public Builder usedWorkerCount(Long usedWorkerCount) {
                 this.usedWorkerCount = usedWorkerCount;
                 return this;
             }
@@ -1389,7 +1389,7 @@ public class DescribeSQLSamplesResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>0.0</p>
              */
-            public Builder waitCount(Double waitCount) {
+            public Builder waitCount(Long waitCount) {
                 this.waitCount = waitCount;
                 return this;
             }

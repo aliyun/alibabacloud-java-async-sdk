@@ -41,7 +41,7 @@ public class DescribeSampleSqlRawTextsRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Limit")
-    private String limit;
+    private Integer limit;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SqlId")
@@ -126,7 +126,7 @@ public class DescribeSampleSqlRawTextsRequest extends Request {
     /**
      * @return limit
      */
-    public String getLimit() {
+    public Integer getLimit() {
         return this.limit;
     }
 
@@ -164,7 +164,7 @@ public class DescribeSampleSqlRawTextsRequest extends Request {
         private Boolean dynamicSql; 
         private String endTime; 
         private String instanceId; 
-        private String limit; 
+        private Integer limit; 
         private String sqlId; 
         private String startTime; 
         private String tenantId; 
@@ -242,7 +242,7 @@ public class DescribeSampleSqlRawTextsRequest extends Request {
         /**
          * Limit.
          */
-        public Builder limit(String limit) {
+        public Builder limit(Integer limit) {
             this.putBodyParameter("Limit", limit);
             this.limit = limit;
             return this;

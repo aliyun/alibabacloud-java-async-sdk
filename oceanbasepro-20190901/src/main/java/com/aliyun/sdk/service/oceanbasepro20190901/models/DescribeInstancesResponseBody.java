@@ -1295,6 +1295,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
+        @com.aliyun.core.annotation.NameInMap("Iops")
+        private Integer iops;
+
         @com.aliyun.core.annotation.NameInMap("MaintainTime")
         private String maintainTime;
 
@@ -1361,6 +1364,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.instanceRole = builder.instanceRole;
             this.instanceType = builder.instanceType;
+            this.iops = builder.iops;
             this.maintainTime = builder.maintainTime;
             this.mem = builder.mem;
             this.migratable = builder.migratable;
@@ -1527,6 +1531,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return iops
+         */
+        public Integer getIops() {
+            return this.iops;
+        }
+
+        /**
          * @return maintainTime
          */
         public String getMaintainTime() {
@@ -1652,6 +1663,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String instanceName; 
             private String instanceRole; 
             private String instanceType; 
+            private Integer iops; 
             private String maintainTime; 
             private Long mem; 
             private Boolean migratable; 
@@ -1692,6 +1704,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
                 this.instanceName = model.instanceName;
                 this.instanceRole = model.instanceRole;
                 this.instanceType = model.instanceType;
+                this.iops = model.iops;
                 this.maintainTime = model.maintainTime;
                 this.mem = model.mem;
                 this.migratable = model.migratable;
@@ -1947,6 +1960,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * Iops.
+             */
+            public Builder iops(Integer iops) {
+                this.iops = iops;
                 return this;
             }
 

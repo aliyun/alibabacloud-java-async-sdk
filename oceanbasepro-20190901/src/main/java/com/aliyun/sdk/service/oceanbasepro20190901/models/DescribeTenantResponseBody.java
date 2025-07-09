@@ -2417,6 +2417,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
+        @com.aliyun.core.annotation.NameInMap("Iops")
+        private Integer iops;
+
         @com.aliyun.core.annotation.NameInMap("LowerCaseTableNames")
         private Integer lowerCaseTableNames;
 
@@ -2501,6 +2504,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.enableReadOnlyReplica = builder.enableReadOnlyReplica;
             this.enableReadWriteSplit = builder.enableReadWriteSplit;
             this.instanceType = builder.instanceType;
+            this.iops = builder.iops;
             this.lowerCaseTableNames = builder.lowerCaseTableNames;
             this.masterIntranetAddressZone = builder.masterIntranetAddressZone;
             this.maxParallelQueryDegree = builder.maxParallelQueryDegree;
@@ -2650,6 +2654,13 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public String getInstanceType() {
             return this.instanceType;
+        }
+
+        /**
+         * @return iops
+         */
+        public Integer getIops() {
+            return this.iops;
         }
 
         /**
@@ -2824,6 +2835,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Boolean enableReadOnlyReplica; 
             private Boolean enableReadWriteSplit; 
             private String instanceType; 
+            private Integer iops; 
             private Integer lowerCaseTableNames; 
             private String masterIntranetAddressZone; 
             private Long maxParallelQueryDegree; 
@@ -2868,6 +2880,7 @@ public class DescribeTenantResponseBody extends TeaModel {
                 this.enableReadOnlyReplica = model.enableReadOnlyReplica;
                 this.enableReadWriteSplit = model.enableReadWriteSplit;
                 this.instanceType = model.instanceType;
+                this.iops = model.iops;
                 this.lowerCaseTableNames = model.lowerCaseTableNames;
                 this.masterIntranetAddressZone = model.masterIntranetAddressZone;
                 this.maxParallelQueryDegree = model.maxParallelQueryDegree;
@@ -3089,6 +3102,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * Iops.
+             */
+            public Builder iops(Integer iops) {
+                this.iops = iops;
                 return this;
             }
 
