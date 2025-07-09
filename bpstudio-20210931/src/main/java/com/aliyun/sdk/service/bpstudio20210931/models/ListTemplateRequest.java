@@ -41,6 +41,10 @@ public class ListTemplateRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TagList")
     @com.aliyun.core.annotation.Validation()
     private Integer tagList;
@@ -57,6 +61,7 @@ public class ListTemplateRequest extends Request {
         this.nextToken = builder.nextToken;
         this.orderType = builder.orderType;
         this.resourceGroupId = builder.resourceGroupId;
+        this.tag = builder.tag;
         this.tagList = builder.tagList;
         this.type = builder.type;
     }
@@ -110,6 +115,13 @@ public class ListTemplateRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return tagList
      */
     public Integer getTagList() {
@@ -129,6 +141,7 @@ public class ListTemplateRequest extends Request {
         private Integer nextToken; 
         private Long orderType; 
         private String resourceGroupId; 
+        private java.util.List<Tag> tag; 
         private Integer tagList; 
         private String type; 
 
@@ -143,6 +156,7 @@ public class ListTemplateRequest extends Request {
             this.nextToken = request.nextToken;
             this.orderType = request.orderType;
             this.resourceGroupId = request.resourceGroupId;
+            this.tag = request.tag;
             this.tagList = request.tagList;
             this.type = request.type;
         } 
@@ -217,6 +231,16 @@ public class ListTemplateRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putBodyParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * <p>The tag that you want to use to query templates.</p>
          * 
          * <strong>example:</strong>
@@ -248,4 +272,79 @@ public class ListTemplateRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link ListTemplateRequest} extends {@link TeaModel}
+     *
+     * <p>ListTemplateRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
