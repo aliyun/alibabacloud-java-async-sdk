@@ -35,6 +35,9 @@ public class OpenStructRefreshJobModel extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceGroup")
     private String resourceGroup;
 
+    @com.aliyun.core.annotation.NameInMap("ScheduledStartTime")
+    private String scheduledStartTime;
+
     @com.aliyun.core.annotation.NameInMap("SchemaName")
     private String schemaName;
 
@@ -51,6 +54,7 @@ public class OpenStructRefreshJobModel extends TeaModel {
         this.refreshInterval = builder.refreshInterval;
         this.refreshModel = builder.refreshModel;
         this.resourceGroup = builder.resourceGroup;
+        this.scheduledStartTime = builder.scheduledStartTime;
         this.schemaName = builder.schemaName;
         this.startTime = builder.startTime;
         this.status = builder.status;
@@ -111,6 +115,13 @@ public class OpenStructRefreshJobModel extends TeaModel {
     }
 
     /**
+     * @return scheduledStartTime
+     */
+    public String getScheduledStartTime() {
+        return this.scheduledStartTime;
+    }
+
+    /**
      * @return schemaName
      */
     public String getSchemaName() {
@@ -138,6 +149,7 @@ public class OpenStructRefreshJobModel extends TeaModel {
         private String refreshInterval; 
         private String refreshModel; 
         private String resourceGroup; 
+        private String scheduledStartTime; 
         private String schemaName; 
         private String startTime; 
         private String status; 
@@ -152,6 +164,7 @@ public class OpenStructRefreshJobModel extends TeaModel {
             this.refreshInterval = model.refreshInterval;
             this.refreshModel = model.refreshModel;
             this.resourceGroup = model.resourceGroup;
+            this.scheduledStartTime = model.scheduledStartTime;
             this.schemaName = model.schemaName;
             this.startTime = model.startTime;
             this.status = model.status;
@@ -202,6 +215,14 @@ public class OpenStructRefreshJobModel extends TeaModel {
          */
         public Builder resourceGroup(String resourceGroup) {
             this.resourceGroup = resourceGroup;
+            return this;
+        }
+
+        /**
+         * ScheduledStartTime.
+         */
+        public Builder scheduledStartTime(String scheduledStartTime) {
+            this.scheduledStartTime = scheduledStartTime;
             return this;
         }
 

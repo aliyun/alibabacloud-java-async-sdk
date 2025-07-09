@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OpenStructMvDetailModel</p>
  */
 public class OpenStructMvDetailModel extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("BaseTableInfos")
+    private java.util.List<BaseTableInfos> baseTableInfos;
+
     @com.aliyun.core.annotation.NameInMap("BaseTableNames")
     private java.util.List<java.util.List<String>> baseTableNames;
 
@@ -54,6 +57,7 @@ public class OpenStructMvDetailModel extends TeaModel {
     private String updatedAt;
 
     private OpenStructMvDetailModel(Builder builder) {
+        this.baseTableInfos = builder.baseTableInfos;
         this.baseTableNames = builder.baseTableNames;
         this.explicitHit = builder.explicitHit;
         this.firstRefreshTime = builder.firstRefreshTime;
@@ -78,6 +82,13 @@ public class OpenStructMvDetailModel extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return baseTableInfos
+     */
+    public java.util.List<BaseTableInfos> getBaseTableInfos() {
+        return this.baseTableInfos;
     }
 
     /**
@@ -165,6 +176,7 @@ public class OpenStructMvDetailModel extends TeaModel {
     }
 
     public static final class Builder {
+        private java.util.List<BaseTableInfos> baseTableInfos; 
         private java.util.List<java.util.List<String>> baseTableNames; 
         private Long explicitHit; 
         private String firstRefreshTime; 
@@ -182,6 +194,7 @@ public class OpenStructMvDetailModel extends TeaModel {
         } 
 
         private Builder(OpenStructMvDetailModel model) {
+            this.baseTableInfos = model.baseTableInfos;
             this.baseTableNames = model.baseTableNames;
             this.explicitHit = model.explicitHit;
             this.firstRefreshTime = model.firstRefreshTime;
@@ -195,6 +208,14 @@ public class OpenStructMvDetailModel extends TeaModel {
             this.resourceGroup = model.resourceGroup;
             this.updatedAt = model.updatedAt;
         } 
+
+        /**
+         * BaseTableInfos.
+         */
+        public Builder baseTableInfos(java.util.List<BaseTableInfos> baseTableInfos) {
+            this.baseTableInfos = baseTableInfos;
+            return this;
+        }
 
         /**
          * BaseTableNames.
@@ -298,4 +319,100 @@ public class OpenStructMvDetailModel extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link OpenStructMvDetailModel} extends {@link TeaModel}
+     *
+     * <p>OpenStructMvDetailModel</p>
+     */
+    public static class BaseTableInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BaseTableIsMv")
+        private Boolean baseTableIsMv;
+
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
+        private String schemaName;
+
+        @com.aliyun.core.annotation.NameInMap("TableName")
+        private String tableName;
+
+        private BaseTableInfos(Builder builder) {
+            this.baseTableIsMv = builder.baseTableIsMv;
+            this.schemaName = builder.schemaName;
+            this.tableName = builder.tableName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BaseTableInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return baseTableIsMv
+         */
+        public Boolean getBaseTableIsMv() {
+            return this.baseTableIsMv;
+        }
+
+        /**
+         * @return schemaName
+         */
+        public String getSchemaName() {
+            return this.schemaName;
+        }
+
+        /**
+         * @return tableName
+         */
+        public String getTableName() {
+            return this.tableName;
+        }
+
+        public static final class Builder {
+            private Boolean baseTableIsMv; 
+            private String schemaName; 
+            private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(BaseTableInfos model) {
+                this.baseTableIsMv = model.baseTableIsMv;
+                this.schemaName = model.schemaName;
+                this.tableName = model.tableName;
+            } 
+
+            /**
+             * BaseTableIsMv.
+             */
+            public Builder baseTableIsMv(Boolean baseTableIsMv) {
+                this.baseTableIsMv = baseTableIsMv;
+                return this;
+            }
+
+            /**
+             * SchemaName.
+             */
+            public Builder schemaName(String schemaName) {
+                this.schemaName = schemaName;
+                return this;
+            }
+
+            /**
+             * TableName.
+             */
+            public Builder tableName(String tableName) {
+                this.tableName = tableName;
+                return this;
+            }
+
+            public BaseTableInfos build() {
+                return new BaseTableInfos(this);
+            } 
+
+        } 
+
+    }
 }

@@ -208,6 +208,9 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Benefit")
         private String benefit;
 
+        @com.aliyun.core.annotation.NameInMap("IndexFields")
+        private String indexFields;
+
         @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Long pageNumber;
 
@@ -234,6 +237,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             this.adviceId = builder.adviceId;
             this.adviceType = builder.adviceType;
             this.benefit = builder.benefit;
+            this.indexFields = builder.indexFields;
             this.pageNumber = builder.pageNumber;
             this.pageSize = builder.pageSize;
             this.reason = builder.reason;
@@ -277,6 +281,13 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
          */
         public String getBenefit() {
             return this.benefit;
+        }
+
+        /**
+         * @return indexFields
+         */
+        public String getIndexFields() {
+            return this.indexFields;
         }
 
         /**
@@ -333,6 +344,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
             private String adviceId; 
             private String adviceType; 
             private String benefit; 
+            private String indexFields; 
             private Long pageNumber; 
             private Long pageSize; 
             private String reason; 
@@ -349,6 +361,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
                 this.adviceId = model.adviceId;
                 this.adviceType = model.adviceType;
                 this.benefit = model.benefit;
+                this.indexFields = model.indexFields;
                 this.pageNumber = model.pageNumber;
                 this.pageSize = model.pageSize;
                 this.reason = model.reason;
@@ -403,6 +416,14 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
              */
             public Builder benefit(String benefit) {
                 this.benefit = benefit;
+                return this;
+            }
+
+            /**
+             * IndexFields.
+             */
+            public Builder indexFields(String indexFields) {
+                this.indexFields = indexFields;
                 return this;
             }
 
