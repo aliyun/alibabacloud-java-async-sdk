@@ -22,6 +22,10 @@ public class CreateBackupRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
+    private Long backupRetentionPeriod;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -49,6 +53,7 @@ public class CreateBackupRequest extends Request {
     private CreateBackupRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.backupRetentionPeriod = builder.backupRetentionPeriod;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -75,6 +80,13 @@ public class CreateBackupRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return backupRetentionPeriod
+     */
+    public Long getBackupRetentionPeriod() {
+        return this.backupRetentionPeriod;
     }
 
     /**
@@ -121,6 +133,7 @@ public class CreateBackupRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateBackupRequest, Builder> {
         private String regionId; 
+        private Long backupRetentionPeriod; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -135,6 +148,7 @@ public class CreateBackupRequest extends Request {
         private Builder(CreateBackupRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.backupRetentionPeriod = request.backupRetentionPeriod;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -149,6 +163,15 @@ public class CreateBackupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * BackupRetentionPeriod.
+         */
+        public Builder backupRetentionPeriod(Long backupRetentionPeriod) {
+            this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
+            this.backupRetentionPeriod = backupRetentionPeriod;
             return this;
         }
 

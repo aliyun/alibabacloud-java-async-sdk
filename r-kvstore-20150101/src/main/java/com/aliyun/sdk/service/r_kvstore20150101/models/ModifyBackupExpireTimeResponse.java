@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeTasksResponse} extends {@link TeaModel}
+ * {@link ModifyBackupExpireTimeResponse} extends {@link TeaModel}
  *
- * <p>DescribeTasksResponse</p>
+ * <p>ModifyBackupExpireTimeResponse</p>
  */
-public class DescribeTasksResponse extends Response {
+public class ModifyBackupExpireTimeResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class DescribeTasksResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeTasksResponseBody body;
+    private ModifyBackupExpireTimeResponseBody body;
 
-    private DescribeTasksResponse(BuilderImpl builder) {
+    private ModifyBackupExpireTimeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeTasksResponse create() {
+    public static ModifyBackupExpireTimeResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class DescribeTasksResponse extends Response {
     /**
      * @return body
      */
-    public DescribeTasksResponseBody getBody() {
+    public ModifyBackupExpireTimeResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeTasksResponse, Builder> {
+    public interface Builder extends Response.Builder<ModifyBackupExpireTimeResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeTasksResponseBody body);
+        Builder body(ModifyBackupExpireTimeResponseBody body);
 
         @Override
-        DescribeTasksResponse build();
+        ModifyBackupExpireTimeResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeTasksResponse, Builder>
+            extends Response.BuilderImpl<ModifyBackupExpireTimeResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private DescribeTasksResponseBody body; 
+        private ModifyBackupExpireTimeResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeTasksResponse response) {
+        private BuilderImpl(ModifyBackupExpireTimeResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class DescribeTasksResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeTasksResponseBody body) {
+        public Builder body(ModifyBackupExpireTimeResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeTasksResponse build() {
-            return new DescribeTasksResponse(this);
+        public ModifyBackupExpireTimeResponse build() {
+            return new ModifyBackupExpireTimeResponse(this);
         } 
 
     } 

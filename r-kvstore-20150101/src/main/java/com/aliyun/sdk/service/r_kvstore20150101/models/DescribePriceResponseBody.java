@@ -114,7 +114,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The parameters of the order. This parameter is returned when OrderParamOut is set to <code>true</code>.</p>
+         * <p>The parameters of the order. When OrderParamOut is set to <code>true</code>, this parameter is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>String</p>
@@ -125,7 +125,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3A40BE4E-1890-4972-889C-FEFA37663635</p>
@@ -144,7 +144,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The rules that match the coupon.</p>
+         * <p>The orders that match the coupons.</p>
          */
         public Builder subOrders(SubOrders subOrders) {
             this.subOrders = subOrders;
@@ -247,7 +247,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The description of the coupon.</p>
+             * <p>The coupon description.</p>
              * 
              * <strong>example:</strong>
              * <p>coupondemo</p>
@@ -258,7 +258,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the coupon was selected.</p>
+             * <p>Indicates whether the coupon is selected.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -526,7 +526,7 @@ public class DescribePriceResponseBody extends TeaModel {
              * <p>The activity name.</p>
              * 
              * <strong>example:</strong>
-             * <p>合同优惠_整单_xxx折</p>
+             * <p>contract promotion_order_xxx discount</p>
              */
             public Builder activityName(String activityName) {
                 this.activityName = activityName;
@@ -534,7 +534,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price after the promotion.</p>
+             * <p>The preferential price.</p>
              */
             public Builder finalFee(Double finalFee) {
                 this.finalFee = finalFee;
@@ -550,7 +550,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The promotion ID.</p>
+             * <p>The promotion code.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -773,7 +773,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The price difference displayed in the total order amount.</p>
+             * <p>The promotional offer (displayed in the total order amount).</p>
              * 
              * <strong>example:</strong>
              * <p>**</p>
@@ -784,7 +784,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the price difference.</p>
+             * <p>The name of the promotional offer.</p>
              * 
              * <strong>example:</strong>
              * <p>XXXXX</p>
@@ -795,7 +795,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the contract promotion is hit.</p>
+             * <p>Indicates whether eligibility for the contracted discount is met.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1179,7 +1179,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether the contract promotion is hit.</p>
+             * <p>Indicates whether eligibility for the contracted discount is met.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -1190,7 +1190,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The order information.</p>
+             * <p>The information about the order.</p>
              * 
              * <strong>example:</strong>
              * <p>&quot;&quot;</p>
@@ -1239,7 +1239,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount.</p>
+             * <p>The discounted price.</p>
              * 
              * <strong>example:</strong>
              * <p>0</p>
@@ -1333,7 +1333,7 @@ public class DescribePriceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The name of the promotion rule.</p>
+             * <p>The name of the rule.</p>
              * 
              * <strong>example:</strong>
              * <p>test</p>
@@ -1620,7 +1620,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discounted price.</p>
+             * <p>The preferential price.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -1631,7 +1631,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction price.</p>
+             * <p>The total discount amount.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -1653,7 +1653,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The promotion ID.</p>
+             * <p>The promotion IDs.</p>
              */
             public Builder optionIds(ContractActivityOptionIds optionIds) {
                 this.optionIds = optionIds;
@@ -2691,7 +2691,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount.</p>
+             * <p>The discounted price.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -2702,7 +2702,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The original price of the product.</p>
+             * <p>The original price of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>0.0</p>
@@ -2952,7 +2952,11 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coupon code. Default value: <code>youhuiquan_promotion_option_id_for_blank</code>.</p>
+             * <p>Indicates whether coupons are used. Valid values:</p>
+             * <ul>
+             * <li>default or null (default): Coupons are used.</li>
+             * <li>youhuiquan_promotion_option_id_for_blank: Coupons are not used.</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>default</p>
@@ -3018,7 +3022,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates whether</p>
+             * <p>Indicates whether the promotion option is selected.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -3253,7 +3257,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The transaction price.</p>
+             * <p>The discount amount.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -3264,7 +3268,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The code of the coupon.</p>
+             * <p>The coupon code.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -3286,7 +3290,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The coupon code.</p>
+             * <p>The promotion code.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -3308,7 +3312,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the promotional activity.</p>
+             * <p>The promotion name.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -3708,7 +3712,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The promotion details.</p>
+             * <p>Details about promotions.</p>
              */
             public Builder promDetailList(PromDetailList promDetailList) {
                 this.promDetailList = promDetailList;
@@ -3716,7 +3720,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The rule IDs.</p>
+             * <p>The hit rule IDs.</p>
              */
             public Builder ruleIds(SubOrderRuleIds ruleIds) {
                 this.ruleIds = ruleIds;
@@ -3724,7 +3728,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount.</p>
+             * <p>The discounted price.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -3735,7 +3739,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The discount.</p>
+             * <p>The discounted price.</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -3746,7 +3750,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The final price of the order.</p>
+             * <p>The transaction price of the order.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

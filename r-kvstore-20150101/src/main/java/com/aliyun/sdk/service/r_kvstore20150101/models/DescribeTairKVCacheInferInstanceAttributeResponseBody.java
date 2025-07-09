@@ -230,6 +230,9 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
+        @com.aliyun.core.annotation.NameInMap("ComputeUnitNum")
+        private Integer computeUnitNum;
+
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
@@ -260,6 +263,12 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         @com.aliyun.core.annotation.NameInMap("IsOrderCompleted")
         private String isOrderCompleted;
 
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private String model;
+
+        @com.aliyun.core.annotation.NameInMap("ModelServiceNum")
+        private Integer modelServiceNum;
+
         @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
@@ -269,14 +278,8 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @com.aliyun.core.annotation.NameInMap("ReserveGpuNum")
-        private Integer reserveGpuNum;
-
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
-
-        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
-        private String securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Storage")
         private Long storage;
@@ -299,6 +302,7 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         private DBInstanceAttribute(Builder builder) {
             this.architectureType = builder.architectureType;
             this.chargeType = builder.chargeType;
+            this.computeUnitNum = builder.computeUnitNum;
             this.connectionString = builder.connectionString;
             this.createTime = builder.createTime;
             this.endTime = builder.endTime;
@@ -309,12 +313,12 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
             this.instanceType = builder.instanceType;
             this.isDelete = builder.isDelete;
             this.isOrderCompleted = builder.isOrderCompleted;
+            this.model = builder.model;
+            this.modelServiceNum = builder.modelServiceNum;
             this.networkType = builder.networkType;
             this.privateIp = builder.privateIp;
             this.regionId = builder.regionId;
-            this.reserveGpuNum = builder.reserveGpuNum;
             this.resourceGroupId = builder.resourceGroupId;
-            this.securityGroupId = builder.securityGroupId;
             this.storage = builder.storage;
             this.tags = builder.tags;
             this.vSwitchId = builder.vSwitchId;
@@ -343,6 +347,13 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
          */
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        /**
+         * @return computeUnitNum
+         */
+        public Integer getComputeUnitNum() {
+            return this.computeUnitNum;
         }
 
         /**
@@ -416,6 +427,20 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
+         * @return model
+         */
+        public String getModel() {
+            return this.model;
+        }
+
+        /**
+         * @return modelServiceNum
+         */
+        public Integer getModelServiceNum() {
+            return this.modelServiceNum;
+        }
+
+        /**
          * @return networkType
          */
         public String getNetworkType() {
@@ -437,24 +462,10 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         }
 
         /**
-         * @return reserveGpuNum
-         */
-        public Integer getReserveGpuNum() {
-            return this.reserveGpuNum;
-        }
-
-        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
             return this.resourceGroupId;
-        }
-
-        /**
-         * @return securityGroupId
-         */
-        public String getSecurityGroupId() {
-            return this.securityGroupId;
         }
 
         /**
@@ -502,6 +513,7 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
         public static final class Builder {
             private String architectureType; 
             private String chargeType; 
+            private Integer computeUnitNum; 
             private String connectionString; 
             private String createTime; 
             private String endTime; 
@@ -512,12 +524,12 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
             private String instanceType; 
             private Integer isDelete; 
             private String isOrderCompleted; 
+            private String model; 
+            private Integer modelServiceNum; 
             private String networkType; 
             private String privateIp; 
             private String regionId; 
-            private Integer reserveGpuNum; 
             private String resourceGroupId; 
-            private String securityGroupId; 
             private Long storage; 
             private Tags tags; 
             private String vSwitchId; 
@@ -531,6 +543,7 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
             private Builder(DBInstanceAttribute model) {
                 this.architectureType = model.architectureType;
                 this.chargeType = model.chargeType;
+                this.computeUnitNum = model.computeUnitNum;
                 this.connectionString = model.connectionString;
                 this.createTime = model.createTime;
                 this.endTime = model.endTime;
@@ -541,12 +554,12 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
                 this.instanceType = model.instanceType;
                 this.isDelete = model.isDelete;
                 this.isOrderCompleted = model.isOrderCompleted;
+                this.model = model.model;
+                this.modelServiceNum = model.modelServiceNum;
                 this.networkType = model.networkType;
                 this.privateIp = model.privateIp;
                 this.regionId = model.regionId;
-                this.reserveGpuNum = model.reserveGpuNum;
                 this.resourceGroupId = model.resourceGroupId;
-                this.securityGroupId = model.securityGroupId;
                 this.storage = model.storage;
                 this.tags = model.tags;
                 this.vSwitchId = model.vSwitchId;
@@ -568,6 +581,14 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * ComputeUnitNum.
+             */
+            public Builder computeUnitNum(Integer computeUnitNum) {
+                this.computeUnitNum = computeUnitNum;
                 return this;
             }
 
@@ -652,6 +673,22 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
+             * Model.
+             */
+            public Builder model(String model) {
+                this.model = model;
+                return this;
+            }
+
+            /**
+             * ModelServiceNum.
+             */
+            public Builder modelServiceNum(Integer modelServiceNum) {
+                this.modelServiceNum = modelServiceNum;
+                return this;
+            }
+
+            /**
              * NetworkType.
              */
             public Builder networkType(String networkType) {
@@ -676,26 +713,10 @@ public class DescribeTairKVCacheInferInstanceAttributeResponseBody extends TeaMo
             }
 
             /**
-             * ReserveGpuNum.
-             */
-            public Builder reserveGpuNum(Integer reserveGpuNum) {
-                this.reserveGpuNum = reserveGpuNum;
-                return this;
-            }
-
-            /**
              * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
-                return this;
-            }
-
-            /**
-             * SecurityGroupId.
-             */
-            public Builder securityGroupId(String securityGroupId) {
-                this.securityGroupId = securityGroupId;
                 return this;
             }
 

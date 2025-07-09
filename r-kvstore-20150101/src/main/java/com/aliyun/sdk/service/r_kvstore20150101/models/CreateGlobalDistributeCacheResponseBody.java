@@ -17,10 +17,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGlobalDistributeCacheResponseBody</p>
  */
 public class CreateGlobalDistributeCacheResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("GlobalInstanceId")
+    private String globalInstanceId;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    private String instanceId;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateGlobalDistributeCacheResponseBody(Builder builder) {
+        this.globalInstanceId = builder.globalInstanceId;
+        this.instanceId = builder.instanceId;
         this.requestId = builder.requestId;
     }
 
@@ -37,6 +45,20 @@ public class CreateGlobalDistributeCacheResponseBody extends TeaModel {
     }
 
     /**
+     * @return globalInstanceId
+     */
+    public String getGlobalInstanceId() {
+        return this.globalInstanceId;
+    }
+
+    /**
+     * @return instanceId
+     */
+    public String getInstanceId() {
+        return this.instanceId;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -44,14 +66,34 @@ public class CreateGlobalDistributeCacheResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String globalInstanceId; 
+        private String instanceId; 
         private String requestId; 
 
         private Builder() {
         } 
 
         private Builder(CreateGlobalDistributeCacheResponseBody model) {
+            this.globalInstanceId = model.globalInstanceId;
+            this.instanceId = model.instanceId;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * GlobalInstanceId.
+         */
+        public Builder globalInstanceId(String globalInstanceId) {
+            this.globalInstanceId = globalInstanceId;
+            return this;
+        }
+
+        /**
+         * InstanceId.
+         */
+        public Builder instanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
 
         /**
          * <p>The ID of the request.</p>

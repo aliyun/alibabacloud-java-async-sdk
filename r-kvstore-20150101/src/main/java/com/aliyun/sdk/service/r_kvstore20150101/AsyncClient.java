@@ -205,6 +205,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAccountResponse> deleteAccount(DeleteAccountRequest request);
 
     /**
+     * @param request the request parameters of DeleteBackup  DeleteBackupRequest
+     * @return DeleteBackupResponse
+     */
+    CompletableFuture<DeleteBackupResponse> deleteBackup(DeleteBackupRequest request);
+
+    /**
      * <b>description</b> :
      * <p>Before you delete an IP whitelist template, you must unbind (disassociate) the instances that are currently associated with the template.</p>
      * 
@@ -456,7 +462,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can also query the performance monitoring data of an instance in the ApsaraDB for Redis console. For more information, see <a href="https://help.aliyun.com/document_detail/43887.html">Metrics</a>.</p>
+     * <p>You can also query the performance monitoring data of an instance in the Tair console. For more information, see <a href="https://help.aliyun.com/document_detail/43887.html">Metrics</a>.</p>
      * 
      * @param request the request parameters of DescribeHistoryMonitorValues  DescribeHistoryMonitorValuesRequest
      * @return DescribeHistoryMonitorValuesResponse
@@ -561,8 +567,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p> ApsaraDB for Redis has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see <a href="https://help.aliyun.com/document_detail/189893.html">The DescribeMonitorItems operation supported by ApsaraDB for Redis is phased out</a>.
-     * After you call this operation to retrieve a list of metrics for a specified ApsaraDB for Redis instance, you can call the <a href="~~DescribeHistoryMonitorValues~~">DescribeHistoryMonitorValues</a> operation to query monitoring history of the instance.</p>
+     * <p> To improve user experience, Tair has upgraded the monitoring metrics. The DescribeMonitorItems operation is phased out. For more information, see <a href="https://help.aliyun.com/document_detail/189893.html">The DescribeMonitorItems operation of Tair (Redis OSS-compatible) is phased out</a>.
+     * After you call this operation to retrieve a list of metrics for a specified instance, you can call the <a href="https://help.aliyun.com/document_detail/473827.html">DescribeHistoryMonitorValues</a> operation to query the monitoring history of the instance.</p>
      * </blockquote>
      * 
      * @param request the request parameters of DescribeMonitorItems  DescribeMonitorItemsRequest
@@ -701,15 +707,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeTairKVCacheInferInstancesResponse> describeTairKVCacheInferInstances(DescribeTairKVCacheInferInstancesRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>You can call this operation to query the progress of a task when you perform time-consuming operations. You can also log on to the Tair (Redis OSS-compatible) console and click the Tasks icon in the upper-right corner of the <strong>Instance Information</strong> page to view the progress of the current task.</p>
-     * 
-     * @param request the request parameters of DescribeTasks  DescribeTasksRequest
-     * @return DescribeTasksResponse
-     */
-    CompletableFuture<DescribeTasksResponse> describeTasks(DescribeTasksRequest request);
-
-    /**
      * @param request the request parameters of DescribeZones  DescribeZonesRequest
      * @return DescribeZonesResponse
      */
@@ -773,7 +770,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>The log management feature of ApsaraDB for Redis requires the resources of <a href="https://help.aliyun.com/document_detail/48869.html">Log Service</a>. To use the log management feature of ApsaraDB for Redis, you can call this operation to associate the RAM role named AliyunServiceRoleForKvstore with the ApsaraDB for Redis instance. For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Associated RAM roles of ApsaraDB for Redis</a>.</p>
+     * <p>The log management feature of Tair (Redis OSS-compatible) requires the resources of <a href="https://help.aliyun.com/document_detail/48869.html">Simple Log Service</a>. To use the log management feature, you can call this operation to assign the AliyunServiceRoleForKvstore service-linked role to Tair (Redis OSS-compatible). For more information, see <a href="https://help.aliyun.com/document_detail/184337.html">Service-linked role of Tair (Redis OSS-compatible)</a>.</p>
      * 
      * @param request the request parameters of InitializeKvstorePermission  InitializeKvstorePermissionRequest
      * @return InitializeKvstorePermissionResponse
@@ -859,6 +856,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyAuditLogConfigResponse
      */
     CompletableFuture<ModifyAuditLogConfigResponse> modifyAuditLogConfig(ModifyAuditLogConfigRequest request);
+
+    /**
+     * @param request the request parameters of ModifyBackupExpireTime  ModifyBackupExpireTimeRequest
+     * @return ModifyBackupExpireTimeResponse
+     */
+    CompletableFuture<ModifyBackupExpireTimeResponse> modifyBackupExpireTime(ModifyBackupExpireTimeRequest request);
 
     /**
      * @param request the request parameters of ModifyBackupPolicy  ModifyBackupPolicyRequest
@@ -1024,9 +1027,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>When the password-free access feature is enabled, Elastic Compute Service (ECS) instances in the same virtual private cloud (VPC) can connect to the ApsaraDB for Redis instance without a password. You can also use the username and password to connect to the ApsaraDB for Redis instance.</p>
+     * <p>When the password-free access feature is enabled, Elastic Compute Service (ECS) instances in the same virtual private cloud (VPC) can connect to the Tair instance without a password. You can also use the username and password to connect to the Tair instance.</p>
      * <blockquote>
-     * <p>The ApsaraDB for Redis instance is deployed in a VPC. For more information, see <a href="https://help.aliyun.com/document_detail/85168.html">Enable password-free access</a>.</p>
+     * <p>The Tair instance is deployed in a VPC. For more information, see <a href="https://help.aliyun.com/document_detail/85168.html">Enable password-free access</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifyInstanceVpcAuthMode  ModifyInstanceVpcAuthModeRequest
@@ -1068,7 +1071,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>After you call this operation, the security groups that are added to the whitelists of the ApsaraDB for Redis instance are deleted, and the security group specified by the <strong>SecurityGroupId</strong> parameter is added to the whitelists. For more information about how to reset security groups in the ApsaraDB for Redis console, see <a href="https://help.aliyun.com/document_detail/148267.html">Add security groups</a>.</p>
+     * <p>After you call this operation, the security groups that are added to the whitelists of the Tair instance are deleted, and the security group specified by the <strong>SecurityGroupId</strong> parameter is added to the whitelists. For more information about how to reset security groups in the Tair console, see <a href="https://help.aliyun.com/document_detail/148267.html">Add security groups</a>.</p>
      * </blockquote>
      * 
      * @param request the request parameters of ModifySecurityGroupConfiguration  ModifySecurityGroupConfigurationRequest

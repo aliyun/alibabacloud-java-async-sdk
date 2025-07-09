@@ -166,7 +166,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details of the backup files.</p>
+         * <p>The queried backup sets.</p>
          */
         public Builder backups(Backups backups) {
             this.backups = backups;
@@ -509,6 +509,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
+        @com.aliyun.core.annotation.NameInMap("ExpectExpireTime")
+        private String expectExpireTime;
+
         @com.aliyun.core.annotation.NameInMap("NodeInstanceId")
         private String nodeInstanceId;
 
@@ -529,6 +532,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             this.backupStatus = builder.backupStatus;
             this.backupType = builder.backupType;
             this.engineVersion = builder.engineVersion;
+            this.expectExpireTime = builder.expectExpireTime;
             this.nodeInstanceId = builder.nodeInstanceId;
             this.recoverConfigMode = builder.recoverConfigMode;
         }
@@ -633,6 +637,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return expectExpireTime
+         */
+        public String getExpectExpireTime() {
+            return this.expectExpireTime;
+        }
+
+        /**
          * @return nodeInstanceId
          */
         public String getNodeInstanceId() {
@@ -660,6 +671,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupStatus; 
             private String backupType; 
             private String engineVersion; 
+            private String expectExpireTime; 
             private String nodeInstanceId; 
             private String recoverConfigMode; 
 
@@ -680,6 +692,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
                 this.backupStatus = model.backupStatus;
                 this.backupType = model.backupType;
                 this.engineVersion = model.engineVersion;
+                this.expectExpireTime = model.expectExpireTime;
                 this.nodeInstanceId = model.nodeInstanceId;
                 this.recoverConfigMode = model.recoverConfigMode;
             } 
@@ -731,7 +744,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             /**
              * <p>The internal download URL of the backup file.</p>
              * <blockquote>
-             * <p> You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the ApsaraDB for Redis instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the ApsaraDB for Redis instance.</p>
+             * <p> You can use this URL to download the backup file from an Elastic Compute Service (ECS) instance that is connected to the Tair instance. The ECS instance must belong to the same classic network or reside in the same virtual private cloud (VPC) as the Tair instance.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -843,6 +856,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
+                return this;
+            }
+
+            /**
+             * ExpectExpireTime.
+             */
+            public Builder expectExpireTime(String expectExpireTime) {
+                this.expectExpireTime = expectExpireTime;
                 return this;
             }
 

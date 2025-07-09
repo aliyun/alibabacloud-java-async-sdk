@@ -679,6 +679,9 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterBackupStatus")
         private String clusterBackupStatus;
 
+        @com.aliyun.core.annotation.NameInMap("ExpectExpireTime")
+        private String expectExpireTime;
+
         @com.aliyun.core.annotation.NameInMap("IsAvail")
         private Integer isAvail;
 
@@ -696,6 +699,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             this.clusterBackupSize = builder.clusterBackupSize;
             this.clusterBackupStartTime = builder.clusterBackupStartTime;
             this.clusterBackupStatus = builder.clusterBackupStatus;
+            this.expectExpireTime = builder.expectExpireTime;
             this.isAvail = builder.isAvail;
             this.progress = builder.progress;
             this.shardClassMemory = builder.shardClassMemory;
@@ -759,6 +763,13 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         }
 
         /**
+         * @return expectExpireTime
+         */
+        public String getExpectExpireTime() {
+            return this.expectExpireTime;
+        }
+
+        /**
          * @return isAvail
          */
         public Integer getIsAvail() {
@@ -787,6 +798,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             private String clusterBackupSize; 
             private String clusterBackupStartTime; 
             private String clusterBackupStatus; 
+            private String expectExpireTime; 
             private Integer isAvail; 
             private String progress; 
             private Integer shardClassMemory; 
@@ -802,6 +814,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
                 this.clusterBackupSize = model.clusterBackupSize;
                 this.clusterBackupStartTime = model.clusterBackupStartTime;
                 this.clusterBackupStatus = model.clusterBackupStatus;
+                this.expectExpireTime = model.expectExpireTime;
                 this.isAvail = model.isAvail;
                 this.progress = model.progress;
                 this.shardClassMemory = model.shardClassMemory;
@@ -883,6 +896,14 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
              */
             public Builder clusterBackupStatus(String clusterBackupStatus) {
                 this.clusterBackupStatus = clusterBackupStatus;
+                return this;
+            }
+
+            /**
+             * ExpectExpireTime.
+             */
+            public Builder expectExpireTime(String expectExpireTime) {
+                this.expectExpireTime = expectExpireTime;
                 return this;
             }
 

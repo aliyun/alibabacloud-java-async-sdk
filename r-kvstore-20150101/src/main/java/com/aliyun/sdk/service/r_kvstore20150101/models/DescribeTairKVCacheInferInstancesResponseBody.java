@@ -293,6 +293,9 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
+        @com.aliyun.core.annotation.NameInMap("ComputeUnitNum")
+        private Integer computeUnitNum;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -317,8 +320,11 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @com.aliyun.core.annotation.NameInMap("ModuleName")
-        private String moduleName;
+        @com.aliyun.core.annotation.NameInMap("Model")
+        private String model;
+
+        @com.aliyun.core.annotation.NameInMap("ModelServiceNum")
+        private Integer modelServiceNum;
 
         @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
@@ -329,17 +335,14 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @com.aliyun.core.annotation.NameInMap("ReserveGpuNum")
-        private Integer reserveGpuNum;
-
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @com.aliyun.core.annotation.NameInMap("UsedGpuNum")
-        private Integer usedGpuNum;
+        @com.aliyun.core.annotation.NameInMap("VNodeName")
+        private String vNodeName;
 
         @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
@@ -353,6 +356,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         private TairInferInstanceDTO(Builder builder) {
             this.capacity = builder.capacity;
             this.chargeType = builder.chargeType;
+            this.computeUnitNum = builder.computeUnitNum;
             this.createTime = builder.createTime;
             this.destroyTime = builder.destroyTime;
             this.endTime = builder.endTime;
@@ -361,14 +365,14 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             this.instanceName = builder.instanceName;
             this.instanceStatus = builder.instanceStatus;
             this.instanceType = builder.instanceType;
-            this.moduleName = builder.moduleName;
+            this.model = builder.model;
+            this.modelServiceNum = builder.modelServiceNum;
             this.networkType = builder.networkType;
             this.privateIp = builder.privateIp;
             this.regionId = builder.regionId;
-            this.reserveGpuNum = builder.reserveGpuNum;
             this.resourceGroupId = builder.resourceGroupId;
             this.tags = builder.tags;
-            this.usedGpuNum = builder.usedGpuNum;
+            this.vNodeName = builder.vNodeName;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
             this.zoneId = builder.zoneId;
@@ -394,6 +398,13 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
          */
         public String getChargeType() {
             return this.chargeType;
+        }
+
+        /**
+         * @return computeUnitNum
+         */
+        public Integer getComputeUnitNum() {
+            return this.computeUnitNum;
         }
 
         /**
@@ -453,10 +464,17 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return moduleName
+         * @return model
          */
-        public String getModuleName() {
-            return this.moduleName;
+        public String getModel() {
+            return this.model;
+        }
+
+        /**
+         * @return modelServiceNum
+         */
+        public Integer getModelServiceNum() {
+            return this.modelServiceNum;
         }
 
         /**
@@ -481,13 +499,6 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return reserveGpuNum
-         */
-        public Integer getReserveGpuNum() {
-            return this.reserveGpuNum;
-        }
-
-        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -502,10 +513,10 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * @return usedGpuNum
+         * @return vNodeName
          */
-        public Integer getUsedGpuNum() {
-            return this.usedGpuNum;
+        public String getVNodeName() {
+            return this.vNodeName;
         }
 
         /**
@@ -532,6 +543,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Long capacity; 
             private String chargeType; 
+            private Integer computeUnitNum; 
             private String createTime; 
             private String destroyTime; 
             private String endTime; 
@@ -540,14 +552,14 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             private String instanceName; 
             private String instanceStatus; 
             private String instanceType; 
-            private String moduleName; 
+            private String model; 
+            private Integer modelServiceNum; 
             private String networkType; 
             private String privateIp; 
             private String regionId; 
-            private Integer reserveGpuNum; 
             private String resourceGroupId; 
             private Tags tags; 
-            private Integer usedGpuNum; 
+            private String vNodeName; 
             private String vSwitchId; 
             private String vpcId; 
             private String zoneId; 
@@ -558,6 +570,7 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             private Builder(TairInferInstanceDTO model) {
                 this.capacity = model.capacity;
                 this.chargeType = model.chargeType;
+                this.computeUnitNum = model.computeUnitNum;
                 this.createTime = model.createTime;
                 this.destroyTime = model.destroyTime;
                 this.endTime = model.endTime;
@@ -566,14 +579,14 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
                 this.instanceName = model.instanceName;
                 this.instanceStatus = model.instanceStatus;
                 this.instanceType = model.instanceType;
-                this.moduleName = model.moduleName;
+                this.model = model.model;
+                this.modelServiceNum = model.modelServiceNum;
                 this.networkType = model.networkType;
                 this.privateIp = model.privateIp;
                 this.regionId = model.regionId;
-                this.reserveGpuNum = model.reserveGpuNum;
                 this.resourceGroupId = model.resourceGroupId;
                 this.tags = model.tags;
-                this.usedGpuNum = model.usedGpuNum;
+                this.vNodeName = model.vNodeName;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
                 this.zoneId = model.zoneId;
@@ -592,6 +605,14 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
+                return this;
+            }
+
+            /**
+             * ComputeUnitNum.
+             */
+            public Builder computeUnitNum(Integer computeUnitNum) {
+                this.computeUnitNum = computeUnitNum;
                 return this;
             }
 
@@ -660,10 +681,18 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * Model.
              */
-            public Builder moduleName(String moduleName) {
-                this.moduleName = moduleName;
+            public Builder model(String model) {
+                this.model = model;
+                return this;
+            }
+
+            /**
+             * ModelServiceNum.
+             */
+            public Builder modelServiceNum(Integer modelServiceNum) {
+                this.modelServiceNum = modelServiceNum;
                 return this;
             }
 
@@ -692,14 +721,6 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ReserveGpuNum.
-             */
-            public Builder reserveGpuNum(Integer reserveGpuNum) {
-                this.reserveGpuNum = reserveGpuNum;
-                return this;
-            }
-
-            /**
              * ResourceGroupId.
              */
             public Builder resourceGroupId(String resourceGroupId) {
@@ -716,10 +737,10 @@ public class DescribeTairKVCacheInferInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UsedGpuNum.
+             * VNodeName.
              */
-            public Builder usedGpuNum(Integer usedGpuNum) {
-                this.usedGpuNum = usedGpuNum;
+            public Builder vNodeName(String vNodeName) {
+                this.vNodeName = vNodeName;
                 return this;
             }
 

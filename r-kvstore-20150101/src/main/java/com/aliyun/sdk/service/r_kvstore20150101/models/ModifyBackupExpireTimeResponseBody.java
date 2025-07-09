@@ -12,15 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModifyInstanceConfigResponseBody} extends {@link TeaModel}
+ * {@link ModifyBackupExpireTimeResponseBody} extends {@link TeaModel}
  *
- * <p>ModifyInstanceConfigResponseBody</p>
+ * <p>ModifyBackupExpireTimeResponseBody</p>
  */
-public class ModifyInstanceConfigResponseBody extends TeaModel {
+public class ModifyBackupExpireTimeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ModifyInstanceConfigResponseBody(Builder builder) {
+    private ModifyBackupExpireTimeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -28,7 +28,7 @@ public class ModifyInstanceConfigResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ModifyInstanceConfigResponseBody create() {
+    public static ModifyBackupExpireTimeResponseBody create() {
         return builder().build();
     }
 
@@ -49,23 +49,20 @@ public class ModifyInstanceConfigResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ModifyInstanceConfigResponseBody model) {
+        private Builder(ModifyBackupExpireTimeResponseBody model) {
             this.requestId = model.requestId;
         } 
 
         /**
-         * <p>请求ID。</p>
-         * 
-         * <strong>example:</strong>
-         * <p>8D0C0AFC-E9CD-47A4-8395-5C31BF9B****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ModifyInstanceConfigResponseBody build() {
-            return new ModifyInstanceConfigResponseBody(this);
+        public ModifyBackupExpireTimeResponseBody build() {
+            return new ModifyBackupExpireTimeResponseBody(this);
         } 
 
     } 

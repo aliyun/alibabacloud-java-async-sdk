@@ -12,14 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ModifyInstanceVpcAuthModeRequest} extends {@link RequestModel}
+ * {@link ModifyBackupExpireTimeRequest} extends {@link RequestModel}
  *
- * <p>ModifyInstanceVpcAuthModeRequest</p>
+ * <p>ModifyBackupExpireTimeRequest</p>
  */
-public class ModifyInstanceVpcAuthModeRequest extends Request {
+public class ModifyBackupExpireTimeRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupId")
+    private String backupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpectExpireTime")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String expectExpireTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -42,32 +51,23 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SecurityToken")
-    private String securityToken;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("VpcAuthMode")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String vpcAuthMode;
-
-    private ModifyInstanceVpcAuthModeRequest(Builder builder) {
+    private ModifyBackupExpireTimeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.backupId = builder.backupId;
+        this.expectExpireTime = builder.expectExpireTime;
         this.instanceId = builder.instanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.securityToken = builder.securityToken;
-        this.vpcAuthMode = builder.vpcAuthMode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModifyInstanceVpcAuthModeRequest create() {
+    public static ModifyBackupExpireTimeRequest create() {
         return builder().build();
     }
 
@@ -81,6 +81,20 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return backupId
+     */
+    public String getBackupId() {
+        return this.backupId;
+    }
+
+    /**
+     * @return expectExpireTime
+     */
+    public String getExpectExpireTime() {
+        return this.expectExpireTime;
     }
 
     /**
@@ -118,44 +132,30 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return securityToken
-     */
-    public String getSecurityToken() {
-        return this.securityToken;
-    }
-
-    /**
-     * @return vpcAuthMode
-     */
-    public String getVpcAuthMode() {
-        return this.vpcAuthMode;
-    }
-
-    public static final class Builder extends Request.Builder<ModifyInstanceVpcAuthModeRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModifyBackupExpireTimeRequest, Builder> {
         private String regionId; 
+        private String backupId; 
+        private String expectExpireTime; 
         private String instanceId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String securityToken; 
-        private String vpcAuthMode; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyInstanceVpcAuthModeRequest request) {
+        private Builder(ModifyBackupExpireTimeRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.backupId = request.backupId;
+            this.expectExpireTime = request.expectExpireTime;
             this.instanceId = request.instanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.securityToken = request.securityToken;
-            this.vpcAuthMode = request.vpcAuthMode;
         } 
 
         /**
@@ -168,7 +168,27 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
         }
 
         /**
-         * <p>The ID of the instance.</p>
+         * BackupId.
+         */
+        public Builder backupId(String backupId) {
+            this.putQueryParameter("BackupId", backupId);
+            this.backupId = backupId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-07-06T07:25:57Z</p>
+         */
+        public Builder expectExpireTime(String expectExpireTime) {
+            this.putQueryParameter("ExpectExpireTime", expectExpireTime);
+            this.expectExpireTime = expectExpireTime;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,38 +236,9 @@ public class ModifyInstanceVpcAuthModeRequest extends Request {
             return this;
         }
 
-        /**
-         * SecurityToken.
-         */
-        public Builder securityToken(String securityToken) {
-            this.putQueryParameter("SecurityToken", securityToken);
-            this.securityToken = securityToken;
-            return this;
-        }
-
-        /**
-         * <p>Specifies whether to disable password-free access. Valid values:</p>
-         * <ul>
-         * <li><strong>Open</strong>: disables password-free access.</li>
-         * <li><strong>Close</strong>: enables password-free access.</li>
-         * </ul>
-         * <blockquote>
-         * <p> Default value: <strong>Open</strong>.</p>
-         * </blockquote>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>Close</p>
-         */
-        public Builder vpcAuthMode(String vpcAuthMode) {
-            this.putQueryParameter("VpcAuthMode", vpcAuthMode);
-            this.vpcAuthMode = vpcAuthMode;
-            return this;
-        }
-
         @Override
-        public ModifyInstanceVpcAuthModeRequest build() {
-            return new ModifyInstanceVpcAuthModeRequest(this);
+        public ModifyBackupExpireTimeRequest build() {
+            return new ModifyBackupExpireTimeRequest(this);
         } 
 
     } 
