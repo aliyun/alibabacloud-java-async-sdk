@@ -749,6 +749,9 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DataId")
         private String dataId;
 
+        @com.aliyun.core.annotation.NameInMap("DetectedLanguage")
+        private String detectedLanguage;
+
         @com.aliyun.core.annotation.NameInMap("ManualTaskId")
         private String manualTaskId;
 
@@ -767,17 +770,22 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SensitiveResult")
         private java.util.List<SensitiveResult> sensitiveResult;
 
+        @com.aliyun.core.annotation.NameInMap("TranslatedContent")
+        private String translatedContent;
+
         private Data(Builder builder) {
             this.advice = builder.advice;
             this.attackLevel = builder.attackLevel;
             this.attackResult = builder.attackResult;
             this.dataId = builder.dataId;
+            this.detectedLanguage = builder.detectedLanguage;
             this.manualTaskId = builder.manualTaskId;
             this.result = builder.result;
             this.riskLevel = builder.riskLevel;
             this.score = builder.score;
             this.sensitiveLevel = builder.sensitiveLevel;
             this.sensitiveResult = builder.sensitiveResult;
+            this.translatedContent = builder.translatedContent;
         }
 
         public static Builder builder() {
@@ -814,6 +822,13 @@ public class TextModerationPlusResponseBody extends TeaModel {
          */
         public String getDataId() {
             return this.dataId;
+        }
+
+        /**
+         * @return detectedLanguage
+         */
+        public String getDetectedLanguage() {
+            return this.detectedLanguage;
         }
 
         /**
@@ -858,17 +873,26 @@ public class TextModerationPlusResponseBody extends TeaModel {
             return this.sensitiveResult;
         }
 
+        /**
+         * @return translatedContent
+         */
+        public String getTranslatedContent() {
+            return this.translatedContent;
+        }
+
         public static final class Builder {
             private java.util.List<Advice> advice; 
             private String attackLevel; 
             private java.util.List<AttackResult> attackResult; 
             private String dataId; 
+            private String detectedLanguage; 
             private String manualTaskId; 
             private java.util.List<Result> result; 
             private String riskLevel; 
             private Float score; 
             private String sensitiveLevel; 
             private java.util.List<SensitiveResult> sensitiveResult; 
+            private String translatedContent; 
 
             private Builder() {
             } 
@@ -878,12 +902,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
                 this.attackLevel = model.attackLevel;
                 this.attackResult = model.attackResult;
                 this.dataId = model.dataId;
+                this.detectedLanguage = model.detectedLanguage;
                 this.manualTaskId = model.manualTaskId;
                 this.result = model.result;
                 this.riskLevel = model.riskLevel;
                 this.score = model.score;
                 this.sensitiveLevel = model.sensitiveLevel;
                 this.sensitiveResult = model.sensitiveResult;
+                this.translatedContent = model.translatedContent;
             } 
 
             /**
@@ -921,6 +947,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
              */
             public Builder dataId(String dataId) {
                 this.dataId = dataId;
+                return this;
+            }
+
+            /**
+             * DetectedLanguage.
+             */
+            public Builder detectedLanguage(String detectedLanguage) {
+                this.detectedLanguage = detectedLanguage;
                 return this;
             }
 
@@ -978,6 +1012,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
              */
             public Builder sensitiveResult(java.util.List<SensitiveResult> sensitiveResult) {
                 this.sensitiveResult = sensitiveResult;
+                return this;
+            }
+
+            /**
+             * TranslatedContent.
+             */
+            public Builder translatedContent(String translatedContent) {
+                this.translatedContent = translatedContent;
                 return this;
             }
 
