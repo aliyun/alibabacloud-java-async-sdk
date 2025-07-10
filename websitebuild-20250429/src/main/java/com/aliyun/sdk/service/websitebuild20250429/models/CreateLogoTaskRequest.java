@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateLogoTaskRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogoVersion")
+    private String logoVersion;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NegativePrompt")
     private String negativePrompt;
 
@@ -29,16 +33,12 @@ public class CreateLogoTaskRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Prompt")
     private String prompt;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Version")
-    private String version;
-
     private CreateLogoTaskRequest(Builder builder) {
         super(builder);
+        this.logoVersion = builder.logoVersion;
         this.negativePrompt = builder.negativePrompt;
         this.parameters = builder.parameters;
         this.prompt = builder.prompt;
-        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -52,6 +52,13 @@ public class CreateLogoTaskRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return logoVersion
+     */
+    public String getLogoVersion() {
+        return this.logoVersion;
     }
 
     /**
@@ -75,18 +82,11 @@ public class CreateLogoTaskRequest extends Request {
         return this.prompt;
     }
 
-    /**
-     * @return version
-     */
-    public String getVersion() {
-        return this.version;
-    }
-
     public static final class Builder extends Request.Builder<CreateLogoTaskRequest, Builder> {
+        private String logoVersion; 
         private String negativePrompt; 
         private String parameters; 
         private String prompt; 
-        private String version; 
 
         private Builder() {
             super();
@@ -94,11 +94,20 @@ public class CreateLogoTaskRequest extends Request {
 
         private Builder(CreateLogoTaskRequest request) {
             super(request);
+            this.logoVersion = request.logoVersion;
             this.negativePrompt = request.negativePrompt;
             this.parameters = request.parameters;
             this.prompt = request.prompt;
-            this.version = request.version;
         } 
+
+        /**
+         * LogoVersion.
+         */
+        public Builder logoVersion(String logoVersion) {
+            this.putQueryParameter("LogoVersion", logoVersion);
+            this.logoVersion = logoVersion;
+            return this;
+        }
 
         /**
          * NegativePrompt.
@@ -124,15 +133,6 @@ public class CreateLogoTaskRequest extends Request {
         public Builder prompt(String prompt) {
             this.putQueryParameter("Prompt", prompt);
             this.prompt = prompt;
-            return this;
-        }
-
-        /**
-         * Version.
-         */
-        public Builder version(String version) {
-            this.putQueryParameter("Version", version);
-            this.version = version;
             return this;
         }
 
