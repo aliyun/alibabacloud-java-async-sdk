@@ -50,6 +50,14 @@ public class InitializeRequest extends Request {
     private String dateOfExpiry;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DocName")
+    private String docName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DocNo")
+    private String docNo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DocPageConfig")
     private java.util.List<String> docPageConfig;
 
@@ -179,6 +187,8 @@ public class InitializeRequest extends Request {
         this.crop = builder.crop;
         this.dateOfBirth = builder.dateOfBirth;
         this.dateOfExpiry = builder.dateOfExpiry;
+        this.docName = builder.docName;
+        this.docNo = builder.docNo;
         this.docPageConfig = builder.docPageConfig;
         this.docScanMode = builder.docScanMode;
         this.docType = builder.docType;
@@ -278,6 +288,20 @@ public class InitializeRequest extends Request {
      */
     public String getDateOfExpiry() {
         return this.dateOfExpiry;
+    }
+
+    /**
+     * @return docName
+     */
+    public String getDocName() {
+        return this.docName;
+    }
+
+    /**
+     * @return docNo
+     */
+    public String getDocNo() {
+        return this.docNo;
     }
 
     /**
@@ -499,6 +523,8 @@ public class InitializeRequest extends Request {
         private String crop; 
         private String dateOfBirth; 
         private String dateOfExpiry; 
+        private String docName; 
+        private String docNo; 
         private java.util.List<String> docPageConfig; 
         private String docScanMode; 
         private String docType; 
@@ -544,6 +570,8 @@ public class InitializeRequest extends Request {
             this.crop = request.crop;
             this.dateOfBirth = request.dateOfBirth;
             this.dateOfExpiry = request.dateOfExpiry;
+            this.docName = request.docName;
+            this.docNo = request.docNo;
             this.docPageConfig = request.docPageConfig;
             this.docScanMode = request.docScanMode;
             this.docType = request.docType;
@@ -645,6 +673,24 @@ public class InitializeRequest extends Request {
         public Builder dateOfExpiry(String dateOfExpiry) {
             this.putQueryParameter("DateOfExpiry", dateOfExpiry);
             this.dateOfExpiry = dateOfExpiry;
+            return this;
+        }
+
+        /**
+         * DocName.
+         */
+        public Builder docName(String docName) {
+            this.putQueryParameter("DocName", docName);
+            this.docName = docName;
+            return this;
+        }
+
+        /**
+         * DocNo.
+         */
+        public Builder docNo(String docNo) {
+            this.putQueryParameter("DocNo", docNo);
+            this.docNo = docNo;
             return this;
         }
 
