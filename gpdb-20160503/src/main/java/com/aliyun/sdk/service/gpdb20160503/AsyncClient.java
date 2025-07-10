@@ -242,6 +242,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateStreamingJobResponse> createStreamingJob(CreateStreamingJobRequest request);
 
     /**
+     * @param request the request parameters of CreateSupabaseProject  CreateSupabaseProjectRequest
+     * @return CreateSupabaseProjectResponse
+     */
+    CompletableFuture<CreateSupabaseProjectResponse> createSupabaseProject(CreateSupabaseProjectRequest request);
+
+    /**
      * @param request the request parameters of CreateVectorIndex  CreateVectorIndexRequest
      * @return CreateVectorIndexResponse
      */
@@ -379,6 +385,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteStreamingJobResponse
      */
     CompletableFuture<DeleteStreamingJobResponse> deleteStreamingJob(DeleteStreamingJobRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSupabaseProject  DeleteSupabaseProjectRequest
+     * @return DeleteSupabaseProjectResponse
+     */
+    CompletableFuture<DeleteSupabaseProjectResponse> deleteSupabaseProject(DeleteSupabaseProjectRequest request);
 
     /**
      * @param request the request parameters of DeleteVectorIndex  DeleteVectorIndexRequest
@@ -997,6 +1009,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetStatementResultResponse> getStatementResult(GetStatementResultRequest request);
 
     /**
+     * @param request the request parameters of GetSupabaseProject  GetSupabaseProjectRequest
+     * @return GetSupabaseProjectResponse
+     */
+    CompletableFuture<GetSupabaseProjectResponse> getSupabaseProject(GetSupabaseProjectRequest request);
+
+    /**
+     * @param request the request parameters of GetSupabaseProjectApiKeys  GetSupabaseProjectApiKeysRequest
+     * @return GetSupabaseProjectApiKeysResponse
+     */
+    CompletableFuture<GetSupabaseProjectApiKeysResponse> getSupabaseProjectApiKeys(GetSupabaseProjectApiKeysRequest request);
+
+    /**
+     * @param request the request parameters of GetSupabaseProjectDashboardAccount  GetSupabaseProjectDashboardAccountRequest
+     * @return GetSupabaseProjectDashboardAccountResponse
+     */
+    CompletableFuture<GetSupabaseProjectDashboardAccountResponse> getSupabaseProjectDashboardAccount(GetSupabaseProjectDashboardAccountRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This operation is related to the UploadDocumentAsync operation. You can call the UploadDocumentAsync operation to create an upload job and obtain the job ID, and then call the GetUploadDocumentJob operation to query the execution information of the job.</p>
      * <blockquote>
@@ -1136,6 +1166,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListStreamingJobsResponse
      */
     CompletableFuture<ListStreamingJobsResponse> listStreamingJobs(ListStreamingJobsRequest request);
+
+    /**
+     * @param request the request parameters of ListSupabaseProjects  ListSupabaseProjectsRequest
+     * @return ListSupabaseProjectsResponse
+     */
+    CompletableFuture<ListSupabaseProjectsResponse> listSupabaseProjects(ListSupabaseProjectsRequest request);
 
     /**
      * @param request the request parameters of ListTables  ListTablesRequest
@@ -1333,6 +1369,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyStreamingJobResponse> modifyStreamingJob(ModifyStreamingJobRequest request);
 
     /**
+     * @param request the request parameters of ModifySupabaseProjectSecurityIps  ModifySupabaseProjectSecurityIpsRequest
+     * @return ModifySupabaseProjectSecurityIpsResponse
+     */
+    CompletableFuture<ModifySupabaseProjectSecurityIpsResponse> modifySupabaseProjectSecurityIps(ModifySupabaseProjectSecurityIpsRequest request);
+
+    /**
      * @param request the request parameters of ModifyVectorConfiguration  ModifyVectorConfigurationRequest
      * @return ModifyVectorConfigurationResponse
      */
@@ -1394,6 +1436,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ResetIMVMonitorDataResponse
      */
     CompletableFuture<ResetIMVMonitorDataResponse> resetIMVMonitorData(ResetIMVMonitorDataRequest request);
+
+    /**
+     * @param request the request parameters of ResetSupabaseProjectPassword  ResetSupabaseProjectPasswordRequest
+     * @return ResetSupabaseProjectPasswordResponse
+     */
+    CompletableFuture<ResetSupabaseProjectPasswordResponse> resetSupabaseProjectPassword(ResetSupabaseProjectPasswordRequest request);
 
     /**
      * <b>description</b> :
