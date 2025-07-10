@@ -116,6 +116,10 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String resourceGroupId;
+
         @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
@@ -135,6 +139,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
             this.configRuleName = builder.configRuleName;
             this.ignoreDate = builder.ignoreDate;
             this.regionId = builder.regionId;
+            this.resourceGroupId = builder.resourceGroupId;
             this.resourceId = builder.resourceId;
             this.resourceName = builder.resourceName;
             this.resourceOwnerId = builder.resourceOwnerId;
@@ -192,6 +197,13 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return resourceId
          */
         public String getResourceId() {
@@ -226,6 +238,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
             private String configRuleName; 
             private String ignoreDate; 
             private String regionId; 
+            private String resourceGroupId; 
             private String resourceId; 
             private String resourceName; 
             private Long resourceOwnerId; 
@@ -241,6 +254,7 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
                 this.configRuleName = model.configRuleName;
                 this.ignoreDate = model.ignoreDate;
                 this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
                 this.resourceId = model.resourceId;
                 this.resourceName = model.resourceName;
                 this.resourceOwnerId = model.resourceOwnerId;
@@ -313,6 +327,14 @@ public class ListConfigRuleEvaluationResultsResponseBody extends TeaModel {
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
                 return this;
             }
 
