@@ -45,6 +45,18 @@ public class RenewAppInstanceGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PromotionId")
     private String promotionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenewAmount")
+    private Integer renewAmount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenewMode")
+    private String renewMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RenewNodes")
+    private java.util.List<String> renewNodes;
+
     private RenewAppInstanceGroupRequest(Builder builder) {
         super(builder);
         this.appInstanceGroupId = builder.appInstanceGroupId;
@@ -53,6 +65,9 @@ public class RenewAppInstanceGroupRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.productType = builder.productType;
         this.promotionId = builder.promotionId;
+        this.renewAmount = builder.renewAmount;
+        this.renewMode = builder.renewMode;
+        this.renewNodes = builder.renewNodes;
     }
 
     public static Builder builder() {
@@ -110,6 +125,27 @@ public class RenewAppInstanceGroupRequest extends Request {
         return this.promotionId;
     }
 
+    /**
+     * @return renewAmount
+     */
+    public Integer getRenewAmount() {
+        return this.renewAmount;
+    }
+
+    /**
+     * @return renewMode
+     */
+    public String getRenewMode() {
+        return this.renewMode;
+    }
+
+    /**
+     * @return renewNodes
+     */
+    public java.util.List<String> getRenewNodes() {
+        return this.renewNodes;
+    }
+
     public static final class Builder extends Request.Builder<RenewAppInstanceGroupRequest, Builder> {
         private String appInstanceGroupId; 
         private Boolean autoPay; 
@@ -117,6 +153,9 @@ public class RenewAppInstanceGroupRequest extends Request {
         private String periodUnit; 
         private String productType; 
         private String promotionId; 
+        private Integer renewAmount; 
+        private String renewMode; 
+        private java.util.List<String> renewNodes; 
 
         private Builder() {
             super();
@@ -130,6 +169,9 @@ public class RenewAppInstanceGroupRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.productType = request.productType;
             this.promotionId = request.promotionId;
+            this.renewAmount = request.renewAmount;
+            this.renewMode = request.renewMode;
+            this.renewNodes = request.renewNodes;
         } 
 
         /**
@@ -227,6 +269,34 @@ public class RenewAppInstanceGroupRequest extends Request {
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
             this.promotionId = promotionId;
+            return this;
+        }
+
+        /**
+         * RenewAmount.
+         */
+        public Builder renewAmount(Integer renewAmount) {
+            this.putQueryParameter("RenewAmount", renewAmount);
+            this.renewAmount = renewAmount;
+            return this;
+        }
+
+        /**
+         * RenewMode.
+         */
+        public Builder renewMode(String renewMode) {
+            this.putQueryParameter("RenewMode", renewMode);
+            this.renewMode = renewMode;
+            return this;
+        }
+
+        /**
+         * RenewNodes.
+         */
+        public Builder renewNodes(java.util.List<String> renewNodes) {
+            String renewNodesShrink = shrink(renewNodes, "RenewNodes", "json");
+            this.putQueryParameter("RenewNodes", renewNodesShrink);
+            this.renewNodes = renewNodes;
             return this;
         }
 
