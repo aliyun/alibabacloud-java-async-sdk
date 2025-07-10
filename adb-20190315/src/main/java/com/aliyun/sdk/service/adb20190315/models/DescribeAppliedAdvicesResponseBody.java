@@ -205,6 +205,9 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BuildSQL")
         private String buildSQL;
 
+        @com.aliyun.core.annotation.NameInMap("IndexFields")
+        private String indexFields;
+
         @com.aliyun.core.annotation.NameInMap("JobStatus")
         private String jobStatus;
 
@@ -239,6 +242,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             this.adviceId = builder.adviceId;
             this.benefit = builder.benefit;
             this.buildSQL = builder.buildSQL;
+            this.indexFields = builder.indexFields;
             this.jobStatus = builder.jobStatus;
             this.pageNumber = builder.pageNumber;
             this.pageSize = builder.pageSize;
@@ -278,6 +282,13 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
          */
         public String getBuildSQL() {
             return this.buildSQL;
+        }
+
+        /**
+         * @return indexFields
+         */
+        public String getIndexFields() {
+            return this.indexFields;
         }
 
         /**
@@ -354,6 +365,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
             private String adviceId; 
             private String benefit; 
             private String buildSQL; 
+            private String indexFields; 
             private String jobStatus; 
             private Long pageNumber; 
             private Long pageSize; 
@@ -372,6 +384,7 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
                 this.adviceId = model.adviceId;
                 this.benefit = model.benefit;
                 this.buildSQL = model.buildSQL;
+                this.indexFields = model.indexFields;
                 this.jobStatus = model.jobStatus;
                 this.pageNumber = model.pageNumber;
                 this.pageSize = model.pageSize;
@@ -414,6 +427,14 @@ public class DescribeAppliedAdvicesResponseBody extends TeaModel {
              */
             public Builder buildSQL(String buildSQL) {
                 this.buildSQL = buildSQL;
+                return this;
+            }
+
+            /**
+             * IndexFields.
+             */
+            public Builder indexFields(String indexFields) {
+                this.indexFields = indexFields;
                 return this;
             }
 

@@ -26,6 +26,14 @@ public class BatchApplyAdviceByIdListRequest extends Request {
     private String adviceIdList;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyType")
+    private String applyType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BuildImmediately")
+    private Boolean buildImmediately;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
@@ -39,6 +47,8 @@ public class BatchApplyAdviceByIdListRequest extends Request {
         super(builder);
         this.adviceDate = builder.adviceDate;
         this.adviceIdList = builder.adviceIdList;
+        this.applyType = builder.applyType;
+        this.buildImmediately = builder.buildImmediately;
         this.DBClusterId = builder.DBClusterId;
         this.regionId = builder.regionId;
     }
@@ -71,6 +81,20 @@ public class BatchApplyAdviceByIdListRequest extends Request {
     }
 
     /**
+     * @return applyType
+     */
+    public String getApplyType() {
+        return this.applyType;
+    }
+
+    /**
+     * @return buildImmediately
+     */
+    public Boolean getBuildImmediately() {
+        return this.buildImmediately;
+    }
+
+    /**
      * @return DBClusterId
      */
     public String getDBClusterId() {
@@ -87,6 +111,8 @@ public class BatchApplyAdviceByIdListRequest extends Request {
     public static final class Builder extends Request.Builder<BatchApplyAdviceByIdListRequest, Builder> {
         private Long adviceDate; 
         private String adviceIdList; 
+        private String applyType; 
+        private Boolean buildImmediately; 
         private String DBClusterId; 
         private String regionId; 
 
@@ -98,6 +124,8 @@ public class BatchApplyAdviceByIdListRequest extends Request {
             super(request);
             this.adviceDate = request.adviceDate;
             this.adviceIdList = request.adviceIdList;
+            this.applyType = request.applyType;
+            this.buildImmediately = request.buildImmediately;
             this.DBClusterId = request.DBClusterId;
             this.regionId = request.regionId;
         } 
@@ -123,6 +151,24 @@ public class BatchApplyAdviceByIdListRequest extends Request {
         public Builder adviceIdList(String adviceIdList) {
             this.putQueryParameter("AdviceIdList", adviceIdList);
             this.adviceIdList = adviceIdList;
+            return this;
+        }
+
+        /**
+         * ApplyType.
+         */
+        public Builder applyType(String applyType) {
+            this.putQueryParameter("ApplyType", applyType);
+            this.applyType = applyType;
+            return this;
+        }
+
+        /**
+         * BuildImmediately.
+         */
+        public Builder buildImmediately(Boolean buildImmediately) {
+            this.putQueryParameter("BuildImmediately", buildImmediately);
+            this.buildImmediately = buildImmediately;
             return this;
         }
 

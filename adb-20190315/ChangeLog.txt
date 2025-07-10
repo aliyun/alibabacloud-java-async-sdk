@@ -1,3 +1,6 @@
+2025-07-10 Version: 5.0.6
+- Generated java-async 2019-03-15 for adb.
+
 2025-06-28 Version: 5.0.5
 - Generated java-async 2019-03-15 for adb.
 
