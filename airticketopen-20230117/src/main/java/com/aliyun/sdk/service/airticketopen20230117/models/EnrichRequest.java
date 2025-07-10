@@ -278,6 +278,7 @@ public class EnrichRequest extends Request {
         private String arrivalAirport;
 
         @com.aliyun.core.annotation.NameInMap("arrival_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String arrivalCity;
 
         @com.aliyun.core.annotation.NameInMap("cabin")
@@ -290,9 +291,11 @@ public class EnrichRequest extends Request {
         private String departureAirport;
 
         @com.aliyun.core.annotation.NameInMap("departure_city")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String departureCity;
 
         @com.aliyun.core.annotation.NameInMap("departure_time")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String departureTime;
 
         @com.aliyun.core.annotation.NameInMap("marketing_flight_no")
@@ -411,6 +414,7 @@ public class EnrichRequest extends Request {
 
             /**
              * <p>arrival city code (capitalized)</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>MFM</p>
@@ -455,6 +459,7 @@ public class EnrichRequest extends Request {
 
             /**
              * <p>departure city code (capitalized)</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>SHA</p>
@@ -466,6 +471,7 @@ public class EnrichRequest extends Request {
 
             /**
              * <p>departure time in string format (yyyy-MM-dd HH:mm:ss)</p>
+             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>2023-03-10 07:55:00</p>
