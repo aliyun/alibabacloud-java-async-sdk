@@ -31,6 +31,10 @@ public class ModifyAppRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Disabled")
+    private Boolean disabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Extend")
     private String extend;
 
@@ -47,6 +51,7 @@ public class ModifyAppRequest extends Request {
         this.appId = builder.appId;
         this.appName = builder.appName;
         this.description = builder.description;
+        this.disabled = builder.disabled;
         this.extend = builder.extend;
         this.securityToken = builder.securityToken;
         this.tag = builder.tag;
@@ -87,6 +92,13 @@ public class ModifyAppRequest extends Request {
     }
 
     /**
+     * @return disabled
+     */
+    public Boolean getDisabled() {
+        return this.disabled;
+    }
+
+    /**
      * @return extend
      */
     public String getExtend() {
@@ -111,6 +123,7 @@ public class ModifyAppRequest extends Request {
         private Long appId; 
         private String appName; 
         private String description; 
+        private Boolean disabled; 
         private String extend; 
         private String securityToken; 
         private java.util.List<Tag> tag; 
@@ -124,6 +137,7 @@ public class ModifyAppRequest extends Request {
             this.appId = request.appId;
             this.appName = request.appName;
             this.description = request.description;
+            this.disabled = request.disabled;
             this.extend = request.extend;
             this.securityToken = request.securityToken;
             this.tag = request.tag;
@@ -165,6 +179,15 @@ public class ModifyAppRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Disabled.
+         */
+        public Builder disabled(Boolean disabled) {
+            this.putQueryParameter("Disabled", disabled);
+            this.disabled = disabled;
             return this;
         }
 

@@ -29,6 +29,9 @@ public class DescribeAppResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
+    @com.aliyun.core.annotation.NameInMap("Disabled")
+    private Boolean disabled;
+
     @com.aliyun.core.annotation.NameInMap("Extend")
     private String extend;
 
@@ -43,6 +46,7 @@ public class DescribeAppResponseBody extends TeaModel {
         this.appName = builder.appName;
         this.createdTime = builder.createdTime;
         this.description = builder.description;
+        this.disabled = builder.disabled;
         this.extend = builder.extend;
         this.modifiedTime = builder.modifiedTime;
         this.requestId = builder.requestId;
@@ -89,6 +93,13 @@ public class DescribeAppResponseBody extends TeaModel {
     }
 
     /**
+     * @return disabled
+     */
+    public Boolean getDisabled() {
+        return this.disabled;
+    }
+
+    /**
      * @return extend
      */
     public String getExtend() {
@@ -114,6 +125,7 @@ public class DescribeAppResponseBody extends TeaModel {
         private String appName; 
         private String createdTime; 
         private String description; 
+        private Boolean disabled; 
         private String extend; 
         private String modifiedTime; 
         private String requestId; 
@@ -126,6 +138,7 @@ public class DescribeAppResponseBody extends TeaModel {
             this.appName = model.appName;
             this.createdTime = model.createdTime;
             this.description = model.description;
+            this.disabled = model.disabled;
             this.extend = model.extend;
             this.modifiedTime = model.modifiedTime;
             this.requestId = model.requestId;
@@ -172,6 +185,14 @@ public class DescribeAppResponseBody extends TeaModel {
          */
         public Builder description(String description) {
             this.description = description;
+            return this;
+        }
+
+        /**
+         * Disabled.
+         */
+        public Builder disabled(Boolean disabled) {
+            this.disabled = disabled;
             return this;
         }
 
