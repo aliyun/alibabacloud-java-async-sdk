@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.energyexpertexternal20220923;
 
 import com.aliyun.core.http.*;
 import com.aliyun.sdk.service.energyexpertexternal20220923.models.*;
+import darabonba.core.sse.SSEHttpResponseHandler;
 import darabonba.core.utils.*;
 import com.aliyun.sdk.gateway.pop.*;
 import darabonba.core.*;
@@ -98,6 +99,41 @@ public final class DefaultAsyncClient implements AsyncClient {
             future.completeExceptionally(e);
             return future;
         }
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The interface provides Q&amp;A services within the scope of the selected directory in the session.</li>
+     * <li>The sessionId information is obtained through GetChatSessionList.</li>
+     * <li>You can also create a new session via the CreateChatSession interface.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ChatStream  ChatStreamRequest
+     * @return ChatStreamResponse
+     */
+    @Override
+    public CompletableFuture<ChatStreamResponse> chatStream(ChatStreamRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ChatStream").setMethod(HttpMethod.POST).setPathRegex("/api/v2/aidoc/document/chat/stream").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ChatStreamResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ChatStreamResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<ChatStreamResponseBody> chatStreamWithResponseIterable(ChatStreamRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("ChatStream").setMethod(HttpMethod.POST).setPathRegex("/api/v2/aidoc/document/chat/stream").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+        ChatStreamResponseBodyIterator iterator = ChatStreamResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
     }
 
     /**

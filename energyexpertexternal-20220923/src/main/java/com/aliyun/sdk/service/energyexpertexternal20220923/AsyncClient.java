@@ -45,6 +45,21 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChatResponse> chat(ChatRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>The interface provides Q&amp;A services within the scope of the selected directory in the session.</li>
+     * <li>The sessionId information is obtained through GetChatSessionList.</li>
+     * <li>You can also create a new session via the CreateChatSession interface.</li>
+     * </ul>
+     * 
+     * @param request the request parameters of ChatStream  ChatStreamRequest
+     * @return ChatStreamResponse
+     */
+    CompletableFuture<ChatStreamResponse> chatStream(ChatStreamRequest request);
+
+    ResponseIterable<ChatStreamResponseBody> chatStreamWithResponseIterable(ChatStreamRequest request);
+
+    /**
      * @param request the request parameters of CreateChatSession  CreateChatSessionRequest
      * @return CreateChatSessionResponse
      */
