@@ -131,6 +131,9 @@ public class ListExecutorsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("ExecutorIds")
         private java.util.List<String> executorIds;
 
+        @com.aliyun.core.annotation.NameInMap("Image")
+        private String image;
+
         @com.aliyun.core.annotation.NameInMap("IpAddresses")
         private java.util.List<String> ipAddresses;
 
@@ -146,13 +149,18 @@ public class ListExecutorsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("TimeCreatedBefore")
         private Integer timeCreatedBefore;
 
+        @com.aliyun.core.annotation.NameInMap("VswitchId")
+        private String vswitchId;
+
         private Filter(Builder builder) {
             this.executorIds = builder.executorIds;
+            this.image = builder.image;
             this.ipAddresses = builder.ipAddresses;
             this.jobName = builder.jobName;
             this.status = builder.status;
             this.timeCreatedAfter = builder.timeCreatedAfter;
             this.timeCreatedBefore = builder.timeCreatedBefore;
+            this.vswitchId = builder.vswitchId;
         }
 
         public static Builder builder() {
@@ -168,6 +176,13 @@ public class ListExecutorsRequest extends Request {
          */
         public java.util.List<String> getExecutorIds() {
             return this.executorIds;
+        }
+
+        /**
+         * @return image
+         */
+        public String getImage() {
+            return this.image;
         }
 
         /**
@@ -205,24 +220,35 @@ public class ListExecutorsRequest extends Request {
             return this.timeCreatedBefore;
         }
 
+        /**
+         * @return vswitchId
+         */
+        public String getVswitchId() {
+            return this.vswitchId;
+        }
+
         public static final class Builder {
             private java.util.List<String> executorIds; 
+            private String image; 
             private java.util.List<String> ipAddresses; 
             private String jobName; 
             private java.util.List<String> status; 
             private Integer timeCreatedAfter; 
             private Integer timeCreatedBefore; 
+            private String vswitchId; 
 
             private Builder() {
             } 
 
             private Builder(Filter model) {
                 this.executorIds = model.executorIds;
+                this.image = model.image;
                 this.ipAddresses = model.ipAddresses;
                 this.jobName = model.jobName;
                 this.status = model.status;
                 this.timeCreatedAfter = model.timeCreatedAfter;
                 this.timeCreatedBefore = model.timeCreatedBefore;
+                this.vswitchId = model.vswitchId;
             } 
 
             /**
@@ -230,6 +256,14 @@ public class ListExecutorsRequest extends Request {
              */
             public Builder executorIds(java.util.List<String> executorIds) {
                 this.executorIds = executorIds;
+                return this;
+            }
+
+            /**
+             * Image.
+             */
+            public Builder image(String image) {
+                this.image = image;
                 return this;
             }
 
@@ -270,6 +304,14 @@ public class ListExecutorsRequest extends Request {
              */
             public Builder timeCreatedBefore(Integer timeCreatedBefore) {
                 this.timeCreatedBefore = timeCreatedBefore;
+                return this;
+            }
+
+            /**
+             * VswitchId.
+             */
+            public Builder vswitchId(String vswitchId) {
+                this.vswitchId = vswitchId;
                 return this;
             }
 
