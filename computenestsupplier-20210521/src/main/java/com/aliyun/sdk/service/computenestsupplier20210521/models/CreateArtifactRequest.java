@@ -693,6 +693,9 @@ public class CreateArtifactRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DockerfilePath")
         private String dockerfilePath;
 
+        @com.aliyun.core.annotation.NameInMap("EnableGpu")
+        private Boolean enableGpu;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -711,6 +714,7 @@ public class CreateArtifactRequest extends Request {
             this.commandContent = builder.commandContent;
             this.commandType = builder.commandType;
             this.dockerfilePath = builder.dockerfilePath;
+            this.enableGpu = builder.enableGpu;
             this.regionId = builder.regionId;
             this.sourceContainerImage = builder.sourceContainerImage;
             this.sourceImageId = builder.sourceImageId;
@@ -761,6 +765,13 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
+         * @return enableGpu
+         */
+        public Boolean getEnableGpu() {
+            return this.enableGpu;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -794,6 +805,7 @@ public class CreateArtifactRequest extends Request {
             private String commandContent; 
             private String commandType; 
             private String dockerfilePath; 
+            private Boolean enableGpu; 
             private String regionId; 
             private String sourceContainerImage; 
             private String sourceImageId; 
@@ -808,6 +820,7 @@ public class CreateArtifactRequest extends Request {
                 this.commandContent = model.commandContent;
                 this.commandType = model.commandType;
                 this.dockerfilePath = model.dockerfilePath;
+                this.enableGpu = model.enableGpu;
                 this.regionId = model.regionId;
                 this.sourceContainerImage = model.sourceContainerImage;
                 this.sourceImageId = model.sourceImageId;
@@ -880,6 +893,14 @@ public class CreateArtifactRequest extends Request {
              */
             public Builder dockerfilePath(String dockerfilePath) {
                 this.dockerfilePath = dockerfilePath;
+                return this;
+            }
+
+            /**
+             * EnableGpu.
+             */
+            public Builder enableGpu(Boolean enableGpu) {
+                this.enableGpu = enableGpu;
                 return this;
             }
 
