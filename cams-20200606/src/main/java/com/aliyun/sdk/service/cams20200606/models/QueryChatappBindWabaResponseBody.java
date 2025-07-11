@@ -384,7 +384,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The ID of the business platform.</p>
+             * <p>The business ID.</p>
              * 
              * <strong>example:</strong>
              * <p>19293988***</p>
@@ -395,7 +395,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the business platform.</p>
+             * <p>The business name.</p>
              * 
              * <strong>example:</strong>
              * <p>Alibaba</p>
@@ -428,7 +428,10 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             }
 
             /**
-             * MarketingMessageLiteStatus.
+             * <p>The Marketing Messaging Lite status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Y</p>
              */
             public Builder marketingMessageLiteStatus(String marketingMessageLiteStatus) {
                 this.marketingMessageLiteStatus = marketingMessageLiteStatus;

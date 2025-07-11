@@ -12,23 +12,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListPhoneMessageQrdlRequest} extends {@link RequestModel}
+ * {@link DeleteChatFlowRequest} extends {@link RequestModel}
  *
- * <p>ListPhoneMessageQrdlRequest</p>
+ * <p>DeleteChatFlowRequest</p>
  */
-public class ListPhoneMessageQrdlRequest extends Request {
+public class DeleteChatFlowRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
-    private String custSpaceId;
+    @com.aliyun.core.annotation.NameInMap("BizCode")
+    private String bizCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizExtend")
+    private java.util.Map<String, ?> bizExtend;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowCode")
+    private String flowCode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String phoneNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -38,11 +41,12 @@ public class ListPhoneMessageQrdlRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private ListPhoneMessageQrdlRequest(Builder builder) {
+    private DeleteChatFlowRequest(Builder builder) {
         super(builder);
-        this.custSpaceId = builder.custSpaceId;
+        this.bizCode = builder.bizCode;
+        this.bizExtend = builder.bizExtend;
+        this.flowCode = builder.flowCode;
         this.ownerId = builder.ownerId;
-        this.phoneNumber = builder.phoneNumber;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -51,7 +55,7 @@ public class ListPhoneMessageQrdlRequest extends Request {
         return new Builder();
     }
 
-    public static ListPhoneMessageQrdlRequest create() {
+    public static DeleteChatFlowRequest create() {
         return builder().build();
     }
 
@@ -61,10 +65,24 @@ public class ListPhoneMessageQrdlRequest extends Request {
     }
 
     /**
-     * @return custSpaceId
+     * @return bizCode
      */
-    public String getCustSpaceId() {
-        return this.custSpaceId;
+    public String getBizCode() {
+        return this.bizCode;
+    }
+
+    /**
+     * @return bizExtend
+     */
+    public java.util.Map<String, ?> getBizExtend() {
+        return this.bizExtend;
+    }
+
+    /**
+     * @return flowCode
+     */
+    public String getFlowCode() {
+        return this.flowCode;
     }
 
     /**
@@ -72,13 +90,6 @@ public class ListPhoneMessageQrdlRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return phoneNumber
-     */
-    public String getPhoneNumber() {
-        return this.phoneNumber;
     }
 
     /**
@@ -95,10 +106,11 @@ public class ListPhoneMessageQrdlRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<ListPhoneMessageQrdlRequest, Builder> {
-        private String custSpaceId; 
+    public static final class Builder extends Request.Builder<DeleteChatFlowRequest, Builder> {
+        private String bizCode; 
+        private java.util.Map<String, ?> bizExtend; 
+        private String flowCode; 
         private Long ownerId; 
-        private String phoneNumber; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -106,21 +118,50 @@ public class ListPhoneMessageQrdlRequest extends Request {
             super();
         } 
 
-        private Builder(ListPhoneMessageQrdlRequest request) {
+        private Builder(DeleteChatFlowRequest request) {
             super(request);
-            this.custSpaceId = request.custSpaceId;
+            this.bizCode = request.bizCode;
+            this.bizExtend = request.bizExtend;
+            this.flowCode = request.flowCode;
             this.ownerId = request.ownerId;
-            this.phoneNumber = request.phoneNumber;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CustSpaceId.
+         * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALICOM_OPAAS</p>
          */
-        public Builder custSpaceId(String custSpaceId) {
-            this.putQueryParameter("CustSpaceId", custSpaceId);
-            this.custSpaceId = custSpaceId;
+        public Builder bizCode(String bizCode) {
+            this.putQueryParameter("BizCode", bizCode);
+            this.bizCode = bizCode;
+            return this;
+        }
+
+        /**
+         * <p>Business extension information, default is “{}”.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
+         */
+        public Builder bizExtend(java.util.Map<String, ?> bizExtend) {
+            String bizExtendShrink = shrink(bizExtend, "BizExtend", "json");
+            this.putQueryParameter("BizExtend", bizExtendShrink);
+            this.bizExtend = bizExtend;
+            return this;
+        }
+
+        /**
+         * <p>Process code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>示例值</p>
+         */
+        public Builder flowCode(String flowCode) {
+            this.putQueryParameter("FlowCode", flowCode);
+            this.flowCode = flowCode;
             return this;
         }
 
@@ -130,18 +171,6 @@ public class ListPhoneMessageQrdlRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>示例值</p>
-         */
-        public Builder phoneNumber(String phoneNumber) {
-            this.putQueryParameter("PhoneNumber", phoneNumber);
-            this.phoneNumber = phoneNumber;
             return this;
         }
 
@@ -164,8 +193,8 @@ public class ListPhoneMessageQrdlRequest extends Request {
         }
 
         @Override
-        public ListPhoneMessageQrdlRequest build() {
-            return new ListPhoneMessageQrdlRequest(this);
+        public DeleteChatFlowRequest build() {
+            return new DeleteChatFlowRequest(this);
         } 
 
     } 

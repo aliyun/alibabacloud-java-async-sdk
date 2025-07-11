@@ -12,23 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListPhoneMessageQrdlRequest} extends {@link RequestModel}
+ * {@link GetChatFlowTemplateRequest} extends {@link RequestModel}
  *
- * <p>ListPhoneMessageQrdlRequest</p>
+ * <p>GetChatFlowTemplateRequest</p>
  */
-public class ListPhoneMessageQrdlRequest extends Request {
+public class GetChatFlowTemplateRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
-    private String custSpaceId;
+    @com.aliyun.core.annotation.NameInMap("BizCode")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String bizCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    private Long id;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String phoneNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -38,11 +38,11 @@ public class ListPhoneMessageQrdlRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private ListPhoneMessageQrdlRequest(Builder builder) {
+    private GetChatFlowTemplateRequest(Builder builder) {
         super(builder);
-        this.custSpaceId = builder.custSpaceId;
+        this.bizCode = builder.bizCode;
+        this.id = builder.id;
         this.ownerId = builder.ownerId;
-        this.phoneNumber = builder.phoneNumber;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -51,7 +51,7 @@ public class ListPhoneMessageQrdlRequest extends Request {
         return new Builder();
     }
 
-    public static ListPhoneMessageQrdlRequest create() {
+    public static GetChatFlowTemplateRequest create() {
         return builder().build();
     }
 
@@ -61,10 +61,17 @@ public class ListPhoneMessageQrdlRequest extends Request {
     }
 
     /**
-     * @return custSpaceId
+     * @return bizCode
      */
-    public String getCustSpaceId() {
-        return this.custSpaceId;
+    public String getBizCode() {
+        return this.bizCode;
+    }
+
+    /**
+     * @return id
+     */
+    public Long getId() {
+        return this.id;
     }
 
     /**
@@ -72,13 +79,6 @@ public class ListPhoneMessageQrdlRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return phoneNumber
-     */
-    public String getPhoneNumber() {
-        return this.phoneNumber;
     }
 
     /**
@@ -95,10 +95,10 @@ public class ListPhoneMessageQrdlRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<ListPhoneMessageQrdlRequest, Builder> {
-        private String custSpaceId; 
+    public static final class Builder extends Request.Builder<GetChatFlowTemplateRequest, Builder> {
+        private String bizCode; 
+        private Long id; 
         private Long ownerId; 
-        private String phoneNumber; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -106,21 +106,37 @@ public class ListPhoneMessageQrdlRequest extends Request {
             super();
         } 
 
-        private Builder(ListPhoneMessageQrdlRequest request) {
+        private Builder(GetChatFlowTemplateRequest request) {
             super(request);
-            this.custSpaceId = request.custSpaceId;
+            this.bizCode = request.bizCode;
+            this.id = request.id;
             this.ownerId = request.ownerId;
-            this.phoneNumber = request.phoneNumber;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CustSpaceId.
+         * <p>Business tenant code, default is “ALICOM_OPAAS”.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALICOM_OPAAS</p>
          */
-        public Builder custSpaceId(String custSpaceId) {
-            this.putQueryParameter("CustSpaceId", custSpaceId);
-            this.custSpaceId = custSpaceId;
+        public Builder bizCode(String bizCode) {
+            this.putQueryParameter("BizCode", bizCode);
+            this.bizCode = bizCode;
+            return this;
+        }
+
+        /**
+         * <p>Template ID</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
+         */
+        public Builder id(Long id) {
+            this.putQueryParameter("Id", id);
+            this.id = id;
             return this;
         }
 
@@ -130,18 +146,6 @@ public class ListPhoneMessageQrdlRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>示例值</p>
-         */
-        public Builder phoneNumber(String phoneNumber) {
-            this.putQueryParameter("PhoneNumber", phoneNumber);
-            this.phoneNumber = phoneNumber;
             return this;
         }
 
@@ -164,8 +168,8 @@ public class ListPhoneMessageQrdlRequest extends Request {
         }
 
         @Override
-        public ListPhoneMessageQrdlRequest build() {
-            return new ListPhoneMessageQrdlRequest(this);
+        public GetChatFlowTemplateRequest build() {
+            return new GetChatFlowTemplateRequest(this);
         } 
 
     } 

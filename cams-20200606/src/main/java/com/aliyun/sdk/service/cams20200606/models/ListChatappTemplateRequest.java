@@ -228,11 +228,11 @@ public class ListChatappTemplateRequest extends Request {
         } 
 
         /**
-         * <p>The review status of the message template. Valid values:</p>
+         * <p>The review state of the template. Valid values:</p>
          * <ul>
-         * <li><strong>pass</strong>: The message template is approved.</li>
-         * <li><strong>fail</strong>: The message template is rejected.</li>
-         * <li><strong>auditing</strong>: The message template is being reviewed.</li>
+         * <li><strong>pass</strong>: The template is approved.</li>
+         * <li><strong>fail</strong>: The template is rejected.</li>
+         * <li><strong>auditing</strong>: The template is being reviewed.</li>
          * <li><strong>unaudit</strong>: The review is suspended.</li>
          * </ul>
          * 
@@ -246,7 +246,10 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * Category.
+         * <p>The category of the message template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AUTHENTICATION</p>
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -255,7 +258,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * <p>Template encoding.</p>
+         * <p>The code of the message template.</p>
          * 
          * <strong>example:</strong>
          * <p>838888822*****</p>
@@ -267,7 +270,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * <p>The space ID of the user under the ISV account.</p>
+         * <p>The space ID of the RAM user within the ISV account.</p>
          * 
          * <strong>example:</strong>
          * <p>28251486512358****</p>
@@ -279,7 +282,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * <p>The WhatsApp Business account (WABA) ID of the user within the independent software vendor (ISV) account.</p>
+         * <p>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</p>
          * <blockquote>
          * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
          * </blockquote>
@@ -294,7 +297,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * <p>The independent software vendor (ISV) verification code, which is used to verify whether the user is authorized by the ISV account.</p>
+         * <p>The ISV verification code. This parameter is used to verify whether the RAM user is authorized by the ISV account.</p>
          * 
          * <strong>example:</strong>
          * <p>skdi3kksloslikdkkdk</p>
@@ -318,7 +321,7 @@ public class ListChatappTemplateRequest extends Request {
         }
 
         /**
-         * <p>The name of the message template.</p>
+         * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>hello_whatsapp</p>
@@ -374,7 +377,6 @@ public class ListChatappTemplateRequest extends Request {
          * <ul>
          * <li><strong>WHATSAPP</strong></li>
          * <li><strong>VIBER</strong></li>
-         * <li>LINE: the Line message template. This type of message template will be released later.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -39,24 +39,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation up to 100 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
-     * 
-     * @param request the request parameters of BeeBotAssociate  BeeBotAssociateRequest
-     * @return BeeBotAssociateResponse
-     */
-    CompletableFuture<BeeBotAssociateResponse> beeBotAssociate(BeeBotAssociateRequest request);
-
-    /**
-     * <b>description</b> :
-     * <p>The ID of the session.</p>
-     * 
-     * @param request the request parameters of BeeBotChat  BeeBotChatRequest
-     * @return BeeBotChatResponse
-     */
-    CompletableFuture<BeeBotChatResponse> beeBotChat(BeeBotChatRequest request);
-
-    /**
-     * <b>description</b> :
      * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
      * @param request the request parameters of ChatappBindWaba  ChatappBindWabaRequest
@@ -128,6 +110,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChatappVerifyAndRegisterResponse> chatappVerifyAndRegister(ChatappVerifyAndRegisterRequest request);
 
     /**
+     * @param request the request parameters of CreateChatFlow  CreateChatFlowRequest
+     * @return CreateChatFlowResponse
+     */
+    CompletableFuture<CreateChatFlowResponse> createChatFlow(CreateChatFlowRequest request);
+
+    /**
+     * @param request the request parameters of CreateChatFlowByImport  CreateChatFlowByImportRequest
+     * @return CreateChatFlowByImportResponse
+     */
+    CompletableFuture<CreateChatFlowByImportResponse> createChatFlowByImport(CreateChatFlowByImportRequest request);
+
+    /**
+     * @param request the request parameters of CreateChatFlowLogSetting  CreateChatFlowLogSettingRequest
+     * @return CreateChatFlowLogSettingResponse
+     */
+    CompletableFuture<CreateChatFlowLogSettingResponse> createChatFlowLogSetting(CreateChatFlowLogSettingRequest request);
+
+    /**
      * <b>description</b> :
      * <p>The status of the phone number.</p>
      * 
@@ -156,10 +156,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateFlowResponse> createFlow(CreateFlowRequest request);
 
     /**
+     * @param request the request parameters of CreateFlowVersion  CreateFlowVersionRequest
+     * @return CreateFlowVersionResponse
+     */
+    CompletableFuture<CreateFlowVersionResponse> createFlowVersion(CreateFlowVersionRequest request);
+
+    /**
      * @param request the request parameters of CreatePhoneMessageQrdl  CreatePhoneMessageQrdlRequest
      * @return CreatePhoneMessageQrdlResponse
      */
     CompletableFuture<CreatePhoneMessageQrdlResponse> createPhoneMessageQrdl(CreatePhoneMessageQrdlRequest request);
+
+    /**
+     * @param request the request parameters of DeleteChatFlow  DeleteChatFlowRequest
+     * @return DeleteChatFlowResponse
+     */
+    CompletableFuture<DeleteChatFlowResponse> deleteChatFlow(DeleteChatFlowRequest request);
 
     /**
      * @param request the request parameters of DeleteChatGroup  DeleteChatGroupRequest
@@ -199,6 +211,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteFlowResponse> deleteFlow(DeleteFlowRequest request);
 
     /**
+     * @param request the request parameters of DeleteFlowVersion  DeleteFlowVersionRequest
+     * @return DeleteFlowVersionResponse
+     */
+    CompletableFuture<DeleteFlowVersionResponse> deleteFlowVersion(DeleteFlowVersionRequest request);
+
+    /**
      * @param request the request parameters of DeletePhoneMessageQrdl  DeletePhoneMessageQrdlRequest
      * @return DeletePhoneMessageQrdlResponse
      */
@@ -218,6 +236,36 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return EnableWhatsappROIMetricResponse
      */
     CompletableFuture<EnableWhatsappROIMetricResponse> enableWhatsappROIMetric(EnableWhatsappROIMetricRequest request);
+
+    /**
+     * @param request the request parameters of FlowBindPhone  FlowBindPhoneRequest
+     * @return FlowBindPhoneResponse
+     */
+    CompletableFuture<FlowBindPhoneResponse> flowBindPhone(FlowBindPhoneRequest request);
+
+    /**
+     * @param request the request parameters of FlowRebindPhone  FlowRebindPhoneRequest
+     * @return FlowRebindPhoneResponse
+     */
+    CompletableFuture<FlowRebindPhoneResponse> flowRebindPhone(FlowRebindPhoneRequest request);
+
+    /**
+     * @param request the request parameters of FlowUnbindPhone  FlowUnbindPhoneRequest
+     * @return FlowUnbindPhoneResponse
+     */
+    CompletableFuture<FlowUnbindPhoneResponse> flowUnbindPhone(FlowUnbindPhoneRequest request);
+
+    /**
+     * @param request the request parameters of GetChatFlowMetric  GetChatFlowMetricRequest
+     * @return GetChatFlowMetricResponse
+     */
+    CompletableFuture<GetChatFlowMetricResponse> getChatFlowMetric(GetChatFlowMetricRequest request);
+
+    /**
+     * @param request the request parameters of GetChatFlowTemplate  GetChatFlowTemplateRequest
+     * @return GetChatFlowTemplateResponse
+     */
+    CompletableFuture<GetChatFlowTemplateResponse> getChatFlowTemplate(GetChatFlowTemplateRequest request);
 
     /**
      * <b>description</b> :
@@ -378,6 +426,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<IsvGetAppIdResponse> isvGetAppId(IsvGetAppIdRequest request);
 
     /**
+     * @param request the request parameters of ListBindingRelationsForFlowVersion  ListBindingRelationsForFlowVersionRequest
+     * @return ListBindingRelationsForFlowVersionResponse
+     */
+    CompletableFuture<ListBindingRelationsForFlowVersionResponse> listBindingRelationsForFlowVersion(ListBindingRelationsForFlowVersionRequest request);
+
+    /**
+     * @param request the request parameters of ListChatFlow  ListChatFlowRequest
+     * @return ListChatFlowResponse
+     */
+    CompletableFuture<ListChatFlowResponse> listChatFlow(ListChatFlowRequest request);
+
+    /**
+     * @param request the request parameters of ListChatFlowTemplate  ListChatFlowTemplateRequest
+     * @return ListChatFlowTemplateResponse
+     */
+    CompletableFuture<ListChatFlowTemplateResponse> listChatFlowTemplate(ListChatFlowTemplateRequest request);
+
+    /**
      * @param request the request parameters of ListChatGroup  ListChatGroupRequest
      * @return ListChatGroupResponse
      */
@@ -407,6 +473,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListFlowResponse
      */
     CompletableFuture<ListFlowResponse> listFlow(ListFlowRequest request);
+
+    /**
+     * @param request the request parameters of ListFlowVersion  ListFlowVersionRequest
+     * @return ListFlowVersionResponse
+     */
+    CompletableFuture<ListFlowVersionResponse> listFlowVersion(ListFlowVersionRequest request);
 
     /**
      * @param request the request parameters of ListPhoneMessageQrdl  ListPhoneMessageQrdlRequest
@@ -466,6 +538,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyPhoneBusinessProfileResponse> modifyPhoneBusinessProfile(ModifyPhoneBusinessProfileRequest request);
 
     /**
+     * @param request the request parameters of OfflineFlowVersion  OfflineFlowVersionRequest
+     * @return OfflineFlowVersionResponse
+     */
+    CompletableFuture<OfflineFlowVersionResponse> offlineFlowVersion(OfflineFlowVersionRequest request);
+
+    /**
+     * @param request the request parameters of OnlineFlowVersion  OnlineFlowVersionRequest
+     * @return OnlineFlowVersionResponse
+     */
+    CompletableFuture<OnlineFlowVersionResponse> onlineFlowVersion(OnlineFlowVersionRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
      * 
@@ -509,6 +593,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryWabaBusinessInfoResponse
      */
     CompletableFuture<QueryWabaBusinessInfoResponse> queryWabaBusinessInfo(QueryWabaBusinessInfoRequest request);
+
+    /**
+     * @param request the request parameters of ReadChatFlow  ReadChatFlowRequest
+     * @return ReadChatFlowResponse
+     */
+    CompletableFuture<ReadChatFlowResponse> readChatFlow(ReadChatFlowRequest request);
+
+    /**
+     * @param request the request parameters of ReadChatFlowLogSetting  ReadChatFlowLogSettingRequest
+     * @return ReadChatFlowLogSettingResponse
+     */
+    CompletableFuture<ReadChatFlowLogSettingResponse> readChatFlowLogSetting(ReadChatFlowLogSettingRequest request);
+
+    /**
+     * @param request the request parameters of ReadFlowVersion  ReadFlowVersionRequest
+     * @return ReadFlowVersionResponse
+     */
+    CompletableFuture<ReadFlowVersionResponse> readFlowVersion(ReadFlowVersionRequest request);
 
     /**
      * <b>description</b> :
@@ -560,6 +662,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateAccountWebhookResponse> updateAccountWebhook(UpdateAccountWebhookRequest request);
 
     /**
+     * @param request the request parameters of UpdateChatFlow  UpdateChatFlowRequest
+     * @return UpdateChatFlowResponse
+     */
+    CompletableFuture<UpdateChatFlowResponse> updateChatFlow(UpdateChatFlowRequest request);
+
+    /**
+     * @param request the request parameters of UpdateChatFlowLogSetting  UpdateChatFlowLogSettingRequest
+     * @return UpdateChatFlowLogSettingResponse
+     */
+    CompletableFuture<UpdateChatFlowLogSettingResponse> updateChatFlowLogSetting(UpdateChatFlowLogSettingRequest request);
+
+    /**
      * @param request the request parameters of UpdateChatGroup  UpdateChatGroupRequest
      * @return UpdateChatGroupResponse
      */
@@ -590,6 +704,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateFlowJSONAssetResponse
      */
     CompletableFuture<UpdateFlowJSONAssetResponse> updateFlowJSONAsset(UpdateFlowJSONAssetRequest request);
+
+    /**
+     * @param request the request parameters of UpdateFlowVersion  UpdateFlowVersionRequest
+     * @return UpdateFlowVersionResponse
+     */
+    CompletableFuture<UpdateFlowVersionResponse> updateFlowVersion(UpdateFlowVersionRequest request);
 
     /**
      * @param request the request parameters of UpdatePhoneEncryptionPublicKey  UpdatePhoneEncryptionPublicKeyRequest

@@ -12,23 +12,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ListPhoneMessageQrdlRequest} extends {@link RequestModel}
+ * {@link ListBindingRelationsForFlowVersionRequest} extends {@link RequestModel}
  *
- * <p>ListPhoneMessageQrdlRequest</p>
+ * <p>ListBindingRelationsForFlowVersionRequest</p>
  */
-public class ListPhoneMessageQrdlRequest extends Request {
+public class ListBindingRelationsForFlowVersionRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
-    private String custSpaceId;
+    @com.aliyun.core.annotation.NameInMap("ChannelType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String channelType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowCode")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String flowCode;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String phoneNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -38,11 +39,11 @@ public class ListPhoneMessageQrdlRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private ListPhoneMessageQrdlRequest(Builder builder) {
+    private ListBindingRelationsForFlowVersionRequest(Builder builder) {
         super(builder);
-        this.custSpaceId = builder.custSpaceId;
+        this.channelType = builder.channelType;
+        this.flowCode = builder.flowCode;
         this.ownerId = builder.ownerId;
-        this.phoneNumber = builder.phoneNumber;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -51,7 +52,7 @@ public class ListPhoneMessageQrdlRequest extends Request {
         return new Builder();
     }
 
-    public static ListPhoneMessageQrdlRequest create() {
+    public static ListBindingRelationsForFlowVersionRequest create() {
         return builder().build();
     }
 
@@ -61,10 +62,17 @@ public class ListPhoneMessageQrdlRequest extends Request {
     }
 
     /**
-     * @return custSpaceId
+     * @return channelType
      */
-    public String getCustSpaceId() {
-        return this.custSpaceId;
+    public String getChannelType() {
+        return this.channelType;
+    }
+
+    /**
+     * @return flowCode
+     */
+    public String getFlowCode() {
+        return this.flowCode;
     }
 
     /**
@@ -72,13 +80,6 @@ public class ListPhoneMessageQrdlRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return phoneNumber
-     */
-    public String getPhoneNumber() {
-        return this.phoneNumber;
     }
 
     /**
@@ -95,10 +96,10 @@ public class ListPhoneMessageQrdlRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<ListPhoneMessageQrdlRequest, Builder> {
-        private String custSpaceId; 
+    public static final class Builder extends Request.Builder<ListBindingRelationsForFlowVersionRequest, Builder> {
+        private String channelType; 
+        private String flowCode; 
         private Long ownerId; 
-        private String phoneNumber; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -106,21 +107,36 @@ public class ListPhoneMessageQrdlRequest extends Request {
             super();
         } 
 
-        private Builder(ListPhoneMessageQrdlRequest request) {
+        private Builder(ListBindingRelationsForFlowVersionRequest request) {
             super(request);
-            this.custSpaceId = request.custSpaceId;
+            this.channelType = request.channelType;
+            this.flowCode = request.flowCode;
             this.ownerId = request.ownerId;
-            this.phoneNumber = request.phoneNumber;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * CustSpaceId.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WHATSAPP</p>
          */
-        public Builder custSpaceId(String custSpaceId) {
-            this.putQueryParameter("CustSpaceId", custSpaceId);
-            this.custSpaceId = custSpaceId;
+        public Builder channelType(String channelType) {
+            this.putQueryParameter("ChannelType", channelType);
+            this.channelType = channelType;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f4912c16943b4dfba44bd6fedacf****</p>
+         */
+        public Builder flowCode(String flowCode) {
+            this.putQueryParameter("FlowCode", flowCode);
+            this.flowCode = flowCode;
             return this;
         }
 
@@ -130,18 +146,6 @@ public class ListPhoneMessageQrdlRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>示例值</p>
-         */
-        public Builder phoneNumber(String phoneNumber) {
-            this.putQueryParameter("PhoneNumber", phoneNumber);
-            this.phoneNumber = phoneNumber;
             return this;
         }
 
@@ -164,8 +168,8 @@ public class ListPhoneMessageQrdlRequest extends Request {
         }
 
         @Override
-        public ListPhoneMessageQrdlRequest build() {
-            return new ListPhoneMessageQrdlRequest(this);
+        public ListBindingRelationsForFlowVersionRequest build() {
+            return new ListBindingRelationsForFlowVersionRequest(this);
         } 
 
     } 

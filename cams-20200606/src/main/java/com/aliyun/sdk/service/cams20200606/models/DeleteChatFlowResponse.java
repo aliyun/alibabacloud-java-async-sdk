@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link BeeBotAssociateResponse} extends {@link TeaModel}
+ * {@link DeleteChatFlowResponse} extends {@link TeaModel}
  *
- * <p>BeeBotAssociateResponse</p>
+ * <p>DeleteChatFlowResponse</p>
  */
-public class BeeBotAssociateResponse extends Response {
+public class DeleteChatFlowResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class BeeBotAssociateResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private BeeBotAssociateResponseBody body;
+    private DeleteChatFlowResponseBody body;
 
-    private BeeBotAssociateResponse(BuilderImpl builder) {
+    private DeleteChatFlowResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static BeeBotAssociateResponse create() {
+    public static DeleteChatFlowResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class BeeBotAssociateResponse extends Response {
     /**
      * @return body
      */
-    public BeeBotAssociateResponseBody getBody() {
+    public DeleteChatFlowResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<BeeBotAssociateResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteChatFlowResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(BeeBotAssociateResponseBody body);
+        Builder body(DeleteChatFlowResponseBody body);
 
         @Override
-        BeeBotAssociateResponse build();
+        DeleteChatFlowResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<BeeBotAssociateResponse, Builder>
+            extends Response.BuilderImpl<DeleteChatFlowResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private BeeBotAssociateResponseBody body; 
+        private DeleteChatFlowResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(BeeBotAssociateResponse response) {
+        private BuilderImpl(DeleteChatFlowResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class BeeBotAssociateResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(BeeBotAssociateResponseBody body) {
+        public Builder body(DeleteChatFlowResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public BeeBotAssociateResponse build() {
-            return new BeeBotAssociateResponse(this);
+        public DeleteChatFlowResponse build() {
+            return new DeleteChatFlowResponse(this);
         } 
 
     } 

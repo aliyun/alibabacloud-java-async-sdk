@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link BeeBotChatResponse} extends {@link TeaModel}
+ * {@link ListBindingRelationsForFlowVersionResponse} extends {@link TeaModel}
  *
- * <p>BeeBotChatResponse</p>
+ * <p>ListBindingRelationsForFlowVersionResponse</p>
  */
-public class BeeBotChatResponse extends Response {
+public class ListBindingRelationsForFlowVersionResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,16 +24,16 @@ public class BeeBotChatResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private BeeBotChatResponseBody body;
+    private ListBindingRelationsForFlowVersionResponseBody body;
 
-    private BeeBotChatResponse(BuilderImpl builder) {
+    private ListBindingRelationsForFlowVersionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static BeeBotChatResponse create() {
+    public static ListBindingRelationsForFlowVersionResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -59,35 +59,35 @@ public class BeeBotChatResponse extends Response {
     /**
      * @return body
      */
-    public BeeBotChatResponseBody getBody() {
+    public ListBindingRelationsForFlowVersionResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<BeeBotChatResponse, Builder> {
+    public interface Builder extends Response.Builder<ListBindingRelationsForFlowVersionResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(BeeBotChatResponseBody body);
+        Builder body(ListBindingRelationsForFlowVersionResponseBody body);
 
         @Override
-        BeeBotChatResponse build();
+        ListBindingRelationsForFlowVersionResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<BeeBotChatResponse, Builder>
+            extends Response.BuilderImpl<ListBindingRelationsForFlowVersionResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private BeeBotChatResponseBody body; 
+        private ListBindingRelationsForFlowVersionResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(BeeBotChatResponse response) {
+        private BuilderImpl(ListBindingRelationsForFlowVersionResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class BeeBotChatResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(BeeBotChatResponseBody body) {
+        public Builder body(ListBindingRelationsForFlowVersionResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public BeeBotChatResponse build() {
-            return new BeeBotChatResponse(this);
+        public ListBindingRelationsForFlowVersionResponse build() {
+            return new ListBindingRelationsForFlowVersionResponse(this);
         } 
 
     } 

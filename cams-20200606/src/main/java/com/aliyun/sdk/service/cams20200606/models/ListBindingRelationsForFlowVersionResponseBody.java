@@ -12,16 +12,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ChatappVerifyAndRegisterResponseBody} extends {@link TeaModel}
+ * {@link ListBindingRelationsForFlowVersionResponseBody} extends {@link TeaModel}
  *
- * <p>ChatappVerifyAndRegisterResponseBody</p>
+ * <p>ListBindingRelationsForFlowVersionResponseBody</p>
  */
-public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
+public class ListBindingRelationsForFlowVersionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
+
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private java.util.List<java.util.Map<String, ?>> data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -32,9 +35,10 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ChatappVerifyAndRegisterResponseBody(Builder builder) {
+    private ListBindingRelationsForFlowVersionResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -44,7 +48,7 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ChatappVerifyAndRegisterResponseBody create() {
+    public static ListBindingRelationsForFlowVersionResponseBody create() {
         return builder().build();
     }
 
@@ -64,6 +68,13 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public java.util.List<java.util.Map<String, ?>> getData() {
+        return this.data;
     }
 
     /**
@@ -90,6 +101,7 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
+        private java.util.List<java.util.Map<String, ?>> data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -97,19 +109,17 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
         private Builder() {
         } 
 
-        private Builder(ChatappVerifyAndRegisterResponseBody model) {
+        private Builder(ListBindingRelationsForFlowVersionResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.code = model.code;
+            this.data = model.data;
             this.message = model.message;
             this.requestId = model.requestId;
             this.success = model.success;
         } 
 
         /**
-         * <p>The details about the access denial.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>None</p>
+         * AccessDeniedDetail.
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -117,14 +127,7 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
-         * <ul>
-         * <li>A value of OK indicates that the call is successful.</li>
-         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>OK</p>
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -132,10 +135,15 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>None</p>
+         * Data.
+         */
+        public Builder data(java.util.List<java.util.Map<String, ?>> data) {
+            this.data = data;
+            return this;
+        }
+
+        /**
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,10 +151,7 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -154,22 +159,15 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The call was successful.</li>
-         * <li><strong>false</strong>: The call failed.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>true</p>
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;
             return this;
         }
 
-        public ChatappVerifyAndRegisterResponseBody build() {
-            return new ChatappVerifyAndRegisterResponseBody(this);
+        public ListBindingRelationsForFlowVersionResponseBody build() {
+            return new ListBindingRelationsForFlowVersionResponseBody(this);
         } 
 
     } 

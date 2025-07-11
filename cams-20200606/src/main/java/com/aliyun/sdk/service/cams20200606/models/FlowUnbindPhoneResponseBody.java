@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ChatappVerifyAndRegisterResponseBody} extends {@link TeaModel}
+ * {@link FlowUnbindPhoneResponseBody} extends {@link TeaModel}
  *
- * <p>ChatappVerifyAndRegisterResponseBody</p>
+ * <p>FlowUnbindPhoneResponseBody</p>
  */
-public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
+public class FlowUnbindPhoneResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
@@ -26,17 +26,17 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @com.aliyun.core.annotation.NameInMap("RequestId")
-    private String requestId;
+    @com.aliyun.core.annotation.NameInMap("Model")
+    private Boolean model;
 
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ChatappVerifyAndRegisterResponseBody(Builder builder) {
+    private FlowUnbindPhoneResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
-        this.requestId = builder.requestId;
+        this.model = builder.model;
         this.success = builder.success;
     }
 
@@ -44,7 +44,7 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ChatappVerifyAndRegisterResponseBody create() {
+    public static FlowUnbindPhoneResponseBody create() {
         return builder().build();
     }
 
@@ -74,10 +74,10 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
     }
 
     /**
-     * @return requestId
+     * @return model
      */
-    public String getRequestId() {
-        return this.requestId;
+    public Boolean getModel() {
+        return this.model;
     }
 
     /**
@@ -91,25 +91,25 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
         private String accessDeniedDetail; 
         private String code; 
         private String message; 
-        private String requestId; 
+        private Boolean model; 
         private Boolean success; 
 
         private Builder() {
         } 
 
-        private Builder(ChatappVerifyAndRegisterResponseBody model) {
+        private Builder(FlowUnbindPhoneResponseBody model) {
             this.accessDeniedDetail = model.accessDeniedDetail;
             this.code = model.code;
             this.message = model.message;
-            this.requestId = model.requestId;
+            this.model = model.model;
             this.success = model.success;
         } 
 
         /**
-         * <p>The details about the access denial.</p>
+         * <p>Access denied details, this field is returned only when RAM verification fails.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>无</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -117,14 +117,10 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The HTTP status code returned.</p>
-         * <ul>
-         * <li>A value of OK indicates that the call is successful.</li>
-         * <li>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</li>
-         * </ul>
+         * <p>Request status code.</p>
          * 
          * <strong>example:</strong>
-         * <p>OK</p>
+         * <p>示例值示例值</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -132,10 +128,10 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The error message returned.</p>
+         * <p>Error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>None</p>
+         * <p>示例值示例值示例值</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -143,22 +139,18 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>Request result data.</p>
          * 
          * <strong>example:</strong>
-         * <p>90E63D28-E31D-1EB2-8939-A9486641****</p>
+         * <p>false</p>
          */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
+        public Builder model(Boolean model) {
+            this.model = model;
             return this;
         }
 
         /**
-         * <p>Indicates whether the call was successful. Valid values:</p>
-         * <ul>
-         * <li><strong>true</strong>: The call was successful.</li>
-         * <li><strong>false</strong>: The call failed.</li>
-         * </ul>
+         * <p>Whether the operation was successful. Values: true: success; false: failure.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -168,8 +160,8 @@ public class ChatappVerifyAndRegisterResponseBody extends TeaModel {
             return this;
         }
 
-        public ChatappVerifyAndRegisterResponseBody build() {
-            return new ChatappVerifyAndRegisterResponseBody(this);
+        public FlowUnbindPhoneResponseBody build() {
+            return new FlowUnbindPhoneResponseBody(this);
         } 
 
     } 
