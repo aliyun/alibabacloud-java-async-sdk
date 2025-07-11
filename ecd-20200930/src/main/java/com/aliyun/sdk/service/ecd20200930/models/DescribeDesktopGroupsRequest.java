@@ -34,6 +34,10 @@ public class DescribeDesktopGroupsRequest extends Request {
     private String desktopGroupName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopType")
+    private String desktopType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndUserIds")
     private java.util.List<String> endUserIds;
 
@@ -100,6 +104,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         this.desktopGroupId = builder.desktopGroupId;
         this.desktopGroupIds = builder.desktopGroupIds;
         this.desktopGroupName = builder.desktopGroupName;
+        this.desktopType = builder.desktopType;
         this.endUserIds = builder.endUserIds;
         this.excludedEndUserIds = builder.excludedEndUserIds;
         this.imageId = builder.imageId;
@@ -156,6 +161,13 @@ public class DescribeDesktopGroupsRequest extends Request {
      */
     public String getDesktopGroupName() {
         return this.desktopGroupName;
+    }
+
+    /**
+     * @return desktopType
+     */
+    public String getDesktopType() {
+        return this.desktopType;
     }
 
     /**
@@ -268,6 +280,7 @@ public class DescribeDesktopGroupsRequest extends Request {
         private String desktopGroupId; 
         private java.util.List<String> desktopGroupIds; 
         private String desktopGroupName; 
+        private String desktopType; 
         private java.util.List<String> endUserIds; 
         private java.util.List<String> excludedEndUserIds; 
         private java.util.List<String> imageId; 
@@ -294,6 +307,7 @@ public class DescribeDesktopGroupsRequest extends Request {
             this.desktopGroupId = request.desktopGroupId;
             this.desktopGroupIds = request.desktopGroupIds;
             this.desktopGroupName = request.desktopGroupName;
+            this.desktopType = request.desktopType;
             this.endUserIds = request.endUserIds;
             this.excludedEndUserIds = request.excludedEndUserIds;
             this.imageId = request.imageId;
@@ -350,6 +364,15 @@ public class DescribeDesktopGroupsRequest extends Request {
         public Builder desktopGroupName(String desktopGroupName) {
             this.putQueryParameter("DesktopGroupName", desktopGroupName);
             this.desktopGroupName = desktopGroupName;
+            return this;
+        }
+
+        /**
+         * DesktopType.
+         */
+        public Builder desktopType(String desktopType) {
+            this.putQueryParameter("DesktopType", desktopType);
+            this.desktopType = desktopType;
             return this;
         }
 

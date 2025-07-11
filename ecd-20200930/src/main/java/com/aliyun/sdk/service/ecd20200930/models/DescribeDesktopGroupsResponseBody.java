@@ -390,6 +390,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
+        @com.aliyun.core.annotation.NameInMap("ExpiredTimes")
+        private java.util.List<String> expiredTimes;
+
         @com.aliyun.core.annotation.NameInMap("GpuCount")
         private Float gpuCount;
 
@@ -468,6 +471,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResetType")
         private Long resetType;
 
+        @com.aliyun.core.annotation.NameInMap("SimpleUserGroupId")
+        private String simpleUserGroupId;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
@@ -518,6 +524,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.desktopType = builder.desktopType;
             this.endUserCount = builder.endUserCount;
             this.expiredTime = builder.expiredTime;
+            this.expiredTimes = builder.expiredTimes;
             this.gpuCount = builder.gpuCount;
             this.gpuDriverVersion = builder.gpuDriverVersion;
             this.gpuSpec = builder.gpuSpec;
@@ -544,6 +551,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.protocolType = builder.protocolType;
             this.ratioThreshold = builder.ratioThreshold;
             this.resetType = builder.resetType;
+            this.simpleUserGroupId = builder.simpleUserGroupId;
             this.status = builder.status;
             this.stopDuration = builder.stopDuration;
             this.subnetId = builder.subnetId;
@@ -675,6 +683,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
          */
         public String getExpiredTime() {
             return this.expiredTime;
+        }
+
+        /**
+         * @return expiredTimes
+         */
+        public java.util.List<String> getExpiredTimes() {
+            return this.expiredTimes;
         }
 
         /**
@@ -860,6 +875,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return simpleUserGroupId
+         */
+        public String getSimpleUserGroupId() {
+            return this.simpleUserGroupId;
+        }
+
+        /**
          * @return status
          */
         public Integer getStatus() {
@@ -953,6 +975,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String desktopType; 
             private Integer endUserCount; 
             private String expiredTime; 
+            private java.util.List<String> expiredTimes; 
             private Float gpuCount; 
             private String gpuDriverVersion; 
             private String gpuSpec; 
@@ -979,6 +1002,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String protocolType; 
             private Float ratioThreshold; 
             private Long resetType; 
+            private String simpleUserGroupId; 
             private Integer status; 
             private Long stopDuration; 
             private String subnetId; 
@@ -1011,6 +1035,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
                 this.desktopType = model.desktopType;
                 this.endUserCount = model.endUserCount;
                 this.expiredTime = model.expiredTime;
+                this.expiredTimes = model.expiredTimes;
                 this.gpuCount = model.gpuCount;
                 this.gpuDriverVersion = model.gpuDriverVersion;
                 this.gpuSpec = model.gpuSpec;
@@ -1037,6 +1062,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
                 this.protocolType = model.protocolType;
                 this.ratioThreshold = model.ratioThreshold;
                 this.resetType = model.resetType;
+                this.simpleUserGroupId = model.simpleUserGroupId;
                 this.status = model.status;
                 this.stopDuration = model.stopDuration;
                 this.subnetId = model.subnetId;
@@ -1226,6 +1252,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder expiredTime(String expiredTime) {
                 this.expiredTime = expiredTime;
+                return this;
+            }
+
+            /**
+             * ExpiredTimes.
+             */
+            public Builder expiredTimes(java.util.List<String> expiredTimes) {
+                this.expiredTimes = expiredTimes;
                 return this;
             }
 
@@ -1573,6 +1607,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder resetType(Long resetType) {
                 this.resetType = resetType;
+                return this;
+            }
+
+            /**
+             * SimpleUserGroupId.
+             */
+            public Builder simpleUserGroupId(String simpleUserGroupId) {
+                this.simpleUserGroupId = simpleUserGroupId;
                 return this;
             }
 

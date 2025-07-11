@@ -339,6 +339,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDiskEncryptionServiceResponse> createDiskEncryptionService(CreateDiskEncryptionServiceRequest request);
 
     /**
+     * @param request the request parameters of CreateDrive  CreateDriveRequest
+     * @return CreateDriveResponse
+     */
+    CompletableFuture<CreateDriveResponse> createDrive(CreateDriveRequest request);
+
+    /**
      * @param request the request parameters of CreateImage  CreateImageRequest
      * @return CreateImageResponse
      */
@@ -491,6 +497,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDirectoriesResponse
      */
     CompletableFuture<DeleteDirectoriesResponse> deleteDirectories(DeleteDirectoriesRequest request);
+
+    /**
+     * @param request the request parameters of DeleteDrive  DeleteDriveRequest
+     * @return DeleteDriveResponse
+     */
+    CompletableFuture<DeleteDriveResponse> deleteDrive(DeleteDriveRequest request);
 
     /**
      * @param request the request parameters of DeleteEduRoom  DeleteEduRoomRequest
@@ -738,6 +750,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeDirectoriesResponse
      */
     CompletableFuture<DescribeDirectoriesResponse> describeDirectories(DescribeDirectoriesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDrives  DescribeDrivesRequest
+     * @return DescribeDrivesResponse
+     */
+    CompletableFuture<DescribeDrivesResponse> describeDrives(DescribeDrivesRequest request);
 
     /**
      * @param request the request parameters of DescribeFlowMetric  DescribeFlowMetricRequest

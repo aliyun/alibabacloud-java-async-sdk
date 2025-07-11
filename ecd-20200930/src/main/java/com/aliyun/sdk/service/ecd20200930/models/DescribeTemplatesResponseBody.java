@@ -710,6 +710,15 @@ public class DescribeTemplatesResponseBody extends TeaModel {
      * <p>DescribeTemplatesResponseBody</p>
      */
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AutoPay")
+        private Boolean autoPay;
+
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
+        private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
+        private String chargeType;
+
         @com.aliyun.core.annotation.NameInMap("DataDiskList")
         private java.util.List<DataDiskList> dataDiskList;
 
@@ -731,8 +740,17 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImageType")
         private String imageType;
 
+        @com.aliyun.core.annotation.NameInMap("Period")
+        private Integer period;
+
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
+        private String periodUnit;
+
         @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
         private String policyGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("PostPaidAfterUsedUp")
+        private Boolean postPaidAfterUsedUp;
 
         @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
@@ -770,7 +788,13 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TimerGroupId")
         private String timerGroupId;
 
+        @com.aliyun.core.annotation.NameInMap("UserDuration")
+        private String userDuration;
+
         private Data(Builder builder) {
+            this.autoPay = builder.autoPay;
+            this.autoRenew = builder.autoRenew;
+            this.chargeType = builder.chargeType;
             this.dataDiskList = builder.dataDiskList;
             this.defaultLanguage = builder.defaultLanguage;
             this.description = builder.description;
@@ -778,7 +802,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.imageId = builder.imageId;
             this.imageType = builder.imageType;
+            this.period = builder.period;
+            this.periodUnit = builder.periodUnit;
             this.policyGroupId = builder.policyGroupId;
+            this.postPaidAfterUsedUp = builder.postPaidAfterUsedUp;
             this.productType = builder.productType;
             this.regionConfigList = builder.regionConfigList;
             this.requestId = builder.requestId;
@@ -791,6 +818,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             this.templateName = builder.templateName;
             this.templateType = builder.templateType;
             this.timerGroupId = builder.timerGroupId;
+            this.userDuration = builder.userDuration;
         }
 
         public static Builder builder() {
@@ -799,6 +827,27 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoPay
+         */
+        public Boolean getAutoPay() {
+            return this.autoPay;
+        }
+
+        /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
+        }
+
+        /**
+         * @return chargeType
+         */
+        public String getChargeType() {
+            return this.chargeType;
         }
 
         /**
@@ -851,10 +900,31 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         }
 
         /**
+         * @return period
+         */
+        public Integer getPeriod() {
+            return this.period;
+        }
+
+        /**
+         * @return periodUnit
+         */
+        public String getPeriodUnit() {
+            return this.periodUnit;
+        }
+
+        /**
          * @return policyGroupId
          */
         public String getPolicyGroupId() {
             return this.policyGroupId;
+        }
+
+        /**
+         * @return postPaidAfterUsedUp
+         */
+        public Boolean getPostPaidAfterUsedUp() {
+            return this.postPaidAfterUsedUp;
         }
 
         /**
@@ -941,7 +1011,17 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             return this.timerGroupId;
         }
 
+        /**
+         * @return userDuration
+         */
+        public String getUserDuration() {
+            return this.userDuration;
+        }
+
         public static final class Builder {
+            private Boolean autoPay; 
+            private Boolean autoRenew; 
+            private String chargeType; 
             private java.util.List<DataDiskList> dataDiskList; 
             private String defaultLanguage; 
             private String description; 
@@ -949,7 +1029,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             private String gmtModified; 
             private String imageId; 
             private String imageType; 
+            private Integer period; 
+            private String periodUnit; 
             private String policyGroupId; 
+            private Boolean postPaidAfterUsedUp; 
             private String productType; 
             private java.util.List<RegionConfigList> regionConfigList; 
             private String requestId; 
@@ -962,11 +1045,15 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             private String templateName; 
             private String templateType; 
             private String timerGroupId; 
+            private String userDuration; 
 
             private Builder() {
             } 
 
             private Builder(Data model) {
+                this.autoPay = model.autoPay;
+                this.autoRenew = model.autoRenew;
+                this.chargeType = model.chargeType;
                 this.dataDiskList = model.dataDiskList;
                 this.defaultLanguage = model.defaultLanguage;
                 this.description = model.description;
@@ -974,7 +1061,10 @@ public class DescribeTemplatesResponseBody extends TeaModel {
                 this.gmtModified = model.gmtModified;
                 this.imageId = model.imageId;
                 this.imageType = model.imageType;
+                this.period = model.period;
+                this.periodUnit = model.periodUnit;
                 this.policyGroupId = model.policyGroupId;
+                this.postPaidAfterUsedUp = model.postPaidAfterUsedUp;
                 this.productType = model.productType;
                 this.regionConfigList = model.regionConfigList;
                 this.requestId = model.requestId;
@@ -987,7 +1077,32 @@ public class DescribeTemplatesResponseBody extends TeaModel {
                 this.templateName = model.templateName;
                 this.templateType = model.templateType;
                 this.timerGroupId = model.timerGroupId;
+                this.userDuration = model.userDuration;
             } 
+
+            /**
+             * AutoPay.
+             */
+            public Builder autoPay(Boolean autoPay) {
+                this.autoPay = autoPay;
+                return this;
+            }
+
+            /**
+             * AutoRenew.
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
+
+            /**
+             * ChargeType.
+             */
+            public Builder chargeType(String chargeType) {
+                this.chargeType = chargeType;
+                return this;
+            }
 
             /**
              * DataDiskList.
@@ -1046,10 +1161,34 @@ public class DescribeTemplatesResponseBody extends TeaModel {
             }
 
             /**
+             * Period.
+             */
+            public Builder period(Integer period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * PeriodUnit.
+             */
+            public Builder periodUnit(String periodUnit) {
+                this.periodUnit = periodUnit;
+                return this;
+            }
+
+            /**
              * PolicyGroupId.
              */
             public Builder policyGroupId(String policyGroupId) {
                 this.policyGroupId = policyGroupId;
+                return this;
+            }
+
+            /**
+             * PostPaidAfterUsedUp.
+             */
+            public Builder postPaidAfterUsedUp(Boolean postPaidAfterUsedUp) {
+                this.postPaidAfterUsedUp = postPaidAfterUsedUp;
                 return this;
             }
 
@@ -1146,6 +1285,14 @@ public class DescribeTemplatesResponseBody extends TeaModel {
              */
             public Builder timerGroupId(String timerGroupId) {
                 this.timerGroupId = timerGroupId;
+                return this;
+            }
+
+            /**
+             * UserDuration.
+             */
+            public Builder userDuration(String userDuration) {
+                this.userDuration = userDuration;
                 return this;
             }
 

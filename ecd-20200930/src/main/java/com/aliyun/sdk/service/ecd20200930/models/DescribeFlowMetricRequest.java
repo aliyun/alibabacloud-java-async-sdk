@@ -39,7 +39,7 @@ public class DescribeFlowMetricRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Period")
-    @com.aliyun.core.annotation.Validation(required = true, maximum = 900, minimum = 60)
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 3600, minimum = 60)
     private Integer period;
 
     @com.aliyun.core.annotation.Query

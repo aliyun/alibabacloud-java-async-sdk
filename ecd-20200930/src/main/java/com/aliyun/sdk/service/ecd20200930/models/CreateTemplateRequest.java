@@ -22,8 +22,20 @@ public class CreateTemplateRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    private String chargeType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DataDiskList")
@@ -43,8 +55,21 @@ public class CreateTemplateRequest extends Request {
     private String imageId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Period")
+    @com.aliyun.core.annotation.Validation(maximum = 6, minimum = 1)
+    private Integer period;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
+    private String periodUnit;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
     private String policyGroupId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PostPaidAfterUsedUp")
+    private Boolean postPaidAfterUsedUp;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProductType")
@@ -84,15 +109,25 @@ public class CreateTemplateRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TimerGroupId")
     private String timerGroupId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserDuration")
+    private Integer userDuration;
+
     private CreateTemplateRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.autoPay = builder.autoPay;
+        this.autoRenew = builder.autoRenew;
         this.bizType = builder.bizType;
+        this.chargeType = builder.chargeType;
         this.dataDiskList = builder.dataDiskList;
         this.defaultLanguage = builder.defaultLanguage;
         this.description = builder.description;
         this.imageId = builder.imageId;
+        this.period = builder.period;
+        this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
+        this.postPaidAfterUsedUp = builder.postPaidAfterUsedUp;
         this.productType = builder.productType;
         this.regionConfigList = builder.regionConfigList;
         this.resourceGroupId = builder.resourceGroupId;
@@ -102,6 +137,7 @@ public class CreateTemplateRequest extends Request {
         this.systemDiskSize = builder.systemDiskSize;
         this.templateName = builder.templateName;
         this.timerGroupId = builder.timerGroupId;
+        this.userDuration = builder.userDuration;
     }
 
     public static Builder builder() {
@@ -125,10 +161,31 @@ public class CreateTemplateRequest extends Request {
     }
 
     /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
+    }
+
+    /**
      * @return bizType
      */
     public String getBizType() {
         return this.bizType;
+    }
+
+    /**
+     * @return chargeType
+     */
+    public String getChargeType() {
+        return this.chargeType;
     }
 
     /**
@@ -160,10 +217,31 @@ public class CreateTemplateRequest extends Request {
     }
 
     /**
+     * @return period
+     */
+    public Integer getPeriod() {
+        return this.period;
+    }
+
+    /**
+     * @return periodUnit
+     */
+    public String getPeriodUnit() {
+        return this.periodUnit;
+    }
+
+    /**
      * @return policyGroupId
      */
     public String getPolicyGroupId() {
         return this.policyGroupId;
+    }
+
+    /**
+     * @return postPaidAfterUsedUp
+     */
+    public Boolean getPostPaidAfterUsedUp() {
+        return this.postPaidAfterUsedUp;
     }
 
     /**
@@ -229,14 +307,27 @@ public class CreateTemplateRequest extends Request {
         return this.timerGroupId;
     }
 
+    /**
+     * @return userDuration
+     */
+    public Integer getUserDuration() {
+        return this.userDuration;
+    }
+
     public static final class Builder extends Request.Builder<CreateTemplateRequest, Builder> {
         private String regionId; 
+        private Boolean autoPay; 
+        private Boolean autoRenew; 
         private String bizType; 
+        private String chargeType; 
         private java.util.List<DataDiskList> dataDiskList; 
         private String defaultLanguage; 
         private String description; 
         private String imageId; 
+        private Integer period; 
+        private String periodUnit; 
         private String policyGroupId; 
+        private Boolean postPaidAfterUsedUp; 
         private String productType; 
         private java.util.List<RegionConfigList> regionConfigList; 
         private String resourceGroupId; 
@@ -246,6 +337,7 @@ public class CreateTemplateRequest extends Request {
         private Integer systemDiskSize; 
         private String templateName; 
         private String timerGroupId; 
+        private Integer userDuration; 
 
         private Builder() {
             super();
@@ -254,12 +346,18 @@ public class CreateTemplateRequest extends Request {
         private Builder(CreateTemplateRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
             this.bizType = request.bizType;
+            this.chargeType = request.chargeType;
             this.dataDiskList = request.dataDiskList;
             this.defaultLanguage = request.defaultLanguage;
             this.description = request.description;
             this.imageId = request.imageId;
+            this.period = request.period;
+            this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
+            this.postPaidAfterUsedUp = request.postPaidAfterUsedUp;
             this.productType = request.productType;
             this.regionConfigList = request.regionConfigList;
             this.resourceGroupId = request.resourceGroupId;
@@ -269,6 +367,7 @@ public class CreateTemplateRequest extends Request {
             this.systemDiskSize = request.systemDiskSize;
             this.templateName = request.templateName;
             this.timerGroupId = request.timerGroupId;
+            this.userDuration = request.userDuration;
         } 
 
         /**
@@ -281,11 +380,38 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
+         * AutoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putBodyParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putBodyParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
          * BizType.
          */
         public Builder bizType(String bizType) {
             this.putBodyParameter("BizType", bizType);
             this.bizType = bizType;
+            return this;
+        }
+
+        /**
+         * ChargeType.
+         */
+        public Builder chargeType(String chargeType) {
+            this.putBodyParameter("ChargeType", chargeType);
+            this.chargeType = chargeType;
             return this;
         }
 
@@ -326,11 +452,38 @@ public class CreateTemplateRequest extends Request {
         }
 
         /**
+         * Period.
+         */
+        public Builder period(Integer period) {
+            this.putBodyParameter("Period", period);
+            this.period = period;
+            return this;
+        }
+
+        /**
+         * PeriodUnit.
+         */
+        public Builder periodUnit(String periodUnit) {
+            this.putBodyParameter("PeriodUnit", periodUnit);
+            this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
          * PolicyGroupId.
          */
         public Builder policyGroupId(String policyGroupId) {
             this.putBodyParameter("PolicyGroupId", policyGroupId);
             this.policyGroupId = policyGroupId;
+            return this;
+        }
+
+        /**
+         * PostPaidAfterUsedUp.
+         */
+        public Builder postPaidAfterUsedUp(Boolean postPaidAfterUsedUp) {
+            this.putBodyParameter("PostPaidAfterUsedUp", postPaidAfterUsedUp);
+            this.postPaidAfterUsedUp = postPaidAfterUsedUp;
             return this;
         }
 
@@ -412,6 +565,15 @@ public class CreateTemplateRequest extends Request {
         public Builder timerGroupId(String timerGroupId) {
             this.putBodyParameter("TimerGroupId", timerGroupId);
             this.timerGroupId = timerGroupId;
+            return this;
+        }
+
+        /**
+         * UserDuration.
+         */
+        public Builder userDuration(Integer userDuration) {
+            this.putBodyParameter("UserDuration", userDuration);
+            this.userDuration = userDuration;
             return this;
         }
 

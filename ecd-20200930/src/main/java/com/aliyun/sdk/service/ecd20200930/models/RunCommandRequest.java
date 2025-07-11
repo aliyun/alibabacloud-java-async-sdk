@@ -23,6 +23,10 @@ public class RunCommandRequest extends Request {
     private String commandContent;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandRole")
+    private String commandRole;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContentEncoding")
     private String contentEncoding;
 
@@ -52,6 +56,7 @@ public class RunCommandRequest extends Request {
     private RunCommandRequest(Builder builder) {
         super(builder);
         this.commandContent = builder.commandContent;
+        this.commandRole = builder.commandRole;
         this.contentEncoding = builder.contentEncoding;
         this.desktopId = builder.desktopId;
         this.endUserId = builder.endUserId;
@@ -78,6 +83,13 @@ public class RunCommandRequest extends Request {
      */
     public String getCommandContent() {
         return this.commandContent;
+    }
+
+    /**
+     * @return commandRole
+     */
+    public String getCommandRole() {
+        return this.commandRole;
     }
 
     /**
@@ -124,6 +136,7 @@ public class RunCommandRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunCommandRequest, Builder> {
         private String commandContent; 
+        private String commandRole; 
         private String contentEncoding; 
         private java.util.List<String> desktopId; 
         private String endUserId; 
@@ -138,6 +151,7 @@ public class RunCommandRequest extends Request {
         private Builder(RunCommandRequest request) {
             super(request);
             this.commandContent = request.commandContent;
+            this.commandRole = request.commandRole;
             this.contentEncoding = request.contentEncoding;
             this.desktopId = request.desktopId;
             this.endUserId = request.endUserId;
@@ -159,6 +173,15 @@ public class RunCommandRequest extends Request {
         public Builder commandContent(String commandContent) {
             this.putQueryParameter("CommandContent", commandContent);
             this.commandContent = commandContent;
+            return this;
+        }
+
+        /**
+         * CommandRole.
+         */
+        public Builder commandRole(String commandRole) {
+            this.putQueryParameter("CommandRole", commandRole);
+            this.commandRole = commandRole;
             return this;
         }
 

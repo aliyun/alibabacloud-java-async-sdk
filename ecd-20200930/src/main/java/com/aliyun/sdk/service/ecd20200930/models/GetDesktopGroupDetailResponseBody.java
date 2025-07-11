@@ -528,6 +528,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
+        @com.aliyun.core.annotation.NameInMap("ExpiredTimes")
+        private java.util.List<String> expiredTimes;
+
         @com.aliyun.core.annotation.NameInMap("GpuCount")
         private Float gpuCount;
 
@@ -570,6 +573,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OfficeSiteType")
         private String officeSiteType;
 
+        @com.aliyun.core.annotation.NameInMap("OsType")
+        private String osType;
+
         @com.aliyun.core.annotation.NameInMap("OwnBundleId")
         private String ownBundleId;
 
@@ -596,6 +602,9 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ProfileFollowSwitch")
         private Boolean profileFollowSwitch;
+
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
+        private String protocolType;
 
         @com.aliyun.core.annotation.NameInMap("RatioThreshold")
         private Float ratioThreshold;
@@ -647,6 +656,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             this.directoryId = builder.directoryId;
             this.directoryType = builder.directoryType;
             this.expiredTime = builder.expiredTime;
+            this.expiredTimes = builder.expiredTimes;
             this.gpuCount = builder.gpuCount;
             this.gpuSpec = builder.gpuSpec;
             this.idleDisconnectDuration = builder.idleDisconnectDuration;
@@ -661,6 +671,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteName = builder.officeSiteName;
             this.officeSiteType = builder.officeSiteType;
+            this.osType = builder.osType;
             this.ownBundleId = builder.ownBundleId;
             this.ownBundleName = builder.ownBundleName;
             this.ownType = builder.ownType;
@@ -670,6 +681,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             this.policyGroupName = builder.policyGroupName;
             this.policyGroupNames = builder.policyGroupNames;
             this.profileFollowSwitch = builder.profileFollowSwitch;
+            this.protocolType = builder.protocolType;
             this.ratioThreshold = builder.ratioThreshold;
             this.resType = builder.resType;
             this.resetType = builder.resetType;
@@ -804,6 +816,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return expiredTimes
+         */
+        public java.util.List<String> getExpiredTimes() {
+            return this.expiredTimes;
+        }
+
+        /**
          * @return gpuCount
          */
         public Float getGpuCount() {
@@ -902,6 +921,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return osType
+         */
+        public String getOsType() {
+            return this.osType;
+        }
+
+        /**
          * @return ownBundleId
          */
         public String getOwnBundleId() {
@@ -962,6 +988,13 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
          */
         public Boolean getProfileFollowSwitch() {
             return this.profileFollowSwitch;
+        }
+
+        /**
+         * @return protocolType
+         */
+        public String getProtocolType() {
+            return this.protocolType;
         }
 
         /**
@@ -1058,6 +1091,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             private String directoryId; 
             private String directoryType; 
             private String expiredTime; 
+            private java.util.List<String> expiredTimes; 
             private Float gpuCount; 
             private String gpuSpec; 
             private Long idleDisconnectDuration; 
@@ -1072,6 +1106,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             private String officeSiteId; 
             private String officeSiteName; 
             private String officeSiteType; 
+            private String osType; 
             private String ownBundleId; 
             private String ownBundleName; 
             private Integer ownType; 
@@ -1081,6 +1116,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             private String policyGroupName; 
             private java.util.List<String> policyGroupNames; 
             private Boolean profileFollowSwitch; 
+            private String protocolType; 
             private Float ratioThreshold; 
             private Integer resType; 
             private Integer resetType; 
@@ -1113,6 +1149,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
                 this.directoryId = model.directoryId;
                 this.directoryType = model.directoryType;
                 this.expiredTime = model.expiredTime;
+                this.expiredTimes = model.expiredTimes;
                 this.gpuCount = model.gpuCount;
                 this.gpuSpec = model.gpuSpec;
                 this.idleDisconnectDuration = model.idleDisconnectDuration;
@@ -1127,6 +1164,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
                 this.officeSiteId = model.officeSiteId;
                 this.officeSiteName = model.officeSiteName;
                 this.officeSiteType = model.officeSiteType;
+                this.osType = model.osType;
                 this.ownBundleId = model.ownBundleId;
                 this.ownBundleName = model.ownBundleName;
                 this.ownType = model.ownType;
@@ -1136,6 +1174,7 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
                 this.policyGroupName = model.policyGroupName;
                 this.policyGroupNames = model.policyGroupNames;
                 this.profileFollowSwitch = model.profileFollowSwitch;
+                this.protocolType = model.protocolType;
                 this.ratioThreshold = model.ratioThreshold;
                 this.resType = model.resType;
                 this.resetType = model.resetType;
@@ -1338,6 +1377,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
+             * ExpiredTimes.
+             */
+            public Builder expiredTimes(java.util.List<String> expiredTimes) {
+                this.expiredTimes = expiredTimes;
+                return this;
+            }
+
+            /**
              * <p>The number of vGPUs.</p>
              * 
              * <strong>example:</strong>
@@ -1505,6 +1552,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
             }
 
             /**
+             * OsType.
+             */
+            public Builder osType(String osType) {
+                this.osType = osType;
+                return this;
+            }
+
+            /**
              * <p>The ID of the cloud computer template.</p>
              * 
              * <strong>example:</strong>
@@ -1606,6 +1661,14 @@ public class GetDesktopGroupDetailResponseBody extends TeaModel {
              */
             public Builder profileFollowSwitch(Boolean profileFollowSwitch) {
                 this.profileFollowSwitch = profileFollowSwitch;
+                return this;
+            }
+
+            /**
+             * ProtocolType.
+             */
+            public Builder protocolType(String protocolType) {
+                this.protocolType = protocolType;
                 return this;
             }
 

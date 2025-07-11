@@ -59,6 +59,10 @@ public class DescribeDesktopSessionsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SessionStatus")
     private String sessionStatus;
 
@@ -82,6 +86,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.sessionStatus = builder.sessionStatus;
         this.startTime = builder.startTime;
         this.subPayType = builder.subPayType;
@@ -171,6 +176,13 @@ public class DescribeDesktopSessionsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return sessionStatus
      */
     public String getSessionStatus() {
@@ -202,6 +214,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceGroupId; 
         private String sessionStatus; 
         private String startTime; 
         private String subPayType; 
@@ -222,6 +235,7 @@ public class DescribeDesktopSessionsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.sessionStatus = request.sessionStatus;
             this.startTime = request.startTime;
             this.subPayType = request.subPayType;
@@ -342,6 +356,15 @@ public class DescribeDesktopSessionsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

@@ -111,6 +111,10 @@ public class CreateDesktopsRequest extends Request {
     private String promotionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QosRuleId")
+    private String qosRuleId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -188,6 +192,7 @@ public class CreateDesktopsRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.policyGroupId = builder.policyGroupId;
         this.promotionId = builder.promotionId;
+        this.qosRuleId = builder.qosRuleId;
         this.regionId = builder.regionId;
         this.resellerOwnerUid = builder.resellerOwnerUid;
         this.resourceGroupId = builder.resourceGroupId;
@@ -378,6 +383,13 @@ public class CreateDesktopsRequest extends Request {
     }
 
     /**
+     * @return qosRuleId
+     */
+    public String getQosRuleId() {
+        return this.qosRuleId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -492,6 +504,7 @@ public class CreateDesktopsRequest extends Request {
         private String periodUnit; 
         private String policyGroupId; 
         private String promotionId; 
+        private String qosRuleId; 
         private String regionId; 
         private Long resellerOwnerUid; 
         private String resourceGroupId; 
@@ -535,6 +548,7 @@ public class CreateDesktopsRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.policyGroupId = request.policyGroupId;
             this.promotionId = request.promotionId;
+            this.qosRuleId = request.qosRuleId;
             this.regionId = request.regionId;
             this.resellerOwnerUid = request.resellerOwnerUid;
             this.resourceGroupId = request.resourceGroupId;
@@ -877,6 +891,15 @@ public class CreateDesktopsRequest extends Request {
         public Builder promotionId(String promotionId) {
             this.putQueryParameter("PromotionId", promotionId);
             this.promotionId = promotionId;
+            return this;
+        }
+
+        /**
+         * QosRuleId.
+         */
+        public Builder qosRuleId(String qosRuleId) {
+            this.putQueryParameter("QosRuleId", qosRuleId);
+            this.qosRuleId = qosRuleId;
             return this;
         }
 

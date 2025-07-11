@@ -339,6 +339,9 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndUserNames")
         private java.util.List<String> endUserNames;
 
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
+        private String expiredTime;
+
         @com.aliyun.core.annotation.NameInMap("FotaVersion")
         private String fotaVersion;
 
@@ -385,6 +388,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             this.endUserIds = builder.endUserIds;
             this.endUserName = builder.endUserName;
             this.endUserNames = builder.endUserNames;
+            this.expiredTime = builder.expiredTime;
             this.fotaVersion = builder.fotaVersion;
             this.gpuDriverVersion = builder.gpuDriverVersion;
             this.imageId = builder.imageId;
@@ -468,6 +472,13 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
          */
         public java.util.List<String> getEndUserNames() {
             return this.endUserNames;
+        }
+
+        /**
+         * @return expiredTime
+         */
+        public String getExpiredTime() {
+            return this.expiredTime;
         }
 
         /**
@@ -564,6 +575,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
             private java.util.List<String> endUserIds; 
             private String endUserName; 
             private java.util.List<String> endUserNames; 
+            private String expiredTime; 
             private String fotaVersion; 
             private String gpuDriverVersion; 
             private String imageId; 
@@ -590,6 +602,7 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
                 this.endUserIds = model.endUserIds;
                 this.endUserName = model.endUserName;
                 this.endUserNames = model.endUserNames;
+                this.expiredTime = model.expiredTime;
                 this.fotaVersion = model.fotaVersion;
                 this.gpuDriverVersion = model.gpuDriverVersion;
                 this.imageId = model.imageId;
@@ -791,6 +804,14 @@ public class DescribeDesktopsInGroupResponseBody extends TeaModel {
              */
             public Builder endUserNames(java.util.List<String> endUserNames) {
                 this.endUserNames = endUserNames;
+                return this;
+            }
+
+            /**
+             * ExpiredTime.
+             */
+            public Builder expiredTime(String expiredTime) {
+                this.expiredTime = expiredTime;
                 return this;
             }
 

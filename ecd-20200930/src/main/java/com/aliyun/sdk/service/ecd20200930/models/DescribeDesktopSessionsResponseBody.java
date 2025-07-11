@@ -121,6 +121,81 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
      *
      * <p>DescribeDesktopSessionsResponseBody</p>
      */
+    public static class ResourceGroups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private ResourceGroups(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceGroups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceGroups model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public ResourceGroups build() {
+                return new ResourceGroups(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDesktopSessionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDesktopSessionsResponseBody</p>
+     */
     public static class Sessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
@@ -161,6 +236,9 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroups")
+        private java.util.List<ResourceGroups> resourceGroups;
+
         @com.aliyun.core.annotation.NameInMap("SessionEndTime")
         private String sessionEndTime;
 
@@ -193,6 +271,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             this.osSessionStatus = builder.osSessionStatus;
             this.osType = builder.osType;
             this.protocolType = builder.protocolType;
+            this.resourceGroups = builder.resourceGroups;
             this.sessionEndTime = builder.sessionEndTime;
             this.sessionIdleTime = builder.sessionIdleTime;
             this.sessionStartTime = builder.sessionStartTime;
@@ -301,6 +380,13 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroups
+         */
+        public java.util.List<ResourceGroups> getResourceGroups() {
+            return this.resourceGroups;
+        }
+
+        /**
          * @return sessionEndTime
          */
         public String getSessionEndTime() {
@@ -356,6 +442,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             private String osSessionStatus; 
             private String osType; 
             private String protocolType; 
+            private java.util.List<ResourceGroups> resourceGroups; 
             private String sessionEndTime; 
             private Long sessionIdleTime; 
             private String sessionStartTime; 
@@ -380,6 +467,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
                 this.osSessionStatus = model.osSessionStatus;
                 this.osType = model.osType;
                 this.protocolType = model.protocolType;
+                this.resourceGroups = model.resourceGroups;
                 this.sessionEndTime = model.sessionEndTime;
                 this.sessionIdleTime = model.sessionIdleTime;
                 this.sessionStartTime = model.sessionStartTime;
@@ -538,6 +626,14 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
+                return this;
+            }
+
+            /**
+             * ResourceGroups.
+             */
+            public Builder resourceGroups(java.util.List<ResourceGroups> resourceGroups) {
+                this.resourceGroups = resourceGroups;
                 return this;
             }
 

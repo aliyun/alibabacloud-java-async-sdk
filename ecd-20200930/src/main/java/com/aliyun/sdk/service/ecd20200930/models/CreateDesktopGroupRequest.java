@@ -94,6 +94,10 @@ public class CreateDesktopGroupRequest extends Request {
     private String defaultLanguage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteDuration")
+    private Long deleteDuration;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopGroupName")
     private String desktopGroupName;
 
@@ -215,6 +219,10 @@ public class CreateDesktopGroupRequest extends Request {
     private String sessionType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SimpleUserGroupId")
+    private String simpleUserGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotPolicyId")
     private String snapshotPolicyId;
 
@@ -282,6 +290,7 @@ public class CreateDesktopGroupRequest extends Request {
         this.dataDiskSize = builder.dataDiskSize;
         this.defaultInitDesktopCount = builder.defaultInitDesktopCount;
         this.defaultLanguage = builder.defaultLanguage;
+        this.deleteDuration = builder.deleteDuration;
         this.desktopGroupName = builder.desktopGroupName;
         this.desktopType = builder.desktopType;
         this.directoryId = builder.directoryId;
@@ -311,6 +320,7 @@ public class CreateDesktopGroupRequest extends Request {
         this.resetType = builder.resetType;
         this.scaleStrategyId = builder.scaleStrategyId;
         this.sessionType = builder.sessionType;
+        this.simpleUserGroupId = builder.simpleUserGroupId;
         this.snapshotPolicyId = builder.snapshotPolicyId;
         this.stopDuration = builder.stopDuration;
         this.systemDiskCategory = builder.systemDiskCategory;
@@ -462,6 +472,13 @@ public class CreateDesktopGroupRequest extends Request {
      */
     public String getDefaultLanguage() {
         return this.defaultLanguage;
+    }
+
+    /**
+     * @return deleteDuration
+     */
+    public Long getDeleteDuration() {
+        return this.deleteDuration;
     }
 
     /**
@@ -668,6 +685,13 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return simpleUserGroupId
+     */
+    public String getSimpleUserGroupId() {
+        return this.simpleUserGroupId;
+    }
+
+    /**
      * @return snapshotPolicyId
      */
     public String getSnapshotPolicyId() {
@@ -770,6 +794,7 @@ public class CreateDesktopGroupRequest extends Request {
         private Integer dataDiskSize; 
         private Integer defaultInitDesktopCount; 
         private String defaultLanguage; 
+        private Long deleteDuration; 
         private String desktopGroupName; 
         private String desktopType; 
         private String directoryId; 
@@ -799,6 +824,7 @@ public class CreateDesktopGroupRequest extends Request {
         private Long resetType; 
         private String scaleStrategyId; 
         private String sessionType; 
+        private String simpleUserGroupId; 
         private String snapshotPolicyId; 
         private Long stopDuration; 
         private String systemDiskCategory; 
@@ -836,6 +862,7 @@ public class CreateDesktopGroupRequest extends Request {
             this.dataDiskSize = request.dataDiskSize;
             this.defaultInitDesktopCount = request.defaultInitDesktopCount;
             this.defaultLanguage = request.defaultLanguage;
+            this.deleteDuration = request.deleteDuration;
             this.desktopGroupName = request.desktopGroupName;
             this.desktopType = request.desktopType;
             this.directoryId = request.directoryId;
@@ -865,6 +892,7 @@ public class CreateDesktopGroupRequest extends Request {
             this.resetType = request.resetType;
             this.scaleStrategyId = request.scaleStrategyId;
             this.sessionType = request.sessionType;
+            this.simpleUserGroupId = request.simpleUserGroupId;
             this.snapshotPolicyId = request.snapshotPolicyId;
             this.stopDuration = request.stopDuration;
             this.systemDiskCategory = request.systemDiskCategory;
@@ -1154,6 +1182,15 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder defaultLanguage(String defaultLanguage) {
             this.putQueryParameter("DefaultLanguage", defaultLanguage);
             this.defaultLanguage = defaultLanguage;
+            return this;
+        }
+
+        /**
+         * DeleteDuration.
+         */
+        public Builder deleteDuration(Long deleteDuration) {
+            this.putQueryParameter("DeleteDuration", deleteDuration);
+            this.deleteDuration = deleteDuration;
             return this;
         }
 
@@ -1584,6 +1621,15 @@ public class CreateDesktopGroupRequest extends Request {
         public Builder sessionType(String sessionType) {
             this.putQueryParameter("SessionType", sessionType);
             this.sessionType = sessionType;
+            return this;
+        }
+
+        /**
+         * SimpleUserGroupId.
+         */
+        public Builder simpleUserGroupId(String simpleUserGroupId) {
+            this.putQueryParameter("SimpleUserGroupId", simpleUserGroupId);
+            this.simpleUserGroupId = simpleUserGroupId;
             return this;
         }
 

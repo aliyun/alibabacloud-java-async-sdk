@@ -35,6 +35,10 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SimpleUserGroupId")
+    private String simpleUserGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserGroupName")
     private String userGroupName;
 
@@ -48,6 +52,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         this.desktopGroupIds = builder.desktopGroupIds;
         this.endUserIds = builder.endUserIds;
         this.regionId = builder.regionId;
+        this.simpleUserGroupId = builder.simpleUserGroupId;
         this.userGroupName = builder.userGroupName;
         this.userOuPath = builder.userOuPath;
     }
@@ -94,6 +99,13 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return simpleUserGroupId
+     */
+    public String getSimpleUserGroupId() {
+        return this.simpleUserGroupId;
+    }
+
+    /**
      * @return userGroupName
      */
     public String getUserGroupName() {
@@ -112,6 +124,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         private java.util.List<String> desktopGroupIds; 
         private java.util.List<String> endUserIds; 
         private String regionId; 
+        private String simpleUserGroupId; 
         private String userGroupName; 
         private String userOuPath; 
 
@@ -125,6 +138,7 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
             this.desktopGroupIds = request.desktopGroupIds;
             this.endUserIds = request.endUserIds;
             this.regionId = request.regionId;
+            this.simpleUserGroupId = request.simpleUserGroupId;
             this.userGroupName = request.userGroupName;
             this.userOuPath = request.userOuPath;
         } 
@@ -169,6 +183,15 @@ public class RemoveUserFromDesktopGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SimpleUserGroupId.
+         */
+        public Builder simpleUserGroupId(String simpleUserGroupId) {
+            this.putQueryParameter("SimpleUserGroupId", simpleUserGroupId);
+            this.simpleUserGroupId = simpleUserGroupId;
             return this;
         }
 

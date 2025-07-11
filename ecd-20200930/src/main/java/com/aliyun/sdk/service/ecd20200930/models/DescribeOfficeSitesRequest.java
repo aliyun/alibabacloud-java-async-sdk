@@ -47,6 +47,10 @@ public class DescribeOfficeSitesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    private String vpcId;
+
     private DescribeOfficeSitesRequest(Builder builder) {
         super(builder);
         this.maxResults = builder.maxResults;
@@ -56,6 +60,7 @@ public class DescribeOfficeSitesRequest extends Request {
         this.regionId = builder.regionId;
         this.securityProtection = builder.securityProtection;
         this.status = builder.status;
+        this.vpcId = builder.vpcId;
     }
 
     public static Builder builder() {
@@ -120,6 +125,13 @@ public class DescribeOfficeSitesRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return vpcId
+     */
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeOfficeSitesRequest, Builder> {
         private Integer maxResults; 
         private String nextToken; 
@@ -128,6 +140,7 @@ public class DescribeOfficeSitesRequest extends Request {
         private String regionId; 
         private String securityProtection; 
         private String status; 
+        private String vpcId; 
 
         private Builder() {
             super();
@@ -142,6 +155,7 @@ public class DescribeOfficeSitesRequest extends Request {
             this.regionId = request.regionId;
             this.securityProtection = request.securityProtection;
             this.status = request.status;
+            this.vpcId = request.vpcId;
         } 
 
         /**
@@ -316,6 +330,15 @@ public class DescribeOfficeSitesRequest extends Request {
         public Builder status(String status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * VpcId.
+         */
+        public Builder vpcId(String vpcId) {
+            this.putQueryParameter("VpcId", vpcId);
+            this.vpcId = vpcId;
             return this;
         }
 

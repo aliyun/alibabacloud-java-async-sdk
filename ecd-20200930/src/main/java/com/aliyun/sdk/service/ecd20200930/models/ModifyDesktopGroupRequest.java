@@ -48,6 +48,10 @@ public class ModifyDesktopGroupRequest extends Request {
     private Long connectDuration;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteDuration")
+    private Long deleteDuration;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String desktopGroupId;
@@ -136,6 +140,7 @@ public class ModifyDesktopGroupRequest extends Request {
         this.classify = builder.classify;
         this.comments = builder.comments;
         this.connectDuration = builder.connectDuration;
+        this.deleteDuration = builder.deleteDuration;
         this.desktopGroupId = builder.desktopGroupId;
         this.desktopGroupName = builder.desktopGroupName;
         this.disableSessionConfig = builder.disableSessionConfig;
@@ -217,6 +222,13 @@ public class ModifyDesktopGroupRequest extends Request {
      */
     public Long getConnectDuration() {
         return this.connectDuration;
+    }
+
+    /**
+     * @return deleteDuration
+     */
+    public Long getDeleteDuration() {
+        return this.deleteDuration;
     }
 
     /**
@@ -360,6 +372,7 @@ public class ModifyDesktopGroupRequest extends Request {
         private String classify; 
         private String comments; 
         private Long connectDuration; 
+        private Long deleteDuration; 
         private String desktopGroupId; 
         private String desktopGroupName; 
         private Boolean disableSessionConfig; 
@@ -393,6 +406,7 @@ public class ModifyDesktopGroupRequest extends Request {
             this.classify = request.classify;
             this.comments = request.comments;
             this.connectDuration = request.connectDuration;
+            this.deleteDuration = request.deleteDuration;
             this.desktopGroupId = request.desktopGroupId;
             this.desktopGroupName = request.desktopGroupName;
             this.disableSessionConfig = request.disableSessionConfig;
@@ -521,6 +535,15 @@ public class ModifyDesktopGroupRequest extends Request {
         public Builder connectDuration(Long connectDuration) {
             this.putQueryParameter("ConnectDuration", connectDuration);
             this.connectDuration = connectDuration;
+            return this;
+        }
+
+        /**
+         * DeleteDuration.
+         */
+        public Builder deleteDuration(Long deleteDuration) {
+            this.putQueryParameter("DeleteDuration", deleteDuration);
+            this.deleteDuration = deleteDuration;
             return this;
         }
 
