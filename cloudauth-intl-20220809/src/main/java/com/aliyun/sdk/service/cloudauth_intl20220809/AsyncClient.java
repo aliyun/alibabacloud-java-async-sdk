@@ -123,6 +123,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<InitializeResponse> initialize(InitializeRequest request);
 
     /**
+     * @param request the request parameters of KeepaliveIntl  KeepaliveIntlRequest
+     * @return KeepaliveIntlResponse
+     */
+    CompletableFuture<KeepaliveIntlResponse> keepaliveIntl(KeepaliveIntlRequest request);
+
+    /**
      * @param request the request parameters of Mobile3MetaVerifyIntl  Mobile3MetaVerifyIntlRequest
      * @return Mobile3MetaVerifyIntlResponse
      */

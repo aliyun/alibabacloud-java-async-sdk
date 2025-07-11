@@ -1,0 +1,77 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.cloudauth_intl20220809.models;
+
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * 
+ * {@link KeepaliveIntlRequest} extends {@link RequestModel}
+ *
+ * <p>KeepaliveIntlRequest</p>
+ */
+public class KeepaliveIntlRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    private KeepaliveIntlRequest(Builder builder) {
+        super(builder);
+        this.regionId = builder.regionId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static KeepaliveIntlRequest create() {
+        return builder().build();
+    }
+
+@Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    public static final class Builder extends Request.Builder<KeepaliveIntlRequest, Builder> {
+        private String regionId; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(KeepaliveIntlRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+        } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        @Override
+        public KeepaliveIntlRequest build() {
+            return new KeepaliveIntlRequest(this);
+        } 
+
+    } 
+
+}
