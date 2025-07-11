@@ -117,7 +117,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         private Long executeTime;
 
         @com.aliyun.core.annotation.NameInMap("PlanId")
-        private String planId;
+        private Long planId;
 
         @com.aliyun.core.annotation.NameInMap("ProxySessId")
         private String proxySessId;
@@ -218,7 +218,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         /**
          * @return planId
          */
-        public String getPlanId() {
+        public Long getPlanId() {
             return this.planId;
         }
 
@@ -292,7 +292,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private String database; 
             private Boolean dynamicSql; 
             private Long executeTime; 
-            private String planId; 
+            private Long planId; 
             private String proxySessId; 
             private String serverIp; 
             private Long sessionId; 
@@ -376,7 +376,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             /**
              * PlanId.
              */
-            public Builder planId(String planId) {
+            public Builder planId(Long planId) {
                 this.planId = planId;
                 return this;
             }
@@ -486,7 +486,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         private Long executeTime;
 
         @com.aliyun.core.annotation.NameInMap("PlanId")
-        private String planId;
+        private Long planId;
 
         @com.aliyun.core.annotation.NameInMap("ProcessSqlList")
         private java.util.List<ProcessSqlList> processSqlList;
@@ -591,7 +591,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         /**
          * @return planId
          */
-        public String getPlanId() {
+        public Long getPlanId() {
             return this.planId;
         }
 
@@ -672,7 +672,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private String database; 
             private Boolean dynamicSql; 
             private Long executeTime; 
-            private String planId; 
+            private Long planId; 
             private java.util.List<ProcessSqlList> processSqlList; 
             private String proxySessId; 
             private String serverIp; 
@@ -758,7 +758,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             /**
              * PlanId.
              */
-            public Builder planId(String planId) {
+            public Builder planId(Long planId) {
                 this.planId = planId;
                 return this;
             }
@@ -876,7 +876,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         private Long executeTime;
 
         @com.aliyun.core.annotation.NameInMap("PlanId")
-        private String planId;
+        private Long planId;
 
         @com.aliyun.core.annotation.NameInMap("ProcessSqlLists")
         private java.util.List<ProcessSqlLists> processSqlLists;
@@ -985,7 +985,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         /**
          * @return planId
          */
-        public String getPlanId() {
+        public Long getPlanId() {
             return this.planId;
         }
 
@@ -1073,7 +1073,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
             private String database; 
             private Boolean dynamicSql; 
             private Long executeTime; 
-            private String planId; 
+            private Long planId; 
             private java.util.List<ProcessSqlLists> processSqlLists; 
             private String proxySessId; 
             private String serverIp; 
@@ -1186,7 +1186,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>1898</p>
              */
-            public Builder planId(String planId) {
+            public Builder planId(Long planId) {
                 this.planId = planId;
                 return this;
             }
@@ -1804,13 +1804,13 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
      */
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveSessionCount")
-        private Integer activeSessionCount;
+        private Long activeSessionCount;
 
         @com.aliyun.core.annotation.NameInMap("AllProcessList")
         private java.util.List<AllProcessList> allProcessList;
 
         @com.aliyun.core.annotation.NameInMap("IdleSessionCount")
-        private Integer idleSessionCount;
+        private Long idleSessionCount;
 
         @com.aliyun.core.annotation.NameInMap("ObVersion")
         private String obVersion;
@@ -1819,7 +1819,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         private SessionStatistics sessionStatistics;
 
         @com.aliyun.core.annotation.NameInMap("TotalSessionCount")
-        private Integer totalSessionCount;
+        private Long totalSessionCount;
 
         private Data(Builder builder) {
             this.activeSessionCount = builder.activeSessionCount;
@@ -1841,7 +1841,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         /**
          * @return activeSessionCount
          */
-        public Integer getActiveSessionCount() {
+        public Long getActiveSessionCount() {
             return this.activeSessionCount;
         }
 
@@ -1855,7 +1855,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         /**
          * @return idleSessionCount
          */
-        public Integer getIdleSessionCount() {
+        public Long getIdleSessionCount() {
             return this.idleSessionCount;
         }
 
@@ -1876,17 +1876,17 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
         /**
          * @return totalSessionCount
          */
-        public Integer getTotalSessionCount() {
+        public Long getTotalSessionCount() {
             return this.totalSessionCount;
         }
 
         public static final class Builder {
-            private Integer activeSessionCount; 
+            private Long activeSessionCount; 
             private java.util.List<AllProcessList> allProcessList; 
-            private Integer idleSessionCount; 
+            private Long idleSessionCount; 
             private String obVersion; 
             private SessionStatistics sessionStatistics; 
-            private Integer totalSessionCount; 
+            private Long totalSessionCount; 
 
             private Builder() {
             } 
@@ -1906,7 +1906,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>60</p>
              */
-            public Builder activeSessionCount(Integer activeSessionCount) {
+            public Builder activeSessionCount(Long activeSessionCount) {
                 this.activeSessionCount = activeSessionCount;
                 return this;
             }
@@ -1925,7 +1925,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>30</p>
              */
-            public Builder idleSessionCount(Integer idleSessionCount) {
+            public Builder idleSessionCount(Long idleSessionCount) {
                 this.idleSessionCount = idleSessionCount;
                 return this;
             }
@@ -1955,7 +1955,7 @@ public class DescribeProcessStatsCompositionResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>100</p>
              */
-            public Builder totalSessionCount(Integer totalSessionCount) {
+            public Builder totalSessionCount(Long totalSessionCount) {
                 this.totalSessionCount = totalSessionCount;
                 return this;
             }
