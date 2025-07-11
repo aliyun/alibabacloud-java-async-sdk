@@ -244,6 +244,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetRunningJobsResponse> getRunningJobs(GetRunningJobsRequest request);
 
     /**
+     * @param request the request parameters of GetStorageAmountSummary  GetStorageAmountSummaryRequest
+     * @return GetStorageAmountSummaryResponse
+     */
+    CompletableFuture<GetStorageAmountSummaryResponse> getStorageAmountSummary(GetStorageAmountSummaryRequest request);
+
+    /**
+     * @param request the request parameters of GetStorageSizeSummary  GetStorageSizeSummaryRequest
+     * @return GetStorageSizeSummaryResponse
+     */
+    CompletableFuture<GetStorageSizeSummaryResponse> getStorageSizeSummary(GetStorageSizeSummaryRequest request);
+
+    /**
+     * @param request the request parameters of GetStorageSummaryCompared  GetStorageSummaryComparedRequest
+     * @return GetStorageSummaryComparedResponse
+     */
+    CompletableFuture<GetStorageSummaryComparedResponse> getStorageSummaryCompared(GetStorageSummaryComparedRequest request);
+
+    /**
      * @param request the request parameters of GetTableInfo  GetTableInfoRequest
      * @return GetTableInfoResponse
      */
@@ -388,6 +406,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListStoragePartitionsInfoResponse> listStoragePartitionsInfo(ListStoragePartitionsInfoRequest request);
 
     /**
+     * @param request the request parameters of ListStorageProjectsInfo  ListStorageProjectsInfoRequest
+     * @return ListStorageProjectsInfoResponse
+     */
+    CompletableFuture<ListStorageProjectsInfoResponse> listStorageProjectsInfo(ListStorageProjectsInfoRequest request);
+
+    /**
      * @param request the request parameters of ListStorageTablesInfo  ListStorageTablesInfoRequest
      * @return ListStorageTablesInfoResponse
      */
@@ -422,6 +446,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return QueryQuotaResponse
      */
     CompletableFuture<QueryQuotaResponse> queryQuota(QueryQuotaRequest request);
+
+    /**
+     * @param request the request parameters of QueryStorageMetric  QueryStorageMetricRequest
+     * @return QueryStorageMetricResponse
+     */
+    CompletableFuture<QueryStorageMetricResponse> queryStorageMetric(QueryStorageMetricRequest request);
 
     /**
      * @param request the request parameters of QueryTunnelMetric  QueryTunnelMetricRequest
@@ -529,5 +559,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateTunnelQuotaTimerResponse
      */
     CompletableFuture<UpdateTunnelQuotaTimerResponse> updateTunnelQuotaTimer(UpdateTunnelQuotaTimerRequest request);
+
+    /**
+     * @param request the request parameters of UpdateUsersToRole  UpdateUsersToRoleRequest
+     * @return UpdateUsersToRoleResponse
+     */
+    CompletableFuture<UpdateUsersToRoleResponse> updateUsersToRole(UpdateUsersToRoleRequest request);
 
 }

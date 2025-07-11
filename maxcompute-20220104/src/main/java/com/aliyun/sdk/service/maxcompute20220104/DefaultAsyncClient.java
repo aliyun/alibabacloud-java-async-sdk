@@ -751,6 +751,60 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetStorageAmountSummary  GetStorageAmountSummaryRequest
+     * @return GetStorageAmountSummaryResponse
+     */
+    @Override
+    public CompletableFuture<GetStorageAmountSummaryResponse> getStorageAmountSummary(GetStorageAmountSummaryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetStorageAmountSummary").setMethod(HttpMethod.GET).setPathRegex("/api/v1/observations/analysis/storage/amount").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetStorageAmountSummaryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetStorageAmountSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetStorageSizeSummary  GetStorageSizeSummaryRequest
+     * @return GetStorageSizeSummaryResponse
+     */
+    @Override
+    public CompletableFuture<GetStorageSizeSummaryResponse> getStorageSizeSummary(GetStorageSizeSummaryRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetStorageSizeSummary").setMethod(HttpMethod.GET).setPathRegex("/api/v1/observations/analysis/storage/size").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetStorageSizeSummaryResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetStorageSizeSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetStorageSummaryCompared  GetStorageSummaryComparedRequest
+     * @return GetStorageSummaryComparedResponse
+     */
+    @Override
+    public CompletableFuture<GetStorageSummaryComparedResponse> getStorageSummaryCompared(GetStorageSummaryComparedRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetStorageSummaryCompared").setMethod(HttpMethod.GET).setPathRegex("/api/v1/observations/analysis/storage/{type}/compared").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetStorageSummaryComparedResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetStorageSummaryComparedResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTableInfo  GetTableInfoRequest
      * @return GetTableInfoResponse
      */
@@ -1183,6 +1237,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListStorageProjectsInfo  ListStorageProjectsInfoRequest
+     * @return ListStorageProjectsInfoResponse
+     */
+    @Override
+    public CompletableFuture<ListStorageProjectsInfoResponse> listStorageProjectsInfo(ListStorageProjectsInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListStorageProjectsInfo").setMethod(HttpMethod.GET).setPathRegex("/api/v1/observations/analysis/storage/projectsInfo").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListStorageProjectsInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListStorageProjectsInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListStorageTablesInfo  ListStorageTablesInfoRequest
      * @return ListStorageTablesInfoResponse
      */
@@ -1285,6 +1357,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryQuotaResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryStorageMetric  QueryStorageMetricRequest
+     * @return QueryStorageMetricResponse
+     */
+    @Override
+    public CompletableFuture<QueryStorageMetricResponse> queryStorageMetric(QueryStorageMetricRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("QueryStorageMetric").setMethod(HttpMethod.POST).setPathRegex("/api/v1/observations/storage/{metric}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryStorageMetricResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryStorageMetricResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1584,6 +1674,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<UpdateTunnelQuotaTimerResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UpdateUsersToRole  UpdateUsersToRoleRequest
+     * @return UpdateUsersToRoleResponse
+     */
+    @Override
+    public CompletableFuture<UpdateUsersToRoleResponse> updateUsersToRole(UpdateUsersToRoleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("UpdateUsersToRole").setMethod(HttpMethod.PUT).setPathRegex("/api/v1/projects/{projectName}/roles/{roleName}/users").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateUsersToRoleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateUsersToRoleResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
