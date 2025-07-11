@@ -23,8 +23,11 @@ public class ModifyDomainRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainId")
+    private String domainId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -50,6 +53,7 @@ public class ModifyDomainRequest extends Request {
         super(builder);
         this.accessType = builder.accessType;
         this.domain = builder.domain;
+        this.domainId = builder.domainId;
         this.instanceId = builder.instanceId;
         this.listen = builder.listen;
         this.redirect = builder.redirect;
@@ -84,6 +88,13 @@ public class ModifyDomainRequest extends Request {
     }
 
     /**
+     * @return domainId
+     */
+    public String getDomainId() {
+        return this.domainId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -114,6 +125,7 @@ public class ModifyDomainRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDomainRequest, Builder> {
         private String accessType; 
         private String domain; 
+        private String domainId; 
         private String instanceId; 
         private Listen listen; 
         private Redirect redirect; 
@@ -127,6 +139,7 @@ public class ModifyDomainRequest extends Request {
             super(request);
             this.accessType = request.accessType;
             this.domain = request.domain;
+            this.domainId = request.domainId;
             this.instanceId = request.instanceId;
             this.listen = request.listen;
             this.redirect = request.redirect;
@@ -150,7 +163,6 @@ public class ModifyDomainRequest extends Request {
 
         /**
          * <p>The domain name whose access configurations you want to modify.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -158,6 +170,15 @@ public class ModifyDomainRequest extends Request {
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
             this.domain = domain;
+            return this;
+        }
+
+        /**
+         * DomainId.
+         */
+        public Builder domainId(String domainId) {
+            this.putQueryParameter("DomainId", domainId);
+            this.domainId = domainId;
             return this;
         }
 

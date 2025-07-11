@@ -23,7 +23,6 @@ public class DeleteDomainRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
     @com.aliyun.core.annotation.Query
@@ -135,7 +134,6 @@ public class DeleteDomainRequest extends Request {
 
         /**
          * <p>The domain name that you want to delete.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>

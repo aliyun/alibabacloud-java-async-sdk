@@ -464,6 +464,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DeleteDefenseRuleBlockIp  DeleteDefenseRuleBlockIpRequest
+     * @return DeleteDefenseRuleBlockIpResponse
+     */
+    @Override
+    public CompletableFuture<DeleteDefenseRuleBlockIpResponse> deleteDefenseRuleBlockIp(DeleteDefenseRuleBlockIpRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteDefenseRuleBlockIp").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteDefenseRuleBlockIpResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteDefenseRuleBlockIpResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteDefenseTemplate  DeleteDefenseTemplateRequest
      * @return DeleteDefenseTemplateResponse
      */

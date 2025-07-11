@@ -19,8 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DescribeDomainDetailRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Domain")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainId")
+    private String domainId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -34,6 +37,7 @@ public class DescribeDomainDetailRequest extends Request {
     private DescribeDomainDetailRequest(Builder builder) {
         super(builder);
         this.domain = builder.domain;
+        this.domainId = builder.domainId;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
     }
@@ -59,6 +63,13 @@ public class DescribeDomainDetailRequest extends Request {
     }
 
     /**
+     * @return domainId
+     */
+    public String getDomainId() {
+        return this.domainId;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
@@ -74,6 +85,7 @@ public class DescribeDomainDetailRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDomainDetailRequest, Builder> {
         private String domain; 
+        private String domainId; 
         private String instanceId; 
         private String regionId; 
 
@@ -84,13 +96,13 @@ public class DescribeDomainDetailRequest extends Request {
         private Builder(DescribeDomainDetailRequest request) {
             super(request);
             this.domain = request.domain;
+            this.domainId = request.domainId;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
         } 
 
         /**
          * <p>The domain name that you want to query.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -98,6 +110,15 @@ public class DescribeDomainDetailRequest extends Request {
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
             this.domain = domain;
+            return this;
+        }
+
+        /**
+         * DomainId.
+         */
+        public Builder domainId(String domainId) {
+            this.putQueryParameter("DomainId", domainId);
+            this.domainId = domainId;
             return this;
         }
 

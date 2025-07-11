@@ -26,6 +26,9 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
+    @com.aliyun.core.annotation.NameInMap("DomainId")
+    private String domainId;
+
     @com.aliyun.core.annotation.NameInMap("Listen")
     private Listen listen;
 
@@ -42,12 +45,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     private SM2CertDetail sM2CertDetail;
 
     @com.aliyun.core.annotation.NameInMap("Status")
-    private Long status;
+    private Integer status;
 
     private DescribeDomainDetailResponseBody(Builder builder) {
         this.certDetail = builder.certDetail;
         this.cname = builder.cname;
         this.domain = builder.domain;
+        this.domainId = builder.domainId;
         this.listen = builder.listen;
         this.redirect = builder.redirect;
         this.requestId = builder.requestId;
@@ -90,6 +94,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     }
 
     /**
+     * @return domainId
+     */
+    public String getDomainId() {
+        return this.domainId;
+    }
+
+    /**
      * @return listen
      */
     public Listen getListen() {
@@ -127,7 +138,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
     /**
      * @return status
      */
-    public Long getStatus() {
+    public Integer getStatus() {
         return this.status;
     }
 
@@ -135,12 +146,13 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         private CertDetail certDetail; 
         private String cname; 
         private String domain; 
+        private String domainId; 
         private Listen listen; 
         private Redirect redirect; 
         private String requestId; 
         private String resourceManagerResourceGroupId; 
         private SM2CertDetail sM2CertDetail; 
-        private Long status; 
+        private Integer status; 
 
         private Builder() {
         } 
@@ -149,6 +161,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             this.certDetail = model.certDetail;
             this.cname = model.cname;
             this.domain = model.domain;
+            this.domainId = model.domainId;
             this.listen = model.listen;
             this.redirect = model.redirect;
             this.requestId = model.requestId;
@@ -184,6 +197,14 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
          */
         public Builder domain(String domain) {
             this.domain = domain;
+            return this;
+        }
+
+        /**
+         * DomainId.
+         */
+        public Builder domainId(String domainId) {
+            this.domainId = domainId;
             return this;
         }
 
@@ -246,7 +267,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
          * <strong>example:</strong>
          * <p>1</p>
          */
-        public Builder status(Long status) {
+        public Builder status(Integer status) {
             this.status = status;
             return this;
         }

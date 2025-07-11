@@ -395,6 +395,9 @@ public class DescribeDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
+        @com.aliyun.core.annotation.NameInMap("DomainId")
+        private String domainId;
+
         @com.aliyun.core.annotation.NameInMap("ListenPorts")
         private ListenPorts listenPorts;
 
@@ -408,6 +411,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             this.backeds = builder.backeds;
             this.cname = builder.cname;
             this.domain = builder.domain;
+            this.domainId = builder.domainId;
             this.listenPorts = builder.listenPorts;
             this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
             this.status = builder.status;
@@ -443,6 +447,13 @@ public class DescribeDomainsResponseBody extends TeaModel {
         }
 
         /**
+         * @return domainId
+         */
+        public String getDomainId() {
+            return this.domainId;
+        }
+
+        /**
          * @return listenPorts
          */
         public ListenPorts getListenPorts() {
@@ -467,6 +478,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
             private Backeds backeds; 
             private String cname; 
             private String domain; 
+            private String domainId; 
             private ListenPorts listenPorts; 
             private String resourceManagerResourceGroupId; 
             private Integer status; 
@@ -478,6 +490,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
                 this.backeds = model.backeds;
                 this.cname = model.cname;
                 this.domain = model.domain;
+                this.domainId = model.domainId;
                 this.listenPorts = model.listenPorts;
                 this.resourceManagerResourceGroupId = model.resourceManagerResourceGroupId;
                 this.status = model.status;
@@ -510,6 +523,14 @@ public class DescribeDomainsResponseBody extends TeaModel {
              */
             public Builder domain(String domain) {
                 this.domain = domain;
+                return this;
+            }
+
+            /**
+             * DomainId.
+             */
+            public Builder domainId(String domainId) {
+                this.domainId = domainId;
                 return this;
             }
 

@@ -155,6 +155,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteDefenseRuleResponse> deleteDefenseRule(DeleteDefenseRuleRequest request);
 
     /**
+     * @param request the request parameters of DeleteDefenseRuleBlockIp  DeleteDefenseRuleBlockIpRequest
+     * @return DeleteDefenseRuleBlockIpResponse
+     */
+    CompletableFuture<DeleteDefenseRuleBlockIpResponse> deleteDefenseRuleBlockIp(DeleteDefenseRuleBlockIpRequest request);
+
+    /**
      * @param request the request parameters of DeleteDefenseTemplate  DeleteDefenseTemplateRequest
      * @return DeleteDefenseTemplateResponse
      */
