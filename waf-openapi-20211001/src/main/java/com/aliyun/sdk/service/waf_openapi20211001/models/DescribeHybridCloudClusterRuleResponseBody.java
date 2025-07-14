@@ -98,6 +98,9 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
      * <p>DescribeHybridCloudClusterRuleResponseBody</p>
      */
     public static class ClusterRule extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClusterRuleResourceId")
+        private String clusterRuleResourceId;
+
         @com.aliyun.core.annotation.NameInMap("RuleConfig")
         private String ruleConfig;
 
@@ -108,6 +111,7 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
         private String ruleType;
 
         private ClusterRule(Builder builder) {
+            this.clusterRuleResourceId = builder.clusterRuleResourceId;
             this.ruleConfig = builder.ruleConfig;
             this.ruleStatus = builder.ruleStatus;
             this.ruleType = builder.ruleType;
@@ -119,6 +123,13 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
 
         public static ClusterRule create() {
             return builder().build();
+        }
+
+        /**
+         * @return clusterRuleResourceId
+         */
+        public String getClusterRuleResourceId() {
+            return this.clusterRuleResourceId;
         }
 
         /**
@@ -143,6 +154,7 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String clusterRuleResourceId; 
             private String ruleConfig; 
             private String ruleStatus; 
             private String ruleType; 
@@ -151,10 +163,19 @@ public class DescribeHybridCloudClusterRuleResponseBody extends TeaModel {
             } 
 
             private Builder(ClusterRule model) {
+                this.clusterRuleResourceId = model.clusterRuleResourceId;
                 this.ruleConfig = model.ruleConfig;
                 this.ruleStatus = model.ruleStatus;
                 this.ruleType = model.ruleType;
             } 
+
+            /**
+             * ClusterRuleResourceId.
+             */
+            public Builder clusterRuleResourceId(String clusterRuleResourceId) {
+                this.clusterRuleResourceId = clusterRuleResourceId;
+                return this;
+            }
 
             /**
              * <p>The configuration of the rule.</p>

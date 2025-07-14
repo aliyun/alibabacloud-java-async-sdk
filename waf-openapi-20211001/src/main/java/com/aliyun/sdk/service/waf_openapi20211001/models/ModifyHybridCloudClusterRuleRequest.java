@@ -19,8 +19,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyHybridCloudClusterRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long clusterId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterRuleResourceId")
+    private String clusterRuleResourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -41,17 +44,16 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleStatus")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleStatus;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleType;
 
     private ModifyHybridCloudClusterRuleRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.clusterRuleResourceId = builder.clusterRuleResourceId;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
@@ -78,6 +80,13 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
      */
     public Long getClusterId() {
         return this.clusterId;
+    }
+
+    /**
+     * @return clusterRuleResourceId
+     */
+    public String getClusterRuleResourceId() {
+        return this.clusterRuleResourceId;
     }
 
     /**
@@ -124,6 +133,7 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyHybridCloudClusterRuleRequest, Builder> {
         private Long clusterId; 
+        private String clusterRuleResourceId; 
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -138,6 +148,7 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         private Builder(ModifyHybridCloudClusterRuleRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.clusterRuleResourceId = request.clusterRuleResourceId;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
@@ -148,7 +159,6 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
 
         /**
          * <p>The ID of the hybrid cloud cluster.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>1018</p>
@@ -156,6 +166,15 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
         public Builder clusterId(Long clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * ClusterRuleResourceId.
+         */
+        public Builder clusterRuleResourceId(String clusterRuleResourceId) {
+            this.putQueryParameter("ClusterRuleResourceId", clusterRuleResourceId);
+            this.clusterRuleResourceId = clusterRuleResourceId;
             return this;
         }
 
@@ -221,7 +240,6 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
          * <li><strong>on</strong>: enables the rule.</li>
          * <li><strong>off</strong>: disables the rule.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -237,7 +255,6 @@ public class ModifyHybridCloudClusterRuleRequest extends Request {
          * <ul>
          * <li><strong>pullin</strong>: The traffic redirection rule.</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>pullin</p>

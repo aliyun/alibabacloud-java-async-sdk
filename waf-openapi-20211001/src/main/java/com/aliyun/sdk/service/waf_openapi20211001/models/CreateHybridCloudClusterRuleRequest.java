@@ -12,18 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link DescribeHybridCloudClusterRuleRequest} extends {@link RequestModel}
+ * {@link CreateHybridCloudClusterRuleRequest} extends {@link RequestModel}
  *
- * <p>DescribeHybridCloudClusterRuleRequest</p>
+ * <p>CreateHybridCloudClusterRuleRequest</p>
  */
-public class DescribeHybridCloudClusterRuleRequest extends Request {
+public class CreateHybridCloudClusterRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long clusterId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ClusterRuleResourceId")
-    private String clusterRuleResourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
@@ -39,16 +36,27 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
     private String resourceManagerResourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleConfig")
+    private String ruleConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String ruleStatus;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleType;
 
-    private DescribeHybridCloudClusterRuleRequest(Builder builder) {
+    private CreateHybridCloudClusterRuleRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
-        this.clusterRuleResourceId = builder.clusterRuleResourceId;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
+        this.ruleConfig = builder.ruleConfig;
+        this.ruleStatus = builder.ruleStatus;
         this.ruleType = builder.ruleType;
     }
 
@@ -56,7 +64,7 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeHybridCloudClusterRuleRequest create() {
+    public static CreateHybridCloudClusterRuleRequest create() {
         return builder().build();
     }
 
@@ -70,13 +78,6 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
      */
     public Long getClusterId() {
         return this.clusterId;
-    }
-
-    /**
-     * @return clusterRuleResourceId
-     */
-    public String getClusterRuleResourceId() {
-        return this.clusterRuleResourceId;
     }
 
     /**
@@ -101,39 +102,55 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
     }
 
     /**
+     * @return ruleConfig
+     */
+    public String getRuleConfig() {
+        return this.ruleConfig;
+    }
+
+    /**
+     * @return ruleStatus
+     */
+    public String getRuleStatus() {
+        return this.ruleStatus;
+    }
+
+    /**
      * @return ruleType
      */
     public String getRuleType() {
         return this.ruleType;
     }
 
-    public static final class Builder extends Request.Builder<DescribeHybridCloudClusterRuleRequest, Builder> {
+    public static final class Builder extends Request.Builder<CreateHybridCloudClusterRuleRequest, Builder> {
         private Long clusterId; 
-        private String clusterRuleResourceId; 
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
+        private String ruleConfig; 
+        private String ruleStatus; 
         private String ruleType; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeHybridCloudClusterRuleRequest request) {
+        private Builder(CreateHybridCloudClusterRuleRequest request) {
             super(request);
             this.clusterId = request.clusterId;
-            this.clusterRuleResourceId = request.clusterRuleResourceId;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
+            this.ruleConfig = request.ruleConfig;
+            this.ruleStatus = request.ruleStatus;
             this.ruleType = request.ruleType;
         } 
 
         /**
-         * <p>The ID of the hybrid cloud cluster.</p>
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1</p>
+         * <p>428</p>
          */
         public Builder clusterId(Long clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -142,23 +159,10 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * ClusterRuleResourceId.
-         */
-        public Builder clusterRuleResourceId(String clusterRuleResourceId) {
-            this.putQueryParameter("ClusterRuleResourceId", clusterRuleResourceId);
-            this.clusterRuleResourceId = clusterRuleResourceId;
-            return this;
-        }
-
-        /**
-         * <p>The ID of the WAF instance.</p>
-         * <blockquote>
-         * <p> You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>waf-cn-uqm33n***02</p>
+         * <p>waf_elasticity-cn-0xldbqt****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -167,14 +171,7 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * <p>The region in which the WAF instance is deployed. Valid value:</p>
-         * <ul>
-         * <li><strong>cn-hangzhou</strong>: Chinese mainland.</li>
-         * <li><strong>ap-southeast-1</strong>: outside the Chinese mainland.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,10 +180,7 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * <p>The ID of the Alibaba Cloud resource group.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>rg-acfm***q</p>
+         * ResourceManagerResourceGroupId.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -195,10 +189,28 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
         }
 
         /**
-         * <p>The type of the rule. Valid values:</p>
-         * <ul>
-         * <li><strong>pullin</strong>: The traffic redirection rule of the hybrid cloud cluster.</li>
-         * </ul>
+         * RuleConfig.
+         */
+        public Builder ruleConfig(String ruleConfig) {
+            this.putQueryParameter("RuleConfig", ruleConfig);
+            this.ruleConfig = ruleConfig;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
+         */
+        public Builder ruleStatus(String ruleStatus) {
+            this.putQueryParameter("RuleStatus", ruleStatus);
+            this.ruleStatus = ruleStatus;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>pullin</p>
@@ -210,8 +222,8 @@ public class DescribeHybridCloudClusterRuleRequest extends Request {
         }
 
         @Override
-        public DescribeHybridCloudClusterRuleRequest build() {
-            return new DescribeHybridCloudClusterRuleRequest(this);
+        public CreateHybridCloudClusterRuleRequest build() {
+            return new CreateHybridCloudClusterRuleRequest(this);
         } 
 
     } 

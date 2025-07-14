@@ -86,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDomainResponse> createDomain(CreateDomainRequest request);
 
     /**
+     * @param request the request parameters of CreateHybridCloudClusterRule  CreateHybridCloudClusterRuleRequest
+     * @return CreateHybridCloudClusterRuleResponse
+     */
+    CompletableFuture<CreateHybridCloudClusterRuleResponse> createHybridCloudClusterRule(CreateHybridCloudClusterRuleRequest request);
+
+    /**
      * @param request the request parameters of CreateHybridCloudGroup  CreateHybridCloudGroupRequest
      * @return CreateHybridCloudGroupResponse
      */
@@ -171,6 +177,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteDomainResponse
      */
     CompletableFuture<DeleteDomainResponse> deleteDomain(DeleteDomainRequest request);
+
+    /**
+     * @param request the request parameters of DeleteHybridCloudClusterRule  DeleteHybridCloudClusterRuleRequest
+     * @return DeleteHybridCloudClusterRuleResponse
+     */
+    CompletableFuture<DeleteHybridCloudClusterRuleResponse> deleteHybridCloudClusterRule(DeleteHybridCloudClusterRuleRequest request);
 
     /**
      * @param request the request parameters of DeleteMajorProtectionBlackIp  DeleteMajorProtectionBlackIpRequest
@@ -501,6 +513,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeHybridCloudClusterRuleResponse
      */
     CompletableFuture<DescribeHybridCloudClusterRuleResponse> describeHybridCloudClusterRule(DescribeHybridCloudClusterRuleRequest request);
+
+    /**
+     * @param request the request parameters of DescribeHybridCloudClusterRules  DescribeHybridCloudClusterRulesRequest
+     * @return DescribeHybridCloudClusterRulesResponse
+     */
+    CompletableFuture<DescribeHybridCloudClusterRulesResponse> describeHybridCloudClusterRules(DescribeHybridCloudClusterRulesRequest request);
 
     /**
      * @param request the request parameters of DescribeHybridCloudClusters  DescribeHybridCloudClustersRequest
