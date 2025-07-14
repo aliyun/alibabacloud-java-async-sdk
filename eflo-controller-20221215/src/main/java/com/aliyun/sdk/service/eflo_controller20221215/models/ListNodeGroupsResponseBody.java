@@ -158,6 +158,9 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
+        @com.aliyun.core.annotation.NameInMap("VirtualGpuEnabled")
+        private Boolean virtualGpuEnabled;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
@@ -174,6 +177,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             this.machineType = builder.machineType;
             this.nodeCount = builder.nodeCount;
             this.updateTime = builder.updateTime;
+            this.virtualGpuEnabled = builder.virtualGpuEnabled;
             this.zoneId = builder.zoneId;
         }
 
@@ -270,6 +274,13 @@ public class ListNodeGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return virtualGpuEnabled
+         */
+        public Boolean getVirtualGpuEnabled() {
+            return this.virtualGpuEnabled;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -289,6 +300,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
             private String machineType; 
             private Long nodeCount; 
             private String updateTime; 
+            private Boolean virtualGpuEnabled; 
             private String zoneId; 
 
             private Builder() {
@@ -307,6 +319,7 @@ public class ListNodeGroupsResponseBody extends TeaModel {
                 this.machineType = model.machineType;
                 this.nodeCount = model.nodeCount;
                 this.updateTime = model.updateTime;
+                this.virtualGpuEnabled = model.virtualGpuEnabled;
                 this.zoneId = model.zoneId;
             } 
 
@@ -439,6 +452,17 @@ public class ListNodeGroupsResponseBody extends TeaModel {
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
+                return this;
+            }
+
+            /**
+             * <p>Whether to enable gpu virtualization or not</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder virtualGpuEnabled(Boolean virtualGpuEnabled) {
+                this.virtualGpuEnabled = virtualGpuEnabled;
                 return this;
             }
 

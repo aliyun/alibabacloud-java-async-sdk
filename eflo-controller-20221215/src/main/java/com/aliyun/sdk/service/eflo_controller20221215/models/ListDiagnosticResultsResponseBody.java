@@ -93,7 +93,7 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
         } 
 
         /**
-         * DiagnosticResults.
+         * <p>The diagnostic information.</p>
          */
         public Builder diagnosticResults(java.util.List<DiagnosticResults> diagnosticResults) {
             this.diagnosticResults = diagnosticResults;
@@ -101,9 +101,11 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
         }
 
         /**
+         * <p>Number of items per page in a paginated query. The maximum value is 100.</p>
+         * <p>Default value:</p>
          * <ul>
-         * <li></li>
-         * <li></li>
+         * <li>If no value is set or the set value is less than 20, the default value is 20.</li>
+         * <li>If the set value is greater than 100, the default value is 100.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +117,10 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>NextToken for the next page. Include this value when requesting the next page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a3f2224a5ec7224116c4f5246120abe4</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -123,7 +128,10 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AC4F0004-7BCE-52E0-891B-CAC7D64E3368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -293,7 +301,10 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             } 
 
             /**
-             * ClusterId.
+             * <p>The cluster ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i118578141694745246055</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -301,7 +312,10 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * ClusterName.
+             * <p>Cluster Name</p>
+             * 
+             * <strong>example:</strong>
+             * <p>pjlab-lingjun</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -309,7 +323,10 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * <p>Creation time of the diagnostic task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-01-15T02:01:12Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -317,7 +334,10 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * DiagContent.
+             * <p>Diagnostic content. For example, in network diagnostics, there are static configuration checks, dynamic operation checks, and other diagnostic contents.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>diagcontent</p>
              */
             public Builder diagContent(String diagContent) {
                 this.diagContent = diagContent;
@@ -325,7 +345,10 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * DiagId.
+             * <p>Diagnosis ID</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123</p>
              */
             public Builder diagId(String diagId) {
                 this.diagId = diagId;
@@ -333,7 +356,10 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * DiagResult.
+             * <p>Diagnostic result, either success or failure.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Success</p>
              */
             public Builder diagResult(String diagResult) {
                 this.diagResult = diagResult;
@@ -341,7 +367,10 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * FinishedTime.
+             * <p>Completion time of the diagnostic task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2024-10-16T02:04Z</p>
              */
             public Builder finishedTime(String finishedTime) {
                 this.finishedTime = finishedTime;
@@ -349,7 +378,10 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-bl03ofg6206</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -357,7 +389,10 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * ServerName.
+             * <p>Server name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>proxy-rps.mos.csvw.com</p>
              */
             public Builder serverName(String serverName) {
                 this.serverName = serverName;
@@ -365,7 +400,15 @@ public class ListDiagnosticResultsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Status of the diagnostic task. Possible values:</p>
+             * <ul>
+             * <li>InProgress: Diagnosing.</li>
+             * <li>Finished: Diagnosis completed.</li>
+             * <li>Failed: Diagnosis failed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>succeed</p>
              */
             public Builder status(String status) {
                 this.status = status;

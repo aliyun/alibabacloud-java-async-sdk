@@ -80,7 +80,7 @@ public class CreateClusterResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>Cluster ID</p>
          * 
          * <strong>example:</strong>
          * <p>i116913051663373010974</p>
@@ -91,7 +91,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Request ID</p>
          * 
          * <strong>example:</strong>
          * <p>3C683243-7915-57FB-9570-A2932C1C0F78</p>
@@ -102,7 +102,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The job ID.</p>
+         * <p>Task ID</p>
          * 
          * <strong>example:</strong>
          * <p>i159809891662373011015</p>

@@ -844,9 +844,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>The API creates a session, returns the frontend endpoint, and starts a periodic task to track the session status.</p>
-     * 
      * @param request the request parameters of UpdateNodeGroup  UpdateNodeGroupRequest
      * @return UpdateNodeGroupResponse
      */

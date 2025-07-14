@@ -83,7 +83,7 @@ public class DescribeClusterRequest extends Request {
         }
 
         /**
-         * <p>集群id。</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

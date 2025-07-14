@@ -236,7 +236,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster description.</p>
+         * <p>Cluster description</p>
          * 
          * <strong>example:</strong>
          * <p>Cluster description</p>
@@ -248,7 +248,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster name.</p>
+         * <p>Cluster name</p>
          * 
          * <strong>example:</strong>
          * <p>Standard_Cluster</p>
@@ -260,7 +260,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster type.</p>
+         * <p>Cluster type</p>
          * 
          * <strong>example:</strong>
          * <p>Lite</p>
@@ -272,7 +272,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The components (software instance).</p>
+         * <p>Components (software instances)</p>
          */
         public Builder components(java.util.List<Components> components) {
             String componentsShrink = shrink(components, "Components", "json");
@@ -282,7 +282,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster number.</p>
+         * <p>Cluster number</p>
          * 
          * <strong>example:</strong>
          * <p>A1</p>
@@ -294,7 +294,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
+         * <p>Whether to allow skipping failed nodes, the default value is False</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -306,7 +306,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The network information.</p>
+         * <p>Network information</p>
          */
         public Builder networks(Networks networks) {
             String networksShrink = shrink(networks, "Networks", "json");
@@ -316,7 +316,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The node vSwitch.</p>
+         * <p>Node VSwitches</p>
          */
         public Builder nimizVSwitches(java.util.List<String> nimizVSwitches) {
             String nimizVSwitchesShrink = shrink(nimizVSwitches, "NimizVSwitches", "json");
@@ -326,7 +326,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The node groups.</p>
+         * <p>Node group list</p>
          */
         public Builder nodeGroups(java.util.List<NodeGroups> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
@@ -336,7 +336,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether the elastic network interface (ENI) supports the Jumbo Frames feature.</p>
+         * <p>Whether the network interface supports jumbo frames</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -348,7 +348,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>Resource group ID</p>
          * 
          * <strong>example:</strong>
          * <p>rg-aek2xdkc6icwfha</p>
@@ -360,7 +360,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * <p>The resource tags.</p>
+         * <p>Resource tags</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -428,7 +428,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The basic parameters of the component.</p>
+             * <p>Basic component parameters</p>
              * 
              * <strong>example:</strong>
              * <p>{
@@ -467,7 +467,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The node pool configurations, which are used to establish the mappings between node groups and node pools. This parameter is required when ComponentType is set to ACKEdge. Otherwise, this parameter is left empty.</p>
+             * <p>Node pool configuration, used to establish the correspondence between node groups and node pools. Required when ComponentType is &quot;ACKEdge&quot;, otherwise it can be empty.</p>
              */
             public Builder nodeUnits(java.util.List<?> nodeUnits) {
                 this.nodeUnits = nodeUnits;
@@ -534,7 +534,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The component configurations.</p>
+             * <p>Component configuration</p>
              */
             public Builder componentConfig(ComponentConfig componentConfig) {
                 this.componentConfig = componentConfig;
@@ -542,12 +542,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The component type.</p>
-             * <p>Valid values:</p>
-             * <ul>
-             * <li>ARMS</li>
-             * <li>ACKEdge</li>
-             * </ul>
+             * <p>Component type</p>
              * 
              * <strong>example:</strong>
              * <p>ACKEdge</p>
@@ -617,7 +612,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The bond name.</p>
+             * <p>Bond name</p>
              * 
              * <strong>example:</strong>
              * <p>bond0</p>
@@ -628,7 +623,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The cluster subnet from which the IP address originates.</p>
+             * <p>IP source subnet for the cluster</p>
              * 
              * <strong>example:</strong>
              * <p>172.16.0.0/24</p>
@@ -698,7 +693,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The default bond subnet for the cluster.</p>
+             * <p>Default bond subnet for the cluster</p>
              * 
              * <strong>example:</strong>
              * <p>172.168.0.0/24</p>
@@ -709,7 +704,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The bond information.</p>
+             * <p>Bond information</p>
              */
             public Builder bonds(java.util.List<Bonds> bonds) {
                 this.bonds = bonds;
@@ -776,7 +771,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The bond name.</p>
+             * <p>Bond name</p>
              * 
              * <strong>example:</strong>
              * <p>bond0</p>
@@ -787,7 +782,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The cluster subnet from which the IP address originates.</p>
+             * <p>IP source subnet for the cluster</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.1.0/24</p>
@@ -857,7 +852,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The bond information.</p>
+             * <p>Bond information</p>
              */
             public Builder bonds(java.util.List<MachineTypePolicyBonds> bonds) {
                 this.bonds = bonds;
@@ -865,7 +860,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The instance type.</p>
+             * <p>Machine type</p>
              * 
              * <strong>example:</strong>
              * <p>efg1.nvga8n</p>
@@ -935,7 +930,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The bond name.</p>
+             * <p>Bond name</p>
              * 
              * <strong>example:</strong>
              * <p>bond0</p>
@@ -946,7 +941,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The cluster subnet from which the IP address originates.</p>
+             * <p>IP source subnet for the cluster</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.0.0/24</p>
@@ -1016,7 +1011,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The bond information.</p>
+             * <p>Bond information</p>
              */
             public Builder bonds(java.util.List<NodePolicyBonds> bonds) {
                 this.bonds = bonds;
@@ -1024,7 +1019,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>Node ID</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-2r42vq62001</p>
@@ -1107,7 +1102,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The bond policy.</p>
+             * <p>Bond policy</p>
              */
             public Builder bondPolicy(BondPolicy bondPolicy) {
                 this.bondPolicy = bondPolicy;
@@ -1115,7 +1110,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The allocation policy for the instance type.</p>
+             * <p>Machine type allocation policy</p>
              */
             public Builder machineTypePolicy(java.util.List<MachineTypePolicy> machineTypePolicy) {
                 this.machineTypePolicy = machineTypePolicy;
@@ -1123,7 +1118,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The node allocation policy.</p>
+             * <p>Node allocation policy</p>
              */
             public Builder nodePolicy(java.util.List<NodePolicy> nodePolicy) {
                 this.nodePolicy = nodePolicy;
@@ -1203,7 +1198,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The subnet CIDR block.</p>
+             * <p>Subnet CIDR</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.1.8/24</p>
@@ -1214,7 +1209,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The subnet type.</p>
+             * <p>Subnet type</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.2.8/24</p>
@@ -1225,7 +1220,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The zone ID.</p>
+             * <p>Zone ID</p>
              * 
              * <strong>example:</strong>
              * <p>cn-wulanchabu-b</p>
@@ -1360,7 +1355,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The ID of the Cloud Enterprise Network (CEN) instance.</p>
+             * <p>Cloud Enterprise Network ID</p>
              * 
              * <strong>example:</strong>
              * <p>cen-1gb1eftc5qp2ao75fo</p>
@@ -1371,7 +1366,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The CIDR block for Cloud Link.</p>
+             * <p>Cloud link CIDR</p>
              * 
              * <strong>example:</strong>
              * <p>172.16.0.0/24</p>
@@ -1382,7 +1377,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The Cloud Link ID.</p>
+             * <p>Cloud link ID</p>
              * 
              * <strong>example:</strong>
              * <p>vcc-cn-c4dtycm5i08</p>
@@ -1393,7 +1388,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The VPC.</p>
+             * <p>Virtual Private Cloud (VPC)</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-0jl2x45apm6odc2c10h25</p>
@@ -1404,7 +1399,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The vSwitch.</p>
+             * <p>VPC switch</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-0jl2w3ffbghkss0x2foff</p>
@@ -1415,7 +1410,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The CIDR block for the cluster.</p>
+             * <p>Cluster network segment</p>
              * 
              * <strong>example:</strong>
              * <p>192.168.0.0/16</p>
@@ -1426,7 +1421,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The cluster subnet.</p>
+             * <p>Cluster subnets</p>
              */
             public Builder vpdSubnets(java.util.List<VpdSubnets> vpdSubnets) {
                 this.vpdSubnets = vpdSubnets;
@@ -1493,7 +1488,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>VPC ID</p>
              * 
              * <strong>example:</strong>
              * <p>vpd-vfuz6ejv</p>
@@ -1504,7 +1499,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The IDs of the subnets for a cluster.</p>
+             * <p>List of cluster subnet IDs</p>
              */
             public Builder vpdSubnets(java.util.List<String> vpdSubnets) {
                 this.vpdSubnets = vpdSubnets;
@@ -1649,7 +1644,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The IP allocation policy.</p>
+             * <p>IP allocation policy</p>
              */
             public Builder ipAllocationPolicy(java.util.List<IpAllocationPolicy> ipAllocationPolicy) {
                 this.ipAllocationPolicy = ipAllocationPolicy;
@@ -1657,7 +1652,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The virtual private domain (VPD) configuration information.</p>
+             * <p>Vpd configuration information</p>
              */
             public Builder newVpdInfo(NewVpdInfo newVpdInfo) {
                 this.newVpdInfo = newVpdInfo;
@@ -1665,7 +1660,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The security group ID.</p>
+             * <p>Security group ID</p>
              * 
              * <strong>example:</strong>
              * <p>sg-bp1d3dvbh9by7j5rujax</p>
@@ -1676,7 +1671,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The IP version.</p>
+             * <p>IP version</p>
              * 
              * <strong>example:</strong>
              * <p>IPv4</p>
@@ -1687,7 +1682,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>VSwitch ID</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-asjdfklj</p>
@@ -1698,7 +1693,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The ID of the zone to which the vSwitch belongs.</p>
+             * <p>VSwitch Zone ID</p>
              * 
              * <strong>example:</strong>
              * <p>cn-shanghai-b</p>
@@ -1709,7 +1704,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The VPC ID.</p>
+             * <p>VPC ID</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-0jl36lqzmc06qogy0t5ll</p>
@@ -1720,7 +1715,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The VPD information.</p>
+             * <p>Reuse VPD information</p>
              */
             public Builder vpdInfo(VpdInfo vpdInfo) {
                 this.vpdInfo = vpdInfo;
@@ -1813,7 +1808,10 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * Category.
+             * <p>Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1821,7 +1819,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * DeleteWithNode.
+             * <p>Whether the data disk is deleted with the node when it is unsubscribed</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteWithNode(Boolean deleteWithNode) {
                 this.deleteWithNode = deleteWithNode;
@@ -1829,7 +1830,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * PerformanceLevel.
+             * <p>Data disk performance level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -1837,7 +1841,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>Disk size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1956,7 +1963,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * DataDisk.
+             * <p>Data disk specifications.</p>
              */
             public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
                 this.dataDisk = dataDisk;
@@ -1964,7 +1971,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The hostname.</p>
+             * <p>Hostname</p>
              * 
              * <strong>example:</strong>
              * <p>8d13b784-17a9-11ed-bc7b-acde48001122</p>
@@ -1975,7 +1982,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The logon password.</p>
+             * <p>Login password</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -1986,7 +1993,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>Node ID</p>
              * 
              * <strong>example:</strong>
              * <p>e01poc-cn-i7m2wnivf0d</p>
@@ -1997,7 +2004,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>VSwitch ID</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp169pi5fj151rrms4sia</p>
@@ -2008,7 +2015,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>VPC ID</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-0jlasms92fdxqd3wlf8ny</p>
@@ -2091,9 +2098,9 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The disk category. Valid values:</p>
+             * <p>Disk type. The value range is:</p>
              * <ul>
-             * <li>cloud_essd</li>
+             * <li>cloud_essd: ESSD disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2105,10 +2112,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The performance level of the ESSD that is used as the system disk. Valid values:</p>
+             * <p>When creating an ESSD disk as the system disk, set the performance level of the disk. The value range is:</p>
              * <ul>
-             * <li>PL0: A single ESSD can deliver up to 10,000 random read/write IOPS.</li>
-             * <li>PL1: A single ESSD can deliver up to 50,000 random read/write IOPS.</li>
+             * <li>PL0: Maximum random read/write IOPS for a single disk is 10,000.</li>
+             * <li>PL1: Maximum random read/write IOPS for a single disk is 50,000.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -2120,10 +2127,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>Unit: GB</p>
+             * <p>Unit: GB.</p>
              * 
              * <strong>example:</strong>
-             * <p>20</p>
+             * <p>9999</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -2174,6 +2181,9 @@ public class CreateClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
+        @com.aliyun.core.annotation.NameInMap("VirtualGpuEnabled")
+        private Boolean virtualGpuEnabled;
+
         @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
@@ -2188,6 +2198,7 @@ public class CreateClusterRequest extends Request {
             this.nodes = builder.nodes;
             this.systemDisk = builder.systemDisk;
             this.userData = builder.userData;
+            this.virtualGpuEnabled = builder.virtualGpuEnabled;
             this.zoneId = builder.zoneId;
         }
 
@@ -2270,6 +2281,13 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
+         * @return virtualGpuEnabled
+         */
+        public Boolean getVirtualGpuEnabled() {
+            return this.virtualGpuEnabled;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -2287,6 +2305,7 @@ public class CreateClusterRequest extends Request {
             private java.util.List<Nodes> nodes; 
             private SystemDisk systemDisk; 
             private String userData; 
+            private Boolean virtualGpuEnabled; 
             private String zoneId; 
 
             private Builder() {
@@ -2303,14 +2322,15 @@ public class CreateClusterRequest extends Request {
                 this.nodes = model.nodes;
                 this.systemDisk = model.systemDisk;
                 this.userData = model.userData;
+                this.virtualGpuEnabled = model.virtualGpuEnabled;
                 this.zoneId = model.zoneId;
             } 
 
             /**
-             * <p>Specifies whether to support file system mounting.</p>
+             * <p>Whether to support file system mounting</p>
              * 
              * <strong>example:</strong>
-             * <p>False</p>
+             * <p>true</p>
              */
             public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
                 this.fileSystemMountEnabled = fileSystemMountEnabled;
@@ -2318,7 +2338,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The system image ID.</p>
+             * <p>System image ID</p>
              * 
              * <strong>example:</strong>
              * <p>i190297201634099844192</p>
@@ -2329,10 +2349,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The name of the AccessKey pair.</p>
+             * <p>Key pair name.</p>
              * 
              * <strong>example:</strong>
-             * <p>sc-key</p>
+             * <p>test-keypair</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -2340,10 +2360,10 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The logon password.</p>
+             * <p>Login password</p>
              * 
              * <strong>example:</strong>
-             * <hr>
+             * <p>Password</p>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -2351,7 +2371,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The instance type.</p>
+             * <p>Machine type</p>
              * 
              * <strong>example:</strong>
              * <p>efg1.nvga1</p>
@@ -2362,7 +2382,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The node group description.</p>
+             * <p>Node group description</p>
              * 
              * <strong>example:</strong>
              * <p>Node group description</p>
@@ -2373,7 +2393,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The node group name.</p>
+             * <p>Node group name</p>
              * 
              * <strong>example:</strong>
              * <p>emr-default</p>
@@ -2384,7 +2404,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The nodes.</p>
+             * <p>Node list</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -2392,7 +2412,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The system disk information.</p>
+             * <p>System disk information</p>
              */
             public Builder systemDisk(SystemDisk systemDisk) {
                 this.systemDisk = systemDisk;
@@ -2400,7 +2420,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The user data of the instance. The user data must be Base64-encoded. The raw data can be up to 16 KB in size.</p>
+             * <p>Instance custom data. It needs to be encoded in Base64, and the original data should not exceed 16 KB.</p>
              * 
              * <strong>example:</strong>
              * <p>ZWNobyBoZWxsbyBlY3Mh</p>
@@ -2411,7 +2431,18 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The zone ID.</p>
+             * <p>Whether to enable gpu virtualization or not</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder virtualGpuEnabled(Boolean virtualGpuEnabled) {
+                this.virtualGpuEnabled = virtualGpuEnabled;
+                return this;
+            }
+
+            /**
+             * <p>Zone ID</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-i</p>
@@ -2481,7 +2512,7 @@ public class CreateClusterRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>Key</p>
              * 
              * <strong>example:</strong>
              * <p>env-name</p>
@@ -2492,7 +2523,7 @@ public class CreateClusterRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>Value</p>
              * 
              * <strong>example:</strong>
              * <p>dev</p>

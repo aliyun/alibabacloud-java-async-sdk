@@ -82,7 +82,10 @@ public class DescribeNetTestResultRequest extends Request {
         }
 
         /**
-         * TestId.
+         * <p>The ID of the test task. The unique identifier of a network test task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dr-uf6i0tv2refv8wz*****</p>
          */
         public Builder testId(String testId) {
             this.putBodyParameter("TestId", testId);

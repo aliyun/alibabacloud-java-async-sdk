@@ -210,7 +210,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         } 
 
         /**
-         * ClusterId.
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i119982311660892626523</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -218,7 +221,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * ClusterName.
+         * <p>The cluster name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Standard_Cluster</p>
          */
         public Builder clusterName(String clusterName) {
             this.clusterName = clusterName;
@@ -226,7 +232,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * CommTest.
+         * <p>Specify when NetTestType is CommTest.</p>
          */
         public Builder commTest(CommTest commTest) {
             this.commTest = commTest;
@@ -234,7 +240,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * CreationTime.
+         * <p>create time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-15T10:25:42+08:00</p>
          */
         public Builder creationTime(String creationTime) {
             this.creationTime = creationTime;
@@ -242,7 +251,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * DelayTest.
+         * <p>Fill in when the network test type is a delay test.</p>
          */
         public Builder delayTest(DelayTest delayTest) {
             this.delayTest = delayTest;
@@ -250,7 +259,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * FinishedTime.
+         * <p>finish time</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-10-16T02:04Z</p>
          */
         public Builder finishedTime(String finishedTime) {
             this.finishedTime = finishedTime;
@@ -258,7 +270,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * NetTestType.
+         * <p>The type of the network test.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DelayTest</p>
          */
         public Builder netTestType(String netTestType) {
             this.netTestType = netTestType;
@@ -266,7 +281,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * Port.
+         * <p>Test port number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23604</p>
          */
         public Builder port(String port) {
             this.port = port;
@@ -274,7 +292,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8F065DDD-6996-5973-9691-9EC57BD0072E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -282,7 +303,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * ResultDetial.
+         * <p>result detail</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{}</p>
          */
         public Builder resultDetial(String resultDetial) {
             this.resultDetial = resultDetial;
@@ -290,11 +314,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * <ul>
-         * <li></li>
-         * <li></li>
-         * <li></li>
-         * </ul>
+         * <p>status of session</p>
          * 
          * <strong>example:</strong>
          * <p>Failed</p>
@@ -305,7 +325,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * TestId.
+         * <p>The ID of the test task. The unique identifier of a network test task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>af35ce53-7c35-4277-834a-fbf49c316a96</p>
          */
         public Builder testId(String testId) {
             this.testId = testId;
@@ -313,7 +336,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficTest.
+         * <p>Fill in when the network test type is a traffic test.</p>
          */
         public Builder trafficTest(TrafficTest trafficTest) {
             this.trafficTest = trafficTest;
@@ -392,7 +415,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             } 
 
             /**
-             * IP.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>169.253.253.15</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -400,7 +426,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>i111670831721110797708</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -408,7 +437,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * ServerName.
+             * <p>Service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VBw</p>
              */
             public Builder serverName(String serverName) {
                 this.serverName = serverName;
@@ -501,7 +533,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             } 
 
             /**
-             * GPUNum.
+             * <p>Number of GPUs</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder GPUNum(String GPUNum) {
                 this.GPUNum = GPUNum;
@@ -509,7 +544,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * Hosts.
+             * <p>All hosts infomation</p>
              */
             public Builder hosts(java.util.List<Hosts> hosts) {
                 this.hosts = hosts;
@@ -517,7 +552,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * Model.
+             * <p>The communication library model.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>intention_v4</p>
              */
             public Builder model(String model) {
                 this.model = model;
@@ -525,7 +563,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The CommTest type, which can be ACCL or NCCL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACCL</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -618,7 +659,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Bond.
+             * <p>The bonding of network interface card.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bond1</p>
              */
             public Builder bond(String bond) {
                 this.bond = bond;
@@ -626,7 +670,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * IP.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>125.210.225.48</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -634,7 +681,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-bcd3u1aee06</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -642,7 +692,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * ServerName.
+             * <p>Service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>NQU</p>
              */
             public Builder serverName(String serverName) {
                 this.serverName = serverName;
@@ -696,7 +749,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Hosts.
+             * <p>All hosts infomation</p>
              */
             public Builder hosts(java.util.List<DelayTestHosts> hosts) {
                 this.hosts = hosts;
@@ -789,7 +842,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Bond.
+             * <p>Network interface bond port</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bond1</p>
              */
             public Builder bond(String bond) {
                 this.bond = bond;
@@ -797,7 +853,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * IP.
+             * <p>IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>192.168.1.1</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -805,7 +864,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-20s41p6cx01</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -813,7 +875,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * ServerName.
+             * <p>The name of the service.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xMv</p>
              */
             public Builder serverName(String serverName) {
                 this.serverName = serverName;
@@ -906,7 +971,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Bond.
+             * <p>Network interface bond port</p>
+             * 
+             * <strong>example:</strong>
+             * <p>bond1</p>
              */
             public Builder bond(String bond) {
                 this.bond = bond;
@@ -914,7 +982,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * IP.
+             * <p>The IP address.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>47.121.110.190</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -922,7 +993,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e01-cn-wwo3etaqu0b</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -930,7 +1004,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * ServerName.
+             * <p>Service name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xMv</p>
              */
             public Builder serverName(String serverName) {
                 this.serverName = serverName;
@@ -1062,7 +1139,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             } 
 
             /**
-             * Clients.
+             * <p>All clients information</p>
              */
             public Builder clients(java.util.List<Clients> clients) {
                 this.clients = clients;
@@ -1070,7 +1147,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>Call duration, in seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -1078,7 +1158,11 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * GDR.
+             * <p>When the protocol is RDMA, fill in True/False,
+             * when the protocol is TCP, this field is empty.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>False</p>
              */
             public Builder GDR(String GDR) {
                 this.GDR = GDR;
@@ -1086,7 +1170,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * Protocol.
+             * <p>Network protocol, either RDMA or TCP.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TCP</p>
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -1094,7 +1181,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * QP.
+             * <p>When the protocol is TCP, fill in the number of concurrent connections; when the protocol is RDMA, fill in the configured QP value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder qp(Long qp) {
                 this.qp = qp;
@@ -1102,7 +1192,7 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * Servers.
+             * <p>Servers infomation.</p>
              */
             public Builder servers(java.util.List<Servers> servers) {
                 this.servers = servers;
@@ -1110,7 +1200,10 @@ public class DescribeNetTestResultResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficModel.
+             * <p>Traffic model, either MTON or Fullmesh.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Fullmesh</p>
              */
             public Builder trafficModel(String trafficModel) {
                 this.trafficModel = trafficModel;

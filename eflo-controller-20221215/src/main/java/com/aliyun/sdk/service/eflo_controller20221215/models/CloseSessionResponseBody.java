@@ -80,7 +80,10 @@ public class CloseSessionResponseBody extends TeaModel {
         } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>07AA3A1F-321E-50D8-B834-88C411331C94</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -88,7 +91,10 @@ public class CloseSessionResponseBody extends TeaModel {
         }
 
         /**
-         * SessionId.
+         * <p>The session ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>i206495551737511455528</p>
          */
         public Builder sessionId(String sessionId) {
             this.sessionId = sessionId;
@@ -96,7 +102,7 @@ public class CloseSessionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>ClosingActive</p>
+         * <p>status of session</p>
          * 
          * <strong>example:</strong>
          * <p>Inactive</p>

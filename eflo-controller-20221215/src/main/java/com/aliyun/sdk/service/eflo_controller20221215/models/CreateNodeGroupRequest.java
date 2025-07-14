@@ -112,7 +112,7 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>Cluster ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -125,6 +125,7 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
+         * <p>Node ID.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodeGroup(NodeGroup nodeGroup) {
@@ -135,7 +136,10 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
-         * NodeUnit.
+         * <p>Node information</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;NodeUnitId&quot;:&quot;3c2999a8-2b95-4409-93c5-ad3985fc5c9f&quot;,&quot;ResourceGroupId&quot;:&quot;&quot;,&quot;MaxNodes&quot;:0,&quot;NodeUnitName&quot;:&quot;asi_cn-serverless-sale_e01-lingjun-psale&quot;}</p>
          */
         public Builder nodeUnit(java.util.Map<String, ?> nodeUnit) {
             String nodeUnitShrink = shrink(nodeUnit, "NodeUnit", "json");
@@ -217,12 +221,13 @@ public class CreateNodeGroupRequest extends Request {
             } 
 
             /**
+             * <p>Disk type. Value range:</p>
              * <ul>
-             * <li></li>
+             * <li>cloud_essd: ESSD cloud disk.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>cloud_essd</p>
+             * <p>clou_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -230,13 +235,14 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
+             * <p>When creating an ESSD cloud disk as a system disk, set the performance level of the cloud disk. Value range:</p>
              * <ul>
-             * <li></li>
-             * <li></li>
+             * <li>PL0: Maximum random read/write IOPS per disk 10,000.</li>
+             * <li>PL1: Maximum random read/write IOPS per disk 50,000.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>PL!</p>
+             * <p>PL1</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -244,7 +250,10 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>Unit: GB.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -299,6 +308,9 @@ public class CreateNodeGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
+        @com.aliyun.core.annotation.NameInMap("VirtualGpuEnabled")
+        private Boolean virtualGpuEnabled;
+
         private NodeGroup(Builder builder) {
             this.az = builder.az;
             this.fileSystemMountEnabled = builder.fileSystemMountEnabled;
@@ -310,6 +322,7 @@ public class CreateNodeGroupRequest extends Request {
             this.nodeGroupName = builder.nodeGroupName;
             this.systemDisk = builder.systemDisk;
             this.userData = builder.userData;
+            this.virtualGpuEnabled = builder.virtualGpuEnabled;
         }
 
         public static Builder builder() {
@@ -390,6 +403,13 @@ public class CreateNodeGroupRequest extends Request {
             return this.userData;
         }
 
+        /**
+         * @return virtualGpuEnabled
+         */
+        public Boolean getVirtualGpuEnabled() {
+            return this.virtualGpuEnabled;
+        }
+
         public static final class Builder {
             private String az; 
             private Boolean fileSystemMountEnabled; 
@@ -401,6 +421,7 @@ public class CreateNodeGroupRequest extends Request {
             private String nodeGroupName; 
             private SystemDisk systemDisk; 
             private String userData; 
+            private Boolean virtualGpuEnabled; 
 
             private Builder() {
             } 
@@ -416,9 +437,11 @@ public class CreateNodeGroupRequest extends Request {
                 this.nodeGroupName = model.nodeGroupName;
                 this.systemDisk = model.systemDisk;
                 this.userData = model.userData;
+                this.virtualGpuEnabled = model.virtualGpuEnabled;
             } 
 
             /**
+             * <p>Availability Zone</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -430,10 +453,10 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>Indicates whether file storage mounting is supported.</p>
+             * <p>Whether file storage mounting is supported</p>
              * 
              * <strong>example:</strong>
-             * <p>False</p>
+             * <p>true</p>
              */
             public Builder fileSystemMountEnabled(Boolean fileSystemMountEnabled) {
                 this.fileSystemMountEnabled = fileSystemMountEnabled;
@@ -441,6 +464,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
+             * <p>Image ID.</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -452,7 +476,10 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * KeyPairName.
+             * <p>Key pair name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-keypair</p>
              */
             public Builder keyPairName(String keyPairName) {
                 this.keyPairName = keyPairName;
@@ -460,7 +487,10 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * LoginPassword.
+             * <p>Password</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test-LoginPassword</p>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -468,7 +498,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * <p>The instance type.</p>
+             * <p>Machine type</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -480,7 +510,10 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * NodeGroupDescription.
+             * <p>Node group description</p>
+             * 
+             * <strong>example:</strong>
+             * <p>describe for node group</p>
              */
             public Builder nodeGroupDescription(String nodeGroupDescription) {
                 this.nodeGroupDescription = nodeGroupDescription;
@@ -488,6 +521,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
+             * <p>Node group name</p>
              * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
@@ -499,7 +533,7 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * SystemDisk.
+             * <p>Details of the node system disk configuration.</p>
              */
             public Builder systemDisk(SystemDisk systemDisk) {
                 this.systemDisk = systemDisk;
@@ -507,10 +541,26 @@ public class CreateNodeGroupRequest extends Request {
             }
 
             /**
-             * UserData.
+             * <p>User-defined data</p>
+             * 
+             * <strong>example:</strong>
+             * <p>#!/bin/bash
+             * uptime
+             * echo &quot;aaaaaaa&quot; &gt;&gt; /tmp/ttttt20250110141010.sh</p>
              */
             public Builder userData(String userData) {
                 this.userData = userData;
+                return this;
+            }
+
+            /**
+             * <p>Whether to enable gpu virtualization or not</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
+             */
+            public Builder virtualGpuEnabled(Boolean virtualGpuEnabled) {
+                this.virtualGpuEnabled = virtualGpuEnabled;
                 return this;
             }
 

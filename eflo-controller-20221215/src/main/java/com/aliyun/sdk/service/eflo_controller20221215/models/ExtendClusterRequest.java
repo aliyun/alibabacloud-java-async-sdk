@@ -152,7 +152,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * <p>The cluster ID.</p>
+         * <p>Cluster ID</p>
          * 
          * <strong>example:</strong>
          * <p>i15b480fbd2fcdbc2869cd80</p>
@@ -164,7 +164,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * <p>Specifies whether to allow skipping failed nodes. Default value: False.</p>
+         * <p>Whether to allow skipping failed node tasks, default value is False</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -176,7 +176,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * <p>The combined policies for assigning IP addresses: Only one policy type can be selected for each policy, and multiple policies can be combined.</p>
+         * <p>IP allocation combination policy: Each policy can only choose one type, and multiple policies can be combined</p>
          */
         public Builder ipAllocationPolicy(java.util.List<IpAllocationPolicy> ipAllocationPolicy) {
             String ipAllocationPolicyShrink = shrink(ipAllocationPolicy, "IpAllocationPolicy", "json");
@@ -186,7 +186,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * <p>The node groups.</p>
+         * <p>Node Groups</p>
          */
         public Builder nodeGroups(java.util.List<NodeGroups> nodeGroups) {
             String nodeGroupsShrink = shrink(nodeGroups, "NodeGroups", "json");
@@ -196,7 +196,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * <p>The ID of the zone to which the vSwitch belongs.</p>
+         * <p>VSwitch availability zone ID</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai-b</p>
@@ -208,7 +208,7 @@ public class ExtendClusterRequest extends Request {
         }
 
         /**
-         * <p>The subnets of the cluster.</p>
+         * <p>List of cluster subnets</p>
          */
         public Builder vpdSubnets(java.util.List<String> vpdSubnets) {
             String vpdSubnetsShrink = shrink(vpdSubnets, "VpdSubnets", "json");
@@ -277,7 +277,7 @@ public class ExtendClusterRequest extends Request {
             } 
 
             /**
-             * <p>The bond name.</p>
+             * <p>Bond name</p>
              * 
              * <strong>example:</strong>
              * <p>Bond0</p>
@@ -288,7 +288,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The cluster subnet from which the IP address originates.</p>
+             * <p>IP source cluster subnet</p>
              * 
              * <strong>example:</strong>
              * <p>subnet-3od2fe</p>
@@ -358,7 +358,7 @@ public class ExtendClusterRequest extends Request {
             } 
 
             /**
-             * <p>The default bond subnet for the cluster.</p>
+             * <p>Default bond cluster subnet</p>
              * 
              * <strong>example:</strong>
              * <p>subnet-3od2fe</p>
@@ -369,7 +369,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The bonds.</p>
+             * <p>Bond information</p>
              */
             public Builder bonds(java.util.List<Bonds> bonds) {
                 this.bonds = bonds;
@@ -436,7 +436,7 @@ public class ExtendClusterRequest extends Request {
             } 
 
             /**
-             * <p>The bond name.</p>
+             * <p>Bond name</p>
              * 
              * <strong>example:</strong>
              * <p>Bond0</p>
@@ -447,7 +447,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The cluster subnet from which the IP address originates.</p>
+             * <p>IP source cluster subnet</p>
              * 
              * <strong>example:</strong>
              * <p>subnet-fdo3dv</p>
@@ -517,7 +517,7 @@ public class ExtendClusterRequest extends Request {
             } 
 
             /**
-             * <p>The bonds.</p>
+             * <p>Bond information</p>
              */
             public Builder bonds(java.util.List<MachineTypePolicyBonds> bonds) {
                 this.bonds = bonds;
@@ -525,7 +525,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The instance type.</p>
+             * <p>Machine type</p>
              * 
              * <strong>example:</strong>
              * <p>efg1.nvga1</p>
@@ -595,7 +595,7 @@ public class ExtendClusterRequest extends Request {
             } 
 
             /**
-             * <p>The bond name.</p>
+             * <p>Bond name</p>
              * 
              * <strong>example:</strong>
              * <p>Bond0</p>
@@ -606,7 +606,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The cluster subnet from which the IP address originates.</p>
+             * <p>IP source cluster subnet</p>
              * 
              * <strong>example:</strong>
              * <p>subnet-fdo3dv</p>
@@ -689,7 +689,7 @@ public class ExtendClusterRequest extends Request {
             } 
 
             /**
-             * <p>The bonds.</p>
+             * <p>Bond information</p>
              */
             public Builder bonds(java.util.List<NodePolicyBonds> bonds) {
                 this.bonds = bonds;
@@ -697,10 +697,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The hostname.</p>
+             * <p>Hostname</p>
              * 
              * <strong>example:</strong>
-             * <p>i22c11282.eu95sqa</p>
+             * <p>a100-xa5dza28-0085</p>
              */
             public Builder hostname(String hostname) {
                 this.hostname = hostname;
@@ -708,7 +708,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>Node ID</p>
              * 
              * <strong>example:</strong>
              * <p>i-3fdodw2</p>
@@ -791,7 +791,7 @@ public class ExtendClusterRequest extends Request {
             } 
 
             /**
-             * <p>The bond policy that you specify the cluster subnet ID based on the bond name.</p>
+             * <p>Specify the cluster subnet ID based on the bond name</p>
              */
             public Builder bondPolicy(BondPolicy bondPolicy) {
                 this.bondPolicy = bondPolicy;
@@ -799,7 +799,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The allocation policies for the instance type.</p>
+             * <p>Machine type allocation policy</p>
              */
             public Builder machineTypePolicy(java.util.List<MachineTypePolicy> machineTypePolicy) {
                 this.machineTypePolicy = machineTypePolicy;
@@ -807,7 +807,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The node allocation policies.</p>
+             * <p>Node allocation policy</p>
              */
             public Builder nodePolicy(java.util.List<NodePolicy> nodePolicy) {
                 this.nodePolicy = nodePolicy;
@@ -874,10 +874,10 @@ public class ExtendClusterRequest extends Request {
             } 
 
             /**
-             * <p>The tag key.</p>
+             * <p>Node tag key</p>
              * 
              * <strong>example:</strong>
-             * <p>my_key</p>
+             * <p>key_my</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -885,10 +885,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The tag value.</p>
+             * <p>Node tag value</p>
              * 
              * <strong>example:</strong>
-             * <p>my_value</p>
+             * <p>value_my</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -981,7 +981,10 @@ public class ExtendClusterRequest extends Request {
             } 
 
             /**
-             * Category.
+             * <p>Type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cloud_essd</p>
              */
             public Builder category(String category) {
                 this.category = category;
@@ -989,7 +992,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * DeleteWithNode.
+             * <p>Whether the data disk is deleted with the node</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder deleteWithNode(Boolean deleteWithNode) {
                 this.deleteWithNode = deleteWithNode;
@@ -997,7 +1003,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * PerformanceLevel.
+             * <p>Data Disk Performance Level</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PL0</p>
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
@@ -1005,7 +1014,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * Size.
+             * <p>Disk Size</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -1124,7 +1136,7 @@ public class ExtendClusterRequest extends Request {
             } 
 
             /**
-             * DataDisk.
+             * <p>Data Disk Specifications</p>
              */
             public Builder dataDisk(java.util.List<DataDisk> dataDisk) {
                 this.dataDisk = dataDisk;
@@ -1132,7 +1144,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The hostname.</p>
+             * <p>Hostname</p>
              * 
              * <strong>example:</strong>
              * <p>d044d220-33fd-11ed-86a6</p>
@@ -1143,7 +1155,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The logon password.</p>
+             * <p>Login Password</p>
              * 
              * <strong>example:</strong>
              * <hr>
@@ -1154,7 +1166,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The node ID.</p>
+             * <p>Node ID</p>
              * 
              * <strong>example:</strong>
              * <p>e01-cn-zvp2zdpy601</p>
@@ -1165,7 +1177,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>VSwitch ID</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-bp169pi5fj151rrms4sia</p>
@@ -1176,7 +1188,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>VPC ID</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-0jlasms92fdxqd3wlf8ny</p>
@@ -1389,7 +1401,7 @@ public class ExtendClusterRequest extends Request {
             } 
 
             /**
-             * <p>The number of nodes to be purchased. Valid values: 0 to 500. If you set the value of the Amount parameter to 0, you do not want to purchase nodes and scale out the cluster by using existing nodes. If you set the value of the Amount parameter to a value ranging from 1 to 500, you want to purchase a certain number of nodes for cluster scale-out. Default value: 0.</p>
+             * <p>Number of nodes to purchase. Range: 0<del>500. If the Amount parameter is set to 0, it means no new nodes will be purchased and existing nodes will be used for scaling. If the Amount parameter is set to 1</del>500, it means a certain number of nodes will be purchased and used for scaling. Default value: 0</p>
              * 
              * <strong>example:</strong>
              * <p>4</p>
@@ -1400,7 +1412,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable auto-renewal for the purchased nodes. This parameter takes effect only when the Amount parameter is not set to 0 and the ChargeType parameter is set to PrePaid. Valid values: true and false. Default value: False.</p>
+             * <p>Whether to automatically renew the purchased nodes. This parameter takes effect when the Amount parameter is not 0 and the ChargeType is set to PrePaid. Valid values: True (auto-renewal); False (no auto-renewal). Default value: False</p>
              * 
              * <strong>example:</strong>
              * <p>True</p>
@@ -1411,7 +1423,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The billing method of the node. This parameter does not take effect if you set the Amount parameter to 0. Valid values: PrePaid (subscription) and PostPaid (pay-as-you-go). Default value: PrePaid.</p>
+             * <p>Payment method for the nodes. When the Amount parameter is set to 0, this parameter does not take effect. Valid values: PrePaid (Subscription); PostPaid (Pay-As-You-Go). Default value: PrePaid.</p>
              * 
              * <strong>example:</strong>
              * <p>PostPaid</p>
@@ -1422,7 +1434,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The hostname for the purchased node. This parameter does not take effect if you set the Amount parameter to 0.</p>
+             * <p>Set the hostnames for the purchased nodes. This parameter does not take effect when the Amount parameter is set to 0.</p>
              */
             public Builder hostnames(java.util.List<String> hostnames) {
                 this.hostnames = hostnames;
@@ -1430,10 +1442,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The logon password of the purchased node. This parameter does not take effect if you set the Amount parameter to 0.</p>
+             * <p>Set the login password for the purchased nodes. This parameter is not effective when the Amount parameter is set to 0.</p>
              * 
              * <strong>example:</strong>
-             * <p>Addk(*78</p>
+             * <p>skkO(*89Y</p>
              */
             public Builder loginPassword(String loginPassword) {
                 this.loginPassword = loginPassword;
@@ -1441,7 +1453,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The node group ID.</p>
+             * <p>Node Group ID</p>
              * 
              * <strong>example:</strong>
              * <p>i16d4883a46cbadeb4bc9</p>
@@ -1452,7 +1464,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>Node tags</p>
              */
             public Builder nodeTag(java.util.List<NodeTag> nodeTag) {
                 this.nodeTag = nodeTag;
@@ -1460,7 +1472,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The nodes.</p>
+             * <p>List of Nodes</p>
              */
             public Builder nodes(java.util.List<Nodes> nodes) {
                 this.nodes = nodes;
@@ -1468,7 +1480,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The duration of the purchased node. Unit: months. Valid values: 1, 6, 12, 24, 36, and 48. This parameter takes effect only when the Amount parameter is not set to 0 and the ChargeType parameter is set to PrePaid.</p>
+             * <p>Duration of the node purchase (in months). Valid values: 1, 6, 12, 24, 36, 48. This parameter takes effect when the Amount parameter is not 0 and the ChargeType is set to PrePaid.</p>
              * 
              * <strong>example:</strong>
              * <p>6</p>
@@ -1479,7 +1491,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The user data.</p>
+             * <p>Custom Data</p>
              * 
              * <strong>example:</strong>
              * <p>#!/bin/sh
@@ -1491,10 +1503,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The vSwitch ID.</p>
+             * <p>VSwitch ID</p>
              * 
              * <strong>example:</strong>
-             * <p>vsw-0jly2d537ejphyq6h13ke</p>
+             * <p>vsw-uf65m8xqjgy55xj9jw92n</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1502,10 +1514,10 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The ID of the virtual private cloud (VPC).</p>
+             * <p>VPC ID</p>
              * 
              * <strong>example:</strong>
-             * <p>vpc-zq1econyv63tvyci5hefw</p>
+             * <p>vpc-0jl3b0c0ukydlfezr13n6</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -1513,7 +1525,7 @@ public class ExtendClusterRequest extends Request {
             }
 
             /**
-             * <p>The zone ID.</p>
+             * <p>Zone ID</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou-i</p>
