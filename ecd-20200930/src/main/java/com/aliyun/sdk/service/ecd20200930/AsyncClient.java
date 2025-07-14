@@ -1167,6 +1167,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
+     * @param request the request parameters of ListTransferFiles  ListTransferFilesRequest
+     * @return ListTransferFilesResponse
+     */
+    CompletableFuture<ListTransferFilesResponse> listTransferFiles(ListTransferFilesRequest request);
+
+    /**
      * @param request the request parameters of ListUserAdOrganizationUnits  ListUserAdOrganizationUnitsRequest
      * @return ListUserAdOrganizationUnitsResponse
      */
@@ -1754,6 +1760,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return TagResourcesResponse
      */
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    /**
+     * @param request the request parameters of TransferTaskApprovalCallback  TransferTaskApprovalCallbackRequest
+     * @return TransferTaskApprovalCallbackResponse
+     */
+    CompletableFuture<TransferTaskApprovalCallbackResponse> transferTaskApprovalCallback(TransferTaskApprovalCallbackRequest request);
 
     /**
      * @param request the request parameters of UnbindConfigGroup  UnbindConfigGroupRequest

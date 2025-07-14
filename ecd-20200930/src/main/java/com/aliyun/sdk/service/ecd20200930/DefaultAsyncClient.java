@@ -3023,6 +3023,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListTransferFiles  ListTransferFilesRequest
+     * @return ListTransferFilesResponse
+     */
+    @Override
+    public CompletableFuture<ListTransferFilesResponse> listTransferFiles(ListTransferFilesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ListTransferFiles").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTransferFilesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTransferFilesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListUserAdOrganizationUnits  ListUserAdOrganizationUnitsRequest
      * @return ListUserAdOrganizationUnitsResponse
      */
@@ -4482,6 +4500,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<TagResourcesResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of TransferTaskApprovalCallback  TransferTaskApprovalCallbackRequest
+     * @return TransferTaskApprovalCallbackResponse
+     */
+    @Override
+    public CompletableFuture<TransferTaskApprovalCallbackResponse> transferTaskApprovalCallback(TransferTaskApprovalCallbackRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("TransferTaskApprovalCallback").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(TransferTaskApprovalCallbackResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<TransferTaskApprovalCallbackResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
