@@ -36,6 +36,10 @@ public class ProvisionApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationProvisionInfo
      */
@@ -53,6 +57,14 @@ public class ProvisionApplicationResponseBody extends TeaModel {
     public static final class Builder {
         private ApplicationProvisionInfo applicationProvisionInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ProvisionApplicationResponseBody model) {
+            this.applicationProvisionInfo = model.applicationProvisionInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The installation information of the application.</p>
@@ -123,6 +135,14 @@ public class ProvisionApplicationResponseBody extends TeaModel {
             private String description; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(PredefinedScope model) {
+                this.description = model.description;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The description of the permission.</p>
              * 
@@ -184,6 +204,13 @@ public class ProvisionApplicationResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PredefinedScope> predefinedScope; 
 
+            private Builder() {
+            } 
+
+            private Builder(PredefinedScopes model) {
+                this.predefinedScope = model.predefinedScope;
+            } 
+
             /**
              * PredefinedScope.
              */
@@ -230,6 +257,13 @@ public class ProvisionApplicationResponseBody extends TeaModel {
 
         public static final class Builder {
             private PredefinedScopes predefinedScopes; 
+
+            private Builder() {
+            } 
+
+            private Builder(DelegatedScope model) {
+                this.predefinedScopes = model.predefinedScopes;
+            } 
 
             /**
              * <p>The information about the permissions that are granted to the application.</p>
@@ -373,6 +407,21 @@ public class ProvisionApplicationResponseBody extends TeaModel {
             private String displayName; 
             private String tenantId; 
             private String updateDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationProvisionInfo model) {
+                this.accountId = model.accountId;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.appPrincipalName = model.appPrincipalName;
+                this.createDate = model.createDate;
+                this.delegatedScope = model.delegatedScope;
+                this.displayName = model.displayName;
+                this.tenantId = model.tenantId;
+                this.updateDate = model.updateDate;
+            } 
 
             /**
              * <p>The ID of the Alibaba Cloud account.</p>

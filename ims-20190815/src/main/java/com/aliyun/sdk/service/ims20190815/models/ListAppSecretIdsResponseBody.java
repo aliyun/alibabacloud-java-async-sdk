@@ -36,6 +36,10 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appSecrets
      */
@@ -53,6 +57,14 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
     public static final class Builder {
         private AppSecrets appSecrets; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAppSecretIdsResponseBody model) {
+            this.appSecrets = model.appSecrets;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the application secret.</p>
@@ -135,6 +147,15 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
             private String appSecretId; 
             private String createDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(AppSecret model) {
+                this.appId = model.appId;
+                this.appSecretId = model.appSecretId;
+                this.createDate = model.createDate;
+            } 
+
             /**
              * <p>The ID of the application.</p>
              * 
@@ -206,6 +227,13 @@ public class ListAppSecretIdsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AppSecret> appSecret; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppSecrets model) {
+                this.appSecret = model.appSecret;
+            } 
 
             /**
              * AppSecret.

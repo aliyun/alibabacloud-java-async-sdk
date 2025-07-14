@@ -44,6 +44,10 @@ public class ListUsersInRecycleBinResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isTruncated
      */
@@ -77,6 +81,16 @@ public class ListUsersInRecycleBinResponseBody extends TeaModel {
         private String marker; 
         private String requestId; 
         private Users users; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUsersInRecycleBinResponseBody model) {
+            this.isTruncated = model.isTruncated;
+            this.marker = model.marker;
+            this.requestId = model.requestId;
+            this.users = model.users;
+        } 
 
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
@@ -221,6 +235,18 @@ public class ListUsersInRecycleBinResponseBody extends TeaModel {
             private String userId; 
             private String userPrincipalName; 
 
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.createDate = model.createDate;
+                this.deleteDate = model.deleteDate;
+                this.displayName = model.displayName;
+                this.recycleDate = model.recycleDate;
+                this.userId = model.userId;
+                this.userPrincipalName = model.userPrincipalName;
+            } 
+
             /**
              * <p>The time when the RAM user was created.</p>
              * 
@@ -325,6 +351,13 @@ public class ListUsersInRecycleBinResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<User> user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.user = model.user;
+            } 
 
             /**
              * User.

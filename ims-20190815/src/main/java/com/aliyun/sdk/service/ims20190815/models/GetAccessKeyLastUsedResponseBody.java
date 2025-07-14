@@ -36,6 +36,10 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessKeyLastUsed
      */
@@ -53,6 +57,14 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
     public static final class Builder {
         private AccessKeyLastUsed accessKeyLastUsed; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccessKeyLastUsedResponseBody model) {
+            this.accessKeyLastUsed = model.accessKeyLastUsed;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the time when the AccessKey pair was used for the last time.</p>
@@ -122,6 +134,14 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
         public static final class Builder {
             private String lastUsedDate; 
             private String serviceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessKeyLastUsed model) {
+                this.lastUsedDate = model.lastUsedDate;
+                this.serviceName = model.serviceName;
+            } 
 
             /**
              * <p>The time when the AccessKey pair was used for the last time.</p>

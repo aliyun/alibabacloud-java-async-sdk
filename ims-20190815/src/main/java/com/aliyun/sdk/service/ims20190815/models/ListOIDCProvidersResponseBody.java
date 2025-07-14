@@ -44,6 +44,10 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isTruncated
      */
@@ -77,6 +81,16 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
         private String marker; 
         private OIDCProviders OIDCProviders; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOIDCProvidersResponseBody model) {
+            this.isTruncated = model.isTruncated;
+            this.marker = model.marker;
+            this.OIDCProviders = model.OIDCProviders;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
@@ -281,6 +295,23 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
             private String OIDCProviderName; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(OIDCProvider model) {
+                this.arn = model.arn;
+                this.clientIds = model.clientIds;
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.fingerprints = model.fingerprints;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.issuanceLimitTime = model.issuanceLimitTime;
+                this.issuerUrl = model.issuerUrl;
+                this.OIDCProviderName = model.OIDCProviderName;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the OIDC IdP.</p>
              * 
@@ -440,6 +471,13 @@ public class ListOIDCProvidersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<OIDCProvider> OIDCProvider; 
+
+            private Builder() {
+            } 
+
+            private Builder(OIDCProviders model) {
+                this.OIDCProvider = model.OIDCProvider;
+            } 
 
             /**
              * OIDCProvider.

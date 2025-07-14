@@ -36,6 +36,10 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loginProfile
      */
@@ -53,6 +57,14 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
     public static final class Builder {
         private LoginProfile loginProfile; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateLoginProfileResponseBody model) {
+            this.loginProfile = model.loginProfile;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The console logon configurations.</p>
@@ -170,6 +182,18 @@ public class UpdateLoginProfileResponseBody extends TeaModel {
             private String status; 
             private String updateDate; 
             private String userPrincipalName; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoginProfile model) {
+                this.autoDisableLoginStatus = model.autoDisableLoginStatus;
+                this.MFABindRequired = model.MFABindRequired;
+                this.passwordResetRequired = model.passwordResetRequired;
+                this.status = model.status;
+                this.updateDate = model.updateDate;
+                this.userPrincipalName = model.userPrincipalName;
+            } 
 
             /**
              * <p>Indicates whether console logon is automatically disabled if a RAM user does not log on to the console in the previous specified number of days. The number of days is specified by MaxIdleDaysForUsers. The default value is true, and you cannot change the value.</p>

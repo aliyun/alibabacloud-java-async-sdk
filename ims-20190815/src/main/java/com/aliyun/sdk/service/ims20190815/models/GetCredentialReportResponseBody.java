@@ -48,6 +48,10 @@ public class GetCredentialReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
@@ -89,6 +93,17 @@ public class GetCredentialReportResponseBody extends TeaModel {
         private String isTruncated; 
         private String nextToken; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCredentialReportResponseBody model) {
+            this.content = model.content;
+            this.generatedTime = model.generatedTime;
+            this.isTruncated = model.isTruncated;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The content of the user credential report.</p>

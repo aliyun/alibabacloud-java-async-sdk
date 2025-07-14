@@ -40,7 +40,7 @@ public class ProvisionExternalApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,9 +87,9 @@ public class ProvisionExternalApplicationRequest extends Request {
         }
 
         /**
-         * <p>The information about the scope of permissions granted to the application. You can enter multiple scopes and separate them with semicolons (;).</p>
+         * <p>The permissions that are granted to the application. Separate multiple permissions with a semicolon (;).</p>
          * <blockquote>
-         * <p> For more information about the supported permission scopes, see the &quot;OAuth scope&quot; section in the <a href="https://help.aliyun.com/zh/ram/user-guide/overview-of-oauth-applications">Overview</a> topic.</p>
+         * <p> For more information about the supported permissions, see <a href="https://help.aliyun.com/document_detail/93693.html">Overview</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

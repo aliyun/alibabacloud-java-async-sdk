@@ -40,6 +40,10 @@ public class GetGovernanceReportStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return governanceItemsStatus
      */
@@ -65,6 +69,15 @@ public class GetGovernanceReportStatusResponseBody extends TeaModel {
         private GovernanceItemsStatus governanceItemsStatus; 
         private String requestId; 
         private String wholeReportStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGovernanceReportStatusResponseBody model) {
+            this.governanceItemsStatus = model.governanceItemsStatus;
+            this.requestId = model.requestId;
+            this.wholeReportStatus = model.wholeReportStatus;
+        } 
 
         /**
          * GovernanceItemsStatus.
@@ -140,6 +153,14 @@ public class GetGovernanceReportStatusResponseBody extends TeaModel {
             private String governanceItem; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(GovernanceItemStatus model) {
+                this.governanceItem = model.governanceItem;
+                this.status = model.status;
+            } 
+
             /**
              * GovernanceItem.
              */
@@ -194,6 +215,13 @@ public class GetGovernanceReportStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<GovernanceItemStatus> governanceItemStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(GovernanceItemsStatus model) {
+                this.governanceItemStatus = model.governanceItemStatus;
+            } 
 
             /**
              * GovernanceItemStatus.

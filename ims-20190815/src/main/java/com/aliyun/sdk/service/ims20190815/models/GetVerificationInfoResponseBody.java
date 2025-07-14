@@ -40,6 +40,10 @@ public class GetVerificationInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class GetVerificationInfoResponseBody extends TeaModel {
         private String requestId; 
         private SecurityEmailDevice securityEmailDevice; 
         private SecurityPhoneDevice securityPhoneDevice; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetVerificationInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityEmailDevice = model.securityEmailDevice;
+            this.securityPhoneDevice = model.securityPhoneDevice;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -142,6 +155,14 @@ public class GetVerificationInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String email; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityEmailDevice model) {
+                this.email = model.email;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The email address.</p>
@@ -231,6 +252,15 @@ public class GetVerificationInfoResponseBody extends TeaModel {
             private String areaCode; 
             private String phoneNumber; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityPhoneDevice model) {
+                this.areaCode = model.areaCode;
+                this.phoneNumber = model.phoneNumber;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The international dialing code.</p>

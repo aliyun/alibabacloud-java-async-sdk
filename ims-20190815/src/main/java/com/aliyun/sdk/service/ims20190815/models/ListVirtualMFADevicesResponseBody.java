@@ -44,6 +44,10 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isTruncated
      */
@@ -77,6 +81,16 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
         private String marker; 
         private String requestId; 
         private VirtualMFADevices virtualMFADevices; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListVirtualMFADevicesResponseBody model) {
+            this.isTruncated = model.isTruncated;
+            this.marker = model.marker;
+            this.requestId = model.requestId;
+            this.virtualMFADevices = model.virtualMFADevices;
+        } 
 
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
@@ -188,6 +202,15 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             private String userId; 
             private String userPrincipalName; 
 
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.displayName = model.displayName;
+                this.userId = model.userId;
+                this.userPrincipalName = model.userPrincipalName;
+            } 
+
             /**
              * <p>The display name of the RAM user.</p>
              * 
@@ -284,6 +307,15 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
             private String serialNumber; 
             private User user; 
 
+            private Builder() {
+            } 
+
+            private Builder(VirtualMFADevice model) {
+                this.activateDate = model.activateDate;
+                this.serialNumber = model.serialNumber;
+                this.user = model.user;
+            } 
+
             /**
              * <p>The time when the MFA device was activated.</p>
              * 
@@ -352,6 +384,13 @@ public class ListVirtualMFADevicesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<VirtualMFADevice> virtualMFADevice; 
+
+            private Builder() {
+            } 
+
+            private Builder(VirtualMFADevices model) {
+                this.virtualMFADevice = model.virtualMFADevice;
+            } 
 
             /**
              * VirtualMFADevice.

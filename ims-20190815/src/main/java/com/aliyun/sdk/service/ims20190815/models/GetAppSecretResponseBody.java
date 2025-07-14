@@ -36,6 +36,10 @@ public class GetAppSecretResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appSecret
      */
@@ -53,6 +57,14 @@ public class GetAppSecretResponseBody extends TeaModel {
     public static final class Builder {
         private AppSecret appSecret; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAppSecretResponseBody model) {
+            this.appSecret = model.appSecret;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the application secret.</p>
@@ -146,6 +158,16 @@ public class GetAppSecretResponseBody extends TeaModel {
             private String appSecretId; 
             private String appSecretValue; 
             private String createDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppSecret model) {
+                this.appId = model.appId;
+                this.appSecretId = model.appSecretId;
+                this.appSecretValue = model.appSecretValue;
+                this.createDate = model.createDate;
+            } 
 
             /**
              * <p>The ID of the application.</p>

@@ -36,6 +36,10 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return predefinedScopes
      */
@@ -53,6 +57,14 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
     public static final class Builder {
         private PredefinedScopes predefinedScopes; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPredefinedScopesResponseBody model) {
+            this.predefinedScopes = model.predefinedScopes;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about application permissions.</p>
@@ -123,6 +135,14 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
             private String description; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(PredefinedScope model) {
+                this.description = model.description;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The description of the permission scope.</p>
              * 
@@ -183,6 +203,13 @@ public class ListPredefinedScopesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<PredefinedScope> predefinedScope; 
+
+            private Builder() {
+            } 
+
+            private Builder(PredefinedScopes model) {
+                this.predefinedScope = model.predefinedScope;
+            } 
 
             /**
              * PredefinedScope.

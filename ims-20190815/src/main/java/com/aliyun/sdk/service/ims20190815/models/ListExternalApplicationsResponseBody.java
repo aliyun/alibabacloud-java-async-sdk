@@ -44,6 +44,10 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return externalApplications
      */
@@ -77,6 +81,16 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
         private Boolean isTruncated; 
         private String marker; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExternalApplicationsResponseBody model) {
+            this.externalApplications = model.externalApplications;
+            this.isTruncated = model.isTruncated;
+            this.marker = model.marker;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the external applications.</p>
@@ -176,6 +190,14 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
             private String description; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(PredefinedScope model) {
+                this.description = model.description;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The description of the permission.</p>
              * 
@@ -237,6 +259,13 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PredefinedScope> predefinedScope; 
 
+            private Builder() {
+            } 
+
+            private Builder(PredefinedScopes model) {
+                this.predefinedScope = model.predefinedScope;
+            } 
+
             /**
              * PredefinedScope.
              */
@@ -283,6 +312,13 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private PredefinedScopes predefinedScopes; 
+
+            private Builder() {
+            } 
+
+            private Builder(DelegatedScope model) {
+                this.predefinedScopes = model.predefinedScopes;
+            } 
 
             /**
              * <p>The information about the permissions that are granted to the external application.</p>
@@ -403,6 +439,19 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
             private String tenantId; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExternalApplication model) {
+                this.appPrincipalName = model.appPrincipalName;
+                this.createDate = model.createDate;
+                this.delegatedScope = model.delegatedScope;
+                this.displayName = model.displayName;
+                this.foreignAppId = model.foreignAppId;
+                this.tenantId = model.tenantId;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
              * <p>The name of the external application principal. The value is in the <code>&lt;app_name&gt;@app.&lt;account_id&gt;.onaliyun.com</code> format.</p>
              * 
@@ -515,6 +564,13 @@ public class ListExternalApplicationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ExternalApplication> externalApplication; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExternalApplications model) {
+                this.externalApplication = model.externalApplication;
+            } 
 
             /**
              * ExternalApplication.

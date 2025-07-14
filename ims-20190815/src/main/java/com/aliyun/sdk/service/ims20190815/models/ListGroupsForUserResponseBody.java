@@ -36,6 +36,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groups
      */
@@ -53,6 +57,14 @@ public class ListGroupsForUserResponseBody extends TeaModel {
     public static final class Builder {
         private Groups groups; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGroupsForUserResponseBody model) {
+            this.groups = model.groups;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the RAM user groups.</p>
@@ -159,6 +171,17 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             private String groupName; 
             private String joinDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.comments = model.comments;
+                this.displayName = model.displayName;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.joinDate = model.joinDate;
+            } 
+
             /**
              * <p>The description.</p>
              * 
@@ -252,6 +275,13 @@ public class ListGroupsForUserResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Group> group; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.group = model.group;
+            } 
 
             /**
              * Group.

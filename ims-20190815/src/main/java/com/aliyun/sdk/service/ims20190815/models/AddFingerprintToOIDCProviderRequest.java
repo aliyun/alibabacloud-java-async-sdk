@@ -39,7 +39,7 @@ public class AddFingerprintToOIDCProviderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,9 +73,9 @@ public class AddFingerprintToOIDCProviderRequest extends Request {
         } 
 
         /**
-         * <p>The fingerprint of the HTTPS certificate.</p>
+         * <p>The fingerprint of the HTTPS CA certificate.</p>
          * <p>The fingerprint can contain letters and digits.</p>
-         * <p>The fingerprint can be up to 40 characters in length.</p>
+         * <p>The fingerprint can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>902ef2deeb3c5b13ea4c3d5193629309e231****</p>

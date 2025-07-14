@@ -40,6 +40,10 @@ public class ListRecentGovernanceMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return generateTime
      */
@@ -65,6 +69,15 @@ public class ListRecentGovernanceMetricsResponseBody extends TeaModel {
         private String generateTime; 
         private GovernanceMetrics governanceMetrics; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListRecentGovernanceMetricsResponseBody model) {
+            this.generateTime = model.generateTime;
+            this.governanceMetrics = model.governanceMetrics;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The time when the report was generated.</p>
@@ -158,6 +171,15 @@ public class ListRecentGovernanceMetricsResponseBody extends TeaModel {
             private String metricType; 
             private Object metricValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(GovernanceMetric model) {
+                this.governanceItem = model.governanceItem;
+                this.metricType = model.metricType;
+                this.metricValue = model.metricValue;
+            } 
+
             /**
              * <p>The name of the governance item.</p>
              * 
@@ -234,6 +256,13 @@ public class ListRecentGovernanceMetricsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<GovernanceMetric> governanceMetric; 
+
+            private Builder() {
+            } 
+
+            private Builder(GovernanceMetrics model) {
+                this.governanceMetric = model.governanceMetric;
+            } 
 
             /**
              * GovernanceMetric.

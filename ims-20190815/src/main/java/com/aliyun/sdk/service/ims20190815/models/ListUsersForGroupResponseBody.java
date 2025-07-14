@@ -44,6 +44,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isTruncated
      */
@@ -77,6 +81,16 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         private String marker; 
         private String requestId; 
         private Users users; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUsersForGroupResponseBody model) {
+            this.isTruncated = model.isTruncated;
+            this.marker = model.marker;
+            this.requestId = model.requestId;
+            this.users = model.users;
+        } 
 
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
@@ -200,6 +214,16 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             private String userId; 
             private String userPrincipalName; 
 
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.displayName = model.displayName;
+                this.joinDate = model.joinDate;
+                this.userId = model.userId;
+                this.userPrincipalName = model.userPrincipalName;
+            } 
+
             /**
              * <p>The display name of the RAM user.</p>
              * 
@@ -282,6 +306,13 @@ public class ListUsersForGroupResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<User> user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.user = model.user;
+            } 
 
             /**
              * User.

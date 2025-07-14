@@ -60,6 +60,10 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return columnsSchema
      */
@@ -125,6 +129,20 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
         private String metricType; 
         private Object metricValue; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGovernanceItemReportResponseBody model) {
+            this.columnsSchema = model.columnsSchema;
+            this.columnsValue = model.columnsValue;
+            this.generateTime = model.generateTime;
+            this.isTruncated = model.isTruncated;
+            this.marker = model.marker;
+            this.metricType = model.metricType;
+            this.metricValue = model.metricValue;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * ColumnsSchema.
@@ -240,6 +258,14 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
             private String columnName; 
             private String columnType; 
 
+            private Builder() {
+            } 
+
+            private Builder(ColumnSchema model) {
+                this.columnName = model.columnName;
+                this.columnType = model.columnType;
+            } 
+
             /**
              * ColumnName.
              */
@@ -295,6 +321,13 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ColumnSchema> columnSchema; 
 
+            private Builder() {
+            } 
+
+            private Builder(ColumnsSchema model) {
+                this.columnSchema = model.columnSchema;
+            } 
+
             /**
              * ColumnSchema.
              */
@@ -342,6 +375,13 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<?> columnValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ColumnRow model) {
+                this.columnValue = model.columnValue;
+            } 
+
             /**
              * ColumnValue.
              */
@@ -388,6 +428,13 @@ public class GetGovernanceItemReportResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<ColumnRow> columnRow; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColumnsValue model) {
+                this.columnRow = model.columnRow;
+            } 
 
             /**
              * ColumnRow.

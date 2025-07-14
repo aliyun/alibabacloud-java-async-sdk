@@ -36,6 +36,10 @@ public class GetUserInRecycleBinResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetUserInRecycleBinResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private User user; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserInRecycleBinResponseBody model) {
+            this.requestId = model.requestId;
+            this.user = model.user;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -170,6 +182,18 @@ public class GetUserInRecycleBinResponseBody extends TeaModel {
             private String recycleDate; 
             private String userId; 
             private String userPrincipalName; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.createDate = model.createDate;
+                this.deleteDate = model.deleteDate;
+                this.displayName = model.displayName;
+                this.recycleDate = model.recycleDate;
+                this.userId = model.userId;
+                this.userPrincipalName = model.userPrincipalName;
+            } 
 
             /**
              * <p>The time when the RAM user was created.</p>

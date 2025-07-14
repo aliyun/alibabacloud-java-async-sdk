@@ -36,6 +36,10 @@ public class CreateAccessKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessKey
      */
@@ -53,6 +57,14 @@ public class CreateAccessKeyResponseBody extends TeaModel {
     public static final class Builder {
         private AccessKey accessKey; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAccessKeyResponseBody model) {
+            this.accessKey = model.accessKey;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the AccessKey pair.</p>
@@ -147,11 +159,21 @@ public class CreateAccessKeyResponseBody extends TeaModel {
             private String createDate; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessKey model) {
+                this.accessKeyId = model.accessKeyId;
+                this.accessKeySecret = model.accessKeySecret;
+                this.createDate = model.createDate;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The AccessKey ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>LTAI4G3HaMmeHpay2gcq****</p>
+             * <p>yourAccessKeyID</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -162,7 +184,7 @@ public class CreateAccessKeyResponseBody extends TeaModel {
              * <p>The AccessKey secret.</p>
              * 
              * <strong>example:</strong>
-             * <p>Y3MSLE6OgizS4qrz5LVFDoyZEL****</p>
+             * <p>yourAccessKeySecret</p>
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;

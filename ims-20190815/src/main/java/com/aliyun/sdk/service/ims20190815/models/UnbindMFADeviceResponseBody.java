@@ -36,6 +36,10 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return MFADevice
      */
@@ -53,6 +57,14 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
     public static final class Builder {
         private MFADevice MFADevice; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UnbindMFADeviceResponseBody model) {
+            this.MFADevice = model.MFADevice;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the MFA device.</p>
@@ -110,6 +122,13 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
 
         public static final class Builder {
             private String serialNumber; 
+
+            private Builder() {
+            } 
+
+            private Builder(MFADevice model) {
+                this.serialNumber = model.serialNumber;
+            } 
 
             /**
              * <p>The serial number of the MFA device.</p>

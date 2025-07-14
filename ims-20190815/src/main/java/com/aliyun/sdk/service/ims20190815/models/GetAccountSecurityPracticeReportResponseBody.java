@@ -36,6 +36,10 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountSecurityPracticeInfo
      */
@@ -53,6 +57,14 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
     public static final class Builder {
         private AccountSecurityPracticeInfo accountSecurityPracticeInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccountSecurityPracticeReportResponseBody model) {
+            this.accountSecurityPracticeInfo = model.accountSecurityPracticeInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the security report for the Alibaba Cloud account.</p>
@@ -206,6 +218,21 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
             private Integer subUserWithOldAccessKey; 
             private Integer subUserWithUnusedAccessKey; 
             private Integer unusedAkNum; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountSecurityPracticeUserInfo model) {
+                this.bindMfa = model.bindMfa;
+                this.oldAkNum = model.oldAkNum;
+                this.rootWithAccessKey = model.rootWithAccessKey;
+                this.subUser = model.subUser;
+                this.subUserBindMfa = model.subUserBindMfa;
+                this.subUserPwdLevel = model.subUserPwdLevel;
+                this.subUserWithOldAccessKey = model.subUserWithOldAccessKey;
+                this.subUserWithUnusedAccessKey = model.subUserWithUnusedAccessKey;
+                this.unusedAkNum = model.unusedAkNum;
+            } 
 
             /**
              * <p>Indicates whether multi-factor authentication (MFA) is enabled. Valid values:</p>
@@ -365,6 +392,14 @@ public class GetAccountSecurityPracticeReportResponseBody extends TeaModel {
         public static final class Builder {
             private AccountSecurityPracticeUserInfo accountSecurityPracticeUserInfo; 
             private Integer score; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccountSecurityPracticeInfo model) {
+                this.accountSecurityPracticeUserInfo = model.accountSecurityPracticeUserInfo;
+                this.score = model.score;
+            } 
 
             /**
              * <p>The information about the security report for the Alibaba Cloud account.</p>

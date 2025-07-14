@@ -44,6 +44,10 @@ public class ListUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isTruncated
      */
@@ -77,6 +81,16 @@ public class ListUsersResponseBody extends TeaModel {
         private String marker; 
         private String requestId; 
         private Users users; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUsersResponseBody model) {
+            this.isTruncated = model.isTruncated;
+            this.marker = model.marker;
+            this.requestId = model.requestId;
+            this.users = model.users;
+        } 
 
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
@@ -173,6 +187,14 @@ public class ListUsersResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The key of the tag.</p>
              * 
@@ -233,6 +255,13 @@ public class ListUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tag> tag; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tag = model.tag;
+            } 
 
             /**
              * Tag.
@@ -413,6 +442,24 @@ public class ListUsersResponseBody extends TeaModel {
             private String userId; 
             private String userPrincipalName; 
 
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.comments = model.comments;
+                this.createDate = model.createDate;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.lastLoginDate = model.lastLoginDate;
+                this.mobilePhone = model.mobilePhone;
+                this.provisionType = model.provisionType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.updateDate = model.updateDate;
+                this.userId = model.userId;
+                this.userPrincipalName = model.userPrincipalName;
+            } 
+
             /**
              * <p>The description.</p>
              * 
@@ -591,6 +638,13 @@ public class ListUsersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<User> user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.user = model.user;
+            } 
 
             /**
              * User.

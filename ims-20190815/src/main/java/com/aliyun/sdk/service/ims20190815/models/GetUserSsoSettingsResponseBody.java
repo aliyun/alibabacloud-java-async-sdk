@@ -36,6 +36,10 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UserSsoSettings userSsoSettings; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserSsoSettingsResponseBody model) {
+            this.requestId = model.requestId;
+            this.userSsoSettings = model.userSsoSettings;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -146,6 +158,16 @@ public class GetUserSsoSettingsResponseBody extends TeaModel {
             private String metadataDocument; 
             private Boolean ssoEnabled; 
             private Boolean ssoLoginWithDomain; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserSsoSettings model) {
+                this.auxiliaryDomain = model.auxiliaryDomain;
+                this.metadataDocument = model.metadataDocument;
+                this.ssoEnabled = model.ssoEnabled;
+                this.ssoLoginWithDomain = model.ssoLoginWithDomain;
+            } 
 
             /**
              * <p>The auxiliary domain name.</p>

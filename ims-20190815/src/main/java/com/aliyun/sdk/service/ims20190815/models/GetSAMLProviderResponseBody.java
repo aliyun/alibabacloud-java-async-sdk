@@ -36,6 +36,10 @@ public class GetSAMLProviderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSAMLProviderResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SAMLProvider SAMLProvider; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSAMLProviderResponseBody model) {
+            this.requestId = model.requestId;
+            this.SAMLProvider = model.SAMLProvider;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -170,6 +182,18 @@ public class GetSAMLProviderResponseBody extends TeaModel {
             private String encodedSAMLMetadataDocument; 
             private String SAMLProviderName; 
             private String updateDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(SAMLProvider model) {
+                this.arn = model.arn;
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.encodedSAMLMetadataDocument = model.encodedSAMLMetadataDocument;
+                this.SAMLProviderName = model.SAMLProviderName;
+                this.updateDate = model.updateDate;
+            } 
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the IdP.</p>

@@ -36,6 +36,10 @@ public class CreateOIDCProviderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return OIDCProvider
      */
@@ -53,6 +57,14 @@ public class CreateOIDCProviderResponseBody extends TeaModel {
     public static final class Builder {
         private OIDCProvider OIDCProvider; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOIDCProviderResponseBody model) {
+            this.OIDCProvider = model.OIDCProvider;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the OIDC IdP.</p>
@@ -230,6 +242,23 @@ public class CreateOIDCProviderResponseBody extends TeaModel {
             private String issuerUrl; 
             private String OIDCProviderName; 
             private String updateDate; 
+
+            private Builder() {
+            } 
+
+            private Builder(OIDCProvider model) {
+                this.arn = model.arn;
+                this.clientIds = model.clientIds;
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.fingerprints = model.fingerprints;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.issuanceLimitTime = model.issuanceLimitTime;
+                this.issuerUrl = model.issuerUrl;
+                this.OIDCProviderName = model.OIDCProviderName;
+                this.updateDate = model.updateDate;
+            } 
 
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the OIDC IdP.</p>

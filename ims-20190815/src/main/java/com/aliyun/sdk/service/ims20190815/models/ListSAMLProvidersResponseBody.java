@@ -44,6 +44,10 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isTruncated
      */
@@ -77,6 +81,16 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
         private String marker; 
         private String requestId; 
         private SAMLProviders SAMLProviders; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSAMLProvidersResponseBody model) {
+            this.isTruncated = model.isTruncated;
+            this.marker = model.marker;
+            this.requestId = model.requestId;
+            this.SAMLProviders = model.SAMLProviders;
+        } 
 
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
@@ -209,6 +223,17 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
             private String SAMLProviderName; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(SAMLProvider model) {
+                this.arn = model.arn;
+                this.createDate = model.createDate;
+                this.description = model.description;
+                this.SAMLProviderName = model.SAMLProviderName;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
              * <p>The Alibaba Cloud Resource Name (ARN) of the IdP.</p>
              * 
@@ -302,6 +327,13 @@ public class ListSAMLProvidersResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<SAMLProvider> SAMLProvider; 
+
+            private Builder() {
+            } 
+
+            private Builder(SAMLProviders model) {
+                this.SAMLProvider = model.SAMLProvider;
+            } 
 
             /**
              * SAMLProvider.

@@ -36,6 +36,10 @@ public class CreateLoginProfileResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return loginProfile
      */
@@ -53,6 +57,14 @@ public class CreateLoginProfileResponseBody extends TeaModel {
     public static final class Builder {
         private LoginProfile loginProfile; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateLoginProfileResponseBody model) {
+            this.loginProfile = model.loginProfile;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The logon information.</p>
@@ -158,6 +170,17 @@ public class CreateLoginProfileResponseBody extends TeaModel {
             private String status; 
             private String updateDate; 
             private String userPrincipalName; 
+
+            private Builder() {
+            } 
+
+            private Builder(LoginProfile model) {
+                this.MFABindRequired = model.MFABindRequired;
+                this.passwordResetRequired = model.passwordResetRequired;
+                this.status = model.status;
+                this.updateDate = model.updateDate;
+                this.userPrincipalName = model.userPrincipalName;
+            } 
 
             /**
              * <p>Indicates whether to forcefully enable MFA for the RAM user.</p>

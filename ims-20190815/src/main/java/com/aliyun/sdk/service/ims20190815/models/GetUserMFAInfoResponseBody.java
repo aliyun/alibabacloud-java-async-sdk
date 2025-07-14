@@ -40,6 +40,10 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isMFAEnable
      */
@@ -65,6 +69,15 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         private Boolean isMFAEnable; 
         private MFADevice MFADevice; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserMFAInfoResponseBody model) {
+            this.isMFAEnable = model.isMFAEnable;
+            this.MFADevice = model.MFADevice;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the MFA device is enabled. Valid values:</p>
@@ -149,6 +162,14 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String serialNumber; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(MFADevice model) {
+                this.serialNumber = model.serialNumber;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The serial number of the MFA device.</p>

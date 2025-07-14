@@ -39,7 +39,7 @@ public class RestoreAccessKeyFromRecycleBinRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -76,7 +76,7 @@ public class RestoreAccessKeyFromRecycleBinRequest extends Request {
          * <p>The AccessKey ID of the RAM user.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI4GFTgcR8m8cZQDTH****</p>
+         * <p>LTAI*******************</p>
          */
         public Builder userAccessKeyId(String userAccessKeyId) {
             this.putQueryParameter("UserAccessKeyId", userAccessKeyId);

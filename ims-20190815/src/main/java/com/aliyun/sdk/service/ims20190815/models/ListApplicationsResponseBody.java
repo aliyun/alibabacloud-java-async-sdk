@@ -36,6 +36,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applications
      */
@@ -53,6 +57,14 @@ public class ListApplicationsResponseBody extends TeaModel {
     public static final class Builder {
         private Applications applications; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationsResponseBody model) {
+            this.applications = model.applications;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the application.</p>
@@ -135,6 +147,15 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String name; 
             private Boolean required; 
 
+            private Builder() {
+            } 
+
+            private Builder(PredefinedScope model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.required = model.required;
+            } 
+
             /**
              * <p>The description of the permission.</p>
              * 
@@ -212,6 +233,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PredefinedScope> predefinedScope; 
 
+            private Builder() {
+            } 
+
+            private Builder(PredefinedScopes model) {
+                this.predefinedScope = model.predefinedScope;
+            } 
+
             /**
              * PredefinedScope.
              */
@@ -259,6 +287,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         public static final class Builder {
             private PredefinedScopes predefinedScopes; 
 
+            private Builder() {
+            } 
+
+            private Builder(DelegatedScope model) {
+                this.predefinedScopes = model.predefinedScopes;
+            } 
+
             /**
              * <p>The information about the permissions that are granted on the application.</p>
              */
@@ -305,6 +340,13 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> redirectUri; 
+
+            private Builder() {
+            } 
+
+            private Builder(RedirectUris model) {
+                this.redirectUri = model.redirectUri;
+            } 
 
             /**
              * RedirectUri.
@@ -497,6 +539,25 @@ public class ListApplicationsResponseBody extends TeaModel {
             private Boolean secretRequired; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Application model) {
+                this.accessTokenValidity = model.accessTokenValidity;
+                this.accountId = model.accountId;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.appType = model.appType;
+                this.createDate = model.createDate;
+                this.delegatedScope = model.delegatedScope;
+                this.displayName = model.displayName;
+                this.isMultiTenant = model.isMultiTenant;
+                this.redirectUris = model.redirectUris;
+                this.refreshTokenValidity = model.refreshTokenValidity;
+                this.secretRequired = model.secretRequired;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
              * <p>The validity period of the access token. Unit: seconds.</p>
              * 
@@ -677,6 +738,13 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Application> application; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.application = model.application;
+            } 
 
             /**
              * Application.

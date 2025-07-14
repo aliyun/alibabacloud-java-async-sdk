@@ -36,6 +36,10 @@ public class GetAccessKeyInfoInRecycleBinResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessKey
      */
@@ -53,6 +57,14 @@ public class GetAccessKeyInfoInRecycleBinResponseBody extends TeaModel {
     public static final class Builder {
         private AccessKey accessKey; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccessKeyInfoInRecycleBinResponseBody model) {
+            this.accessKey = model.accessKey;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the AccessKey pair.</p>
@@ -183,11 +195,24 @@ public class GetAccessKeyInfoInRecycleBinResponseBody extends TeaModel {
             private String userPrincipalName; 
             private Boolean userRecycled; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessKey model) {
+                this.accessKeyId = model.accessKeyId;
+                this.createDate = model.createDate;
+                this.deleteDate = model.deleteDate;
+                this.recycleDate = model.recycleDate;
+                this.userId = model.userId;
+                this.userPrincipalName = model.userPrincipalName;
+                this.userRecycled = model.userRecycled;
+            } 
+
             /**
              * <p>The AccessKey ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>LTAI4GFTgcR8m8cZQDTH****</p>
+             * <p>LTAI*******************</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;

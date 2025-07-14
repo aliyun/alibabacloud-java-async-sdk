@@ -36,6 +36,10 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return passwordPolicy
      */
@@ -53,6 +57,14 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private PasswordPolicy passwordPolicy; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPasswordPolicyResponseBody model) {
+            this.passwordPolicy = model.passwordPolicy;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the password policy.</p>
@@ -230,6 +242,23 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
             private Boolean requireNumbers; 
             private Boolean requireSymbols; 
             private Boolean requireUppercaseCharacters; 
+
+            private Builder() {
+            } 
+
+            private Builder(PasswordPolicy model) {
+                this.hardExpire = model.hardExpire;
+                this.maxLoginAttemps = model.maxLoginAttemps;
+                this.maxPasswordAge = model.maxPasswordAge;
+                this.minimumPasswordDifferentCharacter = model.minimumPasswordDifferentCharacter;
+                this.minimumPasswordLength = model.minimumPasswordLength;
+                this.passwordNotContainUserName = model.passwordNotContainUserName;
+                this.passwordReusePrevention = model.passwordReusePrevention;
+                this.requireLowercaseCharacters = model.requireLowercaseCharacters;
+                this.requireNumbers = model.requireNumbers;
+                this.requireSymbols = model.requireSymbols;
+                this.requireUppercaseCharacters = model.requireUppercaseCharacters;
+            } 
 
             /**
              * <p>Indicates whether to disable logon after the password expires.</p>

@@ -39,7 +39,7 @@ public class AddClientIdToOIDCProviderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -74,8 +74,8 @@ public class AddClientIdToOIDCProviderRequest extends Request {
 
         /**
          * <p>The client ID that you want to add.</p>
-         * <p>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are periods (.), hyphens (-), underscores (_), colons (:), and forward slashes (/). </p>
-         * <p>The client ID can be up to 64 characters in length.</p>
+         * <p>The client ID can contain letters, digits, and special characters and cannot start with the special characters. The special characters are <code>periods, (.), hyphens (-), underscores (_), colons (:), and forward slashes (/)</code>.``</p>
+         * <p>The client ID can be up to 128 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>598469743454717****</p>

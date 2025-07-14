@@ -36,6 +36,10 @@ public class GetDefaultDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultDomainName
      */
@@ -53,6 +57,14 @@ public class GetDefaultDomainResponseBody extends TeaModel {
     public static final class Builder {
         private String defaultDomainName; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDefaultDomainResponseBody model) {
+            this.defaultDomainName = model.defaultDomainName;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The default domain name.</p>

@@ -36,6 +36,10 @@ public class ListAccessKeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessKeys
      */
@@ -54,8 +58,16 @@ public class ListAccessKeysResponseBody extends TeaModel {
         private AccessKeys accessKeys; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAccessKeysResponseBody model) {
+            this.accessKeys = model.accessKeys;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The information about the AccessKey pairs.</p>
+         * <p>The AccessKey pairs.</p>
          */
         public Builder accessKeys(AccessKeys accessKeys) {
             this.accessKeys = accessKeys;
@@ -147,11 +159,21 @@ public class ListAccessKeysResponseBody extends TeaModel {
             private String status; 
             private String updateDate; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessKey model) {
+                this.accessKeyId = model.accessKeyId;
+                this.createDate = model.createDate;
+                this.status = model.status;
+                this.updateDate = model.updateDate;
+            } 
+
             /**
              * <p>The AccessKey ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>0wNEpMMlzy7s****</p>
+             * <p>LTAI*******************</p>
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -233,6 +255,13 @@ public class ListAccessKeysResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<AccessKey> accessKey; 
+
+            private Builder() {
+            } 
+
+            private Builder(AccessKeys model) {
+                this.accessKey = model.accessKey;
+            } 
 
             /**
              * AccessKey.

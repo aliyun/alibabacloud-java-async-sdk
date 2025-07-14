@@ -230,15 +230,15 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <h3>Prerequisites</h3>
-     * <p>Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificates, and the client IDs are obtained from an external (IdP, such as Google G Suite or Okta.</p>
-     * <h3>Limits</h3>
+     * <h3><a href="#"></a>Prerequisites</h3>
+     * <p>Before you call this operation, make sure that the information such as the URL of the issuer, the fingerprints of HTTPS certificate authority (CA) certificates, and the client IDs are obtained from an external IdP, such as Google Workspace or Okta.</p>
+     * <h3><a href="#"></a>Limits</h3>
      * <ul>
      * <li>You can create a maximum of 100 OIDC IdPs in an Alibaba Cloud account.</li>
-     * <li>You can add a maximum of 20 client IDs to an OIDC IdP.</li>
+     * <li>You can add a maximum of 50 client IDs to an OIDC IdP.</li>
      * <li>You can add a maximum of five fingerprints to an OIDC IdP.</li>
      * </ul>
-     * <h3></h3>
+     * <h3><a href="#"></a>Operation description</h3>
      * <p>This topic provides an example on how to create an IdP named <code>TestOIDCProvider</code> to configure a trust relationship between the external IdP and Alibaba Cloud.</p>
      * 
      * @param request the request parameters of CreateOIDCProvider  CreateOIDCProviderRequest
@@ -984,9 +984,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>This topic provides an example to show how to query the information about a RAM user named <code>test@example.onaliyun.com</code>.</p>
-     * 
      * @param request the request parameters of GetUser  GetUserRequest
      * @return GetUserResponse
      */

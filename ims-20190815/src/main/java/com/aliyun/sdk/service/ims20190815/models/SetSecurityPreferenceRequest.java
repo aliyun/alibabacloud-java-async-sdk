@@ -55,6 +55,7 @@ public class SetSecurityPreferenceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperationForRiskLogin")
+    @Deprecated
     private String operationForRiskLogin;
 
     @com.aliyun.core.annotation.Query
@@ -84,7 +85,7 @@ public class SetSecurityPreferenceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -215,13 +216,14 @@ public class SetSecurityPreferenceRequest extends Request {
         }
 
         /**
-         * <p>Allow direct login using passkey.</p>
+         * <p>Specifies whether a RAM user can use a passkey for logon. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true: A RAM user can use a passkey for logon. This is the default value.</li>
+         * <li>false: A RAM user cannot use a passkey for logon.</li>
          * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder allowUserToLoginWithPasskey(Boolean allowUserToLoginWithPasskey) {
             this.putQueryParameter("AllowUserToLoginWithPasskey", allowUserToLoginWithPasskey);

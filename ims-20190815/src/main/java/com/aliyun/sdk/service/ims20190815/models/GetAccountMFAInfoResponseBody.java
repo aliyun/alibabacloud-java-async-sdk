@@ -36,6 +36,10 @@ public class GetAccountMFAInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isMFAEnable
      */
@@ -53,6 +57,14 @@ public class GetAccountMFAInfoResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean isMFAEnable; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccountMFAInfoResponseBody model) {
+            this.isMFAEnable = model.isMFAEnable;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether MFA devices are enabled. Valid values:</p>

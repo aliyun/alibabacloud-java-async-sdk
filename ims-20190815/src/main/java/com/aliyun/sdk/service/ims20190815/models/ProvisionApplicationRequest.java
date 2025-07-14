@@ -40,7 +40,7 @@ public class ProvisionApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -89,7 +89,7 @@ public class ProvisionApplicationRequest extends Request {
         /**
          * <p>The permissions that are granted to the application. Separate multiple permissions with a semicolon (;).</p>
          * <blockquote>
-         * <p> For more information about the supported permissions, see <a href="https://help.aliyun.com/zh/ram/user-guide/overview-of-oauth-applications">Overview</a>.</p>
+         * <p> For more information about the supported permissions, see <a href="https://help.aliyun.com/document_detail/93693.html">Overview</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

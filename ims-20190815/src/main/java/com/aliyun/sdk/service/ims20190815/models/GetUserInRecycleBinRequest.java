@@ -39,7 +39,7 @@ public class GetUserInRecycleBinRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -79,7 +79,7 @@ public class GetUserInRecycleBinRequest extends Request {
          * </blockquote>
          * 
          * <strong>example:</strong>
-         * <p>LTAI4GFTgcR8m8cZQDTH****</p>
+         * <p>LTAI*******************</p>
          */
         public Builder userAccessKeyId(String userAccessKeyId) {
             this.putQueryParameter("UserAccessKeyId", userAccessKeyId);

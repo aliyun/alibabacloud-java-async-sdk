@@ -36,6 +36,10 @@ public class UpdateUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class UpdateUserResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private User user; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateUserResponseBody model) {
+            this.requestId = model.requestId;
+            this.user = model.user;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -218,6 +230,22 @@ public class UpdateUserResponseBody extends TeaModel {
             private String updateDate; 
             private String userId; 
             private String userPrincipalName; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.comments = model.comments;
+                this.createDate = model.createDate;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.lastLoginDate = model.lastLoginDate;
+                this.mobilePhone = model.mobilePhone;
+                this.provisionType = model.provisionType;
+                this.updateDate = model.updateDate;
+                this.userId = model.userId;
+                this.userPrincipalName = model.userPrincipalName;
+            } 
 
             /**
              * <p>The description.</p>

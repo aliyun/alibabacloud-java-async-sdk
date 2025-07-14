@@ -35,7 +35,7 @@ public class GetAccessKeyInfoInRecycleBinRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -64,7 +64,7 @@ public class GetAccessKeyInfoInRecycleBinRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>LTAI4GFTgcR8m8cZQDTH****</p>
+         * <p>LTAI*******************</p>
          */
         public Builder userAccessKeyId(String userAccessKeyId) {
             this.putQueryParameter("UserAccessKeyId", userAccessKeyId);

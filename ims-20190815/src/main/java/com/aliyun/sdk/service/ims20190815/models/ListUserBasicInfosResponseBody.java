@@ -44,6 +44,10 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isTruncated
      */
@@ -77,6 +81,16 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
         private String marker; 
         private String requestId; 
         private UserBasicInfos userBasicInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserBasicInfosResponseBody model) {
+            this.isTruncated = model.isTruncated;
+            this.marker = model.marker;
+            this.requestId = model.requestId;
+            this.userBasicInfos = model.userBasicInfos;
+        } 
 
         /**
          * <p>Indicates whether the response is truncated. Valid values:</p>
@@ -197,6 +211,16 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
             private String userId; 
             private String userPrincipalName; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserBasicInfo model) {
+                this.displayName = model.displayName;
+                this.status = model.status;
+                this.userId = model.userId;
+                this.userPrincipalName = model.userPrincipalName;
+            } 
+
             /**
              * <p>The display name of the RAM user.</p>
              * 
@@ -279,6 +303,13 @@ public class ListUserBasicInfosResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<UserBasicInfo> userBasicInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserBasicInfos model) {
+                this.userBasicInfo = model.userBasicInfo;
+            } 
 
             /**
              * UserBasicInfo.

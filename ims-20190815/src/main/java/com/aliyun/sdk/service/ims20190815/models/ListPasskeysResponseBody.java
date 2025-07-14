@@ -36,6 +36,10 @@ public class ListPasskeysResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return passkeys
      */
@@ -53,6 +57,14 @@ public class ListPasskeysResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Passkeys> passkeys; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPasskeysResponseBody model) {
+            this.passkeys = model.passkeys;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the passkeys.</p>
@@ -146,6 +158,16 @@ public class ListPasskeysResponseBody extends TeaModel {
             private String lastUseDate; 
             private String passkeyId; 
             private String passkeyName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Passkeys model) {
+                this.createDate = model.createDate;
+                this.lastUseDate = model.lastUseDate;
+                this.passkeyId = model.passkeyId;
+                this.passkeyName = model.passkeyName;
+            } 
 
             /**
              * <p>The time when the passkey was created. The value is a timestamp.</p>

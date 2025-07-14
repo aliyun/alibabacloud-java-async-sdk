@@ -36,6 +36,10 @@ public class GetAccountSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetAccountSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SummaryMap summaryMap; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAccountSummaryResponseBody model) {
+            this.requestId = model.requestId;
+            this.summaryMap = model.summaryMap;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -375,6 +387,35 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             private Integer versionsPerPolicyQuota; 
             private Integer virtualMFADevicesQuota; 
 
+            private Builder() {
+            } 
+
+            private Builder(SummaryMap model) {
+                this.accessKeysPerUserQuota = model.accessKeysPerUserQuota;
+                this.attachedPoliciesPerGroupQuota = model.attachedPoliciesPerGroupQuota;
+                this.attachedPoliciesPerRoleQuota = model.attachedPoliciesPerRoleQuota;
+                this.attachedPoliciesPerUserQuota = model.attachedPoliciesPerUserQuota;
+                this.attachedSystemPoliciesPerGroupQuota = model.attachedSystemPoliciesPerGroupQuota;
+                this.attachedSystemPoliciesPerRoleQuota = model.attachedSystemPoliciesPerRoleQuota;
+                this.attachedSystemPoliciesPerUserQuota = model.attachedSystemPoliciesPerUserQuota;
+                this.conditionsPerAKPolicyQuota = model.conditionsPerAKPolicyQuota;
+                this.groups = model.groups;
+                this.groupsPerUserQuota = model.groupsPerUserQuota;
+                this.groupsQuota = model.groupsQuota;
+                this.IPItemsPerAKPolicyQuota = model.IPItemsPerAKPolicyQuota;
+                this.MFADevices = model.MFADevices;
+                this.MFADevicesInUse = model.MFADevicesInUse;
+                this.policies = model.policies;
+                this.policiesQuota = model.policiesQuota;
+                this.policySizeQuota = model.policySizeQuota;
+                this.roles = model.roles;
+                this.rolesQuota = model.rolesQuota;
+                this.users = model.users;
+                this.usersQuota = model.usersQuota;
+                this.versionsPerPolicyQuota = model.versionsPerPolicyQuota;
+                this.virtualMFADevicesQuota = model.virtualMFADevicesQuota;
+            } 
+
             /**
              * <p>The maximum number of AccessKey pairs that a Resource Access Management (RAM) user can have.</p>
              * 
@@ -453,7 +494,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The number of network access control policies that can be configured for an account or AccessKey pair.</p>
+             * <p>The maximum number of network access control policies that can be configured for an Alibaba Cloud account or AccessKey pair.</p>
              * 
              * <strong>example:</strong>
              * <p>8</p>
@@ -497,7 +538,7 @@ public class GetAccountSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The total number of IP addresses that can be configured in a network access control policy of an account or AccessKey pair.</p>
+             * <p>The maximum number of IP addresses that can be specified in an account-level AccessKey pair-based or AccessKey pair-level policy for network access control.</p>
              * 
              * <strong>example:</strong>
              * <p>50</p>

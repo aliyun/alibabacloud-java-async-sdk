@@ -36,6 +36,10 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private SecurityPreference securityPreference; 
+
+        private Builder() {
+        } 
+
+        private Builder(SetSecurityPreferenceResponseBody model) {
+            this.requestId = model.requestId;
+            this.securityPreference = model.securityPreference;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -111,6 +123,13 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean allowUserToManageAccessKeys; 
 
+            private Builder() {
+            } 
+
+            private Builder(AccessKeyPreference model) {
+                this.allowUserToManageAccessKeys = model.allowUserToManageAccessKeys;
+            } 
+
             /**
              * <p>Indicates whether RAM users can manage their AccessKey pairs.</p>
              * 
@@ -155,6 +174,7 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         private String MFAOperationForLogin;
 
         @com.aliyun.core.annotation.NameInMap("OperationForRiskLogin")
+        @Deprecated
         private String operationForRiskLogin;
 
         private LoginProfilePreference(Builder builder) {
@@ -233,6 +253,19 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             private String MFAOperationForLogin; 
             private String operationForRiskLogin; 
 
+            private Builder() {
+            } 
+
+            private Builder(LoginProfilePreference model) {
+                this.allowUserToChangePassword = model.allowUserToChangePassword;
+                this.allowUserToLoginWithPasskey = model.allowUserToLoginWithPasskey;
+                this.enableSaveMFATicket = model.enableSaveMFATicket;
+                this.loginNetworkMasks = model.loginNetworkMasks;
+                this.loginSessionDuration = model.loginSessionDuration;
+                this.MFAOperationForLogin = model.MFAOperationForLogin;
+                this.operationForRiskLogin = model.operationForRiskLogin;
+            } 
+
             /**
              * <p>Indicates whether RAM users can change their passwords.</p>
              * 
@@ -245,13 +278,10 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Allow direct login using passkey.</p>
-             * <ul>
-             * <li><p>true</p>
-             * </li>
-             * <li><p>false</p>
-             * </li>
-             * </ul>
+             * <p>Indicates whether a RAM user can use a passkey for logon.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder allowUserToLoginWithPasskey(Boolean allowUserToLoginWithPasskey) {
                 this.allowUserToLoginWithPasskey = allowUserToLoginWithPasskey;
@@ -352,6 +382,13 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean allowUserToManageMFADevices; 
 
+            private Builder() {
+            } 
+
+            private Builder(MFAPreference model) {
+                this.allowUserToManageMFADevices = model.allowUserToManageMFADevices;
+            } 
+
             /**
              * <p>Indicates whether RAM users can manage their MFA devices.</p>
              * 
@@ -414,6 +451,14 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             private Integer maxIdleDaysForAccessKeys; 
             private Integer maxIdleDaysForUsers; 
 
+            private Builder() {
+            } 
+
+            private Builder(MaxIdleDays model) {
+                this.maxIdleDaysForAccessKeys = model.maxIdleDaysForAccessKeys;
+                this.maxIdleDaysForUsers = model.maxIdleDaysForUsers;
+            } 
+
             /**
              * <p>The maximum number of days that the AccessKey pair of a RAM user can stay unused. If an AccessKey pair is not used in the previous specified number of days, the AccessKey pair is automatically disabled on the next day. The default value is 730. You cannot change the value.</p>
              * 
@@ -475,6 +520,13 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean allowUserToManagePersonalDingTalk; 
 
+            private Builder() {
+            } 
+
+            private Builder(PersonalInfoPreference model) {
+                this.allowUserToManagePersonalDingTalk = model.allowUserToManagePersonalDingTalk;
+            } 
+
             /**
              * <p>Indicates whether RAM users can manage their personal DingTalk accounts, such as binding and unbinding of the accounts.</p>
              * 
@@ -524,6 +576,13 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> verificationTypes; 
+
+            private Builder() {
+            } 
+
+            private Builder(VerificationPreference model) {
+                this.verificationTypes = model.verificationTypes;
+            } 
 
             /**
              * <p>The MFA methods.</p>
@@ -631,6 +690,18 @@ public class SetSecurityPreferenceResponseBody extends TeaModel {
             private MaxIdleDays maxIdleDays; 
             private PersonalInfoPreference personalInfoPreference; 
             private VerificationPreference verificationPreference; 
+
+            private Builder() {
+            } 
+
+            private Builder(SecurityPreference model) {
+                this.accessKeyPreference = model.accessKeyPreference;
+                this.loginProfilePreference = model.loginProfilePreference;
+                this.MFAPreference = model.MFAPreference;
+                this.maxIdleDays = model.maxIdleDays;
+                this.personalInfoPreference = model.personalInfoPreference;
+                this.verificationPreference = model.verificationPreference;
+            } 
 
             /**
              * <p>The AccessKey pair preference.</p>
