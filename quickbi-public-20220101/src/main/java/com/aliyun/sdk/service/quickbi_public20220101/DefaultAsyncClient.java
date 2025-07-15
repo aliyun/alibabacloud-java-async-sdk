@@ -1463,9 +1463,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of QueryReadableResourcesListByUserId  QueryReadableResourcesListByUserIdRequest
+     * @deprecated OpenAPI QueryReadableResourcesListByUserId is deprecated, please use quickbi-public::2022-01-01::QueryReadableResourcesListByUserIdV2 instead.  * @param request  the request parameters of QueryReadableResourcesListByUserId  QueryReadableResourcesListByUserIdRequest
      * @return QueryReadableResourcesListByUserIdResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<QueryReadableResourcesListByUserIdResponse> queryReadableResourcesListByUserId(QueryReadableResourcesListByUserIdRequest request) {
         try {
@@ -1475,6 +1476,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<QueryReadableResourcesListByUserIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of QueryReadableResourcesListByUserIdV2  QueryReadableResourcesListByUserIdV2Request
+     * @return QueryReadableResourcesListByUserIdV2Response
+     */
+    @Override
+    public CompletableFuture<QueryReadableResourcesListByUserIdV2Response> queryReadableResourcesListByUserIdV2(QueryReadableResourcesListByUserIdV2Request request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("QueryReadableResourcesListByUserIdV2").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(QueryReadableResourcesListByUserIdV2Response.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<QueryReadableResourcesListByUserIdV2Response> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

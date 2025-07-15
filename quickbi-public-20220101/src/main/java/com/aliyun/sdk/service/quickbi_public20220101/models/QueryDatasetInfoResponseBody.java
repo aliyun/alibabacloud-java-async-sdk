@@ -95,7 +95,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The dataset information.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -577,7 +577,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExpressionV2.
+             * <p>Expression for the flattened calculation dimensions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example_expression</p>
              */
             public Builder expressionV2(String expressionV2) {
                 this.expressionV2 = expressionV2;
@@ -596,7 +599,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FieldDescription.
+             * <p>The description of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hhhh</p>
              */
             public Builder fieldDescription(String fieldDescription) {
                 this.fieldDescription = fieldDescription;
@@ -970,7 +976,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ExpressionV2.
+             * <p>Expression for flattened computation metrics.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example_expression</p>
              */
             public Builder expressionV2(String expressionV2) {
                 this.expressionV2 = expressionV2;
@@ -993,7 +1002,10 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FieldDescription.
+             * <p>The description of the field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asadsda</p>
              */
             public Builder fieldDescription(String fieldDescription) {
                 this.fieldDescription = fieldDescription;
@@ -1348,7 +1360,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>If it is a custom SQL table, this is the specific SQL.</p>
+             * <p>A list of all dimensions in the dataset.</p>
              */
             public Builder dimensionList(java.util.List<DimensionList> dimensionList) {
                 this.dimensionList = dimensionList;
@@ -1423,7 +1435,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The unique ID of the table to which the table belongs, which corresponds to the UniqueId of the CubeTypeList.</p>
+             * <p>A list of all measures for the dataset.</p>
              */
             public Builder measureList(java.util.List<MeasureList> measureList) {
                 this.measureList = measureList;
@@ -1431,7 +1443,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OpenOfflineAcceleration.
+             * <p>Whether to enable extraction acceleration. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder openOfflineAcceleration(Boolean openOfflineAcceleration) {
                 this.openOfflineAcceleration = openOfflineAcceleration;

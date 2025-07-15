@@ -147,7 +147,7 @@ public class CreateTicket4CopilotRequest extends Request {
          * <ul>
          * <li><p>1: Alibaba Cloud Primary Account</p>
          * </li>
-         * <li><p>3: QuickBI Self-built Account</p>
+         * <li><p>3: Quick BI Self-built Account</p>
          * </li>
          * <li><p>4: DingTalk</p>
          * </li>

@@ -131,7 +131,10 @@ public class SmartqAuthorizeRequest extends Request {
         } 
 
         /**
-         * CubeIds.
+         * <p>Array of dataset IDs, separated by English commas. <notice>This parameter will be converted to the corresponding question resource ID for authorization. Therefore, if the input cubeId does not correspond to any question resource, an error indicating that the question resource does not exist will be reported. Please ensure the correctness of the cubeId.</notice></p>
+         * 
+         * <strong>example:</strong>
+         * <p>wasdasd<em><strong><strong><strong>1235235sd,ASDAS</strong></strong></strong></em>**ASDAW123</p>
          */
         public Builder cubeIds(String cubeIds) {
             this.putQueryParameter("CubeIds", cubeIds);

@@ -531,10 +531,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryOrganizationWorkspaceListResponse> queryOrganizationWorkspaceList(QueryOrganizationWorkspaceListRequest request);
 
     /**
-     * @param request the request parameters of QueryReadableResourcesListByUserId  QueryReadableResourcesListByUserIdRequest
+     * @deprecated OpenAPI QueryReadableResourcesListByUserId is deprecated, please use quickbi-public::2022-01-01::QueryReadableResourcesListByUserIdV2 instead.  * @param request  the request parameters of QueryReadableResourcesListByUserId  QueryReadableResourcesListByUserIdRequest
      * @return QueryReadableResourcesListByUserIdResponse
      */
+    @Deprecated
     CompletableFuture<QueryReadableResourcesListByUserIdResponse> queryReadableResourcesListByUserId(QueryReadableResourcesListByUserIdRequest request);
+
+    /**
+     * @param request the request parameters of QueryReadableResourcesListByUserIdV2  QueryReadableResourcesListByUserIdV2Request
+     * @return QueryReadableResourcesListByUserIdV2Response
+     */
+    CompletableFuture<QueryReadableResourcesListByUserIdV2Response> queryReadableResourcesListByUserIdV2(QueryReadableResourcesListByUserIdV2Request request);
 
     /**
      * @param request the request parameters of QueryReportPerformance  QueryReportPerformanceRequest

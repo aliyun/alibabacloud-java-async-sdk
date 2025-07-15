@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class QueryAuditLogRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessSourceFlag")
+    private String accessSourceFlag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EndDate")
     @com.aliyun.core.annotation.Validation(required = true)
     private String endDate;
@@ -45,17 +49,23 @@ public class QueryAuditLogRequest extends Request {
     private String startDate;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserAccessDevice")
+    private String userAccessDevice;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private QueryAuditLogRequest(Builder builder) {
         super(builder);
+        this.accessSourceFlag = builder.accessSourceFlag;
         this.endDate = builder.endDate;
         this.logType = builder.logType;
         this.operatorId = builder.operatorId;
         this.operatorTypes = builder.operatorTypes;
         this.resourceType = builder.resourceType;
         this.startDate = builder.startDate;
+        this.userAccessDevice = builder.userAccessDevice;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -70,6 +80,13 @@ public class QueryAuditLogRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessSourceFlag
+     */
+    public String getAccessSourceFlag() {
+        return this.accessSourceFlag;
     }
 
     /**
@@ -115,6 +132,13 @@ public class QueryAuditLogRequest extends Request {
     }
 
     /**
+     * @return userAccessDevice
+     */
+    public String getUserAccessDevice() {
+        return this.userAccessDevice;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -122,12 +146,14 @@ public class QueryAuditLogRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryAuditLogRequest, Builder> {
+        private String accessSourceFlag; 
         private String endDate; 
         private String logType; 
         private String operatorId; 
         private String operatorTypes; 
         private String resourceType; 
         private String startDate; 
+        private String userAccessDevice; 
         private String workspaceId; 
 
         private Builder() {
@@ -136,14 +162,25 @@ public class QueryAuditLogRequest extends Request {
 
         private Builder(QueryAuditLogRequest request) {
             super(request);
+            this.accessSourceFlag = request.accessSourceFlag;
             this.endDate = request.endDate;
             this.logType = request.logType;
             this.operatorId = request.operatorId;
             this.operatorTypes = request.operatorTypes;
             this.resourceType = request.resourceType;
             this.startDate = request.startDate;
+            this.userAccessDevice = request.userAccessDevice;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * AccessSourceFlag.
+         */
+        public Builder accessSourceFlag(String accessSourceFlag) {
+            this.putQueryParameter("AccessSourceFlag", accessSourceFlag);
+            this.accessSourceFlag = accessSourceFlag;
+            return this;
+        }
 
         /**
          * <p>End date of the query, format (&quot;yyyyMMdd&quot;).</p>
@@ -223,6 +260,15 @@ public class QueryAuditLogRequest extends Request {
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
             this.startDate = startDate;
+            return this;
+        }
+
+        /**
+         * UserAccessDevice.
+         */
+        public Builder userAccessDevice(String userAccessDevice) {
+            this.putQueryParameter("UserAccessDevice", userAccessDevice);
+            this.userAccessDevice = userAccessDevice;
             return this;
         }
 
