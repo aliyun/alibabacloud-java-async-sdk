@@ -20,6 +20,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
+     * @param request the request parameters of AddAuditTerms  AddAuditTermsRequest
+     * @return AddAuditTermsResponse
+     */
+    CompletableFuture<AddAuditTermsResponse> addAuditTerms(AddAuditTermsRequest request);
+
+    /**
      * @param request the request parameters of AddDatasetDocument  AddDatasetDocumentRequest
      * @return AddDatasetDocumentResponse
      */
@@ -84,6 +90,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateTokenResponse
      */
     CompletableFuture<CreateTokenResponse> createToken(CreateTokenRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAuditTerms  DeleteAuditTermsRequest
+     * @return DeleteAuditTermsResponse
+     */
+    CompletableFuture<DeleteAuditTermsResponse> deleteAuditTerms(DeleteAuditTermsRequest request);
 
     /**
      * @param request the request parameters of DeleteCustomText  DeleteCustomTextRequest
@@ -152,6 +164,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DocumentExtractionResponse> documentExtraction(DocumentExtractionRequest request);
 
     /**
+     * @param request the request parameters of EditAuditTerms  EditAuditTermsRequest
+     * @return EditAuditTermsResponse
+     */
+    CompletableFuture<EditAuditTermsResponse> editAuditTerms(EditAuditTermsRequest request);
+
+    /**
      * @param request the request parameters of ExportAnalysisTagDetailByTaskId  ExportAnalysisTagDetailByTaskIdRequest
      * @return ExportAnalysisTagDetailByTaskIdResponse
      */
@@ -194,6 +212,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<FeedbackDialogueResponse> feedbackDialogue(FeedbackDialogueRequest request);
 
     /**
+     * @param request the request parameters of FetchExportTermsTask  FetchExportTermsTaskRequest
+     * @return FetchExportTermsTaskResponse
+     */
+    CompletableFuture<FetchExportTermsTaskResponse> fetchExportTermsTask(FetchExportTermsTaskRequest request);
+
+    /**
      * @param request the request parameters of FetchExportWordTask  FetchExportWordTaskRequest
      * @return FetchExportWordTaskResponse
      */
@@ -204,6 +228,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return FetchImageTaskResponse
      */
     CompletableFuture<FetchImageTaskResponse> fetchImageTask(FetchImageTaskRequest request);
+
+    /**
+     * @param request the request parameters of FetchImportTermsTask  FetchImportTermsTaskRequest
+     * @return FetchImportTermsTaskResponse
+     */
+    CompletableFuture<FetchImportTermsTaskResponse> fetchImportTermsTask(FetchImportTermsTaskRequest request);
 
     /**
      * @param request the request parameters of GenerateExportWordTask  GenerateExportWordTaskRequest
@@ -432,6 +462,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListAuditContentErrorTypesResponse
      */
     CompletableFuture<ListAuditContentErrorTypesResponse> listAuditContentErrorTypes(ListAuditContentErrorTypesRequest request);
+
+    /**
+     * @param request the request parameters of ListAuditTerms  ListAuditTermsRequest
+     * @return ListAuditTermsResponse
+     */
+    CompletableFuture<ListAuditTermsResponse> listAuditTerms(ListAuditTermsRequest request);
 
     /**
      * @param request the request parameters of ListBuildConfigs  ListBuildConfigsRequest
@@ -944,6 +980,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitEnterpriseVocAnalysisTaskResponse
      */
     CompletableFuture<SubmitEnterpriseVocAnalysisTaskResponse> submitEnterpriseVocAnalysisTask(SubmitEnterpriseVocAnalysisTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitExportTermsTask  SubmitExportTermsTaskRequest
+     * @return SubmitExportTermsTaskResponse
+     */
+    CompletableFuture<SubmitExportTermsTaskResponse> submitExportTermsTask(SubmitExportTermsTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitImportTermsTask  SubmitImportTermsTaskRequest
+     * @return SubmitImportTermsTaskResponse
+     */
+    CompletableFuture<SubmitImportTermsTaskResponse> submitImportTermsTask(SubmitImportTermsTaskRequest request);
 
     /**
      * @param request the request parameters of SubmitSmartAudit  SubmitSmartAuditRequest
