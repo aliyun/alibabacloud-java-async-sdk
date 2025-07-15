@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeletePlaylistResponseBody} extends {@link TeaModel}
  *
  * <p>DeletePlaylistResponseBody</p>
  */
 public class DeletePlaylistResponseBody extends TeaModel {
-    @NameInMap("ProgramId")
+    @com.aliyun.core.annotation.NameInMap("ProgramId")
     private String programId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeletePlaylistResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DeletePlaylistResponseBody extends TeaModel {
 
     public static DeletePlaylistResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class DeletePlaylistResponseBody extends TeaModel {
         private String programId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeletePlaylistResponseBody model) {
+            this.programId = model.programId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * ProgramId.
+         * <p>The ID of the episode list. You can use the ID as a request parameter in the API operation that is used to query the information about the episode list, start the episode list, or stop the episode list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
          */
         public Builder programId(String programId) {
             this.programId = programId;
@@ -58,7 +78,10 @@ public class DeletePlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c6a2a0d-f228-4a64-af62-20e91b96****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

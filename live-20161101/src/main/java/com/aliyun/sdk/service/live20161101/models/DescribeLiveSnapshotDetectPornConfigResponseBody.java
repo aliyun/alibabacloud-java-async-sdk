@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveSnapshotDetectPornConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveSnapshotDetectPornConfigResponseBody</p>
  */
 public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
-    @NameInMap("LiveSnapshotDetectPornConfigList")
+    @com.aliyun.core.annotation.NameInMap("LiveSnapshotDetectPornConfigList")
     private LiveSnapshotDetectPornConfigList liveSnapshotDetectPornConfigList;
 
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
     private DescribeLiveSnapshotDetectPornConfigResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
 
     public static DescribeLiveSnapshotDetectPornConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,21 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
         private Integer totalNum; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveSnapshotDetectPornConfigResponseBody model) {
+            this.liveSnapshotDetectPornConfigList = model.liveSnapshotDetectPornConfigList;
+            this.order = model.order;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * LiveSnapshotDetectPornConfigList.
+         * <p>The list of video moderation configurations.</p>
          */
         public Builder liveSnapshotDetectPornConfigList(LiveSnapshotDetectPornConfigList liveSnapshotDetectPornConfigList) {
             this.liveSnapshotDetectPornConfigList = liveSnapshotDetectPornConfigList;
@@ -118,7 +140,10 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.order = order;
@@ -126,7 +151,10 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.pageNum = pageNum;
@@ -134,7 +162,10 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +173,10 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +184,10 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of entries that meet the specified conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -158,7 +195,10 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -171,9 +211,15 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveSnapshotDetectPornConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveSnapshotDetectPornConfigResponseBody</p>
+     */
     public static class Scenes extends TeaModel {
-        @NameInMap("scene")
-        private java.util.List < String > scene;
+        @com.aliyun.core.annotation.NameInMap("scene")
+        private java.util.List<String> scene;
 
         private Scenes(Builder builder) {
             this.scene = builder.scene;
@@ -190,17 +236,24 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
         /**
          * @return scene
          */
-        public java.util.List < String > getScene() {
+        public java.util.List<String> getScene() {
             return this.scene;
         }
 
         public static final class Builder {
-            private java.util.List < String > scene; 
+            private java.util.List<String> scene; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scenes model) {
+                this.scene = model.scene;
+            } 
 
             /**
              * scene.
              */
-            public Builder scene(java.util.List < String > scene) {
+            public Builder scene(java.util.List<String> scene) {
                 this.scene = scene;
                 return this;
             }
@@ -212,26 +265,32 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveSnapshotDetectPornConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveSnapshotDetectPornConfigResponseBody</p>
+     */
     public static class LiveSnapshotDetectPornConfig extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("OssBucket")
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
         private String ossBucket;
 
-        @NameInMap("OssEndpoint")
+        @com.aliyun.core.annotation.NameInMap("OssEndpoint")
         private String ossEndpoint;
 
-        @NameInMap("OssObject")
+        @com.aliyun.core.annotation.NameInMap("OssObject")
         private String ossObject;
 
-        @NameInMap("Scenes")
+        @com.aliyun.core.annotation.NameInMap("Scenes")
         private Scenes scenes;
 
         private LiveSnapshotDetectPornConfig(Builder builder) {
@@ -310,8 +369,24 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
             private String ossObject; 
             private Scenes scenes; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveSnapshotDetectPornConfig model) {
+                this.appName = model.appName;
+                this.domainName = model.domainName;
+                this.interval = model.interval;
+                this.ossBucket = model.ossBucket;
+                this.ossEndpoint = model.ossEndpoint;
+                this.ossObject = model.ossObject;
+                this.scenes = model.scenes;
+            } 
+
             /**
-             * AppName.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveApp****</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -319,7 +394,10 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -327,7 +405,10 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The interval at which snapshots are captured from the live stream. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>80</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -335,7 +416,10 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OssBucket.
+             * <p>The name of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveBucket****</p>
              */
             public Builder ossBucket(String ossBucket) {
                 this.ossBucket = ossBucket;
@@ -343,7 +427,10 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OssEndpoint.
+             * <p>The endpoint of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-oss-****.aliyuncs.com</p>
              */
             public Builder ossEndpoint(String ossEndpoint) {
                 this.ossEndpoint = ossEndpoint;
@@ -351,7 +438,10 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OssObject.
+             * <p>The name of the storage file in Object Storage Service (OSS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{liveApp****}/{liveStream****}/{Date}/{Hour}/{Minute}_{Second}.jpg</p>
              */
             public Builder ossObject(String ossObject) {
                 this.ossObject = ossObject;
@@ -359,7 +449,7 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Scenes.
+             * <p>The moderation scenario array.</p>
              */
             public Builder scenes(Scenes scenes) {
                 this.scenes = scenes;
@@ -373,9 +463,15 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveSnapshotDetectPornConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveSnapshotDetectPornConfigResponseBody</p>
+     */
     public static class LiveSnapshotDetectPornConfigList extends TeaModel {
-        @NameInMap("LiveSnapshotDetectPornConfig")
-        private java.util.List < LiveSnapshotDetectPornConfig> liveSnapshotDetectPornConfig;
+        @com.aliyun.core.annotation.NameInMap("LiveSnapshotDetectPornConfig")
+        private java.util.List<LiveSnapshotDetectPornConfig> liveSnapshotDetectPornConfig;
 
         private LiveSnapshotDetectPornConfigList(Builder builder) {
             this.liveSnapshotDetectPornConfig = builder.liveSnapshotDetectPornConfig;
@@ -392,17 +488,24 @@ public class DescribeLiveSnapshotDetectPornConfigResponseBody extends TeaModel {
         /**
          * @return liveSnapshotDetectPornConfig
          */
-        public java.util.List < LiveSnapshotDetectPornConfig> getLiveSnapshotDetectPornConfig() {
+        public java.util.List<LiveSnapshotDetectPornConfig> getLiveSnapshotDetectPornConfig() {
             return this.liveSnapshotDetectPornConfig;
         }
 
         public static final class Builder {
-            private java.util.List < LiveSnapshotDetectPornConfig> liveSnapshotDetectPornConfig; 
+            private java.util.List<LiveSnapshotDetectPornConfig> liveSnapshotDetectPornConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveSnapshotDetectPornConfigList model) {
+                this.liveSnapshotDetectPornConfig = model.liveSnapshotDetectPornConfig;
+            } 
 
             /**
              * LiveSnapshotDetectPornConfig.
              */
-            public Builder liveSnapshotDetectPornConfig(java.util.List < LiveSnapshotDetectPornConfig> liveSnapshotDetectPornConfig) {
+            public Builder liveSnapshotDetectPornConfig(java.util.List<LiveSnapshotDetectPornConfig> liveSnapshotDetectPornConfig) {
                 this.liveSnapshotDetectPornConfig = liveSnapshotDetectPornConfig;
                 return this;
             }

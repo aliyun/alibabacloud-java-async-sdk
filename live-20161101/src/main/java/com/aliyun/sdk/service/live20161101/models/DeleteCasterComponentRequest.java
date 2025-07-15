@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteCasterComponentRequest} extends {@link RequestModel}
  *
  * <p>DeleteCasterComponentRequest</p>
  */
 public class DeleteCasterComponentRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("CasterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CasterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String casterId;
 
-    @Query
-    @NameInMap("ComponentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComponentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String componentId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     private DeleteCasterComponentRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.componentId = builder.componentId;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -46,16 +51,9 @@ public class DeleteCasterComponentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -79,11 +77,18 @@ public class DeleteCasterComponentRequest extends Request {
         return this.ownerId;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteCasterComponentRequest, Builder> {
-        private String regionId; 
         private String casterId; 
         private String componentId; 
         private Long ownerId; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -91,23 +96,25 @@ public class DeleteCasterComponentRequest extends Request {
 
         private Builder(DeleteCasterComponentRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.casterId = request.casterId;
             this.componentId = request.componentId;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * CasterId.
+         * <p>The ID of the production studio.</p>
+         * <ul>
+         * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
+         * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
          */
         public Builder casterId(String casterId) {
             this.putQueryParameter("CasterId", casterId);
@@ -116,7 +123,11 @@ public class DeleteCasterComponentRequest extends Request {
         }
 
         /**
-         * ComponentId.
+         * <p>The component ID. If the component was added by calling the <a href="https://help.aliyun.com/document_detail/2848030.html">AddCasterComponent</a> operation, check the value of the response parameter ComponentId to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>21926b36-7dd2-4fde-ae25-51b5bc8e****</p>
          */
         public Builder componentId(String componentId) {
             this.putQueryParameter("ComponentId", componentId);
@@ -130,6 +141,15 @@ public class DeleteCasterComponentRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveCertificateListRequest} extends {@link RequestModel}
  *
  * <p>DescribeLiveCertificateListRequest</p>
  */
 public class DescribeLiveCertificateListRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeLiveCertificateListRequest(Builder builder) {
@@ -39,7 +44,7 @@ public class DescribeLiveCertificateListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +87,10 @@ public class DescribeLiveCertificateListRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>The ingest domain or streaming domain. Separate multiple domain names with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.aliyundoc.com,example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

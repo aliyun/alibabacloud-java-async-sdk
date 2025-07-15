@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveAppSnapshotConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteLiveAppSnapshotConfigRequest</p>
  */
 public class DeleteLiveAppSnapshotConfigRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DeleteLiveAppSnapshotConfigRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class DeleteLiveAppSnapshotConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +103,11 @@ public class DeleteLiveAppSnapshotConfigRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs. The value of this parameter must be the same as the application name in the ingest URL. Otherwise, the configuration does not take effect. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -107,7 +116,11 @@ public class DeleteLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

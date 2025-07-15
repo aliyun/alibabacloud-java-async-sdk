@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveSnapshotDetectPornConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeLiveSnapshotDetectPornConfigRequest</p>
  */
 public class DescribeLiveSnapshotDetectPornConfigRequest extends Request {
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 30, minimum = 5)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 30, minimum = 5)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DescribeLiveSnapshotDetectPornConfigRequest(Builder builder) {
@@ -61,7 +66,7 @@ public class DescribeLiveSnapshotDetectPornConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -140,7 +145,10 @@ public class DescribeLiveSnapshotDetectPornConfigRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -149,7 +157,11 @@ public class DescribeLiveSnapshotDetectPornConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -158,7 +170,19 @@ public class DescribeLiveSnapshotDetectPornConfigRequest extends Request {
         }
 
         /**
-         * Order.
+         * <p>The order in which the entries are sorted based on creation time. Valid values:</p>
+         * <ul>
+         * <li><strong>Asc</strong> (default): ascending order</li>
+         * <li><strong>Desc</strong>: descending order</li>
+         * </ul>
+         * <p>Enumerated values:</p>
+         * <ul>
+         * <li>asc</li>
+         * <li>desc</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Asc</p>
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -176,7 +200,10 @@ public class DescribeLiveSnapshotDetectPornConfigRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -185,7 +212,10 @@ public class DescribeLiveSnapshotDetectPornConfigRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: <strong>5 to 30</strong>. Default value: <strong>10</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

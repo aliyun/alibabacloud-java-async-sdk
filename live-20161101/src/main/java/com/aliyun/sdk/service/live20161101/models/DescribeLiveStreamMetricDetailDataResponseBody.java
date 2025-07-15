@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamMetricDetailDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamMetricDetailDataResponseBody</p>
  */
 public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("StreamDetailData")
+    @com.aliyun.core.annotation.NameInMap("StreamDetailData")
     private StreamDetailData streamDetailData;
 
     private DescribeLiveStreamMetricDetailDataResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
 
     public static DescribeLiveStreamMetricDetailDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,24 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
         private String startTime; 
         private StreamDetailData streamDetailData; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamMetricDetailDataResponseBody model) {
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.nextPageToken = model.nextPageToken;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.streamDetailData = model.streamDetailData;
+        } 
+
         /**
-         * DomainName.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -118,7 +143,10 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -126,7 +154,10 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
         }
 
         /**
-         * NextPageToken.
+         * <p>The token that determines the start point of the next query. This parameter is returned if more data results are available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UjsM9x3aVcJi9a0-ArwJUTTC67C***37C0=</p>
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -134,7 +165,10 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of rows returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5000</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +176,10 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +187,10 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -158,7 +198,7 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
         }
 
         /**
-         * StreamDetailData.
+         * <p>The data array returned.</p>
          */
         public Builder streamDetailData(StreamDetailData streamDetailData) {
             this.streamDetailData = streamDetailData;
@@ -171,68 +211,77 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveStreamMetricDetailDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamMetricDetailDataResponseBody</p>
+     */
     public static class StreamData extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Bps")
+        @com.aliyun.core.annotation.NameInMap("Bps")
         private Float bps;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("FlvBps")
+        @com.aliyun.core.annotation.NameInMap("FlvBps")
         private Float flvBps;
 
-        @NameInMap("FlvCount")
+        @com.aliyun.core.annotation.NameInMap("FlvCount")
         private Long flvCount;
 
-        @NameInMap("FlvTraffic")
+        @com.aliyun.core.annotation.NameInMap("FlvTraffic")
         private Long flvTraffic;
 
-        @NameInMap("HlsBps")
+        @com.aliyun.core.annotation.NameInMap("HlsBps")
         private Float hlsBps;
 
-        @NameInMap("HlsCount")
+        @com.aliyun.core.annotation.NameInMap("HlsCount")
         private Long hlsCount;
 
-        @NameInMap("HlsTraffic")
+        @com.aliyun.core.annotation.NameInMap("HlsTraffic")
         private Long hlsTraffic;
 
-        @NameInMap("P2pBps")
+        @com.aliyun.core.annotation.NameInMap("NewConns")
+        private String newConns;
+
+        @com.aliyun.core.annotation.NameInMap("P2pBps")
         private Float p2pBps;
 
-        @NameInMap("P2pCount")
+        @com.aliyun.core.annotation.NameInMap("P2pCount")
         private Long p2pCount;
 
-        @NameInMap("P2pTraffic")
+        @com.aliyun.core.annotation.NameInMap("P2pTraffic")
         private Long p2pTraffic;
 
-        @NameInMap("RtmpBps")
+        @com.aliyun.core.annotation.NameInMap("RtmpBps")
         private Float rtmpBps;
 
-        @NameInMap("RtmpCount")
+        @com.aliyun.core.annotation.NameInMap("RtmpCount")
         private Long rtmpCount;
 
-        @NameInMap("RtmpTraffic")
+        @com.aliyun.core.annotation.NameInMap("RtmpTraffic")
         private Long rtmpTraffic;
 
-        @NameInMap("RtsBps")
+        @com.aliyun.core.annotation.NameInMap("RtsBps")
         private Float rtsBps;
 
-        @NameInMap("RtsCount")
+        @com.aliyun.core.annotation.NameInMap("RtsCount")
         private Long rtsCount;
 
-        @NameInMap("RtsTraffic")
+        @com.aliyun.core.annotation.NameInMap("RtsTraffic")
         private Long rtsTraffic;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Traffic")
+        @com.aliyun.core.annotation.NameInMap("Traffic")
         private Long traffic;
 
         private StreamData(Builder builder) {
@@ -245,6 +294,7 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             this.hlsBps = builder.hlsBps;
             this.hlsCount = builder.hlsCount;
             this.hlsTraffic = builder.hlsTraffic;
+            this.newConns = builder.newConns;
             this.p2pBps = builder.p2pBps;
             this.p2pCount = builder.p2pCount;
             this.p2pTraffic = builder.p2pTraffic;
@@ -328,6 +378,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
          */
         public Long getHlsTraffic() {
             return this.hlsTraffic;
+        }
+
+        /**
+         * @return newConns
+         */
+        public String getNewConns() {
+            return this.newConns;
         }
 
         /**
@@ -424,6 +481,7 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             private Float hlsBps; 
             private Long hlsCount; 
             private Long hlsTraffic; 
+            private String newConns; 
             private Float p2pBps; 
             private Long p2pCount; 
             private Long p2pTraffic; 
@@ -437,8 +495,39 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             private String timeStamp; 
             private Long traffic; 
 
+            private Builder() {
+            } 
+
+            private Builder(StreamData model) {
+                this.appName = model.appName;
+                this.bps = model.bps;
+                this.count = model.count;
+                this.flvBps = model.flvBps;
+                this.flvCount = model.flvCount;
+                this.flvTraffic = model.flvTraffic;
+                this.hlsBps = model.hlsBps;
+                this.hlsCount = model.hlsCount;
+                this.hlsTraffic = model.hlsTraffic;
+                this.newConns = model.newConns;
+                this.p2pBps = model.p2pBps;
+                this.p2pCount = model.p2pCount;
+                this.p2pTraffic = model.p2pTraffic;
+                this.rtmpBps = model.rtmpBps;
+                this.rtmpCount = model.rtmpCount;
+                this.rtmpTraffic = model.rtmpTraffic;
+                this.rtsBps = model.rtsBps;
+                this.rtsCount = model.rtsCount;
+                this.rtsTraffic = model.rtsTraffic;
+                this.streamName = model.streamName;
+                this.timeStamp = model.timeStamp;
+                this.traffic = model.traffic;
+            } 
+
             /**
-             * AppName.
+             * <p>The name of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -446,7 +535,10 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * Bps.
+             * <p>The total bandwidth consumed by the stream per minute. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>423304182.66</p>
              */
             public Builder bps(Float bps) {
                 this.bps = bps;
@@ -454,7 +546,10 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The total number of online viewers for the stream per minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>423304182</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -462,7 +557,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * FlvBps.
+             * <p>The bandwidth over the Flash Video (FLV) protocol. Unit: bit/s.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>454</p>
              */
             public Builder flvBps(Float flvBps) {
                 this.flvBps = flvBps;
@@ -470,7 +571,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * FlvCount.
+             * <p>The number of online viewers over the FLV protocol.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>32</p>
              */
             public Builder flvCount(Long flvCount) {
                 this.flvCount = flvCount;
@@ -478,7 +585,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * FlvTraffic.
+             * <p>The amount of traffic over the FLV protocol. Unit: bytes.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1254</p>
              */
             public Builder flvTraffic(Long flvTraffic) {
                 this.flvTraffic = flvTraffic;
@@ -486,7 +599,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * HlsBps.
+             * <p>The bandwidth over the HTTP Live Streaming (HLS) protocol. Unit: bit/s.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>4456</p>
              */
             public Builder hlsBps(Float hlsBps) {
                 this.hlsBps = hlsBps;
@@ -494,7 +613,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * HlsCount.
+             * <p>The number of online viewers over the HLS protocol.</p>
+             * <blockquote>
+             * <p> Currently, this parameter is not supported.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>56</p>
              */
             public Builder hlsCount(Long hlsCount) {
                 this.hlsCount = hlsCount;
@@ -502,7 +627,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * HlsTraffic.
+             * <p>The amount of traffic over the HLS protocol. Unit: bytes.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>568</p>
              */
             public Builder hlsTraffic(Long hlsTraffic) {
                 this.hlsTraffic = hlsTraffic;
@@ -510,7 +641,24 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * P2pBps.
+             * <p>Number of new connections established per minute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>450</p>
+             */
+            public Builder newConns(String newConns) {
+                this.newConns = newConns;
+                return this;
+            }
+
+            /**
+             * <p>The bandwidth over the P2P protocol. Unit: bit/s.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>6845</p>
              */
             public Builder p2pBps(Float p2pBps) {
                 this.p2pBps = p2pBps;
@@ -518,7 +666,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * P2pCount.
+             * <p>The number of online viewers over the P2P protocol.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>78</p>
              */
             public Builder p2pCount(Long p2pCount) {
                 this.p2pCount = p2pCount;
@@ -526,7 +680,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * P2pTraffic.
+             * <p>The amount of traffic over the peer-to-peer (P2P) protocol. Unit: bytes.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>4102</p>
              */
             public Builder p2pTraffic(Long p2pTraffic) {
                 this.p2pTraffic = p2pTraffic;
@@ -534,7 +694,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * RtmpBps.
+             * <p>The bandwidth over the Real-Time Messaging Protocol (RTMP) protocol. Unit: bit/s.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>3323</p>
              */
             public Builder rtmpBps(Float rtmpBps) {
                 this.rtmpBps = rtmpBps;
@@ -542,7 +708,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * RtmpCount.
+             * <p>The number of online viewers over the RTMP protocol.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>63</p>
              */
             public Builder rtmpCount(Long rtmpCount) {
                 this.rtmpCount = rtmpCount;
@@ -550,7 +722,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * RtmpTraffic.
+             * <p>The amount of traffic over the RTMP protocol. Unit: bytes.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>5568</p>
              */
             public Builder rtmpTraffic(Long rtmpTraffic) {
                 this.rtmpTraffic = rtmpTraffic;
@@ -558,7 +736,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * RtsBps.
+             * <p>The bandwidth over the RTS protocol. Unit: bit/s.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2361</p>
              */
             public Builder rtsBps(Float rtsBps) {
                 this.rtsBps = rtsBps;
@@ -566,7 +750,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * RtsCount.
+             * <p>The number of online viewers over the Real-Time Streaming (RTS) protocol.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>89</p>
              */
             public Builder rtsCount(Long rtsCount) {
                 this.rtsCount = rtsCount;
@@ -574,7 +764,13 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * RtsTraffic.
+             * <p>The amount of traffic over the RTS protocol. Unit: bytes.</p>
+             * <blockquote>
+             * <p> This parameter is not returned if no traffic is generated over the protocol.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>2322</p>
              */
             public Builder rtsTraffic(Long rtsTraffic) {
                 this.rtsTraffic = rtsTraffic;
@@ -582,7 +778,10 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * StreamName.
+             * <p>The name of the stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test.flv</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -590,7 +789,10 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -598,7 +800,10 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
             }
 
             /**
-             * Traffic.
+             * <p>The total amount of traffic consumed by the stream per minute. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>423304182</p>
              */
             public Builder traffic(Long traffic) {
                 this.traffic = traffic;
@@ -612,9 +817,15 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamMetricDetailDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamMetricDetailDataResponseBody</p>
+     */
     public static class StreamDetailData extends TeaModel {
-        @NameInMap("StreamData")
-        private java.util.List < StreamData> streamData;
+        @com.aliyun.core.annotation.NameInMap("StreamData")
+        private java.util.List<StreamData> streamData;
 
         private StreamDetailData(Builder builder) {
             this.streamData = builder.streamData;
@@ -631,17 +842,24 @@ public class DescribeLiveStreamMetricDetailDataResponseBody extends TeaModel {
         /**
          * @return streamData
          */
-        public java.util.List < StreamData> getStreamData() {
+        public java.util.List<StreamData> getStreamData() {
             return this.streamData;
         }
 
         public static final class Builder {
-            private java.util.List < StreamData> streamData; 
+            private java.util.List<StreamData> streamData; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreamDetailData model) {
+                this.streamData = model.streamData;
+            } 
 
             /**
              * StreamData.
              */
-            public Builder streamData(java.util.List < StreamData> streamData) {
+            public Builder streamData(java.util.List<StreamData> streamData) {
                 this.streamData = streamData;
                 return this;
             }

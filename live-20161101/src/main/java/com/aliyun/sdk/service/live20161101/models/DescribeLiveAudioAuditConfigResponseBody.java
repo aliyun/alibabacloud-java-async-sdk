@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveAudioAuditConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveAudioAuditConfigResponseBody</p>
  */
 public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
-    @NameInMap("LiveAudioAuditConfigList")
+    @com.aliyun.core.annotation.NameInMap("LiveAudioAuditConfigList")
     private LiveAudioAuditConfigList liveAudioAuditConfigList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveAudioAuditConfigResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
 
     public static DescribeLiveAudioAuditConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
         private LiveAudioAuditConfigList liveAudioAuditConfigList; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveAudioAuditConfigResponseBody model) {
+            this.liveAudioAuditConfigList = model.liveAudioAuditConfigList;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * LiveAudioAuditConfigList.
+         * <p>The list of audio moderation configurations.</p>
          */
         public Builder liveAudioAuditConfigList(LiveAudioAuditConfigList liveAudioAuditConfigList) {
             this.liveAudioAuditConfigList = liveAudioAuditConfigList;
@@ -58,7 +75,10 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BF95F2A-3B24-4CDE-9346-7F6FA86697A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,9 +91,15 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveAudioAuditConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveAudioAuditConfigResponseBody</p>
+     */
     public static class Scenes extends TeaModel {
-        @NameInMap("scene")
-        private java.util.List < String > scene;
+        @com.aliyun.core.annotation.NameInMap("scene")
+        private java.util.List<String> scene;
 
         private Scenes(Builder builder) {
             this.scene = builder.scene;
@@ -90,17 +116,24 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
         /**
          * @return scene
          */
-        public java.util.List < String > getScene() {
+        public java.util.List<String> getScene() {
             return this.scene;
         }
 
         public static final class Builder {
-            private java.util.List < String > scene; 
+            private java.util.List<String> scene; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scenes model) {
+                this.scene = model.scene;
+            } 
 
             /**
              * scene.
              */
-            public Builder scene(java.util.List < String > scene) {
+            public Builder scene(java.util.List<String> scene) {
                 this.scene = scene;
                 return this;
             }
@@ -112,20 +145,26 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveAudioAuditConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveAudioAuditConfigResponseBody</p>
+     */
     public static class LiveAudioAuditConfig extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Scenes")
+        @com.aliyun.core.annotation.NameInMap("Scenes")
         private Scenes scenes;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
         private LiveAudioAuditConfig(Builder builder) {
@@ -186,8 +225,22 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
             private Scenes scenes; 
             private String streamName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveAudioAuditConfig model) {
+                this.appName = model.appName;
+                this.bizType = model.bizType;
+                this.domainName = model.domainName;
+                this.scenes = model.scenes;
+                this.streamName = model.streamName;
+            } 
+
             /**
-             * AppName.
+             * <p>The name of the application to which the live stream belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveApp****</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -195,7 +248,10 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
             }
 
             /**
-             * BizType.
+             * <p>The business type. You can specify a model. The default value is the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.edu</p>
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -203,7 +259,10 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -211,7 +270,7 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Scenes.
+             * <p>The moderation scenarios.</p>
              */
             public Builder scenes(Scenes scenes) {
                 this.scenes = scenes;
@@ -219,7 +278,10 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
             }
 
             /**
-             * StreamName.
+             * <p>The name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveStream****</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -233,9 +295,15 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveAudioAuditConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveAudioAuditConfigResponseBody</p>
+     */
     public static class LiveAudioAuditConfigList extends TeaModel {
-        @NameInMap("LiveAudioAuditConfig")
-        private java.util.List < LiveAudioAuditConfig> liveAudioAuditConfig;
+        @com.aliyun.core.annotation.NameInMap("LiveAudioAuditConfig")
+        private java.util.List<LiveAudioAuditConfig> liveAudioAuditConfig;
 
         private LiveAudioAuditConfigList(Builder builder) {
             this.liveAudioAuditConfig = builder.liveAudioAuditConfig;
@@ -252,17 +320,24 @@ public class DescribeLiveAudioAuditConfigResponseBody extends TeaModel {
         /**
          * @return liveAudioAuditConfig
          */
-        public java.util.List < LiveAudioAuditConfig> getLiveAudioAuditConfig() {
+        public java.util.List<LiveAudioAuditConfig> getLiveAudioAuditConfig() {
             return this.liveAudioAuditConfig;
         }
 
         public static final class Builder {
-            private java.util.List < LiveAudioAuditConfig> liveAudioAuditConfig; 
+            private java.util.List<LiveAudioAuditConfig> liveAudioAuditConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveAudioAuditConfigList model) {
+                this.liveAudioAuditConfig = model.liveAudioAuditConfig;
+            } 
 
             /**
              * LiveAudioAuditConfig.
              */
-            public Builder liveAudioAuditConfig(java.util.List < LiveAudioAuditConfig> liveAudioAuditConfig) {
+            public Builder liveAudioAuditConfig(java.util.List<LiveAudioAuditConfig> liveAudioAuditConfig) {
                 this.liveAudioAuditConfig = liveAudioAuditConfig;
                 return this;
             }

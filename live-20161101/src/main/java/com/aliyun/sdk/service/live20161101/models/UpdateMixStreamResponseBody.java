@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMixStreamResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateMixStreamResponseBody</p>
  */
 public class UpdateMixStreamResponseBody extends TeaModel {
-    @NameInMap("MixStreamId")
+    @com.aliyun.core.annotation.NameInMap("MixStreamId")
     private String mixStreamId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateMixStreamResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class UpdateMixStreamResponseBody extends TeaModel {
 
     public static UpdateMixStreamResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class UpdateMixStreamResponseBody extends TeaModel {
         private String mixStreamId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateMixStreamResponseBody model) {
+            this.mixStreamId = model.mixStreamId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * MixStreamId.
+         * <p>The ID of the stream mixing task. You can specify this parameter in a request to delete the stream mixing task or query stream mixing tasks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5b2a046e-74d7-385e-d2d7-8a5b87e4****</p>
          */
         public Builder mixStreamId(String mixStreamId) {
             this.mixStreamId = mixStreamId;
@@ -58,7 +78,10 @@ public class UpdateMixStreamResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1A8CDDFF-0121-4ABB-DA60-AEF095A8W34F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

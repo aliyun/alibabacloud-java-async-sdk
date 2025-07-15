@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveStreamWatermarkRequest} extends {@link RequestModel}
  *
  * <p>DeleteLiveStreamWatermarkRequest</p>
  */
 public class DeleteLiveStreamWatermarkRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     private DeleteLiveStreamWatermarkRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.templateId = builder.templateId;
     }
 
@@ -40,16 +45,9 @@ public class DeleteLiveStreamWatermarkRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -60,6 +58,13 @@ public class DeleteLiveStreamWatermarkRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return templateId
      */
     public String getTemplateId() {
@@ -67,8 +72,8 @@ public class DeleteLiveStreamWatermarkRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteLiveStreamWatermarkRequest, Builder> {
-        private String regionId; 
         private Long ownerId; 
+        private String regionId; 
         private String templateId; 
 
         private Builder() {
@@ -77,19 +82,10 @@ public class DeleteLiveStreamWatermarkRequest extends Request {
 
         private Builder(DeleteLiveStreamWatermarkRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.templateId = request.templateId;
         } 
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * OwnerId.
@@ -101,7 +97,23 @@ public class DeleteLiveStreamWatermarkRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the watermark template.</p>
+         * <blockquote>
+         * <p> You can obtain the template ID by checking the value of the TemplateId parameter that is returned by the <a href="https://help.aliyun.com/document_detail/410759.html">AddLiveStreamWatermark</a> operation.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

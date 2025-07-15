@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EffectCasterVideoResourceRequest} extends {@link RequestModel}
  *
  * <p>EffectCasterVideoResourceRequest</p>
  */
 public class EffectCasterVideoResourceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("CasterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CasterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String casterId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
     private EffectCasterVideoResourceRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.sceneId = builder.sceneId;
     }
@@ -52,16 +57,9 @@ public class EffectCasterVideoResourceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -79,6 +77,13 @@ public class EffectCasterVideoResourceRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -93,9 +98,9 @@ public class EffectCasterVideoResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<EffectCasterVideoResourceRequest, Builder> {
-        private String regionId; 
         private String casterId; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceId; 
         private String sceneId; 
 
@@ -105,24 +110,26 @@ public class EffectCasterVideoResourceRequest extends Request {
 
         private Builder(EffectCasterVideoResourceRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.casterId = request.casterId;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceId = request.resourceId;
             this.sceneId = request.sceneId;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * CasterId.
+         * <p>The ID of the production studio.</p>
+         * <ul>
+         * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
+         * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80787064-1c94-4dc1-85ce-9409960a****</p>
          */
         public Builder casterId(String casterId) {
             this.putQueryParameter("CasterId", casterId);
@@ -140,7 +147,20 @@ public class EffectCasterVideoResourceRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The resource ID. If you call the <a href="https://help.aliyun.com/document_detail/2848046.html">DescribeCasterChannels</a> operation to query the channels of the production studio, you can obtain the ID of the resource in a specific channel from the ResourceId parameter in the response.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f096e8d6-0319-4c96-82bc-ecbc79cf****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -149,7 +169,11 @@ public class EffectCasterVideoResourceRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * <p>The ID of the scene. You can call the <a href="~~60262#doc-api-live-DescribeCasterScenes~~" title="Queries information about the scenes of a production studio.">DescribeCasterScenes</a> operation to get the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>05ab713c-676e-49c0-96ce-cc408da1****</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);

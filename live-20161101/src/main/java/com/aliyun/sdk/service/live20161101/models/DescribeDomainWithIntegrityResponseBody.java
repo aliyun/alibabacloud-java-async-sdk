@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainWithIntegrityResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainWithIntegrityResponseBody</p>
  */
 public class DescribeDomainWithIntegrityResponseBody extends TeaModel {
-    @NameInMap("Content")
-    private java.util.List < Content> content;
+    @com.aliyun.core.annotation.NameInMap("Content")
+    private java.util.List<Content> content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainWithIntegrityResponseBody(Builder builder) {
@@ -31,10 +36,14 @@ public class DescribeDomainWithIntegrityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
-    public java.util.List < Content> getContent() {
+    public java.util.List<Content> getContent() {
         return this.content;
     }
 
@@ -46,19 +55,30 @@ public class DescribeDomainWithIntegrityResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Content> content; 
+        private java.util.List<Content> content; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainWithIntegrityResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Content.
+         * <p>The verification information.</p>
          */
-        public Builder content(java.util.List < Content> content) {
+        public Builder content(java.util.List<Content> content) {
             this.content = content;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,15 +91,21 @@ public class DescribeDomainWithIntegrityResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainWithIntegrityResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainWithIntegrityResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("Columns")
-        private java.util.List < String > columns;
+        @com.aliyun.core.annotation.NameInMap("Columns")
+        private java.util.List<String> columns;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Points")
-        private java.util.List < String > points;
+        @com.aliyun.core.annotation.NameInMap("Points")
+        private java.util.List<String> points;
 
         private Content(Builder builder) {
             this.columns = builder.columns;
@@ -98,7 +124,7 @@ public class DescribeDomainWithIntegrityResponseBody extends TeaModel {
         /**
          * @return columns
          */
-        public java.util.List < String > getColumns() {
+        public java.util.List<String> getColumns() {
             return this.columns;
         }
 
@@ -112,25 +138,37 @@ public class DescribeDomainWithIntegrityResponseBody extends TeaModel {
         /**
          * @return points
          */
-        public java.util.List < String > getPoints() {
+        public java.util.List<String> getPoints() {
             return this.points;
         }
 
         public static final class Builder {
-            private java.util.List < String > columns; 
+            private java.util.List<String> columns; 
             private String name; 
-            private java.util.List < String > points; 
+            private java.util.List<String> points; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.columns = model.columns;
+                this.name = model.name;
+                this.points = model.points;
+            } 
 
             /**
-             * Columns.
+             * <p>The column names.</p>
              */
-            public Builder columns(java.util.List < String > columns) {
+            public Builder columns(java.util.List<String> columns) {
                 this.columns = columns;
                 return this;
             }
 
             /**
-             * Name.
+             * <p>The table name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637825700000</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -138,9 +176,9 @@ public class DescribeDomainWithIntegrityResponseBody extends TeaModel {
             }
 
             /**
-             * Points.
+             * <p>The subpoints.</p>
              */
-            public Builder points(java.util.List < String > points) {
+            public Builder points(java.util.List<String> points) {
                 this.points = points;
                 return this;
             }

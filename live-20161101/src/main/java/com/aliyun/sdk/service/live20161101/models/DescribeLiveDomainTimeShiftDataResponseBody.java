@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveDomainTimeShiftDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveDomainTimeShiftDataResponseBody</p>
  */
 public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TimeShiftData")
+    @com.aliyun.core.annotation.NameInMap("TimeShiftData")
     private TimeShiftData timeShiftData;
 
     private DescribeLiveDomainTimeShiftDataResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
 
     public static DescribeLiveDomainTimeShiftDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
         private String requestId; 
         private TimeShiftData timeShiftData; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveDomainTimeShiftDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.timeShiftData = model.timeShiftData;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8AE1CB3A-6510-442E-A6B9-EF03D05B3E09</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,7 @@ public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
         }
 
         /**
-         * TimeShiftData.
+         * <p>The time shifting usage data that was collected for each time interval.</p>
          */
         public Builder timeShiftData(TimeShiftData timeShiftData) {
             this.timeShiftData = timeShiftData;
@@ -71,14 +91,20 @@ public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveDomainTimeShiftDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainTimeShiftDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DataModule(Builder builder) {
@@ -121,8 +147,20 @@ public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.size = model.size;
+                this.timeStamp = model.timeStamp;
+                this.type = model.type;
+            } 
+
             /**
-             * Size.
+             * <p>The storage used for time shifting. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1664165660</p>
              */
             public Builder size(String size) {
                 this.size = size;
@@ -130,7 +168,10 @@ public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-03-03T00:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -138,7 +179,10 @@ public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of time shifting. Examples: HLS_D1 and HLS_D7.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>HLS_D7</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -152,9 +196,15 @@ public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDomainTimeShiftDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainTimeShiftDataResponseBody</p>
+     */
     public static class TimeShiftData extends TeaModel {
-        @NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        @com.aliyun.core.annotation.NameInMap("DataModule")
+        private java.util.List<DataModule> dataModule;
 
         private TimeShiftData(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -171,17 +221,24 @@ public class DescribeLiveDomainTimeShiftDataResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(TimeShiftData model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

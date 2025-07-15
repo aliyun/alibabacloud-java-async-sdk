@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamTranscodeInfoResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamTranscodeInfoResponseBody</p>
  */
 public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
-    @NameInMap("DomainTranscodeList")
+    @com.aliyun.core.annotation.NameInMap("DomainTranscodeList")
     private DomainTranscodeList domainTranscodeList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveStreamTranscodeInfoResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
 
     public static DescribeLiveStreamTranscodeInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         private DomainTranscodeList domainTranscodeList; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamTranscodeInfoResponseBody model) {
+            this.domainTranscodeList = model.domainTranscodeList;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * DomainTranscodeList.
+         * <p>The transcoding configurations.</p>
          */
         public Builder domainTranscodeList(DomainTranscodeList domainTranscodeList) {
             this.domainTranscodeList = domainTranscodeList;
@@ -58,7 +75,10 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>62136AE6-7793-45ED-B14A-60D19A9486D3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,47 +91,65 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveStreamTranscodeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamTranscodeInfoResponseBody</p>
+     */
     public static class CustomTranscodeParameters extends TeaModel {
-        @NameInMap("AudioBitrate")
+        @com.aliyun.core.annotation.NameInMap("AudioBitrate")
         private Integer audioBitrate;
 
-        @NameInMap("AudioChannelNum")
+        @com.aliyun.core.annotation.NameInMap("AudioChannelNum")
         private Integer audioChannelNum;
 
-        @NameInMap("AudioCodec")
+        @com.aliyun.core.annotation.NameInMap("AudioCodec")
         private String audioCodec;
 
-        @NameInMap("AudioProfile")
+        @com.aliyun.core.annotation.NameInMap("AudioProfile")
         private String audioProfile;
 
-        @NameInMap("AudioRate")
+        @com.aliyun.core.annotation.NameInMap("AudioRate")
         private Integer audioRate;
 
-        @NameInMap("Bframes")
+        @com.aliyun.core.annotation.NameInMap("Bframes")
         private String bframes;
 
-        @NameInMap("FPS")
+        @com.aliyun.core.annotation.NameInMap("BitrateWithSource")
+        private java.util.Map<String, ?> bitrateWithSource;
+
+        @com.aliyun.core.annotation.NameInMap("ExtWithSource")
+        private java.util.Map<String, ?> extWithSource;
+
+        @com.aliyun.core.annotation.NameInMap("FPS")
         private Integer FPS;
 
-        @NameInMap("Gop")
+        @com.aliyun.core.annotation.NameInMap("FpsWithSource")
+        private java.util.Map<String, ?> fpsWithSource;
+
+        @com.aliyun.core.annotation.NameInMap("Gop")
         private String gop;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("RtsFlag")
+        @com.aliyun.core.annotation.NameInMap("ResWithSource")
+        private java.util.Map<String, ?> resWithSource;
+
+        @com.aliyun.core.annotation.NameInMap("RtsFlag")
         private String rtsFlag;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
-        @NameInMap("VideoBitrate")
+        @com.aliyun.core.annotation.NameInMap("VideoBitrate")
         private Integer videoBitrate;
 
-        @NameInMap("VideoProfile")
+        @com.aliyun.core.annotation.NameInMap("VideoProfile")
         private String videoProfile;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private CustomTranscodeParameters(Builder builder) {
@@ -121,9 +159,13 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             this.audioProfile = builder.audioProfile;
             this.audioRate = builder.audioRate;
             this.bframes = builder.bframes;
+            this.bitrateWithSource = builder.bitrateWithSource;
+            this.extWithSource = builder.extWithSource;
             this.FPS = builder.FPS;
+            this.fpsWithSource = builder.fpsWithSource;
             this.gop = builder.gop;
             this.height = builder.height;
+            this.resWithSource = builder.resWithSource;
             this.rtsFlag = builder.rtsFlag;
             this.templateType = builder.templateType;
             this.videoBitrate = builder.videoBitrate;
@@ -182,10 +224,31 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return bitrateWithSource
+         */
+        public java.util.Map<String, ?> getBitrateWithSource() {
+            return this.bitrateWithSource;
+        }
+
+        /**
+         * @return extWithSource
+         */
+        public java.util.Map<String, ?> getExtWithSource() {
+            return this.extWithSource;
+        }
+
+        /**
          * @return FPS
          */
         public Integer getFPS() {
             return this.FPS;
+        }
+
+        /**
+         * @return fpsWithSource
+         */
+        public java.util.Map<String, ?> getFpsWithSource() {
+            return this.fpsWithSource;
         }
 
         /**
@@ -200,6 +263,13 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
          */
         public Integer getHeight() {
             return this.height;
+        }
+
+        /**
+         * @return resWithSource
+         */
+        public java.util.Map<String, ?> getResWithSource() {
+            return this.resWithSource;
         }
 
         /**
@@ -244,17 +314,48 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             private String audioProfile; 
             private Integer audioRate; 
             private String bframes; 
+            private java.util.Map<String, ?> bitrateWithSource; 
+            private java.util.Map<String, ?> extWithSource; 
             private Integer FPS; 
+            private java.util.Map<String, ?> fpsWithSource; 
             private String gop; 
             private Integer height; 
+            private java.util.Map<String, ?> resWithSource; 
             private String rtsFlag; 
             private String templateType; 
             private Integer videoBitrate; 
             private String videoProfile; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomTranscodeParameters model) {
+                this.audioBitrate = model.audioBitrate;
+                this.audioChannelNum = model.audioChannelNum;
+                this.audioCodec = model.audioCodec;
+                this.audioProfile = model.audioProfile;
+                this.audioRate = model.audioRate;
+                this.bframes = model.bframes;
+                this.bitrateWithSource = model.bitrateWithSource;
+                this.extWithSource = model.extWithSource;
+                this.FPS = model.FPS;
+                this.fpsWithSource = model.fpsWithSource;
+                this.gop = model.gop;
+                this.height = model.height;
+                this.resWithSource = model.resWithSource;
+                this.rtsFlag = model.rtsFlag;
+                this.templateType = model.templateType;
+                this.videoBitrate = model.videoBitrate;
+                this.videoProfile = model.videoProfile;
+                this.width = model.width;
+            } 
+
             /**
-             * AudioBitrate.
+             * <p>The bitrate of the output audio. Unit: Kbit/s. Valid values: <strong>1 to 1000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>64</p>
              */
             public Builder audioBitrate(Integer audioBitrate) {
                 this.audioBitrate = audioBitrate;
@@ -262,7 +363,14 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AudioChannelNum.
+             * <p>The number of sound channels. Valid values:</p>
+             * <ul>
+             * <li><strong>1</strong>: mono</li>
+             * <li><strong>2</strong>: binaural</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder audioChannelNum(Integer audioChannelNum) {
                 this.audioChannelNum = audioChannelNum;
@@ -270,7 +378,10 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AudioCodec.
+             * <p>The audio encoding format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ACC</p>
              */
             public Builder audioCodec(String audioCodec) {
                 this.audioCodec = audioCodec;
@@ -278,7 +389,16 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AudioProfile.
+             * <p>The audio encoding profile. Valid values:</p>
+             * <ul>
+             * <li><strong>aac_low</strong></li>
+             * <li><strong>aac_he</strong></li>
+             * <li><strong>aac_he_v2</strong></li>
+             * <li><strong>aac_ld</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>aac_low</p>
              */
             public Builder audioProfile(String audioProfile) {
                 this.audioProfile = audioProfile;
@@ -286,7 +406,13 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * AudioRate.
+             * <p>The audio sampling rate. Valid values: <strong>22050 to 96000</strong>.</p>
+             * <blockquote>
+             * <p> If the value of AudioProfile is <strong>aac_ld</strong>, the audio sampling rate cannot exceed 44100.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>44100</p>
              */
             public Builder audioRate(Integer audioRate) {
                 this.audioRate = audioRate;
@@ -294,7 +420,10 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Bframes.
+             * <p>Indicates whether B-frame removal is enabled. Fixed value: <strong>0</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder bframes(String bframes) {
                 this.bframes = bframes;
@@ -302,7 +431,32 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * FPS.
+             * <p>The source-based bitrate settings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;UpLimit&quot;:2500,&quot;LowerLimit&quot;:800,&quot;Factor&quot;:1}</p>
+             */
+            public Builder bitrateWithSource(java.util.Map<String, ?> bitrateWithSource) {
+                this.bitrateWithSource = bitrateWithSource;
+                return this;
+            }
+
+            /**
+             * <p>Other source-based settings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;KeyFrameOpen&quot;:&quot;yes&quot;,&quot;Copyts&quot;:&quot;yes&quot;,&quot;SeiMode&quot;:1}</p>
+             */
+            public Builder extWithSource(java.util.Map<String, ?> extWithSource) {
+                this.extWithSource = extWithSource;
+                return this;
+            }
+
+            /**
+             * <p>The frame rate of the output video. Unit: frames per second (FPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder FPS(Integer FPS) {
                 this.FPS = FPS;
@@ -310,7 +464,21 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Gop.
+             * <p>The source-based frame rate settings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;UpLimit&quot;:60,&quot;LowerLimit&quot;:1}</p>
+             */
+            public Builder fpsWithSource(java.util.Map<String, ?> fpsWithSource) {
+                this.fpsWithSource = fpsWithSource;
+                return this;
+            }
+
+            /**
+             * <p>The group of pictures (GOP) size of the output video. Unit: frames. Valid values: <strong>1 to 3000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder gop(String gop) {
                 this.gop = gop;
@@ -318,7 +486,10 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the output video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1200</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -326,7 +497,24 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RtsFlag.
+             * <p>The source-based resolution settings.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;Type&quot;:&quot;short&quot;,&quot;Value&quot;:&quot;1080&quot;}</p>
+             */
+            public Builder resWithSource(java.util.Map<String, ?> resWithSource) {
+                this.resWithSource = resWithSource;
+                return this;
+            }
+
+            /**
+             * <p>The Real-Time Transcoding (RTS) flag. Fixed value: <strong>true</strong>.</p>
+             * <blockquote>
+             * <p> This parameter is returned only if RTS is used for transcoding.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder rtsFlag(String rtsFlag) {
                 this.rtsFlag = rtsFlag;
@@ -334,7 +522,17 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * <p>The type of the custom transcoding template. Valid values:</p>
+             * <ul>
+             * <li><strong>h264</strong>: custom H.264 standard transcoding</li>
+             * <li><strong>h264-nbhd</strong>: custom H.264 Narrowband HD™ transcoding</li>
+             * <li><strong>h265</strong>: custom H.265 standard transcoding</li>
+             * <li><strong>h265-nbhd</strong>: custom H.265 Narrowband HD™ transcoding</li>
+             * <li><strong>audio</strong>: audio-only transcoding</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>h264</p>
              */
             public Builder templateType(String templateType) {
                 this.templateType = templateType;
@@ -342,7 +540,10 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VideoBitrate.
+             * <p>The bitrate of the output video. Unit: Kbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3000</p>
              */
             public Builder videoBitrate(Integer videoBitrate) {
                 this.videoBitrate = videoBitrate;
@@ -350,7 +551,15 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * VideoProfile.
+             * <p>The video encoding profile. Valid values:</p>
+             * <ul>
+             * <li><strong>baseline</strong>: suitable for mobile devices.</li>
+             * <li><strong>main</strong>: suitable for standard-definition devices.</li>
+             * <li><strong>high</strong>: suitable for high-definition devices.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>high</p>
              */
             public Builder videoProfile(String videoProfile) {
                 this.videoProfile = videoProfile;
@@ -358,7 +567,10 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The width of the output video.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -372,14 +584,20 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamTranscodeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamTranscodeInfoResponseBody</p>
+     */
     public static class EncryptParameters extends TeaModel {
-        @NameInMap("EncryptType")
+        @com.aliyun.core.annotation.NameInMap("EncryptType")
         private String encryptType;
 
-        @NameInMap("KmsKeyExpireInterval")
+        @com.aliyun.core.annotation.NameInMap("KmsKeyExpireInterval")
         private String kmsKeyExpireInterval;
 
-        @NameInMap("KmsKeyID")
+        @com.aliyun.core.annotation.NameInMap("KmsKeyID")
         private String kmsKeyID;
 
         private EncryptParameters(Builder builder) {
@@ -422,8 +640,20 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             private String kmsKeyExpireInterval; 
             private String kmsKeyID; 
 
+            private Builder() {
+            } 
+
+            private Builder(EncryptParameters model) {
+                this.encryptType = model.encryptType;
+                this.kmsKeyExpireInterval = model.kmsKeyExpireInterval;
+                this.kmsKeyID = model.kmsKeyID;
+            } 
+
             /**
-             * EncryptType.
+             * <p>The type of encryption. Fixed value: <strong>aliyun</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>aliyun</p>
              */
             public Builder encryptType(String encryptType) {
                 this.encryptType = encryptType;
@@ -431,7 +661,10 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * KmsKeyExpireInterval.
+             * <p>The rotation period of the CMK. Valid values: <strong>60 to 3600</strong>. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder kmsKeyExpireInterval(String kmsKeyExpireInterval) {
                 this.kmsKeyExpireInterval = kmsKeyExpireInterval;
@@ -439,7 +672,10 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * KmsKeyID.
+             * <p>The ID of the customer master key (CMK) in Key Management Service (KMS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>afce5722-81d2-43c3-9930-7601da11****</p>
              */
             public Builder kmsKeyID(String kmsKeyID) {
                 this.kmsKeyID = kmsKeyID;
@@ -453,23 +689,29 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamTranscodeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamTranscodeInfoResponseBody</p>
+     */
     public static class DomainTranscodeInfo extends TeaModel {
-        @NameInMap("CustomTranscodeParameters")
+        @com.aliyun.core.annotation.NameInMap("CustomTranscodeParameters")
         private CustomTranscodeParameters customTranscodeParameters;
 
-        @NameInMap("EncryptParameters")
+        @com.aliyun.core.annotation.NameInMap("EncryptParameters")
         private EncryptParameters encryptParameters;
 
-        @NameInMap("IsLazy")
+        @com.aliyun.core.annotation.NameInMap("IsLazy")
         private Boolean isLazy;
 
-        @NameInMap("TranscodeApp")
+        @com.aliyun.core.annotation.NameInMap("TranscodeApp")
         private String transcodeApp;
 
-        @NameInMap("TranscodeName")
+        @com.aliyun.core.annotation.NameInMap("TranscodeName")
         private String transcodeName;
 
-        @NameInMap("TranscodeTemplate")
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplate")
         private String transcodeTemplate;
 
         private DomainTranscodeInfo(Builder builder) {
@@ -539,8 +781,20 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             private String transcodeName; 
             private String transcodeTemplate; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainTranscodeInfo model) {
+                this.customTranscodeParameters = model.customTranscodeParameters;
+                this.encryptParameters = model.encryptParameters;
+                this.isLazy = model.isLazy;
+                this.transcodeApp = model.transcodeApp;
+                this.transcodeName = model.transcodeName;
+                this.transcodeTemplate = model.transcodeTemplate;
+            } 
+
             /**
-             * CustomTranscodeParameters.
+             * <p>The custom transcoding configuration.</p>
              */
             public Builder customTranscodeParameters(CustomTranscodeParameters customTranscodeParameters) {
                 this.customTranscodeParameters = customTranscodeParameters;
@@ -548,7 +802,7 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptParameters.
+             * <p>The encryption settings.</p>
              */
             public Builder encryptParameters(EncryptParameters encryptParameters) {
                 this.encryptParameters = encryptParameters;
@@ -556,7 +810,14 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * IsLazy.
+             * <p>Indicates whether forcible transcoding is used. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: Delayed transcoding is used.</li>
+             * <li><strong>false</strong>: Forcible transcoding is used.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isLazy(Boolean isLazy) {
                 this.isLazy = isLazy;
@@ -564,7 +825,10 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeApp.
+             * <p>The application name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveApp****</p>
              */
             public Builder transcodeApp(String transcodeApp) {
                 this.transcodeApp = transcodeApp;
@@ -572,7 +836,10 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeName.
+             * <p>The main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder transcodeName(String transcodeName) {
                 this.transcodeName = transcodeName;
@@ -580,7 +847,28 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeTemplate.
+             * <p>The transcoding template ID. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Standard transcoding</strong>:</p>
+             * <ul>
+             * <li><strong>lld</strong>: low definition</li>
+             * <li><strong>lsd</strong>: standard definition</li>
+             * <li><strong>lhd</strong>: high definition</li>
+             * <li><strong>lud</strong>: ultra-high definition</li>
+             * </ul>
+             * </li>
+             * <li><p><strong>Narrowband HD™ transcoding</strong>:</p>
+             * <ul>
+             * <li><strong>ld</strong>: low definition</li>
+             * <li><strong>sd</strong>: standard definition</li>
+             * <li><strong>hd</strong>: high definition</li>
+             * <li><strong>ud</strong>: ultra-high definition</li>
+             * </ul>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>lld</p>
              */
             public Builder transcodeTemplate(String transcodeTemplate) {
                 this.transcodeTemplate = transcodeTemplate;
@@ -594,9 +882,15 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamTranscodeInfoResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamTranscodeInfoResponseBody</p>
+     */
     public static class DomainTranscodeList extends TeaModel {
-        @NameInMap("DomainTranscodeInfo")
-        private java.util.List < DomainTranscodeInfo> domainTranscodeInfo;
+        @com.aliyun.core.annotation.NameInMap("DomainTranscodeInfo")
+        private java.util.List<DomainTranscodeInfo> domainTranscodeInfo;
 
         private DomainTranscodeList(Builder builder) {
             this.domainTranscodeInfo = builder.domainTranscodeInfo;
@@ -613,17 +907,24 @@ public class DescribeLiveStreamTranscodeInfoResponseBody extends TeaModel {
         /**
          * @return domainTranscodeInfo
          */
-        public java.util.List < DomainTranscodeInfo> getDomainTranscodeInfo() {
+        public java.util.List<DomainTranscodeInfo> getDomainTranscodeInfo() {
             return this.domainTranscodeInfo;
         }
 
         public static final class Builder {
-            private java.util.List < DomainTranscodeInfo> domainTranscodeInfo; 
+            private java.util.List<DomainTranscodeInfo> domainTranscodeInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainTranscodeList model) {
+                this.domainTranscodeInfo = model.domainTranscodeInfo;
+            } 
 
             /**
              * DomainTranscodeInfo.
              */
-            public Builder domainTranscodeInfo(java.util.List < DomainTranscodeInfo> domainTranscodeInfo) {
+            public Builder domainTranscodeInfo(java.util.List<DomainTranscodeInfo> domainTranscodeInfo) {
                 this.domainTranscodeInfo = domainTranscodeInfo;
                 return this;
             }

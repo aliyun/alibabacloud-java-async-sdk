@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddLiveRecordNotifyConfigRequest} extends {@link RequestModel}
  *
  * <p>AddLiveRecordNotifyConfigRequest</p>
  */
 public class AddLiveRecordNotifyConfigRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("NeedStatusNotify")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedStatusNotify")
     private Boolean needStatusNotify;
 
-    @Query
-    @NameInMap("NotifyUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String notifyUrl;
 
-    @Query
-    @NameInMap("OnDemandUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnDemandUrl")
     private String onDemandUrl;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private AddLiveRecordNotifyConfigRequest(Builder builder) {
@@ -56,7 +61,7 @@ public class AddLiveRecordNotifyConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -126,7 +131,11 @@ public class AddLiveRecordNotifyConfigRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -135,7 +144,14 @@ public class AddLiveRecordNotifyConfigRequest extends Request {
         }
 
         /**
-         * NeedStatusNotify.
+         * <p>Specifies whether to enable callbacks for recording status. Valid values:</p>
+         * <ul>
+         * <li>true: enables callbacks for recording status. If you set this parameter to <strong>true</strong>, an example of recording status callback is returned.</li>
+         * <li>false (default): disables callbacks for recording status.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder needStatusNotify(Boolean needStatusNotify) {
             this.putQueryParameter("NeedStatusNotify", needStatusNotify);
@@ -144,7 +160,14 @@ public class AddLiveRecordNotifyConfigRequest extends Request {
         }
 
         /**
-         * NotifyUrl.
+         * <p>The callback URL that is used to receive notifications about recording events and status.</p>
+         * <blockquote>
+         * <p> The URL must start with <code>http://</code> or <code>https://</code>. For more information, see <a href="https://help.aliyun.com/document_detail/55016.html">Callbacks for live stream recording</a>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://demo.aliyundoc.com/examplecallback.action">http://demo.aliyundoc.com/examplecallback.action</a></p>
          */
         public Builder notifyUrl(String notifyUrl) {
             this.putQueryParameter("NotifyUrl", notifyUrl);
@@ -153,7 +176,13 @@ public class AddLiveRecordNotifyConfigRequest extends Request {
         }
 
         /**
-         * OnDemandUrl.
+         * <p>The callback URL for on-demand recordings.</p>
+         * <blockquote>
+         * <p> The URL must start with <code>http://</code> or <code>https://</code>. For more information, see <a href="https://help.aliyun.com/document_detail/85910.html">On-demand recording</a>.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://learn.aliyundoc.com/ondemandcallback.action">http://learn.aliyundoc.com/ondemandcallback.action</a></p>
          */
         public Builder onDemandUrl(String onDemandUrl) {
             this.putQueryParameter("OnDemandUrl", onDemandUrl);

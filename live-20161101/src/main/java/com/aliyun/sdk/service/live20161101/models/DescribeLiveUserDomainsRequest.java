@@ -1,57 +1,66 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveUserDomainsRequest} extends {@link RequestModel}
  *
  * <p>DescribeLiveUserDomainsRequest</p>
  */
 public class DescribeLiveUserDomainsRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("DomainSearchType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainSearchType")
     private String domainSearchType;
 
-    @Query
-    @NameInMap("DomainStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainStatus")
     private String domainStatus;
 
-    @Query
-    @NameInMap("LiveDomainType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LiveDomainType")
     private String liveDomainType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 500)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RegionName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionName")
     private String regionName;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("Tag")
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeLiveUserDomainsRequest(Builder builder) {
         super(builder);
@@ -63,6 +72,7 @@ public class DescribeLiveUserDomainsRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionName = builder.regionName;
+        this.resourceGroupId = builder.resourceGroupId;
         this.securityToken = builder.securityToken;
         this.tag = builder.tag;
     }
@@ -75,7 +85,7 @@ public class DescribeLiveUserDomainsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -137,6 +147,13 @@ public class DescribeLiveUserDomainsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return securityToken
      */
     public String getSecurityToken() {
@@ -146,7 +163,7 @@ public class DescribeLiveUserDomainsRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
@@ -159,8 +176,9 @@ public class DescribeLiveUserDomainsRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionName; 
+        private String resourceGroupId; 
         private String securityToken; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -176,12 +194,21 @@ public class DescribeLiveUserDomainsRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionName = request.regionName;
+            this.resourceGroupId = request.resourceGroupId;
             this.securityToken = request.securityToken;
             this.tag = request.tag;
         } 
 
         /**
-         * DomainName.
+         * <p>The domain name that is used as a keyword to filter domain names. Fuzzy match is supported.</p>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li>If you set LiveDomainType to liveVideo and leave this parameter empty, the streaming domains are queried. - If you set LiveDomainType to liveEdge and leave this parameter empty, the ingest domains are queried.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>*.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -190,7 +217,16 @@ public class DescribeLiveUserDomainsRequest extends Request {
         }
 
         /**
-         * DomainSearchType.
+         * <p>The search mode. Valid values:</p>
+         * <ul>
+         * <li><strong>fuzzy_match</strong> (default): fuzzy match</li>
+         * <li><strong>pre_match</strong>: prefix match</li>
+         * <li><strong>suf_match</strong>: suffix match</li>
+         * <li><strong>full_match</strong>: exact match</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fuzzy_match</p>
          */
         public Builder domainSearchType(String domainSearchType) {
             this.putQueryParameter("DomainSearchType", domainSearchType);
@@ -199,7 +235,15 @@ public class DescribeLiveUserDomainsRequest extends Request {
         }
 
         /**
-         * DomainStatus.
+         * <p>The status of the domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>online</strong></li>
+         * <li><strong>offline</strong></li>
+         * <li><strong>configuring</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         public Builder domainStatus(String domainStatus) {
             this.putQueryParameter("DomainStatus", domainStatus);
@@ -208,7 +252,17 @@ public class DescribeLiveUserDomainsRequest extends Request {
         }
 
         /**
-         * LiveDomainType.
+         * <p>The type of the domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>liveVideo</strong>: streaming domain</li>
+         * <li><strong>liveEdge</strong>: ingest domain</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you leave this parameter empty, all ingest domains and streaming domains within your Alibaba Cloud account are queried by default.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>liveVideo</p>
          */
         public Builder liveDomainType(String liveDomainType) {
             this.putQueryParameter("LiveDomainType", liveDomainType);
@@ -226,7 +280,10 @@ public class DescribeLiveUserDomainsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. Valid values: <strong>1 to 100000</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -235,7 +292,10 @@ public class DescribeLiveUserDomainsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Default value: <strong>20</strong>. Maximum value: <strong>50</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,11 +304,26 @@ public class DescribeLiveUserDomainsRequest extends Request {
         }
 
         /**
-         * RegionName.
+         * <p>The ID of the region in which the domain name resides.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder regionName(String regionName) {
             this.putQueryParameter("RegionName", regionName);
             this.regionName = regionName;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aek2egyoep3jp7a</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -262,9 +337,9 @@ public class DescribeLiveUserDomainsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>The tags.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -277,11 +352,17 @@ public class DescribeLiveUserDomainsRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveUserDomainsRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveUserDomainsRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -315,8 +396,19 @@ public class DescribeLiveUserDomainsRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -324,7 +416,10 @@ public class DescribeLiveUserDomainsRequest extends Request {
             }
 
             /**
-             * Value.
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
              */
             public Builder value(String value) {
                 this.value = value;

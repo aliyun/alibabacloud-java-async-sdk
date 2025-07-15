@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamDelayConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamDelayConfigResponseBody</p>
  */
 public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
-    @NameInMap("LiveStreamFlvDelayConfig")
+    @com.aliyun.core.annotation.NameInMap("LiveStreamFlvDelayConfig")
     private LiveStreamFlvDelayConfig liveStreamFlvDelayConfig;
 
-    @NameInMap("LiveStreamHlsDelayConfig")
+    @com.aliyun.core.annotation.NameInMap("LiveStreamHlsDelayConfig")
     private LiveStreamHlsDelayConfig liveStreamHlsDelayConfig;
 
-    @NameInMap("LiveStreamRtmpDelayConfig")
+    @com.aliyun.core.annotation.NameInMap("LiveStreamRtmpDelayConfig")
     private LiveStreamRtmpDelayConfig liveStreamRtmpDelayConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveStreamDelayConfigResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
 
     public static DescribeLiveStreamDelayConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,18 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
         private LiveStreamRtmpDelayConfig liveStreamRtmpDelayConfig; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamDelayConfigResponseBody model) {
+            this.liveStreamFlvDelayConfig = model.liveStreamFlvDelayConfig;
+            this.liveStreamHlsDelayConfig = model.liveStreamHlsDelayConfig;
+            this.liveStreamRtmpDelayConfig = model.liveStreamRtmpDelayConfig;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * LiveStreamFlvDelayConfig.
+         * <p>The latency of FLV-based playback.</p>
          */
         public Builder liveStreamFlvDelayConfig(LiveStreamFlvDelayConfig liveStreamFlvDelayConfig) {
             this.liveStreamFlvDelayConfig = liveStreamFlvDelayConfig;
@@ -82,7 +101,7 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
         }
 
         /**
-         * LiveStreamHlsDelayConfig.
+         * <p>The latency of HLS-based playback.</p>
          */
         public Builder liveStreamHlsDelayConfig(LiveStreamHlsDelayConfig liveStreamHlsDelayConfig) {
             this.liveStreamHlsDelayConfig = liveStreamHlsDelayConfig;
@@ -90,7 +109,7 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
         }
 
         /**
-         * LiveStreamRtmpDelayConfig.
+         * <p>The latency of RTMP-based playback.</p>
          */
         public Builder liveStreamRtmpDelayConfig(LiveStreamRtmpDelayConfig liveStreamRtmpDelayConfig) {
             this.liveStreamRtmpDelayConfig = liveStreamRtmpDelayConfig;
@@ -98,7 +117,10 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>785C9CB0-EB8A-4912-BBF2-966BEFD32DC3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +133,17 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveStreamDelayConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamDelayConfigResponseBody</p>
+     */
     public static class LiveStreamFlvDelayConfig extends TeaModel {
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private Integer delay;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private LiveStreamFlvDelayConfig(Builder builder) {
@@ -149,8 +177,19 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
             private Integer delay; 
             private String level; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamFlvDelayConfig model) {
+                this.delay = model.delay;
+                this.level = model.level;
+            } 
+
             /**
-             * Delay.
+             * <p>The playback latency. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5</p>
              */
             public Builder delay(Integer delay) {
                 this.delay = delay;
@@ -158,7 +197,15 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The latency level. Valid values:</p>
+             * <ul>
+             * <li><strong>short</strong>: The latency is less than or equal to 4 seconds.</li>
+             * <li><strong>medium</strong>: The latency is greater than 4 seconds, and less than or equal to 8 seconds.</li>
+             * <li><strong>long</strong>: The latency is greater than 8 seconds.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>medium</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -172,11 +219,17 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamDelayConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamDelayConfigResponseBody</p>
+     */
     public static class LiveStreamHlsDelayConfig extends TeaModel {
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private Integer delay;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private LiveStreamHlsDelayConfig(Builder builder) {
@@ -210,8 +263,19 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
             private Integer delay; 
             private String level; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamHlsDelayConfig model) {
+                this.delay = model.delay;
+                this.level = model.level;
+            } 
+
             /**
-             * Delay.
+             * <p>The playback latency. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder delay(Integer delay) {
                 this.delay = delay;
@@ -219,7 +283,15 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The latency level. Valid values:</p>
+             * <ul>
+             * <li><strong>short</strong>: The latency is less than or equal to 4 seconds.</li>
+             * <li><strong>medium</strong>: The latency is greater than 4 seconds, and less than or equal to 8 seconds.</li>
+             * <li><strong>long</strong>: The latency is greater than 8 seconds.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>short</p>
              */
             public Builder level(String level) {
                 this.level = level;
@@ -233,11 +305,17 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamDelayConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamDelayConfigResponseBody</p>
+     */
     public static class LiveStreamRtmpDelayConfig extends TeaModel {
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private Integer delay;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
         private LiveStreamRtmpDelayConfig(Builder builder) {
@@ -271,8 +349,19 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
             private Integer delay; 
             private String level; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamRtmpDelayConfig model) {
+                this.delay = model.delay;
+                this.level = model.level;
+            } 
+
             /**
-             * Delay.
+             * <p>The playback latency. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>4</p>
              */
             public Builder delay(Integer delay) {
                 this.delay = delay;
@@ -280,7 +369,15 @@ public class DescribeLiveStreamDelayConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * <p>The latency level. Valid values:</p>
+             * <ul>
+             * <li><strong>short</strong>: The latency is less than or equal to 4 seconds.</li>
+             * <li><strong>medium</strong>: The latency is greater than 4 seconds, and less than or equal to 8 seconds.</li>
+             * <li><strong>long</strong>: The latency is greater than 8 seconds.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>short</p>
              */
             public Builder level(String level) {
                 this.level = level;

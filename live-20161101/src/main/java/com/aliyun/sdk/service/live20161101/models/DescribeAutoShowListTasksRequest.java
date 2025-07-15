@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoShowListTasksRequest} extends {@link RequestModel}
  *
  * <p>DescribeAutoShowListTasksRequest</p>
  */
 public class DescribeAutoShowListTasksRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("CasterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CasterId")
     private String casterId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     private DescribeAutoShowListTasksRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -39,16 +44,9 @@ public class DescribeAutoShowListTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -65,10 +63,17 @@ public class DescribeAutoShowListTasksRequest extends Request {
         return this.ownerId;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAutoShowListTasksRequest, Builder> {
-        private String regionId; 
         private String casterId; 
         private Long ownerId; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -76,22 +81,19 @@ public class DescribeAutoShowListTasksRequest extends Request {
 
         private Builder(DescribeAutoShowListTasksRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.casterId = request.casterId;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * CasterId.
+         * <p>The ID of the production studio for which you want to query scheduled tasks.</p>
+         * <blockquote>
+         * <p> If the scheduled tasks were created by calling the <a href="https://help.aliyun.com/document_detail/2848056.html">InitializeAutoShowListTask</a> operation, check the value of the response parameter CasterId to obtain the ID. If you do not specify this parameter, the system queries all the scheduled tasks that belong to the user specified by the OwnerId parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>53200b81-b761-4c10-842a-a0726d97****</p>
          */
         public Builder casterId(String casterId) {
             this.putQueryParameter("CasterId", casterId);
@@ -105,6 +107,15 @@ public class DescribeAutoShowListTasksRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

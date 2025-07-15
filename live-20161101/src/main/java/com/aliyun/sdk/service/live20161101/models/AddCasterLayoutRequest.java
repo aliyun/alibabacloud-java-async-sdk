@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCasterLayoutRequest} extends {@link RequestModel}
  *
  * <p>AddCasterLayoutRequest</p>
  */
 public class AddCasterLayoutRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AudioLayer")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<AudioLayer> audioLayer;
 
-    @Query
-    @NameInMap("AudioLayer")
-    @Validation(required = true)
-    private java.util.List < AudioLayer> audioLayer;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BlendList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> blendList;
 
-    @Query
-    @NameInMap("BlendList")
-    @Validation(required = true)
-    private java.util.List < String > blendList;
-
-    @Query
-    @NameInMap("CasterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CasterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String casterId;
 
-    @Query
-    @NameInMap("MixList")
-    @Validation(required = true)
-    private java.util.List < String > mixList;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MixList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> mixList;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("VideoLayer")
-    @Validation(required = true)
-    private java.util.List < VideoLayer> videoLayer;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoLayer")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<VideoLayer> videoLayer;
 
     private AddCasterLayoutRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.audioLayer = builder.audioLayer;
         this.blendList = builder.blendList;
         this.casterId = builder.casterId;
         this.mixList = builder.mixList;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.videoLayer = builder.videoLayer;
     }
 
@@ -64,29 +69,22 @@ public class AddCasterLayoutRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return audioLayer
      */
-    public java.util.List < AudioLayer> getAudioLayer() {
+    public java.util.List<AudioLayer> getAudioLayer() {
         return this.audioLayer;
     }
 
     /**
      * @return blendList
      */
-    public java.util.List < String > getBlendList() {
+    public java.util.List<String> getBlendList() {
         return this.blendList;
     }
 
@@ -100,7 +98,7 @@ public class AddCasterLayoutRequest extends Request {
     /**
      * @return mixList
      */
-    public java.util.List < String > getMixList() {
+    public java.util.List<String> getMixList() {
         return this.mixList;
     }
 
@@ -112,20 +110,27 @@ public class AddCasterLayoutRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return videoLayer
      */
-    public java.util.List < VideoLayer> getVideoLayer() {
+    public java.util.List<VideoLayer> getVideoLayer() {
         return this.videoLayer;
     }
 
     public static final class Builder extends Request.Builder<AddCasterLayoutRequest, Builder> {
-        private String regionId; 
-        private java.util.List < AudioLayer> audioLayer; 
-        private java.util.List < String > blendList; 
+        private java.util.List<AudioLayer> audioLayer; 
+        private java.util.List<String> blendList; 
         private String casterId; 
-        private java.util.List < String > mixList; 
+        private java.util.List<String> mixList; 
         private Long ownerId; 
-        private java.util.List < VideoLayer> videoLayer; 
+        private String regionId; 
+        private java.util.List<VideoLayer> videoLayer; 
 
         private Builder() {
             super();
@@ -133,44 +138,50 @@ public class AddCasterLayoutRequest extends Request {
 
         private Builder(AddCasterLayoutRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.audioLayer = request.audioLayer;
             this.blendList = request.blendList;
             this.casterId = request.casterId;
             this.mixList = request.mixList;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.videoLayer = request.videoLayer;
         } 
 
         /**
-         * RegionId.
+         * <p>Audio layout.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * AudioLayer.
-         */
-        public Builder audioLayer(java.util.List < AudioLayer> audioLayer) {
+        public Builder audioLayer(java.util.List<AudioLayer> audioLayer) {
             this.putQueryParameter("AudioLayer", audioLayer);
             this.audioLayer = audioLayer;
             return this;
         }
 
         /**
-         * BlendList.
+         * <p>The element represents the location ID of the video resource, i.e., LocationId. Refer to <a href="https://help.aliyun.com/document_detail/60250.html">Adding Video Source</a> for LocationId, which corresponds in order with the VideoLayers elements.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RV01</p>
          */
-        public Builder blendList(java.util.List < String > blendList) {
+        public Builder blendList(java.util.List<String> blendList) {
             this.putQueryParameter("BlendList", blendList);
             this.blendList = blendList;
             return this;
         }
 
         /**
-         * CasterId.
+         * <p>The ID of the production studio.</p>
+         * <p>If you create a production studio through the <a href="~~69338#doc-api-live-CreateCaster~~" title="Creates a production studio.">CreateCaster</a> interface, check the value of the CasterId parameter in the response.</p>
+         * <p>If you create a production studio through the ApsaraVideo Live Console, log in to the console, then check the ID of the production studio through the following path:</p>
+         * <p>Production Studios &gt; Production Studio Management</p>
+         * <blockquote>
+         * <p> The CasterId is reflected in the Name column on the Production Studio Management page.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LIVEPRODUCER_POST-cn-0pp1czt****</p>
          */
         public Builder casterId(String casterId) {
             this.putQueryParameter("CasterId", casterId);
@@ -179,9 +190,14 @@ public class AddCasterLayoutRequest extends Request {
         }
 
         /**
-         * MixList.
+         * <p>The element represents the location ID of the audio resource, i.e., LocationId.
+         * LocationId is referred to in <a href="https://help.aliyun.com/document_detail/60250.html">Adding Video Source</a>, and corresponds in order with the AudioLayers elements.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>RV01</p>
          */
-        public Builder mixList(java.util.List < String > mixList) {
+        public Builder mixList(java.util.List<String> mixList) {
             this.putQueryParameter("MixList", mixList);
             this.mixList = mixList;
             return this;
@@ -197,9 +213,19 @@ public class AddCasterLayoutRequest extends Request {
         }
 
         /**
-         * VideoLayer.
+         * RegionId.
          */
-        public Builder videoLayer(java.util.List < VideoLayer> videoLayer) {
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>Video layout.</p>
+         * <p>This parameter is required.</p>
+         */
+        public Builder videoLayer(java.util.List<VideoLayer> videoLayer) {
             this.putQueryParameter("VideoLayer", videoLayer);
             this.videoLayer = videoLayer;
             return this;
@@ -212,14 +238,20 @@ public class AddCasterLayoutRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AddCasterLayoutRequest} extends {@link TeaModel}
+     *
+     * <p>AddCasterLayoutRequest</p>
+     */
     public static class AudioLayer extends TeaModel {
-        @NameInMap("FixedDelayDuration")
+        @com.aliyun.core.annotation.NameInMap("FixedDelayDuration")
         private Integer fixedDelayDuration;
 
-        @NameInMap("ValidChannel")
+        @com.aliyun.core.annotation.NameInMap("ValidChannel")
         private String validChannel;
 
-        @NameInMap("VolumeRate")
+        @com.aliyun.core.annotation.NameInMap("VolumeRate")
         private Float volumeRate;
 
         private AudioLayer(Builder builder) {
@@ -262,8 +294,20 @@ public class AddCasterLayoutRequest extends Request {
             private String validChannel; 
             private Float volumeRate; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioLayer model) {
+                this.fixedDelayDuration = model.fixedDelayDuration;
+                this.validChannel = model.validChannel;
+                this.volumeRate = model.volumeRate;
+            } 
+
             /**
-             * FixedDelayDuration.
+             * <p>The fixed delay of audio layer N. You can use this parameter to synchronize the audio with subtitles. Unit: milliseconds. Valid values: <strong>0 to 5000</strong>. Default value: <strong>0</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder fixedDelayDuration(Integer fixedDelayDuration) {
                 this.fixedDelayDuration = fixedDelayDuration;
@@ -271,7 +315,15 @@ public class AddCasterLayoutRequest extends Request {
             }
 
             /**
-             * ValidChannel.
+             * <p>The valid voice channels of audio layer N. Valid values:</p>
+             * <ul>
+             * <li><strong>leftChannel</strong>: the left channel.</li>
+             * <li><strong>rightChannel</strong>: the right channel.</li>
+             * <li><strong>all</strong>: both the left and right channels. This is the default value.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder validChannel(String validChannel) {
                 this.validChannel = validChannel;
@@ -279,7 +331,15 @@ public class AddCasterLayoutRequest extends Request {
             }
 
             /**
-             * VolumeRate.
+             * <p>The multiples of the original volume at which audio layer N plays audio streams. Valid values: <strong>0 to 10.0</strong>.</p>
+             * <ul>
+             * <li>The default value <strong>1.0</strong> indicates that audio layer N plays audio streams at the original volume.</li>
+             * <li>A value smaller than <strong>1.0</strong> indicates that audio layer N plays audio streams at a lower volume than the original one.</li>
+             * <li>A value greater than <strong>1.0</strong> indicates that audio layer N plays audio streams at a higher volume than the original one.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder volumeRate(Float volumeRate) {
                 this.volumeRate = volumeRate;
@@ -293,23 +353,29 @@ public class AddCasterLayoutRequest extends Request {
         } 
 
     }
+    /**
+     * 
+     * {@link AddCasterLayoutRequest} extends {@link TeaModel}
+     *
+     * <p>AddCasterLayoutRequest</p>
+     */
     public static class VideoLayer extends TeaModel {
-        @NameInMap("FillMode")
+        @com.aliyun.core.annotation.NameInMap("FillMode")
         private String fillMode;
 
-        @NameInMap("FixedDelayDuration")
+        @com.aliyun.core.annotation.NameInMap("FixedDelayDuration")
         private Integer fixedDelayDuration;
 
-        @NameInMap("HeightNormalized")
+        @com.aliyun.core.annotation.NameInMap("HeightNormalized")
         private Float heightNormalized;
 
-        @NameInMap("PositionNormalized")
-        private java.util.List < Float > positionNormalized;
+        @com.aliyun.core.annotation.NameInMap("PositionNormalized")
+        private java.util.List<Float> positionNormalized;
 
-        @NameInMap("PositionRefer")
+        @com.aliyun.core.annotation.NameInMap("PositionRefer")
         private String positionRefer;
 
-        @NameInMap("WidthNormalized")
+        @com.aliyun.core.annotation.NameInMap("WidthNormalized")
         private Float widthNormalized;
 
         private VideoLayer(Builder builder) {
@@ -353,7 +419,7 @@ public class AddCasterLayoutRequest extends Request {
         /**
          * @return positionNormalized
          */
-        public java.util.List < Float > getPositionNormalized() {
+        public java.util.List<Float> getPositionNormalized() {
             return this.positionNormalized;
         }
 
@@ -375,12 +441,31 @@ public class AddCasterLayoutRequest extends Request {
             private String fillMode; 
             private Integer fixedDelayDuration; 
             private Float heightNormalized; 
-            private java.util.List < Float > positionNormalized; 
+            private java.util.List<Float> positionNormalized; 
             private String positionRefer; 
             private Float widthNormalized; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoLayer model) {
+                this.fillMode = model.fillMode;
+                this.fixedDelayDuration = model.fixedDelayDuration;
+                this.heightNormalized = model.heightNormalized;
+                this.positionNormalized = model.positionNormalized;
+                this.positionRefer = model.positionRefer;
+                this.widthNormalized = model.widthNormalized;
+            } 
+
             /**
-             * FillMode.
+             * <p>The scaling mode of video layer N. Valid values:</p>
+             * <ul>
+             * <li><strong>none</strong>: The image is not scaled to fill in the specified layout section. Set video layer N based on the image size of the video resource. This is the default value.</li>
+             * <li><strong>fit</strong>: The image is scaled with the original aspect ratio to fill in the specified layout section. Set video layer N based on the section size. The image is centered in the layout section with the long side of the image equaling that of the section. If the aspect ratio of the image is inconsistent with that of the section, the short side of the image may be shorter than that of the section. The area outside the image displays the next video layer or the background if no next video layer exists. By default, the background color is black.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>fit</p>
              */
             public Builder fillMode(String fillMode) {
                 this.fillMode = fillMode;
@@ -388,7 +473,10 @@ public class AddCasterLayoutRequest extends Request {
             }
 
             /**
-             * FixedDelayDuration.
+             * <p>The fixed delay of video layer N. You can use this parameter to synchronize the video with subtitles. Unit: milliseconds. Valid values: <strong>0 to 5000</strong>. Default value: <strong>0</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5000</p>
              */
             public Builder fixedDelayDuration(Integer fixedDelayDuration) {
                 this.fixedDelayDuration = fixedDelayDuration;
@@ -396,7 +484,14 @@ public class AddCasterLayoutRequest extends Request {
             }
 
             /**
-             * HeightNormalized.
+             * <p>The normalized value of the height of the image of video layer N.</p>
+             * <ul>
+             * <li>If the FillMode parameter of video layer N is set to none, the width of the video image is scaled based on this parameter. The default value is <strong>0</strong>, which indicates that the video image is displayed in the original size.</li>
+             * <li>If the FillMode parameter of video layer N is set to fit, you must set this parameter to a value greater than <strong>0</strong>. In this case, the video image is scaled with the original aspect ratio to fill in the specified layout section based on this parameter.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder heightNormalized(Float heightNormalized) {
                 this.heightNormalized = heightNormalized;
@@ -404,15 +499,35 @@ public class AddCasterLayoutRequest extends Request {
             }
 
             /**
-             * PositionNormalized.
+             * <p>The normalized value of the <code>[x,y]</code> coordinates of video layer N in the production studio. The default coordinates are <code>[0,0]</code>.</p>
+             * <blockquote>
+             * <p> The coordinates indicate the location of video layer N in the production studio. Set this parameter to the normalized value of the coordinates.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0.3</p>
              */
-            public Builder positionNormalized(java.util.List < Float > positionNormalized) {
+            public Builder positionNormalized(java.util.List<Float> positionNormalized) {
                 this.positionNormalized = positionNormalized;
                 return this;
             }
 
             /**
-             * PositionRefer.
+             * <p>The reference coordinates of video layer N in the production studio. Valid values:</p>
+             * <ul>
+             * <li><strong>topLeft</strong>: the upper-left corner. This is the default value.</li>
+             * <li><strong>topRight</strong>: the upper-right corner.</li>
+             * <li><strong>bottomLeft</strong>: the lower-left corner.</li>
+             * <li><strong>bottomRight</strong>: the lower-right corner.</li>
+             * <li><strong>center</strong>: the center position.</li>
+             * <li><strong>topCenter</strong>: the upper center position.</li>
+             * <li><strong>bottomCenter</strong>: the lower center position.</li>
+             * <li><strong>leftCenter</strong>: the left center position.</li>
+             * <li><strong>rightCenter</strong>: the right center position.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>topLeft</p>
              */
             public Builder positionRefer(String positionRefer) {
                 this.positionRefer = positionRefer;
@@ -420,7 +535,14 @@ public class AddCasterLayoutRequest extends Request {
             }
 
             /**
-             * WidthNormalized.
+             * <p>The normalized value of the width of the image of video layer N.</p>
+             * <ul>
+             * <li>If the FillMode parameter of video layer N is set to none, the height of the video image is scaled based on this parameter. The default value is <strong>0</strong>, which indicates that the video image is displayed in the original size.</li>
+             * <li>If the FillMode parameter of video layer N is set to fit, you must set this parameter to a value greater than <strong>0</strong>. In this case, the video image is scaled with the original aspect ratio to fill in the specified layout section based on this parameter.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder widthNormalized(Float widthNormalized) {
                 this.widthNormalized = widthNormalized;

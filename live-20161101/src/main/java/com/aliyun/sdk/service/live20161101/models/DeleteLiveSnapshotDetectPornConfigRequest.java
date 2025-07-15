@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveSnapshotDetectPornConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteLiveSnapshotDetectPornConfigRequest</p>
  */
 public class DeleteLiveSnapshotDetectPornConfigRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DeleteLiveSnapshotDetectPornConfigRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class DeleteLiveSnapshotDetectPornConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +103,11 @@ public class DeleteLiveSnapshotDetectPornConfigRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs. You can call the <a href="https://help.aliyun.com/document_detail/2847918.html">DescribeLiveSnapshotDetectPornConfig</a> operation to query the application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -107,7 +116,11 @@ public class DeleteLiveSnapshotDetectPornConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);

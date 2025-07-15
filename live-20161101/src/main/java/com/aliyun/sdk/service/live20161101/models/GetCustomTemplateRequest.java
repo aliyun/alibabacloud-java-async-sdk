@@ -1,34 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomTemplateRequest} extends {@link RequestModel}
  *
  * <p>GetCustomTemplateRequest</p>
  */
 public class GetCustomTemplateRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Template")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Template")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String template;
 
     private GetCustomTemplateRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.template = builder.template;
     }
 
@@ -40,16 +45,9 @@ public class GetCustomTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -60,6 +58,13 @@ public class GetCustomTemplateRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return template
      */
     public String getTemplate() {
@@ -67,8 +72,8 @@ public class GetCustomTemplateRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetCustomTemplateRequest, Builder> {
-        private String regionId; 
         private Long ownerId; 
+        private String regionId; 
         private String template; 
 
         private Builder() {
@@ -77,19 +82,10 @@ public class GetCustomTemplateRequest extends Request {
 
         private Builder(GetCustomTemplateRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.template = request.template;
         } 
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * OwnerId.
@@ -101,7 +97,20 @@ public class GetCustomTemplateRequest extends Request {
         }
 
         /**
-         * Template.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The name of the custom template that you want to query. The value is a string.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestTemplate</p>
          */
         public Builder template(String template) {
             this.putQueryParameter("Template", template);

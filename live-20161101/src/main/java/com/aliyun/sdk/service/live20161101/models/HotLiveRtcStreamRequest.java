@@ -1,66 +1,70 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link HotLiveRtcStreamRequest} extends {@link RequestModel}
  *
  * <p>HotLiveRtcStreamRequest</p>
  */
 public class HotLiveRtcStreamRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("AudioMsid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AudioMsid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String audioMsid;
 
-    @Query
-    @NameInMap("ConnectionTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionTimeout")
     private String connectionTimeout;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("MediaTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaTimeout")
     private String mediaTimeout;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionCode;
 
-    @Query
-    @NameInMap("StreamName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String streamName;
 
-    @Query
-    @NameInMap("VideoMsid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoMsid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String videoMsid;
 
     private HotLiveRtcStreamRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.audioMsid = builder.audioMsid;
         this.connectionTimeout = builder.connectionTimeout;
@@ -68,6 +72,7 @@ public class HotLiveRtcStreamRequest extends Request {
         this.mediaTimeout = builder.mediaTimeout;
         this.ownerId = builder.ownerId;
         this.regionCode = builder.regionCode;
+        this.regionId = builder.regionId;
         this.streamName = builder.streamName;
         this.videoMsid = builder.videoMsid;
     }
@@ -80,16 +85,9 @@ public class HotLiveRtcStreamRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -142,6 +140,13 @@ public class HotLiveRtcStreamRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return streamName
      */
     public String getStreamName() {
@@ -156,7 +161,6 @@ public class HotLiveRtcStreamRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<HotLiveRtcStreamRequest, Builder> {
-        private String regionId; 
         private String appName; 
         private String audioMsid; 
         private String connectionTimeout; 
@@ -164,6 +168,7 @@ public class HotLiveRtcStreamRequest extends Request {
         private String mediaTimeout; 
         private Long ownerId; 
         private String regionCode; 
+        private String regionId; 
         private String streamName; 
         private String videoMsid; 
 
@@ -173,7 +178,6 @@ public class HotLiveRtcStreamRequest extends Request {
 
         private Builder(HotLiveRtcStreamRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appName = request.appName;
             this.audioMsid = request.audioMsid;
             this.connectionTimeout = request.connectionTimeout;
@@ -181,21 +185,17 @@ public class HotLiveRtcStreamRequest extends Request {
             this.mediaTimeout = request.mediaTimeout;
             this.ownerId = request.ownerId;
             this.regionCode = request.regionCode;
+            this.regionId = request.regionId;
             this.streamName = request.streamName;
             this.videoMsid = request.videoMsid;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -204,7 +204,11 @@ public class HotLiveRtcStreamRequest extends Request {
         }
 
         /**
-         * AudioMsid.
+         * <p>The audio MSID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rts audio</p>
          */
         public Builder audioMsid(String audioMsid) {
             this.putQueryParameter("AudioMsid", audioMsid);
@@ -213,7 +217,10 @@ public class HotLiveRtcStreamRequest extends Request {
         }
 
         /**
-         * ConnectionTimeout.
+         * <p>The duration for which the prefetch connection is maintained. Unit: milliseconds. Default value: 0, which specifies that the prefetch connection is always maintained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder connectionTimeout(String connectionTimeout) {
             this.putQueryParameter("ConnectionTimeout", connectionTimeout);
@@ -222,7 +229,11 @@ public class HotLiveRtcStreamRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -231,7 +242,10 @@ public class HotLiveRtcStreamRequest extends Request {
         }
 
         /**
-         * MediaTimeout.
+         * <p>The custom period after which a timeout event is triggered. Unit: milliseconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100000</p>
          */
         public Builder mediaTimeout(String mediaTimeout) {
             this.putQueryParameter("MediaTimeout", mediaTimeout);
@@ -249,7 +263,14 @@ public class HotLiveRtcStreamRequest extends Request {
         }
 
         /**
-         * RegionCode.
+         * <p>The code of the region in which the live stream is prefetched. For more information, see the following tables that list available region codes.</p>
+         * <blockquote>
+         * <p> Region codes include provincial codes for China and country codes for all countries.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ZHJ</p>
          */
         public Builder regionCode(String regionCode) {
             this.putQueryParameter("RegionCode", regionCode);
@@ -258,7 +279,20 @@ public class HotLiveRtcStreamRequest extends Request {
         }
 
         /**
-         * StreamName.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The name of the live stream that you want to prefetch.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>stream</p>
          */
         public Builder streamName(String streamName) {
             this.putQueryParameter("StreamName", streamName);
@@ -267,7 +301,11 @@ public class HotLiveRtcStreamRequest extends Request {
         }
 
         /**
-         * VideoMsid.
+         * <p>The video MSID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rts video</p>
          */
         public Builder videoMsid(String videoMsid) {
             this.putQueryParameter("VideoMsid", videoMsid);

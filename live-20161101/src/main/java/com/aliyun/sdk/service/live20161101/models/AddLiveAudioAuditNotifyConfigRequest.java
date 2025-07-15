@@ -1,45 +1,50 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddLiveAudioAuditNotifyConfigRequest} extends {@link RequestModel}
  *
  * <p>AddLiveAudioAuditNotifyConfigRequest</p>
  */
 public class AddLiveAudioAuditNotifyConfigRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("Callback")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Callback")
     private String callback;
 
-    @Query
-    @NameInMap("CallbackTemplate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallbackTemplate")
     private String callbackTemplate;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     private AddLiveAudioAuditNotifyConfigRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.callback = builder.callback;
         this.callbackTemplate = builder.callbackTemplate;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -50,16 +55,9 @@ public class AddLiveAudioAuditNotifyConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -90,12 +88,19 @@ public class AddLiveAudioAuditNotifyConfigRequest extends Request {
         return this.ownerId;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<AddLiveAudioAuditNotifyConfigRequest, Builder> {
-        private String regionId; 
         private String callback; 
         private String callbackTemplate; 
         private String domainName; 
         private Long ownerId; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -103,24 +108,18 @@ public class AddLiveAudioAuditNotifyConfigRequest extends Request {
 
         private Builder(AddLiveAudioAuditNotifyConfigRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.callback = request.callback;
             this.callbackTemplate = request.callbackTemplate;
             this.domainName = request.domainName;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * Callback.
+         * <p>The callback URL. This URL is used to receive callback notifications about violations in audio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://demo.aliyundoc.com/callback">https://demo.aliyundoc.com/callback</a></p>
          */
         public Builder callback(String callback) {
             this.putQueryParameter("Callback", callback);
@@ -129,7 +128,17 @@ public class AddLiveAudioAuditNotifyConfigRequest extends Request {
         }
 
         /**
-         * CallbackTemplate.
+         * <p>The callback template. Valid values:</p>
+         * <ul>
+         * <li><strong>{DomainName}</strong>: the streaming domain.</li>
+         * <li><strong>{AppName}</strong>: the name of the application to which the live stream belongs.</li>
+         * <li><strong>{StreamName}</strong>: the name of the live stream.</li>
+         * <li><strong>{Timestamp}</strong>: the time when the callback is returned. The value of this field is a UNIX timestamp. Unit: seconds.</li>
+         * <li><strong>{Result}</strong>: the moderation results.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;domain&quot;:{DomainName},&quot;app&quot;:{AppName},&quot;stream&quot;:{StreamName},&quot;timestamp&quot;:{Timestamp},&quot;result&quot;:{Result}}</p>
          */
         public Builder callbackTemplate(String callbackTemplate) {
             this.putQueryParameter("CallbackTemplate", callbackTemplate);
@@ -138,7 +147,11 @@ public class AddLiveAudioAuditNotifyConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -152,6 +165,15 @@ public class AddLiveAudioAuditNotifyConfigRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

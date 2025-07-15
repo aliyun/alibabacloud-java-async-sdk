@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamsNotifyUrlConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamsNotifyUrlConfigResponseBody</p>
  */
 public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
-    @NameInMap("LiveStreamsNotifyConfig")
+    @com.aliyun.core.annotation.NameInMap("LiveStreamsNotifyConfig")
     private LiveStreamsNotifyConfig liveStreamsNotifyConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveStreamsNotifyUrlConfigResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
 
     public static DescribeLiveStreamsNotifyUrlConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
         private LiveStreamsNotifyConfig liveStreamsNotifyConfig; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamsNotifyUrlConfigResponseBody model) {
+            this.liveStreamsNotifyConfig = model.liveStreamsNotifyConfig;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * LiveStreamsNotifyConfig.
+         * <p>The callback configuration.</p>
          */
         public Builder liveStreamsNotifyConfig(LiveStreamsNotifyConfig liveStreamsNotifyConfig) {
             this.liveStreamsNotifyConfig = liveStreamsNotifyConfig;
@@ -58,7 +75,10 @@ public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>40A4F36D-A7CC-473A-88E7-154F92242566</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,21 +91,31 @@ public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveStreamsNotifyUrlConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamsNotifyUrlConfigResponseBody</p>
+     */
     public static class LiveStreamsNotifyConfig extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("NotifyAuthKey")
+        @com.aliyun.core.annotation.NameInMap("ExceptionNotifyUrl")
+        private String exceptionNotifyUrl;
+
+        @com.aliyun.core.annotation.NameInMap("NotifyAuthKey")
         private String notifyAuthKey;
 
-        @NameInMap("NotifyReqAuth")
+        @com.aliyun.core.annotation.NameInMap("NotifyReqAuth")
         private String notifyReqAuth;
 
-        @NameInMap("NotifyUrl")
+        @com.aliyun.core.annotation.NameInMap("NotifyUrl")
         private String notifyUrl;
 
         private LiveStreamsNotifyConfig(Builder builder) {
             this.domainName = builder.domainName;
+            this.exceptionNotifyUrl = builder.exceptionNotifyUrl;
             this.notifyAuthKey = builder.notifyAuthKey;
             this.notifyReqAuth = builder.notifyReqAuth;
             this.notifyUrl = builder.notifyUrl;
@@ -104,6 +134,13 @@ public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
          */
         public String getDomainName() {
             return this.domainName;
+        }
+
+        /**
+         * @return exceptionNotifyUrl
+         */
+        public String getExceptionNotifyUrl() {
+            return this.exceptionNotifyUrl;
         }
 
         /**
@@ -129,12 +166,27 @@ public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
 
         public static final class Builder {
             private String domainName; 
+            private String exceptionNotifyUrl; 
             private String notifyAuthKey; 
             private String notifyReqAuth; 
             private String notifyUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamsNotifyConfig model) {
+                this.domainName = model.domainName;
+                this.exceptionNotifyUrl = model.exceptionNotifyUrl;
+                this.notifyAuthKey = model.notifyAuthKey;
+                this.notifyReqAuth = model.notifyReqAuth;
+                this.notifyUrl = model.notifyUrl;
+            } 
+
             /**
-             * DomainName.
+             * <p>The ingest domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo.aliyundoc.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -142,7 +194,21 @@ public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyAuthKey.
+             * <p>Exception event callback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://4a7e5f08.r37.cpolar.top/live/Record/call-back/streamException">https://4a7e5f08.r37.cpolar.top/live/Record/call-back/streamException</a></p>
+             */
+            public Builder exceptionNotifyUrl(String exceptionNotifyUrl) {
+                this.exceptionNotifyUrl = exceptionNotifyUrl;
+                return this;
+            }
+
+            /**
+             * <p>The authentication key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder notifyAuthKey(String notifyAuthKey) {
                 this.notifyAuthKey = notifyAuthKey;
@@ -150,7 +216,14 @@ public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyReqAuth.
+             * <p>Indicates whether callback authentication is enabled. Valid values:</p>
+             * <ul>
+             * <li>yes</li>
+             * <li>no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>yes</p>
              */
             public Builder notifyReqAuth(String notifyReqAuth) {
                 this.notifyReqAuth = notifyReqAuth;
@@ -158,7 +231,10 @@ public class DescribeLiveStreamsNotifyUrlConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyUrl.
+             * <p>The callback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://guide.aliyundoc.com/notify">http://guide.aliyundoc.com/notify</a></p>
              */
             public Builder notifyUrl(String notifyUrl) {
                 this.notifyUrl = notifyUrl;

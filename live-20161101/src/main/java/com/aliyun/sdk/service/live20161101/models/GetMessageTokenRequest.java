@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMessageTokenRequest} extends {@link RequestModel}
  *
  * <p>GetMessageTokenRequest</p>
  */
 public class GetMessageTokenRequest extends Request {
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("DeviceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceId;
 
-    @Body
-    @NameInMap("DeviceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceType;
 
-    @Body
-    @NameInMap("UserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userId;
 
     private GetMessageTokenRequest(Builder builder) {
@@ -48,7 +53,7 @@ public class GetMessageTokenRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -100,7 +105,11 @@ public class GetMessageTokenRequest extends Request {
         } 
 
         /**
-         * 应用ID
+         * <p>The ID of the interactive messaging application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a494caec-***-695ef345db77</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -109,7 +118,11 @@ public class GetMessageTokenRequest extends Request {
         }
 
         /**
-         * 终端设备ID
+         * <p>The ID of the device. Each device has a unique ID. You can specify a custom ID. The ID can be up to 64 characters in length and can contain lowercase letters, digits, underscores (_), and hyphen (-). You can specify multiple device IDs. We recommend that you obtain the IDs from the devices and pass the IDs to the server.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a494caec-***-695ef345db77</p>
          */
         public Builder deviceId(String deviceId) {
             this.putBodyParameter("DeviceId", deviceId);
@@ -118,7 +131,17 @@ public class GetMessageTokenRequest extends Request {
         }
 
         /**
-         * 终端设备类型
+         * <p>The type of the device. Valid values:</p>
+         * <ul>
+         * <li>ios</li>
+         * <li>android</li>
+         * <li>web</li>
+         * <li>pc</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>android</p>
          */
         public Builder deviceType(String deviceType) {
             this.putBodyParameter("DeviceType", deviceType);
@@ -127,7 +150,11 @@ public class GetMessageTokenRequest extends Request {
         }
 
         /**
-         * 用户UserId,在AppId下单独唯一
+         * <p>The ID of the user. Each user has a unique ID in the application. The ID can be up to 32 characters in length and can contain lowercase letters, digits, underscores (_), and periods (.). You can specify multiple user IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de1**a0</p>
          */
         public Builder userId(String userId) {
             this.putBodyParameter("UserId", userId);

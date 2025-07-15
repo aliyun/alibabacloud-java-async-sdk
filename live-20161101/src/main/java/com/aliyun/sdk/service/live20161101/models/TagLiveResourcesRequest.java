@@ -1,44 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link TagLiveResourcesRequest} extends {@link RequestModel}
  *
  * <p>TagLiveResourcesRequest</p>
  */
 public class TagLiveResourcesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
-    private java.util.List < String > resourceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> resourceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("Tag")
-    @Validation(required = true)
-    private java.util.List < Tag> tag;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<Tag> tag;
 
     private TagLiveResourcesRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tag = builder.tag;
@@ -52,16 +57,9 @@ public class TagLiveResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -72,9 +70,16 @@ public class TagLiveResourcesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -88,16 +93,16 @@ public class TagLiveResourcesRequest extends Request {
     /**
      * @return tag
      */
-    public java.util.List < Tag> getTag() {
+    public java.util.List<Tag> getTag() {
         return this.tag;
     }
 
     public static final class Builder extends Request.Builder<TagLiveResourcesRequest, Builder> {
-        private String regionId; 
         private Long ownerId; 
-        private java.util.List < String > resourceId; 
+        private String regionId; 
+        private java.util.List<String> resourceId; 
         private String resourceType; 
-        private java.util.List < Tag> tag; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -105,21 +110,12 @@ public class TagLiveResourcesRequest extends Request {
 
         private Builder(TagLiveResourcesRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
             this.tag = request.tag;
         } 
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * OwnerId.
@@ -131,16 +127,32 @@ public class TagLiveResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * RegionId.
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The type of the resources. Set the value to <strong>DOMAIN</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
         }
 
         /**
-         * ResourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOMAIN</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -149,9 +161,9 @@ public class TagLiveResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * <p>This parameter is required.</p>
          */
-        public Builder tag(java.util.List < Tag> tag) {
+        public Builder tag(java.util.List<Tag> tag) {
             this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
@@ -164,12 +176,18 @@ public class TagLiveResourcesRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link TagLiveResourcesRequest} extends {@link TeaModel}
+     *
+     * <p>TagLiveResourcesRequest</p>
+     */
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -203,8 +221,19 @@ public class TagLiveResourcesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>This parameter is required.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>env</p>
              */
             public Builder key(String key) {
                 this.key = key;

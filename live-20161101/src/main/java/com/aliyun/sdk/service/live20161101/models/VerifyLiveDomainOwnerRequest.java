@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyLiveDomainOwnerRequest} extends {@link RequestModel}
  *
  * <p>VerifyLiveDomainOwnerRequest</p>
  */
 public class VerifyLiveDomainOwnerRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("VerifyType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerifyType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String verifyType;
 
     private VerifyLiveDomainOwnerRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.verifyType = builder.verifyType;
     }
 
@@ -46,16 +51,9 @@ public class VerifyLiveDomainOwnerRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -73,6 +71,13 @@ public class VerifyLiveDomainOwnerRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return verifyType
      */
     public String getVerifyType() {
@@ -80,9 +85,9 @@ public class VerifyLiveDomainOwnerRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<VerifyLiveDomainOwnerRequest, Builder> {
-        private String regionId; 
         private String domainName; 
         private Long ownerId; 
+        private String regionId; 
         private String verifyType; 
 
         private Builder() {
@@ -91,23 +96,18 @@ public class VerifyLiveDomainOwnerRequest extends Request {
 
         private Builder(VerifyLiveDomainOwnerRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.domainName = request.domainName;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.verifyType = request.verifyType;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * DomainName.
+         * <p>The domain name for which you want to verify the ownership. You can specify only one domain name in each request.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -125,7 +125,24 @@ public class VerifyLiveDomainOwnerRequest extends Request {
         }
 
         /**
-         * VerifyType.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The verification method. Valid values:</p>
+         * <ul>
+         * <li>dnsCheck: DNS record verification</li>
+         * <li>fileCheck: file verification</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dnsCheck</p>
          */
         public Builder verifyType(String verifyType) {
             this.putQueryParameter("VerifyType", verifyType);

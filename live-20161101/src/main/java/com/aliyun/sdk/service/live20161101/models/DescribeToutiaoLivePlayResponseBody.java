@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeToutiaoLivePlayResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeToutiaoLivePlayResponseBody</p>
  */
 public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
-    @NameInMap("Content")
-    private java.util.List < Content> content;
+    @com.aliyun.core.annotation.NameInMap("Content")
+    private java.util.List<Content> content;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeToutiaoLivePlayResponseBody(Builder builder) {
@@ -35,10 +40,14 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return content
      */
-    public java.util.List < Content> getContent() {
+    public java.util.List<Content> getContent() {
         return this.content;
     }
 
@@ -57,20 +66,32 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Content> content; 
+        private java.util.List<Content> content; 
         private String description; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeToutiaoLivePlayResponseBody model) {
+            this.content = model.content;
+            this.description = model.description;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Content.
+         * <p>The information about the live stream.</p>
          */
-        public Builder content(java.util.List < Content> content) {
+        public Builder content(java.util.List<Content> content) {
             this.content = content;
             return this;
         }
 
         /**
-         * Description.
+         * <p>The description of the response status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -78,7 +99,10 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,26 +115,32 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeToutiaoLivePlayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeToutiaoLivePlayResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("App")
+        @com.aliyun.core.annotation.NameInMap("App")
         private String app;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Float bandwidth;
 
-        @NameInMap("CdnName")
+        @com.aliyun.core.annotation.NameInMap("CdnName")
         private String cdnName;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("PlayNum")
+        @com.aliyun.core.annotation.NameInMap("PlayNum")
         private Long playNum;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private Content(Builder builder) {
@@ -189,8 +219,24 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
             private String streamName; 
             private Long timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.app = model.app;
+                this.bandwidth = model.bandwidth;
+                this.cdnName = model.cdnName;
+                this.domain = model.domain;
+                this.playNum = model.playNum;
+                this.streamName = model.streamName;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
-             * App.
+             * <p>The name of the application to which the live stream belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveApp****</p>
              */
             public Builder app(String app) {
                 this.app = app;
@@ -198,7 +244,10 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
             }
 
             /**
-             * Bandwidth.
+             * <p>The bandwidth. Unit: Mbit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0801239013671875</p>
              */
             public Builder bandwidth(Float bandwidth) {
                 this.bandwidth = bandwidth;
@@ -206,7 +255,10 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
             }
 
             /**
-             * CdnName.
+             * <p>The Content Delivery Network (CDN) name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ali</p>
              */
             public Builder cdnName(String cdnName) {
                 this.cdnName = cdnName;
@@ -214,7 +266,10 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -222,7 +277,10 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
             }
 
             /**
-             * PlayNum.
+             * <p>The number of viewers.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>452</p>
              */
             public Builder playNum(Long playNum) {
                 this.playNum = playNum;
@@ -230,7 +288,10 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
             }
 
             /**
-             * StreamName.
+             * <p>The name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveStream****</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -238,7 +299,10 @@ public class DescribeToutiaoLivePlayResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * <p>The timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1625484600</p>
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveDomainLogResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveDomainLogResponseBody</p>
  */
 public class DescribeLiveDomainLogResponseBody extends TeaModel {
-    @NameInMap("DomainLogDetails")
+    @com.aliyun.core.annotation.NameInMap("DomainLogDetails")
     private DomainLogDetails domainLogDetails;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveDomainLogResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
 
     public static DescribeLiveDomainLogResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,8 +70,17 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
         private String domainName; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveDomainLogResponseBody model) {
+            this.domainLogDetails = model.domainLogDetails;
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * DomainLogDetails.
+         * <p>The log information.</p>
          */
         public Builder domainLogDetails(DomainLogDetails domainLogDetails) {
             this.domainLogDetails = domainLogDetails;
@@ -70,7 +88,10 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>The streaming domain or ingest domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -78,7 +99,10 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,20 +115,26 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveDomainLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainLogResponseBody</p>
+     */
     public static class LogInfoDetail extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("LogName")
+        @com.aliyun.core.annotation.NameInMap("LogName")
         private String logName;
 
-        @NameInMap("LogPath")
+        @com.aliyun.core.annotation.NameInMap("LogPath")
         private String logPath;
 
-        @NameInMap("LogSize")
+        @com.aliyun.core.annotation.NameInMap("LogSize")
         private Long logSize;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private LogInfoDetail(Builder builder) {
@@ -165,8 +195,22 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
             private Long logSize; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogInfoDetail model) {
+                this.endTime = model.endTime;
+                this.logName = model.logName;
+                this.logPath = model.logPath;
+                this.logSize = model.logSize;
+                this.startTime = model.startTime;
+            } 
+
             /**
-             * EndTime.
+             * <p>The end of the time range for which the logs were queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-10-20T05:00:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -174,7 +218,10 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogName.
+             * <p>The name of the log file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>developer.aliyundoc.com_2016_10_20_040000_050000.gz</p>
              */
             public Builder logName(String logName) {
                 this.logName = logName;
@@ -182,7 +229,10 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogPath.
+             * <p>The path of the log file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>learn.aliyundoc.com/developer.aliyundoc.com/2016_10_20/example.aliyundoc.com_2016_10_20_040000_050000.gz?Expires=1522659931&amp;OSSAccessKeyId=LTAI******eo4ZEuA&amp;Signature=C01p%2BtA%******KP9Sru2Oxwy7Do0%3D</p>
              */
             public Builder logPath(String logPath) {
                 this.logPath = logPath;
@@ -190,7 +240,10 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogSize.
+             * <p>The size of the log file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder logSize(Long logSize) {
                 this.logSize = logSize;
@@ -198,7 +251,10 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The beginning of the time range for which the logs were queried.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-10-20T04:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -212,9 +268,15 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDomainLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainLogResponseBody</p>
+     */
     public static class LogInfos extends TeaModel {
-        @NameInMap("LogInfoDetail")
-        private java.util.List < LogInfoDetail> logInfoDetail;
+        @com.aliyun.core.annotation.NameInMap("LogInfoDetail")
+        private java.util.List<LogInfoDetail> logInfoDetail;
 
         private LogInfos(Builder builder) {
             this.logInfoDetail = builder.logInfoDetail;
@@ -231,17 +293,24 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
         /**
          * @return logInfoDetail
          */
-        public java.util.List < LogInfoDetail> getLogInfoDetail() {
+        public java.util.List<LogInfoDetail> getLogInfoDetail() {
             return this.logInfoDetail;
         }
 
         public static final class Builder {
-            private java.util.List < LogInfoDetail> logInfoDetail; 
+            private java.util.List<LogInfoDetail> logInfoDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(LogInfos model) {
+                this.logInfoDetail = model.logInfoDetail;
+            } 
 
             /**
              * LogInfoDetail.
              */
-            public Builder logInfoDetail(java.util.List < LogInfoDetail> logInfoDetail) {
+            public Builder logInfoDetail(java.util.List<LogInfoDetail> logInfoDetail) {
                 this.logInfoDetail = logInfoDetail;
                 return this;
             }
@@ -253,14 +322,20 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDomainLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainLogResponseBody</p>
+     */
     public static class PageInfos extends TeaModel {
-        @NameInMap("PageIndex")
+        @com.aliyun.core.annotation.NameInMap("PageIndex")
         private Long pageIndex;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private PageInfos(Builder builder) {
@@ -303,8 +378,20 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
             private Long pageSize; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageInfos model) {
+                this.pageIndex = model.pageIndex;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
+
             /**
-             * PageIndex.
+             * <p>The page number of the returned page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder pageIndex(Long pageIndex) {
                 this.pageIndex = pageIndex;
@@ -312,7 +399,10 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * <p>The number of entries returned per page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder pageSize(Long pageSize) {
                 this.pageSize = pageSize;
@@ -320,7 +410,10 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of entries returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder total(Long total) {
                 this.total = total;
@@ -334,14 +427,20 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDomainLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainLogResponseBody</p>
+     */
     public static class DomainLogDetail extends TeaModel {
-        @NameInMap("LogCount")
+        @com.aliyun.core.annotation.NameInMap("LogCount")
         private Long logCount;
 
-        @NameInMap("LogInfos")
+        @com.aliyun.core.annotation.NameInMap("LogInfos")
         private LogInfos logInfos;
 
-        @NameInMap("PageInfos")
+        @com.aliyun.core.annotation.NameInMap("PageInfos")
         private PageInfos pageInfos;
 
         private DomainLogDetail(Builder builder) {
@@ -384,8 +483,20 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
             private LogInfos logInfos; 
             private PageInfos pageInfos; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainLogDetail model) {
+                this.logCount = model.logCount;
+                this.logInfos = model.logInfos;
+                this.pageInfos = model.pageInfos;
+            } 
+
             /**
-             * LogCount.
+             * <p>The total number of entries returned on the current page.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder logCount(Long logCount) {
                 this.logCount = logCount;
@@ -393,7 +504,7 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * LogInfos.
+             * <p>Details about the logs.</p>
              */
             public Builder logInfos(LogInfos logInfos) {
                 this.logInfos = logInfos;
@@ -401,7 +512,7 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
             }
 
             /**
-             * PageInfos.
+             * <p>The page information.</p>
              */
             public Builder pageInfos(PageInfos pageInfos) {
                 this.pageInfos = pageInfos;
@@ -415,9 +526,15 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDomainLogResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainLogResponseBody</p>
+     */
     public static class DomainLogDetails extends TeaModel {
-        @NameInMap("DomainLogDetail")
-        private java.util.List < DomainLogDetail> domainLogDetail;
+        @com.aliyun.core.annotation.NameInMap("DomainLogDetail")
+        private java.util.List<DomainLogDetail> domainLogDetail;
 
         private DomainLogDetails(Builder builder) {
             this.domainLogDetail = builder.domainLogDetail;
@@ -434,17 +551,24 @@ public class DescribeLiveDomainLogResponseBody extends TeaModel {
         /**
          * @return domainLogDetail
          */
-        public java.util.List < DomainLogDetail> getDomainLogDetail() {
+        public java.util.List<DomainLogDetail> getDomainLogDetail() {
             return this.domainLogDetail;
         }
 
         public static final class Builder {
-            private java.util.List < DomainLogDetail> domainLogDetail; 
+            private java.util.List<DomainLogDetail> domainLogDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainLogDetails model) {
+                this.domainLogDetail = model.domainLogDetail;
+            } 
 
             /**
              * DomainLogDetail.
              */
-            public Builder domainLogDetail(java.util.List < DomainLogDetail> domainLogDetail) {
+            public Builder domainLogDetail(java.util.List<DomainLogDetail> domainLogDetail) {
                 this.domainLogDetail = domainLogDetail;
                 return this;
             }

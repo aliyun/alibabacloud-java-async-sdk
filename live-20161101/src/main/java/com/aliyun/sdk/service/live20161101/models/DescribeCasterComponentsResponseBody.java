@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCasterComponentsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCasterComponentsResponseBody</p>
  */
 public class DescribeCasterComponentsResponseBody extends TeaModel {
-    @NameInMap("Components")
+    @com.aliyun.core.annotation.NameInMap("Components")
     private Components components;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeCasterComponentsResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
 
     public static DescribeCasterComponentsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,8 +70,17 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         private String requestId; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCasterComponentsResponseBody model) {
+            this.components = model.components;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
-         * Components.
+         * <p>The components.</p>
          */
         public Builder components(Components components) {
             this.components = components;
@@ -70,7 +88,10 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3be7ade8-d907-483c-b24a-0dad45******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +99,10 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -91,47 +115,53 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCasterComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterComponentsResponseBody</p>
+     */
     public static class CaptionLayerContent extends TeaModel {
-        @NameInMap("BorderColor")
+        @com.aliyun.core.annotation.NameInMap("BorderColor")
         private String borderColor;
 
-        @NameInMap("BorderWidthNormalized")
+        @com.aliyun.core.annotation.NameInMap("BorderWidthNormalized")
         private Float borderWidthNormalized;
 
-        @NameInMap("Color")
+        @com.aliyun.core.annotation.NameInMap("Color")
         private String color;
 
-        @NameInMap("FontName")
+        @com.aliyun.core.annotation.NameInMap("FontName")
         private String fontName;
 
-        @NameInMap("LineSpaceNormalized")
+        @com.aliyun.core.annotation.NameInMap("LineSpaceNormalized")
         private Float lineSpaceNormalized;
 
-        @NameInMap("LocationId")
+        @com.aliyun.core.annotation.NameInMap("LocationId")
         private String locationId;
 
-        @NameInMap("PtsOffset")
+        @com.aliyun.core.annotation.NameInMap("PtsOffset")
         private Integer ptsOffset;
 
-        @NameInMap("ShowSourceLan")
+        @com.aliyun.core.annotation.NameInMap("ShowSourceLan")
         private Boolean showSourceLan;
 
-        @NameInMap("SizeNormalized")
+        @com.aliyun.core.annotation.NameInMap("SizeNormalized")
         private Float sizeNormalized;
 
-        @NameInMap("SourceLan")
+        @com.aliyun.core.annotation.NameInMap("SourceLan")
         private String sourceLan;
 
-        @NameInMap("TargetLan")
+        @com.aliyun.core.annotation.NameInMap("TargetLan")
         private String targetLan;
 
-        @NameInMap("WordCountPerLine")
+        @com.aliyun.core.annotation.NameInMap("WordCountPerLine")
         private Integer wordCountPerLine;
 
-        @NameInMap("WordSpaceNormalized")
+        @com.aliyun.core.annotation.NameInMap("WordSpaceNormalized")
         private Float wordSpaceNormalized;
 
-        @NameInMap("WordsCount")
+        @com.aliyun.core.annotation.NameInMap("WordsCount")
         private Integer wordsCount;
 
         private CaptionLayerContent(Builder builder) {
@@ -273,8 +303,32 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             private Float wordSpaceNormalized; 
             private Integer wordsCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(CaptionLayerContent model) {
+                this.borderColor = model.borderColor;
+                this.borderWidthNormalized = model.borderWidthNormalized;
+                this.color = model.color;
+                this.fontName = model.fontName;
+                this.lineSpaceNormalized = model.lineSpaceNormalized;
+                this.locationId = model.locationId;
+                this.ptsOffset = model.ptsOffset;
+                this.showSourceLan = model.showSourceLan;
+                this.sizeNormalized = model.sizeNormalized;
+                this.sourceLan = model.sourceLan;
+                this.targetLan = model.targetLan;
+                this.wordCountPerLine = model.wordCountPerLine;
+                this.wordSpaceNormalized = model.wordSpaceNormalized;
+                this.wordsCount = model.wordsCount;
+            } 
+
             /**
-             * BorderColor.
+             * <p>The color of the text border.</p>
+             * <p>Valid values: <strong>0x000000 to 0xffffff</strong>. If the value of this parameter is &quot;&quot;, this parameter does not take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x000000</p>
              */
             public Builder borderColor(String borderColor) {
                 this.borderColor = borderColor;
@@ -282,7 +336,11 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * BorderWidthNormalized.
+             * <p>The normalized value of the width of the text border. The value of this parameter equals the border width divided by the font size.</p>
+             * <p>The maximum width of the text border is <strong>16</strong>, even if the border width calculated based on this parameter is greater than <strong>16</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder borderWidthNormalized(Float borderWidthNormalized) {
                 this.borderWidthNormalized = borderWidthNormalized;
@@ -290,7 +348,10 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Color.
+             * <p>The color of the text. Valid values: <strong>0x000000 to 0xffffff</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x000000</p>
              */
             public Builder color(String color) {
                 this.color = color;
@@ -298,7 +359,20 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * FontName.
+             * <p>The font of the text, which is specified by the system. Valid values:</p>
+             * <ul>
+             * <li><strong>KaiTi</strong></li>
+             * <li><strong>AlibabaPuHuiTi-Regular</strong></li>
+             * <li><strong>AlibabaPuHuiTi-Bold</strong></li>
+             * <li><strong>NAlibabaPuHuiTi-Light</strong></li>
+             * <li><strong>NotoSansHans-Regular</strong></li>
+             * <li><strong>NotoSansHans-Bold</strong></li>
+             * <li><strong>NotoSansHans-Light</strong></li>
+             * </ul>
+             * <hr>
+             * 
+             * <strong>example:</strong>
+             * <p>KaiTi</p>
              */
             public Builder fontName(String fontName) {
                 this.fontName = fontName;
@@ -306,7 +380,10 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * LineSpaceNormalized.
+             * <p>The line spacing, which indicates the interval between every two lines.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder lineSpaceNormalized(Float lineSpaceNormalized) {
                 this.lineSpaceNormalized = lineSpaceNormalized;
@@ -314,7 +391,10 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * LocationId.
+             * <p>The location ID of the component. If the value of the ComponentType parameter is caption, the LocationId parameter indicates the channel ID of the video source that is referenced by the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RV01</p>
              */
             public Builder locationId(String locationId) {
                 this.locationId = locationId;
@@ -322,7 +402,11 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * PtsOffset.
+             * <p>The offset between the presentation timestamps (PTS) of the subtitles and the audio.</p>
+             * <p>Valid values: <strong>-10000 to 10000</strong>. Default value: <strong>0</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder ptsOffset(Integer ptsOffset) {
                 this.ptsOffset = ptsOffset;
@@ -330,7 +414,14 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * ShowSourceLan.
+             * <p>Indicates whether the source language of the subtitles is displayed. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong>: The source language is displayed.</li>
+             * <li><strong>false</strong>: The source language is not displayed.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder showSourceLan(Boolean showSourceLan) {
                 this.showSourceLan = showSourceLan;
@@ -338,7 +429,11 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * SizeNormalized.
+             * <p>The normalized value of the font size of the subtitles. The value of this parameter equals the font size divided by the output height.``</p>
+             * <p>The maximum font size of the subtitles is <strong>1,024</strong>, even if the font size calculated based on this parameter is greater than <strong>1,024</strong>. If the value of this parameter is <strong>-1</strong>, this parameter does not take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder sizeNormalized(Float sizeNormalized) {
                 this.sizeNormalized = sizeNormalized;
@@ -346,7 +441,16 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceLan.
+             * <p>The source language of the audio in the video source. Valid values:</p>
+             * <ul>
+             * <li><strong>en</strong>: English</li>
+             * <li><strong>cn</strong>: Chinese</li>
+             * <li><strong>es</strong>: Spanish</li>
+             * <li><strong>ru</strong>: Russian</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder sourceLan(String sourceLan) {
                 this.sourceLan = sourceLan;
@@ -354,7 +458,16 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * TargetLan.
+             * <p>The target language of the audio in the video source. Valid values:</p>
+             * <ul>
+             * <li><strong>en</strong>: English</li>
+             * <li><strong>cn</strong>: Chinese</li>
+             * <li><strong>es</strong>: Spanish</li>
+             * <li><strong>ru</strong>: Russian</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>cn</p>
              */
             public Builder targetLan(String targetLan) {
                 this.targetLan = targetLan;
@@ -362,7 +475,10 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * WordCountPerLine.
+             * <p>The maximum number of words displayed in each line.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder wordCountPerLine(Integer wordCountPerLine) {
                 this.wordCountPerLine = wordCountPerLine;
@@ -370,7 +486,10 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * WordSpaceNormalized.
+             * <p>The word spacing, which indicates the interval between every two words.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder wordSpaceNormalized(Float wordSpaceNormalized) {
                 this.wordSpaceNormalized = wordSpaceNormalized;
@@ -378,7 +497,11 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * WordsCount.
+             * <p>The number of words displayed on the component. The value of this parameter can be specified based on the font size.</p>
+             * <p>Valid values: <strong>10 to 50</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>35</p>
              */
             public Builder wordsCount(Integer wordsCount) {
                 this.wordsCount = wordsCount;
@@ -392,9 +515,15 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterComponentsResponseBody</p>
+     */
     public static class PositionNormalizeds extends TeaModel {
-        @NameInMap("Position")
-        private java.util.List < Float > position;
+        @com.aliyun.core.annotation.NameInMap("Position")
+        private java.util.List<Float> position;
 
         private PositionNormalizeds(Builder builder) {
             this.position = builder.position;
@@ -411,17 +540,24 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         /**
          * @return position
          */
-        public java.util.List < Float > getPosition() {
+        public java.util.List<Float> getPosition() {
             return this.position;
         }
 
         public static final class Builder {
-            private java.util.List < Float > position; 
+            private java.util.List<Float> position; 
+
+            private Builder() {
+            } 
+
+            private Builder(PositionNormalizeds model) {
+                this.position = model.position;
+            } 
 
             /**
              * Position.
              */
-            public Builder position(java.util.List < Float > position) {
+            public Builder position(java.util.List<Float> position) {
                 this.position = position;
                 return this;
             }
@@ -433,20 +569,26 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterComponentsResponseBody</p>
+     */
     public static class ComponentLayer extends TeaModel {
-        @NameInMap("HeightNormalized")
+        @com.aliyun.core.annotation.NameInMap("HeightNormalized")
         private Float heightNormalized;
 
-        @NameInMap("PositionNormalizeds")
+        @com.aliyun.core.annotation.NameInMap("PositionNormalizeds")
         private PositionNormalizeds positionNormalizeds;
 
-        @NameInMap("PositionRefer")
+        @com.aliyun.core.annotation.NameInMap("PositionRefer")
         private String positionRefer;
 
-        @NameInMap("Transparency")
+        @com.aliyun.core.annotation.NameInMap("Transparency")
         private Integer transparency;
 
-        @NameInMap("WidthNormalized")
+        @com.aliyun.core.annotation.NameInMap("WidthNormalized")
         private Float widthNormalized;
 
         private ComponentLayer(Builder builder) {
@@ -507,8 +649,23 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             private Integer transparency; 
             private Float widthNormalized; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComponentLayer model) {
+                this.heightNormalized = model.heightNormalized;
+                this.positionNormalizeds = model.positionNormalizeds;
+                this.positionRefer = model.positionRefer;
+                this.transparency = model.transparency;
+                this.widthNormalized = model.widthNormalized;
+            } 
+
             /**
-             * HeightNormalized.
+             * <p>The normalized value for heights of the elements in the layer. The widths of the elements are proportionally scaled based on this parameter.</p>
+             * <p>If the value of this parameter is <strong>0</strong>, the elements in the layer are not scaled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder heightNormalized(Float heightNormalized) {
                 this.heightNormalized = heightNormalized;
@@ -516,7 +673,10 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * PositionNormalizeds.
+             * <p>The normalized value of the position of the layer, in the format of <code>[x,y]</code>. Example: <code>[0,0]</code>.</p>
+             * <blockquote>
+             * <p> The values of x and y need to be normalized.</p>
+             * </blockquote>
              */
             public Builder positionNormalizeds(PositionNormalizeds positionNormalizeds) {
                 this.positionNormalizeds = positionNormalizeds;
@@ -524,7 +684,16 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * PositionRefer.
+             * <p>The reference coordinates of the layer. Valid values:</p>
+             * <ul>
+             * <li><strong>topLeft</strong>: the upper-left corner</li>
+             * <li><strong>topRight</strong>: the upper-right corner</li>
+             * <li><strong>bottomLeft</strong>: the lower-left corner</li>
+             * <li><strong>bottomRight</strong>: the lower-right corner</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>topLeft</p>
              */
             public Builder positionRefer(String positionRefer) {
                 this.positionRefer = positionRefer;
@@ -532,7 +701,11 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Transparency.
+             * <p>The transparency of the layer. Valid values: 0 to 255.</p>
+             * <p>A value of <strong>0</strong> indicates that the layer is completely transparent. A value of <strong>255</strong> indicates that the layer is completely opaque.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder transparency(Integer transparency) {
                 this.transparency = transparency;
@@ -540,7 +713,13 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * WidthNormalized.
+             * <p>The normalized value for widths of the elements in the layer. The heights of the elements are proportionally scaled based on this parameter. If the value of this parameter is <strong>0</strong>, the elements in the layer are not scaled.</p>
+             * <blockquote>
+             * <p> This parameter conflicts with the HeightNormalized parameter. If both of them are specified, only the HeightNormalized parameter takes effect. If only one of them is specified, the latest specified value is used.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder widthNormalized(Float widthNormalized) {
                 this.widthNormalized = widthNormalized;
@@ -554,8 +733,14 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterComponentsResponseBody</p>
+     */
     public static class ImageLayerContent extends TeaModel {
-        @NameInMap("MaterialId")
+        @com.aliyun.core.annotation.NameInMap("MaterialId")
         private String materialId;
 
         private ImageLayerContent(Builder builder) {
@@ -580,8 +765,18 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         public static final class Builder {
             private String materialId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ImageLayerContent model) {
+                this.materialId = model.materialId;
+            } 
+
             /**
-             * MaterialId.
+             * <p>The ID of the material from the media library.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6cf724c6ebfd4a59b5b3cec6f10d****</p>
              */
             public Builder materialId(String materialId) {
                 this.materialId = materialId;
@@ -595,23 +790,29 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterComponentsResponseBody</p>
+     */
     public static class TextLayerContent extends TeaModel {
-        @NameInMap("BorderColor")
+        @com.aliyun.core.annotation.NameInMap("BorderColor")
         private String borderColor;
 
-        @NameInMap("BorderWidthNormalized")
+        @com.aliyun.core.annotation.NameInMap("BorderWidthNormalized")
         private Float borderWidthNormalized;
 
-        @NameInMap("Color")
+        @com.aliyun.core.annotation.NameInMap("Color")
         private String color;
 
-        @NameInMap("FontName")
+        @com.aliyun.core.annotation.NameInMap("FontName")
         private String fontName;
 
-        @NameInMap("SizeNormalized")
+        @com.aliyun.core.annotation.NameInMap("SizeNormalized")
         private Float sizeNormalized;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
         private TextLayerContent(Builder builder) {
@@ -681,8 +882,23 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             private Float sizeNormalized; 
             private String text; 
 
+            private Builder() {
+            } 
+
+            private Builder(TextLayerContent model) {
+                this.borderColor = model.borderColor;
+                this.borderWidthNormalized = model.borderWidthNormalized;
+                this.color = model.color;
+                this.fontName = model.fontName;
+                this.sizeNormalized = model.sizeNormalized;
+                this.text = model.text;
+            } 
+
             /**
-             * BorderColor.
+             * <p>The color of the text border. Valid values: <strong>0x000000 to 0xffffff</strong>. If the value of this parameter is <strong>&quot;&quot;</strong>, this parameter does not take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x000000</p>
              */
             public Builder borderColor(String borderColor) {
                 this.borderColor = borderColor;
@@ -690,7 +906,11 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * BorderWidthNormalized.
+             * <p>The normalized value of the width of the text border. The value of this parameter equals the border width divided by the font size.****</p>
+             * <p>The maximum width of the text border is <strong>16</strong>, even if the border width calculated based on this parameter is greater than <strong>16</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder borderWidthNormalized(Float borderWidthNormalized) {
                 this.borderWidthNormalized = borderWidthNormalized;
@@ -698,7 +918,10 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Color.
+             * <p>The color of the text. Valid values: <strong>0x000000 to 0xffffff</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0xff0000</p>
              */
             public Builder color(String color) {
                 this.color = color;
@@ -706,7 +929,20 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * FontName.
+             * <p>The font of the text, which is specified by the system. Valid values:</p>
+             * <ul>
+             * <li><strong>KaiTi</strong></li>
+             * <li><strong>AlibabaPuHuiTi-Regular</strong></li>
+             * <li><strong>AlibabaPuHuiTi-Bold</strong></li>
+             * <li><strong>NAlibabaPuHuiTi-Light</strong></li>
+             * <li><strong>NotoSansHans-Regular</strong></li>
+             * <li><strong>NotoSansHans-Bold</strong></li>
+             * <li><strong>NotoSansHans-Light</strong></li>
+             * </ul>
+             * <hr>
+             * 
+             * <strong>example:</strong>
+             * <p>KaiTi</p>
              */
             public Builder fontName(String fontName) {
                 this.fontName = fontName;
@@ -714,7 +950,11 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * SizeNormalized.
+             * <p>The normalized value of the font size of the text.</p>
+             * <p>The value of this parameter equals the font size divided by the output height.**** The maximum font size of the text is <strong>1,024</strong>, even if the font size calculated based on this parameter is greater than <strong>1,024</strong>. If the value of this parameter is <strong>-1</strong>, this parameter does not take effect.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16</p>
              */
             public Builder sizeNormalized(Float sizeNormalized) {
                 this.sizeNormalized = sizeNormalized;
@@ -722,7 +962,10 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Text.
+             * <p>The content of the text.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hello world</p>
              */
             public Builder text(String text) {
                 this.text = text;
@@ -736,32 +979,38 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterComponentsResponseBody</p>
+     */
     public static class Component extends TeaModel {
-        @NameInMap("CaptionLayerContent")
+        @com.aliyun.core.annotation.NameInMap("CaptionLayerContent")
         private CaptionLayerContent captionLayerContent;
 
-        @NameInMap("ComponentId")
+        @com.aliyun.core.annotation.NameInMap("ComponentId")
         private String componentId;
 
-        @NameInMap("ComponentLayer")
+        @com.aliyun.core.annotation.NameInMap("ComponentLayer")
         private ComponentLayer componentLayer;
 
-        @NameInMap("ComponentName")
+        @com.aliyun.core.annotation.NameInMap("ComponentName")
         private String componentName;
 
-        @NameInMap("ComponentType")
+        @com.aliyun.core.annotation.NameInMap("ComponentType")
         private String componentType;
 
-        @NameInMap("Effect")
+        @com.aliyun.core.annotation.NameInMap("Effect")
         private String effect;
 
-        @NameInMap("ImageLayerContent")
+        @com.aliyun.core.annotation.NameInMap("ImageLayerContent")
         private ImageLayerContent imageLayerContent;
 
-        @NameInMap("LocationId")
+        @com.aliyun.core.annotation.NameInMap("LocationId")
         private String locationId;
 
-        @NameInMap("TextLayerContent")
+        @com.aliyun.core.annotation.NameInMap("TextLayerContent")
         private TextLayerContent textLayerContent;
 
         private Component(Builder builder) {
@@ -858,8 +1107,23 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             private String locationId; 
             private TextLayerContent textLayerContent; 
 
+            private Builder() {
+            } 
+
+            private Builder(Component model) {
+                this.captionLayerContent = model.captionLayerContent;
+                this.componentId = model.componentId;
+                this.componentLayer = model.componentLayer;
+                this.componentName = model.componentName;
+                this.componentType = model.componentType;
+                this.effect = model.effect;
+                this.imageLayerContent = model.imageLayerContent;
+                this.locationId = model.locationId;
+                this.textLayerContent = model.textLayerContent;
+            } 
+
             /**
-             * CaptionLayerContent.
+             * <p>The information about the subtitle component.</p>
              */
             public Builder captionLayerContent(CaptionLayerContent captionLayerContent) {
                 this.captionLayerContent = captionLayerContent;
@@ -867,7 +1131,10 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentId.
+             * <p>The component ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72d2ec7a-4cd7-4a01-974b-7cd53947****</p>
              */
             public Builder componentId(String componentId) {
                 this.componentId = componentId;
@@ -875,7 +1142,7 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentLayer.
+             * <p>The information about the component layer, such as the size and layout.</p>
              */
             public Builder componentLayer(ComponentLayer componentLayer) {
                 this.componentLayer = componentLayer;
@@ -883,7 +1150,10 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentName.
+             * <p>The name of the component. By default, the name is the ID of the component.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>component_name</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -891,7 +1161,15 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * ComponentType.
+             * <p>The type of the component. Valid values:</p>
+             * <ul>
+             * <li><strong>text</strong>: a text component</li>
+             * <li><strong>image</strong>: an image component</li>
+             * <li><strong>caption</strong>: a caption component</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>text</p>
              */
             public Builder componentType(String componentType) {
                 this.componentType = componentType;
@@ -899,7 +1177,15 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * Effect.
+             * <p>The display effect for the component. Valid values:</p>
+             * <ul>
+             * <li><strong>none</strong></li>
+             * <li><strong>animateH</strong>: horizontal scrolling</li>
+             * <li><strong>animateV</strong>: vertical scrolling</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>animateV</p>
              */
             public Builder effect(String effect) {
                 this.effect = effect;
@@ -907,7 +1193,7 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageLayerContent.
+             * <p>The information about the image component. This parameter is returned only for image components.</p>
              */
             public Builder imageLayerContent(ImageLayerContent imageLayerContent) {
                 this.imageLayerContent = imageLayerContent;
@@ -915,7 +1201,11 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * LocationId.
+             * <p>The location ID of the component.</p>
+             * <p>Each location ID can be assigned to only one component and must be in the RC[Number] format. The values of this parameter are in ascending order, for example, from RC01 to RC12.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RC01</p>
              */
             public Builder locationId(String locationId) {
                 this.locationId = locationId;
@@ -923,7 +1213,7 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
             }
 
             /**
-             * TextLayerContent.
+             * <p>The information about the text component. This parameter is returned only for text components.</p>
              */
             public Builder textLayerContent(TextLayerContent textLayerContent) {
                 this.textLayerContent = textLayerContent;
@@ -937,9 +1227,15 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterComponentsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterComponentsResponseBody</p>
+     */
     public static class Components extends TeaModel {
-        @NameInMap("Component")
-        private java.util.List < Component> component;
+        @com.aliyun.core.annotation.NameInMap("Component")
+        private java.util.List<Component> component;
 
         private Components(Builder builder) {
             this.component = builder.component;
@@ -956,17 +1252,24 @@ public class DescribeCasterComponentsResponseBody extends TeaModel {
         /**
          * @return component
          */
-        public java.util.List < Component> getComponent() {
+        public java.util.List<Component> getComponent() {
             return this.component;
         }
 
         public static final class Builder {
-            private java.util.List < Component> component; 
+            private java.util.List<Component> component; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.component = model.component;
+            } 
 
             /**
              * Component.
              */
-            public Builder component(java.util.List < Component> component) {
+            public Builder component(java.util.List<Component> component) {
                 this.component = component;
                 return this;
             }

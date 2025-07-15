@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditPlaylistResponseBody} extends {@link TeaModel}
  *
  * <p>EditPlaylistResponseBody</p>
  */
 public class EditPlaylistResponseBody extends TeaModel {
-    @NameInMap("CasterId")
+    @com.aliyun.core.annotation.NameInMap("CasterId")
     private String casterId;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private Items items;
 
-    @NameInMap("ProgramId")
+    @com.aliyun.core.annotation.NameInMap("ProgramId")
     private String programId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private EditPlaylistResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class EditPlaylistResponseBody extends TeaModel {
 
     public static EditPlaylistResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class EditPlaylistResponseBody extends TeaModel {
         private String programId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(EditPlaylistResponseBody model) {
+            this.casterId = model.casterId;
+            this.items = model.items;
+            this.programId = model.programId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * CasterId.
+         * <p>The ID of the production studio. You can use the ID as a request parameter in the API operation that is used to configure callbacks or add a virtual studio layout.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0e94d1f4-1a65-445c-9dcf-de8b3b8d****</p>
          */
         public Builder casterId(String casterId) {
             this.casterId = casterId;
@@ -82,7 +104,7 @@ public class EditPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * <p>The information about the episodes.</p>
          */
         public Builder items(Items items) {
             this.items = items;
@@ -90,7 +112,10 @@ public class EditPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * ProgramId.
+         * <p>The ID of the episode list. You can use the ID as a request parameter in the API operation that is used to delete the episode list, query the information about the episode list, start the episode list, or stop the episode list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
          */
         public Builder programId(String programId) {
             this.programId = programId;
@@ -98,7 +123,10 @@ public class EditPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c6a2a0d-f228-4a64-af62-20e91b96****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -111,11 +139,17 @@ public class EditPlaylistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link EditPlaylistResponseBody} extends {@link TeaModel}
+     *
+     * <p>EditPlaylistResponseBody</p>
+     */
     public static class FailedItems extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private String itemId;
 
-        @NameInMap("ItemName")
+        @com.aliyun.core.annotation.NameInMap("ItemName")
         private String itemName;
 
         private FailedItems(Builder builder) {
@@ -149,8 +183,19 @@ public class EditPlaylistResponseBody extends TeaModel {
             private String itemId; 
             private String itemName; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailedItems model) {
+                this.itemId = model.itemId;
+                this.itemName = model.itemName;
+            } 
+
             /**
-             * ItemId.
+             * <p>The ID of the episode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c09f3d63-eacf-4fbf-bd48-a07a6ba7****</p>
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
@@ -158,7 +203,10 @@ public class EditPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * ItemName.
+             * <p>The name of the episode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item2</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -172,11 +220,17 @@ public class EditPlaylistResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EditPlaylistResponseBody} extends {@link TeaModel}
+     *
+     * <p>EditPlaylistResponseBody</p>
+     */
     public static class SuccessItems extends TeaModel {
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private String itemId;
 
-        @NameInMap("ItemName")
+        @com.aliyun.core.annotation.NameInMap("ItemName")
         private String itemName;
 
         private SuccessItems(Builder builder) {
@@ -210,8 +264,19 @@ public class EditPlaylistResponseBody extends TeaModel {
             private String itemId; 
             private String itemName; 
 
+            private Builder() {
+            } 
+
+            private Builder(SuccessItems model) {
+                this.itemId = model.itemId;
+                this.itemName = model.itemName;
+            } 
+
             /**
-             * ItemId.
+             * <p>The ID of the episode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c09f3d63-eacf-4fbf-bd48-a07a6ba7****</p>
              */
             public Builder itemId(String itemId) {
                 this.itemId = itemId;
@@ -219,7 +284,10 @@ public class EditPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * ItemName.
+             * <p>The name of the episode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>item1</p>
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;
@@ -233,12 +301,18 @@ public class EditPlaylistResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link EditPlaylistResponseBody} extends {@link TeaModel}
+     *
+     * <p>EditPlaylistResponseBody</p>
+     */
     public static class Items extends TeaModel {
-        @NameInMap("FailedItems")
-        private java.util.List < FailedItems> failedItems;
+        @com.aliyun.core.annotation.NameInMap("FailedItems")
+        private java.util.List<FailedItems> failedItems;
 
-        @NameInMap("SuccessItems")
-        private java.util.List < SuccessItems> successItems;
+        @com.aliyun.core.annotation.NameInMap("SuccessItems")
+        private java.util.List<SuccessItems> successItems;
 
         private Items(Builder builder) {
             this.failedItems = builder.failedItems;
@@ -256,33 +330,41 @@ public class EditPlaylistResponseBody extends TeaModel {
         /**
          * @return failedItems
          */
-        public java.util.List < FailedItems> getFailedItems() {
+        public java.util.List<FailedItems> getFailedItems() {
             return this.failedItems;
         }
 
         /**
          * @return successItems
          */
-        public java.util.List < SuccessItems> getSuccessItems() {
+        public java.util.List<SuccessItems> getSuccessItems() {
             return this.successItems;
         }
 
         public static final class Builder {
-            private java.util.List < FailedItems> failedItems; 
-            private java.util.List < SuccessItems> successItems; 
+            private java.util.List<FailedItems> failedItems; 
+            private java.util.List<SuccessItems> successItems; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.failedItems = model.failedItems;
+                this.successItems = model.successItems;
+            } 
 
             /**
-             * FailedItems.
+             * <p>The episodes that failed to be added.</p>
              */
-            public Builder failedItems(java.util.List < FailedItems> failedItems) {
+            public Builder failedItems(java.util.List<FailedItems> failedItems) {
                 this.failedItems = failedItems;
                 return this;
             }
 
             /**
-             * SuccessItems.
+             * <p>The episodes that were added.</p>
              */
-            public Builder successItems(java.util.List < SuccessItems> successItems) {
+            public Builder successItems(java.util.List<SuccessItems> successItems) {
                 this.successItems = successItems;
                 return this;
             }

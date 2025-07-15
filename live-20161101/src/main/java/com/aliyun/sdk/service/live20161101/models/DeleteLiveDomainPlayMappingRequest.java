@@ -1,41 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveDomainPlayMappingRequest} extends {@link RequestModel}
  *
  * <p>DeleteLiveDomainPlayMappingRequest</p>
  */
 public class DeleteLiveDomainPlayMappingRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PlayDomain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlayDomain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String playDomain;
 
-    @Query
-    @NameInMap("PullDomain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PullDomain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pullDomain;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     private DeleteLiveDomainPlayMappingRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.ownerId = builder.ownerId;
         this.playDomain = builder.playDomain;
         this.pullDomain = builder.pullDomain;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -46,16 +51,9 @@ public class DeleteLiveDomainPlayMappingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -79,11 +77,18 @@ public class DeleteLiveDomainPlayMappingRequest extends Request {
         return this.pullDomain;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteLiveDomainPlayMappingRequest, Builder> {
-        private String regionId; 
         private Long ownerId; 
         private String playDomain; 
         private String pullDomain; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -91,20 +96,11 @@ public class DeleteLiveDomainPlayMappingRequest extends Request {
 
         private Builder(DeleteLiveDomainPlayMappingRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.ownerId = request.ownerId;
             this.playDomain = request.playDomain;
             this.pullDomain = request.pullDomain;
+            this.regionId = request.regionId;
         } 
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * OwnerId.
@@ -116,7 +112,11 @@ public class DeleteLiveDomainPlayMappingRequest extends Request {
         }
 
         /**
-         * PlayDomain.
+         * <p>The sub-streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder playDomain(String playDomain) {
             this.putQueryParameter("PlayDomain", playDomain);
@@ -125,11 +125,24 @@ public class DeleteLiveDomainPlayMappingRequest extends Request {
         }
 
         /**
-         * PullDomain.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder pullDomain(String pullDomain) {
             this.putQueryParameter("PullDomain", pullDomain);
             this.pullDomain = pullDomain;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

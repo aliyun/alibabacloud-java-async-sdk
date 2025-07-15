@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveDomainMappingResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveDomainMappingResponseBody</p>
  */
 public class DescribeLiveDomainMappingResponseBody extends TeaModel {
-    @NameInMap("LiveDomainModels")
+    @com.aliyun.core.annotation.NameInMap("LiveDomainModels")
     private LiveDomainModels liveDomainModels;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveDomainMappingResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveDomainMappingResponseBody extends TeaModel {
 
     public static DescribeLiveDomainMappingResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveDomainMappingResponseBody extends TeaModel {
         private LiveDomainModels liveDomainModels; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveDomainMappingResponseBody model) {
+            this.liveDomainModels = model.liveDomainModels;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * LiveDomainModels.
+         * <p>The mappings of the queried domain name.</p>
          */
         public Builder liveDomainModels(LiveDomainModels liveDomainModels) {
             this.liveDomainModels = liveDomainModels;
@@ -58,7 +75,10 @@ public class DescribeLiveDomainMappingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F6CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +91,17 @@ public class DescribeLiveDomainMappingResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveDomainMappingResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainMappingResponseBody</p>
+     */
     public static class LiveDomainModel extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private LiveDomainModel(Builder builder) {
@@ -109,8 +135,19 @@ public class DescribeLiveDomainMappingResponseBody extends TeaModel {
             private String domainName; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveDomainModel model) {
+                this.domainName = model.domainName;
+                this.type = model.type;
+            } 
+
             /**
-             * DomainName.
+             * <p>The domain name to which the queried domain name is mapped.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -118,7 +155,15 @@ public class DescribeLiveDomainMappingResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the queried domain name. Valid values:</p>
+             * <ul>
+             * <li><strong>vhost</strong>: main streaming domain</li>
+             * <li><strong>publish</strong>: ingest domain</li>
+             * <li><strong>play</strong>: sub-streaming domain</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>play</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -132,9 +177,15 @@ public class DescribeLiveDomainMappingResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDomainMappingResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainMappingResponseBody</p>
+     */
     public static class LiveDomainModels extends TeaModel {
-        @NameInMap("LiveDomainModel")
-        private java.util.List < LiveDomainModel> liveDomainModel;
+        @com.aliyun.core.annotation.NameInMap("LiveDomainModel")
+        private java.util.List<LiveDomainModel> liveDomainModel;
 
         private LiveDomainModels(Builder builder) {
             this.liveDomainModel = builder.liveDomainModel;
@@ -151,17 +202,24 @@ public class DescribeLiveDomainMappingResponseBody extends TeaModel {
         /**
          * @return liveDomainModel
          */
-        public java.util.List < LiveDomainModel> getLiveDomainModel() {
+        public java.util.List<LiveDomainModel> getLiveDomainModel() {
             return this.liveDomainModel;
         }
 
         public static final class Builder {
-            private java.util.List < LiveDomainModel> liveDomainModel; 
+            private java.util.List<LiveDomainModel> liveDomainModel; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveDomainModels model) {
+                this.liveDomainModel = model.liveDomainModel;
+            } 
 
             /**
              * LiveDomainModel.
              */
-            public Builder liveDomainModel(java.util.List < LiveDomainModel> liveDomainModel) {
+            public Builder liveDomainModel(java.util.List<LiveDomainModel> liveDomainModel) {
                 this.liveDomainModel = liveDomainModel;
                 return this;
             }

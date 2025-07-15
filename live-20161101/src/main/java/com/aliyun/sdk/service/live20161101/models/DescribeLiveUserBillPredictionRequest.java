@@ -1,49 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveUserBillPredictionRequest} extends {@link RequestModel}
  *
  * <p>DescribeLiveUserBillPredictionRequest</p>
  */
 public class DescribeLiveUserBillPredictionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("Area")
-    private String area;
-
-    @Query
-    @NameInMap("Dimension")
-    @Validation(required = true)
-    private String dimension;
-
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeLiveUserBillPredictionRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
-        this.area = builder.area;
-        this.dimension = builder.dimension;
         this.endTime = builder.endTime;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -55,30 +49,9 @@ public class DescribeLiveUserBillPredictionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
-     * @return area
-     */
-    public String getArea() {
-        return this.area;
-    }
-
-    /**
-     * @return dimension
-     */
-    public String getDimension() {
-        return this.dimension;
     }
 
     /**
@@ -96,6 +69,13 @@ public class DescribeLiveUserBillPredictionRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -103,11 +83,9 @@ public class DescribeLiveUserBillPredictionRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveUserBillPredictionRequest, Builder> {
-        private String regionId; 
-        private String area; 
-        private String dimension; 
         private String endTime; 
         private Long ownerId; 
+        private String regionId; 
         private String startTime; 
 
         private Builder() {
@@ -116,43 +94,17 @@ public class DescribeLiveUserBillPredictionRequest extends Request {
 
         private Builder(DescribeLiveUserBillPredictionRequest request) {
             super(request);
-            this.regionId = request.regionId;
-            this.area = request.area;
-            this.dimension = request.dimension;
             this.endTime = request.endTime;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * Area.
-         */
-        public Builder area(String area) {
-            this.putQueryParameter("Area", area);
-            this.area = area;
-            return this;
-        }
-
-        /**
-         * Dimension.
-         */
-        public Builder dimension(String dimension) {
-            this.putQueryParameter("Dimension", dimension);
-            this.dimension = dimension;
-            return this;
-        }
-
-        /**
-         * EndTime.
+         * <p>The end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-01T05:45:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -170,7 +122,19 @@ public class DescribeLiveUserBillPredictionRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd**THH:mm:ssZ</em> format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-01T05:40:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

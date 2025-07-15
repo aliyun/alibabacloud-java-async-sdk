@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListLiveRealtimeLogDeliveryResponseBody} extends {@link TeaModel}
  *
  * <p>ListLiveRealtimeLogDeliveryResponseBody</p>
  */
 public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListLiveRealtimeLogDeliveryResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
 
     public static ListLiveRealtimeLogDeliveryResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
         private Content content; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListLiveRealtimeLogDeliveryResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Content.
+         * <p>The configurations of real-time log delivery.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +75,10 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30559C03-86C9-4EEC-B840-0DC5F5A2189B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +91,29 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListLiveRealtimeLogDeliveryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveRealtimeLogDeliveryResponseBody</p>
+     */
     public static class RealtimeLogDeliveryInfo extends TeaModel {
-        @NameInMap("DmId")
+        @com.aliyun.core.annotation.NameInMap("DmId")
         private Integer dmId;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Logstore")
+        @com.aliyun.core.annotation.NameInMap("Logstore")
         private String logstore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RealtimeLogDeliveryInfo(Builder builder) {
@@ -157,8 +183,23 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
             private String region; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(RealtimeLogDeliveryInfo model) {
+                this.dmId = model.dmId;
+                this.domainName = model.domainName;
+                this.logstore = model.logstore;
+                this.project = model.project;
+                this.region = model.region;
+                this.status = model.status;
+            } 
+
             /**
-             * DmId.
+             * <p>The ID of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001010</p>
              */
             public Builder dmId(Integer dmId) {
                 this.dmId = dmId;
@@ -166,7 +207,10 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -174,7 +218,10 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * Logstore.
+             * <p>The name of the Logstore to which log entries are delivered.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>logstore_example</p>
              */
             public Builder logstore(String logstore) {
                 this.logstore = logstore;
@@ -182,7 +229,10 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * Project.
+             * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>project_example</p>
              */
             public Builder project(String project) {
                 this.project = project;
@@ -190,7 +240,10 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The ID of the region where the Log Service project is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -198,7 +251,14 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of real-time log delivery. Valid values:</p>
+             * <ul>
+             * <li><strong>online</strong>: enabled</li>
+             * <li><strong>offline</strong>: disabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>online</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -212,9 +272,15 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListLiveRealtimeLogDeliveryResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListLiveRealtimeLogDeliveryResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("RealtimeLogDeliveryInfo")
-        private java.util.List < RealtimeLogDeliveryInfo> realtimeLogDeliveryInfo;
+        @com.aliyun.core.annotation.NameInMap("RealtimeLogDeliveryInfo")
+        private java.util.List<RealtimeLogDeliveryInfo> realtimeLogDeliveryInfo;
 
         private Content(Builder builder) {
             this.realtimeLogDeliveryInfo = builder.realtimeLogDeliveryInfo;
@@ -231,17 +297,24 @@ public class ListLiveRealtimeLogDeliveryResponseBody extends TeaModel {
         /**
          * @return realtimeLogDeliveryInfo
          */
-        public java.util.List < RealtimeLogDeliveryInfo> getRealtimeLogDeliveryInfo() {
+        public java.util.List<RealtimeLogDeliveryInfo> getRealtimeLogDeliveryInfo() {
             return this.realtimeLogDeliveryInfo;
         }
 
         public static final class Builder {
-            private java.util.List < RealtimeLogDeliveryInfo> realtimeLogDeliveryInfo; 
+            private java.util.List<RealtimeLogDeliveryInfo> realtimeLogDeliveryInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.realtimeLogDeliveryInfo = model.realtimeLogDeliveryInfo;
+            } 
 
             /**
              * RealtimeLogDeliveryInfo.
              */
-            public Builder realtimeLogDeliveryInfo(java.util.List < RealtimeLogDeliveryInfo> realtimeLogDeliveryInfo) {
+            public Builder realtimeLogDeliveryInfo(java.util.List<RealtimeLogDeliveryInfo> realtimeLogDeliveryInfo) {
                 this.realtimeLogDeliveryInfo = realtimeLogDeliveryInfo;
                 return this;
             }

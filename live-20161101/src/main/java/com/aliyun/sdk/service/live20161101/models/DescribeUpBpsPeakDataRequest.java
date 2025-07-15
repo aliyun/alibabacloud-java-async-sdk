@@ -1,50 +1,55 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUpBpsPeakDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeUpBpsPeakDataRequest</p>
  */
 public class DescribeUpBpsPeakDataRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("DomainSwitch")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainSwitch")
     private String domainSwitch;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeUpBpsPeakDataRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.domainSwitch = builder.domainSwitch;
         this.endTime = builder.endTime;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -56,16 +61,9 @@ public class DescribeUpBpsPeakDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -97,6 +95,13 @@ public class DescribeUpBpsPeakDataRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -104,11 +109,11 @@ public class DescribeUpBpsPeakDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeUpBpsPeakDataRequest, Builder> {
-        private String regionId; 
         private String domainName; 
         private String domainSwitch; 
         private String endTime; 
         private Long ownerId; 
+        private String regionId; 
         private String startTime; 
 
         private Builder() {
@@ -117,25 +122,19 @@ public class DescribeUpBpsPeakDataRequest extends Request {
 
         private Builder(DescribeUpBpsPeakDataRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.domainName = request.domainName;
             this.domainSwitch = request.domainSwitch;
             this.endTime = request.endTime;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * DomainName.
+         * <p>The accelerated domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -144,7 +143,14 @@ public class DescribeUpBpsPeakDataRequest extends Request {
         }
 
         /**
-         * DomainSwitch.
+         * <p>Specifies whether to collect statistics at the domain name level. Valid values:</p>
+         * <ul>
+         * <li>on: collects statistics at the domain name level.</li>
+         * <li>off: collects statistics at the user level. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         public Builder domainSwitch(String domainSwitch) {
             this.putQueryParameter("DomainSwitch", domainSwitch);
@@ -153,7 +159,11 @@ public class DescribeUpBpsPeakDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of stream pulling. The time must be in UTC. The end time must be later than the start time. The maximum time range that can be specified by StartTime and EndTime is 30 days.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-10-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -171,7 +181,20 @@ public class DescribeUpBpsPeakDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The start time of stream pulling. The time must be in UTC. The maximum time range that can be specified by StartTime and EndTime is 30 days.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-10-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

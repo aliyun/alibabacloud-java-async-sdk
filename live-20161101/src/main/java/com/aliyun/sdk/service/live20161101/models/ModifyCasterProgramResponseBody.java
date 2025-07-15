@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ModifyCasterProgramResponseBody} extends {@link TeaModel}
  *
  * <p>ModifyCasterProgramResponseBody</p>
  */
 public class ModifyCasterProgramResponseBody extends TeaModel {
-    @NameInMap("CasterId")
+    @com.aliyun.core.annotation.NameInMap("CasterId")
     private String casterId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyCasterProgramResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ModifyCasterProgramResponseBody extends TeaModel {
 
     public static ModifyCasterProgramResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class ModifyCasterProgramResponseBody extends TeaModel {
         private String casterId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ModifyCasterProgramResponseBody model) {
+            this.casterId = model.casterId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * CasterId.
+         * <p>The ID of the production studio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
          */
         public Builder casterId(String casterId) {
             this.casterId = casterId;
@@ -58,7 +78,10 @@ public class ModifyCasterProgramResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

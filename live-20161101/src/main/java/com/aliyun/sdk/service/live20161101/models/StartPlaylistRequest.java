@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StartPlaylistRequest} extends {@link RequestModel}
  *
  * <p>StartPlaylistRequest</p>
  */
 public class StartPlaylistRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("Offset")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Offset")
     private Integer offset;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProgramId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProgramId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String programId;
 
-    @Query
-    @NameInMap("ResumeMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResumeMode")
     private String resumeMode;
 
-    @Query
-    @NameInMap("StartItemId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartItemId")
     private String startItemId;
 
     private StartPlaylistRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.offset = builder.offset;
         this.ownerId = builder.ownerId;
         this.programId = builder.programId;
+        this.regionId = builder.regionId;
         this.resumeMode = builder.resumeMode;
         this.startItemId = builder.startItemId;
     }
@@ -55,16 +60,9 @@ public class StartPlaylistRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -89,6 +87,13 @@ public class StartPlaylistRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resumeMode
      */
     public String getResumeMode() {
@@ -103,10 +108,10 @@ public class StartPlaylistRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StartPlaylistRequest, Builder> {
-        private String regionId; 
         private Integer offset; 
         private Long ownerId; 
         private String programId; 
+        private String regionId; 
         private String resumeMode; 
         private String startItemId; 
 
@@ -116,25 +121,20 @@ public class StartPlaylistRequest extends Request {
 
         private Builder(StartPlaylistRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.offset = request.offset;
             this.ownerId = request.ownerId;
             this.programId = request.programId;
+            this.regionId = request.regionId;
             this.resumeMode = request.resumeMode;
             this.startItemId = request.startItemId;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * Offset.
+         * <p>The offset of the position where the system starts the playback. This parameter takes effect only if the input source is a video file. Unit: milliseconds.</p>
+         * <p>A value greater than 0 indicates an offset from the first frame.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("Offset", offset);
@@ -152,7 +152,11 @@ public class StartPlaylistRequest extends Request {
         }
 
         /**
-         * ProgramId.
+         * <p>The ID of the episode list. If the episode list was created by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, check the value of the response parameter ProgramId to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
          */
         public Builder programId(String programId) {
             this.putQueryParameter("ProgramId", programId);
@@ -161,7 +165,24 @@ public class StartPlaylistRequest extends Request {
         }
 
         /**
-         * ResumeMode.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The method to resume the playback of the episode list. Valid values:</p>
+         * <ul>
+         * <li><strong>Restart</strong>: resumes the playback from the beginning.</li>
+         * <li><strong>Continue</strong>: resumes the playback from the position where the previous playback stops. The <strong>StartItemId</strong> parameter is required only if you set <strong>ResumeMode</strong> to <strong>Custom</strong>.</li>
+         * <li><strong>Custom</strong>: resumes the playback from a custom position.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Custom</p>
          */
         public Builder resumeMode(String resumeMode) {
             this.putQueryParameter("ResumeMode", resumeMode);
@@ -170,7 +191,13 @@ public class StartPlaylistRequest extends Request {
         }
 
         /**
-         * StartItemId.
+         * <p>The ID of the first episode to play. This episode is the first to play in carousel playback.</p>
+         * <blockquote>
+         * <p> This parameter is required only if you set ResumeMode to Custom.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>asdfasdfasdf****</p>
          */
         public Builder startItemId(String startItemId) {
             this.putQueryParameter("StartItemId", startItemId);

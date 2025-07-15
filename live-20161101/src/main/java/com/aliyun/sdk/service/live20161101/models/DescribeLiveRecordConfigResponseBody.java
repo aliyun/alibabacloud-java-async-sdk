@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveRecordConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveRecordConfigResponseBody</p>
  */
 public class DescribeLiveRecordConfigResponseBody extends TeaModel {
-    @NameInMap("LiveAppRecordList")
+    @com.aliyun.core.annotation.NameInMap("LiveAppRecordList")
     private LiveAppRecordList liveAppRecordList;
 
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
     private DescribeLiveRecordConfigResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
 
     public static DescribeLiveRecordConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,21 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         private Integer totalNum; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveRecordConfigResponseBody model) {
+            this.liveAppRecordList = model.liveAppRecordList;
+            this.order = model.order;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * LiveAppRecordList.
+         * <p>The list of recording configurations.</p>
          */
         public Builder liveAppRecordList(LiveAppRecordList liveAppRecordList) {
             this.liveAppRecordList = liveAppRecordList;
@@ -118,7 +140,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Order.
+         * <p>The sorting order of recording configurations by creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>desc</p>
          */
         public Builder order(String order) {
             this.order = order;
@@ -126,7 +151,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.pageNum = pageNum;
@@ -134,7 +162,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +173,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5056369B-D337-499E-B8B7-B761BD37B08A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +184,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of recording configurations that meet the specified conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -158,7 +195,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -171,20 +211,26 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveRecordConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveRecordConfigResponseBody</p>
+     */
     public static class RecordFormat extends TeaModel {
-        @NameInMap("CycleDuration")
+        @com.aliyun.core.annotation.NameInMap("CycleDuration")
         private Integer cycleDuration;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("OssObjectPrefix")
+        @com.aliyun.core.annotation.NameInMap("OssObjectPrefix")
         private String ossObjectPrefix;
 
-        @NameInMap("SliceDuration")
+        @com.aliyun.core.annotation.NameInMap("SliceDuration")
         private Integer sliceDuration;
 
-        @NameInMap("SliceOssObjectPrefix")
+        @com.aliyun.core.annotation.NameInMap("SliceOssObjectPrefix")
         private String sliceOssObjectPrefix;
 
         private RecordFormat(Builder builder) {
@@ -245,8 +291,22 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             private Integer sliceDuration; 
             private String sliceOssObjectPrefix; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecordFormat model) {
+                this.cycleDuration = model.cycleDuration;
+                this.format = model.format;
+                this.ossObjectPrefix = model.ossObjectPrefix;
+                this.sliceDuration = model.sliceDuration;
+                this.sliceOssObjectPrefix = model.sliceOssObjectPrefix;
+            } 
+
             /**
-             * CycleDuration.
+             * <p>The duration of a recording file. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder cycleDuration(Integer cycleDuration) {
                 this.cycleDuration = cycleDuration;
@@ -254,7 +314,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * <p>The format of recording files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>M3U8</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -262,7 +325,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OssObjectPrefix.
+             * <p>The naming format of a recording file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{liveApp****}/{liveStream****}</p>
              */
             public Builder ossObjectPrefix(String ossObjectPrefix) {
                 this.ossObjectPrefix = ossObjectPrefix;
@@ -270,7 +336,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SliceDuration.
+             * <p>The duration of a segment file. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder sliceDuration(Integer sliceDuration) {
                 this.sliceDuration = sliceDuration;
@@ -278,7 +347,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SliceOssObjectPrefix.
+             * <p>The naming format of a segment file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{liveApp****}/{liveStream****}/{UnixTimestamp}</p>
              */
             public Builder sliceOssObjectPrefix(String sliceOssObjectPrefix) {
                 this.sliceOssObjectPrefix = sliceOssObjectPrefix;
@@ -292,9 +364,15 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveRecordConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveRecordConfigResponseBody</p>
+     */
     public static class RecordFormatList extends TeaModel {
-        @NameInMap("RecordFormat")
-        private java.util.List < RecordFormat> recordFormat;
+        @com.aliyun.core.annotation.NameInMap("RecordFormat")
+        private java.util.List<RecordFormat> recordFormat;
 
         private RecordFormatList(Builder builder) {
             this.recordFormat = builder.recordFormat;
@@ -311,17 +389,24 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         /**
          * @return recordFormat
          */
-        public java.util.List < RecordFormat> getRecordFormat() {
+        public java.util.List<RecordFormat> getRecordFormat() {
             return this.recordFormat;
         }
 
         public static final class Builder {
-            private java.util.List < RecordFormat> recordFormat; 
+            private java.util.List<RecordFormat> recordFormat; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordFormatList model) {
+                this.recordFormat = model.recordFormat;
+            } 
 
             /**
              * RecordFormat.
              */
-            public Builder recordFormat(java.util.List < RecordFormat> recordFormat) {
+            public Builder recordFormat(java.util.List<RecordFormat> recordFormat) {
                 this.recordFormat = recordFormat;
                 return this;
             }
@@ -333,20 +418,26 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveRecordConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveRecordConfigResponseBody</p>
+     */
     public static class TranscodeRecordFormatListRecordFormat extends TeaModel {
-        @NameInMap("CycleDuration")
+        @com.aliyun.core.annotation.NameInMap("CycleDuration")
         private Integer cycleDuration;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("OssObjectPrefix")
+        @com.aliyun.core.annotation.NameInMap("OssObjectPrefix")
         private String ossObjectPrefix;
 
-        @NameInMap("SliceDuration")
+        @com.aliyun.core.annotation.NameInMap("SliceDuration")
         private Integer sliceDuration;
 
-        @NameInMap("SliceOssObjectPrefix")
+        @com.aliyun.core.annotation.NameInMap("SliceOssObjectPrefix")
         private String sliceOssObjectPrefix;
 
         private TranscodeRecordFormatListRecordFormat(Builder builder) {
@@ -407,8 +498,22 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             private Integer sliceDuration; 
             private String sliceOssObjectPrefix; 
 
+            private Builder() {
+            } 
+
+            private Builder(TranscodeRecordFormatListRecordFormat model) {
+                this.cycleDuration = model.cycleDuration;
+                this.format = model.format;
+                this.ossObjectPrefix = model.ossObjectPrefix;
+                this.sliceDuration = model.sliceDuration;
+                this.sliceOssObjectPrefix = model.sliceOssObjectPrefix;
+            } 
+
             /**
-             * CycleDuration.
+             * <p>The duration of a recording file. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3600</p>
              */
             public Builder cycleDuration(Integer cycleDuration) {
                 this.cycleDuration = cycleDuration;
@@ -416,7 +521,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * <p>The format of recording files.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>M3U8</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -424,7 +532,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OssObjectPrefix.
+             * <p>The naming format of a recording file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{liveApp****}/{liveStream****}</p>
              */
             public Builder ossObjectPrefix(String ossObjectPrefix) {
                 this.ossObjectPrefix = ossObjectPrefix;
@@ -432,7 +543,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SliceDuration.
+             * <p>The duration of a segment file. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder sliceDuration(Integer sliceDuration) {
                 this.sliceDuration = sliceDuration;
@@ -440,7 +554,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SliceOssObjectPrefix.
+             * <p>The naming format of a segment file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>record/{liveApp****}/{liveStream****}/{UnixTimestamp}</p>
              */
             public Builder sliceOssObjectPrefix(String sliceOssObjectPrefix) {
                 this.sliceOssObjectPrefix = sliceOssObjectPrefix;
@@ -454,9 +571,15 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveRecordConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveRecordConfigResponseBody</p>
+     */
     public static class TranscodeRecordFormatList extends TeaModel {
-        @NameInMap("RecordFormat")
-        private java.util.List < TranscodeRecordFormatListRecordFormat> recordFormat;
+        @com.aliyun.core.annotation.NameInMap("RecordFormat")
+        private java.util.List<TranscodeRecordFormatListRecordFormat> recordFormat;
 
         private TranscodeRecordFormatList(Builder builder) {
             this.recordFormat = builder.recordFormat;
@@ -473,17 +596,24 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         /**
          * @return recordFormat
          */
-        public java.util.List < TranscodeRecordFormatListRecordFormat> getRecordFormat() {
+        public java.util.List<TranscodeRecordFormatListRecordFormat> getRecordFormat() {
             return this.recordFormat;
         }
 
         public static final class Builder {
-            private java.util.List < TranscodeRecordFormatListRecordFormat> recordFormat; 
+            private java.util.List<TranscodeRecordFormatListRecordFormat> recordFormat; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeRecordFormatList model) {
+                this.recordFormat = model.recordFormat;
+            } 
 
             /**
              * RecordFormat.
              */
-            public Builder recordFormat(java.util.List < TranscodeRecordFormatListRecordFormat> recordFormat) {
+            public Builder recordFormat(java.util.List<TranscodeRecordFormatListRecordFormat> recordFormat) {
                 this.recordFormat = recordFormat;
                 return this;
             }
@@ -495,9 +625,15 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveRecordConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveRecordConfigResponseBody</p>
+     */
     public static class TranscodeTemplates extends TeaModel {
-        @NameInMap("Templates")
-        private java.util.List < String > templates;
+        @com.aliyun.core.annotation.NameInMap("Templates")
+        private java.util.List<String> templates;
 
         private TranscodeTemplates(Builder builder) {
             this.templates = builder.templates;
@@ -514,17 +650,24 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         /**
          * @return templates
          */
-        public java.util.List < String > getTemplates() {
+        public java.util.List<String> getTemplates() {
             return this.templates;
         }
 
         public static final class Builder {
-            private java.util.List < String > templates; 
+            private java.util.List<String> templates; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodeTemplates model) {
+                this.templates = model.templates;
+            } 
 
             /**
              * Templates.
              */
-            public Builder templates(java.util.List < String > templates) {
+            public Builder templates(java.util.List<String> templates) {
                 this.templates = templates;
                 return this;
             }
@@ -536,46 +679,56 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveRecordConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveRecordConfigResponseBody</p>
+     */
     public static class LiveAppRecord extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DelayTime")
+        private Integer delayTime;
+
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("OnDemond")
+        @com.aliyun.core.annotation.NameInMap("OnDemond")
         private Integer onDemond;
 
-        @NameInMap("OssBucket")
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
         private String ossBucket;
 
-        @NameInMap("OssEndpoint")
+        @com.aliyun.core.annotation.NameInMap("OssEndpoint")
         private String ossEndpoint;
 
-        @NameInMap("RecordFormatList")
+        @com.aliyun.core.annotation.NameInMap("RecordFormatList")
         private RecordFormatList recordFormatList;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
-        @NameInMap("TranscodeRecordFormatList")
+        @com.aliyun.core.annotation.NameInMap("TranscodeRecordFormatList")
         private TranscodeRecordFormatList transcodeRecordFormatList;
 
-        @NameInMap("TranscodeTemplates")
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplates")
         private TranscodeTemplates transcodeTemplates;
 
         private LiveAppRecord(Builder builder) {
             this.appName = builder.appName;
             this.createTime = builder.createTime;
+            this.delayTime = builder.delayTime;
             this.domainName = builder.domainName;
             this.endTime = builder.endTime;
             this.onDemond = builder.onDemond;
@@ -608,6 +761,13 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return delayTime
+         */
+        public Integer getDelayTime() {
+            return this.delayTime;
         }
 
         /**
@@ -683,6 +843,7 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String appName; 
             private String createTime; 
+            private Integer delayTime; 
             private String domainName; 
             private String endTime; 
             private Integer onDemond; 
@@ -694,8 +855,30 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             private TranscodeRecordFormatList transcodeRecordFormatList; 
             private TranscodeTemplates transcodeTemplates; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveAppRecord model) {
+                this.appName = model.appName;
+                this.createTime = model.createTime;
+                this.delayTime = model.delayTime;
+                this.domainName = model.domainName;
+                this.endTime = model.endTime;
+                this.onDemond = model.onDemond;
+                this.ossBucket = model.ossBucket;
+                this.ossEndpoint = model.ossEndpoint;
+                this.recordFormatList = model.recordFormatList;
+                this.startTime = model.startTime;
+                this.streamName = model.streamName;
+                this.transcodeRecordFormatList = model.transcodeRecordFormatList;
+                this.transcodeTemplates = model.transcodeTemplates;
+            } 
+
             /**
-             * AppName.
+             * <p>The name of the application to which the live stream belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveApp****</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -703,7 +886,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the recording configuration was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-05-20T09:33:38Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -711,7 +897,21 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The maximum interruption duration of the live stream. If the actual interruption duration exceeds the threshold, a new recording is generated. Valid values: 15 to 21600. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>180</p>
+             */
+            public Builder delayTime(Integer delayTime) {
+                this.delayTime = delayTime;
+                return this;
+            }
+
+            /**
+             * <p>The name of the main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -719,7 +919,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the recording. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-11-08T03:49:18Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -727,7 +930,19 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OnDemond.
+             * <p>The configuration of on-demand recording. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disables on-demand recording.</li>
+             * <li><strong>1</strong>: enables on-demand recording that is triggered by HTTP callbacks.</li>
+             * <li><strong>2</strong>: enables on-demand recording that is triggered by stream ingest parameters.</li>
+             * <li><strong>7</strong>: enables on-demand recording by calling the <a href="https://help.aliyun.com/document_detail/85907.html">RealTimeRecordCommand</a> operation to manually start or stop recording.</li>
+             * </ul>
+             * <blockquote>
+             * <p> If you set OnDemand to <strong>1</strong>, you must call the <a href="https://help.aliyun.com/document_detail/51831.html">AddLiveRecordNotifyConfig</a> operation to configure OnDemandUrl. Otherwise, the configuration of on-demand recording is invalid.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder onDemond(Integer onDemond) {
                 this.onDemond = onDemond;
@@ -735,7 +950,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OssBucket.
+             * <p>The name of the Object Storage Service (OSS) bucket in which the recordings are stored.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveBucket****</p>
              */
             public Builder ossBucket(String ossBucket) {
                 this.ossBucket = ossBucket;
@@ -743,7 +961,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OssEndpoint.
+             * <p>The endpoint of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-oss-****.aliyuncs.com</p>
              */
             public Builder ossEndpoint(String ossEndpoint) {
                 this.ossEndpoint = ossEndpoint;
@@ -751,7 +972,7 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * RecordFormatList.
+             * <p>The recording formats of original streams.</p>
              */
             public Builder recordFormatList(RecordFormatList recordFormatList) {
                 this.recordFormatList = recordFormatList;
@@ -759,7 +980,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the recording. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-11-08T02:49:18Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -767,7 +991,10 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * StreamName.
+             * <p>The name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveStream****</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -775,7 +1002,7 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeRecordFormatList.
+             * <p>The recording formats of transcoded streams.</p>
              */
             public Builder transcodeRecordFormatList(TranscodeRecordFormatList transcodeRecordFormatList) {
                 this.transcodeRecordFormatList = transcodeRecordFormatList;
@@ -783,7 +1010,7 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeTemplates.
+             * <p>The transcoding templates.</p>
              */
             public Builder transcodeTemplates(TranscodeTemplates transcodeTemplates) {
                 this.transcodeTemplates = transcodeTemplates;
@@ -797,9 +1024,15 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveRecordConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveRecordConfigResponseBody</p>
+     */
     public static class LiveAppRecordList extends TeaModel {
-        @NameInMap("LiveAppRecord")
-        private java.util.List < LiveAppRecord> liveAppRecord;
+        @com.aliyun.core.annotation.NameInMap("LiveAppRecord")
+        private java.util.List<LiveAppRecord> liveAppRecord;
 
         private LiveAppRecordList(Builder builder) {
             this.liveAppRecord = builder.liveAppRecord;
@@ -816,17 +1049,24 @@ public class DescribeLiveRecordConfigResponseBody extends TeaModel {
         /**
          * @return liveAppRecord
          */
-        public java.util.List < LiveAppRecord> getLiveAppRecord() {
+        public java.util.List<LiveAppRecord> getLiveAppRecord() {
             return this.liveAppRecord;
         }
 
         public static final class Builder {
-            private java.util.List < LiveAppRecord> liveAppRecord; 
+            private java.util.List<LiveAppRecord> liveAppRecord; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveAppRecordList model) {
+                this.liveAppRecord = model.liveAppRecord;
+            } 
 
             /**
              * LiveAppRecord.
              */
-            public Builder liveAppRecord(java.util.List < LiveAppRecord> liveAppRecord) {
+            public Builder liveAppRecord(java.util.List<LiveAppRecord> liveAppRecord) {
                 this.liveAppRecord = liveAppRecord;
                 return this;
             }

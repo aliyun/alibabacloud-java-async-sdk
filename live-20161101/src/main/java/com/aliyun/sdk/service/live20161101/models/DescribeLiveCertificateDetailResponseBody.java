@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveCertificateDetailResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveCertificateDetailResponseBody</p>
  */
 public class DescribeLiveCertificateDetailResponseBody extends TeaModel {
-    @NameInMap("Cert")
+    @com.aliyun.core.annotation.NameInMap("Cert")
     private String cert;
 
-    @NameInMap("CertId")
+    @com.aliyun.core.annotation.NameInMap("CertId")
     private Long certId;
 
-    @NameInMap("CertName")
+    @com.aliyun.core.annotation.NameInMap("CertName")
     private String certName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveCertificateDetailResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class DescribeLiveCertificateDetailResponseBody extends TeaModel {
 
     public static DescribeLiveCertificateDetailResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class DescribeLiveCertificateDetailResponseBody extends TeaModel {
         private String certName; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveCertificateDetailResponseBody model) {
+            this.cert = model.cert;
+            this.certId = model.certId;
+            this.certName = model.certName;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Cert.
+         * <p>The content of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----****-----END CERTIFICATE-----</p>
          */
         public Builder cert(String cert) {
             this.cert = cert;
@@ -82,7 +104,10 @@ public class DescribeLiveCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertId.
+         * <p>The ID of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>23451111</p>
          */
         public Builder certId(Long certId) {
             this.certId = certId;
@@ -90,7 +115,10 @@ public class DescribeLiveCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * CertName.
+         * <p>The name of the certificate.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cert-****</p>
          */
         public Builder certName(String certName) {
             this.certName = certName;
@@ -98,7 +126,10 @@ public class DescribeLiveCertificateDetailResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C7C69682-7F88-40DD-A198-10D0309E439B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

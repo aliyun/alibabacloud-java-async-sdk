@@ -1,70 +1,75 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveProducerUsageDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeLiveProducerUsageDataRequest</p>
  */
 public class DescribeLiveProducerUsageDataRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Instance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Instance")
     private String instance;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private String interval;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("SplitBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SplitBy")
     private String splitBy;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("app")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("app")
     private String app;
 
     private DescribeLiveProducerUsageDataRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
         this.instance = builder.instance;
         this.interval = builder.interval;
         this.ownerId = builder.ownerId;
         this.region = builder.region;
+        this.regionId = builder.regionId;
         this.splitBy = builder.splitBy;
         this.startTime = builder.startTime;
         this.type = builder.type;
@@ -79,16 +84,9 @@ public class DescribeLiveProducerUsageDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -134,6 +132,13 @@ public class DescribeLiveProducerUsageDataRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return splitBy
      */
     public String getSplitBy() {
@@ -162,13 +167,13 @@ public class DescribeLiveProducerUsageDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveProducerUsageDataRequest, Builder> {
-        private String regionId; 
         private String domainName; 
         private String endTime; 
         private String instance; 
         private String interval; 
         private Long ownerId; 
         private String region; 
+        private String regionId; 
         private String splitBy; 
         private String startTime; 
         private String type; 
@@ -180,13 +185,13 @@ public class DescribeLiveProducerUsageDataRequest extends Request {
 
         private Builder(DescribeLiveProducerUsageDataRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.domainName = request.domainName;
             this.endTime = request.endTime;
             this.instance = request.instance;
             this.interval = request.interval;
             this.ownerId = request.ownerId;
             this.region = request.region;
+            this.regionId = request.regionId;
             this.splitBy = request.splitBy;
             this.startTime = request.startTime;
             this.type = request.type;
@@ -194,16 +199,14 @@ public class DescribeLiveProducerUsageDataRequest extends Request {
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * DomainName.
+         * <p>The streaming domain of the production studio.</p>
+         * <ul>
+         * <li>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</li>
+         * <li>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -212,7 +215,13 @@ public class DescribeLiveProducerUsageDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * <blockquote>
+         * <p> The end time must be later than the start time.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-31T15:59:59Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -221,7 +230,13 @@ public class DescribeLiveProducerUsageDataRequest extends Request {
         }
 
         /**
-         * Instance.
+         * <p>The production studio instance that you want to query. You can specify one or more production studio instances. Separate multiple instances with commas (,).</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the usage data of all production studio instances is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>a17d0184-462d-4630-b2a6-8c26dde2****</p>
          */
         public Builder instance(String instance) {
             this.putQueryParameter("Instance", instance);
@@ -230,7 +245,10 @@ public class DescribeLiveProducerUsageDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time granularity for a query. Valid values: 3600 and 86400. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -248,7 +266,10 @@ public class DescribeLiveProducerUsageDataRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The region in which the domain name resides. If you leave this parameter empty, the data of all regions is returned. You can specify multiple regions by separating them with commas (,).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -257,7 +278,22 @@ public class DescribeLiveProducerUsageDataRequest extends Request {
         }
 
         /**
-         * SplitBy.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The key that is used to group data. You can specify one or more keys. Separate multiple keys with commas (,). Valid values: domain, region, instance, and type. The data for a key that you specify by using the SplitBy parameter is returned by group.</p>
+         * <blockquote>
+         * <p> If you do not set this parameter, the aggregated data is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>type</p>
          */
         public Builder splitBy(String splitBy) {
             this.putQueryParameter("SplitBy", splitBy);
@@ -266,7 +302,10 @@ public class DescribeLiveProducerUsageDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-09-30T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -275,7 +314,17 @@ public class DescribeLiveProducerUsageDataRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>The type of the production studio. You can specify one or more production studio types. Separate multiple types with commas (,). Valid values:</p>
+         * <ul>
+         * <li><strong>slidelive</strong>: playlist-mode studio.</li>
+         * <li><strong>universal</strong>: general studio.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If you do not set this parameter, the usage data of all types of production studios is returned.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>slidelive</p>
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -284,7 +333,10 @@ public class DescribeLiveProducerUsageDataRequest extends Request {
         }
 
         /**
-         * app.
+         * <p>The name of the application to which the live stream belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
          */
         public Builder app(String app) {
             this.putQueryParameter("app", app);

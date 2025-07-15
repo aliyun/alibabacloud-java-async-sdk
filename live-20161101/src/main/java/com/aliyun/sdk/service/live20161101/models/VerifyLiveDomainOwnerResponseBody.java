@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link VerifyLiveDomainOwnerResponseBody} extends {@link TeaModel}
  *
  * <p>VerifyLiveDomainOwnerResponseBody</p>
  */
 public class VerifyLiveDomainOwnerResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private VerifyLiveDomainOwnerResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class VerifyLiveDomainOwnerResponseBody extends TeaModel {
 
     public static VerifyLiveDomainOwnerResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class VerifyLiveDomainOwnerResponseBody extends TeaModel {
         private String content; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(VerifyLiveDomainOwnerResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Content.
+         * <p>The verification information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>verify_dffeb6610035dcb77b413******</p>
          */
         public Builder content(String content) {
             this.content = content;
@@ -58,7 +78,10 @@ public class VerifyLiveDomainOwnerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1BA6D7CE-55F1-5926-8764-F8663473AD0D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

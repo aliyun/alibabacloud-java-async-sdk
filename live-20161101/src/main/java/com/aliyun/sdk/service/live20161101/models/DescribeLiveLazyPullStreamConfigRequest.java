@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveLazyPullStreamConfigRequest} extends {@link RequestModel}
  *
  * <p>DescribeLiveLazyPullStreamConfigRequest</p>
  */
 public class DescribeLiveLazyPullStreamConfigRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     private DescribeLiveLazyPullStreamConfigRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -45,16 +50,9 @@ public class DescribeLiveLazyPullStreamConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -78,11 +76,18 @@ public class DescribeLiveLazyPullStreamConfigRequest extends Request {
         return this.ownerId;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeLiveLazyPullStreamConfigRequest, Builder> {
-        private String regionId; 
         private String appName; 
         private String domainName; 
         private Long ownerId; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -90,23 +95,17 @@ public class DescribeLiveLazyPullStreamConfigRequest extends Request {
 
         private Builder(DescribeLiveLazyPullStreamConfigRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appName = request.appName;
             this.domainName = request.domainName;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -115,7 +114,11 @@ public class DescribeLiveLazyPullStreamConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -129,6 +132,15 @@ public class DescribeLiveLazyPullStreamConfigRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

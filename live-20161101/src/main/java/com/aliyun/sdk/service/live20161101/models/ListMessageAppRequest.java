@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMessageAppRequest} extends {@link RequestModel}
  *
  * <p>ListMessageAppRequest</p>
  */
 public class ListMessageAppRequest extends Request {
-    @Body
-    @NameInMap("PageNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNum;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Body
-    @NameInMap("SortType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SortType")
     private Integer sortType;
 
     private ListMessageAppRequest(Builder builder) {
@@ -41,7 +46,7 @@ public class ListMessageAppRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +89,11 @@ public class ListMessageAppRequest extends Request {
         } 
 
         /**
-         * PageNum.
+         * <p>The number of the page to return. Default value: 1. Valid values: 1 to 100000.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putBodyParameter("PageNum", pageNum);
@@ -93,7 +102,11 @@ public class ListMessageAppRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of applications to return on each page. Default value: 20. Valid values: 1 to 50.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -102,7 +115,14 @@ public class ListMessageAppRequest extends Request {
         }
 
         /**
-         * SortType.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>0: ascending order by time</li>
+         * <li>1: descending order by time</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sortType(Integer sortType) {
             this.putBodyParameter("SortType", sortType);

@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamRecordContentRequest} extends {@link RequestModel}
  *
  * <p>DescribeLiveStreamRecordContentRequest</p>
  */
 public class DescribeLiveStreamRecordContentRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("StreamName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String streamName;
 
     private DescribeLiveStreamRecordContentRequest(Builder builder) {
@@ -64,7 +69,7 @@ public class DescribeLiveStreamRecordContentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -143,7 +148,11 @@ public class DescribeLiveStreamRecordContentRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -152,7 +161,11 @@ public class DescribeLiveStreamRecordContentRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The operation that you want to perform. Set the value to <strong>DescribeLiveStreamRecordContent</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -161,7 +174,11 @@ public class DescribeLiveStreamRecordContentRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The beginning of the time range to query. You can only query the recordings in the last 6 months. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-22T08:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -188,7 +205,11 @@ public class DescribeLiveStreamRecordContentRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The name of the live stream.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-21T08:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -197,7 +218,11 @@ public class DescribeLiveStreamRecordContentRequest extends Request {
         }
 
         /**
-         * StreamName.
+         * <p>The name of the application to which the live stream belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveStream****</p>
          */
         public Builder streamName(String streamName) {
             this.putQueryParameter("StreamName", streamName);

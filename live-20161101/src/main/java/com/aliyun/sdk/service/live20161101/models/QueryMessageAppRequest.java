@@ -1,35 +1,40 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QueryMessageAppRequest} extends {@link RequestModel}
  *
  * <p>QueryMessageAppRequest</p>
  */
 public class QueryMessageAppRequest extends Request {
-    @Body
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Body
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Body
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("SortType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SortType")
     private Integer sortType;
 
     private QueryMessageAppRequest(Builder builder) {
@@ -49,7 +54,7 @@ public class QueryMessageAppRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -110,7 +115,10 @@ public class QueryMessageAppRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the interactive messaging application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VKL3***</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -119,7 +127,10 @@ public class QueryMessageAppRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The name of the interactive messaging application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testApp</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -128,7 +139,10 @@ public class QueryMessageAppRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The number of the page to return. Default value: 1. Valid values: 1 to 100000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putBodyParameter("PageNum", pageNum);
@@ -137,7 +151,10 @@ public class QueryMessageAppRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of applications to return on each page. Default value: 20. Valid values: 1 to 50.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -146,7 +163,14 @@ public class QueryMessageAppRequest extends Request {
         }
 
         /**
-         * SortType.
+         * <p>The sort order. Valid values:</p>
+         * <ul>
+         * <li>0: ascending order by time</li>
+         * <li>1: descending order by time</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder sortType(Integer sortType) {
             this.putBodyParameter("SortType", sortType);

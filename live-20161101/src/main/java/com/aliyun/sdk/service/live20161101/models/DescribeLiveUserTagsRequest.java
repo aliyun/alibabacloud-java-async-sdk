@@ -1,29 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveUserTagsRequest} extends {@link RequestModel}
  *
  * <p>DescribeLiveUserTagsRequest</p>
  */
 public class DescribeLiveUserTagsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     private DescribeLiveUserTagsRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -34,16 +39,9 @@ public class DescribeLiveUserTagsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -53,9 +51,16 @@ public class DescribeLiveUserTagsRequest extends Request {
         return this.ownerId;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeLiveUserTagsRequest, Builder> {
-        private String regionId; 
         private Long ownerId; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -63,18 +68,9 @@ public class DescribeLiveUserTagsRequest extends Request {
 
         private Builder(DescribeLiveUserTagsRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
         } 
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * OwnerId.
@@ -82,6 +78,15 @@ public class DescribeLiveUserTagsRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

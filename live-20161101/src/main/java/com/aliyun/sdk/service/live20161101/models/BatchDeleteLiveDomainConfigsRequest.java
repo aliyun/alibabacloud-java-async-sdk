@@ -1,37 +1,42 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link BatchDeleteLiveDomainConfigsRequest} extends {@link RequestModel}
  *
  * <p>BatchDeleteLiveDomainConfigsRequest</p>
  */
 public class BatchDeleteLiveDomainConfigsRequest extends Request {
-    @Query
-    @NameInMap("DomainNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainNames;
 
-    @Query
-    @NameInMap("FunctionNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FunctionNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String functionNames;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private BatchDeleteLiveDomainConfigsRequest(Builder builder) {
@@ -51,7 +56,7 @@ public class BatchDeleteLiveDomainConfigsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -112,7 +117,11 @@ public class BatchDeleteLiveDomainConfigsRequest extends Request {
         } 
 
         /**
-         * DomainNames.
+         * <p>The ingest domain or streaming domain. Separate multiple domain names with commas (,).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.aliyundoc.com,example.aliyundoc.com,example.com</p>
          */
         public Builder domainNames(String domainNames) {
             this.putQueryParameter("DomainNames", domainNames);
@@ -121,7 +130,11 @@ public class BatchDeleteLiveDomainConfigsRequest extends Request {
         }
 
         /**
-         * FunctionNames.
+         * <p>The names of the features. Separate multiple features with commas (,). For more information, see <strong>Features specified by the Functions parameter</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>referer_white_list_set,ip_black_list_set</p>
          */
         public Builder functionNames(String functionNames) {
             this.putQueryParameter("FunctionNames", functionNames);

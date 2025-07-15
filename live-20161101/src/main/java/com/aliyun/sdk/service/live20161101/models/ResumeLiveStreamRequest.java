@@ -1,43 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResumeLiveStreamRequest} extends {@link RequestModel}
  *
  * <p>ResumeLiveStreamRequest</p>
  */
 public class ResumeLiveStreamRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("LiveStreamType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LiveStreamType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String liveStreamType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("StreamName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String streamName;
 
     private ResumeLiveStreamRequest(Builder builder) {
@@ -58,7 +63,7 @@ public class ResumeLiveStreamRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -128,7 +133,11 @@ public class ResumeLiveStreamRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs. You can specify an asterisk (*) as the value to match all applications. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -137,7 +146,11 @@ public class ResumeLiveStreamRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The ingest domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -146,7 +159,11 @@ public class ResumeLiveStreamRequest extends Request {
         }
 
         /**
-         * LiveStreamType.
+         * <p>Specifies whether the live stream is ingested by a streamer or played by a client. Set the value to <strong>publisher</strong>, which specifies that the live stream is ingested by a streamer.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>publisher</p>
          */
         public Builder liveStreamType(String liveStreamType) {
             this.putQueryParameter("LiveStreamType", liveStreamType);
@@ -173,7 +190,11 @@ public class ResumeLiveStreamRequest extends Request {
         }
 
         /**
-         * StreamName.
+         * <p>The name of the ingested stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveStream****</p>
          */
         public Builder streamName(String streamName) {
             this.putQueryParameter("StreamName", streamName);

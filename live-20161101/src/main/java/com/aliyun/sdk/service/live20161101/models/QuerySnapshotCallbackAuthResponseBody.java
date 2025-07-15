@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link QuerySnapshotCallbackAuthResponseBody} extends {@link TeaModel}
  *
  * <p>QuerySnapshotCallbackAuthResponseBody</p>
  */
 public class QuerySnapshotCallbackAuthResponseBody extends TeaModel {
-    @NameInMap("CallbackAuthKey")
+    @com.aliyun.core.annotation.NameInMap("CallbackAuthKey")
     private String callbackAuthKey;
 
-    @NameInMap("CallbackReqAuth")
+    @com.aliyun.core.annotation.NameInMap("CallbackReqAuth")
     private String callbackReqAuth;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QuerySnapshotCallbackAuthResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class QuerySnapshotCallbackAuthResponseBody extends TeaModel {
 
     public static QuerySnapshotCallbackAuthResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class QuerySnapshotCallbackAuthResponseBody extends TeaModel {
         private String domainName; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(QuerySnapshotCallbackAuthResponseBody model) {
+            this.callbackAuthKey = model.callbackAuthKey;
+            this.callbackReqAuth = model.callbackReqAuth;
+            this.domainName = model.domainName;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * CallbackAuthKey.
+         * <p>The callback authentication key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourkey</p>
          */
         public Builder callbackAuthKey(String callbackAuthKey) {
             this.callbackAuthKey = callbackAuthKey;
@@ -82,7 +104,14 @@ public class QuerySnapshotCallbackAuthResponseBody extends TeaModel {
         }
 
         /**
-         * CallbackReqAuth.
+         * <p>Indicates whether callback authentication is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>yes</strong>: Callback authentication is enabled.</li>
+         * <li><strong>no</strong>: Callback authentication is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yes</p>
          */
         public Builder callbackReqAuth(String callbackReqAuth) {
             this.callbackReqAuth = callbackReqAuth;
@@ -90,7 +119,10 @@ public class QuerySnapshotCallbackAuthResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -98,7 +130,10 @@ public class QuerySnapshotCallbackAuthResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD5</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

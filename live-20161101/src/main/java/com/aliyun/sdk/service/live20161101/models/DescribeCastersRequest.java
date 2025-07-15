@@ -1,68 +1,80 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCastersRequest} extends {@link RequestModel}
  *
  * <p>DescribeCastersRequest</p>
  */
 public class DescribeCastersRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("CasterId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CasterId")
     private String casterId;
 
-    @Query
-    @NameInMap("CasterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CasterName")
     private String casterName;
 
-    @Query
-    @NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
     private Integer chargeType;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("NormType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NormType")
     private String normType;
 
-    @Query
-    @NameInMap("OrderByModifyAsc")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderByModifyAsc")
     private String orderByModifyAsc;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List<Tag> tag;
 
     private DescribeCastersRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.casterName = builder.casterName;
         this.chargeType = builder.chargeType;
@@ -72,8 +84,11 @@ public class DescribeCastersRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.startTime = builder.startTime;
         this.status = builder.status;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -84,16 +99,9 @@ public class DescribeCastersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -160,6 +168,20 @@ public class DescribeCastersRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -173,8 +195,14 @@ public class DescribeCastersRequest extends Request {
         return this.status;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List<Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<DescribeCastersRequest, Builder> {
-        private String regionId; 
         private String casterId; 
         private String casterName; 
         private Integer chargeType; 
@@ -184,8 +212,11 @@ public class DescribeCastersRequest extends Request {
         private Long ownerId; 
         private Integer pageNum; 
         private Integer pageSize; 
+        private String regionId; 
+        private String resourceGroupId; 
         private String startTime; 
         private Integer status; 
+        private java.util.List<Tag> tag; 
 
         private Builder() {
             super();
@@ -193,7 +224,6 @@ public class DescribeCastersRequest extends Request {
 
         private Builder(DescribeCastersRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.casterId = request.casterId;
             this.casterName = request.casterName;
             this.chargeType = request.chargeType;
@@ -203,21 +233,30 @@ public class DescribeCastersRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.startTime = request.startTime;
             this.status = request.status;
+            this.tag = request.tag;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * CasterId.
+         * <p>The ID of the production studio.</p>
+         * <ul>
+         * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848012.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
+         * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the ApsaraVideo Live console and click Production Studios in the left-side navigation pane.</li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>You can find the ID of the production studio in the Instance ID/Name column.</p>
+         * </li>
+         * <li><p>If you leave this parameter empty, the data of all production studios is returned.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>LIVEPRODUCER_POST-cn-0pp1czt****</p>
          */
         public Builder casterId(String casterId) {
             this.putQueryParameter("CasterId", casterId);
@@ -226,7 +265,10 @@ public class DescribeCastersRequest extends Request {
         }
 
         /**
-         * CasterName.
+         * <p>The name of the production studio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveCaster****</p>
          */
         public Builder casterName(String casterName) {
             this.putQueryParameter("CasterName", casterName);
@@ -235,7 +277,14 @@ public class DescribeCastersRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * <p>The billing method. Valid values:</p>
+         * <ul>
+         * <li>0: the subscription billing method</li>
+         * <li>1: the pay-as-you-go billing method</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder chargeType(Integer chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -244,7 +293,10 @@ public class DescribeCastersRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-06-29T11:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -253,7 +305,16 @@ public class DescribeCastersRequest extends Request {
         }
 
         /**
-         * NormType.
+         * <p>The type of the production studio. Valid values:</p>
+         * <ul>
+         * <li>1: general mode</li>
+         * <li>3: lightweight carousel playback mode</li>
+         * <li>4: virtual studio</li>
+         * <li>6: playlist mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder normType(String normType) {
             this.putQueryParameter("NormType", normType);
@@ -262,7 +323,13 @@ public class DescribeCastersRequest extends Request {
         }
 
         /**
-         * OrderByModifyAsc.
+         * <p>Specifies whether to sort the production studios in ascending order based on the modification time.</p>
+         * <blockquote>
+         * <p> If you leave this parameter empty, the default value is used. Default value: false.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         public Builder orderByModifyAsc(String orderByModifyAsc) {
             this.putQueryParameter("OrderByModifyAsc", orderByModifyAsc);
@@ -280,7 +347,10 @@ public class DescribeCastersRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The number of the page to return.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -289,7 +359,10 @@ public class DescribeCastersRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of templates to return on each page. If you leave this parameter empty, the default value is used. Default value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -298,7 +371,31 @@ public class DescribeCastersRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">Resource groups</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-aekzw******</p>
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-06-29T09:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -307,11 +404,27 @@ public class DescribeCastersRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the production studio. Valid values:</p>
+         * <ul>
+         * <li>0: idle</li>
+         * <li>1: streaming</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);
             this.status = status;
+            return this;
+        }
+
+        /**
+         * <p>The tags.</p>
+         */
+        public Builder tag(java.util.List<Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
             return this;
         }
 
@@ -322,4 +435,85 @@ public class DescribeCastersRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCastersRequest} extends {@link TeaModel}
+     *
+     * <p>DescribeCastersRequest</p>
+     */
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
+            /**
+             * <p>The key of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestKey</p>
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * <p>The value of the tag.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>TestValue</p>
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

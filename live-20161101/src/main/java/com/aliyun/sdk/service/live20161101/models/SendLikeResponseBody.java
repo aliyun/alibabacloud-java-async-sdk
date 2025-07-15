@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendLikeResponseBody} extends {@link TeaModel}
  *
  * <p>SendLikeResponseBody</p>
  */
 public class SendLikeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private SendLikeResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class SendLikeResponseBody extends TeaModel {
 
     public static SendLikeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class SendLikeResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(SendLikeResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-****-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,7 @@ public class SendLikeResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,8 +91,14 @@ public class SendLikeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link SendLikeResponseBody} extends {@link TeaModel}
+     *
+     * <p>SendLikeResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("LikeCount")
+        @com.aliyun.core.annotation.NameInMap("LikeCount")
         private Integer likeCount;
 
         private Result(Builder builder) {
@@ -97,8 +123,18 @@ public class SendLikeResponseBody extends TeaModel {
         public static final class Builder {
             private Integer likeCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.likeCount = model.likeCount;
+            } 
+
             /**
-             * LikeCount.
+             * <p>The number of likes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder likeCount(Integer likeCount) {
                 this.likeCount = likeCount;

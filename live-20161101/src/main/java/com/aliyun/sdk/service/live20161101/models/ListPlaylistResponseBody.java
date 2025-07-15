@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPlaylistResponseBody} extends {@link TeaModel}
  *
  * <p>ListPlaylistResponseBody</p>
  */
 public class ListPlaylistResponseBody extends TeaModel {
-    @NameInMap("ProgramList")
-    private java.util.List < ProgramList> programList;
+    @com.aliyun.core.annotation.NameInMap("ProgramList")
+    private java.util.List<ProgramList> programList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListPlaylistResponseBody(Builder builder) {
@@ -35,10 +40,14 @@ public class ListPlaylistResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return programList
      */
-    public java.util.List < ProgramList> getProgramList() {
+    public java.util.List<ProgramList> getProgramList() {
         return this.programList;
     }
 
@@ -57,20 +66,32 @@ public class ListPlaylistResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ProgramList> programList; 
+        private java.util.List<ProgramList> programList; 
         private String requestId; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListPlaylistResponseBody model) {
+            this.programList = model.programList;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
-         * ProgramList.
+         * <p>The episode lists.</p>
          */
-        public Builder programList(java.util.List < ProgramList> programList) {
+        public Builder programList(java.util.List<ProgramList> programList) {
             this.programList = programList;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c6a2a0d-f228-4a64-af62-20e91b96****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +99,10 @@ public class ListPlaylistResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of episode lists returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -91,23 +115,29 @@ public class ListPlaylistResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPlaylistResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPlaylistResponseBody</p>
+     */
     public static class ProgramList extends TeaModel {
-        @NameInMap("CasterId")
+        @com.aliyun.core.annotation.NameInMap("CasterId")
         private String casterId;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("ProgramId")
+        @com.aliyun.core.annotation.NameInMap("ProgramId")
         private String programId;
 
-        @NameInMap("ProgramName")
+        @com.aliyun.core.annotation.NameInMap("ProgramName")
         private String programName;
 
-        @NameInMap("RepeatNumber")
+        @com.aliyun.core.annotation.NameInMap("RepeatNumber")
         private Integer repeatNumber;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private ProgramList(Builder builder) {
@@ -177,8 +207,23 @@ public class ListPlaylistResponseBody extends TeaModel {
             private Integer repeatNumber; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProgramList model) {
+                this.casterId = model.casterId;
+                this.domainName = model.domainName;
+                this.programId = model.programId;
+                this.programName = model.programName;
+                this.repeatNumber = model.repeatNumber;
+                this.status = model.status;
+            } 
+
             /**
-             * CasterId.
+             * <p>The ID of the production studio to which the episode list belongs. You can use the ID as a request parameter in the API operation that is used to add a layout to the virtual studio, delete a layout in the virtual studio, modify a layout of the virtual studio, or query layouts of the virtual studio.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>casdfasdfasfdasdflkasjdflaj****</p>
              */
             public Builder casterId(String casterId) {
                 this.casterId = casterId;
@@ -186,7 +231,10 @@ public class ListPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -194,7 +242,10 @@ public class ListPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * ProgramId.
+             * <p>The ID of the episode list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c09f3d63-eacf-4fbf-bd48-a07a6ba7****</p>
              */
             public Builder programId(String programId) {
                 this.programId = programId;
@@ -202,7 +253,10 @@ public class ListPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * ProgramName.
+             * <p>The name of the episode list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>playlist1</p>
              */
             public Builder programName(String programName) {
                 this.programName = programName;
@@ -210,7 +264,15 @@ public class ListPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * RepeatNumber.
+             * <p>The number of playbacks after the first playback is complete. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong> (default): specifies that the episode list is played only once.</li>
+             * <li><strong>-1</strong>: specifies that the episode list is played in loop mode.</li>
+             * <li>Positive integer: specifies the number of times the episode list repeats after the first playback is complete.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder repeatNumber(Integer repeatNumber) {
                 this.repeatNumber = repeatNumber;
@@ -218,7 +280,14 @@ public class ListPlaylistResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the episode list. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: stopped</li>
+             * <li><strong>1</strong>: running</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetLiveDomainStagingConfigResponseBody} extends {@link TeaModel}
  *
  * <p>SetLiveDomainStagingConfigResponseBody</p>
  */
 public class SetLiveDomainStagingConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetLiveDomainStagingConfigResponseBody(Builder builder) {
@@ -27,6 +32,10 @@ public class SetLiveDomainStagingConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -37,8 +46,18 @@ public class SetLiveDomainStagingConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(SetLiveDomainStagingConfigResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>04F0F334-1335-436C-A1D7-6C044FE73368</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

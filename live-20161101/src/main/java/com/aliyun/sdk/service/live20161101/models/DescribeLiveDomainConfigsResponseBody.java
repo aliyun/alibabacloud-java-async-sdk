@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveDomainConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveDomainConfigsResponseBody</p>
  */
 public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
-    @NameInMap("DomainConfigs")
+    @com.aliyun.core.annotation.NameInMap("DomainConfigs")
     private DomainConfigs domainConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveDomainConfigsResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
 
     public static DescribeLiveDomainConfigsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
         private DomainConfigs domainConfigs; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveDomainConfigsResponseBody model) {
+            this.domainConfigs = model.domainConfigs;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * DomainConfigs.
+         * <p>The configurations of the domain name.</p>
          */
         public Builder domainConfigs(DomainConfigs domainConfigs) {
             this.domainConfigs = domainConfigs;
@@ -58,7 +75,10 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F8AA0364-0FDB-4AD5-AC74-D69FAB8924ED</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +91,17 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainConfigsResponseBody</p>
+     */
     public static class FunctionArg extends TeaModel {
-        @NameInMap("ArgName")
+        @com.aliyun.core.annotation.NameInMap("ArgName")
         private String argName;
 
-        @NameInMap("ArgValue")
+        @com.aliyun.core.annotation.NameInMap("ArgValue")
         private String argValue;
 
         private FunctionArg(Builder builder) {
@@ -109,8 +135,19 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
             private String argName; 
             private String argValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(FunctionArg model) {
+                this.argName = model.argName;
+                this.argValue = model.argValue;
+            } 
+
             /**
-             * ArgName.
+             * <p>The name of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>domain_name</p>
              */
             public Builder argName(String argName) {
                 this.argName = argName;
@@ -118,7 +155,10 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ArgValue.
+             * <p>The attribute value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>developer.aliyundoc.com</p>
              */
             public Builder argValue(String argValue) {
                 this.argValue = argValue;
@@ -132,9 +172,15 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainConfigsResponseBody</p>
+     */
     public static class FunctionArgs extends TeaModel {
-        @NameInMap("FunctionArg")
-        private java.util.List < FunctionArg> functionArg;
+        @com.aliyun.core.annotation.NameInMap("FunctionArg")
+        private java.util.List<FunctionArg> functionArg;
 
         private FunctionArgs(Builder builder) {
             this.functionArg = builder.functionArg;
@@ -151,17 +197,24 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
         /**
          * @return functionArg
          */
-        public java.util.List < FunctionArg> getFunctionArg() {
+        public java.util.List<FunctionArg> getFunctionArg() {
             return this.functionArg;
         }
 
         public static final class Builder {
-            private java.util.List < FunctionArg> functionArg; 
+            private java.util.List<FunctionArg> functionArg; 
+
+            private Builder() {
+            } 
+
+            private Builder(FunctionArgs model) {
+                this.functionArg = model.functionArg;
+            } 
 
             /**
              * FunctionArg.
              */
-            public Builder functionArg(java.util.List < FunctionArg> functionArg) {
+            public Builder functionArg(java.util.List<FunctionArg> functionArg) {
                 this.functionArg = functionArg;
                 return this;
             }
@@ -173,17 +226,23 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainConfigsResponseBody</p>
+     */
     public static class DomainConfig extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("FunctionArgs")
+        @com.aliyun.core.annotation.NameInMap("FunctionArgs")
         private FunctionArgs functionArgs;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DomainConfig(Builder builder) {
@@ -235,8 +294,21 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
             private String functionName; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainConfig model) {
+                this.configId = model.configId;
+                this.functionArgs = model.functionArgs;
+                this.functionName = model.functionName;
+                this.status = model.status;
+            } 
+
             /**
-             * ConfigId.
+             * <p>The configuration ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5003576</p>
              */
             public Builder configId(String configId) {
                 this.configId = configId;
@@ -244,7 +316,7 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionArgs.
+             * <p>The attributes of the feature.</p>
              */
             public Builder functionArgs(FunctionArgs functionArgs) {
                 this.functionArgs = functionArgs;
@@ -252,7 +324,10 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * FunctionName.
+             * <p>The name of the feature.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>set_req_host_header</p>
              */
             public Builder functionName(String functionName) {
                 this.functionName = functionName;
@@ -260,7 +335,16 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The configuration status. Valid values:</p>
+             * <ul>
+             * <li><strong>success</strong></li>
+             * <li><strong>testing</strong></li>
+             * <li><strong>failed</strong></li>
+             * <li><strong>configuring</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -274,9 +358,15 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDomainConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainConfigsResponseBody</p>
+     */
     public static class DomainConfigs extends TeaModel {
-        @NameInMap("DomainConfig")
-        private java.util.List < DomainConfig> domainConfig;
+        @com.aliyun.core.annotation.NameInMap("DomainConfig")
+        private java.util.List<DomainConfig> domainConfig;
 
         private DomainConfigs(Builder builder) {
             this.domainConfig = builder.domainConfig;
@@ -293,17 +383,24 @@ public class DescribeLiveDomainConfigsResponseBody extends TeaModel {
         /**
          * @return domainConfig
          */
-        public java.util.List < DomainConfig> getDomainConfig() {
+        public java.util.List<DomainConfig> getDomainConfig() {
             return this.domainConfig;
         }
 
         public static final class Builder {
-            private java.util.List < DomainConfig> domainConfig; 
+            private java.util.List<DomainConfig> domainConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainConfigs model) {
+                this.domainConfig = model.domainConfig;
+            } 
 
             /**
              * DomainConfig.
              */
-            public Builder domainConfig(java.util.List < DomainConfig> domainConfig) {
+            public Builder domainConfig(java.util.List<DomainConfig> domainConfig) {
                 this.domainConfig = domainConfig;
                 return this;
             }

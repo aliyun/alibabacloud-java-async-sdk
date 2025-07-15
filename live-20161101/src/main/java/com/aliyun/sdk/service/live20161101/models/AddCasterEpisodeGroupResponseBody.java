@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCasterEpisodeGroupResponseBody} extends {@link TeaModel}
  *
  * <p>AddCasterEpisodeGroupResponseBody</p>
  */
 public class AddCasterEpisodeGroupResponseBody extends TeaModel {
-    @NameInMap("ItemIds")
+    @com.aliyun.core.annotation.NameInMap("ItemIds")
     private ItemIds itemIds;
 
-    @NameInMap("ProgramId")
+    @com.aliyun.core.annotation.NameInMap("ProgramId")
     private String programId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddCasterEpisodeGroupResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class AddCasterEpisodeGroupResponseBody extends TeaModel {
 
     public static AddCasterEpisodeGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,8 +70,17 @@ public class AddCasterEpisodeGroupResponseBody extends TeaModel {
         private String programId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AddCasterEpisodeGroupResponseBody model) {
+            this.itemIds = model.itemIds;
+            this.programId = model.programId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * ItemIds.
+         * <p>The IDs of the episodes.</p>
          */
         public Builder itemIds(ItemIds itemIds) {
             this.itemIds = itemIds;
@@ -70,7 +88,10 @@ public class AddCasterEpisodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * ProgramId.
+         * <p>The ID of the episode list that was added. Record the ID as it can be used to manage the program being added.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68X****</p>
          */
         public Builder programId(String programId) {
             this.programId = programId;
@@ -78,7 +99,10 @@ public class AddCasterEpisodeGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -91,9 +115,15 @@ public class AddCasterEpisodeGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddCasterEpisodeGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddCasterEpisodeGroupResponseBody</p>
+     */
     public static class ItemIds extends TeaModel {
-        @NameInMap("ItemId")
-        private java.util.List < String > itemId;
+        @com.aliyun.core.annotation.NameInMap("ItemId")
+        private java.util.List<String> itemId;
 
         private ItemIds(Builder builder) {
             this.itemId = builder.itemId;
@@ -110,17 +140,24 @@ public class AddCasterEpisodeGroupResponseBody extends TeaModel {
         /**
          * @return itemId
          */
-        public java.util.List < String > getItemId() {
+        public java.util.List<String> getItemId() {
             return this.itemId;
         }
 
         public static final class Builder {
-            private java.util.List < String > itemId; 
+            private java.util.List<String> itemId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ItemIds model) {
+                this.itemId = model.itemId;
+            } 
 
             /**
              * ItemId.
              */
-            public Builder itemId(java.util.List < String > itemId) {
+            public Builder itemId(java.util.List<String> itemId) {
                 this.itemId = itemId;
                 return this;
             }

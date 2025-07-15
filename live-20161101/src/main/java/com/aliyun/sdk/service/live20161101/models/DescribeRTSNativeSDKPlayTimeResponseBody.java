@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRTSNativeSDKPlayTimeResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRTSNativeSDKPlayTimeResponseBody</p>
  */
 public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PlayTimeData")
-    private java.util.List < PlayTimeData> playTimeData;
+    @com.aliyun.core.annotation.NameInMap("PlayTimeData")
+    private java.util.List<PlayTimeData> playTimeData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeRTSNativeSDKPlayTimeResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
 
     public static DescribeRTSNativeSDKPlayTimeResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,7 +69,7 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
     /**
      * @return playTimeData
      */
-    public java.util.List < PlayTimeData> getPlayTimeData() {
+    public java.util.List<PlayTimeData> getPlayTimeData() {
         return this.playTimeData;
     }
 
@@ -81,12 +90,26 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
     public static final class Builder {
         private String dataInterval; 
         private String endTime; 
-        private java.util.List < PlayTimeData> playTimeData; 
+        private java.util.List<PlayTimeData> playTimeData; 
         private String requestId; 
         private String startTime; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRTSNativeSDKPlayTimeResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.endTime = model.endTime;
+            this.playTimeData = model.playTimeData;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
+
         /**
-         * DataInterval.
+         * <p>The time granularity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -94,7 +117,10 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range for which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -102,15 +128,18 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
         }
 
         /**
-         * PlayTimeData.
+         * <p>The average playback duration and average stuttering duration at each interval. Unit: milliseconds.</p>
          */
-        public Builder playTimeData(java.util.List < PlayTimeData> playTimeData) {
+        public Builder playTimeData(java.util.List<PlayTimeData> playTimeData) {
             this.playTimeData = playTimeData;
             return this;
         }
 
         /**
-         * Id
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BF95F2A-3B24-4CDE-9346-7F6FA86697A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range for which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -131,14 +163,20 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRTSNativeSDKPlayTimeResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRTSNativeSDKPlayTimeResponseBody</p>
+     */
     public static class PlayTimeData extends TeaModel {
-        @NameInMap("PlayTime")
+        @com.aliyun.core.annotation.NameInMap("PlayTime")
         private String playTime;
 
-        @NameInMap("StallTime")
+        @com.aliyun.core.annotation.NameInMap("StallTime")
         private String stallTime;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private PlayTimeData(Builder builder) {
@@ -181,8 +219,20 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
             private String stallTime; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(PlayTimeData model) {
+                this.playTime = model.playTime;
+                this.stallTime = model.stallTime;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
-             * PlayTime.
+             * <p>The average playback duration within the period of time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1000</p>
              */
             public Builder playTime(String playTime) {
                 this.playTime = playTime;
@@ -190,7 +240,10 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
             }
 
             /**
-             * StallTime.
+             * <p>The average stuttering duration within the period of time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder stallTime(String stallTime) {
                 this.stallTime = stallTime;
@@ -198,7 +251,10 @@ public class DescribeRTSNativeSDKPlayTimeResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

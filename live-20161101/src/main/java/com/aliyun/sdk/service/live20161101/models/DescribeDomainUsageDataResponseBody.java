@@ -1,39 +1,44 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainUsageDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeDomainUsageDataResponseBody</p>
  */
 public class DescribeDomainUsageDataResponseBody extends TeaModel {
-    @NameInMap("Area")
+    @com.aliyun.core.annotation.NameInMap("Area")
     private String area;
 
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UsageDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("UsageDataPerInterval")
     private UsageDataPerInterval usageDataPerInterval;
 
     private DescribeDomainUsageDataResponseBody(Builder builder) {
@@ -53,6 +58,10 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
 
     public static DescribeDomainUsageDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -121,8 +130,25 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         private String type; 
         private UsageDataPerInterval usageDataPerInterval; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeDomainUsageDataResponseBody model) {
+            this.area = model.area;
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.type = model.type;
+            this.usageDataPerInterval = model.usageDataPerInterval;
+        } 
+
         /**
-         * Area.
+         * <p>The billable region where the resource usage data was generated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CN</p>
          */
         public Builder area(String area) {
             this.area = area;
@@ -130,7 +156,10 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * DataInterval.
+         * <p>The time interval between the returned entries. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -138,7 +167,10 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -146,7 +178,10 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range for which the resource usage data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T21:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -154,7 +189,10 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -162,7 +200,10 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range for which the resource usage data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -170,7 +211,10 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * Type.
+         * <p>The type of the resource usage data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder type(String type) {
             this.type = type;
@@ -178,7 +222,7 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * UsageDataPerInterval.
+         * <p>The resource usage data that was collected for each time interval.</p>
          */
         public Builder usageDataPerInterval(UsageDataPerInterval usageDataPerInterval) {
             this.usageDataPerInterval = usageDataPerInterval;
@@ -191,11 +235,17 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeDomainUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainUsageDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -229,8 +279,19 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
-             * TimeStamp.
+             * <p>The timestamp of the returned data. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -238,7 +299,15 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The amount of resource usage.</p>
+             * <ul>
+             * <li>If the value of the Field parameter is traf or req_traf, the returned data is measured in bytes.</li>
+             * <li>If the value of the Field parameter is bps or req_bps, the returned data is measured in bit/s.</li>
+             * <li>If the value of the Field parameter is acc, the returned data is measured by count.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>423304182</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -252,9 +321,15 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeDomainUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDomainUsageDataResponseBody</p>
+     */
     public static class UsageDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        @com.aliyun.core.annotation.NameInMap("DataModule")
+        private java.util.List<DataModule> dataModule;
 
         private UsageDataPerInterval(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -271,17 +346,24 @@ public class DescribeDomainUsageDataResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsageDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

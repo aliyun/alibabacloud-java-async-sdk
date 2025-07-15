@@ -1,56 +1,61 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddLiveSnapshotDetectPornConfigRequest} extends {@link RequestModel}
  *
  * <p>AddLiveSnapshotDetectPornConfigRequest</p>
  */
 public class AddLiveSnapshotDetectPornConfigRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Interval")
-    @Validation(maximum = 3600, minimum = 5)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
+    @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 5)
     private Integer interval;
 
-    @Query
-    @NameInMap("OssBucket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssBucket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossBucket;
 
-    @Query
-    @NameInMap("OssEndpoint")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssEndpoint")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossEndpoint;
 
-    @Query
-    @NameInMap("OssObject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssObject")
     private String ossObject;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Scene")
-    private java.util.List < String > scene;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scene")
+    private java.util.List<String> scene;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private AddLiveSnapshotDetectPornConfigRequest(Builder builder) {
@@ -74,7 +79,7 @@ public class AddLiveSnapshotDetectPornConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -131,7 +136,7 @@ public class AddLiveSnapshotDetectPornConfigRequest extends Request {
     /**
      * @return scene
      */
-    public java.util.List < String > getScene() {
+    public java.util.List<String> getScene() {
         return this.scene;
     }
 
@@ -150,7 +155,7 @@ public class AddLiveSnapshotDetectPornConfigRequest extends Request {
         private String ossEndpoint; 
         private String ossObject; 
         private Long ownerId; 
-        private java.util.List < String > scene; 
+        private java.util.List<String> scene; 
         private String securityToken; 
 
         private Builder() {
@@ -171,7 +176,11 @@ public class AddLiveSnapshotDetectPornConfigRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testApp</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -180,7 +189,11 @@ public class AddLiveSnapshotDetectPornConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -189,7 +202,10 @@ public class AddLiveSnapshotDetectPornConfigRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The interval at which snapshots are captured from the live stream. Valid values: <strong>5 to 3600</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder interval(Integer interval) {
             this.putQueryParameter("Interval", interval);
@@ -198,7 +214,12 @@ public class AddLiveSnapshotDetectPornConfigRequest extends Request {
         }
 
         /**
-         * OssBucket.
+         * <p>The name of the OSS bucket.</p>
+         * <p>After the review is complete, you can search for specific violations in the OSS console based on the callback information. You must create the OSS bucket in advance. For more information, see <a href="https://help.aliyun.com/document_detail/199449.html">Configure content moderation</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>livebucket</p>
          */
         public Builder ossBucket(String ossBucket) {
             this.putQueryParameter("OssBucket", ossBucket);
@@ -207,7 +228,12 @@ public class AddLiveSnapshotDetectPornConfigRequest extends Request {
         }
 
         /**
-         * OssEndpoint.
+         * <p>The endpoint of the Object Storage Service (OSS) bucket.</p>
+         * <p>After the review is complete, you can search for specific violations in the OSS console based on the callback information. You must configure the OSS endpoint in advance. For more information, see <a href="https://help.aliyun.com/document_detail/199449.html">Configure content moderation</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-oss-****.aliyuncs.com</p>
          */
         public Builder ossEndpoint(String ossEndpoint) {
             this.putQueryParameter("OssEndpoint", ossEndpoint);
@@ -216,7 +242,10 @@ public class AddLiveSnapshotDetectPornConfigRequest extends Request {
         }
 
         /**
-         * OssObject.
+         * <p>The name of the snapshot that stores violations such as pornographic content and politically sensitive content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>record/{AppName}/{StreamName}/{Sequence}.jpg</p>
          */
         public Builder ossObject(String ossObject) {
             this.putQueryParameter("OssObject", ossObject);
@@ -234,9 +263,12 @@ public class AddLiveSnapshotDetectPornConfigRequest extends Request {
         }
 
         /**
-         * Scene.
+         * <p>Scene list detection.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>live</p>
          */
-        public Builder scene(java.util.List < String > scene) {
+        public Builder scene(java.util.List<String> scene) {
             this.putQueryParameter("Scene", scene);
             this.scene = scene;
             return this;

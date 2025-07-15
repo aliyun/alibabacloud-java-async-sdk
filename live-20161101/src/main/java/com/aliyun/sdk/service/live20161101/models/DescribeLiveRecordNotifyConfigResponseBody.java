@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveRecordNotifyConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveRecordNotifyConfigResponseBody</p>
  */
 public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
-    @NameInMap("LiveRecordNotifyConfig")
+    @com.aliyun.core.annotation.NameInMap("LiveRecordNotifyConfig")
     private LiveRecordNotifyConfig liveRecordNotifyConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveRecordNotifyConfigResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
 
     public static DescribeLiveRecordNotifyConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
         private LiveRecordNotifyConfig liveRecordNotifyConfig; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveRecordNotifyConfigResponseBody model) {
+            this.liveRecordNotifyConfig = model.liveRecordNotifyConfig;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * LiveRecordNotifyConfig.
+         * <p>The configuration of callbacks for live stream recording.</p>
          */
         public Builder liveRecordNotifyConfig(LiveRecordNotifyConfig liveRecordNotifyConfig) {
             this.liveRecordNotifyConfig = liveRecordNotifyConfig;
@@ -58,7 +75,10 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5056369B-D337-499E-B8B7-B761BD37B08A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +91,23 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveRecordNotifyConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveRecordNotifyConfigResponseBody</p>
+     */
     public static class LiveRecordNotifyConfig extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("NeedStatusNotify")
+        @com.aliyun.core.annotation.NameInMap("NeedStatusNotify")
         private Boolean needStatusNotify;
 
-        @NameInMap("NotifyUrl")
+        @com.aliyun.core.annotation.NameInMap("NotifyUrl")
         private String notifyUrl;
 
-        @NameInMap("OnDemandUrl")
+        @com.aliyun.core.annotation.NameInMap("OnDemandUrl")
         private String onDemandUrl;
 
         private LiveRecordNotifyConfig(Builder builder) {
@@ -133,8 +159,21 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
             private String notifyUrl; 
             private String onDemandUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveRecordNotifyConfig model) {
+                this.domainName = model.domainName;
+                this.needStatusNotify = model.needStatusNotify;
+                this.notifyUrl = model.notifyUrl;
+                this.onDemandUrl = model.onDemandUrl;
+            } 
+
             /**
-             * DomainName.
+             * <p>The main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -142,7 +181,14 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NeedStatusNotify.
+             * <p>Indicates whether recording status callbacks are enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>true</strong></li>
+             * <li><strong>false</strong> (default)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder needStatusNotify(Boolean needStatusNotify) {
                 this.needStatusNotify = needStatusNotify;
@@ -150,7 +196,10 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyUrl.
+             * <p>The recording callback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://learn.aliyundoc.com/examplecallback.action">http://learn.aliyundoc.com/examplecallback.action</a></p>
              */
             public Builder notifyUrl(String notifyUrl) {
                 this.notifyUrl = notifyUrl;
@@ -158,7 +207,10 @@ public class DescribeLiveRecordNotifyConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OnDemandUrl.
+             * <p>The callback URL for on-demand recording.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://guide.aliyundoc.com/ondemandcallback.action">http://guide.aliyundoc.com/ondemandcallback.action</a></p>
              */
             public Builder onDemandUrl(String onDemandUrl) {
                 this.onDemandUrl = onDemandUrl;

@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EffectCasterUrgentRequest} extends {@link RequestModel}
  *
  * <p>EffectCasterUrgentRequest</p>
  */
 public class EffectCasterUrgentRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("CasterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CasterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String casterId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
     private EffectCasterUrgentRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.sceneId = builder.sceneId;
     }
 
@@ -46,16 +51,9 @@ public class EffectCasterUrgentRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -73,6 +71,13 @@ public class EffectCasterUrgentRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return sceneId
      */
     public String getSceneId() {
@@ -80,9 +85,9 @@ public class EffectCasterUrgentRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<EffectCasterUrgentRequest, Builder> {
-        private String regionId; 
         private String casterId; 
         private Long ownerId; 
+        private String regionId; 
         private String sceneId; 
 
         private Builder() {
@@ -91,23 +96,25 @@ public class EffectCasterUrgentRequest extends Request {
 
         private Builder(EffectCasterUrgentRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.casterId = request.casterId;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.sceneId = request.sceneId;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * CasterId.
+         * <p>The ID of the production studio.</p>
+         * <ul>
+         * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
+         * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>80787064-1c94-4dc1-85ce-9409960a****</p>
          */
         public Builder casterId(String casterId) {
             this.putQueryParameter("CasterId", casterId);
@@ -125,7 +132,21 @@ public class EffectCasterUrgentRequest extends Request {
         }
 
         /**
-         * SceneId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the scene. This parameter takes effect only if the scene is a PGM scene.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/2848039.html">DescribeCasterScenes</a> operation to query the scene ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>242b4e2c-c30f-4442-85ba-2e3e4e3d****</p>
          */
         public Builder sceneId(String sceneId) {
             this.putQueryParameter("SceneId", sceneId);

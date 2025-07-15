@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveShiftConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveShiftConfigsResponseBody</p>
  */
 public class DescribeLiveShiftConfigsResponseBody extends TeaModel {
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private Content content;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveShiftConfigsResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveShiftConfigsResponseBody extends TeaModel {
 
     public static DescribeLiveShiftConfigsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveShiftConfigsResponseBody extends TeaModel {
         private Content content; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveShiftConfigsResponseBody model) {
+            this.content = model.content;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Content.
+         * <p>The time shifting configurations.</p>
          */
         public Builder content(Content content) {
             this.content = content;
@@ -58,7 +75,10 @@ public class DescribeLiveShiftConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B49E6DDA-F413-422B-B58E-2FA23F286726</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +91,26 @@ public class DescribeLiveShiftConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveShiftConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveShiftConfigsResponseBody</p>
+     */
     public static class Config extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("IgnoreTranscode")
+        @com.aliyun.core.annotation.NameInMap("IgnoreTranscode")
         private Boolean ignoreTranscode;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
-        @NameInMap("Vision")
+        @com.aliyun.core.annotation.NameInMap("Vision")
         private Integer vision;
 
         private Config(Builder builder) {
@@ -145,8 +171,22 @@ public class DescribeLiveShiftConfigsResponseBody extends TeaModel {
             private String streamName; 
             private Integer vision; 
 
+            private Builder() {
+            } 
+
+            private Builder(Config model) {
+                this.appName = model.appName;
+                this.domainName = model.domainName;
+                this.ignoreTranscode = model.ignoreTranscode;
+                this.streamName = model.streamName;
+                this.vision = model.vision;
+            } 
+
             /**
-             * AppName.
+             * <p>The application for which you configure time shifting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveApp****</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -154,7 +194,10 @@ public class DescribeLiveShiftConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The domain name for which you configure time shifting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -162,7 +205,15 @@ public class DescribeLiveShiftConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * IgnoreTranscode.
+             * <p>Whether to ignore time shift generation for the transcode stream.</p>
+             * <ul>
+             * <li>true: Ignore time shifting generation.</li>
+             * <li>false: Generate time shifting.</li>
+             * </ul>
+             * <p>The default value is true.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder ignoreTranscode(Boolean ignoreTranscode) {
                 this.ignoreTranscode = ignoreTranscode;
@@ -170,7 +221,10 @@ public class DescribeLiveShiftConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * StreamName.
+             * <p>The name of the live stream for which you configure time shifting.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveStream****</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -178,7 +232,10 @@ public class DescribeLiveShiftConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Vision.
+             * <p>The number of days for which the time shifting configurations are retained.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder vision(Integer vision) {
                 this.vision = vision;
@@ -192,9 +249,15 @@ public class DescribeLiveShiftConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveShiftConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveShiftConfigsResponseBody</p>
+     */
     public static class Content extends TeaModel {
-        @NameInMap("Config")
-        private java.util.List < Config> config;
+        @com.aliyun.core.annotation.NameInMap("Config")
+        private java.util.List<Config> config;
 
         private Content(Builder builder) {
             this.config = builder.config;
@@ -211,17 +274,24 @@ public class DescribeLiveShiftConfigsResponseBody extends TeaModel {
         /**
          * @return config
          */
-        public java.util.List < Config> getConfig() {
+        public java.util.List<Config> getConfig() {
             return this.config;
         }
 
         public static final class Builder {
-            private java.util.List < Config> config; 
+            private java.util.List<Config> config; 
+
+            private Builder() {
+            } 
+
+            private Builder(Content model) {
+                this.config = model.config;
+            } 
 
             /**
              * Config.
              */
-            public Builder config(java.util.List < Config> config) {
+            public Builder config(java.util.List<Config> config) {
                 this.config = config;
                 return this;
             }

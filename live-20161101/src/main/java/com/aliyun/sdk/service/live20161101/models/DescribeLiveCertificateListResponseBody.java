@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveCertificateListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveCertificateListResponseBody</p>
  */
 public class DescribeLiveCertificateListResponseBody extends TeaModel {
-    @NameInMap("CertificateListModel")
+    @com.aliyun.core.annotation.NameInMap("CertificateListModel")
     private CertificateListModel certificateListModel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveCertificateListResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
 
     public static DescribeLiveCertificateListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
         private CertificateListModel certificateListModel; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveCertificateListResponseBody model) {
+            this.certificateListModel = model.certificateListModel;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * CertificateListModel.
+         * <p>The details.</p>
          */
         public Builder certificateListModel(CertificateListModel certificateListModel) {
             this.certificateListModel = certificateListModel;
@@ -58,7 +75,10 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,23 +91,29 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveCertificateListResponseBody</p>
+     */
     public static class Cert extends TeaModel {
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private Long certId;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("Common")
+        @com.aliyun.core.annotation.NameInMap("Common")
         private String common;
 
-        @NameInMap("Fingerprint")
+        @com.aliyun.core.annotation.NameInMap("Fingerprint")
         private String fingerprint;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("LastTime")
+        @com.aliyun.core.annotation.NameInMap("LastTime")
         private Long lastTime;
 
         private Cert(Builder builder) {
@@ -157,8 +183,23 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
             private String issuer; 
             private Long lastTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Cert model) {
+                this.certId = model.certId;
+                this.certName = model.certName;
+                this.common = model.common;
+                this.fingerprint = model.fingerprint;
+                this.issuer = model.issuer;
+                this.lastTime = model.lastTime;
+            } 
+
             /**
-             * CertId.
+             * <p>The ID of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>123456</p>
              */
             public Builder certId(Long certId) {
                 this.certId = certId;
@@ -166,7 +207,10 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * CertName.
+             * <p>The name of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Cert-****</p>
              */
             public Builder certName(String certName) {
                 this.certName = certName;
@@ -174,7 +218,10 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Common.
+             * <p>The Common Name (CN) attribute of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.net</p>
              */
             public Builder common(String common) {
                 this.common = common;
@@ -182,7 +229,10 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Fingerprint.
+             * <p>The fingerprint of the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder fingerprint(String fingerprint) {
                 this.fingerprint = fingerprint;
@@ -190,7 +240,10 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * <p>The certificate authority (CA) that issued the certificate.</p>
+             * 
+             * <strong>example:</strong>
+             * <hr>
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -198,7 +251,10 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * LastTime.
+             * <p>The time when the certificate was issued. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1512388659</p>
              */
             public Builder lastTime(Long lastTime) {
                 this.lastTime = lastTime;
@@ -212,9 +268,15 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveCertificateListResponseBody</p>
+     */
     public static class CertList extends TeaModel {
-        @NameInMap("Cert")
-        private java.util.List < Cert> cert;
+        @com.aliyun.core.annotation.NameInMap("Cert")
+        private java.util.List<Cert> cert;
 
         private CertList(Builder builder) {
             this.cert = builder.cert;
@@ -231,17 +293,24 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
         /**
          * @return cert
          */
-        public java.util.List < Cert> getCert() {
+        public java.util.List<Cert> getCert() {
             return this.cert;
         }
 
         public static final class Builder {
-            private java.util.List < Cert> cert; 
+            private java.util.List<Cert> cert; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertList model) {
+                this.cert = model.cert;
+            } 
 
             /**
              * Cert.
              */
-            public Builder cert(java.util.List < Cert> cert) {
+            public Builder cert(java.util.List<Cert> cert) {
                 this.cert = cert;
                 return this;
             }
@@ -253,11 +322,17 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveCertificateListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveCertificateListResponseBody</p>
+     */
     public static class CertificateListModel extends TeaModel {
-        @NameInMap("CertList")
+        @com.aliyun.core.annotation.NameInMap("CertList")
         private CertList certList;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
         private CertificateListModel(Builder builder) {
@@ -291,8 +366,16 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
             private CertList certList; 
             private Integer count; 
 
+            private Builder() {
+            } 
+
+            private Builder(CertificateListModel model) {
+                this.certList = model.certList;
+                this.count = model.count;
+            } 
+
             /**
-             * CertList.
+             * <p>The certificates.</p>
              */
             public Builder certList(CertList certList) {
                 this.certList = certList;
@@ -300,7 +383,10 @@ public class DescribeLiveCertificateListResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The number of certificates.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Integer count) {
                 this.count = count;

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUpBpsPeakDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUpBpsPeakDataResponseBody</p>
  */
 public class DescribeUpBpsPeakDataResponseBody extends TeaModel {
-    @NameInMap("DescribeUpPeakTraffics")
+    @com.aliyun.core.annotation.NameInMap("DescribeUpPeakTraffics")
     private DescribeUpPeakTraffics describeUpPeakTraffics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUpBpsPeakDataResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeUpBpsPeakDataResponseBody extends TeaModel {
 
     public static DescribeUpBpsPeakDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeUpBpsPeakDataResponseBody extends TeaModel {
         private DescribeUpPeakTraffics describeUpPeakTraffics; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeUpBpsPeakDataResponseBody model) {
+            this.describeUpPeakTraffics = model.describeUpPeakTraffics;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * DescribeUpPeakTraffics.
+         * <p>The information about peak inbound bandwidth on each day.</p>
          */
         public Builder describeUpPeakTraffics(DescribeUpPeakTraffics describeUpPeakTraffics) {
             this.describeUpPeakTraffics = describeUpPeakTraffics;
@@ -58,7 +75,10 @@ public class DescribeUpBpsPeakDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +91,23 @@ public class DescribeUpBpsPeakDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUpBpsPeakDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUpBpsPeakDataResponseBody</p>
+     */
     public static class DescribeUpPeakTraffic extends TeaModel {
-        @NameInMap("BandWidth")
+        @com.aliyun.core.annotation.NameInMap("BandWidth")
         private String bandWidth;
 
-        @NameInMap("PeakTime")
+        @com.aliyun.core.annotation.NameInMap("PeakTime")
         private String peakTime;
 
-        @NameInMap("QueryTime")
+        @com.aliyun.core.annotation.NameInMap("QueryTime")
         private String queryTime;
 
-        @NameInMap("StatName")
+        @com.aliyun.core.annotation.NameInMap("StatName")
         private String statName;
 
         private DescribeUpPeakTraffic(Builder builder) {
@@ -133,8 +159,21 @@ public class DescribeUpBpsPeakDataResponseBody extends TeaModel {
             private String queryTime; 
             private String statName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DescribeUpPeakTraffic model) {
+                this.bandWidth = model.bandWidth;
+                this.peakTime = model.peakTime;
+                this.queryTime = model.queryTime;
+                this.statName = model.statName;
+            } 
+
             /**
-             * BandWidth.
+             * <p>The daily peak inbound bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>777.2727083333333</p>
              */
             public Builder bandWidth(String bandWidth) {
                 this.bandWidth = bandWidth;
@@ -142,7 +181,10 @@ public class DescribeUpBpsPeakDataResponseBody extends TeaModel {
             }
 
             /**
-             * PeakTime.
+             * <p>The time when the daily peak bandwidth is reached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1522180000000</p>
              */
             public Builder peakTime(String peakTime) {
                 this.peakTime = peakTime;
@@ -150,7 +192,10 @@ public class DescribeUpBpsPeakDataResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTime.
+             * <p>The time queried on the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1522080000000</p>
              */
             public Builder queryTime(String queryTime) {
                 this.queryTime = queryTime;
@@ -158,7 +203,10 @@ public class DescribeUpBpsPeakDataResponseBody extends TeaModel {
             }
 
             /**
-             * StatName.
+             * <p>The category of the statistical data. If the DomainSwitch parameter is set to on, the value of this parameter is the domain name. If the DomainSwitch parameter is set to off or not specified, the value of this parameter is the user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>push-live.aliyuncs.com</p>
              */
             public Builder statName(String statName) {
                 this.statName = statName;
@@ -172,9 +220,15 @@ public class DescribeUpBpsPeakDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUpBpsPeakDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUpBpsPeakDataResponseBody</p>
+     */
     public static class DescribeUpPeakTraffics extends TeaModel {
-        @NameInMap("DescribeUpPeakTraffic")
-        private java.util.List < DescribeUpPeakTraffic> describeUpPeakTraffic;
+        @com.aliyun.core.annotation.NameInMap("DescribeUpPeakTraffic")
+        private java.util.List<DescribeUpPeakTraffic> describeUpPeakTraffic;
 
         private DescribeUpPeakTraffics(Builder builder) {
             this.describeUpPeakTraffic = builder.describeUpPeakTraffic;
@@ -191,17 +245,24 @@ public class DescribeUpBpsPeakDataResponseBody extends TeaModel {
         /**
          * @return describeUpPeakTraffic
          */
-        public java.util.List < DescribeUpPeakTraffic> getDescribeUpPeakTraffic() {
+        public java.util.List<DescribeUpPeakTraffic> getDescribeUpPeakTraffic() {
             return this.describeUpPeakTraffic;
         }
 
         public static final class Builder {
-            private java.util.List < DescribeUpPeakTraffic> describeUpPeakTraffic; 
+            private java.util.List<DescribeUpPeakTraffic> describeUpPeakTraffic; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescribeUpPeakTraffics model) {
+                this.describeUpPeakTraffic = model.describeUpPeakTraffic;
+            } 
 
             /**
              * DescribeUpPeakTraffic.
              */
-            public Builder describeUpPeakTraffic(java.util.List < DescribeUpPeakTraffic> describeUpPeakTraffic) {
+            public Builder describeUpPeakTraffic(java.util.List<DescribeUpPeakTraffic> describeUpPeakTraffic) {
                 this.describeUpPeakTraffic = describeUpPeakTraffic;
                 return this;
             }

@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link StopLiveDomainResponseBody} extends {@link TeaModel}
  *
  * <p>StopLiveDomainResponseBody</p>
  */
 public class StopLiveDomainResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private StopLiveDomainResponseBody(Builder builder) {
@@ -27,6 +32,10 @@ public class StopLiveDomainResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -37,8 +46,18 @@ public class StopLiveDomainResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(StopLiveDomainResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>324AEFFF-308C-4DA7-8CD3-01B277B98F28</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

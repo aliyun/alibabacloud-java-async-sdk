@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPlaylistItemsRequest} extends {@link RequestModel}
  *
  * <p>ListPlaylistItemsRequest</p>
  */
 public class ListPlaylistItemsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProgramId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProgramId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String programId;
 
-    @Query
-    @NameInMap("ProgramItemIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProgramItemIds")
     private String programItemIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     private ListPlaylistItemsRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.ownerId = builder.ownerId;
         this.programId = builder.programId;
         this.programItemIds = builder.programItemIds;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -45,16 +50,9 @@ public class ListPlaylistItemsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -78,11 +76,18 @@ public class ListPlaylistItemsRequest extends Request {
         return this.programItemIds;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<ListPlaylistItemsRequest, Builder> {
-        private String regionId; 
         private Long ownerId; 
         private String programId; 
         private String programItemIds; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -90,20 +95,11 @@ public class ListPlaylistItemsRequest extends Request {
 
         private Builder(ListPlaylistItemsRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.ownerId = request.ownerId;
             this.programId = request.programId;
             this.programItemIds = request.programItemIds;
+            this.regionId = request.regionId;
         } 
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * OwnerId.
@@ -115,7 +111,11 @@ public class ListPlaylistItemsRequest extends Request {
         }
 
         /**
-         * ProgramId.
+         * <p>The ID of the episode list. If the episode list was created by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, check the value of the response parameter ProgramId to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
          */
         public Builder programId(String programId) {
             this.putQueryParameter("ProgramId", programId);
@@ -124,11 +124,23 @@ public class ListPlaylistItemsRequest extends Request {
         }
 
         /**
-         * ProgramItemIds.
+         * <p>The IDs of the episodes that you want to query. Separate episode IDs with commas (,). If you set this parameter, only the information about the specified episodes is returned. If you do not set this parameter, the information about all episodes in the episode list is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c10f3d63-eacf-4fbf-bd48-a07a6ba7****,c09f3d63-eacf-4fbf-bd48-a07a6ba7****</p>
          */
         public Builder programItemIds(String programItemIds) {
             this.putQueryParameter("ProgramItemIds", programItemIds);
             this.programItemIds = programItemIds;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

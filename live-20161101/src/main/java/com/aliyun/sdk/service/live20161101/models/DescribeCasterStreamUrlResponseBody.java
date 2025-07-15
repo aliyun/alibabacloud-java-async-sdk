@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCasterStreamUrlResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCasterStreamUrlResponseBody</p>
  */
 public class DescribeCasterStreamUrlResponseBody extends TeaModel {
-    @NameInMap("CasterId")
+    @com.aliyun.core.annotation.NameInMap("CasterId")
     private String casterId;
 
-    @NameInMap("CasterStreams")
+    @com.aliyun.core.annotation.NameInMap("CasterStreams")
     private CasterStreams casterStreams;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeCasterStreamUrlResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
 
     public static DescribeCasterStreamUrlResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
         private String requestId; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCasterStreamUrlResponseBody model) {
+            this.casterId = model.casterId;
+            this.casterStreams = model.casterStreams;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
-         * CasterId.
+         * <p>The ID of the production studio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
          */
         public Builder casterId(String casterId) {
             this.casterId = casterId;
@@ -82,7 +104,7 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
         }
 
         /**
-         * CasterStreams.
+         * <p>The information about the streams of the production studio.</p>
          */
         public Builder casterStreams(CasterStreams casterStreams) {
             this.casterStreams = casterStreams;
@@ -90,7 +112,10 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +123,10 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The number of streams that were returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -111,14 +139,20 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCasterStreamUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterStreamUrlResponseBody</p>
+     */
     public static class StreamInfo extends TeaModel {
-        @NameInMap("OutputStreamUrl")
+        @com.aliyun.core.annotation.NameInMap("OutputStreamUrl")
         private String outputStreamUrl;
 
-        @NameInMap("TranscodeConfig")
+        @com.aliyun.core.annotation.NameInMap("TranscodeConfig")
         private String transcodeConfig;
 
-        @NameInMap("VideoFormat")
+        @com.aliyun.core.annotation.NameInMap("VideoFormat")
         private String videoFormat;
 
         private StreamInfo(Builder builder) {
@@ -161,8 +195,20 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
             private String transcodeConfig; 
             private String videoFormat; 
 
+            private Builder() {
+            } 
+
+            private Builder(StreamInfo model) {
+                this.outputStreamUrl = model.outputStreamUrl;
+                this.transcodeConfig = model.transcodeConfig;
+                this.videoFormat = model.videoFormat;
+            } 
+
             /**
-             * OutputStreamUrl.
+             * <p>The streaming URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://out/caster/example.net">http://out/caster/example.net</a></p>
              */
             public Builder outputStreamUrl(String outputStreamUrl) {
                 this.outputStreamUrl = outputStreamUrl;
@@ -170,7 +216,16 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeConfig.
+             * <p>The resolution to which the scene transcodes the stream for playback. Valid values:</p>
+             * <ul>
+             * <li><strong>lsd</strong>: standard definition.</li>
+             * <li><strong>lld</strong>: low definition.</li>
+             * <li><strong>lud</strong>: ultra high definition.</li>
+             * <li><strong>lhd</strong>: high definition.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>lld</p>
              */
             public Builder transcodeConfig(String transcodeConfig) {
                 this.transcodeConfig = transcodeConfig;
@@ -178,7 +233,15 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
             }
 
             /**
-             * VideoFormat.
+             * <p>The format to which the scene transcodes the stream for playback. Valid values:</p>
+             * <ul>
+             * <li><strong>flv</strong>.</li>
+             * <li><strong>rtmp</strong>.</li>
+             * <li><strong>m3u8</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>flv</p>
              */
             public Builder videoFormat(String videoFormat) {
                 this.videoFormat = videoFormat;
@@ -192,9 +255,15 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterStreamUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterStreamUrlResponseBody</p>
+     */
     public static class StreamInfos extends TeaModel {
-        @NameInMap("StreamInfo")
-        private java.util.List < StreamInfo> streamInfo;
+        @com.aliyun.core.annotation.NameInMap("StreamInfo")
+        private java.util.List<StreamInfo> streamInfo;
 
         private StreamInfos(Builder builder) {
             this.streamInfo = builder.streamInfo;
@@ -211,17 +280,24 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
         /**
          * @return streamInfo
          */
-        public java.util.List < StreamInfo> getStreamInfo() {
+        public java.util.List<StreamInfo> getStreamInfo() {
             return this.streamInfo;
         }
 
         public static final class Builder {
-            private java.util.List < StreamInfo> streamInfo; 
+            private java.util.List<StreamInfo> streamInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreamInfos model) {
+                this.streamInfo = model.streamInfo;
+            } 
 
             /**
              * StreamInfo.
              */
-            public Builder streamInfo(java.util.List < StreamInfo> streamInfo) {
+            public Builder streamInfo(java.util.List<StreamInfo> streamInfo) {
                 this.streamInfo = streamInfo;
                 return this;
             }
@@ -233,20 +309,26 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterStreamUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterStreamUrlResponseBody</p>
+     */
     public static class CasterStream extends TeaModel {
-        @NameInMap("OutputType")
+        @com.aliyun.core.annotation.NameInMap("OutputType")
         private Integer outputType;
 
-        @NameInMap("RtmpUrl")
+        @com.aliyun.core.annotation.NameInMap("RtmpUrl")
         private String rtmpUrl;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
-        @NameInMap("StreamInfos")
+        @com.aliyun.core.annotation.NameInMap("StreamInfos")
         private StreamInfos streamInfos;
 
-        @NameInMap("StreamUrl")
+        @com.aliyun.core.annotation.NameInMap("StreamUrl")
         private String streamUrl;
 
         private CasterStream(Builder builder) {
@@ -307,8 +389,26 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
             private StreamInfos streamInfos; 
             private String streamUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(CasterStream model) {
+                this.outputType = model.outputType;
+                this.rtmpUrl = model.rtmpUrl;
+                this.sceneId = model.sceneId;
+                this.streamInfos = model.streamInfos;
+                this.streamUrl = model.streamUrl;
+            } 
+
             /**
-             * OutputType.
+             * <p>Indicates whether the output stream is in preview mode or program mode.</p>
+             * <ul>
+             * <li><strong>0</strong>: indicates that the output videos of the scene are in preview mode.</li>
+             * <li><strong>1</strong>: indicates that the output videos of the scene are in program mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder outputType(Integer outputType) {
                 this.outputType = outputType;
@@ -316,7 +416,10 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
             }
 
             /**
-             * RtmpUrl.
+             * <p>The Real Time Messaging Protocol (RTMP) URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://live/caster/example.edu</p>
              */
             public Builder rtmpUrl(String rtmpUrl) {
                 this.rtmpUrl = rtmpUrl;
@@ -324,7 +427,10 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
             }
 
             /**
-             * SceneId.
+             * <p>The ID of the scene.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23ca74e0-aca3-4e7a-8561-9d96f525****</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -332,7 +438,7 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
             }
 
             /**
-             * StreamInfos.
+             * <p>The information about the stream.</p>
              */
             public Builder streamInfos(StreamInfos streamInfos) {
                 this.streamInfos = streamInfos;
@@ -340,7 +446,10 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
             }
 
             /**
-             * StreamUrl.
+             * <p>The streaming URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://live/caster/example.org">http://live/caster/example.org</a></p>
              */
             public Builder streamUrl(String streamUrl) {
                 this.streamUrl = streamUrl;
@@ -354,9 +463,15 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterStreamUrlResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterStreamUrlResponseBody</p>
+     */
     public static class CasterStreams extends TeaModel {
-        @NameInMap("CasterStream")
-        private java.util.List < CasterStream> casterStream;
+        @com.aliyun.core.annotation.NameInMap("CasterStream")
+        private java.util.List<CasterStream> casterStream;
 
         private CasterStreams(Builder builder) {
             this.casterStream = builder.casterStream;
@@ -373,17 +488,24 @@ public class DescribeCasterStreamUrlResponseBody extends TeaModel {
         /**
          * @return casterStream
          */
-        public java.util.List < CasterStream> getCasterStream() {
+        public java.util.List<CasterStream> getCasterStream() {
             return this.casterStream;
         }
 
         public static final class Builder {
-            private java.util.List < CasterStream> casterStream; 
+            private java.util.List<CasterStream> casterStream; 
+
+            private Builder() {
+            } 
+
+            private Builder(CasterStreams model) {
+                this.casterStream = model.casterStream;
+            } 
 
             /**
              * CasterStream.
              */
-            public Builder casterStream(java.util.List < CasterStream> casterStream) {
+            public Builder casterStream(java.util.List<CasterStream> casterStream) {
                 this.casterStream = casterStream;
                 return this;
             }

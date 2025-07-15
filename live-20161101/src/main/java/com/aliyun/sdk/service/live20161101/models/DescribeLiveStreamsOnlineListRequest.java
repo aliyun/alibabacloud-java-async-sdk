@@ -1,61 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamsOnlineListRequest} extends {@link RequestModel}
  *
  * <p>DescribeLiveStreamsOnlineListRequest</p>
  */
 public class DescribeLiveStreamsOnlineListRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OnlyStream")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OnlyStream")
     private String onlyStream;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
     private String queryType;
 
-    @Query
-    @NameInMap("StreamName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamName")
     private String streamName;
 
-    @Query
-    @NameInMap("StreamType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamType")
     private String streamType;
 
     private DescribeLiveStreamsOnlineListRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.onlyStream = builder.onlyStream;
@@ -63,6 +67,7 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
         this.queryType = builder.queryType;
+        this.regionId = builder.regionId;
         this.streamName = builder.streamName;
         this.streamType = builder.streamType;
     }
@@ -75,16 +80,9 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -137,6 +135,13 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return streamName
      */
     public String getStreamName() {
@@ -151,7 +156,6 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveStreamsOnlineListRequest, Builder> {
-        private String regionId; 
         private String appName; 
         private String domainName; 
         private String onlyStream; 
@@ -159,6 +163,7 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
         private Integer pageNum; 
         private Integer pageSize; 
         private String queryType; 
+        private String regionId; 
         private String streamName; 
         private String streamType; 
 
@@ -168,7 +173,6 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
 
         private Builder(DescribeLiveStreamsOnlineListRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appName = request.appName;
             this.domainName = request.domainName;
             this.onlyStream = request.onlyStream;
@@ -176,21 +180,16 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
             this.queryType = request.queryType;
+            this.regionId = request.regionId;
             this.streamName = request.streamName;
             this.streamType = request.streamType;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -199,7 +198,11 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -208,7 +211,14 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * OnlyStream.
+         * <p>Specifies whether to return only specific parameters. Valid values:</p>
+         * <ul>
+         * <li><strong>yes</strong>: returns only the DomainName, AppName, StreamName, and PublishTime parameters.</li>
+         * <li><strong>no</strong>: returns all parameters. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>no</p>
          */
         public Builder onlyStream(String onlyStream) {
             this.putQueryParameter("OnlyStream", onlyStream);
@@ -226,7 +236,10 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number. Default value: 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -235,7 +248,10 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 3000. Default value: 2000.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1500</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,7 +260,14 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * QueryType.
+         * <p>The mode in which stream names are matched. Valid values:</p>
+         * <ul>
+         * <li><strong>fuzzy</strong> (default): fuzzy match</li>
+         * <li><strong>strict</strong>: exact match</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>fuzzy</p>
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("QueryType", queryType);
@@ -253,7 +276,19 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * StreamName.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The name of the live stream. You can specify only one live stream. You can view the stream name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveStream****</p>
          */
         public Builder streamName(String streamName) {
             this.putQueryParameter("StreamName", streamName);
@@ -262,7 +297,15 @@ public class DescribeLiveStreamsOnlineListRequest extends Request {
         }
 
         /**
-         * StreamType.
+         * <p>The type of the streams to query. Valid values:</p>
+         * <ul>
+         * <li><strong>all</strong> (default): all streams</li>
+         * <li><strong>raw</strong>: source streams</li>
+         * <li><strong>trans</strong>: transcoded streams</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>all</p>
          */
         public Builder streamType(String streamType) {
             this.putQueryParameter("StreamType", streamType);

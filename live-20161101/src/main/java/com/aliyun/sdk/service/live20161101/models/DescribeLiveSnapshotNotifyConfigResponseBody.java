@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveSnapshotNotifyConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveSnapshotNotifyConfigResponseBody</p>
  */
 public class DescribeLiveSnapshotNotifyConfigResponseBody extends TeaModel {
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("NotifyAuthKey")
+    @com.aliyun.core.annotation.NameInMap("NotifyAuthKey")
     private String notifyAuthKey;
 
-    @NameInMap("NotifyReqAuth")
+    @com.aliyun.core.annotation.NameInMap("NotifyReqAuth")
     private String notifyReqAuth;
 
-    @NameInMap("NotifyUrl")
+    @com.aliyun.core.annotation.NameInMap("NotifyUrl")
     private String notifyUrl;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveSnapshotNotifyConfigResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class DescribeLiveSnapshotNotifyConfigResponseBody extends TeaModel {
 
     public static DescribeLiveSnapshotNotifyConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,22 @@ public class DescribeLiveSnapshotNotifyConfigResponseBody extends TeaModel {
         private String notifyUrl; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveSnapshotNotifyConfigResponseBody model) {
+            this.domainName = model.domainName;
+            this.notifyAuthKey = model.notifyAuthKey;
+            this.notifyReqAuth = model.notifyReqAuth;
+            this.notifyUrl = model.notifyUrl;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://www.yourdomain***.com">www.yourdomain***.com</a></p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -94,7 +117,10 @@ public class DescribeLiveSnapshotNotifyConfigResponseBody extends TeaModel {
         }
 
         /**
-         * NotifyAuthKey.
+         * <p>The callback authentication key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yourkey</p>
          */
         public Builder notifyAuthKey(String notifyAuthKey) {
             this.notifyAuthKey = notifyAuthKey;
@@ -102,7 +128,14 @@ public class DescribeLiveSnapshotNotifyConfigResponseBody extends TeaModel {
         }
 
         /**
-         * NotifyReqAuth.
+         * <p>Indicates whether callback authentication is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>yes</strong>: Callback authentication is enabled.</li>
+         * <li><strong>no</strong>: Callback authentication is disabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>yes</p>
          */
         public Builder notifyReqAuth(String notifyReqAuth) {
             this.notifyReqAuth = notifyReqAuth;
@@ -110,7 +143,10 @@ public class DescribeLiveSnapshotNotifyConfigResponseBody extends TeaModel {
         }
 
         /**
-         * NotifyUrl.
+         * <p>The callback URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://callback.yourdomain***.com">http://callback.yourdomain***.com</a></p>
          */
         public Builder notifyUrl(String notifyUrl) {
             this.notifyUrl = notifyUrl;
@@ -118,7 +154,10 @@ public class DescribeLiveSnapshotNotifyConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5056369B-D337-499E-B8B7-B761BD37B08A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -1,38 +1,43 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendLikeRequest} extends {@link RequestModel}
  *
  * <p>SendLikeRequest</p>
  */
 public class SendLikeRequest extends Request {
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("BroadCastType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BroadCastType")
     private Integer broadCastType;
 
-    @Body
-    @NameInMap("Count")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Count")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String count;
 
-    @Body
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Body
-    @NameInMap("OperatorUserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OperatorUserId")
     private String operatorUserId;
 
     private SendLikeRequest(Builder builder) {
@@ -52,7 +57,7 @@ public class SendLikeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +118,11 @@ public class SendLikeRequest extends Request {
         } 
 
         /**
-         * 应用ID。
+         * <p>The ID of the interactive messaging application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VKL3***</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -122,11 +131,15 @@ public class SendLikeRequest extends Request {
         }
 
         /**
-         * 系统消息广播类型，取值0，1，2.
-         * <p>
-         * 0：不广播。
-         * 1：广播至消息组指定成员。
-         * 2：广播至消息组。
+         * <p>The mode in which system messages are broadcasted. Valid values:</p>
+         * <ul>
+         * <li>0: specifies that system messages are not broadcasted. This is the default value.</li>
+         * <li>1: specifies that system messages are broadcasted to specified users.</li>
+         * <li>2: specifies that system messages are broadcasted to the message group.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder broadCastType(Integer broadCastType) {
             this.putBodyParameter("BroadCastType", broadCastType);
@@ -135,7 +148,11 @@ public class SendLikeRequest extends Request {
         }
 
         /**
-         * 点赞数。示例值：1。
+         * <p>The number of likes.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder count(String count) {
             this.putBodyParameter("Count", count);
@@ -144,7 +161,11 @@ public class SendLikeRequest extends Request {
         }
 
         /**
-         * 消息组ID。
+         * <p>The ID of the message group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE35-****-T95F</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -153,7 +174,10 @@ public class SendLikeRequest extends Request {
         }
 
         /**
-         * 操作者ID。示例值：testUserId。
+         * <p>The ID of the user who performs the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de1**a0</p>
          */
         public Builder operatorUserId(String operatorUserId) {
             this.putBodyParameter("OperatorUserId", operatorUserId);

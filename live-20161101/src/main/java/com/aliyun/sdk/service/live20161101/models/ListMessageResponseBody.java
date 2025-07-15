@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMessageResponseBody} extends {@link TeaModel}
  *
  * <p>ListMessageResponseBody</p>
  */
 public class ListMessageResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private ListMessageResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ListMessageResponseBody extends TeaModel {
 
     public static ListMessageResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class ListMessageResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListMessageResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-****-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,7 @@ public class ListMessageResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,20 +91,26 @@ public class ListMessageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMessageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMessageResponseBody</p>
+     */
     public static class MessageList extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private String messageId;
 
-        @NameInMap("SenderId")
+        @com.aliyun.core.annotation.NameInMap("SenderId")
         private String senderId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private MessageList(Builder builder) {
@@ -145,8 +171,22 @@ public class ListMessageResponseBody extends TeaModel {
             private String senderId; 
             private Integer type; 
 
+            private Builder() {
+            } 
+
+            private Builder(MessageList model) {
+                this.data = model.data;
+                this.groupId = model.groupId;
+                this.messageId = model.messageId;
+                this.senderId = model.senderId;
+                this.type = model.type;
+            } 
+
             /**
-             * Data.
+             * <p>The message body. The value is a JSON string.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder data(String data) {
                 this.data = data;
@@ -154,7 +194,10 @@ public class ListMessageResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * <p>The ID of the message group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AE35-****-T95F</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -162,7 +205,10 @@ public class ListMessageResponseBody extends TeaModel {
             }
 
             /**
-             * MessageId.
+             * <p>The ID of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>qt***</p>
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -170,7 +216,10 @@ public class ListMessageResponseBody extends TeaModel {
             }
 
             /**
-             * SenderId.
+             * <p>The ID of the user who sent the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>yi***</p>
              */
             public Builder senderId(String senderId) {
                 this.senderId = senderId;
@@ -178,7 +227,10 @@ public class ListMessageResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the message.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10002</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -192,12 +244,18 @@ public class ListMessageResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMessageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMessageResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("HasMore")
+        @com.aliyun.core.annotation.NameInMap("HasMore")
         private Boolean hasMore;
 
-        @NameInMap("MessageList")
-        private java.util.List < MessageList> messageList;
+        @com.aliyun.core.annotation.NameInMap("MessageList")
+        private java.util.List<MessageList> messageList;
 
         private Result(Builder builder) {
             this.hasMore = builder.hasMore;
@@ -222,16 +280,31 @@ public class ListMessageResponseBody extends TeaModel {
         /**
          * @return messageList
          */
-        public java.util.List < MessageList> getMessageList() {
+        public java.util.List<MessageList> getMessageList() {
             return this.messageList;
         }
 
         public static final class Builder {
             private Boolean hasMore; 
-            private java.util.List < MessageList> messageList; 
+            private java.util.List<MessageList> messageList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.hasMore = model.hasMore;
+                this.messageList = model.messageList;
+            } 
 
             /**
-             * HasMore.
+             * <p>Indicates whether the current page is followed by another page. Valid values:</p>
+             * <ul>
+             * <li>true: The current page is followed by another page.</li>
+             * <li>false: The current page is not followed by another page.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasMore(Boolean hasMore) {
                 this.hasMore = hasMore;
@@ -239,9 +312,9 @@ public class ListMessageResponseBody extends TeaModel {
             }
 
             /**
-             * MessageList.
+             * <p>Details about the messages.</p>
              */
-            public Builder messageList(java.util.List < MessageList> messageList) {
+            public Builder messageList(java.util.List<MessageList> messageList) {
                 this.messageList = messageList;
                 return this;
             }

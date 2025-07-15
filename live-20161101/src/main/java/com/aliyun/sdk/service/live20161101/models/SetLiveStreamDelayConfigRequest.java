@@ -1,63 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetLiveStreamDelayConfigRequest} extends {@link RequestModel}
  *
  * <p>SetLiveStreamDelayConfigRequest</p>
  */
 public class SetLiveStreamDelayConfigRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("FlvDelay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlvDelay")
     private Integer flvDelay;
 
-    @Query
-    @NameInMap("FlvLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlvLevel")
     private String flvLevel;
 
-    @Query
-    @NameInMap("HlsDelay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HlsDelay")
     private Integer hlsDelay;
 
-    @Query
-    @NameInMap("HlsLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HlsLevel")
     private String hlsLevel;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RtmpDelay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RtmpDelay")
     private Integer rtmpDelay;
 
-    @Query
-    @NameInMap("RtmpLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RtmpLevel")
     private String rtmpLevel;
 
     private SetLiveStreamDelayConfigRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.flvDelay = builder.flvDelay;
         this.flvLevel = builder.flvLevel;
         this.hlsDelay = builder.hlsDelay;
         this.hlsLevel = builder.hlsLevel;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.rtmpDelay = builder.rtmpDelay;
         this.rtmpLevel = builder.rtmpLevel;
     }
@@ -70,16 +75,9 @@ public class SetLiveStreamDelayConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -125,6 +123,13 @@ public class SetLiveStreamDelayConfigRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return rtmpDelay
      */
     public Integer getRtmpDelay() {
@@ -139,13 +144,13 @@ public class SetLiveStreamDelayConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<SetLiveStreamDelayConfigRequest, Builder> {
-        private String regionId; 
         private String domainName; 
         private Integer flvDelay; 
         private String flvLevel; 
         private Integer hlsDelay; 
         private String hlsLevel; 
         private Long ownerId; 
+        private String regionId; 
         private Integer rtmpDelay; 
         private String rtmpLevel; 
 
@@ -155,28 +160,23 @@ public class SetLiveStreamDelayConfigRequest extends Request {
 
         private Builder(SetLiveStreamDelayConfigRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.domainName = request.domainName;
             this.flvDelay = request.flvDelay;
             this.flvLevel = request.flvLevel;
             this.hlsDelay = request.hlsDelay;
             this.hlsLevel = request.hlsLevel;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.rtmpDelay = request.rtmpDelay;
             this.rtmpLevel = request.rtmpLevel;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * DomainName.
+         * <p>The streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -185,7 +185,13 @@ public class SetLiveStreamDelayConfigRequest extends Request {
         }
 
         /**
-         * FlvDelay.
+         * <p>The latency of FLV-based playback. Unit: seconds.</p>
+         * <blockquote>
+         * <p> If this parameter is left empty, the latency is set to a value corresponding to the FlvLevel parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>8</p>
          */
         public Builder flvDelay(Integer flvDelay) {
             this.putQueryParameter("FlvDelay", flvDelay);
@@ -194,7 +200,19 @@ public class SetLiveStreamDelayConfigRequest extends Request {
         }
 
         /**
-         * FlvLevel.
+         * <p>The latency level of FLV-based playback. Ignore this parameter if the FlvDelay parameter is configured.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>short</strong> (default): The latency is 4 seconds.</li>
+         * <li><strong>medium</strong>: The latency is 8 seconds.</li>
+         * <li><strong>long</strong>: The latency is 16 seconds.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If both the FlvDelay and FlvLevel parameters are left empty, FlvLevel is set to <strong>short</strong> by default.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>medium</p>
          */
         public Builder flvLevel(String flvLevel) {
             this.putQueryParameter("FlvLevel", flvLevel);
@@ -203,7 +221,13 @@ public class SetLiveStreamDelayConfigRequest extends Request {
         }
 
         /**
-         * HlsDelay.
+         * <p>The latency of HLS-based playback. Unit: seconds.</p>
+         * <blockquote>
+         * <p> If this parameter is left empty, the latency is set to a value corresponding to the HlsLevel parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder hlsDelay(Integer hlsDelay) {
             this.putQueryParameter("HlsDelay", hlsDelay);
@@ -212,7 +236,19 @@ public class SetLiveStreamDelayConfigRequest extends Request {
         }
 
         /**
-         * HlsLevel.
+         * <p>The latency level of HLS-based playback. Ignore this parameter if the HlsDelay parameter is configured.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>short</strong>: The latency is 3 seconds. This is the default value.</li>
+         * <li><strong>medium</strong>: The latency is 6 seconds.</li>
+         * <li><strong>long</strong>: The latency is 15 seconds.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If both the HlsDelay and HlsLevel parameters are left empty, HlsLevel is set to <strong>short</strong> by default.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>short</p>
          */
         public Builder hlsLevel(String hlsLevel) {
             this.putQueryParameter("HlsLevel", hlsLevel);
@@ -230,7 +266,22 @@ public class SetLiveStreamDelayConfigRequest extends Request {
         }
 
         /**
-         * RtmpDelay.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The latency of RTMP-based playback. Unit: seconds.</p>
+         * <blockquote>
+         * <p> If this parameter is left empty, the latency is set to a value corresponding to the RtmpLevel parameter.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>4</p>
          */
         public Builder rtmpDelay(Integer rtmpDelay) {
             this.putQueryParameter("RtmpDelay", rtmpDelay);
@@ -239,7 +290,19 @@ public class SetLiveStreamDelayConfigRequest extends Request {
         }
 
         /**
-         * RtmpLevel.
+         * <p>The latency level of RTMP-based playback. Ignore this parameter if the RtmpDelay parameter is configured.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li><strong>short</strong> (default): The latency is 4 seconds.</li>
+         * <li><strong>medium</strong>: The latency is 8 seconds.</li>
+         * <li><strong>long</strong>: The latency is 16 seconds.</li>
+         * </ul>
+         * <blockquote>
+         * <p> If both the RtmpDelay and RtmpLevel parameters are left empty, RtmpLevel is set to <strong>short</strong> by default.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>short</p>
          */
         public Builder rtmpLevel(String rtmpLevel) {
             this.putQueryParameter("RtmpLevel", rtmpLevel);

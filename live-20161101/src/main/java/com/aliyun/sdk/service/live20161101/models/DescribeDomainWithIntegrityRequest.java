@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeDomainWithIntegrityRequest} extends {@link RequestModel}
  *
  * <p>DescribeDomainWithIntegrityRequest</p>
  */
 public class DescribeDomainWithIntegrityRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("Integrity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Integrity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Float integrity;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeDomainWithIntegrityRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.endTime = builder.endTime;
         this.integrity = builder.integrity;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -52,16 +57,9 @@ public class DescribeDomainWithIntegrityRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -86,6 +84,13 @@ public class DescribeDomainWithIntegrityRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -93,10 +98,10 @@ public class DescribeDomainWithIntegrityRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDomainWithIntegrityRequest, Builder> {
-        private String regionId; 
         private String endTime; 
         private Float integrity; 
         private Long ownerId; 
+        private String regionId; 
         private String startTime; 
 
         private Builder() {
@@ -105,24 +110,19 @@ public class DescribeDomainWithIntegrityRequest extends Request {
 
         private Builder(DescribeDomainWithIntegrityRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.endTime = request.endTime;
             this.integrity = request.integrity;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * EndTime.
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-10-10T20:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -131,7 +131,11 @@ public class DescribeDomainWithIntegrityRequest extends Request {
         }
 
         /**
-         * Integrity.
+         * <p>The integrity.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.95</p>
          */
         public Builder integrity(Float integrity) {
             this.putQueryParameter("Integrity", integrity);
@@ -149,7 +153,20 @@ public class DescribeDomainWithIntegrityRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-10-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

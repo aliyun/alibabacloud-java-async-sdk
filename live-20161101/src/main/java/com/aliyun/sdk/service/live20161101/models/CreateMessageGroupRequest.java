@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMessageGroupRequest} extends {@link RequestModel}
  *
  * <p>CreateMessageGroupRequest</p>
  */
 public class CreateMessageGroupRequest extends Request {
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("CreatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String creatorId;
 
-    @Body
-    @NameInMap("Extension")
-    private java.util.Map < String, String > extension;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Extension")
+    private java.util.Map<String, String> extension;
 
     private CreateMessageGroupRequest(Builder builder) {
         super(builder);
@@ -41,7 +46,7 @@ public class CreateMessageGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -63,14 +68,14 @@ public class CreateMessageGroupRequest extends Request {
     /**
      * @return extension
      */
-    public java.util.Map < String, String > getExtension() {
+    public java.util.Map<String, String> getExtension() {
         return this.extension;
     }
 
     public static final class Builder extends Request.Builder<CreateMessageGroupRequest, Builder> {
         private String appId; 
         private String creatorId; 
-        private java.util.Map < String, String > extension; 
+        private java.util.Map<String, String> extension; 
 
         private Builder() {
             super();
@@ -84,7 +89,11 @@ public class CreateMessageGroupRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the interactive messaging application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a494caec-***-695ef345db77</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -93,7 +102,11 @@ public class CreateMessageGroupRequest extends Request {
         }
 
         /**
-         * CreatorId.
+         * <p>The ID of the creator. The ID can be up to 36 characters in length and can contain only letters and digits.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>as****hs</p>
          */
         public Builder creatorId(String creatorId) {
             this.putBodyParameter("CreatorId", creatorId);
@@ -102,9 +115,9 @@ public class CreateMessageGroupRequest extends Request {
         }
 
         /**
-         * Extension.
+         * <p>The extended field.</p>
          */
-        public Builder extension(java.util.Map < String, String > extension) {
+        public Builder extension(java.util.Map<String, String> extension) {
             String extensionShrink = shrink(extension, "Extension", "json");
             this.putBodyParameter("Extension", extensionShrink);
             this.extension = extension;

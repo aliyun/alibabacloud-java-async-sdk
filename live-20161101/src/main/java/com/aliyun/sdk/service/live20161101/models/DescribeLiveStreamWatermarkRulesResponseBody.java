@@ -1,26 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamWatermarkRulesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamWatermarkRulesResponseBody</p>
  */
 public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleInfoList")
+    @com.aliyun.core.annotation.NameInMap("RuleInfoList")
     private RuleInfoList ruleInfoList;
+
+    @com.aliyun.core.annotation.NameInMap("Total")
+    private Integer total;
 
     private DescribeLiveStreamWatermarkRulesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.ruleInfoList = builder.ruleInfoList;
+        this.total = builder.total;
     }
 
     public static Builder builder() {
@@ -29,6 +38,10 @@ public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
 
     public static DescribeLiveStreamWatermarkRulesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -45,12 +58,32 @@ public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
         return this.ruleInfoList;
     }
 
+    /**
+     * @return total
+     */
+    public Integer getTotal() {
+        return this.total;
+    }
+
     public static final class Builder {
         private String requestId; 
         private RuleInfoList ruleInfoList; 
+        private Integer total; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamWatermarkRulesResponseBody model) {
+            this.requestId = model.requestId;
+            this.ruleInfoList = model.ruleInfoList;
+            this.total = model.total;
+        } 
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c6a2a0df228-4a64- af62-20e91b9676b3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,10 +91,21 @@ public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RuleInfoList.
+         * <p>The watermark rules.</p>
          */
         public Builder ruleInfoList(RuleInfoList ruleInfoList) {
             this.ruleInfoList = ruleInfoList;
+            return this;
+        }
+
+        /**
+         * <p>The total number of entries that meet the specified conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        public Builder total(Integer total) {
+            this.total = total;
             return this;
         }
 
@@ -71,26 +115,32 @@ public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveStreamWatermarkRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamWatermarkRulesResponseBody</p>
+     */
     public static class RuleInfo extends TeaModel {
-        @NameInMap("App")
+        @com.aliyun.core.annotation.NameInMap("App")
         private String app;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("Stream")
+        @com.aliyun.core.annotation.NameInMap("Stream")
         private String stream;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
         private RuleInfo(Builder builder) {
@@ -169,8 +219,24 @@ public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
             private String stream; 
             private String templateId; 
 
+            private Builder() {
+            } 
+
+            private Builder(RuleInfo model) {
+                this.app = model.app;
+                this.description = model.description;
+                this.domain = model.domain;
+                this.name = model.name;
+                this.ruleId = model.ruleId;
+                this.stream = model.stream;
+                this.templateId = model.templateId;
+            } 
+
             /**
-             * App.
+             * <p>The name of the application to which the live stream belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveApp****</p>
              */
             public Builder app(String app) {
                 this.app = app;
@@ -178,7 +244,10 @@ public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the custom rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my rule</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -186,7 +255,10 @@ public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.aliyundoc.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -194,7 +266,10 @@ public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the custom rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WatermarkRule****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -202,7 +277,13 @@ public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleId.
+             * <p>The ID of the watermark rule.</p>
+             * <blockquote>
+             * <p> You can obtain the rule ID by checking the value of the RuleId parameter that is returned by the <a href="https://help.aliyun.com/document_detail/2848100.html">AddLiveStreamWatermarkRule</a> operation.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>445409ec-7eaa-461d -8f29-4bec2eb9****</p>
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -210,7 +291,23 @@ public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Stream.
+             * <p>The name of the live stream. The following matching rules apply:</p>
+             * <ul>
+             * <li>A stream name can be exactly matched. Example: liveStreamA.</li>
+             * <li>Fuzzy match is also supported. The use of an asterisk (<code>*</code>) allows all approximate matches to be found.</li>
+             * <li>You can place the asterisk before or after an approximate string.</li>
+             * </ul>
+             * <blockquote>
+             * </blockquote>
+             * <ul>
+             * <li><p>Fuzzy match: Only one asterisk (<code>*</code>) before or after an approximate string is allowed. The approximate string must be enclosed in <code>()</code>. Separate multiple strings with vertical bars (<code>|</code>).</p>
+             * </li>
+             * <li><p>For example, <code>*(t1|t2)</code> matches all streams whose name has the <code>t1</code> or <code>t2</code> suffix, and <code>(abc|123)*</code> matches all streams whose name has the <code>abc</code> or <code>123</code> prefix.</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>liveStreamA</p>
              */
             public Builder stream(String stream) {
                 this.stream = stream;
@@ -218,7 +315,13 @@ public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The ID of the watermark template.</p>
+             * <blockquote>
+             * <p> You can obtain the template ID by checking the value of the TemplateId parameter that is returned by the <a href="https://help.aliyun.com/document_detail/2848096.html">AddLiveStreamWatermark</a> operation.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>445409ec-7eaa-461d-8f29-4bec2eb9 ****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -232,9 +335,15 @@ public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamWatermarkRulesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamWatermarkRulesResponseBody</p>
+     */
     public static class RuleInfoList extends TeaModel {
-        @NameInMap("RuleInfo")
-        private java.util.List < RuleInfo> ruleInfo;
+        @com.aliyun.core.annotation.NameInMap("RuleInfo")
+        private java.util.List<RuleInfo> ruleInfo;
 
         private RuleInfoList(Builder builder) {
             this.ruleInfo = builder.ruleInfo;
@@ -251,17 +360,24 @@ public class DescribeLiveStreamWatermarkRulesResponseBody extends TeaModel {
         /**
          * @return ruleInfo
          */
-        public java.util.List < RuleInfo> getRuleInfo() {
+        public java.util.List<RuleInfo> getRuleInfo() {
             return this.ruleInfo;
         }
 
         public static final class Builder {
-            private java.util.List < RuleInfo> ruleInfo; 
+            private java.util.List<RuleInfo> ruleInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleInfoList model) {
+                this.ruleInfo = model.ruleInfo;
+            } 
 
             /**
              * RuleInfo.
              */
-            public Builder ruleInfo(java.util.List < RuleInfo> ruleInfo) {
+            public Builder ruleInfo(java.util.List<RuleInfo> ruleInfo) {
                 this.ruleInfo = ruleInfo;
                 return this;
             }

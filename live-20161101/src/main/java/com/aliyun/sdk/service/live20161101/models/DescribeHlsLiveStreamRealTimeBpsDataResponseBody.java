@@ -1,25 +1,30 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeHlsLiveStreamRealTimeBpsDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeHlsLiveStreamRealTimeBpsDataResponseBody</p>
  */
 public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Time")
+    @com.aliyun.core.annotation.NameInMap("Time")
     private String time;
 
-    @NameInMap("UsageData")
-    private java.util.List < UsageData> usageData;
+    @com.aliyun.core.annotation.NameInMap("UsageData")
+    private java.util.List<UsageData> usageData;
 
     private DescribeHlsLiveStreamRealTimeBpsDataResponseBody(Builder builder) {
         this.requestId = builder.requestId;
@@ -33,6 +38,10 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
 
     public static DescribeHlsLiveStreamRealTimeBpsDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -52,17 +61,29 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
     /**
      * @return usageData
      */
-    public java.util.List < UsageData> getUsageData() {
+    public java.util.List<UsageData> getUsageData() {
         return this.usageData;
     }
 
     public static final class Builder {
         private String requestId; 
         private String time; 
-        private java.util.List < UsageData> usageData; 
+        private java.util.List<UsageData> usageData; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeHlsLiveStreamRealTimeBpsDataResponseBody model) {
+            this.requestId = model.requestId;
+            this.time = model.time;
+            this.usageData = model.usageData;
+        } 
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>17C16B18-D3EA-4809-9CC3-8A2CBE14BC7B</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +91,10 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * Time.
+         * <p>The timestamp for which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-08-08T00:00:00Z</p>
          */
         public Builder time(String time) {
             this.time = time;
@@ -78,9 +102,9 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * UsageData.
+         * <p>The usage data.</p>
          */
-        public Builder usageData(java.util.List < UsageData> usageData) {
+        public Builder usageData(java.util.List<UsageData> usageData) {
             this.usageData = usageData;
             return this;
         }
@@ -91,14 +115,20 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeHlsLiveStreamRealTimeBpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHlsLiveStreamRealTimeBpsDataResponseBody</p>
+     */
     public static class Infos extends TeaModel {
-        @NameInMap("DownFlow")
+        @com.aliyun.core.annotation.NameInMap("DownFlow")
         private Float downFlow;
 
-        @NameInMap("Online")
+        @com.aliyun.core.annotation.NameInMap("Online")
         private Float online;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private String rate;
 
         private Infos(Builder builder) {
@@ -141,8 +171,20 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
             private Float online; 
             private String rate; 
 
+            private Builder() {
+            } 
+
+            private Builder(Infos model) {
+                this.downFlow = model.downFlow;
+                this.online = model.online;
+                this.rate = model.rate;
+            } 
+
             /**
-             * DownFlow.
+             * <p>The bandwidth. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>11440.88</p>
              */
             public Builder downFlow(Float downFlow) {
                 this.downFlow = downFlow;
@@ -150,7 +192,10 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Online.
+             * <p>The number of online users.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder online(Float online) {
                 this.online = online;
@@ -158,7 +203,10 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * Rate.
+             * <p>The bitrate.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1028</p>
              */
             public Builder rate(String rate) {
                 this.rate = rate;
@@ -172,11 +220,17 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHlsLiveStreamRealTimeBpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHlsLiveStreamRealTimeBpsDataResponseBody</p>
+     */
     public static class StreamInfos extends TeaModel {
-        @NameInMap("Infos")
-        private java.util.List < Infos> infos;
+        @com.aliyun.core.annotation.NameInMap("Infos")
+        private java.util.List<Infos> infos;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
         private StreamInfos(Builder builder) {
@@ -195,7 +249,7 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
         /**
          * @return infos
          */
-        public java.util.List < Infos> getInfos() {
+        public java.util.List<Infos> getInfos() {
             return this.infos;
         }
 
@@ -207,19 +261,30 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < Infos> infos; 
+            private java.util.List<Infos> infos; 
             private String streamName; 
 
+            private Builder() {
+            } 
+
+            private Builder(StreamInfos model) {
+                this.infos = model.infos;
+                this.streamName = model.streamName;
+            } 
+
             /**
-             * Infos.
+             * <p>The statistics on the HLS stream.</p>
              */
-            public Builder infos(java.util.List < Infos> infos) {
+            public Builder infos(java.util.List<Infos> infos) {
                 this.infos = infos;
                 return this;
             }
 
             /**
-             * StreamName.
+             * <p>The name of the stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>/live/sport.m3u8</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -233,12 +298,18 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeHlsLiveStreamRealTimeBpsDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeHlsLiveStreamRealTimeBpsDataResponseBody</p>
+     */
     public static class UsageData extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("StreamInfos")
-        private java.util.List < StreamInfos> streamInfos;
+        @com.aliyun.core.annotation.NameInMap("StreamInfos")
+        private java.util.List<StreamInfos> streamInfos;
 
         private UsageData(Builder builder) {
             this.domainName = builder.domainName;
@@ -263,16 +334,27 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
         /**
          * @return streamInfos
          */
-        public java.util.List < StreamInfos> getStreamInfos() {
+        public java.util.List<StreamInfos> getStreamInfos() {
             return this.streamInfos;
         }
 
         public static final class Builder {
             private String domainName; 
-            private java.util.List < StreamInfos> streamInfos; 
+            private java.util.List<StreamInfos> streamInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(UsageData model) {
+                this.domainName = model.domainName;
+                this.streamInfos = model.streamInfos;
+            } 
 
             /**
-             * DomainName.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -280,9 +362,9 @@ public class DescribeHlsLiveStreamRealTimeBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * StreamInfos.
+             * <p>Details about the statistics on each HLS stream under the domain name.</p>
              */
-            public Builder streamInfos(java.util.List < StreamInfos> streamInfos) {
+            public Builder streamInfos(java.util.List<StreamInfos> streamInfos) {
                 this.streamInfos = streamInfos;
                 return this;
             }

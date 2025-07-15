@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EnableLiveRealtimeLogDeliveryResponseBody} extends {@link TeaModel}
  *
  * <p>EnableLiveRealtimeLogDeliveryResponseBody</p>
  */
 public class EnableLiveRealtimeLogDeliveryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private EnableLiveRealtimeLogDeliveryResponseBody(Builder builder) {
@@ -27,6 +32,10 @@ public class EnableLiveRealtimeLogDeliveryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -37,8 +46,18 @@ public class EnableLiveRealtimeLogDeliveryResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(EnableLiveRealtimeLogDeliveryResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9732E117-8A37-49FD-A36F-ABBB87556CA7</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

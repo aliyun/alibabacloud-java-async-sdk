@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetEditingJobInfoResponseBody} extends {@link TeaModel}
  *
  * <p>GetEditingJobInfoResponseBody</p>
  */
 public class GetEditingJobInfoResponseBody extends TeaModel {
-    @NameInMap("CasterId")
+    @com.aliyun.core.annotation.NameInMap("CasterId")
     private String casterId;
 
-    @NameInMap("EditingTasksInfo")
+    @com.aliyun.core.annotation.NameInMap("EditingTasksInfo")
     private String editingTasksInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetEditingJobInfoResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class GetEditingJobInfoResponseBody extends TeaModel {
 
     public static GetEditingJobInfoResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,8 +70,20 @@ public class GetEditingJobInfoResponseBody extends TeaModel {
         private String editingTasksInfo; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetEditingJobInfoResponseBody model) {
+            this.casterId = model.casterId;
+            this.editingTasksInfo = model.editingTasksInfo;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * CasterId.
+         * <p>The ID of the production studio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>53200b81-b761-4c10-842a-a0726d97****</p>
          */
         public Builder casterId(String casterId) {
             this.casterId = casterId;
@@ -70,7 +91,17 @@ public class GetEditingJobInfoResponseBody extends TeaModel {
         }
 
         /**
-         * EditingTasksInfo.
+         * <p>The information about editing tasks. The following fields are returned for each editing task:</p>
+         * <ul>
+         * <li><strong>OutputVodId</strong>: the ID of the output video-on-demand (VOD) file.</li>
+         * <li><strong>TaskStatus</strong>: the status of the editing task. Valid values: -1, 0, 1, 2, and 3. A value of -1 indicates that the editing task fails. A value of 0 indicates that the editing task is being initialized. A value of 1 indicates that editing is in progress. A value of 2 indicates that the output VOD file is being uploaded. A value of 3 indicates that the editing task is successful.</li>
+         * <li><strong>StorageLocation</strong>: the storage location in ApsaraVideo VOD.</li>
+         * <li><strong>FileName</strong>: the name of the file that is edited.</li>
+         * <li><strong>ShowId</strong>: the ID of the episode.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;EditingTasksInfo&quot;: {     &quot;OutputVodId&quot;: &quot;3e34733b40b9a96ccf5c1ff6f69****&quot;,     &quot;TaskStatus&quot;: 1,     &quot;StorageInfo&quot;: {       &quot;StorageLocation&quot;: &quot;<em><strong>bucket</strong></em>&quot;,       &quot;FileName&quot;: &quot;EditFile****&quot;     },     &quot;ShowId&quot;: &quot;42200b81-b761-4c10-842a-a0726d97****&quot;   },</p>
          */
         public Builder editingTasksInfo(String editingTasksInfo) {
             this.editingTasksInfo = editingTasksInfo;
@@ -78,7 +109,10 @@ public class GetEditingJobInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

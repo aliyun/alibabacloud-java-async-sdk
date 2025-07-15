@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateMessageAppRequest} extends {@link RequestModel}
  *
  * <p>UpdateMessageAppRequest</p>
  */
 public class UpdateMessageAppRequest extends Request {
-    @Body
-    @NameInMap("AppConfig")
-    private java.util.Map < String, String > appConfig;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppConfig")
+    private java.util.Map<String, String> appConfig;
 
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Body
-    @NameInMap("Extension")
-    private java.util.Map < String, String > extension;
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Extension")
+    private java.util.Map<String, String> extension;
 
     private UpdateMessageAppRequest(Builder builder) {
         super(builder);
@@ -45,7 +50,7 @@ public class UpdateMessageAppRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -53,7 +58,7 @@ public class UpdateMessageAppRequest extends Request {
     /**
      * @return appConfig
      */
-    public java.util.Map < String, String > getAppConfig() {
+    public java.util.Map<String, String> getAppConfig() {
         return this.appConfig;
     }
 
@@ -74,15 +79,15 @@ public class UpdateMessageAppRequest extends Request {
     /**
      * @return extension
      */
-    public java.util.Map < String, String > getExtension() {
+    public java.util.Map<String, String> getExtension() {
         return this.extension;
     }
 
     public static final class Builder extends Request.Builder<UpdateMessageAppRequest, Builder> {
-        private java.util.Map < String, String > appConfig; 
+        private java.util.Map<String, String> appConfig; 
         private String appId; 
         private String appName; 
-        private java.util.Map < String, String > extension; 
+        private java.util.Map<String, String> extension; 
 
         private Builder() {
             super();
@@ -97,9 +102,9 @@ public class UpdateMessageAppRequest extends Request {
         } 
 
         /**
-         * AppConfig.
+         * <p>The configurations of the application.</p>
          */
-        public Builder appConfig(java.util.Map < String, String > appConfig) {
+        public Builder appConfig(java.util.Map<String, String> appConfig) {
             String appConfigShrink = shrink(appConfig, "AppConfig", "json");
             this.putBodyParameter("AppConfig", appConfigShrink);
             this.appConfig = appConfig;
@@ -107,7 +112,11 @@ public class UpdateMessageAppRequest extends Request {
         }
 
         /**
-         * AppId.
+         * <p>The ID of the interactive messaging application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VKL3***</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -116,7 +125,10 @@ public class UpdateMessageAppRequest extends Request {
         }
 
         /**
-         * AppName.
+         * <p>The name of the interactive messaging application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>testApp</p>
          */
         public Builder appName(String appName) {
             this.putBodyParameter("AppName", appName);
@@ -125,9 +137,9 @@ public class UpdateMessageAppRequest extends Request {
         }
 
         /**
-         * Extension.
+         * <p>The extended field.</p>
          */
-        public Builder extension(java.util.Map < String, String > extension) {
+        public Builder extension(java.util.Map<String, String> extension) {
             String extensionShrink = shrink(extension, "Extension", "json");
             this.putBodyParameter("Extension", extensionShrink);
             this.extension = extension;

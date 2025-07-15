@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamsBlockListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamsBlockListResponseBody</p>
  */
 public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StreamUrls")
+    @com.aliyun.core.annotation.NameInMap("StreamUrls")
     private StreamUrls streamUrls;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
     private DescribeLiveStreamsBlockListResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
 
     public static DescribeLiveStreamsBlockListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,24 @@ public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
         private Integer totalNum; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamsBlockListResponseBody model) {
+            this.domainName = model.domainName;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.streamUrls = model.streamUrls;
+            this.totalNum = model.totalNum;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -118,7 +143,10 @@ public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.pageNum = pageNum;
@@ -126,7 +154,10 @@ public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -134,7 +165,10 @@ public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9D855EC8-CF71-4615-B164-F7DFCB23B41D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -142,7 +176,7 @@ public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
         }
 
         /**
-         * StreamUrls.
+         * <p>The complete URL of each live stream.</p>
          */
         public Builder streamUrls(StreamUrls streamUrls) {
             this.streamUrls = streamUrls;
@@ -150,7 +184,10 @@ public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of live stream URLs that meet the specified conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -158,7 +195,10 @@ public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of returned pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -171,9 +211,15 @@ public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveStreamsBlockListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamsBlockListResponseBody</p>
+     */
     public static class StreamUrls extends TeaModel {
-        @NameInMap("StreamUrl")
-        private java.util.List < String > streamUrl;
+        @com.aliyun.core.annotation.NameInMap("StreamUrl")
+        private java.util.List<String> streamUrl;
 
         private StreamUrls(Builder builder) {
             this.streamUrl = builder.streamUrl;
@@ -190,17 +236,24 @@ public class DescribeLiveStreamsBlockListResponseBody extends TeaModel {
         /**
          * @return streamUrl
          */
-        public java.util.List < String > getStreamUrl() {
+        public java.util.List<String> getStreamUrl() {
             return this.streamUrl;
         }
 
         public static final class Builder {
-            private java.util.List < String > streamUrl; 
+            private java.util.List<String> streamUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreamUrls model) {
+                this.streamUrl = model.streamUrl;
+            } 
 
             /**
              * StreamUrl.
              */
-            public Builder streamUrl(java.util.List < String > streamUrl) {
+            public Builder streamUrl(java.util.List<String> streamUrl) {
                 this.streamUrl = streamUrl;
                 return this;
             }

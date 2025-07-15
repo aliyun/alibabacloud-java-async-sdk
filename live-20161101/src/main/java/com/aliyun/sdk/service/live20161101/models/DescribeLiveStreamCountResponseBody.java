@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamCountResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamCountResponseBody</p>
  */
 public class DescribeLiveStreamCountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StreamCountInfos")
+    @com.aliyun.core.annotation.NameInMap("StreamCountInfos")
     private StreamCountInfos streamCountInfos;
 
     private DescribeLiveStreamCountResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
 
     public static DescribeLiveStreamCountResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
         private String requestId; 
         private StreamCountInfos streamCountInfos; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamCountResponseBody model) {
+            this.requestId = model.requestId;
+            this.streamCountInfos = model.streamCountInfos;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FCFFE4A4-F34F-4EEF-B401-36A01689AFBC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,7 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
         }
 
         /**
-         * StreamCountInfos.
+         * <p>The statistics of the live streams.</p>
          */
         public Builder streamCountInfos(StreamCountInfos streamCountInfos) {
             this.streamCountInfos = streamCountInfos;
@@ -71,14 +91,20 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveStreamCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamCountResponseBody</p>
+     */
     public static class StreamCountDetail extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("VideoDataRate")
+        @com.aliyun.core.annotation.NameInMap("VideoDataRate")
         private Long videoDataRate;
 
         private StreamCountDetail(Builder builder) {
@@ -121,8 +147,20 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
             private String format; 
             private Long videoDataRate; 
 
+            private Builder() {
+            } 
+
+            private Builder(StreamCountDetail model) {
+                this.count = model.count;
+                this.format = model.format;
+                this.videoDataRate = model.videoDataRate;
+            } 
+
             /**
-             * Count.
+             * <p>The number of online streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -130,7 +168,14 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * <p>The video codec. Valid values:</p>
+             * <ul>
+             * <li><strong>h264</strong></li>
+             * <li><strong>h265</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>h264</p>
              */
             public Builder format(String format) {
                 this.format = format;
@@ -138,7 +183,10 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
             }
 
             /**
-             * VideoDataRate.
+             * <p>The video bitrate. This parameter is returned only for transcoded streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>390</p>
              */
             public Builder videoDataRate(Long videoDataRate) {
                 this.videoDataRate = videoDataRate;
@@ -152,9 +200,15 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamCountResponseBody</p>
+     */
     public static class StreamCountDetails extends TeaModel {
-        @NameInMap("StreamCountDetail")
-        private java.util.List < StreamCountDetail> streamCountDetail;
+        @com.aliyun.core.annotation.NameInMap("StreamCountDetail")
+        private java.util.List<StreamCountDetail> streamCountDetail;
 
         private StreamCountDetails(Builder builder) {
             this.streamCountDetail = builder.streamCountDetail;
@@ -171,17 +225,24 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
         /**
          * @return streamCountDetail
          */
-        public java.util.List < StreamCountDetail> getStreamCountDetail() {
+        public java.util.List<StreamCountDetail> getStreamCountDetail() {
             return this.streamCountDetail;
         }
 
         public static final class Builder {
-            private java.util.List < StreamCountDetail> streamCountDetail; 
+            private java.util.List<StreamCountDetail> streamCountDetail; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreamCountDetails model) {
+                this.streamCountDetail = model.streamCountDetail;
+            } 
 
             /**
              * StreamCountDetail.
              */
-            public Builder streamCountDetail(java.util.List < StreamCountDetail> streamCountDetail) {
+            public Builder streamCountDetail(java.util.List<StreamCountDetail> streamCountDetail) {
                 this.streamCountDetail = streamCountDetail;
                 return this;
             }
@@ -193,17 +254,23 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamCountResponseBody</p>
+     */
     public static class StreamCountInfo extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Limit")
+        @com.aliyun.core.annotation.NameInMap("Limit")
         private Long limit;
 
-        @NameInMap("StreamCountDetails")
+        @com.aliyun.core.annotation.NameInMap("StreamCountDetails")
         private StreamCountDetails streamCountDetails;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private StreamCountInfo(Builder builder) {
@@ -255,8 +322,21 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
             private StreamCountDetails streamCountDetails; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(StreamCountInfo model) {
+                this.count = model.count;
+                this.limit = model.limit;
+                this.streamCountDetails = model.streamCountDetails;
+                this.type = model.type;
+            } 
+
             /**
-             * Count.
+             * <p>The number of online streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -264,7 +344,10 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
             }
 
             /**
-             * Limit.
+             * <p>The maximum allowed number of concurrently ingested streams. This parameter is available only to users in the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder limit(Long limit) {
                 this.limit = limit;
@@ -272,7 +355,7 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
             }
 
             /**
-             * StreamCountDetails.
+             * <p>The information about the live streams.</p>
              */
             public Builder streamCountDetails(StreamCountDetails streamCountDetails) {
                 this.streamCountDetails = streamCountDetails;
@@ -280,7 +363,14 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the live stream. Valid values:</p>
+             * <ul>
+             * <li><strong>raw</strong>: source streams</li>
+             * <li><strong>trans</strong>: transcoded streams</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>raw</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -294,9 +384,15 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamCountResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamCountResponseBody</p>
+     */
     public static class StreamCountInfos extends TeaModel {
-        @NameInMap("StreamCountInfo")
-        private java.util.List < StreamCountInfo> streamCountInfo;
+        @com.aliyun.core.annotation.NameInMap("StreamCountInfo")
+        private java.util.List<StreamCountInfo> streamCountInfo;
 
         private StreamCountInfos(Builder builder) {
             this.streamCountInfo = builder.streamCountInfo;
@@ -313,17 +409,24 @@ public class DescribeLiveStreamCountResponseBody extends TeaModel {
         /**
          * @return streamCountInfo
          */
-        public java.util.List < StreamCountInfo> getStreamCountInfo() {
+        public java.util.List<StreamCountInfo> getStreamCountInfo() {
             return this.streamCountInfo;
         }
 
         public static final class Builder {
-            private java.util.List < StreamCountInfo> streamCountInfo; 
+            private java.util.List<StreamCountInfo> streamCountInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreamCountInfos model) {
+                this.streamCountInfo = model.streamCountInfo;
+            } 
 
             /**
              * StreamCountInfo.
              */
-            public Builder streamCountInfo(java.util.List < StreamCountInfo> streamCountInfo) {
+            public Builder streamCountInfo(java.util.List<StreamCountInfo> streamCountInfo) {
                 this.streamCountInfo = streamCountInfo;
                 return this;
             }

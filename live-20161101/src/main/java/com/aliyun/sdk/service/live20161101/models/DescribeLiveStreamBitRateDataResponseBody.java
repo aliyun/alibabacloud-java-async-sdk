@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamBitRateDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamBitRateDataResponseBody</p>
  */
 public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
-    @NameInMap("FrameRateAndBitRateInfos")
+    @com.aliyun.core.annotation.NameInMap("FrameRateAndBitRateInfos")
     private FrameRateAndBitRateInfos frameRateAndBitRateInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveStreamBitRateDataResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
 
     public static DescribeLiveStreamBitRateDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
         private FrameRateAndBitRateInfos frameRateAndBitRateInfos; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamBitRateDataResponseBody model) {
+            this.frameRateAndBitRateInfos = model.frameRateAndBitRateInfos;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * FrameRateAndBitRateInfos.
+         * <p>The frame rates and bitrates of the live stream.</p>
          */
         public Builder frameRateAndBitRateInfos(FrameRateAndBitRateInfos frameRateAndBitRateInfos) {
             this.frameRateAndBitRateInfos = frameRateAndBitRateInfos;
@@ -58,7 +75,10 @@ public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +91,26 @@ public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveStreamBitRateDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamBitRateDataResponseBody</p>
+     */
     public static class FrameRateAndBitRateInfo extends TeaModel {
-        @NameInMap("AudioFrameRate")
+        @com.aliyun.core.annotation.NameInMap("AudioFrameRate")
         private Float audioFrameRate;
 
-        @NameInMap("BitRate")
+        @com.aliyun.core.annotation.NameInMap("BitRate")
         private Float bitRate;
 
-        @NameInMap("StreamUrl")
+        @com.aliyun.core.annotation.NameInMap("StreamUrl")
         private String streamUrl;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("VideoFrameRate")
+        @com.aliyun.core.annotation.NameInMap("VideoFrameRate")
         private Float videoFrameRate;
 
         private FrameRateAndBitRateInfo(Builder builder) {
@@ -145,8 +171,22 @@ public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
             private String time; 
             private Float videoFrameRate; 
 
+            private Builder() {
+            } 
+
+            private Builder(FrameRateAndBitRateInfo model) {
+                this.audioFrameRate = model.audioFrameRate;
+                this.bitRate = model.bitRate;
+                this.streamUrl = model.streamUrl;
+                this.time = model.time;
+                this.videoFrameRate = model.videoFrameRate;
+            } 
+
             /**
-             * AudioFrameRate.
+             * <p>The audio frame rate of the live stream. Unit: FPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder audioFrameRate(Float audioFrameRate) {
                 this.audioFrameRate = audioFrameRate;
@@ -154,7 +194,10 @@ public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * BitRate.
+             * <p>The bitrate of the live stream. Unit: bit/s.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder bitRate(Float bitRate) {
                 this.bitRate = bitRate;
@@ -162,7 +205,7 @@ public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * StreamUrl.
+             * <p>The URL of the live stream.</p>
              */
             public Builder streamUrl(String streamUrl) {
                 this.streamUrl = streamUrl;
@@ -170,7 +213,10 @@ public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * <p>The time when the data was collected. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-09-13T16:04:00Z</p>
              */
             public Builder time(String time) {
                 this.time = time;
@@ -178,7 +224,10 @@ public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * VideoFrameRate.
+             * <p>The video frame rate of the live stream. Unit: frames per second (FPS).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30</p>
              */
             public Builder videoFrameRate(Float videoFrameRate) {
                 this.videoFrameRate = videoFrameRate;
@@ -192,9 +241,15 @@ public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamBitRateDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamBitRateDataResponseBody</p>
+     */
     public static class FrameRateAndBitRateInfos extends TeaModel {
-        @NameInMap("FrameRateAndBitRateInfo")
-        private java.util.List < FrameRateAndBitRateInfo> frameRateAndBitRateInfo;
+        @com.aliyun.core.annotation.NameInMap("FrameRateAndBitRateInfo")
+        private java.util.List<FrameRateAndBitRateInfo> frameRateAndBitRateInfo;
 
         private FrameRateAndBitRateInfos(Builder builder) {
             this.frameRateAndBitRateInfo = builder.frameRateAndBitRateInfo;
@@ -211,17 +266,24 @@ public class DescribeLiveStreamBitRateDataResponseBody extends TeaModel {
         /**
          * @return frameRateAndBitRateInfo
          */
-        public java.util.List < FrameRateAndBitRateInfo> getFrameRateAndBitRateInfo() {
+        public java.util.List<FrameRateAndBitRateInfo> getFrameRateAndBitRateInfo() {
             return this.frameRateAndBitRateInfo;
         }
 
         public static final class Builder {
-            private java.util.List < FrameRateAndBitRateInfo> frameRateAndBitRateInfo; 
+            private java.util.List<FrameRateAndBitRateInfo> frameRateAndBitRateInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(FrameRateAndBitRateInfos model) {
+                this.frameRateAndBitRateInfo = model.frameRateAndBitRateInfo;
+            } 
 
             /**
              * FrameRateAndBitRateInfo.
              */
-            public Builder frameRateAndBitRateInfo(java.util.List < FrameRateAndBitRateInfo> frameRateAndBitRateInfo) {
+            public Builder frameRateAndBitRateInfo(java.util.List<FrameRateAndBitRateInfo> frameRateAndBitRateInfo) {
                 this.frameRateAndBitRateInfo = frameRateAndBitRateInfo;
                 return this;
             }

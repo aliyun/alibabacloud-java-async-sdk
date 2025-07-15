@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveDomainRealTimeTrafficDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveDomainRealTimeTrafficDataResponseBody</p>
  */
 public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RealTimeTrafficDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("RealTimeTrafficDataPerInterval")
     private RealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeLiveDomainRealTimeTrafficDataResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
 
     public static DescribeLiveDomainRealTimeTrafficDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
         private String requestId; 
         private String startTime; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveDomainRealTimeTrafficDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.realTimeTrafficDataPerInterval = model.realTimeTrafficDataPerInterval;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
+
         /**
-         * DataInterval.
+         * <p>The time interval between the entries returned. Unit: seconds</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +130,10 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
         }
 
         /**
-         * DomainName.
+         * <p>The streaming domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com,example.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +141,10 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T15:01:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +152,7 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
         }
 
         /**
-         * RealTimeTrafficDataPerInterval.
+         * <p>The traffic that was collected at each interval.</p>
          */
         public Builder realTimeTrafficDataPerInterval(RealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval) {
             this.realTimeTrafficDataPerInterval = realTimeTrafficDataPerInterval;
@@ -130,7 +160,10 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A666D44F-19D6-490E-97CF-1A64AB962C57</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +171,10 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T15:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -151,11 +187,17 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveDomainRealTimeTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainRealTimeTrafficDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -189,8 +231,19 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
             private String timeStamp; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.timeStamp = model.timeStamp;
+                this.value = model.value;
+            } 
+
             /**
-             * TimeStamp.
+             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-10T15:01:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +251,10 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
             }
 
             /**
-             * Value.
+             * <p>The traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -212,9 +268,15 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDomainRealTimeTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainRealTimeTrafficDataResponseBody</p>
+     */
     public static class RealTimeTrafficDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        @com.aliyun.core.annotation.NameInMap("DataModule")
+        private java.util.List<DataModule> dataModule;
 
         private RealTimeTrafficDataPerInterval(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -231,17 +293,24 @@ public class DescribeLiveDomainRealTimeTrafficDataResponseBody extends TeaModel 
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(RealTimeTrafficDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

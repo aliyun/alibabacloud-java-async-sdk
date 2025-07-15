@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListMessageGroupUserByIdResponseBody} extends {@link TeaModel}
  *
  * <p>ListMessageGroupUserByIdResponseBody</p>
  */
 public class ListMessageGroupUserByIdResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private ListMessageGroupUserByIdResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
 
     public static ListMessageGroupUserByIdResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListMessageGroupUserByIdResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-****-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,7 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned results.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,23 +91,29 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListMessageGroupUserByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMessageGroupUserByIdResponseBody</p>
+     */
     public static class UserList extends TeaModel {
-        @NameInMap("IsMute")
+        @com.aliyun.core.annotation.NameInMap("IsMute")
         private Boolean isMute;
 
-        @NameInMap("MuteBy")
-        private java.util.List < String > muteBy;
+        @com.aliyun.core.annotation.NameInMap("MuteBy")
+        private java.util.List<String> muteBy;
 
-        @NameInMap("UserAvatar")
+        @com.aliyun.core.annotation.NameInMap("UserAvatar")
         private String userAvatar;
 
-        @NameInMap("UserExtension")
+        @com.aliyun.core.annotation.NameInMap("UserExtension")
         private String userExtension;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserNick")
+        @com.aliyun.core.annotation.NameInMap("UserNick")
         private String userNick;
 
         private UserList(Builder builder) {
@@ -117,7 +143,7 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
         /**
          * @return muteBy
          */
-        public java.util.List < String > getMuteBy() {
+        public java.util.List<String> getMuteBy() {
             return this.muteBy;
         }
 
@@ -151,14 +177,33 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean isMute; 
-            private java.util.List < String > muteBy; 
+            private java.util.List<String> muteBy; 
             private String userAvatar; 
             private String userExtension; 
             private String userId; 
             private String userNick; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserList model) {
+                this.isMute = model.isMute;
+                this.muteBy = model.muteBy;
+                this.userAvatar = model.userAvatar;
+                this.userExtension = model.userExtension;
+                this.userId = model.userId;
+                this.userNick = model.userNick;
+            } 
+
             /**
-             * IsMute.
+             * <p>Indicates whether the user is muted. Valid values:</p>
+             * <ul>
+             * <li>true: The user is muted.</li>
+             * <li>false: The user is not muted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder isMute(Boolean isMute) {
                 this.isMute = isMute;
@@ -166,15 +211,22 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
             }
 
             /**
-             * MuteBy.
+             * <p>The type of the mute. Valid values:</p>
+             * <ul>
+             * <li>group: All members in the message group are muted.</li>
+             * <li>user: Specific members in the message group are muted.</li>
+             * </ul>
              */
-            public Builder muteBy(java.util.List < String > muteBy) {
+            public Builder muteBy(java.util.List<String> muteBy) {
                 this.muteBy = muteBy;
                 return this;
             }
 
             /**
-             * UserAvatar.
+             * <p>The URL of the profile picture of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;<a href="http://www.aliyundoc.com/xxyy.png">http://www.aliyundoc.com/xxyy.png</a>&quot;</p>
              */
             public Builder userAvatar(String userAvatar) {
                 this.userAvatar = userAvatar;
@@ -182,7 +234,10 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
             }
 
             /**
-             * UserExtension.
+             * <p>The custom information about the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12e</p>
              */
             public Builder userExtension(String userExtension) {
                 this.userExtension = userExtension;
@@ -190,7 +245,10 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * <p>The ID of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ad***</p>
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -198,7 +256,10 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
             }
 
             /**
-             * UserNick.
+             * <p>The nickname of the user.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxyy</p>
              */
             public Builder userNick(String userNick) {
                 this.userNick = userNick;
@@ -212,15 +273,21 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link ListMessageGroupUserByIdResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListMessageGroupUserByIdResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("HasMore")
+        @com.aliyun.core.annotation.NameInMap("HasMore")
         private Boolean hasMore;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
-        @NameInMap("UserList")
-        private java.util.List < UserList> userList;
+        @com.aliyun.core.annotation.NameInMap("UserList")
+        private java.util.List<UserList> userList;
 
         private Result(Builder builder) {
             this.hasMore = builder.hasMore;
@@ -253,17 +320,33 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
         /**
          * @return userList
          */
-        public java.util.List < UserList> getUserList() {
+        public java.util.List<UserList> getUserList() {
             return this.userList;
         }
 
         public static final class Builder {
             private Boolean hasMore; 
             private Integer total; 
-            private java.util.List < UserList> userList; 
+            private java.util.List<UserList> userList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.hasMore = model.hasMore;
+                this.total = model.total;
+                this.userList = model.userList;
+            } 
 
             /**
-             * HasMore.
+             * <p>Indicates whether the current page is followed by another page. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder hasMore(Boolean hasMore) {
                 this.hasMore = hasMore;
@@ -271,7 +354,10 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * <p>The total number of users returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder total(Integer total) {
                 this.total = total;
@@ -279,9 +365,9 @@ public class ListMessageGroupUserByIdResponseBody extends TeaModel {
             }
 
             /**
-             * UserList.
+             * <p>The list of users.</p>
              */
-            public Builder userList(java.util.List < UserList> userList) {
+            public Builder userList(java.util.List<UserList> userList) {
                 this.userList = userList;
                 return this;
             }

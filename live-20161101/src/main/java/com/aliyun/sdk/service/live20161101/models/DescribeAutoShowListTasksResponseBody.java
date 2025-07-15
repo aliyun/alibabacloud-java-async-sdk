@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeAutoShowListTasksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeAutoShowListTasksResponseBody</p>
  */
 public class DescribeAutoShowListTasksResponseBody extends TeaModel {
-    @NameInMap("AutoShowListTasks")
+    @com.aliyun.core.annotation.NameInMap("AutoShowListTasks")
     private String autoShowListTasks;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAutoShowListTasksResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeAutoShowListTasksResponseBody extends TeaModel {
 
     public static DescribeAutoShowListTasksResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,25 @@ public class DescribeAutoShowListTasksResponseBody extends TeaModel {
         private String autoShowListTasks; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeAutoShowListTasksResponseBody model) {
+            this.autoShowListTasks = model.autoShowListTasks;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AutoShowListTasks.
+         * <p>The information about the scheduled tasks. The following fields are included:</p>
+         * <ul>
+         * <li>Status: the status of the scheduled task. Valid values: 0 and 1. A value of 0 indicates that the scheduled task is paused. A value of 1 indicates that the scheduled task is started.</li>
+         * <li>LiveTemplate: the transcoding templates.</li>
+         * <li>TranscodeConfig: the transcoding configuration for the source URL.</li>
+         * <li>CasterId: the ID of the production studio.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Status&quot;:0,&quot;TranscodeConfig&quot;:{&quot;CasterTemplate&quot;:&quot;lp_hd&quot;, &quot;LiveTemplate&quot;:[&quot;lhd&quot;,&quot;lsd&quot;]}, &quot;CasterId&quot;:&quot;cce04ef3-2226-4865-8704-f84b8375****&quot;}</p>
          */
         public Builder autoShowListTasks(String autoShowListTasks) {
             this.autoShowListTasks = autoShowListTasks;
@@ -58,7 +84,10 @@ public class DescribeAutoShowListTasksResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

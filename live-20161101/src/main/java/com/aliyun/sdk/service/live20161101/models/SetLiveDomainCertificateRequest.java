@@ -1,53 +1,58 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetLiveDomainCertificateRequest} extends {@link RequestModel}
  *
  * <p>SetLiveDomainCertificateRequest</p>
  */
 public class SetLiveDomainCertificateRequest extends Request {
-    @Query
-    @NameInMap("CertName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertName")
     private String certName;
 
-    @Query
-    @NameInMap("CertType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertType")
     private String certType;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("ForceSet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceSet")
     private String forceSet;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SSLPri")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLPri")
     private String SSLPri;
 
-    @Query
-    @NameInMap("SSLProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SSLProtocol;
 
-    @Query
-    @NameInMap("SSLPub")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLPub")
     private String SSLPub;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private SetLiveDomainCertificateRequest(Builder builder) {
@@ -71,7 +76,7 @@ public class SetLiveDomainCertificateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -168,7 +173,10 @@ public class SetLiveDomainCertificateRequest extends Request {
         } 
 
         /**
-         * CertName.
+         * <p>The certificate name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Cert-****</p>
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -177,7 +185,15 @@ public class SetLiveDomainCertificateRequest extends Request {
         }
 
         /**
-         * CertType.
+         * <p>The certificate type. Valid values:</p>
+         * <ul>
+         * <li><strong>upload</strong>: a custom certificate</li>
+         * <li><strong>cas</strong>: a certificate that is purchased from Certificate Management Service</li>
+         * <li><strong>free</strong>: a free certificate (for testing)</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>free</p>
          */
         public Builder certType(String certType) {
             this.putQueryParameter("CertType", certType);
@@ -186,7 +202,11 @@ public class SetLiveDomainCertificateRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The domain name that is secured by the certificate. The domain name uses <code>HTTPS</code>-based acceleration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>developer.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -195,7 +215,10 @@ public class SetLiveDomainCertificateRequest extends Request {
         }
 
         /**
-         * ForceSet.
+         * <p>Specifies whether to check the certificate name for duplicates. A value of 1 indicates that the system does not perform the check and overwrites the information about the certificate that has the same name. Set the value to <strong>1</strong>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder forceSet(String forceSet) {
             this.putQueryParameter("ForceSet", forceSet);
@@ -213,7 +236,13 @@ public class SetLiveDomainCertificateRequest extends Request {
         }
 
         /**
-         * SSLPri.
+         * <p>The private key.</p>
+         * <blockquote>
+         * <p> This parameter is required only if you set the SSLProtocol parameter to on.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder SSLPri(String SSLPri) {
             this.putQueryParameter("SSLPri", SSLPri);
@@ -222,7 +251,15 @@ public class SetLiveDomainCertificateRequest extends Request {
         }
 
         /**
-         * SSLProtocol.
+         * <p>Specifies whether to enable the HTTPS certificate. Valid values:</p>
+         * <ul>
+         * <li><strong>on</strong>. If you set this parameter to <strong>on</strong>, you must also specify the SSLPub and SSLPri parameters.</li>
+         * <li><strong>off</strong>. This is the default value.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
          */
         public Builder SSLProtocol(String SSLProtocol) {
             this.putQueryParameter("SSLProtocol", SSLProtocol);
@@ -231,7 +268,13 @@ public class SetLiveDomainCertificateRequest extends Request {
         }
 
         /**
-         * SSLPub.
+         * <p>The public key.</p>
+         * <blockquote>
+         * <p> This parameter is required only if you set the SSLProtocol parameter to on.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <hr>
          */
         public Builder SSLPub(String SSLPub) {
             this.putQueryParameter("SSLPub", SSLPub);

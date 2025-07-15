@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveAudioAuditNotifyConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveAudioAuditNotifyConfigResponseBody</p>
  */
 public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
-    @NameInMap("LiveAudioAuditNotifyConfigList")
+    @com.aliyun.core.annotation.NameInMap("LiveAudioAuditNotifyConfigList")
     private LiveAudioAuditNotifyConfigList liveAudioAuditNotifyConfigList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveAudioAuditNotifyConfigResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
 
     public static DescribeLiveAudioAuditNotifyConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
         private LiveAudioAuditNotifyConfigList liveAudioAuditNotifyConfigList; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveAudioAuditNotifyConfigResponseBody model) {
+            this.liveAudioAuditNotifyConfigList = model.liveAudioAuditNotifyConfigList;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * LiveAudioAuditNotifyConfigList.
+         * <p>The configuration of callbacks for audio moderation results.</p>
          */
         public Builder liveAudioAuditNotifyConfigList(LiveAudioAuditNotifyConfigList liveAudioAuditNotifyConfigList) {
             this.liveAudioAuditNotifyConfigList = liveAudioAuditNotifyConfigList;
@@ -58,7 +75,10 @@ public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B908FF89-B03C-4831-B55B-48D2A******</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,14 +91,20 @@ public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveAudioAuditNotifyConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveAudioAuditNotifyConfigResponseBody</p>
+     */
     public static class LiveAudioAuditNotifyConfig extends TeaModel {
-        @NameInMap("Callback")
+        @com.aliyun.core.annotation.NameInMap("Callback")
         private String callback;
 
-        @NameInMap("CallbackTemplate")
+        @com.aliyun.core.annotation.NameInMap("CallbackTemplate")
         private String callbackTemplate;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
         private LiveAudioAuditNotifyConfig(Builder builder) {
@@ -121,8 +147,20 @@ public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
             private String callbackTemplate; 
             private String domainName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveAudioAuditNotifyConfig model) {
+                this.callback = model.callback;
+                this.callbackTemplate = model.callbackTemplate;
+                this.domainName = model.domainName;
+            } 
+
             /**
-             * Callback.
+             * <p>The callback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://guide.aliyundoc.com/callback">http://guide.aliyundoc.com/callback</a></p>
              */
             public Builder callback(String callback) {
                 this.callback = callback;
@@ -130,7 +168,17 @@ public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CallbackTemplate.
+             * <p>The callback template. The following fields are configured:</p>
+             * <ul>
+             * <li><strong>{DomainName}</strong>: the streaming domain.</li>
+             * <li><strong>{AppName}</strong>: the name of the application to which the live stream belongs.</li>
+             * <li><strong>{StreamName}</strong>: the name of the live stream.</li>
+             * <li><strong>{Timestamp}</strong>: the time when the callback is returned. The value of this field is a UNIX timestamp. Unit: seconds.</li>
+             * <li><strong>{Result}</strong>: the moderation results.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;domain&quot;:{DomainName},&quot;app&quot;:{AppName},&quot;stream&quot;:{StreamName},&quot;timestamp&quot;:{Timestamp},&quot;result&quot;:{Result}}</p>
              */
             public Builder callbackTemplate(String callbackTemplate) {
                 this.callbackTemplate = callbackTemplate;
@@ -138,7 +186,10 @@ public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -152,9 +203,15 @@ public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveAudioAuditNotifyConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveAudioAuditNotifyConfigResponseBody</p>
+     */
     public static class LiveAudioAuditNotifyConfigList extends TeaModel {
-        @NameInMap("LiveAudioAuditNotifyConfig")
-        private java.util.List < LiveAudioAuditNotifyConfig> liveAudioAuditNotifyConfig;
+        @com.aliyun.core.annotation.NameInMap("LiveAudioAuditNotifyConfig")
+        private java.util.List<LiveAudioAuditNotifyConfig> liveAudioAuditNotifyConfig;
 
         private LiveAudioAuditNotifyConfigList(Builder builder) {
             this.liveAudioAuditNotifyConfig = builder.liveAudioAuditNotifyConfig;
@@ -171,17 +228,24 @@ public class DescribeLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
         /**
          * @return liveAudioAuditNotifyConfig
          */
-        public java.util.List < LiveAudioAuditNotifyConfig> getLiveAudioAuditNotifyConfig() {
+        public java.util.List<LiveAudioAuditNotifyConfig> getLiveAudioAuditNotifyConfig() {
             return this.liveAudioAuditNotifyConfig;
         }
 
         public static final class Builder {
-            private java.util.List < LiveAudioAuditNotifyConfig> liveAudioAuditNotifyConfig; 
+            private java.util.List<LiveAudioAuditNotifyConfig> liveAudioAuditNotifyConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveAudioAuditNotifyConfigList model) {
+                this.liveAudioAuditNotifyConfig = model.liveAudioAuditNotifyConfig;
+            } 
 
             /**
              * LiveAudioAuditNotifyConfig.
              */
-            public Builder liveAudioAuditNotifyConfig(java.util.List < LiveAudioAuditNotifyConfig> liveAudioAuditNotifyConfig) {
+            public Builder liveAudioAuditNotifyConfig(java.util.List<LiveAudioAuditNotifyConfig> liveAudioAuditNotifyConfig) {
                 this.liveAudioAuditNotifyConfig = liveAudioAuditNotifyConfig;
                 return this;
             }

@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveDomainBpsDataRequest} extends {@link RequestModel}
  *
  * <p>DescribeLiveDomainBpsDataRequest</p>
  */
 public class DescribeLiveDomainBpsDataRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private String interval;
 
-    @Query
-    @NameInMap("IspNameEn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IspNameEn")
     private String ispNameEn;
 
-    @Query
-    @NameInMap("LocationNameEn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocationNameEn")
     private String locationNameEn;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeLiveDomainBpsDataRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
         this.interval = builder.interval;
         this.ispNameEn = builder.ispNameEn;
         this.locationNameEn = builder.locationNameEn;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -64,16 +69,9 @@ public class DescribeLiveDomainBpsDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -119,6 +117,13 @@ public class DescribeLiveDomainBpsDataRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -126,13 +131,13 @@ public class DescribeLiveDomainBpsDataRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveDomainBpsDataRequest, Builder> {
-        private String regionId; 
         private String domainName; 
         private String endTime; 
         private String interval; 
         private String ispNameEn; 
         private String locationNameEn; 
         private Long ownerId; 
+        private String regionId; 
         private String startTime; 
 
         private Builder() {
@@ -141,27 +146,21 @@ public class DescribeLiveDomainBpsDataRequest extends Request {
 
         private Builder(DescribeLiveDomainBpsDataRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.domainName = request.domainName;
             this.endTime = request.endTime;
             this.interval = request.interval;
             this.ispNameEn = request.ispNameEn;
             this.locationNameEn = request.locationNameEn;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * DomainName.
+         * <p>The streaming domain. You can query one or more domain names. If you specify multiple domain names, separate them with commas (,). If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -170,7 +169,10 @@ public class DescribeLiveDomainBpsDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T09:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -179,7 +181,25 @@ public class DescribeLiveDomainBpsDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time granularity of the query. Unit: seconds. Valid values:</p>
+         * <ul>
+         * <li><strong>300</strong> (default)</li>
+         * <li><strong>3600</strong></li>
+         * <li><strong>86400</strong></li>
+         * </ul>
+         * <blockquote>
+         * </blockquote>
+         * <ul>
+         * <li><p>If you specify an invalid value or do not specify this parameter, the default value <strong>300</strong> is used.</p>
+         * </li>
+         * <li><p>When the time granularity is <strong>300</strong> seconds, the returned bandwidth is the average bandwidth within the 300 seconds.</p>
+         * </li>
+         * <li><p>When the time granularity is <strong>3600</strong> or <strong>86400</strong> seconds, the returned bandwidth is the peak value of all average bandwidths within each 300-second period.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -188,7 +208,10 @@ public class DescribeLiveDomainBpsDataRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * <p>The name of the Internet service provider (ISP). You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query a list of available ISPs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alibaba</p>
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -197,7 +220,10 @@ public class DescribeLiveDomainBpsDataRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * <p>The name of the region. You can call the <a href="https://help.aliyun.com/document_detail/91077.html">DescribeCdnRegionAndIsp</a> operation to query a list of available regions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tianjin</p>
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -215,7 +241,19 @@ public class DescribeLiveDomainBpsDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T08:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveDomainPushTrafficDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveDomainPushTrafficDataResponseBody</p>
  */
 public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TrafficDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("TrafficDataPerInterval")
     private TrafficDataPerInterval trafficDataPerInterval;
 
     private DescribeLiveDomainPushTrafficDataResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
 
     public static DescribeLiveDomainPushTrafficDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
         private String startTime; 
         private TrafficDataPerInterval trafficDataPerInterval; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveDomainPushTrafficDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.trafficDataPerInterval = model.trafficDataPerInterval;
+        } 
+
         /**
-         * DataInterval.
+         * <p>The time granularity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +130,10 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>The ingest domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +141,10 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range during which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +152,10 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3C6CCEC4-6B88-4D4A-93E4-D47B3D92CF8F</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +163,10 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range during which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +174,7 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficDataPerInterval.
+         * <p>The traffic data that was collected at each interval.</p>
          */
         public Builder trafficDataPerInterval(TrafficDataPerInterval trafficDataPerInterval) {
             this.trafficDataPerInterval = trafficDataPerInterval;
@@ -151,11 +187,17 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveDomainPushTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainPushTrafficDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("TrafficValue")
+        @com.aliyun.core.annotation.NameInMap("TrafficValue")
         private String trafficValue;
 
         private DataModule(Builder builder) {
@@ -189,8 +231,19 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String trafficValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.timeStamp = model.timeStamp;
+                this.trafficValue = model.trafficValue;
+            } 
+
             /**
-             * TimeStamp.
+             * <p>The timestamp of the data returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-10T20:05:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +251,10 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficValue.
+             * <p>The traffic. Unit: bytes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1288111</p>
              */
             public Builder trafficValue(String trafficValue) {
                 this.trafficValue = trafficValue;
@@ -212,9 +268,15 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDomainPushTrafficDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainPushTrafficDataResponseBody</p>
+     */
     public static class TrafficDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        @com.aliyun.core.annotation.NameInMap("DataModule")
+        private java.util.List<DataModule> dataModule;
 
         private TrafficDataPerInterval(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -231,17 +293,24 @@ public class DescribeLiveDomainPushTrafficDataResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(TrafficDataPerInterval model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

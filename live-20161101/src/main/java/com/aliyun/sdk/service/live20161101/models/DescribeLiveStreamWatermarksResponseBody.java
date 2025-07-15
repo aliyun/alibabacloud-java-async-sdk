@@ -1,25 +1,34 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamWatermarksResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamWatermarksResponseBody</p>
  */
 public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WatermarkList")
+    @com.aliyun.core.annotation.NameInMap("Total")
+    private Integer total;
+
+    @com.aliyun.core.annotation.NameInMap("WatermarkList")
     private WatermarkList watermarkList;
 
     private DescribeLiveStreamWatermarksResponseBody(Builder builder) {
         this.requestId = builder.requestId;
+        this.total = builder.total;
         this.watermarkList = builder.watermarkList;
     }
 
@@ -31,11 +40,22 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
     public String getRequestId() {
         return this.requestId;
+    }
+
+    /**
+     * @return total
+     */
+    public Integer getTotal() {
+        return this.total;
     }
 
     /**
@@ -47,10 +67,23 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
+        private Integer total; 
         private WatermarkList watermarkList; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamWatermarksResponseBody model) {
+            this.requestId = model.requestId;
+            this.total = model.total;
+            this.watermarkList = model.watermarkList;
+        } 
+
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c6a2a0df228-4a64- af62-20e91b9676b3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +91,18 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
         }
 
         /**
-         * WatermarkList.
+         * <p>The total number of watermark templates that meet the specified conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        public Builder total(Integer total) {
+            this.total = total;
+            return this;
+        }
+
+        /**
+         * <p>Details of the watermark templates.</p>
          */
         public Builder watermarkList(WatermarkList watermarkList) {
             this.watermarkList = watermarkList;
@@ -71,41 +115,50 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveStreamWatermarksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamWatermarksResponseBody</p>
+     */
     public static class Watermark extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OffsetCorner")
+        @com.aliyun.core.annotation.NameInMap("OffsetCorner")
         private String offsetCorner;
 
-        @NameInMap("PictureUrl")
+        @com.aliyun.core.annotation.NameInMap("PictureUrl")
         private String pictureUrl;
 
-        @NameInMap("RefHeight")
+        @com.aliyun.core.annotation.NameInMap("RefHeight")
         private Integer refHeight;
 
-        @NameInMap("RefWidth")
+        @com.aliyun.core.annotation.NameInMap("RefWidth")
         private Integer refWidth;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
+        private Integer ruleCount;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("Transparency")
+        @com.aliyun.core.annotation.NameInMap("Transparency")
         private Integer transparency;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("XOffset")
+        @com.aliyun.core.annotation.NameInMap("XOffset")
         private Float xOffset;
 
-        @NameInMap("YOffset")
+        @com.aliyun.core.annotation.NameInMap("YOffset")
         private Float yOffset;
 
         private Watermark(Builder builder) {
@@ -116,6 +169,7 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             this.pictureUrl = builder.pictureUrl;
             this.refHeight = builder.refHeight;
             this.refWidth = builder.refWidth;
+            this.ruleCount = builder.ruleCount;
             this.templateId = builder.templateId;
             this.transparency = builder.transparency;
             this.type = builder.type;
@@ -181,6 +235,13 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
         }
 
         /**
+         * @return ruleCount
+         */
+        public Integer getRuleCount() {
+            return this.ruleCount;
+        }
+
+        /**
          * @return templateId
          */
         public String getTemplateId() {
@@ -223,14 +284,37 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             private String pictureUrl; 
             private Integer refHeight; 
             private Integer refWidth; 
+            private Integer ruleCount; 
             private String templateId; 
             private Integer transparency; 
             private Integer type; 
             private Float xOffset; 
             private Float yOffset; 
 
+            private Builder() {
+            } 
+
+            private Builder(Watermark model) {
+                this.description = model.description;
+                this.height = model.height;
+                this.name = model.name;
+                this.offsetCorner = model.offsetCorner;
+                this.pictureUrl = model.pictureUrl;
+                this.refHeight = model.refHeight;
+                this.refWidth = model.refWidth;
+                this.ruleCount = model.ruleCount;
+                this.templateId = model.templateId;
+                this.transparency = model.transparency;
+                this.type = model.type;
+                this.xOffset = model.xOffset;
+                this.yOffset = model.yOffset;
+            } 
+
             /**
-             * Description.
+             * <p>The description of the watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>my watermark</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -238,7 +322,10 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the watermark. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>200</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -246,7 +333,10 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the watermark.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>livewatermark****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +344,16 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             }
 
             /**
-             * OffsetCorner.
+             * <p>The position of the watermark.</p>
+             * <ul>
+             * <li>TopLeft: the upper-left corner.</li>
+             * <li>TopRight: the upper-right corner.</li>
+             * <li>BottomLeft: the lower-left corner.</li>
+             * <li>BottomRight: the lower-right corner.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TopRight</p>
              */
             public Builder offsetCorner(String offsetCorner) {
                 this.offsetCorner = offsetCorner;
@@ -262,7 +361,10 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             }
 
             /**
-             * PictureUrl.
+             * <p>The URL of the watermark image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.com">http://example.com</a></p>
              */
             public Builder pictureUrl(String pictureUrl) {
                 this.pictureUrl = pictureUrl;
@@ -270,7 +372,10 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             }
 
             /**
-             * RefHeight.
+             * <p>The height of the background video. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1080</p>
              */
             public Builder refHeight(Integer refHeight) {
                 this.refHeight = refHeight;
@@ -278,7 +383,10 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             }
 
             /**
-             * RefWidth.
+             * <p>The width of the background video. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1920</p>
              */
             public Builder refWidth(Integer refWidth) {
                 this.refWidth = refWidth;
@@ -286,7 +394,21 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * <p>The number of watermark rules configured for the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>12</p>
+             */
+            public Builder ruleCount(Integer ruleCount) {
+                this.ruleCount = ruleCount;
+                return this;
+            }
+
+            /**
+             * <p>The ID of the watermark template.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>445409ec-7eaa-4 61d-8f29-4bec2eb9 ****</p>
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -294,7 +416,10 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             }
 
             /**
-             * Transparency.
+             * <p>The transparency of the watermark. A smaller value indicates a more transparent watermark. Valid values: 0 to 255.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>255</p>
              */
             public Builder transparency(Integer transparency) {
                 this.transparency = transparency;
@@ -302,7 +427,14 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The watermark type.</p>
+             * <ul>
+             * <li>0: image. Only image watermarks are supported.</li>
+             * <li>1: text.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder type(Integer type) {
                 this.type = type;
@@ -310,7 +442,13 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             }
 
             /**
-             * XOffset.
+             * <p>The offset of the watermark along the x-axis. Unit: pixels.</p>
+             * <blockquote>
+             * <p> The value of the RefWidth parameter is used as the reference. If the OffsetCorner parameter is set to TopLeft, the value of the XOffset parameter indicates the x-axis offset of the upper-left corner of the watermark relative to that of the background video. The directions from the coordinate axes to the center of the background video are positive. In other words, the x-axis is positive toward the right.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>50.0</p>
              */
             public Builder xOffset(Float xOffset) {
                 this.xOffset = xOffset;
@@ -318,7 +456,13 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
             }
 
             /**
-             * YOffset.
+             * <p>The offset of the watermark along the y-axis. Unit: pixels.</p>
+             * <blockquote>
+             * <p> The value of the RefHeight parameter is used as the reference. If the OffsetCorner parameter is set to TopLeft, the value of the YOffset parameter indicates the y-axis offset of the upper-left corner of the watermark relative to that of the background video. The directions from the coordinate axes to the center of the background video are positive. In other words, the y-axis is positive downward.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>100.0</p>
              */
             public Builder yOffset(Float yOffset) {
                 this.yOffset = yOffset;
@@ -332,9 +476,15 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamWatermarksResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamWatermarksResponseBody</p>
+     */
     public static class WatermarkList extends TeaModel {
-        @NameInMap("Watermark")
-        private java.util.List < Watermark> watermark;
+        @com.aliyun.core.annotation.NameInMap("Watermark")
+        private java.util.List<Watermark> watermark;
 
         private WatermarkList(Builder builder) {
             this.watermark = builder.watermark;
@@ -351,17 +501,24 @@ public class DescribeLiveStreamWatermarksResponseBody extends TeaModel {
         /**
          * @return watermark
          */
-        public java.util.List < Watermark> getWatermark() {
+        public java.util.List<Watermark> getWatermark() {
             return this.watermark;
         }
 
         public static final class Builder {
-            private java.util.List < Watermark> watermark; 
+            private java.util.List<Watermark> watermark; 
+
+            private Builder() {
+            } 
+
+            private Builder(WatermarkList model) {
+                this.watermark = model.watermark;
+            } 
 
             /**
              * Watermark.
              */
-            public Builder watermark(java.util.List < Watermark> watermark) {
+            public Builder watermark(java.util.List<Watermark> watermark) {
                 this.watermark = watermark;
                 return this;
             }

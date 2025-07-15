@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeUpPeakPublishStreamDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeUpPeakPublishStreamDataResponseBody</p>
  */
 public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
-    @NameInMap("DescribeUpPeakPublishStreamDatas")
+    @com.aliyun.core.annotation.NameInMap("DescribeUpPeakPublishStreamDatas")
     private DescribeUpPeakPublishStreamDatas describeUpPeakPublishStreamDatas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeUpPeakPublishStreamDataResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
 
     public static DescribeUpPeakPublishStreamDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
         private DescribeUpPeakPublishStreamDatas describeUpPeakPublishStreamDatas; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeUpPeakPublishStreamDataResponseBody model) {
+            this.describeUpPeakPublishStreamDatas = model.describeUpPeakPublishStreamDatas;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * DescribeUpPeakPublishStreamDatas.
+         * <p>The information about the peak number of concurrently ingested streams on each day.</p>
          */
         public Builder describeUpPeakPublishStreamDatas(DescribeUpPeakPublishStreamDatas describeUpPeakPublishStreamDatas) {
             this.describeUpPeakPublishStreamDatas = describeUpPeakPublishStreamDatas;
@@ -58,7 +75,10 @@ public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6CFDE7AB-571A-14EA-B072-989FF753****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +91,26 @@ public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeUpPeakPublishStreamDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUpPeakPublishStreamDataResponseBody</p>
+     */
     public static class DescribeUpPeakPublishStreamData extends TeaModel {
-        @NameInMap("BandWidth")
+        @com.aliyun.core.annotation.NameInMap("BandWidth")
         private String bandWidth;
 
-        @NameInMap("PeakTime")
+        @com.aliyun.core.annotation.NameInMap("PeakTime")
         private String peakTime;
 
-        @NameInMap("PublishStreamNum")
+        @com.aliyun.core.annotation.NameInMap("PublishStreamNum")
         private Integer publishStreamNum;
 
-        @NameInMap("QueryTime")
+        @com.aliyun.core.annotation.NameInMap("QueryTime")
         private String queryTime;
 
-        @NameInMap("StatName")
+        @com.aliyun.core.annotation.NameInMap("StatName")
         private String statName;
 
         private DescribeUpPeakPublishStreamData(Builder builder) {
@@ -145,8 +171,22 @@ public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
             private String queryTime; 
             private String statName; 
 
+            private Builder() {
+            } 
+
+            private Builder(DescribeUpPeakPublishStreamData model) {
+                this.bandWidth = model.bandWidth;
+                this.peakTime = model.peakTime;
+                this.publishStreamNum = model.publishStreamNum;
+                this.queryTime = model.queryTime;
+                this.statName = model.statName;
+            } 
+
             /**
-             * BandWidth.
+             * <p>The daily peak inbound bandwidth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>777.2727083333333</p>
              */
             public Builder bandWidth(String bandWidth) {
                 this.bandWidth = bandWidth;
@@ -154,7 +194,10 @@ public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
             }
 
             /**
-             * PeakTime.
+             * <p>The time when the daily peak number of concurrently ingested streams is reached.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1522180000000</p>
              */
             public Builder peakTime(String peakTime) {
                 this.peakTime = peakTime;
@@ -162,7 +205,10 @@ public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStreamNum.
+             * <p>The daily peak number of concurrently ingested streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>36</p>
              */
             public Builder publishStreamNum(Integer publishStreamNum) {
                 this.publishStreamNum = publishStreamNum;
@@ -170,7 +216,10 @@ public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
             }
 
             /**
-             * QueryTime.
+             * <p>The time queried on the day.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1522080000000</p>
              */
             public Builder queryTime(String queryTime) {
                 this.queryTime = queryTime;
@@ -178,7 +227,10 @@ public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
             }
 
             /**
-             * StatName.
+             * <p>The category of the statistical data. If the DomainSwitch parameter is set to on, the value of this parameter is the domain name. If the DomainSwitch parameter is set to off or not specified, the value of this parameter is the user ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>push-live.aliyuncs.com</p>
              */
             public Builder statName(String statName) {
                 this.statName = statName;
@@ -192,9 +244,15 @@ public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeUpPeakPublishStreamDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeUpPeakPublishStreamDataResponseBody</p>
+     */
     public static class DescribeUpPeakPublishStreamDatas extends TeaModel {
-        @NameInMap("DescribeUpPeakPublishStreamData")
-        private java.util.List < DescribeUpPeakPublishStreamData> describeUpPeakPublishStreamData;
+        @com.aliyun.core.annotation.NameInMap("DescribeUpPeakPublishStreamData")
+        private java.util.List<DescribeUpPeakPublishStreamData> describeUpPeakPublishStreamData;
 
         private DescribeUpPeakPublishStreamDatas(Builder builder) {
             this.describeUpPeakPublishStreamData = builder.describeUpPeakPublishStreamData;
@@ -211,17 +269,24 @@ public class DescribeUpPeakPublishStreamDataResponseBody extends TeaModel {
         /**
          * @return describeUpPeakPublishStreamData
          */
-        public java.util.List < DescribeUpPeakPublishStreamData> getDescribeUpPeakPublishStreamData() {
+        public java.util.List<DescribeUpPeakPublishStreamData> getDescribeUpPeakPublishStreamData() {
             return this.describeUpPeakPublishStreamData;
         }
 
         public static final class Builder {
-            private java.util.List < DescribeUpPeakPublishStreamData> describeUpPeakPublishStreamData; 
+            private java.util.List<DescribeUpPeakPublishStreamData> describeUpPeakPublishStreamData; 
+
+            private Builder() {
+            } 
+
+            private Builder(DescribeUpPeakPublishStreamDatas model) {
+                this.describeUpPeakPublishStreamData = model.describeUpPeakPublishStreamData;
+            } 
 
             /**
              * DescribeUpPeakPublishStreamData.
              */
-            public Builder describeUpPeakPublishStreamData(java.util.List < DescribeUpPeakPublishStreamData> describeUpPeakPublishStreamData) {
+            public Builder describeUpPeakPublishStreamData(java.util.List<DescribeUpPeakPublishStreamData> describeUpPeakPublishStreamData) {
                 this.describeUpPeakPublishStreamData = describeUpPeakPublishStreamData;
                 return this;
             }

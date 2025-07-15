@@ -1,39 +1,49 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamWatermarkRulesRequest} extends {@link RequestModel}
  *
  * <p>DescribeLiveStreamWatermarkRulesRequest</p>
  */
 public class DescribeLiveStreamWatermarkRulesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    private String domain;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     private DescribeLiveStreamWatermarkRulesRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
+        this.domain = builder.domain;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -44,16 +54,16 @@ public class DescribeLiveStreamWatermarkRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
 
     /**
-     * @return regionId
+     * @return domain
      */
-    public String getRegionId() {
-        return this.regionId;
+    public String getDomain() {
+        return this.domain;
     }
 
     /**
@@ -77,11 +87,19 @@ public class DescribeLiveStreamWatermarkRulesRequest extends Request {
         return this.pageSize;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeLiveStreamWatermarkRulesRequest, Builder> {
-        private String regionId; 
+        private String domain; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -89,18 +107,22 @@ public class DescribeLiveStreamWatermarkRulesRequest extends Request {
 
         private Builder(DescribeLiveStreamWatermarkRulesRequest request) {
             super(request);
-            this.regionId = request.regionId;
+            this.domain = request.domain;
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * RegionId.
+         * <p>The main streaming domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>live.yourdomain.com</p>
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder domain(String domain) {
+            this.putQueryParameter("Domain", domain);
+            this.domain = domain;
             return this;
         }
 
@@ -114,7 +136,10 @@ public class DescribeLiveStreamWatermarkRulesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number. If you do not specify this parameter, the default value 1 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,11 +148,23 @@ public class DescribeLiveStreamWatermarkRulesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. If you do not specify this parameter, the default value 100 is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

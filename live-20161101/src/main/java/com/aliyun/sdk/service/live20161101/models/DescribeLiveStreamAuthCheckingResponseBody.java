@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamAuthCheckingResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamAuthCheckingResponseBody</p>
  */
 public class DescribeLiveStreamAuthCheckingResponseBody extends TeaModel {
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeLiveStreamAuthCheckingResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class DescribeLiveStreamAuthCheckingResponseBody extends TeaModel {
 
     public static DescribeLiveStreamAuthCheckingResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,8 +70,20 @@ public class DescribeLiveStreamAuthCheckingResponseBody extends TeaModel {
         private String requestId; 
         private String status; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamAuthCheckingResponseBody model) {
+            this.description = model.description;
+            this.requestId = model.requestId;
+            this.status = model.status;
+        } 
+
         /**
-         * Description.
+         * <p>The error message for failed authentication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INVALID AUTH_KEY</p>
          */
         public Builder description(String description) {
             this.description = description;
@@ -70,7 +91,10 @@ public class DescribeLiveStreamAuthCheckingResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16F08B4E-14FD-5D72-AB2F-BAFA4C4D57F1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +102,14 @@ public class DescribeLiveStreamAuthCheckingResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * <p>Indicates whether the signed URL is valid. Valid values:</p>
+         * <ul>
+         * <li>pass: valid.</li>
+         * <li>false: invalid.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>pass</p>
          */
         public Builder status(String status) {
             this.status = status;

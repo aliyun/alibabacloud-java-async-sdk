@@ -1,59 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddLiveAudioAuditConfigRequest} extends {@link RequestModel}
  *
  * <p>AddLiveAudioAuditConfigRequest</p>
  */
 public class AddLiveAudioAuditConfigRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OssBucket")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssBucket")
     private String ossBucket;
 
-    @Query
-    @NameInMap("OssEndpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssEndpoint")
     private String ossEndpoint;
 
-    @Query
-    @NameInMap("OssObject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssObject")
     private String ossObject;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StreamName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String streamName;
 
     private AddLiveAudioAuditConfigRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.bizType = builder.bizType;
         this.domainName = builder.domainName;
@@ -61,6 +65,7 @@ public class AddLiveAudioAuditConfigRequest extends Request {
         this.ossEndpoint = builder.ossEndpoint;
         this.ossObject = builder.ossObject;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.streamName = builder.streamName;
     }
 
@@ -72,16 +77,9 @@ public class AddLiveAudioAuditConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -134,6 +132,13 @@ public class AddLiveAudioAuditConfigRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return streamName
      */
     public String getStreamName() {
@@ -141,7 +146,6 @@ public class AddLiveAudioAuditConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddLiveAudioAuditConfigRequest, Builder> {
-        private String regionId; 
         private String appName; 
         private String bizType; 
         private String domainName; 
@@ -149,6 +153,7 @@ public class AddLiveAudioAuditConfigRequest extends Request {
         private String ossEndpoint; 
         private String ossObject; 
         private Long ownerId; 
+        private String regionId; 
         private String streamName; 
 
         private Builder() {
@@ -157,7 +162,6 @@ public class AddLiveAudioAuditConfigRequest extends Request {
 
         private Builder(AddLiveAudioAuditConfigRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appName = request.appName;
             this.bizType = request.bizType;
             this.domainName = request.domainName;
@@ -165,20 +169,16 @@ public class AddLiveAudioAuditConfigRequest extends Request {
             this.ossEndpoint = request.ossEndpoint;
             this.ossObject = request.ossObject;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.streamName = request.streamName;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs. The value of this parameter must be the same as the application name in the ingest URL. Otherwise, the configuration does not take effect. The application name is case-sensitive.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -187,7 +187,10 @@ public class AddLiveAudioAuditConfigRequest extends Request {
         }
 
         /**
-         * BizType.
+         * <p>The business type. You can specify a model. The default value is the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.edu</p>
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -196,7 +199,11 @@ public class AddLiveAudioAuditConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -205,7 +212,10 @@ public class AddLiveAudioAuditConfigRequest extends Request {
         }
 
         /**
-         * OssBucket.
+         * <p>The name of the OSS bucket in which the recording is stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveBucket****</p>
          */
         public Builder ossBucket(String ossBucket) {
             this.putQueryParameter("OssBucket", ossBucket);
@@ -214,7 +224,10 @@ public class AddLiveAudioAuditConfigRequest extends Request {
         }
 
         /**
-         * OssEndpoint.
+         * <p>The endpoint of OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-oss-****.aliyuncs.com</p>
          */
         public Builder ossEndpoint(String ossEndpoint) {
             this.putQueryParameter("OssEndpoint", ossEndpoint);
@@ -223,7 +236,10 @@ public class AddLiveAudioAuditConfigRequest extends Request {
         }
 
         /**
-         * OssObject.
+         * <p>The name of the recording stored in OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveObject****</p>
          */
         public Builder ossObject(String ossObject) {
             this.putQueryParameter("OssObject", ossObject);
@@ -241,7 +257,20 @@ public class AddLiveAudioAuditConfigRequest extends Request {
         }
 
         /**
-         * StreamName.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The name of the live stream. The value of this parameter must be the same as the stream name in the ingest URL. Otherwise, the configuration does not take effect. The stream name is case-sensitive.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveStream****</p>
          */
         public Builder streamName(String streamName) {
             this.putQueryParameter("StreamName", streamName);

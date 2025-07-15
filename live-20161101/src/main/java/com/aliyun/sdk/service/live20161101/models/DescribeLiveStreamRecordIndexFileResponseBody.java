@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamRecordIndexFileResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamRecordIndexFileResponseBody</p>
  */
 public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
-    @NameInMap("RecordIndexInfo")
+    @com.aliyun.core.annotation.NameInMap("RecordIndexInfo")
     private RecordIndexInfo recordIndexInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveStreamRecordIndexFileResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
 
     public static DescribeLiveStreamRecordIndexFileResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
         private RecordIndexInfo recordIndexInfo; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamRecordIndexFileResponseBody model) {
+            this.recordIndexInfo = model.recordIndexInfo;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RecordIndexInfo.
+         * <p>The information about the index file.</p>
          */
         public Builder recordIndexInfo(RecordIndexInfo recordIndexInfo) {
             this.recordIndexInfo = recordIndexInfo;
@@ -58,7 +75,10 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5EBF2AC3-4B73-40A5-8B32-83F49D5F035E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,47 +91,56 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveStreamRecordIndexFileResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamRecordIndexFileResponseBody</p>
+     */
     public static class RecordIndexInfo extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Format")
+        private String format;
+
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("OssBucket")
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
         private String ossBucket;
 
-        @NameInMap("OssEndpoint")
+        @com.aliyun.core.annotation.NameInMap("OssEndpoint")
         private String ossEndpoint;
 
-        @NameInMap("OssObject")
+        @com.aliyun.core.annotation.NameInMap("OssObject")
         private String ossObject;
 
-        @NameInMap("RecordId")
+        @com.aliyun.core.annotation.NameInMap("RecordId")
         private String recordId;
 
-        @NameInMap("RecordUrl")
+        @com.aliyun.core.annotation.NameInMap("RecordUrl")
         private String recordUrl;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private RecordIndexInfo(Builder builder) {
@@ -120,6 +149,7 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             this.domainName = builder.domainName;
             this.duration = builder.duration;
             this.endTime = builder.endTime;
+            this.format = builder.format;
             this.height = builder.height;
             this.ossBucket = builder.ossBucket;
             this.ossEndpoint = builder.ossEndpoint;
@@ -172,6 +202,13 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
          */
         public String getEndTime() {
             return this.endTime;
+        }
+
+        /**
+         * @return format
+         */
+        public String getFormat() {
+            return this.format;
         }
 
         /**
@@ -243,6 +280,7 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             private String domainName; 
             private Float duration; 
             private String endTime; 
+            private String format; 
             private Integer height; 
             private String ossBucket; 
             private String ossEndpoint; 
@@ -253,8 +291,32 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             private String streamName; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(RecordIndexInfo model) {
+                this.appName = model.appName;
+                this.createTime = model.createTime;
+                this.domainName = model.domainName;
+                this.duration = model.duration;
+                this.endTime = model.endTime;
+                this.format = model.format;
+                this.height = model.height;
+                this.ossBucket = model.ossBucket;
+                this.ossEndpoint = model.ossEndpoint;
+                this.ossObject = model.ossObject;
+                this.recordId = model.recordId;
+                this.recordUrl = model.recordUrl;
+                this.startTime = model.startTime;
+                this.streamName = model.streamName;
+                this.width = model.width;
+            } 
+
             /**
-             * AppName.
+             * <p>The name of the application to which the live stream belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveApp****</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -262,7 +324,10 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the index file was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-05-27T09:40:56Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -270,7 +335,10 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -278,7 +346,10 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The recording length. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>588.849</p>
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -286,7 +357,10 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end time of the index file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-05-25T05:47:11Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -294,7 +368,21 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The video format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>mp4</p>
+             */
+            public Builder format(String format) {
+                this.format = format;
+                return this;
+            }
+
+            /**
+             * <p>The video height.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>480</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -302,7 +390,10 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             }
 
             /**
-             * OssBucket.
+             * <p>The name of the Object Storage Service (OSS) bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveBucket****</p>
              */
             public Builder ossBucket(String ossBucket) {
                 this.ossBucket = ossBucket;
@@ -310,7 +401,10 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             }
 
             /**
-             * OssEndpoint.
+             * <p>The endpoint of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-oss-****.aliyuncs.com</p>
              */
             public Builder ossEndpoint(String ossEndpoint) {
                 this.ossEndpoint = ossEndpoint;
@@ -318,7 +412,10 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             }
 
             /**
-             * OssObject.
+             * <p>The name of the storage file in OSS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveObject****</p>
              */
             public Builder ossObject(String ossObject) {
                 this.ossObject = ossObject;
@@ -326,7 +423,10 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             }
 
             /**
-             * RecordId.
+             * <p>The ID of the index file.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c4d7f0a4-b506-43f9-8de3-07732c3f****</p>
              */
             public Builder recordId(String recordId) {
                 this.recordId = recordId;
@@ -334,7 +434,7 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             }
 
             /**
-             * RecordUrl.
+             * <p>The URL of the index file.</p>
              */
             public Builder recordUrl(String recordUrl) {
                 this.recordUrl = recordUrl;
@@ -342,7 +442,10 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The start time of the index file. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-01T05:36:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -350,7 +453,10 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             }
 
             /**
-             * StreamName.
+             * <p>The name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveStream****</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -358,7 +464,10 @@ public class DescribeLiveStreamRecordIndexFileResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The video width.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>640</p>
              */
             public Builder width(Integer width) {
                 this.width = width;

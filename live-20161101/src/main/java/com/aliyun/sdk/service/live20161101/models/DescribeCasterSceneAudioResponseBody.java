@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCasterSceneAudioResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCasterSceneAudioResponseBody</p>
  */
 public class DescribeCasterSceneAudioResponseBody extends TeaModel {
-    @NameInMap("AudioLayers")
+    @com.aliyun.core.annotation.NameInMap("AudioLayers")
     private AudioLayers audioLayers;
 
-    @NameInMap("CasterId")
+    @com.aliyun.core.annotation.NameInMap("CasterId")
     private String casterId;
 
-    @NameInMap("FollowEnable")
+    @com.aliyun.core.annotation.NameInMap("FollowEnable")
     private Integer followEnable;
 
-    @NameInMap("MixList")
+    @com.aliyun.core.annotation.NameInMap("MixList")
     private MixList mixList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCasterSceneAudioResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
 
     public static DescribeCasterSceneAudioResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,19 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
         private MixList mixList; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCasterSceneAudioResponseBody model) {
+            this.audioLayers = model.audioLayers;
+            this.casterId = model.casterId;
+            this.followEnable = model.followEnable;
+            this.mixList = model.mixList;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * AudioLayers.
+         * <p>The configurations of the audio layers.</p>
          */
         public Builder audioLayers(AudioLayers audioLayers) {
             this.audioLayers = audioLayers;
@@ -94,7 +114,10 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
         }
 
         /**
-         * CasterId.
+         * <p>The ID of the production studio. You can specify the ID in a request to start a scene in the production studio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>97df6b7f-3490-47d2-ac50-88338765****</p>
          */
         public Builder casterId(String casterId) {
             this.casterId = casterId;
@@ -102,7 +125,14 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
         }
 
         /**
-         * FollowEnable.
+         * <p>The audio mode. By default, the audio follows video (AFV) mode is used. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: the audio mixing mode</li>
+         * <li><strong>1</strong>: the AFV mode</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder followEnable(Integer followEnable) {
             this.followEnable = followEnable;
@@ -118,7 +148,10 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>98745637-3490-47d2-ac50-883387567098</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -131,14 +164,20 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCasterSceneAudioResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterSceneAudioResponseBody</p>
+     */
     public static class AudioLayer extends TeaModel {
-        @NameInMap("FixedDelayDuration")
+        @com.aliyun.core.annotation.NameInMap("FixedDelayDuration")
         private Integer fixedDelayDuration;
 
-        @NameInMap("ValidChannel")
+        @com.aliyun.core.annotation.NameInMap("ValidChannel")
         private String validChannel;
 
-        @NameInMap("VolumeRate")
+        @com.aliyun.core.annotation.NameInMap("VolumeRate")
         private Float volumeRate;
 
         private AudioLayer(Builder builder) {
@@ -181,8 +220,20 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
             private String validChannel; 
             private Float volumeRate; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioLayer model) {
+                this.fixedDelayDuration = model.fixedDelayDuration;
+                this.validChannel = model.validChannel;
+                this.volumeRate = model.volumeRate;
+            } 
+
             /**
-             * FixedDelayDuration.
+             * <p>The fixed delay of the audio layer. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder fixedDelayDuration(Integer fixedDelayDuration) {
                 this.fixedDelayDuration = fixedDelayDuration;
@@ -190,7 +241,15 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
             }
 
             /**
-             * ValidChannel.
+             * <p>The sound channel type of the audio layer. Valid values:</p>
+             * <ul>
+             * <li><strong>left</strong>: the left channel</li>
+             * <li><strong>right</strong>: the right channel</li>
+             * <li><strong>all</strong> (default): both the left and right channels</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder validChannel(String validChannel) {
                 this.validChannel = validChannel;
@@ -198,7 +257,10 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeRate.
+             * <p>The volume of the audio layer.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder volumeRate(Float volumeRate) {
                 this.volumeRate = volumeRate;
@@ -212,9 +274,15 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterSceneAudioResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterSceneAudioResponseBody</p>
+     */
     public static class AudioLayers extends TeaModel {
-        @NameInMap("AudioLayer")
-        private java.util.List < AudioLayer> audioLayer;
+        @com.aliyun.core.annotation.NameInMap("AudioLayer")
+        private java.util.List<AudioLayer> audioLayer;
 
         private AudioLayers(Builder builder) {
             this.audioLayer = builder.audioLayer;
@@ -231,17 +299,24 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
         /**
          * @return audioLayer
          */
-        public java.util.List < AudioLayer> getAudioLayer() {
+        public java.util.List<AudioLayer> getAudioLayer() {
             return this.audioLayer;
         }
 
         public static final class Builder {
-            private java.util.List < AudioLayer> audioLayer; 
+            private java.util.List<AudioLayer> audioLayer; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioLayers model) {
+                this.audioLayer = model.audioLayer;
+            } 
 
             /**
              * AudioLayer.
              */
-            public Builder audioLayer(java.util.List < AudioLayer> audioLayer) {
+            public Builder audioLayer(java.util.List<AudioLayer> audioLayer) {
                 this.audioLayer = audioLayer;
                 return this;
             }
@@ -253,9 +328,15 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterSceneAudioResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterSceneAudioResponseBody</p>
+     */
     public static class MixList extends TeaModel {
-        @NameInMap("LocationId")
-        private java.util.List < String > locationId;
+        @com.aliyun.core.annotation.NameInMap("LocationId")
+        private java.util.List<String> locationId;
 
         private MixList(Builder builder) {
             this.locationId = builder.locationId;
@@ -272,17 +353,24 @@ public class DescribeCasterSceneAudioResponseBody extends TeaModel {
         /**
          * @return locationId
          */
-        public java.util.List < String > getLocationId() {
+        public java.util.List<String> getLocationId() {
             return this.locationId;
         }
 
         public static final class Builder {
-            private java.util.List < String > locationId; 
+            private java.util.List<String> locationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MixList model) {
+                this.locationId = model.locationId;
+            } 
 
             /**
              * LocationId.
              */
-            public Builder locationId(java.util.List < String > locationId) {
+            public Builder locationId(java.util.List<String> locationId) {
                 this.locationId = locationId;
                 return this;
             }

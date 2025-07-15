@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveRecordVodConfigsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveRecordVodConfigsResponseBody</p>
  */
 public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
-    @NameInMap("LiveRecordVodConfigs")
+    @com.aliyun.core.annotation.NameInMap("LiveRecordVodConfigs")
     private LiveRecordVodConfigs liveRecordVodConfigs;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private String total;
 
     private DescribeLiveRecordVodConfigsResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
 
     public static DescribeLiveRecordVodConfigsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -85,8 +94,19 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         private String requestId; 
         private String total; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveRecordVodConfigsResponseBody model) {
+            this.liveRecordVodConfigs = model.liveRecordVodConfigs;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
-         * LiveRecordVodConfigs.
+         * <p>The configurations.</p>
          */
         public Builder liveRecordVodConfigs(LiveRecordVodConfigs liveRecordVodConfigs) {
             this.liveRecordVodConfigs = liveRecordVodConfigs;
@@ -94,7 +114,10 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.pageNum = pageNum;
@@ -102,7 +125,10 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -110,7 +136,10 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5056369B-D337-499E-B8B7-B761BD37B08A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder total(String total) {
             this.total = total;
@@ -131,29 +163,41 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveRecordVodConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveRecordVodConfigsResponseBody</p>
+     */
     public static class LiveRecordVodConfig extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AutoCompose")
+        @com.aliyun.core.annotation.NameInMap("AutoCompose")
         private String autoCompose;
 
-        @NameInMap("ComposeVodTranscodeGroupId")
+        @com.aliyun.core.annotation.NameInMap("ComposeVodTranscodeGroupId")
         private String composeVodTranscodeGroupId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CycleDuration")
+        @com.aliyun.core.annotation.NameInMap("CycleDuration")
         private Integer cycleDuration;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("OnDemand")
+        private Integer onDemand;
+
+        @com.aliyun.core.annotation.NameInMap("StorageLocation")
+        private String storageLocation;
+
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
-        @NameInMap("VodTranscodeGroupId")
+        @com.aliyun.core.annotation.NameInMap("VodTranscodeGroupId")
         private String vodTranscodeGroupId;
 
         private LiveRecordVodConfig(Builder builder) {
@@ -163,6 +207,8 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             this.createTime = builder.createTime;
             this.cycleDuration = builder.cycleDuration;
             this.domainName = builder.domainName;
+            this.onDemand = builder.onDemand;
+            this.storageLocation = builder.storageLocation;
             this.streamName = builder.streamName;
             this.vodTranscodeGroupId = builder.vodTranscodeGroupId;
         }
@@ -218,6 +264,20 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return onDemand
+         */
+        public Integer getOnDemand() {
+            return this.onDemand;
+        }
+
+        /**
+         * @return storageLocation
+         */
+        public String getStorageLocation() {
+            return this.storageLocation;
+        }
+
+        /**
          * @return streamName
          */
         public String getStreamName() {
@@ -238,11 +298,32 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             private String createTime; 
             private Integer cycleDuration; 
             private String domainName; 
+            private Integer onDemand; 
+            private String storageLocation; 
             private String streamName; 
             private String vodTranscodeGroupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveRecordVodConfig model) {
+                this.appName = model.appName;
+                this.autoCompose = model.autoCompose;
+                this.composeVodTranscodeGroupId = model.composeVodTranscodeGroupId;
+                this.createTime = model.createTime;
+                this.cycleDuration = model.cycleDuration;
+                this.domainName = model.domainName;
+                this.onDemand = model.onDemand;
+                this.storageLocation = model.storageLocation;
+                this.streamName = model.streamName;
+                this.vodTranscodeGroupId = model.vodTranscodeGroupId;
+            } 
+
             /**
-             * AppName.
+             * <p>The name of the application to which the live stream belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveApp****</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -250,7 +331,14 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * AutoCompose.
+             * <p>Indicates whether automatic merging is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>ON</strong></li>
+             * <li><strong>OFF</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ON</p>
              */
             public Builder autoCompose(String autoCompose) {
                 this.autoCompose = autoCompose;
@@ -258,7 +346,13 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * ComposeVodTranscodeGroupId.
+             * <p>The ID of the transcoding template group that was used to automatically merge the VOD files created from the live streams.</p>
+             * <blockquote>
+             * <p> This parameter is returned if the value of the AutoCompose parameter is ON.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>dadfcaadde****</p>
              */
             public Builder composeVodTranscodeGroupId(String composeVodTranscodeGroupId) {
                 this.composeVodTranscodeGroupId = composeVodTranscodeGroupId;
@@ -266,7 +360,10 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the live stream was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-01T17:37:00Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -274,7 +371,10 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * CycleDuration.
+             * <p>The recording cycle. Unit: seconds. Default value: <strong>3600</strong>. Valid values: <strong>300 to 21600</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>360</p>
              */
             public Builder cycleDuration(Integer cycleDuration) {
                 this.cycleDuration = cycleDuration;
@@ -282,7 +382,10 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -290,7 +393,36 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * StreamName.
+             * <p>Indicates whether on-demand recording is enabled. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong> (default): On-demand recording is disabled.</li>
+             * <li><strong>1</strong>: On-demand recording is enabled by using the HTTP callback method.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
+             */
+            public Builder onDemand(Integer onDemand) {
+                this.onDemand = onDemand;
+                return this;
+            }
+
+            /**
+             * <p>The storage location.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>****-tjptr2vatm.oss-cn-shanghai.aliyuncs.com</p>
+             */
+            public Builder storageLocation(String storageLocation) {
+                this.storageLocation = storageLocation;
+                return this;
+            }
+
+            /**
+             * <p>The name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveStream****</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -298,7 +430,10 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * VodTranscodeGroupId.
+             * <p>The ID of the transcoding template group in ApsaraVideo VOD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>e2d796d3bb5fd8049d32bff62f94****</p>
              */
             public Builder vodTranscodeGroupId(String vodTranscodeGroupId) {
                 this.vodTranscodeGroupId = vodTranscodeGroupId;
@@ -312,9 +447,15 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveRecordVodConfigsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveRecordVodConfigsResponseBody</p>
+     */
     public static class LiveRecordVodConfigs extends TeaModel {
-        @NameInMap("LiveRecordVodConfig")
-        private java.util.List < LiveRecordVodConfig> liveRecordVodConfig;
+        @com.aliyun.core.annotation.NameInMap("LiveRecordVodConfig")
+        private java.util.List<LiveRecordVodConfig> liveRecordVodConfig;
 
         private LiveRecordVodConfigs(Builder builder) {
             this.liveRecordVodConfig = builder.liveRecordVodConfig;
@@ -331,17 +472,24 @@ public class DescribeLiveRecordVodConfigsResponseBody extends TeaModel {
         /**
          * @return liveRecordVodConfig
          */
-        public java.util.List < LiveRecordVodConfig> getLiveRecordVodConfig() {
+        public java.util.List<LiveRecordVodConfig> getLiveRecordVodConfig() {
             return this.liveRecordVodConfig;
         }
 
         public static final class Builder {
-            private java.util.List < LiveRecordVodConfig> liveRecordVodConfig; 
+            private java.util.List<LiveRecordVodConfig> liveRecordVodConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveRecordVodConfigs model) {
+                this.liveRecordVodConfig = model.liveRecordVodConfig;
+            } 
 
             /**
              * LiveRecordVodConfig.
              */
-            public Builder liveRecordVodConfig(java.util.List < LiveRecordVodConfig> liveRecordVodConfig) {
+            public Builder liveRecordVodConfig(java.util.List<LiveRecordVodConfig> liveRecordVodConfig) {
                 this.liveRecordVodConfig = liveRecordVodConfig;
                 return this;
             }

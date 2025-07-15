@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLivePullStreamInfoConfigRequest} extends {@link RequestModel}
  *
  * <p>DeleteLivePullStreamInfoConfigRequest</p>
  */
 public class DeleteLivePullStreamInfoConfigRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StreamName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String streamName;
 
     private DeleteLivePullStreamInfoConfigRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.streamName = builder.streamName;
     }
 
@@ -52,16 +57,9 @@ public class DeleteLivePullStreamInfoConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -86,6 +84,13 @@ public class DeleteLivePullStreamInfoConfigRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return streamName
      */
     public String getStreamName() {
@@ -93,10 +98,10 @@ public class DeleteLivePullStreamInfoConfigRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteLivePullStreamInfoConfigRequest, Builder> {
-        private String regionId; 
         private String appName; 
         private String domainName; 
         private Long ownerId; 
+        private String regionId; 
         private String streamName; 
 
         private Builder() {
@@ -105,24 +110,19 @@ public class DeleteLivePullStreamInfoConfigRequest extends Request {
 
         private Builder(DeleteLivePullStreamInfoConfigRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appName = request.appName;
             this.domainName = request.domainName;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.streamName = request.streamName;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs. You can call <a href="https://help.aliyun.com/document_detail/2847818.htmll">DescribeLivePullStreamConfig</a> operation to query the application name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -131,7 +131,11 @@ public class DeleteLivePullStreamInfoConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -149,7 +153,20 @@ public class DeleteLivePullStreamInfoConfigRequest extends Request {
         }
 
         /**
-         * StreamName.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The name of the live stream. You can call <a href="https://help.aliyun.com/document_detail/2847818.htmll">DescribeLivePullStreamConfig</a> operation to query the stream name.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveStream****</p>
          */
         public Builder streamName(String streamName) {
             this.putQueryParameter("StreamName", streamName);

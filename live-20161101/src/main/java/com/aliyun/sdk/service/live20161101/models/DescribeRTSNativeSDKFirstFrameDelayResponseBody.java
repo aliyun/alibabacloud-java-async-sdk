@@ -1,30 +1,35 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRTSNativeSDKFirstFrameDelayResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRTSNativeSDKFirstFrameDelayResponseBody</p>
  */
 public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("FrameDelayData")
-    private java.util.List < FrameDelayData> frameDelayData;
+    @com.aliyun.core.annotation.NameInMap("FrameDelayData")
+    private java.util.List<FrameDelayData> frameDelayData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeRTSNativeSDKFirstFrameDelayResponseBody(Builder builder) {
@@ -41,6 +46,10 @@ public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
 
     public static DescribeRTSNativeSDKFirstFrameDelayResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -60,7 +69,7 @@ public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
     /**
      * @return frameDelayData
      */
-    public java.util.List < FrameDelayData> getFrameDelayData() {
+    public java.util.List<FrameDelayData> getFrameDelayData() {
         return this.frameDelayData;
     }
 
@@ -81,12 +90,26 @@ public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
     public static final class Builder {
         private String dataInterval; 
         private String endTime; 
-        private java.util.List < FrameDelayData> frameDelayData; 
+        private java.util.List<FrameDelayData> frameDelayData; 
         private String requestId; 
         private String startTime; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRTSNativeSDKFirstFrameDelayResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.endTime = model.endTime;
+            this.frameDelayData = model.frameDelayData;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
+
         /**
-         * DataInterval.
+         * <p>The time granularity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -94,7 +117,10 @@ public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range for which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -102,15 +128,18 @@ public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
         }
 
         /**
-         * FrameDelayData.
+         * <p>The average latency of first frames at each interval. Unit: milliseconds.</p>
          */
-        public Builder frameDelayData(java.util.List < FrameDelayData> frameDelayData) {
+        public Builder frameDelayData(java.util.List<FrameDelayData> frameDelayData) {
             this.frameDelayData = frameDelayData;
             return this;
         }
 
         /**
-         * Id
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +147,10 @@ public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range for which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -131,11 +163,17 @@ public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRTSNativeSDKFirstFrameDelayResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRTSNativeSDKFirstFrameDelayResponseBody</p>
+     */
     public static class FrameDelayData extends TeaModel {
-        @NameInMap("FrameDelay")
+        @com.aliyun.core.annotation.NameInMap("FrameDelay")
         private String frameDelay;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private FrameDelayData(Builder builder) {
@@ -169,8 +207,19 @@ public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
             private String frameDelay; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(FrameDelayData model) {
+                this.frameDelay = model.frameDelay;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
-             * FrameDelay.
+             * <p>The average latency of first frames within the period of time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>400</p>
              */
             public Builder frameDelay(String frameDelay) {
                 this.frameDelay = frameDelay;
@@ -178,7 +227,10 @@ public class DescribeRTSNativeSDKFirstFrameDelayResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;

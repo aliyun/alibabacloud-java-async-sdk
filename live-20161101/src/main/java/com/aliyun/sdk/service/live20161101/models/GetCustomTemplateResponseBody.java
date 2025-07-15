@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetCustomTemplateResponseBody} extends {@link TeaModel}
  *
  * <p>GetCustomTemplateResponseBody</p>
  */
 public class GetCustomTemplateResponseBody extends TeaModel {
-    @NameInMap("CustomTemplate")
+    @com.aliyun.core.annotation.NameInMap("CustomTemplate")
     private String customTemplate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Template")
+    @com.aliyun.core.annotation.NameInMap("Template")
     private String template;
 
     private GetCustomTemplateResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class GetCustomTemplateResponseBody extends TeaModel {
 
     public static GetCustomTemplateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,8 +70,20 @@ public class GetCustomTemplateResponseBody extends TeaModel {
         private String requestId; 
         private String template; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetCustomTemplateResponseBody model) {
+            this.customTemplate = model.customTemplate;
+            this.requestId = model.requestId;
+            this.template = model.template;
+        } 
+
         /**
-         * CustomTemplate.
+         * <p>The configurations of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{height:1080,scale:[16:9],gop:60,bframes:30,cdesc:h264}</p>
          */
         public Builder customTemplate(String customTemplate) {
             this.customTemplate = customTemplate;
@@ -70,7 +91,10 @@ public class GetCustomTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BC1E78D3-FA8B-4457-DEE2-6093E1232254</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +102,10 @@ public class GetCustomTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Template.
+         * <p>The name of the template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TestTemplate</p>
          */
         public Builder template(String template) {
             this.template = template;

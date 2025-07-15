@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeStudioLayoutsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeStudioLayoutsResponseBody</p>
  */
 public class DescribeStudioLayoutsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StudioLayouts")
-    private java.util.List < StudioLayouts> studioLayouts;
+    @com.aliyun.core.annotation.NameInMap("StudioLayouts")
+    private java.util.List<StudioLayouts> studioLayouts;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeStudioLayoutsResponseBody(Builder builder) {
@@ -35,6 +40,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -45,7 +54,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
     /**
      * @return studioLayouts
      */
-    public java.util.List < StudioLayouts> getStudioLayouts() {
+    public java.util.List<StudioLayouts> getStudioLayouts() {
         return this.studioLayouts;
     }
 
@@ -58,11 +67,23 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
 
     public static final class Builder {
         private String requestId; 
-        private java.util.List < StudioLayouts> studioLayouts; 
+        private java.util.List<StudioLayouts> studioLayouts; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeStudioLayoutsResponseBody model) {
+            this.requestId = model.requestId;
+            this.studioLayouts = model.studioLayouts;
+            this.total = model.total;
+        } 
+
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c6a2a0d-f228-4a64-af62-20e91b9676b3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,15 +91,18 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         }
 
         /**
-         * StudioLayouts.
+         * <p>The layout information.</p>
          */
-        public Builder studioLayouts(java.util.List < StudioLayouts> studioLayouts) {
+        public Builder studioLayouts(java.util.List<StudioLayouts> studioLayouts) {
             this.studioLayouts = studioLayouts;
             return this;
         }
 
         /**
-         * Total.
+         * <p>The total number of layouts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -91,17 +115,23 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeStudioLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStudioLayoutsResponseBody</p>
+     */
     public static class BgImageConfig extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("LocationId")
+        @com.aliyun.core.annotation.NameInMap("LocationId")
         private String locationId;
 
-        @NameInMap("MaterialId")
+        @com.aliyun.core.annotation.NameInMap("MaterialId")
         private String materialId;
 
         private BgImageConfig(Builder builder) {
@@ -153,8 +183,21 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             private String locationId; 
             private String materialId; 
 
+            private Builder() {
+            } 
+
+            private Builder(BgImageConfig model) {
+                this.id = model.id;
+                this.imageUrl = model.imageUrl;
+                this.locationId = model.locationId;
+                this.materialId = model.materialId;
+            } 
+
             /**
-             * Id.
+             * <p>The unique ID of the material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k12kj31****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -162,7 +205,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageUrl.
+             * <p>The URL of the material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://example.org">http://example.org</a></p>
              */
             public Builder imageUrl(String imageUrl) {
                 this.imageUrl = imageUrl;
@@ -170,7 +216,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * LocationId.
+             * <p>The position ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RV01</p>
              */
             public Builder locationId(String locationId) {
                 this.locationId = locationId;
@@ -178,7 +227,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * MaterialId.
+             * <p>The ID of the material in ApsaraVideo VOD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdfas9df89asd8f9****</p>
              */
             public Builder materialId(String materialId) {
                 this.materialId = materialId;
@@ -192,11 +244,17 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStudioLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStudioLayoutsResponseBody</p>
+     */
     public static class CommonConfig extends TeaModel {
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("VideoResourceId")
+        @com.aliyun.core.annotation.NameInMap("VideoResourceId")
         private String videoResourceId;
 
         private CommonConfig(Builder builder) {
@@ -230,8 +288,19 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             private String channelId; 
             private String videoResourceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommonConfig model) {
+                this.channelId = model.channelId;
+                this.videoResourceId = model.videoResourceId;
+            } 
+
             /**
-             * ChannelId.
+             * <p>The ID of the channel that is bound to the video resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RV01</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -239,7 +308,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * VideoResourceId.
+             * <p>The ID of the video resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdfasdfasdfasdfa****</p>
              */
             public Builder videoResourceId(String videoResourceId) {
                 this.videoResourceId = videoResourceId;
@@ -253,11 +325,17 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStudioLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStudioLayoutsResponseBody</p>
+     */
     public static class LayerOrderConfigList extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private LayerOrderConfigList(Builder builder) {
@@ -291,8 +369,19 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             private String id; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(LayerOrderConfigList model) {
+                this.id = model.id;
+                this.type = model.type;
+            } 
+
             /**
-             * Id.
+             * <p>The unique ID of the resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k12kj31****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -300,7 +389,14 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the resource. Valid values:</p>
+             * <ul>
+             * <li><strong>background</strong>: background material</li>
+             * <li><strong>media</strong>: multimedia material</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>media</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -314,35 +410,41 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStudioLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStudioLayoutsResponseBody</p>
+     */
     public static class MediaInputConfigList extends TeaModel {
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("FillMode")
+        @com.aliyun.core.annotation.NameInMap("FillMode")
         private String fillMode;
 
-        @NameInMap("HeightNormalized")
+        @com.aliyun.core.annotation.NameInMap("HeightNormalized")
         private Float heightNormalized;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("ImageMaterialId")
+        @com.aliyun.core.annotation.NameInMap("ImageMaterialId")
         private String imageMaterialId;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("PositionNormalized")
-        private java.util.List < Float > positionNormalized;
+        @com.aliyun.core.annotation.NameInMap("PositionNormalized")
+        private java.util.List<Float> positionNormalized;
 
-        @NameInMap("PositionRefer")
+        @com.aliyun.core.annotation.NameInMap("PositionRefer")
         private String positionRefer;
 
-        @NameInMap("VideoResourceId")
+        @com.aliyun.core.annotation.NameInMap("VideoResourceId")
         private String videoResourceId;
 
-        @NameInMap("WidthNormalized")
+        @com.aliyun.core.annotation.NameInMap("WidthNormalized")
         private Float widthNormalized;
 
         private MediaInputConfigList(Builder builder) {
@@ -411,7 +513,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         /**
          * @return positionNormalized
          */
-        public java.util.List < Float > getPositionNormalized() {
+        public java.util.List<Float> getPositionNormalized() {
             return this.positionNormalized;
         }
 
@@ -443,13 +545,32 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             private String id; 
             private String imageMaterialId; 
             private Integer index; 
-            private java.util.List < Float > positionNormalized; 
+            private java.util.List<Float> positionNormalized; 
             private String positionRefer; 
             private String videoResourceId; 
             private Float widthNormalized; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediaInputConfigList model) {
+                this.channelId = model.channelId;
+                this.fillMode = model.fillMode;
+                this.heightNormalized = model.heightNormalized;
+                this.id = model.id;
+                this.imageMaterialId = model.imageMaterialId;
+                this.index = model.index;
+                this.positionNormalized = model.positionNormalized;
+                this.positionRefer = model.positionRefer;
+                this.videoResourceId = model.videoResourceId;
+                this.widthNormalized = model.widthNormalized;
+            } 
+
             /**
-             * ChannelId.
+             * <p>The ID of the channel that is bound to the video resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RV01</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -457,7 +578,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * FillMode.
+             * <p>The fill type. Default value: none.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>none</p>
              */
             public Builder fillMode(String fillMode) {
                 this.fillMode = fillMode;
@@ -465,7 +589,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * HeightNormalized.
+             * <p>The normalized value of the material height. The value indicates the ratio of the material height to the height of the background. Valid values: <strong>0 to 1</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.4</p>
              */
             public Builder heightNormalized(Float heightNormalized) {
                 this.heightNormalized = heightNormalized;
@@ -473,7 +600,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique ID of the multimedia material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k12kj31****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -481,7 +611,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageMaterialId.
+             * <p>The ID of the image in ApsaraVideo VOD.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>lkajsdfsa8fd89asd8****</p>
              */
             public Builder imageMaterialId(String imageMaterialId) {
                 this.imageMaterialId = imageMaterialId;
@@ -489,7 +622,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The sequence number of the multimedia material. This parameter is displayed on the frontend but not used in the operation logic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -497,15 +633,18 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * PositionNormalized.
+             * <p>The normalized value of the position of the material, in the format of [unk][x,y][unk]. Valid values of x and y: <strong>0 to 1</strong>. For example, [unk][0.1,0.2][unk] indicates that the material is horizontally offset by 10% and vertically offset by 20% towards the upper-left corner.</p>
              */
-            public Builder positionNormalized(java.util.List < Float > positionNormalized) {
+            public Builder positionNormalized(java.util.List<Float> positionNormalized) {
                 this.positionNormalized = positionNormalized;
                 return this;
             }
 
             /**
-             * PositionRefer.
+             * <p>The coordinate origin for the material. Default value: topLeft. topLeft indicates that the upper-left corner is used as the coordinate origin.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>topLeft</p>
              */
             public Builder positionRefer(String positionRefer) {
                 this.positionRefer = positionRefer;
@@ -513,7 +652,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * VideoResourceId.
+             * <p>The ID of the video resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdfasdfasdfasdfa****</p>
              */
             public Builder videoResourceId(String videoResourceId) {
                 this.videoResourceId = videoResourceId;
@@ -521,7 +663,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * WidthNormalized.
+             * <p>The normalized value of the material width. The value indicates the ratio of the material width to the width of the background. Valid values: <strong>0 to 1</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.4</p>
              */
             public Builder widthNormalized(Float widthNormalized) {
                 this.widthNormalized = widthNormalized;
@@ -535,11 +680,17 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStudioLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStudioLayoutsResponseBody</p>
+     */
     public static class AudioConfig extends TeaModel {
-        @NameInMap("ValidChannel")
+        @com.aliyun.core.annotation.NameInMap("ValidChannel")
         private String validChannel;
 
-        @NameInMap("VolumeRate")
+        @com.aliyun.core.annotation.NameInMap("VolumeRate")
         private Float volumeRate;
 
         private AudioConfig(Builder builder) {
@@ -573,8 +724,19 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             private String validChannel; 
             private Float volumeRate; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioConfig model) {
+                this.validChannel = model.validChannel;
+                this.volumeRate = model.volumeRate;
+            } 
+
             /**
-             * ValidChannel.
+             * <p>The corresponding channel.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder validChannel(String validChannel) {
                 this.validChannel = validChannel;
@@ -582,7 +744,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeRate.
+             * <p>The volume.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1.0</p>
              */
             public Builder volumeRate(Float volumeRate) {
                 this.volumeRate = volumeRate;
@@ -596,38 +761,44 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStudioLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStudioLayoutsResponseBody</p>
+     */
     public static class ScreenInputConfigList extends TeaModel {
-        @NameInMap("AudioConfig")
+        @com.aliyun.core.annotation.NameInMap("AudioConfig")
         private AudioConfig audioConfig;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("Color")
+        @com.aliyun.core.annotation.NameInMap("Color")
         private String color;
 
-        @NameInMap("HeightNormalized")
+        @com.aliyun.core.annotation.NameInMap("HeightNormalized")
         private Float heightNormalized;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("OnlyAudio")
+        @com.aliyun.core.annotation.NameInMap("OnlyAudio")
         private Boolean onlyAudio;
 
-        @NameInMap("PortraitType")
+        @com.aliyun.core.annotation.NameInMap("PortraitType")
         private Integer portraitType;
 
-        @NameInMap("PositionX")
+        @com.aliyun.core.annotation.NameInMap("PositionX")
         private String positionX;
 
-        @NameInMap("PositionY")
+        @com.aliyun.core.annotation.NameInMap("PositionY")
         private String positionY;
 
-        @NameInMap("VideoResourceId")
+        @com.aliyun.core.annotation.NameInMap("VideoResourceId")
         private String videoResourceId;
 
         private ScreenInputConfigList(Builder builder) {
@@ -742,8 +913,25 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             private String positionY; 
             private String videoResourceId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScreenInputConfigList model) {
+                this.audioConfig = model.audioConfig;
+                this.channelId = model.channelId;
+                this.color = model.color;
+                this.heightNormalized = model.heightNormalized;
+                this.id = model.id;
+                this.index = model.index;
+                this.onlyAudio = model.onlyAudio;
+                this.portraitType = model.portraitType;
+                this.positionX = model.positionX;
+                this.positionY = model.positionY;
+                this.videoResourceId = model.videoResourceId;
+            } 
+
             /**
-             * AudioConfig.
+             * <p>The audio configurations.</p>
              */
             public Builder audioConfig(AudioConfig audioConfig) {
                 this.audioConfig = audioConfig;
@@ -751,7 +939,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelId.
+             * <p>The ID of the channel that is bound to the video resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RV01</p>
              */
             public Builder channelId(String channelId) {
                 this.channelId = channelId;
@@ -759,7 +950,16 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * Color.
+             * <p>The color gamut for chroma key. Valid values:</p>
+             * <ul>
+             * <li><strong>blue</strong></li>
+             * <li><strong>green</strong></li>
+             * <li><strong>auto</strong>: automatic recognition</li>
+             * <li><strong>complex</strong>: background replacement</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>green</p>
              */
             public Builder color(String color) {
                 this.color = color;
@@ -767,7 +967,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * HeightNormalized.
+             * <p>The normalized value of the height. The value indicates the ratio of the height of the keyed portrait to the height of the background. Valid values: <strong>0 to 1</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.4</p>
              */
             public Builder heightNormalized(Float heightNormalized) {
                 this.heightNormalized = heightNormalized;
@@ -775,7 +978,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * <p>The unique ID of the chroma key source.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>k12kj31****</p>
              */
             public Builder id(String id) {
                 this.id = id;
@@ -783,7 +989,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * <p>The sequence number of the chroma key source. This parameter is displayed on the frontend but not used in the operation logic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -791,7 +1000,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * OnlyAudio.
+             * <p>Indicates whether only audio exists.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder onlyAudio(Boolean onlyAudio) {
                 this.onlyAudio = onlyAudio;
@@ -799,7 +1011,14 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * PortraitType.
+             * <p>The portrait type. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: half body</li>
+             * <li><strong>1</strong>: full body</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder portraitType(Integer portraitType) {
                 this.portraitType = portraitType;
@@ -807,7 +1026,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * PositionX.
+             * <p>The x-coordinate of the material. Valid values: <strong>0 to 1</strong>. The upper-left corner is used as the coordinate origin for the material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.1</p>
              */
             public Builder positionX(String positionX) {
                 this.positionX = positionX;
@@ -815,7 +1037,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * PositionY.
+             * <p>The y-coordinate of the material. Valid values: <strong>0 to 1</strong>. The upper-left corner is used as the coordinate origin for the material.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.2</p>
              */
             public Builder positionY(String positionY) {
                 this.positionY = positionY;
@@ -823,7 +1048,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * VideoResourceId.
+             * <p>The ID of the video resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdfasdfasdfasdfa****</p>
              */
             public Builder videoResourceId(String videoResourceId) {
                 this.videoResourceId = videoResourceId;
@@ -837,30 +1065,36 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeStudioLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeStudioLayoutsResponseBody</p>
+     */
     public static class StudioLayouts extends TeaModel {
-        @NameInMap("BgImageConfig")
+        @com.aliyun.core.annotation.NameInMap("BgImageConfig")
         private BgImageConfig bgImageConfig;
 
-        @NameInMap("CommonConfig")
+        @com.aliyun.core.annotation.NameInMap("CommonConfig")
         private CommonConfig commonConfig;
 
-        @NameInMap("LayerOrderConfigList")
-        private java.util.List < LayerOrderConfigList> layerOrderConfigList;
+        @com.aliyun.core.annotation.NameInMap("LayerOrderConfigList")
+        private java.util.List<LayerOrderConfigList> layerOrderConfigList;
 
-        @NameInMap("LayoutId")
+        @com.aliyun.core.annotation.NameInMap("LayoutId")
         private String layoutId;
 
-        @NameInMap("LayoutName")
+        @com.aliyun.core.annotation.NameInMap("LayoutName")
         private String layoutName;
 
-        @NameInMap("LayoutType")
+        @com.aliyun.core.annotation.NameInMap("LayoutType")
         private String layoutType;
 
-        @NameInMap("MediaInputConfigList")
-        private java.util.List < MediaInputConfigList> mediaInputConfigList;
+        @com.aliyun.core.annotation.NameInMap("MediaInputConfigList")
+        private java.util.List<MediaInputConfigList> mediaInputConfigList;
 
-        @NameInMap("ScreenInputConfigList")
-        private java.util.List < ScreenInputConfigList> screenInputConfigList;
+        @com.aliyun.core.annotation.NameInMap("ScreenInputConfigList")
+        private java.util.List<ScreenInputConfigList> screenInputConfigList;
 
         private StudioLayouts(Builder builder) {
             this.bgImageConfig = builder.bgImageConfig;
@@ -898,7 +1132,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         /**
          * @return layerOrderConfigList
          */
-        public java.util.List < LayerOrderConfigList> getLayerOrderConfigList() {
+        public java.util.List<LayerOrderConfigList> getLayerOrderConfigList() {
             return this.layerOrderConfigList;
         }
 
@@ -926,29 +1160,43 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
         /**
          * @return mediaInputConfigList
          */
-        public java.util.List < MediaInputConfigList> getMediaInputConfigList() {
+        public java.util.List<MediaInputConfigList> getMediaInputConfigList() {
             return this.mediaInputConfigList;
         }
 
         /**
          * @return screenInputConfigList
          */
-        public java.util.List < ScreenInputConfigList> getScreenInputConfigList() {
+        public java.util.List<ScreenInputConfigList> getScreenInputConfigList() {
             return this.screenInputConfigList;
         }
 
         public static final class Builder {
             private BgImageConfig bgImageConfig; 
             private CommonConfig commonConfig; 
-            private java.util.List < LayerOrderConfigList> layerOrderConfigList; 
+            private java.util.List<LayerOrderConfigList> layerOrderConfigList; 
             private String layoutId; 
             private String layoutName; 
             private String layoutType; 
-            private java.util.List < MediaInputConfigList> mediaInputConfigList; 
-            private java.util.List < ScreenInputConfigList> screenInputConfigList; 
+            private java.util.List<MediaInputConfigList> mediaInputConfigList; 
+            private java.util.List<ScreenInputConfigList> screenInputConfigList; 
+
+            private Builder() {
+            } 
+
+            private Builder(StudioLayouts model) {
+                this.bgImageConfig = model.bgImageConfig;
+                this.commonConfig = model.commonConfig;
+                this.layerOrderConfigList = model.layerOrderConfigList;
+                this.layoutId = model.layoutId;
+                this.layoutName = model.layoutName;
+                this.layoutType = model.layoutType;
+                this.mediaInputConfigList = model.mediaInputConfigList;
+                this.screenInputConfigList = model.screenInputConfigList;
+            } 
 
             /**
-             * BgImageConfig.
+             * <p>The background material configurations.</p>
              */
             public Builder bgImageConfig(BgImageConfig bgImageConfig) {
                 this.bgImageConfig = bgImageConfig;
@@ -956,7 +1204,7 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * CommonConfig.
+             * <p>The common layout configurations. This parameter is returned only for a common layout.</p>
              */
             public Builder commonConfig(CommonConfig commonConfig) {
                 this.commonConfig = commonConfig;
@@ -964,15 +1212,18 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * LayerOrderConfigList.
+             * <p>The layer sorting configurations.</p>
              */
-            public Builder layerOrderConfigList(java.util.List < LayerOrderConfigList> layerOrderConfigList) {
+            public Builder layerOrderConfigList(java.util.List<LayerOrderConfigList> layerOrderConfigList) {
                 this.layerOrderConfigList = layerOrderConfigList;
                 return this;
             }
 
             /**
-             * LayoutId.
+             * <p>The ID of the layout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
              */
             public Builder layoutId(String layoutId) {
                 this.layoutId = layoutId;
@@ -980,7 +1231,10 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * LayoutName.
+             * <p>The name of the layout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>测试布局</p>
              */
             public Builder layoutName(String layoutName) {
                 this.layoutName = layoutName;
@@ -988,7 +1242,14 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * LayoutType.
+             * <p>The type of the layout. Valid values:</p>
+             * <ul>
+             * <li><strong>common</strong></li>
+             * <li><strong>studio</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>studio</p>
              */
             public Builder layoutType(String layoutType) {
                 this.layoutType = layoutType;
@@ -996,17 +1257,17 @@ public class DescribeStudioLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * MediaInputConfigList.
+             * <p>The multimedia input configurations.</p>
              */
-            public Builder mediaInputConfigList(java.util.List < MediaInputConfigList> mediaInputConfigList) {
+            public Builder mediaInputConfigList(java.util.List<MediaInputConfigList> mediaInputConfigList) {
                 this.mediaInputConfigList = mediaInputConfigList;
                 return this;
             }
 
             /**
-             * ScreenInputConfigList.
+             * <p>The input configurations for chroma key.</p>
              */
-            public Builder screenInputConfigList(java.util.List < ScreenInputConfigList> screenInputConfigList) {
+            public Builder screenInputConfigList(java.util.List<ScreenInputConfigList> screenInputConfigList) {
                 this.screenInputConfigList = screenInputConfigList;
                 return this;
             }

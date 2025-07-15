@@ -1,58 +1,68 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SetLiveLazyPullStreamInfoConfigRequest} extends {@link RequestModel}
  *
  * <p>SetLiveLazyPullStreamInfoConfigRequest</p>
  */
 public class SetLiveLazyPullStreamInfoConfigRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PullAppName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PullAppName")
     private String pullAppName;
 
-    @Query
-    @NameInMap("PullDomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PullDomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pullDomainName;
 
-    @Query
-    @NameInMap("PullProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PullProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pullProtocol;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TranscodeLazy")
+    private String transcodeLazy;
 
     private SetLiveLazyPullStreamInfoConfigRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
         this.pullAppName = builder.pullAppName;
         this.pullDomainName = builder.pullDomainName;
         this.pullProtocol = builder.pullProtocol;
+        this.regionId = builder.regionId;
+        this.transcodeLazy = builder.transcodeLazy;
     }
 
     public static Builder builder() {
@@ -63,16 +73,9 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -117,14 +120,29 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends Request {
         return this.pullProtocol;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
+     * @return transcodeLazy
+     */
+    public String getTranscodeLazy() {
+        return this.transcodeLazy;
+    }
+
     public static final class Builder extends Request.Builder<SetLiveLazyPullStreamInfoConfigRequest, Builder> {
-        private String regionId; 
         private String appName; 
         private String domainName; 
         private Long ownerId; 
         private String pullAppName; 
         private String pullDomainName; 
         private String pullProtocol; 
+        private String regionId; 
+        private String transcodeLazy; 
 
         private Builder() {
             super();
@@ -132,26 +150,25 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends Request {
 
         private Builder(SetLiveLazyPullStreamInfoConfigRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appName = request.appName;
             this.domainName = request.domainName;
             this.ownerId = request.ownerId;
             this.pullAppName = request.pullAppName;
             this.pullDomainName = request.pullDomainName;
             this.pullProtocol = request.pullProtocol;
+            this.regionId = request.regionId;
+            this.transcodeLazy = request.transcodeLazy;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs.</p>
+         * <blockquote>
+         * <p> If you want to configure triggered stream pulling for all applications, set the value to <strong>ali_all_app</strong>.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ali_all_app</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -160,7 +177,11 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -178,7 +199,13 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends Request {
         }
 
         /**
-         * PullAppName.
+         * <p>The name of the application for back-to-origin stream pulling.</p>
+         * <blockquote>
+         * <p> If you want to use the application specified in the streaming URL, leave this parameter empty.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>livePullApp****</p>
          */
         public Builder pullAppName(String pullAppName) {
             this.putQueryParameter("PullAppName", pullAppName);
@@ -187,7 +214,11 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends Request {
         }
 
         /**
-         * PullDomainName.
+         * <p>The origin server address of the live stream. Separate multiple addresses with semicolons (;).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>guide.aliyundoc.com</p>
          */
         public Builder pullDomainName(String pullDomainName) {
             this.putQueryParameter("PullDomainName", pullDomainName);
@@ -196,11 +227,45 @@ public class SetLiveLazyPullStreamInfoConfigRequest extends Request {
         }
 
         /**
-         * PullProtocol.
+         * <p>The protocol for back-to-origin stream pulling. Valid values:</p>
+         * <ul>
+         * <li><strong>rtmp</strong></li>
+         * <li><strong>httpflv</strong></li>
+         * <li><strong>hls</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp</p>
          */
         public Builder pullProtocol(String pullProtocol) {
             this.putQueryParameter("PullProtocol", pullProtocol);
             this.pullProtocol = pullProtocol;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>Specifies whether to trigger stream pulling when the transcoded stream is played. The default value is <strong>no</strong>. Valid values:</p>
+         * <ul>
+         * <li><strong>yes</strong></li>
+         * <li><strong>no</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>no</p>
+         */
+        public Builder transcodeLazy(String transcodeLazy) {
+            this.putQueryParameter("TranscodeLazy", transcodeLazy);
+            this.transcodeLazy = transcodeLazy;
             return this;
         }
 

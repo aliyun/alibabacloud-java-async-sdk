@@ -1,18 +1,23 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLiveAudioAuditNotifyConfigResponseBody} extends {@link TeaModel}
  *
  * <p>UpdateLiveAudioAuditNotifyConfigResponseBody</p>
  */
 public class UpdateLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateLiveAudioAuditNotifyConfigResponseBody(Builder builder) {
@@ -27,6 +32,10 @@ public class UpdateLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -37,8 +46,18 @@ public class UpdateLiveAudioAuditNotifyConfigResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateLiveAudioAuditNotifyConfigResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7BF95F2A-3B24-4CDE-9346-7F6FA86697A1</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

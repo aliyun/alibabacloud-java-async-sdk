@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamsNotifyRecordsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamsNotifyRecordsResponseBody</p>
  */
 public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
-    @NameInMap("NotifyRecordsInfo")
+    @com.aliyun.core.annotation.NameInMap("NotifyRecordsInfo")
     private NotifyRecordsInfo notifyRecordsInfo;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
     private DescribeLiveStreamsNotifyRecordsResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
 
     public static DescribeLiveStreamsNotifyRecordsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,20 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
         private Integer totalNum; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamsNotifyRecordsResponseBody model) {
+            this.notifyRecordsInfo = model.notifyRecordsInfo;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * NotifyRecordsInfo.
+         * <p>The stream ingest callback records.</p>
          */
         public Builder notifyRecordsInfo(NotifyRecordsInfo notifyRecordsInfo) {
             this.notifyRecordsInfo = notifyRecordsInfo;
@@ -106,7 +127,10 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.pageNum = pageNum;
@@ -114,7 +138,10 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +149,10 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>F675E4B4-125D-1533-901B-11A724644285</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +160,10 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of entries that meet the specified conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -138,7 +171,10 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -151,32 +187,38 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveStreamsNotifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamsNotifyRecordsResponseBody</p>
+     */
     public static class LiveStreamNotifyRecordsInfo extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("NotifyContent")
+        @com.aliyun.core.annotation.NameInMap("NotifyContent")
         private String notifyContent;
 
-        @NameInMap("NotifyResult")
+        @com.aliyun.core.annotation.NameInMap("NotifyResult")
         private String notifyResult;
 
-        @NameInMap("NotifyTime")
+        @com.aliyun.core.annotation.NameInMap("NotifyTime")
         private String notifyTime;
 
-        @NameInMap("NotifyType")
+        @com.aliyun.core.annotation.NameInMap("NotifyType")
         private String notifyType;
 
-        @NameInMap("NotifyUrl")
+        @com.aliyun.core.annotation.NameInMap("NotifyUrl")
         private String notifyUrl;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
         private LiveStreamNotifyRecordsInfo(Builder builder) {
@@ -273,8 +315,26 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
             private String notifyUrl; 
             private String streamName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamNotifyRecordsInfo model) {
+                this.appName = model.appName;
+                this.description = model.description;
+                this.domainName = model.domainName;
+                this.notifyContent = model.notifyContent;
+                this.notifyResult = model.notifyResult;
+                this.notifyTime = model.notifyTime;
+                this.notifyType = model.notifyType;
+                this.notifyUrl = model.notifyUrl;
+                this.streamName = model.streamName;
+            } 
+
             /**
-             * AppName.
+             * <p>The name of the application to which the live stream belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>app</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -282,7 +342,10 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The result of the request. If success is returned, the request is successful. If an error message is returned, the request failed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -290,7 +353,10 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The ingest domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>push.example1.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -298,7 +364,10 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyContent.
+             * <p>The callback content.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;action&quot;:&quot;publish_done&quot;,&quot;app&quot;:&quot;push.example1.com&quot;}</p>
              */
             public Builder notifyContent(String notifyContent) {
                 this.notifyContent = notifyContent;
@@ -306,7 +375,14 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyResult.
+             * <p>The callback result. Valid values:</p>
+             * <ul>
+             * <li>success</li>
+             * <li>failed</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder notifyResult(String notifyResult) {
                 this.notifyResult = notifyResult;
@@ -314,7 +390,10 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyTime.
+             * <p>The time when the callback was invoked. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2022-10-19T19:09:28Z</p>
              */
             public Builder notifyTime(String notifyTime) {
                 this.notifyTime = notifyTime;
@@ -322,7 +401,14 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyType.
+             * <p>The event. Valid values:</p>
+             * <ul>
+             * <li>publish: The stream ingest starts.</li>
+             * <li>publish_done: The stream ingest is interrupted.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>publish_done</p>
              */
             public Builder notifyType(String notifyType) {
                 this.notifyType = notifyType;
@@ -330,7 +416,10 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyUrl.
+             * <p>The callback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://xx.xx.xx.xx/callbacks">http://xx.xx.xx.xx/callbacks</a></p>
              */
             public Builder notifyUrl(String notifyUrl) {
                 this.notifyUrl = notifyUrl;
@@ -338,7 +427,10 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * StreamName.
+             * <p>The name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>stream</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -352,9 +444,15 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamsNotifyRecordsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamsNotifyRecordsResponseBody</p>
+     */
     public static class NotifyRecordsInfo extends TeaModel {
-        @NameInMap("LiveStreamNotifyRecordsInfo")
-        private java.util.List < LiveStreamNotifyRecordsInfo> liveStreamNotifyRecordsInfo;
+        @com.aliyun.core.annotation.NameInMap("LiveStreamNotifyRecordsInfo")
+        private java.util.List<LiveStreamNotifyRecordsInfo> liveStreamNotifyRecordsInfo;
 
         private NotifyRecordsInfo(Builder builder) {
             this.liveStreamNotifyRecordsInfo = builder.liveStreamNotifyRecordsInfo;
@@ -371,17 +469,24 @@ public class DescribeLiveStreamsNotifyRecordsResponseBody extends TeaModel {
         /**
          * @return liveStreamNotifyRecordsInfo
          */
-        public java.util.List < LiveStreamNotifyRecordsInfo> getLiveStreamNotifyRecordsInfo() {
+        public java.util.List<LiveStreamNotifyRecordsInfo> getLiveStreamNotifyRecordsInfo() {
             return this.liveStreamNotifyRecordsInfo;
         }
 
         public static final class Builder {
-            private java.util.List < LiveStreamNotifyRecordsInfo> liveStreamNotifyRecordsInfo; 
+            private java.util.List<LiveStreamNotifyRecordsInfo> liveStreamNotifyRecordsInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotifyRecordsInfo model) {
+                this.liveStreamNotifyRecordsInfo = model.liveStreamNotifyRecordsInfo;
+            } 
 
             /**
              * LiveStreamNotifyRecordsInfo.
              */
-            public Builder liveStreamNotifyRecordsInfo(java.util.List < LiveStreamNotifyRecordsInfo> liveStreamNotifyRecordsInfo) {
+            public Builder liveStreamNotifyRecordsInfo(java.util.List<LiveStreamNotifyRecordsInfo> liveStreamNotifyRecordsInfo) {
                 this.liveStreamNotifyRecordsInfo = liveStreamNotifyRecordsInfo;
                 return this;
             }

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCasterProgramResponseBody} extends {@link TeaModel}
  *
  * <p>AddCasterProgramResponseBody</p>
  */
 public class AddCasterProgramResponseBody extends TeaModel {
-    @NameInMap("EpisodeIds")
+    @com.aliyun.core.annotation.NameInMap("EpisodeIds")
     private EpisodeIds episodeIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddCasterProgramResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class AddCasterProgramResponseBody extends TeaModel {
 
     public static AddCasterProgramResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class AddCasterProgramResponseBody extends TeaModel {
         private EpisodeIds episodeIds; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AddCasterProgramResponseBody model) {
+            this.episodeIds = model.episodeIds;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * EpisodeIds.
+         * <p>The IDs of the episodes. The episode IDs are listed in the same order as specified by the variable N.</p>
          */
         public Builder episodeIds(EpisodeIds episodeIds) {
             this.episodeIds = episodeIds;
@@ -58,7 +75,10 @@ public class AddCasterProgramResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,8 +91,14 @@ public class AddCasterProgramResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link AddCasterProgramResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddCasterProgramResponseBody</p>
+     */
     public static class EpisodeId extends TeaModel {
-        @NameInMap("EpisodeId")
+        @com.aliyun.core.annotation.NameInMap("EpisodeId")
         private String episodeId;
 
         private EpisodeId(Builder builder) {
@@ -97,8 +123,18 @@ public class AddCasterProgramResponseBody extends TeaModel {
         public static final class Builder {
             private String episodeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(EpisodeId model) {
+                this.episodeId = model.episodeId;
+            } 
+
             /**
-             * EpisodeId.
+             * <p>The ID of the episode. You can use the ID as a request parameter in the API operation that is used to modify the episode list, query the information about the episode list, delete the episode, or modify the configurations of the episode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
              */
             public Builder episodeId(String episodeId) {
                 this.episodeId = episodeId;
@@ -112,9 +148,15 @@ public class AddCasterProgramResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link AddCasterProgramResponseBody} extends {@link TeaModel}
+     *
+     * <p>AddCasterProgramResponseBody</p>
+     */
     public static class EpisodeIds extends TeaModel {
-        @NameInMap("EpisodeId")
-        private java.util.List < EpisodeId> episodeId;
+        @com.aliyun.core.annotation.NameInMap("EpisodeId")
+        private java.util.List<EpisodeId> episodeId;
 
         private EpisodeIds(Builder builder) {
             this.episodeId = builder.episodeId;
@@ -131,17 +173,27 @@ public class AddCasterProgramResponseBody extends TeaModel {
         /**
          * @return episodeId
          */
-        public java.util.List < EpisodeId> getEpisodeId() {
+        public java.util.List<EpisodeId> getEpisodeId() {
             return this.episodeId;
         }
 
         public static final class Builder {
-            private java.util.List < EpisodeId> episodeId; 
+            private java.util.List<EpisodeId> episodeId; 
+
+            private Builder() {
+            } 
+
+            private Builder(EpisodeIds model) {
+                this.episodeId = model.episodeId;
+            } 
 
             /**
-             * EpisodeId.
+             * <p>The ID of the episode. You can use the ID as a request parameter in the API operation that is used to modify the episode list, query the information about the episode list, delete the episode, or modify the configurations of the episode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>16A96B9A-F203-4EC5-8E43-CB92E68F****</p>
              */
-            public Builder episodeId(java.util.List < EpisodeId> episodeId) {
+            public Builder episodeId(java.util.List<EpisodeId> episodeId) {
                 this.episodeId = episodeId;
                 return this;
             }

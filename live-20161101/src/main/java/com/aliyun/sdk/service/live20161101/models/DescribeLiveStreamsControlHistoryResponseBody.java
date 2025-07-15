@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamsControlHistoryResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamsControlHistoryResponseBody</p>
  */
 public class DescribeLiveStreamsControlHistoryResponseBody extends TeaModel {
-    @NameInMap("ControlInfo")
+    @com.aliyun.core.annotation.NameInMap("ControlInfo")
     private ControlInfo controlInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveStreamsControlHistoryResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveStreamsControlHistoryResponseBody extends TeaModel {
 
     public static DescribeLiveStreamsControlHistoryResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveStreamsControlHistoryResponseBody extends TeaModel {
         private ControlInfo controlInfo; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamsControlHistoryResponseBody model) {
+            this.controlInfo = model.controlInfo;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * ControlInfo.
+         * <p>The operation records.</p>
          */
         public Builder controlInfo(ControlInfo controlInfo) {
             this.controlInfo = controlInfo;
@@ -58,7 +75,10 @@ public class DescribeLiveStreamsControlHistoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>9C31856F-386D-4DB3-BE79-A0AA493D702A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,17 +91,23 @@ public class DescribeLiveStreamsControlHistoryResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveStreamsControlHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamsControlHistoryResponseBody</p>
+     */
     public static class LiveStreamControlInfo extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ClientIP")
+        @com.aliyun.core.annotation.NameInMap("ClientIP")
         private String clientIP;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private LiveStreamControlInfo(Builder builder) {
@@ -133,8 +159,21 @@ public class DescribeLiveStreamsControlHistoryResponseBody extends TeaModel {
             private String streamName; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamControlInfo model) {
+                this.action = model.action;
+                this.clientIP = model.clientIP;
+                this.streamName = model.streamName;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
-             * Action.
+             * <p>The name of the operation performed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>DescribeLiveStreamsControlHistory</p>
              */
             public Builder action(String action) {
                 this.action = action;
@@ -142,7 +181,10 @@ public class DescribeLiveStreamsControlHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIP.
+             * <p>The IP address that is used by the client for live streaming.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.207.XX.XX</p>
              */
             public Builder clientIP(String clientIP) {
                 this.clientIP = clientIP;
@@ -150,7 +192,10 @@ public class DescribeLiveStreamsControlHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * StreamName.
+             * <p>The name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveStream****</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -158,7 +203,10 @@ public class DescribeLiveStreamsControlHistoryResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The time when the operation was performed. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2015-12-01T16:36:18Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -172,9 +220,15 @@ public class DescribeLiveStreamsControlHistoryResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamsControlHistoryResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamsControlHistoryResponseBody</p>
+     */
     public static class ControlInfo extends TeaModel {
-        @NameInMap("LiveStreamControlInfo")
-        private java.util.List < LiveStreamControlInfo> liveStreamControlInfo;
+        @com.aliyun.core.annotation.NameInMap("LiveStreamControlInfo")
+        private java.util.List<LiveStreamControlInfo> liveStreamControlInfo;
 
         private ControlInfo(Builder builder) {
             this.liveStreamControlInfo = builder.liveStreamControlInfo;
@@ -191,17 +245,24 @@ public class DescribeLiveStreamsControlHistoryResponseBody extends TeaModel {
         /**
          * @return liveStreamControlInfo
          */
-        public java.util.List < LiveStreamControlInfo> getLiveStreamControlInfo() {
+        public java.util.List<LiveStreamControlInfo> getLiveStreamControlInfo() {
             return this.liveStreamControlInfo;
         }
 
         public static final class Builder {
-            private java.util.List < LiveStreamControlInfo> liveStreamControlInfo; 
+            private java.util.List<LiveStreamControlInfo> liveStreamControlInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(ControlInfo model) {
+                this.liveStreamControlInfo = model.liveStreamControlInfo;
+            } 
 
             /**
              * LiveStreamControlInfo.
              */
-            public Builder liveStreamControlInfo(java.util.List < LiveStreamControlInfo> liveStreamControlInfo) {
+            public Builder liveStreamControlInfo(java.util.List<LiveStreamControlInfo> liveStreamControlInfo) {
                 this.liveStreamControlInfo = liveStreamControlInfo;
                 return this;
             }

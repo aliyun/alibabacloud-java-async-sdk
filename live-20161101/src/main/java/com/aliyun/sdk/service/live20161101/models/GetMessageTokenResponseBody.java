@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMessageTokenResponseBody} extends {@link TeaModel}
  *
  * <p>GetMessageTokenResponseBody</p>
  */
 public class GetMessageTokenResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private GetMessageTokenResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetMessageTokenResponseBody extends TeaModel {
 
     public static GetMessageTokenResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class GetMessageTokenResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetMessageTokenResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-****-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,7 @@ public class GetMessageTokenResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,14 +91,20 @@ public class GetMessageTokenResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMessageTokenResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMessageTokenResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AccessToken")
+        @com.aliyun.core.annotation.NameInMap("AccessToken")
         private String accessToken;
 
-        @NameInMap("AccessTokenExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("AccessTokenExpiredTime")
         private Long accessTokenExpiredTime;
 
-        @NameInMap("RefreshToken")
+        @com.aliyun.core.annotation.NameInMap("RefreshToken")
         private String refreshToken;
 
         private Result(Builder builder) {
@@ -121,8 +147,20 @@ public class GetMessageTokenResponseBody extends TeaModel {
             private Long accessTokenExpiredTime; 
             private String refreshToken; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.accessToken = model.accessToken;
+                this.accessTokenExpiredTime = model.accessTokenExpiredTime;
+                this.refreshToken = model.refreshToken;
+            } 
+
             /**
-             * 用于长连接建连的token
+             * <p>The token used to establish a persistent connection.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oauth_cloud_key:***-b0YY5Gy6Q</p>
              */
             public Builder accessToken(String accessToken) {
                 this.accessToken = accessToken;
@@ -130,7 +168,10 @@ public class GetMessageTokenResponseBody extends TeaModel {
             }
 
             /**
-             * 登录token过期时间(毫秒)
+             * <p>Indicates how long until the token expires. Unit: milliseconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>86400000</p>
              */
             public Builder accessTokenExpiredTime(Long accessTokenExpiredTime) {
                 this.accessTokenExpiredTime = accessTokenExpiredTime;
@@ -138,7 +179,10 @@ public class GetMessageTokenResponseBody extends TeaModel {
             }
 
             /**
-             * 更新Token，若AccessToken过期，则可以使用RefreshToken再次获取新Token
+             * <p>The updated token. If a token expires, you can call RefreshToken to obtain a new token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>oauth_cloud_key:****-Q62xggOTdgk3gw=</p>
              */
             public Builder refreshToken(String refreshToken) {
                 this.refreshToken = refreshToken;

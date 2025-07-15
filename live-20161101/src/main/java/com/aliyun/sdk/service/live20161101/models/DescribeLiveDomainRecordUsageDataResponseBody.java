@@ -1,26 +1,39 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveDomainRecordUsageDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveDomainRecordUsageDataResponseBody</p>
  */
 public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
-    @NameInMap("RecordUsageData")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.NameInMap("RecordUsageData")
     private RecordUsageData recordUsageData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
+
     private DescribeLiveDomainRecordUsageDataResponseBody(Builder builder) {
+        this.endTime = builder.endTime;
         this.recordUsageData = builder.recordUsageData;
         this.requestId = builder.requestId;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -29,6 +42,17 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
 
     public static DescribeLiveDomainRecordUsageDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -45,12 +69,42 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder {
+        private String endTime; 
         private RecordUsageData recordUsageData; 
         private String requestId; 
+        private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveDomainRecordUsageDataResponseBody model) {
+            this.endTime = model.endTime;
+            this.recordUsageData = model.recordUsageData;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
 
         /**
-         * RecordUsageData.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-10T21:00:00Z</p>
+         */
+        public Builder endTime(String endTime) {
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * <p>The recording data that was collected for each interval.</p>
          */
         public Builder recordUsageData(RecordUsageData recordUsageData) {
             this.recordUsageData = recordUsageData;
@@ -58,10 +112,24 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4B460F8B-993C-4F48-B98A-910811DEBFEB</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * <p>The beginning of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-05-10T20:00:00Z</p>
+         */
+        public Builder startTime(String startTime) {
+            this.startTime = startTime;
             return this;
         }
 
@@ -71,26 +139,36 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveDomainRecordUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainRecordUsageDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("Region")
+        private String region;
+
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DataModule(Builder builder) {
             this.count = builder.count;
             this.domain = builder.domain;
             this.duration = builder.duration;
+            this.region = builder.region;
             this.timeStamp = builder.timeStamp;
             this.type = builder.type;
         }
@@ -125,6 +203,13 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
         }
 
         /**
+         * @return region
+         */
+        public String getRegion() {
+            return this.region;
+        }
+
+        /**
          * @return timeStamp
          */
         public String getTimeStamp() {
@@ -142,11 +227,27 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
             private Long count; 
             private String domain; 
             private Long duration; 
+            private String region; 
             private String timeStamp; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.count = model.count;
+                this.domain = model.domain;
+                this.duration = model.duration;
+                this.region = model.region;
+                this.timeStamp = model.timeStamp;
+                this.type = model.type;
+            } 
+
             /**
-             * Count.
+             * <p>The number of peak channels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -154,7 +255,10 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The main streaming domain. This parameter is returned if the value of the request parameter SplitBy contains <code>domain</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -162,7 +266,10 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * <p>The recording length. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3560</p>
              */
             public Builder duration(Long duration) {
                 this.duration = duration;
@@ -170,7 +277,21 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
+             */
+            public Builder region(String region) {
+                this.region = region;
+                return this;
+            }
+
+            /**
+             * <p>The time when recording started.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -178,7 +299,10 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The recording file type. This parameter is returned if the value of the request parameter SplitBy contains <code>record_fmt</code>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>MP4</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -192,9 +316,15 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDomainRecordUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainRecordUsageDataResponseBody</p>
+     */
     public static class RecordUsageData extends TeaModel {
-        @NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        @com.aliyun.core.annotation.NameInMap("DataModule")
+        private java.util.List<DataModule> dataModule;
 
         private RecordUsageData(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -211,17 +341,24 @@ public class DescribeLiveDomainRecordUsageDataResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(RecordUsageData model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

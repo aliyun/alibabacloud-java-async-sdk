@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveDomainMappingRequest} extends {@link RequestModel}
  *
  * <p>DeleteLiveDomainMappingRequest</p>
  */
 public class DeleteLiveDomainMappingRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PullDomain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PullDomain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pullDomain;
 
-    @Query
-    @NameInMap("PushDomain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PushDomain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pushDomain;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private DeleteLiveDomainMappingRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class DeleteLiveDomainMappingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -107,7 +112,11 @@ public class DeleteLiveDomainMappingRequest extends Request {
         }
 
         /**
-         * PullDomain.
+         * <p>The streaming domain. The type of the domain name is <strong>liveVideo</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder pullDomain(String pullDomain) {
             this.putQueryParameter("PullDomain", pullDomain);
@@ -116,7 +125,11 @@ public class DeleteLiveDomainMappingRequest extends Request {
         }
 
         /**
-         * PushDomain.
+         * <p>The ingest domain. The type of the domain name is <strong>liveEdge</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.aliyundoc.com</p>
          */
         public Builder pushDomain(String pushDomain) {
             this.putQueryParameter("PushDomain", pushDomain);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLivePullStreamConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLivePullStreamConfigResponseBody</p>
  */
 public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
-    @NameInMap("LiveAppRecordList")
+    @com.aliyun.core.annotation.NameInMap("LiveAppRecordList")
     private LiveAppRecordList liveAppRecordList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLivePullStreamConfigResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
 
     public static DescribeLivePullStreamConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
         private LiveAppRecordList liveAppRecordList; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLivePullStreamConfigResponseBody model) {
+            this.liveAppRecordList = model.liveAppRecordList;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * LiveAppRecordList.
+         * <p>Details about the stream pulling configurations.</p>
          */
         public Builder liveAppRecordList(LiveAppRecordList liveAppRecordList) {
             this.liveAppRecordList = liveAppRecordList;
@@ -58,7 +75,10 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3136B58-5876-4168-83CA-B562781981A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,26 +91,32 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLivePullStreamConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLivePullStreamConfigResponseBody</p>
+     */
     public static class LiveAppRecord extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("SourceUrl")
+        @com.aliyun.core.annotation.NameInMap("SourceUrl")
         private String sourceUrl;
 
-        @NameInMap("SourceUsing")
+        @com.aliyun.core.annotation.NameInMap("SourceUsing")
         private String sourceUsing;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
         private LiveAppRecord(Builder builder) {
@@ -169,8 +195,24 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
             private String startTime; 
             private String streamName; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveAppRecord model) {
+                this.appName = model.appName;
+                this.domainName = model.domainName;
+                this.endTime = model.endTime;
+                this.sourceUrl = model.sourceUrl;
+                this.sourceUsing = model.sourceUsing;
+                this.startTime = model.startTime;
+                this.streamName = model.streamName;
+            } 
+
             /**
-             * AppName.
+             * <p>The name of the application to which the live stream belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveApp****</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -178,7 +220,10 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -186,7 +231,10 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end of the time range for which the configurations were queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-05-20T01:33:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -194,7 +242,10 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SourceUrl.
+             * <p>The origin server of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>guide.aliyundoc.com</p>
              */
             public Builder sourceUrl(String sourceUrl) {
                 this.sourceUrl = sourceUrl;
@@ -202,7 +253,10 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SourceUsing.
+             * <p>The live stream origin server that you are using.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>guide.aliyundoc.com</p>
              */
             public Builder sourceUsing(String sourceUsing) {
                 this.sourceUsing = sourceUsing;
@@ -210,7 +264,10 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The beginning of the time range for which the configurations were queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-05-15T01:30:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -218,7 +275,10 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
             }
 
             /**
-             * StreamName.
+             * <p>The name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveStream****</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -232,9 +292,15 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLivePullStreamConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLivePullStreamConfigResponseBody</p>
+     */
     public static class LiveAppRecordList extends TeaModel {
-        @NameInMap("LiveAppRecord")
-        private java.util.List < LiveAppRecord> liveAppRecord;
+        @com.aliyun.core.annotation.NameInMap("LiveAppRecord")
+        private java.util.List<LiveAppRecord> liveAppRecord;
 
         private LiveAppRecordList(Builder builder) {
             this.liveAppRecord = builder.liveAppRecord;
@@ -251,17 +317,24 @@ public class DescribeLivePullStreamConfigResponseBody extends TeaModel {
         /**
          * @return liveAppRecord
          */
-        public java.util.List < LiveAppRecord> getLiveAppRecord() {
+        public java.util.List<LiveAppRecord> getLiveAppRecord() {
             return this.liveAppRecord;
         }
 
         public static final class Builder {
-            private java.util.List < LiveAppRecord> liveAppRecord; 
+            private java.util.List<LiveAppRecord> liveAppRecord; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveAppRecordList model) {
+                this.liveAppRecord = model.liveAppRecord;
+            } 
 
             /**
              * LiveAppRecord.
              */
-            public Builder liveAppRecord(java.util.List < LiveAppRecord> liveAppRecord) {
+            public Builder liveAppRecord(java.util.List<LiveAppRecord> liveAppRecord) {
                 this.liveAppRecord = liveAppRecord;
                 return this;
             }

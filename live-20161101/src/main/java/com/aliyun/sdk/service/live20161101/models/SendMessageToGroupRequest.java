@@ -1,39 +1,48 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SendMessageToGroupRequest} extends {@link RequestModel}
  *
  * <p>SendMessageToGroupRequest</p>
  */
 public class SendMessageToGroupRequest extends Request {
-    @Body
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Body
-    @NameInMap("Data")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String data;
 
-    @Body
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Body
-    @NameInMap("OperatorUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OperatorUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operatorUserId;
 
-    @Body
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SkipAudit")
+    private Boolean skipAudit;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
     private Integer type;
 
     private SendMessageToGroupRequest(Builder builder) {
@@ -42,6 +51,7 @@ public class SendMessageToGroupRequest extends Request {
         this.data = builder.data;
         this.groupId = builder.groupId;
         this.operatorUserId = builder.operatorUserId;
+        this.skipAudit = builder.skipAudit;
         this.type = builder.type;
     }
 
@@ -53,7 +63,7 @@ public class SendMessageToGroupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -87,6 +97,13 @@ public class SendMessageToGroupRequest extends Request {
     }
 
     /**
+     * @return skipAudit
+     */
+    public Boolean getSkipAudit() {
+        return this.skipAudit;
+    }
+
+    /**
      * @return type
      */
     public Integer getType() {
@@ -98,6 +115,7 @@ public class SendMessageToGroupRequest extends Request {
         private String data; 
         private String groupId; 
         private String operatorUserId; 
+        private Boolean skipAudit; 
         private Integer type; 
 
         private Builder() {
@@ -110,11 +128,16 @@ public class SendMessageToGroupRequest extends Request {
             this.data = request.data;
             this.groupId = request.groupId;
             this.operatorUserId = request.operatorUserId;
+            this.skipAudit = request.skipAudit;
             this.type = request.type;
         } 
 
         /**
-         * AppId.
+         * <p>The ID of the interactive messaging application.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>VKL3***</p>
          */
         public Builder appId(String appId) {
             this.putBodyParameter("AppId", appId);
@@ -123,7 +146,11 @@ public class SendMessageToGroupRequest extends Request {
         }
 
         /**
-         * Data.
+         * <p>The message body. The value is a JSON string.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder data(String data) {
             this.putBodyParameter("Data", data);
@@ -132,7 +159,11 @@ public class SendMessageToGroupRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * <p>The ID of the message group.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AE35-****-T95F</p>
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);
@@ -141,7 +172,11 @@ public class SendMessageToGroupRequest extends Request {
         }
 
         /**
-         * OperatorUserId.
+         * <p>The ID of the user who performed the operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>de1**a0</p>
          */
         public Builder operatorUserId(String operatorUserId) {
             this.putBodyParameter("OperatorUserId", operatorUserId);
@@ -150,7 +185,26 @@ public class SendMessageToGroupRequest extends Request {
         }
 
         /**
-         * Type.
+         * <p>Specifies whether the message requires Alibaba Cloud content moderation. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: does not require content moderation.</li>
+         * <li><strong>false</strong>: requires content moderation. This is the default value.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        public Builder skipAudit(Boolean skipAudit) {
+            this.putQueryParameter("SkipAudit", skipAudit);
+            this.skipAudit = skipAudit;
+            return this;
+        }
+
+        /**
+         * <p>The type of the message. A value that is less than or equal to 10000 specifies a system message. A value that is greater than 10000 specifies a custom message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12000</p>
          */
         public Builder type(Integer type) {
             this.putBodyParameter("Type", type);

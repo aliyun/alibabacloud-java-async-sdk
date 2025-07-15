@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveDrmUsageDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveDrmUsageDataResponseBody</p>
  */
 public class DescribeLiveDrmUsageDataResponseBody extends TeaModel {
-    @NameInMap("DrmUsageData")
+    @com.aliyun.core.annotation.NameInMap("DrmUsageData")
     private DrmUsageData drmUsageData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveDrmUsageDataResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveDrmUsageDataResponseBody extends TeaModel {
 
     public static DescribeLiveDrmUsageDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveDrmUsageDataResponseBody extends TeaModel {
         private DrmUsageData drmUsageData; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveDrmUsageDataResponseBody model) {
+            this.drmUsageData = model.drmUsageData;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * DrmUsageData.
+         * <p>The usage of the DRM encryption service at each time interval.</p>
          */
         public Builder drmUsageData(DrmUsageData drmUsageData) {
             this.drmUsageData = drmUsageData;
@@ -58,7 +75,10 @@ public class DescribeLiveDrmUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>91FC2D9D-B042-4634-8A5C-7B8E7482C22D</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +91,26 @@ public class DescribeLiveDrmUsageDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveDrmUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDrmUsageDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("DrmType")
+        @com.aliyun.core.annotation.NameInMap("DrmType")
         private String drmType;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private DataModule(Builder builder) {
@@ -145,8 +171,22 @@ public class DescribeLiveDrmUsageDataResponseBody extends TeaModel {
             private String region; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.count = model.count;
+                this.domain = model.domain;
+                this.drmType = model.drmType;
+                this.region = model.region;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
-             * Count.
+             * <p>The number of times DRM-encrypted live streams are requested.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -154,7 +194,10 @@ public class DescribeLiveDrmUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The domain name. If the value of SplitBy includes domain, the returned data is grouped by domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -162,7 +205,10 @@ public class DescribeLiveDrmUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * DrmType.
+             * <p>The DRM type. If the value of SplitBy includes drm_type, the returned data is grouped by DRM type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Widevine</p>
              */
             public Builder drmType(String drmType) {
                 this.drmType = drmType;
@@ -170,7 +216,10 @@ public class DescribeLiveDrmUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The ID of the region. If the value of SplitBy includes region, the returned data is grouped by region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-beijing</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -178,7 +227,10 @@ public class DescribeLiveDrmUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-05-01T16:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -192,9 +244,15 @@ public class DescribeLiveDrmUsageDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDrmUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDrmUsageDataResponseBody</p>
+     */
     public static class DrmUsageData extends TeaModel {
-        @NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        @com.aliyun.core.annotation.NameInMap("DataModule")
+        private java.util.List<DataModule> dataModule;
 
         private DrmUsageData(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -211,17 +269,24 @@ public class DescribeLiveDrmUsageDataResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(DrmUsageData model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

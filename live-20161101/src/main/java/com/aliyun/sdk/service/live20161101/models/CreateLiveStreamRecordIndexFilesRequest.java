@@ -1,63 +1,72 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateLiveStreamRecordIndexFilesRequest} extends {@link RequestModel}
  *
  * <p>CreateLiveStreamRecordIndexFilesRequest</p>
  */
 public class CreateLiveStreamRecordIndexFilesRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("OssBucket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimeIncluded")
+    private Boolean endTimeIncluded;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssBucket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossBucket;
 
-    @Query
-    @NameInMap("OssEndpoint")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssEndpoint")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossEndpoint;
 
-    @Query
-    @NameInMap("OssObject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssObject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossObject;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("StreamName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String streamName;
 
     private CreateLiveStreamRecordIndexFilesRequest(Builder builder) {
@@ -65,6 +74,7 @@ public class CreateLiveStreamRecordIndexFilesRequest extends Request {
         this.appName = builder.appName;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
+        this.endTimeIncluded = builder.endTimeIncluded;
         this.ossBucket = builder.ossBucket;
         this.ossEndpoint = builder.ossEndpoint;
         this.ossObject = builder.ossObject;
@@ -82,7 +92,7 @@ public class CreateLiveStreamRecordIndexFilesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -106,6 +116,13 @@ public class CreateLiveStreamRecordIndexFilesRequest extends Request {
      */
     public String getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return endTimeIncluded
+     */
+    public Boolean getEndTimeIncluded() {
+        return this.endTimeIncluded;
     }
 
     /**
@@ -161,6 +178,7 @@ public class CreateLiveStreamRecordIndexFilesRequest extends Request {
         private String appName; 
         private String domainName; 
         private String endTime; 
+        private Boolean endTimeIncluded; 
         private String ossBucket; 
         private String ossEndpoint; 
         private String ossObject; 
@@ -178,6 +196,7 @@ public class CreateLiveStreamRecordIndexFilesRequest extends Request {
             this.appName = request.appName;
             this.domainName = request.domainName;
             this.endTime = request.endTime;
+            this.endTimeIncluded = request.endTimeIncluded;
             this.ossBucket = request.ossBucket;
             this.ossEndpoint = request.ossEndpoint;
             this.ossObject = request.ossObject;
@@ -188,7 +207,11 @@ public class CreateLiveStreamRecordIndexFilesRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs. The value of this parameter must be the same as the application name in the ingest URL. Otherwise, the configuration does not take effect. If you want to match all applications, specify an asterisk (*) as the value.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -197,7 +220,11 @@ public class CreateLiveStreamRecordIndexFilesRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -206,7 +233,11 @@ public class CreateLiveStreamRecordIndexFilesRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end time of the index file. TS segments that are uploaded before the end time are included in the index file. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-22T08:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -215,7 +246,23 @@ public class CreateLiveStreamRecordIndexFilesRequest extends Request {
         }
 
         /**
-         * OssBucket.
+         * <p>Specifies whether to include the end time. If you set this parameter to true, the system attempts to include one more TS segment. The created index file covers the entire time range that is specified by the StartTime and EndTime parameters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        public Builder endTimeIncluded(Boolean endTimeIncluded) {
+            this.putQueryParameter("EndTimeIncluded", endTimeIncluded);
+            this.endTimeIncluded = endTimeIncluded;
+            return this;
+        }
+
+        /**
+         * <p>The name of the OSS bucket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveBucket****</p>
          */
         public Builder ossBucket(String ossBucket) {
             this.putQueryParameter("OssBucket", ossBucket);
@@ -224,7 +271,11 @@ public class CreateLiveStreamRecordIndexFilesRequest extends Request {
         }
 
         /**
-         * OssEndpoint.
+         * <p>The endpoint of the OSS bucket.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-oss-****.aliyuncs.com</p>
          */
         public Builder ossEndpoint(String ossEndpoint) {
             this.putQueryParameter("OssEndpoint", ossEndpoint);
@@ -233,7 +284,11 @@ public class CreateLiveStreamRecordIndexFilesRequest extends Request {
         }
 
         /**
-         * OssObject.
+         * <p>The name of the recording that is stored in OSS.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{AppName}/{StreamName}/{Date}/{Hour}/{Minute}_{Second}.m3u8</p>
          */
         public Builder ossObject(String ossObject) {
             this.putQueryParameter("OssObject", ossObject);
@@ -260,7 +315,11 @@ public class CreateLiveStreamRecordIndexFilesRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The start time of the index file. TS segments that are uploaded after the start time are included in the index file. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2017-12-21T08:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -269,7 +328,11 @@ public class CreateLiveStreamRecordIndexFilesRequest extends Request {
         }
 
         /**
-         * StreamName.
+         * <p>The name of the live stream. The value of this parameter must be the same as the stream name in the ingest URL. Otherwise, the configuration does not take effect. If you want to match all streams, specify an asterisk (*) as the value.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveStream****</p>
          */
         public Builder streamName(String streamName) {
             this.putQueryParameter("StreamName", streamName);

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveDomainLimitResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveDomainLimitResponseBody</p>
  */
 public class DescribeLiveDomainLimitResponseBody extends TeaModel {
-    @NameInMap("LiveDomainLimitList")
+    @com.aliyun.core.annotation.NameInMap("LiveDomainLimitList")
     private LiveDomainLimitList liveDomainLimitList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveDomainLimitResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
 
     public static DescribeLiveDomainLimitResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
         private LiveDomainLimitList liveDomainLimitList; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveDomainLimitResponseBody model) {
+            this.liveDomainLimitList = model.liveDomainLimitList;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * LiveDomainLimitList.
+         * <p>The limits.</p>
          */
         public Builder liveDomainLimitList(LiveDomainLimitList liveDomainLimitList) {
             this.liveDomainLimitList = liveDomainLimitList;
@@ -58,7 +75,10 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3136B58-5876-4168-83CA-B562781981A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,20 +91,38 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveDomainLimitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainLimitResponseBody</p>
+     */
     public static class LiveDomainLimit extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("CurrentNum")
+        private Integer currentNum;
+
+        @com.aliyun.core.annotation.NameInMap("CurrentTranscodeNum")
+        private Integer currentTranscodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("CurrentTransferNum")
+        private Integer currentTransferNum;
+
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("LimitNum")
+        @com.aliyun.core.annotation.NameInMap("LimitNum")
         private Integer limitNum;
 
-        @NameInMap("LimitTranscodeNum")
+        @com.aliyun.core.annotation.NameInMap("LimitTranscodeNum")
         private Integer limitTranscodeNum;
 
-        @NameInMap("LimitTransferNum")
+        @com.aliyun.core.annotation.NameInMap("LimitTransferNum")
         private Integer limitTransferNum;
 
         private LiveDomainLimit(Builder builder) {
+            this.currentNum = builder.currentNum;
+            this.currentTranscodeNum = builder.currentTranscodeNum;
+            this.currentTransferNum = builder.currentTransferNum;
             this.domainName = builder.domainName;
             this.limitNum = builder.limitNum;
             this.limitTranscodeNum = builder.limitTranscodeNum;
@@ -97,6 +135,27 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
 
         public static LiveDomainLimit create() {
             return builder().build();
+        }
+
+        /**
+         * @return currentNum
+         */
+        public Integer getCurrentNum() {
+            return this.currentNum;
+        }
+
+        /**
+         * @return currentTranscodeNum
+         */
+        public Integer getCurrentTranscodeNum() {
+            return this.currentTranscodeNum;
+        }
+
+        /**
+         * @return currentTransferNum
+         */
+        public Integer getCurrentTransferNum() {
+            return this.currentTransferNum;
         }
 
         /**
@@ -128,13 +187,65 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer currentNum; 
+            private Integer currentTranscodeNum; 
+            private Integer currentTransferNum; 
             private String domainName; 
             private Integer limitNum; 
             private Integer limitTranscodeNum; 
             private Integer limitTransferNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveDomainLimit model) {
+                this.currentNum = model.currentNum;
+                this.currentTranscodeNum = model.currentTranscodeNum;
+                this.currentTransferNum = model.currentTransferNum;
+                this.domainName = model.domainName;
+                this.limitNum = model.limitNum;
+                this.limitTranscodeNum = model.limitTranscodeNum;
+                this.limitTransferNum = model.limitTransferNum;
+            } 
+
             /**
-             * DomainName.
+             * <p>The current number of ingested streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder currentNum(Integer currentNum) {
+                this.currentNum = currentNum;
+                return this;
+            }
+
+            /**
+             * <p>The current number of transcoded streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder currentTranscodeNum(Integer currentTranscodeNum) {
+                this.currentTranscodeNum = currentTranscodeNum;
+                return this;
+            }
+
+            /**
+             * <p>The current number of streams relayed from the live center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
+             */
+            public Builder currentTransferNum(Integer currentTransferNum) {
+                this.currentTransferNum = currentTransferNum;
+                return this;
+            }
+
+            /**
+             * <p>The name of the queried main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -142,7 +253,10 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
             }
 
             /**
-             * LimitNum.
+             * <p>The maximum number of ingested streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder limitNum(Integer limitNum) {
                 this.limitNum = limitNum;
@@ -150,7 +264,10 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
             }
 
             /**
-             * LimitTranscodeNum.
+             * <p>The maximum number of transcoded streams.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder limitTranscodeNum(Integer limitTranscodeNum) {
                 this.limitTranscodeNum = limitTranscodeNum;
@@ -158,7 +275,10 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
             }
 
             /**
-             * LimitTransferNum.
+             * <p>The maximum allowed number of streams relayed from the live center.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder limitTransferNum(Integer limitTransferNum) {
                 this.limitTransferNum = limitTransferNum;
@@ -172,9 +292,15 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDomainLimitResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainLimitResponseBody</p>
+     */
     public static class LiveDomainLimitList extends TeaModel {
-        @NameInMap("LiveDomainLimit")
-        private java.util.List < LiveDomainLimit> liveDomainLimit;
+        @com.aliyun.core.annotation.NameInMap("LiveDomainLimit")
+        private java.util.List<LiveDomainLimit> liveDomainLimit;
 
         private LiveDomainLimitList(Builder builder) {
             this.liveDomainLimit = builder.liveDomainLimit;
@@ -191,17 +317,24 @@ public class DescribeLiveDomainLimitResponseBody extends TeaModel {
         /**
          * @return liveDomainLimit
          */
-        public java.util.List < LiveDomainLimit> getLiveDomainLimit() {
+        public java.util.List<LiveDomainLimit> getLiveDomainLimit() {
             return this.liveDomainLimit;
         }
 
         public static final class Builder {
-            private java.util.List < LiveDomainLimit> liveDomainLimit; 
+            private java.util.List<LiveDomainLimit> liveDomainLimit; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveDomainLimitList model) {
+                this.liveDomainLimit = model.liveDomainLimit;
+            } 
 
             /**
              * LiveDomainLimit.
              */
-            public Builder liveDomainLimit(java.util.List < LiveDomainLimit> liveDomainLimit) {
+            public Builder liveDomainLimit(java.util.List<LiveDomainLimit> liveDomainLimit) {
                 this.liveDomainLimit = liveDomainLimit;
                 return this;
             }

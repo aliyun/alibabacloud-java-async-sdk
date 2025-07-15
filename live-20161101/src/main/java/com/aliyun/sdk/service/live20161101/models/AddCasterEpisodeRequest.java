@@ -1,71 +1,76 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddCasterEpisodeRequest} extends {@link RequestModel}
  *
  * <p>AddCasterEpisodeRequest</p>
  */
 public class AddCasterEpisodeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("CasterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CasterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String casterId;
 
-    @Query
-    @NameInMap("ComponentId")
-    private java.util.List < String > componentId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComponentId")
+    private java.util.List<String> componentId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("EpisodeName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EpisodeName")
     private String episodeName;
 
-    @Query
-    @NameInMap("EpisodeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EpisodeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String episodeType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("SwitchType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String switchType;
 
     private AddCasterEpisodeRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.componentId = builder.componentId;
         this.endTime = builder.endTime;
         this.episodeName = builder.episodeName;
         this.episodeType = builder.episodeType;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.startTime = builder.startTime;
         this.switchType = builder.switchType;
@@ -79,16 +84,9 @@ public class AddCasterEpisodeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -101,7 +99,7 @@ public class AddCasterEpisodeRequest extends Request {
     /**
      * @return componentId
      */
-    public java.util.List < String > getComponentId() {
+    public java.util.List<String> getComponentId() {
         return this.componentId;
     }
 
@@ -134,6 +132,13 @@ public class AddCasterEpisodeRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -155,13 +160,13 @@ public class AddCasterEpisodeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddCasterEpisodeRequest, Builder> {
-        private String regionId; 
         private String casterId; 
-        private java.util.List < String > componentId; 
+        private java.util.List<String> componentId; 
         private String endTime; 
         private String episodeName; 
         private String episodeType; 
         private Long ownerId; 
+        private String regionId; 
         private String resourceId; 
         private String startTime; 
         private String switchType; 
@@ -172,29 +177,31 @@ public class AddCasterEpisodeRequest extends Request {
 
         private Builder(AddCasterEpisodeRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.casterId = request.casterId;
             this.componentId = request.componentId;
             this.endTime = request.endTime;
             this.episodeName = request.episodeName;
             this.episodeType = request.episodeType;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceId = request.resourceId;
             this.startTime = request.startTime;
             this.switchType = request.switchType;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * CasterId.
+         * <p>The ID of the production studio.</p>
+         * <ul>
+         * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
+         * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LIVEPRODUCER_POST-cn-0pp1czt****</p>
          */
         public Builder casterId(String casterId) {
             this.putQueryParameter("CasterId", casterId);
@@ -203,16 +210,31 @@ public class AddCasterEpisodeRequest extends Request {
         }
 
         /**
-         * ComponentId.
+         * <p>The components. Components in the production studio are listed from the bottom to the top in an array.</p>
+         * <p>If a component was added by calling the <a href="https://help.aliyun.com/document_detail/2848030.html">AddCasterComponent</a> operation, check the value of the response parameter ComponentId to obtain the component ID.</p>
+         * <ul>
+         * <li>This parameter takes effect and is required when the EpisodeType parameter is set to <strong>Component</strong>.</li>
+         * <li>This parameter is optional when the EpisodeType parameter is set to <strong>Resource</strong>. In this case, if this parameter is specified, the components are bound to and switched together with video resources.</li>
+         * </ul>
+         * <blockquote>
+         * <p> The variable N specifies the sequence number of the component. For example, <strong>ComponentId.1</strong> specifies the ID of the first component and <strong>ComponentId.2</strong> specifies the ID of the second component.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;a2b8e671-2fe5-4642-a2ec-bf93880e****&quot;]</p>
          */
-        public Builder componentId(java.util.List < String > componentId) {
+        public Builder componentId(java.util.List<String> componentId) {
             this.putQueryParameter("ComponentId", componentId);
             this.componentId = componentId;
             return this;
         }
 
         /**
-         * EndTime.
+         * <p>The time when the episode ends. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-06-29T09:10:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -221,7 +243,10 @@ public class AddCasterEpisodeRequest extends Request {
         }
 
         /**
-         * EpisodeName.
+         * <p>The name of the episode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>episode_1</p>
          */
         public Builder episodeName(String episodeName) {
             this.putQueryParameter("EpisodeName", episodeName);
@@ -230,7 +255,15 @@ public class AddCasterEpisodeRequest extends Request {
         }
 
         /**
-         * EpisodeType.
+         * <p>The type of the episode. Valid values:</p>
+         * <ul>
+         * <li><strong>Resource</strong>: a video resource.</li>
+         * <li><strong>Component</strong>: a component.</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource</p>
          */
         public Builder episodeType(String episodeType) {
             this.putQueryParameter("EpisodeType", episodeType);
@@ -248,7 +281,23 @@ public class AddCasterEpisodeRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the video resource.</p>
+         * <blockquote>
+         * <p> This parameter takes effect and is required when the EpisodeType parameter is set to Resource.</p>
+         * </blockquote>
+         * <p><br>If the video resource was added by calling the <a href="https://help.aliyun.com/document_detail/2848020.html">AddCasterVideoResource</a> operation, check the value of the response parameter ResourceId to obtain the ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -257,7 +306,11 @@ public class AddCasterEpisodeRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * <p>The time when the episode starts. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-06-29T08:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -266,7 +319,19 @@ public class AddCasterEpisodeRequest extends Request {
         }
 
         /**
-         * SwitchType.
+         * <p>The policy for switching episodes. Valid values:</p>
+         * <ul>
+         * <li><strong>TimeFirst</strong>: The episode starts when the preceding episode ends and ends when the next episode starts. If no next episode exists, the episode keeps repeating until a new episode is added or the production studio stops.</li>
+         * <li><strong>ContentFirst</strong>: The episode starts and ends as scheduled.</li>
+         * </ul>
+         * <p>This parameter takes effect only when the EpisodeType parameter is set to Resource.</p>
+         * <blockquote>
+         * <p> This parameter must be set to TimeFirst when the video resource is a live stream.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TimeFirst</p>
          */
         public Builder switchType(String switchType) {
             this.putQueryParameter("SwitchType", switchType);

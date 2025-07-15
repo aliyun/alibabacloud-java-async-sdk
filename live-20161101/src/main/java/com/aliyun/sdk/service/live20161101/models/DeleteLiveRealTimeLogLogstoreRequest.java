@@ -1,47 +1,52 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DeleteLiveRealTimeLogLogstoreRequest} extends {@link RequestModel}
  *
  * <p>DeleteLiveRealTimeLogLogstoreRequest</p>
  */
 public class DeleteLiveRealTimeLogLogstoreRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("Logstore")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Logstore")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logstore;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Project")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Project")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String project;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     private DeleteLiveRealTimeLogLogstoreRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.logstore = builder.logstore;
         this.ownerId = builder.ownerId;
         this.project = builder.project;
         this.region = builder.region;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -52,16 +57,9 @@ public class DeleteLiveRealTimeLogLogstoreRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -92,12 +90,19 @@ public class DeleteLiveRealTimeLogLogstoreRequest extends Request {
         return this.region;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<DeleteLiveRealTimeLogLogstoreRequest, Builder> {
-        private String regionId; 
         private String logstore; 
         private Long ownerId; 
         private String project; 
         private String region; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -105,24 +110,19 @@ public class DeleteLiveRealTimeLogLogstoreRequest extends Request {
 
         private Builder(DeleteLiveRealTimeLogLogstoreRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.logstore = request.logstore;
             this.ownerId = request.ownerId;
             this.project = request.project;
             this.region = request.region;
+            this.regionId = request.regionId;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * Logstore.
+         * <p>The name of the Logstore to which log entries are delivered.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logstore_example</p>
          */
         public Builder logstore(String logstore) {
             this.putQueryParameter("Logstore", logstore);
@@ -140,7 +140,11 @@ public class DeleteLiveRealTimeLogLogstoreRequest extends Request {
         }
 
         /**
-         * Project.
+         * <p>The name of the Log Service project that is used for real-time log delivery.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project_example</p>
          */
         public Builder project(String project) {
             this.putQueryParameter("Project", project);
@@ -149,11 +153,24 @@ public class DeleteLiveRealTimeLogLogstoreRequest extends Request {
         }
 
         /**
-         * Region.
+         * <p>The ID of the region where the Log Service project is deployed.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
             this.region = region;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

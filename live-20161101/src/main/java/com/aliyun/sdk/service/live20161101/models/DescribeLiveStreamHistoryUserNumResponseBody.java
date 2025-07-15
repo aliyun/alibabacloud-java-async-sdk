@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamHistoryUserNumResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamHistoryUserNumResponseBody</p>
  */
 public class DescribeLiveStreamHistoryUserNumResponseBody extends TeaModel {
-    @NameInMap("LiveStreamUserNumInfos")
+    @com.aliyun.core.annotation.NameInMap("LiveStreamUserNumInfos")
     private LiveStreamUserNumInfos liveStreamUserNumInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveStreamHistoryUserNumResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveStreamHistoryUserNumResponseBody extends TeaModel {
 
     public static DescribeLiveStreamHistoryUserNumResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveStreamHistoryUserNumResponseBody extends TeaModel {
         private LiveStreamUserNumInfos liveStreamUserNumInfos; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamHistoryUserNumResponseBody model) {
+            this.liveStreamUserNumInfos = model.liveStreamUserNumInfos;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * LiveStreamUserNumInfos.
+         * <p>The number of historical online users for the live stream.</p>
          */
         public Builder liveStreamUserNumInfos(LiveStreamUserNumInfos liveStreamUserNumInfos) {
             this.liveStreamUserNumInfos = liveStreamUserNumInfos;
@@ -58,7 +75,10 @@ public class DescribeLiveStreamHistoryUserNumResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F5FF8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +91,17 @@ public class DescribeLiveStreamHistoryUserNumResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveStreamHistoryUserNumResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamHistoryUserNumResponseBody</p>
+     */
     public static class LiveStreamUserNumInfo extends TeaModel {
-        @NameInMap("StreamTime")
+        @com.aliyun.core.annotation.NameInMap("StreamTime")
         private String streamTime;
 
-        @NameInMap("UserNum")
+        @com.aliyun.core.annotation.NameInMap("UserNum")
         private String userNum;
 
         private LiveStreamUserNumInfo(Builder builder) {
@@ -109,8 +135,19 @@ public class DescribeLiveStreamHistoryUserNumResponseBody extends TeaModel {
             private String streamTime; 
             private String userNum; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamUserNumInfo model) {
+                this.streamTime = model.streamTime;
+                this.userNum = model.userNum;
+            } 
+
             /**
-             * StreamTime.
+             * <p>The time when the stream started. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-10-20T06:20:00Z</p>
              */
             public Builder streamTime(String streamTime) {
                 this.streamTime = streamTime;
@@ -118,7 +155,10 @@ public class DescribeLiveStreamHistoryUserNumResponseBody extends TeaModel {
             }
 
             /**
-             * UserNum.
+             * <p>The number of users at the current point in time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder userNum(String userNum) {
                 this.userNum = userNum;
@@ -132,9 +172,15 @@ public class DescribeLiveStreamHistoryUserNumResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamHistoryUserNumResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamHistoryUserNumResponseBody</p>
+     */
     public static class LiveStreamUserNumInfos extends TeaModel {
-        @NameInMap("LiveStreamUserNumInfo")
-        private java.util.List < LiveStreamUserNumInfo> liveStreamUserNumInfo;
+        @com.aliyun.core.annotation.NameInMap("LiveStreamUserNumInfo")
+        private java.util.List<LiveStreamUserNumInfo> liveStreamUserNumInfo;
 
         private LiveStreamUserNumInfos(Builder builder) {
             this.liveStreamUserNumInfo = builder.liveStreamUserNumInfo;
@@ -151,17 +197,24 @@ public class DescribeLiveStreamHistoryUserNumResponseBody extends TeaModel {
         /**
          * @return liveStreamUserNumInfo
          */
-        public java.util.List < LiveStreamUserNumInfo> getLiveStreamUserNumInfo() {
+        public java.util.List<LiveStreamUserNumInfo> getLiveStreamUserNumInfo() {
             return this.liveStreamUserNumInfo;
         }
 
         public static final class Builder {
-            private java.util.List < LiveStreamUserNumInfo> liveStreamUserNumInfo; 
+            private java.util.List<LiveStreamUserNumInfo> liveStreamUserNumInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamUserNumInfos model) {
+                this.liveStreamUserNumInfo = model.liveStreamUserNumInfo;
+            } 
 
             /**
              * LiveStreamUserNumInfo.
              */
-            public Builder liveStreamUserNumInfo(java.util.List < LiveStreamUserNumInfo> liveStreamUserNumInfo) {
+            public Builder liveStreamUserNumInfo(java.util.List<LiveStreamUserNumInfo> liveStreamUserNumInfo) {
                 this.liveStreamUserNumInfo = liveStreamUserNumInfo;
                 return this;
             }

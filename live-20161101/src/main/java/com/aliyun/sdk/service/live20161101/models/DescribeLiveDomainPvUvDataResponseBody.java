@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveDomainPvUvDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveDomainPvUvDataResponseBody</p>
  */
 public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PvUvDataInfos")
+    @com.aliyun.core.annotation.NameInMap("PvUvDataInfos")
     private PvUvDataInfos pvUvDataInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeLiveDomainPvUvDataResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
 
     public static DescribeLiveDomainPvUvDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveDomainPvUvDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.domainName = model.domainName;
+            this.endTime = model.endTime;
+            this.pvUvDataInfos = model.pvUvDataInfos;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
+
         /**
-         * DataInterval.
+         * <p>The time interval between the entries returned. Unit: seconds. Default value: 3600.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +130,10 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * <p>The streaming domain.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +141,10 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-20T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +152,7 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * PvUvDataInfos.
+         * <p>The data of PVs and UVs.</p>
          */
         public Builder pvUvDataInfos(PvUvDataInfos pvUvDataInfos) {
             this.pvUvDataInfos = pvUvDataInfos;
@@ -130,7 +160,10 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>E9D3257A-1B7C-414C-90C1-8D07AC47BCAC</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +171,10 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range during which the data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-17T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -151,14 +187,20 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveDomainPvUvDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainPvUvDataResponseBody</p>
+     */
     public static class PvUvDataInfo extends TeaModel {
-        @NameInMap("PV")
+        @com.aliyun.core.annotation.NameInMap("PV")
         private String pv;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("UV")
+        @com.aliyun.core.annotation.NameInMap("UV")
         private String uv;
 
         private PvUvDataInfo(Builder builder) {
@@ -201,8 +243,20 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
             private String timeStamp; 
             private String uv; 
 
+            private Builder() {
+            } 
+
+            private Builder(PvUvDataInfo model) {
+                this.pv = model.pv;
+                this.timeStamp = model.timeStamp;
+                this.uv = model.uv;
+            } 
+
             /**
-             * PV.
+             * <p>The number of PVs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3036</p>
              */
             public Builder pv(String pv) {
                 this.pv = pv;
@@ -210,7 +264,10 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-03-19T16:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -218,7 +275,10 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
             }
 
             /**
-             * UV.
+             * <p>The number of UVs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder uv(String uv) {
                 this.uv = uv;
@@ -232,9 +292,15 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDomainPvUvDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDomainPvUvDataResponseBody</p>
+     */
     public static class PvUvDataInfos extends TeaModel {
-        @NameInMap("PvUvDataInfo")
-        private java.util.List < PvUvDataInfo> pvUvDataInfo;
+        @com.aliyun.core.annotation.NameInMap("PvUvDataInfo")
+        private java.util.List<PvUvDataInfo> pvUvDataInfo;
 
         private PvUvDataInfos(Builder builder) {
             this.pvUvDataInfo = builder.pvUvDataInfo;
@@ -251,17 +317,24 @@ public class DescribeLiveDomainPvUvDataResponseBody extends TeaModel {
         /**
          * @return pvUvDataInfo
          */
-        public java.util.List < PvUvDataInfo> getPvUvDataInfo() {
+        public java.util.List<PvUvDataInfo> getPvUvDataInfo() {
             return this.pvUvDataInfo;
         }
 
         public static final class Builder {
-            private java.util.List < PvUvDataInfo> pvUvDataInfo; 
+            private java.util.List<PvUvDataInfo> pvUvDataInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(PvUvDataInfos model) {
+                this.pvUvDataInfo = model.pvUvDataInfo;
+            } 
 
             /**
              * PvUvDataInfo.
              */
-            public Builder pvUvDataInfo(java.util.List < PvUvDataInfo> pvUvDataInfo) {
+            public Builder pvUvDataInfo(java.util.List<PvUvDataInfo> pvUvDataInfo) {
                 this.pvUvDataInfo = pvUvDataInfo;
                 return this;
             }

@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveDetectNotifyConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveDetectNotifyConfigResponseBody</p>
  */
 public class DescribeLiveDetectNotifyConfigResponseBody extends TeaModel {
-    @NameInMap("LiveDetectNotifyConfig")
+    @com.aliyun.core.annotation.NameInMap("LiveDetectNotifyConfig")
     private LiveDetectNotifyConfig liveDetectNotifyConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveDetectNotifyConfigResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveDetectNotifyConfigResponseBody extends TeaModel {
 
     public static DescribeLiveDetectNotifyConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveDetectNotifyConfigResponseBody extends TeaModel {
         private LiveDetectNotifyConfig liveDetectNotifyConfig; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveDetectNotifyConfigResponseBody model) {
+            this.liveDetectNotifyConfig = model.liveDetectNotifyConfig;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * LiveDetectNotifyConfig.
+         * <p>The callback configuration.</p>
          */
         public Builder liveDetectNotifyConfig(LiveDetectNotifyConfig liveDetectNotifyConfig) {
             this.liveDetectNotifyConfig = liveDetectNotifyConfig;
@@ -58,7 +75,10 @@ public class DescribeLiveDetectNotifyConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,11 +91,17 @@ public class DescribeLiveDetectNotifyConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveDetectNotifyConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDetectNotifyConfigResponseBody</p>
+     */
     public static class LiveDetectNotifyConfig extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("NotifyUrl")
+        @com.aliyun.core.annotation.NameInMap("NotifyUrl")
         private String notifyUrl;
 
         private LiveDetectNotifyConfig(Builder builder) {
@@ -109,8 +135,19 @@ public class DescribeLiveDetectNotifyConfigResponseBody extends TeaModel {
             private String domainName; 
             private String notifyUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveDetectNotifyConfig model) {
+                this.domainName = model.domainName;
+                this.notifyUrl = model.notifyUrl;
+            } 
+
             /**
-             * DomainName.
+             * <p>The main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -118,7 +155,10 @@ public class DescribeLiveDetectNotifyConfigResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyUrl.
+             * <p>The callback URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://aliyundoc.com">http://aliyundoc.com</a></p>
              */
             public Builder notifyUrl(String notifyUrl) {
                 this.notifyUrl = notifyUrl;

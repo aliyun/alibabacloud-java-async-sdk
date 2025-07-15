@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveRealtimeDeliveryAccRequest} extends {@link RequestModel}
  *
  * <p>DescribeLiveRealtimeDeliveryAccRequest</p>
  */
 public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private String interval;
 
-    @Query
-    @NameInMap("LogStore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogStore")
     private String logStore;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Project")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Project")
     private String project;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeLiveRealtimeDeliveryAccRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.endTime = builder.endTime;
         this.interval = builder.interval;
         this.logStore = builder.logStore;
         this.ownerId = builder.ownerId;
         this.project = builder.project;
+        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
     }
 
@@ -64,16 +69,9 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -119,6 +117,13 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -126,13 +131,13 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveRealtimeDeliveryAccRequest, Builder> {
-        private String regionId; 
         private String domainName; 
         private String endTime; 
         private String interval; 
         private String logStore; 
         private Long ownerId; 
         private String project; 
+        private String regionId; 
         private String startTime; 
 
         private Builder() {
@@ -141,27 +146,25 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
 
         private Builder(DescribeLiveRealtimeDeliveryAccRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.domainName = request.domainName;
             this.endTime = request.endTime;
             this.interval = request.interval;
             this.logStore = request.logStore;
             this.ownerId = request.ownerId;
             this.project = request.project;
+            this.regionId = request.regionId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * DomainName.
+         * <p>The streaming domain.</p>
+         * <ul>
+         * <li>You can query one or more domain names. If you specify multiple domain names, separate them with commas (,).</li>
+         * <li>If you leave this parameter empty, the data of all domain names within your Alibaba Cloud account is returned.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -170,7 +173,11 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * <p>The end time must be later than the start time. The maximum time range that can be specified is one year.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T21:05:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -179,7 +186,16 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
         }
 
         /**
-         * Interval.
+         * <p>The time granularity of the query. Unit: seconds. Valid values:</p>
+         * <ul>
+         * <li><strong>300</strong></li>
+         * <li><strong>3600</strong></li>
+         * <li><strong>86400</strong></li>
+         * </ul>
+         * <p>If you specify an invalid value or do not specify this parameter, the default value is used. If the specified time range is no more than three days, the default value is 300. If the specified time range is more than three days and no more than 30 days, the default value is 3600. If the specified time range is more than 30 days, the default value is 86400.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3600</p>
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -188,7 +204,10 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
         }
 
         /**
-         * LogStore.
+         * <p>The name of the Logstore to which log entries are delivered. If you leave this parameter empty, the data of all Logstores is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>logstore_example</p>
          */
         public Builder logStore(String logStore) {
             this.putQueryParameter("LogStore", logStore);
@@ -206,7 +225,10 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
         }
 
         /**
-         * Project.
+         * <p>The name of the Log Service project that is used for real-time log delivery. If you leave this parameter empty, the data of all Log Service projects is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>project_example</p>
          */
         public Builder project(String project) {
             this.putQueryParameter("Project", project);
@@ -215,7 +237,19 @@ public class DescribeLiveRealtimeDeliveryAccRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2015-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

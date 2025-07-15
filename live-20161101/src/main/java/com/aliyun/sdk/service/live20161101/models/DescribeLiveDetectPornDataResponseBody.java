@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveDetectPornDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveDetectPornDataResponseBody</p>
  */
 public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
-    @NameInMap("DetectPornData")
+    @com.aliyun.core.annotation.NameInMap("DetectPornData")
     private DetectPornData detectPornData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLiveDetectPornDataResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
 
     public static DescribeLiveDetectPornDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,16 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
         private DetectPornData detectPornData; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveDetectPornDataResponseBody model) {
+            this.detectPornData = model.detectPornData;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * DetectPornData.
+         * <p>The bandwidth data returned at each interval.</p>
          */
         public Builder detectPornData(DetectPornData detectPornData) {
             this.detectPornData = detectPornData;
@@ -58,7 +75,10 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>B955107D-E658-4E77-B913-E0AC3D31693E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -71,29 +91,35 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveDetectPornDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDetectPornDataResponseBody</p>
+     */
     public static class DataModule extends TeaModel {
-        @NameInMap("App")
+        @com.aliyun.core.annotation.NameInMap("App")
         private String app;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Fee")
+        @com.aliyun.core.annotation.NameInMap("Fee")
         private String fee;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Stream")
+        @com.aliyun.core.annotation.NameInMap("Stream")
         private String stream;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private DataModule(Builder builder) {
@@ -181,8 +207,25 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
             private String stream; 
             private String timeStamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(DataModule model) {
+                this.app = model.app;
+                this.count = model.count;
+                this.domain = model.domain;
+                this.fee = model.fee;
+                this.region = model.region;
+                this.scene = model.scene;
+                this.stream = model.stream;
+                this.timeStamp = model.timeStamp;
+            } 
+
             /**
-             * App.
+             * <p>The name of the application to which the live stream belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveApp****</p>
              */
             public Builder app(String app) {
                 this.app = app;
@@ -190,7 +233,10 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * <p>The number of reviewed images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2</p>
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -198,7 +244,10 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
             }
 
             /**
-             * Domain.
+             * <p>The main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -206,7 +255,14 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
             }
 
             /**
-             * Fee.
+             * <p>Indicates whether a quota of free image scanning is available. Valid values:</p>
+             * <ul>
+             * <li><strong>free</strong></li>
+             * <li><strong>charge</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>free</p>
              */
             public Builder fee(String fee) {
                 this.fee = fee;
@@ -214,7 +270,10 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region in which the domain name resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -222,7 +281,17 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
             }
 
             /**
-             * Scene.
+             * <p>The moderation scenario. Valid values:</p>
+             * <ul>
+             * <li><strong>porn</strong> (default): pornography</li>
+             * <li><strong>terrorism</strong>: terrorism or politically sensitive content</li>
+             * <li><strong>ad</strong>: ad violation</li>
+             * <li><strong>live</strong>: undesirable scene</li>
+             * <li><strong>logo</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>porn</p>
              */
             public Builder scene(String scene) {
                 this.scene = scene;
@@ -230,7 +299,10 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
             }
 
             /**
-             * Stream.
+             * <p>The name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveStream****</p>
              */
             public Builder stream(String stream) {
                 this.stream = stream;
@@ -238,7 +310,10 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The timestamp of the data returned. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2017-12-10T15:00:05Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -252,9 +327,15 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveDetectPornDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveDetectPornDataResponseBody</p>
+     */
     public static class DetectPornData extends TeaModel {
-        @NameInMap("DataModule")
-        private java.util.List < DataModule> dataModule;
+        @com.aliyun.core.annotation.NameInMap("DataModule")
+        private java.util.List<DataModule> dataModule;
 
         private DetectPornData(Builder builder) {
             this.dataModule = builder.dataModule;
@@ -271,17 +352,24 @@ public class DescribeLiveDetectPornDataResponseBody extends TeaModel {
         /**
          * @return dataModule
          */
-        public java.util.List < DataModule> getDataModule() {
+        public java.util.List<DataModule> getDataModule() {
             return this.dataModule;
         }
 
         public static final class Builder {
-            private java.util.List < DataModule> dataModule; 
+            private java.util.List<DataModule> dataModule; 
+
+            private Builder() {
+            } 
+
+            private Builder(DetectPornData model) {
+                this.dataModule = model.dataModule;
+            } 
 
             /**
              * DataModule.
              */
-            public Builder dataModule(java.util.List < DataModule> dataModule) {
+            public Builder dataModule(java.util.List<DataModule> dataModule) {
                 this.dataModule = dataModule;
                 return this;
             }

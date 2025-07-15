@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveProducerUsageDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveProducerUsageDataResponseBody</p>
  */
 public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
-    @NameInMap("BillProducerData")
+    @com.aliyun.core.annotation.NameInMap("BillProducerData")
     private BillProducerData billProducerData;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeLiveProducerUsageDataResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
 
     public static DescribeLiveProducerUsageDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,18 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
         private String requestId; 
         private String startTime; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveProducerUsageDataResponseBody model) {
+            this.billProducerData = model.billProducerData;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+        } 
+
         /**
-         * BillProducerData.
+         * <p>The production studio usage data.</p>
          */
         public Builder billProducerData(BillProducerData billProducerData) {
             this.billProducerData = billProducerData;
@@ -82,7 +101,10 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range during which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-09-30T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -90,7 +112,10 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>C370DAF1-C838-4288-A1A0-9A87633D248E</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +123,10 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The start of the time range for which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-10-31T15:59:59Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -111,38 +139,44 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveProducerUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveProducerUsageDataResponseBody</p>
+     */
     public static class BillProducerDataItem extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private String instance;
 
-        @NameInMap("OutputHdDuration")
+        @com.aliyun.core.annotation.NameInMap("OutputHdDuration")
         private Long outputHdDuration;
 
-        @NameInMap("OutputLdDuration")
+        @com.aliyun.core.annotation.NameInMap("OutputLdDuration")
         private Long outputLdDuration;
 
-        @NameInMap("OutputSdDuration")
+        @com.aliyun.core.annotation.NameInMap("OutputSdDuration")
         private Long outputSdDuration;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("TranHdDuration")
+        @com.aliyun.core.annotation.NameInMap("TranHdDuration")
         private Long tranHdDuration;
 
-        @NameInMap("TranLdDuration")
+        @com.aliyun.core.annotation.NameInMap("TranLdDuration")
         private Long tranLdDuration;
 
-        @NameInMap("TranSdDuration")
+        @com.aliyun.core.annotation.NameInMap("TranSdDuration")
         private Long tranSdDuration;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private BillProducerDataItem(Builder builder) {
@@ -257,8 +291,28 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
             private Long tranSdDuration; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(BillProducerDataItem model) {
+                this.domainName = model.domainName;
+                this.instance = model.instance;
+                this.outputHdDuration = model.outputHdDuration;
+                this.outputLdDuration = model.outputLdDuration;
+                this.outputSdDuration = model.outputSdDuration;
+                this.region = model.region;
+                this.timeStamp = model.timeStamp;
+                this.tranHdDuration = model.tranHdDuration;
+                this.tranLdDuration = model.tranLdDuration;
+                this.tranSdDuration = model.tranSdDuration;
+                this.type = model.type;
+            } 
+
             /**
-             * DomainName.
+             * <p>The domain name. If domain is specified by the SplitBy parameter, the usage data is returned based on different domain names.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -266,7 +320,10 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Instance.
+             * <p>The production studio instance. If instance is specified by the SplitBy parameter, the usage data is returned based on different production studio instances.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>a17d0184-462d-4630-b2a6-8c26dde2****</p>
              */
             public Builder instance(String instance) {
                 this.instance = instance;
@@ -274,7 +331,10 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * OutputHdDuration.
+             * <p>The duration of high definition streaming. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6000</p>
              */
             public Builder outputHdDuration(Long outputHdDuration) {
                 this.outputHdDuration = outputHdDuration;
@@ -282,7 +342,10 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * OutputLdDuration.
+             * <p>The duration of low definition streaming. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1001</p>
              */
             public Builder outputLdDuration(Long outputLdDuration) {
                 this.outputLdDuration = outputLdDuration;
@@ -290,7 +353,10 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * OutputSdDuration.
+             * <p>The duration of standard definition streaming. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder outputSdDuration(Long outputSdDuration) {
                 this.outputSdDuration = outputSdDuration;
@@ -298,7 +364,10 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * <p>The region. If region is specified by the SplitBy parameter, the usage data is returned based on different regions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder region(String region) {
                 this.region = region;
@@ -306,7 +375,10 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2018-09-30T00:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -314,7 +386,10 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * TranHdDuration.
+             * <p>The duration of high definition transcoding. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6777</p>
              */
             public Builder tranHdDuration(Long tranHdDuration) {
                 this.tranHdDuration = tranHdDuration;
@@ -322,7 +397,10 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * TranLdDuration.
+             * <p>The duration of low definition transcoding. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>111</p>
              */
             public Builder tranLdDuration(Long tranLdDuration) {
                 this.tranLdDuration = tranLdDuration;
@@ -330,7 +408,10 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * TranSdDuration.
+             * <p>The duration of standard definition transcoding. Unit: minutes.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>666</p>
              */
             public Builder tranSdDuration(Long tranSdDuration) {
                 this.tranSdDuration = tranSdDuration;
@@ -338,7 +419,10 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the production studio. If type is specified by the SplitBy parameter, the usage data is returned based on different types of production studios.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>slidelive</p>
              */
             public Builder type(String type) {
                 this.type = type;
@@ -352,9 +436,15 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveProducerUsageDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveProducerUsageDataResponseBody</p>
+     */
     public static class BillProducerData extends TeaModel {
-        @NameInMap("BillProducerDataItem")
-        private java.util.List < BillProducerDataItem> billProducerDataItem;
+        @com.aliyun.core.annotation.NameInMap("BillProducerDataItem")
+        private java.util.List<BillProducerDataItem> billProducerDataItem;
 
         private BillProducerData(Builder builder) {
             this.billProducerDataItem = builder.billProducerDataItem;
@@ -371,17 +461,24 @@ public class DescribeLiveProducerUsageDataResponseBody extends TeaModel {
         /**
          * @return billProducerDataItem
          */
-        public java.util.List < BillProducerDataItem> getBillProducerDataItem() {
+        public java.util.List<BillProducerDataItem> getBillProducerDataItem() {
             return this.billProducerDataItem;
         }
 
         public static final class Builder {
-            private java.util.List < BillProducerDataItem> billProducerDataItem; 
+            private java.util.List<BillProducerDataItem> billProducerDataItem; 
+
+            private Builder() {
+            } 
+
+            private Builder(BillProducerData model) {
+                this.billProducerDataItem = model.billProducerDataItem;
+            } 
 
             /**
              * BillProducerDataItem.
              */
-            public Builder billProducerDataItem(java.util.List < BillProducerDataItem> billProducerDataItem) {
+            public Builder billProducerDataItem(java.util.List<BillProducerDataItem> billProducerDataItem) {
                 this.billProducerDataItem = billProducerDataItem;
                 return this;
             }

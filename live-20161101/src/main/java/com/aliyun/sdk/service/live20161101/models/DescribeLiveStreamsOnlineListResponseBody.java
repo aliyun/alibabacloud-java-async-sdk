@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamsOnlineListResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveStreamsOnlineListResponseBody</p>
  */
 public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
-    @NameInMap("OnlineInfo")
+    @com.aliyun.core.annotation.NameInMap("OnlineInfo")
     private OnlineInfo onlineInfo;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
     private DescribeLiveStreamsOnlineListResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
 
     public static DescribeLiveStreamsOnlineListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,20 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
         private Integer totalNum; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveStreamsOnlineListResponseBody model) {
+            this.onlineInfo = model.onlineInfo;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * OnlineInfo.
+         * <p>The information about the live streams that are being ingested.</p>
          */
         public Builder onlineInfo(OnlineInfo onlineInfo) {
             this.onlineInfo = onlineInfo;
@@ -106,7 +127,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number of the returned page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.pageNum = pageNum;
@@ -114,7 +138,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries returned per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +149,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c6a2a0df228-4a64- af62-20e91b9676b3</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +160,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of streams that meet the specified conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -138,7 +171,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -151,55 +187,68 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveStreamsOnlineListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamsOnlineListResponseBody</p>
+     */
     public static class LiveStreamOnlineInfo extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AudioCodecId")
+        @com.aliyun.core.annotation.NameInMap("AudioCodecId")
         private Integer audioCodecId;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("AudioDataRate")
+        private Integer audioDataRate;
+
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("FrameRate")
+        @com.aliyun.core.annotation.NameInMap("FrameRate")
         private Integer frameRate;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("PublishDomain")
+        @com.aliyun.core.annotation.NameInMap("PublishDomain")
         private String publishDomain;
 
-        @NameInMap("PublishTime")
+        @com.aliyun.core.annotation.NameInMap("PublishTime")
         private String publishTime;
 
-        @NameInMap("PublishType")
+        @com.aliyun.core.annotation.NameInMap("PublishType")
         private String publishType;
 
-        @NameInMap("PublishUrl")
+        @com.aliyun.core.annotation.NameInMap("PublishUrl")
         private String publishUrl;
 
-        @NameInMap("ServerIp")
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
         private String serverIp;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
-        @NameInMap("Transcoded")
+        @com.aliyun.core.annotation.NameInMap("Transcoded")
         private String transcoded;
 
-        @NameInMap("VideoCodecId")
+        @com.aliyun.core.annotation.NameInMap("VideoCodecId")
         private Integer videoCodecId;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("VideoDataRate")
+        private Integer videoDataRate;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private LiveStreamOnlineInfo(Builder builder) {
             this.appName = builder.appName;
             this.audioCodecId = builder.audioCodecId;
+            this.audioDataRate = builder.audioDataRate;
             this.clientIp = builder.clientIp;
             this.domainName = builder.domainName;
             this.frameRate = builder.frameRate;
@@ -212,6 +261,7 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             this.streamName = builder.streamName;
             this.transcoded = builder.transcoded;
             this.videoCodecId = builder.videoCodecId;
+            this.videoDataRate = builder.videoDataRate;
             this.width = builder.width;
         }
 
@@ -235,6 +285,13 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
          */
         public Integer getAudioCodecId() {
             return this.audioCodecId;
+        }
+
+        /**
+         * @return audioDataRate
+         */
+        public Integer getAudioDataRate() {
+            return this.audioDataRate;
         }
 
         /**
@@ -322,6 +379,13 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
         }
 
         /**
+         * @return videoDataRate
+         */
+        public Integer getVideoDataRate() {
+            return this.videoDataRate;
+        }
+
+        /**
          * @return width
          */
         public Integer getWidth() {
@@ -331,6 +395,7 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
         public static final class Builder {
             private String appName; 
             private Integer audioCodecId; 
+            private Integer audioDataRate; 
             private String clientIp; 
             private String domainName; 
             private Integer frameRate; 
@@ -343,10 +408,37 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             private String streamName; 
             private String transcoded; 
             private Integer videoCodecId; 
+            private Integer videoDataRate; 
             private Integer width; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamOnlineInfo model) {
+                this.appName = model.appName;
+                this.audioCodecId = model.audioCodecId;
+                this.audioDataRate = model.audioDataRate;
+                this.clientIp = model.clientIp;
+                this.domainName = model.domainName;
+                this.frameRate = model.frameRate;
+                this.height = model.height;
+                this.publishDomain = model.publishDomain;
+                this.publishTime = model.publishTime;
+                this.publishType = model.publishType;
+                this.publishUrl = model.publishUrl;
+                this.serverIp = model.serverIp;
+                this.streamName = model.streamName;
+                this.transcoded = model.transcoded;
+                this.videoCodecId = model.videoCodecId;
+                this.videoDataRate = model.videoDataRate;
+                this.width = model.width;
+            } 
+
             /**
-             * AppName.
+             * <p>The name of the application to which the live stream belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveApp****</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -354,7 +446,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             }
 
             /**
-             * AudioCodecId.
+             * <p>The ID of the audio codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder audioCodecId(Integer audioCodecId) {
                 this.audioCodecId = audioCodecId;
@@ -362,7 +457,24 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             }
 
             /**
-             * ClientIp.
+             * <p>The audio bitrate of the live stream. Unit: Kbit/s.</p>
+             * <blockquote>
+             * <p> This parameter can be returned after you submit a ticket for whitelist configuration. For more information about how to submit a ticket, see Contact us.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
+             */
+            public Builder audioDataRate(Integer audioDataRate) {
+                this.audioDataRate = audioDataRate;
+                return this;
+            }
+
+            /**
+             * <p>The IP address of the client for stream ingest.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>106.11.XX.XX</p>
              */
             public Builder clientIp(String clientIp) {
                 this.clientIp = clientIp;
@@ -370,7 +482,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -378,7 +493,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             }
 
             /**
-             * FrameRate.
+             * <p>The frame rate. Unit: FPS.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>15</p>
              */
             public Builder frameRate(Integer frameRate) {
                 this.frameRate = frameRate;
@@ -386,7 +504,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * <p>The height of the video resolution. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>720</p>
              */
             public Builder height(Integer height) {
                 this.height = height;
@@ -394,7 +515,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             }
 
             /**
-             * PublishDomain.
+             * <p>The ingest domain. If live center ingest was used, the streaming domain is returned.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>demo.aliyundoc.com</p>
              */
             public Builder publishDomain(String publishDomain) {
                 this.publishDomain = publishDomain;
@@ -402,7 +526,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             }
 
             /**
-             * PublishTime.
+             * <p>The start time of stream ingest. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-08-09T02:37:59Z</p>
              */
             public Builder publishTime(String publishTime) {
                 this.publishTime = publishTime;
@@ -410,7 +537,14 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             }
 
             /**
-             * PublishType.
+             * <p>The ingest type. Valid values:</p>
+             * <ul>
+             * <li><strong>edge</strong>: edge ingest.</li>
+             * <li><strong>center</strong>: live center ingest.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>edge</p>
              */
             public Builder publishType(String publishType) {
                 this.publishType = publishType;
@@ -418,7 +552,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             }
 
             /**
-             * PublishUrl.
+             * <p>The complete URL that was used to ingest the stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://demo.aliyundoc.com/live/test****</p>
              */
             public Builder publishUrl(String publishUrl) {
                 this.publishUrl = publishUrl;
@@ -426,7 +563,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             }
 
             /**
-             * ServerIp.
+             * <p>The IP address of the ingest node.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>120.221.XX.XX</p>
              */
             public Builder serverIp(String serverIp) {
                 this.serverIp = serverIp;
@@ -434,7 +574,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             }
 
             /**
-             * StreamName.
+             * <p>The name of the live stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveStream****</p>
              */
             public Builder streamName(String streamName) {
                 this.streamName = streamName;
@@ -442,7 +585,14 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             }
 
             /**
-             * Transcoded.
+             * <p>Indicates whether the stream was transcoded. Valid values:</p>
+             * <ul>
+             * <li><strong>yes</strong></li>
+             * <li><strong>no</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>no</p>
              */
             public Builder transcoded(String transcoded) {
                 this.transcoded = transcoded;
@@ -450,7 +600,10 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             }
 
             /**
-             * VideoCodecId.
+             * <p>The ID of the video codec.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>7</p>
              */
             public Builder videoCodecId(Integer videoCodecId) {
                 this.videoCodecId = videoCodecId;
@@ -458,7 +611,24 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * <p>The video bitrate of the live stream. Unit: Kbit/s.</p>
+             * <blockquote>
+             * <p> This parameter can be returned after you submit a ticket for whitelist configuration. For more information about how to submit a ticket, see Contact us.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
+             */
+            public Builder videoDataRate(Integer videoDataRate) {
+                this.videoDataRate = videoDataRate;
+                return this;
+            }
+
+            /**
+             * <p>The width of the video resolution. Unit: pixels.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1280</p>
              */
             public Builder width(Integer width) {
                 this.width = width;
@@ -472,9 +642,15 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveStreamsOnlineListResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveStreamsOnlineListResponseBody</p>
+     */
     public static class OnlineInfo extends TeaModel {
-        @NameInMap("LiveStreamOnlineInfo")
-        private java.util.List < LiveStreamOnlineInfo> liveStreamOnlineInfo;
+        @com.aliyun.core.annotation.NameInMap("LiveStreamOnlineInfo")
+        private java.util.List<LiveStreamOnlineInfo> liveStreamOnlineInfo;
 
         private OnlineInfo(Builder builder) {
             this.liveStreamOnlineInfo = builder.liveStreamOnlineInfo;
@@ -491,17 +667,24 @@ public class DescribeLiveStreamsOnlineListResponseBody extends TeaModel {
         /**
          * @return liveStreamOnlineInfo
          */
-        public java.util.List < LiveStreamOnlineInfo> getLiveStreamOnlineInfo() {
+        public java.util.List<LiveStreamOnlineInfo> getLiveStreamOnlineInfo() {
             return this.liveStreamOnlineInfo;
         }
 
         public static final class Builder {
-            private java.util.List < LiveStreamOnlineInfo> liveStreamOnlineInfo; 
+            private java.util.List<LiveStreamOnlineInfo> liveStreamOnlineInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnlineInfo model) {
+                this.liveStreamOnlineInfo = model.liveStreamOnlineInfo;
+            } 
 
             /**
              * LiveStreamOnlineInfo.
              */
-            public Builder liveStreamOnlineInfo(java.util.List < LiveStreamOnlineInfo> liveStreamOnlineInfo) {
+            public Builder liveStreamOnlineInfo(java.util.List<LiveStreamOnlineInfo> liveStreamOnlineInfo) {
                 this.liveStreamOnlineInfo = liveStreamOnlineInfo;
                 return this;
             }

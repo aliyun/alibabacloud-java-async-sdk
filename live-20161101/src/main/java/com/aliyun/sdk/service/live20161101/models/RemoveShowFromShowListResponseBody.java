@@ -1,27 +1,32 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RemoveShowFromShowListResponseBody} extends {@link TeaModel}
  *
  * <p>RemoveShowFromShowListResponseBody</p>
  */
 public class RemoveShowFromShowListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ShowId")
+    @com.aliyun.core.annotation.NameInMap("ShowId")
     private String showId;
 
-    @NameInMap("failedList")
+    @com.aliyun.core.annotation.NameInMap("failedList")
     private String failedList;
 
-    @NameInMap("successfulShowIds")
+    @com.aliyun.core.annotation.NameInMap("successfulShowIds")
     private String successfulShowIds;
 
     private RemoveShowFromShowListResponseBody(Builder builder) {
@@ -37,6 +42,10 @@ public class RemoveShowFromShowListResponseBody extends TeaModel {
 
     public static RemoveShowFromShowListResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -73,8 +82,21 @@ public class RemoveShowFromShowListResponseBody extends TeaModel {
         private String failedList; 
         private String successfulShowIds; 
 
+        private Builder() {
+        } 
+
+        private Builder(RemoveShowFromShowListResponseBody model) {
+            this.requestId = model.requestId;
+            this.showId = model.showId;
+            this.failedList = model.failedList;
+            this.successfulShowIds = model.successfulShowIds;
+        } 
+
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +104,10 @@ public class RemoveShowFromShowListResponseBody extends TeaModel {
         }
 
         /**
-         * ShowId.
+         * <p>The ID of the episode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>a2b8e671-2fe5-4642-a2ec-bf93880e****</p>
          */
         public Builder showId(String showId) {
             this.showId = showId;
@@ -90,7 +115,10 @@ public class RemoveShowFromShowListResponseBody extends TeaModel {
         }
 
         /**
-         * failedList.
+         * <p>The IDs of episodes that failed to be removed and the relevant failure information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>failedList[Show1, Show2...]</p>
          */
         public Builder failedList(String failedList) {
             this.failedList = failedList;
@@ -98,7 +126,10 @@ public class RemoveShowFromShowListResponseBody extends TeaModel {
         }
 
         /**
-         * successfulShowIds.
+         * <p>The IDs of episodes that were removed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>f1933f16-5467-4308-b3a9-e8d451a90999</p>
          */
         public Builder successfulShowIds(String successfulShowIds) {
             this.successfulShowIds = successfulShowIds;

@@ -1,46 +1,51 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link EditPlaylistRequest} extends {@link RequestModel}
  *
  * <p>EditPlaylistRequest</p>
  */
 public class EditPlaylistRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProgramConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProgramConfig")
     private String programConfig;
 
-    @Query
-    @NameInMap("ProgramId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProgramId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String programId;
 
-    @Query
-    @NameInMap("ProgramItems")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProgramItems")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String programItems;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
     private EditPlaylistRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.ownerId = builder.ownerId;
         this.programConfig = builder.programConfig;
         this.programId = builder.programId;
         this.programItems = builder.programItems;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -51,16 +56,9 @@ public class EditPlaylistRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -91,12 +89,19 @@ public class EditPlaylistRequest extends Request {
         return this.programItems;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<EditPlaylistRequest, Builder> {
-        private String regionId; 
         private Long ownerId; 
         private String programConfig; 
         private String programId; 
         private String programItems; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -104,21 +109,12 @@ public class EditPlaylistRequest extends Request {
 
         private Builder(EditPlaylistRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.ownerId = request.ownerId;
             this.programConfig = request.programConfig;
             this.programId = request.programId;
             this.programItems = request.programItems;
+            this.regionId = request.regionId;
         } 
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * OwnerId.
@@ -130,7 +126,10 @@ public class EditPlaylistRequest extends Request {
         }
 
         /**
-         * ProgramConfig.
+         * <p>The configurations of the episode list. For more information, see the <strong>ProgramConfig</strong> section of this topic.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;RepeatNumber&quot;:&quot;0&quot;,&quot;ProgramName&quot;:&quot;my program&quot;}]</p>
          */
         public Builder programConfig(String programConfig) {
             this.putQueryParameter("ProgramConfig", programConfig);
@@ -139,7 +138,11 @@ public class EditPlaylistRequest extends Request {
         }
 
         /**
-         * ProgramId.
+         * <p>The ID of the episode list. If the episode list was created by calling the <a href="https://help.aliyun.com/document_detail/2848078.html">AddPlaylistItems</a> operation, check the value of the response parameter ProgramId to obtain the ID.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
          */
         public Builder programId(String programId) {
             this.putQueryParameter("ProgramId", programId);
@@ -148,11 +151,24 @@ public class EditPlaylistRequest extends Request {
         }
 
         /**
-         * ProgramItems.
+         * <p>The episodes that you want to add to the production studio. The value is a JSON string. For more information, see the <strong>InputProgramItem</strong> section of this topic.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;ItemName&quot;:&quot;item1&quot;,&quot;ResourceType&quot;:&quot;vod&quot;,&quot;ResourceValue&quot;:&quot;5f8809f2-3352-4d1f-a8f7-86f9429f****&quot;}, {&quot;ItemName&quot;: &quot;item2&quot;,&quot;ResourceType&quot;: &quot;vod&quot;,&quot;ResourceValue&quot;: &quot;e7411c0b-dd98-4c61-a545-f8bfba6c****&quot;}]</p>
          */
         public Builder programItems(String programItems) {
             this.putQueryParameter("ProgramItems", programItems);
             this.programItems = programItems;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 

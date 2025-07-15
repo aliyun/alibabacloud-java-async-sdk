@@ -1,58 +1,63 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLiveAppSnapshotConfigRequest} extends {@link RequestModel}
  *
  * <p>UpdateLiveAppSnapshotConfigRequest</p>
  */
 public class UpdateLiveAppSnapshotConfigRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("Callback")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Callback")
     private String callback;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OssBucket")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssBucket")
     private String ossBucket;
 
-    @Query
-    @NameInMap("OssEndpoint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssEndpoint")
     private String ossEndpoint;
 
-    @Query
-    @NameInMap("OverwriteOssObject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OverwriteOssObject")
     private String overwriteOssObject;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("SequenceOssObject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SequenceOssObject")
     private String sequenceOssObject;
 
-    @Query
-    @NameInMap("TimeInterval")
-    @Validation(maximum = 3600, minimum = 5)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeInterval")
+    @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 5)
     private Integer timeInterval;
 
     private UpdateLiveAppSnapshotConfigRequest(Builder builder) {
@@ -77,7 +82,7 @@ public class UpdateLiveAppSnapshotConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -183,7 +188,11 @@ public class UpdateLiveAppSnapshotConfigRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -192,7 +201,10 @@ public class UpdateLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * Callback.
+         * <p>The callback URL that is used to receive notifications about snapshot capture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://learn.aliyundoc.com">https://learn.aliyundoc.com</a></p>
          */
         public Builder callback(String callback) {
             this.putQueryParameter("Callback", callback);
@@ -201,7 +213,11 @@ public class UpdateLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -210,7 +226,10 @@ public class UpdateLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * OssBucket.
+         * <p>The name of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveBucket****</p>
          */
         public Builder ossBucket(String ossBucket) {
             this.putQueryParameter("OssBucket", ossBucket);
@@ -219,7 +238,10 @@ public class UpdateLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * OssEndpoint.
+         * <p>The endpoint of the OSS bucket.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-oss-****.aliyuncs.com</p>
          */
         public Builder ossEndpoint(String ossEndpoint) {
             this.putQueryParameter("OssEndpoint", ossEndpoint);
@@ -228,7 +250,16 @@ public class UpdateLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * OverwriteOssObject.
+         * <p>The naming format of snapshots that are stored in the overwrite mode, which means that a new snapshot overwrites the previous snapshot.</p>
+         * <ul>
+         * <li>The name must be less than 256 bytes in length.</li>
+         * <li>Only JPG images are supported.</li>
+         * <li>The name can contain variables such as {AppName} and {StreamName}.</li>
+         * <li>A value of hyphen (-) indicates that this parameter is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{liveApp****}/{liveStream****}.jpg</p>
          */
         public Builder overwriteOssObject(String overwriteOssObject) {
             this.putQueryParameter("OverwriteOssObject", overwriteOssObject);
@@ -255,7 +286,16 @@ public class UpdateLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * SequenceOssObject.
+         * <p>The naming format of snapshots that are stored in sequence, which means that a new snapshot does not overwrite the previous snapshot. You can call the <a href="https://help.aliyun.com/document_detail/2847902.html">DescribeLiveStreamSnapshotInfo</a> operation to query the snapshots that were captured within a specific time period.</p>
+         * <ul>
+         * <li>The name must be less than 256 bytes in length.</li>
+         * <li>Only JPG images are supported.</li>
+         * <li>The name can contain variables such as {AppName}, {StreamName}, {UnixTimestamp}, and {Sequence}. The name must contain at least one of the {UnixTimestamp} and {Sequence} variables.</li>
+         * <li>A value of hyphen (-) indicates that this parameter is deleted.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot/{liveApp****}/{liveStream****}/{UnixTimestamp****}.jpg</p>
          */
         public Builder sequenceOssObject(String sequenceOssObject) {
             this.putQueryParameter("SequenceOssObject", sequenceOssObject);
@@ -264,7 +304,10 @@ public class UpdateLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * TimeInterval.
+         * <p>The interval at which snapshots are captured. Valid values: <strong>5 to 3600</strong>. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder timeInterval(Integer timeInterval) {
             this.putQueryParameter("TimeInterval", timeInterval);

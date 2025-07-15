@@ -1,36 +1,41 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveSnapshotConfigResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveSnapshotConfigResponseBody</p>
  */
 public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
-    @NameInMap("LiveStreamSnapshotConfigList")
+    @com.aliyun.core.annotation.NameInMap("LiveStreamSnapshotConfigList")
     private LiveStreamSnapshotConfigList liveStreamSnapshotConfigList;
 
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
     private DescribeLiveSnapshotConfigResponseBody(Builder builder) {
@@ -49,6 +54,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
 
     public static DescribeLiveSnapshotConfigResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -109,8 +118,21 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
         private Integer totalNum; 
         private Integer totalPage; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveSnapshotConfigResponseBody model) {
+            this.liveStreamSnapshotConfigList = model.liveStreamSnapshotConfigList;
+            this.order = model.order;
+            this.pageNum = model.pageNum;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalNum = model.totalNum;
+            this.totalPage = model.totalPage;
+        } 
+
         /**
-         * LiveStreamSnapshotConfigList.
+         * <p>The snapshot configurations.</p>
          */
         public Builder liveStreamSnapshotConfigList(LiveStreamSnapshotConfigList liveStreamSnapshotConfigList) {
             this.liveStreamSnapshotConfigList = liveStreamSnapshotConfigList;
@@ -118,7 +140,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
         }
 
         /**
-         * Order.
+         * <p>The sort order.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>asc</p>
          */
         public Builder order(String order) {
             this.order = order;
@@ -126,7 +151,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.pageNum = pageNum;
@@ -134,7 +162,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +173,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>A3136B58-5876-4168-83CA-B562781981A0</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +184,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TotalNum.
+         * <p>The total number of entries that meet the specified conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6</p>
          */
         public Builder totalNum(Integer totalNum) {
             this.totalNum = totalNum;
@@ -158,7 +195,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPage.
+         * <p>The total number of pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder totalPage(Integer totalPage) {
             this.totalPage = totalPage;
@@ -171,32 +211,38 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveSnapshotConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveSnapshotConfigResponseBody</p>
+     */
     public static class LiveStreamSnapshotConfig extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("Callback")
+        @com.aliyun.core.annotation.NameInMap("Callback")
         private String callback;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("OssBucket")
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
         private String ossBucket;
 
-        @NameInMap("OssEndpoint")
+        @com.aliyun.core.annotation.NameInMap("OssEndpoint")
         private String ossEndpoint;
 
-        @NameInMap("OverwriteOssObject")
+        @com.aliyun.core.annotation.NameInMap("OverwriteOssObject")
         private String overwriteOssObject;
 
-        @NameInMap("SequenceOssObject")
+        @com.aliyun.core.annotation.NameInMap("SequenceOssObject")
         private String sequenceOssObject;
 
-        @NameInMap("TimeInterval")
+        @com.aliyun.core.annotation.NameInMap("TimeInterval")
         private Integer timeInterval;
 
         private LiveStreamSnapshotConfig(Builder builder) {
@@ -293,8 +339,26 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
             private String sequenceOssObject; 
             private Integer timeInterval; 
 
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamSnapshotConfig model) {
+                this.appName = model.appName;
+                this.callback = model.callback;
+                this.createTime = model.createTime;
+                this.domainName = model.domainName;
+                this.ossBucket = model.ossBucket;
+                this.ossEndpoint = model.ossEndpoint;
+                this.overwriteOssObject = model.overwriteOssObject;
+                this.sequenceOssObject = model.sequenceOssObject;
+                this.timeInterval = model.timeInterval;
+            } 
+
             /**
-             * AppName.
+             * <p>The name of the application to which the live stream belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveApp****</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -302,7 +366,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Callback.
+             * <p>The callback URL that is used to receive notifications about snapshot capture.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://learn.aliyundoc.com">https://learn.aliyundoc.com</a></p>
              */
             public Builder callback(String callback) {
                 this.callback = callback;
@@ -310,7 +377,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the configuration was created. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-05-20T01:33:38Z</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -318,7 +388,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * <p>The main streaming domain.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -326,7 +399,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OssBucket.
+             * <p>The name of the Object Storage Service (OSS) bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>liveBucket****</p>
              */
             public Builder ossBucket(String ossBucket) {
                 this.ossBucket = ossBucket;
@@ -334,7 +410,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OssEndpoint.
+             * <p>The endpoint of the OSS bucket.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-oss-****.aliyuncs.com</p>
              */
             public Builder ossEndpoint(String ossEndpoint) {
                 this.ossEndpoint = ossEndpoint;
@@ -342,7 +421,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
             }
 
             /**
-             * OverwriteOssObject.
+             * <p>The naming format of snapshots that are stored in the overwrite mode, which means that a new snapshot overwrites the previous snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{liveApp****}/{liveStream****}.jpg</p>
              */
             public Builder overwriteOssObject(String overwriteOssObject) {
                 this.overwriteOssObject = overwriteOssObject;
@@ -350,7 +432,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
             }
 
             /**
-             * SequenceOssObject.
+             * <p>The naming format of snapshots that are stored in sequence, which means that a new snapshot does not overwrite the previous snapshot.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>snapshot/{liveApp****}/{liveStream****}/{UnixTimestamp}.jpg</p>
              */
             public Builder sequenceOssObject(String sequenceOssObject) {
                 this.sequenceOssObject = sequenceOssObject;
@@ -358,7 +443,10 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
             }
 
             /**
-             * TimeInterval.
+             * <p>The interval at which snapshots are captured. Unit: seconds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10</p>
              */
             public Builder timeInterval(Integer timeInterval) {
                 this.timeInterval = timeInterval;
@@ -372,9 +460,15 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveSnapshotConfigResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveSnapshotConfigResponseBody</p>
+     */
     public static class LiveStreamSnapshotConfigList extends TeaModel {
-        @NameInMap("LiveStreamSnapshotConfig")
-        private java.util.List < LiveStreamSnapshotConfig> liveStreamSnapshotConfig;
+        @com.aliyun.core.annotation.NameInMap("LiveStreamSnapshotConfig")
+        private java.util.List<LiveStreamSnapshotConfig> liveStreamSnapshotConfig;
 
         private LiveStreamSnapshotConfigList(Builder builder) {
             this.liveStreamSnapshotConfig = builder.liveStreamSnapshotConfig;
@@ -391,17 +485,24 @@ public class DescribeLiveSnapshotConfigResponseBody extends TeaModel {
         /**
          * @return liveStreamSnapshotConfig
          */
-        public java.util.List < LiveStreamSnapshotConfig> getLiveStreamSnapshotConfig() {
+        public java.util.List<LiveStreamSnapshotConfig> getLiveStreamSnapshotConfig() {
             return this.liveStreamSnapshotConfig;
         }
 
         public static final class Builder {
-            private java.util.List < LiveStreamSnapshotConfig> liveStreamSnapshotConfig; 
+            private java.util.List<LiveStreamSnapshotConfig> liveStreamSnapshotConfig; 
+
+            private Builder() {
+            } 
+
+            private Builder(LiveStreamSnapshotConfigList model) {
+                this.liveStreamSnapshotConfig = model.liveStreamSnapshotConfig;
+            } 
 
             /**
              * LiveStreamSnapshotConfig.
              */
-            public Builder liveStreamSnapshotConfig(java.util.List < LiveStreamSnapshotConfig> liveStreamSnapshotConfig) {
+            public Builder liveStreamSnapshotConfig(java.util.List<LiveStreamSnapshotConfig> liveStreamSnapshotConfig) {
                 this.liveStreamSnapshotConfig = liveStreamSnapshotConfig;
                 return this;
             }

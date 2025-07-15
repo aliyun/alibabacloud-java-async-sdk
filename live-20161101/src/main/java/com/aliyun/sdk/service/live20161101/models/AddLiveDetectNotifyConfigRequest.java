@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddLiveDetectNotifyConfigRequest} extends {@link RequestModel}
  *
  * <p>AddLiveDetectNotifyConfigRequest</p>
  */
 public class AddLiveDetectNotifyConfigRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("NotifyUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String notifyUrl;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
     private AddLiveDetectNotifyConfigRequest(Builder builder) {
@@ -46,7 +51,7 @@ public class AddLiveDetectNotifyConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +103,11 @@ public class AddLiveDetectNotifyConfigRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -107,7 +116,11 @@ public class AddLiveDetectNotifyConfigRequest extends Request {
         }
 
         /**
-         * NotifyUrl.
+         * <p>The callback URL that is used to receive callback notifications about violations, such as pornographic content and politically sensitive content, detected in live streams.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://demo.aliyundoc.com/examplecallback.action">http://demo.aliyundoc.com/examplecallback.action</a></p>
          */
         public Builder notifyUrl(String notifyUrl) {
             this.putQueryParameter("NotifyUrl", notifyUrl);

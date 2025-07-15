@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UnTagLiveResourcesRequest} extends {@link RequestModel}
  *
  * <p>UnTagLiveResourcesRequest</p>
  */
 public class UnTagLiveResourcesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("All")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("All")
     private Boolean all;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
-    private java.util.List < String > resourceId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List<String> resourceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("TagKey")
-    private java.util.List < String > tagKey;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKey")
+    private java.util.List<String> tagKey;
 
     private UnTagLiveResourcesRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.all = builder.all;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
         this.tagKey = builder.tagKey;
@@ -56,16 +61,9 @@ public class UnTagLiveResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -83,9 +81,16 @@ public class UnTagLiveResourcesRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return resourceId
      */
-    public java.util.List < String > getResourceId() {
+    public java.util.List<String> getResourceId() {
         return this.resourceId;
     }
 
@@ -99,17 +104,17 @@ public class UnTagLiveResourcesRequest extends Request {
     /**
      * @return tagKey
      */
-    public java.util.List < String > getTagKey() {
+    public java.util.List<String> getTagKey() {
         return this.tagKey;
     }
 
     public static final class Builder extends Request.Builder<UnTagLiveResourcesRequest, Builder> {
-        private String regionId; 
         private Boolean all; 
         private Long ownerId; 
-        private java.util.List < String > resourceId; 
+        private String regionId; 
+        private java.util.List<String> resourceId; 
         private String resourceType; 
-        private java.util.List < String > tagKey; 
+        private java.util.List<String> tagKey; 
 
         private Builder() {
             super();
@@ -117,22 +122,13 @@ public class UnTagLiveResourcesRequest extends Request {
 
         private Builder(UnTagLiveResourcesRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.all = request.all;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
             this.tagKey = request.tagKey;
         } 
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
 
         /**
          * All.
@@ -153,16 +149,31 @@ public class UnTagLiveResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * RegionId.
          */
-        public Builder resourceId(java.util.List < String > resourceId) {
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
+         */
+        public Builder resourceId(java.util.List<String> resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
             this.resourceId = resourceId;
             return this;
         }
 
         /**
-         * ResourceType.
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DOMAIN</p>
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -173,7 +184,7 @@ public class UnTagLiveResourcesRequest extends Request {
         /**
          * TagKey.
          */
-        public Builder tagKey(java.util.List < String > tagKey) {
+        public Builder tagKey(java.util.List<String> tagKey) {
             this.putQueryParameter("TagKey", tagKey);
             this.tagKey = tagKey;
             return this;

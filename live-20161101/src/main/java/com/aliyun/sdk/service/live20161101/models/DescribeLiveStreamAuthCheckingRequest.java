@@ -1,40 +1,45 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveStreamAuthCheckingRequest} extends {@link RequestModel}
  *
  * <p>DescribeLiveStreamAuthCheckingRequest</p>
  */
 public class DescribeLiveStreamAuthCheckingRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Url")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String url;
 
     private DescribeLiveStreamAuthCheckingRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.url = builder.url;
     }
 
@@ -46,16 +51,9 @@ public class DescribeLiveStreamAuthCheckingRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -73,6 +71,13 @@ public class DescribeLiveStreamAuthCheckingRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return url
      */
     public String getUrl() {
@@ -80,9 +85,9 @@ public class DescribeLiveStreamAuthCheckingRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeLiveStreamAuthCheckingRequest, Builder> {
-        private String regionId; 
         private String domainName; 
         private Long ownerId; 
+        private String regionId; 
         private String url; 
 
         private Builder() {
@@ -91,23 +96,18 @@ public class DescribeLiveStreamAuthCheckingRequest extends Request {
 
         private Builder(DescribeLiveStreamAuthCheckingRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.domainName = request.domainName;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.url = request.url;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * DomainName.
+         * <p>The ingest domain or streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.aliyundoc.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -125,7 +125,20 @@ public class DescribeLiveStreamAuthCheckingRequest extends Request {
         }
 
         /**
-         * Url.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The complete ingest URL or streaming URL. You can use the <a href="https://help.aliyun.com/document_detail/197400.html">URL generator</a> to generate a URL.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://example.com/live/test.flv?auth_key=1664248">http://example.com/live/test.flv?auth_key=1664248</a>******</p>
          */
         public Builder url(String url) {
             this.putQueryParameter("Url", url);

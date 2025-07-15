@@ -1,61 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCasterProgramRequest} extends {@link RequestModel}
  *
  * <p>DescribeCasterProgramRequest</p>
  */
 public class DescribeCasterProgramRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("CasterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CasterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String casterId;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("EpisodeId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EpisodeId")
     private String episodeId;
 
-    @Query
-    @NameInMap("EpisodeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EpisodeType")
     private String episodeType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
     private DescribeCasterProgramRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.casterId = builder.casterId;
         this.endTime = builder.endTime;
         this.episodeId = builder.episodeId;
@@ -63,6 +67,7 @@ public class DescribeCasterProgramRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNum = builder.pageNum;
         this.pageSize = builder.pageSize;
+        this.regionId = builder.regionId;
         this.startTime = builder.startTime;
         this.status = builder.status;
     }
@@ -75,16 +80,9 @@ public class DescribeCasterProgramRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -137,6 +135,13 @@ public class DescribeCasterProgramRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
@@ -151,7 +156,6 @@ public class DescribeCasterProgramRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeCasterProgramRequest, Builder> {
-        private String regionId; 
         private String casterId; 
         private String endTime; 
         private String episodeId; 
@@ -159,6 +163,7 @@ public class DescribeCasterProgramRequest extends Request {
         private Long ownerId; 
         private Integer pageNum; 
         private Integer pageSize; 
+        private String regionId; 
         private String startTime; 
         private Integer status; 
 
@@ -168,7 +173,6 @@ public class DescribeCasterProgramRequest extends Request {
 
         private Builder(DescribeCasterProgramRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.casterId = request.casterId;
             this.endTime = request.endTime;
             this.episodeId = request.episodeId;
@@ -176,21 +180,24 @@ public class DescribeCasterProgramRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNum = request.pageNum;
             this.pageSize = request.pageSize;
+            this.regionId = request.regionId;
             this.startTime = request.startTime;
             this.status = request.status;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * CasterId.
+         * <p>The ID of the production studio.</p>
+         * <ul>
+         * <li>If the production studio was created by calling the <a href="https://help.aliyun.com/document_detail/2848009.html">CreateCaster</a> operation, check the value of the response parameter CasterId to obtain the ID.</li>
+         * <li>If the production studio was created by using the ApsaraVideo Live console, obtain the ID on the <strong>Production Studio Management</strong> page. To go to the page, log on to the <strong>ApsaraVideo Live console</strong> and click <strong>Production Studios</strong> in the left-side navigation pane.</li>
+         * </ul>
+         * <blockquote>
+         * <p> You can find the ID of the production studio in the Instance ID/Name column.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LIVEPRODUCER_POST-cn-0pp1czt****</p>
          */
         public Builder casterId(String casterId) {
             this.putQueryParameter("CasterId", casterId);
@@ -199,7 +206,10 @@ public class DescribeCasterProgramRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-06-29T10:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -208,7 +218,10 @@ public class DescribeCasterProgramRequest extends Request {
         }
 
         /**
-         * EpisodeId.
+         * <p>The ID of the episode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1872639A-F203-4EC5-8E43-CB92E68F****</p>
          */
         public Builder episodeId(String episodeId) {
             this.putQueryParameter("EpisodeId", episodeId);
@@ -217,7 +230,14 @@ public class DescribeCasterProgramRequest extends Request {
         }
 
         /**
-         * EpisodeType.
+         * <p>The type of the episode. Valid values:</p>
+         * <ul>
+         * <li><strong>Resource</strong>: a video resource</li>
+         * <li><strong>Component</strong>: a component</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>Resource</p>
          */
         public Builder episodeType(String episodeType) {
             this.putQueryParameter("EpisodeType", episodeType);
@@ -235,7 +255,10 @@ public class DescribeCasterProgramRequest extends Request {
         }
 
         /**
-         * PageNum.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder pageNum(Integer pageNum) {
             this.putQueryParameter("PageNum", pageNum);
@@ -244,7 +267,10 @@ public class DescribeCasterProgramRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -253,7 +279,19 @@ public class DescribeCasterProgramRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2016-06-29T09:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -262,7 +300,15 @@ public class DescribeCasterProgramRequest extends Request {
         }
 
         /**
-         * Status.
+         * <p>The status of the episode. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: The episode is not played.</li>
+         * <li><strong>1</strong>: The episode is being played.</li>
+         * <li><strong>2</strong>: The playback of the episode is complete.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         public Builder status(Integer status) {
             this.putQueryParameter("Status", status);

@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListPlaylistItemsResponseBody} extends {@link TeaModel}
  *
  * <p>ListPlaylistItemsResponseBody</p>
  */
 public class ListPlaylistItemsResponseBody extends TeaModel {
-    @NameInMap("ProgramItems")
-    private java.util.List < ProgramItems> programItems;
+    @com.aliyun.core.annotation.NameInMap("ProgramItems")
+    private java.util.List<ProgramItems> programItems;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListPlaylistItemsResponseBody(Builder builder) {
@@ -35,10 +40,14 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return programItems
      */
-    public java.util.List < ProgramItems> getProgramItems() {
+    public java.util.List<ProgramItems> getProgramItems() {
         return this.programItems;
     }
 
@@ -57,20 +66,32 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < ProgramItems> programItems; 
+        private java.util.List<ProgramItems> programItems; 
         private String requestId; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListPlaylistItemsResponseBody model) {
+            this.programItems = model.programItems;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
-         * ProgramItems.
+         * <p>The episodes.</p>
          */
-        public Builder programItems(java.util.List < ProgramItems> programItems) {
+        public Builder programItems(java.util.List<ProgramItems> programItems) {
             this.programItems = programItems;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5c6a2a0d-f228-4a64-af62-20e91b9****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +99,10 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of episodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -91,23 +115,29 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListPlaylistItemsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListPlaylistItemsResponseBody</p>
+     */
     public static class ProgramItems extends TeaModel {
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("ProgramId")
+        @com.aliyun.core.annotation.NameInMap("ProgramId")
         private String programId;
 
-        @NameInMap("ProgramItemId")
+        @com.aliyun.core.annotation.NameInMap("ProgramItemId")
         private String programItemId;
 
-        @NameInMap("ProgramItemName")
+        @com.aliyun.core.annotation.NameInMap("ProgramItemName")
         private String programItemName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("ResourceValue")
+        @com.aliyun.core.annotation.NameInMap("ResourceValue")
         private String resourceValue;
 
         private ProgramItems(Builder builder) {
@@ -177,8 +207,23 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
             private String resourceType; 
             private String resourceValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProgramItems model) {
+                this.index = model.index;
+                this.programId = model.programId;
+                this.programItemId = model.programItemId;
+                this.programItemName = model.programItemName;
+                this.resourceType = model.resourceType;
+                this.resourceValue = model.resourceValue;
+            } 
+
             /**
-             * Index.
+             * <p>The sequence number of the episode in the query result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -186,7 +231,10 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
             }
 
             /**
-             * ProgramId.
+             * <p>The ID of the episode list. You can use the ID as a request parameter in the API operation that is used to edit the episode list, delete the episode list, query the information about the episode list, start the episode list, or stop the episode list.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
              */
             public Builder programId(String programId) {
                 this.programId = programId;
@@ -194,7 +242,10 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
             }
 
             /**
-             * ProgramItemId.
+             * <p>The ID of the episode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>c10f3d63-eacf-4fbf-bd48-a07a6ba7****</p>
              */
             public Builder programItemId(String programItemId) {
                 this.programItemId = programItemId;
@@ -202,7 +253,10 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
             }
 
             /**
-             * ProgramItemName.
+             * <p>The name of the episode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>playlistItem1</p>
              */
             public Builder programItemName(String programItemName) {
                 this.programItemName = programItemName;
@@ -210,7 +264,10 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * <p>The resource type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vod</p>
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -218,7 +275,10 @@ public class ListPlaylistItemsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceValue.
+             * <p>The resource ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>asdfasdf8as9df8sa9df89****</p>
              */
             public Builder resourceValue(String resourceValue) {
                 this.resourceValue = resourceValue;

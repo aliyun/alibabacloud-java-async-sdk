@@ -1,48 +1,53 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLiveStreamWatermarkRuleRequest} extends {@link RequestModel}
  *
  * <p>UpdateLiveStreamWatermarkRuleRequest</p>
  */
 public class UpdateLiveStreamWatermarkRuleRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleId;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
     private UpdateLiveStreamWatermarkRuleRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.description = builder.description;
         this.name = builder.name;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.ruleId = builder.ruleId;
         this.templateId = builder.templateId;
     }
@@ -55,16 +60,9 @@ public class UpdateLiveStreamWatermarkRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -89,6 +87,13 @@ public class UpdateLiveStreamWatermarkRuleRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return ruleId
      */
     public String getRuleId() {
@@ -103,10 +108,10 @@ public class UpdateLiveStreamWatermarkRuleRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateLiveStreamWatermarkRuleRequest, Builder> {
-        private String regionId; 
         private String description; 
         private String name; 
         private Long ownerId; 
+        private String regionId; 
         private String ruleId; 
         private String templateId; 
 
@@ -116,25 +121,19 @@ public class UpdateLiveStreamWatermarkRuleRequest extends Request {
 
         private Builder(UpdateLiveStreamWatermarkRuleRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.description = request.description;
             this.name = request.name;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.ruleId = request.ruleId;
             this.templateId = request.templateId;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * Description.
+         * <p>The description of the custom rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my rule</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -143,7 +142,10 @@ public class UpdateLiveStreamWatermarkRuleRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the custom rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>WatermarkRule****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -161,7 +163,23 @@ public class UpdateLiveStreamWatermarkRuleRequest extends Request {
         }
 
         /**
-         * RuleId.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the watermark rule.</p>
+         * <blockquote>
+         * <p> You can obtain the rule ID by checking the value of the RuleId parameter that is returned by the <a href="https://help.aliyun.com/document_detail/2848100.html">AddLiveStreamWatermarkRule</a> operation.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -170,7 +188,13 @@ public class UpdateLiveStreamWatermarkRuleRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * <p>The ID of the watermark template.</p>
+         * <blockquote>
+         * <p> You can obtain the template ID by checking the value of the TemplateId parameter that is returned by the <a href="https://help.aliyun.com/document_detail/2848096.html">AddLiveStreamWatermark</a> operation.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>445409ec-7eaa-461d-8f29-4bec2eb9 ****</p>
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

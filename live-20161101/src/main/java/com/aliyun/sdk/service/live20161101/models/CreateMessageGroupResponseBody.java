@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateMessageGroupResponseBody} extends {@link TeaModel}
  *
  * <p>CreateMessageGroupResponseBody</p>
  */
 public class CreateMessageGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private CreateMessageGroupResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class CreateMessageGroupResponseBody extends TeaModel {
 
     public static CreateMessageGroupResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class CreateMessageGroupResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateMessageGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-****-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,7 @@ public class CreateMessageGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,11 +91,17 @@ public class CreateMessageGroupResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link CreateMessageGroupResponseBody} extends {@link TeaModel}
+     *
+     * <p>CreateMessageGroupResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("Extension")
-        private java.util.Map < String, ? > extension;
+        @com.aliyun.core.annotation.NameInMap("Extension")
+        private java.util.Map<String, ?> extension;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
         private Result(Builder builder) {
@@ -94,7 +120,7 @@ public class CreateMessageGroupResponseBody extends TeaModel {
         /**
          * @return extension
          */
-        public java.util.Map < String, ? > getExtension() {
+        public java.util.Map<String, ?> getExtension() {
             return this.extension;
         }
 
@@ -106,19 +132,33 @@ public class CreateMessageGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, ? > extension; 
+            private java.util.Map<String, ?> extension; 
             private String groupId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.extension = model.extension;
+                this.groupId = model.groupId;
+            } 
+
             /**
-             * Extension.
+             * <p>The extended field.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test001</p>
              */
-            public Builder extension(java.util.Map < String, ? > extension) {
+            public Builder extension(java.util.Map<String, ?> extension) {
                 this.extension = extension;
                 return this;
             }
 
             /**
-             * 用于长连接建连的token
+             * <p>The ID of the message group.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AE35-****-T95F</p>
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;

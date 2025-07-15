@@ -1,60 +1,65 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddLiveAppSnapshotConfigRequest} extends {@link RequestModel}
  *
  * <p>AddLiveAppSnapshotConfigRequest</p>
  */
 public class AddLiveAppSnapshotConfigRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("Callback")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Callback")
     private String callback;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OssBucket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssBucket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossBucket;
 
-    @Query
-    @NameInMap("OssEndpoint")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssEndpoint")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossEndpoint;
 
-    @Query
-    @NameInMap("OverwriteOssObject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OverwriteOssObject")
     private String overwriteOssObject;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("SequenceOssObject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SequenceOssObject")
     private String sequenceOssObject;
 
-    @Query
-    @NameInMap("TimeInterval")
-    @Validation(required = true, maximum = 3600, minimum = 5)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimeInterval")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 3600, minimum = 5)
     private Integer timeInterval;
 
     private AddLiveAppSnapshotConfigRequest(Builder builder) {
@@ -79,7 +84,7 @@ public class AddLiveAppSnapshotConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -185,7 +190,11 @@ public class AddLiveAppSnapshotConfigRequest extends Request {
         } 
 
         /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs. The value of this parameter must be the same as the application name in the ingest URL. Otherwise, the configuration does not take effect. The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (<em>). The name cannot start with a hyphen (-) or underscore (</em>). You can also specify an asterisk (*) as the value to match all applications.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -194,7 +203,10 @@ public class AddLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * Callback.
+         * <p>The callback URL that is used to receive notifications about snapshot capture.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://learn.aliyundoc.com">https://learn.aliyundoc.com</a></p>
          */
         public Builder callback(String callback) {
             this.putQueryParameter("Callback", callback);
@@ -203,7 +215,11 @@ public class AddLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The main streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -212,7 +228,12 @@ public class AddLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * OssBucket.
+         * <p>The name of the OSS bucket.</p>
+         * <p>After the configuration is complete, you can search for specific snapshots in the OSS console based on the callback information. You must create the OSS bucket in advance. For more information, see <a href="https://help.aliyun.com/document_detail/84932.html">Configure OSS</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveBucket****</p>
          */
         public Builder ossBucket(String ossBucket) {
             this.putQueryParameter("OssBucket", ossBucket);
@@ -221,7 +242,12 @@ public class AddLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * OssEndpoint.
+         * <p>The endpoint of the OSS bucket.</p>
+         * <p>After the configuration is complete, you can search for specific snapshots in the OSS console based on the callback information. You must configure the OSS endpoint in advance. For more information, see <a href="https://help.aliyun.com/document_detail/84932.html">Configure OSS</a>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-oss-****.aliyuncs.com</p>
          */
         public Builder ossEndpoint(String ossEndpoint) {
             this.putQueryParameter("OssEndpoint", ossEndpoint);
@@ -230,7 +256,15 @@ public class AddLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * OverwriteOssObject.
+         * <p>The naming format of snapshots that are stored in the overwrite mode, which means that a new snapshot overwrites the previous snapshot.</p>
+         * <ul>
+         * <li>The name must be less than 256 bytes in length.</li>
+         * <li>Only JPG images are supported.</li>
+         * <li>The name can contain variables such as {AppName} and {StreamName}.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>{AppName}/{StreamName}.jpg</p>
          */
         public Builder overwriteOssObject(String overwriteOssObject) {
             this.putQueryParameter("OverwriteOssObject", overwriteOssObject);
@@ -257,7 +291,16 @@ public class AddLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * SequenceOssObject.
+         * <p>The naming format of snapshots that are stored in sequence,</p>
+         * <p>which means that a new snapshot does not overwrite the previous snapshot. You can call the <a href="https://help.aliyun.com/document_detail/2847902.html">DescribeLiveStreamSnapshotInfo</a> operation to query the snapshots that were captured within a specific time period.</p>
+         * <ul>
+         * <li>The name must be less than 256 bytes in length.</li>
+         * <li>Only JPG images are supported.</li>
+         * <li>The name can contain variables such as {AppName}, {StreamName}, {UnixTimestamp}, and {Sequence}. The name must contain at least one of the {UnixTimestamp} and {Sequence} variables.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>snapshot/{AppName}/{StreamName}/{UnixTimestamp}.jpg</p>
          */
         public Builder sequenceOssObject(String sequenceOssObject) {
             this.putQueryParameter("SequenceOssObject", sequenceOssObject);
@@ -266,7 +309,11 @@ public class AddLiveAppSnapshotConfigRequest extends Request {
         }
 
         /**
-         * TimeInterval.
+         * <p>The interval at which snapshots are captured. Unit: seconds. Valid values: <strong>5 to 3600</strong>.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5</p>
          */
         public Builder timeInterval(Integer timeInterval) {
             this.putQueryParameter("TimeInterval", timeInterval);

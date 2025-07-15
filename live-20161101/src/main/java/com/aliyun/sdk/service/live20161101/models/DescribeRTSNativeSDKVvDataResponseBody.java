@@ -1,31 +1,36 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRTSNativeSDKVvDataResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRTSNativeSDKVvDataResponseBody</p>
  */
 public class DescribeRTSNativeSDKVvDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("VvData")
-    private java.util.List < VvData> vvData;
+    @com.aliyun.core.annotation.NameInMap("VvData")
+    private java.util.List<VvData> vvData;
 
     private DescribeRTSNativeSDKVvDataResponseBody(Builder builder) {
         this.dataInterval = builder.dataInterval;
@@ -41,6 +46,10 @@ public class DescribeRTSNativeSDKVvDataResponseBody extends TeaModel {
 
     public static DescribeRTSNativeSDKVvDataResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -74,7 +83,7 @@ public class DescribeRTSNativeSDKVvDataResponseBody extends TeaModel {
     /**
      * @return vvData
      */
-    public java.util.List < VvData> getVvData() {
+    public java.util.List<VvData> getVvData() {
         return this.vvData;
     }
 
@@ -83,10 +92,24 @@ public class DescribeRTSNativeSDKVvDataResponseBody extends TeaModel {
         private String endTime; 
         private String requestId; 
         private String startTime; 
-        private java.util.List < VvData> vvData; 
+        private java.util.List<VvData> vvData; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeRTSNativeSDKVvDataResponseBody model) {
+            this.dataInterval = model.dataInterval;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.vvData = model.vvData;
+        } 
 
         /**
-         * DataInterval.
+         * <p>The time granularity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>300</p>
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -94,7 +117,10 @@ public class DescribeRTSNativeSDKVvDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range for which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-10T21:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -102,7 +128,10 @@ public class DescribeRTSNativeSDKVvDataResponseBody extends TeaModel {
         }
 
         /**
-         * Id
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +139,10 @@ public class DescribeRTSNativeSDKVvDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range for which the data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2021-12-10T20:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -118,9 +150,9 @@ public class DescribeRTSNativeSDKVvDataResponseBody extends TeaModel {
         }
 
         /**
-         * VvData.
+         * <p>The total number of playbacks and the number of successful playbacks at each interval.</p>
          */
-        public Builder vvData(java.util.List < VvData> vvData) {
+        public Builder vvData(java.util.List<VvData> vvData) {
             this.vvData = vvData;
             return this;
         }
@@ -131,14 +163,20 @@ public class DescribeRTSNativeSDKVvDataResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRTSNativeSDKVvDataResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRTSNativeSDKVvDataResponseBody</p>
+     */
     public static class VvData extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("VvSuccess")
+        @com.aliyun.core.annotation.NameInMap("VvSuccess")
         private String vvSuccess;
 
-        @NameInMap("VvTotal")
+        @com.aliyun.core.annotation.NameInMap("VvTotal")
         private String vvTotal;
 
         private VvData(Builder builder) {
@@ -181,8 +219,20 @@ public class DescribeRTSNativeSDKVvDataResponseBody extends TeaModel {
             private String vvSuccess; 
             private String vvTotal; 
 
+            private Builder() {
+            } 
+
+            private Builder(VvData model) {
+                this.timeStamp = model.timeStamp;
+                this.vvSuccess = model.vvSuccess;
+                this.vvTotal = model.vvTotal;
+            } 
+
             /**
-             * TimeStamp.
+             * <p>The timestamp of the returned data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2021-12-10T20:00:00Z</p>
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -190,7 +240,10 @@ public class DescribeRTSNativeSDKVvDataResponseBody extends TeaModel {
             }
 
             /**
-             * VvSuccess.
+             * <p>The number of successful playbacks within the period of time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>99</p>
              */
             public Builder vvSuccess(String vvSuccess) {
                 this.vvSuccess = vvSuccess;
@@ -198,7 +251,10 @@ public class DescribeRTSNativeSDKVvDataResponseBody extends TeaModel {
             }
 
             /**
-             * VvTotal.
+             * <p>The total number of playbacks within the period of time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder vvTotal(String vvTotal) {
                 this.vvTotal = vvTotal;

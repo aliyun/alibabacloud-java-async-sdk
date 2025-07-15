@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCasterScenesResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCasterScenesResponseBody</p>
  */
 public class DescribeCasterScenesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SceneList")
+    @com.aliyun.core.annotation.NameInMap("SceneList")
     private SceneList sceneList;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeCasterScenesResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
 
     public static DescribeCasterScenesResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,8 +70,20 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
         private SceneList sceneList; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCasterScenesResponseBody model) {
+            this.requestId = model.requestId;
+            this.sceneList = model.sceneList;
+            this.total = model.total;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The ID of the scene.</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,7 +91,7 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
         }
 
         /**
-         * SceneList.
+         * <p>The scenes.</p>
          */
         public Builder sceneList(SceneList sceneList) {
             this.sceneList = sceneList;
@@ -78,7 +99,10 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -91,9 +115,15 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCasterScenesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterScenesResponseBody</p>
+     */
     public static class ComponentIds extends TeaModel {
-        @NameInMap("componentId")
-        private java.util.List < String > componentId;
+        @com.aliyun.core.annotation.NameInMap("componentId")
+        private java.util.List<String> componentId;
 
         private ComponentIds(Builder builder) {
             this.componentId = builder.componentId;
@@ -110,17 +140,24 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
         /**
          * @return componentId
          */
-        public java.util.List < String > getComponentId() {
+        public java.util.List<String> getComponentId() {
             return this.componentId;
         }
 
         public static final class Builder {
-            private java.util.List < String > componentId; 
+            private java.util.List<String> componentId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComponentIds model) {
+                this.componentId = model.componentId;
+            } 
 
             /**
              * componentId.
              */
-            public Builder componentId(java.util.List < String > componentId) {
+            public Builder componentId(java.util.List<String> componentId) {
                 this.componentId = componentId;
                 return this;
             }
@@ -132,14 +169,20 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterScenesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterScenesResponseBody</p>
+     */
     public static class StreamInfo extends TeaModel {
-        @NameInMap("OutputStreamUrl")
+        @com.aliyun.core.annotation.NameInMap("OutputStreamUrl")
         private String outputStreamUrl;
 
-        @NameInMap("TranscodeConfig")
+        @com.aliyun.core.annotation.NameInMap("TranscodeConfig")
         private String transcodeConfig;
 
-        @NameInMap("VideoFormat")
+        @com.aliyun.core.annotation.NameInMap("VideoFormat")
         private String videoFormat;
 
         private StreamInfo(Builder builder) {
@@ -182,8 +225,20 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
             private String transcodeConfig; 
             private String videoFormat; 
 
+            private Builder() {
+            } 
+
+            private Builder(StreamInfo model) {
+                this.outputStreamUrl = model.outputStreamUrl;
+                this.transcodeConfig = model.transcodeConfig;
+                this.videoFormat = model.videoFormat;
+            } 
+
             /**
-             * OutputStreamUrl.
+             * <p>The streaming URL.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="http://live/caster/example.net">http://live/caster/example.net</a></p>
              */
             public Builder outputStreamUrl(String outputStreamUrl) {
                 this.outputStreamUrl = outputStreamUrl;
@@ -191,7 +246,16 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
             }
 
             /**
-             * TranscodeConfig.
+             * <p>The transcoding configuration. Valid values:</p>
+             * <ul>
+             * <li><strong>sd</strong>: standard definition</li>
+             * <li><strong>lld</strong>: low definition</li>
+             * <li><strong>lud</strong>: ultra-high definition</li>
+             * <li><strong>lhd</strong>: high definition</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>lld</p>
              */
             public Builder transcodeConfig(String transcodeConfig) {
                 this.transcodeConfig = transcodeConfig;
@@ -199,7 +263,15 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
             }
 
             /**
-             * VideoFormat.
+             * <p>The format. Valid values:</p>
+             * <ul>
+             * <li><strong>flv</strong></li>
+             * <li><strong>mp4</strong></li>
+             * <li><strong>m3u8</strong></li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>flv</p>
              */
             public Builder videoFormat(String videoFormat) {
                 this.videoFormat = videoFormat;
@@ -213,9 +285,15 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterScenesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterScenesResponseBody</p>
+     */
     public static class StreamInfos extends TeaModel {
-        @NameInMap("StreamInfo")
-        private java.util.List < StreamInfo> streamInfo;
+        @com.aliyun.core.annotation.NameInMap("StreamInfo")
+        private java.util.List<StreamInfo> streamInfo;
 
         private StreamInfos(Builder builder) {
             this.streamInfo = builder.streamInfo;
@@ -232,17 +310,24 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
         /**
          * @return streamInfo
          */
-        public java.util.List < StreamInfo> getStreamInfo() {
+        public java.util.List<StreamInfo> getStreamInfo() {
             return this.streamInfo;
         }
 
         public static final class Builder {
-            private java.util.List < StreamInfo> streamInfo; 
+            private java.util.List<StreamInfo> streamInfo; 
+
+            private Builder() {
+            } 
+
+            private Builder(StreamInfos model) {
+                this.streamInfo = model.streamInfo;
+            } 
 
             /**
              * StreamInfo.
              */
-            public Builder streamInfo(java.util.List < StreamInfo> streamInfo) {
+            public Builder streamInfo(java.util.List<StreamInfo> streamInfo) {
                 this.streamInfo = streamInfo;
                 return this;
             }
@@ -254,29 +339,35 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterScenesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterScenesResponseBody</p>
+     */
     public static class Scene extends TeaModel {
-        @NameInMap("ComponentIds")
+        @com.aliyun.core.annotation.NameInMap("ComponentIds")
         private ComponentIds componentIds;
 
-        @NameInMap("LayoutId")
+        @com.aliyun.core.annotation.NameInMap("LayoutId")
         private String layoutId;
 
-        @NameInMap("OutputType")
+        @com.aliyun.core.annotation.NameInMap("OutputType")
         private String outputType;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("StreamInfos")
+        @com.aliyun.core.annotation.NameInMap("StreamInfos")
         private StreamInfos streamInfos;
 
-        @NameInMap("StreamUrl")
+        @com.aliyun.core.annotation.NameInMap("StreamUrl")
         private String streamUrl;
 
         private Scene(Builder builder) {
@@ -364,8 +455,22 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
             private StreamInfos streamInfos; 
             private String streamUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(Scene model) {
+                this.componentIds = model.componentIds;
+                this.layoutId = model.layoutId;
+                this.outputType = model.outputType;
+                this.sceneId = model.sceneId;
+                this.sceneName = model.sceneName;
+                this.status = model.status;
+                this.streamInfos = model.streamInfos;
+                this.streamUrl = model.streamUrl;
+            } 
+
             /**
-             * ComponentIds.
+             * <p>The components.</p>
              */
             public Builder componentIds(ComponentIds componentIds) {
                 this.componentIds = componentIds;
@@ -373,7 +478,10 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
             }
 
             /**
-             * LayoutId.
+             * <p>The ID of the layout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>37cb2f8b-f152-4338-b928-6704f71d****</p>
              */
             public Builder layoutId(String layoutId) {
                 this.layoutId = layoutId;
@@ -381,7 +489,14 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
             }
 
             /**
-             * OutputType.
+             * <p>Indicates whether the output video is in PVW mode or PGM mode. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: in PVW mode.</li>
+             * <li><strong>1</strong>: in PGM mode.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder outputType(String outputType) {
                 this.outputType = outputType;
@@ -389,7 +504,10 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
             }
 
             /**
-             * SceneId.
+             * <p>The ID of the scene. You can use the ID as a request parameter in the API operation that is used to modify the audio configurations of the scene, query the audio configurations of the scene, start the scene, or stop the scene.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b5f8c837-ceeb-424f-b30b-68e94e86****</p>
              */
             public Builder sceneId(String sceneId) {
                 this.sceneId = sceneId;
@@ -397,7 +515,10 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
             }
 
             /**
-             * SceneName.
+             * <p>The name of the scene.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>scene1</p>
              */
             public Builder sceneName(String sceneName) {
                 this.sceneName = sceneName;
@@ -405,7 +526,14 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the scene. Valid values:</p>
+             * <ul>
+             * <li><strong>0</strong>: disabled</li>
+             * <li><strong>1</strong>: enabled</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -413,7 +541,7 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
             }
 
             /**
-             * StreamInfos.
+             * <p>The information about the stream.</p>
              */
             public Builder streamInfos(StreamInfos streamInfos) {
                 this.streamInfos = streamInfos;
@@ -421,7 +549,10 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
             }
 
             /**
-             * StreamUrl.
+             * <p>The URL of the output stream.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rtmp://developer.aliyundoc.com/caster/4a82a3d1b7f0462ea37348366201****?auth_key=1608953344-0-0-ac8c628078541d7055a170ec59a5****</p>
              */
             public Builder streamUrl(String streamUrl) {
                 this.streamUrl = streamUrl;
@@ -435,9 +566,15 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterScenesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterScenesResponseBody</p>
+     */
     public static class SceneList extends TeaModel {
-        @NameInMap("Scene")
-        private java.util.List < Scene> scene;
+        @com.aliyun.core.annotation.NameInMap("Scene")
+        private java.util.List<Scene> scene;
 
         private SceneList(Builder builder) {
             this.scene = builder.scene;
@@ -454,17 +591,24 @@ public class DescribeCasterScenesResponseBody extends TeaModel {
         /**
          * @return scene
          */
-        public java.util.List < Scene> getScene() {
+        public java.util.List<Scene> getScene() {
             return this.scene;
         }
 
         public static final class Builder {
-            private java.util.List < Scene> scene; 
+            private java.util.List<Scene> scene; 
+
+            private Builder() {
+            } 
+
+            private Builder(SceneList model) {
+                this.scene = model.scene;
+            } 
 
             /**
              * Scene.
              */
-            public Builder scene(java.util.List < Scene> scene) {
+            public Builder scene(java.util.List<Scene> scene) {
                 this.scene = scene;
                 return this;
             }

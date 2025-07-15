@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeLiveTopDomainsByFlowResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeLiveTopDomainsByFlowResponseBody</p>
  */
 public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
-    @NameInMap("DomainCount")
+    @com.aliyun.core.annotation.NameInMap("DomainCount")
     private Long domainCount;
 
-    @NameInMap("DomainOnlineCount")
+    @com.aliyun.core.annotation.NameInMap("DomainOnlineCount")
     private Long domainOnlineCount;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TopDomains")
+    @com.aliyun.core.annotation.NameInMap("TopDomains")
     private TopDomains topDomains;
 
     private DescribeLiveTopDomainsByFlowResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
 
     public static DescribeLiveTopDomainsByFlowResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
         private String startTime; 
         private TopDomains topDomains; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeLiveTopDomainsByFlowResponseBody model) {
+            this.domainCount = model.domainCount;
+            this.domainOnlineCount = model.domainOnlineCount;
+            this.endTime = model.endTime;
+            this.requestId = model.requestId;
+            this.startTime = model.startTime;
+            this.topDomains = model.topDomains;
+        } 
+
         /**
-         * DomainCount.
+         * <p>The total number of domain names in your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder domainCount(Long domainCount) {
             this.domainCount = domainCount;
@@ -106,7 +130,10 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * DomainOnlineCount.
+         * <p>The total number of domain names that are in the Enabled state in your account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder domainOnlineCount(Long domainOnlineCount) {
             this.domainOnlineCount = domainOnlineCount;
@@ -114,7 +141,10 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * <p>The end of the time range for which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-20T16:00:00Z</p>
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +152,10 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>33834C3E-388E-5FFE-A8AE-63575035C064</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +163,10 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * <p>The beginning of the time range for which data was queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2018-03-17T16:00:00Z</p>
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -138,7 +174,7 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
         }
 
         /**
-         * TopDomains.
+         * <p>The top domain names ranked by traffic.</p>
          */
         public Builder topDomains(TopDomains topDomains) {
             this.topDomains = topDomains;
@@ -151,26 +187,32 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeLiveTopDomainsByFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveTopDomainsByFlowResponseBody</p>
+     */
     public static class TopDomain extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("MaxBps")
+        @com.aliyun.core.annotation.NameInMap("MaxBps")
         private Long maxBps;
 
-        @NameInMap("MaxBpsTime")
+        @com.aliyun.core.annotation.NameInMap("MaxBpsTime")
         private String maxBpsTime;
 
-        @NameInMap("Rank")
+        @com.aliyun.core.annotation.NameInMap("Rank")
         private Long rank;
 
-        @NameInMap("TotalAccess")
+        @com.aliyun.core.annotation.NameInMap("TotalAccess")
         private Long totalAccess;
 
-        @NameInMap("TotalTraffic")
+        @com.aliyun.core.annotation.NameInMap("TotalTraffic")
         private String totalTraffic;
 
-        @NameInMap("TrafficPercent")
+        @com.aliyun.core.annotation.NameInMap("TrafficPercent")
         private String trafficPercent;
 
         private TopDomain(Builder builder) {
@@ -249,8 +291,24 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
             private String totalTraffic; 
             private String trafficPercent; 
 
+            private Builder() {
+            } 
+
+            private Builder(TopDomain model) {
+                this.domainName = model.domainName;
+                this.maxBps = model.maxBps;
+                this.maxBpsTime = model.maxBpsTime;
+                this.rank = model.rank;
+                this.totalAccess = model.totalAccess;
+                this.totalTraffic = model.totalTraffic;
+                this.trafficPercent = model.trafficPercent;
+            } 
+
             /**
-             * DomainName.
+             * <p>The domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>example.com</p>
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -258,7 +316,10 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * MaxBps.
+             * <p>The peak bandwidth of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>22139626</p>
              */
             public Builder maxBps(Long maxBps) {
                 this.maxBps = maxBps;
@@ -266,7 +327,10 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * MaxBpsTime.
+             * <p>The time when the bandwidth reached the peak value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1457111400</p>
              */
             public Builder maxBpsTime(String maxBpsTime) {
                 this.maxBpsTime = maxBpsTime;
@@ -274,7 +338,10 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Rank.
+             * <p>The ranking of the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder rank(Long rank) {
                 this.rank = rank;
@@ -282,7 +349,10 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * TotalAccess.
+             * <p>The number of visits to the domain name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>107784230</p>
              */
             public Builder totalAccess(Long totalAccess) {
                 this.totalAccess = totalAccess;
@@ -290,7 +360,10 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * TotalTraffic.
+             * <p>The total traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2043859876683.9001</p>
              */
             public Builder totalTraffic(String totalTraffic) {
                 this.totalTraffic = totalTraffic;
@@ -298,7 +371,10 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficPercent.
+             * <p>The traffic share of the domain name relative to the total traffic.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>30.64191989360235</p>
              */
             public Builder trafficPercent(String trafficPercent) {
                 this.trafficPercent = trafficPercent;
@@ -312,9 +388,15 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeLiveTopDomainsByFlowResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeLiveTopDomainsByFlowResponseBody</p>
+     */
     public static class TopDomains extends TeaModel {
-        @NameInMap("TopDomain")
-        private java.util.List < TopDomain> topDomain;
+        @com.aliyun.core.annotation.NameInMap("TopDomain")
+        private java.util.List<TopDomain> topDomain;
 
         private TopDomains(Builder builder) {
             this.topDomain = builder.topDomain;
@@ -331,17 +413,24 @@ public class DescribeLiveTopDomainsByFlowResponseBody extends TeaModel {
         /**
          * @return topDomain
          */
-        public java.util.List < TopDomain> getTopDomain() {
+        public java.util.List<TopDomain> getTopDomain() {
             return this.topDomain;
         }
 
         public static final class Builder {
-            private java.util.List < TopDomain> topDomain; 
+            private java.util.List<TopDomain> topDomain; 
+
+            private Builder() {
+            } 
+
+            private Builder(TopDomains model) {
+                this.topDomain = model.topDomain;
+            } 
 
             /**
              * TopDomain.
              */
-            public Builder topDomain(java.util.List < TopDomain> topDomain) {
+            public Builder topDomain(java.util.List<TopDomain> topDomain) {
                 this.topDomain = topDomain;
                 return this;
             }

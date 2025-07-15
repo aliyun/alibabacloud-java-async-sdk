@@ -1,68 +1,73 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link AddTrancodeSEIRequest} extends {@link RequestModel}
  *
  * <p>AddTrancodeSEIRequest</p>
  */
 public class AddTrancodeSEIRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("Delay")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Delay")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer delay;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Pattern")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Pattern")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pattern;
 
-    @Query
-    @NameInMap("Repeat")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Repeat")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer repeat;
 
-    @Query
-    @NameInMap("StreamName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String streamName;
 
-    @Query
-    @NameInMap("Text")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Text")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String text;
 
     private AddTrancodeSEIRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.appName = builder.appName;
         this.delay = builder.delay;
         this.domainName = builder.domainName;
         this.ownerId = builder.ownerId;
         this.pattern = builder.pattern;
+        this.regionId = builder.regionId;
         this.repeat = builder.repeat;
         this.streamName = builder.streamName;
         this.text = builder.text;
@@ -76,16 +81,9 @@ public class AddTrancodeSEIRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -124,6 +122,13 @@ public class AddTrancodeSEIRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return repeat
      */
     public Integer getRepeat() {
@@ -145,12 +150,12 @@ public class AddTrancodeSEIRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AddTrancodeSEIRequest, Builder> {
-        private String regionId; 
         private String appName; 
         private Integer delay; 
         private String domainName; 
         private Long ownerId; 
         private String pattern; 
+        private String regionId; 
         private Integer repeat; 
         private String streamName; 
         private String text; 
@@ -161,28 +166,23 @@ public class AddTrancodeSEIRequest extends Request {
 
         private Builder(AddTrancodeSEIRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.appName = request.appName;
             this.delay = request.delay;
             this.domainName = request.domainName;
             this.ownerId = request.ownerId;
             this.pattern = request.pattern;
+            this.regionId = request.regionId;
             this.repeat = request.repeat;
             this.streamName = request.streamName;
             this.text = request.text;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * AppName.
+         * <p>The name of the application to which the live stream belongs. You can view the application name on the <a href="https://help.aliyun.com/document_detail/197397.html">Stream Management</a> page of the ApsaraVideo Live console.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveApp****</p>
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -191,7 +191,11 @@ public class AddTrancodeSEIRequest extends Request {
         }
 
         /**
-         * Delay.
+         * <p>The time period after which the SEI is inserted after the request is received. Unit: milliseconds.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder delay(Integer delay) {
             this.putQueryParameter("Delay", delay);
@@ -200,7 +204,11 @@ public class AddTrancodeSEIRequest extends Request {
         }
 
         /**
-         * DomainName.
+         * <p>The streaming domain.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.com</p>
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -218,7 +226,15 @@ public class AddTrancodeSEIRequest extends Request {
         }
 
         /**
-         * Pattern.
+         * <p>Specifies whether to append the SEI to each keyframe or frame. Valid values:</p>
+         * <ul>
+         * <li><strong>keyframe</strong></li>
+         * <li><strong>frame</strong></li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>keyframe</p>
          */
         public Builder pattern(String pattern) {
             this.putQueryParameter("Pattern", pattern);
@@ -227,7 +243,20 @@ public class AddTrancodeSEIRequest extends Request {
         }
 
         /**
-         * Repeat.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The number of times that the SEI is repeatedly inserted. A value of -1 specifies infinite times.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-1</p>
          */
         public Builder repeat(Integer repeat) {
             this.putQueryParameter("Repeat", repeat);
@@ -236,7 +265,14 @@ public class AddTrancodeSEIRequest extends Request {
         }
 
         /**
-         * StreamName.
+         * <p>The name of the live stream.</p>
+         * <blockquote>
+         * <p> The value of this parameter must be the name of the source stream. This way, the SEI is inserted to all the transcoded streams.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveStream****</p>
          */
         public Builder streamName(String streamName) {
             this.putQueryParameter("StreamName", streamName);
@@ -245,7 +281,11 @@ public class AddTrancodeSEIRequest extends Request {
         }
 
         /**
-         * Text.
+         * <p>The SEI text. It can be up to 4,000 bytes in length.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveSei****</p>
          */
         public Builder text(String text) {
             this.putQueryParameter("Text", text);

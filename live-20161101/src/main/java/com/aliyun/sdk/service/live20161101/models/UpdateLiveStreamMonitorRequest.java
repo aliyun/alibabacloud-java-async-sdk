@@ -1,64 +1,85 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link UpdateLiveStreamMonitorRequest} extends {@link RequestModel}
  *
  * <p>UpdateLiveStreamMonitorRequest</p>
  */
 public class UpdateLiveStreamMonitorRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
-
-    @Query
-    @NameInMap("App")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("App")
     private String app;
 
-    @Query
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallbackUrl")
+    private String callbackUrl;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DingTalkWebHookUrl")
+    private String dingTalkWebHookUrl;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Query
-    @NameInMap("InputList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputList;
 
-    @Query
-    @NameInMap("MonitorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorConfig")
+    private String monitorConfig;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String monitorId;
 
-    @Query
-    @NameInMap("MonitorName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorName")
     private String monitorName;
 
-    @Query
-    @NameInMap("OutputTemplate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputTemplate")
     private String outputTemplate;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Stream")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Stream")
     private String stream;
 
     private UpdateLiveStreamMonitorRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.app = builder.app;
+        this.callbackUrl = builder.callbackUrl;
+        this.dingTalkWebHookUrl = builder.dingTalkWebHookUrl;
         this.domain = builder.domain;
         this.inputList = builder.inputList;
+        this.monitorConfig = builder.monitorConfig;
         this.monitorId = builder.monitorId;
         this.monitorName = builder.monitorName;
         this.outputTemplate = builder.outputTemplate;
         this.ownerId = builder.ownerId;
+        this.regionId = builder.regionId;
         this.stream = builder.stream;
     }
 
@@ -70,16 +91,9 @@ public class UpdateLiveStreamMonitorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -87,6 +101,20 @@ public class UpdateLiveStreamMonitorRequest extends Request {
      */
     public String getApp() {
         return this.app;
+    }
+
+    /**
+     * @return callbackUrl
+     */
+    public String getCallbackUrl() {
+        return this.callbackUrl;
+    }
+
+    /**
+     * @return dingTalkWebHookUrl
+     */
+    public String getDingTalkWebHookUrl() {
+        return this.dingTalkWebHookUrl;
     }
 
     /**
@@ -101,6 +129,13 @@ public class UpdateLiveStreamMonitorRequest extends Request {
      */
     public String getInputList() {
         return this.inputList;
+    }
+
+    /**
+     * @return monitorConfig
+     */
+    public String getMonitorConfig() {
+        return this.monitorConfig;
     }
 
     /**
@@ -132,6 +167,13 @@ public class UpdateLiveStreamMonitorRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return stream
      */
     public String getStream() {
@@ -139,14 +181,17 @@ public class UpdateLiveStreamMonitorRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<UpdateLiveStreamMonitorRequest, Builder> {
-        private String regionId; 
         private String app; 
+        private String callbackUrl; 
+        private String dingTalkWebHookUrl; 
         private String domain; 
         private String inputList; 
+        private String monitorConfig; 
         private String monitorId; 
         private String monitorName; 
         private String outputTemplate; 
         private Long ownerId; 
+        private String regionId; 
         private String stream; 
 
         private Builder() {
@@ -155,28 +200,25 @@ public class UpdateLiveStreamMonitorRequest extends Request {
 
         private Builder(UpdateLiveStreamMonitorRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.app = request.app;
+            this.callbackUrl = request.callbackUrl;
+            this.dingTalkWebHookUrl = request.dingTalkWebHookUrl;
             this.domain = request.domain;
             this.inputList = request.inputList;
+            this.monitorConfig = request.monitorConfig;
             this.monitorId = request.monitorId;
             this.monitorName = request.monitorName;
             this.outputTemplate = request.outputTemplate;
             this.ownerId = request.ownerId;
+            this.regionId = request.regionId;
             this.stream = request.stream;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * App.
+         * <p>The name of the application to which the output stream of the monitoring session belongs. You can specify a name. If you do not specify a name, the system uses <strong>monitor</strong> as the name of the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>monitor****</p>
          */
         public Builder app(String app) {
             this.putQueryParameter("App", app);
@@ -185,7 +227,37 @@ public class UpdateLiveStreamMonitorRequest extends Request {
         }
 
         /**
-         * Domain.
+         * <p>The callback URL. Supported formats include HTTP and HTTPS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="http://guide.aliyundoc.com/notify">http://guide.aliyundoc.com/notify</a></p>
+         */
+        public Builder callbackUrl(String callbackUrl) {
+            this.putQueryParameter("CallbackUrl", callbackUrl);
+            this.callbackUrl = callbackUrl;
+            return this;
+        }
+
+        /**
+         * <p>The URL of the DingTalk chatbot. Specify a DingTalk chatbot that you have configured, and you can receive live monitoring alerts from the chatbot. For more information, see <a href="https://open.dingtalk.com/document/robots/custom-robot-access">Configure a custom chatbot</a>.</p>
+         * <blockquote>
+         * <p> Specify &quot;Alert&quot; as the custom keyword of the DingTalk chatbot. Otherwise, you cannot receive messages.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=7a7d404056eee1f2fd944ace9bcfc361dc6448583e1d3d3baa">https://oapi.dingtalk.com/robot/send?access_token=7a7d404056eee1f2fd944ace9bcfc361dc6448583e1d3d3baa</a>****</p>
+         */
+        public Builder dingTalkWebHookUrl(String dingTalkWebHookUrl) {
+            this.putQueryParameter("DingTalkWebHookUrl", dingTalkWebHookUrl);
+            this.dingTalkWebHookUrl = dingTalkWebHookUrl;
+            return this;
+        }
+
+        /**
+         * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo.aliyundoc.com</p>
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -194,7 +266,11 @@ public class UpdateLiveStreamMonitorRequest extends Request {
         }
 
         /**
-         * InputList.
+         * <p>The list of input streams to monitor. For more information, see the following <strong>InputConfig</strong> table.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>InputConfig</p>
          */
         public Builder inputList(String inputList) {
             this.putQueryParameter("InputList", inputList);
@@ -203,7 +279,26 @@ public class UpdateLiveStreamMonitorRequest extends Request {
         }
 
         /**
-         * MonitorId.
+         * <p>The monitoring alert thresholds. The value is a JSON string. For more information, see the following MonitorConfig table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;{&quot;fpsLowThres&quot;: 0.6,&quot;brLowThres&quot;: 1.1,&quot;eofDurationThresSec&quot;: 10}&quot;</p>
+         */
+        public Builder monitorConfig(String monitorConfig) {
+            this.putQueryParameter("MonitorConfig", monitorConfig);
+            this.monitorConfig = monitorConfig;
+            return this;
+        }
+
+        /**
+         * <p>The ID of the monitoring session.</p>
+         * <blockquote>
+         * <p> You can obtain the monitoring session ID from the response of the <a href="https://help.aliyun.com/document_detail/2848129.html">CreateLiveStreamMonitor</a> operation.</p>
+         * </blockquote>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>445409ec-7eaa-461d-8f29-4bec2eb9****</p>
          */
         public Builder monitorId(String monitorId) {
             this.putQueryParameter("MonitorId", monitorId);
@@ -212,7 +307,10 @@ public class UpdateLiveStreamMonitorRequest extends Request {
         }
 
         /**
-         * MonitorName.
+         * <p>The name of the monitoring session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>liveMonitor****</p>
          */
         public Builder monitorName(String monitorName) {
             this.putQueryParameter("MonitorName", monitorName);
@@ -221,7 +319,16 @@ public class UpdateLiveStreamMonitorRequest extends Request {
         }
 
         /**
-         * OutputTemplate.
+         * <p>The output template of the monitoring session. Valid values:</p>
+         * <ul>
+         * <li><strong>lp_ld</strong>: low definition</li>
+         * <li><strong>lp_sd</strong>: standard definition</li>
+         * <li><strong>lp_hd</strong>: high definition</li>
+         * <li><strong>lp_ud</strong>: ultra-high definition</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>lp_ud</p>
          */
         public Builder outputTemplate(String outputTemplate) {
             this.putQueryParameter("OutputTemplate", outputTemplate);
@@ -239,7 +346,19 @@ public class UpdateLiveStreamMonitorRequest extends Request {
         }
 
         /**
-         * Stream.
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The name of the output stream of the monitoring session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>monitorStream****</p>
          */
         public Builder stream(String stream) {
             this.putQueryParameter("Stream", stream);

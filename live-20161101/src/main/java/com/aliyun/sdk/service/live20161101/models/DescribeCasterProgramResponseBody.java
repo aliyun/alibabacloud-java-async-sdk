@@ -1,33 +1,38 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCasterProgramResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCasterProgramResponseBody</p>
  */
 public class DescribeCasterProgramResponseBody extends TeaModel {
-    @NameInMap("CasterId")
+    @com.aliyun.core.annotation.NameInMap("CasterId")
     private String casterId;
 
-    @NameInMap("Episodes")
+    @com.aliyun.core.annotation.NameInMap("Episodes")
     private Episodes episodes;
 
-    @NameInMap("ProgramEffect")
+    @com.aliyun.core.annotation.NameInMap("ProgramEffect")
     private Integer programEffect;
 
-    @NameInMap("ProgramName")
+    @com.aliyun.core.annotation.NameInMap("ProgramName")
     private String programName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeCasterProgramResponseBody(Builder builder) {
@@ -45,6 +50,10 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
 
     public static DescribeCasterProgramResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -97,8 +106,23 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
         private String requestId; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCasterProgramResponseBody model) {
+            this.casterId = model.casterId;
+            this.episodes = model.episodes;
+            this.programEffect = model.programEffect;
+            this.programName = model.programName;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
-         * CasterId.
+         * <p>The ID of the production studio.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LIVEPRODUCER_POST-cn-0pp1czt****</p>
          */
         public Builder casterId(String casterId) {
             this.casterId = casterId;
@@ -106,7 +130,7 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
         }
 
         /**
-         * Episodes.
+         * <p>The list of the episodes.</p>
          */
         public Builder episodes(Episodes episodes) {
             this.episodes = episodes;
@@ -114,7 +138,14 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
         }
 
         /**
-         * ProgramEffect.
+         * <p>Indicates whether carousel playback is enabled.</p>
+         * <ul>
+         * <li><strong>0</strong>: Carousel playback is disabled.</li>
+         * <li><strong>1</strong>: Carousel playback is enabled.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder programEffect(Integer programEffect) {
             this.programEffect = programEffect;
@@ -122,7 +153,10 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
         }
 
         /**
-         * ProgramName.
+         * <p>The name of the episode list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>programs_name</p>
          */
         public Builder programName(String programName) {
             this.programName = programName;
@@ -130,7 +164,10 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-F203-4EC5-8E43-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +175,10 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -151,9 +191,15 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCasterProgramResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterProgramResponseBody</p>
+     */
     public static class ComponentIds extends TeaModel {
-        @NameInMap("ComponentId")
-        private java.util.List < String > componentId;
+        @com.aliyun.core.annotation.NameInMap("ComponentId")
+        private java.util.List<String> componentId;
 
         private ComponentIds(Builder builder) {
             this.componentId = builder.componentId;
@@ -170,17 +216,24 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
         /**
          * @return componentId
          */
-        public java.util.List < String > getComponentId() {
+        public java.util.List<String> getComponentId() {
             return this.componentId;
         }
 
         public static final class Builder {
-            private java.util.List < String > componentId; 
+            private java.util.List<String> componentId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComponentIds model) {
+                this.componentId = model.componentId;
+            } 
 
             /**
              * ComponentId.
              */
-            public Builder componentId(java.util.List < String > componentId) {
+            public Builder componentId(java.util.List<String> componentId) {
                 this.componentId = componentId;
                 return this;
             }
@@ -192,32 +245,38 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterProgramResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterProgramResponseBody</p>
+     */
     public static class Episode extends TeaModel {
-        @NameInMap("ComponentIds")
+        @com.aliyun.core.annotation.NameInMap("ComponentIds")
         private ComponentIds componentIds;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EpisodeId")
+        @com.aliyun.core.annotation.NameInMap("EpisodeId")
         private String episodeId;
 
-        @NameInMap("EpisodeName")
+        @com.aliyun.core.annotation.NameInMap("EpisodeName")
         private String episodeName;
 
-        @NameInMap("EpisodeType")
+        @com.aliyun.core.annotation.NameInMap("EpisodeType")
         private String episodeType;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SwitchType")
+        @com.aliyun.core.annotation.NameInMap("SwitchType")
         private String switchType;
 
         private Episode(Builder builder) {
@@ -314,8 +373,23 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
             private Integer status; 
             private String switchType; 
 
+            private Builder() {
+            } 
+
+            private Builder(Episode model) {
+                this.componentIds = model.componentIds;
+                this.endTime = model.endTime;
+                this.episodeId = model.episodeId;
+                this.episodeName = model.episodeName;
+                this.episodeType = model.episodeType;
+                this.resourceId = model.resourceId;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.switchType = model.switchType;
+            } 
+
             /**
-             * ComponentIds.
+             * <p>The components.</p>
              */
             public Builder componentIds(ComponentIds componentIds) {
                 this.componentIds = componentIds;
@@ -323,7 +397,10 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * <p>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-06-29T10:02:00Z</p>
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -331,7 +408,10 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
             }
 
             /**
-             * EpisodeId.
+             * <p>The ID of the episode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1872639A-F203-4EC5-8E43-CB92E68F****</p>
              */
             public Builder episodeId(String episodeId) {
                 this.episodeId = episodeId;
@@ -339,7 +419,10 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
             }
 
             /**
-             * EpisodeName.
+             * <p>The name of the episode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>program_name_1</p>
              */
             public Builder episodeName(String episodeName) {
                 this.episodeName = episodeName;
@@ -347,7 +430,14 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
             }
 
             /**
-             * EpisodeType.
+             * <p>The type of the episode. Valid values:</p>
+             * <ul>
+             * <li><strong>Resource</strong>: a video resource</li>
+             * <li><strong>Component</strong>: a component</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Resource</p>
              */
             public Builder episodeType(String episodeType) {
                 this.episodeType = episodeType;
@@ -355,7 +445,10 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * <p>The ID of the video resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1872639A-F203-4EC5-8E43-CB92E837****</p>
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -363,7 +456,10 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * <p>The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2016-06-29T09:00:00Z</p>
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -371,7 +467,10 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the episode.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0</p>
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -379,7 +478,14 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
             }
 
             /**
-             * SwitchType.
+             * <p>The policy for switching episodes. Valid values:</p>
+             * <ul>
+             * <li><strong>TimeFirst</strong>: The episode starts when the previous episode ends and ends when the next episode starts. If no next episode exists, the episode keeps repeating until a new episode is added or the production studio stops. This value is required for live video resources.</li>
+             * <li><strong>ContentFirst</strong>: The episode starts and ends as scheduled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>TimeFirst</p>
              */
             public Builder switchType(String switchType) {
                 this.switchType = switchType;
@@ -393,9 +499,15 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterProgramResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterProgramResponseBody</p>
+     */
     public static class Episodes extends TeaModel {
-        @NameInMap("Episode")
-        private java.util.List < Episode> episode;
+        @com.aliyun.core.annotation.NameInMap("Episode")
+        private java.util.List<Episode> episode;
 
         private Episodes(Builder builder) {
             this.episode = builder.episode;
@@ -412,17 +524,24 @@ public class DescribeCasterProgramResponseBody extends TeaModel {
         /**
          * @return episode
          */
-        public java.util.List < Episode> getEpisode() {
+        public java.util.List<Episode> getEpisode() {
             return this.episode;
         }
 
         public static final class Builder {
-            private java.util.List < Episode> episode; 
+            private java.util.List<Episode> episode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Episodes model) {
+                this.episode = model.episode;
+            } 
 
             /**
              * Episode.
              */
-            public Builder episode(java.util.List < Episode> episode) {
+            public Builder episode(java.util.List<Episode> episode) {
                 this.episode = episode;
                 return this;
             }

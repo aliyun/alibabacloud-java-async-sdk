@@ -1,21 +1,26 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetMessageAppResponseBody} extends {@link TeaModel}
  *
  * <p>GetMessageAppResponseBody</p>
  */
 public class GetMessageAppResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private GetMessageAppResponseBody(Builder builder) {
@@ -29,6 +34,10 @@ public class GetMessageAppResponseBody extends TeaModel {
 
     public static GetMessageAppResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -49,8 +58,19 @@ public class GetMessageAppResponseBody extends TeaModel {
         private String requestId; 
         private Result result; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetMessageAppResponseBody model) {
+            this.requestId = model.requestId;
+            this.result = model.result;
+        } 
+
         /**
-         * Id of the request
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16A96B9A-****-CB92E68F4CD8</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +78,7 @@ public class GetMessageAppResponseBody extends TeaModel {
         }
 
         /**
-         * Result.
+         * <p>The returned result.</p>
          */
         public Builder result(Result result) {
             this.result = result;
@@ -71,23 +91,29 @@ public class GetMessageAppResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetMessageAppResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetMessageAppResponseBody</p>
+     */
     public static class Result extends TeaModel {
-        @NameInMap("AppConfig")
-        private java.util.Map < String, String > appConfig;
+        @com.aliyun.core.annotation.NameInMap("AppConfig")
+        private java.util.Map<String, String> appConfig;
 
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Extension")
-        private java.util.Map < String, String > extension;
+        @com.aliyun.core.annotation.NameInMap("Extension")
+        private java.util.Map<String, String> extension;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Result(Builder builder) {
@@ -110,7 +136,7 @@ public class GetMessageAppResponseBody extends TeaModel {
         /**
          * @return appConfig
          */
-        public java.util.Map < String, String > getAppConfig() {
+        public java.util.Map<String, String> getAppConfig() {
             return this.appConfig;
         }
 
@@ -138,7 +164,7 @@ public class GetMessageAppResponseBody extends TeaModel {
         /**
          * @return extension
          */
-        public java.util.Map < String, String > getExtension() {
+        public java.util.Map<String, String> getExtension() {
             return this.extension;
         }
 
@@ -150,23 +176,38 @@ public class GetMessageAppResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.Map < String, String > appConfig; 
+            private java.util.Map<String, String> appConfig; 
             private String appId; 
             private String appName; 
             private Long createTime; 
-            private java.util.Map < String, String > extension; 
+            private java.util.Map<String, String> extension; 
             private Integer status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.appConfig = model.appConfig;
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.createTime = model.createTime;
+                this.extension = model.extension;
+                this.status = model.status;
+            } 
+
             /**
-             * AppConfig.
+             * <p>The configurations of the application.</p>
              */
-            public Builder appConfig(java.util.Map < String, String > appConfig) {
+            public Builder appConfig(java.util.Map<String, String> appConfig) {
                 this.appConfig = appConfig;
                 return this;
             }
 
             /**
-             * 应用ID。
+             * <p>The ID of the interactive messaging application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VKL3***</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -174,7 +215,10 @@ public class GetMessageAppResponseBody extends TeaModel {
             }
 
             /**
-             * 应用名称。长度2~16位。
+             * <p>The name of the interactive messaging application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>testApp</p>
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -182,7 +226,10 @@ public class GetMessageAppResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the interactive messaging application was created. The time is displayed in UTC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>502280113</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -190,15 +237,18 @@ public class GetMessageAppResponseBody extends TeaModel {
             }
 
             /**
-             * Extension.
+             * <p>The extended field.</p>
              */
-            public Builder extension(java.util.Map < String, String > extension) {
+            public Builder extension(java.util.Map<String, String> extension) {
                 this.extension = extension;
                 return this;
             }
 
             /**
-             * Status.
+             * <p>The status of the interactive message application. A value of 1 indicates that the application is normal.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder status(Integer status) {
                 this.status = status;

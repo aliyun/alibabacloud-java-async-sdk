@@ -1,24 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.live20161101.models;
 
-import com.aliyun.core.annotation.*;
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeCasterLayoutsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeCasterLayoutsResponseBody</p>
  */
 public class DescribeCasterLayoutsResponseBody extends TeaModel {
-    @NameInMap("Layouts")
+    @com.aliyun.core.annotation.NameInMap("Layouts")
     private Layouts layouts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private DescribeCasterLayoutsResponseBody(Builder builder) {
@@ -33,6 +38,10 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
 
     public static DescribeCasterLayoutsResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -61,8 +70,17 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         private String requestId; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeCasterLayoutsResponseBody model) {
+            this.layouts = model.layouts;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
-         * Layouts.
+         * <p>The layouts.</p>
          */
         public Builder layouts(Layouts layouts) {
             this.layouts = layouts;
@@ -70,7 +88,14 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The normalized value of the width of the video layer image.</p>
+         * <ul>
+         * <li>If the FillMode parameter of the video layer is set to none, the height of the video image is scaled based on this parameter. The default value is <strong>0</strong>, which indicates that the video image is displayed in the original size.</li>
+         * <li>If the FillMode parameter of the video layer is set to fit, the value of the parameter is greater than <strong>0</strong>.</li>
+         * </ul>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +103,10 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -91,14 +119,20 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeCasterLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterLayoutsResponseBody</p>
+     */
     public static class AudioLayer extends TeaModel {
-        @NameInMap("FixedDelayDuration")
+        @com.aliyun.core.annotation.NameInMap("FixedDelayDuration")
         private Integer fixedDelayDuration;
 
-        @NameInMap("ValidChannel")
+        @com.aliyun.core.annotation.NameInMap("ValidChannel")
         private String validChannel;
 
-        @NameInMap("VolumeRate")
+        @com.aliyun.core.annotation.NameInMap("VolumeRate")
         private Float volumeRate;
 
         private AudioLayer(Builder builder) {
@@ -141,8 +175,21 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             private String validChannel; 
             private Float volumeRate; 
 
+            private Builder() {
+            } 
+
+            private Builder(AudioLayer model) {
+                this.fixedDelayDuration = model.fixedDelayDuration;
+                this.validChannel = model.validChannel;
+                this.volumeRate = model.volumeRate;
+            } 
+
             /**
-             * FixedDelayDuration.
+             * <p>The fixed delay of the audio layer. This parameter is used to synchronize the audio with subtitles.</p>
+             * <p>Unit: milliseconds. Default value: <strong>0</strong>. Valid values: <strong>0 to 5000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder fixedDelayDuration(Integer fixedDelayDuration) {
                 this.fixedDelayDuration = fixedDelayDuration;
@@ -150,7 +197,15 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * ValidChannel.
+             * <p>The sound channels that are used for volume input in the audio layer. Valid values:</p>
+             * <ul>
+             * <li><strong>leftChannel</strong>: the left channel</li>
+             * <li><strong>rightChannel</strong>: the right channel</li>
+             * <li><strong>all</strong> (default): both the left and right channels</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>all</p>
              */
             public Builder validChannel(String validChannel) {
                 this.validChannel = validChannel;
@@ -158,7 +213,13 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * VolumeRate.
+             * <p>The normalized value of the height of the audio layer. The width of the audio layer is proportionally scaled based on this parameter.</p>
+             * <blockquote>
+             * <p> The default value is <strong>0</strong>, which indicates that the audio layer is not scaled.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder volumeRate(Float volumeRate) {
                 this.volumeRate = volumeRate;
@@ -172,9 +233,15 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterLayoutsResponseBody</p>
+     */
     public static class AudioLayers extends TeaModel {
-        @NameInMap("AudioLayer")
-        private java.util.List < AudioLayer> audioLayer;
+        @com.aliyun.core.annotation.NameInMap("AudioLayer")
+        private java.util.List<AudioLayer> audioLayer;
 
         private AudioLayers(Builder builder) {
             this.audioLayer = builder.audioLayer;
@@ -191,17 +258,24 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         /**
          * @return audioLayer
          */
-        public java.util.List < AudioLayer> getAudioLayer() {
+        public java.util.List<AudioLayer> getAudioLayer() {
             return this.audioLayer;
         }
 
         public static final class Builder {
-            private java.util.List < AudioLayer> audioLayer; 
+            private java.util.List<AudioLayer> audioLayer; 
+
+            private Builder() {
+            } 
+
+            private Builder(AudioLayers model) {
+                this.audioLayer = model.audioLayer;
+            } 
 
             /**
              * AudioLayer.
              */
-            public Builder audioLayer(java.util.List < AudioLayer> audioLayer) {
+            public Builder audioLayer(java.util.List<AudioLayer> audioLayer) {
                 this.audioLayer = audioLayer;
                 return this;
             }
@@ -213,9 +287,15 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterLayoutsResponseBody</p>
+     */
     public static class BlendList extends TeaModel {
-        @NameInMap("LocationId")
-        private java.util.List < String > locationId;
+        @com.aliyun.core.annotation.NameInMap("LocationId")
+        private java.util.List<String> locationId;
 
         private BlendList(Builder builder) {
             this.locationId = builder.locationId;
@@ -232,17 +312,24 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         /**
          * @return locationId
          */
-        public java.util.List < String > getLocationId() {
+        public java.util.List<String> getLocationId() {
             return this.locationId;
         }
 
         public static final class Builder {
-            private java.util.List < String > locationId; 
+            private java.util.List<String> locationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(BlendList model) {
+                this.locationId = model.locationId;
+            } 
 
             /**
              * LocationId.
              */
-            public Builder locationId(java.util.List < String > locationId) {
+            public Builder locationId(java.util.List<String> locationId) {
                 this.locationId = locationId;
                 return this;
             }
@@ -254,9 +341,15 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterLayoutsResponseBody</p>
+     */
     public static class MixList extends TeaModel {
-        @NameInMap("LocationId")
-        private java.util.List < String > locationId;
+        @com.aliyun.core.annotation.NameInMap("LocationId")
+        private java.util.List<String> locationId;
 
         private MixList(Builder builder) {
             this.locationId = builder.locationId;
@@ -273,17 +366,24 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         /**
          * @return locationId
          */
-        public java.util.List < String > getLocationId() {
+        public java.util.List<String> getLocationId() {
             return this.locationId;
         }
 
         public static final class Builder {
-            private java.util.List < String > locationId; 
+            private java.util.List<String> locationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MixList model) {
+                this.locationId = model.locationId;
+            } 
 
             /**
              * LocationId.
              */
-            public Builder locationId(java.util.List < String > locationId) {
+            public Builder locationId(java.util.List<String> locationId) {
                 this.locationId = locationId;
                 return this;
             }
@@ -295,9 +395,15 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterLayoutsResponseBody</p>
+     */
     public static class PositionNormalizeds extends TeaModel {
-        @NameInMap("Position")
-        private java.util.List < Float > position;
+        @com.aliyun.core.annotation.NameInMap("Position")
+        private java.util.List<Float> position;
 
         private PositionNormalizeds(Builder builder) {
             this.position = builder.position;
@@ -314,17 +420,24 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         /**
          * @return position
          */
-        public java.util.List < Float > getPosition() {
+        public java.util.List<Float> getPosition() {
             return this.position;
         }
 
         public static final class Builder {
-            private java.util.List < Float > position; 
+            private java.util.List<Float> position; 
+
+            private Builder() {
+            } 
+
+            private Builder(PositionNormalizeds model) {
+                this.position = model.position;
+            } 
 
             /**
              * Position.
              */
-            public Builder position(java.util.List < Float > position) {
+            public Builder position(java.util.List<Float> position) {
                 this.position = position;
                 return this;
             }
@@ -336,23 +449,29 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterLayoutsResponseBody</p>
+     */
     public static class VideoLayer extends TeaModel {
-        @NameInMap("FillMode")
+        @com.aliyun.core.annotation.NameInMap("FillMode")
         private String fillMode;
 
-        @NameInMap("FixedDelayDuration")
+        @com.aliyun.core.annotation.NameInMap("FixedDelayDuration")
         private Integer fixedDelayDuration;
 
-        @NameInMap("HeightNormalized")
+        @com.aliyun.core.annotation.NameInMap("HeightNormalized")
         private Float heightNormalized;
 
-        @NameInMap("PositionNormalizeds")
+        @com.aliyun.core.annotation.NameInMap("PositionNormalizeds")
         private PositionNormalizeds positionNormalizeds;
 
-        @NameInMap("PositionRefer")
+        @com.aliyun.core.annotation.NameInMap("PositionRefer")
         private String positionRefer;
 
-        @NameInMap("WidthNormalized")
+        @com.aliyun.core.annotation.NameInMap("WidthNormalized")
         private Float widthNormalized;
 
         private VideoLayer(Builder builder) {
@@ -422,8 +541,27 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             private String positionRefer; 
             private Float widthNormalized; 
 
+            private Builder() {
+            } 
+
+            private Builder(VideoLayer model) {
+                this.fillMode = model.fillMode;
+                this.fixedDelayDuration = model.fixedDelayDuration;
+                this.heightNormalized = model.heightNormalized;
+                this.positionNormalizeds = model.positionNormalizeds;
+                this.positionRefer = model.positionRefer;
+                this.widthNormalized = model.widthNormalized;
+            } 
+
             /**
-             * FillMode.
+             * <p>The scaling mode of the video layer. Valid values:</p>
+             * <ul>
+             * <li><strong>none</strong> (default): specifies that the video layer is not scaled. The video layer is displayed based on its original size.</li>
+             * <li><strong>fit</strong>: specifies that the video layer is adapted to the fill area. The video layer is displayed based on the fill area. In this case, the video layer is scaled proportionally, with its original aspect ratio retained. The video layer is placed in the center, with its longer sides aligned with the fill area. If the aspect ratio of the video layer is different from that of the fill area, the content of the lower layer is displayed alongside the shorter sides. If there is no lower layer, black bars are displayed instead.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>fit</p>
              */
             public Builder fillMode(String fillMode) {
                 this.fillMode = fillMode;
@@ -431,7 +569,11 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * FixedDelayDuration.
+             * <p>The fixed delay of the video layer. This parameter is used to synchronize the video with subtitles.</p>
+             * <p>Unit: milliseconds. Default value: <strong>0</strong>. Valid values: <strong>0 to 5000</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>20</p>
              */
             public Builder fixedDelayDuration(Integer fixedDelayDuration) {
                 this.fixedDelayDuration = fixedDelayDuration;
@@ -439,7 +581,14 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * HeightNormalized.
+             * <p>The normalized value of the height of the video layer.</p>
+             * <ul>
+             * <li>If the FillMode parameter of the video layer is set to none, the width of the video layer is proportionally scaled based on this parameter. The default value is <strong>0</strong>, which indicates that the video layer is not scaled.</li>
+             * <li>If the FillMode parameter of the video layer is set to fit, the value of this parameter is greater than <strong>0</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder heightNormalized(Float heightNormalized) {
                 this.heightNormalized = heightNormalized;
@@ -447,7 +596,10 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * PositionNormalizeds.
+             * <p>The normalized value of the position of the video layer, in the format of <code>[x,y]</code>. Default value: <code>[0,0]</code>.</p>
+             * <blockquote>
+             * <p> The values of x and y are normalized.</p>
+             * </blockquote>
              */
             public Builder positionNormalizeds(PositionNormalizeds positionNormalizeds) {
                 this.positionNormalizeds = positionNormalizeds;
@@ -455,7 +607,21 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * PositionRefer.
+             * <p>The reference coordinates of the video layer. Valid values:</p>
+             * <ul>
+             * <li><strong>topLeft</strong> (default): the upper-left corner</li>
+             * <li><strong>topRight</strong>: the upper-right corner</li>
+             * <li><strong>bottomLeft</strong>: the lower-left corner</li>
+             * <li><strong>bottomRight</strong>: the lower-right corner</li>
+             * <li><strong>center</strong>: the center</li>
+             * <li><strong>topCenter</strong>: the upper center</li>
+             * <li><strong>bottomCenter</strong>: the lower center</li>
+             * <li><strong>leftCenter</strong>: the left center</li>
+             * <li><strong>rightCenter</strong>: the right center</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>topLeft</p>
              */
             public Builder positionRefer(String positionRefer) {
                 this.positionRefer = positionRefer;
@@ -463,7 +629,14 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * WidthNormalized.
+             * <p>The normalized value of the width of the video layer.</p>
+             * <ul>
+             * <li>If the FillMode parameter of the video layer is set to none, the height of the video layer is scaled based on this parameter. The default value is <strong>0</strong>, which indicates that the video layer is not scaled.</li>
+             * <li>If the FillMode parameter of the video layer is set to fit, the value of this parameter is greater than <strong>0</strong>.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>0.5</p>
              */
             public Builder widthNormalized(Float widthNormalized) {
                 this.widthNormalized = widthNormalized;
@@ -477,9 +650,15 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterLayoutsResponseBody</p>
+     */
     public static class VideoLayers extends TeaModel {
-        @NameInMap("VideoLayer")
-        private java.util.List < VideoLayer> videoLayer;
+        @com.aliyun.core.annotation.NameInMap("VideoLayer")
+        private java.util.List<VideoLayer> videoLayer;
 
         private VideoLayers(Builder builder) {
             this.videoLayer = builder.videoLayer;
@@ -496,17 +675,24 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         /**
          * @return videoLayer
          */
-        public java.util.List < VideoLayer> getVideoLayer() {
+        public java.util.List<VideoLayer> getVideoLayer() {
             return this.videoLayer;
         }
 
         public static final class Builder {
-            private java.util.List < VideoLayer> videoLayer; 
+            private java.util.List<VideoLayer> videoLayer; 
+
+            private Builder() {
+            } 
+
+            private Builder(VideoLayers model) {
+                this.videoLayer = model.videoLayer;
+            } 
 
             /**
              * VideoLayer.
              */
-            public Builder videoLayer(java.util.List < VideoLayer> videoLayer) {
+            public Builder videoLayer(java.util.List<VideoLayer> videoLayer) {
                 this.videoLayer = videoLayer;
                 return this;
             }
@@ -518,20 +704,26 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterLayoutsResponseBody</p>
+     */
     public static class Layout extends TeaModel {
-        @NameInMap("AudioLayers")
+        @com.aliyun.core.annotation.NameInMap("AudioLayers")
         private AudioLayers audioLayers;
 
-        @NameInMap("BlendList")
+        @com.aliyun.core.annotation.NameInMap("BlendList")
         private BlendList blendList;
 
-        @NameInMap("LayoutId")
+        @com.aliyun.core.annotation.NameInMap("LayoutId")
         private String layoutId;
 
-        @NameInMap("MixList")
+        @com.aliyun.core.annotation.NameInMap("MixList")
         private MixList mixList;
 
-        @NameInMap("VideoLayers")
+        @com.aliyun.core.annotation.NameInMap("VideoLayers")
         private VideoLayers videoLayers;
 
         private Layout(Builder builder) {
@@ -592,8 +784,19 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             private MixList mixList; 
             private VideoLayers videoLayers; 
 
+            private Builder() {
+            } 
+
+            private Builder(Layout model) {
+                this.audioLayers = model.audioLayers;
+                this.blendList = model.blendList;
+                this.layoutId = model.layoutId;
+                this.mixList = model.mixList;
+                this.videoLayers = model.videoLayers;
+            } 
+
             /**
-             * AudioLayers.
+             * <p>The configurations of the audio layers.</p>
              */
             public Builder audioLayers(AudioLayers audioLayers) {
                 this.audioLayers = audioLayers;
@@ -601,7 +804,7 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * BlendList.
+             * <p>The location IDs of the video layers, which are in the same order as the video layers.</p>
              */
             public Builder blendList(BlendList blendList) {
                 this.blendList = blendList;
@@ -609,7 +812,10 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * LayoutId.
+             * <p>The ID of the layout.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>72d2ec7a-4cd7-4a01-974b-7cd53947****</p>
              */
             public Builder layoutId(String layoutId) {
                 this.layoutId = layoutId;
@@ -617,7 +823,7 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * MixList.
+             * <p>The location IDs of the audio layers, which are in the same order as the audio layers.</p>
              */
             public Builder mixList(MixList mixList) {
                 this.mixList = mixList;
@@ -625,7 +831,7 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
             }
 
             /**
-             * VideoLayers.
+             * <p>The configurations of the video layers, which are in the default array sequence.</p>
              */
             public Builder videoLayers(VideoLayers videoLayers) {
                 this.videoLayers = videoLayers;
@@ -639,9 +845,15 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeCasterLayoutsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCasterLayoutsResponseBody</p>
+     */
     public static class Layouts extends TeaModel {
-        @NameInMap("Layout")
-        private java.util.List < Layout> layout;
+        @com.aliyun.core.annotation.NameInMap("Layout")
+        private java.util.List<Layout> layout;
 
         private Layouts(Builder builder) {
             this.layout = builder.layout;
@@ -658,17 +870,24 @@ public class DescribeCasterLayoutsResponseBody extends TeaModel {
         /**
          * @return layout
          */
-        public java.util.List < Layout> getLayout() {
+        public java.util.List<Layout> getLayout() {
             return this.layout;
         }
 
         public static final class Builder {
-            private java.util.List < Layout> layout; 
+            private java.util.List<Layout> layout; 
+
+            private Builder() {
+            } 
+
+            private Builder(Layouts model) {
+                this.layout = model.layout;
+            } 
 
             /**
              * Layout.
              */
-            public Builder layout(java.util.List < Layout> layout) {
+            public Builder layout(java.util.List<Layout> layout) {
                 this.layout = layout;
                 return this;
             }
