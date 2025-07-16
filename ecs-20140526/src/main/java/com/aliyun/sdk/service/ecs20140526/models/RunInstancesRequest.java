@@ -3294,7 +3294,6 @@ public class RunInstancesRequest extends Request {
         private String encrypted;
 
         @com.aliyun.core.annotation.NameInMap("KMSKeyId")
-        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String KMSKeyId;
 
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")

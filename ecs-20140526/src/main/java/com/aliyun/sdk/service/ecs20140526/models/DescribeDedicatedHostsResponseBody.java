@@ -193,6 +193,135 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
      *
      * <p>DescribeDedicatedHostsResponseBody</p>
      */
+    public static class AvailableInstanceType extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AvailableInstanceCapacity")
+        private Integer availableInstanceCapacity;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private String instanceType;
+
+        private AvailableInstanceType(Builder builder) {
+            this.availableInstanceCapacity = builder.availableInstanceCapacity;
+            this.instanceType = builder.instanceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AvailableInstanceType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return availableInstanceCapacity
+         */
+        public Integer getAvailableInstanceCapacity() {
+            return this.availableInstanceCapacity;
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        public static final class Builder {
+            private Integer availableInstanceCapacity; 
+            private String instanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableInstanceType model) {
+                this.availableInstanceCapacity = model.availableInstanceCapacity;
+                this.instanceType = model.instanceType;
+            } 
+
+            /**
+             * AvailableInstanceCapacity.
+             */
+            public Builder availableInstanceCapacity(Integer availableInstanceCapacity) {
+                this.availableInstanceCapacity = availableInstanceCapacity;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            public AvailableInstanceType build() {
+                return new AvailableInstanceType(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
+    public static class AvailableInstanceTypes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AvailableInstanceType")
+        private java.util.List<AvailableInstanceType> availableInstanceType;
+
+        private AvailableInstanceTypes(Builder builder) {
+            this.availableInstanceType = builder.availableInstanceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AvailableInstanceTypes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return availableInstanceType
+         */
+        public java.util.List<AvailableInstanceType> getAvailableInstanceType() {
+            return this.availableInstanceType;
+        }
+
+        public static final class Builder {
+            private java.util.List<AvailableInstanceType> availableInstanceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvailableInstanceTypes model) {
+                this.availableInstanceType = model.availableInstanceType;
+            } 
+
+            /**
+             * AvailableInstanceType.
+             */
+            public Builder availableInstanceType(java.util.List<AvailableInstanceType> availableInstanceType) {
+                this.availableInstanceType = availableInstanceType;
+                return this;
+            }
+
+            public AvailableInstanceTypes build() {
+                return new AvailableInstanceTypes(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeDedicatedHostsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeDedicatedHostsResponseBody</p>
+     */
     public static class SocketCapacity extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AvailableMemory")
         private Float availableMemory;
@@ -401,6 +530,9 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
      * <p>DescribeDedicatedHostsResponseBody</p>
      */
     public static class Capacity extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AvailableInstanceTypes")
+        private AvailableInstanceTypes availableInstanceTypes;
+
         @com.aliyun.core.annotation.NameInMap("AvailableLocalStorage")
         private Integer availableLocalStorage;
 
@@ -432,6 +564,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         private Integer totalVgpus;
 
         private Capacity(Builder builder) {
+            this.availableInstanceTypes = builder.availableInstanceTypes;
             this.availableLocalStorage = builder.availableLocalStorage;
             this.availableMemory = builder.availableMemory;
             this.availableVcpus = builder.availableVcpus;
@@ -450,6 +583,13 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
 
         public static Capacity create() {
             return builder().build();
+        }
+
+        /**
+         * @return availableInstanceTypes
+         */
+        public AvailableInstanceTypes getAvailableInstanceTypes() {
+            return this.availableInstanceTypes;
         }
 
         /**
@@ -523,6 +663,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private AvailableInstanceTypes availableInstanceTypes; 
             private Integer availableLocalStorage; 
             private Float availableMemory; 
             private Integer availableVcpus; 
@@ -538,6 +679,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             } 
 
             private Builder(Capacity model) {
+                this.availableInstanceTypes = model.availableInstanceTypes;
                 this.availableLocalStorage = model.availableLocalStorage;
                 this.availableMemory = model.availableMemory;
                 this.availableVcpus = model.availableVcpus;
@@ -549,6 +691,14 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
                 this.totalVcpus = model.totalVcpus;
                 this.totalVgpus = model.totalVgpus;
             } 
+
+            /**
+             * AvailableInstanceTypes.
+             */
+            public Builder availableInstanceTypes(AvailableInstanceTypes availableInstanceTypes) {
+                this.availableInstanceTypes = availableInstanceTypes;
+                return this;
+            }
 
             /**
              * <p>The amount of available space on the local disks. Unit: GiB</p>

@@ -68,6 +68,10 @@ public class DescribeDedicatedHostsRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryInventory")
+    private Boolean queryInventory;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -114,6 +118,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.queryInventory = builder.queryInventory;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -222,6 +227,13 @@ public class DescribeDedicatedHostsRequest extends Request {
     }
 
     /**
+     * @return queryInventory
+     */
+    public Boolean getQueryInventory() {
+        return this.queryInventory;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -290,6 +302,7 @@ public class DescribeDedicatedHostsRequest extends Request {
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private Boolean queryInventory; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -317,6 +330,7 @@ public class DescribeDedicatedHostsRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.queryInventory = request.queryInventory;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -468,6 +482,15 @@ public class DescribeDedicatedHostsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * QueryInventory.
+         */
+        public Builder queryInventory(Boolean queryInventory) {
+            this.putQueryParameter("QueryInventory", queryInventory);
+            this.queryInventory = queryInventory;
             return this;
         }
 

@@ -1901,6 +1901,81 @@ public class CreateAutoProvisioningGroupRequest extends Request {
      *
      * <p>CreateAutoProvisioningGroupRequest</p>
      */
+    public static class SchedulerOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostClusterId")
+        private String dedicatedHostClusterId;
+
+        @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
+        private String dedicatedHostId;
+
+        private SchedulerOptions(Builder builder) {
+            this.dedicatedHostClusterId = builder.dedicatedHostClusterId;
+            this.dedicatedHostId = builder.dedicatedHostId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SchedulerOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dedicatedHostClusterId
+         */
+        public String getDedicatedHostClusterId() {
+            return this.dedicatedHostClusterId;
+        }
+
+        /**
+         * @return dedicatedHostId
+         */
+        public String getDedicatedHostId() {
+            return this.dedicatedHostId;
+        }
+
+        public static final class Builder {
+            private String dedicatedHostClusterId; 
+            private String dedicatedHostId; 
+
+            private Builder() {
+            } 
+
+            private Builder(SchedulerOptions model) {
+                this.dedicatedHostClusterId = model.dedicatedHostClusterId;
+                this.dedicatedHostId = model.dedicatedHostId;
+            } 
+
+            /**
+             * DedicatedHostClusterId.
+             */
+            public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
+                this.dedicatedHostClusterId = dedicatedHostClusterId;
+                return this;
+            }
+
+            /**
+             * DedicatedHostId.
+             */
+            public Builder dedicatedHostId(String dedicatedHostId) {
+                this.dedicatedHostId = dedicatedHostId;
+                return this;
+            }
+
+            public SchedulerOptions build() {
+                return new SchedulerOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link CreateAutoProvisioningGroupRequest} extends {@link TeaModel}
+     *
+     * <p>CreateAutoProvisioningGroupRequest</p>
+     */
     public static class LaunchConfiguration extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private java.util.List<Arn> arn;
@@ -2010,6 +2085,9 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
 
+        @com.aliyun.core.annotation.NameInMap("SchedulerOptions")
+        private SchedulerOptions schedulerOptions;
+
         @com.aliyun.core.annotation.NameInMap("SpotDuration")
         private Integer spotDuration;
 
@@ -2053,6 +2131,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             this.imageOptions = builder.imageOptions;
             this.period = builder.period;
             this.periodUnit = builder.periodUnit;
+            this.schedulerOptions = builder.schedulerOptions;
             this.spotDuration = builder.spotDuration;
             this.spotInterruptionBehavior = builder.spotInterruptionBehavior;
         }
@@ -2318,6 +2397,13 @@ public class CreateAutoProvisioningGroupRequest extends Request {
         }
 
         /**
+         * @return schedulerOptions
+         */
+        public SchedulerOptions getSchedulerOptions() {
+            return this.schedulerOptions;
+        }
+
+        /**
          * @return spotDuration
          */
         public Integer getSpotDuration() {
@@ -2368,6 +2454,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
             private ImageOptions imageOptions; 
             private Integer period; 
             private String periodUnit; 
+            private SchedulerOptions schedulerOptions; 
             private Integer spotDuration; 
             private String spotInterruptionBehavior; 
 
@@ -2411,6 +2498,7 @@ public class CreateAutoProvisioningGroupRequest extends Request {
                 this.imageOptions = model.imageOptions;
                 this.period = model.period;
                 this.periodUnit = model.periodUnit;
+                this.schedulerOptions = model.schedulerOptions;
                 this.spotDuration = model.spotDuration;
                 this.spotInterruptionBehavior = model.spotInterruptionBehavior;
             } 
@@ -2892,6 +2980,14 @@ public class CreateAutoProvisioningGroupRequest extends Request {
              */
             public Builder periodUnit(String periodUnit) {
                 this.periodUnit = periodUnit;
+                return this;
+            }
+
+            /**
+             * SchedulerOptions.
+             */
+            public Builder schedulerOptions(SchedulerOptions schedulerOptions) {
+                this.schedulerOptions = schedulerOptions;
                 return this;
             }
 

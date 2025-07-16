@@ -2325,7 +2325,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeResourcesModificationResponse> describeResourcesModification(DescribeResourcesModificationRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeRouteTables is deprecated  * @param request  the request parameters of DescribeRouteTables  DescribeRouteTablesRequest
+     * @deprecated OpenAPI DescribeRouteTables is deprecated, please use Vpc::2016-04-28::DescribeRouteTableList instead.  * @param request  the request parameters of DescribeRouteTables  DescribeRouteTablesRequest
      * @return DescribeRouteTablesResponse
      */
     @Deprecated
@@ -2565,7 +2565,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserDataResponse> describeUserData(DescribeUserDataRequest request);
 
     /**
-     * @deprecated OpenAPI DescribeVRouters is deprecated  * @param request  the request parameters of DescribeVRouters  DescribeVRoutersRequest
+     * @deprecated OpenAPI DescribeVRouters is deprecated, please use Vpc::2016-04-28::DescribeVRouters instead.  * @param request  the request parameters of DescribeVRouters  DescribeVRoutersRequest
      * @return DescribeVRoutersResponse
      */
     @Deprecated

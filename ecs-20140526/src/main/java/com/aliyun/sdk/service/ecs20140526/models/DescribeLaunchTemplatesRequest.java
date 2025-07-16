@@ -274,7 +274,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
 
         /**
          * <p>The number of entries to return on each page.</p>
-         * <p>Default value: 10.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -286,10 +286,8 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
-         * <blockquote>
-         * <p>Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
-         * </blockquote>
+         * <p>The number of entries to return on each page.</p>
+         * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -301,7 +299,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The tags of the launch template.</p>
+         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -332,7 +330,10 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The IDs of launch templates. You can specify up to 100 launch template IDs. You must specify LaunchTemplateId or LaunchTemplateName to determine a launch template.</p>
+         * <p>The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
+         * <blockquote>
+         * <p>Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxazb4p****</p>

@@ -255,6 +255,60 @@ public class DescribeInstancesResponseBody extends TeaModel {
      *
      * <p>DescribeInstancesResponseBody</p>
      */
+    public static class ClockOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PtpStatus")
+        private String ptpStatus;
+
+        private ClockOptions(Builder builder) {
+            this.ptpStatus = builder.ptpStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ClockOptions create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ptpStatus
+         */
+        public String getPtpStatus() {
+            return this.ptpStatus;
+        }
+
+        public static final class Builder {
+            private String ptpStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(ClockOptions model) {
+                this.ptpStatus = model.ptpStatus;
+            } 
+
+            /**
+             * PtpStatus.
+             */
+            public Builder ptpStatus(String ptpStatus) {
+                this.ptpStatus = ptpStatus;
+                return this;
+            }
+
+            public ClockOptions build() {
+                return new ClockOptions(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeInstancesResponseBody</p>
+     */
     public static class CpuOptions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CoreCount")
         private Integer coreCount;
@@ -2799,6 +2853,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
         private String autoReleaseTime;
 
+        @com.aliyun.core.annotation.NameInMap("ClockOptions")
+        private ClockOptions clockOptions;
+
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
@@ -2997,6 +3054,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         private Instance(Builder builder) {
             this.additionalInfo = builder.additionalInfo;
             this.autoReleaseTime = builder.autoReleaseTime;
+            this.clockOptions = builder.clockOptions;
             this.clusterId = builder.clusterId;
             this.cpu = builder.cpu;
             this.cpuOptions = builder.cpuOptions;
@@ -3084,6 +3142,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          */
         public String getAutoReleaseTime() {
             return this.autoReleaseTime;
+        }
+
+        /**
+         * @return clockOptions
+         */
+        public ClockOptions getClockOptions() {
+            return this.clockOptions;
         }
 
         /**
@@ -3544,6 +3609,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private AdditionalInfo additionalInfo; 
             private String autoReleaseTime; 
+            private ClockOptions clockOptions; 
             private String clusterId; 
             private Integer cpu; 
             private CpuOptions cpuOptions; 
@@ -3616,6 +3682,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Builder(Instance model) {
                 this.additionalInfo = model.additionalInfo;
                 this.autoReleaseTime = model.autoReleaseTime;
+                this.clockOptions = model.clockOptions;
                 this.clusterId = model.clusterId;
                 this.cpu = model.cpu;
                 this.cpuOptions = model.cpuOptions;
@@ -3701,6 +3768,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder autoReleaseTime(String autoReleaseTime) {
                 this.autoReleaseTime = autoReleaseTime;
+                return this;
+            }
+
+            /**
+             * ClockOptions.
+             */
+            public Builder clockOptions(ClockOptions clockOptions) {
+                this.clockOptions = clockOptions;
                 return this;
             }
 
