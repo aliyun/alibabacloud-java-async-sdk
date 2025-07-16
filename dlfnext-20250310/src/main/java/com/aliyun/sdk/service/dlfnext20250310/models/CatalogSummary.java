@@ -23,6 +23,9 @@ public class CatalogSummary extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("databaseCount")
     private MoMValues databaseCount;
 
+    @com.aliyun.core.annotation.NameInMap("fileAccessCountMonthly")
+    private Long fileAccessCountMonthly;
+
     @com.aliyun.core.annotation.NameInMap("generatedDate")
     private String generatedDate;
 
@@ -44,6 +47,7 @@ public class CatalogSummary extends TeaModel {
     private CatalogSummary(Builder builder) {
         this.apiVisitCountMonthly = builder.apiVisitCountMonthly;
         this.databaseCount = builder.databaseCount;
+        this.fileAccessCountMonthly = builder.fileAccessCountMonthly;
         this.generatedDate = builder.generatedDate;
         this.partitionCount = builder.partitionCount;
         this.tableCount = builder.tableCount;
@@ -76,6 +80,13 @@ public class CatalogSummary extends TeaModel {
      */
     public MoMValues getDatabaseCount() {
         return this.databaseCount;
+    }
+
+    /**
+     * @return fileAccessCountMonthly
+     */
+    public Long getFileAccessCountMonthly() {
+        return this.fileAccessCountMonthly;
     }
 
     /**
@@ -123,6 +134,7 @@ public class CatalogSummary extends TeaModel {
     public static final class Builder {
         private Long apiVisitCountMonthly; 
         private MoMValues databaseCount; 
+        private Long fileAccessCountMonthly; 
         private String generatedDate; 
         private MoMValues partitionCount; 
         private MoMValues tableCount; 
@@ -136,6 +148,7 @@ public class CatalogSummary extends TeaModel {
         private Builder(CatalogSummary model) {
             this.apiVisitCountMonthly = model.apiVisitCountMonthly;
             this.databaseCount = model.databaseCount;
+            this.fileAccessCountMonthly = model.fileAccessCountMonthly;
             this.generatedDate = model.generatedDate;
             this.partitionCount = model.partitionCount;
             this.tableCount = model.tableCount;
@@ -157,6 +170,14 @@ public class CatalogSummary extends TeaModel {
          */
         public Builder databaseCount(MoMValues databaseCount) {
             this.databaseCount = databaseCount;
+            return this;
+        }
+
+        /**
+         * fileAccessCountMonthly.
+         */
+        public Builder fileAccessCountMonthly(Long fileAccessCountMonthly) {
+            this.fileAccessCountMonthly = fileAccessCountMonthly;
             return this;
         }
 

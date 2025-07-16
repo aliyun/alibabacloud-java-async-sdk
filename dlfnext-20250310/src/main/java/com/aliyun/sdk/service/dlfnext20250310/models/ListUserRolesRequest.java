@@ -19,7 +19,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ListUserRolesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
-    private String maxResults;
+    private Integer maxResults;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageToken")
@@ -52,7 +52,7 @@ public class ListUserRolesRequest extends Request {
     /**
      * @return maxResults
      */
-    public String getMaxResults() {
+    public Integer getMaxResults() {
         return this.maxResults;
     }
 
@@ -71,7 +71,7 @@ public class ListUserRolesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListUserRolesRequest, Builder> {
-        private String maxResults; 
+        private Integer maxResults; 
         private String pageToken; 
         private String userPrincipal; 
 
@@ -89,7 +89,7 @@ public class ListUserRolesRequest extends Request {
         /**
          * maxResults.
          */
-        public Builder maxResults(String maxResults) {
+        public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
             this.maxResults = maxResults;
             return this;

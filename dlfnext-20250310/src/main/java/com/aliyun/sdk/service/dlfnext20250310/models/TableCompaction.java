@@ -20,6 +20,9 @@ public class TableCompaction extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("catalogId")
     private String catalogId;
 
+    @com.aliyun.core.annotation.NameInMap("cuUsage")
+    private Double cuUsage;
+
     @com.aliyun.core.annotation.NameInMap("lastCompactedFileTime")
     private Long lastCompactedFileTime;
 
@@ -31,6 +34,7 @@ public class TableCompaction extends TeaModel {
 
     private TableCompaction(Builder builder) {
         this.catalogId = builder.catalogId;
+        this.cuUsage = builder.cuUsage;
         this.lastCompactedFileTime = builder.lastCompactedFileTime;
         this.maxLevel0FileCount = builder.maxLevel0FileCount;
         this.tableId = builder.tableId;
@@ -56,6 +60,13 @@ public class TableCompaction extends TeaModel {
     }
 
     /**
+     * @return cuUsage
+     */
+    public Double getCuUsage() {
+        return this.cuUsage;
+    }
+
+    /**
      * @return lastCompactedFileTime
      */
     public Long getLastCompactedFileTime() {
@@ -78,6 +89,7 @@ public class TableCompaction extends TeaModel {
 
     public static final class Builder {
         private String catalogId; 
+        private Double cuUsage; 
         private Long lastCompactedFileTime; 
         private String maxLevel0FileCount; 
         private String tableId; 
@@ -87,6 +99,7 @@ public class TableCompaction extends TeaModel {
 
         private Builder(TableCompaction model) {
             this.catalogId = model.catalogId;
+            this.cuUsage = model.cuUsage;
             this.lastCompactedFileTime = model.lastCompactedFileTime;
             this.maxLevel0FileCount = model.maxLevel0FileCount;
             this.tableId = model.tableId;
@@ -97,6 +110,14 @@ public class TableCompaction extends TeaModel {
          */
         public Builder catalogId(String catalogId) {
             this.catalogId = catalogId;
+            return this;
+        }
+
+        /**
+         * cuUsage.
+         */
+        public Builder cuUsage(Double cuUsage) {
+            this.cuUsage = cuUsage;
             return this;
         }
 

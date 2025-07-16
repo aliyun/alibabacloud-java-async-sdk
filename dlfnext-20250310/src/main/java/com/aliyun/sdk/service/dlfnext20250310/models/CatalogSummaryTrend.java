@@ -20,6 +20,9 @@ public class CatalogSummaryTrend extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("apiVisitCount")
     private java.util.List<DateSummary> apiVisitCount;
 
+    @com.aliyun.core.annotation.NameInMap("fileAccessCount")
+    private java.util.List<DateSummary> fileAccessCount;
+
     @com.aliyun.core.annotation.NameInMap("throughput")
     private java.util.List<DateSummary> throughput;
 
@@ -34,6 +37,7 @@ public class CatalogSummaryTrend extends TeaModel {
 
     private CatalogSummaryTrend(Builder builder) {
         this.apiVisitCount = builder.apiVisitCount;
+        this.fileAccessCount = builder.fileAccessCount;
         this.throughput = builder.throughput;
         this.totalFileCount = builder.totalFileCount;
         this.totalFileSizeInBytes = builder.totalFileSizeInBytes;
@@ -57,6 +61,13 @@ public class CatalogSummaryTrend extends TeaModel {
      */
     public java.util.List<DateSummary> getApiVisitCount() {
         return this.apiVisitCount;
+    }
+
+    /**
+     * @return fileAccessCount
+     */
+    public java.util.List<DateSummary> getFileAccessCount() {
+        return this.fileAccessCount;
     }
 
     /**
@@ -89,6 +100,7 @@ public class CatalogSummaryTrend extends TeaModel {
 
     public static final class Builder {
         private java.util.List<DateSummary> apiVisitCount; 
+        private java.util.List<DateSummary> fileAccessCount; 
         private java.util.List<DateSummary> throughput; 
         private java.util.List<DateSummary> totalFileCount; 
         private java.util.List<DateSummary> totalFileSizeInBytes; 
@@ -99,6 +111,7 @@ public class CatalogSummaryTrend extends TeaModel {
 
         private Builder(CatalogSummaryTrend model) {
             this.apiVisitCount = model.apiVisitCount;
+            this.fileAccessCount = model.fileAccessCount;
             this.throughput = model.throughput;
             this.totalFileCount = model.totalFileCount;
             this.totalFileSizeInBytes = model.totalFileSizeInBytes;
@@ -110,6 +123,14 @@ public class CatalogSummaryTrend extends TeaModel {
          */
         public Builder apiVisitCount(java.util.List<DateSummary> apiVisitCount) {
             this.apiVisitCount = apiVisitCount;
+            return this;
+        }
+
+        /**
+         * <p>file access count trends</p>
+         */
+        public Builder fileAccessCount(java.util.List<DateSummary> fileAccessCount) {
+            this.fileAccessCount = fileAccessCount;
             return this;
         }
 

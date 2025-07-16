@@ -22,10 +22,6 @@ public class CreateCatalogRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("optimizationConfig")
-    private java.util.Map<String, String> optimizationConfig;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("options")
     private java.util.Map<String, String> options;
 
@@ -36,7 +32,6 @@ public class CreateCatalogRequest extends Request {
     private CreateCatalogRequest(Builder builder) {
         super(builder);
         this.name = builder.name;
-        this.optimizationConfig = builder.optimizationConfig;
         this.options = builder.options;
         this.type = builder.type;
     }
@@ -62,13 +57,6 @@ public class CreateCatalogRequest extends Request {
     }
 
     /**
-     * @return optimizationConfig
-     */
-    public java.util.Map<String, String> getOptimizationConfig() {
-        return this.optimizationConfig;
-    }
-
-    /**
      * @return options
      */
     public java.util.Map<String, String> getOptions() {
@@ -84,7 +72,6 @@ public class CreateCatalogRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateCatalogRequest, Builder> {
         private String name; 
-        private java.util.Map<String, String> optimizationConfig; 
         private java.util.Map<String, String> options; 
         private String type; 
 
@@ -95,7 +82,6 @@ public class CreateCatalogRequest extends Request {
         private Builder(CreateCatalogRequest request) {
             super(request);
             this.name = request.name;
-            this.optimizationConfig = request.optimizationConfig;
             this.options = request.options;
             this.type = request.type;
         } 
@@ -106,15 +92,6 @@ public class CreateCatalogRequest extends Request {
         public Builder name(String name) {
             this.putBodyParameter("name", name);
             this.name = name;
-            return this;
-        }
-
-        /**
-         * optimizationConfig.
-         */
-        public Builder optimizationConfig(java.util.Map<String, String> optimizationConfig) {
-            this.putBodyParameter("optimizationConfig", optimizationConfig);
-            this.optimizationConfig = optimizationConfig;
             return this;
         }
 
