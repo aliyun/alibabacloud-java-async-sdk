@@ -611,6 +611,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
+        @com.aliyun.core.annotation.NameInMap("CpuType")
+        private String cpuType;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
@@ -767,6 +770,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.commodityCode = builder.commodityCode;
             this.connAddrs = builder.connAddrs;
             this.connectionString = builder.connectionString;
+            this.cpuType = builder.cpuType;
             this.createTime = builder.createTime;
             this.DBInstanceType = builder.DBInstanceType;
             this.DBNodeClass = builder.DBNodeClass;
@@ -879,6 +883,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getConnectionString() {
             return this.connectionString;
+        }
+
+        /**
+         * @return cpuType
+         */
+        public String getCpuType() {
+            return this.cpuType;
         }
 
         /**
@@ -1226,6 +1237,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String commodityCode; 
             private java.util.List<ConnAddrs> connAddrs; 
             private String connectionString; 
+            private String cpuType; 
             private String createTime; 
             private String DBInstanceType; 
             private String DBNodeClass; 
@@ -1287,6 +1299,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.commodityCode = model.commodityCode;
                 this.connAddrs = model.connAddrs;
                 this.connectionString = model.connectionString;
+                this.cpuType = model.cpuType;
                 this.createTime = model.createTime;
                 this.DBInstanceType = model.DBInstanceType;
                 this.DBNodeClass = model.DBNodeClass;
@@ -1398,6 +1411,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
+                return this;
+            }
+
+            /**
+             * CpuType.
+             */
+            public Builder cpuType(String cpuType) {
+                this.cpuType = cpuType;
                 return this;
             }
 
