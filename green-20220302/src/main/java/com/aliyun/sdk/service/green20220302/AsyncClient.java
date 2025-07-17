@@ -44,6 +44,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeImageResultExtResponse> describeImageResultExt(DescribeImageResultExtRequest request);
 
     /**
+     * @param request the request parameters of DescribeMultimodalModerationResult  DescribeMultimodalModerationResultRequest
+     * @return DescribeMultimodalModerationResultResponse
+     */
+    CompletableFuture<DescribeMultimodalModerationResultResponse> describeMultimodalModerationResult(DescribeMultimodalModerationResultRequest request);
+
+    /**
      * @param request the request parameters of DescribeUploadToken  DescribeUploadTokenRequest
      * @return DescribeUploadTokenResponse
      */
@@ -112,6 +118,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return MultiModalGuardResponse
      */
     CompletableFuture<MultiModalGuardResponse> multiModalGuard(MultiModalGuardRequest request);
+
+    /**
+     * @param request the request parameters of MultimodalAsyncModeration  MultimodalAsyncModerationRequest
+     * @return MultimodalAsyncModerationResponse
+     */
+    CompletableFuture<MultimodalAsyncModerationResponse> multimodalAsyncModeration(MultimodalAsyncModerationRequest request);
 
     /**
      * <b>description</b> :
