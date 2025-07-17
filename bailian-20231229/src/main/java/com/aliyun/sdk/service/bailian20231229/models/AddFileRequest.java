@@ -161,7 +161,7 @@ public class AddFileRequest extends Request {
         } 
 
         /**
-         * <p>The ID of the workspace to which the document is uploaded. On the <a href="https://bailian.console.alibabacloud.com/#/home">homepage</a> of the console, click the workspace Details icon in the upper-left corner to view the workspace ID.</p>
+         * <p>The ID of the workspace to which the document is uploaded. On the <a href="https://modelstudio.console.alibabacloud.com/?tab=playground#/efm/prompt">homepage</a> of the console, click the workspace Details icon in the upper-left corner to view the workspace ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * <p>The primary key ID of the category to which the document is uploaded. This parameter corresponds to the <code>CategoryId</code>&lt;props=&quot;china&quot;&gt; returned by the <a href="https://www.alibabacloud.com/help/zh/model-studio/developer-reference/api-bailian-2023-12-29-addcategory">AddCategory</a> operation. You can also click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://bailian.console.alibabacloud.com/#/data-center">Data Management</a> page to view the ID. You can set the parameter to default, which specifies the Default Category created by the system.</p>
+         * <p>The primary key ID of the category to which the document is uploaded. This parameter corresponds to the <code>CategoryId</code> returned by the <a href="https://www.alibabacloud.com/help/eh/model-studio/developer-reference/api-bailian-2023-12-29-addcategory">AddCategory</a> operation. You can also click the ID icon next to the category name on the Unstructured Data tab of the <a href="https://modelstudio.console.alibabacloud.com/#/data-center">Application Data</a> page to view the ID. You can set the parameter to default, which specifies the Default Category created by the system.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,14 @@ public class AddFileRequest extends Request {
         }
 
         /**
-         * CategoryType.
+         * <p>The type of the category. Valid values:</p>
+         * <ul>
+         * <li>UNSTRUCTURED</li>
+         * <li>SESSION_FILE</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>UNSTRUCTURED</p>
          */
         public Builder categoryType(String categoryType) {
             this.putBodyParameter("CategoryType", categoryType);

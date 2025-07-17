@@ -43,6 +43,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddFileResponse> addFile(AddFileRequest request);
 
     /**
+     * @param request the request parameters of AddFilesFromAuthorizedOss  AddFilesFromAuthorizedOssRequest
+     * @return AddFilesFromAuthorizedOssResponse
+     */
+    CompletableFuture<AddFilesFromAuthorizedOssResponse> addFilesFromAuthorizedOss(AddFilesFromAuthorizedOssRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  This operation returns an HTTP URL that can be used to upload an unstructured document (the lease) and parameters required for the upload. Structured documents are not supported.</p>
      * <ul>
