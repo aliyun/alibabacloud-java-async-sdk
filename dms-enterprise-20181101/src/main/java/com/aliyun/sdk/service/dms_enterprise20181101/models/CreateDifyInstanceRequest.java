@@ -26,6 +26,10 @@ public class CreateDifyInstanceRequest extends Request {
     private String adbpgInstanceMode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupVSwitchId")
+    private String backupVSwitchId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -79,6 +83,14 @@ public class CreateDifyInstanceRequest extends Request {
     private Boolean dryRun;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Edition")
+    private String edition;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableExtraEndpoint")
+    private Boolean enableExtraEndpoint;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GpuNodeSpec")
     private String gpuNodeSpec;
 
@@ -113,6 +125,10 @@ public class CreateDifyInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KvStoreType")
     private String kvStoreType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MajorVersion")
+    private String majorVersion;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ModelId")
@@ -247,6 +263,7 @@ public class CreateDifyInstanceRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.adbpgInstanceMode = builder.adbpgInstanceMode;
+        this.backupVSwitchId = builder.backupVSwitchId;
         this.clientToken = builder.clientToken;
         this.dataRegion = builder.dataRegion;
         this.databaseOption = builder.databaseOption;
@@ -260,6 +277,8 @@ public class CreateDifyInstanceRequest extends Request {
         this.dbStorageSize = builder.dbStorageSize;
         this.dbStorageType = builder.dbStorageType;
         this.dryRun = builder.dryRun;
+        this.edition = builder.edition;
+        this.enableExtraEndpoint = builder.enableExtraEndpoint;
         this.gpuNodeSpec = builder.gpuNodeSpec;
         this.kvStoreAccount = builder.kvStoreAccount;
         this.kvStoreEngineVersion = builder.kvStoreEngineVersion;
@@ -269,6 +288,7 @@ public class CreateDifyInstanceRequest extends Request {
         this.kvStorePassword = builder.kvStorePassword;
         this.kvStoreResourceId = builder.kvStoreResourceId;
         this.kvStoreType = builder.kvStoreType;
+        this.majorVersion = builder.majorVersion;
         this.modelId = builder.modelId;
         this.modelOption = builder.modelOption;
         this.natGatewayOption = builder.natGatewayOption;
@@ -327,6 +347,13 @@ public class CreateDifyInstanceRequest extends Request {
      */
     public String getAdbpgInstanceMode() {
         return this.adbpgInstanceMode;
+    }
+
+    /**
+     * @return backupVSwitchId
+     */
+    public String getBackupVSwitchId() {
+        return this.backupVSwitchId;
     }
 
     /**
@@ -421,6 +448,20 @@ public class CreateDifyInstanceRequest extends Request {
     }
 
     /**
+     * @return edition
+     */
+    public String getEdition() {
+        return this.edition;
+    }
+
+    /**
+     * @return enableExtraEndpoint
+     */
+    public Boolean getEnableExtraEndpoint() {
+        return this.enableExtraEndpoint;
+    }
+
+    /**
      * @return gpuNodeSpec
      */
     public String getGpuNodeSpec() {
@@ -481,6 +522,13 @@ public class CreateDifyInstanceRequest extends Request {
      */
     public String getKvStoreType() {
         return this.kvStoreType;
+    }
+
+    /**
+     * @return majorVersion
+     */
+    public String getMajorVersion() {
+        return this.majorVersion;
     }
 
     /**
@@ -703,6 +751,7 @@ public class CreateDifyInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDifyInstanceRequest, Builder> {
         private String regionId; 
         private String adbpgInstanceMode; 
+        private String backupVSwitchId; 
         private String clientToken; 
         private String dataRegion; 
         private String databaseOption; 
@@ -716,6 +765,8 @@ public class CreateDifyInstanceRequest extends Request {
         private String dbStorageSize; 
         private String dbStorageType; 
         private Boolean dryRun; 
+        private String edition; 
+        private Boolean enableExtraEndpoint; 
         private String gpuNodeSpec; 
         private String kvStoreAccount; 
         private String kvStoreEngineVersion; 
@@ -725,6 +776,7 @@ public class CreateDifyInstanceRequest extends Request {
         private String kvStorePassword; 
         private Integer kvStoreResourceId; 
         private String kvStoreType; 
+        private String majorVersion; 
         private String modelId; 
         private String modelOption; 
         private String natGatewayOption; 
@@ -765,6 +817,7 @@ public class CreateDifyInstanceRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.adbpgInstanceMode = request.adbpgInstanceMode;
+            this.backupVSwitchId = request.backupVSwitchId;
             this.clientToken = request.clientToken;
             this.dataRegion = request.dataRegion;
             this.databaseOption = request.databaseOption;
@@ -778,6 +831,8 @@ public class CreateDifyInstanceRequest extends Request {
             this.dbStorageSize = request.dbStorageSize;
             this.dbStorageType = request.dbStorageType;
             this.dryRun = request.dryRun;
+            this.edition = request.edition;
+            this.enableExtraEndpoint = request.enableExtraEndpoint;
             this.gpuNodeSpec = request.gpuNodeSpec;
             this.kvStoreAccount = request.kvStoreAccount;
             this.kvStoreEngineVersion = request.kvStoreEngineVersion;
@@ -787,6 +842,7 @@ public class CreateDifyInstanceRequest extends Request {
             this.kvStorePassword = request.kvStorePassword;
             this.kvStoreResourceId = request.kvStoreResourceId;
             this.kvStoreType = request.kvStoreType;
+            this.majorVersion = request.majorVersion;
             this.modelId = request.modelId;
             this.modelOption = request.modelOption;
             this.natGatewayOption = request.natGatewayOption;
@@ -835,6 +891,15 @@ public class CreateDifyInstanceRequest extends Request {
         public Builder adbpgInstanceMode(String adbpgInstanceMode) {
             this.putQueryParameter("AdbpgInstanceMode", adbpgInstanceMode);
             this.adbpgInstanceMode = adbpgInstanceMode;
+            return this;
+        }
+
+        /**
+         * BackupVSwitchId.
+         */
+        public Builder backupVSwitchId(String backupVSwitchId) {
+            this.putQueryParameter("BackupVSwitchId", backupVSwitchId);
+            this.backupVSwitchId = backupVSwitchId;
             return this;
         }
 
@@ -956,6 +1021,24 @@ public class CreateDifyInstanceRequest extends Request {
         }
 
         /**
+         * Edition.
+         */
+        public Builder edition(String edition) {
+            this.putQueryParameter("Edition", edition);
+            this.edition = edition;
+            return this;
+        }
+
+        /**
+         * EnableExtraEndpoint.
+         */
+        public Builder enableExtraEndpoint(Boolean enableExtraEndpoint) {
+            this.putQueryParameter("EnableExtraEndpoint", enableExtraEndpoint);
+            this.enableExtraEndpoint = enableExtraEndpoint;
+            return this;
+        }
+
+        /**
          * GpuNodeSpec.
          */
         public Builder gpuNodeSpec(String gpuNodeSpec) {
@@ -1033,6 +1116,15 @@ public class CreateDifyInstanceRequest extends Request {
         public Builder kvStoreType(String kvStoreType) {
             this.putQueryParameter("KvStoreType", kvStoreType);
             this.kvStoreType = kvStoreType;
+            return this;
+        }
+
+        /**
+         * MajorVersion.
+         */
+        public Builder majorVersion(String majorVersion) {
+            this.putQueryParameter("MajorVersion", majorVersion);
+            this.majorVersion = majorVersion;
             return this;
         }
 

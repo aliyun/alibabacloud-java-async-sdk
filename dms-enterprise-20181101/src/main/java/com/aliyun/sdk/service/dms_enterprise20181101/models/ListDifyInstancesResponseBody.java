@@ -245,8 +245,29 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppUuid")
         private String appUuid;
 
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
+        private String createdTime;
+
+        @com.aliyun.core.annotation.NameInMap("Edition")
+        private String edition;
+
+        @com.aliyun.core.annotation.NameInMap("EnterpriseInternetUrl")
+        private String enterpriseInternetUrl;
+
+        @com.aliyun.core.annotation.NameInMap("EnterpriseIntranetUrl")
+        private String enterpriseIntranetUrl;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("InternetUrl")
+        private String internetUrl;
+
+        @com.aliyun.core.annotation.NameInMap("IntranetUrl")
+        private String intranetUrl;
+
+        @com.aliyun.core.annotation.NameInMap("MajorVersion")
+        private String majorVersion;
 
         @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
@@ -265,7 +286,14 @@ public class ListDifyInstancesResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.appUuid = builder.appUuid;
+            this.createdTime = builder.createdTime;
+            this.edition = builder.edition;
+            this.enterpriseInternetUrl = builder.enterpriseInternetUrl;
+            this.enterpriseIntranetUrl = builder.enterpriseIntranetUrl;
             this.instanceId = builder.instanceId;
+            this.internetUrl = builder.internetUrl;
+            this.intranetUrl = builder.intranetUrl;
+            this.majorVersion = builder.majorVersion;
             this.securityGroupId = builder.securityGroupId;
             this.vSwitchId = builder.vSwitchId;
             this.vpcId = builder.vpcId;
@@ -289,10 +317,59 @@ public class ListDifyInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return createdTime
+         */
+        public String getCreatedTime() {
+            return this.createdTime;
+        }
+
+        /**
+         * @return edition
+         */
+        public String getEdition() {
+            return this.edition;
+        }
+
+        /**
+         * @return enterpriseInternetUrl
+         */
+        public String getEnterpriseInternetUrl() {
+            return this.enterpriseInternetUrl;
+        }
+
+        /**
+         * @return enterpriseIntranetUrl
+         */
+        public String getEnterpriseIntranetUrl() {
+            return this.enterpriseIntranetUrl;
+        }
+
+        /**
          * @return instanceId
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return internetUrl
+         */
+        public String getInternetUrl() {
+            return this.internetUrl;
+        }
+
+        /**
+         * @return intranetUrl
+         */
+        public String getIntranetUrl() {
+            return this.intranetUrl;
+        }
+
+        /**
+         * @return majorVersion
+         */
+        public String getMajorVersion() {
+            return this.majorVersion;
         }
 
         /**
@@ -332,7 +409,14 @@ public class ListDifyInstancesResponseBody extends TeaModel {
 
         public static final class Builder {
             private String appUuid; 
+            private String createdTime; 
+            private String edition; 
+            private String enterpriseInternetUrl; 
+            private String enterpriseIntranetUrl; 
             private String instanceId; 
+            private String internetUrl; 
+            private String intranetUrl; 
+            private String majorVersion; 
             private String securityGroupId; 
             private String vSwitchId; 
             private String vpcId; 
@@ -344,7 +428,14 @@ public class ListDifyInstancesResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.appUuid = model.appUuid;
+                this.createdTime = model.createdTime;
+                this.edition = model.edition;
+                this.enterpriseInternetUrl = model.enterpriseInternetUrl;
+                this.enterpriseIntranetUrl = model.enterpriseIntranetUrl;
                 this.instanceId = model.instanceId;
+                this.internetUrl = model.internetUrl;
+                this.intranetUrl = model.intranetUrl;
+                this.majorVersion = model.majorVersion;
                 this.securityGroupId = model.securityGroupId;
                 this.vSwitchId = model.vSwitchId;
                 this.vpcId = model.vpcId;
@@ -361,10 +452,66 @@ public class ListDifyInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * CreatedTime.
+             */
+            public Builder createdTime(String createdTime) {
+                this.createdTime = createdTime;
+                return this;
+            }
+
+            /**
+             * Edition.
+             */
+            public Builder edition(String edition) {
+                this.edition = edition;
+                return this;
+            }
+
+            /**
+             * EnterpriseInternetUrl.
+             */
+            public Builder enterpriseInternetUrl(String enterpriseInternetUrl) {
+                this.enterpriseInternetUrl = enterpriseInternetUrl;
+                return this;
+            }
+
+            /**
+             * EnterpriseIntranetUrl.
+             */
+            public Builder enterpriseIntranetUrl(String enterpriseIntranetUrl) {
+                this.enterpriseIntranetUrl = enterpriseIntranetUrl;
+                return this;
+            }
+
+            /**
              * InstanceId.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * InternetUrl.
+             */
+            public Builder internetUrl(String internetUrl) {
+                this.internetUrl = internetUrl;
+                return this;
+            }
+
+            /**
+             * IntranetUrl.
+             */
+            public Builder intranetUrl(String intranetUrl) {
+                this.intranetUrl = intranetUrl;
+                return this;
+            }
+
+            /**
+             * MajorVersion.
+             */
+            public Builder majorVersion(String majorVersion) {
+                this.majorVersion = majorVersion;
                 return this;
             }
 

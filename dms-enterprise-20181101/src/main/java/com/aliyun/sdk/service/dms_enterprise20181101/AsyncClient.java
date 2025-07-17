@@ -59,6 +59,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddLogicTableRouteConfigResponse> addLogicTableRouteConfig(AddLogicTableRouteConfigRequest request);
 
     /**
+     * @param request the request parameters of AddTableToCategory  AddTableToCategoryRequest
+     * @return AddTableToCategoryResponse
+     */
+    CompletableFuture<AddTableToCategoryResponse> addTableToCategory(AddTableToCategoryRequest request);
+
+    /**
      * <b>description</b> :
      * <p>When you add directed edges for a task node, take note of the following limits:</p>
      * <ol>
@@ -304,6 +310,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateLogicDatabaseResponse> createLogicDatabase(CreateLogicDatabaseRequest request);
 
     /**
+     * @param request the request parameters of CreateMetaCategory  CreateMetaCategoryRequest
+     * @return CreateMetaCategoryResponse
+     */
+    CompletableFuture<CreateMetaCategoryResponse> createMetaCategory(CreateMetaCategoryRequest request);
+
+    /**
      * <b>description</b> :
      * <p>To facilitate ticket creation, you can call the following dedicated operations to create some types of tickets:</p>
      * <ul>
@@ -487,6 +499,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteLogicTableRouteConfigResponse> deleteLogicTableRouteConfig(DeleteLogicTableRouteConfigRequest request);
 
     /**
+     * @param request the request parameters of DeleteMetaCategory  DeleteMetaCategoryRequest
+     * @return DeleteMetaCategoryResponse
+     */
+    CompletableFuture<DeleteMetaCategoryResponse> deleteMetaCategory(DeleteMetaCategoryRequest request);
+
+    /**
      * <b>description</b> :
      * <p>After you disable this feature, your DB instance loses the JDBC protocol. All authorization information is recycled.</p>
      * 
@@ -598,6 +616,24 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
      * </ul>
      * 
+     * @param request the request parameters of DescribeDifyEditions  DescribeDifyEditionsRequest
+     * @return DescribeDifyEditionsResponse
+     */
+    CompletableFuture<DescribeDifyEditionsResponse> describeDifyEditions(DescribeDifyEditionsRequest request);
+
+    /**
+     * <b>description</b> :
+     * <h2>请求说明</h2>
+     * <ul>
+     * <li><code>workspaceOption</code> 参数指示是否新建工作空间，默认使用已有工作空间。</li>
+     * <li>如果选择新建工作空间 (<code>CreateNewInstance</code>)，则必须提供 <code>workspaceName</code> 和 <code>workspaceDescription</code>。</li>
+     * <li><code>vpcId</code>, <code>VSwitchID</code>, <code>zoneId</code>, <code>regionCode</code>, <code>ResourceQuota</code>, <code>Replicas</code>, <code>storageType</code>, <code>dbInstanceClass</code>, <code>dbEngineVersion</code>, <code>kvstoreEngineVersion</code> 是必填项。</li>
+     * <li>当 <code>storageType</code> 为 <code>oss</code> 时，需要指定 <code>ossBucketResourceId</code> 和 <code>ossPath</code>。</li>
+     * <li>如果需要新建数据库实例，则必须提供 <code>instanceAccount</code> 和 <code>instancePassword</code>。</li>
+     * <li>预付费模式下，<code>PayPeriodType</code> 和 <code>PayPeriod</code> 必须填写。</li>
+     * <li>可以通过设置 <code>dryRun</code> 为 <code>true</code> 来执行预检查而不实际创建实例。</li>
+     * </ul>
+     * 
      * @param request the request parameters of DescribeDifyRegions  DescribeDifyRegionsRequest
      * @return DescribeDifyRegionsResponse
      */
@@ -677,6 +713,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ExecuteStructSyncResponse
      */
     CompletableFuture<ExecuteStructSyncResponse> executeStructSync(ExecuteStructSyncRequest request);
+
+    /**
+     * @param request the request parameters of GenMetaKnowledgeAsset  GenMetaKnowledgeAssetRequest
+     * @return GenMetaKnowledgeAssetResponse
+     */
+    CompletableFuture<GenMetaKnowledgeAssetResponse> genMetaKnowledgeAsset(GenMetaKnowledgeAssetRequest request);
 
     /**
      * <b>description</b> :
@@ -1434,6 +1476,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListLogicTablesResponse> listLogicTables(ListLogicTablesRequest request);
 
     /**
+     * @param request the request parameters of ListMetaCategory  ListMetaCategoryRequest
+     * @return ListMetaCategoryResponse
+     */
+    CompletableFuture<ListMetaCategoryResponse> listMetaCategory(ListMetaCategoryRequest request);
+
+    /**
      * @param request the request parameters of ListOrders  ListOrdersRequest
      * @return ListOrdersResponse
      */
@@ -1534,6 +1582,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListTablesResponse
      */
     CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request);
+
+    /**
+     * @param request the request parameters of ListTablesInCategory  ListTablesInCategoryRequest
+     * @return ListTablesInCategoryResponse
+     */
+    CompletableFuture<ListTablesInCategoryResponse> listTablesInCategory(ListTablesInCategoryRequest request);
 
     /**
      * @param request the request parameters of ListTaskFlow  ListTaskFlowRequest
@@ -1746,6 +1800,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RemoveDataExportJobResponse> removeDataExportJob(RemoveDataExportJobRequest request);
 
     /**
+     * @param request the request parameters of RemoveTableFromCategory  RemoveTableFromCategoryRequest
+     * @return RemoveTableFromCategoryResponse
+     */
+    CompletableFuture<RemoveTableFromCategoryResponse> removeTableFromCategory(RemoveTableFromCategoryRequest request);
+
+    /**
      * @param request the request parameters of RestartDataCorrectSQLJob  RestartDataCorrectSQLJobRequest
      * @return RestartDataCorrectSQLJobResponse
      */
@@ -1930,6 +1990,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return UpdateInstanceResponse
      */
     CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateMetaCategory  UpdateMetaCategoryRequest
+     * @return UpdateMetaCategoryResponse
+     */
+    CompletableFuture<UpdateMetaCategoryResponse> updateMetaCategory(UpdateMetaCategoryRequest request);
 
     /**
      * <b>description</b> :
