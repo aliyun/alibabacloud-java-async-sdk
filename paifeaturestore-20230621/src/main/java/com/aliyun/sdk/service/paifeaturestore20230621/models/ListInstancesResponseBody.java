@@ -115,6 +115,60 @@ public class ListInstancesResponseBody extends TeaModel {
      *
      * <p>ListInstancesResponseBody</p>
      */
+    public static class FeatureDBInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private FeatureDBInfo(Builder builder) {
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FeatureDBInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(FeatureDBInfo model) {
+                this.status = model.status;
+            } 
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public FeatureDBInfo build() {
+                return new FeatureDBInfo(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListInstancesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListInstancesResponseBody</p>
+     */
     public static class FeatureDBInstanceInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
@@ -170,7 +224,11 @@ public class ListInstancesResponseBody extends TeaModel {
      * <p>ListInstancesResponseBody</p>
      */
     public static class Instances extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("FeatureDBInfo")
+        private FeatureDBInfo featureDBInfo;
+
         @com.aliyun.core.annotation.NameInMap("FeatureDBInstanceInfo")
+        @Deprecated
         private FeatureDBInstanceInfo featureDBInstanceInfo;
 
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
@@ -192,6 +250,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String type;
 
         private Instances(Builder builder) {
+            this.featureDBInfo = builder.featureDBInfo;
             this.featureDBInstanceInfo = builder.featureDBInstanceInfo;
             this.gmtCreateTime = builder.gmtCreateTime;
             this.gmtModifiedTime = builder.gmtModifiedTime;
@@ -207,6 +266,13 @@ public class ListInstancesResponseBody extends TeaModel {
 
         public static Instances create() {
             return builder().build();
+        }
+
+        /**
+         * @return featureDBInfo
+         */
+        public FeatureDBInfo getFeatureDBInfo() {
+            return this.featureDBInfo;
         }
 
         /**
@@ -259,6 +325,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private FeatureDBInfo featureDBInfo; 
             private FeatureDBInstanceInfo featureDBInstanceInfo; 
             private String gmtCreateTime; 
             private String gmtModifiedTime; 
@@ -271,6 +338,7 @@ public class ListInstancesResponseBody extends TeaModel {
             } 
 
             private Builder(Instances model) {
+                this.featureDBInfo = model.featureDBInfo;
                 this.featureDBInstanceInfo = model.featureDBInstanceInfo;
                 this.gmtCreateTime = model.gmtCreateTime;
                 this.gmtModifiedTime = model.gmtModifiedTime;
@@ -279,6 +347,14 @@ public class ListInstancesResponseBody extends TeaModel {
                 this.status = model.status;
                 this.type = model.type;
             } 
+
+            /**
+             * FeatureDBInfo.
+             */
+            public Builder featureDBInfo(FeatureDBInfo featureDBInfo) {
+                this.featureDBInfo = featureDBInfo;
+                return this;
+            }
 
             /**
              * FeatureDBInstanceInfo.
