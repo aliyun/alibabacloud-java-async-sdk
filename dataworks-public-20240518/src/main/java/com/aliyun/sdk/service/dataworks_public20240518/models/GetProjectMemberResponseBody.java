@@ -231,11 +231,15 @@ public class GetProjectMemberResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
+        @com.aliyun.core.annotation.NameInMap("UserName")
+        private String userName;
+
         private ProjectMember(Builder builder) {
             this.projectId = builder.projectId;
             this.roles = builder.roles;
             this.status = builder.status;
             this.userId = builder.userId;
+            this.userName = builder.userName;
         }
 
         public static Builder builder() {
@@ -274,11 +278,19 @@ public class GetProjectMemberResponseBody extends TeaModel {
             return this.userId;
         }
 
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
         public static final class Builder {
             private Long projectId; 
             private java.util.List<Roles> roles; 
             private String status; 
             private String userId; 
+            private String userName; 
 
             private Builder() {
             } 
@@ -288,6 +300,7 @@ public class GetProjectMemberResponseBody extends TeaModel {
                 this.roles = model.roles;
                 this.status = model.status;
                 this.userId = model.userId;
+                this.userName = model.userName;
             } 
 
             /**
@@ -332,6 +345,14 @@ public class GetProjectMemberResponseBody extends TeaModel {
              */
             public Builder userId(String userId) {
                 this.userId = userId;
+                return this;
+            }
+
+            /**
+             * UserName.
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
                 return this;
             }
 

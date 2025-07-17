@@ -359,7 +359,7 @@ public class CreateWorkflowInstancesRequest extends Request {
         }
 
         /**
-         * <p>The workflow parameters. The priority of workflow parameters is higher than that of task parameters. You can call the GetTask operation to obtain the format of the workflow parameters by querying the Parameters parameter.</p>
+         * <p>The workflow parameters. This parameter takes effect only when you set the <code>WorkflowId</code> parameter to a value other than 1. If your workflow is an auto triggered workflow, configure this parameter in the key=value format. The parameters that you configure in this parameter have a lower priority than task parameters. If your workflow is a manually triggered workflow, configure this parameter in the JSON format. The parameters that you configure in this parameter have a higher priority than task parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{ 
@@ -451,8 +451,8 @@ public class CreateWorkflowInstancesRequest extends Request {
             /**
              * <p>The alerting policy. Valid values:</p>
              * <ul>
-             * <li>SUCCESS: An alert is reported when data backfill succeeds.</li>
-             * <li>FAILURE: An alert is reported when data backfill fails.</li>
+             * <li>Success: An alert is reported when data backfill succeeds.</li>
+             * <li>Failure: An alert is reported when data backfill fails.</li>
              * <li>SuccessFailure: An alert is reported regardless of whether data backfill succeeds or fails.</li>
              * </ul>
              * 
@@ -524,7 +524,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             } 
 
             /**
-             * <p>Specifies whether to block the running of the instance if the analysis fails. If you set the Type parameter to SupplementData, this parameter is required.</p>
+             * <p>Specifies whether to block running if the analysis fails. If you set the Type parameter to SupplementData, this parameter is required. Valid values: true and false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -535,7 +535,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the analysis feature. If you set the Type parameter to SupplementData, this parameter is required.</p>
+             * <p>Specifies whether to enable the analysis feature. If you set the Type parameter to SupplementData, this parameter is required. Valid values: true and false.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -642,7 +642,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether the instance can be run immediately during the time period in the future. Default value: false.</p>
+             * <p>Specifies whether the instances can be run immediately during the time period in the future. Valid values: true and false.</p>
              * 
              * <strong>example:</strong>
              * <p>false</p>
@@ -959,9 +959,9 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The running order. Default value: Asc. Valid values:</p>
+             * <p>The running order. Valid values:</p>
              * <ul>
-             * <li>Asc: The tasks are sorted by data timestamp in ascending order.</li>
+             * <li>Asc (default): The tasks are sorted by data timestamp in ascending order.</li>
              * <li>Desc: The tasks are sorted by data timestamp in descending order.</li>
              * </ul>
              * 
@@ -985,7 +985,10 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * Priority.
+             * <p>The running priority. Valid values: 1 to 11. A larger value indicates a higher priority.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -993,7 +996,14 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * PriorityWeightStrategy.
+             * <p>The weight policy for the priority. Valid values:</p>
+             * <ul>
+             * <li><code>Disable</code>: No weight policy for the priority is enabled. This is the default value.</li>
+             * <li><code>Upstream</code>: The sum of the weights for the ancestor nodes of the current node is calculated. The more ancestor nodes, the higher the weight.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Upstream</p>
              */
             public Builder priorityWeightStrategy(String priorityWeightStrategy) {
                 this.priorityWeightStrategy = priorityWeightStrategy;
@@ -1015,7 +1025,7 @@ public class CreateWorkflowInstancesRequest extends Request {
             }
 
             /**
-             * <p>The policy for running. If you leave this parameter empty, the runtime configuration is used.</p>
+             * <p>The policy for running. If you leave this parameter empty, the task configuration is used.</p>
              */
             public Builder runPolicy(RunPolicy runPolicy) {
                 this.runPolicy = runPolicy;
