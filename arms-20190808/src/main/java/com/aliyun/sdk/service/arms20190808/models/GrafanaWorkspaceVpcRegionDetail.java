@@ -72,6 +72,10 @@ public class GrafanaWorkspaceVpcRegionDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return fcConfig
      */
@@ -161,6 +165,23 @@ public class GrafanaWorkspaceVpcRegionDetail extends TeaModel {
         private String vSwitchId; 
         private java.util.List<String> vSwitchIds; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceVpcRegionDetail model) {
+            this.fcConfig = model.fcConfig;
+            this.id = model.id;
+            this.installStatus = model.installStatus;
+            this.name = model.name;
+            this.regionId = model.regionId;
+            this.securityGroupId = model.securityGroupId;
+            this.securityGroupIds = model.securityGroupIds;
+            this.userId = model.userId;
+            this.vSwitchId = model.vSwitchId;
+            this.vSwitchIds = model.vSwitchIds;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * fcConfig.

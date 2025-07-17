@@ -48,6 +48,10 @@ public class GrafanaWorkspaceOperateLog extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return date
      */
@@ -89,6 +93,17 @@ public class GrafanaWorkspaceOperateLog extends TeaModel {
         private String grafanaWorkspaceId; 
         private Long id; 
         private String operatorId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceOperateLog model) {
+            this.date = model.date;
+            this.detail = model.detail;
+            this.grafanaWorkspaceId = model.grafanaWorkspaceId;
+            this.id = model.id;
+            this.operatorId = model.operatorId;
+        } 
 
         /**
          * date.

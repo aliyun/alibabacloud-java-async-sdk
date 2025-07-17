@@ -36,6 +36,10 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TaskDetail taskDetail; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSyntheticTaskDetailResponseBody model) {
+            this.requestId = model.requestId;
+            this.taskDetail = model.taskDetail;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -158,6 +170,17 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String name; 
             private String seriousAlert; 
             private String symbols; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertList model) {
+                this.generalAlert = model.generalAlert;
+                this.isCritical = model.isCritical;
+                this.name = model.name;
+                this.seriousAlert = model.seriousAlert;
+                this.symbols = model.symbols;
+            } 
 
             /**
              * <p>The low-risk alert.</p>
@@ -312,6 +335,18 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String alertPolicyId; 
             private String monitorSamples; 
             private String startExecutionTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommonParam model) {
+                this.alarmFlag = model.alarmFlag;
+                this.alertList = model.alertList;
+                this.alertNotifierId = model.alertNotifierId;
+                this.alertPolicyId = model.alertPolicyId;
+                this.monitorSamples = model.monitorSamples;
+                this.startExecutionTime = model.startExecutionTime;
+            } 
 
             /**
              * <p>The identifier of the alert.</p>
@@ -546,6 +581,24 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String validateKeywords; 
             private Long verifyWay; 
             private String whiteList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Download model) {
+                this.connectionTimeout = model.connectionTimeout;
+                this.downloadCustomHeaderContent = model.downloadCustomHeaderContent;
+                this.downloadCustomHost = model.downloadCustomHost;
+                this.downloadCustomHostIp = model.downloadCustomHostIp;
+                this.downloadKernel = model.downloadKernel;
+                this.downloadRedirect = model.downloadRedirect;
+                this.downloadTransmissionSize = model.downloadTransmissionSize;
+                this.monitorTimeout = model.monitorTimeout;
+                this.quickProtocol = model.quickProtocol;
+                this.validateKeywords = model.validateKeywords;
+                this.verifyWay = model.verifyWay;
+                this.whiteList = model.whiteList;
+            } 
 
             /**
              * <p>The timeout period of the file download task.</p>
@@ -812,6 +865,19 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private Long startMinute; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtendInterval model) {
+                this.days = model.days;
+                this.endMinute = model.endMinute;
+                this.endTime = model.endTime;
+                this.endhour = model.endhour;
+                this.startHour = model.startHour;
+                this.startMinute = model.startMinute;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The day on which synthetic monitoring is performed. Valid values:</p>
              * <ul>
@@ -970,6 +1036,16 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private Long monitorType; 
             private Long netServiceId; 
             private Long sendCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorList model) {
+                this.cityCode = model.cityCode;
+                this.monitorType = model.monitorType;
+                this.netServiceId = model.netServiceId;
+                this.sendCount = model.sendCount;
+            } 
 
             /**
              * <p>The city code.</p>
@@ -1377,6 +1453,40 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String verifyStringBlacklist; 
             private String verifyStringWhitelist; 
             private Long waitCompletionTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Nav model) {
+                this.dnsHijackWhitelist = model.dnsHijackWhitelist;
+                this.elementBlacklist = model.elementBlacklist;
+                this.executeActiveX = model.executeActiveX;
+                this.executeApplet = model.executeApplet;
+                this.executeScript = model.executeScript;
+                this.filterInvalidIP = model.filterInvalidIP;
+                this.flowHijackJumpTimes = model.flowHijackJumpTimes;
+                this.flowHijackLogo = model.flowHijackLogo;
+                this.monitorTimeout = model.monitorTimeout;
+                this.navAutomaticScrolling = model.navAutomaticScrolling;
+                this.navCustomHeader = model.navCustomHeader;
+                this.navCustomHeaderContent = model.navCustomHeaderContent;
+                this.navCustomHost = model.navCustomHost;
+                this.navCustomHostIp = model.navCustomHostIp;
+                this.navDisableCache = model.navDisableCache;
+                this.navDisableCompression = model.navDisableCompression;
+                this.navIgnoreCertificateError = model.navIgnoreCertificateError;
+                this.navRedirect = model.navRedirect;
+                this.navReturnElement = model.navReturnElement;
+                this.pageTampering = model.pageTampering;
+                this.processName = model.processName;
+                this.quicDomain = model.quicDomain;
+                this.quicVersion = model.quicVersion;
+                this.requestHeader = model.requestHeader;
+                this.slowElementThreshold = model.slowElementThreshold;
+                this.verifyStringBlacklist = model.verifyStringBlacklist;
+                this.verifyStringWhitelist = model.verifyStringWhitelist;
+                this.waitCompletionTime = model.waitCompletionTime;
+            } 
 
             /**
              * <p>The DNS whitelist.</p>
@@ -1986,6 +2096,29 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private Long netTraceRouteTimeout; 
             private String whiteList; 
 
+            private Builder() {
+            } 
+
+            private Builder(Net model) {
+                this.netDigSwitch = model.netDigSwitch;
+                this.netDnsNs = model.netDnsNs;
+                this.netDnsQueryMethod = model.netDnsQueryMethod;
+                this.netDnsServer = model.netDnsServer;
+                this.netDnsSwitch = model.netDnsSwitch;
+                this.netDnsTimeout = model.netDnsTimeout;
+                this.netIcmpActive = model.netIcmpActive;
+                this.netIcmpDataCut = model.netIcmpDataCut;
+                this.netIcmpInterval = model.netIcmpInterval;
+                this.netIcmpNum = model.netIcmpNum;
+                this.netIcmpSize = model.netIcmpSize;
+                this.netIcmpSwitch = model.netIcmpSwitch;
+                this.netIcmpTimeout = model.netIcmpTimeout;
+                this.netTraceRouteNum = model.netTraceRouteNum;
+                this.netTraceRouteSwitch = model.netTraceRouteSwitch;
+                this.netTraceRouteTimeout = model.netTraceRouteTimeout;
+                this.whiteList = model.whiteList;
+            } 
+
             /**
              * <p>Indicates whether the data is displayed in the DIG format. Valid values:</p>
              * <ul>
@@ -2260,6 +2393,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Formdata model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the <strong>form-data</strong>.</p>
              * 
@@ -2332,6 +2473,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Urlencoded model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -2441,6 +2590,17 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String mode; 
             private String raw; 
             private Urlencoded urlencoded; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestContentBody model) {
+                this.formdata = model.formdata;
+                this.language = model.language;
+                this.mode = model.mode;
+                this.raw = model.raw;
+                this.urlencoded = model.urlencoded;
+            } 
 
             /**
              * <p>The data content. This parameter is returned when Mode is set to form-data.</p>
@@ -2554,6 +2714,14 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestContentHeader model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the header in the request parameters.</p>
              * 
@@ -2638,6 +2806,15 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private RequestContentBody body; 
             private java.util.List<RequestContentHeader> header; 
             private String method; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestContent model) {
+                this.body = model.body;
+                this.header = model.header;
+                this.method = model.method;
+            } 
 
             /**
              * <p>The content of the request body.</p>
@@ -2804,6 +2981,21 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private RequestContent requestContent; 
             private String verifyContent; 
             private Long verifyWay; 
+
+            private Builder() {
+            } 
+
+            private Builder(Protocol model) {
+                this.characterEncoding = model.characterEncoding;
+                this.customHost = model.customHost;
+                this.customHostIp = model.customHostIp;
+                this.protocolConnectionTimeout = model.protocolConnectionTimeout;
+                this.protocolMonitorTimeout = model.protocolMonitorTimeout;
+                this.receivedDataSize = model.receivedDataSize;
+                this.requestContent = model.requestContent;
+                this.verifyContent = model.verifyContent;
+                this.verifyWay = model.verifyWay;
+            } 
 
             /**
              * <p>The encoding format. Valid values:</p>
@@ -3123,6 +3315,27 @@ public class GetSyntheticTaskDetailResponseBody extends TeaModel {
             private String taskName; 
             private Long taskType; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(TaskDetail model) {
+                this.commonParam = model.commonParam;
+                this.download = model.download;
+                this.extendInterval = model.extendInterval;
+                this.intervalTime = model.intervalTime;
+                this.intervalType = model.intervalType;
+                this.ipType = model.ipType;
+                this.monitorList = model.monitorList;
+                this.monitorListString = model.monitorListString;
+                this.nav = model.nav;
+                this.net = model.net;
+                this.protocol = model.protocol;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskType = model.taskType;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The list of common parameters.</p>

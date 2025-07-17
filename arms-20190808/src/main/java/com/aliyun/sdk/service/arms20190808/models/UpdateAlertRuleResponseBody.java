@@ -40,6 +40,10 @@ public class UpdateAlertRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alertId
      */
@@ -65,6 +69,15 @@ public class UpdateAlertRuleResponseBody extends TeaModel {
         private Long alertId; 
         private String data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateAlertRuleResponseBody model) {
+            this.alertId = model.alertId;
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the alert rule.</p>

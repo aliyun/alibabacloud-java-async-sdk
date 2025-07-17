@@ -48,6 +48,10 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEnvironmentMetricTargetsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code. The status code 200 indicates that the request was successful.</p>
@@ -291,6 +306,22 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             private Long lastScrapeSeries; 
             private String scrapePool; 
             private String scrapeUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(ActiveTargets model) {
+                this.discoveredLabels = model.discoveredLabels;
+                this.globalUrl = model.globalUrl;
+                this.health = model.health;
+                this.labels = model.labels;
+                this.lastError = model.lastError;
+                this.lastScrape = model.lastScrape;
+                this.lastScrapeDuration = model.lastScrapeDuration;
+                this.lastScrapeSeries = model.lastScrapeSeries;
+                this.scrapePool = model.scrapePool;
+                this.scrapeUrl = model.scrapeUrl;
+            } 
 
             /**
              * <p>The tags used for service discovery.</p>
@@ -543,6 +574,22 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
             private String scrapePool; 
             private String scrapeUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(DroppedTargets model) {
+                this.discoveredLabels = model.discoveredLabels;
+                this.globalUrl = model.globalUrl;
+                this.health = model.health;
+                this.labels = model.labels;
+                this.lastError = model.lastError;
+                this.lastScrape = model.lastScrape;
+                this.lastScrapeDuration = model.lastScrapeDuration;
+                this.lastScrapeSeries = model.lastScrapeSeries;
+                this.scrapePool = model.scrapePool;
+                this.scrapeUrl = model.scrapeUrl;
+            } 
+
             /**
              * <p>The tags used for service discovery.</p>
              */
@@ -697,6 +744,14 @@ public class ListEnvironmentMetricTargetsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ActiveTargets> activeTargets; 
             private java.util.List<DroppedTargets> droppedTargets; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.activeTargets = model.activeTargets;
+                this.droppedTargets = model.droppedTargets;
+            } 
 
             /**
              * <p>The active targets.</p>

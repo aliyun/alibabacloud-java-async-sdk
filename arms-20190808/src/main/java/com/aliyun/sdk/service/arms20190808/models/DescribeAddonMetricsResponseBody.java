@@ -48,6 +48,10 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeAddonMetricsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -204,6 +219,15 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
             private String key; 
             private String source; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.description = model.description;
+                this.key = model.key;
+                this.source = model.source;
+            } 
+
             /**
              * <p>The description of the tag.</p>
              * 
@@ -299,6 +323,15 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
             private String description; 
             private String key; 
             private String source; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetricsLabels model) {
+                this.description = model.description;
+                this.key = model.key;
+                this.source = model.source;
+            } 
 
             /**
              * <p>The description of the tag.</p>
@@ -420,6 +453,17 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
             private String type; 
             private String unit; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.description = model.description;
+                this.labels = model.labels;
+                this.metric = model.metric;
+                this.type = model.type;
+                this.unit = model.unit;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -534,6 +578,15 @@ public class DescribeAddonMetricsResponseBody extends TeaModel {
             private String group; 
             private java.util.List<Labels> labels; 
             private java.util.List<Metrics> metrics; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.group = model.group;
+                this.labels = model.labels;
+                this.metrics = model.metrics;
+            } 
 
             /**
              * <p>The metric group.</p>

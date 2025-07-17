@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ManageRecordingRuleResponseBody} extends {@link TeaModel}
+ * {@link UpdateEnvDropMetricsRuleResponseBody} extends {@link TeaModel}
  *
- * <p>ManageRecordingRuleResponseBody</p>
+ * <p>UpdateEnvDropMetricsRuleResponseBody</p>
  */
-public class ManageRecordingRuleResponseBody extends TeaModel {
+public class UpdateEnvDropMetricsRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -29,7 +29,7 @@ public class ManageRecordingRuleResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ManageRecordingRuleResponseBody(Builder builder) {
+    private UpdateEnvDropMetricsRuleResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -40,8 +40,12 @@ public class ManageRecordingRuleResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ManageRecordingRuleResponseBody create() {
+    public static UpdateEnvDropMetricsRuleResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -78,11 +82,18 @@ public class ManageRecordingRuleResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateEnvDropMetricsRuleResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>200</p>
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -90,10 +101,7 @@ public class ManageRecordingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the operation.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
+         * Data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -101,10 +109,7 @@ public class ManageRecordingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>success</p>
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -112,18 +117,18 @@ public class ManageRecordingRuleResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request. You can use the ID to troubleshoot issues.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
-         * <p>CD782AEC-A676-529F-8F26-0ED0FF0EF1EA</p>
+         * <p>6A9AEA84-7186-4D8D-B498-4585C6A2****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ManageRecordingRuleResponseBody build() {
-            return new ManageRecordingRuleResponseBody(this);
+        public UpdateEnvDropMetricsRuleResponseBody build() {
+            return new UpdateEnvDropMetricsRuleResponseBody(this);
         } 
 
     } 

@@ -36,6 +36,10 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchRetcodeAppByPageResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned page information.</p>
@@ -122,6 +134,14 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -315,6 +335,24 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             private String type; 
             private Long updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetcodeApps model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.createTime = model.createTime;
+                this.nickName = model.nickName;
+                this.pid = model.pid;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.retcodeAppType = model.retcodeAppType;
+                this.tags = model.tags;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The ID of the application. The parameter is an auto-increment parameter.</p>
@@ -531,6 +569,16 @@ public class SearchRetcodeAppByPageResponseBody extends TeaModel {
             private Integer pageSize; 
             private java.util.List<RetcodeApps> retcodeApps; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.retcodeApps = model.retcodeApps;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

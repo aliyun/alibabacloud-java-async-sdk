@@ -44,6 +44,10 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPrometheusIntegrationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code. The status code 200 indicates that the request was successful.</p>
@@ -360,6 +374,30 @@ public class ListPrometheusIntegrationResponseBody extends TeaModel {
             private String status; 
             private String target; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.canDelete = model.canDelete;
+                this.canEditor = model.canEditor;
+                this.clusterId = model.clusterId;
+                this.containerName = model.containerName;
+                this.describe = model.describe;
+                this.exporterType = model.exporterType;
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+                this.integrationType = model.integrationType;
+                this.namespace = model.namespace;
+                this.needUpgrade = model.needUpgrade;
+                this.param = model.param;
+                this.podName = model.podName;
+                this.showDescribe = model.showDescribe;
+                this.showLog = model.showLog;
+                this.status = model.status;
+                this.target = model.target;
+                this.version = model.version;
+            } 
 
             /**
              * <p>Indicates whether the exporter can be deleted.</p>

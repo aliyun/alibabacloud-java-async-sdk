@@ -36,6 +36,10 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchTraceAppByPageResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the array object.</p>
@@ -122,6 +134,14 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -315,6 +335,24 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             private String type; 
             private Long updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TraceApps model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.createTime = model.createTime;
+                this.labels = model.labels;
+                this.pid = model.pid;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.show = model.show;
+                this.tags = model.tags;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The application ID.</p>
@@ -524,6 +562,16 @@ public class SearchTraceAppByPageResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer totalCount; 
             private java.util.List<TraceApps> traceApps; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+                this.traceApps = model.traceApps;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

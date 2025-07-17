@@ -44,6 +44,10 @@ public class RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody extends Tea
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody extends Tea
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -180,6 +194,15 @@ public class RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody extends Tea
             private String info; 
             private String msg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.info = model.info;
+                this.msg = model.msg;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The Info-level information.</p>

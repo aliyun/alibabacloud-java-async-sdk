@@ -36,6 +36,10 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return multiCallChainInfos
      */
@@ -53,6 +57,14 @@ public class GetMultipleTraceResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<MultiCallChainInfos> multiCallChainInfos; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetMultipleTraceResponseBody model) {
+            this.multiCallChainInfos = model.multiCallChainInfos;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of traces.</p>
@@ -122,6 +134,14 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagEntryList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -196,6 +216,14 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             private java.util.List<TagEntryList> tagEntryList; 
             private Long timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogEventList model) {
+                this.tagEntryList = model.tagEntryList;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * <p>The tags of the trace.</p>
              */
@@ -265,6 +293,14 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpansTagEntryList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -482,6 +518,26 @@ public class GetMultipleTraceResponseBody extends TeaModel {
             private java.util.List<SpansTagEntryList> tagEntryList; 
             private Long timestamp; 
             private String traceID; 
+
+            private Builder() {
+            } 
+
+            private Builder(Spans model) {
+                this.duration = model.duration;
+                this.haveStack = model.haveStack;
+                this.logEventList = model.logEventList;
+                this.operationName = model.operationName;
+                this.parentSpanId = model.parentSpanId;
+                this.resultCode = model.resultCode;
+                this.rpcId = model.rpcId;
+                this.rpcType = model.rpcType;
+                this.serviceIp = model.serviceIp;
+                this.serviceName = model.serviceName;
+                this.spanId = model.spanId;
+                this.tagEntryList = model.tagEntryList;
+                this.timestamp = model.timestamp;
+                this.traceID = model.traceID;
+            } 
 
             /**
              * <p>The amount of time consumed by the trace. Unit: milliseconds.</p>
@@ -709,6 +765,14 @@ public class GetMultipleTraceResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Spans> spans; 
             private String traceID; 
+
+            private Builder() {
+            } 
+
+            private Builder(MultiCallChainInfos model) {
+                this.spans = model.spans;
+                this.traceID = model.traceID;
+            } 
 
             /**
              * <p>The details of the trace.</p>

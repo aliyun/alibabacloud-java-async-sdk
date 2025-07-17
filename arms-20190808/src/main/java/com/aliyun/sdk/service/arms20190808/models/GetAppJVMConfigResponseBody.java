@@ -48,6 +48,10 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAppJVMConfigResponseBody model) {
+            this.code = model.code;
+            this.jvmInfoList = model.jvmInfoList;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The response code. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.</p>
@@ -239,6 +254,18 @@ public class GetAppJVMConfigResponseBody extends TeaModel {
             private String pid; 
             private String procId; 
             private String vmArgs; 
+
+            private Builder() {
+            } 
+
+            private Builder(JvmInfoList model) {
+                this.agentVersion = model.agentVersion;
+                this.hostName = model.hostName;
+                this.ip = model.ip;
+                this.pid = model.pid;
+                this.procId = model.procId;
+                this.vmArgs = model.vmArgs;
+            } 
 
             /**
              * <p>The version of the agent.</p>

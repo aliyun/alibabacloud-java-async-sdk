@@ -48,6 +48,10 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEnvironmentAlertRulesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
@@ -196,6 +211,14 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
             private Long alertId; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.alertId = model.alertId;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The ID of the alert rule.</p>
              * 
@@ -280,6 +303,15 @@ public class ListEnvironmentAlertRulesResponseBody extends TeaModel {
             private java.util.List<String> groups; 
             private java.util.List<Rules> rules; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.groups = model.groups;
+                this.rules = model.rules;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The queried alert groups.</p>

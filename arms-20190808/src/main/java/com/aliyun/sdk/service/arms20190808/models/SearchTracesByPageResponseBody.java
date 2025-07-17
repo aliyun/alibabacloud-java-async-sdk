@@ -36,6 +36,10 @@ public class SearchTracesByPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -54,8 +58,16 @@ public class SearchTracesByPageResponseBody extends TeaModel {
         private PageBean pageBean; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(SearchTracesByPageResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The returned struct.</p>
+         * <p>The struct returned.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -183,6 +195,19 @@ public class SearchTracesByPageResponseBody extends TeaModel {
             private Long timestamp; 
             private String traceID; 
 
+            private Builder() {
+            } 
+
+            private Builder(TraceInfos model) {
+                this.duration = model.duration;
+                this.operationName = model.operationName;
+                this.serviceIp = model.serviceIp;
+                this.serviceName = model.serviceName;
+                this.spanID = model.spanID;
+                this.timestamp = model.timestamp;
+                this.traceID = model.traceID;
+            } 
+
             /**
              * <p>The amount of time consumed by the trace. Unit: milliseconds.</p>
              * 
@@ -228,7 +253,10 @@ public class SearchTracesByPageResponseBody extends TeaModel {
             }
 
             /**
-             * SpanID.
+             * <p>The span ID of the trace.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>be3d6dcf5750e***</p>
              */
             public Builder spanID(String spanID) {
                 this.spanID = spanID;
@@ -331,6 +359,16 @@ public class SearchTracesByPageResponseBody extends TeaModel {
             private Integer pageSize; 
             private Integer total; 
             private java.util.List<TraceInfos> traceInfos; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+                this.traceInfos = model.traceInfos;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

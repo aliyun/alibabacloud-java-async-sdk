@@ -48,6 +48,10 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCloudClusterAllUrlResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
@@ -288,6 +303,22 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             private String remoteWriteUrl; 
             private String token; 
 
+            private Builder() {
+            } 
+
+            private Builder(RemoteUrl model) {
+                this.authToken = model.authToken;
+                this.grafanaUrl = model.grafanaUrl;
+                this.internetGrafanaUrl = model.internetGrafanaUrl;
+                this.internetPushGatewayUrl = model.internetPushGatewayUrl;
+                this.internetRemoteReadUrl = model.internetRemoteReadUrl;
+                this.internetRemoteWriteUrl = model.internetRemoteWriteUrl;
+                this.pushGatewayUrl = model.pushGatewayUrl;
+                this.remoteReadUrl = model.remoteReadUrl;
+                this.remoteWriteUrl = model.remoteWriteUrl;
+                this.token = model.token;
+            } 
+
             /**
              * <p>Indicates whether authentication is enabled.</p>
              * 
@@ -460,6 +491,15 @@ public class GetCloudClusterAllUrlResponseBody extends TeaModel {
             private String productCode; 
             private String region; 
             private RemoteUrl remoteUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.productCode = model.productCode;
+                this.region = model.region;
+                this.remoteUrl = model.remoteUrl;
+            } 
 
             /**
              * <p>The identifier of the cloud service.</p>

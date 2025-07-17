@@ -44,6 +44,10 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddPrometheusGlobalViewResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>状态码。说明 200表示成功。</p>
@@ -181,6 +195,15 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
             private String globalViewClusterId; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Info model) {
+                this.failedInstances = model.failedInstances;
+                this.globalViewClusterId = model.globalViewClusterId;
+                this.regionId = model.regionId;
+            } 
+
             /**
              * <p>The list of instances that failed to be added.</p>
              * 
@@ -276,6 +299,15 @@ public class AddPrometheusGlobalViewResponseBody extends TeaModel {
             private Info info; 
             private String msg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.info = model.info;
+                this.msg = model.msg;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The Info-level information.</p>

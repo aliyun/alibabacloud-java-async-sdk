@@ -44,6 +44,10 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSyntheticMonitorsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -264,6 +278,22 @@ public class GetSyntheticMonitorsResponseBody extends TeaModel {
             private String operator; 
             private String operatorCode; 
             private String region; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.available = model.available;
+                this.canBeSelected = model.canBeSelected;
+                this.city = model.city;
+                this.cityCode = model.cityCode;
+                this.clientType = model.clientType;
+                this.country = model.country;
+                this.ipv6 = model.ipv6;
+                this.operator = model.operator;
+                this.operatorCode = model.operatorCode;
+                this.region = model.region;
+            } 
 
             /**
              * <p>Indicates whether the monitoring point is available. Valid values: true and false.</p>

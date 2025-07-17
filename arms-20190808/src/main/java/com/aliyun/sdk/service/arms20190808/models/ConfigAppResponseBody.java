@@ -36,6 +36,10 @@ public class ConfigAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ConfigAppResponseBody extends TeaModel {
     public static final class Builder {
         private String data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConfigAppResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The result of turning on or off the main switch of the agent or the main switch status of the agent. Indicates whether the request was successful. Valid values:</p>

@@ -44,6 +44,10 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdatePrometheusIntegrationResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status code or error code.</p>
@@ -168,6 +182,14 @@ public class UpdatePrometheusIntegrationResponseBody extends TeaModel {
         public static final class Builder {
             private Long instanceId; 
             private String instanceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.instanceId = model.instanceId;
+                this.instanceName = model.instanceName;
+            } 
 
             /**
              * <p>The exporter ID.</p>

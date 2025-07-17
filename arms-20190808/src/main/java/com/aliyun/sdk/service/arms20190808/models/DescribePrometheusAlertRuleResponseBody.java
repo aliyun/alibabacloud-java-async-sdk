@@ -48,6 +48,10 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
         private PrometheusAlertRule prometheusAlertRule; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePrometheusAlertRuleResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.prometheusAlertRule = model.prometheusAlertRule;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -196,6 +211,14 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Annotations model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the annotation.</p>
              * 
@@ -268,6 +291,14 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the tag.</p>
@@ -461,6 +492,24 @@ public class DescribePrometheusAlertRuleResponseBody extends TeaModel {
             private String notifyType; 
             private Integer status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrometheusAlertRule model) {
+                this.alertId = model.alertId;
+                this.alertName = model.alertName;
+                this.annotations = model.annotations;
+                this.clusterId = model.clusterId;
+                this.dispatchRuleId = model.dispatchRuleId;
+                this.duration = model.duration;
+                this.expression = model.expression;
+                this.labels = model.labels;
+                this.message = model.message;
+                this.notifyType = model.notifyType;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the alert rule.</p>

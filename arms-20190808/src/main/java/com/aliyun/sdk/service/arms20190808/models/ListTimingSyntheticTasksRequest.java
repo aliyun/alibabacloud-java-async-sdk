@@ -49,7 +49,7 @@ public class ListTimingSyntheticTasksRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -267,6 +267,20 @@ public class ListTimingSyntheticTasksRequest extends Request {
             private java.util.List<String> taskIds; 
             private java.util.List<Integer> taskTypes; 
 
+            private Builder() {
+            } 
+
+            private Builder(Search model) {
+                this.name = model.name;
+                this.order = model.order;
+                this.orderField = model.orderField;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.status = model.status;
+                this.taskIds = model.taskIds;
+                this.taskTypes = model.taskTypes;
+            } 
+
             /**
              * <p>The task name.</p>
              * 
@@ -399,6 +413,14 @@ public class ListTimingSyntheticTasksRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

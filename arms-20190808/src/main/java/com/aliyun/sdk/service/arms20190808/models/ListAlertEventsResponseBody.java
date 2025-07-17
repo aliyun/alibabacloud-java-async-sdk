@@ -36,6 +36,10 @@ public class ListAlertEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class ListAlertEventsResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAlertEventsResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned struct.</p>
@@ -146,6 +158,16 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private String alarmName; 
             private String createTime; 
             private Integer state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Alarms model) {
+                this.alarmId = model.alarmId;
+                this.alarmName = model.alarmName;
+                this.createTime = model.createTime;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The ID of the alert.</p>
@@ -246,6 +268,14 @@ public class ListAlertEventsResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationPolicies model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The ID of the notification policy.</p>
@@ -487,6 +517,28 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private Long triggerCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Events model) {
+                this.alarms = model.alarms;
+                this.alertName = model.alertName;
+                this.annotations = model.annotations;
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.generatorURL = model.generatorURL;
+                this.handlerName = model.handlerName;
+                this.integrationName = model.integrationName;
+                this.integrationType = model.integrationType;
+                this.labels = model.labels;
+                this.notificationPolicies = model.notificationPolicies;
+                this.receiveTime = model.receiveTime;
+                this.severity = model.severity;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.triggerCount = model.triggerCount;
+            } 
 
             /**
              * <p>The associated alerts.</p>
@@ -744,6 +796,16 @@ public class ListAlertEventsResponseBody extends TeaModel {
             private Long page; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.events = model.events;
+                this.page = model.page;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The queried historical alert events.</p>

@@ -44,6 +44,10 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTimingSyntheticTasksResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status code. The status code 200 indicates that the request was successful.</p>
@@ -181,6 +195,15 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private Integer ipType; 
             private java.util.List<String> ips; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hosts model) {
+                this.domain = model.domain;
+                this.ipType = model.ipType;
+                this.ips = model.ips;
+            } 
+
             /**
              * <p>The destination domain name.</p>
              * 
@@ -267,6 +290,14 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private java.util.List<Hosts> hosts; 
             private Integer selectType; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomHost model) {
+                this.hosts = model.hosts;
+                this.selectType = model.selectType;
+            } 
+
             /**
              * <p>The custom host settings.</p>
              */
@@ -352,6 +383,15 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private String prometheusClusterId; 
             private String prometheusClusterRegion; 
             private java.util.Map<String, String> prometheusLabels; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomPrometheusSetting model) {
+                this.prometheusClusterId = model.prometheusClusterId;
+                this.prometheusClusterRegion = model.prometheusClusterRegion;
+                this.prometheusLabels = model.prometheusLabels;
+            } 
 
             /**
              * <p>A reserved field.</p>
@@ -457,6 +497,16 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private String secureGroupId; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomVPCSetting model) {
+                this.regionId = model.regionId;
+                this.secureGroupId = model.secureGroupId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The region ID.</p>
@@ -625,6 +675,20 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private Integer traceClientType; 
             private String xtraceRegion; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommonSetting model) {
+                this.customHost = model.customHost;
+                this.customPrometheusSetting = model.customPrometheusSetting;
+                this.customVPCSetting = model.customVPCSetting;
+                this.ipType = model.ipType;
+                this.isOpenTrace = model.isOpenTrace;
+                this.monitorSamples = model.monitorSamples;
+                this.traceClientType = model.traceClientType;
+                this.xtraceRegion = model.xtraceRegion;
+            } 
+
             /**
              * <p>The custom host settings.</p>
              */
@@ -768,6 +832,14 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -985,6 +1057,26 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private String taskId; 
             private Integer taskType; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Items model) {
+                this.commonSetting = model.commonSetting;
+                this.frequency = model.frequency;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.monitorCategory = model.monitorCategory;
+                this.monitorNum = model.monitorNum;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.taskId = model.taskId;
+                this.taskType = model.taskType;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The general settings.</p>
@@ -1209,6 +1301,16 @@ public class ListTimingSyntheticTasksResponseBody extends TeaModel {
             private Integer page; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The queried tasks.</p>

@@ -61,7 +61,7 @@ public class GetTraceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -146,7 +146,10 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder pageNumber(Long pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -155,7 +158,10 @@ public class GetTraceRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries on each page. Maximum value: 100.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);

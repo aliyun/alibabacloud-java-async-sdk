@@ -36,6 +36,10 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEscalationPoliciesResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned objects.</p>
@@ -122,6 +134,14 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(EscalationPolicies model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The ID of the escalation policy.</p>
@@ -219,6 +239,16 @@ public class ListEscalationPoliciesResponseBody extends TeaModel {
             private Long page; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.escalationPolicies = model.escalationPolicies;
+                this.page = model.page;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The list of escalation policies.</p>

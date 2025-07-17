@@ -100,7 +100,7 @@ public class QueryMetricByPageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -439,6 +439,14 @@ public class QueryMetricByPageRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the filter condition. You must set the key to <code>pid</code> or <code>regionId</code>.</p>

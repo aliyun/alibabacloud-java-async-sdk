@@ -48,6 +48,10 @@ public class ListDashboardsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dashboardVos
      */
@@ -89,6 +93,17 @@ public class ListDashboardsResponseBody extends TeaModel {
         private String grafanaServiceOpened; 
         private String prometheusServiceOpened; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDashboardsResponseBody model) {
+            this.dashboardVos = model.dashboardVos;
+            this.environmentId = model.environmentId;
+            this.grafanaServiceOpened = model.grafanaServiceOpened;
+            this.prometheusServiceOpened = model.prometheusServiceOpened;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the Grafana dashboard.</p>
@@ -371,6 +386,29 @@ public class ListDashboardsResponseBody extends TeaModel {
             private String uid; 
             private String url; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(I18nChild model) {
+                this.dashboardType = model.dashboardType;
+                this.exporter = model.exporter;
+                this.httpUrl = model.httpUrl;
+                this.httpsUrl = model.httpsUrl;
+                this.id = model.id;
+                this.isArmsExporter = model.isArmsExporter;
+                this.kind = model.kind;
+                this.language = model.language;
+                this.name = model.name;
+                this.needUpdate = model.needUpdate;
+                this.tags = model.tags;
+                this.time = model.time;
+                this.title = model.title;
+                this.type = model.type;
+                this.uid = model.uid;
+                this.url = model.url;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The type of the Grafana dashboard. This parameter has the same effect as the Exporter parameter whereas provides clearer implication.</p>
@@ -824,6 +862,30 @@ public class ListDashboardsResponseBody extends TeaModel {
             private String uid; 
             private String url; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(DashboardVos model) {
+                this.dashboardType = model.dashboardType;
+                this.exporter = model.exporter;
+                this.httpUrl = model.httpUrl;
+                this.httpsUrl = model.httpsUrl;
+                this.i18nChild = model.i18nChild;
+                this.id = model.id;
+                this.isArmsExporter = model.isArmsExporter;
+                this.kind = model.kind;
+                this.language = model.language;
+                this.name = model.name;
+                this.needUpdate = model.needUpdate;
+                this.tags = model.tags;
+                this.time = model.time;
+                this.title = model.title;
+                this.type = model.type;
+                this.uid = model.uid;
+                this.url = model.url;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The type of the Grafana dashboard. This parameter has the same effect as the Exporter parameter whereas provides clearer implication.</p>

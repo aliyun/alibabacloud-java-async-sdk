@@ -36,6 +36,10 @@ public class GetRetcodeShareUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,16 @@ public class GetRetcodeShareUrlResponseBody extends TeaModel {
         private String requestId; 
         private String url; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetRetcodeShareUrlResponseBody model) {
+            this.requestId = model.requestId;
+            this.url = model.url;
+        } 
+
         /**
-         * <p>The request ID.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>01FF8DD9-A09C-47A1-895A-B6E321******</p>
@@ -66,7 +78,7 @@ public class GetRetcodeShareUrlResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The logon-free URL of the application.</p>
+         * <p>The share URL of the application monitored by Browser Monitoring.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://arms-daily.console.aliyun.com:8080/shareapi/retcode.json?login_arms_t3h_token=XXXxxx&action=RetcodeAction&eventSubmitDoGetData=1">http://arms-daily.console.aliyun.com:8080/shareapi/retcode.json?login_arms_t3h_token=XXXxxx&amp;action=RetcodeAction&amp;eventSubmitDoGetData=1</a></p>

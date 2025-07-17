@@ -57,6 +57,10 @@ public class InstallManagedPrometheusRequest extends Request {
     private String vSwitchId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VcExtraInfo")
+    private String vcExtraInfo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VpcId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
@@ -72,6 +76,7 @@ public class InstallManagedPrometheusRequest extends Request {
         this.resourceGroupId = builder.resourceGroupId;
         this.securityGroupId = builder.securityGroupId;
         this.vSwitchId = builder.vSwitchId;
+        this.vcExtraInfo = builder.vcExtraInfo;
         this.vpcId = builder.vpcId;
     }
 
@@ -83,7 +88,7 @@ public class InstallManagedPrometheusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,6 +157,13 @@ public class InstallManagedPrometheusRequest extends Request {
     }
 
     /**
+     * @return vcExtraInfo
+     */
+    public String getVcExtraInfo() {
+        return this.vcExtraInfo;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -168,6 +180,7 @@ public class InstallManagedPrometheusRequest extends Request {
         private String resourceGroupId; 
         private String securityGroupId; 
         private String vSwitchId; 
+        private String vcExtraInfo; 
         private String vpcId; 
 
         private Builder() {
@@ -185,6 +198,7 @@ public class InstallManagedPrometheusRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.securityGroupId = request.securityGroupId;
             this.vSwitchId = request.vSwitchId;
+            this.vcExtraInfo = request.vcExtraInfo;
             this.vpcId = request.vpcId;
         } 
 
@@ -302,6 +316,15 @@ public class InstallManagedPrometheusRequest extends Request {
         public Builder vSwitchId(String vSwitchId) {
             this.putQueryParameter("VSwitchId", vSwitchId);
             this.vSwitchId = vSwitchId;
+            return this;
+        }
+
+        /**
+         * VcExtraInfo.
+         */
+        public Builder vcExtraInfo(String vcExtraInfo) {
+            this.putQueryParameter("VcExtraInfo", vcExtraInfo);
+            this.vcExtraInfo = vcExtraInfo;
             return this;
         }
 

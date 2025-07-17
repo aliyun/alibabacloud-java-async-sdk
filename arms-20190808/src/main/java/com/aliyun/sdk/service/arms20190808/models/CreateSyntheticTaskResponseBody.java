@@ -44,6 +44,10 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
         private Data data; 
         private String msg; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateSyntheticTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -164,6 +178,13 @@ public class CreateSyntheticTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The ID of the synthetic monitoring task.</p>

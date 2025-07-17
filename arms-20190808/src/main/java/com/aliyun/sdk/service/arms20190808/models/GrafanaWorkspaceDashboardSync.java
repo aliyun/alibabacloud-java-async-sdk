@@ -68,6 +68,10 @@ public class GrafanaWorkspaceDashboardSync extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dashboardTitle
      */
@@ -149,6 +153,22 @@ public class GrafanaWorkspaceDashboardSync extends TeaModel {
         private String orgId; 
         private String orgName; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceDashboardSync model) {
+            this.dashboardTitle = model.dashboardTitle;
+            this.dashboardURL = model.dashboardURL;
+            this.dashboardUid = model.dashboardUid;
+            this.folderId = model.folderId;
+            this.folderTitle = model.folderTitle;
+            this.folderURL = model.folderURL;
+            this.folderUid = model.folderUid;
+            this.orgId = model.orgId;
+            this.orgName = model.orgName;
+            this.type = model.type;
+        } 
 
         /**
          * dashboardTitle.

@@ -36,6 +36,10 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRetcodeLogstoreResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned struct.</p>
@@ -134,6 +146,15 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
             private String logstore; 
             private String project; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetcodeSLSConfig model) {
+                this.logstore = model.logstore;
+                this.project = model.project;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The Log Service Logstore.</p>
@@ -230,6 +251,15 @@ public class GetRetcodeLogstoreResponseBody extends TeaModel {
             private String message; 
             private RetcodeSLSConfig retcodeSLSConfig; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.message = model.message;
+                this.retcodeSLSConfig = model.retcodeSLSConfig;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The content of the log.</p>

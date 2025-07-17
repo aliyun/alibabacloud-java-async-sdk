@@ -36,6 +36,10 @@ public class SearchTracesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class SearchTracesResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TraceInfos> traceInfos; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchTracesResponseBody model) {
+            this.requestId = model.requestId;
+            this.traceInfos = model.traceInfos;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -183,6 +195,19 @@ public class SearchTracesResponseBody extends TeaModel {
             private Long timestamp; 
             private String traceID; 
 
+            private Builder() {
+            } 
+
+            private Builder(TraceInfos model) {
+                this.duration = model.duration;
+                this.operationName = model.operationName;
+                this.serviceIp = model.serviceIp;
+                this.serviceName = model.serviceName;
+                this.spanID = model.spanID;
+                this.timestamp = model.timestamp;
+                this.traceID = model.traceID;
+            } 
+
             /**
              * <p>The amount of time consumed by the trace. Unit: milliseconds.</p>
              * 
@@ -228,7 +253,10 @@ public class SearchTracesResponseBody extends TeaModel {
             }
 
             /**
-             * SpanID.
+             * <p>Span ID. You can get it from the <strong>Trace Explorer</strong> page of the ARMS console.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>be3d6dcf5750e***</p>
              */
             public Builder spanID(String spanID) {
                 this.spanID = spanID;

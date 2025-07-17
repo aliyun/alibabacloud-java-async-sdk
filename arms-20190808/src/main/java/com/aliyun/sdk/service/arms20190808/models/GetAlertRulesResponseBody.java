@@ -36,6 +36,10 @@ public class GetAlertRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class GetAlertRulesResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAlertRulesResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned pages.</p>
@@ -158,6 +170,17 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private Long n; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertRuleItems model) {
+                this.aggregate = model.aggregate;
+                this.metricKey = model.metricKey;
+                this.n = model.n;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The aggregation method of the alert condition. Valid values:</p>
@@ -281,6 +304,14 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private java.util.List<AlertRuleItems> alertRuleItems; 
             private String condition; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertRuleContent model) {
+                this.alertRuleItems = model.alertRuleItems;
+                this.condition = model.condition;
+            } 
+
             /**
              * <p>The trigger conditions of the Application Monitoring or Browser Monitoring alert rule.</p>
              */
@@ -354,6 +385,14 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Annotations model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the annotation.</p>
@@ -463,6 +502,17 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private Boolean show; 
             private String t; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomSLSFilters model) {
+                this.key = model.key;
+                this.opt = model.opt;
+                this.show = model.show;
+                this.t = model.t;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the filter condition.</p>
@@ -586,6 +636,15 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String filterOpt; 
             private java.util.List<String> filterValues; 
 
+            private Builder() {
+            } 
+
+            private Builder(DimFilters model) {
+                this.filterKey = model.filterKey;
+                this.filterOpt = model.filterOpt;
+                this.filterValues = model.filterValues;
+            } 
+
             /**
              * <p>The key of the filter condition.</p>
              * 
@@ -691,6 +750,16 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private java.util.List<String> customSLSWheres; 
             private java.util.List<DimFilters> dimFilters; 
 
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.customSLSFilters = model.customSLSFilters;
+                this.customSLSGroupByDimensions = model.customSLSGroupByDimensions;
+                this.customSLSWheres = model.customSLSWheres;
+                this.dimFilters = model.dimFilters;
+            } 
+
             /**
              * <p>The custom filter condition of the Browser Monitoring alert rule.</p>
              */
@@ -774,6 +843,14 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -846,6 +923,14 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -1195,6 +1280,37 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private Long updatedTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertRules model) {
+                this.alertCheckType = model.alertCheckType;
+                this.alertGroup = model.alertGroup;
+                this.alertId = model.alertId;
+                this.alertName = model.alertName;
+                this.alertRuleContent = model.alertRuleContent;
+                this.alertStatus = model.alertStatus;
+                this.alertType = model.alertType;
+                this.annotations = model.annotations;
+                this.autoAddNewApplication = model.autoAddNewApplication;
+                this.clusterId = model.clusterId;
+                this.createdTime = model.createdTime;
+                this.duration = model.duration;
+                this.extend = model.extend;
+                this.filters = model.filters;
+                this.labels = model.labels;
+                this.level = model.level;
+                this.message = model.message;
+                this.metricsType = model.metricsType;
+                this.notifyStrategy = model.notifyStrategy;
+                this.pids = model.pids;
+                this.promQL = model.promQL;
+                this.regionId = model.regionId;
+                this.tags = model.tags;
+                this.updatedTime = model.updatedTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The alert check type of the Prometheus alert rule.</p>
@@ -1563,6 +1679,16 @@ public class GetAlertRulesResponseBody extends TeaModel {
             private Long page; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.alertRules = model.alertRules;
+                this.page = model.page;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The alert rules.</p>

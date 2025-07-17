@@ -58,7 +58,7 @@ public class DeleteTraceAppRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -235,6 +235,14 @@ public class DeleteTraceAppRequest extends Request {
             private Integer id; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(ReasonIds model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The ID of the reason for deletion.</p>
              * 
@@ -307,6 +315,14 @@ public class DeleteTraceAppRequest extends Request {
         public static final class Builder {
             private java.util.List<ReasonIds> reasonIds; 
             private String remark; 
+
+            private Builder() {
+            } 
+
+            private Builder(DeleteReason model) {
+                this.reasonIds = model.reasonIds;
+                this.remark = model.remark;
+            } 
 
             /**
              * <p>Reasons Ids.</p>

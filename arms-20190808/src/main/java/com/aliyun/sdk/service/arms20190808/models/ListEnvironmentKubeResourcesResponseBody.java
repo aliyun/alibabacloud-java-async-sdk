@@ -48,6 +48,10 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEnvironmentKubeResourcesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
@@ -220,6 +235,16 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
             private String name; 
             private String namespace; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metadata model) {
+                this.annotations = model.annotations;
+                this.labels = model.labels;
+                this.name = model.name;
+                this.namespace = model.namespace;
+            } 
+
             /**
              * <p>The annotations.</p>
              */
@@ -344,6 +369,17 @@ public class ListEnvironmentKubeResourcesResponseBody extends TeaModel {
             private Metadata metadata; 
             private Object spec; 
             private Object status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.apiVersion = model.apiVersion;
+                this.kind = model.kind;
+                this.metadata = model.metadata;
+                this.spec = model.spec;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The version number of the API.</p>

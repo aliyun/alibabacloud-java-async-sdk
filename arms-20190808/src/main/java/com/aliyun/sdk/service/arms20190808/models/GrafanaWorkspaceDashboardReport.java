@@ -92,6 +92,10 @@ public class GrafanaWorkspaceDashboardReport extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gmtCreate
      */
@@ -221,6 +225,28 @@ public class GrafanaWorkspaceDashboardReport extends TeaModel {
         private String triggerType; 
         private String url; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceDashboardReport model) {
+            this.gmtCreate = model.gmtCreate;
+            this.grafanaWorkspaceId = model.grafanaWorkspaceId;
+            this.id = model.id;
+            this.lastSendTime = model.lastSendTime;
+            this.msg = model.msg;
+            this.name = model.name;
+            this.reportChannelTarget = model.reportChannelTarget;
+            this.reportChannelType = model.reportChannelType;
+            this.reportStyle = model.reportStyle;
+            this.reportType = model.reportType;
+            this.status = model.status;
+            this.triggerDay = model.triggerDay;
+            this.triggerTime = model.triggerTime;
+            this.triggerType = model.triggerType;
+            this.url = model.url;
+            this.userId = model.userId;
+        } 
 
         /**
          * gmtCreate.

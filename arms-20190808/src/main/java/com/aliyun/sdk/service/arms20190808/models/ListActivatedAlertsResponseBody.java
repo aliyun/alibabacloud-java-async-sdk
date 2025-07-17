@@ -40,6 +40,10 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -65,6 +69,15 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         private String message; 
         private Page page; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListActivatedAlertsResponseBody model) {
+            this.message = model.message;
+            this.page = model.page;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Message.
@@ -142,6 +155,14 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
         public static final class Builder {
             private Integer ruleId; 
             private String ruleName; 
+
+            private Builder() {
+            } 
+
+            private Builder(DispatchRules model) {
+                this.ruleId = model.ruleId;
+                this.ruleName = model.ruleName;
+            } 
 
             /**
              * <p>The ID of the notification policy.</p>
@@ -383,6 +404,28 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             private String severity; 
             private Long startsAt; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Alerts model) {
+                this.alertId = model.alertId;
+                this.alertName = model.alertName;
+                this.alertType = model.alertType;
+                this.count = model.count;
+                this.createTime = model.createTime;
+                this.dispatchRules = model.dispatchRules;
+                this.endsAt = model.endsAt;
+                this.expandFields = model.expandFields;
+                this.integrationName = model.integrationName;
+                this.integrationType = model.integrationType;
+                this.involvedObjectKind = model.involvedObjectKind;
+                this.involvedObjectName = model.involvedObjectName;
+                this.message = model.message;
+                this.severity = model.severity;
+                this.startsAt = model.startsAt;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the alert rule.</p>
@@ -645,6 +688,16 @@ public class ListActivatedAlertsResponseBody extends TeaModel {
             private Integer page; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Page model) {
+                this.alerts = model.alerts;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The alerts that have been triggered.</p>

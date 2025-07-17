@@ -36,6 +36,10 @@ public class DeleteAlertContactResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isSuccess
      */
@@ -53,6 +57,14 @@ public class DeleteAlertContactResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean isSuccess; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteAlertContactResponseBody model) {
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the call was successful.</p>

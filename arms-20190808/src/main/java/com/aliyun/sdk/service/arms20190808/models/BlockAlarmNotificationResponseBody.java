@@ -48,6 +48,10 @@ public class BlockAlarmNotificationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class BlockAlarmNotificationResponseBody extends TeaModel {
         private String requestId; 
         private Boolean result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(BlockAlarmNotificationResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>

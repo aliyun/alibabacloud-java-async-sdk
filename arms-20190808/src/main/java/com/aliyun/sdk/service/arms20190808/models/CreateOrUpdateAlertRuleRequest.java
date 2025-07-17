@@ -182,7 +182,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -590,12 +590,24 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         /**
          * <p>The type of the alert rule. Valid values:</p>
          * <ul>
-         * <li>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</li>
-         * <li>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</li>
-         * <li>PROMETHEUS_MONITORING_ALERT_RULE: alert rule for Managed Service for Prometheus</li>
-         * <li>XTRACE_MONITORING_ALERT_RULE: alert rule for Managed Service for OpenTelemetry</li>
-         * <li>EBPF_MONITORING_ALERT_RULE: alert rule for Application Monitoring eBPF Edition</li>
-         * <li>RUM_MONITORING_ALERT_RULE: alert rule for Real User Monitoring</li>
+         * <li>APPLICATION_MONITORING_ALERT_RULE: an alert rule for Application Monitoring.</li>
+         * <li>BROWSER_MONITORING_ALERT_RULE: an alert rule for Browser Monitoring.</li>
+         * <li>PROMETHEUS_MONITORING_ALERT_RULE: an alert rule for Managed Service for Prometheus.</li>
+         * <li>XTRACE_MONITORING_ALERT_RULE: an alert rule for Managed Service for OpenTelemetry.</li>
+         * <li>EBPF_MONITORING_ALERT_RULE: an alert rule for Application Monitoring eBPF Edition.</li>
+         * <li>RUM_MONITORING_ALERT_RULE: an alert rule for Real User Monitoring.</li>
+         * </ul>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>PROMETHEUS_MONITORING_ALERT_RULE</li>
+         * <li>APPLICATION_MONITORING_ALERT_RULE</li>
+         * <li>BROWSER_MONITORING_ALERT_RULE</li>
+         * <li>prometheus monitoring alert</li>
+         * <li>application monitoring alert</li>
+         * <li>browser monitoring alert</li>
+         * <li>XTRACE_MONITORING_ALERT_RULE</li>
+         * <li>EBPF_MONITORING_ALERT_RULE</li>
+         * <li>RUM_MONITORING_ALERT_RULE</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -656,7 +668,10 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * CheckCycle.
+         * <p>The interval for checking the alerts in Managed Service for Prometheus.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder checkCycle(Long checkCycle) {
             this.putBodyParameter("CheckCycle", checkCycle);
@@ -827,7 +842,7 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         }
 
         /**
-         * <p>The notification mode. You can specify the normal mode or simple mode.</p>
+         * <p>The notification mode. You can specify normal mode or simple mode.</p>
          * <ul>
          * <li>DIRECTED_MODE</li>
          * <li>NORMAL_MODE</li>
@@ -967,6 +982,14 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MarkTags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The Tag Key.</p>
              * 
@@ -1039,6 +1062,14 @@ public class CreateOrUpdateAlertRuleRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

@@ -48,6 +48,10 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEnvironmentDashboardsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -244,6 +259,18 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
             private String uid; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dashboards model) {
+                this.folderUid = model.folderUid;
+                this.region = model.region;
+                this.tags = model.tags;
+                this.title = model.title;
+                this.uid = model.uid;
+                this.url = model.url;
+            } 
+
             /**
              * <p>The UID of the folder.</p>
              * 
@@ -357,6 +384,14 @@ public class ListEnvironmentDashboardsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Dashboards> dashboards; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.dashboards = model.dashboards;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The dashboards.</p>

@@ -56,6 +56,10 @@ public class CreateRumAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class CreateRumAppResponseBody extends TeaModel {
         private String requestId; 
         private String resourceGroupId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRumAppResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. 2XX indicates that the request was successful. 3XX indicates that the request was redirected. 4XX indicates that a request error occurred. 5XX indicates that a server error occurred.</p>
@@ -256,6 +273,15 @@ public class CreateRumAppResponseBody extends TeaModel {
             private String cdnDomain; 
             private String endpoint; 
             private String pid; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cdnDomain = model.cdnDomain;
+                this.endpoint = model.endpoint;
+                this.pid = model.pid;
+            } 
 
             /**
              * <p>The domain name of the SDK.</p>

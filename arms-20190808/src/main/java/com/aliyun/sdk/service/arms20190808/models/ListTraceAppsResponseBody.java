@@ -48,6 +48,10 @@ public class ListTraceAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListTraceAppsResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private java.util.List<TraceApps> traceApps; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListTraceAppsResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceApps = model.traceApps;
+        } 
 
         /**
          * <p>The HTTP status code returned for the request. Valid values:</p>
@@ -201,6 +216,14 @@ public class ListTraceAppsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -466,6 +489,30 @@ public class ListTraceAppsResponseBody extends TeaModel {
             private String userId; 
             private String workloadKind; 
             private String workloadName; 
+
+            private Builder() {
+            } 
+
+            private Builder(TraceApps model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.clusterId = model.clusterId;
+                this.createTime = model.createTime;
+                this.labels = model.labels;
+                this.language = model.language;
+                this.namespace = model.namespace;
+                this.pid = model.pid;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.show = model.show;
+                this.source = model.source;
+                this.tags = model.tags;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+                this.workloadKind = model.workloadKind;
+                this.workloadName = model.workloadName;
+            } 
 
             /**
              * <p>The application ID.</p>

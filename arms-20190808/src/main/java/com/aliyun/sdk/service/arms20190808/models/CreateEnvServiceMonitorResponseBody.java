@@ -44,6 +44,10 @@ public class CreateEnvServiceMonitorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class CreateEnvServiceMonitorResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateEnvServiceMonitorResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -192,6 +206,16 @@ public class CreateEnvServiceMonitorResponseBody extends TeaModel {
             private Integer matchedTargetCount; 
             private String namespace; 
             private String serviceMonitorName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.matchedMsg = model.matchedMsg;
+                this.matchedTargetCount = model.matchedTargetCount;
+                this.namespace = model.namespace;
+                this.serviceMonitorName = model.serviceMonitorName;
+            } 
 
             /**
              * <p>Indicates whether targets are matched.</p>

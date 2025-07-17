@@ -52,6 +52,10 @@ public class GetRumAppsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return appList
      */
@@ -101,6 +105,18 @@ public class GetRumAppsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRumAppsResponseBody model) {
+            this.appList = model.appList;
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The queried applications.</p>
@@ -243,6 +259,16 @@ public class GetRumAppsResponseBody extends TeaModel {
             private java.util.List<String> propagatorTypes; 
             private String tracing; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceDomainConfigs model) {
+                this.description = model.description;
+                this.domain = model.domain;
+                this.propagatorTypes = model.propagatorTypes;
+                this.tracing = model.tracing;
+            } 
+
             /**
              * <p>The description.</p>
              * 
@@ -338,6 +364,14 @@ public class GetRumAppsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
@@ -591,6 +625,29 @@ public class GetRumAppsResponseBody extends TeaModel {
             private String status; 
             private java.util.List<Tags> tags; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AppList model) {
+                this.appType = model.appType;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.endpoint = model.endpoint;
+                this.isSubscription = model.isSubscription;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.packageName = model.packageName;
+                this.pid = model.pid;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serviceDomainConfigs = model.serviceDomainConfigs;
+                this.slsLogstore = model.slsLogstore;
+                this.slsProject = model.slsProject;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The application type. Valid values: web, miniapp, ios, and android.</p>

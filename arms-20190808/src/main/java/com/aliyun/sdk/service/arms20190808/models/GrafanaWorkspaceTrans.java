@@ -68,6 +68,10 @@ public class GrafanaWorkspaceTrans extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiUrl
      */
@@ -149,6 +153,22 @@ public class GrafanaWorkspaceTrans extends TeaModel {
         private String processStatus; 
         private java.util.List<GrafanaWorkspaceTransDetail> transDetails; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceTrans model) {
+            this.apiUrl = model.apiUrl;
+            this.authType = model.authType;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.grafanaWorkspaceId = model.grafanaWorkspaceId;
+            this.id = model.id;
+            this.msg = model.msg;
+            this.processStatus = model.processStatus;
+            this.transDetails = model.transDetails;
+            this.userId = model.userId;
+        } 
 
         /**
          * apiUrl.

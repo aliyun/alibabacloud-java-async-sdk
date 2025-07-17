@@ -52,6 +52,10 @@ public class CreateGrafanaWorkspaceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CreateGrafanaWorkspaceResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGrafanaWorkspaceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>

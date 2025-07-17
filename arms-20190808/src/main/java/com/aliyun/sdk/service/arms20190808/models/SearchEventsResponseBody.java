@@ -40,6 +40,10 @@ public class SearchEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isTrigger
      */
@@ -65,6 +69,15 @@ public class SearchEventsResponseBody extends TeaModel {
         private Integer isTrigger; 
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchEventsResponseBody model) {
+            this.isTrigger = model.isTrigger;
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Specifies whether the alert event is triggered. If you do not set this parameter, all alert events are queried. Valid values:</p>
@@ -233,6 +246,21 @@ public class SearchEventsResponseBody extends TeaModel {
             private Long id; 
             private java.util.List<String> links; 
             private String message; 
+
+            private Builder() {
+            } 
+
+            private Builder(Event model) {
+                this.alertId = model.alertId;
+                this.alertName = model.alertName;
+                this.alertRule = model.alertRule;
+                this.alertType = model.alertType;
+                this.eventLevel = model.eventLevel;
+                this.eventTime = model.eventTime;
+                this.id = model.id;
+                this.links = model.links;
+                this.message = model.message;
+            } 
 
             /**
              * <p>The ID of the alert rule that is associated with the event.</p>
@@ -414,6 +442,16 @@ public class SearchEventsResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.event = model.event;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The information about the alert events.</p>

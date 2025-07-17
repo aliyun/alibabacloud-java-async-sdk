@@ -44,6 +44,10 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdatePrometheusGlobalViewResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code. The status code 200 indicates that the request was successful.</p>
@@ -193,6 +207,16 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
             private String sourceType; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(FailedInstances model) {
+                this.clusterId = model.clusterId;
+                this.sourceName = model.sourceName;
+                this.sourceType = model.sourceType;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The ID of the Prometheus instance.</p>
              * 
@@ -287,6 +311,14 @@ public class UpdatePrometheusGlobalViewResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<FailedInstances> failedInstances; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.failedInstances = model.failedInstances;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The data sources that failed to be updated.</p>

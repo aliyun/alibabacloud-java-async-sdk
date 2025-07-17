@@ -40,7 +40,7 @@ public class GetSyntheticMonitorsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -161,6 +161,15 @@ public class GetSyntheticMonitorsRequest extends Request {
             private Integer monitorCategory; 
             private Integer network; 
             private Integer taskType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.monitorCategory = model.monitorCategory;
+                this.network = model.network;
+                this.taskType = model.taskType;
+            } 
 
             /**
              * <p>The type of the monitoring point. Valid values: 1: PC. 2: mobile device.</p>

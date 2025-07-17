@@ -44,6 +44,10 @@ public class ListPrometheusGlobalViewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ListPrometheusGlobalViewResponseBody extends TeaModel {
         private String data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPrometheusGlobalViewResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Status code. Description 200 means success.</p>

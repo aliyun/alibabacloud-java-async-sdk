@@ -40,6 +40,10 @@ public class ListAlertsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -66,8 +70,20 @@ public class ListAlertsResponseBody extends TeaModel {
         private PageBean pageBean; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAlertsResponseBody model) {
+            this.message = model.message;
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Message.
+         * <p>The returned error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>alert.manager.error.code.signature.invalid</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -75,7 +91,7 @@ public class ListAlertsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the array object.</p>
+         * <p>The struct returned.</p>
          */
         public Builder pageBean(PageBean pageBean) {
             this.pageBean = pageBean;
@@ -178,6 +194,17 @@ public class ListAlertsResponseBody extends TeaModel {
             private String handlerName; 
             private String time; 
             private Long type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Activities model) {
+                this.content = model.content;
+                this.description = model.description;
+                this.handlerName = model.handlerName;
+                this.time = model.time;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The content of the alert notification.</p>
@@ -411,6 +438,24 @@ public class ListAlertsResponseBody extends TeaModel {
             private String severity; 
             private String startTime; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertEvents model) {
+                this.alertName = model.alertName;
+                this.annotations = model.annotations;
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.generatorURL = model.generatorURL;
+                this.integrationName = model.integrationName;
+                this.integrationType = model.integrationType;
+                this.labels = model.labels;
+                this.receiveTime = model.receiveTime;
+                this.severity = model.severity;
+                this.startTime = model.startTime;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The name of the event.</p>
@@ -795,8 +840,33 @@ public class ListAlertsResponseBody extends TeaModel {
             private String solution; 
             private Long state; 
 
+            private Builder() {
+            } 
+
+            private Builder(ListAlerts model) {
+                this.acknowledgeTime = model.acknowledgeTime;
+                this.activities = model.activities;
+                this.alertEvents = model.alertEvents;
+                this.alertId = model.alertId;
+                this.alertName = model.alertName;
+                this.createTime = model.createTime;
+                this.describe = model.describe;
+                this.dispatchRuleId = model.dispatchRuleId;
+                this.dispatchRuleName = model.dispatchRuleName;
+                this.handler = model.handler;
+                this.notifyRobots = model.notifyRobots;
+                this.owner = model.owner;
+                this.recoverTime = model.recoverTime;
+                this.severity = model.severity;
+                this.solution = model.solution;
+                this.state = model.state;
+            } 
+
             /**
-             * AcknowledgeTime.
+             * <p>Time to claim the alarm.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder acknowledgeTime(Long acknowledgeTime) {
                 this.acknowledgeTime = acknowledgeTime;
@@ -853,7 +923,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Describe.
+             * <p>The description of a event execution status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[Notification Strategy: ARMS Front-end Alarm]\nPage Indicator Page Name: Home JS Error Number Average in the last 5 minutes &gt;= 1.0 times, current value 1.0000 times\n</p>
              */
             public Builder describe(String describe) {
                 this.describe = describe;
@@ -883,7 +956,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Handler.
+             * <p>Alarm handler.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder handler(String handler) {
                 this.handler = handler;
@@ -891,7 +967,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyRobots.
+             * <p>The contact card of an instant messaging app.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Test Robot</p>
              */
             public Builder notifyRobots(String notifyRobots) {
                 this.notifyRobots = notifyRobots;
@@ -899,7 +978,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * Owner.
+             * <p>The notification object configured in the notification policy, responsible for handling alerts.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Alice</p>
              */
             public Builder owner(String owner) {
                 this.owner = owner;
@@ -907,7 +989,10 @@ public class ListAlertsResponseBody extends TeaModel {
             }
 
             /**
-             * RecoverTime.
+             * <p>Alarm recovery time.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-1</p>
              */
             public Builder recoverTime(Long recoverTime) {
                 this.recoverTime = recoverTime;
@@ -1027,8 +1112,18 @@ public class ListAlertsResponseBody extends TeaModel {
             private Long size; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.listAlerts = model.listAlerts;
+                this.page = model.page;
+                this.size = model.size;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>The alerts for which the alert sending history is queried.</p>
+             * <p>The queried alert notification history records.</p>
              */
             public Builder listAlerts(java.util.List<ListAlerts> listAlerts) {
                 this.listAlerts = listAlerts;

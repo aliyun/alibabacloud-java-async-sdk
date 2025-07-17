@@ -56,6 +56,10 @@ public class DeleteRumAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -113,6 +117,19 @@ public class DeleteRumAppResponseBody extends TeaModel {
         private String resourceGroupId; 
         private String result; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeleteRumAppResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.result = model.result;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code. The status code 200 indicates that the request was successful.</p>

@@ -52,6 +52,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetRumAppInfoResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
          * 
@@ -114,7 +130,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The details of the application.</p>
+         * <p>The application details.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -231,6 +247,15 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private Boolean enable; 
             private java.util.Map<String, DataBonreeSDKConfigModuleConfigVersionConfigsValue> versionConfigs; 
 
+            private Builder() {
+            } 
+
+            private Builder(ModuleConfig model) {
+                this.defaultConfig = model.defaultConfig;
+                this.enable = model.enable;
+                this.versionConfigs = model.versionConfigs;
+            } 
+
             /**
              * <p>The default configuration of the application.</p>
              */
@@ -309,8 +334,19 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private Integer samplingRate; 
             private Integer samplingType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SamplingConfig model) {
+                this.samplingRate = model.samplingRate;
+                this.samplingType = model.samplingType;
+            } 
+
             /**
-             * samplingRate.
+             * <p>Sampling rate: between (0, 1000], a thousandth.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>500</p>
              */
             public Builder samplingRate(Integer samplingRate) {
                 this.samplingRate = samplingRate;
@@ -318,7 +354,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * samplingType.
+             * <p>Sampling type, currently only session random sampling is supported, that is, fixed transmission: 1.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder samplingType(Integer samplingType) {
                 this.samplingType = samplingType;
@@ -376,6 +415,14 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private ModuleConfig moduleConfig; 
             private SamplingConfig samplingConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(BonreeSDKConfig model) {
+                this.moduleConfig = model.moduleConfig;
+                this.samplingConfig = model.samplingConfig;
+            } 
+
             /**
              * <p>The module configuration.</p>
              */
@@ -385,7 +432,7 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * samplingConfig.
+             * <p>Sampling configuration.</p>
              */
             public Builder samplingConfig(SamplingConfig samplingConfig) {
                 this.samplingConfig = samplingConfig;
@@ -479,6 +526,17 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private Integer samplingRate; 
             private Boolean tracing; 
 
+            private Builder() {
+            } 
+
+            private Builder(ServiceDomainConfigs model) {
+                this.description = model.description;
+                this.domain = model.domain;
+                this.propagatorTypes = model.propagatorTypes;
+                this.samplingRate = model.samplingRate;
+                this.tracing = model.tracing;
+            } 
+
             /**
              * <p>The description.</p>
              * 
@@ -510,7 +568,10 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingRate.
+             * <p>The sampling rate of a trace. Valid values: (0, 100].</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder samplingRate(Integer samplingRate) {
                 this.samplingRate = samplingRate;
@@ -582,6 +643,14 @@ public class GetRumAppInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -896,8 +965,39 @@ public class GetRumAppInfoResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appConfig = model.appConfig;
+                this.appGroup = model.appGroup;
+                this.appType = model.appType;
+                this.backendServiceTraceRegion = model.backendServiceTraceRegion;
+                this.bonreeSDKConfig = model.bonreeSDKConfig;
+                this.cdnDomain = model.cdnDomain;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.endpoint = model.endpoint;
+                this.isSubscription = model.isSubscription;
+                this.name = model.name;
+                this.nickName = model.nickName;
+                this.packageName = model.packageName;
+                this.pid = model.pid;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.serviceDomainConfigs = model.serviceDomainConfigs;
+                this.slsLogstore = model.slsLogstore;
+                this.slsProject = model.slsProject;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.type = model.type;
+            } 
+
             /**
-             * AppConfig.
+             * <p>The application configurations in the JSON format. This parameter is deprecated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;apiRequestOfH5&quot;:300,&quot;apiRequestOfOriginal&quot;:500,&quot;coldStart&quot;:5000,&quot;hotStart&quot;:3000,&quot;staticResourceLoad&quot;:300,&quot;stutter&quot;:1000,&quot;viewLoadOfH5&quot;:1000,&quot;viewLoadOfOriginal&quot;:2000}</p>
              */
             public Builder appConfig(String appConfig) {
                 this.appConfig = appConfig;
@@ -969,6 +1069,9 @@ public class GetRumAppInfoResponseBody extends TeaModel {
 
             /**
              * <p>The description of the application.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Portal home page.</p>
              */
             public Builder description(String description) {
                 this.description = description;

@@ -36,6 +36,10 @@ public class UpdateIntegrationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return integration
      */
@@ -53,6 +57,14 @@ public class UpdateIntegrationResponseBody extends TeaModel {
     public static final class Builder {
         private Integration integration; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateIntegrationResponseBody model) {
+            this.integration = model.integration;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The Information about the alert integration.</p>
@@ -290,6 +302,28 @@ public class UpdateIntegrationResponseBody extends TeaModel {
             private String shortToken; 
             private java.util.List<Long> stat; 
             private Boolean state; 
+
+            private Builder() {
+            } 
+
+            private Builder(Integration model) {
+                this.apiEndpoint = model.apiEndpoint;
+                this.autoRecover = model.autoRecover;
+                this.description = model.description;
+                this.duplicateKey = model.duplicateKey;
+                this.extendedFieldRedefineRules = model.extendedFieldRedefineRules;
+                this.fieldRedefineRules = model.fieldRedefineRules;
+                this.initiativeRecoverField = model.initiativeRecoverField;
+                this.initiativeRecoverValue = model.initiativeRecoverValue;
+                this.integrationId = model.integrationId;
+                this.integrationName = model.integrationName;
+                this.integrationProductType = model.integrationProductType;
+                this.liveness = model.liveness;
+                this.recoverTime = model.recoverTime;
+                this.shortToken = model.shortToken;
+                this.stat = model.stat;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The endpoint of the alert integration.</p>

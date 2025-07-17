@@ -40,6 +40,10 @@ public class GrafanaWorkspaceIntegrationDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataSources
      */
@@ -65,6 +69,15 @@ public class GrafanaWorkspaceIntegrationDetail extends TeaModel {
         private java.util.List<GrafanaWorkspaceIntegrationDataSource> dataSources; 
         private String integrationId; 
         private String status; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceIntegrationDetail model) {
+            this.dataSources = model.dataSources;
+            this.integrationId = model.integrationId;
+            this.status = model.status;
+        } 
 
         /**
          * dataSources.

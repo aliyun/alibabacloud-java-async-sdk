@@ -36,6 +36,10 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeContactGroupsResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The objects that were returned.</p>
@@ -158,6 +170,17 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             private String contactName; 
             private String email; 
             private String phone; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contacts model) {
+                this.armsContactId = model.armsContactId;
+                this.contactId = model.contactId;
+                this.contactName = model.contactName;
+                this.email = model.email;
+                this.phone = model.phone;
+            } 
 
             /**
              * <p>The ID of the alert contact.</p>
@@ -289,6 +312,16 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             private String contactGroupName; 
             private java.util.List<Contacts> contacts; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertContactGroups model) {
+                this.armsContactGroupId = model.armsContactGroupId;
+                this.contactGroupId = model.contactGroupId;
+                this.contactGroupName = model.contactGroupName;
+                this.contacts = model.contacts;
+            } 
+
             /**
              * <p>The ID of the alert contact group.</p>
              * 
@@ -404,6 +437,16 @@ public class DescribeContactGroupsResponseBody extends TeaModel {
             private Long page; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.alertContactGroups = model.alertContactGroups;
+                this.page = model.page;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The name of the alert contact group.</p>

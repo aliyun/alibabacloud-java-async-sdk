@@ -36,6 +36,10 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alertRobot
      */
@@ -53,6 +57,14 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
     public static final class Builder {
         private AlertRobot alertRobot; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOrUpdateIMRobotResponseBody model) {
+            this.alertRobot = model.alertRobot;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the IM chatbot.</p>
@@ -206,6 +218,21 @@ public class CreateOrUpdateIMRobotResponseBody extends TeaModel {
             private String robotName; 
             private String token; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertRobot model) {
+                this.cardTemplate = model.cardTemplate;
+                this.dailyNoc = model.dailyNoc;
+                this.dailyNocTime = model.dailyNocTime;
+                this.enableOutgoing = model.enableOutgoing;
+                this.robotAddress = model.robotAddress;
+                this.robotId = model.robotId;
+                this.robotName = model.robotName;
+                this.token = model.token;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The configurations of the alert card template.</p>

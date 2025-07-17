@@ -36,6 +36,10 @@ public class GrafanaWorkspaceArmsAlertConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return armsAlertsEnable
      */
@@ -53,6 +57,14 @@ public class GrafanaWorkspaceArmsAlertConfig extends TeaModel {
     public static final class Builder {
         private String armsAlertsEnable; 
         private String armsAlertsWebhookUrl; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceArmsAlertConfig model) {
+            this.armsAlertsEnable = model.armsAlertsEnable;
+            this.armsAlertsWebhookUrl = model.armsAlertsWebhookUrl;
+        } 
 
         /**
          * armsAlertsEnable.

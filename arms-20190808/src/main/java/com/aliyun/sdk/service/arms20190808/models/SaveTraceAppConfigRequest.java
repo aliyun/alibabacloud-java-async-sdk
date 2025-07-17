@@ -45,7 +45,7 @@ public class SaveTraceAppConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -169,6 +169,14 @@ public class SaveTraceAppConfigRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Settings model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the settings that you want to modify. For more information about the supported settings, see the following sections.</p>

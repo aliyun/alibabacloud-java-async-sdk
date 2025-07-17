@@ -36,6 +36,10 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEventBridgeIntegrationsResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about EventBridge integrations that is returned on each page.</p>
@@ -134,6 +146,15 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             private String description; 
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventBridgeIntegrations model) {
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The description of the EventBridge integration.</p>
@@ -242,6 +263,16 @@ public class ListEventBridgeIntegrationsResponseBody extends TeaModel {
             private Long page; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.eventBridgeIntegrations = model.eventBridgeIntegrations;
+                this.page = model.page;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The EventBridge integrations.</p>

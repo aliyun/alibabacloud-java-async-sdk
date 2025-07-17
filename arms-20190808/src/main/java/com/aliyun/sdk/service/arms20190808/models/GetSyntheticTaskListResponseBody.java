@@ -36,6 +36,10 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -53,6 +57,14 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSyntheticTaskListResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The query results.</p>
@@ -206,6 +218,21 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             private String taskTypeName; 
             private String url; 
             private Float usable; 
+
+            private Builder() {
+            } 
+
+            private Builder(List model) {
+                this.createTime = model.createTime;
+                this.monitorNumber = model.monitorNumber;
+                this.taskId = model.taskId;
+                this.taskName = model.taskName;
+                this.taskStatus = model.taskStatus;
+                this.taskType = model.taskType;
+                this.taskTypeName = model.taskTypeName;
+                this.url = model.url;
+                this.usable = model.usable;
+            } 
 
             /**
              * <p>The time when the task was created.</p>
@@ -497,6 +524,25 @@ public class GetSyntheticTaskListResponseBody extends TeaModel {
             private String prepage; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.hasNextPage = model.hasNextPage;
+                this.hasPreviousPage = model.hasPreviousPage;
+                this.isFirstPage = model.isFirstPage;
+                this.isLastPage = model.isLastPage;
+                this.list = model.list;
+                this.navigateFirstPage = model.navigateFirstPage;
+                this.navigateLastPage = model.navigateLastPage;
+                this.navigatePageNums = model.navigatePageNums;
+                this.nextPage = model.nextPage;
+                this.pages = model.pages;
+                this.prepage = model.prepage;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Indicates whether the current page is followed by a page.</p>

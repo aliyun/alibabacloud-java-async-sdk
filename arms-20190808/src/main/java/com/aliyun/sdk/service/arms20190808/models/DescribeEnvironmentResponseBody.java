@@ -44,6 +44,10 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnvironmentResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
@@ -168,6 +182,14 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -553,6 +575,40 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             private String userId; 
             private String vpcId; 
             private String vswitchId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.bindResourceId = model.bindResourceId;
+                this.bindResourceProfile = model.bindResourceProfile;
+                this.bindResourceStatus = model.bindResourceStatus;
+                this.bindResourceStoreDuration = model.bindResourceStoreDuration;
+                this.bindResourceType = model.bindResourceType;
+                this.bindVpcCidr = model.bindVpcCidr;
+                this.dbInstanceStatus = model.dbInstanceStatus;
+                this.environmentId = model.environmentId;
+                this.environmentName = model.environmentName;
+                this.environmentSubType = model.environmentSubType;
+                this.environmentType = model.environmentType;
+                this.feePackage = model.feePackage;
+                this.grafaDataSourceName = model.grafaDataSourceName;
+                this.grafanaDatasourceUid = model.grafanaDatasourceUid;
+                this.grafanaFolderTitle = model.grafanaFolderTitle;
+                this.grafanaFolderUid = model.grafanaFolderUid;
+                this.grafanaFolderUrl = model.grafanaFolderUrl;
+                this.grafanaWorkspaceId = model.grafanaWorkspaceId;
+                this.managedType = model.managedType;
+                this.prometheusInstanceId = model.prometheusInstanceId;
+                this.prometheusInstanceName = model.prometheusInstanceName;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.securityGroupId = model.securityGroupId;
+                this.tags = model.tags;
+                this.userId = model.userId;
+                this.vpcId = model.vpcId;
+                this.vswitchId = model.vswitchId;
+            } 
 
             /**
              * <p>The ID of the resource associated with the environment, such as the ACK cluster ID or VPC ID.</p>

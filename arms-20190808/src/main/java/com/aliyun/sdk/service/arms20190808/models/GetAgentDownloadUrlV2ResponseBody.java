@@ -48,6 +48,10 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAgentDownloadUrlV2ResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code.<br><strong>Valid values:</strong></p>
@@ -198,6 +213,14 @@ public class GetAgentDownloadUrlV2ResponseBody extends TeaModel {
         public static final class Builder {
             private String url; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.url = model.url;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The download URL of the agent.</p>

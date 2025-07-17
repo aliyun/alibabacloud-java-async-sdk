@@ -36,6 +36,10 @@ public class StopAlertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return isSuccess
      */
@@ -53,6 +57,14 @@ public class StopAlertResponseBody extends TeaModel {
     public static final class Builder {
         private Boolean isSuccess; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(StopAlertResponseBody model) {
+            this.isSuccess = model.isSuccess;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the request is successful. Valid values:</p>

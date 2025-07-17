@@ -36,6 +36,10 @@ public class GetRetcodeAppByPidResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetRetcodeAppByPidResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private RetcodeApp retcodeApp; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRetcodeAppByPidResponseBody model) {
+            this.requestId = model.requestId;
+            this.retcodeApp = model.retcodeApp;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class GetRetcodeAppByPidResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -243,6 +263,18 @@ public class GetRetcodeAppByPidResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String retcodeAppType; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetcodeApp model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.pid = model.pid;
+                this.resourceGroupId = model.resourceGroupId;
+                this.retcodeAppType = model.retcodeAppType;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The ID of the application. The parameter is an auto-increment parameter.</p>

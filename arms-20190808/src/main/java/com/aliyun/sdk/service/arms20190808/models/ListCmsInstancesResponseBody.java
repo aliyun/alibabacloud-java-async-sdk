@@ -36,6 +36,10 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListCmsInstancesResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCmsInstancesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * Data.
@@ -216,6 +228,22 @@ public class ListCmsInstancesResponseBody extends TeaModel {
             private String type; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Products model) {
+                this.descr = model.descr;
+                this.id = model.id;
+                this.instance = model.instance;
+                this.name = model.name;
+                this.prod = model.prod;
+                this.source = model.source;
+                this.state = model.state;
+                this.time = model.time;
+                this.type = model.type;
+                this.url = model.url;
+            } 
+
             /**
              * Descr.
              */
@@ -346,6 +374,14 @@ public class ListCmsInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean enableTag; 
             private java.util.List<Products> products; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.enableTag = model.enableTag;
+                this.products = model.products;
+            } 
 
             /**
              * EnableTag.

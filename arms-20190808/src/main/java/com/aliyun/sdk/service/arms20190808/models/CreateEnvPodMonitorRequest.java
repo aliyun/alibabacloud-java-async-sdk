@@ -57,7 +57,7 @@ public class CreateEnvPodMonitorRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -130,7 +130,7 @@ public class CreateEnvPodMonitorRequest extends Request {
         }
 
         /**
-         * <p>The YAML configuration string of the PodMonitor.</p>
+         * <p>The YAML configuration snippet for PodMonitor.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

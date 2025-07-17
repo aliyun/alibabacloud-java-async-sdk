@@ -44,6 +44,10 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEnvCustomJobsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -192,6 +206,16 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             private String metricsPath; 
             private java.util.List<String> scrapeDiscoverys; 
             private String scrapeInterval; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScrapeConfigs model) {
+                this.jobName = model.jobName;
+                this.metricsPath = model.metricsPath;
+                this.scrapeDiscoverys = model.scrapeDiscoverys;
+                this.scrapeInterval = model.scrapeInterval;
+            } 
 
             /**
              * <p>The name of the job.</p>
@@ -380,6 +404,22 @@ public class ListEnvCustomJobsResponseBody extends TeaModel {
             private String regionId; 
             private java.util.List<ScrapeConfigs> scrapeConfigs; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.addonName = model.addonName;
+                this.addonReleaseName = model.addonReleaseName;
+                this.addonVersion = model.addonVersion;
+                this.configYaml = model.configYaml;
+                this.creationTimestamp = model.creationTimestamp;
+                this.customJobName = model.customJobName;
+                this.environmentId = model.environmentId;
+                this.regionId = model.regionId;
+                this.scrapeConfigs = model.scrapeConfigs;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The name of the add-on to which the custom job belongs.</p>

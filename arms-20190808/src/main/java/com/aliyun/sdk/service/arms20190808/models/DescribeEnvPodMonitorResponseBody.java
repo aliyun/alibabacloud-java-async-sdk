@@ -44,6 +44,10 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnvPodMonitorResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -216,6 +230,18 @@ public class DescribeEnvPodMonitorResponseBody extends TeaModel {
             private String podMonitorName; 
             private String regionId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.configYaml = model.configYaml;
+                this.environmentId = model.environmentId;
+                this.namespace = model.namespace;
+                this.podMonitorName = model.podMonitorName;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The YAML string of the PodMonitor.</p>

@@ -36,6 +36,10 @@ public class GrafanaWorkspaceIniSection extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return propertys
      */
@@ -53,6 +57,14 @@ public class GrafanaWorkspaceIniSection extends TeaModel {
     public static final class Builder {
         private java.util.List<GrafanaWorkspaceIniProperty> propertys; 
         private String section; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceIniSection model) {
+            this.propertys = model.propertys;
+            this.section = model.section;
+        } 
 
         /**
          * propertys.

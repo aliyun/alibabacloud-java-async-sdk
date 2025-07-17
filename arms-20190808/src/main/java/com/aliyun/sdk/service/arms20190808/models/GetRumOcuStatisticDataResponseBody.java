@@ -44,6 +44,10 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRumOcuStatisticDataResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -204,6 +218,17 @@ public class GetRumOcuStatisticDataResponseBody extends TeaModel {
             private Integer page; 
             private Integer pageSize; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.complete = model.complete;
+                this.items = model.items;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Indicates whether the next page exists.</p>

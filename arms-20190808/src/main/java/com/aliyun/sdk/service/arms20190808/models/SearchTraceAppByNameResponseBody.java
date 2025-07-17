@@ -36,6 +36,10 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<TraceApps> traceApps; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchTraceAppByNameResponseBody model) {
+            this.requestId = model.requestId;
+            this.traceApps = model.traceApps;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,6 +134,14 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -315,6 +335,24 @@ public class SearchTraceAppByNameResponseBody extends TeaModel {
             private String type; 
             private Long updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TraceApps model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.createTime = model.createTime;
+                this.labels = model.labels;
+                this.pid = model.pid;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.show = model.show;
+                this.tags = model.tags;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The application ID.</p>

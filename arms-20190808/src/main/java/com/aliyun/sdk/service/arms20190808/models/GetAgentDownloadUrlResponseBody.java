@@ -36,6 +36,10 @@ public class GetAgentDownloadUrlResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return armsAgentDownloadUrl
      */
@@ -53,6 +57,14 @@ public class GetAgentDownloadUrlResponseBody extends TeaModel {
     public static final class Builder {
         private String armsAgentDownloadUrl; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAgentDownloadUrlResponseBody model) {
+            this.armsAgentDownloadUrl = model.armsAgentDownloadUrl;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The download URL of the ARMS agent.</p>

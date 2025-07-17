@@ -53,10 +53,6 @@ public class GetRumDataForPageRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer startTime;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Workspace")
-    private String workspace;
-
     private GetRumDataForPageRequest(Builder builder) {
         super(builder);
         this.appGroup = builder.appGroup;
@@ -67,7 +63,6 @@ public class GetRumDataForPageRequest extends Request {
         this.query = builder.query;
         this.regionId = builder.regionId;
         this.startTime = builder.startTime;
-        this.workspace = builder.workspace;
     }
 
     public static Builder builder() {
@@ -78,7 +73,7 @@ public class GetRumDataForPageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -139,13 +134,6 @@ public class GetRumDataForPageRequest extends Request {
         return this.startTime;
     }
 
-    /**
-     * @return workspace
-     */
-    public String getWorkspace() {
-        return this.workspace;
-    }
-
     public static final class Builder extends Request.Builder<GetRumDataForPageRequest, Builder> {
         private String appGroup; 
         private Integer currentPage; 
@@ -155,7 +143,6 @@ public class GetRumDataForPageRequest extends Request {
         private String query; 
         private String regionId; 
         private Integer startTime; 
-        private String workspace; 
 
         private Builder() {
             super();
@@ -171,7 +158,6 @@ public class GetRumDataForPageRequest extends Request {
             this.query = request.query;
             this.regionId = request.regionId;
             this.startTime = request.startTime;
-            this.workspace = request.workspace;
         } 
 
         /**
@@ -273,15 +259,6 @@ public class GetRumDataForPageRequest extends Request {
         public Builder startTime(Integer startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
-            return this;
-        }
-
-        /**
-         * Workspace.
-         */
-        public Builder workspace(String workspace) {
-            this.putQueryParameter("Workspace", workspace);
-            this.workspace = workspace;
             return this;
         }
 

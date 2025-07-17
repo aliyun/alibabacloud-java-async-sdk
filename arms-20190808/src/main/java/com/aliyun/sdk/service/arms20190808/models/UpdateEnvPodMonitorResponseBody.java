@@ -44,6 +44,10 @@ public class UpdateEnvPodMonitorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class UpdateEnvPodMonitorResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateEnvPodMonitorResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code.</p>
@@ -171,6 +185,14 @@ public class UpdateEnvPodMonitorResponseBody extends TeaModel {
         public static final class Builder {
             private String matchedMsg; 
             private String matchedTargetCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.matchedMsg = model.matchedMsg;
+                this.matchedTargetCount = model.matchedTargetCount;
+            } 
 
             /**
              * <p>Indicates whether targets are matched.</p>

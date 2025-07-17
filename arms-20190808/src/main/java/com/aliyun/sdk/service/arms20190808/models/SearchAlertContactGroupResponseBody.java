@@ -36,6 +36,10 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contactGroups
      */
@@ -53,6 +57,14 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ContactGroups> contactGroups; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchAlertContactGroupResponseBody model) {
+            this.contactGroups = model.contactGroups;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the alert contact groups.</p>
@@ -206,6 +218,21 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             private Boolean systemNoc; 
             private Long updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contacts model) {
+                this.contactId = model.contactId;
+                this.contactName = model.contactName;
+                this.createTime = model.createTime;
+                this.dingRobot = model.dingRobot;
+                this.email = model.email;
+                this.phone = model.phone;
+                this.systemNoc = model.systemNoc;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The ID of the alert contact.</p>
@@ -408,6 +435,18 @@ public class SearchAlertContactGroupResponseBody extends TeaModel {
             private Long createTime; 
             private Long updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactGroups model) {
+                this.contactGroupId = model.contactGroupId;
+                this.contactGroupName = model.contactGroupName;
+                this.contacts = model.contacts;
+                this.createTime = model.createTime;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The ID of the alert contact group.</p>

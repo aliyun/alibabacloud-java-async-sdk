@@ -36,6 +36,10 @@ public class GetPrometheusApiTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetPrometheusApiTokenResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String token; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPrometheusApiTokenResponseBody model) {
+            this.requestId = model.requestId;
+            this.token = model.token;
+        } 
 
         /**
          * <p>The request ID.</p>

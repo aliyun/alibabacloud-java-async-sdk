@@ -44,6 +44,10 @@ public class GrafanaWorkspaceIntegrationPreview extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -77,6 +81,16 @@ public class GrafanaWorkspaceIntegrationPreview extends TeaModel {
         private String image; 
         private String name; 
         private String thumbnail; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceIntegrationPreview model) {
+            this.id = model.id;
+            this.image = model.image;
+            this.name = model.name;
+            this.thumbnail = model.thumbnail;
+        } 
 
         /**
          * id.

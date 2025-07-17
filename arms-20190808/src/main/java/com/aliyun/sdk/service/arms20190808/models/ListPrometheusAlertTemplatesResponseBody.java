@@ -36,6 +36,10 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return prometheusAlertTemplates
      */
@@ -53,6 +57,14 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<PrometheusAlertTemplates> prometheusAlertTemplates; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPrometheusAlertTemplatesResponseBody model) {
+            this.prometheusAlertTemplates = model.prometheusAlertTemplates;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned struct.</p>
@@ -122,6 +134,14 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Annotations model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the annotation.</p>
@@ -195,6 +215,14 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
         public static final class Builder {
             private String name; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The name of the tag.</p>
@@ -340,6 +368,20 @@ public class ListPrometheusAlertTemplatesResponseBody extends TeaModel {
             private java.util.List<Labels> labels; 
             private String type; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrometheusAlertTemplates model) {
+                this.alertName = model.alertName;
+                this.annotations = model.annotations;
+                this.description = model.description;
+                this.duration = model.duration;
+                this.expression = model.expression;
+                this.labels = model.labels;
+                this.type = model.type;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The name of the alert rule.</p>

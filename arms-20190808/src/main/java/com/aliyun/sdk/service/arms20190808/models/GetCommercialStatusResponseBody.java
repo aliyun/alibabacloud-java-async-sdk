@@ -36,6 +36,10 @@ public class GetCommercialStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetCommercialStatusResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UserAndCommodityStatus userAndCommodityStatus; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCommercialStatusResponseBody model) {
+            this.requestId = model.requestId;
+            this.userAndCommodityStatus = model.userAndCommodityStatus;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -182,6 +194,19 @@ public class GetCommercialStatusResponseBody extends TeaModel {
             private Long freeDays; 
             private String lable; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserAndCommodityStatus model) {
+                this.basic = model.basic;
+                this.chargeType = model.chargeType;
+                this.enable = model.enable;
+                this.extraInfo = model.extraInfo;
+                this.freeDays = model.freeDays;
+                this.lable = model.lable;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Indicates whether you are using the Basic Edition.</p>

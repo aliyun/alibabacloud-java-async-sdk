@@ -44,6 +44,10 @@ public class DeleteGrafanaResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,18 @@ public class DeleteGrafanaResourceResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeleteGrafanaResourceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Status code. 200 is success, other status codes are exceptions.</p>
+         * <p>The status code. The status code 200 indicates a successful request, whereas others indicate a failed request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -101,7 +115,7 @@ public class DeleteGrafanaResourceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returns a hint message for the result.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

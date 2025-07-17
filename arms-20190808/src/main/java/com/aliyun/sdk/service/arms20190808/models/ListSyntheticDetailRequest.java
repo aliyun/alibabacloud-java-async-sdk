@@ -94,7 +94,7 @@ public class ListSyntheticDetailRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -460,6 +460,15 @@ public class ListSyntheticDetailRequest extends Request {
             private String opType; 
             private Object value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AdvancedFilters model) {
+                this.key = model.key;
+                this.opType = model.opType;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The filter condition. The taskType and dataId fields are supported.</p>
              * <ul>
@@ -559,6 +568,15 @@ public class ListSyntheticDetailRequest extends Request {
             private String key; 
             private String opType; 
             private Object value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExactFilters model) {
+                this.key = model.key;
+                this.opType = model.opType;
+                this.value = model.value;
+            } 
 
             /**
              * <p>A reserved field.</p>

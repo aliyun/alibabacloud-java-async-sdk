@@ -89,7 +89,7 @@ public class QueryCommercialUsageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -254,8 +254,8 @@ public class QueryCommercialUsageRequest extends Request {
          * <p>The time interval between data slices. Unit: seconds. Minimum value: 3600.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li>3600: hours</li>
-         * <li>86400: days</li>
+         * <li>3600: 1 hour</li>
+         * <li>86400: 1 day</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -418,6 +418,15 @@ public class QueryCommercialUsageRequest extends Request {
             private String key; 
             private String opType; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AdvancedFilters model) {
+                this.key = model.key;
+                this.opType = model.opType;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the filter condition.</p>

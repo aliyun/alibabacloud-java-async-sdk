@@ -36,6 +36,10 @@ public class CreateWebhookResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contactId
      */
@@ -53,6 +57,14 @@ public class CreateWebhookResponseBody extends TeaModel {
     public static final class Builder {
         private String contactId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateWebhookResponseBody model) {
+            this.contactId = model.contactId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the contact for webhook alerts.</p>

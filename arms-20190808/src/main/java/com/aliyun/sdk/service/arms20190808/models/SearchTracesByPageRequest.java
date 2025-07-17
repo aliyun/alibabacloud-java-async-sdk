@@ -102,7 +102,7 @@ public class SearchTracesByPageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -467,6 +467,14 @@ public class SearchTracesByPageRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExclusionFilters model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key that is used to filter the query results.</p>
              * 
@@ -539,6 +547,14 @@ public class SearchTracesByPageRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag. The following system preset fields are provided:</p>

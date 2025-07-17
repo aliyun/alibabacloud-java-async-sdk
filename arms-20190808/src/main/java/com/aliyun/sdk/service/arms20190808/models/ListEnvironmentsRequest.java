@@ -69,7 +69,7 @@ public class ListEnvironmentsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -243,7 +243,10 @@ public class ListEnvironmentsRequest extends Request {
         }
 
         /**
-         * <p>The region IDs.</p>
+         * <p>The region IDs to be queried.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing,cn-hangzhou</p>
          */
         public Builder filterRegionIds(String filterRegionIds) {
             this.putQueryParameter("FilterRegionIds", filterRegionIds);
@@ -335,6 +338,14 @@ public class ListEnvironmentsRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

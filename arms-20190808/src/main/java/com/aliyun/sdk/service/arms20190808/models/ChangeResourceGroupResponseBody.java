@@ -44,6 +44,10 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ChangeResourceGroupResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status code or error code.</p>
@@ -168,6 +182,14 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String resourceGroupId; 
             private String resourceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceId = model.resourceId;
+            } 
 
             /**
              * <p>The ID of the resource group.</p>

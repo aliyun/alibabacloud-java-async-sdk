@@ -36,6 +36,10 @@ public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return licenseKey
      */
@@ -53,6 +57,14 @@ public class DescribeTraceLicenseKeyResponseBody extends TeaModel {
     public static final class Builder {
         private String licenseKey; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeTraceLicenseKeyResponseBody model) {
+            this.licenseKey = model.licenseKey;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The license key for the application.</p>

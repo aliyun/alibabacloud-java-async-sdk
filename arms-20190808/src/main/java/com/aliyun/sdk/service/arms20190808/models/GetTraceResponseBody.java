@@ -36,6 +36,10 @@ public class GetTraceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetTraceResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<Spans> spans; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTraceResponseBody model) {
+            this.requestId = model.requestId;
+            this.spans = model.spans;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,6 +134,14 @@ public class GetTraceResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagEntryList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -196,6 +216,14 @@ public class GetTraceResponseBody extends TeaModel {
             private java.util.List<TagEntryList> tagEntryList; 
             private Long timestamp; 
 
+            private Builder() {
+            } 
+
+            private Builder(LogEventList model) {
+                this.tagEntryList = model.tagEntryList;
+                this.timestamp = model.timestamp;
+            } 
+
             /**
              * <p>The tags of the trace.</p>
              */
@@ -265,6 +293,14 @@ public class GetTraceResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpansTagEntryList model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>
@@ -494,6 +530,27 @@ public class GetTraceResponseBody extends TeaModel {
             private java.util.List<SpansTagEntryList> tagEntryList; 
             private Long timestamp; 
             private String traceID; 
+
+            private Builder() {
+            } 
+
+            private Builder(Spans model) {
+                this.children = model.children;
+                this.duration = model.duration;
+                this.haveStack = model.haveStack;
+                this.logEventList = model.logEventList;
+                this.operationName = model.operationName;
+                this.parentSpanId = model.parentSpanId;
+                this.resultCode = model.resultCode;
+                this.rpcId = model.rpcId;
+                this.rpcType = model.rpcType;
+                this.serviceIp = model.serviceIp;
+                this.serviceName = model.serviceName;
+                this.spanId = model.spanId;
+                this.tagEntryList = model.tagEntryList;
+                this.timestamp = model.timestamp;
+                this.traceID = model.traceID;
+            } 
 
             /**
              * <p>The child spans of the current span.</p>

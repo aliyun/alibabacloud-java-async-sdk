@@ -52,6 +52,10 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetRumExceptionStackResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The responses code. The status code 200 indicates that the request was successful.</p>
          * 
@@ -114,7 +130,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned message.</p>
+         * <p>The response message.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -219,8 +235,19 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             private String threadDetail; 
             private String threadTag; 
 
+            private Builder() {
+            } 
+
+            private Builder(ThreadInfoList model) {
+                this.threadDetail = model.threadDetail;
+                this.threadTag = model.threadTag;
+            } 
+
             /**
-             * ThreadDetail.
+             * <p>Thread stack details.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;0  libsystem_platform.dylib + 0x1ab5\n    rax = 0x0000000000000001   rdx = 0x0000000000000064\n    rcx = 0xffffffffffffffff   rbx = 0x0000000107701bd0\n    rsi = 0x0101010101010101   rdi = 0x0000000000000001\n    rbp = 0x00007ff7b8d64300   rsp = 0x00007ff7b8d64300\n     r8 = 0x000000000000000a    r9 = 0x0000000000000000\n    r10 = 0x0000000000000001   r11 = 0x0000000000000247\n    r12 = 0x00007ff7b8d64390   r13 = 0x0000000000000000\n    r14 = 0x000000010719d770   r15 = 0x00007ff7b8d64500\n    rip = 0x00007ff807a40ab5\n    Found by: given as instruction pointer in context\n 1  alibabacloud_rum_example + 0x2ad1\n    rbp = 0x00007ff7b8d64310   rsp = 0x00007ff7b8d64310\n    rip = 0x000000010719dad1\n    Found by: previous frame&quot;s frame pointer\n 2  alibabacloud_rum_example + 0x2a3b\n    rbp = 0x00007ff7b8d64360   rsp = 0x00007ff7b8d64320\n    rip = 0x000000010719da3b\n    Found by: previous frame&quot;s frame pointer\n 3  0x7ff807688345\n    rbp = 0x00007ff7b8d64580   rsp = 0x00007ff7b8d64370\n    rip = 0x00007ff807688345\n    Found by: previous frame&quot;s frame pointer&quot;</p>
              */
             public Builder threadDetail(String threadDetail) {
                 this.threadDetail = threadDetail;
@@ -228,7 +255,10 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             }
 
             /**
-             * ThreadTag.
+             * <p>The thread tag, including the thread number and name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Thread 0 (crashed)</p>
              */
             public Builder threadTag(String threadTag) {
                 this.threadTag = threadTag;
@@ -358,8 +388,25 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             private java.util.List<ThreadInfoList> threadInfoList; 
             private String uuid; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.binaryImages = model.binaryImages;
+                this.crashAddress = model.crashAddress;
+                this.crashReason = model.crashReason;
+                this.lines = model.lines;
+                this.moduleName = model.moduleName;
+                this.threadId = model.threadId;
+                this.threadInfoList = model.threadInfoList;
+                this.uuid = model.uuid;
+            } 
+
             /**
-             * BinaryImages.
+             * <p>The name and UUID of the symbol table required for parsing the exception stack. This parameter is exposed during the parsing of PC errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>&quot;04B5B216682E40BF9BBE9698E3F98CAA0,libcurl.4.dylib;7878DB3CF21A3C13A203B7E3B0FA66250,libalibabacloud_rum.dylib;0F9F96FE6B1C3253A33AC9E4A0C2A3860,libsystem_kernel.dylib;3DF3256F466E37BCB995A5A9956E14150,libsystem_pthread.dylib;000000000000000000000000000000000,Security;EA4B83A319EB3E15B22CDF035DBD49250,alibabacloud_rum_example;710BB12EEEC744BAB41D1849CA3AD8021,LTSDK.pdb;EE330BA9C49E4730AA15A2B7C0BB2CAE1,JBLive.pdb&quot;</p>
              */
             public Builder binaryImages(String binaryImages) {
                 this.binaryImages = binaryImages;
@@ -367,7 +414,10 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             }
 
             /**
-             * CrashAddress.
+             * <p>The crash address. This parameter is exposed during the parsing of PC errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0x1</p>
              */
             public Builder crashAddress(String crashAddress) {
                 this.crashAddress = crashAddress;
@@ -375,7 +425,10 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             }
 
             /**
-             * CrashReason.
+             * <p>The cause of the exception. This parameter is exposed during the parsing of PC errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>EXC_BAD_ACCESS / KERN_INVALID_ADDRESS</p>
              */
             public Builder crashReason(String crashReason) {
                 this.crashReason = crashReason;
@@ -391,7 +444,10 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             }
 
             /**
-             * ModuleName.
+             * <p>The name of the crash parsing module. This parameter is exposed during the parsing of PC errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>alibabacloud_rum_example</p>
              */
             public Builder moduleName(String moduleName) {
                 this.moduleName = moduleName;
@@ -410,7 +466,7 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             }
 
             /**
-             * ThreadInfoList.
+             * <p>The thread stack information captured during PC crashes.</p>
              */
             public Builder threadInfoList(java.util.List<ThreadInfoList> threadInfoList) {
                 this.threadInfoList = threadInfoList;
@@ -418,7 +474,10 @@ public class GetRumExceptionStackResponseBody extends TeaModel {
             }
 
             /**
-             * Uuid.
+             * <p>The UUID of the symbol table required for parsing the stack. This parameter is exposed during the parsing of PC errors.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>9032259CEB9130E780C6DE8FDECCD7990</p>
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

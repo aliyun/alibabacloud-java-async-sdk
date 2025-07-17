@@ -112,7 +112,7 @@ public class CreateSyntheticTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -535,6 +535,15 @@ public class CreateSyntheticTaskRequest extends Request {
             private String name; 
             private Long symbols; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertList model) {
+                this.isCritical = model.isCritical;
+                this.name = model.name;
+                this.symbols = model.symbols;
+            } 
+
             /**
              * <p>Specifies whether the condition must be met.</p>
              * 
@@ -676,6 +685,18 @@ public class CreateSyntheticTaskRequest extends Request {
             private String alertPolicyId; 
             private Long monitorSamples; 
             private Long startExecutionTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(CommonParam model) {
+                this.alarmFlag = model.alarmFlag;
+                this.alertList = model.alertList;
+                this.alertNotifierId = model.alertNotifierId;
+                this.alertPolicyId = model.alertPolicyId;
+                this.monitorSamples = model.monitorSamples;
+                this.startExecutionTime = model.startExecutionTime;
+            } 
 
             /**
              * <p>Specifies whether to create an alert rule.</p>
@@ -930,6 +951,25 @@ public class CreateSyntheticTaskRequest extends Request {
             private String validateKeywords; 
             private Long verifyWay; 
             private String whiteList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Download model) {
+                this.connectionTimeout = model.connectionTimeout;
+                this.downloadCustomHeaderContent = model.downloadCustomHeaderContent;
+                this.downloadCustomHost = model.downloadCustomHost;
+                this.downloadCustomHostIp = model.downloadCustomHostIp;
+                this.downloadIgnoreCertificateError = model.downloadIgnoreCertificateError;
+                this.downloadKernel = model.downloadKernel;
+                this.downloadRedirection = model.downloadRedirection;
+                this.downloadTransmissionSize = model.downloadTransmissionSize;
+                this.monitorTimeout = model.monitorTimeout;
+                this.quickProtocol = model.quickProtocol;
+                this.validateKeywords = model.validateKeywords;
+                this.verifyWay = model.verifyWay;
+                this.whiteList = model.whiteList;
+            } 
 
             /**
              * <p>The connection timeout period.</p>
@@ -1203,6 +1243,19 @@ public class CreateSyntheticTaskRequest extends Request {
             private Long startMinute; 
             private String startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExtendInterval model) {
+                this.days = model.days;
+                this.endHour = model.endHour;
+                this.endMinute = model.endMinute;
+                this.endTime = model.endTime;
+                this.startHour = model.startHour;
+                this.startMinute = model.startMinute;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The day on which synthetic monitoring is performed.</p>
              */
@@ -1342,6 +1395,15 @@ public class CreateSyntheticTaskRequest extends Request {
             private Long cityCode; 
             private Long monitorType; 
             private Long netServiceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(MonitorList model) {
+                this.cityCode = model.cityCode;
+                this.monitorType = model.monitorType;
+                this.netServiceId = model.netServiceId;
+            } 
 
             /**
              * <p>The ID of the city to which the monitoring point belongs.</p>
@@ -1757,6 +1819,41 @@ public class CreateSyntheticTaskRequest extends Request {
             private String verifyStringBlacklist; 
             private String verifyStringWhiteList; 
             private Double waitCompletionTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Navigation model) {
+                this.DNSHijackWhiteList = model.DNSHijackWhiteList;
+                this.elementBlacklist = model.elementBlacklist;
+                this.executeActiveX = model.executeActiveX;
+                this.executeApplication = model.executeApplication;
+                this.executeScript = model.executeScript;
+                this.filterInvalidIP = model.filterInvalidIP;
+                this.flowHijackJumpTimes = model.flowHijackJumpTimes;
+                this.flowHijackLogo = model.flowHijackLogo;
+                this.monitorTimeout = model.monitorTimeout;
+                this.navAutomaticScrolling = model.navAutomaticScrolling;
+                this.navCustomHeader = model.navCustomHeader;
+                this.navCustomHeaderContent = model.navCustomHeaderContent;
+                this.navCustomHost = model.navCustomHost;
+                this.navCustomHostIp = model.navCustomHostIp;
+                this.navDisableCache = model.navDisableCache;
+                this.navDisableCompression = model.navDisableCompression;
+                this.navIgnoreCertificateError = model.navIgnoreCertificateError;
+                this.navRedirection = model.navRedirection;
+                this.navReturnElement = model.navReturnElement;
+                this.pageTamper = model.pageTamper;
+                this.processName = model.processName;
+                this.QUICDomain = model.QUICDomain;
+                this.QUICVersion = model.QUICVersion;
+                this.requestHeader = model.requestHeader;
+                this.responseHeader = model.responseHeader;
+                this.slowElementThreshold = model.slowElementThreshold;
+                this.verifyStringBlacklist = model.verifyStringBlacklist;
+                this.verifyStringWhiteList = model.verifyStringWhiteList;
+                this.waitCompletionTime = model.waitCompletionTime;
+            } 
 
             /**
              * <p>The whitelist for DNS hijacking.</p>
@@ -2389,6 +2486,29 @@ public class CreateSyntheticTaskRequest extends Request {
             private Long netTraceRouteTimeout; 
             private String whiteList; 
 
+            private Builder() {
+            } 
+
+            private Builder(Net model) {
+                this.netDNSNs = model.netDNSNs;
+                this.netDNSQueryMethod = model.netDNSQueryMethod;
+                this.netDNSServer = model.netDNSServer;
+                this.netDNSSwitch = model.netDNSSwitch;
+                this.netDNSTimeout = model.netDNSTimeout;
+                this.netDigSwitch = model.netDigSwitch;
+                this.netICMPActive = model.netICMPActive;
+                this.netICMPDataCut = model.netICMPDataCut;
+                this.netICMPInterval = model.netICMPInterval;
+                this.netICMPNum = model.netICMPNum;
+                this.netICMPSize = model.netICMPSize;
+                this.netICMPSwitch = model.netICMPSwitch;
+                this.netICMPTimeout = model.netICMPTimeout;
+                this.netTraceRouteNum = model.netTraceRouteNum;
+                this.netTraceRouteSwitch = model.netTraceRouteSwitch;
+                this.netTraceRouteTimeout = model.netTraceRouteTimeout;
+                this.whiteList = model.whiteList;
+            } 
+
             /**
              * <p>The DNS server.</p>
              * 
@@ -2663,6 +2783,14 @@ public class CreateSyntheticTaskRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(FormData model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of <strong>form-data</strong>.</p>
              * 
@@ -2735,6 +2863,14 @@ public class CreateSyntheticTaskRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(UrlEncoding model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of <strong>x-www-form-urlencoded</strong>.</p>
@@ -2844,6 +2980,17 @@ public class CreateSyntheticTaskRequest extends Request {
             private String mode; 
             private String raw; 
             private java.util.List<UrlEncoding> urlEncoding; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestContentBody model) {
+                this.formData = model.formData;
+                this.language = model.language;
+                this.mode = model.mode;
+                this.raw = model.raw;
+                this.urlEncoding = model.urlEncoding;
+            } 
 
             /**
              * <p>The data that is passed when the <strong>Mode</strong> parameter is set to <strong>form-data</strong>.</p>
@@ -2957,6 +3104,14 @@ public class CreateSyntheticTaskRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RequestContentHeader model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the request header.</p>
              * 
@@ -3041,6 +3196,15 @@ public class CreateSyntheticTaskRequest extends Request {
             private RequestContentBody body; 
             private java.util.List<RequestContentHeader> header; 
             private String method; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestContent model) {
+                this.body = model.body;
+                this.header = model.header;
+                this.method = model.method;
+            } 
 
             /**
              * <p>The custom body of a request to initiate an API performance synthetic monitoring task.</p>
@@ -3207,6 +3371,21 @@ public class CreateSyntheticTaskRequest extends Request {
             private RequestContent requestContent; 
             private String verifyContent; 
             private Long verifyWay; 
+
+            private Builder() {
+            } 
+
+            private Builder(Protocol model) {
+                this.characterEncoding = model.characterEncoding;
+                this.customHost = model.customHost;
+                this.customHostIp = model.customHostIp;
+                this.protocolConnectionTime = model.protocolConnectionTime;
+                this.protocolMonitorTimeout = model.protocolMonitorTimeout;
+                this.receivedDataSize = model.receivedDataSize;
+                this.requestContent = model.requestContent;
+                this.verifyContent = model.verifyContent;
+                this.verifyWay = model.verifyWay;
+            } 
 
             /**
              * <p>The encoding format.</p>

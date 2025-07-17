@@ -36,6 +36,10 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dispatchRule
      */
@@ -53,6 +57,14 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
     public static final class Builder {
         private DispatchRule dispatchRule; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDispatchRuleResponseBody model) {
+            this.dispatchRule = model.dispatchRule;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The struct returned.</p>
@@ -158,6 +170,17 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private Long groupWaitTime; 
             private java.util.List<String> groupingFields; 
             private Long repeatInterval; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupRules model) {
+                this.groupId = model.groupId;
+                this.groupInterval = model.groupInterval;
+                this.groupWaitTime = model.groupWaitTime;
+                this.groupingFields = model.groupingFields;
+                this.repeatInterval = model.repeatInterval;
+            } 
 
             /**
              * <p>The ID of the group.</p>
@@ -274,6 +297,15 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(LabelMatchExpressions model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the tag of the dispatch rule. Valid values:</p>
              * <ul>
@@ -360,6 +392,13 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<LabelMatchExpressions> labelMatchExpressions; 
 
+            private Builder() {
+            } 
+
+            private Builder(LabelMatchExpressionGroups model) {
+                this.labelMatchExpressions = model.labelMatchExpressions;
+            } 
+
             /**
              * <p>The collection of conditions of the dispatch rule.</p>
              */
@@ -406,6 +445,13 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<LabelMatchExpressionGroups> labelMatchExpressionGroups; 
+
+            private Builder() {
+            } 
+
+            private Builder(LabelMatchExpressionGrid model) {
+                this.labelMatchExpressionGroups = model.labelMatchExpressionGroups;
+            } 
 
             /**
              * <p>The collection of dispatch rules.</p>
@@ -477,6 +523,15 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private String name; 
             private String notifyObjectId; 
             private String notifyType; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotifyObjects model) {
+                this.name = model.name;
+                this.notifyObjectId = model.notifyObjectId;
+                this.notifyType = model.notifyType;
+            } 
 
             /**
              * <p>The name of the contact or contact group.</p>
@@ -565,6 +620,14 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<String> notifyChannels; 
             private java.util.List<NotifyObjects> notifyObjects; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotifyRules model) {
+                this.notifyChannels = model.notifyChannels;
+                this.notifyObjects = model.notifyObjects;
+            } 
 
             /**
              * <p>The notification method Array.</p>
@@ -704,6 +767,20 @@ public class DescribeDispatchRuleResponseBody extends TeaModel {
             private java.util.List<NotifyRules> notifyRules; 
             private Long ruleId; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(DispatchRule model) {
+                this.dispatchType = model.dispatchType;
+                this.groupRules = model.groupRules;
+                this.isRecover = model.isRecover;
+                this.labelMatchExpressionGrid = model.labelMatchExpressionGrid;
+                this.name = model.name;
+                this.notifyRules = model.notifyRules;
+                this.ruleId = model.ruleId;
+                this.state = model.state;
+            } 
 
             /**
              * <p>Alarm handling method.</p>

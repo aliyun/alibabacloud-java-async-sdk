@@ -44,6 +44,10 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String msg; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSyntheticTaskMonitorsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.msg = model.msg;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status code returned.</p>
@@ -236,6 +250,19 @@ public class GetSyntheticTaskMonitorsResponseBody extends TeaModel {
             private String district; 
             private Long netServiceId; 
             private String netServiceName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.busy = model.busy;
+                this.city = model.city;
+                this.cityCode = model.cityCode;
+                this.clientType = model.clientType;
+                this.district = model.district;
+                this.netServiceId = model.netServiceId;
+                this.netServiceName = model.netServiceName;
+            } 
 
             /**
              * <p>The task status.</p>

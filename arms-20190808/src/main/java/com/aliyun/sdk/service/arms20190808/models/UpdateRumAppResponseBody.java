@@ -52,6 +52,10 @@ public class UpdateRumAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class UpdateRumAppResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateRumAppResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -242,6 +258,16 @@ public class UpdateRumAppResponseBody extends TeaModel {
             private Integer limit; 
             private Boolean limited; 
             private Integer usage; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.config = model.config;
+                this.limit = model.limit;
+                this.limited = model.limited;
+                this.usage = model.usage;
+            } 
 
             /**
              * <p>The user configurations. This is a reserved parameter.</p>

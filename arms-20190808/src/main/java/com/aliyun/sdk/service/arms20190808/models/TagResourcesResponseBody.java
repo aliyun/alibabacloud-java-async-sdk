@@ -36,6 +36,10 @@ public class TagResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class TagResourcesResponseBody extends TeaModel {
     public static final class Builder {
         private String data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(TagResourcesResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned message.</p>

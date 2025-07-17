@@ -36,6 +36,10 @@ public class SearchAlertContactResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class SearchAlertContactResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchAlertContactResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned struct.</p>
@@ -242,6 +254,24 @@ public class SearchAlertContactResponseBody extends TeaModel {
             private Long updateTime; 
             private String userId; 
             private String webhook; 
+
+            private Builder() {
+            } 
+
+            private Builder(Contacts model) {
+                this.contactId = model.contactId;
+                this.contactName = model.contactName;
+                this.content = model.content;
+                this.createTime = model.createTime;
+                this.dingRobot = model.dingRobot;
+                this.email = model.email;
+                this.phone = model.phone;
+                this.resourceGroupId = model.resourceGroupId;
+                this.systemNoc = model.systemNoc;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+                this.webhook = model.webhook;
+            } 
 
             /**
              * <p>The ID of the alert contact.</p>
@@ -453,6 +483,16 @@ public class SearchAlertContactResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.contacts = model.contacts;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The information about the alert contacts.</p>

@@ -36,6 +36,10 @@ public class GetTraceAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetTraceAppResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private TraceApp traceApp; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetTraceAppResponseBody model) {
+            this.requestId = model.requestId;
+            this.traceApp = model.traceApp;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -122,6 +134,14 @@ public class GetTraceAppResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -352,6 +372,27 @@ public class GetTraceAppResponseBody extends TeaModel {
             private Long updateTime; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(TraceApp model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.clusterId = model.clusterId;
+                this.createTime = model.createTime;
+                this.labels = model.labels;
+                this.language = model.language;
+                this.pid = model.pid;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.show = model.show;
+                this.source = model.source;
+                this.tags = model.tags;
+                this.type = model.type;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The application ID.</p>
              * 
@@ -375,7 +416,7 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Cluster ID, used only in K8s scenarios.</p>
+             * <p>The ID of the cluster.</p>
              * 
              * <strong>example:</strong>
              * <p>c905d1364c2dd4b6284a3f41790c4****</p>
@@ -405,7 +446,7 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Coding Language.</p>
+             * <p>The programming language of the application.</p>
              * 
              * <strong>example:</strong>
              * <p>java</p>

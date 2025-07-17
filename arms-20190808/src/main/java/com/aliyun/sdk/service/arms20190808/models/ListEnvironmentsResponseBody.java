@@ -48,6 +48,10 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEnvironmentsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -216,6 +231,16 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String icon; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Addons model) {
+                this.alias = model.alias;
+                this.description = model.description;
+                this.icon = model.icon;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The alias of the add-on.</p>
              * 
@@ -335,6 +360,16 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private String icon; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(Features model) {
+                this.alias = model.alias;
+                this.description = model.description;
+                this.icon = model.icon;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The alias of the feature.</p>
              * 
@@ -429,6 +464,14 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -767,6 +810,36 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             private java.util.List<Tags> tags; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Environments model) {
+                this.addons = model.addons;
+                this.bindResourceId = model.bindResourceId;
+                this.bindResourceProfile = model.bindResourceProfile;
+                this.bindResourceType = model.bindResourceType;
+                this.bindVpcCidr = model.bindVpcCidr;
+                this.createTime = model.createTime;
+                this.createdUserId = model.createdUserId;
+                this.environmentId = model.environmentId;
+                this.environmentName = model.environmentName;
+                this.environmentType = model.environmentType;
+                this.features = model.features;
+                this.feePackage = model.feePackage;
+                this.grafanaDatasourceUid = model.grafanaDatasourceUid;
+                this.grafanaFolderTitle = model.grafanaFolderTitle;
+                this.grafanaFolderUid = model.grafanaFolderUid;
+                this.latestReleaseCreateTime = model.latestReleaseCreateTime;
+                this.managedType = model.managedType;
+                this.prometheusId = model.prometheusId;
+                this.prometheusInstanceId = model.prometheusInstanceId;
+                this.regionId = model.regionId;
+                this.releaseCount = model.releaseCount;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The add-ons.</p>
              */
@@ -1086,6 +1159,14 @@ public class ListEnvironmentsResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Environments> environments; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.environments = model.environments;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The queried environments.</p>

@@ -46,7 +46,7 @@ public class GetTraceAppRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -115,7 +115,7 @@ public class GetTraceAppRequest extends Request {
         }
 
         /**
-         * <p>标签。</p>
+         * <p>The list of tags.</p>
          */
         public Builder tags(java.util.List<Tags> tags) {
             this.putQueryParameter("Tags", tags);
@@ -174,8 +174,16 @@ public class GetTraceAppRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * <p>标签的键（key）。</p>
+             * <p>The tag key.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -186,7 +194,7 @@ public class GetTraceAppRequest extends Request {
             }
 
             /**
-             * <p>标签的值（value）。</p>
+             * <p>The tag value.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>

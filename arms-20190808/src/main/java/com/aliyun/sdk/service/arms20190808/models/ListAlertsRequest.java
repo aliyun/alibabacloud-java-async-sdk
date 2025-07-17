@@ -96,7 +96,7 @@ public class ListAlertsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -298,7 +298,10 @@ public class ListAlertsRequest extends Request {
         }
 
         /**
-         * Owner.
+         * <p>The notification object configured in the notification policy, responsible for handling alerts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Alice</p>
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);

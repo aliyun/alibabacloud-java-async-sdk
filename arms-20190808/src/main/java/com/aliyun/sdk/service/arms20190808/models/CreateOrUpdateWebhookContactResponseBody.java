@@ -36,6 +36,10 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private WebhookContact webhookContact; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOrUpdateWebhookContactResponseBody model) {
+            this.requestId = model.requestId;
+            this.webhookContact = model.webhookContact;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -170,6 +182,18 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             private String method; 
             private String recoverBody; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Webhook model) {
+                this.bizHeaders = model.bizHeaders;
+                this.bizParams = model.bizParams;
+                this.body = model.body;
+                this.method = model.method;
+                this.recoverBody = model.recoverBody;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The HTTP request headers.</p>
@@ -303,6 +327,15 @@ public class CreateOrUpdateWebhookContactResponseBody extends TeaModel {
             private Webhook webhook; 
             private Float webhookId; 
             private String webhookName; 
+
+            private Builder() {
+            } 
+
+            private Builder(WebhookContact model) {
+                this.webhook = model.webhook;
+                this.webhookId = model.webhookId;
+                this.webhookName = model.webhookName;
+            } 
 
             /**
              * <p>The information about the webhook alert contact.</p>

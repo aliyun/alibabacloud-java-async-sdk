@@ -36,6 +36,10 @@ public class AddGrafanaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class AddGrafanaResponseBody extends TeaModel {
     public static final class Builder {
         private String data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AddGrafanaResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Indicates whether the call was successful.</p>

@@ -52,6 +52,10 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetRumDataForPageResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private String success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRumDataForPageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The responses code. The status code 200 indicates that the request was successful.</p>
@@ -278,6 +294,19 @@ public class GetRumDataForPageResponseBody extends TeaModel {
             private String pageSize; 
             private String preference; 
             private String total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.authentication = model.authentication;
+                this.completion = model.completion;
+                this.items = model.items;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.preference = model.preference;
+                this.total = model.total;
+            } 
 
             /**
              * <p>A reserved parameter. Ignore this parameter.</p>

@@ -44,6 +44,10 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return useCustom
      */
@@ -78,6 +82,16 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
         private String description; 
         private Long updateTime; 
 
+        private Builder() {
+        } 
+
+        private Builder(DataBonreeSDKConfigModuleConfigVersionConfigsValue model) {
+            this.useCustom = model.useCustom;
+            this.customConfig = model.customConfig;
+            this.description = model.description;
+            this.updateTime = model.updateTime;
+        } 
+
         /**
          * <p>Indicates whether the custom configuration is used.</p>
          * 
@@ -99,6 +113,9 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValue extends TeaModel
 
         /**
          * <p>The description of the version configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.description = description;

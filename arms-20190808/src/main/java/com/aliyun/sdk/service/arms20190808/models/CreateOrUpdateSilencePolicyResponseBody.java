@@ -36,6 +36,10 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         private String requestId; 
         private SilencePolicy silencePolicy; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateOrUpdateSilencePolicyResponseBody model) {
+            this.requestId = model.requestId;
+            this.silencePolicy = model.silencePolicy;
+        } 
+
         /**
          * <p>The ID of the request.</p>
          * 
@@ -66,7 +78,7 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>A list of silence policies.</p>
+         * <p>The silence policy.</p>
          */
         public Builder silencePolicy(SilencePolicy silencePolicy) {
             this.silencePolicy = silencePolicy;
@@ -134,6 +146,15 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             private String key; 
             private String operator; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(MatchingConditions model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the matching condition.</p>
@@ -214,6 +235,13 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MatchingConditions> matchingConditions; 
+
+            private Builder() {
+            } 
+
+            private Builder(MatchingRules model) {
+                this.matchingConditions = model.matchingConditions;
+            } 
 
             /**
              * <p>A list of matching conditions.</p>
@@ -334,8 +362,24 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             private String timePeriod; 
             private String timeSlots; 
 
+            private Builder() {
+            } 
+
+            private Builder(SilencePolicy model) {
+                this.effectiveTimeType = model.effectiveTimeType;
+                this.id = model.id;
+                this.matchingRules = model.matchingRules;
+                this.name = model.name;
+                this.state = model.state;
+                this.timePeriod = model.timePeriod;
+                this.timeSlots = model.timeSlots;
+            } 
+
             /**
-             * EffectiveTimeType.
+             * <p>The effective type. Valid values: PERMANENT: The policy is effective permanently. CYCLE_EFFECT: The policy is effective cyclically. CUSTOM_TIME: The policy is effective during a custom time period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PERMANENT</p>
              */
             public Builder effectiveTimeType(String effectiveTimeType) {
                 this.effectiveTimeType = effectiveTimeType;
@@ -384,7 +428,10 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * TimePeriod.
+             * <p>Effective period. Valid values: DAY: daily WEEK: weekly</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WEEK</p>
              */
             public Builder timePeriod(String timePeriod) {
                 this.timePeriod = timePeriod;
@@ -392,7 +439,10 @@ public class CreateOrUpdateSilencePolicyResponseBody extends TeaModel {
             }
 
             /**
-             * TimeSlots.
+             * <p>The time period during which the silence policy is effective.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{startWeek: &quot;1&quot;, startTime: &quot;00:00&quot;, endTime: &quot;11:59&quot;, endWeek:&quot;7&quot;}]</p>
              */
             public Builder timeSlots(String timeSlots) {
                 this.timeSlots = timeSlots;

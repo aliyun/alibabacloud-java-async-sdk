@@ -48,6 +48,10 @@ public class ListAddonsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListAddonsResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAddonsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Status code: 200 indicates success.</p>
@@ -208,6 +223,15 @@ public class ListAddonsResponseBody extends TeaModel {
             private String name; 
             private String url; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dashboards model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.url = model.url;
+            } 
+
             /**
              * <p>The description of the dashboard.</p>
              * 
@@ -304,6 +328,15 @@ public class ListAddonsResponseBody extends TeaModel {
             private java.util.Map<String, Boolean> features; 
             private java.util.List<String> services; 
 
+            private Builder() {
+            } 
+
+            private Builder(Dependencies model) {
+                this.clusterTypes = model.clusterTypes;
+                this.features = model.features;
+                this.services = model.services;
+            } 
+
             /**
              * <p>The supported cluster types.</p>
              */
@@ -366,6 +399,13 @@ public class ListAddonsResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> promQL; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetricCheckRule model) {
+                this.promQL = model.promQL;
+            } 
 
             /**
              * <p>The PromQL statements.</p>
@@ -449,6 +489,16 @@ public class ListAddonsResponseBody extends TeaModel {
             private String icon; 
             private String label; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Protocols model) {
+                this.description = model.description;
+                this.icon = model.icon;
+                this.label = model.label;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The description of the protocol.</p>
@@ -604,6 +654,19 @@ public class ListAddonsResponseBody extends TeaModel {
             private Boolean needRestartAfterIntegration; 
             private java.util.List<Protocols> protocols; 
             private String targetAddonName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Policies model) {
+                this.alertDefaultStatus = model.alertDefaultStatus;
+                this.defaultInstall = model.defaultInstall;
+                this.enableServiceAccount = model.enableServiceAccount;
+                this.metricCheckRule = model.metricCheckRule;
+                this.needRestartAfterIntegration = model.needRestartAfterIntegration;
+                this.protocols = model.protocols;
+                this.targetAddonName = model.targetAddonName;
+            } 
 
             /**
              * <p>The default alert status.</p>
@@ -774,6 +837,18 @@ public class ListAddonsResponseBody extends TeaModel {
             private String label; 
             private String name; 
             private Policies policies; 
+
+            private Builder() {
+            } 
+
+            private Builder(Environments model) {
+                this.dependencies = model.dependencies;
+                this.description = model.description;
+                this.enable = model.enable;
+                this.label = model.label;
+                this.name = model.name;
+                this.policies = model.policies;
+            } 
 
             /**
              * <p>The dependencies of the environment.</p>
@@ -1029,6 +1104,26 @@ public class ListAddonsResponseBody extends TeaModel {
             private String scene; 
             private String version; 
             private String weight; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alias = model.alias;
+                this.categories = model.categories;
+                this.dashboards = model.dashboards;
+                this.description = model.description;
+                this.environments = model.environments;
+                this.icon = model.icon;
+                this.keywords = model.keywords;
+                this.language = model.language;
+                this.latestReleaseCreateTime = model.latestReleaseCreateTime;
+                this.name = model.name;
+                this.once = model.once;
+                this.scene = model.scene;
+                this.version = model.version;
+                this.weight = model.weight;
+            } 
 
             /**
              * <p>The alias of the add-on.</p>

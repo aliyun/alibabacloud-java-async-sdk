@@ -64,6 +64,10 @@ public class GrafanaWorkspaceDataBackup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return gmtCreate
      */
@@ -137,6 +141,21 @@ public class GrafanaWorkspaceDataBackup extends TeaModel {
         private String processStatus; 
         private String subType; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceDataBackup model) {
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.grafanaWorkspaceId = model.grafanaWorkspaceId;
+            this.id = model.id;
+            this.msg = model.msg;
+            this.processName = model.processName;
+            this.processStatus = model.processStatus;
+            this.subType = model.subType;
+            this.userId = model.userId;
+        } 
 
         /**
          * gmtCreate.

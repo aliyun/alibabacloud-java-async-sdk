@@ -44,6 +44,10 @@ public class ListPrometheusMonitoringResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ListPrometheusMonitoringResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPrometheusMonitoringResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status code. The status code 200 indicates that the request was successful.</p>
@@ -204,6 +218,17 @@ public class ListPrometheusMonitoringResponseBody extends TeaModel {
             private String monitoringName; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.clusterId = model.clusterId;
+                this.configYaml = model.configYaml;
+                this.monitoringName = model.monitoringName;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the Prometheus instance.</p>

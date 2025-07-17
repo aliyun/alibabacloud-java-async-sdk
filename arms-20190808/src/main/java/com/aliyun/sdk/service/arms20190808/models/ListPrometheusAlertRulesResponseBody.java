@@ -48,6 +48,10 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
         private java.util.List<PrometheusAlertRules> prometheusAlertRules; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPrometheusAlertRulesResponseBody model) {
+            this.code = model.code;
+            this.message = model.message;
+            this.prometheusAlertRules = model.prometheusAlertRules;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
@@ -192,6 +207,14 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Annotations model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the annotation.</p>
              * 
@@ -265,6 +288,14 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             private String name; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.name = model.name;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The name of the tag.</p>
              * 
@@ -337,6 +368,14 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -542,6 +581,25 @@ public class ListPrometheusAlertRulesResponseBody extends TeaModel {
             private Integer status; 
             private java.util.List<Tags> tags; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrometheusAlertRules model) {
+                this.alertId = model.alertId;
+                this.alertName = model.alertName;
+                this.annotations = model.annotations;
+                this.clusterId = model.clusterId;
+                this.dispatchRuleId = model.dispatchRuleId;
+                this.duration = model.duration;
+                this.expression = model.expression;
+                this.labels = model.labels;
+                this.message = model.message;
+                this.notifyType = model.notifyType;
+                this.status = model.status;
+                this.tags = model.tags;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the alert rule.</p>

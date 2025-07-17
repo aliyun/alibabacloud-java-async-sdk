@@ -36,6 +36,10 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alertContact
      */
@@ -53,6 +57,14 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
     public static final class Builder {
         private AlertContact alertContact; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOrUpdateContactResponseBody model) {
+            this.alertContact = model.alertContact;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The object of the alert contact.</p>
@@ -194,6 +206,20 @@ public class CreateOrUpdateContactResponseBody extends TeaModel {
             private String phone; 
             private Long reissueSendNotice; 
             private Boolean isEmailVerify; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertContact model) {
+                this.contactId = model.contactId;
+                this.contactName = model.contactName;
+                this.dingRobotUrl = model.dingRobotUrl;
+                this.email = model.email;
+                this.isVerify = model.isVerify;
+                this.phone = model.phone;
+                this.reissueSendNotice = model.reissueSendNotice;
+                this.isEmailVerify = model.isEmailVerify;
+            } 
 
             /**
              * <p>The ID of the alert contact.</p>

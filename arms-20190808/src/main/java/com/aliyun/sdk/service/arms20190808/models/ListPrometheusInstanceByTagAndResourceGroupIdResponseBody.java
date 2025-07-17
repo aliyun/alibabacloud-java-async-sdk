@@ -44,6 +44,10 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListPrometheusInstanceByTagAndResourceGroupIdResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
@@ -168,6 +182,14 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key.</p>
@@ -494,6 +516,35 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
             private String vSwitchId; 
             private String vpcId; 
 
+            private Builder() {
+            } 
+
+            private Builder(PrometheusInstances model) {
+                this.authToken = model.authToken;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterType = model.clusterType;
+                this.grafanaInstanceId = model.grafanaInstanceId;
+                this.httpApiInterUrl = model.httpApiInterUrl;
+                this.httpApiIntraUrl = model.httpApiIntraUrl;
+                this.paymentType = model.paymentType;
+                this.pushGatewayInterUrl = model.pushGatewayInterUrl;
+                this.pushGatewayIntraUrl = model.pushGatewayIntraUrl;
+                this.regionId = model.regionId;
+                this.remoteReadInterUrl = model.remoteReadInterUrl;
+                this.remoteReadIntraUrl = model.remoteReadIntraUrl;
+                this.remoteWriteInterUrl = model.remoteWriteInterUrl;
+                this.remoteWriteIntraUrl = model.remoteWriteIntraUrl;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceType = model.resourceType;
+                this.securityGroupId = model.securityGroupId;
+                this.subClustersJson = model.subClustersJson;
+                this.tags = model.tags;
+                this.userId = model.userId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
+
             /**
              * <p>The authorization token.</p>
              * 
@@ -794,6 +845,13 @@ public class ListPrometheusInstanceByTagAndResourceGroupIdResponseBody extends T
 
         public static final class Builder {
             private java.util.List<PrometheusInstances> prometheusInstances; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.prometheusInstances = model.prometheusInstances;
+            } 
 
             /**
              * <p>The queried Prometheus instances.</p>

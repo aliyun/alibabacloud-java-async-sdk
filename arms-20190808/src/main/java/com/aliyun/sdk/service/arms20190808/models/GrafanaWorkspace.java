@@ -136,6 +136,10 @@ public class GrafanaWorkspace extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return commercial
      */
@@ -353,6 +357,39 @@ public class GrafanaWorkspace extends TeaModel {
         private java.util.List<Tags> tags; 
         private java.util.List<String> upgradeVersion; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspace model) {
+            this.commercial = model.commercial;
+            this.deployType = model.deployType;
+            this.description = model.description;
+            this.endTime = model.endTime;
+            this.gmtCreate = model.gmtCreate;
+            this.grafanaVersion = model.grafanaVersion;
+            this.grafanaWorkspaceDomain = model.grafanaWorkspaceDomain;
+            this.grafanaWorkspaceDomainStatus = model.grafanaWorkspaceDomainStatus;
+            this.grafanaWorkspaceEdition = model.grafanaWorkspaceEdition;
+            this.grafanaWorkspaceId = model.grafanaWorkspaceId;
+            this.grafanaWorkspaceIp = model.grafanaWorkspaceIp;
+            this.grafanaWorkspaceName = model.grafanaWorkspaceName;
+            this.maxAccount = model.maxAccount;
+            this.ntmId = model.ntmId;
+            this.personalDomain = model.personalDomain;
+            this.personalDomainPrefix = model.personalDomainPrefix;
+            this.privateDomain = model.privateDomain;
+            this.privateIp = model.privateIp;
+            this.protocol = model.protocol;
+            this.regionId = model.regionId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.shareSynced = model.shareSynced;
+            this.snatIp = model.snatIp;
+            this.status = model.status;
+            this.tags = model.tags;
+            this.upgradeVersion = model.upgradeVersion;
+            this.userId = model.userId;
+        } 
 
         /**
          * commercial.
@@ -619,6 +656,14 @@ public class GrafanaWorkspace extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * key.

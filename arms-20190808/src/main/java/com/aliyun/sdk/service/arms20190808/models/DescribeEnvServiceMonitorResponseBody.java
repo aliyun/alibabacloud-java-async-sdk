@@ -44,6 +44,10 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnvServiceMonitorResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
@@ -216,6 +230,18 @@ public class DescribeEnvServiceMonitorResponseBody extends TeaModel {
             private String regionId; 
             private String serviceMonitorName; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.configYaml = model.configYaml;
+                this.environmentId = model.environmentId;
+                this.namespace = model.namespace;
+                this.regionId = model.regionId;
+                this.serviceMonitorName = model.serviceMonitorName;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The YAML configuration file of the ServiceMonitor.</p>

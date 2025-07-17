@@ -48,6 +48,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -90,6 +94,17 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnvironmentFeatureResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
          * 
@@ -102,7 +117,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The returned struct.</p>
+         * <p>The struct returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -300,6 +315,23 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private String status; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Feature model) {
+                this.alias = model.alias;
+                this.config = model.config;
+                this.description = model.description;
+                this.environmentId = model.environmentId;
+                this.icon = model.icon;
+                this.language = model.language;
+                this.latestVersion = model.latestVersion;
+                this.managed = model.managed;
+                this.name = model.name;
+                this.status = model.status;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The alias of the feature.</p>
              * 
@@ -486,6 +518,15 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private String image; 
             private String name; 
 
+            private Builder() {
+            } 
+
+            private Builder(FeatureContainers model) {
+                this.args = model.args;
+                this.image = model.image;
+                this.name = model.name;
+            } 
+
             /**
              * <p>The container parameters.</p>
              */
@@ -639,6 +680,20 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private String status; 
             private String vSwitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(FeatureStatus model) {
+                this.bindResourceId = model.bindResourceId;
+                this.featureContainers = model.featureContainers;
+                this.ips = model.ips;
+                this.name = model.name;
+                this.namespace = model.namespace;
+                this.securityGroupId = model.securityGroupId;
+                this.status = model.status;
+                this.vSwitchId = model.vSwitchId;
+            } 
+
             /**
              * <p>The ID of the resource.</p>
              * 
@@ -789,6 +844,15 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             private FeatureStatus featureStatus; 
             private String config; 
 
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.feature = model.feature;
+                this.featureStatus = model.featureStatus;
+                this.config = model.config;
+            } 
+
             /**
              * <p>The installation information about the feature.</p>
              */
@@ -806,7 +870,10 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
             }
 
             /**
-             * config.
+             * <p>The feature configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{}</p>
              */
             public Builder config(String config) {
                 this.config = config;

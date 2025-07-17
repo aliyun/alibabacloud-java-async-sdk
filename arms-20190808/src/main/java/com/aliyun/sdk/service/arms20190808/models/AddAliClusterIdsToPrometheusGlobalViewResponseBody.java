@@ -44,6 +44,10 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,18 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(AddAliClusterIdsToPrometheusGlobalViewResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Status code. 200 is success, other status codes are exceptions.</p>
+         * <p>The status code. The HTTP 200 status code indicates a successful request, while others indicate error conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -98,7 +112,7 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
         }
 
         /**
-         * <p>Returns a hint message for the result.</p>
+         * <p>The returned message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -180,6 +194,15 @@ public class AddAliClusterIdsToPrometheusGlobalViewResponseBody extends TeaModel
             private String info; 
             private String msg; 
             private Boolean success; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.info = model.info;
+                this.msg = model.msg;
+                this.success = model.success;
+            } 
 
             /**
              * <p>The Info-level information.</p>

@@ -36,6 +36,10 @@ public class CreateIntegrationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return integration
      */
@@ -53,6 +57,14 @@ public class CreateIntegrationResponseBody extends TeaModel {
     public static final class Builder {
         private Integration integration; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateIntegrationResponseBody model) {
+            this.integration = model.integration;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned information about the alert integration.</p>
@@ -170,6 +182,18 @@ public class CreateIntegrationResponseBody extends TeaModel {
             private String integrationName; 
             private String integrationProductType; 
             private Long recoverTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Integration model) {
+                this.autoRecover = model.autoRecover;
+                this.description = model.description;
+                this.integrationId = model.integrationId;
+                this.integrationName = model.integrationName;
+                this.integrationProductType = model.integrationProductType;
+                this.recoverTime = model.recoverTime;
+            } 
 
             /**
              * <p>Indicates whether alert events are automatically cleared. Default value: true. Valid values:</p>

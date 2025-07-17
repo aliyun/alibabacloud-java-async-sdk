@@ -36,6 +36,10 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return promClusterList
      */
@@ -53,6 +57,14 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<PromClusterList> promClusterList; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListClusterFromGrafanaResponseBody model) {
+            this.promClusterList = model.promClusterList;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The cluster information.</p>
@@ -314,6 +326,30 @@ public class ListClusterFromGrafanaResponseBody extends TeaModel {
             private String stateJson; 
             private Long updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(PromClusterList model) {
+                this.agentStatus = model.agentStatus;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterType = model.clusterType;
+                this.controllerId = model.controllerId;
+                this.createTime = model.createTime;
+                this.extra = model.extra;
+                this.id = model.id;
+                this.installTime = model.installTime;
+                this.isControllerInstalled = model.isControllerInstalled;
+                this.lastHeartBeatTime = model.lastHeartBeatTime;
+                this.nodeNum = model.nodeNum;
+                this.options = model.options;
+                this.pluginsJsonArray = model.pluginsJsonArray;
+                this.regionId = model.regionId;
+                this.stateJson = model.stateJson;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The status of the Prometheus agent on the cluster. Valid values:</p>

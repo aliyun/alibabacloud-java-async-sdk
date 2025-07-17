@@ -74,9 +74,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of AddAliClusterIdsToPrometheusGlobalView  AddAliClusterIdsToPrometheusGlobalViewRequest
+     * @deprecated OpenAPI AddAliClusterIdsToPrometheusGlobalView is deprecated  * @param request  the request parameters of AddAliClusterIdsToPrometheusGlobalView  AddAliClusterIdsToPrometheusGlobalViewRequest
      * @return AddAliClusterIdsToPrometheusGlobalViewResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AddAliClusterIdsToPrometheusGlobalViewResponse> addAliClusterIdsToPrometheusGlobalView(AddAliClusterIdsToPrometheusGlobalViewRequest request) {
         try {
@@ -92,9 +93,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of AddGrafana  AddGrafanaRequest
+     * @deprecated OpenAPI AddGrafana is deprecated  * @param request  the request parameters of AddGrafana  AddGrafanaRequest
      * @return AddGrafanaResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AddGrafanaResponse> addGrafana(AddGrafanaRequest request) {
         try {
@@ -129,9 +131,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of AddPrometheusGlobalView  AddPrometheusGlobalViewRequest
+     * @deprecated OpenAPI AddPrometheusGlobalView is deprecated  * @param request  the request parameters of AddPrometheusGlobalView  AddPrometheusGlobalViewRequest
      * @return AddPrometheusGlobalViewResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AddPrometheusGlobalViewResponse> addPrometheusGlobalView(AddPrometheusGlobalViewRequest request) {
         try {
@@ -147,9 +150,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of AddPrometheusGlobalViewByAliClusterIds  AddPrometheusGlobalViewByAliClusterIdsRequest
+     * @deprecated OpenAPI AddPrometheusGlobalViewByAliClusterIds is deprecated  * @param request  the request parameters of AddPrometheusGlobalViewByAliClusterIds  AddPrometheusGlobalViewByAliClusterIdsRequest
      * @return AddPrometheusGlobalViewByAliClusterIdsResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AddPrometheusGlobalViewByAliClusterIdsResponse> addPrometheusGlobalViewByAliClusterIds(AddPrometheusGlobalViewByAliClusterIdsRequest request) {
         try {
@@ -203,9 +207,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of AddRecordingRule  AddRecordingRuleRequest
+     * @deprecated OpenAPI AddRecordingRule is deprecated  * @param request  the request parameters of AddRecordingRule  AddRecordingRuleRequest
      * @return AddRecordingRuleResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AddRecordingRuleResponse> addRecordingRule(AddRecordingRuleRequest request) {
         try {
@@ -221,9 +226,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of AddTagToFlinkCluster  AddTagToFlinkClusterRequest
+     * @deprecated OpenAPI AddTagToFlinkCluster is deprecated  * @param request  the request parameters of AddTagToFlinkCluster  AddTagToFlinkClusterRequest
      * @return AddTagToFlinkClusterResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AddTagToFlinkClusterResponse> addTagToFlinkCluster(AddTagToFlinkClusterRequest request) {
         try {
@@ -239,9 +245,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of AppendInstancesToPrometheusGlobalView  AppendInstancesToPrometheusGlobalViewRequest
+     * @deprecated OpenAPI AppendInstancesToPrometheusGlobalView is deprecated  * @param request  the request parameters of AppendInstancesToPrometheusGlobalView  AppendInstancesToPrometheusGlobalViewRequest
      * @return AppendInstancesToPrometheusGlobalViewResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<AppendInstancesToPrometheusGlobalViewResponse> appendInstancesToPrometheusGlobalView(AppendInstancesToPrometheusGlobalViewRequest request) {
         try {
@@ -275,9 +282,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of BindPrometheusGrafanaInstance  BindPrometheusGrafanaInstanceRequest
+     * @deprecated OpenAPI BindPrometheusGrafanaInstance is deprecated  * @param request  the request parameters of BindPrometheusGrafanaInstance  BindPrometheusGrafanaInstanceRequest
      * @return BindPrometheusGrafanaInstanceResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<BindPrometheusGrafanaInstanceResponse> bindPrometheusGrafanaInstance(BindPrometheusGrafanaInstanceRequest request) {
         try {
@@ -801,9 +809,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of CreatePrometheusMonitoring  CreatePrometheusMonitoringRequest
+     * @deprecated OpenAPI CreatePrometheusMonitoring is deprecated  * @param request  the request parameters of CreatePrometheusMonitoring  CreatePrometheusMonitoringRequest
      * @return CreatePrometheusMonitoringResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<CreatePrometheusMonitoringResponse> createPrometheusMonitoring(CreatePrometheusMonitoringRequest request) {
         try {
@@ -1243,9 +1252,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeleteGrafanaResource  DeleteGrafanaResourceRequest
+     * @deprecated OpenAPI DeleteGrafanaResource is deprecated  * @param request  the request parameters of DeleteGrafanaResource  DeleteGrafanaResourceRequest
      * @return DeleteGrafanaResourceResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeleteGrafanaResourceResponse> deleteGrafanaResource(DeleteGrafanaResourceRequest request) {
         try {
@@ -1376,9 +1386,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeletePrometheusGlobalView  DeletePrometheusGlobalViewRequest
+     * @deprecated OpenAPI DeletePrometheusGlobalView is deprecated  * @param request  the request parameters of DeletePrometheusGlobalView  DeletePrometheusGlobalViewRequest
      * @return DeletePrometheusGlobalViewResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeletePrometheusGlobalViewResponse> deletePrometheusGlobalView(DeletePrometheusGlobalViewRequest request) {
         try {
@@ -1413,9 +1424,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of DeletePrometheusMonitoring  DeletePrometheusMonitoringRequest
+     * @deprecated OpenAPI DeletePrometheusMonitoring is deprecated  * @param request  the request parameters of DeletePrometheusMonitoring  DeletePrometheusMonitoringRequest
      * @return DeletePrometheusMonitoringResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<DeletePrometheusMonitoringResponse> deletePrometheusMonitoring(DeletePrometheusMonitoringRequest request) {
         try {
@@ -1722,6 +1734,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeEnvDropMetricsRule  DescribeEnvDropMetricsRuleRequest
+     * @return DescribeEnvDropMetricsRuleResponse
+     */
+    @Override
+    public CompletableFuture<DescribeEnvDropMetricsRuleResponse> describeEnvDropMetricsRule(DescribeEnvDropMetricsRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeEnvDropMetricsRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeEnvDropMetricsRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeEnvDropMetricsRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeEnvPodMonitor  DescribeEnvPodMonitorRequest
      * @return DescribeEnvPodMonitorResponse
      */
@@ -1884,9 +1914,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of EnableMetric  EnableMetricRequest
+     * @deprecated OpenAPI EnableMetric is deprecated  * @param request  the request parameters of EnableMetric  EnableMetricRequest
      * @return EnableMetricResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<EnableMetricResponse> enableMetric(EnableMetricRequest request) {
         try {
@@ -2066,9 +2097,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of GetExploreUrl  GetExploreUrlRequest
+     * @deprecated OpenAPI GetExploreUrl is deprecated  * @param request  the request parameters of GetExploreUrl  GetExploreUrlRequest
      * @return GetExploreUrlResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetExploreUrlResponse> getExploreUrl(GetExploreUrlRequest request) {
         try {
@@ -2255,9 +2287,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of GetPrometheusMonitoring  GetPrometheusMonitoringRequest
+     * @deprecated OpenAPI GetPrometheusMonitoring is deprecated  * @param request  the request parameters of GetPrometheusMonitoring  GetPrometheusMonitoringRequest
      * @return GetPrometheusMonitoringResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetPrometheusMonitoringResponse> getPrometheusMonitoring(GetPrometheusMonitoringRequest request) {
         try {
@@ -2273,9 +2306,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of GetRecordingRule  GetRecordingRuleRequest
+     * @deprecated OpenAPI GetRecordingRule is deprecated  * @param request  the request parameters of GetRecordingRule  GetRecordingRuleRequest
      * @return GetRecordingRuleResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<GetRecordingRuleResponse> getRecordingRule(GetRecordingRuleRequest request) {
         try {
@@ -2881,9 +2915,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ListClusterFromGrafana  ListClusterFromGrafanaRequest
+     * @deprecated OpenAPI ListClusterFromGrafana is deprecated  * @param request  the request parameters of ListClusterFromGrafana  ListClusterFromGrafanaRequest
      * @return ListClusterFromGrafanaResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ListClusterFromGrafanaResponse> listClusterFromGrafana(ListClusterFromGrafanaRequest request) {
         try {
@@ -2939,9 +2974,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ListDashboardsByName  ListDashboardsByNameRequest
+     * @deprecated OpenAPI ListDashboardsByName is deprecated  * @param request  the request parameters of ListDashboardsByName  ListDashboardsByNameRequest
      * @return ListDashboardsByNameResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ListDashboardsByNameResponse> listDashboardsByName(ListDashboardsByNameRequest request) {
         try {
@@ -3398,9 +3434,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ListPrometheusMonitoring  ListPrometheusMonitoringRequest
+     * @deprecated OpenAPI ListPrometheusMonitoring is deprecated  * @param request  the request parameters of ListPrometheusMonitoring  ListPrometheusMonitoringRequest
      * @return ListPrometheusMonitoringResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<ListPrometheusMonitoringResponse> listPrometheusMonitoring(ListPrometheusMonitoringRequest request) {
         try {
@@ -3527,42 +3564,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of ManageGetRecordingRule  ManageGetRecordingRuleRequest
-     * @return ManageGetRecordingRuleResponse
-     */
-    @Override
-    public CompletableFuture<ManageGetRecordingRuleResponse> manageGetRecordingRule(ManageGetRecordingRuleRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ManageGetRecordingRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ManageGetRecordingRuleResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ManageGetRecordingRuleResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * @param request the request parameters of ManageRecordingRule  ManageRecordingRuleRequest
-     * @return ManageRecordingRuleResponse
-     */
-    @Override
-    public CompletableFuture<ManageRecordingRuleResponse> manageRecordingRule(ManageRecordingRuleRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ManageRecordingRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ManageRecordingRuleResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<ManageRecordingRuleResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
      * @param request the request parameters of OpenArmsDefaultSLR  OpenArmsDefaultSLRRequest
      * @return OpenArmsDefaultSLRResponse
      */
@@ -3608,9 +3609,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of OpenVCluster  OpenVClusterRequest
+     * @deprecated OpenAPI OpenVCluster is deprecated  * @param request  the request parameters of OpenVCluster  OpenVClusterRequest
      * @return OpenVClusterResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<OpenVClusterResponse> openVCluster(OpenVClusterRequest request) {
         try {
@@ -3716,9 +3718,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of QueryPromInstallStatus  QueryPromInstallStatusRequest
+     * @deprecated OpenAPI QueryPromInstallStatus is deprecated  * @param request  the request parameters of QueryPromInstallStatus  QueryPromInstallStatusRequest
      * @return QueryPromInstallStatusResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<QueryPromInstallStatusResponse> queryPromInstallStatus(QueryPromInstallStatusRequest request) {
         try {
@@ -3752,9 +3755,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of RemoveAliClusterIdsFromPrometheusGlobalView  RemoveAliClusterIdsFromPrometheusGlobalViewRequest
+     * @deprecated OpenAPI RemoveAliClusterIdsFromPrometheusGlobalView is deprecated  * @param request  the request parameters of RemoveAliClusterIdsFromPrometheusGlobalView  RemoveAliClusterIdsFromPrometheusGlobalViewRequest
      * @return RemoveAliClusterIdsFromPrometheusGlobalViewResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<RemoveAliClusterIdsFromPrometheusGlobalViewResponse> removeAliClusterIdsFromPrometheusGlobalView(RemoveAliClusterIdsFromPrometheusGlobalViewRequest request) {
         try {
@@ -3770,9 +3774,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of RemoveSourcesFromPrometheusGlobalView  RemoveSourcesFromPrometheusGlobalViewRequest
+     * @deprecated OpenAPI RemoveSourcesFromPrometheusGlobalView is deprecated  * @param request  the request parameters of RemoveSourcesFromPrometheusGlobalView  RemoveSourcesFromPrometheusGlobalViewRequest
      * @return RemoveSourcesFromPrometheusGlobalViewResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<RemoveSourcesFromPrometheusGlobalViewResponse> removeSourcesFromPrometheusGlobalView(RemoveSourcesFromPrometheusGlobalViewRequest request) {
         try {
@@ -4153,9 +4158,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of SyncRecordingRules  SyncRecordingRulesRequest
+     * @deprecated OpenAPI SyncRecordingRules is deprecated  * @param request  the request parameters of SyncRecordingRules  SyncRecordingRulesRequest
      * @return SyncRecordingRulesResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<SyncRecordingRulesResponse> syncRecordingRules(SyncRecordingRulesRequest request) {
         try {
@@ -4339,6 +4345,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of UpdateEnvDropMetricsRule  UpdateEnvDropMetricsRuleRequest
+     * @return UpdateEnvDropMetricsRuleResponse
+     */
+    @Override
+    public CompletableFuture<UpdateEnvDropMetricsRuleResponse> updateEnvDropMetricsRule(UpdateEnvDropMetricsRuleRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateEnvDropMetricsRule").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateEnvDropMetricsRuleResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateEnvDropMetricsRuleResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of UpdateEnvPodMonitor  UpdateEnvPodMonitorRequest
      * @return UpdateEnvPodMonitorResponse
      */
@@ -4450,9 +4474,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of UpdateMetricDrop  UpdateMetricDropRequest
+     * @deprecated OpenAPI UpdateMetricDrop is deprecated, please use ARMS::2019-08-08::UpdateEnvDropMetricsRule instead.  * @param request  the request parameters of UpdateMetricDrop  UpdateMetricDropRequest
      * @return UpdateMetricDropResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdateMetricDropResponse> updateMetricDrop(UpdateMetricDropRequest request) {
         try {
@@ -4486,9 +4511,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of UpdatePrometheusGlobalView  UpdatePrometheusGlobalViewRequest
+     * @deprecated OpenAPI UpdatePrometheusGlobalView is deprecated  * @param request  the request parameters of UpdatePrometheusGlobalView  UpdatePrometheusGlobalViewRequest
      * @return UpdatePrometheusGlobalViewResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdatePrometheusGlobalViewResponse> updatePrometheusGlobalView(UpdatePrometheusGlobalViewRequest request) {
         try {
@@ -4541,9 +4567,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of UpdatePrometheusMonitoring  UpdatePrometheusMonitoringRequest
+     * @deprecated OpenAPI UpdatePrometheusMonitoring is deprecated  * @param request  the request parameters of UpdatePrometheusMonitoring  UpdatePrometheusMonitoringRequest
      * @return UpdatePrometheusMonitoringResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdatePrometheusMonitoringResponse> updatePrometheusMonitoring(UpdatePrometheusMonitoringRequest request) {
         try {
@@ -4559,9 +4586,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @param request the request parameters of UpdatePrometheusMonitoringStatus  UpdatePrometheusMonitoringStatusRequest
+     * @deprecated OpenAPI UpdatePrometheusMonitoringStatus is deprecated  * @param request  the request parameters of UpdatePrometheusMonitoringStatus  UpdatePrometheusMonitoringStatusRequest
      * @return UpdatePrometheusMonitoringStatusResponse
      */
+    @Deprecated
     @Override
     public CompletableFuture<UpdatePrometheusMonitoringStatusResponse> updatePrometheusMonitoringStatus(UpdatePrometheusMonitoringStatusRequest request) {
         try {

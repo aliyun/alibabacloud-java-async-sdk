@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ManageGetRecordingRuleResponse} extends {@link TeaModel}
+ * {@link UpdateEnvDropMetricsRuleResponse} extends {@link TeaModel}
  *
- * <p>ManageGetRecordingRuleResponse</p>
+ * <p>UpdateEnvDropMetricsRuleResponse</p>
  */
-public class ManageGetRecordingRuleResponse extends Response {
+public class UpdateEnvDropMetricsRuleResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,20 +24,20 @@ public class ManageGetRecordingRuleResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ManageGetRecordingRuleResponseBody body;
+    private UpdateEnvDropMetricsRuleResponseBody body;
 
-    private ManageGetRecordingRuleResponse(BuilderImpl builder) {
+    private UpdateEnvDropMetricsRuleResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ManageGetRecordingRuleResponse create() {
+    public static UpdateEnvDropMetricsRuleResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -59,35 +59,35 @@ public class ManageGetRecordingRuleResponse extends Response {
     /**
      * @return body
      */
-    public ManageGetRecordingRuleResponseBody getBody() {
+    public UpdateEnvDropMetricsRuleResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ManageGetRecordingRuleResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateEnvDropMetricsRuleResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ManageGetRecordingRuleResponseBody body);
+        Builder body(UpdateEnvDropMetricsRuleResponseBody body);
 
         @Override
-        ManageGetRecordingRuleResponse build();
+        UpdateEnvDropMetricsRuleResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ManageGetRecordingRuleResponse, Builder>
+            extends Response.BuilderImpl<UpdateEnvDropMetricsRuleResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private ManageGetRecordingRuleResponseBody body; 
+        private UpdateEnvDropMetricsRuleResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ManageGetRecordingRuleResponse response) {
+        private BuilderImpl(UpdateEnvDropMetricsRuleResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class ManageGetRecordingRuleResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ManageGetRecordingRuleResponseBody body) {
+        public Builder body(UpdateEnvDropMetricsRuleResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ManageGetRecordingRuleResponse build() {
-            return new ManageGetRecordingRuleResponse(this);
+        public UpdateEnvDropMetricsRuleResponse build() {
+            return new UpdateEnvDropMetricsRuleResponse(this);
         } 
 
     } 

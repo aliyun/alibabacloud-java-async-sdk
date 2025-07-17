@@ -44,6 +44,10 @@ public class UpdatePrometheusInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class UpdatePrometheusInstanceResponseBody extends TeaModel {
         private String data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdatePrometheusInstanceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>

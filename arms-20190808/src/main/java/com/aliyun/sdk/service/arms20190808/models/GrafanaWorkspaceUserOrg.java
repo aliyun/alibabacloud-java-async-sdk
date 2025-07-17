@@ -40,6 +40,10 @@ public class GrafanaWorkspaceUserOrg extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orgId
      */
@@ -65,6 +69,15 @@ public class GrafanaWorkspaceUserOrg extends TeaModel {
         private Long orgId; 
         private String orgName; 
         private String role; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceUserOrg model) {
+            this.orgId = model.orgId;
+            this.orgName = model.orgName;
+            this.role = model.role;
+        } 
 
         /**
          * orgId.

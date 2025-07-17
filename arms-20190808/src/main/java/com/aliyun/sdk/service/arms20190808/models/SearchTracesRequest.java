@@ -87,7 +87,7 @@ public class SearchTracesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -385,6 +385,14 @@ public class SearchTracesRequest extends Request {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ExclusionFilters model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key that is used to filter the query results.</p>
              * 
@@ -457,6 +465,14 @@ public class SearchTracesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. The following system preset fields are provided:</p>

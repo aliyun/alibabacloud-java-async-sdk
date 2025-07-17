@@ -36,6 +36,10 @@ public class ListScenarioResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return armsScenarios
      */
@@ -53,6 +57,14 @@ public class ListScenarioResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<ArmsScenarios> armsScenarios; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListScenarioResponseBody model) {
+            this.armsScenarios = model.armsScenarios;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The detailed information of the business monitoring job.</p>
@@ -206,6 +218,21 @@ public class ListScenarioResponseBody extends TeaModel {
             private String sign; 
             private String updateTime; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ArmsScenarios model) {
+                this.appId = model.appId;
+                this.createTime = model.createTime;
+                this.extensions = model.extensions;
+                this.id = model.id;
+                this.name = model.name;
+                this.regionId = model.regionId;
+                this.sign = model.sign;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The ID of the application.</p>

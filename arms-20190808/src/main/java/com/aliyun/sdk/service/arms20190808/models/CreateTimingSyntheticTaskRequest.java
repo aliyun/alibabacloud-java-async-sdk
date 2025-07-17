@@ -96,7 +96,7 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -441,6 +441,16 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private String target; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvailableAssertions model) {
+                this.expect = model.expect;
+                this.operator = model.operator;
+                this.target = model.target;
+                this.type = model.type;
+            } 
+
             /**
              * <p>The expected value.</p>
              * <p>This parameter is required.</p>
@@ -554,6 +564,15 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private Integer ipType; 
             private java.util.List<String> ips; 
 
+            private Builder() {
+            } 
+
+            private Builder(Hosts model) {
+                this.domain = model.domain;
+                this.ipType = model.ipType;
+                this.ips = model.ips;
+            } 
+
             /**
              * <p>The domain name.</p>
              * <p>This parameter is required.</p>
@@ -645,6 +664,14 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private java.util.List<Hosts> hosts; 
             private Integer selectType; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomHost model) {
+                this.hosts = model.hosts;
+                this.selectType = model.selectType;
+            } 
+
             /**
              * <p>The list of hosts.</p>
              * <p>This parameter is required.</p>
@@ -732,6 +759,15 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private String prometheusClusterId; 
             private String prometheusClusterRegion; 
             private java.util.Map<String, String> prometheusLabels; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomPrometheusSetting model) {
+                this.prometheusClusterId = model.prometheusClusterId;
+                this.prometheusClusterRegion = model.prometheusClusterRegion;
+                this.prometheusLabels = model.prometheusLabels;
+            } 
 
             /**
              * <p>A reserved parameter.</p>
@@ -837,6 +873,16 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private String secureGroupId; 
             private String vSwitchId; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomVPCSetting model) {
+                this.regionId = model.regionId;
+                this.secureGroupId = model.secureGroupId;
+                this.vSwitchId = model.vSwitchId;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The region ID.</p>
@@ -1005,6 +1051,20 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private Integer traceClientType; 
             private String xtraceRegion; 
 
+            private Builder() {
+            } 
+
+            private Builder(CommonSetting model) {
+                this.customHost = model.customHost;
+                this.customPrometheusSetting = model.customPrometheusSetting;
+                this.customVPCSetting = model.customVPCSetting;
+                this.ipType = model.ipType;
+                this.isOpenTrace = model.isOpenTrace;
+                this.monitorSamples = model.monitorSamples;
+                this.traceClientType = model.traceClientType;
+                this.xtraceRegion = model.xtraceRegion;
+            } 
+
             /**
              * <p>The custom host settings.</p>
              */
@@ -1151,6 +1211,14 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private Integer endHour; 
             private Integer startHour; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomPeriod model) {
+                this.endHour = model.endHour;
+                this.startHour = model.startHour;
+            } 
+
             /**
              * <p>The custom host settings.</p>
              * <p>This parameter is required.</p>
@@ -1225,6 +1293,14 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         public static final class Builder {
             private String content; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(RequestBody model) {
+                this.content = model.content;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The content of the request body. Format: JSON string. The parameter is required if the Type parameter is set to text/plain, application/json, application/xml, or text/html. Format: JSON string.</p>
@@ -1374,6 +1450,20 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private java.util.Map<String, String> requestHeaders; 
             private String targetUrl; 
             private Long timeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApiHTTP model) {
+                this.checkCert = model.checkCert;
+                this.connectTimeout = model.connectTimeout;
+                this.method = model.method;
+                this.protocolAlpnProtocol = model.protocolAlpnProtocol;
+                this.requestBody = model.requestBody;
+                this.requestHeaders = model.requestHeaders;
+                this.targetUrl = model.targetUrl;
+                this.timeout = model.timeout;
+            } 
 
             /**
              * <p>Specifies whether to verify the certificate. Default value: no.</p>
@@ -1706,6 +1796,30 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private Integer verifyWay; 
             private String whiteList; 
 
+            private Builder() {
+            } 
+
+            private Builder(FileDownload model) {
+                this.connectionTimeout = model.connectionTimeout;
+                this.customHeaderContent = model.customHeaderContent;
+                this.downloadKernel = model.downloadKernel;
+                this.ignoreCertificateAuthError = model.ignoreCertificateAuthError;
+                this.ignoreCertificateCanceledError = model.ignoreCertificateCanceledError;
+                this.ignoreCertificateOutOfDateError = model.ignoreCertificateOutOfDateError;
+                this.ignoreCertificateStatusError = model.ignoreCertificateStatusError;
+                this.ignoreCertificateUntrustworthyError = model.ignoreCertificateUntrustworthyError;
+                this.ignoreCertificateUsingError = model.ignoreCertificateUsingError;
+                this.ignoreInvalidHostError = model.ignoreInvalidHostError;
+                this.monitorTimeout = model.monitorTimeout;
+                this.quickProtocol = model.quickProtocol;
+                this.redirection = model.redirection;
+                this.targetUrl = model.targetUrl;
+                this.transmissionSize = model.transmissionSize;
+                this.validateKeywords = model.validateKeywords;
+                this.verifyWay = model.verifyWay;
+                this.whiteList = model.whiteList;
+            } 
+
             /**
              * <p>Unit: milliseconds. Minimum value: 1000. Maximum value: 120000. Default value: 5000.</p>
              * 
@@ -2006,6 +2120,17 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private String targetUrl; 
             private Long timeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetDNS model) {
+                this.dnsServerIpType = model.dnsServerIpType;
+                this.nsServer = model.nsServer;
+                this.queryMethod = model.queryMethod;
+                this.targetUrl = model.targetUrl;
+                this.timeout = model.timeout;
+            } 
+
             /**
              * <p>The IP version of the DNS server.</p>
              * <ul>
@@ -2206,6 +2331,21 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private Boolean tracertEnable; 
             private Integer tracertNumMax; 
             private Long tracertTimeout; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetICMP model) {
+                this.interval = model.interval;
+                this.packageNum = model.packageNum;
+                this.packageSize = model.packageSize;
+                this.splitPackage = model.splitPackage;
+                this.targetUrl = model.targetUrl;
+                this.timeout = model.timeout;
+                this.tracertEnable = model.tracertEnable;
+                this.tracertNumMax = model.tracertNumMax;
+                this.tracertTimeout = model.tracertTimeout;
+            } 
 
             /**
              * <p>The interval at which ICMP packets are sent. Unit: milliseconds. Minimum value: 200. Maximum value: 2000. Default value: 200.</p>
@@ -2419,6 +2559,19 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private Integer tracertNumMax; 
             private Long tracertTimeout; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetTCP model) {
+                this.connectTimes = model.connectTimes;
+                this.interval = model.interval;
+                this.targetUrl = model.targetUrl;
+                this.timeout = model.timeout;
+                this.tracertEnable = model.tracertEnable;
+                this.tracertNumMax = model.tracertNumMax;
+                this.tracertTimeout = model.tracertTimeout;
+            } 
+
             /**
              * <p>The number of TCP connections that are established. Minimum value: 1. Maximum value: 16. Default value: 4.</p>
              * 
@@ -2607,6 +2760,19 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private Integer streamType; 
             private String targetUrl; 
             private String whiteList; 
+
+            private Builder() {
+            } 
+
+            private Builder(Stream model) {
+                this.customHeaderContent = model.customHeaderContent;
+                this.playerType = model.playerType;
+                this.streamAddressType = model.streamAddressType;
+                this.streamMonitorTimeout = model.streamMonitorTimeout;
+                this.streamType = model.streamType;
+                this.targetUrl = model.targetUrl;
+                this.whiteList = model.whiteList;
+            } 
 
             /**
              * <p>The custom header. Format: JSON map.</p>
@@ -2946,6 +3112,31 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private String verifyStringWhitelist; 
             private Long waitCompletionTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(Website model) {
+                this.automaticScrolling = model.automaticScrolling;
+                this.customHeader = model.customHeader;
+                this.customHeaderContent = model.customHeaderContent;
+                this.DNSHijackWhitelist = model.DNSHijackWhitelist;
+                this.disableCache = model.disableCache;
+                this.disableCompression = model.disableCompression;
+                this.elementBlacklist = model.elementBlacklist;
+                this.filterInvalidIP = model.filterInvalidIP;
+                this.flowHijackJumpTimes = model.flowHijackJumpTimes;
+                this.flowHijackLogo = model.flowHijackLogo;
+                this.ignoreCertificateError = model.ignoreCertificateError;
+                this.monitorTimeout = model.monitorTimeout;
+                this.pageTamper = model.pageTamper;
+                this.redirection = model.redirection;
+                this.slowElementThreshold = model.slowElementThreshold;
+                this.targetUrl = model.targetUrl;
+                this.verifyStringBlacklist = model.verifyStringBlacklist;
+                this.verifyStringWhitelist = model.verifyStringWhitelist;
+                this.waitCompletionTime = model.waitCompletionTime;
+            } 
+
             /**
              * <p>Specifies whether to automatically scroll up and down the screen to load a page.</p>
              * <ul>
@@ -3279,6 +3470,19 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private Stream stream; 
             private Website website; 
 
+            private Builder() {
+            } 
+
+            private Builder(MonitorConf model) {
+                this.apiHTTP = model.apiHTTP;
+                this.fileDownload = model.fileDownload;
+                this.netDNS = model.netDNS;
+                this.netICMP = model.netICMP;
+                this.netTCP = model.netTCP;
+                this.stream = model.stream;
+                this.website = model.website;
+            } 
+
             /**
              * <p>The parameters of the HTTP(S) synthetic test.</p>
              */
@@ -3401,6 +3605,15 @@ public class CreateTimingSyntheticTaskRequest extends Request {
             private Integer clientType; 
             private String operatorCode; 
 
+            private Builder() {
+            } 
+
+            private Builder(Monitors model) {
+                this.cityCode = model.cityCode;
+                this.clientType = model.clientType;
+                this.operatorCode = model.operatorCode;
+            } 
+
             /**
              * <p>The city code.</p>
              * <p>This parameter is required.</p>
@@ -3493,6 +3706,14 @@ public class CreateTimingSyntheticTaskRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the tag.</p>

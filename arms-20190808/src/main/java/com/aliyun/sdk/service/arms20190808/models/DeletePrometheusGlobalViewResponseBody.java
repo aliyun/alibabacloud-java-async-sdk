@@ -44,6 +44,10 @@ public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -78,8 +82,18 @@ public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DeletePrometheusGlobalViewResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>Status code. 200 is success, other status codes are exceptions.</p>
+         * <p>The status code. The status code 200 indicates a successful request, whereas others indicate a failed request.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -101,7 +115,7 @@ public class DeletePrometheusGlobalViewResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Additional Message.</p>
+         * <p>The supplemental message providing additional context about the response.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>

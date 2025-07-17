@@ -44,6 +44,10 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeEnvCustomJobResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -204,6 +218,17 @@ public class DescribeEnvCustomJobResponseBody extends TeaModel {
             private String environmentId; 
             private String regionId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.configYaml = model.configYaml;
+                this.customJobName = model.customJobName;
+                this.environmentId = model.environmentId;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>If the <strong>encryptYaml</strong> parameter is set to <code>true</code>, a Base64-encoded YAML string is returned. Otherwise, a plaintext YAML string is returned.</p>

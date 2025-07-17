@@ -46,7 +46,7 @@ public class ListCmsInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +113,14 @@ public class ListCmsInstancesRequest extends Request {
         }
 
         /**
-         * TypeFilter.
+         * <p>The type of the cloud service integration. Valid values:</p>
+         * <ul>
+         * <li>direct: self-monitoring</li>
+         * <li>cms: Hybrid Cloud Monitoring</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>direct</p>
          */
         public Builder typeFilter(String typeFilter) {
             this.putQueryParameter("TypeFilter", typeFilter);

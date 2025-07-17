@@ -104,6 +104,10 @@ public class CallChainInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalInfo
      */
@@ -257,6 +261,31 @@ public class CallChainInfo extends TeaModel {
         private String spanId; 
         private java.util.Map<String, String> tagMap; 
         private String traceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CallChainInfo model) {
+            this.additionalInfo = model.additionalInfo;
+            this.appName = model.appName;
+            this.appType = model.appType;
+            this.children = model.children;
+            this.haveSpan = model.haveSpan;
+            this.logMap = model.logMap;
+            this.logTime = model.logTime;
+            this.parentSpanId = model.parentSpanId;
+            this.pid = model.pid;
+            this.regionId = model.regionId;
+            this.resultCode = model.resultCode;
+            this.rpc = model.rpc;
+            this.rpcId = model.rpcId;
+            this.rpcType = model.rpcType;
+            this.serverIp = model.serverIp;
+            this.span = model.span;
+            this.spanId = model.spanId;
+            this.tagMap = model.tagMap;
+            this.traceId = model.traceId;
+        } 
 
         /**
          * AdditionalInfo.

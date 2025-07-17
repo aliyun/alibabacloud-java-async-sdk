@@ -44,6 +44,10 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSyntheticDetailResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code returned. The status code 200 indicates that the request was successful.</p>
@@ -204,6 +218,17 @@ public class ListSyntheticDetailResponseBody extends TeaModel {
             private Integer pageSize; 
             private Long taskCreateTime; 
             private Integer total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.items = model.items;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.taskCreateTime = model.taskCreateTime;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The list of results.</p>

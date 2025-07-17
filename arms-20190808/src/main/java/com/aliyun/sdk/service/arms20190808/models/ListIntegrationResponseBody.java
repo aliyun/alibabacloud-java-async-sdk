@@ -36,6 +36,10 @@ public class ListIntegrationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageInfo
      */
@@ -53,6 +57,14 @@ public class ListIntegrationResponseBody extends TeaModel {
     public static final class Builder {
         private PageInfo pageInfo; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListIntegrationResponseBody model) {
+            this.pageInfo = model.pageInfo;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The pagination information.</p>
@@ -206,6 +218,21 @@ public class ListIntegrationResponseBody extends TeaModel {
             private String initiativeRecoverValue; 
             private Long recoverTime; 
             private java.util.List<Long> stat; 
+
+            private Builder() {
+            } 
+
+            private Builder(IntegrationDetail model) {
+                this.autoRecover = model.autoRecover;
+                this.description = model.description;
+                this.duplicateKey = model.duplicateKey;
+                this.extendedFieldRedefineRules = model.extendedFieldRedefineRules;
+                this.fieldRedefineRules = model.fieldRedefineRules;
+                this.initiativeRecoverField = model.initiativeRecoverField;
+                this.initiativeRecoverValue = model.initiativeRecoverValue;
+                this.recoverTime = model.recoverTime;
+                this.stat = model.stat;
+            } 
 
             /**
              * <p>Indicates whether alert events are automatically cleared. Valid values:</p>
@@ -442,6 +469,21 @@ public class ListIntegrationResponseBody extends TeaModel {
             private String shortToken; 
             private Boolean state; 
 
+            private Builder() {
+            } 
+
+            private Builder(Integrations model) {
+                this.apiEndpoint = model.apiEndpoint;
+                this.createTime = model.createTime;
+                this.integrationDetail = model.integrationDetail;
+                this.integrationId = model.integrationId;
+                this.integrationName = model.integrationName;
+                this.integrationProductType = model.integrationProductType;
+                this.liveness = model.liveness;
+                this.shortToken = model.shortToken;
+                this.state = model.state;
+            } 
+
             /**
              * <p>The endpoint of the alert integration.</p>
              * 
@@ -620,6 +662,16 @@ public class ListIntegrationResponseBody extends TeaModel {
             private Long page; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageInfo model) {
+                this.integrations = model.integrations;
+                this.page = model.page;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The information about each alert integration.</p>

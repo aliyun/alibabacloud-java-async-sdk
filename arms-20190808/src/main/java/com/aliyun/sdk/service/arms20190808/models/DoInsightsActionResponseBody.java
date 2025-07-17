@@ -48,6 +48,10 @@ public class DoInsightsActionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -90,8 +94,19 @@ public class DoInsightsActionResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(DoInsightsActionResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>Status code. 200 means success, other status codes are exceptions.</p>
+         * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -106,8 +121,8 @@ public class DoInsightsActionResponseBody extends TeaModel {
          * <ul>
          * <li><p>QueryTopo</p>
          * <pre><code>{
-         *  &quot;nodes&quot;: [Node] # The collection of nodes. For more information, see the &quot;Node&quot; section of this topic.
-         *  &quot;edges&quot;: [Edge] # The collection of edges. For more information, see the &quot;Edge&quot; section of this topic.
+         * &quot;nodes&quot;: [Object] # The nodes. For more information, see node details in the supplementary notes of response parameters.
+         * &quot;edges&quot;: [Object] # The edges. For more information, see edge details in the supplementary notes of response parameters.
          * }
          * </code></pre>
          * </li>
@@ -199,7 +214,7 @@ public class DoInsightsActionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Information returned when the call fails.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -210,7 +225,7 @@ public class DoInsightsActionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The request ID.</p>
+         * <p>Id of the request</p>
          * 
          * <strong>example:</strong>
          * <p>626037F5-FDEB-45B0-804C-B3C92797A64E</p>
@@ -221,10 +236,10 @@ public class DoInsightsActionResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Whether the query is successful:</p>
+         * <p>Indicates whether the call was successful. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><code>true</code></li>
+         * <li><code>false</code></li>
          * </ul>
          * 
          * <strong>example:</strong>

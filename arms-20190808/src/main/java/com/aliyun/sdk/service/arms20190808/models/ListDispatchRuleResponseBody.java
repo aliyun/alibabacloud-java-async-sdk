@@ -36,6 +36,10 @@ public class ListDispatchRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dispatchRules
      */
@@ -53,6 +57,14 @@ public class ListDispatchRuleResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<DispatchRules> dispatchRules; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDispatchRuleResponseBody model) {
+            this.dispatchRules = model.dispatchRules;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned struct.</p>
@@ -134,6 +146,15 @@ public class ListDispatchRuleResponseBody extends TeaModel {
             private String name; 
             private Long ruleId; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(DispatchRules model) {
+                this.name = model.name;
+                this.ruleId = model.ruleId;
+                this.state = model.state;
+            } 
 
             /**
              * <p>The name of the notification policy.</p>

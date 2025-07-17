@@ -52,6 +52,10 @@ public class GrafanaWorkspaceTransDetail extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dashboardAmount
      */
@@ -101,6 +105,18 @@ public class GrafanaWorkspaceTransDetail extends TeaModel {
         private String originalName; 
         private Long target; 
         private String targetName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceTransDetail model) {
+            this.dashboardAmount = model.dashboardAmount;
+            this.dataSourceAmount = model.dataSourceAmount;
+            this.original = model.original;
+            this.originalName = model.originalName;
+            this.target = model.target;
+            this.targetName = model.targetName;
+        } 
 
         /**
          * dashboardAmount.

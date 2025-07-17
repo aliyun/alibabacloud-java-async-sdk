@@ -56,6 +56,10 @@ public class GrafanaWorkspaceAccount extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accountId
      */
@@ -113,6 +117,19 @@ public class GrafanaWorkspaceAccount extends TeaModel {
         private Float gmtCreate; 
         private java.util.List<GrafanaWorkspaceUserOrg> orgs; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceAccount model) {
+            this.accountId = model.accountId;
+            this.accountNotes = model.accountNotes;
+            this.aliyunUid = model.aliyunUid;
+            this.aliyunUserName = model.aliyunUserName;
+            this.gmtCreate = model.gmtCreate;
+            this.orgs = model.orgs;
+            this.type = model.type;
+        } 
 
         /**
          * accountId.

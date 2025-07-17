@@ -39,7 +39,7 @@ public class DeleteAppListRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -73,7 +73,7 @@ public class DeleteAppListRequest extends Request {
         } 
 
         /**
-         * <p>The PIDs of the applications monitored by ARMS Application Monitoring.</p>
+         * <p>The list of PIDs for the applications monitored by Application Monitoring.</p>
          */
         public Builder pids(java.util.List<String> pids) {
             this.putQueryParameter("Pids", pids);

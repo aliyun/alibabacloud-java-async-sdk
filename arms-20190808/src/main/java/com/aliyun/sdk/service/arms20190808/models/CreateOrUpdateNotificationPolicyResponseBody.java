@@ -36,6 +36,10 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return notificationPolicy
      */
@@ -53,6 +57,14 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private NotificationPolicy notificationPolicy; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOrUpdateNotificationPolicyResponseBody model) {
+            this.notificationPolicy = model.notificationPolicy;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>An array of notification policy objects.</p>
@@ -134,6 +146,15 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private Long groupInterval; 
             private Long groupWait; 
             private java.util.List<String> groupingFields; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupRule model) {
+                this.groupInterval = model.groupInterval;
+                this.groupWait = model.groupWait;
+                this.groupingFields = model.groupingFields;
+            } 
 
             /**
              * <p>The time interval of grouping. Unit: seconds. Default value: 30.</p>
@@ -232,6 +253,15 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MatchingConditions model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the matching condition.</p>
              * 
@@ -311,6 +341,13 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MatchingConditions> matchingConditions; 
+
+            private Builder() {
+            } 
+
+            private Builder(MatchingRules model) {
+                this.matchingConditions = model.matchingConditions;
+            } 
 
             /**
              * <p>The matching conditions.</p>
@@ -394,6 +431,16 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private Long notifyObjectId; 
             private String notifyObjectName; 
             private String notifyObjectType; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotifyObjects model) {
+                this.notifyChannels = model.notifyChannels;
+                this.notifyObjectId = model.notifyObjectId;
+                this.notifyObjectName = model.notifyObjectName;
+                this.notifyObjectType = model.notifyObjectType;
+            } 
 
             /**
              * <p>The notification methods specified for a contact.</p>
@@ -518,6 +565,16 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private String notifyEndTime; 
             private java.util.List<NotifyObjects> notifyObjects; 
             private String notifyStartTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotifyRule model) {
+                this.notifyChannels = model.notifyChannels;
+                this.notifyEndTime = model.notifyEndTime;
+                this.notifyObjects = model.notifyObjects;
+                this.notifyStartTime = model.notifyStartTime;
+            } 
 
             /**
              * <p>The notification method.</p>
@@ -691,6 +748,21 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private String smsRecoverContent; 
             private String ttsContent; 
             private String ttsRecoverContent; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotifyTemplate model) {
+                this.emailContent = model.emailContent;
+                this.emailRecoverContent = model.emailRecoverContent;
+                this.emailRecoverTitle = model.emailRecoverTitle;
+                this.emailTitle = model.emailTitle;
+                this.robotContent = model.robotContent;
+                this.smsContent = model.smsContent;
+                this.smsRecoverContent = model.smsRecoverContent;
+                this.ttsContent = model.ttsContent;
+                this.ttsRecoverContent = model.ttsRecoverContent;
+            } 
 
             /**
              * <p>The content of the alert notification sent through email.</p>
@@ -973,6 +1045,25 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private Long repeatInterval; 
             private Boolean sendRecoverMessage; 
             private String state; 
+
+            private Builder() {
+            } 
+
+            private Builder(NotificationPolicy model) {
+                this.directedMode = model.directedMode;
+                this.escalationPolicyId = model.escalationPolicyId;
+                this.groupRule = model.groupRule;
+                this.id = model.id;
+                this.integrationId = model.integrationId;
+                this.matchingRules = model.matchingRules;
+                this.name = model.name;
+                this.notifyRule = model.notifyRule;
+                this.notifyTemplate = model.notifyTemplate;
+                this.repeat = model.repeat;
+                this.repeatInterval = model.repeatInterval;
+                this.sendRecoverMessage = model.sendRecoverMessage;
+                this.state = model.state;
+            } 
 
             /**
              * <p>Specifies whether to enable simple mode.</p>

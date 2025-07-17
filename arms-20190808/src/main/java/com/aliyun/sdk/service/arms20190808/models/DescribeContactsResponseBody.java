@@ -36,6 +36,10 @@ public class DescribeContactsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class DescribeContactsResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeContactsResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The objects that were returned.</p>
@@ -194,6 +206,20 @@ public class DescribeContactsResponseBody extends TeaModel {
             private Boolean isVerify; 
             private String phone; 
             private Long reissueSendNotice; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertContacts model) {
+                this.armsContactId = model.armsContactId;
+                this.contactId = model.contactId;
+                this.contactName = model.contactName;
+                this.email = model.email;
+                this.isEmailVerify = model.isEmailVerify;
+                this.isVerify = model.isVerify;
+                this.phone = model.phone;
+                this.reissueSendNotice = model.reissueSendNotice;
+            } 
 
             /**
              * <p>The ID of the alert contact.</p>
@@ -367,6 +393,16 @@ public class DescribeContactsResponseBody extends TeaModel {
             private Long page; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.alertContacts = model.alertContacts;
+                this.page = model.page;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The alert contacts.</p>

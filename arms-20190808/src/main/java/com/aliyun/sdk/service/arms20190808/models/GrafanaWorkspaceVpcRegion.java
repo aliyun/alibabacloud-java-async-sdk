@@ -36,6 +36,10 @@ public class GrafanaWorkspaceVpcRegion extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regionId
      */
@@ -53,6 +57,14 @@ public class GrafanaWorkspaceVpcRegion extends TeaModel {
     public static final class Builder {
         private String regionId; 
         private String regionName; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceVpcRegion model) {
+            this.regionId = model.regionId;
+            this.regionName = model.regionName;
+        } 
 
         /**
          * regionId.

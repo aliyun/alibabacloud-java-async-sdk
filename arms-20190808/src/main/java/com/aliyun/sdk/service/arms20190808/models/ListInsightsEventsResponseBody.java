@@ -36,6 +36,10 @@ public class ListInsightsEventsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return insightsEvents
      */
@@ -53,6 +57,14 @@ public class ListInsightsEventsResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<InsightsEvents> insightsEvents; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInsightsEventsResponseBody model) {
+            this.insightsEvents = model.insightsEvents;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the event.</p>
@@ -182,6 +194,19 @@ public class ListInsightsEventsResponseBody extends TeaModel {
             private String problemId; 
             private String title; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(InsightsEvents model) {
+                this.date = model.date;
+                this.desc = model.desc;
+                this.level = model.level;
+                this.pid = model.pid;
+                this.problemId = model.problemId;
+                this.title = model.title;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The time when the event occurred. The value is a timestamp.</p>

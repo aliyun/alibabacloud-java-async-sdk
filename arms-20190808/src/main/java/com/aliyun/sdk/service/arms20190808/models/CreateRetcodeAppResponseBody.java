@@ -52,6 +52,10 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
         private String requestId; 
         private RetcodeAppDataBean retcodeAppDataBean; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateRetcodeAppResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.retcodeAppDataBean = model.retcodeAppDataBean;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
@@ -219,6 +235,14 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -279,6 +303,13 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetcodeAppDataBeanTags model) {
+                this.tags = model.tags;
+            } 
 
             /**
              * Tags.
@@ -362,6 +393,16 @@ public class CreateRetcodeAppResponseBody extends TeaModel {
             private String pid; 
             private String resourceGroupId; 
             private RetcodeAppDataBeanTags tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(RetcodeAppDataBean model) {
+                this.appId = model.appId;
+                this.pid = model.pid;
+                this.resourceGroupId = model.resourceGroupId;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The application ID.</p>

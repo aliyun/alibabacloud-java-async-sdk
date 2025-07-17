@@ -29,6 +29,9 @@ public class GrafanaWorkspaceVpcConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("installStatus")
     private String installStatus;
 
+    @com.aliyun.core.annotation.NameInMap("ipSections")
+    private String ipSections;
+
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
@@ -52,6 +55,7 @@ public class GrafanaWorkspaceVpcConfig extends TeaModel {
         this.id = builder.id;
         this.installMsg = builder.installMsg;
         this.installStatus = builder.installStatus;
+        this.ipSections = builder.ipSections;
         this.name = builder.name;
         this.regionId = builder.regionId;
         this.securityGroupId = builder.securityGroupId;
@@ -66,6 +70,10 @@ public class GrafanaWorkspaceVpcConfig extends TeaModel {
 
     public static GrafanaWorkspaceVpcConfig create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
     }
 
     /**
@@ -94,6 +102,13 @@ public class GrafanaWorkspaceVpcConfig extends TeaModel {
      */
     public String getInstallStatus() {
         return this.installStatus;
+    }
+
+    /**
+     * @return ipSections
+     */
+    public String getIpSections() {
+        return this.ipSections;
     }
 
     /**
@@ -143,12 +158,30 @@ public class GrafanaWorkspaceVpcConfig extends TeaModel {
         private Long id; 
         private String installMsg; 
         private String installStatus; 
+        private String ipSections; 
         private String name; 
         private String regionId; 
         private String securityGroupId; 
         private String userId; 
         private String vSwitchId; 
         private String vpcId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceVpcConfig model) {
+            this.fcConfig = model.fcConfig;
+            this.id = model.id;
+            this.installMsg = model.installMsg;
+            this.installStatus = model.installStatus;
+            this.ipSections = model.ipSections;
+            this.name = model.name;
+            this.regionId = model.regionId;
+            this.securityGroupId = model.securityGroupId;
+            this.userId = model.userId;
+            this.vSwitchId = model.vSwitchId;
+            this.vpcId = model.vpcId;
+        } 
 
         /**
          * fcConfig.
@@ -179,6 +212,14 @@ public class GrafanaWorkspaceVpcConfig extends TeaModel {
          */
         public Builder installStatus(String installStatus) {
             this.installStatus = installStatus;
+            return this;
+        }
+
+        /**
+         * ipSections.
+         */
+        public Builder ipSections(String ipSections) {
+            this.ipSections = ipSections;
             return this;
         }
 

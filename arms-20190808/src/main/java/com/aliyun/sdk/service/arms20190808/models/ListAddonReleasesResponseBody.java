@@ -48,6 +48,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -90,6 +94,17 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListAddonReleasesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
          * 
@@ -102,7 +117,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The result of the operation.</p>
+         * <p>The result returned.</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -239,6 +254,18 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             private String reason; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.firstTransitionTime = model.firstTransitionTime;
+                this.lastTransitionTime = model.lastTransitionTime;
+                this.message = model.message;
+                this.reason = model.reason;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The first transition time.</p>
@@ -585,6 +612,33 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             private String userId; 
             private String version; 
 
+            private Builder() {
+            } 
+
+            private Builder(Releases model) {
+                this.addonName = model.addonName;
+                this.alertRuleCount = model.alertRuleCount;
+                this.conditions = model.conditions;
+                this.config = model.config;
+                this.createTime = model.createTime;
+                this.dashboardCount = model.dashboardCount;
+                this.environmentId = model.environmentId;
+                this.exporterCount = model.exporterCount;
+                this.haveConfig = model.haveConfig;
+                this.installUserId = model.installUserId;
+                this.language = model.language;
+                this.managed = model.managed;
+                this.nextVersion = model.nextVersion;
+                this.regionId = model.regionId;
+                this.releaseId = model.releaseId;
+                this.releaseName = model.releaseName;
+                this.scene = model.scene;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+                this.version = model.version;
+            } 
+
             /**
              * <p>The name of the add-on.</p>
              * 
@@ -616,7 +670,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Config.
+             * <p>The configuration information of the add-on release.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;port&quot;:&quot;9379&quot;}</p>
              */
             public Builder config(String config) {
                 this.config = config;
@@ -701,7 +758,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * Managed.
+             * <p>Indicates whether the component is fully managed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder managed(Boolean managed) {
                 this.managed = managed;
@@ -709,7 +769,10 @@ public class ListAddonReleasesResponseBody extends TeaModel {
             }
 
             /**
-             * NextVersion.
+             * <p>The latest version.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0.0.4</p>
              */
             public Builder nextVersion(String nextVersion) {
                 this.nextVersion = nextVersion;
@@ -854,6 +917,14 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<Releases> releases; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.releases = model.releases;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The queried add-ons.</p>

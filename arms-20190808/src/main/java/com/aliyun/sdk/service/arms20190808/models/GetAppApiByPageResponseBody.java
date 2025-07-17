@@ -48,6 +48,10 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class GetAppApiByPageResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAppApiByPageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned for the request. Valid values:</p>
@@ -237,6 +252,17 @@ public class GetAppApiByPageResponseBody extends TeaModel {
             private Integer page; 
             private Integer pageSize; 
             private String total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.completed = model.completed;
+                this.items = model.items;
+                this.page = model.page;
+                this.pageSize = model.pageSize;
+                this.total = model.total;
+            } 
 
             /**
              * <p>Is completed.</p>

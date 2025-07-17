@@ -51,7 +51,7 @@ public class DeleteRumAppRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -128,7 +128,10 @@ public class DeleteRumAppRequest extends Request {
         }
 
         /**
-         * RealRegionId.
+         * <p>The region where the application resides. You can leave this parameter empty or set it to China East 2 Finance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-finance-1</p>
          */
         public Builder realRegionId(String realRegionId) {
             this.putQueryParameter("RealRegionId", realRegionId);

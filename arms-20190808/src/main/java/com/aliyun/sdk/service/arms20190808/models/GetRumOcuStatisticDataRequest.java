@@ -73,7 +73,7 @@ public class GetRumOcuStatisticDataRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -330,6 +330,15 @@ public class GetRumOcuStatisticDataRequest extends Request {
             private String key; 
             private String opType; 
             private Object value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filter model) {
+                this.key = model.key;
+                this.opType = model.opType;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the filter condition. Three types of filter conditions are provided:</p>

@@ -44,6 +44,10 @@ public class BindPrometheusGrafanaInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class BindPrometheusGrafanaInstanceResponseBody extends TeaModel {
         private Boolean data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(BindPrometheusGrafanaInstanceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>

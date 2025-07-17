@@ -36,6 +36,10 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private java.util.List<SourceMapList> sourceMapList; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetSourceMapInfoResponseBody model) {
+            this.requestId = model.requestId;
+            this.sourceMapList = model.sourceMapList;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -158,6 +170,17 @@ public class GetSourceMapInfoResponseBody extends TeaModel {
             private String size; 
             private String uploadTime; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(SourceMapList model) {
+                this.fid = model.fid;
+                this.fileName = model.fileName;
+                this.size = model.size;
+                this.uploadTime = model.uploadTime;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The ID of the SourceMap file.</p>

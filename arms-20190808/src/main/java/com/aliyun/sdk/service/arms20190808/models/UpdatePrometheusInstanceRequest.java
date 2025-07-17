@@ -86,7 +86,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -214,6 +214,9 @@ public class UpdatePrometheusInstanceRequest extends Request {
 
         /**
          * <p>The IP addresses or CIDR blocks for which password-free read is enabled. Separate multiple IP addresses with line breaks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
          */
         public Builder authFreeReadPolicy(String authFreeReadPolicy) {
             this.putQueryParameter("AuthFreeReadPolicy", authFreeReadPolicy);
@@ -223,6 +226,9 @@ public class UpdatePrometheusInstanceRequest extends Request {
 
         /**
          * <p>The IP addresses or CIDR blocks for which password-free write is enabled. Separate multiple IP addresses with line breaks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.0.0.0/0</p>
          */
         public Builder authFreeWritePolicy(String authFreeWritePolicy) {
             this.putQueryParameter("AuthFreeWritePolicy", authFreeWritePolicy);
@@ -272,6 +278,9 @@ public class UpdatePrometheusInstanceRequest extends Request {
 
         /**
          * <p>The billing mode. Valid values: POSTPAY: charges fees based on the amount of reported metric data. POSTPAY_GB: charges fees based on the amount of written metric data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -293,7 +302,7 @@ public class UpdatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The ID of the Prometheus resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmxyexli2****</p>

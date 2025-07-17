@@ -46,10 +46,6 @@ public class GetRumAppsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Workspace")
-    private String workspace;
-
     private GetRumAppsRequest(Builder builder) {
         super(builder);
         this.appGroup = builder.appGroup;
@@ -59,7 +55,6 @@ public class GetRumAppsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.tags = builder.tags;
-        this.workspace = builder.workspace;
     }
 
     public static Builder builder() {
@@ -70,7 +65,7 @@ public class GetRumAppsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -124,13 +119,6 @@ public class GetRumAppsRequest extends Request {
         return this.tags;
     }
 
-    /**
-     * @return workspace
-     */
-    public String getWorkspace() {
-        return this.workspace;
-    }
-
     public static final class Builder extends Request.Builder<GetRumAppsRequest, Builder> {
         private String appGroup; 
         private String appId; 
@@ -139,7 +127,6 @@ public class GetRumAppsRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private java.util.List<Tags> tags; 
-        private String workspace; 
 
         private Builder() {
             super();
@@ -154,7 +141,6 @@ public class GetRumAppsRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.tags = request.tags;
-            this.workspace = request.workspace;
         } 
 
         /**
@@ -194,7 +180,10 @@ public class GetRumAppsRequest extends Request {
         }
 
         /**
-         * AppType.
+         * <p>The application type. Currently, supported application types include: web, mini program, Android, iOS, Windows, macOS, and HarmonyOS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>web</p>
          */
         public Builder appType(String appType) {
             this.putQueryParameter("AppType", appType);
@@ -234,15 +223,6 @@ public class GetRumAppsRequest extends Request {
             String tagsShrink = shrink(tags, "Tags", "json");
             this.putQueryParameter("Tags", tagsShrink);
             this.tags = tags;
-            return this;
-        }
-
-        /**
-         * Workspace.
-         */
-        public Builder workspace(String workspace) {
-            this.putQueryParameter("Workspace", workspace);
-            this.workspace = workspace;
             return this;
         }
 
@@ -296,6 +276,14 @@ public class GetRumAppsRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

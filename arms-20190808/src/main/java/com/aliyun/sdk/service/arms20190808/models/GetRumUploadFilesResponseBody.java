@@ -52,6 +52,10 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRumUploadFilesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed.</p>
@@ -254,6 +270,17 @@ public class GetRumUploadFilesResponseBody extends TeaModel {
             private String size; 
             private String uuid; 
             private String versionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.fileName = model.fileName;
+                this.lastModifiedTime = model.lastModifiedTime;
+                this.size = model.size;
+                this.uuid = model.uuid;
+                this.versionId = model.versionId;
+            } 
 
             /**
              * <p>The file name.</p>

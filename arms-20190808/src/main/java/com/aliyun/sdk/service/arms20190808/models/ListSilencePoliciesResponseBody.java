@@ -36,6 +36,10 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSilencePoliciesResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned pages.</p>
@@ -135,6 +147,15 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             private String operator; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MatchingConditions model) {
+                this.key = model.key;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The key of the matching condition.</p>
              * 
@@ -214,6 +235,13 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<MatchingConditions> matchingConditions; 
+
+            private Builder() {
+            } 
+
+            private Builder(MatchingRules model) {
+                this.matchingConditions = model.matchingConditions;
+            } 
 
             /**
              * <p>The matching conditions.</p>
@@ -334,8 +362,24 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             private String timePeriod; 
             private String timeSlots; 
 
+            private Builder() {
+            } 
+
+            private Builder(SilencePolicies model) {
+                this.effectiveTimeType = model.effectiveTimeType;
+                this.id = model.id;
+                this.matchingRules = model.matchingRules;
+                this.name = model.name;
+                this.state = model.state;
+                this.timePeriod = model.timePeriod;
+                this.timeSlots = model.timeSlots;
+            } 
+
             /**
-             * EffectiveTimeType.
+             * <p>The effective type. Valid values: PERMANENT: The policy is effective permanently. CYCLE_EFFECT: The policy is effective cyclically. CUSTOM_TIME: The policy is effective during a custom time period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>PERMANENT</p>
              */
             public Builder effectiveTimeType(String effectiveTimeType) {
                 this.effectiveTimeType = effectiveTimeType;
@@ -384,7 +428,10 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TimePeriod.
+             * <p>The effective time. Valid values: WEEK: weekly DAY: daily</p>
+             * 
+             * <strong>example:</strong>
+             * <p>WEEK</p>
              */
             public Builder timePeriod(String timePeriod) {
                 this.timePeriod = timePeriod;
@@ -392,7 +439,10 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * TimeSlots.
+             * <p>Effective period.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[{&quot;endTime&quot;:&quot;00:00&quot;,&quot;endWeek&quot;:&quot;7&quot;,&quot;startTime&quot;:&quot;00:00&quot;,&quot;startWeek&quot;:&quot;1&quot;}]</p>
              */
             public Builder timeSlots(String timeSlots) {
                 this.timeSlots = timeSlots;
@@ -473,6 +523,16 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             private java.util.List<SilencePolicies> silencePolicies; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.page = model.page;
+                this.silencePolicies = model.silencePolicies;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The number of the page returned.</p>

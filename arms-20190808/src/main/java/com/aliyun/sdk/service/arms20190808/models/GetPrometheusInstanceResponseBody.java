@@ -44,6 +44,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         private Data data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPrometheusInstanceResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The status code. The status code 200 indicates that the request was successful. If another status code is returned, the request failed.</p>
@@ -169,6 +183,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -253,6 +275,12 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HttpApiIntraUrl")
         private String httpApiIntraUrl;
 
+        @com.aliyun.core.annotation.NameInMap("OpenTelemetryInterUrl")
+        private String openTelemetryInterUrl;
+
+        @com.aliyun.core.annotation.NameInMap("OpenTelemetryIntraUrl")
+        private String openTelemetryIntraUrl;
+
         @com.aliyun.core.annotation.NameInMap("PaymentType")
         private String paymentType;
 
@@ -333,6 +361,8 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             this.grafanaInstanceId = builder.grafanaInstanceId;
             this.httpApiInterUrl = builder.httpApiInterUrl;
             this.httpApiIntraUrl = builder.httpApiIntraUrl;
+            this.openTelemetryInterUrl = builder.openTelemetryInterUrl;
+            this.openTelemetryIntraUrl = builder.openTelemetryIntraUrl;
             this.paymentType = builder.paymentType;
             this.paymentTypeUpdateTime = builder.paymentTypeUpdateTime;
             this.product = builder.product;
@@ -474,6 +504,20 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
          */
         public String getHttpApiIntraUrl() {
             return this.httpApiIntraUrl;
+        }
+
+        /**
+         * @return openTelemetryInterUrl
+         */
+        public String getOpenTelemetryInterUrl() {
+            return this.openTelemetryInterUrl;
+        }
+
+        /**
+         * @return openTelemetryIntraUrl
+         */
+        public String getOpenTelemetryIntraUrl() {
+            return this.openTelemetryIntraUrl;
         }
 
         /**
@@ -640,6 +684,8 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String grafanaInstanceId; 
             private String httpApiInterUrl; 
             private String httpApiIntraUrl; 
+            private String openTelemetryInterUrl; 
+            private String openTelemetryIntraUrl; 
             private String paymentType; 
             private String paymentTypeUpdateTime; 
             private String product; 
@@ -661,6 +707,51 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String vSwitchId; 
             private String version; 
             private String vpcId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.accessType = model.accessType;
+                this.archiveDuration = model.archiveDuration;
+                this.authFreeReadPolicy = model.authFreeReadPolicy;
+                this.authFreeWritePolicy = model.authFreeWritePolicy;
+                this.authToken = model.authToken;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterType = model.clusterType;
+                this.dbInstanceStatus = model.dbInstanceStatus;
+                this.enableAuthFreeRead = model.enableAuthFreeRead;
+                this.enableAuthFreeWrite = model.enableAuthFreeWrite;
+                this.enableAuthToken = model.enableAuthToken;
+                this.extraInfo = model.extraInfo;
+                this.grafanaInstanceId = model.grafanaInstanceId;
+                this.httpApiInterUrl = model.httpApiInterUrl;
+                this.httpApiIntraUrl = model.httpApiIntraUrl;
+                this.openTelemetryInterUrl = model.openTelemetryInterUrl;
+                this.openTelemetryIntraUrl = model.openTelemetryIntraUrl;
+                this.paymentType = model.paymentType;
+                this.paymentTypeUpdateTime = model.paymentTypeUpdateTime;
+                this.product = model.product;
+                this.pushGatewayInterUrl = model.pushGatewayInterUrl;
+                this.pushGatewayIntraUrl = model.pushGatewayIntraUrl;
+                this.regionId = model.regionId;
+                this.remoteReadInterUrl = model.remoteReadInterUrl;
+                this.remoteReadIntraUrl = model.remoteReadIntraUrl;
+                this.remoteWriteInterUrl = model.remoteWriteInterUrl;
+                this.remoteWriteIntraUrl = model.remoteWriteIntraUrl;
+                this.resourceGroupId = model.resourceGroupId;
+                this.resourceType = model.resourceType;
+                this.securityGroupId = model.securityGroupId;
+                this.storageDuration = model.storageDuration;
+                this.subClustersJson = model.subClustersJson;
+                this.supportAuthTypes = model.supportAuthTypes;
+                this.tags = model.tags;
+                this.userId = model.userId;
+                this.vSwitchId = model.vSwitchId;
+                this.version = model.version;
+                this.vpcId = model.vpcId;
+            } 
 
             /**
              * <p>The permission type. Valid values: readWrite, readOnly, and httpReadOnly</p>
@@ -802,7 +893,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The extra information.</p>
+             * <p>The extra information. This parameter is returned only for console requests.</p>
              */
             public Builder extraInfo(java.util.Map<String, String> extraInfo) {
                 this.extraInfo = extraInfo;
@@ -843,6 +934,22 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
+             * OpenTelemetryInterUrl.
+             */
+            public Builder openTelemetryInterUrl(String openTelemetryInterUrl) {
+                this.openTelemetryInterUrl = openTelemetryInterUrl;
+                return this;
+            }
+
+            /**
+             * OpenTelemetryIntraUrl.
+             */
+            public Builder openTelemetryIntraUrl(String openTelemetryIntraUrl) {
+                this.openTelemetryIntraUrl = openTelemetryIntraUrl;
+                return this;
+            }
+
+            /**
              * <p>The billing method. Valid values:</p>
              * <ul>
              * <li>PREPAY: subscription</li>
@@ -859,6 +966,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
             /**
              * <p>The time when the billing method was modified.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2025-02-26T06:05:01Z</p>
              */
             public Builder paymentTypeUpdateTime(String paymentTypeUpdateTime) {
                 this.paymentTypeUpdateTime = paymentTypeUpdateTime;
@@ -998,7 +1108,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The child instances of the Prometheus instance for GlobalView. The value is a JSON string.</p>
+             * <p>The child instances of the global aggregation instance. The value is a JSON string.</p>
              * 
              * <strong>example:</strong>
              * <p>[{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-hangzhou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c39a1048921e04fceb039db2fbb73***&quot;,&quot;sourceName&quot;:&quot;arms-luyao-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789***&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-beijing&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c6b6485496d5b400abde22cb47b5****&quot;,&quot;sourceName&quot;:&quot;agent-321-test&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;1672753017899***&quot;},{&quot;headers&quot;:{},&quot;regionId&quot;:&quot;cn-zhangjiakou&quot;,&quot;sourceType&quot;:&quot;AlibabaPrometheus&quot;,&quot;extras&quot;:{},&quot;clusterId&quot;:&quot;c261a4f3200c446659133f1ade789b15e&quot;,&quot;sourceName&quot;:&quot;zaifeng-cardinality-01&quot;,&quot;dataSource&quot;:&quot;&quot;,&quot;userId&quot;:&quot;167275301789***&quot;}]</p>
@@ -1047,7 +1157,10 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>Version</p>
+             * 
+             * <strong>example:</strong>
+             * <p>V1</p>
              */
             public Builder version(String version) {
                 this.version = version;

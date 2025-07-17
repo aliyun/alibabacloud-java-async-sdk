@@ -36,6 +36,10 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return eventBridgeIntegration
      */
@@ -53,6 +57,14 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
     public static final class Builder {
         private EventBridgeIntegration eventBridgeIntegration; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOrUpdateEventBridgeIntegrationResponseBody model) {
+            this.eventBridgeIntegration = model.eventBridgeIntegration;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the EventBridge integration.</p>
@@ -206,6 +218,21 @@ public class CreateOrUpdateEventBridgeIntegrationResponseBody extends TeaModel {
             private Long id; 
             private String name; 
             private String source; 
+
+            private Builder() {
+            } 
+
+            private Builder(EventBridgeIntegration model) {
+                this.accessKey = model.accessKey;
+                this.accessSecret = model.accessSecret;
+                this.description = model.description;
+                this.endpoint = model.endpoint;
+                this.eventBusName = model.eventBusName;
+                this.eventBusRegionId = model.eventBusRegionId;
+                this.id = model.id;
+                this.name = model.name;
+                this.source = model.source;
+            } 
 
             /**
              * <p>The AccessKey ID that is used to connect to EventBridge.</p>

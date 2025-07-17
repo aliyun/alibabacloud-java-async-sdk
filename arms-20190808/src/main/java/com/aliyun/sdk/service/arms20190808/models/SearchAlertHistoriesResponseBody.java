@@ -36,6 +36,10 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchAlertHistoriesResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned struct.</p>
@@ -230,6 +242,23 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             private String strategyId; 
             private String target; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlarmHistories model) {
+                this.alarmContent = model.alarmContent;
+                this.alarmResponseCode = model.alarmResponseCode;
+                this.alarmSources = model.alarmSources;
+                this.alarmTime = model.alarmTime;
+                this.alarmType = model.alarmType;
+                this.emails = model.emails;
+                this.id = model.id;
+                this.phones = model.phones;
+                this.strategyId = model.strategyId;
+                this.target = model.target;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The content of the alert notification.</p>
@@ -436,6 +465,16 @@ public class SearchAlertHistoriesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.alarmHistories = model.alarmHistories;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The information about alert records.</p>

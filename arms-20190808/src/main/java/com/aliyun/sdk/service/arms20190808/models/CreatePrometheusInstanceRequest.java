@@ -106,7 +106,7 @@ public class CreatePrometheusInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -351,7 +351,10 @@ public class CreatePrometheusInstanceRequest extends Request {
         }
 
         /**
-         * <p>The billing mode. Valid values: POSTPAY: charges fees based on the amount of reported metric data. POSTPAY_GB: charges fees based on the amount of written metric data. Empty value: The user-defined default billing mode is used. If no such a billing mode is available, you are charged based on the amount of reported metric data.</p>
+         * <p>The billing mode. Valid values: POSTPAY: charges fees based on the amount of reported metric data. POSTPAY_GB: charges fees based on the amount of written metric data. Empty: The user-defined default billing mode is used. If you do not specify a default value, you are charged based on the amount of reported metric data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>POSTPAY</p>
          */
         public Builder paymentType(String paymentType) {
             this.putQueryParameter("PaymentType", paymentType);
@@ -546,6 +549,14 @@ public class CreatePrometheusInstanceRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * Key.

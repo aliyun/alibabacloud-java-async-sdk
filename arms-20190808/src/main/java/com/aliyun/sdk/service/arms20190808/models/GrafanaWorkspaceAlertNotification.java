@@ -60,6 +60,10 @@ public class GrafanaWorkspaceAlertNotification extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return id
      */
@@ -125,6 +129,20 @@ public class GrafanaWorkspaceAlertNotification extends TeaModel {
         private String settings; 
         private String type; 
         private String uid; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceAlertNotification model) {
+            this.id = model.id;
+            this.isArms = model.isArms;
+            this.isDefault = model.isDefault;
+            this.name = model.name;
+            this.sendReminder = model.sendReminder;
+            this.settings = model.settings;
+            this.type = model.type;
+            this.uid = model.uid;
+        } 
 
         /**
          * id.

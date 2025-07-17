@@ -36,6 +36,10 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOnCallSchedulesResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The objects that were returned.</p>
@@ -134,6 +146,15 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             private String description; 
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(OnCallSchedules model) {
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The description of the scheduling policy.</p>
@@ -242,6 +263,16 @@ public class ListOnCallSchedulesResponseBody extends TeaModel {
             private Long page; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.onCallSchedules = model.onCallSchedules;
+                this.page = model.page;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The information about the scheduling policy.</p>

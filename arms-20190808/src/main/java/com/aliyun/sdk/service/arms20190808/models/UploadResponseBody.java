@@ -36,6 +36,10 @@ public class UploadResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class UploadResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private UploadResult uploadResult; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadResponseBody model) {
+            this.requestId = model.requestId;
+            this.uploadResult = model.uploadResult;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -134,6 +146,15 @@ public class UploadResponseBody extends TeaModel {
             private String fid; 
             private String fileName; 
             private String uploadTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(UploadResult model) {
+                this.fid = model.fid;
+                this.fileName = model.fileName;
+                this.uploadTime = model.uploadTime;
+            } 
 
             /**
              * <p>The ID of the SourceMap file.</p>

@@ -52,6 +52,10 @@ public class GrafanaWorkspaceIniProperty extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultValue
      */
@@ -101,6 +105,18 @@ public class GrafanaWorkspaceIniProperty extends TeaModel {
         private String key; 
         private Boolean secret; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceIniProperty model) {
+            this.defaultValue = model.defaultValue;
+            this.description = model.description;
+            this.example = model.example;
+            this.key = model.key;
+            this.secret = model.secret;
+            this.value = model.value;
+        } 
 
         /**
          * defaultValue.

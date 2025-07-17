@@ -36,6 +36,10 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return alertContactGroup
      */
@@ -53,6 +57,14 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
     public static final class Builder {
         private AlertContactGroup alertContactGroup; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOrUpdateContactGroupResponseBody model) {
+            this.alertContactGroup = model.alertContactGroup;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the alert contact group.</p>
@@ -134,6 +146,15 @@ public class CreateOrUpdateContactGroupResponseBody extends TeaModel {
             private Float contactGroupId; 
             private String contactGroupName; 
             private String contactIds; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertContactGroup model) {
+                this.contactGroupId = model.contactGroupId;
+                this.contactGroupName = model.contactGroupName;
+                this.contactIds = model.contactIds;
+            } 
 
             /**
              * <p>The ID of the alert contact group.</p>

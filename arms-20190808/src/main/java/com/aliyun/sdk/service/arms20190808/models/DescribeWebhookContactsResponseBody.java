@@ -36,6 +36,10 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeWebhookContactsResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned objects.</p>
@@ -170,6 +182,18 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             private String method; 
             private String recoverBody; 
             private String url; 
+
+            private Builder() {
+            } 
+
+            private Builder(Webhook model) {
+                this.bizHeaders = model.bizHeaders;
+                this.bizParams = model.bizParams;
+                this.body = model.body;
+                this.method = model.method;
+                this.recoverBody = model.recoverBody;
+                this.url = model.url;
+            } 
 
             /**
              * <p>The header of the HTTP request.</p>
@@ -304,6 +328,15 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             private Float webhookId; 
             private String webhookName; 
 
+            private Builder() {
+            } 
+
+            private Builder(WebhookContacts model) {
+                this.webhook = model.webhook;
+                this.webhookId = model.webhookId;
+                this.webhookName = model.webhookName;
+            } 
+
             /**
              * <p>The details of the webhook alert contact.</p>
              */
@@ -408,6 +441,16 @@ public class DescribeWebhookContactsResponseBody extends TeaModel {
             private Long size; 
             private Long total; 
             private java.util.List<WebhookContacts> webhookContacts; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.page = model.page;
+                this.size = model.size;
+                this.total = model.total;
+                this.webhookContacts = model.webhookContacts;
+            } 
 
             /**
              * <p>The page number of the returned page.</p>

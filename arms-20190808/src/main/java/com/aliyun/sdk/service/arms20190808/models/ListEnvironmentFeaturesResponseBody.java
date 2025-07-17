@@ -48,6 +48,10 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEnvironmentFeaturesResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>Status Code. Description 200 indicates success.</p>
@@ -303,6 +318,23 @@ public class ListEnvironmentFeaturesResponseBody extends TeaModel {
             private String name; 
             private String status; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alias = model.alias;
+                this.config = model.config;
+                this.description = model.description;
+                this.environmentId = model.environmentId;
+                this.icon = model.icon;
+                this.language = model.language;
+                this.latestVersion = model.latestVersion;
+                this.managed = model.managed;
+                this.name = model.name;
+                this.status = model.status;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The alias of the feature.</p>

@@ -68,10 +68,6 @@ public class CreateRumAppRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List<Tag> tag;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Workspace")
-    private String workspace;
-
     private CreateRumAppRequest(Builder builder) {
         super(builder);
         this.appGroup = builder.appGroup;
@@ -86,7 +82,6 @@ public class CreateRumAppRequest extends Request {
         this.siteType = builder.siteType;
         this.source = builder.source;
         this.tag = builder.tag;
-        this.workspace = builder.workspace;
     }
 
     public static Builder builder() {
@@ -97,7 +92,7 @@ public class CreateRumAppRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -186,13 +181,6 @@ public class CreateRumAppRequest extends Request {
         return this.tag;
     }
 
-    /**
-     * @return workspace
-     */
-    public String getWorkspace() {
-        return this.workspace;
-    }
-
     public static final class Builder extends Request.Builder<CreateRumAppRequest, Builder> {
         private String appGroup; 
         private String appName; 
@@ -206,7 +194,6 @@ public class CreateRumAppRequest extends Request {
         private String siteType; 
         private String source; 
         private java.util.List<Tag> tag; 
-        private String workspace; 
 
         private Builder() {
             super();
@@ -226,7 +213,6 @@ public class CreateRumAppRequest extends Request {
             this.siteType = request.siteType;
             this.source = request.source;
             this.tag = request.tag;
-            this.workspace = request.workspace;
         } 
 
         /**
@@ -267,7 +253,10 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * Language.
+         * <p>The language used by the client.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>java</p>
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
@@ -300,7 +289,10 @@ public class CreateRumAppRequest extends Request {
         }
 
         /**
-         * RealRegionId.
+         * <p>The region where the application resides. You can leave this parameter empty or set it to China East 2 Finance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai-finance-1</p>
          */
         public Builder realRegionId(String realRegionId) {
             this.putQueryParameter("RealRegionId", realRegionId);
@@ -368,15 +360,6 @@ public class CreateRumAppRequest extends Request {
             return this;
         }
 
-        /**
-         * Workspace.
-         */
-        public Builder workspace(String workspace) {
-            this.putQueryParameter("Workspace", workspace);
-            this.workspace = workspace;
-            return this;
-        }
-
         @Override
         public CreateRumAppRequest build() {
             return new CreateRumAppRequest(this);
@@ -427,6 +410,14 @@ public class CreateRumAppRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

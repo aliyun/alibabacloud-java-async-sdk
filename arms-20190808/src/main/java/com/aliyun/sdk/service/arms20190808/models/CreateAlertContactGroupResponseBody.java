@@ -36,6 +36,10 @@ public class CreateAlertContactGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contactGroupId
      */
@@ -53,6 +57,14 @@ public class CreateAlertContactGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String contactGroupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateAlertContactGroupResponseBody model) {
+            this.contactGroupId = model.contactGroupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the alert contact group.</p>

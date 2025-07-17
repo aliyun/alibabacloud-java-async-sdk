@@ -36,6 +36,10 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeIMRobotsResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned objects.</p>
@@ -122,6 +134,14 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(DispatchRules model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The ID of the notification policy.</p>
@@ -279,6 +299,21 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             private Float robotId; 
             private String robotName; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlertIMRobots model) {
+                this.createTime = model.createTime;
+                this.dailyNoc = model.dailyNoc;
+                this.dailyNocTime = model.dailyNocTime;
+                this.dingSignKey = model.dingSignKey;
+                this.dispatchRules = model.dispatchRules;
+                this.robotAddr = model.robotAddr;
+                this.robotId = model.robotId;
+                this.robotName = model.robotName;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The time when the IM chatbot was created.</p>
@@ -458,6 +493,16 @@ public class DescribeIMRobotsResponseBody extends TeaModel {
             private Long page; 
             private Long size; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.alertIMRobots = model.alertIMRobots;
+                this.page = model.page;
+                this.size = model.size;
+                this.total = model.total;
+            } 
 
             /**
              * <p>The queried IM chatbots.</p>

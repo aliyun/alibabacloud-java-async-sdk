@@ -44,6 +44,10 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -77,6 +81,16 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
         private java.util.List<Data> data; 
         private String message; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListEnvPodMonitorsResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -204,6 +218,17 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             private String path; 
             private String port; 
             private Integer targetPort; 
+
+            private Builder() {
+            } 
+
+            private Builder(Endpoints model) {
+                this.interval = model.interval;
+                this.matchedTargetCount = model.matchedTargetCount;
+                this.path = model.path;
+                this.port = model.port;
+                this.targetPort = model.targetPort;
+            } 
 
             /**
              * <p>The collection interval.</p>
@@ -418,6 +443,23 @@ public class ListEnvPodMonitorsResponseBody extends TeaModel {
             private String podMonitorName; 
             private String regionId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.addonName = model.addonName;
+                this.addonReleaseName = model.addonReleaseName;
+                this.addonVersion = model.addonVersion;
+                this.configYaml = model.configYaml;
+                this.creationTimestamp = model.creationTimestamp;
+                this.endpoints = model.endpoints;
+                this.environmentId = model.environmentId;
+                this.namespace = model.namespace;
+                this.podMonitorName = model.podMonitorName;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The name of the add-on to which the PodMonitor belongs.</p>

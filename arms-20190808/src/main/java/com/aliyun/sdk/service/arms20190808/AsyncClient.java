@@ -20,15 +20,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     /**
-     * @param request the request parameters of AddAliClusterIdsToPrometheusGlobalView  AddAliClusterIdsToPrometheusGlobalViewRequest
+     * @deprecated OpenAPI AddAliClusterIdsToPrometheusGlobalView is deprecated  * @param request  the request parameters of AddAliClusterIdsToPrometheusGlobalView  AddAliClusterIdsToPrometheusGlobalViewRequest
      * @return AddAliClusterIdsToPrometheusGlobalViewResponse
      */
+    @Deprecated
     CompletableFuture<AddAliClusterIdsToPrometheusGlobalViewResponse> addAliClusterIdsToPrometheusGlobalView(AddAliClusterIdsToPrometheusGlobalViewRequest request);
 
     /**
-     * @param request the request parameters of AddGrafana  AddGrafanaRequest
+     * @deprecated OpenAPI AddGrafana is deprecated  * @param request  the request parameters of AddGrafana  AddGrafanaRequest
      * @return AddGrafanaResponse
      */
+    @Deprecated
     CompletableFuture<AddGrafanaResponse> addGrafana(AddGrafanaRequest request);
 
     /**
@@ -39,15 +41,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddIntegrationResponse> addIntegration(AddIntegrationRequest request);
 
     /**
-     * @param request the request parameters of AddPrometheusGlobalView  AddPrometheusGlobalViewRequest
+     * @deprecated OpenAPI AddPrometheusGlobalView is deprecated  * @param request  the request parameters of AddPrometheusGlobalView  AddPrometheusGlobalViewRequest
      * @return AddPrometheusGlobalViewResponse
      */
+    @Deprecated
     CompletableFuture<AddPrometheusGlobalViewResponse> addPrometheusGlobalView(AddPrometheusGlobalViewRequest request);
 
     /**
-     * @param request the request parameters of AddPrometheusGlobalViewByAliClusterIds  AddPrometheusGlobalViewByAliClusterIdsRequest
+     * @deprecated OpenAPI AddPrometheusGlobalViewByAliClusterIds is deprecated  * @param request  the request parameters of AddPrometheusGlobalViewByAliClusterIds  AddPrometheusGlobalViewByAliClusterIdsRequest
      * @return AddPrometheusGlobalViewByAliClusterIdsResponse
      */
+    @Deprecated
     CompletableFuture<AddPrometheusGlobalViewByAliClusterIdsResponse> addPrometheusGlobalViewByAliClusterIds(AddPrometheusGlobalViewByAliClusterIdsRequest request);
 
     /**
@@ -65,21 +69,24 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddPrometheusIntegrationResponse> addPrometheusIntegration(AddPrometheusIntegrationRequest request);
 
     /**
-     * @param request the request parameters of AddRecordingRule  AddRecordingRuleRequest
+     * @deprecated OpenAPI AddRecordingRule is deprecated  * @param request  the request parameters of AddRecordingRule  AddRecordingRuleRequest
      * @return AddRecordingRuleResponse
      */
+    @Deprecated
     CompletableFuture<AddRecordingRuleResponse> addRecordingRule(AddRecordingRuleRequest request);
 
     /**
-     * @param request the request parameters of AddTagToFlinkCluster  AddTagToFlinkClusterRequest
+     * @deprecated OpenAPI AddTagToFlinkCluster is deprecated  * @param request  the request parameters of AddTagToFlinkCluster  AddTagToFlinkClusterRequest
      * @return AddTagToFlinkClusterResponse
      */
+    @Deprecated
     CompletableFuture<AddTagToFlinkClusterResponse> addTagToFlinkCluster(AddTagToFlinkClusterRequest request);
 
     /**
-     * @param request the request parameters of AppendInstancesToPrometheusGlobalView  AppendInstancesToPrometheusGlobalViewRequest
+     * @deprecated OpenAPI AppendInstancesToPrometheusGlobalView is deprecated  * @param request  the request parameters of AppendInstancesToPrometheusGlobalView  AppendInstancesToPrometheusGlobalViewRequest
      * @return AppendInstancesToPrometheusGlobalViewResponse
      */
+    @Deprecated
     CompletableFuture<AppendInstancesToPrometheusGlobalViewResponse> appendInstancesToPrometheusGlobalView(AppendInstancesToPrometheusGlobalViewRequest request);
 
     /**
@@ -89,9 +96,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApplyScenarioResponse> applyScenario(ApplyScenarioRequest request);
 
     /**
-     * @param request the request parameters of BindPrometheusGrafanaInstance  BindPrometheusGrafanaInstanceRequest
+     * @deprecated OpenAPI BindPrometheusGrafanaInstance is deprecated  * @param request  the request parameters of BindPrometheusGrafanaInstance  BindPrometheusGrafanaInstanceRequest
      * @return BindPrometheusGrafanaInstanceResponse
      */
+    @Deprecated
     CompletableFuture<BindPrometheusGrafanaInstanceResponse> bindPrometheusGrafanaInstance(BindPrometheusGrafanaInstanceRequest request);
 
     /**
@@ -279,9 +287,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePrometheusInstanceResponse> createPrometheusInstance(CreatePrometheusInstanceRequest request);
 
     /**
-     * @param request the request parameters of CreatePrometheusMonitoring  CreatePrometheusMonitoringRequest
+     * @deprecated OpenAPI CreatePrometheusMonitoring is deprecated  * @param request  the request parameters of CreatePrometheusMonitoring  CreatePrometheusMonitoringRequest
      * @return CreatePrometheusMonitoringResponse
      */
+    @Deprecated
     CompletableFuture<CreatePrometheusMonitoringResponse> createPrometheusMonitoring(CreatePrometheusMonitoringRequest request);
 
     /**
@@ -433,9 +442,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEventBridgeIntegrationResponse> deleteEventBridgeIntegration(DeleteEventBridgeIntegrationRequest request);
 
     /**
-     * @param request the request parameters of DeleteGrafanaResource  DeleteGrafanaResourceRequest
+     * @deprecated OpenAPI DeleteGrafanaResource is deprecated  * @param request  the request parameters of DeleteGrafanaResource  DeleteGrafanaResourceRequest
      * @return DeleteGrafanaResourceResponse
      */
+    @Deprecated
     CompletableFuture<DeleteGrafanaResourceResponse> deleteGrafanaResource(DeleteGrafanaResourceRequest request);
 
     /**
@@ -482,9 +492,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePrometheusAlertRuleResponse> deletePrometheusAlertRule(DeletePrometheusAlertRuleRequest request);
 
     /**
-     * @param request the request parameters of DeletePrometheusGlobalView  DeletePrometheusGlobalViewRequest
+     * @deprecated OpenAPI DeletePrometheusGlobalView is deprecated  * @param request  the request parameters of DeletePrometheusGlobalView  DeletePrometheusGlobalViewRequest
      * @return DeletePrometheusGlobalViewResponse
      */
+    @Deprecated
     CompletableFuture<DeletePrometheusGlobalViewResponse> deletePrometheusGlobalView(DeletePrometheusGlobalViewRequest request);
 
     /**
@@ -495,9 +506,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePrometheusIntegrationResponse> deletePrometheusIntegration(DeletePrometheusIntegrationRequest request);
 
     /**
-     * @param request the request parameters of DeletePrometheusMonitoring  DeletePrometheusMonitoringRequest
+     * @deprecated OpenAPI DeletePrometheusMonitoring is deprecated  * @param request  the request parameters of DeletePrometheusMonitoring  DeletePrometheusMonitoringRequest
      * @return DeletePrometheusMonitoringResponse
      */
+    @Deprecated
     CompletableFuture<DeletePrometheusMonitoringResponse> deletePrometheusMonitoring(DeletePrometheusMonitoringRequest request);
 
     /**
@@ -600,6 +612,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeEnvCustomJobResponse> describeEnvCustomJob(DescribeEnvCustomJobRequest request);
 
     /**
+     * @param request the request parameters of DescribeEnvDropMetricsRule  DescribeEnvDropMetricsRuleRequest
+     * @return DescribeEnvDropMetricsRuleResponse
+     */
+    CompletableFuture<DescribeEnvDropMetricsRuleResponse> describeEnvDropMetricsRule(DescribeEnvDropMetricsRuleRequest request);
+
+    /**
      * @param request the request parameters of DescribeEnvPodMonitor  DescribeEnvPodMonitorRequest
      * @return DescribeEnvPodMonitorResponse
      */
@@ -654,9 +672,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DoInsightsActionResponse> doInsightsAction(DoInsightsActionRequest request);
 
     /**
-     * @param request the request parameters of EnableMetric  EnableMetricRequest
+     * @deprecated OpenAPI EnableMetric is deprecated  * @param request  the request parameters of EnableMetric  EnableMetricRequest
      * @return EnableMetricResponse
      */
+    @Deprecated
     CompletableFuture<EnableMetricResponse> enableMetric(EnableMetricRequest request);
 
     /**
@@ -716,9 +735,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCommercialStatusResponse> getCommercialStatus(GetCommercialStatusRequest request);
 
     /**
-     * @param request the request parameters of GetExploreUrl  GetExploreUrlRequest
+     * @deprecated OpenAPI GetExploreUrl is deprecated  * @param request  the request parameters of GetExploreUrl  GetExploreUrlRequest
      * @return GetExploreUrlResponse
      */
+    @Deprecated
     CompletableFuture<GetExploreUrlResponse> getExploreUrl(GetExploreUrlRequest request);
 
     /**
@@ -785,15 +805,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetPrometheusIntegrationResponse> getPrometheusIntegration(GetPrometheusIntegrationRequest request);
 
     /**
-     * @param request the request parameters of GetPrometheusMonitoring  GetPrometheusMonitoringRequest
+     * @deprecated OpenAPI GetPrometheusMonitoring is deprecated  * @param request  the request parameters of GetPrometheusMonitoring  GetPrometheusMonitoringRequest
      * @return GetPrometheusMonitoringResponse
      */
+    @Deprecated
     CompletableFuture<GetPrometheusMonitoringResponse> getPrometheusMonitoring(GetPrometheusMonitoringRequest request);
 
     /**
-     * @param request the request parameters of GetRecordingRule  GetRecordingRuleRequest
+     * @deprecated OpenAPI GetRecordingRule is deprecated  * @param request  the request parameters of GetRecordingRule  GetRecordingRuleRequest
      * @return GetRecordingRuleResponse
      */
+    @Deprecated
     CompletableFuture<GetRecordingRuleResponse> getRecordingRule(GetRecordingRuleRequest request);
 
     /**
@@ -1015,9 +1037,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAlertsResponse> listAlerts(ListAlertsRequest request);
 
     /**
-     * @param request the request parameters of ListClusterFromGrafana  ListClusterFromGrafanaRequest
+     * @deprecated OpenAPI ListClusterFromGrafana is deprecated  * @param request  the request parameters of ListClusterFromGrafana  ListClusterFromGrafanaRequest
      * @return ListClusterFromGrafanaResponse
      */
+    @Deprecated
     CompletableFuture<ListClusterFromGrafanaResponse> listClusterFromGrafana(ListClusterFromGrafanaRequest request);
 
     /**
@@ -1037,9 +1060,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDashboardsResponse> listDashboards(ListDashboardsRequest request);
 
     /**
-     * @param request the request parameters of ListDashboardsByName  ListDashboardsByNameRequest
+     * @deprecated OpenAPI ListDashboardsByName is deprecated  * @param request  the request parameters of ListDashboardsByName  ListDashboardsByNameRequest
      * @return ListDashboardsByNameResponse
      */
+    @Deprecated
     CompletableFuture<ListDashboardsByNameResponse> listDashboardsByName(ListDashboardsByNameRequest request);
 
     /**
@@ -1196,9 +1220,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPrometheusIntegrationResponse> listPrometheusIntegration(ListPrometheusIntegrationRequest request);
 
     /**
-     * @param request the request parameters of ListPrometheusMonitoring  ListPrometheusMonitoringRequest
+     * @deprecated OpenAPI ListPrometheusMonitoring is deprecated  * @param request  the request parameters of ListPrometheusMonitoring  ListPrometheusMonitoringRequest
      * @return ListPrometheusMonitoringResponse
      */
+    @Deprecated
     CompletableFuture<ListPrometheusMonitoringResponse> listPrometheusMonitoring(ListPrometheusMonitoringRequest request);
 
     /**
@@ -1241,18 +1266,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTraceAppsResponse> listTraceApps(ListTraceAppsRequest request);
 
     /**
-     * @param request the request parameters of ManageGetRecordingRule  ManageGetRecordingRuleRequest
-     * @return ManageGetRecordingRuleResponse
-     */
-    CompletableFuture<ManageGetRecordingRuleResponse> manageGetRecordingRule(ManageGetRecordingRuleRequest request);
-
-    /**
-     * @param request the request parameters of ManageRecordingRule  ManageRecordingRuleRequest
-     * @return ManageRecordingRuleResponse
-     */
-    CompletableFuture<ManageRecordingRuleResponse> manageRecordingRule(ManageRecordingRuleRequest request);
-
-    /**
      * @param request the request parameters of OpenArmsDefaultSLR  OpenArmsDefaultSLRRequest
      * @return OpenArmsDefaultSLRResponse
      */
@@ -1274,9 +1287,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<OpenArmsServiceSecondVersionResponse> openArmsServiceSecondVersion(OpenArmsServiceSecondVersionRequest request);
 
     /**
-     * @param request the request parameters of OpenVCluster  OpenVClusterRequest
+     * @deprecated OpenAPI OpenVCluster is deprecated  * @param request  the request parameters of OpenVCluster  OpenVClusterRequest
      * @return OpenVClusterResponse
      */
+    @Deprecated
     CompletableFuture<OpenVClusterResponse> openVCluster(OpenVClusterRequest request);
 
     /**
@@ -1310,9 +1324,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryMetricByPageResponse> queryMetricByPage(QueryMetricByPageRequest request);
 
     /**
-     * @param request the request parameters of QueryPromInstallStatus  QueryPromInstallStatusRequest
+     * @deprecated OpenAPI QueryPromInstallStatus is deprecated  * @param request  the request parameters of QueryPromInstallStatus  QueryPromInstallStatusRequest
      * @return QueryPromInstallStatusResponse
      */
+    @Deprecated
     CompletableFuture<QueryPromInstallStatusResponse> queryPromInstallStatus(QueryPromInstallStatusRequest request);
 
     /**
@@ -1322,15 +1337,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryReleaseMetricResponse> queryReleaseMetric(QueryReleaseMetricRequest request);
 
     /**
-     * @param request the request parameters of RemoveAliClusterIdsFromPrometheusGlobalView  RemoveAliClusterIdsFromPrometheusGlobalViewRequest
+     * @deprecated OpenAPI RemoveAliClusterIdsFromPrometheusGlobalView is deprecated  * @param request  the request parameters of RemoveAliClusterIdsFromPrometheusGlobalView  RemoveAliClusterIdsFromPrometheusGlobalViewRequest
      * @return RemoveAliClusterIdsFromPrometheusGlobalViewResponse
      */
+    @Deprecated
     CompletableFuture<RemoveAliClusterIdsFromPrometheusGlobalViewResponse> removeAliClusterIdsFromPrometheusGlobalView(RemoveAliClusterIdsFromPrometheusGlobalViewRequest request);
 
     /**
-     * @param request the request parameters of RemoveSourcesFromPrometheusGlobalView  RemoveSourcesFromPrometheusGlobalViewRequest
+     * @deprecated OpenAPI RemoveSourcesFromPrometheusGlobalView is deprecated  * @param request  the request parameters of RemoveSourcesFromPrometheusGlobalView  RemoveSourcesFromPrometheusGlobalViewRequest
      * @return RemoveSourcesFromPrometheusGlobalViewResponse
      */
+    @Deprecated
     CompletableFuture<RemoveSourcesFromPrometheusGlobalViewResponse> removeSourcesFromPrometheusGlobalView(RemoveSourcesFromPrometheusGlobalViewRequest request);
 
     /**
@@ -1471,9 +1488,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SwitchSyntheticTaskStatusResponse> switchSyntheticTaskStatus(SwitchSyntheticTaskStatusRequest request);
 
     /**
-     * @param request the request parameters of SyncRecordingRules  SyncRecordingRulesRequest
+     * @deprecated OpenAPI SyncRecordingRules is deprecated  * @param request  the request parameters of SyncRecordingRules  SyncRecordingRulesRequest
      * @return SyncRecordingRulesResponse
      */
+    @Deprecated
     CompletableFuture<SyncRecordingRulesResponse> syncRecordingRules(SyncRecordingRulesRequest request);
 
     /**
@@ -1537,6 +1555,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateEnvCustomJobResponse> updateEnvCustomJob(UpdateEnvCustomJobRequest request);
 
     /**
+     * @param request the request parameters of UpdateEnvDropMetricsRule  UpdateEnvDropMetricsRuleRequest
+     * @return UpdateEnvDropMetricsRuleResponse
+     */
+    CompletableFuture<UpdateEnvDropMetricsRuleResponse> updateEnvDropMetricsRule(UpdateEnvDropMetricsRuleRequest request);
+
+    /**
      * @param request the request parameters of UpdateEnvPodMonitor  UpdateEnvPodMonitorRequest
      * @return UpdateEnvPodMonitorResponse
      */
@@ -1576,9 +1600,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateIntegrationResponse> updateIntegration(UpdateIntegrationRequest request);
 
     /**
-     * @param request the request parameters of UpdateMetricDrop  UpdateMetricDropRequest
+     * @deprecated OpenAPI UpdateMetricDrop is deprecated, please use ARMS::2019-08-08::UpdateEnvDropMetricsRule instead.  * @param request  the request parameters of UpdateMetricDrop  UpdateMetricDropRequest
      * @return UpdateMetricDropResponse
      */
+    @Deprecated
     CompletableFuture<UpdateMetricDropResponse> updateMetricDrop(UpdateMetricDropRequest request);
 
     /**
@@ -1588,9 +1613,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePrometheusAlertRuleResponse> updatePrometheusAlertRule(UpdatePrometheusAlertRuleRequest request);
 
     /**
-     * @param request the request parameters of UpdatePrometheusGlobalView  UpdatePrometheusGlobalViewRequest
+     * @deprecated OpenAPI UpdatePrometheusGlobalView is deprecated  * @param request  the request parameters of UpdatePrometheusGlobalView  UpdatePrometheusGlobalViewRequest
      * @return UpdatePrometheusGlobalViewResponse
      */
+    @Deprecated
     CompletableFuture<UpdatePrometheusGlobalViewResponse> updatePrometheusGlobalView(UpdatePrometheusGlobalViewRequest request);
 
     /**
@@ -1607,15 +1633,17 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdatePrometheusIntegrationResponse> updatePrometheusIntegration(UpdatePrometheusIntegrationRequest request);
 
     /**
-     * @param request the request parameters of UpdatePrometheusMonitoring  UpdatePrometheusMonitoringRequest
+     * @deprecated OpenAPI UpdatePrometheusMonitoring is deprecated  * @param request  the request parameters of UpdatePrometheusMonitoring  UpdatePrometheusMonitoringRequest
      * @return UpdatePrometheusMonitoringResponse
      */
+    @Deprecated
     CompletableFuture<UpdatePrometheusMonitoringResponse> updatePrometheusMonitoring(UpdatePrometheusMonitoringRequest request);
 
     /**
-     * @param request the request parameters of UpdatePrometheusMonitoringStatus  UpdatePrometheusMonitoringStatusRequest
+     * @deprecated OpenAPI UpdatePrometheusMonitoringStatus is deprecated  * @param request  the request parameters of UpdatePrometheusMonitoringStatus  UpdatePrometheusMonitoringStatusRequest
      * @return UpdatePrometheusMonitoringStatusResponse
      */
+    @Deprecated
     CompletableFuture<UpdatePrometheusMonitoringStatusResponse> updatePrometheusMonitoringStatus(UpdatePrometheusMonitoringStatusRequest request);
 
     /**

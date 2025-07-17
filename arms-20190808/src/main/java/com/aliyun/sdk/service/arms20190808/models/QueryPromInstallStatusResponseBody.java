@@ -36,6 +36,10 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(QueryPromInstallStatusResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned struct.</p>
@@ -110,6 +122,13 @@ public class QueryPromInstallStatusResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean isControllerInstalled; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.isControllerInstalled = model.isControllerInstalled;
+            } 
 
             /**
              * <p>Indicates whether the call was successful. Valid values:</p>

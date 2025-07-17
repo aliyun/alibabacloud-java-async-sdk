@@ -68,6 +68,10 @@ public class GrafanaWorkspaceCustomDomain extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cert
      */
@@ -149,6 +153,22 @@ public class GrafanaWorkspaceCustomDomain extends TeaModel {
         private String protocol; 
         private String status; 
         private String uri; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceCustomDomain model) {
+            this.cert = model.cert;
+            this.date = model.date;
+            this.domain = model.domain;
+            this.grafanaWorkspaceId = model.grafanaWorkspaceId;
+            this.id = model.id;
+            this.key = model.key;
+            this.privateZone = model.privateZone;
+            this.protocol = model.protocol;
+            this.status = model.status;
+            this.uri = model.uri;
+        } 
 
         /**
          * cert.

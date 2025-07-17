@@ -48,6 +48,10 @@ public class GrafanaWorkspaceNews extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return date
      */
@@ -89,6 +93,17 @@ public class GrafanaWorkspaceNews extends TeaModel {
         private String image; 
         private String link; 
         private String title; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceNews model) {
+            this.date = model.date;
+            this.description = model.description;
+            this.image = model.image;
+            this.link = model.link;
+            this.title = model.title;
+        } 
 
         /**
          * date.

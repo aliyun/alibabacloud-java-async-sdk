@@ -32,6 +32,10 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return enable
      */
@@ -41,6 +45,13 @@ public class DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue
 
     public static final class Builder {
         private Boolean enable; 
+
+        private Builder() {
+        } 
+
+        private Builder(DataBonreeSDKConfigModuleConfigVersionConfigsValueCustomConfigValue model) {
+            this.enable = model.enable;
+        } 
 
         /**
          * <p>Indicates whether the configuration is enabled.</p>

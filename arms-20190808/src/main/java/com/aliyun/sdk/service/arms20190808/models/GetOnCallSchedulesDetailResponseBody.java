@@ -36,6 +36,10 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOnCallSchedulesDetailResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the scheduling policy.</p>
@@ -122,6 +134,14 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(SimpleContact model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The ID of the user on duty.</p>
@@ -208,6 +228,15 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private SimpleContact simpleContact; 
             private String start; 
 
+            private Builder() {
+            } 
+
+            private Builder(RenderedFinnalEntries model) {
+                this.end = model.end;
+                this.simpleContact = model.simpleContact;
+                this.start = model.start;
+            } 
+
             /**
              * <p>The date on which the user completed shift work.</p>
              * 
@@ -288,6 +317,14 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(RenderedLayerEntriesSimpleContact model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The ID of the scheduled user.</p>
@@ -374,6 +411,15 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String end; 
             private RenderedLayerEntriesSimpleContact simpleContact; 
 
+            private Builder() {
+            } 
+
+            private Builder(RenderedLayerEntries model) {
+                this.start = model.start;
+                this.end = model.end;
+                this.simpleContact = model.simpleContact;
+            } 
+
             /**
              * <p>The date from which the scheduled user was supposed to start shift work.</p>
              * 
@@ -454,6 +500,14 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
         public static final class Builder {
             private Long id; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(RenderedSubstitudeEntriesSimpleContact model) {
+                this.id = model.id;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The ID of the substitute.</p>
@@ -539,6 +593,15 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String end; 
             private RenderedSubstitudeEntriesSimpleContact simpleContact; 
             private String start; 
+
+            private Builder() {
+            } 
+
+            private Builder(RenderedSubstitudeEntries model) {
+                this.end = model.end;
+                this.simpleContact = model.simpleContact;
+                this.start = model.start;
+            } 
 
             /**
              * <p>The date on which the substitute was supposed to complete shift work.</p>
@@ -632,6 +695,15 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String endTimeOfDay; 
             private String restrictionType; 
             private String startTimeOfDay; 
+
+            private Builder() {
+            } 
+
+            private Builder(Restrictions model) {
+                this.endTimeOfDay = model.endTimeOfDay;
+                this.restrictionType = model.restrictionType;
+                this.startTimeOfDay = model.startTimeOfDay;
+            } 
 
             /**
              * <p>The end time of the shift per day.</p>
@@ -756,6 +828,17 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private String rotationType; 
             private Long shiftLength; 
             private String startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScheduleLayers model) {
+                this.contactIds = model.contactIds;
+                this.restrictions = model.restrictions;
+                this.rotationType = model.rotationType;
+                this.shiftLength = model.shiftLength;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The ID list of users on duty.</p>
@@ -933,6 +1016,20 @@ public class GetOnCallSchedulesDetailResponseBody extends TeaModel {
             private java.util.List<java.util.List<RenderedLayerEntries>> renderedLayerEntries; 
             private java.util.List<RenderedSubstitudeEntries> renderedSubstitudeEntries; 
             private java.util.List<ScheduleLayers> scheduleLayers; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.alertRobotId = model.alertRobotId;
+                this.description = model.description;
+                this.id = model.id;
+                this.name = model.name;
+                this.renderedFinnalEntries = model.renderedFinnalEntries;
+                this.renderedLayerEntries = model.renderedLayerEntries;
+                this.renderedSubstitudeEntries = model.renderedSubstitudeEntries;
+                this.scheduleLayers = model.scheduleLayers;
+            } 
 
             /**
              * <p>The URL of the DingTalk chatbot, which is used to receive notifications about shift changes.</p>

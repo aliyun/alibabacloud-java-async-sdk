@@ -36,6 +36,10 @@ public class SearchAlertRulesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return pageBean
      */
@@ -53,6 +57,14 @@ public class SearchAlertRulesResponseBody extends TeaModel {
     public static final class Builder {
         private PageBean pageBean; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(SearchAlertRulesResponseBody model) {
+            this.pageBean = model.pageBean;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned struct.</p>
@@ -146,6 +158,16 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private String alarmContentTemplate; 
             private String content; 
             private String subTitle; 
+
+            private Builder() {
+            } 
+
+            private Builder(AlarmContext model) {
+                this.alarmContentSubTitle = model.alarmContentSubTitle;
+                this.alarmContentTemplate = model.alarmContentTemplate;
+                this.content = model.content;
+                this.subTitle = model.subTitle;
+            } 
 
             /**
              * <p>The sub-title of the alert notification content.</p>
@@ -290,6 +312,18 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private String operator; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Rules model) {
+                this.aggregates = model.aggregates;
+                this.alias = model.alias;
+                this.measure = model.measure;
+                this.nValue = model.nValue;
+                this.operator = model.operator;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The aggregation logic of the metric data of the alert rule. Valid values:</p>
              * <ul>
@@ -423,6 +457,14 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private String operator; 
             private java.util.List<Rules> rules; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertRule model) {
+                this.operator = model.operator;
+                this.rules = model.rules;
+            } 
+
             /**
              * <p>The logical operator between conditions. Valid values: <code>&amp;</code>: AND. <code>|</code>: OR.</p>
              * 
@@ -504,6 +546,15 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private String key; 
             private String type; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Dimensions model) {
+                this.key = model.key;
+                this.type = model.type;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The key of the dimension. Valid values:</p>
@@ -635,6 +686,17 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private java.util.List<Dimensions> dimensions; 
             private String pid; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(MetricParam model) {
+                this.appGroupId = model.appGroupId;
+                this.appId = model.appId;
+                this.dimensions = model.dimensions;
+                this.pid = model.pid;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The ID of the application group that is associated with the alert rule. This parameter is applicable to Enterprise Distributed Application Service (EDAS) applications.</p>
@@ -770,6 +832,16 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private Long noticeEndTime; 
             private Long noticeStartTime; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Notice model) {
+                this.endTime = model.endTime;
+                this.noticeEndTime = model.noticeEndTime;
+                this.noticeStartTime = model.noticeStartTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The end of the time range when the alert rule takes effect within 24 hours per day. This value is a UNIX timestamp. The year, month, and day that are indicated by the timestamp are not displayed in this value. Only the hour, minute, and second are displayed.</p>
@@ -1118,6 +1190,35 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private Long updateTime; 
             private String userId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AlertRules model) {
+                this.alarmContext = model.alarmContext;
+                this.alertLevel = model.alertLevel;
+                this.alertRule = model.alertRule;
+                this.alertTitle = model.alertTitle;
+                this.alertType = model.alertType;
+                this.alertVersion = model.alertVersion;
+                this.alertWays = model.alertWays;
+                this.config = model.config;
+                this.contactGroupIdList = model.contactGroupIdList;
+                this.contactGroupIds = model.contactGroupIds;
+                this.createTime = model.createTime;
+                this.hostByAlertManager = model.hostByAlertManager;
+                this.id = model.id;
+                this.metricParam = model.metricParam;
+                this.notice = model.notice;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.taskId = model.taskId;
+                this.taskStatus = model.taskStatus;
+                this.title = model.title;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+            } 
+
             /**
              * <p>The format of the alert notification.</p>
              */
@@ -1455,6 +1556,16 @@ public class SearchAlertRulesResponseBody extends TeaModel {
             private Integer pageNumber; 
             private Integer pageSize; 
             private Integer totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(PageBean model) {
+                this.alertRules = model.alertRules;
+                this.pageNumber = model.pageNumber;
+                this.pageSize = model.pageSize;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The details of the alert rules.</p>

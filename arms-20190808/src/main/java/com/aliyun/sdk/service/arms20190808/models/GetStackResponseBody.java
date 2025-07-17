@@ -36,6 +36,10 @@ public class GetStackResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class GetStackResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<StackInfo> stackInfo; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetStackResponseBody model) {
+            this.requestId = model.requestId;
+            this.stackInfo = model.stackInfo;
+        } 
+
         /**
          * <p>The request ID.</p>
          * 
@@ -66,7 +78,7 @@ public class GetStackResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information of the method stack.</p>
+         * <p>The method stack details.</p>
          */
         public Builder stackInfo(java.util.List<StackInfo> stackInfo) {
             this.stackInfo = stackInfo;
@@ -122,6 +134,14 @@ public class GetStackResponseBody extends TeaModel {
         public static final class Builder {
             private String info; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExtInfo model) {
+                this.info = model.info;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The content of the custom parameter.</p>
@@ -280,6 +300,21 @@ public class GetStackResponseBody extends TeaModel {
             private String serviceName; 
             private Long startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(StackInfo model) {
+                this.api = model.api;
+                this.callCount = model.callCount;
+                this.duration = model.duration;
+                this.exception = model.exception;
+                this.extInfo = model.extInfo;
+                this.line = model.line;
+                this.rpcId = model.rpcId;
+                this.serviceName = model.serviceName;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The name of the operation.</p>
              * 
@@ -292,7 +327,7 @@ public class GetStackResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Number of repeated method calls.</p>
+             * <p>The number of times the method is called.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

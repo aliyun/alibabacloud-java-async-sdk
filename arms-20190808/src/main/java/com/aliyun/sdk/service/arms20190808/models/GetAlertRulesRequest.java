@@ -82,7 +82,7 @@ public class GetAlertRulesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -230,7 +230,7 @@ public class GetAlertRulesRequest extends Request {
          * <li>PAUSED</li>
          * </ul>
          * <blockquote>
-         * <p> The PAUSED state indicates that the alert rule is abnormal and has been suspended. This may be because the specified threshold value is excessively large, or the associated cluster has been deleted.</p>
+         * <p> The PAUSED state indicates an abnormal and paused alert rule. This may result from excessively large threshold values or deleted associated clusters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -243,7 +243,7 @@ public class GetAlertRulesRequest extends Request {
         }
 
         /**
-         * <p>The type of the alert rule. This parameter is required for the new version of Alert Management.</p>
+         * <p>The type of the alert rule. This parameter is required for the new version of Alert Management. Valid values:</p>
          * <ul>
          * <li>APPLICATION_MONITORING_ALERT_RULE: alert rule for Application Monitoring</li>
          * <li>BROWSER_MONITORING_ALERT_RULE: alert rule for Browser Monitoring</li>
@@ -381,6 +381,14 @@ public class GetAlertRulesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

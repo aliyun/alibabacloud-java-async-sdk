@@ -72,6 +72,10 @@ public class GrafanaWorkspaceIntegrationDataSource extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterType
      */
@@ -161,6 +165,23 @@ public class GrafanaWorkspaceIntegrationDataSource extends TeaModel {
         private String regionId; 
         private String status; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(GrafanaWorkspaceIntegrationDataSource model) {
+            this.clusterType = model.clusterType;
+            this.datasourceId = model.datasourceId;
+            this.datasourceName = model.datasourceName;
+            this.datasourceUrl = model.datasourceUrl;
+            this.description = model.description;
+            this.exploreUrl = model.exploreUrl;
+            this.extra = model.extra;
+            this.folderUrl = model.folderUrl;
+            this.regionId = model.regionId;
+            this.status = model.status;
+            this.type = model.type;
+        } 
 
         /**
          * clusterType.

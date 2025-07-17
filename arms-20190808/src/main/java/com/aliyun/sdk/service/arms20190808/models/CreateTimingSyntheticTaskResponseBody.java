@@ -48,6 +48,10 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateTimingSyntheticTaskResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code returned. The status code 200 indicates that the request was successful.</p>
@@ -191,6 +206,14 @@ public class CreateTimingSyntheticTaskResponseBody extends TeaModel {
         public static final class Builder {
             private String status; 
             private String taskId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.status = model.status;
+                this.taskId = model.taskId;
+            } 
 
             /**
              * <p>The task status. Valid values:</p>

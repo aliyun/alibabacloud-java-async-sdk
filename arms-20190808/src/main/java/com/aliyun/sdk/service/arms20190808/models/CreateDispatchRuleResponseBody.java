@@ -36,6 +36,10 @@ public class CreateDispatchRuleResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dispatchRuleId
      */
@@ -53,6 +57,14 @@ public class CreateDispatchRuleResponseBody extends TeaModel {
     public static final class Builder {
         private Long dispatchRuleId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDispatchRuleResponseBody model) {
+            this.dispatchRuleId = model.dispatchRuleId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the dispatch policy.</p>

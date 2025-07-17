@@ -52,6 +52,10 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -102,6 +106,18 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(QueryCommercialUsageResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
          * <p>The response status. Valid values: 2XX: The request is successful. 3XX: A redirection message is returned. 4XX: The request is invalid. 5XX: A server error occurs.</p>
          * 
@@ -122,7 +138,10 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -215,6 +234,14 @@ public class QueryCommercialUsageResponseBody extends TeaModel {
         public static final class Builder {
             private Boolean complete; 
             private java.util.List<java.util.Map<String, ?>> items; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.complete = model.complete;
+                this.items = model.items;
+            } 
 
             /**
              * <p>Indicates whether a multi-region query is complete. Valid values:</p>

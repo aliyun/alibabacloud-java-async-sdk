@@ -48,6 +48,10 @@ public class InstallAddonResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -89,6 +93,17 @@ public class InstallAddonResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstallAddonResponseBody model) {
+            this.code = model.code;
+            this.data = model.data;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
@@ -239,6 +254,18 @@ public class InstallAddonResponseBody extends TeaModel {
             private String reason; 
             private String status; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Conditions model) {
+                this.firstTransitionTime = model.firstTransitionTime;
+                this.lastTransitionTime = model.lastTransitionTime;
+                this.message = model.message;
+                this.reason = model.reason;
+                this.status = model.status;
+                this.type = model.type;
+            } 
 
             /**
              * <p>The first transition time.</p>
@@ -560,6 +587,31 @@ public class InstallAddonResponseBody extends TeaModel {
             private String updateTime; 
             private String userId; 
             private String version; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.addonName = model.addonName;
+                this.alertRuleCount = model.alertRuleCount;
+                this.conditions = model.conditions;
+                this.createTime = model.createTime;
+                this.dashboardCount = model.dashboardCount;
+                this.environmentId = model.environmentId;
+                this.exporterCount = model.exporterCount;
+                this.haveConfig = model.haveConfig;
+                this.installUserId = model.installUserId;
+                this.language = model.language;
+                this.managed = model.managed;
+                this.regionId = model.regionId;
+                this.releaseId = model.releaseId;
+                this.releaseName = model.releaseName;
+                this.scene = model.scene;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.userId = model.userId;
+                this.version = model.version;
+            } 
 
             /**
              * <p>The name of the add-on.</p>

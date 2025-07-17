@@ -36,6 +36,10 @@ public class OpenArmsServiceSecondVersionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -53,6 +57,14 @@ public class OpenArmsServiceSecondVersionResponseBody extends TeaModel {
     public static final class Builder {
         private String orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(OpenArmsServiceSecondVersionResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The service ID returned if the service is activated.</p>
