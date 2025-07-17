@@ -47,6 +47,10 @@ public class GenerateSqlFromNLRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String question;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableNames")
+    private String tableNames;
+
     private GenerateSqlFromNLRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -56,6 +60,7 @@ public class GenerateSqlFromNLRequest extends Request {
         this.level = builder.level;
         this.model = builder.model;
         this.question = builder.question;
+        this.tableNames = builder.tableNames;
     }
 
     public static Builder builder() {
@@ -120,6 +125,13 @@ public class GenerateSqlFromNLRequest extends Request {
         return this.question;
     }
 
+    /**
+     * @return tableNames
+     */
+    public String getTableNames() {
+        return this.tableNames;
+    }
+
     public static final class Builder extends Request.Builder<GenerateSqlFromNLRequest, Builder> {
         private String regionId; 
         private String dbId; 
@@ -128,6 +140,7 @@ public class GenerateSqlFromNLRequest extends Request {
         private String level; 
         private String model; 
         private String question; 
+        private String tableNames; 
 
         private Builder() {
             super();
@@ -142,6 +155,7 @@ public class GenerateSqlFromNLRequest extends Request {
             this.level = request.level;
             this.model = request.model;
             this.question = request.question;
+            this.tableNames = request.tableNames;
         } 
 
         /**
@@ -207,6 +221,15 @@ public class GenerateSqlFromNLRequest extends Request {
         public Builder question(String question) {
             this.putQueryParameter("Question", question);
             this.question = question;
+            return this;
+        }
+
+        /**
+         * TableNames.
+         */
+        public Builder tableNames(String tableNames) {
+            this.putQueryParameter("TableNames", tableNames);
+            this.tableNames = tableNames;
             return this;
         }
 
