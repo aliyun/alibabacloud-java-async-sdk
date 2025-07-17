@@ -814,7 +814,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
          * <p>The name series of elastic container instances. Naming conventions:</p>
          * <ul>
          * <li>The name must be 2 to 128 characters in length.</li>
-         * <li>The name can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).</li>
+         * <li>The name can contain only lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen (-).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -976,7 +976,7 @@ public class ModifyEciScalingConfigurationRequest extends Request {
 
         /**
          * <blockquote>
-         * <p> This parameter is unavailable.</p>
+         * <p> This parameter is unavailable for use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -2566,7 +2566,6 @@ public class ModifyEciScalingConfigurationRequest extends Request {
      */
     public static class EnvironmentVars extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldRef")
-        @com.aliyun.core.annotation.Validation(required = true)
         private FieldRef fieldRef;
 
         @com.aliyun.core.annotation.NameInMap("Key")
@@ -2916,15 +2915,12 @@ public class ModifyEciScalingConfigurationRequest extends Request {
      */
     public static class Containers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LivenessProbe")
-        @com.aliyun.core.annotation.Validation(required = true)
         private LivenessProbe livenessProbe;
 
         @com.aliyun.core.annotation.NameInMap("ReadinessProbe")
-        @com.aliyun.core.annotation.Validation(required = true)
         private ReadinessProbe readinessProbe;
 
         @com.aliyun.core.annotation.NameInMap("SecurityContext")
-        @com.aliyun.core.annotation.Validation(required = true)
         private SecurityContext securityContext;
 
         @com.aliyun.core.annotation.NameInMap("Args")
@@ -4175,7 +4171,6 @@ public class ModifyEciScalingConfigurationRequest extends Request {
      */
     public static class InitContainerEnvironmentVars extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FieldRef")
-        @com.aliyun.core.annotation.Validation(required = true)
         private InitContainerEnvironmentVarsFieldRef fieldRef;
 
         @com.aliyun.core.annotation.NameInMap("Key")
@@ -4526,7 +4521,6 @@ public class ModifyEciScalingConfigurationRequest extends Request {
      */
     public static class InitContainers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityContext")
-        @com.aliyun.core.annotation.Validation(required = true)
         private InitContainersSecurityContext securityContext;
 
         @com.aliyun.core.annotation.NameInMap("Args")
@@ -5571,23 +5565,18 @@ public class ModifyEciScalingConfigurationRequest extends Request {
      */
     public static class Volumes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private DiskVolume diskVolume;
 
         @com.aliyun.core.annotation.NameInMap("EmptyDirVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private EmptyDirVolume emptyDirVolume;
 
         @com.aliyun.core.annotation.NameInMap("FlexVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private FlexVolume flexVolume;
 
         @com.aliyun.core.annotation.NameInMap("HostPathVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private HostPathVolume hostPathVolume;
 
         @com.aliyun.core.annotation.NameInMap("NFSVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private NFSVolume NFSVolume;
 
         @com.aliyun.core.annotation.NameInMap("ConfigFileVolumeConfigFileToPath")

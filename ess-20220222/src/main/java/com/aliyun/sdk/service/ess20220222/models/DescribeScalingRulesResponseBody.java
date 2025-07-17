@@ -572,7 +572,10 @@ public class DescribeScalingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * <p>The statistical period of the metric data in the target tracking scaling rule.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder period(Integer period) {
                 this.period = period;

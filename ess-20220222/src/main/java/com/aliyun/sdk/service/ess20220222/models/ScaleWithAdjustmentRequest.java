@@ -36,6 +36,10 @@ public class ScaleWithAdjustmentRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecutionMode")
+    private String executionMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LifecycleHookContext")
     private LifecycleHookContext lifecycleHookContext;
 
@@ -74,6 +78,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         this.adjustmentType = builder.adjustmentType;
         this.adjustmentValue = builder.adjustmentValue;
         this.clientToken = builder.clientToken;
+        this.executionMode = builder.executionMode;
         this.lifecycleHookContext = builder.lifecycleHookContext;
         this.minAdjustmentMagnitude = builder.minAdjustmentMagnitude;
         this.overrides = builder.overrides;
@@ -123,6 +128,13 @@ public class ScaleWithAdjustmentRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return executionMode
+     */
+    public String getExecutionMode() {
+        return this.executionMode;
     }
 
     /**
@@ -186,6 +198,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         private String adjustmentType; 
         private Integer adjustmentValue; 
         private String clientToken; 
+        private String executionMode; 
         private LifecycleHookContext lifecycleHookContext; 
         private Integer minAdjustmentMagnitude; 
         private Overrides overrides; 
@@ -205,6 +218,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             this.adjustmentType = request.adjustmentType;
             this.adjustmentValue = request.adjustmentValue;
             this.clientToken = request.clientToken;
+            this.executionMode = request.executionMode;
             this.lifecycleHookContext = request.lifecycleHookContext;
             this.minAdjustmentMagnitude = request.minAdjustmentMagnitude;
             this.overrides = request.overrides;
@@ -272,6 +286,15 @@ public class ScaleWithAdjustmentRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * ExecutionMode.
+         */
+        public Builder executionMode(String executionMode) {
+            this.putQueryParameter("ExecutionMode", executionMode);
+            this.executionMode = executionMode;
             return this;
         }
 

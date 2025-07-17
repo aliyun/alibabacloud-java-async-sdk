@@ -467,7 +467,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * AlarmOptions.
+         * <p>The alert attributes.</p>
          */
         public Builder alarmOptions(AlarmOptions alarmOptions) {
             this.putQueryParameter("AlarmOptions", alarmOptions);
@@ -901,7 +901,20 @@ public class ModifyScalingRuleRequest extends Request {
             } 
 
             /**
-             * Period.
+             * <p>The statistical period of the metric data in the target tracking scaling rule. Unit: seconds. Valid values:</p>
+             * <ul>
+             * <li>15</li>
+             * <li>60</li>
+             * <li>120</li>
+             * <li>300</li>
+             * <li>900</li>
+             * </ul>
+             * <blockquote>
+             * <p> Default value: 60.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>60</p>
              */
             public Builder period(Integer period) {
                 this.period = period;

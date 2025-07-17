@@ -814,7 +814,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * <p>The containers on the elastic container instance.</p>
+         * <p>The containers per elastic container instance.</p>
          */
         public Builder containers(java.util.List<Containers> containers) {
             this.putQueryParameter("Containers", containers);
@@ -2556,7 +2556,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. The name cannot start with a digit. Specify the value in the [0-9a-zA-Z] format.</p>
+             * <p>The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (_), and digits. It cannot start with a digit. Specify the value in the [0-9a-zA-Z] format.</p>
              * 
              * <strong>example:</strong>
              * <p>PATH</p>
@@ -2637,7 +2637,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The port number. Valid values: 1 to 65535.</p>
+             * <p>The port. Valid values: 1 to 65535.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -2648,9 +2648,9 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The protocol type. Valid values:</p>
+             * <p>The type of the protocol. Valid values:</p>
              * <ul>
-             * <li>TCP</li>
+             * <li>TCP.</li>
              * <li>UDP</li>
              * </ul>
              * 
@@ -2761,7 +2761,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             } 
 
             /**
-             * <p>The directory to which the container mounts the volume.</p>
+             * <p>The directory in which the container mounts the volume.</p>
              * <blockquote>
              * <p> Data in this directory is overwritten by data on the volume. Specify this parameter with caution.</p>
              * </blockquote>
@@ -2775,11 +2775,11 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The mount propagation settings of the volume. Mount propagation enables volume sharing from one container to other containers within the same pod or to containers across separate pods on the same node. Valid values:</p>
+             * <p>The mount propagation setting. Mount propagation enables volume sharing from one container to other containers within the same pod or to containers across separate pods on the same node. Valid values:</p>
              * <ul>
-             * <li>None: Subsequent mounts executed on the volume or its subdirectories do not propagate to the volume.</li>
-             * <li>HostToCotainer: Subsequent mounts executed on the volume or its subdirectories propagate to the volume.</li>
-             * <li>Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed on the volume or its subdirectories propagate to the volume. All volume mounts executed on the container not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.</li>
+             * <li>None: Subsequent mounts executed on the volume or its subdirectories are not propagated to the volume.</li>
+             * <li>HostToCotainer: Subsequent mounts executed on the volume or its subdirectories are propagated to the volume.</li>
+             * <li>Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed on the volume or its subdirectories are propagated to the volume. All volume mounts executed on the container are not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.</li>
              * </ul>
              * <p>Default value: None.</p>
              * 
@@ -2792,7 +2792,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The name of the volume. The value of this parameter is the same as the value of Volumes.Name.</p>
+             * <p>The volume name. The value of this parameter is the same as the value of Volumes.Name.</p>
              * 
              * <strong>example:</strong>
              * <p>default-volume1</p>
@@ -2819,7 +2819,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The subdirectory of the volume.</p>
+             * <p>The volume subdirectory.</p>
              * 
              * <strong>example:</strong>
              * <p>data2/</p>
@@ -2844,15 +2844,12 @@ public class CreateEciScalingConfigurationRequest extends Request {
      */
     public static class Containers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LivenessProbe")
-        @com.aliyun.core.annotation.Validation(required = true)
         private LivenessProbe livenessProbe;
 
         @com.aliyun.core.annotation.NameInMap("ReadinessProbe")
-        @com.aliyun.core.annotation.Validation(required = true)
         private ReadinessProbe readinessProbe;
 
         @com.aliyun.core.annotation.NameInMap("SecurityContext")
-        @com.aliyun.core.annotation.Validation(required = true)
         private SecurityContext securityContext;
 
         @com.aliyun.core.annotation.NameInMap("Args")
@@ -3306,7 +3303,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The startup arguments of the containers. You can specify up to 10 arguments.</p>
+             * <p>The startup arguments of the container. You can specify up to 10 arguments.</p>
              */
             public Builder args(java.util.List<String> args) {
                 this.args = args;
@@ -3314,7 +3311,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The commands that you can run by using a CLI to perform liveness probes within the container.</p>
+             * <p>The commands that you want to run by using the CLI for liveness probing within the container.</p>
              */
             public Builder commands(java.util.List<String> commands) {
                 this.commands = commands;
@@ -3352,7 +3349,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The container image.</p>
+             * <p>The image in the container.</p>
              * 
              * <strong>example:</strong>
              * <p>registry-vpc.cn-hangzhou.aliyuncs.com/eci_open/nginx:latest</p>
@@ -3366,8 +3363,8 @@ public class CreateEciScalingConfigurationRequest extends Request {
              * <p>The image pulling policy. Valid values:</p>
              * <ul>
              * <li>Always: Each time instances are created, image pulling is performed.</li>
-             * <li>IfNotPresent: Image pulling is performed as needed. On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.</li>
-             * <li>Never: On-premises images are always used. Image pulling is not performed.</li>
+             * <li>IfNotPresent: Image pulling is performed based on your business requirements. On-premises images are used by default. If no on-premises images are available, images are pulled from remote sources.</li>
+             * <li>Never: Image pulling is not performed. On-premises images are always used. Image pulling is not performed.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -3379,7 +3376,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The commands that you can run by using a CLI to configure the postStart callback function within the container.</p>
+             * <p>The commands that you want to run by using the CLI to configure the postStart callback function within the container.</p>
              */
             public Builder lifecyclePostStartHandlerExecs(java.util.List<String> lifecyclePostStartHandlerExecs) {
                 this.lifecyclePostStartHandlerExecs = lifecyclePostStartHandlerExecs;
@@ -3387,7 +3384,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the host to which you send an HTTP GET request to configure the postStart callback function.</p>
+             * <p>The IP address of the host to which you want to send HTTP GET requests to configure the postStart callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.XX.XX</p>
@@ -3398,7 +3395,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The path to which you send an HTTP GET request to configure the postStart callback function.</p>
+             * <p>The path to which you want to send HTTP GET requests to configure the postStart callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>/healthyz</p>
@@ -3409,7 +3406,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The port over which you send an HTTP GET request to configure the postStart callback function.</p>
+             * <p>The port over which you want to send HTTP GET requests to configure the postStart callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>5050</p>
@@ -3420,7 +3417,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The protocol type of the HTTP GET request that you send to configure the postStart callback function. Valid values:</p>
+             * <p>The protocol type of HTTP GET requests that you want to send to configure the postStart callback function. Valid values:</p>
              * <ul>
              * <li>HTTP</li>
              * <li>HTTPS</li>
@@ -3435,7 +3432,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the host detected by the TCP socket that you use to configure the postStart callback function.</p>
+             * <p>The IP address of the host detected by the TCP sockets that you want to use to configure the postStart callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.XX.XX</p>
@@ -3446,7 +3443,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The port detected by the TCP socket that you use to configure the postStart callback function.</p>
+             * <p>The port detected by the TCP sockets that you want to use to configure the postStart callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>80</p>
@@ -3457,7 +3454,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The commands that you can run by using a CLI to configure the preStop callback function within the container.</p>
+             * <p>The commands that you want to run by using the CLI to configure the preStop callback function within the container.</p>
              */
             public Builder lifecyclePreStopHandlerExecs(java.util.List<String> lifecyclePreStopHandlerExecs) {
                 this.lifecyclePreStopHandlerExecs = lifecyclePreStopHandlerExecs;
@@ -3465,7 +3462,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the host to which you send an HTTP GET request to configure the preStop callback function.</p>
+             * <p>The IP address of the host to which you want to send HTTP GET requests to configure the preStop callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.XX.XX</p>
@@ -3476,7 +3473,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The path to which you send an HTTP GET request to configure the preStop callback function.</p>
+             * <p>The path to which you want to send HTTP GET requests to configure the preStop callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>/healthyz</p>
@@ -3487,7 +3484,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The port over which you send an HTTP GET request to configure the preStop callback function.</p>
+             * <p>The port over which you want to send HTTP GET requests to configure the preStop callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>88</p>
@@ -3498,7 +3495,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The protocol type of the HTTP GET request that you send to configure the preStop callback function. Valid values:</p>
+             * <p>The protocol type of the HTTP GET requests that you want to send to configure the preStop callback function. Valid values:</p>
              * <ul>
              * <li>HTTP</li>
              * <li>HTTPS</li>
@@ -3513,7 +3510,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The IP address of the host detected by the TCP socket that you use to configure the preStop callback function.</p>
+             * <p>The IP address of the host detected by the TCP sockets that you want to use to configure the preStop callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>10.0.XX.XX</p>
@@ -3524,7 +3521,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The port detected by the TCP socket that you use to configure the preStop callback function.</p>
+             * <p>The port detected by the TCP sockets that you want to use to configure the preStop callback function.</p>
              * 
              * <strong>example:</strong>
              * <p>90</p>
@@ -3535,7 +3532,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>The memory size per container. Unit: GiB.</p>
+             * <p>The memory size that you want to allocate to the container. Unit: GiB.</p>
              * 
              * <strong>example:</strong>
              * <p>0.5</p>
@@ -3589,7 +3586,7 @@ public class CreateEciScalingConfigurationRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to enable the Interaction feature. Valid values:</p>
+             * <p>Specifies whether to enable interaction. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>
@@ -4405,7 +4402,6 @@ public class CreateEciScalingConfigurationRequest extends Request {
      */
     public static class InitContainers extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SecurityContext")
-        @com.aliyun.core.annotation.Validation(required = true)
         private InitContainersSecurityContext securityContext;
 
         @com.aliyun.core.annotation.NameInMap("Args")
@@ -5447,23 +5443,18 @@ public class CreateEciScalingConfigurationRequest extends Request {
      */
     public static class Volumes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DiskVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private DiskVolume diskVolume;
 
         @com.aliyun.core.annotation.NameInMap("EmptyDirVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private EmptyDirVolume emptyDirVolume;
 
         @com.aliyun.core.annotation.NameInMap("FlexVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private FlexVolume flexVolume;
 
         @com.aliyun.core.annotation.NameInMap("HostPathVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private HostPathVolume hostPathVolume;
 
         @com.aliyun.core.annotation.NameInMap("NFSVolume")
-        @com.aliyun.core.annotation.Validation(required = true)
         private NFSVolume NFSVolume;
 
         @com.aliyun.core.annotation.NameInMap("ConfigFileVolumeConfigFileToPaths")

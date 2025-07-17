@@ -489,8 +489,8 @@ public class CreateAlarmRequest extends Request {
         /**
          * <p>The metric type. Valid values:</p>
          * <ul>
-         * <li>system: system metrics of CloudMonitor.</li>
-         * <li>custom: custom metrics that are reported to CloudMonitor.</li>
+         * <li>system: a system metric of CloudMonitor.</li>
+         * <li>custom: a custom metric that is reported to CloudMonitor.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -20,6 +20,9 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ActivityType")
     private String activityType;
 
+    @com.aliyun.core.annotation.NameInMap("PlanResult")
+    private PlanResult planResult;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -28,6 +31,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
 
     private ScaleWithAdjustmentResponseBody(Builder builder) {
         this.activityType = builder.activityType;
+        this.planResult = builder.planResult;
         this.requestId = builder.requestId;
         this.scalingActivityId = builder.scalingActivityId;
     }
@@ -52,6 +56,13 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
     }
 
     /**
+     * @return planResult
+     */
+    public PlanResult getPlanResult() {
+        return this.planResult;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -67,6 +78,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
 
     public static final class Builder {
         private String activityType; 
+        private PlanResult planResult; 
         private String requestId; 
         private String scalingActivityId; 
 
@@ -75,6 +87,7 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
 
         private Builder(ScaleWithAdjustmentResponseBody model) {
             this.activityType = model.activityType;
+            this.planResult = model.planResult;
             this.requestId = model.requestId;
             this.scalingActivityId = model.scalingActivityId;
         } 
@@ -89,6 +102,14 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
          */
         public Builder activityType(String activityType) {
             this.activityType = activityType;
+            return this;
+        }
+
+        /**
+         * PlanResult.
+         */
+        public Builder planResult(PlanResult planResult) {
+            this.planResult = planResult;
             return this;
         }
 
@@ -120,4 +141,196 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ScaleWithAdjustmentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ScaleWithAdjustmentResponseBody</p>
+     */
+    public static class ResourceAllocations extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Amount")
+        private Integer amount;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
+        private String instanceChargeType;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private String instanceType;
+
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
+        private String spotStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
+        private ResourceAllocations(Builder builder) {
+            this.amount = builder.amount;
+            this.instanceChargeType = builder.instanceChargeType;
+            this.instanceType = builder.instanceType;
+            this.spotStrategy = builder.spotStrategy;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceAllocations create() {
+            return builder().build();
+        }
+
+        /**
+         * @return amount
+         */
+        public Integer getAmount() {
+            return this.amount;
+        }
+
+        /**
+         * @return instanceChargeType
+         */
+        public String getInstanceChargeType() {
+            return this.instanceChargeType;
+        }
+
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return spotStrategy
+         */
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private Integer amount; 
+            private String instanceChargeType; 
+            private String instanceType; 
+            private String spotStrategy; 
+            private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ResourceAllocations model) {
+                this.amount = model.amount;
+                this.instanceChargeType = model.instanceChargeType;
+                this.instanceType = model.instanceType;
+                this.spotStrategy = model.spotStrategy;
+                this.zoneId = model.zoneId;
+            } 
+
+            /**
+             * Amount.
+             */
+            public Builder amount(Integer amount) {
+                this.amount = amount;
+                return this;
+            }
+
+            /**
+             * InstanceChargeType.
+             */
+            public Builder instanceChargeType(String instanceChargeType) {
+                this.instanceChargeType = instanceChargeType;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * SpotStrategy.
+             */
+            public Builder spotStrategy(String spotStrategy) {
+                this.spotStrategy = spotStrategy;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public ResourceAllocations build() {
+                return new ResourceAllocations(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ScaleWithAdjustmentResponseBody} extends {@link TeaModel}
+     *
+     * <p>ScaleWithAdjustmentResponseBody</p>
+     */
+    public static class PlanResult extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ResourceAllocations")
+        private java.util.List<ResourceAllocations> resourceAllocations;
+
+        private PlanResult(Builder builder) {
+            this.resourceAllocations = builder.resourceAllocations;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PlanResult create() {
+            return builder().build();
+        }
+
+        /**
+         * @return resourceAllocations
+         */
+        public java.util.List<ResourceAllocations> getResourceAllocations() {
+            return this.resourceAllocations;
+        }
+
+        public static final class Builder {
+            private java.util.List<ResourceAllocations> resourceAllocations; 
+
+            private Builder() {
+            } 
+
+            private Builder(PlanResult model) {
+                this.resourceAllocations = model.resourceAllocations;
+            } 
+
+            /**
+             * ResourceAllocations.
+             */
+            public Builder resourceAllocations(java.util.List<ResourceAllocations> resourceAllocations) {
+                this.resourceAllocations = resourceAllocations;
+                return this;
+            }
+
+            public PlanResult build() {
+                return new PlanResult(this);
+            } 
+
+        } 
+
+    }
 }

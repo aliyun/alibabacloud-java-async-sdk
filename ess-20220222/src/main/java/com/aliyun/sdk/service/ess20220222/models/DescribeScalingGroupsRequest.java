@@ -263,8 +263,8 @@ public class DescribeScalingGroupsRequest extends Request {
         }
 
         /**
-         * <p>The page number. Minimum value: 1.</p>
-         * <p>Default value: 1</p>
+         * <p>The page number. Pages start from page 1.</p>
+         * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
