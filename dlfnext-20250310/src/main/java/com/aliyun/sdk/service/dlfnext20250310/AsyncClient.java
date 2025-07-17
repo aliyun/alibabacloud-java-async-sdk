@@ -26,6 +26,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AlterCatalogResponse> alterCatalog(AlterCatalogRequest request);
 
     /**
+     * @param request the request parameters of AlterDatabase  AlterDatabaseRequest
+     * @return AlterDatabaseResponse
+     */
+    CompletableFuture<AlterDatabaseResponse> alterDatabase(AlterDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of AlterTable  AlterTableRequest
+     * @return AlterTableResponse
+     */
+    CompletableFuture<AlterTableResponse> alterTable(AlterTableRequest request);
+
+    /**
      * @param request the request parameters of BatchGrantPermissions  BatchGrantPermissionsRequest
      * @return BatchGrantPermissionsResponse
      */
@@ -44,10 +56,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCatalogResponse> createCatalog(CreateCatalogRequest request);
 
     /**
+     * @param request the request parameters of CreateDatabase  CreateDatabaseRequest
+     * @return CreateDatabaseResponse
+     */
+    CompletableFuture<CreateDatabaseResponse> createDatabase(CreateDatabaseRequest request);
+
+    /**
      * @param request the request parameters of CreateRole  CreateRoleRequest
      * @return CreateRoleResponse
      */
     CompletableFuture<CreateRoleResponse> createRole(CreateRoleRequest request);
+
+    /**
+     * @param request the request parameters of CreateTable  CreateTableRequest
+     * @return CreateTableResponse
+     */
+    CompletableFuture<CreateTableResponse> createTable(CreateTableRequest request);
 
     /**
      * @param request the request parameters of DeleteRole  DeleteRoleRequest
@@ -66,6 +90,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DropCatalogResponse
      */
     CompletableFuture<DropCatalogResponse> dropCatalog(DropCatalogRequest request);
+
+    /**
+     * @param request the request parameters of DropDatabase  DropDatabaseRequest
+     * @return DropDatabaseResponse
+     */
+    CompletableFuture<DropDatabaseResponse> dropDatabase(DropDatabaseRequest request);
+
+    /**
+     * @param request the request parameters of DropTable  DropTableRequest
+     * @return DropTableResponse
+     */
+    CompletableFuture<DropTableResponse> dropTable(DropTableRequest request);
 
     /**
      * @param request the request parameters of GetCatalog  GetCatalogRequest
@@ -92,6 +128,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCatalogTokenResponse> getCatalogToken(GetCatalogTokenRequest request);
 
     /**
+     * @param request the request parameters of GetDatabase  GetDatabaseRequest
+     * @return GetDatabaseResponse
+     */
+    CompletableFuture<GetDatabaseResponse> getDatabase(GetDatabaseRequest request);
+
+    /**
      * @param request the request parameters of GetDatabaseSummary  GetDatabaseSummaryRequest
      * @return GetDatabaseSummaryResponse
      */
@@ -108,6 +150,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetRoleResponse
      */
     CompletableFuture<GetRoleResponse> getRole(GetRoleRequest request);
+
+    /**
+     * @param request the request parameters of GetTable  GetTableRequest
+     * @return GetTableResponse
+     */
+    CompletableFuture<GetTableResponse> getTable(GetTableRequest request);
 
     /**
      * @param request the request parameters of GetTableSummary  GetTableSummaryRequest
@@ -134,6 +182,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCatalogsResponse> listCatalogs(ListCatalogsRequest request);
 
     /**
+     * @param request the request parameters of ListDatabases  ListDatabasesRequest
+     * @return ListDatabasesResponse
+     */
+    CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request);
+
+    /**
      * @param request the request parameters of ListPartitionSummaries  ListPartitionSummariesRequest
      * @return ListPartitionSummariesResponse
      */
@@ -156,6 +210,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListRolesResponse
      */
     CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request);
+
+    /**
+     * @param request the request parameters of ListTables  ListTablesRequest
+     * @return ListTablesResponse
+     */
+    CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request);
 
     /**
      * @param request the request parameters of ListUserRoles  ListUserRolesRequest
