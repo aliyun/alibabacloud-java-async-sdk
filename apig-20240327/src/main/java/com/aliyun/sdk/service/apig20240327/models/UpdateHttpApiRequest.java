@@ -64,6 +64,10 @@ public class UpdateHttpApiRequest extends Request {
     private java.util.List<String> protocols;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("removeBasePathOnForward")
+    private Boolean removeBasePathOnForward;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("versionConfig")
     private HttpApiVersionConfig versionConfig;
 
@@ -80,6 +84,7 @@ public class UpdateHttpApiRequest extends Request {
         this.ingressConfig = builder.ingressConfig;
         this.onlyChangeConfig = builder.onlyChangeConfig;
         this.protocols = builder.protocols;
+        this.removeBasePathOnForward = builder.removeBasePathOnForward;
         this.versionConfig = builder.versionConfig;
     }
 
@@ -174,6 +179,13 @@ public class UpdateHttpApiRequest extends Request {
     }
 
     /**
+     * @return removeBasePathOnForward
+     */
+    public Boolean getRemoveBasePathOnForward() {
+        return this.removeBasePathOnForward;
+    }
+
+    /**
      * @return versionConfig
      */
     public HttpApiVersionConfig getVersionConfig() {
@@ -192,6 +204,7 @@ public class UpdateHttpApiRequest extends Request {
         private IngressConfig ingressConfig; 
         private Boolean onlyChangeConfig; 
         private java.util.List<String> protocols; 
+        private Boolean removeBasePathOnForward; 
         private HttpApiVersionConfig versionConfig; 
 
         private Builder() {
@@ -211,6 +224,7 @@ public class UpdateHttpApiRequest extends Request {
             this.ingressConfig = request.ingressConfig;
             this.onlyChangeConfig = request.onlyChangeConfig;
             this.protocols = request.protocols;
+            this.removeBasePathOnForward = request.removeBasePathOnForward;
             this.versionConfig = request.versionConfig;
         } 
 
@@ -321,6 +335,15 @@ public class UpdateHttpApiRequest extends Request {
         public Builder protocols(java.util.List<String> protocols) {
             this.putBodyParameter("protocols", protocols);
             this.protocols = protocols;
+            return this;
+        }
+
+        /**
+         * removeBasePathOnForward.
+         */
+        public Builder removeBasePathOnForward(Boolean removeBasePathOnForward) {
+            this.putBodyParameter("removeBasePathOnForward", removeBasePathOnForward);
+            this.removeBasePathOnForward = removeBasePathOnForward;
             return this;
         }
 

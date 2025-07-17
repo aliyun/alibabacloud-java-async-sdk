@@ -146,10 +146,14 @@ public class ListZonesResponseBody extends TeaModel {
      * <p>ListZonesResponseBody</p>
      */
     public static class Items extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("supportQat")
+        private String supportQat;
+
         @com.aliyun.core.annotation.NameInMap("zoneId")
         private String zoneId;
 
         private Items(Builder builder) {
+            this.supportQat = builder.supportQat;
             this.zoneId = builder.zoneId;
         }
 
@@ -162,6 +166,13 @@ public class ListZonesResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportQat
+         */
+        public String getSupportQat() {
+            return this.supportQat;
+        }
+
+        /**
          * @return zoneId
          */
         public String getZoneId() {
@@ -169,14 +180,24 @@ public class ListZonesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String supportQat; 
             private String zoneId; 
 
             private Builder() {
             } 
 
             private Builder(Items model) {
+                this.supportQat = model.supportQat;
                 this.zoneId = model.zoneId;
             } 
+
+            /**
+             * supportQat.
+             */
+            public Builder supportQat(String supportQat) {
+                this.supportQat = supportQat;
+                return this;
+            }
 
             /**
              * <p>可用区ID。</p>

@@ -54,6 +54,10 @@ public class CreateHttpApiRequest extends Request {
     private IngressConfig ingressConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("modelCategory")
+    private String modelCategory;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("name")
     @com.aliyun.core.annotation.Validation(required = true)
     private String name;
@@ -61,6 +65,10 @@ public class CreateHttpApiRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("protocols")
     private java.util.List<String> protocols;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("removeBasePathOnForward")
+    private Boolean removeBasePathOnForward;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("resourceGroupId")
@@ -85,8 +93,10 @@ public class CreateHttpApiRequest extends Request {
         this.description = builder.description;
         this.enableAuth = builder.enableAuth;
         this.ingressConfig = builder.ingressConfig;
+        this.modelCategory = builder.modelCategory;
         this.name = builder.name;
         this.protocols = builder.protocols;
+        this.removeBasePathOnForward = builder.removeBasePathOnForward;
         this.resourceGroupId = builder.resourceGroupId;
         this.type = builder.type;
         this.versionConfig = builder.versionConfig;
@@ -169,6 +179,13 @@ public class CreateHttpApiRequest extends Request {
     }
 
     /**
+     * @return modelCategory
+     */
+    public String getModelCategory() {
+        return this.modelCategory;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -180,6 +197,13 @@ public class CreateHttpApiRequest extends Request {
      */
     public java.util.List<String> getProtocols() {
         return this.protocols;
+    }
+
+    /**
+     * @return removeBasePathOnForward
+     */
+    public Boolean getRemoveBasePathOnForward() {
+        return this.removeBasePathOnForward;
     }
 
     /**
@@ -213,8 +237,10 @@ public class CreateHttpApiRequest extends Request {
         private String description; 
         private Boolean enableAuth; 
         private IngressConfig ingressConfig; 
+        private String modelCategory; 
         private String name; 
         private java.util.List<String> protocols; 
+        private Boolean removeBasePathOnForward; 
         private String resourceGroupId; 
         private String type; 
         private HttpApiVersionConfig versionConfig; 
@@ -234,8 +260,10 @@ public class CreateHttpApiRequest extends Request {
             this.description = request.description;
             this.enableAuth = request.enableAuth;
             this.ingressConfig = request.ingressConfig;
+            this.modelCategory = request.modelCategory;
             this.name = request.name;
             this.protocols = request.protocols;
+            this.removeBasePathOnForward = request.removeBasePathOnForward;
             this.resourceGroupId = request.resourceGroupId;
             this.type = request.type;
             this.versionConfig = request.versionConfig;
@@ -332,6 +360,15 @@ public class CreateHttpApiRequest extends Request {
         }
 
         /**
+         * modelCategory.
+         */
+        public Builder modelCategory(String modelCategory) {
+            this.putBodyParameter("modelCategory", modelCategory);
+            this.modelCategory = modelCategory;
+            return this;
+        }
+
+        /**
          * <p>The API name.</p>
          * <p>This parameter is required.</p>
          * 
@@ -350,6 +387,15 @@ public class CreateHttpApiRequest extends Request {
         public Builder protocols(java.util.List<String> protocols) {
             this.putBodyParameter("protocols", protocols);
             this.protocols = protocols;
+            return this;
+        }
+
+        /**
+         * removeBasePathOnForward.
+         */
+        public Builder removeBasePathOnForward(Boolean removeBasePathOnForward) {
+            this.putBodyParameter("removeBasePathOnForward", removeBasePathOnForward);
+            this.removeBasePathOnForward = removeBasePathOnForward;
             return this;
         }
 
