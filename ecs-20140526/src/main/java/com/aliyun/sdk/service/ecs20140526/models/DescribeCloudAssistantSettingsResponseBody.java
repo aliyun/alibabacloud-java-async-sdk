@@ -26,6 +26,9 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("SessionManagerConfig")
+    private SessionManagerConfig sessionManagerConfig;
+
     @com.aliyun.core.annotation.NameInMap("SlsDeliveryConfigs")
     private SlsDeliveryConfigs slsDeliveryConfigs;
 
@@ -33,6 +36,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         this.agentUpgradeConfig = builder.agentUpgradeConfig;
         this.ossDeliveryConfigs = builder.ossDeliveryConfigs;
         this.requestId = builder.requestId;
+        this.sessionManagerConfig = builder.sessionManagerConfig;
         this.slsDeliveryConfigs = builder.slsDeliveryConfigs;
     }
 
@@ -70,6 +74,13 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
     }
 
     /**
+     * @return sessionManagerConfig
+     */
+    public SessionManagerConfig getSessionManagerConfig() {
+        return this.sessionManagerConfig;
+    }
+
+    /**
      * @return slsDeliveryConfigs
      */
     public SlsDeliveryConfigs getSlsDeliveryConfigs() {
@@ -80,6 +91,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
         private AgentUpgradeConfig agentUpgradeConfig; 
         private OssDeliveryConfigs ossDeliveryConfigs; 
         private String requestId; 
+        private SessionManagerConfig sessionManagerConfig; 
         private SlsDeliveryConfigs slsDeliveryConfigs; 
 
         private Builder() {
@@ -89,6 +101,7 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
             this.agentUpgradeConfig = model.agentUpgradeConfig;
             this.ossDeliveryConfigs = model.ossDeliveryConfigs;
             this.requestId = model.requestId;
+            this.sessionManagerConfig = model.sessionManagerConfig;
             this.slsDeliveryConfigs = model.slsDeliveryConfigs;
         } 
 
@@ -116,6 +129,14 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SessionManagerConfig.
+         */
+        public Builder sessionManagerConfig(SessionManagerConfig sessionManagerConfig) {
+            this.sessionManagerConfig = sessionManagerConfig;
             return this;
         }
 
@@ -552,6 +573,60 @@ public class DescribeCloudAssistantSettingsResponseBody extends TeaModel {
 
             public OssDeliveryConfigs build() {
                 return new OssDeliveryConfigs(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link DescribeCloudAssistantSettingsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeCloudAssistantSettingsResponseBody</p>
+     */
+    public static class SessionManagerConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SessionManagerEnabled")
+        private Boolean sessionManagerEnabled;
+
+        private SessionManagerConfig(Builder builder) {
+            this.sessionManagerEnabled = builder.sessionManagerEnabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SessionManagerConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sessionManagerEnabled
+         */
+        public Boolean getSessionManagerEnabled() {
+            return this.sessionManagerEnabled;
+        }
+
+        public static final class Builder {
+            private Boolean sessionManagerEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(SessionManagerConfig model) {
+                this.sessionManagerEnabled = model.sessionManagerEnabled;
+            } 
+
+            /**
+             * SessionManagerEnabled.
+             */
+            public Builder sessionManagerEnabled(Boolean sessionManagerEnabled) {
+                this.sessionManagerEnabled = sessionManagerEnabled;
+                return this;
+            }
+
+            public SessionManagerConfig build() {
+                return new SessionManagerConfig(this);
             } 
 
         } 

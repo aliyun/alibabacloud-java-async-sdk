@@ -51,6 +51,10 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionManagerConfig")
+    private SessionManagerConfig sessionManagerConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SettingType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String settingType;
@@ -69,6 +73,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.sessionManagerConfig = builder.sessionManagerConfig;
         this.settingType = builder.settingType;
         this.slsDeliveryConfig = builder.slsDeliveryConfig;
     }
@@ -143,6 +148,13 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
     }
 
     /**
+     * @return sessionManagerConfig
+     */
+    public SessionManagerConfig getSessionManagerConfig() {
+        return this.sessionManagerConfig;
+    }
+
+    /**
      * @return settingType
      */
     public String getSettingType() {
@@ -165,6 +177,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private SessionManagerConfig sessionManagerConfig; 
         private String settingType; 
         private SlsDeliveryConfig slsDeliveryConfig; 
 
@@ -182,6 +195,7 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.sessionManagerConfig = request.sessionManagerConfig;
             this.settingType = request.settingType;
             this.slsDeliveryConfig = request.slsDeliveryConfig;
         } 
@@ -261,6 +275,16 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SessionManagerConfig.
+         */
+        public Builder sessionManagerConfig(SessionManagerConfig sessionManagerConfig) {
+            String sessionManagerConfigShrink = shrink(sessionManagerConfig, "SessionManagerConfig", "json");
+            this.putQueryParameter("SessionManagerConfig", sessionManagerConfigShrink);
+            this.sessionManagerConfig = sessionManagerConfig;
             return this;
         }
 
@@ -595,6 +619,60 @@ public class ModifyCloudAssistantSettingsRequest extends Request {
 
             public OssDeliveryConfig build() {
                 return new OssDeliveryConfig(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ModifyCloudAssistantSettingsRequest} extends {@link TeaModel}
+     *
+     * <p>ModifyCloudAssistantSettingsRequest</p>
+     */
+    public static class SessionManagerConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SessionManagerEnabled")
+        private Boolean sessionManagerEnabled;
+
+        private SessionManagerConfig(Builder builder) {
+            this.sessionManagerEnabled = builder.sessionManagerEnabled;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SessionManagerConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sessionManagerEnabled
+         */
+        public Boolean getSessionManagerEnabled() {
+            return this.sessionManagerEnabled;
+        }
+
+        public static final class Builder {
+            private Boolean sessionManagerEnabled; 
+
+            private Builder() {
+            } 
+
+            private Builder(SessionManagerConfig model) {
+                this.sessionManagerEnabled = model.sessionManagerEnabled;
+            } 
+
+            /**
+             * SessionManagerEnabled.
+             */
+            public Builder sessionManagerEnabled(Boolean sessionManagerEnabled) {
+                this.sessionManagerEnabled = sessionManagerEnabled;
+                return this;
+            }
+
+            public SessionManagerConfig build() {
+                return new SessionManagerConfig(this);
             } 
 
         } 
