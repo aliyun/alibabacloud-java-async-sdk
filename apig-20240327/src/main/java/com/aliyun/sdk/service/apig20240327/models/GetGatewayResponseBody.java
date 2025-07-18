@@ -1129,6 +1129,9 @@ public class GetGatewayResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("gatewayType")
         private String gatewayType;
 
+        @com.aliyun.core.annotation.NameInMap("isp")
+        private String isp;
+
         @com.aliyun.core.annotation.NameInMap("loadBalancers")
         private java.util.List<LoadBalancers> loadBalancers;
 
@@ -1179,6 +1182,7 @@ public class GetGatewayResponseBody extends TeaModel {
             this.expireTimestamp = builder.expireTimestamp;
             this.gatewayId = builder.gatewayId;
             this.gatewayType = builder.gatewayType;
+            this.isp = builder.isp;
             this.loadBalancers = builder.loadBalancers;
             this.name = builder.name;
             this.replicas = builder.replicas;
@@ -1250,6 +1254,13 @@ public class GetGatewayResponseBody extends TeaModel {
          */
         public String getGatewayType() {
             return this.gatewayType;
+        }
+
+        /**
+         * @return isp
+         */
+        public String getIsp() {
+            return this.isp;
         }
 
         /**
@@ -1358,6 +1369,7 @@ public class GetGatewayResponseBody extends TeaModel {
             private Long expireTimestamp; 
             private String gatewayId; 
             private String gatewayType; 
+            private String isp; 
             private java.util.List<LoadBalancers> loadBalancers; 
             private String name; 
             private String replicas; 
@@ -1384,6 +1396,7 @@ public class GetGatewayResponseBody extends TeaModel {
                 this.expireTimestamp = model.expireTimestamp;
                 this.gatewayId = model.gatewayId;
                 this.gatewayType = model.gatewayType;
+                this.isp = model.isp;
                 this.loadBalancers = model.loadBalancers;
                 this.name = model.name;
                 this.replicas = model.replicas;
@@ -1482,6 +1495,14 @@ public class GetGatewayResponseBody extends TeaModel {
              */
             public Builder gatewayType(String gatewayType) {
                 this.gatewayType = gatewayType;
+                return this;
+            }
+
+            /**
+             * isp.
+             */
+            public Builder isp(String isp) {
+                this.isp = isp;
                 return this;
             }
 
