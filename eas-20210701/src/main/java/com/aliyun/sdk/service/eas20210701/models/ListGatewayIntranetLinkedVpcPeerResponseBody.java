@@ -91,7 +91,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The list of VPC peers.</p>
+         * <p>The VPC peers.</p>
          */
         public Builder peerVpcList(java.util.List<PeerVpcList> peerVpcList) {
             this.peerVpcList = peerVpcList;
@@ -270,7 +270,7 @@ public class ListGatewayIntranetLinkedVpcPeerResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The ID of the VPC peers.</p>
+             * <p>The IDs of the VPC peers.</p>
              */
             public Builder peerVpcs(java.util.List<PeerVpcs> peerVpcs) {
                 this.peerVpcs = peerVpcs;

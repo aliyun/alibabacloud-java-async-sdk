@@ -32,6 +32,9 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AppVersion")
     private String appVersion;
 
+    @com.aliyun.core.annotation.NameInMap("AutoscalerEnabled")
+    private Boolean autoscalerEnabled;
+
     @com.aliyun.core.annotation.NameInMap("CallerUid")
     private String callerUid;
 
@@ -41,11 +44,20 @@ public class Service extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
+    @com.aliyun.core.annotation.NameInMap("CronscalerEnabled")
+    private Boolean cronscalerEnabled;
+
     @com.aliyun.core.annotation.NameInMap("CurrentVersion")
     private Integer currentVersion;
 
     @com.aliyun.core.annotation.NameInMap("ExtraData")
     private String extraData;
+
+    @com.aliyun.core.annotation.NameInMap("GPUCorePercentage")
+    private Integer GPUCorePercentage;
+
+    @com.aliyun.core.annotation.NameInMap("GPUMemory")
+    private Integer GPUMemory;
 
     @com.aliyun.core.annotation.NameInMap("Gateway")
     private String gateway;
@@ -55,6 +67,9 @@ public class Service extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Image")
     private String image;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceCountInResource")
+    private InstanceCountInResource instanceCountInResource;
 
     @com.aliyun.core.annotation.NameInMap("InternetEndpoint")
     private String internetEndpoint;
@@ -100,6 +115,9 @@ public class Service extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("ResourceAlias")
     private String resourceAlias;
+
+    @com.aliyun.core.annotation.NameInMap("ResourceBurstable")
+    private Boolean resourceBurstable;
 
     @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
@@ -161,14 +179,19 @@ public class Service extends TeaModel {
         this.appSpecName = builder.appSpecName;
         this.appType = builder.appType;
         this.appVersion = builder.appVersion;
+        this.autoscalerEnabled = builder.autoscalerEnabled;
         this.callerUid = builder.callerUid;
         this.cpu = builder.cpu;
         this.createTime = builder.createTime;
+        this.cronscalerEnabled = builder.cronscalerEnabled;
         this.currentVersion = builder.currentVersion;
         this.extraData = builder.extraData;
+        this.GPUCorePercentage = builder.GPUCorePercentage;
+        this.GPUMemory = builder.GPUMemory;
         this.gateway = builder.gateway;
         this.gpu = builder.gpu;
         this.image = builder.image;
+        this.instanceCountInResource = builder.instanceCountInResource;
         this.internetEndpoint = builder.internetEndpoint;
         this.intranetEndpoint = builder.intranetEndpoint;
         this.labels = builder.labels;
@@ -184,6 +207,7 @@ public class Service extends TeaModel {
         this.requestId = builder.requestId;
         this.resource = builder.resource;
         this.resourceAlias = builder.resourceAlias;
+        this.resourceBurstable = builder.resourceBurstable;
         this.role = builder.role;
         this.roleAttrs = builder.roleAttrs;
         this.runningInstance = builder.runningInstance;
@@ -252,6 +276,13 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return autoscalerEnabled
+     */
+    public Boolean getAutoscalerEnabled() {
+        return this.autoscalerEnabled;
+    }
+
+    /**
      * @return callerUid
      */
     public String getCallerUid() {
@@ -273,6 +304,13 @@ public class Service extends TeaModel {
     }
 
     /**
+     * @return cronscalerEnabled
+     */
+    public Boolean getCronscalerEnabled() {
+        return this.cronscalerEnabled;
+    }
+
+    /**
      * @return currentVersion
      */
     public Integer getCurrentVersion() {
@@ -284,6 +322,20 @@ public class Service extends TeaModel {
      */
     public String getExtraData() {
         return this.extraData;
+    }
+
+    /**
+     * @return GPUCorePercentage
+     */
+    public Integer getGPUCorePercentage() {
+        return this.GPUCorePercentage;
+    }
+
+    /**
+     * @return GPUMemory
+     */
+    public Integer getGPUMemory() {
+        return this.GPUMemory;
     }
 
     /**
@@ -305,6 +357,13 @@ public class Service extends TeaModel {
      */
     public String getImage() {
         return this.image;
+    }
+
+    /**
+     * @return instanceCountInResource
+     */
+    public InstanceCountInResource getInstanceCountInResource() {
+        return this.instanceCountInResource;
     }
 
     /**
@@ -410,6 +469,13 @@ public class Service extends TeaModel {
      */
     public String getResourceAlias() {
         return this.resourceAlias;
+    }
+
+    /**
+     * @return resourceBurstable
+     */
+    public Boolean getResourceBurstable() {
+        return this.resourceBurstable;
     }
 
     /**
@@ -544,14 +610,19 @@ public class Service extends TeaModel {
         private String appSpecName; 
         private String appType; 
         private String appVersion; 
+        private Boolean autoscalerEnabled; 
         private String callerUid; 
         private Integer cpu; 
         private String createTime; 
+        private Boolean cronscalerEnabled; 
         private Integer currentVersion; 
         private String extraData; 
+        private Integer GPUCorePercentage; 
+        private Integer GPUMemory; 
         private String gateway; 
         private Integer gpu; 
         private String image; 
+        private InstanceCountInResource instanceCountInResource; 
         private String internetEndpoint; 
         private String intranetEndpoint; 
         private java.util.List<Labels> labels; 
@@ -567,6 +638,7 @@ public class Service extends TeaModel {
         private String requestId; 
         private String resource; 
         private String resourceAlias; 
+        private Boolean resourceBurstable; 
         private String role; 
         private String roleAttrs; 
         private Integer runningInstance; 
@@ -595,14 +667,19 @@ public class Service extends TeaModel {
             this.appSpecName = model.appSpecName;
             this.appType = model.appType;
             this.appVersion = model.appVersion;
+            this.autoscalerEnabled = model.autoscalerEnabled;
             this.callerUid = model.callerUid;
             this.cpu = model.cpu;
             this.createTime = model.createTime;
+            this.cronscalerEnabled = model.cronscalerEnabled;
             this.currentVersion = model.currentVersion;
             this.extraData = model.extraData;
+            this.GPUCorePercentage = model.GPUCorePercentage;
+            this.GPUMemory = model.GPUMemory;
             this.gateway = model.gateway;
             this.gpu = model.gpu;
             this.image = model.image;
+            this.instanceCountInResource = model.instanceCountInResource;
             this.internetEndpoint = model.internetEndpoint;
             this.intranetEndpoint = model.intranetEndpoint;
             this.labels = model.labels;
@@ -618,6 +695,7 @@ public class Service extends TeaModel {
             this.requestId = model.requestId;
             this.resource = model.resource;
             this.resourceAlias = model.resourceAlias;
+            this.resourceBurstable = model.resourceBurstable;
             this.role = model.role;
             this.roleAttrs = model.roleAttrs;
             this.runningInstance = model.runningInstance;
@@ -679,6 +757,14 @@ public class Service extends TeaModel {
         }
 
         /**
+         * AutoscalerEnabled.
+         */
+        public Builder autoscalerEnabled(Boolean autoscalerEnabled) {
+            this.autoscalerEnabled = autoscalerEnabled;
+            return this;
+        }
+
+        /**
          * CallerUid.
          */
         public Builder callerUid(String callerUid) {
@@ -703,6 +789,14 @@ public class Service extends TeaModel {
         }
 
         /**
+         * CronscalerEnabled.
+         */
+        public Builder cronscalerEnabled(Boolean cronscalerEnabled) {
+            this.cronscalerEnabled = cronscalerEnabled;
+            return this;
+        }
+
+        /**
          * CurrentVersion.
          */
         public Builder currentVersion(Integer currentVersion) {
@@ -715,6 +809,22 @@ public class Service extends TeaModel {
          */
         public Builder extraData(String extraData) {
             this.extraData = extraData;
+            return this;
+        }
+
+        /**
+         * GPUCorePercentage.
+         */
+        public Builder GPUCorePercentage(Integer GPUCorePercentage) {
+            this.GPUCorePercentage = GPUCorePercentage;
+            return this;
+        }
+
+        /**
+         * GPUMemory.
+         */
+        public Builder GPUMemory(Integer GPUMemory) {
+            this.GPUMemory = GPUMemory;
             return this;
         }
 
@@ -739,6 +849,14 @@ public class Service extends TeaModel {
          */
         public Builder image(String image) {
             this.image = image;
+            return this;
+        }
+
+        /**
+         * InstanceCountInResource.
+         */
+        public Builder instanceCountInResource(InstanceCountInResource instanceCountInResource) {
+            this.instanceCountInResource = instanceCountInResource;
             return this;
         }
 
@@ -859,6 +977,14 @@ public class Service extends TeaModel {
          */
         public Builder resourceAlias(String resourceAlias) {
             this.resourceAlias = resourceAlias;
+            return this;
+        }
+
+        /**
+         * ResourceBurstable.
+         */
+        public Builder resourceBurstable(Boolean resourceBurstable) {
+            this.resourceBurstable = resourceBurstable;
             return this;
         }
 
@@ -1012,6 +1138,102 @@ public class Service extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link Service} extends {@link TeaModel}
+     *
+     * <p>Service</p>
+     */
+    public static class InstanceCountInResource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Dedicated")
+        private Integer dedicated;
+
+        @com.aliyun.core.annotation.NameInMap("Public")
+        private Integer _public;
+
+        @com.aliyun.core.annotation.NameInMap("Quota")
+        private Integer quota;
+
+        private InstanceCountInResource(Builder builder) {
+            this.dedicated = builder.dedicated;
+            this._public = builder._public;
+            this.quota = builder.quota;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceCountInResource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return dedicated
+         */
+        public Integer getDedicated() {
+            return this.dedicated;
+        }
+
+        /**
+         * @return _public
+         */
+        public Integer get_public() {
+            return this._public;
+        }
+
+        /**
+         * @return quota
+         */
+        public Integer getQuota() {
+            return this.quota;
+        }
+
+        public static final class Builder {
+            private Integer dedicated; 
+            private Integer _public; 
+            private Integer quota; 
+
+            private Builder() {
+            } 
+
+            private Builder(InstanceCountInResource model) {
+                this.dedicated = model.dedicated;
+                this._public = model._public;
+                this.quota = model.quota;
+            } 
+
+            /**
+             * Dedicated.
+             */
+            public Builder dedicated(Integer dedicated) {
+                this.dedicated = dedicated;
+                return this;
+            }
+
+            /**
+             * Public.
+             */
+            public Builder _public(Integer _public) {
+                this._public = _public;
+                return this;
+            }
+
+            /**
+             * Quota.
+             */
+            public Builder quota(Integer quota) {
+                this.quota = quota;
+                return this;
+            }
+
+            public InstanceCountInResource build() {
+                return new InstanceCountInResource(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link Service} extends {@link TeaModel}

@@ -23,6 +23,9 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DisableSpotProtectionPeriod")
     private Boolean disableSpotProtectionPeriod;
 
+    @com.aliyun.core.annotation.NameInMap("Features")
+    private java.util.List<String> features;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -44,6 +47,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     private DescribeVirtualResourceResponseBody(Builder builder) {
         this.createTime = builder.createTime;
         this.disableSpotProtectionPeriod = builder.disableSpotProtectionPeriod;
+        this.features = builder.features;
         this.requestId = builder.requestId;
         this.resources = builder.resources;
         this.serviceCount = builder.serviceCount;
@@ -76,6 +80,13 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
      */
     public Boolean getDisableSpotProtectionPeriod() {
         return this.disableSpotProtectionPeriod;
+    }
+
+    /**
+     * @return features
+     */
+    public java.util.List<String> getFeatures() {
+        return this.features;
     }
 
     /**
@@ -123,6 +134,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
     public static final class Builder {
         private String createTime; 
         private Boolean disableSpotProtectionPeriod; 
+        private java.util.List<String> features; 
         private String requestId; 
         private java.util.List<Resources> resources; 
         private Integer serviceCount; 
@@ -136,6 +148,7 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
         private Builder(DescribeVirtualResourceResponseBody model) {
             this.createTime = model.createTime;
             this.disableSpotProtectionPeriod = model.disableSpotProtectionPeriod;
+            this.features = model.features;
             this.requestId = model.requestId;
             this.resources = model.resources;
             this.serviceCount = model.serviceCount;
@@ -163,6 +176,14 @@ public class DescribeVirtualResourceResponseBody extends TeaModel {
          */
         public Builder disableSpotProtectionPeriod(Boolean disableSpotProtectionPeriod) {
             this.disableSpotProtectionPeriod = disableSpotProtectionPeriod;
+            return this;
+        }
+
+        /**
+         * Features.
+         */
+        public Builder features(java.util.List<String> features) {
+            this.features = features;
             return this;
         }
 

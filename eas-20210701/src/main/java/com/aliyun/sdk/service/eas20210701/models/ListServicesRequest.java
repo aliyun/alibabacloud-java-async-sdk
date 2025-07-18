@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListServicesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoscalerEnabled")
+    private Boolean autoscalerEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CronscalerEnabled")
+    private Boolean cronscalerEnabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
@@ -62,6 +70,10 @@ public class ListServicesRequest extends Request {
     private String resourceAliasName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceBurstable")
+    private Boolean resourceBurstable;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
@@ -104,6 +116,8 @@ public class ListServicesRequest extends Request {
 
     private ListServicesRequest(Builder builder) {
         super(builder);
+        this.autoscalerEnabled = builder.autoscalerEnabled;
+        this.cronscalerEnabled = builder.cronscalerEnabled;
         this.filter = builder.filter;
         this.gateway = builder.gateway;
         this.groupName = builder.groupName;
@@ -115,6 +129,7 @@ public class ListServicesRequest extends Request {
         this.parentServiceUid = builder.parentServiceUid;
         this.quotaId = builder.quotaId;
         this.resourceAliasName = builder.resourceAliasName;
+        this.resourceBurstable = builder.resourceBurstable;
         this.resourceId = builder.resourceId;
         this.resourceName = builder.resourceName;
         this.resourceType = builder.resourceType;
@@ -138,6 +153,20 @@ public class ListServicesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoscalerEnabled
+     */
+    public Boolean getAutoscalerEnabled() {
+        return this.autoscalerEnabled;
+    }
+
+    /**
+     * @return cronscalerEnabled
+     */
+    public Boolean getCronscalerEnabled() {
+        return this.cronscalerEnabled;
     }
 
     /**
@@ -218,6 +247,13 @@ public class ListServicesRequest extends Request {
     }
 
     /**
+     * @return resourceBurstable
+     */
+    public Boolean getResourceBurstable() {
+        return this.resourceBurstable;
+    }
+
+    /**
      * @return resourceId
      */
     public String getResourceId() {
@@ -288,6 +324,8 @@ public class ListServicesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListServicesRequest, Builder> {
+        private Boolean autoscalerEnabled; 
+        private Boolean cronscalerEnabled; 
         private String filter; 
         private String gateway; 
         private String groupName; 
@@ -299,6 +337,7 @@ public class ListServicesRequest extends Request {
         private String parentServiceUid; 
         private String quotaId; 
         private String resourceAliasName; 
+        private Boolean resourceBurstable; 
         private String resourceId; 
         private String resourceName; 
         private String resourceType; 
@@ -316,6 +355,8 @@ public class ListServicesRequest extends Request {
 
         private Builder(ListServicesRequest request) {
             super(request);
+            this.autoscalerEnabled = request.autoscalerEnabled;
+            this.cronscalerEnabled = request.cronscalerEnabled;
             this.filter = request.filter;
             this.gateway = request.gateway;
             this.groupName = request.groupName;
@@ -327,6 +368,7 @@ public class ListServicesRequest extends Request {
             this.parentServiceUid = request.parentServiceUid;
             this.quotaId = request.quotaId;
             this.resourceAliasName = request.resourceAliasName;
+            this.resourceBurstable = request.resourceBurstable;
             this.resourceId = request.resourceId;
             this.resourceName = request.resourceName;
             this.resourceType = request.resourceType;
@@ -338,6 +380,24 @@ public class ListServicesRequest extends Request {
             this.sort = request.sort;
             this.workspaceId = request.workspaceId;
         } 
+
+        /**
+         * AutoscalerEnabled.
+         */
+        public Builder autoscalerEnabled(Boolean autoscalerEnabled) {
+            this.putQueryParameter("AutoscalerEnabled", autoscalerEnabled);
+            this.autoscalerEnabled = autoscalerEnabled;
+            return this;
+        }
+
+        /**
+         * CronscalerEnabled.
+         */
+        public Builder cronscalerEnabled(Boolean cronscalerEnabled) {
+            this.putQueryParameter("CronscalerEnabled", cronscalerEnabled);
+            this.cronscalerEnabled = cronscalerEnabled;
+            return this;
+        }
 
         /**
          * <p>The field that is used for fuzzy matches. The system performs fuzzy matches only by service name.</p>
@@ -464,6 +524,15 @@ public class ListServicesRequest extends Request {
         public Builder resourceAliasName(String resourceAliasName) {
             this.putQueryParameter("ResourceAliasName", resourceAliasName);
             this.resourceAliasName = resourceAliasName;
+            return this;
+        }
+
+        /**
+         * ResourceBurstable.
+         */
+        public Builder resourceBurstable(Boolean resourceBurstable) {
+            this.putQueryParameter("ResourceBurstable", resourceBurstable);
+            this.resourceBurstable = resourceBurstable;
             return this;
         }
 

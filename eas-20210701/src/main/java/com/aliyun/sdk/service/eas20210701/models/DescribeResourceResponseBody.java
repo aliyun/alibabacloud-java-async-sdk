@@ -32,6 +32,9 @@ public class DescribeResourceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ExtraData")
     private String extraData;
 
+    @com.aliyun.core.annotation.NameInMap("Features")
+    private java.util.List<String> features;
+
     @com.aliyun.core.annotation.NameInMap("GpuCount")
     private Integer gpuCount;
 
@@ -40,6 +43,15 @@ public class DescribeResourceResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("InstanceCount")
     private Integer instanceCount;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceMaxAllocatableCPU")
+    private Integer instanceMaxAllocatableCPU;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceMaxAllocatableGPU")
+    private Float instanceMaxAllocatableGPU;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceMaxAllocatableMemory")
+    private Integer instanceMaxAllocatableMemory;
 
     @com.aliyun.core.annotation.NameInMap("Memory")
     private Integer memory;
@@ -83,9 +95,13 @@ public class DescribeResourceResponseBody extends TeaModel {
         this.cpuUsed = builder.cpuUsed;
         this.createTime = builder.createTime;
         this.extraData = builder.extraData;
+        this.features = builder.features;
         this.gpuCount = builder.gpuCount;
         this.gpuUsed = builder.gpuUsed;
         this.instanceCount = builder.instanceCount;
+        this.instanceMaxAllocatableCPU = builder.instanceMaxAllocatableCPU;
+        this.instanceMaxAllocatableGPU = builder.instanceMaxAllocatableGPU;
+        this.instanceMaxAllocatableMemory = builder.instanceMaxAllocatableMemory;
         this.memory = builder.memory;
         this.memoryUsed = builder.memoryUsed;
         this.message = builder.message;
@@ -148,6 +164,13 @@ public class DescribeResourceResponseBody extends TeaModel {
     }
 
     /**
+     * @return features
+     */
+    public java.util.List<String> getFeatures() {
+        return this.features;
+    }
+
+    /**
      * @return gpuCount
      */
     public Integer getGpuCount() {
@@ -166,6 +189,27 @@ public class DescribeResourceResponseBody extends TeaModel {
      */
     public Integer getInstanceCount() {
         return this.instanceCount;
+    }
+
+    /**
+     * @return instanceMaxAllocatableCPU
+     */
+    public Integer getInstanceMaxAllocatableCPU() {
+        return this.instanceMaxAllocatableCPU;
+    }
+
+    /**
+     * @return instanceMaxAllocatableGPU
+     */
+    public Float getInstanceMaxAllocatableGPU() {
+        return this.instanceMaxAllocatableGPU;
+    }
+
+    /**
+     * @return instanceMaxAllocatableMemory
+     */
+    public Integer getInstanceMaxAllocatableMemory() {
+        return this.instanceMaxAllocatableMemory;
     }
 
     /**
@@ -258,9 +302,13 @@ public class DescribeResourceResponseBody extends TeaModel {
         private Integer cpuUsed; 
         private String createTime; 
         private String extraData; 
+        private java.util.List<String> features; 
         private Integer gpuCount; 
         private Float gpuUsed; 
         private Integer instanceCount; 
+        private Integer instanceMaxAllocatableCPU; 
+        private Float instanceMaxAllocatableGPU; 
+        private Integer instanceMaxAllocatableMemory; 
         private Integer memory; 
         private Integer memoryUsed; 
         private String message; 
@@ -283,9 +331,13 @@ public class DescribeResourceResponseBody extends TeaModel {
             this.cpuUsed = model.cpuUsed;
             this.createTime = model.createTime;
             this.extraData = model.extraData;
+            this.features = model.features;
             this.gpuCount = model.gpuCount;
             this.gpuUsed = model.gpuUsed;
             this.instanceCount = model.instanceCount;
+            this.instanceMaxAllocatableCPU = model.instanceMaxAllocatableCPU;
+            this.instanceMaxAllocatableGPU = model.instanceMaxAllocatableGPU;
+            this.instanceMaxAllocatableMemory = model.instanceMaxAllocatableMemory;
             this.memory = model.memory;
             this.memoryUsed = model.memoryUsed;
             this.message = model.message;
@@ -356,6 +408,14 @@ public class DescribeResourceResponseBody extends TeaModel {
         }
 
         /**
+         * Features.
+         */
+        public Builder features(java.util.List<String> features) {
+            this.features = features;
+            return this;
+        }
+
+        /**
          * <p>The total number of GPUs.</p>
          * 
          * <strong>example:</strong>
@@ -385,6 +445,30 @@ public class DescribeResourceResponseBody extends TeaModel {
          */
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = instanceCount;
+            return this;
+        }
+
+        /**
+         * InstanceMaxAllocatableCPU.
+         */
+        public Builder instanceMaxAllocatableCPU(Integer instanceMaxAllocatableCPU) {
+            this.instanceMaxAllocatableCPU = instanceMaxAllocatableCPU;
+            return this;
+        }
+
+        /**
+         * InstanceMaxAllocatableGPU.
+         */
+        public Builder instanceMaxAllocatableGPU(Float instanceMaxAllocatableGPU) {
+            this.instanceMaxAllocatableGPU = instanceMaxAllocatableGPU;
+            return this;
+        }
+
+        /**
+         * InstanceMaxAllocatableMemory.
+         */
+        public Builder instanceMaxAllocatableMemory(Integer instanceMaxAllocatableMemory) {
+            this.instanceMaxAllocatableMemory = instanceMaxAllocatableMemory;
             return this;
         }
 

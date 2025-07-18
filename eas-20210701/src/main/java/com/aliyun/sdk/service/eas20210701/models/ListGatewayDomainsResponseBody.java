@@ -80,7 +80,7 @@ public class ListGatewayDomainsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The list of custom domain names.</p>
+         * <p>The custom domain names.</p>
          */
         public Builder customDomains(java.util.List<CustomDomains> customDomains) {
             this.customDomains = customDomains;

@@ -23,17 +23,41 @@ public class Resource extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("CpuCount")
     private Integer cpuCount;
 
+    @com.aliyun.core.annotation.NameInMap("CpuUsed")
+    private Integer cpuUsed;
+
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
     @com.aliyun.core.annotation.NameInMap("ExtraData")
     private java.util.Map<String, ?> extraData;
 
+    @com.aliyun.core.annotation.NameInMap("Features")
+    private java.util.List<String> features;
+
     @com.aliyun.core.annotation.NameInMap("GpuCount")
     private Integer gpuCount;
 
+    @com.aliyun.core.annotation.NameInMap("GpuUsed")
+    private Float gpuUsed;
+
     @com.aliyun.core.annotation.NameInMap("InstanceCount")
     private Integer instanceCount;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceMaxAllocatableCPU")
+    private Integer instanceMaxAllocatableCPU;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceMaxAllocatableGPU")
+    private Float instanceMaxAllocatableGPU;
+
+    @com.aliyun.core.annotation.NameInMap("InstanceMaxAllocatableMemory")
+    private Integer instanceMaxAllocatableMemory;
+
+    @com.aliyun.core.annotation.NameInMap("Memory")
+    private Integer memory;
+
+    @com.aliyun.core.annotation.NameInMap("MemoryUsed")
+    private Integer memoryUsed;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -65,10 +89,18 @@ public class Resource extends TeaModel {
     private Resource(Builder builder) {
         this.clusterId = builder.clusterId;
         this.cpuCount = builder.cpuCount;
+        this.cpuUsed = builder.cpuUsed;
         this.createTime = builder.createTime;
         this.extraData = builder.extraData;
+        this.features = builder.features;
         this.gpuCount = builder.gpuCount;
+        this.gpuUsed = builder.gpuUsed;
         this.instanceCount = builder.instanceCount;
+        this.instanceMaxAllocatableCPU = builder.instanceMaxAllocatableCPU;
+        this.instanceMaxAllocatableGPU = builder.instanceMaxAllocatableGPU;
+        this.instanceMaxAllocatableMemory = builder.instanceMaxAllocatableMemory;
+        this.memory = builder.memory;
+        this.memoryUsed = builder.memoryUsed;
         this.message = builder.message;
         this.postPaidInstanceCount = builder.postPaidInstanceCount;
         this.prePaidInstanceCount = builder.prePaidInstanceCount;
@@ -107,6 +139,13 @@ public class Resource extends TeaModel {
     }
 
     /**
+     * @return cpuUsed
+     */
+    public Integer getCpuUsed() {
+        return this.cpuUsed;
+    }
+
+    /**
      * @return createTime
      */
     public String getCreateTime() {
@@ -121,6 +160,13 @@ public class Resource extends TeaModel {
     }
 
     /**
+     * @return features
+     */
+    public java.util.List<String> getFeatures() {
+        return this.features;
+    }
+
+    /**
      * @return gpuCount
      */
     public Integer getGpuCount() {
@@ -128,10 +174,52 @@ public class Resource extends TeaModel {
     }
 
     /**
+     * @return gpuUsed
+     */
+    public Float getGpuUsed() {
+        return this.gpuUsed;
+    }
+
+    /**
      * @return instanceCount
      */
     public Integer getInstanceCount() {
         return this.instanceCount;
+    }
+
+    /**
+     * @return instanceMaxAllocatableCPU
+     */
+    public Integer getInstanceMaxAllocatableCPU() {
+        return this.instanceMaxAllocatableCPU;
+    }
+
+    /**
+     * @return instanceMaxAllocatableGPU
+     */
+    public Float getInstanceMaxAllocatableGPU() {
+        return this.instanceMaxAllocatableGPU;
+    }
+
+    /**
+     * @return instanceMaxAllocatableMemory
+     */
+    public Integer getInstanceMaxAllocatableMemory() {
+        return this.instanceMaxAllocatableMemory;
+    }
+
+    /**
+     * @return memory
+     */
+    public Integer getMemory() {
+        return this.memory;
+    }
+
+    /**
+     * @return memoryUsed
+     */
+    public Integer getMemoryUsed() {
+        return this.memoryUsed;
     }
 
     /**
@@ -200,10 +288,18 @@ public class Resource extends TeaModel {
     public static final class Builder {
         private String clusterId; 
         private Integer cpuCount; 
+        private Integer cpuUsed; 
         private String createTime; 
         private java.util.Map<String, ?> extraData; 
+        private java.util.List<String> features; 
         private Integer gpuCount; 
+        private Float gpuUsed; 
         private Integer instanceCount; 
+        private Integer instanceMaxAllocatableCPU; 
+        private Float instanceMaxAllocatableGPU; 
+        private Integer instanceMaxAllocatableMemory; 
+        private Integer memory; 
+        private Integer memoryUsed; 
         private String message; 
         private Integer postPaidInstanceCount; 
         private Integer prePaidInstanceCount; 
@@ -220,10 +316,18 @@ public class Resource extends TeaModel {
         private Builder(Resource model) {
             this.clusterId = model.clusterId;
             this.cpuCount = model.cpuCount;
+            this.cpuUsed = model.cpuUsed;
             this.createTime = model.createTime;
             this.extraData = model.extraData;
+            this.features = model.features;
             this.gpuCount = model.gpuCount;
+            this.gpuUsed = model.gpuUsed;
             this.instanceCount = model.instanceCount;
+            this.instanceMaxAllocatableCPU = model.instanceMaxAllocatableCPU;
+            this.instanceMaxAllocatableGPU = model.instanceMaxAllocatableGPU;
+            this.instanceMaxAllocatableMemory = model.instanceMaxAllocatableMemory;
+            this.memory = model.memory;
+            this.memoryUsed = model.memoryUsed;
             this.message = model.message;
             this.postPaidInstanceCount = model.postPaidInstanceCount;
             this.prePaidInstanceCount = model.prePaidInstanceCount;
@@ -252,6 +356,14 @@ public class Resource extends TeaModel {
         }
 
         /**
+         * CpuUsed.
+         */
+        public Builder cpuUsed(Integer cpuUsed) {
+            this.cpuUsed = cpuUsed;
+            return this;
+        }
+
+        /**
          * CreateTime.
          */
         public Builder createTime(String createTime) {
@@ -268,6 +380,14 @@ public class Resource extends TeaModel {
         }
 
         /**
+         * Features.
+         */
+        public Builder features(java.util.List<String> features) {
+            this.features = features;
+            return this;
+        }
+
+        /**
          * GpuCount.
          */
         public Builder gpuCount(Integer gpuCount) {
@@ -276,10 +396,58 @@ public class Resource extends TeaModel {
         }
 
         /**
+         * GpuUsed.
+         */
+        public Builder gpuUsed(Float gpuUsed) {
+            this.gpuUsed = gpuUsed;
+            return this;
+        }
+
+        /**
          * InstanceCount.
          */
         public Builder instanceCount(Integer instanceCount) {
             this.instanceCount = instanceCount;
+            return this;
+        }
+
+        /**
+         * InstanceMaxAllocatableCPU.
+         */
+        public Builder instanceMaxAllocatableCPU(Integer instanceMaxAllocatableCPU) {
+            this.instanceMaxAllocatableCPU = instanceMaxAllocatableCPU;
+            return this;
+        }
+
+        /**
+         * InstanceMaxAllocatableGPU.
+         */
+        public Builder instanceMaxAllocatableGPU(Float instanceMaxAllocatableGPU) {
+            this.instanceMaxAllocatableGPU = instanceMaxAllocatableGPU;
+            return this;
+        }
+
+        /**
+         * InstanceMaxAllocatableMemory.
+         */
+        public Builder instanceMaxAllocatableMemory(Integer instanceMaxAllocatableMemory) {
+            this.instanceMaxAllocatableMemory = instanceMaxAllocatableMemory;
+            return this;
+        }
+
+        /**
+         * Memory.
+         */
+        public Builder memory(Integer memory) {
+            this.memory = memory;
+            return this;
+        }
+
+        /**
+         * MemoryUsed.
+         */
+        public Builder memoryUsed(Integer memoryUsed) {
+            this.memoryUsed = memoryUsed;
             return this;
         }
 
