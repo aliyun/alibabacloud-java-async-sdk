@@ -145,7 +145,7 @@ public class QueryTaskByParamRequest extends Request {
         } 
 
         /**
-         * <p>Keyword, defaults to all information.</p>
+         * <p>Keyword, defaults to all information</p>
          * 
          * <strong>example:</strong>
          * <p>mesh-notification-788717</p>
@@ -166,7 +166,7 @@ public class QueryTaskByParamRequest extends Request {
         }
 
         /**
-         * <p>Current page number, default is 1.</p>
+         * <p>Current page number, default is 1</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -178,7 +178,7 @@ public class QueryTaskByParamRequest extends Request {
         }
 
         /**
-         * <p>Page size, default is 10.</p>
+         * <p>Page size, default is 10</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -208,7 +208,7 @@ public class QueryTaskByParamRequest extends Request {
         }
 
         /**
-         * <p>Status, defaults to all statuses.</p>
+         * <p>Status, defaults to all statuses</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

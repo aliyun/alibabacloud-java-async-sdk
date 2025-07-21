@@ -106,7 +106,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Current page number.</p>
+         * <p>Current page number</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -117,7 +117,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Page size.</p>
+         * <p>Page size</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -128,7 +128,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Request ID.</p>
+         * <p>Request ID</p>
          * 
          * <strong>example:</strong>
          * <p>10A1AD70-E48E-476D-98D9-39BD92193837</p>
@@ -139,7 +139,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Total count.</p>
+         * <p>Total count</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -150,7 +150,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Returned results.</p>
+         * <p>Returned results</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -344,7 +344,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time.</p>
+             * <p>Creation time</p>
              * 
              * <strong>example:</strong>
              * <p>2022-04-18T10:36Z</p>
@@ -355,7 +355,10 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * IpPoolId.
+             * <p>dedicated IP pool ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>xxx</p>
              */
             public Builder ipPoolId(String ipPoolId) {
                 this.ipPoolId = ipPoolId;
@@ -363,7 +366,10 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * IpPoolName.
+             * <p>dedicated IP pool name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder ipPoolName(String ipPoolName) {
                 this.ipPoolName = ipPoolName;
@@ -371,7 +377,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Receiver&quot;s name.</p>
+             * <p>Receiver&quot;s name</p>
              * 
              * <strong>example:</strong>
              * <p>TKP000442-333</p>
@@ -382,7 +388,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Request count.</p>
+             * <p>Request count</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -393,7 +399,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Tag.</p>
+             * <p>Tag</p>
              * 
              * <strong>example:</strong>
              * <p>202201</p>
@@ -404,7 +410,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task ID.</p>
+             * <p>Task ID</p>
              * 
              * <strong>example:</strong>
              * <p>1054296</p>
@@ -415,7 +421,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Task status, sent successfully: 1.</p>
+             * <p>Task status, sent successfully: 1</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>
@@ -426,7 +432,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Template name.</p>
+             * <p>Template name</p>
              * 
              * <strong>example:</strong>
              * <p>Short Simple</p>
@@ -437,7 +443,7 @@ public class QueryTaskByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Creation time in UTC format.</p>
+             * <p>Creation time in UTC format</p>
              * 
              * <strong>example:</strong>
              * <p>1569734892</p>

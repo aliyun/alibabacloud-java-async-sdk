@@ -86,6 +86,54 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateUserSuppressionResponse> createUserSuppression(CreateUserSuppressionRequest request);
 
     /**
+     * @param request the request parameters of DedicatedIpAutoRenewal  DedicatedIpAutoRenewalRequest
+     * @return DedicatedIpAutoRenewalResponse
+     */
+    CompletableFuture<DedicatedIpAutoRenewalResponse> dedicatedIpAutoRenewal(DedicatedIpAutoRenewalRequest request);
+
+    /**
+     * @param request the request parameters of DedicatedIpChangeWarmupType  DedicatedIpChangeWarmupTypeRequest
+     * @return DedicatedIpChangeWarmupTypeResponse
+     */
+    CompletableFuture<DedicatedIpChangeWarmupTypeResponse> dedicatedIpChangeWarmupType(DedicatedIpChangeWarmupTypeRequest request);
+
+    /**
+     * @param request the request parameters of DedicatedIpList  DedicatedIpListRequest
+     * @return DedicatedIpListResponse
+     */
+    CompletableFuture<DedicatedIpListResponse> dedicatedIpList(DedicatedIpListRequest request);
+
+    /**
+     * @param request the request parameters of DedicatedIpNonePoolList  DedicatedIpNonePoolListRequest
+     * @return DedicatedIpNonePoolListResponse
+     */
+    CompletableFuture<DedicatedIpNonePoolListResponse> dedicatedIpNonePoolList(DedicatedIpNonePoolListRequest request);
+
+    /**
+     * @param request the request parameters of DedicatedIpPoolCreate  DedicatedIpPoolCreateRequest
+     * @return DedicatedIpPoolCreateResponse
+     */
+    CompletableFuture<DedicatedIpPoolCreateResponse> dedicatedIpPoolCreate(DedicatedIpPoolCreateRequest request);
+
+    /**
+     * @param request the request parameters of DedicatedIpPoolDelete  DedicatedIpPoolDeleteRequest
+     * @return DedicatedIpPoolDeleteResponse
+     */
+    CompletableFuture<DedicatedIpPoolDeleteResponse> dedicatedIpPoolDelete(DedicatedIpPoolDeleteRequest request);
+
+    /**
+     * @param request the request parameters of DedicatedIpPoolList  DedicatedIpPoolListRequest
+     * @return DedicatedIpPoolListResponse
+     */
+    CompletableFuture<DedicatedIpPoolListResponse> dedicatedIpPoolList(DedicatedIpPoolListRequest request);
+
+    /**
+     * @param request the request parameters of DedicatedIpPoolUpdate  DedicatedIpPoolUpdateRequest
+     * @return DedicatedIpPoolUpdateResponse
+     */
+    CompletableFuture<DedicatedIpPoolUpdateResponse> dedicatedIpPoolUpdate(DedicatedIpPoolUpdateRequest request);
+
+    /**
      * @param request the request parameters of DeleteDomain  DeleteDomainRequest
      * @return DeleteDomainResponse
      */
@@ -279,6 +327,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SetSuppressionListLevelResponse
      */
     CompletableFuture<SetSuppressionListLevelResponse> setSuppressionListLevel(SetSuppressionListLevelRequest request);
+
+    /**
+     * @param request the request parameters of UnblockSending  UnblockSendingRequest
+     * @return UnblockSendingResponse
+     */
+    CompletableFuture<UnblockSendingResponse> unblockSending(UnblockSendingRequest request);
 
     /**
      * @param request the request parameters of UpdateIpProtection  UpdateIpProtectionRequest

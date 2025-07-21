@@ -238,6 +238,150 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DedicatedIpAutoRenewal  DedicatedIpAutoRenewalRequest
+     * @return DedicatedIpAutoRenewalResponse
+     */
+    @Override
+    public CompletableFuture<DedicatedIpAutoRenewalResponse> dedicatedIpAutoRenewal(DedicatedIpAutoRenewalRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DedicatedIpAutoRenewal").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DedicatedIpAutoRenewalResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DedicatedIpAutoRenewalResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DedicatedIpChangeWarmupType  DedicatedIpChangeWarmupTypeRequest
+     * @return DedicatedIpChangeWarmupTypeResponse
+     */
+    @Override
+    public CompletableFuture<DedicatedIpChangeWarmupTypeResponse> dedicatedIpChangeWarmupType(DedicatedIpChangeWarmupTypeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DedicatedIpChangeWarmupType").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DedicatedIpChangeWarmupTypeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DedicatedIpChangeWarmupTypeResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DedicatedIpList  DedicatedIpListRequest
+     * @return DedicatedIpListResponse
+     */
+    @Override
+    public CompletableFuture<DedicatedIpListResponse> dedicatedIpList(DedicatedIpListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DedicatedIpList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DedicatedIpListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DedicatedIpListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DedicatedIpNonePoolList  DedicatedIpNonePoolListRequest
+     * @return DedicatedIpNonePoolListResponse
+     */
+    @Override
+    public CompletableFuture<DedicatedIpNonePoolListResponse> dedicatedIpNonePoolList(DedicatedIpNonePoolListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DedicatedIpNonePoolList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DedicatedIpNonePoolListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DedicatedIpNonePoolListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DedicatedIpPoolCreate  DedicatedIpPoolCreateRequest
+     * @return DedicatedIpPoolCreateResponse
+     */
+    @Override
+    public CompletableFuture<DedicatedIpPoolCreateResponse> dedicatedIpPoolCreate(DedicatedIpPoolCreateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DedicatedIpPoolCreate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DedicatedIpPoolCreateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DedicatedIpPoolCreateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DedicatedIpPoolDelete  DedicatedIpPoolDeleteRequest
+     * @return DedicatedIpPoolDeleteResponse
+     */
+    @Override
+    public CompletableFuture<DedicatedIpPoolDeleteResponse> dedicatedIpPoolDelete(DedicatedIpPoolDeleteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DedicatedIpPoolDelete").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DedicatedIpPoolDeleteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DedicatedIpPoolDeleteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DedicatedIpPoolList  DedicatedIpPoolListRequest
+     * @return DedicatedIpPoolListResponse
+     */
+    @Override
+    public CompletableFuture<DedicatedIpPoolListResponse> dedicatedIpPoolList(DedicatedIpPoolListRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DedicatedIpPoolList").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DedicatedIpPoolListResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DedicatedIpPoolListResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DedicatedIpPoolUpdate  DedicatedIpPoolUpdateRequest
+     * @return DedicatedIpPoolUpdateResponse
+     */
+    @Override
+    public CompletableFuture<DedicatedIpPoolUpdateResponse> dedicatedIpPoolUpdate(DedicatedIpPoolUpdateRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DedicatedIpPoolUpdate").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DedicatedIpPoolUpdateResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DedicatedIpPoolUpdateResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DeleteDomain  DeleteDomainRequest
      * @return DeleteDomainResponse
      */
@@ -811,6 +955,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SetSuppressionListLevelResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of UnblockSending  UnblockSendingRequest
+     * @return UnblockSendingResponse
+     */
+    @Override
+    public CompletableFuture<UnblockSendingResponse> unblockSending(UnblockSendingRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UnblockSending").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UnblockSendingResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UnblockSendingResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

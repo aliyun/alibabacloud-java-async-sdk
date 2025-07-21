@@ -134,7 +134,7 @@ public class CheckReplyToMailAddressRequest extends Request {
          * <p>en is English, and any other value or an empty value defaults to Chinese.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>en</p>
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

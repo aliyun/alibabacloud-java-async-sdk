@@ -147,7 +147,7 @@ public class QueryMailAddressByParamRequest extends Request {
          * <p>Email address, length 1-60, supports numbers, letters, ., -, @.</p>
          * 
          * <strong>example:</strong>
-         * <p>账号+@+域名</p>
+         * <p><a href="mailto:sender@example.com">sender@example.com</a></p>
          */
         public Builder keyWord(String keyWord) {
             this.putQueryParameter("KeyWord", keyWord);
@@ -207,7 +207,7 @@ public class QueryMailAddressByParamRequest extends Request {
         }
 
         /**
-         * <p>Type of sending address. Values:</p>
+         * <p>Sending address type. Values:</p>
          * <ul>
          * <li>batch: bulk email</li>
          * <li>trigger: triggered email</li>

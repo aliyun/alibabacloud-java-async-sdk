@@ -12,19 +12,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link BatchSendMailResponseBody} extends {@link TeaModel}
+ * {@link DedicatedIpChangeWarmupTypeResponseBody} extends {@link TeaModel}
  *
- * <p>BatchSendMailResponseBody</p>
+ * <p>DedicatedIpChangeWarmupTypeResponseBody</p>
  */
-public class BatchSendMailResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("EnvId")
-    private String envId;
-
+public class DedicatedIpChangeWarmupTypeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private BatchSendMailResponseBody(Builder builder) {
-        this.envId = builder.envId;
+    private DedicatedIpChangeWarmupTypeResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -32,19 +28,12 @@ public class BatchSendMailResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static BatchSendMailResponseBody create() {
+    public static DedicatedIpChangeWarmupTypeResponseBody create() {
         return builder().build();
     }
 
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return envId
-     */
-    public String getEnvId() {
-        return this.envId;
     }
 
     /**
@@ -55,41 +44,28 @@ public class BatchSendMailResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String envId; 
         private String requestId; 
 
         private Builder() {
         } 
 
-        private Builder(BatchSendMailResponseBody model) {
-            this.envId = model.envId;
+        private Builder(DedicatedIpChangeWarmupTypeResponseBody model) {
             this.requestId = model.requestId;
         } 
-
-        /**
-         * <p>Event ID</p>
-         * 
-         * <strong>example:</strong>
-         * <p>xxx</p>
-         */
-        public Builder envId(String envId) {
-            this.envId = envId;
-            return this;
-        }
 
         /**
          * <p>Request ID</p>
          * 
          * <strong>example:</strong>
-         * <p>12D086F6-8F31-4658-84C1-006DED011A85</p>
+         * <p>xxx</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public BatchSendMailResponseBody build() {
-            return new BatchSendMailResponseBody(this);
+        public DedicatedIpChangeWarmupTypeResponseBody build() {
+            return new DedicatedIpChangeWarmupTypeResponseBody(this);
         } 
 
     } 

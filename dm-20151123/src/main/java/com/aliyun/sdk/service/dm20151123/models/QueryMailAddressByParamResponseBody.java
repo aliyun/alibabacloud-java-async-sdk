@@ -150,7 +150,7 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
         }
 
         /**
-         * <p>List of mail addresses</p>
+         * <p>List of sending addresses</p>
          */
         public Builder data(Data data) {
             this.data = data;
@@ -349,7 +349,7 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
              * <p>Sending address</p>
              * 
              * <strong>example:</strong>
-             * <p>账户+@+域名</p>
+             * <p><a href="mailto:sender@example.com">sender@example.com</a></p>
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -412,7 +412,7 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Mail address ID</p>
+             * <p>Sending address ID</p>
              * 
              * <strong>example:</strong>
              * <p>12122</p>
@@ -467,7 +467,7 @@ public class QueryMailAddressByParamResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Type of sending address. Values:</p>
+             * <p>Sending address type. Values:</p>
              * <ul>
              * <li>batch: bulk email</li>
              * <li>trigger: triggered email</li>
