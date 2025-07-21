@@ -1301,6 +1301,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetDefaultKmsInstance  GetDefaultKmsInstanceRequest
+     * @return GetDefaultKmsInstanceResponse
+     */
+    @Override
+    public CompletableFuture<GetDefaultKmsInstanceResponse> getDefaultKmsInstance(GetDefaultKmsInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDefaultKmsInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDefaultKmsInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetDefaultKmsInstanceResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetKeyPolicy  GetKeyPolicyRequest
      * @return GetKeyPolicyResponse
      */

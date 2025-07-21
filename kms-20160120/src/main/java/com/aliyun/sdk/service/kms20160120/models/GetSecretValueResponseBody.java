@@ -54,7 +54,7 @@ public class GetSecretValueResponseBody extends TeaModel {
     private String versionId;
 
     @com.aliyun.core.annotation.NameInMap("VersionStages")
-    private VersionStages versionStages;
+    private java.util.List<String> versionStages;
 
     private GetSecretValueResponseBody(Builder builder) {
         this.automaticRotation = builder.automaticRotation;
@@ -171,7 +171,7 @@ public class GetSecretValueResponseBody extends TeaModel {
     /**
      * @return versionStages
      */
-    public VersionStages getVersionStages() {
+    public java.util.List<String> getVersionStages() {
         return this.versionStages;
     }
 
@@ -188,7 +188,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         private String secretName; 
         private String secretType; 
         private String versionId; 
-        private VersionStages versionStages; 
+        private java.util.List<String> versionStages; 
 
         private Builder() {
         } 
@@ -389,7 +389,7 @@ public class GetSecretValueResponseBody extends TeaModel {
         /**
          * <p>The stage labels that mark the secret versions.</p>
          */
-        public Builder versionStages(VersionStages versionStages) {
+        public Builder versionStages(java.util.List<String> versionStages) {
             this.versionStages = versionStages;
             return this;
         }
@@ -400,58 +400,4 @@ public class GetSecretValueResponseBody extends TeaModel {
 
     } 
 
-    /**
-     * 
-     * {@link GetSecretValueResponseBody} extends {@link TeaModel}
-     *
-     * <p>GetSecretValueResponseBody</p>
-     */
-    public static class VersionStages extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("VersionStage")
-        private java.util.List<String> versionStage;
-
-        private VersionStages(Builder builder) {
-            this.versionStage = builder.versionStage;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static VersionStages create() {
-            return builder().build();
-        }
-
-        /**
-         * @return versionStage
-         */
-        public java.util.List<String> getVersionStage() {
-            return this.versionStage;
-        }
-
-        public static final class Builder {
-            private java.util.List<String> versionStage; 
-
-            private Builder() {
-            } 
-
-            private Builder(VersionStages model) {
-                this.versionStage = model.versionStage;
-            } 
-
-            /**
-             * VersionStage.
-             */
-            public Builder versionStage(java.util.List<String> versionStage) {
-                this.versionStage = versionStage;
-                return this;
-            }
-
-            public VersionStages build() {
-                return new VersionStages(this);
-            } 
-
-        } 
-
-    }
 }

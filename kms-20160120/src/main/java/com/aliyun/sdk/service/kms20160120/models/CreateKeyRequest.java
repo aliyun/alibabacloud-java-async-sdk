@@ -34,6 +34,10 @@ public class CreateKeyRequest extends Request {
     private String keySpec;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyStorageMechanism")
+    private String keyStorageMechanism;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("KeyUsage")
     private String keyUsage;
 
@@ -63,6 +67,7 @@ public class CreateKeyRequest extends Request {
         this.description = builder.description;
         this.enableAutomaticRotation = builder.enableAutomaticRotation;
         this.keySpec = builder.keySpec;
+        this.keyStorageMechanism = builder.keyStorageMechanism;
         this.keyUsage = builder.keyUsage;
         this.origin = builder.origin;
         this.policy = builder.policy;
@@ -113,6 +118,13 @@ public class CreateKeyRequest extends Request {
     }
 
     /**
+     * @return keyStorageMechanism
+     */
+    public String getKeyStorageMechanism() {
+        return this.keyStorageMechanism;
+    }
+
+    /**
      * @return keyUsage
      */
     public String getKeyUsage() {
@@ -159,6 +171,7 @@ public class CreateKeyRequest extends Request {
         private String description; 
         private Boolean enableAutomaticRotation; 
         private String keySpec; 
+        private String keyStorageMechanism; 
         private String keyUsage; 
         private String origin; 
         private String policy; 
@@ -176,6 +189,7 @@ public class CreateKeyRequest extends Request {
             this.description = request.description;
             this.enableAutomaticRotation = request.enableAutomaticRotation;
             this.keySpec = request.keySpec;
+            this.keyStorageMechanism = request.keyStorageMechanism;
             this.keyUsage = request.keyUsage;
             this.origin = request.origin;
             this.policy = request.policy;
@@ -241,6 +255,15 @@ public class CreateKeyRequest extends Request {
         public Builder keySpec(String keySpec) {
             this.putQueryParameter("KeySpec", keySpec);
             this.keySpec = keySpec;
+            return this;
+        }
+
+        /**
+         * KeyStorageMechanism.
+         */
+        public Builder keyStorageMechanism(String keyStorageMechanism) {
+            this.putQueryParameter("KeyStorageMechanism", keyStorageMechanism);
+            this.keyStorageMechanism = keyStorageMechanism;
             return this;
         }
 

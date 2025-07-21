@@ -729,6 +729,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetClientKeyResponse> getClientKey(GetClientKeyRequest request);
 
     /**
+     * @param request the request parameters of GetDefaultKmsInstance  GetDefaultKmsInstanceRequest
+     * @return GetDefaultKmsInstanceResponse
+     */
+    CompletableFuture<GetDefaultKmsInstanceResponse> getDefaultKmsInstance(GetDefaultKmsInstanceRequest request);
+
+    /**
      * @param request the request parameters of GetKeyPolicy  GetKeyPolicyRequest
      * @return GetKeyPolicyResponse
      */

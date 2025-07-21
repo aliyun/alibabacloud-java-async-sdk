@@ -305,6 +305,9 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("KeyNum")
         private Long keyNum;
 
+        @com.aliyun.core.annotation.NameInMap("ProductVersion")
+        private String productVersion;
+
         @com.aliyun.core.annotation.NameInMap("SecretNum")
         private String secretNum;
 
@@ -338,6 +341,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceName = builder.instanceName;
             this.keyNum = builder.keyNum;
+            this.productVersion = builder.productVersion;
             this.secretNum = builder.secretNum;
             this.spec = builder.spec;
             this.startDate = builder.startDate;
@@ -413,6 +417,13 @@ public class GetKmsInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return productVersion
+         */
+        public String getProductVersion() {
+            return this.productVersion;
+        }
+
+        /**
          * @return secretNum
          */
         public String getSecretNum() {
@@ -477,6 +488,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceName; 
             private Long keyNum; 
+            private String productVersion; 
             private String secretNum; 
             private Long spec; 
             private String startDate; 
@@ -498,6 +510,7 @@ public class GetKmsInstanceResponseBody extends TeaModel {
                 this.instanceId = model.instanceId;
                 this.instanceName = model.instanceName;
                 this.keyNum = model.keyNum;
+                this.productVersion = model.productVersion;
                 this.secretNum = model.secretNum;
                 this.spec = model.spec;
                 this.startDate = model.startDate;
@@ -590,6 +603,14 @@ public class GetKmsInstanceResponseBody extends TeaModel {
              */
             public Builder keyNum(Long keyNum) {
                 this.keyNum = keyNum;
+                return this;
+            }
+
+            /**
+             * ProductVersion.
+             */
+            public Builder productVersion(String productVersion) {
+                this.productVersion = productVersion;
                 return this;
             }
 
