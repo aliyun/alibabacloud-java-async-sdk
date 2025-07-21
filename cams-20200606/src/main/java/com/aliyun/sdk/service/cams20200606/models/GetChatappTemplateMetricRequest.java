@@ -39,6 +39,18 @@ public class GetChatappTemplateMetricRequest extends Request {
     private String language;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Start")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long start;
@@ -59,6 +71,9 @@ public class GetChatappTemplateMetricRequest extends Request {
         this.granularity = builder.granularity;
         this.isvCode = builder.isvCode;
         this.language = builder.language;
+        this.ownerId = builder.ownerId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.start = builder.start;
         this.templateCode = builder.templateCode;
         this.templateType = builder.templateType;
@@ -113,6 +128,27 @@ public class GetChatappTemplateMetricRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
      * @return start
      */
     public Long getStart() {
@@ -139,6 +175,9 @@ public class GetChatappTemplateMetricRequest extends Request {
         private String granularity; 
         private String isvCode; 
         private String language; 
+        private Long ownerId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private Long start; 
         private String templateCode; 
         private String templateType; 
@@ -154,6 +193,9 @@ public class GetChatappTemplateMetricRequest extends Request {
             this.granularity = request.granularity;
             this.isvCode = request.isvCode;
             this.language = request.language;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.start = request.start;
             this.templateCode = request.templateCode;
             this.templateType = request.templateType;
@@ -222,6 +264,33 @@ public class GetChatappTemplateMetricRequest extends Request {
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
             this.language = language;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

@@ -17,25 +17,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePhoneEncryptionPublicKeyRequest</p>
  */
 public class UpdatePhoneEncryptionPublicKeyRequest extends Request {
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EncryptionPublicKey")
     @com.aliyun.core.annotation.Validation(required = true)
     private String encryptionPublicKey;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     private UpdatePhoneEncryptionPublicKeyRequest(Builder builder) {
         super(builder);
         this.custSpaceId = builder.custSpaceId;
         this.encryptionPublicKey = builder.encryptionPublicKey;
+        this.ownerId = builder.ownerId;
         this.phoneNumber = builder.phoneNumber;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -66,16 +81,40 @@ public class UpdatePhoneEncryptionPublicKeyRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return phoneNumber
      */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
 
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<UpdatePhoneEncryptionPublicKeyRequest, Builder> {
         private String custSpaceId; 
         private String encryptionPublicKey; 
+        private Long ownerId; 
         private String phoneNumber; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -85,52 +124,69 @@ public class UpdatePhoneEncryptionPublicKeyRequest extends Request {
             super(request);
             this.custSpaceId = request.custSpaceId;
             this.encryptionPublicKey = request.encryptionPublicKey;
+            this.ownerId = request.ownerId;
             this.phoneNumber = request.phoneNumber;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * <p>SpaceId/instanceId of ISV sub clients.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>399382882</p>
+         * CustSpaceId.
          */
         public Builder custSpaceId(String custSpaceId) {
-            this.putBodyParameter("CustSpaceId", custSpaceId);
+            this.putQueryParameter("CustSpaceId", custSpaceId);
             this.custSpaceId = custSpaceId;
             return this;
         }
 
         /**
-         * <p>Encrypt the public key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>-----BEGIN PUBLIC KEY-----
-         * AAA
-         * BBB
-         * CCC
-         * DDD
-         * EEE
-         * FFF
-         * GGG
-         * -----END PUBLIC KEY-----</p>
+         * <p>示例值示例值示例值</p>
          */
         public Builder encryptionPublicKey(String encryptionPublicKey) {
-            this.putBodyParameter("EncryptionPublicKey", encryptionPublicKey);
+            this.putQueryParameter("EncryptionPublicKey", encryptionPublicKey);
             this.encryptionPublicKey = encryptionPublicKey;
             return this;
         }
 
         /**
-         * <p>The phone number.</p>
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>86138000</p>
+         * <p>示例值示例值</p>
          */
         public Builder phoneNumber(String phoneNumber) {
-            this.putBodyParameter("PhoneNumber", phoneNumber);
+            this.putQueryParameter("PhoneNumber", phoneNumber);
             this.phoneNumber = phoneNumber;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

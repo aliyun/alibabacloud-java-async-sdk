@@ -43,6 +43,10 @@ public class GetChatFlowMetricRequest extends Request {
     private String metricName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetricParam")
+    private java.util.Map<String, ?> metricParam;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
@@ -66,6 +70,7 @@ public class GetChatFlowMetricRequest extends Request {
         this.flowVersion = builder.flowVersion;
         this.from = builder.from;
         this.metricName = builder.metricName;
+        this.metricParam = builder.metricParam;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -128,6 +133,13 @@ public class GetChatFlowMetricRequest extends Request {
     }
 
     /**
+     * @return metricParam
+     */
+    public java.util.Map<String, ?> getMetricParam() {
+        return this.metricParam;
+    }
+
+    /**
      * @return ownerId
      */
     public Long getOwnerId() {
@@ -162,6 +174,7 @@ public class GetChatFlowMetricRequest extends Request {
         private String flowVersion; 
         private Long from; 
         private String metricName; 
+        private java.util.Map<String, ?> metricParam; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -179,6 +192,7 @@ public class GetChatFlowMetricRequest extends Request {
             this.flowVersion = request.flowVersion;
             this.from = request.from;
             this.metricName = request.metricName;
+            this.metricParam = request.metricParam;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -256,6 +270,16 @@ public class GetChatFlowMetricRequest extends Request {
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
             this.metricName = metricName;
+            return this;
+        }
+
+        /**
+         * MetricParam.
+         */
+        public Builder metricParam(java.util.Map<String, ?> metricParam) {
+            String metricParamShrink = shrink(metricParam, "MetricParam", "json");
+            this.putQueryParameter("MetricParam", metricParamShrink);
+            this.metricParam = metricParam;
             return this;
         }
 

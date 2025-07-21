@@ -17,23 +17,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFlowRequest</p>
  */
 public class ListFlowRequest extends Request {
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowName")
     private String flowName;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     private ListFlowRequest(Builder builder) {
         super(builder);
         this.custSpaceId = builder.custSpaceId;
         this.flowName = builder.flowName;
+        this.ownerId = builder.ownerId;
         this.page = builder.page;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -64,16 +79,40 @@ public class ListFlowRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return page
      */
     public Page getPage() {
         return this.page;
     }
 
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<ListFlowRequest, Builder> {
         private String custSpaceId; 
         private String flowName; 
+        private Long ownerId; 
         private Page page; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -83,40 +122,64 @@ public class ListFlowRequest extends Request {
             super(request);
             this.custSpaceId = request.custSpaceId;
             this.flowName = request.flowName;
+            this.ownerId = request.ownerId;
             this.page = request.page;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>99948484</p>
+         * CustSpaceId.
          */
         public Builder custSpaceId(String custSpaceId) {
-            this.putBodyParameter("CustSpaceId", custSpaceId);
+            this.putQueryParameter("CustSpaceId", custSpaceId);
             this.custSpaceId = custSpaceId;
             return this;
         }
 
         /**
-         * <p>The name of the Flow that you want to query. If FlowName is left empty, the information about all Flows is queried.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>flow_001</p>
+         * FlowName.
          */
         public Builder flowName(String flowName) {
-            this.putBodyParameter("FlowName", flowName);
+            this.putQueryParameter("FlowName", flowName);
             this.flowName = flowName;
             return this;
         }
 
         /**
-         * <p>The returned pages.</p>
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * Page.
          */
         public Builder page(Page page) {
             String pageShrink = shrink(page, "Page", "json");
-            this.putBodyParameter("Page", pageShrink);
+            this.putQueryParameter("Page", pageShrink);
             this.page = page;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 
@@ -180,10 +243,7 @@ public class ListFlowRequest extends Request {
             } 
 
             /**
-             * <p>The page number.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1</p>
+             * Index.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -191,10 +251,7 @@ public class ListFlowRequest extends Request {
             }
 
             /**
-             * <p>The number of entries per page.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>20</p>
+             * Size.
              */
             public Builder size(Integer size) {
                 this.size = size;

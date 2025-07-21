@@ -12,24 +12,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link ChatappMigrationVerifiedRequest} extends {@link RequestModel}
+ * {@link ListFlowNodePrototypeV2Request} extends {@link RequestModel}
  *
- * <p>ChatappMigrationVerifiedRequest</p>
+ * <p>ListFlowNodePrototypeV2Request</p>
  */
-public class ChatappMigrationVerifiedRequest extends Request {
+public class ListFlowNodePrototypeV2Request extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.NameInMap("BizCode")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String custSpaceId;
+    private String bizCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupCode")
+    private String groupCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
+    private String keyword;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String phoneNumber;
+    private Long pageNo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Long pageSize;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -39,26 +52,23 @@ public class ChatappMigrationVerifiedRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("VerifyCode")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String verifyCode;
-
-    private ChatappMigrationVerifiedRequest(Builder builder) {
+    private ListFlowNodePrototypeV2Request(Builder builder) {
         super(builder);
-        this.custSpaceId = builder.custSpaceId;
+        this.bizCode = builder.bizCode;
+        this.groupCode = builder.groupCode;
+        this.keyword = builder.keyword;
         this.ownerId = builder.ownerId;
-        this.phoneNumber = builder.phoneNumber;
+        this.pageNo = builder.pageNo;
+        this.pageSize = builder.pageSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.verifyCode = builder.verifyCode;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ChatappMigrationVerifiedRequest create() {
+    public static ListFlowNodePrototypeV2Request create() {
         return builder().build();
     }
 
@@ -68,10 +78,24 @@ public class ChatappMigrationVerifiedRequest extends Request {
     }
 
     /**
-     * @return custSpaceId
+     * @return bizCode
      */
-    public String getCustSpaceId() {
-        return this.custSpaceId;
+    public String getBizCode() {
+        return this.bizCode;
+    }
+
+    /**
+     * @return groupCode
+     */
+    public String getGroupCode() {
+        return this.groupCode;
+    }
+
+    /**
+     * @return keyword
+     */
+    public String getKeyword() {
+        return this.keyword;
     }
 
     /**
@@ -82,10 +106,17 @@ public class ChatappMigrationVerifiedRequest extends Request {
     }
 
     /**
-     * @return phoneNumber
+     * @return pageNo
      */
-    public String getPhoneNumber() {
-        return this.phoneNumber;
+    public Long getPageNo() {
+        return this.pageNo;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Long getPageSize() {
+        return this.pageSize;
     }
 
     /**
@@ -102,45 +133,59 @@ public class ChatappMigrationVerifiedRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return verifyCode
-     */
-    public String getVerifyCode() {
-        return this.verifyCode;
-    }
-
-    public static final class Builder extends Request.Builder<ChatappMigrationVerifiedRequest, Builder> {
-        private String custSpaceId; 
+    public static final class Builder extends Request.Builder<ListFlowNodePrototypeV2Request, Builder> {
+        private String bizCode; 
+        private String groupCode; 
+        private String keyword; 
         private Long ownerId; 
-        private String phoneNumber; 
+        private Long pageNo; 
+        private Long pageSize; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String verifyCode; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ChatappMigrationVerifiedRequest request) {
+        private Builder(ListFlowNodePrototypeV2Request request) {
             super(request);
-            this.custSpaceId = request.custSpaceId;
+            this.bizCode = request.bizCode;
+            this.groupCode = request.groupCode;
+            this.keyword = request.keyword;
             this.ownerId = request.ownerId;
-            this.phoneNumber = request.phoneNumber;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.verifyCode = request.verifyCode;
         } 
 
         /**
-         * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>293483938849493</p>
+         * <p>ALICOM_OPAAS</p>
          */
-        public Builder custSpaceId(String custSpaceId) {
-            this.putQueryParameter("CustSpaceId", custSpaceId);
-            this.custSpaceId = custSpaceId;
+        public Builder bizCode(String bizCode) {
+            this.putQueryParameter("BizCode", bizCode);
+            this.bizCode = bizCode;
+            return this;
+        }
+
+        /**
+         * GroupCode.
+         */
+        public Builder groupCode(String groupCode) {
+            this.putQueryParameter("GroupCode", groupCode);
+            this.groupCode = groupCode;
+            return this;
+        }
+
+        /**
+         * Keyword.
+         */
+        public Builder keyword(String keyword) {
+            this.putQueryParameter("Keyword", keyword);
+            this.keyword = keyword;
             return this;
         }
 
@@ -154,15 +199,26 @@ public class ChatappMigrationVerifiedRequest extends Request {
         }
 
         /**
-         * <p>The phone number.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>861380001234</p>
+         * <p>1</p>
          */
-        public Builder phoneNumber(String phoneNumber) {
-            this.putQueryParameter("PhoneNumber", phoneNumber);
-            this.phoneNumber = phoneNumber;
+        public Builder pageNo(Long pageNo) {
+            this.putQueryParameter("PageNo", pageNo);
+            this.pageNo = pageNo;
+            return this;
+        }
+
+        /**
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        public Builder pageSize(Long pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
             return this;
         }
 
@@ -184,22 +240,9 @@ public class ChatappMigrationVerifiedRequest extends Request {
             return this;
         }
 
-        /**
-         * <p>The verification code.</p>
-         * <p>This parameter is required.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>828798</p>
-         */
-        public Builder verifyCode(String verifyCode) {
-            this.putQueryParameter("VerifyCode", verifyCode);
-            this.verifyCode = verifyCode;
-            return this;
-        }
-
         @Override
-        public ChatappMigrationVerifiedRequest build() {
-            return new ChatappMigrationVerifiedRequest(this);
+        public ListFlowNodePrototypeV2Request build() {
+            return new ListFlowNodePrototypeV2Request(this);
         } 
 
     } 

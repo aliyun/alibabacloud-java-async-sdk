@@ -117,6 +117,13 @@ public class ListBindingRelationsForFlowVersionRequest extends Request {
         } 
 
         /**
+         * <p>Channel type. Values:</p>
+         * <ul>
+         * <li>INSTAGRAM</li>
+         * <li>WHATSAPP</li>
+         * <li>MESSENGER</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;- VIBER</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -129,10 +136,11 @@ public class ListBindingRelationsForFlowVersionRequest extends Request {
         }
 
         /**
+         * <p>Process code. View the process code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> interface.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>f4912c16943b4dfba44bd6fedacf****</p>
+         * <p>9ccc41**************************</p>
          */
         public Builder flowCode(String flowCode) {
             this.putQueryParameter("FlowCode", flowCode);

@@ -27,8 +27,20 @@ public class UpdateAccountWebhookRequest extends Request {
     private String httpFlag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueueFlag")
     private String queueFlag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatusCallbackUrl")
@@ -38,7 +50,10 @@ public class UpdateAccountWebhookRequest extends Request {
         super(builder);
         this.custSpaceId = builder.custSpaceId;
         this.httpFlag = builder.httpFlag;
+        this.ownerId = builder.ownerId;
         this.queueFlag = builder.queueFlag;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.statusCallbackUrl = builder.statusCallbackUrl;
     }
 
@@ -70,10 +85,31 @@ public class UpdateAccountWebhookRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return queueFlag
      */
     public String getQueueFlag() {
         return this.queueFlag;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -86,7 +122,10 @@ public class UpdateAccountWebhookRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateAccountWebhookRequest, Builder> {
         private String custSpaceId; 
         private String httpFlag; 
+        private Long ownerId; 
         private String queueFlag; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String statusCallbackUrl; 
 
         private Builder() {
@@ -97,7 +136,10 @@ public class UpdateAccountWebhookRequest extends Request {
             super(request);
             this.custSpaceId = request.custSpaceId;
             this.httpFlag = request.httpFlag;
+            this.ownerId = request.ownerId;
             this.queueFlag = request.queueFlag;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.statusCallbackUrl = request.statusCallbackUrl;
         } 
 
@@ -131,6 +173,15 @@ public class UpdateAccountWebhookRequest extends Request {
         }
 
         /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
          * <p>Specifies whether to use Message Service (MNS) queues to receive receipts. Valid values:</p>
          * <ul>
          * <li>Y: indicates that MNS queues are used to receive receipts.</li>
@@ -143,6 +194,24 @@ public class UpdateAccountWebhookRequest extends Request {
         public Builder queueFlag(String queueFlag) {
             this.putQueryParameter("QueueFlag", queueFlag);
             this.queueFlag = queueFlag;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

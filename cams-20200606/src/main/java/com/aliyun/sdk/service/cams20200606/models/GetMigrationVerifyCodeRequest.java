@@ -33,16 +33,31 @@ public class GetMigrationVerifyCodeRequest extends Request {
     private String method;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     private GetMigrationVerifyCodeRequest(Builder builder) {
         super(builder);
         this.custSpaceId = builder.custSpaceId;
         this.locale = builder.locale;
         this.method = builder.method;
+        this.ownerId = builder.ownerId;
         this.phoneNumber = builder.phoneNumber;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -80,17 +95,41 @@ public class GetMigrationVerifyCodeRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return phoneNumber
      */
     public String getPhoneNumber() {
         return this.phoneNumber;
     }
 
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<GetMigrationVerifyCodeRequest, Builder> {
         private String custSpaceId; 
         private String locale; 
         private String method; 
+        private Long ownerId; 
         private String phoneNumber; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -101,7 +140,10 @@ public class GetMigrationVerifyCodeRequest extends Request {
             this.custSpaceId = request.custSpaceId;
             this.locale = request.locale;
             this.method = request.method;
+            this.ownerId = request.ownerId;
             this.phoneNumber = request.phoneNumber;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -144,6 +186,15 @@ public class GetMigrationVerifyCodeRequest extends Request {
         }
 
         /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
          * <p>Phone number.</p>
          * <p>This parameter is required.</p>
          * 
@@ -153,6 +204,24 @@ public class GetMigrationVerifyCodeRequest extends Request {
         public Builder phoneNumber(String phoneNumber) {
             this.putQueryParameter("PhoneNumber", phoneNumber);
             this.phoneNumber = phoneNumber;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

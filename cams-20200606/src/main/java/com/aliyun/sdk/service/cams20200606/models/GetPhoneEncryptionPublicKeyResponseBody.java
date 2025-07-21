@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPhoneEncryptionPublicKeyResponseBody</p>
  */
 public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -30,6 +33,7 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
     private String requestId;
 
     private GetPhoneEncryptionPublicKeyResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -46,6 +50,13 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -77,6 +88,7 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
@@ -86,11 +98,20 @@ public class GetPhoneEncryptionPublicKeyResponseBody extends TeaModel {
         } 
 
         private Builder(GetPhoneEncryptionPublicKeyResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
             this.code = model.code;
             this.data = model.data;
             this.message = model.message;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * <p>The response code.</p>

@@ -27,6 +27,10 @@ public class UpdatePhoneWebhookRequest extends Request {
     private String httpFlag;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
@@ -34,6 +38,14 @@ public class UpdatePhoneWebhookRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueueFlag")
     private String queueFlag;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StatusCallbackUrl")
@@ -47,8 +59,11 @@ public class UpdatePhoneWebhookRequest extends Request {
         super(builder);
         this.custSpaceId = builder.custSpaceId;
         this.httpFlag = builder.httpFlag;
+        this.ownerId = builder.ownerId;
         this.phoneNumber = builder.phoneNumber;
         this.queueFlag = builder.queueFlag;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.statusCallbackUrl = builder.statusCallbackUrl;
         this.upCallbackUrl = builder.upCallbackUrl;
     }
@@ -81,6 +96,13 @@ public class UpdatePhoneWebhookRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return phoneNumber
      */
     public String getPhoneNumber() {
@@ -92,6 +114,20 @@ public class UpdatePhoneWebhookRequest extends Request {
      */
     public String getQueueFlag() {
         return this.queueFlag;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -111,8 +147,11 @@ public class UpdatePhoneWebhookRequest extends Request {
     public static final class Builder extends Request.Builder<UpdatePhoneWebhookRequest, Builder> {
         private String custSpaceId; 
         private String httpFlag; 
+        private Long ownerId; 
         private String phoneNumber; 
         private String queueFlag; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String statusCallbackUrl; 
         private String upCallbackUrl; 
 
@@ -124,8 +163,11 @@ public class UpdatePhoneWebhookRequest extends Request {
             super(request);
             this.custSpaceId = request.custSpaceId;
             this.httpFlag = request.httpFlag;
+            this.ownerId = request.ownerId;
             this.phoneNumber = request.phoneNumber;
             this.queueFlag = request.queueFlag;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.statusCallbackUrl = request.statusCallbackUrl;
             this.upCallbackUrl = request.upCallbackUrl;
         } 
@@ -160,6 +202,15 @@ public class UpdatePhoneWebhookRequest extends Request {
         }
 
         /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
          * <p>phone number.</p>
          * <p>This parameter is required.</p>
          * 
@@ -185,6 +236,24 @@ public class UpdatePhoneWebhookRequest extends Request {
         public Builder queueFlag(String queueFlag) {
             this.putQueryParameter("QueueFlag", queueFlag);
             this.queueFlag = queueFlag;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

@@ -17,25 +17,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeletePhoneMessageQrdlRequest</p>
  */
 public class DeletePhoneMessageQrdlRequest extends Request {
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PhoneNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QrdlCode")
     @com.aliyun.core.annotation.Validation(required = true)
     private String qrdlCode;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
     private DeletePhoneMessageQrdlRequest(Builder builder) {
         super(builder);
         this.custSpaceId = builder.custSpaceId;
+        this.ownerId = builder.ownerId;
         this.phoneNumber = builder.phoneNumber;
         this.qrdlCode = builder.qrdlCode;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -59,6 +74,13 @@ public class DeletePhoneMessageQrdlRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return phoneNumber
      */
     public String getPhoneNumber() {
@@ -72,10 +94,27 @@ public class DeletePhoneMessageQrdlRequest extends Request {
         return this.qrdlCode;
     }
 
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<DeletePhoneMessageQrdlRequest, Builder> {
         private String custSpaceId; 
+        private Long ownerId; 
         private String phoneNumber; 
         private String qrdlCode; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -84,45 +123,70 @@ public class DeletePhoneMessageQrdlRequest extends Request {
         private Builder(DeletePhoneMessageQrdlRequest request) {
             super(request);
             this.custSpaceId = request.custSpaceId;
+            this.ownerId = request.ownerId;
             this.phoneNumber = request.phoneNumber;
             this.qrdlCode = request.qrdlCode;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * <p>The space ID of the RAM user within the independent software vendor (ISV) account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>883873773</p>
+         * CustSpaceId.
          */
         public Builder custSpaceId(String custSpaceId) {
-            this.putBodyParameter("CustSpaceId", custSpaceId);
+            this.putQueryParameter("CustSpaceId", custSpaceId);
             this.custSpaceId = custSpaceId;
             return this;
         }
 
         /**
-         * <p>The phone number. Add the country code before the phone number.</p>
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>861380000</p>
+         * <p>示例值示例值</p>
          */
         public Builder phoneNumber(String phoneNumber) {
-            this.putBodyParameter("PhoneNumber", phoneNumber);
+            this.putQueryParameter("PhoneNumber", phoneNumber);
             this.phoneNumber = phoneNumber;
             return this;
         }
 
         /**
-         * <p>QR code encoding.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>29338838</p>
+         * <p>示例值示例值示例值</p>
          */
         public Builder qrdlCode(String qrdlCode) {
-            this.putBodyParameter("QrdlCode", qrdlCode);
+            this.putQueryParameter("QrdlCode", qrdlCode);
             this.qrdlCode = qrdlCode;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

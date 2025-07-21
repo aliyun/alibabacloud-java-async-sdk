@@ -17,25 +17,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFlowRequest</p>
  */
 public class CreateFlowRequest extends Request {
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Categories")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<String> categories;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String flowName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
 
     private CreateFlowRequest(Builder builder) {
         super(builder);
         this.categories = builder.categories;
         this.custSpaceId = builder.custSpaceId;
         this.flowName = builder.flowName;
+        this.ownerId = builder.ownerId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -72,10 +87,34 @@ public class CreateFlowRequest extends Request {
         return this.flowName;
     }
 
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<CreateFlowRequest, Builder> {
         private java.util.List<String> categories; 
         private String custSpaceId; 
         private String flowName; 
+        private Long ownerId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -86,41 +125,66 @@ public class CreateFlowRequest extends Request {
             this.categories = request.categories;
             this.custSpaceId = request.custSpaceId;
             this.flowName = request.flowName;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * <p>The categories of the Flow.</p>
          * <p>This parameter is required.</p>
          */
         public Builder categories(java.util.List<String> categories) {
             String categoriesShrink = shrink(categories, "Categories", "json");
-            this.putBodyParameter("Categories", categoriesShrink);
+            this.putQueryParameter("Categories", categoriesShrink);
             this.categories = categories;
             return this;
         }
 
         /**
-         * <p>The space ID of the user within the independent software vendor (ISV) account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>93994848</p>
+         * CustSpaceId.
          */
         public Builder custSpaceId(String custSpaceId) {
-            this.putBodyParameter("CustSpaceId", custSpaceId);
+            this.putQueryParameter("CustSpaceId", custSpaceId);
             this.custSpaceId = custSpaceId;
             return this;
         }
 
         /**
-         * <p>The name of the Flow.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>flow_001</p>
+         * <p>示例值示例值</p>
          */
         public Builder flowName(String flowName) {
-            this.putBodyParameter("FlowName", flowName);
+            this.putQueryParameter("FlowName", flowName);
             this.flowName = flowName;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

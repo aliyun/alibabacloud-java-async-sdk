@@ -52,6 +52,18 @@ public class SubmitIsvCustomerTermsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String officeAddress;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
     private SubmitIsvCustomerTermsRequest(Builder builder) {
         super(builder);
         this.businessDesc = builder.businessDesc;
@@ -61,6 +73,9 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         this.custSpaceId = builder.custSpaceId;
         this.isvTerms = builder.isvTerms;
         this.officeAddress = builder.officeAddress;
+        this.ownerId = builder.ownerId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -125,6 +140,27 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         return this.officeAddress;
     }
 
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<SubmitIsvCustomerTermsRequest, Builder> {
         private String businessDesc; 
         private String contactMail; 
@@ -133,6 +169,9 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         private String custSpaceId; 
         private String isvTerms; 
         private String officeAddress; 
+        private Long ownerId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -147,6 +186,9 @@ public class SubmitIsvCustomerTermsRequest extends Request {
             this.custSpaceId = request.custSpaceId;
             this.isvTerms = request.isvTerms;
             this.officeAddress = request.officeAddress;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -240,6 +282,33 @@ public class SubmitIsvCustomerTermsRequest extends Request {
         public Builder officeAddress(String officeAddress) {
             this.putQueryParameter("OfficeAddress", officeAddress);
             this.officeAddress = officeAddress;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

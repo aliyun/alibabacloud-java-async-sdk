@@ -17,14 +17,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChatappEmbedSignUpRequest</p>
  */
 public class ChatappEmbedSignUpRequest extends Request {
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InputToken")
     @com.aliyun.core.annotation.Validation(required = true)
     private String inputToken;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
     private ChatappEmbedSignUpRequest(Builder builder) {
         super(builder);
         this.inputToken = builder.inputToken;
+        this.ownerId = builder.ownerId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -47,8 +62,32 @@ public class ChatappEmbedSignUpRequest extends Request {
         return this.inputToken;
     }
 
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<ChatappEmbedSignUpRequest, Builder> {
         private String inputToken; 
+        private Long ownerId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -57,18 +96,47 @@ public class ChatappEmbedSignUpRequest extends Request {
         private Builder(ChatappEmbedSignUpRequest request) {
             super(request);
             this.inputToken = request.inputToken;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * <p>The InputToken returned after the embedded signup flow is complete.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>wlelkelwidilwloe-ewlwols0lwsllsld</p>
+         * <p>示例值示例值</p>
          */
         public Builder inputToken(String inputToken) {
-            this.putBodyParameter("InputToken", inputToken);
+            this.putQueryParameter("InputToken", inputToken);
             this.inputToken = inputToken;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

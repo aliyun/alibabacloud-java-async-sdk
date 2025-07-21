@@ -32,11 +32,26 @@ public class CreateChatappMigrationInitiateRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String mobileNumber;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
     private CreateChatappMigrationInitiateRequest(Builder builder) {
         super(builder);
         this.countryCode = builder.countryCode;
         this.custSpaceId = builder.custSpaceId;
         this.mobileNumber = builder.mobileNumber;
+        this.ownerId = builder.ownerId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
     }
 
     public static Builder builder() {
@@ -73,10 +88,34 @@ public class CreateChatappMigrationInitiateRequest extends Request {
         return this.mobileNumber;
     }
 
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<CreateChatappMigrationInitiateRequest, Builder> {
         private String countryCode; 
         private String custSpaceId; 
         private String mobileNumber; 
+        private Long ownerId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
 
         private Builder() {
             super();
@@ -87,6 +126,9 @@ public class CreateChatappMigrationInitiateRequest extends Request {
             this.countryCode = request.countryCode;
             this.custSpaceId = request.custSpaceId;
             this.mobileNumber = request.mobileNumber;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
@@ -125,6 +167,33 @@ public class CreateChatappMigrationInitiateRequest extends Request {
         public Builder mobileNumber(String mobileNumber) {
             this.putQueryParameter("MobileNumber", mobileNumber);
             this.mobileNumber = mobileNumber;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
             return this;
         }
 

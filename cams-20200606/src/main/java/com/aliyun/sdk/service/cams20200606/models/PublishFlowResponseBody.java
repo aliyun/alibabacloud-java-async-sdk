@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PublishFlowResponseBody</p>
  */
 public class PublishFlowResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -27,6 +30,7 @@ public class PublishFlowResponseBody extends TeaModel {
     private String requestId;
 
     private PublishFlowResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.message = builder.message;
         this.requestId = builder.requestId;
@@ -42,6 +46,13 @@ public class PublishFlowResponseBody extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -66,6 +77,7 @@ public class PublishFlowResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private String message; 
         private String requestId; 
@@ -74,10 +86,19 @@ public class PublishFlowResponseBody extends TeaModel {
         } 
 
         private Builder(PublishFlowResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
             this.code = model.code;
             this.message = model.message;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * <p>If OK is returned, the request was successful.</p>

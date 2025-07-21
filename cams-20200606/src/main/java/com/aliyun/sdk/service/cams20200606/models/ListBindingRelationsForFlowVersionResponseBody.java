@@ -119,7 +119,10 @@ public class ListBindingRelationsForFlowVersionResponseBody extends TeaModel {
         } 
 
         /**
-         * AccessDeniedDetail.
+         * <p>Access denied details.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>None</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -127,7 +130,10 @@ public class ListBindingRelationsForFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>Error code. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error Codes</a>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -135,7 +141,7 @@ public class ListBindingRelationsForFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * <p>Returned data list.</p>
          */
         public Builder data(java.util.List<java.util.Map<String, ?>> data) {
             this.data = data;
@@ -143,7 +149,10 @@ public class ListBindingRelationsForFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>Error message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>无</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -151,7 +160,10 @@ public class ListBindingRelationsForFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>Request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>90E63D28-E31D-1EB2-8939-A94866411B2O</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,7 +171,16 @@ public class ListBindingRelationsForFlowVersionResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the operation was successful. Values:</p>
+         * <ul>
+         * <li><p>true: Success.</p>
+         * </li>
+         * <li><p>false: Failure.</p>
+         * </li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

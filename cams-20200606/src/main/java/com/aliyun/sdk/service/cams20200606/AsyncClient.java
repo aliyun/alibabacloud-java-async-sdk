@@ -426,6 +426,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<IsvGetAppIdResponse> isvGetAppId(IsvGetAppIdRequest request);
 
     /**
+     * <b>description</b> :
+     * <ul>
+     * <li>You can call this interface to query the list of phone numbers or merchant account IDs bound to a process, or you can view the list in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a> &gt; <strong>Settings</strong> interface.</li>
+     * <li>Before calling this interface, make sure that the process you created has already been bound to a phone number or merchant account ID.</li>
+     * <li>If the process you created is not bound to a phone number or merchant account ID, you can manually bind a phone number or merchant account ID in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder"><strong>Flow Editor</strong></a> &gt; <strong>Settings</strong> interface, or bind it through the <a href="https://help.aliyun.com/document_detail/2937190.html">FlowBindPhone</a> interface.</li>
+     * </ul>
+     * 
      * @param request the request parameters of ListBindingRelationsForFlowVersion  ListBindingRelationsForFlowVersionRequest
      * @return ListBindingRelationsForFlowVersionResponse
      */
@@ -456,6 +463,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListChatGroupParticipantsResponse> listChatGroupParticipants(ListChatGroupParticipantsRequest request);
 
     /**
+     * @param request the request parameters of ListChatappMessage  ListChatappMessageRequest
+     * @return ListChatappMessageResponse
+     */
+    CompletableFuture<ListChatappMessageResponse> listChatappMessage(ListChatappMessageRequest request);
+
+    /**
      * <b>description</b> :
      * <h3>QPS limit</h3>
      * <p>You can call this operation up to five times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.</p>
@@ -473,6 +486,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListFlowResponse
      */
     CompletableFuture<ListFlowResponse> listFlow(ListFlowRequest request);
+
+    /**
+     * @param request the request parameters of ListFlowNodePrototypeV2  ListFlowNodePrototypeV2Request
+     * @return ListFlowNodePrototypeV2Response
+     */
+    CompletableFuture<ListFlowNodePrototypeV2Response> listFlowNodePrototypeV2(ListFlowNodePrototypeV2Request request);
 
     /**
      * @param request the request parameters of ListFlowVersion  ListFlowVersionRequest
