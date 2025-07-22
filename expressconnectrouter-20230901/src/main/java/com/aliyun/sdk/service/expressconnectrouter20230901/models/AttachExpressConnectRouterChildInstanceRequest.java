@@ -73,7 +73,7 @@ public class AttachExpressConnectRouterChildInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -231,7 +231,10 @@ public class AttachExpressConnectRouterChildInstanceRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>The description of the sub-instance. It must be 0 to 128 characters in length.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         public Builder description(String description) {
             this.putBodyParameter("Description", description);

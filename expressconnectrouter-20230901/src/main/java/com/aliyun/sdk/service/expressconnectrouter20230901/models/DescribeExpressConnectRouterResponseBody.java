@@ -76,6 +76,10 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -173,6 +177,24 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExpressConnectRouterResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.ecrList = model.ecrList;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -364,6 +386,14 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
             private String tagKey; 
             private String tagValue; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
+
             /**
              * <p>The tag key.</p>
              * 
@@ -544,6 +574,23 @@ public class DescribeExpressConnectRouterResponseBody extends TeaModel {
             private String resourceGroupId; 
             private String status; 
             private java.util.List<Tags> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(EcrList model) {
+                this.alibabaSideAsn = model.alibabaSideAsn;
+                this.bizStatus = model.bizStatus;
+                this.description = model.description;
+                this.ecrId = model.ecrId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.name = model.name;
+                this.ownerId = model.ownerId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>The autonomous system number (ASN) of the ECR.</p>

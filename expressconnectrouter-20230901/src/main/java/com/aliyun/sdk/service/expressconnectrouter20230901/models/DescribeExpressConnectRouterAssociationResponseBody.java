@@ -76,6 +76,10 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -173,6 +177,24 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExpressConnectRouterAssociationResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.associationList = model.associationList;
+            this.code = model.code;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -532,6 +554,28 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
             private String vpcId; 
             private Long vpcOwnerId; 
 
+            private Builder() {
+            } 
+
+            private Builder(AssociationList model) {
+                this.allowedPrefixes = model.allowedPrefixes;
+                this.allowedPrefixesMode = model.allowedPrefixesMode;
+                this.associationId = model.associationId;
+                this.associationNodeType = model.associationNodeType;
+                this.cenId = model.cenId;
+                this.description = model.description;
+                this.ecrId = model.ecrId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.ownerId = model.ownerId;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.transitRouterId = model.transitRouterId;
+                this.transitRouterOwnerId = model.transitRouterOwnerId;
+                this.vpcId = model.vpcId;
+                this.vpcOwnerId = model.vpcOwnerId;
+            } 
+
             /**
              * <p>The allowed route prefixes.</p>
              */
@@ -541,7 +585,14 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
             }
 
             /**
-             * AllowedPrefixesMode.
+             * <p>The prefix route mode. Valid values:</p>
+             * <ul>
+             * <li>MatchMode</li>
+             * <li>IncrementalMode</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MatchMode</p>
              */
             public Builder allowedPrefixesMode(String allowedPrefixesMode) {
                 this.allowedPrefixesMode = allowedPrefixesMode;
@@ -586,7 +637,10 @@ public class DescribeExpressConnectRouterAssociationResponseBody extends TeaMode
             }
 
             /**
-             * Description.
+             * <p>The description of the associated resource.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;

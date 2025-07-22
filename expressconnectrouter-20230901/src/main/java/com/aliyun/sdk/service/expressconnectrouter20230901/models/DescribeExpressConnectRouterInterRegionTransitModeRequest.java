@@ -45,7 +45,7 @@ public class DescribeExpressConnectRouterInterRegionTransitModeRequest extends R
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }

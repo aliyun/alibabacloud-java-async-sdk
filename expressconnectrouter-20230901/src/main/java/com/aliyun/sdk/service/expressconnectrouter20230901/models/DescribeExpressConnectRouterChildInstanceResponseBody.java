@@ -76,6 +76,10 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -173,6 +177,24 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExpressConnectRouterChildInstanceResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.childInstanceList = model.childInstanceList;
+            this.code = model.code;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -483,6 +505,24 @@ public class DescribeExpressConnectRouterChildInstanceResponseBody extends TeaMo
             private Long ownerId; 
             private String regionId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ChildInstanceList model) {
+                this.associationId = model.associationId;
+                this.childInstanceId = model.childInstanceId;
+                this.childInstanceOwnerId = model.childInstanceOwnerId;
+                this.childInstanceRegionId = model.childInstanceRegionId;
+                this.childInstanceType = model.childInstanceType;
+                this.description = model.description;
+                this.ecrId = model.ecrId;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.ownerId = model.ownerId;
+                this.regionId = model.regionId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the association between the ECR and the VPC or TR.</p>

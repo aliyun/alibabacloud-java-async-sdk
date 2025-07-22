@@ -64,6 +64,10 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryResponseBody extend
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -137,6 +141,21 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryResponseBody extend
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExpressConnectRouterAllowedPrefixHistoryResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.allowedPrefixHistoryList = model.allowedPrefixHistoryList;
+            this.code = model.code;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -290,6 +309,14 @@ public class DescribeExpressConnectRouterAllowedPrefixHistoryResponseBody extend
         public static final class Builder {
             private java.util.List<String> allowedPrefix; 
             private String gmtCreate; 
+
+            private Builder() {
+            } 
+
+            private Builder(AllowedPrefixHistoryList model) {
+                this.allowedPrefix = model.allowedPrefix;
+                this.gmtCreate = model.gmtCreate;
+            } 
 
             /**
              * <p>The route prefix.</p>

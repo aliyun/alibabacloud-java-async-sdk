@@ -65,7 +65,7 @@ public class CreateExpressConnectRouterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -174,6 +174,9 @@ public class CreateExpressConnectRouterRequest extends Request {
 
         /**
          * <p>The description of the ECR.</p>
+         * <blockquote>
+         * <p> The description can be empty or 0 to 256 characters in length and cannot start with http:// or https://.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -202,6 +205,9 @@ public class CreateExpressConnectRouterRequest extends Request {
 
         /**
          * <p>The name of the ECR.</p>
+         * <blockquote>
+         * <p> The name must be 0 to 128 characters in length, and cannot start with http:// or https://.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -284,6 +290,14 @@ public class CreateExpressConnectRouterRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>

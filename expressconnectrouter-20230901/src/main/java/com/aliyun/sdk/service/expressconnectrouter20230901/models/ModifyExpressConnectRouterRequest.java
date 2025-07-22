@@ -55,7 +55,7 @@ public class ModifyExpressConnectRouterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -133,6 +133,9 @@ public class ModifyExpressConnectRouterRequest extends Request {
 
         /**
          * <p>The description of the ECR.</p>
+         * <blockquote>
+         * <p> The description can be empty or 0 to 256 characters in length and cannot start with http:// or https://.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -174,6 +177,9 @@ public class ModifyExpressConnectRouterRequest extends Request {
 
         /**
          * <p>The name of the ECR.</p>
+         * <blockquote>
+         * <p> The name must be 0 to 128 characters in length, and cannot start with http:// or https://.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>test</p>

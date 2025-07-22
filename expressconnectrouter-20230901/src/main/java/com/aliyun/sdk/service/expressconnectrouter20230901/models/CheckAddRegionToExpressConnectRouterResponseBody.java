@@ -80,6 +80,10 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -185,6 +189,25 @@ public class CheckAddRegionToExpressConnectRouterResponseBody extends TeaModel {
         private String message; 
         private String requestId; 
         private Boolean success; 
+
+        private Builder() {
+        } 
+
+        private Builder(CheckAddRegionToExpressConnectRouterResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.anyCrossBorderLink = model.anyCrossBorderLink;
+            this.anyInterRegionLink = model.anyInterRegionLink;
+            this.code = model.code;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.isCdtCrossBorderEnabled = model.isCdtCrossBorderEnabled;
+            this.isCdtInterRegionEnabled = model.isCdtInterRegionEnabled;
+            this.isUserAllowedToCreateCrossBorderLink = model.isUserAllowedToCreateCrossBorderLink;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
 
         /**
          * <p>The details about the access denial.</p>

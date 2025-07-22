@@ -76,6 +76,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -173,6 +177,24 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeInstanceGrantedToExpressConnectRouterResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.ecrGrantedInstanceList = model.ecrGrantedInstanceList;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -472,6 +494,23 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
             private String nodeType; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(EcrGrantedInstanceList model) {
+                this.ecrId = model.ecrId;
+                this.ecrOwnerAliUid = model.ecrOwnerAliUid;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.grantId = model.grantId;
+                this.nodeId = model.nodeId;
+                this.nodeOwnerBid = model.nodeOwnerBid;
+                this.nodeOwnerUid = model.nodeOwnerUid;
+                this.nodeRegionId = model.nodeRegionId;
+                this.nodeType = model.nodeType;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The ECR ID.</p>
              * 
@@ -484,7 +523,10 @@ public class DescribeInstanceGrantedToExpressConnectRouterResponseBody extends T
             }
 
             /**
-             * EcrOwnerAliUid.
+             * <p>The ID of the Alibaba Cloud account that owns the ECR to which you want to grant permissions.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1456408190545060</p>
              */
             public Builder ecrOwnerAliUid(String ecrOwnerAliUid) {
                 this.ecrOwnerAliUid = ecrOwnerAliUid;

@@ -76,6 +76,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -174,8 +178,29 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         private Boolean success; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeFlowLogsResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.flowLogs = model.flowLogs;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * AccessDeniedDetail.
+         * <p>The queried information about the request denial.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Authentication is failed for ****</p>
          */
         public Builder accessDeniedDetail(String accessDeniedDetail) {
             this.accessDeniedDetail = accessDeniedDetail;
@@ -183,7 +208,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder code(String code) {
             this.code = code;
@@ -191,7 +219,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * <p>The dynamic error code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>IllegalParamFormat.EcrId</p>
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -199,7 +230,13 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * <p>The dynamic part in the error message. This parameter is used to replace the <code>%s</code> variable in <strong>ErrMessage</strong>.</p>
+         * <blockquote>
+         * <p> For example, if the value of <strong>ErrMessage</strong> is <strong>The Value of Input Parameter %s is not valid</strong> and the value of <strong>DynamicMessage</strong> is <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+         * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>The param format of EcrId **** is illegal.</p>
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -207,7 +244,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * FlowLogs.
+         * <p>The information about the flow logs.</p>
          */
         public Builder flowLogs(java.util.List<FlowLogs> flowLogs) {
             this.flowLogs = flowLogs;
@@ -215,7 +252,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * <p>The HTTP status code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -223,7 +263,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * <p>The total number of entries returned. Valid values: 1 to 2147483647. Default value: 10.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -231,7 +274,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * <p>The returned message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OK</p>
          */
         public Builder message(String message) {
             this.message = message;
@@ -239,7 +285,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * <p>A pagination token. It can be used in the next request to retrieve a new page of results. Valid values:</p>
+         * <ul>
+         * <li>If <strong>NextToken</strong> is empty, no next page exists.</li>
+         * <li>If a value of <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>AAAAAYws9fJ0Ur4MGm/5OkDoW/Zn0J0/sCjivzwX9oBcwFnWaaas/kSG+J/WzLOxJHS4****</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -247,7 +300,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>6FABF516-FED3-5697-BDA2-B18C5D9A****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -255,7 +311,14 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li><strong>True</strong></li>
+         * <li><strong>False</strong></li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>True</p>
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -263,7 +326,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of records that meet the query conditions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>11</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -320,8 +386,22 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             private String key; 
             private String value; 
 
+            private Builder() {
+            } 
+
+            private Builder(Tags model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
+
             /**
-             * Key.
+             * <p>The key of tag N of the instance. The tag key cannot be an empty string.</p>
+             * <blockquote>
+             * <p>It can be up to 64 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>TagKey</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -329,7 +409,13 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The tag value.</p>
+             * <blockquote>
+             * <p>It can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>. The tag value can be an empty string.</p>
+             * </blockquote>
+             * 
+             * <strong>example:</strong>
+             * <p>TagValue</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -555,8 +641,33 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             private String status; 
             private java.util.List<Tags> tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(FlowLogs model) {
+                this.creationTime = model.creationTime;
+                this.description = model.description;
+                this.ecrId = model.ecrId;
+                this.flowLogId = model.flowLogId;
+                this.flowLogName = model.flowLogName;
+                this.instanceId = model.instanceId;
+                this.instanceType = model.instanceType;
+                this.interval = model.interval;
+                this.logStoreName = model.logStoreName;
+                this.projectName = model.projectName;
+                this.regionId = model.regionId;
+                this.resourceGroupId = model.resourceGroupId;
+                this.samplingRate = model.samplingRate;
+                this.slsRegionId = model.slsRegionId;
+                this.status = model.status;
+                this.tags = model.tags;
+            } 
+
             /**
-             * CreationTime.
+             * <p>The time when the flow log was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>2023-09-21T04:20Z</p>
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -564,7 +675,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * <p>The description of the flow log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myFlowlog</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -572,7 +686,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EcrId.
+             * <p>The ECR ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ecr-h4cop1khw98*****</p>
              */
             public Builder ecrId(String ecrId) {
                 this.ecrId = ecrId;
@@ -580,7 +697,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * FlowLogId.
+             * <p>The ID of the flow log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>flowlog-leypqehtgtia2*****</p>
              */
             public Builder flowLogId(String flowLogId) {
                 this.flowLogId = flowLogId;
@@ -588,7 +708,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * FlowLogName.
+             * <p>The name of the flow log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>myFlowlog</p>
              */
             public Builder flowLogName(String flowLogName) {
                 this.flowLogName = flowLogName;
@@ -596,7 +719,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the network instance.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vbr-9dpty76irpf4u15*****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -604,7 +730,13 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * <p>The type of the network instance. Valid values:</p>
+             * <ul>
+             * <li><strong>VBR</strong>: virtual border router (VBR)</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>VBR</p>
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -612,7 +744,15 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * <p>The time window for collecting log data. Unit: seconds. Valid values:</p>
+             * <ul>
+             * <li><strong>60</strong></li>
+             * <li><strong>600</strong></li>
+             * </ul>
+             * <p>Default value: <strong>600</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>600</p>
              */
             public Builder interval(Integer interval) {
                 this.interval = interval;
@@ -620,7 +760,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * <p>The Logstore that stores the captured traffic data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FlowLogStore</p>
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -628,7 +771,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * <p>The name of the project that stores the captured traffic data.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FlowLogProject</p>
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -636,7 +782,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID of the flow log.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -644,7 +793,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * <p>The ID of the resource group to which the ECR belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>rg-aekzb3xwrexc4ry</p>
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -652,7 +804,16 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SamplingRate.
+             * <p>The sampling proportion. Valid values:</p>
+             * <ul>
+             * <li><strong>1:4096</strong></li>
+             * <li><strong>1:2048</strong></li>
+             * <li><strong>1:1024</strong></li>
+             * </ul>
+             * <p>Default value: <strong>1:4096</strong>.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1:4096</p>
              */
             public Builder samplingRate(String samplingRate) {
                 this.samplingRate = samplingRate;
@@ -660,7 +821,10 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * SlsRegionId.
+             * <p>The ID of the region where Log Service is deployed.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder slsRegionId(String slsRegionId) {
                 this.slsRegionId = slsRegionId;
@@ -668,7 +832,16 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the flow log. Valid values:</p>
+             * <ul>
+             * <li><p><strong>Active</strong></p>
+             * </li>
+             * <li><p><strong>Inactive</strong></p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>Active</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -676,7 +849,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * <p>The tag key.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
                 this.tags = tags;

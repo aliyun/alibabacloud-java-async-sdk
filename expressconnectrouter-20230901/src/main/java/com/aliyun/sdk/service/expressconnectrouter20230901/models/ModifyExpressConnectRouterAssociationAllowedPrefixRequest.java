@@ -66,7 +66,7 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends R
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -154,7 +154,14 @@ public class ModifyExpressConnectRouterAssociationAllowedPrefixRequest extends R
         }
 
         /**
-         * AllowedPrefixesMode.
+         * <p>The route prefix mode.</p>
+         * <ul>
+         * <li>MatchMode: After you distribute new route CIDR blocks to data centers, original specific routes that are distributed are withdrawn.</li>
+         * <li>IncrementalMode: After you distribute new route CIDR blocks to data centers, the original specific routes that fall in the CIDR blocks that you configure are withdrawn, and the original specific routes that do not fall in the CIDR blocks are still distributed.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MatchMode</p>
          */
         public Builder allowedPrefixesMode(String allowedPrefixesMode) {
             this.putBodyParameter("AllowedPrefixesMode", allowedPrefixesMode);

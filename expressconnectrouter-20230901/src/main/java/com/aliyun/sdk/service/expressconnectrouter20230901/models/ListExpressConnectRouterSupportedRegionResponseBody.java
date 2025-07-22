@@ -52,6 +52,10 @@ public class ListExpressConnectRouterSupportedRegionResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -101,6 +105,18 @@ public class ListExpressConnectRouterSupportedRegionResponseBody extends TeaMode
         private String requestId; 
         private Boolean success; 
         private java.util.List<String> supportedRegionIdList; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListExpressConnectRouterSupportedRegionResponseBody model) {
+            this.code = model.code;
+            this.httpStatusCode = model.httpStatusCode;
+            this.message = model.message;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.supportedRegionIdList = model.supportedRegionIdList;
+        } 
 
         /**
          * <p>The response code. The status code 200 indicates that the request was successful. Other status codes indicate that the request failed. For more information, see Error codes.</p>

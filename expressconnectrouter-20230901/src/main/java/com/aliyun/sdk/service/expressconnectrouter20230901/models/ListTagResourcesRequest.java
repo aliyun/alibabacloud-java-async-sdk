@@ -56,7 +56,7 @@ public class ListTagResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -168,8 +168,8 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The tags.</p>
-         * <p>You can bind up to 20 tags to an ECR.</p>
+         * <p>The tag.</p>
+         * <p>You can specify at most 20 tags.</p>
          */
         public Builder tag(java.util.List<Tag> tag) {
             this.putBodyParameter("Tag", tag);
@@ -227,6 +227,14 @@ public class ListTagResourcesRequest extends Request {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Tag model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The tag key.</p>

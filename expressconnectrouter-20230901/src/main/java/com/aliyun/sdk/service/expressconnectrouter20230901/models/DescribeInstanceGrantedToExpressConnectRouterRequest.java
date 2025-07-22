@@ -90,7 +90,7 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -214,7 +214,14 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         } 
 
         /**
-         * CallerType.
+         * <p>The type of the user account. Valid values:</p>
+         * <ul>
+         * <li><strong>sub</strong>: a Resource Access Management (RAM) user.</li>
+         * <li><strong>parent</strong>: an Alibaba Cloud account.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>OTHER</p>
          */
         public Builder callerType(String callerType) {
             this.putBodyParameter("CallerType", callerType);
@@ -418,6 +425,14 @@ public class DescribeInstanceGrantedToExpressConnectRouterRequest extends Reques
         public static final class Builder {
             private String tagKey; 
             private String tagValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(TagModels model) {
+                this.tagKey = model.tagKey;
+                this.tagValue = model.tagValue;
+            } 
 
             /**
              * <p>The tag key. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>

@@ -76,6 +76,10 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -173,6 +177,24 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
         private java.util.List<RouteEntriesList> routeEntriesList; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeExpressConnectRouterRouteEntriesResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.routeEntriesList = model.routeEntriesList;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -281,7 +303,7 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
         }
 
         /**
-         * <p>The route entries.</p>
+         * <p>The routes.</p>
          */
         public Builder routeEntriesList(java.util.List<RouteEntriesList> routeEntriesList) {
             this.routeEntriesList = routeEntriesList;
@@ -424,6 +446,19 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
             private String nexthopInstanceRegionId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(RouteEntriesList model) {
+                this.asPath = model.asPath;
+                this.community = model.community;
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.med = model.med;
+                this.nexthopInstanceId = model.nexthopInstanceId;
+                this.nexthopInstanceRegionId = model.nexthopInstanceRegionId;
+                this.status = model.status;
+            } 
+
             /**
              * <p>The AS path of the route.</p>
              * 
@@ -458,7 +493,15 @@ public class DescribeExpressConnectRouterRouteEntriesResponseBody extends TeaMod
             }
 
             /**
-             * Med.
+             * <p>The MED value of the BGP route, which is used between the ECR and the transit router.</p>
+             * <ul>
+             * <li>You can set the MED value to 2000. In this case, the transit router and the ECR are used as default paths.</li>
+             * <li>If a non-default path is used, the MED value is empty.</li>
+             * <li>You can set the MED value to 2000 only for one object associated with a transit router of a CEN instance.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>2000</p>
              */
             public Builder med(Long med) {
                 this.med = med;

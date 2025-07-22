@@ -50,7 +50,7 @@ public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Req
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -205,6 +205,14 @@ public class ModifyExpressConnectRouterInterRegionTransitModeRequest extends Req
         public static final class Builder {
             private String mode; 
             private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(TransitModeList model) {
+                this.mode = model.mode;
+                this.regionId = model.regionId;
+            } 
 
             /**
              * <p>The cross-domain forwarding mode of the ECR. Valid values:</p>

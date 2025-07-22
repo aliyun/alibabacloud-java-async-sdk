@@ -76,6 +76,10 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return accessDeniedDetail
      */
@@ -173,6 +177,24 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
         private String requestId; 
         private Boolean success; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDisabledExpressConnectRouterRouteEntriesResponseBody model) {
+            this.accessDeniedDetail = model.accessDeniedDetail;
+            this.code = model.code;
+            this.disabledRouteEntryList = model.disabledRouteEntryList;
+            this.dynamicCode = model.dynamicCode;
+            this.dynamicMessage = model.dynamicMessage;
+            this.httpStatusCode = model.httpStatusCode;
+            this.maxResults = model.maxResults;
+            this.message = model.message;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details about the access denial.</p>
@@ -399,6 +421,17 @@ public class DescribeDisabledExpressConnectRouterRouteEntriesResponseBody extend
             private String gmtCreate; 
             private String nexthopInstanceId; 
             private String nexthopInstanceRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(DisabledRouteEntryList model) {
+                this.destinationCidrBlock = model.destinationCidrBlock;
+                this.ecrId = model.ecrId;
+                this.gmtCreate = model.gmtCreate;
+                this.nexthopInstanceId = model.nexthopInstanceId;
+                this.nexthopInstanceRegionId = model.nexthopInstanceRegionId;
+            } 
 
             /**
              * <p>The destination CIDR block of the route.</p>
