@@ -201,6 +201,9 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogicRead")
         private Long logicRead;
 
+        @com.aliyun.core.annotation.NameInMap("NodeId")
+        private String nodeId;
+
         @com.aliyun.core.annotation.NameInMap("OriginTime")
         private String originTime;
 
@@ -243,6 +246,7 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             this.latancy = builder.latancy;
             this.lockTime = builder.lockTime;
             this.logicRead = builder.logicRead;
+            this.nodeId = builder.nodeId;
             this.originTime = builder.originTime;
             this.physicAsyncRead = builder.physicAsyncRead;
             this.physicSyncRead = builder.physicSyncRead;
@@ -318,6 +322,13 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
          */
         public Long getLogicRead() {
             return this.logicRead;
+        }
+
+        /**
+         * @return nodeId
+         */
+        public String getNodeId() {
+            return this.nodeId;
         }
 
         /**
@@ -406,6 +417,7 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
             private Long latancy; 
             private Long lockTime; 
             private Long logicRead; 
+            private String nodeId; 
             private String originTime; 
             private Long physicAsyncRead; 
             private Long physicSyncRead; 
@@ -430,6 +442,7 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
                 this.latancy = model.latancy;
                 this.lockTime = model.lockTime;
                 this.logicRead = model.logicRead;
+                this.nodeId = model.nodeId;
                 this.originTime = model.originTime;
                 this.physicAsyncRead = model.physicAsyncRead;
                 this.physicSyncRead = model.physicSyncRead;
@@ -528,6 +541,14 @@ public class GetDasSQLLogHotDataResponseBody extends TeaModel {
              */
             public Builder logicRead(Long logicRead) {
                 this.logicRead = logicRead;
+                return this;
+            }
+
+            /**
+             * NodeId.
+             */
+            public Builder nodeId(String nodeId) {
+                this.nodeId = nodeId;
                 return this;
             }
 
