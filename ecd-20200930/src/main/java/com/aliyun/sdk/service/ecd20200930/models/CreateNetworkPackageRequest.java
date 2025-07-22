@@ -36,7 +36,6 @@ public class CreateNetworkPackageRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String officeSiteId;
 
     @com.aliyun.core.annotation.Query
@@ -304,7 +303,6 @@ public class CreateNetworkPackageRequest extends Request {
 
         /**
          * <p>The office network ID.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-363353****</p>

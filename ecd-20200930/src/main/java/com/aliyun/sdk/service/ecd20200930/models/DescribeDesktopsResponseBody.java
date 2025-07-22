@@ -1351,6 +1351,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disks")
         private java.util.List<Disks> disks;
 
+        @com.aliyun.core.annotation.NameInMap("DomainType")
+        private String domainType;
+
         @com.aliyun.core.annotation.NameInMap("DowngradeQuota")
         private Long downgradeQuota;
 
@@ -1508,6 +1511,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.directoryId = builder.directoryId;
             this.directoryType = builder.directoryType;
             this.disks = builder.disks;
+            this.domainType = builder.domainType;
             this.downgradeQuota = builder.downgradeQuota;
             this.downgradedTimes = builder.downgradedTimes;
             this.endUserIds = builder.endUserIds;
@@ -1688,6 +1692,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
          */
         public java.util.List<Disks> getDisks() {
             return this.disks;
+        }
+
+        /**
+         * @return domainType
+         */
+        public String getDomainType() {
+            return this.domainType;
         }
 
         /**
@@ -2031,6 +2042,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private String directoryId; 
             private String directoryType; 
             private java.util.List<Disks> disks; 
+            private String domainType; 
             private Long downgradeQuota; 
             private Long downgradedTimes; 
             private java.util.List<String> endUserIds; 
@@ -2100,6 +2112,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
                 this.directoryId = model.directoryId;
                 this.directoryType = model.directoryType;
                 this.disks = model.disks;
+                this.domainType = model.domainType;
                 this.downgradeQuota = model.downgradeQuota;
                 this.downgradedTimes = model.downgradedTimes;
                 this.endUserIds = model.endUserIds;
@@ -2371,6 +2384,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder disks(java.util.List<Disks> disks) {
                 this.disks = disks;
+                return this;
+            }
+
+            /**
+             * DomainType.
+             */
+            public Builder domainType(String domainType) {
+                this.domainType = domainType;
                 return this;
             }
 

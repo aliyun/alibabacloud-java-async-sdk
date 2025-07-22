@@ -65,6 +65,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddUserToDesktopOversoldUserGroupResponse> addUserToDesktopOversoldUserGroup(AddUserToDesktopOversoldUserGroupRequest request);
 
     /**
+     * @param request the request parameters of AllocateIpAddress  AllocateIpAddressRequest
+     * @return AllocateIpAddressResponse
+     */
+    CompletableFuture<AllocateIpAddressResponse> allocateIpAddress(AllocateIpAddressRequest request);
+
+    /**
      * <b>description</b> :
      * <p>You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups &gt; Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More &gt; Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
      * After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.</p>
@@ -96,10 +102,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ApproveFotaUpdateResponse> approveFotaUpdate(ApproveFotaUpdateRequest request);
 
     /**
+     * @param request the request parameters of AssociateIpAddress  AssociateIpAddressRequest
+     * @return AssociateIpAddressResponse
+     */
+    CompletableFuture<AssociateIpAddressResponse> associateIpAddress(AssociateIpAddressRequest request);
+
+    /**
      * @param request the request parameters of AssociateNetworkPackage  AssociateNetworkPackageRequest
      * @return AssociateNetworkPackageResponse
      */
     CompletableFuture<AssociateNetworkPackageResponse> associateNetworkPackage(AssociateNetworkPackageRequest request);
+
+    /**
+     * @param request the request parameters of AssociateRouteTable  AssociateRouteTableRequest
+     * @return AssociateRouteTableResponse
+     */
+    CompletableFuture<AssociateRouteTableResponse> associateRouteTable(AssociateRouteTableRequest request);
 
     /**
      * <b>description</b> :
@@ -276,6 +294,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
+     * <p>The list of teams of a cloud disk in Cloud Drive Service is synchronized from the Organization tab in the Elastic Desktop Service (EDS) console. You can choose Users &gt; Manager User &gt; User &gt; Organization in the console. If you want to authorize a user to use a team space, you must move the user to the corresponding organization. After you move the user, the user can view the menu bar of the team space on a Cloud Drive Service client.</p>
+     * 
+     * @param request the request parameters of CreateCloudDriveGroup  CreateCloudDriveGroupRequest
+     * @return CreateCloudDriveGroupResponse
+     */
+    CompletableFuture<CreateCloudDriveGroupResponse> createCloudDriveGroup(CreateCloudDriveGroupRequest request);
+
+    /**
+     * <b>description</b> :
      * <p>Before you call this operation, make sure that you understand the billing methods and pricing of Enterprise Drive Service (formerly Cloud Drive Service). For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview</a>.</p>
      * 
      * @param request the request parameters of CreateCloudDriveService  CreateCloudDriveServiceRequest
@@ -345,6 +372,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateDriveResponse> createDrive(CreateDriveRequest request);
 
     /**
+     * @param request the request parameters of CreateEcdReportTask  CreateEcdReportTaskRequest
+     * @return CreateEcdReportTaskResponse
+     */
+    CompletableFuture<CreateEcdReportTaskResponse> createEcdReportTask(CreateEcdReportTaskRequest request);
+
+    /**
+     * @param request the request parameters of CreateForwardEntry  CreateForwardEntryRequest
+     * @return CreateForwardEntryResponse
+     */
+    CompletableFuture<CreateForwardEntryResponse> createForwardEntry(CreateForwardEntryRequest request);
+
+    /**
      * @param request the request parameters of CreateImage  CreateImageRequest
      * @return CreateImageResponse
      */
@@ -369,6 +408,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateNASFileSystemResponse
      */
     CompletableFuture<CreateNASFileSystemResponse> createNASFileSystem(CreateNASFileSystemRequest request);
+
+    /**
+     * @param request the request parameters of CreateNatGateway  CreateNatGatewayRequest
+     * @return CreateNatGatewayResponse
+     */
+    CompletableFuture<CreateNatGatewayResponse> createNatGateway(CreateNatGatewayRequest request);
 
     /**
      * @param request the request parameters of CreateNetworkPackage  CreateNetworkPackageRequest
@@ -399,6 +444,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateRAMDirectoryResponse> createRAMDirectory(CreateRAMDirectoryRequest request);
 
     /**
+     * @param request the request parameters of CreateRouteEntry  CreateRouteEntryRequest
+     * @return CreateRouteEntryResponse
+     */
+    CompletableFuture<CreateRouteEntryResponse> createRouteEntry(CreateRouteEntryRequest request);
+
+    /**
+     * @param request the request parameters of CreateRouteTable  CreateRouteTableRequest
+     * @return CreateRouteTableResponse
+     */
+    CompletableFuture<CreateRouteTableResponse> createRouteTable(CreateRouteTableRequest request);
+
+    /**
      * @param request the request parameters of CreateSimpleOfficeSite  CreateSimpleOfficeSiteRequest
      * @return CreateSimpleOfficeSiteResponse
      */
@@ -412,6 +469,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateSnapshotResponse
      */
     CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request);
+
+    /**
+     * @param request the request parameters of CreateSnatEntry  CreateSnatEntryRequest
+     * @return CreateSnatEntryResponse
+     */
+    CompletableFuture<CreateSnatEntryResponse> createSnatEntry(CreateSnatEntryRequest request);
+
+    /**
+     * @param request the request parameters of CreateSubnet  CreateSubnetRequest
+     * @return CreateSubnetResponse
+     */
+    CompletableFuture<CreateSubnetResponse> createSubnet(CreateSubnetRequest request);
 
     /**
      * @param request the request parameters of CreateTemplate  CreateTemplateRequest
@@ -511,6 +580,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteEduRoomResponse> deleteEduRoom(DeleteEduRoomRequest request);
 
     /**
+     * @param request the request parameters of DeleteForwardEntry  DeleteForwardEntryRequest
+     * @return DeleteForwardEntryResponse
+     */
+    CompletableFuture<DeleteForwardEntryResponse> deleteForwardEntry(DeleteForwardEntryRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  Images include system images and custom images. System images cannot be deleted.</p>
      * <ul>
@@ -533,6 +608,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteNASFileSystemsResponse
      */
     CompletableFuture<DeleteNASFileSystemsResponse> deleteNASFileSystems(DeleteNASFileSystemsRequest request);
+
+    /**
+     * @param request the request parameters of DeleteNatGateway  DeleteNatGatewayRequest
+     * @return DeleteNatGatewayResponse
+     */
+    CompletableFuture<DeleteNatGatewayResponse> deleteNatGateway(DeleteNatGatewayRequest request);
 
     /**
      * @param request the request parameters of DeleteNetworkPackages  DeleteNetworkPackagesRequest
@@ -569,6 +650,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeletePolicyGroupsResponse> deletePolicyGroups(DeletePolicyGroupsRequest request);
 
     /**
+     * @param request the request parameters of DeleteRouteEntry  DeleteRouteEntryRequest
+     * @return DeleteRouteEntryResponse
+     */
+    CompletableFuture<DeleteRouteEntryResponse> deleteRouteEntry(DeleteRouteEntryRequest request);
+
+    /**
+     * @param request the request parameters of DeleteRouteTable  DeleteRouteTableRequest
+     * @return DeleteRouteTableResponse
+     */
+    CompletableFuture<DeleteRouteTableResponse> deleteRouteTable(DeleteRouteTableRequest request);
+
+    /**
      * <b>description</b> :
      * <p>If the IDs of the snapshots that you specify do not exist, requests are ignored.</p>
      * 
@@ -576,6 +669,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteSnapshotResponse
      */
     CompletableFuture<DeleteSnapshotResponse> deleteSnapshot(DeleteSnapshotRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSnatEntry  DeleteSnatEntryRequest
+     * @return DeleteSnatEntryResponse
+     */
+    CompletableFuture<DeleteSnatEntryResponse> deleteSnatEntry(DeleteSnatEntryRequest request);
+
+    /**
+     * @param request the request parameters of DeleteSubnet  DeleteSubnetRequest
+     * @return DeleteSubnetResponse
+     */
+    CompletableFuture<DeleteSubnetResponse> deleteSubnet(DeleteSubnetRequest request);
 
     /**
      * <b>description</b> :
@@ -758,6 +863,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDrivesResponse> describeDrives(DescribeDrivesRequest request);
 
     /**
+     * @param request the request parameters of DescribeEcdReportTasks  DescribeEcdReportTasksRequest
+     * @return DescribeEcdReportTasksResponse
+     */
+    CompletableFuture<DescribeEcdReportTasksResponse> describeEcdReportTasks(DescribeEcdReportTasksRequest request);
+
+    /**
      * @param request the request parameters of DescribeFlowMetric  DescribeFlowMetricRequest
      * @return DescribeFlowMetricResponse
      */
@@ -773,6 +884,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeFlowStatisticResponse
      */
     CompletableFuture<DescribeFlowStatisticResponse> describeFlowStatistic(DescribeFlowStatisticRequest request);
+
+    /**
+     * @param request the request parameters of DescribeForwardTableEntries  DescribeForwardTableEntriesRequest
+     * @return DescribeForwardTableEntriesResponse
+     */
+    CompletableFuture<DescribeForwardTableEntriesResponse> describeForwardTableEntries(DescribeForwardTableEntriesRequest request);
 
     /**
      * @param request the request parameters of DescribeFotaPendingDesktops  DescribeFotaPendingDesktopsRequest
@@ -826,6 +943,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInvocationsResponse> describeInvocations(DescribeInvocationsRequest request);
 
     /**
+     * @param request the request parameters of DescribeIpAddresses  DescribeIpAddressesRequest
+     * @return DescribeIpAddressesResponse
+     */
+    CompletableFuture<DescribeIpAddressesResponse> describeIpAddresses(DescribeIpAddressesRequest request);
+
+    /**
      * @param request the request parameters of DescribeKmsKeys  DescribeKmsKeysRequest
      * @return DescribeKmsKeysResponse
      */
@@ -842,6 +965,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeNASFileSystemsResponse
      */
     CompletableFuture<DescribeNASFileSystemsResponse> describeNASFileSystems(DescribeNASFileSystemsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeNatGateways  DescribeNatGatewaysRequest
+     * @return DescribeNatGatewaysResponse
+     */
+    CompletableFuture<DescribeNatGatewaysResponse> describeNatGateways(DescribeNatGatewaysRequest request);
 
     /**
      * @param request the request parameters of DescribeNetworkPackages  DescribeNetworkPackagesRequest
@@ -928,6 +1057,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeResourceByCenterPolicyIdResponse> describeResourceByCenterPolicyId(DescribeResourceByCenterPolicyIdRequest request);
 
     /**
+     * @param request the request parameters of DescribeRouteEntryList  DescribeRouteEntryListRequest
+     * @return DescribeRouteEntryListResponse
+     */
+    CompletableFuture<DescribeRouteEntryListResponse> describeRouteEntryList(DescribeRouteEntryListRequest request);
+
+    /**
+     * @param request the request parameters of DescribeRouteTableList  DescribeRouteTableListRequest
+     * @return DescribeRouteTableListResponse
+     */
+    CompletableFuture<DescribeRouteTableListResponse> describeRouteTableList(DescribeRouteTableListRequest request);
+
+    /**
      * <b>description</b> :
      * <p>  This is a central operation and can be called only by using services in the China (Shanghai) region.</p>
      * <ul>
@@ -944,6 +1085,18 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DescribeSnapshotsResponse
      */
     CompletableFuture<DescribeSnapshotsResponse> describeSnapshots(DescribeSnapshotsRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSnatTableEntries  DescribeSnatTableEntriesRequest
+     * @return DescribeSnatTableEntriesResponse
+     */
+    CompletableFuture<DescribeSnatTableEntriesResponse> describeSnatTableEntries(DescribeSnatTableEntriesRequest request);
+
+    /**
+     * @param request the request parameters of DescribeSubnets  DescribeSubnetsRequest
+     * @return DescribeSubnetsResponse
+     */
+    CompletableFuture<DescribeSubnetsResponse> describeSubnets(DescribeSubnetsRequest request);
 
     /**
      * @param request the request parameters of DescribeTemplates  DescribeTemplatesRequest
@@ -1022,6 +1175,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DisconnectDesktopSessionsResponse
      */
     CompletableFuture<DisconnectDesktopSessionsResponse> disconnectDesktopSessions(DisconnectDesktopSessionsRequest request);
+
+    /**
+     * @param request the request parameters of DissociateIpAddress  DissociateIpAddressRequest
+     * @return DissociateIpAddressResponse
+     */
+    CompletableFuture<DissociateIpAddressResponse> dissociateIpAddress(DissociateIpAddressRequest request);
 
     /**
      * @param request the request parameters of DissociateNetworkPackage  DissociateNetworkPackageRequest
@@ -1568,6 +1727,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return RebuildDesktopsResponse
      */
     CompletableFuture<RebuildDesktopsResponse> rebuildDesktops(RebuildDesktopsRequest request);
+
+    /**
+     * @param request the request parameters of ReleaseIpAddress  ReleaseIpAddressRequest
+     * @return ReleaseIpAddressResponse
+     */
+    CompletableFuture<ReleaseIpAddressResponse> releaseIpAddress(ReleaseIpAddressRequest request);
 
     /**
      * @param request the request parameters of RemoveFilePermission  RemoveFilePermissionRequest
