@@ -212,6 +212,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListRolesResponse> listRoles(ListRolesRequest request);
 
     /**
+     * @param request the request parameters of ListTableDetails  ListTableDetailsRequest
+     * @return ListTableDetailsResponse
+     */
+    CompletableFuture<ListTableDetailsResponse> listTableDetails(ListTableDetailsRequest request);
+
+    /**
      * @param request the request parameters of ListTables  ListTablesRequest
      * @return ListTablesResponse
      */

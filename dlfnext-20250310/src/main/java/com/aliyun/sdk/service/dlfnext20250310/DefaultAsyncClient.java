@@ -616,6 +616,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListTableDetails  ListTableDetailsRequest
+     * @return ListTableDetailsResponse
+     */
+    @Override
+    public CompletableFuture<ListTableDetailsResponse> listTableDetails(ListTableDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTableDetails").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/{catalogId}/databases/{database}/table-details").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTableDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListTableDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListTables  ListTablesRequest
      * @return ListTablesResponse
      */
