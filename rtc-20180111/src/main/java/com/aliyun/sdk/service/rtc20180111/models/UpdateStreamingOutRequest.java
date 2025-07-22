@@ -60,6 +60,10 @@ public class UpdateStreamingOutRequest extends Request {
     private RegionColor regionColor;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecMixedUserList")
+    private java.util.List<String> specMixedUserList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 55, minLength = 1)
     private String taskId;
@@ -85,6 +89,7 @@ public class UpdateStreamingOutRequest extends Request {
         this.layoutSpecifiedUsers = builder.layoutSpecifiedUsers;
         this.panes = builder.panes;
         this.regionColor = builder.regionColor;
+        this.specMixedUserList = builder.specMixedUserList;
         this.taskId = builder.taskId;
         this.templateId = builder.templateId;
         this.texts = builder.texts;
@@ -174,6 +179,13 @@ public class UpdateStreamingOutRequest extends Request {
     }
 
     /**
+     * @return specMixedUserList
+     */
+    public java.util.List<String> getSpecMixedUserList() {
+        return this.specMixedUserList;
+    }
+
+    /**
      * @return taskId
      */
     public String getTaskId() {
@@ -205,6 +217,7 @@ public class UpdateStreamingOutRequest extends Request {
         private LayoutSpecifiedUsers layoutSpecifiedUsers; 
         private java.util.List<Panes> panes; 
         private RegionColor regionColor; 
+        private java.util.List<String> specMixedUserList; 
         private String taskId; 
         private String templateId; 
         private java.util.List<Texts> texts; 
@@ -225,6 +238,7 @@ public class UpdateStreamingOutRequest extends Request {
             this.layoutSpecifiedUsers = request.layoutSpecifiedUsers;
             this.panes = request.panes;
             this.regionColor = request.regionColor;
+            this.specMixedUserList = request.specMixedUserList;
             this.taskId = request.taskId;
             this.templateId = request.templateId;
             this.texts = request.texts;
@@ -324,6 +338,15 @@ public class UpdateStreamingOutRequest extends Request {
         public Builder regionColor(RegionColor regionColor) {
             this.putQueryParameter("RegionColor", regionColor);
             this.regionColor = regionColor;
+            return this;
+        }
+
+        /**
+         * SpecMixedUserList.
+         */
+        public Builder specMixedUserList(java.util.List<String> specMixedUserList) {
+            this.putQueryParameter("SpecMixedUserList", specMixedUserList);
+            this.specMixedUserList = specMixedUserList;
             return this;
         }
 

@@ -284,7 +284,7 @@ public class CreateAppAgentTemplateRequest extends Request {
         private Integer weight;
 
         @com.aliyun.core.annotation.NameInMap("Word")
-        @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
+        @com.aliyun.core.annotation.Validation(required = true)
         private String word;
 
         private WordWeights(Builder builder) {
@@ -388,7 +388,6 @@ public class CreateAppAgentTemplateRequest extends Request {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("WordWeights")
-        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List<WordWeights> wordWeights;
 
         private AsrConfig(Builder builder) {
@@ -460,7 +459,7 @@ public class CreateAppAgentTemplateRequest extends Request {
             }
 
             /**
-             * <p>This parameter is required.</p>
+             * WordWeights.
              */
             public Builder wordWeights(java.util.List<WordWeights> wordWeights) {
                 this.wordWeights = wordWeights;

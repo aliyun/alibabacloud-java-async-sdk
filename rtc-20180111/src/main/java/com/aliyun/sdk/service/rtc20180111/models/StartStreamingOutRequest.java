@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class StartStreamingOutRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Annotation")
+    private String annotation;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
@@ -68,6 +72,10 @@ public class StartStreamingOutRequest extends Request {
     private Boolean showDefaultBackgroundOnMute;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecMixedUserList")
+    private java.util.List<String> specMixedUserList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartWithoutChannel")
     private Boolean startWithoutChannel;
 
@@ -100,6 +108,7 @@ public class StartStreamingOutRequest extends Request {
 
     private StartStreamingOutRequest(Builder builder) {
         super(builder);
+        this.annotation = builder.annotation;
         this.appId = builder.appId;
         this.backgrounds = builder.backgrounds;
         this.bgColor = builder.bgColor;
@@ -112,6 +121,7 @@ public class StartStreamingOutRequest extends Request {
         this.regionColor = builder.regionColor;
         this.reservePaneForNoCameraUser = builder.reservePaneForNoCameraUser;
         this.showDefaultBackgroundOnMute = builder.showDefaultBackgroundOnMute;
+        this.specMixedUserList = builder.specMixedUserList;
         this.startWithoutChannel = builder.startWithoutChannel;
         this.startWithoutChannelWaitTime = builder.startWithoutChannelWaitTime;
         this.subHighResolutionStream = builder.subHighResolutionStream;
@@ -132,6 +142,13 @@ public class StartStreamingOutRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return annotation
+     */
+    public String getAnnotation() {
+        return this.annotation;
     }
 
     /**
@@ -219,6 +236,13 @@ public class StartStreamingOutRequest extends Request {
     }
 
     /**
+     * @return specMixedUserList
+     */
+    public java.util.List<String> getSpecMixedUserList() {
+        return this.specMixedUserList;
+    }
+
+    /**
      * @return startWithoutChannel
      */
     public Boolean getStartWithoutChannel() {
@@ -268,6 +292,7 @@ public class StartStreamingOutRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StartStreamingOutRequest, Builder> {
+        private String annotation; 
         private String appId; 
         private java.util.List<Backgrounds> backgrounds; 
         private BgColor bgColor; 
@@ -280,6 +305,7 @@ public class StartStreamingOutRequest extends Request {
         private RegionColor regionColor; 
         private Boolean reservePaneForNoCameraUser; 
         private Boolean showDefaultBackgroundOnMute; 
+        private java.util.List<String> specMixedUserList; 
         private Boolean startWithoutChannel; 
         private Integer startWithoutChannelWaitTime; 
         private Boolean subHighResolutionStream; 
@@ -294,6 +320,7 @@ public class StartStreamingOutRequest extends Request {
 
         private Builder(StartStreamingOutRequest request) {
             super(request);
+            this.annotation = request.annotation;
             this.appId = request.appId;
             this.backgrounds = request.backgrounds;
             this.bgColor = request.bgColor;
@@ -306,6 +333,7 @@ public class StartStreamingOutRequest extends Request {
             this.regionColor = request.regionColor;
             this.reservePaneForNoCameraUser = request.reservePaneForNoCameraUser;
             this.showDefaultBackgroundOnMute = request.showDefaultBackgroundOnMute;
+            this.specMixedUserList = request.specMixedUserList;
             this.startWithoutChannel = request.startWithoutChannel;
             this.startWithoutChannelWaitTime = request.startWithoutChannelWaitTime;
             this.subHighResolutionStream = request.subHighResolutionStream;
@@ -314,6 +342,15 @@ public class StartStreamingOutRequest extends Request {
             this.texts = request.texts;
             this.url = request.url;
         } 
+
+        /**
+         * Annotation.
+         */
+        public Builder annotation(String annotation) {
+            this.putQueryParameter("Annotation", annotation);
+            this.annotation = annotation;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>
@@ -427,6 +464,15 @@ public class StartStreamingOutRequest extends Request {
         public Builder showDefaultBackgroundOnMute(Boolean showDefaultBackgroundOnMute) {
             this.putQueryParameter("ShowDefaultBackgroundOnMute", showDefaultBackgroundOnMute);
             this.showDefaultBackgroundOnMute = showDefaultBackgroundOnMute;
+            return this;
+        }
+
+        /**
+         * SpecMixedUserList.
+         */
+        public Builder specMixedUserList(java.util.List<String> specMixedUserList) {
+            this.putQueryParameter("SpecMixedUserList", specMixedUserList);
+            this.specMixedUserList = specMixedUserList;
             return this;
         }
 

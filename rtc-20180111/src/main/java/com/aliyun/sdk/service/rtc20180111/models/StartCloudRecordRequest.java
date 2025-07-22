@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class StartCloudRecordRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Annotation")
+    private String annotation;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AppId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
@@ -56,6 +60,10 @@ public class StartCloudRecordRequest extends Request {
     private java.util.List<Panes> panes;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordMode")
+    private Integer recordMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionColor")
     private RegionColor regionColor;
 
@@ -66,6 +74,18 @@ public class StartCloudRecordRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ShowDefaultBackgroundOnMute")
     private Boolean showDefaultBackgroundOnMute;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SingleStreamingRecord")
+    private SingleStreamingRecord singleStreamingRecord;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartWithoutChannel")
+    private Boolean startWithoutChannel;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartWithoutChannelWaitTime")
+    private Integer startWithoutChannelWaitTime;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StorageConfig")
@@ -92,6 +112,7 @@ public class StartCloudRecordRequest extends Request {
 
     private StartCloudRecordRequest(Builder builder) {
         super(builder);
+        this.annotation = builder.annotation;
         this.appId = builder.appId;
         this.backgrounds = builder.backgrounds;
         this.bgColor = builder.bgColor;
@@ -101,9 +122,13 @@ public class StartCloudRecordRequest extends Request {
         this.images = builder.images;
         this.layoutSpecifiedUsers = builder.layoutSpecifiedUsers;
         this.panes = builder.panes;
+        this.recordMode = builder.recordMode;
         this.regionColor = builder.regionColor;
         this.reservePaneForNoCameraUser = builder.reservePaneForNoCameraUser;
         this.showDefaultBackgroundOnMute = builder.showDefaultBackgroundOnMute;
+        this.singleStreamingRecord = builder.singleStreamingRecord;
+        this.startWithoutChannel = builder.startWithoutChannel;
+        this.startWithoutChannelWaitTime = builder.startWithoutChannelWaitTime;
         this.storageConfig = builder.storageConfig;
         this.subHighResolutionStream = builder.subHighResolutionStream;
         this.taskId = builder.taskId;
@@ -122,6 +147,13 @@ public class StartCloudRecordRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return annotation
+     */
+    public String getAnnotation() {
+        return this.annotation;
     }
 
     /**
@@ -188,6 +220,13 @@ public class StartCloudRecordRequest extends Request {
     }
 
     /**
+     * @return recordMode
+     */
+    public Integer getRecordMode() {
+        return this.recordMode;
+    }
+
+    /**
      * @return regionColor
      */
     public RegionColor getRegionColor() {
@@ -206,6 +245,27 @@ public class StartCloudRecordRequest extends Request {
      */
     public Boolean getShowDefaultBackgroundOnMute() {
         return this.showDefaultBackgroundOnMute;
+    }
+
+    /**
+     * @return singleStreamingRecord
+     */
+    public SingleStreamingRecord getSingleStreamingRecord() {
+        return this.singleStreamingRecord;
+    }
+
+    /**
+     * @return startWithoutChannel
+     */
+    public Boolean getStartWithoutChannel() {
+        return this.startWithoutChannel;
+    }
+
+    /**
+     * @return startWithoutChannelWaitTime
+     */
+    public Integer getStartWithoutChannelWaitTime() {
+        return this.startWithoutChannelWaitTime;
     }
 
     /**
@@ -244,6 +304,7 @@ public class StartCloudRecordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<StartCloudRecordRequest, Builder> {
+        private String annotation; 
         private String appId; 
         private java.util.List<Backgrounds> backgrounds; 
         private BgColor bgColor; 
@@ -253,9 +314,13 @@ public class StartCloudRecordRequest extends Request {
         private java.util.List<Images> images; 
         private LayoutSpecifiedUsers layoutSpecifiedUsers; 
         private java.util.List<Panes> panes; 
+        private Integer recordMode; 
         private RegionColor regionColor; 
         private Boolean reservePaneForNoCameraUser; 
         private Boolean showDefaultBackgroundOnMute; 
+        private SingleStreamingRecord singleStreamingRecord; 
+        private Boolean startWithoutChannel; 
+        private Integer startWithoutChannelWaitTime; 
         private StorageConfig storageConfig; 
         private Boolean subHighResolutionStream; 
         private String taskId; 
@@ -268,6 +333,7 @@ public class StartCloudRecordRequest extends Request {
 
         private Builder(StartCloudRecordRequest request) {
             super(request);
+            this.annotation = request.annotation;
             this.appId = request.appId;
             this.backgrounds = request.backgrounds;
             this.bgColor = request.bgColor;
@@ -277,15 +343,28 @@ public class StartCloudRecordRequest extends Request {
             this.images = request.images;
             this.layoutSpecifiedUsers = request.layoutSpecifiedUsers;
             this.panes = request.panes;
+            this.recordMode = request.recordMode;
             this.regionColor = request.regionColor;
             this.reservePaneForNoCameraUser = request.reservePaneForNoCameraUser;
             this.showDefaultBackgroundOnMute = request.showDefaultBackgroundOnMute;
+            this.singleStreamingRecord = request.singleStreamingRecord;
+            this.startWithoutChannel = request.startWithoutChannel;
+            this.startWithoutChannelWaitTime = request.startWithoutChannelWaitTime;
             this.storageConfig = request.storageConfig;
             this.subHighResolutionStream = request.subHighResolutionStream;
             this.taskId = request.taskId;
             this.templateId = request.templateId;
             this.texts = request.texts;
         } 
+
+        /**
+         * Annotation.
+         */
+        public Builder annotation(String annotation) {
+            this.putQueryParameter("Annotation", annotation);
+            this.annotation = annotation;
+            return this;
+        }
 
         /**
          * <p>appId</p>
@@ -378,6 +457,15 @@ public class StartCloudRecordRequest extends Request {
         }
 
         /**
+         * RecordMode.
+         */
+        public Builder recordMode(Integer recordMode) {
+            this.putQueryParameter("RecordMode", recordMode);
+            this.recordMode = recordMode;
+            return this;
+        }
+
+        /**
          * RegionColor.
          */
         public Builder regionColor(RegionColor regionColor) {
@@ -401,6 +489,34 @@ public class StartCloudRecordRequest extends Request {
         public Builder showDefaultBackgroundOnMute(Boolean showDefaultBackgroundOnMute) {
             this.putQueryParameter("ShowDefaultBackgroundOnMute", showDefaultBackgroundOnMute);
             this.showDefaultBackgroundOnMute = showDefaultBackgroundOnMute;
+            return this;
+        }
+
+        /**
+         * SingleStreamingRecord.
+         */
+        public Builder singleStreamingRecord(SingleStreamingRecord singleStreamingRecord) {
+            String singleStreamingRecordShrink = shrink(singleStreamingRecord, "SingleStreamingRecord", "json");
+            this.putQueryParameter("SingleStreamingRecord", singleStreamingRecordShrink);
+            this.singleStreamingRecord = singleStreamingRecord;
+            return this;
+        }
+
+        /**
+         * StartWithoutChannel.
+         */
+        public Builder startWithoutChannel(Boolean startWithoutChannel) {
+            this.putQueryParameter("StartWithoutChannel", startWithoutChannel);
+            this.startWithoutChannel = startWithoutChannel;
+            return this;
+        }
+
+        /**
+         * StartWithoutChannelWaitTime.
+         */
+        public Builder startWithoutChannelWaitTime(Integer startWithoutChannelWaitTime) {
+            this.putQueryParameter("StartWithoutChannelWaitTime", startWithoutChannelWaitTime);
+            this.startWithoutChannelWaitTime = startWithoutChannelWaitTime;
             return this;
         }
 
@@ -2993,6 +3109,351 @@ public class StartCloudRecordRequest extends Request {
 
             public RegionColor build() {
                 return new RegionColor(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     *
+     * <p>StartCloudRecordRequest</p>
+     */
+    public static class SpecifiedStreams extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Ids")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<String> ids;
+
+        @com.aliyun.core.annotation.NameInMap("StreamType")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String streamType;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private SpecifiedStreams(Builder builder) {
+            this.ids = builder.ids;
+            this.streamType = builder.streamType;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SpecifiedStreams create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ids
+         */
+        public java.util.List<String> getIds() {
+            return this.ids;
+        }
+
+        /**
+         * @return streamType
+         */
+        public String getStreamType() {
+            return this.streamType;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private java.util.List<String> ids; 
+            private String streamType; 
+            private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(SpecifiedStreams model) {
+                this.ids = model.ids;
+                this.streamType = model.streamType;
+                this.type = model.type;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder ids(java.util.List<String> ids) {
+                this.ids = ids;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder streamType(String streamType) {
+                this.streamType = streamType;
+                return this;
+            }
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public SpecifiedStreams build() {
+                return new SpecifiedStreams(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     *
+     * <p>StartCloudRecordRequest</p>
+     */
+    public static class Audio extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
+        private Integer bitrate;
+
+        @com.aliyun.core.annotation.NameInMap("Codec")
+        private String codec;
+
+        @com.aliyun.core.annotation.NameInMap("SampleRate")
+        private Integer sampleRate;
+
+        private Audio(Builder builder) {
+            this.bitrate = builder.bitrate;
+            this.codec = builder.codec;
+            this.sampleRate = builder.sampleRate;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Audio create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bitrate
+         */
+        public Integer getBitrate() {
+            return this.bitrate;
+        }
+
+        /**
+         * @return codec
+         */
+        public String getCodec() {
+            return this.codec;
+        }
+
+        /**
+         * @return sampleRate
+         */
+        public Integer getSampleRate() {
+            return this.sampleRate;
+        }
+
+        public static final class Builder {
+            private Integer bitrate; 
+            private String codec; 
+            private Integer sampleRate; 
+
+            private Builder() {
+            } 
+
+            private Builder(Audio model) {
+                this.bitrate = model.bitrate;
+                this.codec = model.codec;
+                this.sampleRate = model.sampleRate;
+            } 
+
+            /**
+             * Bitrate.
+             */
+            public Builder bitrate(Integer bitrate) {
+                this.bitrate = bitrate;
+                return this;
+            }
+
+            /**
+             * Codec.
+             */
+            public Builder codec(String codec) {
+                this.codec = codec;
+                return this;
+            }
+
+            /**
+             * SampleRate.
+             */
+            public Builder sampleRate(Integer sampleRate) {
+                this.sampleRate = sampleRate;
+                return this;
+            }
+
+            public Audio build() {
+                return new Audio(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     *
+     * <p>StartCloudRecordRequest</p>
+     */
+    public static class TranscodingParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Audio")
+        private Audio audio;
+
+        @com.aliyun.core.annotation.NameInMap("Container")
+        private String container;
+
+        private TranscodingParameters(Builder builder) {
+            this.audio = builder.audio;
+            this.container = builder.container;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TranscodingParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return audio
+         */
+        public Audio getAudio() {
+            return this.audio;
+        }
+
+        /**
+         * @return container
+         */
+        public String getContainer() {
+            return this.container;
+        }
+
+        public static final class Builder {
+            private Audio audio; 
+            private String container; 
+
+            private Builder() {
+            } 
+
+            private Builder(TranscodingParameters model) {
+                this.audio = model.audio;
+                this.container = model.container;
+            } 
+
+            /**
+             * Audio.
+             */
+            public Builder audio(Audio audio) {
+                this.audio = audio;
+                return this;
+            }
+
+            /**
+             * Container.
+             */
+            public Builder container(String container) {
+                this.container = container;
+                return this;
+            }
+
+            public TranscodingParameters build() {
+                return new TranscodingParameters(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link StartCloudRecordRequest} extends {@link TeaModel}
+     *
+     * <p>StartCloudRecordRequest</p>
+     */
+    public static class SingleStreamingRecord extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SpecifiedStreams")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List<SpecifiedStreams> specifiedStreams;
+
+        @com.aliyun.core.annotation.NameInMap("TranscodingParameters")
+        private TranscodingParameters transcodingParameters;
+
+        private SingleStreamingRecord(Builder builder) {
+            this.specifiedStreams = builder.specifiedStreams;
+            this.transcodingParameters = builder.transcodingParameters;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SingleStreamingRecord create() {
+            return builder().build();
+        }
+
+        /**
+         * @return specifiedStreams
+         */
+        public java.util.List<SpecifiedStreams> getSpecifiedStreams() {
+            return this.specifiedStreams;
+        }
+
+        /**
+         * @return transcodingParameters
+         */
+        public TranscodingParameters getTranscodingParameters() {
+            return this.transcodingParameters;
+        }
+
+        public static final class Builder {
+            private java.util.List<SpecifiedStreams> specifiedStreams; 
+            private TranscodingParameters transcodingParameters; 
+
+            private Builder() {
+            } 
+
+            private Builder(SingleStreamingRecord model) {
+                this.specifiedStreams = model.specifiedStreams;
+                this.transcodingParameters = model.transcodingParameters;
+            } 
+
+            /**
+             * <p>This parameter is required.</p>
+             */
+            public Builder specifiedStreams(java.util.List<SpecifiedStreams> specifiedStreams) {
+                this.specifiedStreams = specifiedStreams;
+                return this;
+            }
+
+            /**
+             * TranscodingParameters.
+             */
+            public Builder transcodingParameters(TranscodingParameters transcodingParameters) {
+                this.transcodingParameters = transcodingParameters;
+                return this;
+            }
+
+            public SingleStreamingRecord build() {
+                return new SingleStreamingRecord(this);
             } 
 
         } 
