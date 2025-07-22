@@ -56,6 +56,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetNodeByTemplateIdResponse> getNodeByTemplateId(GetNodeByTemplateIdRequest request);
 
     /**
+     * @param request the request parameters of GetOrderSummaryForPartner  GetOrderSummaryForPartnerRequest
+     * @return GetOrderSummaryForPartnerResponse
+     */
+    CompletableFuture<GetOrderSummaryForPartnerResponse> getOrderSummaryForPartner(GetOrderSummaryForPartnerRequest request);
+
+    /**
      * @param request the request parameters of GetPlatformUserInfoForPartner  GetPlatformUserInfoForPartnerRequest
      * @return GetPlatformUserInfoForPartnerResponse
      */
