@@ -179,6 +179,9 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegDate")
         private String regDate;
 
+        @com.aliyun.core.annotation.NameInMap("Registrar")
+        private String registrar;
+
         @com.aliyun.core.annotation.NameInMap("RenewPrice")
         private Double renewPrice;
 
@@ -247,6 +250,7 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
             this.productId = builder.productId;
             this.publishTime = builder.publishTime;
             this.regDate = builder.regDate;
+            this.registrar = builder.registrar;
             this.renewPrice = builder.renewPrice;
             this.reserved = builder.reserved;
             this.rmbPrice = builder.rmbPrice;
@@ -467,6 +471,13 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
         }
 
         /**
+         * @return registrar
+         */
+        public String getRegistrar() {
+            return this.registrar;
+        }
+
+        /**
          * @return renewPrice
          */
         public Double getRenewPrice() {
@@ -586,6 +597,7 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
             private String productId; 
             private String publishTime; 
             private String regDate; 
+            private String registrar; 
             private Double renewPrice; 
             private Boolean reserved; 
             private Double rmbPrice; 
@@ -632,6 +644,7 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
                 this.productId = model.productId;
                 this.publishTime = model.publishTime;
                 this.regDate = model.regDate;
+                this.registrar = model.registrar;
                 this.renewPrice = model.renewPrice;
                 this.reserved = model.reserved;
                 this.rmbPrice = model.rmbPrice;
@@ -868,6 +881,14 @@ public class QueryExportDomainExpireSnatchsResponseBody extends TeaModel {
              */
             public Builder regDate(String regDate) {
                 this.regDate = regDate;
+                return this;
+            }
+
+            /**
+             * Registrar.
+             */
+            public Builder registrar(String registrar) {
+                this.registrar = registrar;
                 return this;
             }
 
