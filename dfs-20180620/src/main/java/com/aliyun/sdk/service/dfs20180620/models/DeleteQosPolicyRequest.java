@@ -18,6 +18,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteQosPolicyRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FederationId")
+    private String federationId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    private String fileSystemId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InputRegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String inputRegionId;
@@ -29,6 +37,8 @@ public class DeleteQosPolicyRequest extends Request {
 
     private DeleteQosPolicyRequest(Builder builder) {
         super(builder);
+        this.federationId = builder.federationId;
+        this.fileSystemId = builder.fileSystemId;
         this.inputRegionId = builder.inputRegionId;
         this.qosPolicyId = builder.qosPolicyId;
     }
@@ -47,6 +57,20 @@ public class DeleteQosPolicyRequest extends Request {
     }
 
     /**
+     * @return federationId
+     */
+    public String getFederationId() {
+        return this.federationId;
+    }
+
+    /**
+     * @return fileSystemId
+     */
+    public String getFileSystemId() {
+        return this.fileSystemId;
+    }
+
+    /**
      * @return inputRegionId
      */
     public String getInputRegionId() {
@@ -61,6 +85,8 @@ public class DeleteQosPolicyRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteQosPolicyRequest, Builder> {
+        private String federationId; 
+        private String fileSystemId; 
         private String inputRegionId; 
         private String qosPolicyId; 
 
@@ -70,9 +96,29 @@ public class DeleteQosPolicyRequest extends Request {
 
         private Builder(DeleteQosPolicyRequest request) {
             super(request);
+            this.federationId = request.federationId;
+            this.fileSystemId = request.fileSystemId;
             this.inputRegionId = request.inputRegionId;
             this.qosPolicyId = request.qosPolicyId;
         } 
+
+        /**
+         * FederationId.
+         */
+        public Builder federationId(String federationId) {
+            this.putQueryParameter("FederationId", federationId);
+            this.federationId = federationId;
+            return this;
+        }
+
+        /**
+         * FileSystemId.
+         */
+        public Builder fileSystemId(String fileSystemId) {
+            this.putQueryParameter("FileSystemId", fileSystemId);
+            this.fileSystemId = fileSystemId;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

@@ -26,6 +26,14 @@ public class ModifyQosPolicyRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FederationId")
+    private String federationId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    private String fileSystemId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InputRegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String inputRegionId;
@@ -51,6 +59,8 @@ public class ModifyQosPolicyRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.description = builder.description;
+        this.federationId = builder.federationId;
+        this.fileSystemId = builder.fileSystemId;
         this.inputRegionId = builder.inputRegionId;
         this.maxIOBandWidth = builder.maxIOBandWidth;
         this.maxIOps = builder.maxIOps;
@@ -83,6 +93,20 @@ public class ModifyQosPolicyRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return federationId
+     */
+    public String getFederationId() {
+        return this.federationId;
+    }
+
+    /**
+     * @return fileSystemId
+     */
+    public String getFileSystemId() {
+        return this.fileSystemId;
     }
 
     /**
@@ -123,6 +147,8 @@ public class ModifyQosPolicyRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyQosPolicyRequest, Builder> {
         private String regionId; 
         private String description; 
+        private String federationId; 
+        private String fileSystemId; 
         private String inputRegionId; 
         private Long maxIOBandWidth; 
         private Long maxIOps; 
@@ -137,6 +163,8 @@ public class ModifyQosPolicyRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.description = request.description;
+            this.federationId = request.federationId;
+            this.fileSystemId = request.fileSystemId;
             this.inputRegionId = request.inputRegionId;
             this.maxIOBandWidth = request.maxIOBandWidth;
             this.maxIOps = request.maxIOps;
@@ -159,6 +187,24 @@ public class ModifyQosPolicyRequest extends Request {
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * FederationId.
+         */
+        public Builder federationId(String federationId) {
+            this.putQueryParameter("FederationId", federationId);
+            this.federationId = federationId;
+            return this;
+        }
+
+        /**
+         * FileSystemId.
+         */
+        public Builder fileSystemId(String fileSystemId) {
+            this.putQueryParameter("FileSystemId", fileSystemId);
+            this.fileSystemId = fileSystemId;
             return this;
         }
 

@@ -51,6 +51,10 @@ public class CreateQosPolicyRequest extends Request {
     private Long maxMetaQps;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReqTags")
+    private java.util.List<String> reqTags;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ZoneIds")
     private java.util.List<String> zoneIds;
 
@@ -64,6 +68,7 @@ public class CreateQosPolicyRequest extends Request {
         this.maxIOBandWidth = builder.maxIOBandWidth;
         this.maxIOps = builder.maxIOps;
         this.maxMetaQps = builder.maxMetaQps;
+        this.reqTags = builder.reqTags;
         this.zoneIds = builder.zoneIds;
     }
 
@@ -137,6 +142,13 @@ public class CreateQosPolicyRequest extends Request {
     }
 
     /**
+     * @return reqTags
+     */
+    public java.util.List<String> getReqTags() {
+        return this.reqTags;
+    }
+
+    /**
      * @return zoneIds
      */
     public java.util.List<String> getZoneIds() {
@@ -152,6 +164,7 @@ public class CreateQosPolicyRequest extends Request {
         private Long maxIOBandWidth; 
         private Long maxIOps; 
         private Long maxMetaQps; 
+        private java.util.List<String> reqTags; 
         private java.util.List<String> zoneIds; 
 
         private Builder() {
@@ -168,6 +181,7 @@ public class CreateQosPolicyRequest extends Request {
             this.maxIOBandWidth = request.maxIOBandWidth;
             this.maxIOps = request.maxIOps;
             this.maxMetaQps = request.maxMetaQps;
+            this.reqTags = request.reqTags;
             this.zoneIds = request.zoneIds;
         } 
 
@@ -241,6 +255,16 @@ public class CreateQosPolicyRequest extends Request {
         public Builder maxMetaQps(Long maxMetaQps) {
             this.putQueryParameter("MaxMetaQps", maxMetaQps);
             this.maxMetaQps = maxMetaQps;
+            return this;
+        }
+
+        /**
+         * ReqTags.
+         */
+        public Builder reqTags(java.util.List<String> reqTags) {
+            String reqTagsShrink = shrink(reqTags, "ReqTags", "json");
+            this.putQueryParameter("ReqTags", reqTagsShrink);
+            this.reqTags = reqTags;
             return this;
         }
 

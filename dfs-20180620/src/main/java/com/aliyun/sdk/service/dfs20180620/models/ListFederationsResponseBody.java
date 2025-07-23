@@ -20,11 +20,19 @@ public class ListFederationsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Federations")
     private java.util.List<Federations> federations;
 
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFederationsResponseBody(Builder builder) {
         this.federations = builder.federations;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
     }
 
@@ -48,6 +56,20 @@ public class ListFederationsResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -56,6 +78,8 @@ public class ListFederationsResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Federations> federations; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String requestId; 
 
         private Builder() {
@@ -63,6 +87,8 @@ public class ListFederationsResponseBody extends TeaModel {
 
         private Builder(ListFederationsResponseBody model) {
             this.federations = model.federations;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
             this.requestId = model.requestId;
         } 
 
@@ -71,6 +97,22 @@ public class ListFederationsResponseBody extends TeaModel {
          */
         public Builder federations(java.util.List<Federations> federations) {
             this.federations = federations;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 

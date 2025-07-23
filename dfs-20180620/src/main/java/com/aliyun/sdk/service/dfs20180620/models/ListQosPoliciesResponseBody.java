@@ -17,6 +17,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQosPoliciesResponseBody</p>
  */
 public class ListQosPoliciesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("QosPolicies")
     private java.util.List<QosPolicies> qosPolicies;
 
@@ -24,6 +30,8 @@ public class ListQosPoliciesResponseBody extends TeaModel {
     private String requestId;
 
     private ListQosPoliciesResponseBody(Builder builder) {
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.qosPolicies = builder.qosPolicies;
         this.requestId = builder.requestId;
     }
@@ -41,6 +49,20 @@ public class ListQosPoliciesResponseBody extends TeaModel {
     }
 
     /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return qosPolicies
      */
     public java.util.List<QosPolicies> getQosPolicies() {
@@ -55,6 +77,8 @@ public class ListQosPoliciesResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private Integer maxResults; 
+        private String nextToken; 
         private java.util.List<QosPolicies> qosPolicies; 
         private String requestId; 
 
@@ -62,9 +86,27 @@ public class ListQosPoliciesResponseBody extends TeaModel {
         } 
 
         private Builder(ListQosPoliciesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
             this.qosPolicies = model.qosPolicies;
             this.requestId = model.requestId;
         } 
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
+            return this;
+        }
 
         /**
          * QosPolicies.
@@ -119,6 +161,9 @@ public class ListQosPoliciesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QosPolicyId")
         private String qosPolicyId;
 
+        @com.aliyun.core.annotation.NameInMap("ReqTags")
+        private String reqTags;
+
         @com.aliyun.core.annotation.NameInMap("ZoneIds")
         private String zoneIds;
 
@@ -131,6 +176,7 @@ public class ListQosPoliciesResponseBody extends TeaModel {
             this.maxIOps = builder.maxIOps;
             this.maxMetaQps = builder.maxMetaQps;
             this.qosPolicyId = builder.qosPolicyId;
+            this.reqTags = builder.reqTags;
             this.zoneIds = builder.zoneIds;
         }
 
@@ -199,6 +245,13 @@ public class ListQosPoliciesResponseBody extends TeaModel {
         }
 
         /**
+         * @return reqTags
+         */
+        public String getReqTags() {
+            return this.reqTags;
+        }
+
+        /**
          * @return zoneIds
          */
         public String getZoneIds() {
@@ -214,6 +267,7 @@ public class ListQosPoliciesResponseBody extends TeaModel {
             private Long maxIOps; 
             private Long maxMetaQps; 
             private String qosPolicyId; 
+            private String reqTags; 
             private String zoneIds; 
 
             private Builder() {
@@ -228,6 +282,7 @@ public class ListQosPoliciesResponseBody extends TeaModel {
                 this.maxIOps = model.maxIOps;
                 this.maxMetaQps = model.maxMetaQps;
                 this.qosPolicyId = model.qosPolicyId;
+                this.reqTags = model.reqTags;
                 this.zoneIds = model.zoneIds;
             } 
 
@@ -292,6 +347,14 @@ public class ListQosPoliciesResponseBody extends TeaModel {
              */
             public Builder qosPolicyId(String qosPolicyId) {
                 this.qosPolicyId = qosPolicyId;
+                return this;
+            }
+
+            /**
+             * ReqTags.
+             */
+            public Builder reqTags(String reqTags) {
+                this.reqTags = reqTags;
                 return this;
             }
 
