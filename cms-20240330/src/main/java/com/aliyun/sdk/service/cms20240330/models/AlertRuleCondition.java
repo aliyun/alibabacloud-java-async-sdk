@@ -26,14 +26,29 @@ public class AlertRuleCondition extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("compareList")
     private java.util.List<CompareList> compareList;
 
+    @com.aliyun.core.annotation.NameInMap("compositeEscalation")
+    private CompositeEscalation compositeEscalation;
+
+    @com.aliyun.core.annotation.NameInMap("escalationType")
+    private String escalationType;
+
+    @com.aliyun.core.annotation.NameInMap("expressEscalation")
+    private ExpressEscalation expressEscalation;
+
+    @com.aliyun.core.annotation.NameInMap("noDataAlertLevel")
+    private String noDataAlertLevel;
+
     @com.aliyun.core.annotation.NameInMap("noDataAppendValue")
     private String noDataAppendValue;
 
-    @com.aliyun.core.annotation.NameInMap("nodataAlertLevel")
-    private String nodataAlertLevel;
+    @com.aliyun.core.annotation.NameInMap("noDataPolicy")
+    private String noDataPolicy;
 
     @com.aliyun.core.annotation.NameInMap("relation")
     private String relation;
+
+    @com.aliyun.core.annotation.NameInMap("simpleEscalation")
+    private SimpleEscalation simpleEscalation;
 
     @com.aliyun.core.annotation.NameInMap("type")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -43,9 +58,14 @@ public class AlertRuleCondition extends TeaModel {
         this.alertCount = builder.alertCount;
         this.caseList = builder.caseList;
         this.compareList = builder.compareList;
+        this.compositeEscalation = builder.compositeEscalation;
+        this.escalationType = builder.escalationType;
+        this.expressEscalation = builder.expressEscalation;
+        this.noDataAlertLevel = builder.noDataAlertLevel;
         this.noDataAppendValue = builder.noDataAppendValue;
-        this.nodataAlertLevel = builder.nodataAlertLevel;
+        this.noDataPolicy = builder.noDataPolicy;
         this.relation = builder.relation;
+        this.simpleEscalation = builder.simpleEscalation;
         this.type = builder.type;
     }
 
@@ -83,6 +103,34 @@ public class AlertRuleCondition extends TeaModel {
     }
 
     /**
+     * @return compositeEscalation
+     */
+    public CompositeEscalation getCompositeEscalation() {
+        return this.compositeEscalation;
+    }
+
+    /**
+     * @return escalationType
+     */
+    public String getEscalationType() {
+        return this.escalationType;
+    }
+
+    /**
+     * @return expressEscalation
+     */
+    public ExpressEscalation getExpressEscalation() {
+        return this.expressEscalation;
+    }
+
+    /**
+     * @return noDataAlertLevel
+     */
+    public String getNoDataAlertLevel() {
+        return this.noDataAlertLevel;
+    }
+
+    /**
      * @return noDataAppendValue
      */
     public String getNoDataAppendValue() {
@@ -90,10 +138,10 @@ public class AlertRuleCondition extends TeaModel {
     }
 
     /**
-     * @return nodataAlertLevel
+     * @return noDataPolicy
      */
-    public String getNodataAlertLevel() {
-        return this.nodataAlertLevel;
+    public String getNoDataPolicy() {
+        return this.noDataPolicy;
     }
 
     /**
@@ -101,6 +149,13 @@ public class AlertRuleCondition extends TeaModel {
      */
     public String getRelation() {
         return this.relation;
+    }
+
+    /**
+     * @return simpleEscalation
+     */
+    public SimpleEscalation getSimpleEscalation() {
+        return this.simpleEscalation;
     }
 
     /**
@@ -114,9 +169,14 @@ public class AlertRuleCondition extends TeaModel {
         private Integer alertCount; 
         private java.util.List<CaseList> caseList; 
         private java.util.List<CompareList> compareList; 
+        private CompositeEscalation compositeEscalation; 
+        private String escalationType; 
+        private ExpressEscalation expressEscalation; 
+        private String noDataAlertLevel; 
         private String noDataAppendValue; 
-        private String nodataAlertLevel; 
+        private String noDataPolicy; 
         private String relation; 
+        private SimpleEscalation simpleEscalation; 
         private String type; 
 
         private Builder() {
@@ -126,9 +186,14 @@ public class AlertRuleCondition extends TeaModel {
             this.alertCount = model.alertCount;
             this.caseList = model.caseList;
             this.compareList = model.compareList;
+            this.compositeEscalation = model.compositeEscalation;
+            this.escalationType = model.escalationType;
+            this.expressEscalation = model.expressEscalation;
+            this.noDataAlertLevel = model.noDataAlertLevel;
             this.noDataAppendValue = model.noDataAppendValue;
-            this.nodataAlertLevel = model.nodataAlertLevel;
+            this.noDataPolicy = model.noDataPolicy;
             this.relation = model.relation;
+            this.simpleEscalation = model.simpleEscalation;
             this.type = model.type;
         } 
 
@@ -157,6 +222,38 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
+         * compositeEscalation.
+         */
+        public Builder compositeEscalation(CompositeEscalation compositeEscalation) {
+            this.compositeEscalation = compositeEscalation;
+            return this;
+        }
+
+        /**
+         * escalationType.
+         */
+        public Builder escalationType(String escalationType) {
+            this.escalationType = escalationType;
+            return this;
+        }
+
+        /**
+         * expressEscalation.
+         */
+        public Builder expressEscalation(ExpressEscalation expressEscalation) {
+            this.expressEscalation = expressEscalation;
+            return this;
+        }
+
+        /**
+         * <p>无数据时按什么级别告警，不指定则不对无数据报警</p>
+         */
+        public Builder noDataAlertLevel(String noDataAlertLevel) {
+            this.noDataAlertLevel = noDataAlertLevel;
+            return this;
+        }
+
+        /**
          * noDataAppendValue.
          */
         public Builder noDataAppendValue(String noDataAppendValue) {
@@ -165,10 +262,10 @@ public class AlertRuleCondition extends TeaModel {
         }
 
         /**
-         * <p>无数据时按什么级别告警，不指定则不对无数据报警</p>
+         * noDataPolicy.
          */
-        public Builder nodataAlertLevel(String nodataAlertLevel) {
-            this.nodataAlertLevel = nodataAlertLevel;
+        public Builder noDataPolicy(String noDataPolicy) {
+            this.noDataPolicy = noDataPolicy;
             return this;
         }
 
@@ -177,6 +274,14 @@ public class AlertRuleCondition extends TeaModel {
          */
         public Builder relation(String relation) {
             this.relation = relation;
+            return this;
+        }
+
+        /**
+         * simpleEscalation.
+         */
+        public Builder simpleEscalation(SimpleEscalation simpleEscalation) {
+            this.simpleEscalation = simpleEscalation;
             return this;
         }
 
@@ -542,6 +647,591 @@ public class AlertRuleCondition extends TeaModel {
 
             public CompareList build() {
                 return new CompareList(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AlertRuleCondition} extends {@link TeaModel}
+     *
+     * <p>AlertRuleCondition</p>
+     */
+    public static class Escalations extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("comparisonOperator")
+        private String comparisonOperator;
+
+        @com.aliyun.core.annotation.NameInMap("metricName")
+        private String metricName;
+
+        @com.aliyun.core.annotation.NameInMap("period")
+        private Long period;
+
+        @com.aliyun.core.annotation.NameInMap("statistics")
+        private String statistics;
+
+        @com.aliyun.core.annotation.NameInMap("threshold")
+        private Double threshold;
+
+        private Escalations(Builder builder) {
+            this.comparisonOperator = builder.comparisonOperator;
+            this.metricName = builder.metricName;
+            this.period = builder.period;
+            this.statistics = builder.statistics;
+            this.threshold = builder.threshold;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Escalations create() {
+            return builder().build();
+        }
+
+        /**
+         * @return comparisonOperator
+         */
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
+        /**
+         * @return metricName
+         */
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        /**
+         * @return period
+         */
+        public Long getPeriod() {
+            return this.period;
+        }
+
+        /**
+         * @return statistics
+         */
+        public String getStatistics() {
+            return this.statistics;
+        }
+
+        /**
+         * @return threshold
+         */
+        public Double getThreshold() {
+            return this.threshold;
+        }
+
+        public static final class Builder {
+            private String comparisonOperator; 
+            private String metricName; 
+            private Long period; 
+            private String statistics; 
+            private Double threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(Escalations model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.metricName = model.metricName;
+                this.period = model.period;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+            } 
+
+            /**
+             * comparisonOperator.
+             */
+            public Builder comparisonOperator(String comparisonOperator) {
+                this.comparisonOperator = comparisonOperator;
+                return this;
+            }
+
+            /**
+             * metricName.
+             */
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * period.
+             */
+            public Builder period(Long period) {
+                this.period = period;
+                return this;
+            }
+
+            /**
+             * statistics.
+             */
+            public Builder statistics(String statistics) {
+                this.statistics = statistics;
+                return this;
+            }
+
+            /**
+             * threshold.
+             */
+            public Builder threshold(Double threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            public Escalations build() {
+                return new Escalations(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AlertRuleCondition} extends {@link TeaModel}
+     *
+     * <p>AlertRuleCondition</p>
+     */
+    public static class CompositeEscalation extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("escalations")
+        private java.util.List<Escalations> escalations;
+
+        @com.aliyun.core.annotation.NameInMap("level")
+        private String level;
+
+        @com.aliyun.core.annotation.NameInMap("relation")
+        private String relation;
+
+        @com.aliyun.core.annotation.NameInMap("times")
+        private Integer times;
+
+        private CompositeEscalation(Builder builder) {
+            this.escalations = builder.escalations;
+            this.level = builder.level;
+            this.relation = builder.relation;
+            this.times = builder.times;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CompositeEscalation create() {
+            return builder().build();
+        }
+
+        /**
+         * @return escalations
+         */
+        public java.util.List<Escalations> getEscalations() {
+            return this.escalations;
+        }
+
+        /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return relation
+         */
+        public String getRelation() {
+            return this.relation;
+        }
+
+        /**
+         * @return times
+         */
+        public Integer getTimes() {
+            return this.times;
+        }
+
+        public static final class Builder {
+            private java.util.List<Escalations> escalations; 
+            private String level; 
+            private String relation; 
+            private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(CompositeEscalation model) {
+                this.escalations = model.escalations;
+                this.level = model.level;
+                this.relation = model.relation;
+                this.times = model.times;
+            } 
+
+            /**
+             * escalations.
+             */
+            public Builder escalations(java.util.List<Escalations> escalations) {
+                this.escalations = escalations;
+                return this;
+            }
+
+            /**
+             * level.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * relation.
+             */
+            public Builder relation(String relation) {
+                this.relation = relation;
+                return this;
+            }
+
+            /**
+             * times.
+             */
+            public Builder times(Integer times) {
+                this.times = times;
+                return this;
+            }
+
+            public CompositeEscalation build() {
+                return new CompositeEscalation(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AlertRuleCondition} extends {@link TeaModel}
+     *
+     * <p>AlertRuleCondition</p>
+     */
+    public static class ExpressEscalation extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("level")
+        private String level;
+
+        @com.aliyun.core.annotation.NameInMap("rawExpression")
+        private String rawExpression;
+
+        @com.aliyun.core.annotation.NameInMap("times")
+        private Integer times;
+
+        private ExpressEscalation(Builder builder) {
+            this.level = builder.level;
+            this.rawExpression = builder.rawExpression;
+            this.times = builder.times;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExpressEscalation create() {
+            return builder().build();
+        }
+
+        /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return rawExpression
+         */
+        public String getRawExpression() {
+            return this.rawExpression;
+        }
+
+        /**
+         * @return times
+         */
+        public Integer getTimes() {
+            return this.times;
+        }
+
+        public static final class Builder {
+            private String level; 
+            private String rawExpression; 
+            private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(ExpressEscalation model) {
+                this.level = model.level;
+                this.rawExpression = model.rawExpression;
+                this.times = model.times;
+            } 
+
+            /**
+             * level.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * rawExpression.
+             */
+            public Builder rawExpression(String rawExpression) {
+                this.rawExpression = rawExpression;
+                return this;
+            }
+
+            /**
+             * times.
+             */
+            public Builder times(Integer times) {
+                this.times = times;
+                return this;
+            }
+
+            public ExpressEscalation build() {
+                return new ExpressEscalation(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AlertRuleCondition} extends {@link TeaModel}
+     *
+     * <p>AlertRuleCondition</p>
+     */
+    public static class SimpleEscalationEscalations extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("comparisonOperator")
+        private String comparisonOperator;
+
+        @com.aliyun.core.annotation.NameInMap("level")
+        private String level;
+
+        @com.aliyun.core.annotation.NameInMap("statistics")
+        private String statistics;
+
+        @com.aliyun.core.annotation.NameInMap("threshold")
+        private Double threshold;
+
+        @com.aliyun.core.annotation.NameInMap("times")
+        private Integer times;
+
+        private SimpleEscalationEscalations(Builder builder) {
+            this.comparisonOperator = builder.comparisonOperator;
+            this.level = builder.level;
+            this.statistics = builder.statistics;
+            this.threshold = builder.threshold;
+            this.times = builder.times;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SimpleEscalationEscalations create() {
+            return builder().build();
+        }
+
+        /**
+         * @return comparisonOperator
+         */
+        public String getComparisonOperator() {
+            return this.comparisonOperator;
+        }
+
+        /**
+         * @return level
+         */
+        public String getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return statistics
+         */
+        public String getStatistics() {
+            return this.statistics;
+        }
+
+        /**
+         * @return threshold
+         */
+        public Double getThreshold() {
+            return this.threshold;
+        }
+
+        /**
+         * @return times
+         */
+        public Integer getTimes() {
+            return this.times;
+        }
+
+        public static final class Builder {
+            private String comparisonOperator; 
+            private String level; 
+            private String statistics; 
+            private Double threshold; 
+            private Integer times; 
+
+            private Builder() {
+            } 
+
+            private Builder(SimpleEscalationEscalations model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.level = model.level;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.times = model.times;
+            } 
+
+            /**
+             * comparisonOperator.
+             */
+            public Builder comparisonOperator(String comparisonOperator) {
+                this.comparisonOperator = comparisonOperator;
+                return this;
+            }
+
+            /**
+             * level.
+             */
+            public Builder level(String level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * statistics.
+             */
+            public Builder statistics(String statistics) {
+                this.statistics = statistics;
+                return this;
+            }
+
+            /**
+             * threshold.
+             */
+            public Builder threshold(Double threshold) {
+                this.threshold = threshold;
+                return this;
+            }
+
+            /**
+             * times.
+             */
+            public Builder times(Integer times) {
+                this.times = times;
+                return this;
+            }
+
+            public SimpleEscalationEscalations build() {
+                return new SimpleEscalationEscalations(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link AlertRuleCondition} extends {@link TeaModel}
+     *
+     * <p>AlertRuleCondition</p>
+     */
+    public static class SimpleEscalation extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("escalations")
+        private java.util.List<SimpleEscalationEscalations> escalations;
+
+        @com.aliyun.core.annotation.NameInMap("metricName")
+        private String metricName;
+
+        @com.aliyun.core.annotation.NameInMap("period")
+        private Long period;
+
+        private SimpleEscalation(Builder builder) {
+            this.escalations = builder.escalations;
+            this.metricName = builder.metricName;
+            this.period = builder.period;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SimpleEscalation create() {
+            return builder().build();
+        }
+
+        /**
+         * @return escalations
+         */
+        public java.util.List<SimpleEscalationEscalations> getEscalations() {
+            return this.escalations;
+        }
+
+        /**
+         * @return metricName
+         */
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        /**
+         * @return period
+         */
+        public Long getPeriod() {
+            return this.period;
+        }
+
+        public static final class Builder {
+            private java.util.List<SimpleEscalationEscalations> escalations; 
+            private String metricName; 
+            private Long period; 
+
+            private Builder() {
+            } 
+
+            private Builder(SimpleEscalation model) {
+                this.escalations = model.escalations;
+                this.metricName = model.metricName;
+                this.period = model.period;
+            } 
+
+            /**
+             * escalations.
+             */
+            public Builder escalations(java.util.List<SimpleEscalationEscalations> escalations) {
+                this.escalations = escalations;
+                return this;
+            }
+
+            /**
+             * metricName.
+             */
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * period.
+             */
+            public Builder period(Long period) {
+                this.period = period;
+                return this;
+            }
+
+            public SimpleEscalation build() {
+                return new SimpleEscalation(this);
             } 
 
         } 

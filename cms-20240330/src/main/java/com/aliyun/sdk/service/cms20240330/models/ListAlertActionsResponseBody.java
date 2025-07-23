@@ -157,6 +157,123 @@ public class ListAlertActionsResponseBody extends TeaModel {
      *
      * <p>ListAlertActionsResponseBody</p>
      */
+    public static class EbParam extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ebSource")
+        private String ebSource;
+
+        @com.aliyun.core.annotation.NameInMap("eventBusName")
+        private String eventBusName;
+
+        @com.aliyun.core.annotation.NameInMap("regionId")
+        private String regionId;
+
+        @com.aliyun.core.annotation.NameInMap("subject")
+        private String subject;
+
+        private EbParam(Builder builder) {
+            this.ebSource = builder.ebSource;
+            this.eventBusName = builder.eventBusName;
+            this.regionId = builder.regionId;
+            this.subject = builder.subject;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static EbParam create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ebSource
+         */
+        public String getEbSource() {
+            return this.ebSource;
+        }
+
+        /**
+         * @return eventBusName
+         */
+        public String getEventBusName() {
+            return this.eventBusName;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        /**
+         * @return subject
+         */
+        public String getSubject() {
+            return this.subject;
+        }
+
+        public static final class Builder {
+            private String ebSource; 
+            private String eventBusName; 
+            private String regionId; 
+            private String subject; 
+
+            private Builder() {
+            } 
+
+            private Builder(EbParam model) {
+                this.ebSource = model.ebSource;
+                this.eventBusName = model.eventBusName;
+                this.regionId = model.regionId;
+                this.subject = model.subject;
+            } 
+
+            /**
+             * ebSource.
+             */
+            public Builder ebSource(String ebSource) {
+                this.ebSource = ebSource;
+                return this;
+            }
+
+            /**
+             * eventBusName.
+             */
+            public Builder eventBusName(String eventBusName) {
+                this.eventBusName = eventBusName;
+                return this;
+            }
+
+            /**
+             * regionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            /**
+             * subject.
+             */
+            public Builder subject(String subject) {
+                this.subject = subject;
+                return this;
+            }
+
+            public EbParam build() {
+                return new EbParam(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAlertActionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlertActionsResponseBody</p>
+     */
     public static class EssParam extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("essGroupId")
         private String essGroupId;
@@ -242,6 +359,102 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
             public EssParam build() {
                 return new EssParam(this);
+            } 
+
+        } 
+
+    }
+    /**
+     * 
+     * {@link ListAlertActionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListAlertActionsResponseBody</p>
+     */
+    public static class Fc3Param extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("function")
+        private String function;
+
+        @com.aliyun.core.annotation.NameInMap("qualifier")
+        private String qualifier;
+
+        @com.aliyun.core.annotation.NameInMap("regionId")
+        private String regionId;
+
+        private Fc3Param(Builder builder) {
+            this.function = builder.function;
+            this.qualifier = builder.qualifier;
+            this.regionId = builder.regionId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Fc3Param create() {
+            return builder().build();
+        }
+
+        /**
+         * @return function
+         */
+        public String getFunction() {
+            return this.function;
+        }
+
+        /**
+         * @return qualifier
+         */
+        public String getQualifier() {
+            return this.qualifier;
+        }
+
+        /**
+         * @return regionId
+         */
+        public String getRegionId() {
+            return this.regionId;
+        }
+
+        public static final class Builder {
+            private String function; 
+            private String qualifier; 
+            private String regionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Fc3Param model) {
+                this.function = model.function;
+                this.qualifier = model.qualifier;
+                this.regionId = model.regionId;
+            } 
+
+            /**
+             * function.
+             */
+            public Builder function(String function) {
+                this.function = function;
+                return this;
+            }
+
+            /**
+             * qualifier.
+             */
+            public Builder qualifier(String qualifier) {
+                this.qualifier = qualifier;
+                return this;
+            }
+
+            /**
+             * regionId.
+             */
+            public Builder regionId(String regionId) {
+                this.regionId = regionId;
+                return this;
+            }
+
+            public Fc3Param build() {
+                return new Fc3Param(this);
             } 
 
         } 
@@ -740,8 +953,14 @@ public class ListAlertActionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("alertActionName")
         private String alertActionName;
 
+        @com.aliyun.core.annotation.NameInMap("ebParam")
+        private EbParam ebParam;
+
         @com.aliyun.core.annotation.NameInMap("essParam")
         private EssParam essParam;
+
+        @com.aliyun.core.annotation.NameInMap("fc3Param")
+        private Fc3Param fc3Param;
 
         @com.aliyun.core.annotation.NameInMap("fcParam")
         private FcParam fcParam;
@@ -764,7 +983,9 @@ public class ListAlertActionsResponseBody extends TeaModel {
         private AlertActions(Builder builder) {
             this.alertActionId = builder.alertActionId;
             this.alertActionName = builder.alertActionName;
+            this.ebParam = builder.ebParam;
             this.essParam = builder.essParam;
+            this.fc3Param = builder.fc3Param;
             this.fcParam = builder.fcParam;
             this.mnsParam = builder.mnsParam;
             this.pagerDutyParam = builder.pagerDutyParam;
@@ -796,10 +1017,24 @@ public class ListAlertActionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ebParam
+         */
+        public EbParam getEbParam() {
+            return this.ebParam;
+        }
+
+        /**
          * @return essParam
          */
         public EssParam getEssParam() {
             return this.essParam;
+        }
+
+        /**
+         * @return fc3Param
+         */
+        public Fc3Param getFc3Param() {
+            return this.fc3Param;
         }
 
         /**
@@ -847,7 +1082,9 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public static final class Builder {
             private String alertActionId; 
             private String alertActionName; 
+            private EbParam ebParam; 
             private EssParam essParam; 
+            private Fc3Param fc3Param; 
             private FcParam fcParam; 
             private MnsParam mnsParam; 
             private PagerDutyParam pagerDutyParam; 
@@ -861,7 +1098,9 @@ public class ListAlertActionsResponseBody extends TeaModel {
             private Builder(AlertActions model) {
                 this.alertActionId = model.alertActionId;
                 this.alertActionName = model.alertActionName;
+                this.ebParam = model.ebParam;
                 this.essParam = model.essParam;
+                this.fc3Param = model.fc3Param;
                 this.fcParam = model.fcParam;
                 this.mnsParam = model.mnsParam;
                 this.pagerDutyParam = model.pagerDutyParam;
@@ -887,10 +1126,26 @@ public class ListAlertActionsResponseBody extends TeaModel {
             }
 
             /**
+             * ebParam.
+             */
+            public Builder ebParam(EbParam ebParam) {
+                this.ebParam = ebParam;
+                return this;
+            }
+
+            /**
              * essParam.
              */
             public Builder essParam(EssParam essParam) {
                 this.essParam = essParam;
+                return this;
+            }
+
+            /**
+             * fc3Param.
+             */
+            public Builder fc3Param(Fc3Param fc3Param) {
+                this.fc3Param = fc3Param;
                 return this;
             }
 

@@ -202,6 +202,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetServiceObservability  GetServiceObservabilityRequest
+     * @return GetServiceObservabilityResponse
+     */
+    @Override
+    public CompletableFuture<GetServiceObservabilityResponse> getServiceObservability(GetServiceObservabilityRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetServiceObservability").setMethod(HttpMethod.GET).setPathRegex("/workspace/{workspace}/service-observability/{type}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetServiceObservabilityResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetServiceObservabilityResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetUmodel  GetUmodelRequest
      * @return GetUmodelResponse
      */

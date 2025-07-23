@@ -23,9 +23,13 @@ public class AlertRuleSend extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("notification")
     private AlertRuleNotification notification;
 
+    @com.aliyun.core.annotation.NameInMap("sendToArms")
+    private Boolean sendToArms;
+
     private AlertRuleSend(Builder builder) {
         this.action = builder.action;
         this.notification = builder.notification;
+        this.sendToArms = builder.sendToArms;
     }
 
     public static Builder builder() {
@@ -54,9 +58,17 @@ public class AlertRuleSend extends TeaModel {
         return this.notification;
     }
 
+    /**
+     * @return sendToArms
+     */
+    public Boolean getSendToArms() {
+        return this.sendToArms;
+    }
+
     public static final class Builder {
         private AlertRuleAction action; 
         private AlertRuleNotification notification; 
+        private Boolean sendToArms; 
 
         private Builder() {
         } 
@@ -64,6 +76,7 @@ public class AlertRuleSend extends TeaModel {
         private Builder(AlertRuleSend model) {
             this.action = model.action;
             this.notification = model.notification;
+            this.sendToArms = model.sendToArms;
         } 
 
         /**
@@ -79,6 +92,14 @@ public class AlertRuleSend extends TeaModel {
          */
         public Builder notification(AlertRuleNotification notification) {
             this.notification = notification;
+            return this;
+        }
+
+        /**
+         * sendToArms.
+         */
+        public Builder sendToArms(Boolean sendToArms) {
+            this.sendToArms = sendToArms;
             return this;
         }
 

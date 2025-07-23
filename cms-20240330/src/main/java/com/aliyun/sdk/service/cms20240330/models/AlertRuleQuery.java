@@ -20,6 +20,9 @@ public class AlertRuleQuery extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("checkAfterDataComplete")
     private Boolean checkAfterDataComplete;
 
+    @com.aliyun.core.annotation.NameInMap("dimensions")
+    private java.util.List<java.util.Map<String, String>> dimensions;
+
     @com.aliyun.core.annotation.NameInMap("duration")
     private Long duration;
 
@@ -32,11 +35,20 @@ public class AlertRuleQuery extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("groupFieldList")
     private java.util.List<String> groupFieldList;
 
+    @com.aliyun.core.annotation.NameInMap("groupId")
+    private String groupId;
+
     @com.aliyun.core.annotation.NameInMap("groupType")
     private String groupType;
 
+    @com.aliyun.core.annotation.NameInMap("namespace")
+    private String namespace;
+
     @com.aliyun.core.annotation.NameInMap("queries")
     private java.util.List<Queries> queries;
+
+    @com.aliyun.core.annotation.NameInMap("relationType")
+    private String relationType;
 
     @com.aliyun.core.annotation.NameInMap("secondJoin")
     private AlertRuleSlsQueryJoin secondJoin;
@@ -47,12 +59,16 @@ public class AlertRuleQuery extends TeaModel {
 
     private AlertRuleQuery(Builder builder) {
         this.checkAfterDataComplete = builder.checkAfterDataComplete;
+        this.dimensions = builder.dimensions;
         this.duration = builder.duration;
         this.expr = builder.expr;
         this.firstJoin = builder.firstJoin;
         this.groupFieldList = builder.groupFieldList;
+        this.groupId = builder.groupId;
         this.groupType = builder.groupType;
+        this.namespace = builder.namespace;
         this.queries = builder.queries;
+        this.relationType = builder.relationType;
         this.secondJoin = builder.secondJoin;
         this.type = builder.type;
     }
@@ -74,6 +90,13 @@ public class AlertRuleQuery extends TeaModel {
      */
     public Boolean getCheckAfterDataComplete() {
         return this.checkAfterDataComplete;
+    }
+
+    /**
+     * @return dimensions
+     */
+    public java.util.List<java.util.Map<String, String>> getDimensions() {
+        return this.dimensions;
     }
 
     /**
@@ -105,6 +128,13 @@ public class AlertRuleQuery extends TeaModel {
     }
 
     /**
+     * @return groupId
+     */
+    public String getGroupId() {
+        return this.groupId;
+    }
+
+    /**
      * @return groupType
      */
     public String getGroupType() {
@@ -112,10 +142,24 @@ public class AlertRuleQuery extends TeaModel {
     }
 
     /**
+     * @return namespace
+     */
+    public String getNamespace() {
+        return this.namespace;
+    }
+
+    /**
      * @return queries
      */
     public java.util.List<Queries> getQueries() {
         return this.queries;
+    }
+
+    /**
+     * @return relationType
+     */
+    public String getRelationType() {
+        return this.relationType;
     }
 
     /**
@@ -134,12 +178,16 @@ public class AlertRuleQuery extends TeaModel {
 
     public static final class Builder {
         private Boolean checkAfterDataComplete; 
+        private java.util.List<java.util.Map<String, String>> dimensions; 
         private Long duration; 
         private String expr; 
         private AlertRuleSlsQueryJoin firstJoin; 
         private java.util.List<String> groupFieldList; 
+        private String groupId; 
         private String groupType; 
+        private String namespace; 
         private java.util.List<Queries> queries; 
+        private String relationType; 
         private AlertRuleSlsQueryJoin secondJoin; 
         private String type; 
 
@@ -148,12 +196,16 @@ public class AlertRuleQuery extends TeaModel {
 
         private Builder(AlertRuleQuery model) {
             this.checkAfterDataComplete = model.checkAfterDataComplete;
+            this.dimensions = model.dimensions;
             this.duration = model.duration;
             this.expr = model.expr;
             this.firstJoin = model.firstJoin;
             this.groupFieldList = model.groupFieldList;
+            this.groupId = model.groupId;
             this.groupType = model.groupType;
+            this.namespace = model.namespace;
             this.queries = model.queries;
+            this.relationType = model.relationType;
             this.secondJoin = model.secondJoin;
             this.type = model.type;
         } 
@@ -163,6 +215,14 @@ public class AlertRuleQuery extends TeaModel {
          */
         public Builder checkAfterDataComplete(Boolean checkAfterDataComplete) {
             this.checkAfterDataComplete = checkAfterDataComplete;
+            return this;
+        }
+
+        /**
+         * dimensions.
+         */
+        public Builder dimensions(java.util.List<java.util.Map<String, String>> dimensions) {
+            this.dimensions = dimensions;
             return this;
         }
 
@@ -199,6 +259,14 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
+         * groupId.
+         */
+        public Builder groupId(String groupId) {
+            this.groupId = groupId;
+            return this;
+        }
+
+        /**
          * groupType.
          */
         public Builder groupType(String groupType) {
@@ -207,10 +275,26 @@ public class AlertRuleQuery extends TeaModel {
         }
 
         /**
+         * namespace.
+         */
+        public Builder namespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+
+        /**
          * queries.
          */
         public Builder queries(java.util.List<Queries> queries) {
             this.queries = queries;
+            return this;
+        }
+
+        /**
+         * relationType.
+         */
+        public Builder relationType(String relationType) {
+            this.relationType = relationType;
             return this;
         }
 

@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEntityStoreDataResponse> getEntityStoreData(GetEntityStoreDataRequest request);
 
     /**
+     * @param request the request parameters of GetServiceObservability  GetServiceObservabilityRequest
+     * @return GetServiceObservabilityResponse
+     */
+    CompletableFuture<GetServiceObservabilityResponse> getServiceObservability(GetServiceObservabilityRequest request);
+
+    /**
      * @param request the request parameters of GetUmodel  GetUmodelRequest
      * @return GetUmodelResponse
      */
