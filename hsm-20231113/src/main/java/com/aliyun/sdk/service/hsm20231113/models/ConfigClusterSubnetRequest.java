@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigClusterSubnetRequest} extends {@link RequestModel}
  *
  * <p>ConfigClusterSubnetRequest</p>
@@ -24,7 +30,7 @@ public class ConfigClusterSubnetRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > vSwitchIds;
+    private java.util.List<String> vSwitchIds;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("VpcId")
@@ -47,7 +53,7 @@ public class ConfigClusterSubnetRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +75,7 @@ public class ConfigClusterSubnetRequest extends Request {
     /**
      * @return vSwitchIds
      */
-    public java.util.List < String > getVSwitchIds() {
+    public java.util.List<String> getVSwitchIds() {
         return this.vSwitchIds;
     }
 
@@ -83,7 +89,7 @@ public class ConfigClusterSubnetRequest extends Request {
     public static final class Builder extends Request.Builder<ConfigClusterSubnetRequest, Builder> {
         private String clusterId; 
         private String regionId; 
-        private java.util.List < String > vSwitchIds; 
+        private java.util.List<String> vSwitchIds; 
         private String vpcId; 
 
         private Builder() {
@@ -99,7 +105,11 @@ public class ConfigClusterSubnetRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster. You can call the ListCluster operation to obtain cluster IDs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster-BqxX63Bsg****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -108,7 +118,11 @@ public class ConfigClusterSubnetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -117,9 +131,10 @@ public class ConfigClusterSubnetRequest extends Request {
         }
 
         /**
-         * VSwitchIds.
+         * <p>A list of vSwitches that are associated with the cluster. Note: You must include all vSwitches that you want to associate with the cluster.</p>
+         * <p>This parameter is required.</p>
          */
-        public Builder vSwitchIds(java.util.List < String > vSwitchIds) {
+        public Builder vSwitchIds(java.util.List<String> vSwitchIds) {
             String vSwitchIdsShrink = shrink(vSwitchIds, "VSwitchIds", "json");
             this.putBodyParameter("VSwitchIds", vSwitchIdsShrink);
             this.vSwitchIds = vSwitchIds;
@@ -127,7 +142,11 @@ public class ConfigClusterSubnetRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * <p>The ID of the virtual private cloud (VPC).</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-7xvkh90cw39p0****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);

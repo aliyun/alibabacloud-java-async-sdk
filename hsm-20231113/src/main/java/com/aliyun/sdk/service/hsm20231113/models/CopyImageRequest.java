@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CopyImageRequest} extends {@link RequestModel}
  *
  * <p>CopyImageRequest</p>
@@ -33,7 +39,7 @@ public class CopyImageRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -67,7 +73,10 @@ public class CopyImageRequest extends Request {
         } 
 
         /**
-         * ImageUid.
+         * <p>The ID of the image.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-hafiudfahdd****</p>
          */
         public Builder imageUid(String imageUid) {
             this.putBodyParameter("ImageUid", imageUid);
@@ -76,7 +85,10 @@ public class CopyImageRequest extends Request {
         }
 
         /**
-         * TargetRegionId.
+         * <p>The ID of the destination region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
          */
         public Builder targetRegionId(String targetRegionId) {
             this.putBodyParameter("TargetRegionId", targetRegionId);

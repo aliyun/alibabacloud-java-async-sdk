@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link SwitchClusterMasterRequest} extends {@link RequestModel}
  *
  * <p>SwitchClusterMasterRequest</p>
@@ -35,7 +41,7 @@ public class SwitchClusterMasterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +75,11 @@ public class SwitchClusterMasterRequest extends Request {
         } 
 
         /**
-         * The cluster ID.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster-w3G9vOJI2****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -78,7 +88,11 @@ public class SwitchClusterMasterRequest extends Request {
         }
 
         /**
-         * The ID of the HSM that you want to promote to the master HSM.
+         * <p>The ID of the HSM that you want to promote to the master HSM.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hsm-cn-vj30bil8****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ResetBackupRequest} extends {@link RequestModel}
  *
  * <p>ResetBackupRequest</p>
@@ -28,7 +34,7 @@ public class ResetBackupRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -53,7 +59,10 @@ public class ResetBackupRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * <p>The ID of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backup-fdb897sdfg5****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);

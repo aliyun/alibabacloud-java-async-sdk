@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterResponseBody} extends {@link TeaModel}
  *
  * <p>CreateClusterResponseBody</p>
@@ -30,6 +36,10 @@ public class CreateClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -48,8 +58,19 @@ public class CreateClusterResponseBody extends TeaModel {
         private String clusterId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateClusterResponseBody model) {
+            this.clusterId = model.clusterId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The cluster ID.
+         * <p>The ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster-729dm40FG****</p>
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -57,7 +78,10 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>5F58413E-8F57-585B-BE48-64CC1E31133C</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

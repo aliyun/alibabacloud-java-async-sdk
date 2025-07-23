@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigClusterCertificateRequest} extends {@link RequestModel}
  *
  * <p>ConfigClusterCertificateRequest</p>
@@ -41,7 +47,7 @@ public class ConfigClusterCertificateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +90,14 @@ public class ConfigClusterCertificateRequest extends Request {
         } 
 
         /**
-         * ClusterCertificate.
+         * <p>The cluster certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIIDaTCCAlECAQEwDQYJKoZIhvcNAQELBQAwVTELMAkGA1UEBhMCY24xCzAJBgNV
+         * BAgMAnpqMQswCQYDVQQHDAJoejEWMBQGA1UECgwNQWxpYmFiYSBDbG91ZDEUMBIG
+         * A1UECwwLU2VjQ2xvdWRIc20wHhcNMjQwNzAzM****-----END CERTIFICATE-----</p>
          */
         public Builder clusterCertificate(String clusterCertificate) {
             this.putBodyParameter("ClusterCertificate", clusterCertificate);
@@ -93,7 +106,11 @@ public class ConfigClusterCertificateRequest extends Request {
         }
 
         /**
-         * ClusterId.
+         * <p>The ID of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster-BqxX63Bsg****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putBodyParameter("ClusterId", clusterId);
@@ -102,7 +119,15 @@ public class ConfigClusterCertificateRequest extends Request {
         }
 
         /**
-         * IssuerCertificate.
+         * <p>The self-signed certificate.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>-----BEGIN CERTIFICATE-----
+         * MIIDfTCCAmWgAwIBAgIJAMRqQMr5if66MA0GCSqGSIb3DQEBCwUAMFUxCzAJBgNV
+         * BAYTAmNuMQswCQYDVQQIDAJ6ajELMAkGA1UEBwwCaHoxFjAUBgNVBAoMDUFsaWJh
+         * YmEgQ2xvdWQxFDA****
+         * -----END CERTIFICATE-----</p>
          */
         public Builder issuerCertificate(String issuerCertificate) {
             this.putBodyParameter("IssuerCertificate", issuerCertificate);

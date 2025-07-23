@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImagesResponseBody} extends {@link TeaModel}
  *
  * <p>ListImagesResponseBody</p>
@@ -15,7 +21,7 @@ public class ListImagesResponseBody extends TeaModel {
     private Integer currentPage;
 
     @com.aliyun.core.annotation.NameInMap("Images")
-    private java.util.List < Images> images;
+    private java.util.List<Images> images;
 
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
@@ -42,6 +48,10 @@ public class ListImagesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -52,7 +62,7 @@ public class ListImagesResponseBody extends TeaModel {
     /**
      * @return images
      */
-    public java.util.List < Images> getImages() {
+    public java.util.List<Images> getImages() {
         return this.images;
     }
 
@@ -79,13 +89,27 @@ public class ListImagesResponseBody extends TeaModel {
 
     public static final class Builder {
         private Integer currentPage; 
-        private java.util.List < Images> images; 
+        private java.util.List<Images> images; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListImagesResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.images = model.images;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -93,15 +117,18 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * Images.
+         * <p>The images returned.</p>
          */
-        public Builder images(java.util.List < Images> images) {
+        public Builder images(java.util.List<Images> images) {
             this.images = images;
             return this;
         }
 
         /**
-         * PageSize.
+         * <p>The number of images per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +136,10 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C467B38-3910-447D-87BC-AC049166F216</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListImagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of images returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListImagesResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListImagesResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListImagesResponseBody</p>
+     */
     public static class Images extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupId")
         private String backupId;
@@ -312,8 +351,31 @@ public class ListImagesResponseBody extends TeaModel {
             private String status; 
             private String vsmDigest; 
 
+            private Builder() {
+            } 
+
+            private Builder(Images model) {
+                this.backupId = model.backupId;
+                this.copyTime = model.copyTime;
+                this.exportTime = model.exportTime;
+                this.imageId = model.imageId;
+                this.instanceId = model.instanceId;
+                this.mode = model.mode;
+                this.regionId = model.regionId;
+                this.remark = model.remark;
+                this.sourceBackupUid = model.sourceBackupUid;
+                this.sourceImageUid = model.sourceImageUid;
+                this.sourceInstanceId = model.sourceInstanceId;
+                this.sourceRegionId = model.sourceRegionId;
+                this.status = model.status;
+                this.vsmDigest = model.vsmDigest;
+            } 
+
             /**
-             * BackupId.
+             * <p>The ID of the backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backup-fdb897sdf****</p>
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -321,7 +383,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * CopyTime.
+             * <p>The time when the image was copied. Unit: milliseconds. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1641275680000</p>
              */
             public Builder copyTime(String copyTime) {
                 this.copyTime = copyTime;
@@ -329,7 +394,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ExportTime.
+             * <p>The time when the image was generated. Unit: milliseconds. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1782849566738</p>
              */
             public Builder exportTime(Long exportTime) {
                 this.exportTime = exportTime;
@@ -337,7 +405,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * ImageId.
+             * <p>The ID of the image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image-d79x4k11pmg19****</p>
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -345,7 +416,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the hardware security module (HSM).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hsm-cn-6ja1xknf****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -353,7 +427,14 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * <p>The image generation mode. Valid values:</p>
+             * <ul>
+             * <li>PERIODIC: It is automatically generated.</li>
+             * <li>MANUAL: It is manually generated.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>MANUAL</p>
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -361,7 +442,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -369,7 +453,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The description of the backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hsm-test</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -377,7 +464,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceBackupUid.
+             * <p>The ID of the source backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backup-hodfhaol****</p>
              */
             public Builder sourceBackupUid(String sourceBackupUid) {
                 this.sourceBackupUid = sourceBackupUid;
@@ -385,7 +475,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceImageUid.
+             * <p>The ID of the source image.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>image-ooopjygsn****</p>
              */
             public Builder sourceImageUid(String sourceImageUid) {
                 this.sourceImageUid = sourceImageUid;
@@ -393,7 +486,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceInstanceId.
+             * <p>The ID of the source HSM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hsm-cn-wz9i2dmefudfxtmb****</p>
              */
             public Builder sourceInstanceId(String sourceInstanceId) {
                 this.sourceInstanceId = sourceInstanceId;
@@ -401,7 +497,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceRegionId.
+             * <p>The ID of the region in which the source image resides.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-shanghai</p>
              */
             public Builder sourceRegionId(String sourceRegionId) {
                 this.sourceRegionId = sourceRegionId;
@@ -409,7 +508,16 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the image. Valid values:</p>
+             * <ul>
+             * <li>NEW: It is disabled.</li>
+             * <li>DELETED: It is deleted.</li>
+             * <li>CREATING: It is being created.</li>
+             * <li>NORMAL: It is created.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>CREATING</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -417,7 +525,10 @@ public class ListImagesResponseBody extends TeaModel {
             }
 
             /**
-             * VsmDigest.
+             * <p>The digest of the HSM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3kGeHnmQzXwSsfF0Jk9eJYhe2gP6An0/HlYIiZh1****</p>
              */
             public Builder vsmDigest(String vsmDigest) {
                 this.vsmDigest = vsmDigest;

@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListImagesRequest} extends {@link RequestModel}
  *
  * <p>ListImagesRequest</p>
@@ -52,7 +58,7 @@ public class ListImagesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -113,7 +119,11 @@ public class ListImagesRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * <p>The ID of the backup.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backup-fdb897sdf****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -122,7 +132,11 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -131,7 +145,14 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * Mode.
+         * <p>The image generation mode. Valid values:</p>
+         * <ul>
+         * <li>PERIODIC: It is automatically generated.</li>
+         * <li>MANUAL: It is manually generated.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>MANUAL</p>
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -140,7 +161,11 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of images per page. Valid values: 1 to 1000.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -149,7 +174,11 @@ public class ListImagesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

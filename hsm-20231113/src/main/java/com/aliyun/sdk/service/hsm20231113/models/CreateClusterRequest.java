@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link CreateClusterRequest} extends {@link RequestModel}
  *
  * <p>CreateClusterRequest</p>
@@ -41,7 +47,7 @@ public class CreateClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -84,7 +90,11 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * The cluster name.
+         * <p>The name of the cluster.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cluster_on****</p>
          */
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("ClusterName", clusterName);
@@ -93,7 +103,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The HSM ID.
+         * <p>The ID of the master HSM.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hsm_intl-sg-uz63ixak****</p>
          */
         public Builder masterInstanceId(String masterInstanceId) {
             this.putBodyParameter("MasterInstanceId", masterInstanceId);
@@ -102,7 +116,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

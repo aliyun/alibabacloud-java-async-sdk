@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigBackupRemarkRequest} extends {@link RequestModel}
  *
  * <p>ConfigBackupRemarkRequest</p>
@@ -39,7 +45,7 @@ public class ConfigBackupRemarkRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -82,7 +88,11 @@ public class ConfigBackupRemarkRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * <p>The ID of the backup.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backup-fdb897sdfg****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -91,7 +101,10 @@ public class ConfigBackupRemarkRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backup-test</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -100,7 +113,10 @@ public class ConfigBackupRemarkRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The description of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Test backup.</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

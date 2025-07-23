@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAuditLogStatusResponseBody} extends {@link TeaModel}
  *
  * <p>GetAuditLogStatusResponseBody</p>
@@ -21,7 +27,7 @@ public class GetAuditLogStatusResponseBody extends TeaModel {
     private Boolean grantedServiceAccess;
 
     @com.aliyun.core.annotation.NameInMap("OssBuckets")
-    private java.util.List < String > ossBuckets;
+    private java.util.List<String> ossBuckets;
 
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -50,6 +56,10 @@ public class GetAuditLogStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return auditLogStatus
      */
@@ -74,7 +84,7 @@ public class GetAuditLogStatusResponseBody extends TeaModel {
     /**
      * @return ossBuckets
      */
-    public java.util.List < String > getOssBuckets() {
+    public java.util.List<String> getOssBuckets() {
         return this.ossBuckets;
     }
 
@@ -103,13 +113,33 @@ public class GetAuditLogStatusResponseBody extends TeaModel {
         private String auditLogStatus; 
         private String auditOssBucket; 
         private Boolean grantedServiceAccess; 
-        private java.util.List < String > ossBuckets; 
+        private java.util.List<String> ossBuckets; 
         private String regionId; 
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetAuditLogStatusResponseBody model) {
+            this.auditLogStatus = model.auditLogStatus;
+            this.auditOssBucket = model.auditOssBucket;
+            this.grantedServiceAccess = model.grantedServiceAccess;
+            this.ossBuckets = model.ossBuckets;
+            this.regionId = model.regionId;
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * AuditLogStatus.
+         * <p>Indicates whether the audit log feature is enabled. Valid values:</p>
+         * <ul>
+         * <li>enable</li>
+         * <li>disable</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder auditLogStatus(String auditLogStatus) {
             this.auditLogStatus = auditLogStatus;
@@ -117,7 +147,10 @@ public class GetAuditLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * AuditOssBucket.
+         * <p>The bucket that stores audit logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucket-test</p>
          */
         public Builder auditOssBucket(String auditOssBucket) {
             this.auditOssBucket = auditOssBucket;
@@ -125,7 +158,14 @@ public class GetAuditLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * GrantedServiceAccess.
+         * <p>Indicates whether Cloud Hardware Security Module is authorized to deliver logs. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder grantedServiceAccess(Boolean grantedServiceAccess) {
             this.grantedServiceAccess = grantedServiceAccess;
@@ -133,15 +173,18 @@ public class GetAuditLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * OssBuckets.
+         * <p>A list of buckets that can be used to store audit logs.</p>
          */
-        public Builder ossBuckets(java.util.List < String > ossBuckets) {
+        public Builder ossBuckets(java.util.List<String> ossBuckets) {
             this.ossBuckets = ossBuckets;
             return this;
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.regionId = regionId;
@@ -149,7 +192,10 @@ public class GetAuditLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C467B38-3910-447D-87BC-AC049166F216</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +203,14 @@ public class GetAuditLogStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Indicates whether the request is successful. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

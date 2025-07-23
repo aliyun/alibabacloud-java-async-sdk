@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>GetInstanceResponseBody</p>
@@ -30,6 +36,10 @@ public class GetInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instance
      */
@@ -48,8 +58,16 @@ public class GetInstanceResponseBody extends TeaModel {
         private Instance instance; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceResponseBody model) {
+            this.instance = model.instance;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The HSM details.
+         * <p>The information about the HSM.</p>
          */
         public Builder instance(Instance instance) {
             this.instance = instance;
@@ -57,7 +75,10 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C467B38-3910-447D-87BC-AC049166F216</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class GetInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link GetInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>GetInstanceResponseBody</p>
+     */
     public static class Instance extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -312,8 +339,36 @@ public class GetInstanceResponseBody extends TeaModel {
             private String whitelist; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.createTime = model.createTime;
+                this.deviceType = model.deviceType;
+                this.expireTime = model.expireTime;
+                this.instanceId = model.instanceId;
+                this.ip = model.ip;
+                this.isTrial = model.isTrial;
+                this.master = model.master;
+                this.orderId = model.orderId;
+                this.regionId = model.regionId;
+                this.remark = model.remark;
+                this.status = model.status;
+                this.tenantIsolationType = model.tenantIsolationType;
+                this.vSwitchId = model.vSwitchId;
+                this.vendor = model.vendor;
+                this.vpcId = model.vpcId;
+                this.whitelist = model.whitelist;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * The ID of the cluster to which the HSM belongs.
+             * <p>The ID of the cluster to which the HSM belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster-w3G9vOJI2****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -321,7 +376,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster name.
+             * <p>The name of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster_online</p>
              */
             public Builder clusterName(String clusterName) {
                 this.clusterName = clusterName;
@@ -329,7 +387,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the HSM was created.
+             * <p>The time when the HSM was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1699515963000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -337,7 +398,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The device type.
+             * <p>The type of the device.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jnta.SJJ1528-G</p>
              */
             public Builder deviceType(String deviceType) {
                 this.deviceType = deviceType;
@@ -345,7 +409,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the instance expired.
+             * <p>The time when the HSM expired.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1699496389720</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -353,7 +420,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The HSM ID.
+             * <p>The ID of the HSM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hsm-cn-g4t3jwsc****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -361,7 +431,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address of the HSM in the VPC.
+             * <p>The IP address of the HSM in the VPC.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>10.192.XX.XX</p>
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -369,11 +442,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the HSM is for trial use. Valid values:
-             * <p>
+             * <p>Indicates whether the HSM is for trial use. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>false</p>
              */
             public Builder isTrial(Boolean isTrial) {
                 this.isTrial = isTrial;
@@ -381,11 +457,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the HSM is the master HSM.
-             * <p>
+             * <p>Indicates whether the HSM is a master HSM. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
              * 
-             * *   true
-             * *   false
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder master(Boolean master) {
                 this.master = master;
@@ -393,7 +472,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The order ID.
+             * <p>The ID of the order.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>23576634952****</p>
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -401,7 +483,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -409,7 +494,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The HSM description.
+             * <p>The description of the HSM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hsmOnline</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -417,17 +505,20 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The HSM status.
-             * <p>
+             * <p>The status of the HSM. Valid values:</p>
+             * <ul>
+             * <li>PENDING: The HSM is disabled.</li>
+             * <li>ACTIVE: The HSM is enabled.</li>
+             * <li>EXPIRED: The HSM expired.</li>
+             * <li>INVALID: The HSM is invalid.</li>
+             * <li>FAILURE: The HSM failed to be created.</li>
+             * <li>RESET: The HSM is being reset.</li>
+             * <li>PAUSED: The HSM is paused.</li>
+             * <li>MODIFYING: The HSM is being modified.</li>
+             * </ul>
              * 
-             * *   PENDING
-             * *   ACTIVE
-             * *   EXPIRED
-             * *   INVALID
-             * *   FAILURE
-             * *   RESET
-             * *   PAUSED
-             * *   MODIFYING
+             * <strong>example:</strong>
+             * <p>EXPIRED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -435,7 +526,14 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * TenantIsolationType.
+             * <p>The type of HSMs that is classified based on resource isolation. Valid values: </p>
+             * <ul>
+             * <li>vsm: Virtual security modules (VSMs)</li>
+             * <li>hostedHsm: Dedicated HSMs.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>vsm</p>
              */
             public Builder tenantIsolationType(String tenantIsolationType) {
                 this.tenantIsolationType = tenantIsolationType;
@@ -443,7 +541,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch configured for the HSM.
+             * <p>The ID of the vSwitch that is configured for the HSM.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vsw-bp1mvfs31ltt0wyhf****</p>
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -451,7 +552,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The vendor information.
+             * <p>The information about the vendor.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>jnta</p>
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;
@@ -459,7 +563,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC) to which the HSM belongs.
+             * <p>The ID of the virtual private cloud (VPC) to which the HSM belongs.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>vpc-uf69i66j9kmoko52p****</p>
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -467,7 +574,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address whitelist of the HSM.
+             * <p>The IP addresses in the whitelist.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>18.68.XX.XX</p>
              */
             public Builder whitelist(String whitelist) {
                 this.whitelist = whitelist;
@@ -475,7 +585,10 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The zone ID.
+             * <p>The ID of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cn-hangzhou-b</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

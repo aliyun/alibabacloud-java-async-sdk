@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBackupsRequest} extends {@link RequestModel}
  *
  * <p>ListBackupsRequest</p>
@@ -56,7 +62,7 @@ public class ListBackupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -126,7 +132,10 @@ public class ListBackupsRequest extends Request {
         } 
 
         /**
-         * BackupId.
+         * <p>The ID of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backup-1648438****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -135,7 +144,11 @@ public class ListBackupsRequest extends Request {
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Long currentPage) {
             this.putQueryParameter("CurrentPage", currentPage);
@@ -144,7 +157,10 @@ public class ListBackupsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * <p>The ID of the hardware security module (HSM).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hsm-cn-vj30bil8****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -153,7 +169,10 @@ public class ListBackupsRequest extends Request {
         }
 
         /**
-         * Name.
+         * <p>The name of the backup.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hsm-te****</p>
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -162,7 +181,11 @@ public class ListBackupsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page. Valid values: 1 to 1000.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -171,7 +194,11 @@ public class ListBackupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

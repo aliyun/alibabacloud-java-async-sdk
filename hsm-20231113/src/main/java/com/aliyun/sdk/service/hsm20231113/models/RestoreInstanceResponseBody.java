@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestoreInstanceResponseBody} extends {@link TeaModel}
  *
  * <p>RestoreInstanceResponseBody</p>
@@ -30,6 +36,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return job
      */
@@ -48,8 +58,16 @@ public class RestoreInstanceResponseBody extends TeaModel {
         private Job job; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(RestoreInstanceResponseBody model) {
+            this.job = model.job;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * The task details.
+         * <p>The details of the task.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -57,7 +75,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C467B38-3910-447D-87BC-AC049366F216</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class RestoreInstanceResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link RestoreInstanceResponseBody} extends {@link TeaModel}
+     *
+     * <p>RestoreInstanceResponseBody</p>
+     */
     public static class Job extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Completed")
         private Boolean completed;
@@ -180,8 +207,25 @@ public class RestoreInstanceResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Job model) {
+                this.completed = model.completed;
+                this.createTime = model.createTime;
+                this.error = model.error;
+                this.jobId = model.jobId;
+                this.progress = model.progress;
+                this.response = model.response;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
-             * Indicates whether the task is complete.
+             * <p>Indicates whether the task is complete.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder completed(Boolean completed) {
                 this.completed = completed;
@@ -189,7 +233,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was created. Unit: milliseconds. The value is a UNIX timestamp.
+             * <p>The time when the task is created. The value is accurate to the millisecond. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1711764127000</p>
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -197,7 +244,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the task fails.
+             * <p>The error message returned if the task fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>OperationTimeout</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -205,7 +255,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The task ID.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>job-540356379023708160</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -213,7 +266,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The task progress. Unit: percent (%).
+             * <p>The progress of the task. Unit: percent (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>50</p>
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -221,7 +277,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The response returned if the task succeeds.
+             * <p>The response returned after the task succeeds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder response(String response) {
                 this.response = response;
@@ -229,7 +288,10 @@ public class RestoreInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The task status. Valid values:
+             * <p>The task status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -237,7 +299,14 @@ public class RestoreInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the action. Valid values: create: creates a task. cancel: cancels a task.
+             * <p>The operation type. Valid values:</p>
+             * <ul>
+             * <li>create</li>
+             * <li>cancel</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>create</p>
              */
             public Builder type(String type) {
                 this.type = type;

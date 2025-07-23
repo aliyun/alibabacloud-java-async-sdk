@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListClustersResponseBody} extends {@link TeaModel}
  *
  * <p>ListClustersResponseBody</p>
  */
 public class ListClustersResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Clusters")
-    private java.util.List < Clusters> clusters;
+    private java.util.List<Clusters> clusters;
 
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
@@ -42,10 +48,14 @@ public class ListClustersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusters
      */
-    public java.util.List < Clusters> getClusters() {
+    public java.util.List<Clusters> getClusters() {
         return this.clusters;
     }
 
@@ -78,22 +88,36 @@ public class ListClustersResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Clusters> clusters; 
+        private java.util.List<Clusters> clusters; 
         private Integer currentPage; 
         private Integer pageSize; 
         private String requestId; 
         private Integer total; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListClustersResponseBody model) {
+            this.clusters = model.clusters;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.total = model.total;
+        } 
+
         /**
-         * Details of the clusters.
+         * <p>The clusters.</p>
          */
-        public Builder clusters(java.util.List < Clusters> clusters) {
+        public Builder clusters(java.util.List<Clusters> clusters) {
             this.clusters = clusters;
             return this;
         }
 
         /**
-         * The page number.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -101,7 +125,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries per page.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +136,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C467B38-3910-447D-87BC-AC049166F216</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of entries returned.
+         * <p>The total number of clusters.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>114</p>
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -130,6 +163,12 @@ public class ListClustersResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListClustersResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListClustersResponseBody</p>
+     */
     public static class Clusters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
@@ -168,8 +207,19 @@ public class ListClustersResponseBody extends TeaModel {
             private String clusterId; 
             private String status; 
 
+            private Builder() {
+            } 
+
+            private Builder(Clusters model) {
+                this.clusterId = model.clusterId;
+                this.status = model.status;
+            } 
+
             /**
-             * The cluster ID.
+             * <p>The ID of the cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cluster-w3G9vOJI2****</p>
              */
             public Builder clusterId(String clusterId) {
                 this.clusterId = clusterId;
@@ -177,14 +227,17 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster status.
-             * <p>
+             * <p>The status of the cluster. Valid values:</p>
+             * <ul>
+             * <li>NEW: The cluster is not initialized.</li>
+             * <li>INITIALIZED: The cluster is initialized.</li>
+             * <li>DELETED: The cluster is deleted.</li>
+             * <li>SYNCHRONIZING: The cluster is being synchronized.</li>
+             * <li>TO_DELETE: The cluster is pending deletion.</li>
+             * </ul>
              * 
-             * *   NEW: not initialized
-             * *   INITIALIZED: initialized
-             * *   DELETED: deleted
-             * *   SYNCHRONIZING: being synchronized
-             * *   TO_DELETE: pending deletion
+             * <strong>example:</strong>
+             * <p>INITIALIZED</p>
              */
             public Builder status(String status) {
                 this.status = status;

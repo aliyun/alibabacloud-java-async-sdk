@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigInstanceRemarkRequest} extends {@link RequestModel}
  *
  * <p>ConfigInstanceRemarkRequest</p>
@@ -35,7 +41,7 @@ public class ConfigInstanceRemarkRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +75,11 @@ public class ConfigInstanceRemarkRequest extends Request {
         } 
 
         /**
-         * The HSM ID.
+         * <p>The ID of the HSM.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hsm-cn-vj30bil8****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -78,7 +88,11 @@ public class ConfigInstanceRemarkRequest extends Request {
         }
 
         /**
-         * The description.
+         * <p>The description of the HSM.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hsmOnline</p>
          */
         public Builder remark(String remark) {
             this.putBodyParameter("Remark", remark);

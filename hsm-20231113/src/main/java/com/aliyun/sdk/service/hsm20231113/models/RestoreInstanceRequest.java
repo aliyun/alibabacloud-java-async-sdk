@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link RestoreInstanceRequest} extends {@link RequestModel}
  *
  * <p>RestoreInstanceRequest</p>
@@ -35,7 +41,7 @@ public class RestoreInstanceRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +75,11 @@ public class RestoreInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the image that you want to use to restore the HSM.
+         * <p>The ID of the image that you want to use to restore the HSM.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-eaOGHkRDQgh4****</p>
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -78,7 +88,11 @@ public class RestoreInstanceRequest extends Request {
         }
 
         /**
-         * The HSM ID.
+         * <p>The ID of the HSM.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hsm-cn-mp90fxef****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

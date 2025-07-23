@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
  *
  * <p>DescribeRegionsResponseBody</p>
  */
 public class DescribeRegionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Regions")
-    private java.util.List < Regions> regions;
+    private java.util.List<Regions> regions;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -30,10 +36,14 @@ public class DescribeRegionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
-    public java.util.List < Regions> getRegions() {
+    public java.util.List<Regions> getRegions() {
         return this.regions;
     }
 
@@ -45,19 +55,30 @@ public class DescribeRegionsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Regions> regions; 
+        private java.util.List<Regions> regions; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(DescribeRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Regions.
+         * <p>The regions.</p>
          */
-        public Builder regions(java.util.List < Regions> regions) {
+        public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
             return this;
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C467B38-3910-447D-87BC-AC049166F216</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class Zones extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cluster")
         private String cluster;
@@ -120,8 +147,24 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String localName; 
             private String zoneId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.cluster = model.cluster;
+                this.localName = model.localName;
+                this.zoneId = model.zoneId;
+            } 
+
             /**
-             * Cluster.
+             * <p>Indicates whether clusters are supported. Valid values:</p>
+             * <ul>
+             * <li>yes</li>
+             * <li>no</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>yes</p>
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -129,7 +172,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * LocalName.
+             * <p>The name of the zone.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Singapore Zone A</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -137,7 +183,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * <p>The zone ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-1a</p>
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;
@@ -151,6 +200,12 @@ public class DescribeRegionsResponseBody extends TeaModel {
         } 
 
     }
+    /**
+     * 
+     * {@link DescribeRegionsResponseBody} extends {@link TeaModel}
+     *
+     * <p>DescribeRegionsResponseBody</p>
+     */
     public static class Regions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
@@ -159,7 +214,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private String regionId;
 
         @com.aliyun.core.annotation.NameInMap("Zones")
-        private java.util.List < Zones> zones;
+        private java.util.List<Zones> zones;
 
         private Regions(Builder builder) {
             this.localName = builder.localName;
@@ -192,17 +247,29 @@ public class DescribeRegionsResponseBody extends TeaModel {
         /**
          * @return zones
          */
-        public java.util.List < Zones> getZones() {
+        public java.util.List<Zones> getZones() {
             return this.zones;
         }
 
         public static final class Builder {
             private String localName; 
             private String regionId; 
-            private java.util.List < Zones> zones; 
+            private java.util.List<Zones> zones; 
+
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.localName = model.localName;
+                this.regionId = model.regionId;
+                this.zones = model.zones;
+            } 
 
             /**
-             * LocalName.
+             * <p>The name of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Singapore</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -210,7 +277,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The region ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-1</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -218,9 +288,9 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * Zones.
+             * <p>The zones.</p>
              */
-            public Builder zones(java.util.List < Zones> zones) {
+            public Builder zones(java.util.List<Zones> zones) {
                 this.zones = zones;
                 return this;
             }

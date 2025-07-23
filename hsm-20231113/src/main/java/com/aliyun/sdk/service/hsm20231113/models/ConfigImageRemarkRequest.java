@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigImageRemarkRequest} extends {@link RequestModel}
  *
  * <p>ConfigImageRemarkRequest</p>
@@ -35,7 +41,7 @@ public class ConfigImageRemarkRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -69,7 +75,11 @@ public class ConfigImageRemarkRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * <p>The ID of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>image-d79x4k11pmg19****</p>
          */
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
@@ -78,7 +88,11 @@ public class ConfigImageRemarkRequest extends Request {
         }
 
         /**
-         * Remark.
+         * <p>The description of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hsm-****</p>
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

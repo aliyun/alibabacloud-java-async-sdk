@@ -1,18 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ListBackupsResponseBody} extends {@link TeaModel}
  *
  * <p>ListBackupsResponseBody</p>
  */
 public class ListBackupsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Backups")
-    private java.util.List < Backups> backups;
+    private java.util.List<Backups> backups;
 
     @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
@@ -42,10 +48,14 @@ public class ListBackupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return backups
      */
-    public java.util.List < Backups> getBackups() {
+    public java.util.List<Backups> getBackups() {
         return this.backups;
     }
 
@@ -78,22 +88,36 @@ public class ListBackupsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private java.util.List < Backups> backups; 
+        private java.util.List<Backups> backups; 
         private Integer currentPage; 
         private Integer pageSize; 
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListBackupsResponseBody model) {
+            this.backups = model.backups;
+            this.currentPage = model.currentPage;
+            this.pageSize = model.pageSize;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * Backups.
+         * <p>The backups returned.</p>
          */
-        public Builder backups(java.util.List < Backups> backups) {
+        public Builder backups(java.util.List<Backups> backups) {
             this.backups = backups;
             return this;
         }
 
         /**
-         * CurrentPage.
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -101,7 +125,10 @@ public class ListBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +136,10 @@ public class ListBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C467B38-3910-447D-87BC-AC049166F216</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +147,10 @@ public class ListBackupsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>30</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -130,6 +163,12 @@ public class ListBackupsResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ListBackupsResponseBody} extends {@link TeaModel}
+     *
+     * <p>ListBackupsResponseBody</p>
+     */
     public static class Backups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutoImageCount")
         private Long autoImageCount;
@@ -348,8 +387,34 @@ public class ListBackupsResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Backups model) {
+                this.autoImageCount = model.autoImageCount;
+                this.backupHourInDay = model.backupHourInDay;
+                this.backupId = model.backupId;
+                this.backupPeriod = model.backupPeriod;
+                this.createTime = model.createTime;
+                this.expireTime = model.expireTime;
+                this.instanceId = model.instanceId;
+                this.maxImageCount = model.maxImageCount;
+                this.name = model.name;
+                this.nextImageCreateTime = model.nextImageCreateTime;
+                this.ownerInstanceId = model.ownerInstanceId;
+                this.regionId = model.regionId;
+                this.releaseTime = model.releaseTime;
+                this.remark = model.remark;
+                this.spInstanceId = model.spInstanceId;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
-             * AutoImageCount.
+             * <p>The number of images that are automatically backed up.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder autoImageCount(Long autoImageCount) {
                 this.autoImageCount = autoImageCount;
@@ -357,7 +422,10 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupHourInDay.
+             * <p>The backup time on the hour that is in the 24-hour clock.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>13</p>
              */
             public Builder backupHourInDay(String backupHourInDay) {
                 this.backupHourInDay = backupHourInDay;
@@ -365,7 +433,10 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupId.
+             * <p>The ID of the backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backup-1648438****</p>
              */
             public Builder backupId(String backupId) {
                 this.backupId = backupId;
@@ -373,7 +444,10 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * BackupPeriod.
+             * <p>The automatic backup cycle. Unit: days.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder backupPeriod(Long backupPeriod) {
                 this.backupPeriod = backupPeriod;
@@ -381,7 +455,10 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the backup is created. The value is accurate to the millisecond. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1637229596000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -389,7 +466,10 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * <p>The expiration time of the backup. The value is accurate to the millisecond. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682417553781</p>
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -397,7 +477,10 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * <p>The ID of the HSM that is associated with the backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hsm-cn-vj30bil8****</p>
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -405,7 +488,10 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxImageCount.
+             * <p>The number of images.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>3</p>
              */
             public Builder maxImageCount(String maxImageCount) {
                 this.maxImageCount = maxImageCount;
@@ -413,7 +499,10 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * <p>The name of the backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backup-te****</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -421,7 +510,10 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * NextImageCreateTime.
+             * <p>The time when the image is created next time. The value is accurate to the millisecond. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1682417553781</p>
              */
             public Builder nextImageCreateTime(Long nextImageCreateTime) {
                 this.nextImageCreateTime = nextImageCreateTime;
@@ -429,7 +521,10 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * OwnerInstanceId.
+             * <p>The ID of the HSM to which the backup belongs. This parameter is available only for HSM backups outside the Chinese mainland and the value of this parameter is consistent with the value of InstanceId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>hsm-cn-vj30bil8****</p>
              */
             public Builder ownerInstanceId(String ownerInstanceId) {
                 this.ownerInstanceId = ownerInstanceId;
@@ -437,7 +532,10 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * <p>The ID of the region.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ap-southeast-1</p>
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -445,7 +543,10 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * ReleaseTime.
+             * <p>The time when the backup is released. The value is accurate to the millisecond. The value is a UNIX timestamp.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1641275680000</p>
              */
             public Builder releaseTime(Long releaseTime) {
                 this.releaseTime = releaseTime;
@@ -453,7 +554,10 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * <p>The description of the backup.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>normal backup</p>
              */
             public Builder remark(String remark) {
                 this.remark = remark;
@@ -461,7 +565,10 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * SpInstanceId.
+             * <p>The ID of the backup. This parameter is available only for HSM backups in the Chinese mainland.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>backup-fdb897sdfg534-****</p>
              */
             public Builder spInstanceId(String spInstanceId) {
                 this.spInstanceId = spInstanceId;
@@ -469,7 +576,15 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The status of the backup. Valid values:</p>
+             * <ul>
+             * <li>NEW: The backup is disabled.</li>
+             * <li>EXPIRED: The backup expired.</li>
+             * <li>ENABLED: The backup is enabled.</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>ENABLED</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -477,7 +592,14 @@ public class ListBackupsResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the backup. Valid values:</p>
+             * <ul>
+             * <li>DEFAULT</li>
+             * <li>NORMAL</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>NORMAL</p>
              */
             public Builder type(String type) {
                 this.type = type;

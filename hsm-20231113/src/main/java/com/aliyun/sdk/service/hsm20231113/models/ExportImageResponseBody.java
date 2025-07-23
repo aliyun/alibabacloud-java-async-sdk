@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ExportImageResponseBody} extends {@link TeaModel}
  *
  * <p>ExportImageResponseBody</p>
@@ -30,6 +36,10 @@ public class ExportImageResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return job
      */
@@ -48,8 +58,16 @@ public class ExportImageResponseBody extends TeaModel {
         private Job job; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ExportImageResponseBody model) {
+            this.job = model.job;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Job.
+         * <p>The information about the asynchronous task returned.</p>
          */
         public Builder job(Job job) {
             this.job = job;
@@ -57,7 +75,10 @@ public class ExportImageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>4C467B38-3910-447D-87BC-AC049166F216</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -70,6 +91,12 @@ public class ExportImageResponseBody extends TeaModel {
 
     } 
 
+    /**
+     * 
+     * {@link ExportImageResponseBody} extends {@link TeaModel}
+     *
+     * <p>ExportImageResponseBody</p>
+     */
     public static class Job extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Completed")
         private Boolean completed;
@@ -168,8 +195,28 @@ public class ExportImageResponseBody extends TeaModel {
             private String status; 
             private String type; 
 
+            private Builder() {
+            } 
+
+            private Builder(Job model) {
+                this.completed = model.completed;
+                this.error = model.error;
+                this.jobId = model.jobId;
+                this.process = model.process;
+                this.response = model.response;
+                this.status = model.status;
+                this.type = model.type;
+            } 
+
             /**
-             * Completed.
+             * <p>Indicates whether the task is complete. Valid values:</p>
+             * <ul>
+             * <li>true</li>
+             * <li>false</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
              */
             public Builder completed(Boolean completed) {
                 this.completed = completed;
@@ -177,7 +224,10 @@ public class ExportImageResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * <p>The error message returned if the operation is abnormal or fails.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Job.Canceled</p>
              */
             public Builder error(String error) {
                 this.error = error;
@@ -185,7 +235,10 @@ public class ExportImageResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * <p>The ID of the task.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>b1748ca6-6b55-49f4-a6d4-2d694a9f3693</p>
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -193,7 +246,10 @@ public class ExportImageResponseBody extends TeaModel {
             }
 
             /**
-             * Process.
+             * <p>The progress of the task. Unit: percent (%).</p>
+             * 
+             * <strong>example:</strong>
+             * <p>100</p>
              */
             public Builder process(Integer process) {
                 this.process = process;
@@ -201,7 +257,10 @@ public class ExportImageResponseBody extends TeaModel {
             }
 
             /**
-             * Response.
+             * <p>The response returned after the operation succeeds.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder response(String response) {
                 this.response = response;
@@ -209,7 +268,16 @@ public class ExportImageResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>The task status. Valid values:</p>
+             * <ul>
+             * <li>running</li>
+             * <li>cancel</li>
+             * <li>fail</li>
+             * <li>success</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>running</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -217,7 +285,14 @@ public class ExportImageResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * <p>The type of the task operation. Valid values:</p>
+             * <ul>
+             * <li>create</li>
+             * <li>cancel</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>create</p>
              */
             public Builder type(String type) {
                 this.type = type;

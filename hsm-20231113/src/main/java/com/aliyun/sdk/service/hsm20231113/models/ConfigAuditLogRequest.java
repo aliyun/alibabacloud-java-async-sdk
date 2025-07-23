@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigAuditLogRequest} extends {@link RequestModel}
  *
  * <p>ConfigAuditLogRequest</p>
@@ -40,7 +46,7 @@ public class ConfigAuditLogRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,11 +89,15 @@ public class ConfigAuditLogRequest extends Request {
         } 
 
         /**
-         * The status of the audit log feature.
-         * <p>
+         * <p>Specifies whether to enable the audit log feature. Valid values:</p>
+         * <ul>
+         * <li>enable</li>
+         * <li>disable</li>
+         * </ul>
+         * <p>This parameter is required.</p>
          * 
-         * *   enable
-         * *   disable
+         * <strong>example:</strong>
+         * <p>enable</p>
          */
         public Builder auditAction(String auditAction) {
             this.putQueryParameter("AuditAction", auditAction);
@@ -96,7 +106,10 @@ public class ConfigAuditLogRequest extends Request {
         }
 
         /**
-         * The bucket to which audit logs are delivered.
+         * <p>The bucket to which audit logs are delivered.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hsm-log</p>
          */
         public Builder auditOssBucket(String auditOssBucket) {
             this.putQueryParameter("AuditOssBucket", auditOssBucket);
@@ -105,7 +118,11 @@ public class ConfigAuditLogRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

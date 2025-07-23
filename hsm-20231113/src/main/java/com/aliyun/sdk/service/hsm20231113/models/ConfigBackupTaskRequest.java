@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigBackupTaskRequest} extends {@link RequestModel}
  *
  * <p>ConfigBackupTaskRequest</p>
@@ -28,11 +34,11 @@ public class ConfigBackupTaskRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Manual2PeriodicList")
-    private java.util.List < String > manual2PeriodicList;
+    private java.util.List<String> manual2PeriodicList;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Periodic2ManualList")
-    private java.util.List < String > periodic2ManualList;
+    private java.util.List<String> periodic2ManualList;
 
     private ConfigBackupTaskRequest(Builder builder) {
         super(builder);
@@ -51,7 +57,7 @@ public class ConfigBackupTaskRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -80,14 +86,14 @@ public class ConfigBackupTaskRequest extends Request {
     /**
      * @return manual2PeriodicList
      */
-    public java.util.List < String > getManual2PeriodicList() {
+    public java.util.List<String> getManual2PeriodicList() {
         return this.manual2PeriodicList;
     }
 
     /**
      * @return periodic2ManualList
      */
-    public java.util.List < String > getPeriodic2ManualList() {
+    public java.util.List<String> getPeriodic2ManualList() {
         return this.periodic2ManualList;
     }
 
@@ -95,8 +101,8 @@ public class ConfigBackupTaskRequest extends Request {
         private Long backupHourInDay; 
         private String backupId; 
         private Long backupPeriod; 
-        private java.util.List < String > manual2PeriodicList; 
-        private java.util.List < String > periodic2ManualList; 
+        private java.util.List<String> manual2PeriodicList; 
+        private java.util.List<String> periodic2ManualList; 
 
         private Builder() {
             super();
@@ -112,7 +118,38 @@ public class ConfigBackupTaskRequest extends Request {
         } 
 
         /**
-         * BackupHourInDay.
+         * <p>The backup time in the 24-hour format. Valid values: 1 to 24.</p>
+         * <p>Enumeration values:</p>
+         * <ul>
+         * <li>0</li>
+         * <li>1</li>
+         * <li>2</li>
+         * <li>3</li>
+         * <li>4</li>
+         * <li>5</li>
+         * <li>6</li>
+         * <li>7</li>
+         * <li>8</li>
+         * <li>9</li>
+         * <li>10</li>
+         * <li>11</li>
+         * <li>12</li>
+         * <li>13</li>
+         * <li>14</li>
+         * <li>15</li>
+         * <li>16</li>
+         * <li>17</li>
+         * <li>18</li>
+         * <li>19</li>
+         * <li>20</li>
+         * <li>21</li>
+         * <li>22</li>
+         * <li>23</li>
+         * </ul>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12</p>
          */
         public Builder backupHourInDay(Long backupHourInDay) {
             this.putQueryParameter("BackupHourInDay", backupHourInDay);
@@ -121,7 +158,11 @@ public class ConfigBackupTaskRequest extends Request {
         }
 
         /**
-         * BackupId.
+         * <p>The ID of the backup.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>backup-173620705****</p>
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -130,7 +171,11 @@ public class ConfigBackupTaskRequest extends Request {
         }
 
         /**
-         * BackupPeriod.
+         * <p>The automatic backup cycle. Unit: days. Valid values: 1, 3, 7, and 30.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         public Builder backupPeriod(Long backupPeriod) {
             this.putQueryParameter("BackupPeriod", backupPeriod);
@@ -139,18 +184,18 @@ public class ConfigBackupTaskRequest extends Request {
         }
 
         /**
-         * Manual2PeriodicList.
+         * <p>The IDs of images for which the manual backup mode is updated to the automatic backup mode.</p>
          */
-        public Builder manual2PeriodicList(java.util.List < String > manual2PeriodicList) {
+        public Builder manual2PeriodicList(java.util.List<String> manual2PeriodicList) {
             this.putQueryParameter("Manual2PeriodicList", manual2PeriodicList);
             this.manual2PeriodicList = manual2PeriodicList;
             return this;
         }
 
         /**
-         * Periodic2ManualList.
+         * <p>The IDs of images for which the automatic backup mode is updated to the manual backup mode.</p>
          */
-        public Builder periodic2ManualList(java.util.List < String > periodic2ManualList) {
+        public Builder periodic2ManualList(java.util.List<String> periodic2ManualList) {
             this.putQueryParameter("Periodic2ManualList", periodic2ManualList);
             this.periodic2ManualList = periodic2ManualList;
             return this;

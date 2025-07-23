@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link GetAuditLogStatusRequest} extends {@link RequestModel}
  *
  * <p>GetAuditLogStatusRequest</p>
@@ -34,7 +40,7 @@ public class GetAuditLogStatusRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -68,7 +74,14 @@ public class GetAuditLogStatusRequest extends Request {
         } 
 
         /**
-         * GetOssBucket.
+         * <p>Specifies whether to obtain the list of OSS buckets that can be used to store audit logs. Valid values:</p>
+         * <ul>
+         * <li>true</li>
+         * <li>false</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder getOssBucket(Boolean getOssBucket) {
             this.putQueryParameter("GetOssBucket", getOssBucket);
@@ -77,7 +90,11 @@ public class GetAuditLogStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

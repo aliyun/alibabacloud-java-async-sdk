@@ -1,11 +1,17 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hsm20231113.models;
 
+import com.aliyun.sdk.gateway.pop.*;
+import darabonba.core.*;
+import darabonba.core.async.*;
+import darabonba.core.sync.*;
+import darabonba.core.client.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
+ * 
  * {@link ConfigInstanceIpAddressRequest} extends {@link RequestModel}
  *
  * <p>ConfigInstanceIpAddressRequest</p>
@@ -53,7 +59,7 @@ public class ConfigInstanceIpAddressRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -114,7 +120,11 @@ public class ConfigInstanceIpAddressRequest extends Request {
         } 
 
         /**
-         * The HSM ID.
+         * <p>The ID of the HSM.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>hsm-cn-mp90fxef****</p>
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -123,7 +133,11 @@ public class ConfigInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * The IP address of the HSM in the VPC.
+         * <p>The endpoint of the VPC to which the HMS belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.168.XX.XX</p>
          */
         public Builder ip(String ip) {
             this.putBodyParameter("Ip", ip);
@@ -132,7 +146,11 @@ public class ConfigInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * <p>The ID of the region.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
@@ -141,7 +159,11 @@ public class ConfigInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * The vSwitch ID of the subnet to which the HSM belongs.
+         * <p>The ID of the vSwitch to which the HMS belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-u7gb0qahu****</p>
          */
         public Builder vSwitchId(String vSwitchId) {
             this.putBodyParameter("VSwitchId", vSwitchId);
@@ -150,7 +172,11 @@ public class ConfigInstanceIpAddressRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the HSM belongs.
+         * <p>The ID of the VPC to which the HMS belongs.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-lmkmivmo6****</p>
          */
         public Builder vpcId(String vpcId) {
             this.putBodyParameter("VpcId", vpcId);
