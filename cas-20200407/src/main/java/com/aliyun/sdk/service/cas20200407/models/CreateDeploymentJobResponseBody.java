@@ -36,6 +36,10 @@ public class CreateDeploymentJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return jobId
      */
@@ -53,6 +57,14 @@ public class CreateDeploymentJobResponseBody extends TeaModel {
     public static final class Builder {
         private Long jobId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateDeploymentJobResponseBody model) {
+            this.jobId = model.jobId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the deployment task.</p>

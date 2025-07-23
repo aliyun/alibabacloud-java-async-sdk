@@ -84,6 +84,10 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return buyCount
      */
@@ -197,6 +201,26 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         private Integer successCount; 
         private Integer useCount; 
         private Integer workerCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDeploymentJobStatusResponseBody model) {
+            this.buyCount = model.buyCount;
+            this.certCount = model.certCount;
+            this.costCount = model.costCount;
+            this.failedCount = model.failedCount;
+            this.matchWorkerCount = model.matchWorkerCount;
+            this.productWorkerCount = model.productWorkerCount;
+            this.requestId = model.requestId;
+            this.resourceCount = model.resourceCount;
+            this.rollbackCount = model.rollbackCount;
+            this.rollbackFailedCount = model.rollbackFailedCount;
+            this.rollbackSuccessCount = model.rollbackSuccessCount;
+            this.successCount = model.successCount;
+            this.useCount = model.useCount;
+            this.workerCount = model.workerCount;
+        } 
 
         /**
          * <p>The total number of purchased resources.</p>
@@ -398,6 +422,14 @@ public class DescribeDeploymentJobStatusResponseBody extends TeaModel {
         public static final class Builder {
             private Integer count; 
             private String productName; 
+
+            private Builder() {
+            } 
+
+            private Builder(ProductWorkerCount model) {
+                this.count = model.count;
+                this.productName = model.productName;
+            } 
 
             /**
              * <p>The total number of resources of a cloud service in the deployment task.</p>

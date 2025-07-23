@@ -48,6 +48,10 @@ public class ListCsrResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return csrList
      */
@@ -89,6 +93,17 @@ public class ListCsrResponseBody extends TeaModel {
         private String requestId; 
         private Long showSize; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCsrResponseBody model) {
+            this.csrList = model.csrList;
+            this.currentPage = model.currentPage;
+            this.requestId = model.requestId;
+            this.showSize = model.showSize;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The CSRs.</p>
@@ -323,6 +338,25 @@ public class ListCsrResponseBody extends TeaModel {
             private String name; 
             private String province; 
             private String sans; 
+
+            private Builder() {
+            } 
+
+            private Builder(CsrList model) {
+                this.algorithm = model.algorithm;
+                this.commonName = model.commonName;
+                this.corpName = model.corpName;
+                this.countryCode = model.countryCode;
+                this.csrId = model.csrId;
+                this.department = model.department;
+                this.hasPrivateKey = model.hasPrivateKey;
+                this.keySha2 = model.keySha2;
+                this.keySize = model.keySize;
+                this.locality = model.locality;
+                this.name = model.name;
+                this.province = model.province;
+                this.sans = model.sans;
+            } 
 
             /**
              * <p>The algorithm. Valid values: RSA, SM2, and ECC.</p>

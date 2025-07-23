@@ -36,6 +36,10 @@ public class UploadCsrResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return csrId
      */
@@ -53,6 +57,14 @@ public class UploadCsrResponseBody extends TeaModel {
     public static final class Builder {
         private Long csrId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadCsrResponseBody model) {
+            this.csrId = model.csrId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the CSR.</p>

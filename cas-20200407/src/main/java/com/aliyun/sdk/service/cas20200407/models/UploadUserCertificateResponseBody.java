@@ -40,6 +40,10 @@ public class UploadUserCertificateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certId
      */
@@ -65,6 +69,15 @@ public class UploadUserCertificateResponseBody extends TeaModel {
         private Long certId; 
         private String requestId; 
         private String resourceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UploadUserCertificateResponseBody model) {
+            this.certId = model.certId;
+            this.requestId = model.requestId;
+            this.resourceId = model.resourceId;
+        } 
 
         /**
          * <p>The ID of the certificate.</p>

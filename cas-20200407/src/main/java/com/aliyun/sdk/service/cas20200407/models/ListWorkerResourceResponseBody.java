@@ -48,6 +48,10 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class ListWorkerResourceResponseBody extends TeaModel {
         private String requestId; 
         private Integer showSize; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListWorkerResourceResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.showSize = model.showSize;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The page number. Default value: 1.</p>
@@ -443,6 +458,35 @@ public class ListWorkerResourceResponseBody extends TeaModel {
             private Long resourceId; 
             private String status; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.certDomain = model.certDomain;
+                this.certId = model.certId;
+                this.certInstanceId = model.certInstanceId;
+                this.certName = model.certName;
+                this.cloudName = model.cloudName;
+                this.cloudProduct = model.cloudProduct;
+                this.cloudRegion = model.cloudRegion;
+                this.defaultResource = model.defaultResource;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.jobId = model.jobId;
+                this.listenerId = model.listenerId;
+                this.namespaceId = model.namespaceId;
+                this.orderId = model.orderId;
+                this.port = model.port;
+                this.regionId = model.regionId;
+                this.resourceCertId = model.resourceCertId;
+                this.resourceDomain = model.resourceDomain;
+                this.resourceId = model.resourceId;
+                this.status = model.status;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The domain name bound to the certificate in the worker task.</p>

@@ -36,6 +36,10 @@ public class CreateCertificateForPackageRequestResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return orderId
      */
@@ -53,6 +57,14 @@ public class CreateCertificateForPackageRequestResponseBody extends TeaModel {
     public static final class Builder {
         private Long orderId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateCertificateForPackageRequestResponseBody model) {
+            this.orderId = model.orderId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The ID of the certificate application order.</p>

@@ -48,6 +48,10 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class ListCloudResourcesResponseBody extends TeaModel {
         private String requestId; 
         private Integer showSize; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCloudResourcesResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.showSize = model.showSize;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The page number. Default value: 1.</p>
@@ -419,6 +434,33 @@ public class ListCloudResourcesResponseBody extends TeaModel {
             private String status; 
             private Integer useSsl; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.certEndTime = model.certEndTime;
+                this.certId = model.certId;
+                this.certName = model.certName;
+                this.certStartTime = model.certStartTime;
+                this.cloudAccessId = model.cloudAccessId;
+                this.cloudName = model.cloudName;
+                this.cloudProduct = model.cloudProduct;
+                this.cloudRegion = model.cloudRegion;
+                this.defaultResource = model.defaultResource;
+                this.domain = model.domain;
+                this.enableHttps = model.enableHttps;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.listenerId = model.listenerId;
+                this.listenerPort = model.listenerPort;
+                this.regionId = model.regionId;
+                this.status = model.status;
+                this.useSsl = model.useSsl;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The end date of the certificate bound to the cloud resource. The value is a timestamp in seconds.</p>

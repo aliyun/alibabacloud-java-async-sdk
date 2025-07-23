@@ -48,6 +48,10 @@ public class DescribePackageStateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return issuedCount
      */
@@ -89,6 +93,17 @@ public class DescribePackageStateResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private Long usedCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribePackageStateResponseBody model) {
+            this.issuedCount = model.issuedCount;
+            this.productCode = model.productCode;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.usedCount = model.usedCount;
+        } 
 
         /**
          * <p>The number of issued certificates of the specified specifications.</p>

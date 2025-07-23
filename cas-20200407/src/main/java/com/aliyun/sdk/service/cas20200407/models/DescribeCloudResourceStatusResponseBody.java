@@ -36,6 +36,10 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCloudResourceStatusResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -134,6 +146,15 @@ public class DescribeCloudResourceStatusResponseBody extends TeaModel {
             private String cloudName; 
             private String cloudProduct; 
             private Long totalCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.cloudName = model.cloudName;
+                this.cloudProduct = model.cloudProduct;
+                this.totalCount = model.totalCount;
+            } 
 
             /**
              * <p>The cloud service provider.</p>

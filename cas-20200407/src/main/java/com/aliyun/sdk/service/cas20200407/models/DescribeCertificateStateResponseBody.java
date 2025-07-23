@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCertificateStateResponseBody</p>
  */
 public class DescribeCertificateStateResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CertId")
+    private String certId;
+
     @com.aliyun.core.annotation.NameInMap("Certificate")
     private String certificate;
 
@@ -51,6 +54,7 @@ public class DescribeCertificateStateResponseBody extends TeaModel {
     private String validateType;
 
     private DescribeCertificateStateResponseBody(Builder builder) {
+        this.certId = builder.certId;
         this.certificate = builder.certificate;
         this.content = builder.content;
         this.domain = builder.domain;
@@ -70,6 +74,17 @@ public class DescribeCertificateStateResponseBody extends TeaModel {
 
     public static DescribeCertificateStateResponseBody create() {
         return builder().build();
+    }
+
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return certId
+     */
+    public String getCertId() {
+        return this.certId;
     }
 
     /**
@@ -150,6 +165,7 @@ public class DescribeCertificateStateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String certId; 
         private String certificate; 
         private String content; 
         private String domain; 
@@ -161,6 +177,32 @@ public class DescribeCertificateStateResponseBody extends TeaModel {
         private String type; 
         private String uri; 
         private String validateType; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeCertificateStateResponseBody model) {
+            this.certId = model.certId;
+            this.certificate = model.certificate;
+            this.content = model.content;
+            this.domain = model.domain;
+            this.privateKey = model.privateKey;
+            this.recordDomain = model.recordDomain;
+            this.recordType = model.recordType;
+            this.recordValue = model.recordValue;
+            this.requestId = model.requestId;
+            this.type = model.type;
+            this.uri = model.uri;
+            this.validateType = model.validateType;
+        } 
+
+        /**
+         * CertId.
+         */
+        public Builder certId(String certId) {
+            this.certId = certId;
+            return this;
+        }
 
         /**
          * <p>The content of the certificate in the PEM format. For more information about the PEM format and how to convert certificate formats, see <a href="https://help.aliyun.com/document_detail/42214.html">What formats are used for mainstream digital certificates?</a></p>

@@ -85,6 +85,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCsrResponse> createCsr(CreateCsrRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>After the task creation is completed, the task will be in the editing state. You need to call the UpdateDeploymentJobStatus interface to change the status to the pending state, otherwise the task will not be executed.</p>
+     * 
      * @param request the request parameters of CreateDeploymentJob  CreateDeploymentJobRequest
      * @return CreateDeploymentJobResponse
      */

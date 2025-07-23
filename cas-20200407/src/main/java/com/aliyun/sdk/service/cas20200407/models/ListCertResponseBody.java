@@ -48,6 +48,10 @@ public class ListCertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certList
      */
@@ -89,6 +93,17 @@ public class ListCertResponseBody extends TeaModel {
         private String requestId; 
         private Long showSize; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCertResponseBody model) {
+            this.certList = model.certList;
+            this.currentPage = model.currentPage;
+            this.requestId = model.requestId;
+            this.showSize = model.showSize;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>An array that consists of the certificates.</p>
@@ -311,6 +326,24 @@ public class ListCertResponseBody extends TeaModel {
             private String status; 
             private Long whId; 
             private String whInstanceId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertList model) {
+                this.afterDate = model.afterDate;
+                this.beforeDate = model.beforeDate;
+                this.certType = model.certType;
+                this.commonName = model.commonName;
+                this.existPrivateKey = model.existPrivateKey;
+                this.identifier = model.identifier;
+                this.issuer = model.issuer;
+                this.sans = model.sans;
+                this.sourceType = model.sourceType;
+                this.status = model.status;
+                this.whId = model.whId;
+                this.whInstanceId = model.whInstanceId;
+            } 
 
             /**
              * <p>The expiration time of the certificate. The value is a UNIX timestamp. Unit: milliseconds.</p>

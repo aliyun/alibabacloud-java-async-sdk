@@ -49,7 +49,7 @@ public class ListCloudAccessRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -101,7 +101,7 @@ public class ListCloudAccessRequest extends Request {
         } 
 
         /**
-         * <p>The cloud service provider.</p>
+         * <p>The cloud service provider. Set the value to <strong>Tencent</strong>, which indicates Tencent Cloud.</p>
          * 
          * <strong>example:</strong>
          * <p>Tencent</p>
@@ -125,7 +125,7 @@ public class ListCloudAccessRequest extends Request {
         }
 
         /**
-         * <p>The AccessKey secret used to access the cloud service.</p>
+         * <p>The AccessKey ID that is used to access cloud resources.</p>
          * 
          * <strong>example:</strong>
          * <p>276</p>
@@ -137,7 +137,7 @@ public class ListCloudAccessRequest extends Request {
         }
 
         /**
-         * <p>The number of certificates per page. Default value: <strong>20</strong>.</p>
+         * <p>The number of entries per page. Valid values: <strong>10</strong>, <strong>20</strong>, and <strong>50</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

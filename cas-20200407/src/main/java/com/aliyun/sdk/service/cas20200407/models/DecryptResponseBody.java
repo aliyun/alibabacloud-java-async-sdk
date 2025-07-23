@@ -40,6 +40,10 @@ public class DecryptResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certIdentifier
      */
@@ -65,6 +69,15 @@ public class DecryptResponseBody extends TeaModel {
         private String certIdentifier; 
         private String plaintext; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DecryptResponseBody model) {
+            this.certIdentifier = model.certIdentifier;
+            this.plaintext = model.plaintext;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The unique identifier of the certificate.</p>

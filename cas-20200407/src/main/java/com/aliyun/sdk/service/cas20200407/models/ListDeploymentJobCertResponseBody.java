@@ -36,6 +36,10 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
     public static final class Builder {
         private java.util.List<Data> data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDeploymentJobCertResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The response parameters.</p>
@@ -266,6 +278,26 @@ public class ListDeploymentJobCertResponseBody extends TeaModel {
             private Long orderId; 
             private java.util.List<String> sans; 
             private String statusCode; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.algorithm = model.algorithm;
+                this.certId = model.certId;
+                this.certInstanceId = model.certInstanceId;
+                this.certName = model.certName;
+                this.certOrderType = model.certOrderType;
+                this.certType = model.certType;
+                this.commonName = model.commonName;
+                this.isTrustee = model.isTrustee;
+                this.month = model.month;
+                this.notAfterTime = model.notAfterTime;
+                this.notBeforeTime = model.notBeforeTime;
+                this.orderId = model.orderId;
+                this.sans = model.sans;
+                this.statusCode = model.statusCode;
+            } 
 
             /**
              * <p>The algorithm of the certificate public key.</p>

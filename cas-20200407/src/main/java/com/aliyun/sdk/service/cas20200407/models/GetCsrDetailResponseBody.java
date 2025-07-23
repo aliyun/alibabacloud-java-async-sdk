@@ -40,6 +40,10 @@ public class GetCsrDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return csr
      */
@@ -65,6 +69,15 @@ public class GetCsrDetailResponseBody extends TeaModel {
         private String csr; 
         private String privateKey; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCsrDetailResponseBody model) {
+            this.csr = model.csr;
+            this.privateKey = model.privateKey;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The content of the CSR.</p>

@@ -48,6 +48,10 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certificateOrderList
      */
@@ -89,6 +93,17 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
         private String requestId; 
         private Long showSize; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUserCertificateOrderResponseBody model) {
+            this.certificateOrderList = model.certificateOrderList;
+            this.currentPage = model.currentPage;
+            this.requestId = model.requestId;
+            this.showSize = model.showSize;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The certificates and orders.</p>
@@ -599,6 +614,48 @@ public class ListUserCertificateOrderResponseBody extends TeaModel {
             private String trusteeStatus; 
             private Boolean upload; 
             private Long wildDomainCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertificateOrderList model) {
+                this.algorithm = model.algorithm;
+                this.aliyunOrderId = model.aliyunOrderId;
+                this.buyDate = model.buyDate;
+                this.certEndTime = model.certEndTime;
+                this.certStartTime = model.certStartTime;
+                this.certType = model.certType;
+                this.certificateId = model.certificateId;
+                this.city = model.city;
+                this.commonName = model.commonName;
+                this.country = model.country;
+                this.domain = model.domain;
+                this.domainCount = model.domainCount;
+                this.domainType = model.domainType;
+                this.endDate = model.endDate;
+                this.expired = model.expired;
+                this.fingerprint = model.fingerprint;
+                this.instanceId = model.instanceId;
+                this.issuer = model.issuer;
+                this.name = model.name;
+                this.orderId = model.orderId;
+                this.orgName = model.orgName;
+                this.partnerOrderId = model.partnerOrderId;
+                this.productCode = model.productCode;
+                this.productName = model.productName;
+                this.province = model.province;
+                this.resourceGroupId = model.resourceGroupId;
+                this.rootBrand = model.rootBrand;
+                this.sans = model.sans;
+                this.serialNo = model.serialNo;
+                this.sha2 = model.sha2;
+                this.sourceType = model.sourceType;
+                this.startDate = model.startDate;
+                this.status = model.status;
+                this.trusteeStatus = model.trusteeStatus;
+                this.upload = model.upload;
+                this.wildDomainCount = model.wildDomainCount;
+            } 
 
             /**
              * <p>The algorithm. This parameter is returned only if OrderType is set to CPACK or BUY.</p>

@@ -40,6 +40,10 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class GetCertWarehouseQuotaResponseBody extends TeaModel {
         private String requestId; 
         private Long totalQuota; 
         private Long useCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetCertWarehouseQuotaResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalQuota = model.totalQuota;
+            this.useCount = model.useCount;
+        } 
 
         /**
          * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>

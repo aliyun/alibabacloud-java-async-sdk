@@ -48,6 +48,10 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currentPage
      */
@@ -89,6 +93,17 @@ public class ListDeploymentJobResponseBody extends TeaModel {
         private String requestId; 
         private Integer showSize; 
         private Long total; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDeploymentJobResponseBody model) {
+            this.currentPage = model.currentPage;
+            this.data = model.data;
+            this.requestId = model.requestId;
+            this.showSize = model.showSize;
+            this.total = model.total;
+        } 
 
         /**
          * <p>The page number. Default value: 1.</p>
@@ -359,6 +374,28 @@ public class ListDeploymentJobResponseBody extends TeaModel {
             private String startTime; 
             private String status; 
             private Long userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.certDomain = model.certDomain;
+                this.certType = model.certType;
+                this.del = model.del;
+                this.endTime = model.endTime;
+                this.gmtCreate = model.gmtCreate;
+                this.gmtModified = model.gmtModified;
+                this.id = model.id;
+                this.instanceId = model.instanceId;
+                this.jobType = model.jobType;
+                this.name = model.name;
+                this.productName = model.productName;
+                this.rollback = model.rollback;
+                this.scheduleTime = model.scheduleTime;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The domain names bound to the certificate of the deployment task.</p>

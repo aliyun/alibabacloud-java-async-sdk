@@ -48,6 +48,10 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return certWarehouseList
      */
@@ -89,6 +93,17 @@ public class ListCertWarehouseResponseBody extends TeaModel {
         private String requestId; 
         private Long showSize; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListCertWarehouseResponseBody model) {
+            this.certWarehouseList = model.certWarehouseList;
+            this.currentPage = model.currentPage;
+            this.requestId = model.requestId;
+            this.showSize = model.showSize;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The certificate application repositories.</p>
@@ -263,6 +278,20 @@ public class ListCertWarehouseResponseBody extends TeaModel {
             private Long qps; 
             private String type; 
             private Long whId; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertWarehouseList model) {
+                this.endTime = model.endTime;
+                this.instanceId = model.instanceId;
+                this.isExpired = model.isExpired;
+                this.name = model.name;
+                this.pcaInstanceId = model.pcaInstanceId;
+                this.qps = model.qps;
+                this.type = model.type;
+                this.whId = model.whId;
+            } 
 
             /**
              * <p>The timestamp when the certificate application repository expires. Unit: milliseconds.</p>

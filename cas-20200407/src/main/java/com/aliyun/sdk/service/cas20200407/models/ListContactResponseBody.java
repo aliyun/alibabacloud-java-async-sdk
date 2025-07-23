@@ -52,6 +52,10 @@ public class ListContactResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return contactList
      */
@@ -101,6 +105,18 @@ public class ListContactResponseBody extends TeaModel {
         private String requestId; 
         private Integer showSize; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListContactResponseBody model) {
+            this.contactList = model.contactList;
+            this.currentPage = model.currentPage;
+            this.keyword = model.keyword;
+            this.requestId = model.requestId;
+            this.showSize = model.showSize;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The contacts.</p>
@@ -274,6 +290,19 @@ public class ListContactResponseBody extends TeaModel {
             private Integer mobileStatus; 
             private String name; 
             private String webhooks; 
+
+            private Builder() {
+            } 
+
+            private Builder(ContactList model) {
+                this.contactId = model.contactId;
+                this.email = model.email;
+                this.emailStatus = model.emailStatus;
+                this.mobile = model.mobile;
+                this.mobileStatus = model.mobileStatus;
+                this.name = model.name;
+                this.webhooks = model.webhooks;
+            } 
 
             /**
              * <p>The ID of the contact.</p>

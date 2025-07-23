@@ -104,6 +104,10 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return casContacts
      */
@@ -257,6 +261,31 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
         private String startTime; 
         private String status; 
         private Long userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DescribeDeploymentJobResponseBody model) {
+            this.casContacts = model.casContacts;
+            this.certDomain = model.certDomain;
+            this.certType = model.certType;
+            this.config = model.config;
+            this.del = model.del;
+            this.endTime = model.endTime;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.id = model.id;
+            this.instanceId = model.instanceId;
+            this.jobType = model.jobType;
+            this.name = model.name;
+            this.productName = model.productName;
+            this.requestId = model.requestId;
+            this.rollback = model.rollback;
+            this.scheduleTime = model.scheduleTime;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.userId = model.userId;
+        } 
 
         /**
          * <p>The information about the contact.</p>
@@ -563,6 +592,16 @@ public class DescribeDeploymentJobResponseBody extends TeaModel {
             private String id; 
             private String mobile; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(CasContacts model) {
+                this.email = model.email;
+                this.id = model.id;
+                this.mobile = model.mobile;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The email address of the contact.</p>

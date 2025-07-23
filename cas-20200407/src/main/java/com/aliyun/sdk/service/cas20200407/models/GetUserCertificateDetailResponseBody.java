@@ -152,6 +152,10 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return algorithm
      */
@@ -401,6 +405,43 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
         private String signCert; 
         private String signPrivateKey; 
         private String startDate; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserCertificateDetailResponseBody model) {
+            this.algorithm = model.algorithm;
+            this.buyInAliyun = model.buyInAliyun;
+            this.cert = model.cert;
+            this.certChain = model.certChain;
+            this.certIdentifier = model.certIdentifier;
+            this.city = model.city;
+            this.common = model.common;
+            this.country = model.country;
+            this.encryptCert = model.encryptCert;
+            this.encryptPrivateKey = model.encryptPrivateKey;
+            this.endDate = model.endDate;
+            this.expired = model.expired;
+            this.fingerprint = model.fingerprint;
+            this.id = model.id;
+            this.instanceId = model.instanceId;
+            this.issuer = model.issuer;
+            this.key = model.key;
+            this.name = model.name;
+            this.notAfter = model.notAfter;
+            this.notBefore = model.notBefore;
+            this.orderId = model.orderId;
+            this.orgName = model.orgName;
+            this.province = model.province;
+            this.requestId = model.requestId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.sans = model.sans;
+            this.serialNo = model.serialNo;
+            this.sha2 = model.sha2;
+            this.signCert = model.signCert;
+            this.signPrivateKey = model.signPrivateKey;
+            this.startDate = model.startDate;
+        } 
 
         /**
          * <p>The algorithm.</p>
@@ -841,6 +882,17 @@ public class GetUserCertificateDetailResponseBody extends TeaModel {
             private Long notAfter; 
             private Long notBefore; 
             private Integer remainDay; 
+
+            private Builder() {
+            } 
+
+            private Builder(CertChain model) {
+                this.commonName = model.commonName;
+                this.issuerCommonName = model.issuerCommonName;
+                this.notAfter = model.notAfter;
+                this.notBefore = model.notBefore;
+                this.remainDay = model.remainDay;
+            } 
 
             /**
              * <p>The common name of the certificate.</p>

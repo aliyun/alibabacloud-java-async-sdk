@@ -36,6 +36,10 @@ public class VerifyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class VerifyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private Boolean signatureValid; 
+
+        private Builder() {
+        } 
+
+        private Builder(VerifyResponseBody model) {
+            this.requestId = model.requestId;
+            this.signatureValid = model.signatureValid;
+        } 
 
         /**
          * <p>The ID of the request.</p>
