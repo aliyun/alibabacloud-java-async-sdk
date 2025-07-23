@@ -43,4 +43,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<OperateAppServiceForPartnerResponse> operateAppServiceForPartner(OperateAppServiceForPartnerRequest request);
 
+    /**
+     * @param request the request parameters of SyncAppInstanceForPartner  SyncAppInstanceForPartnerRequest
+     * @return SyncAppInstanceForPartnerResponse
+     */
+    CompletableFuture<SyncAppInstanceForPartnerResponse> syncAppInstanceForPartner(SyncAppInstanceForPartnerRequest request);
+
 }
