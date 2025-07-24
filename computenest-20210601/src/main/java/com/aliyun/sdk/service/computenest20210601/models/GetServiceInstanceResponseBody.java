@@ -107,6 +107,9 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("SupplierUid")
     private Long supplierUid;
 
+    @com.aliyun.core.annotation.NameInMap("SupportTrialToPrivate")
+    private Boolean supportTrialToPrivate;
+
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List<Tags> tags;
 
@@ -150,6 +153,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         this.status = builder.status;
         this.statusDetail = builder.statusDetail;
         this.supplierUid = builder.supplierUid;
+        this.supportTrialToPrivate = builder.supportTrialToPrivate;
         this.tags = builder.tags;
         this.templateName = builder.templateName;
         this.updateTime = builder.updateTime;
@@ -379,6 +383,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return supportTrialToPrivate
+     */
+    public Boolean getSupportTrialToPrivate() {
+        return this.supportTrialToPrivate;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List<Tags> getTags() {
@@ -437,6 +448,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private String status; 
         private String statusDetail; 
         private Long supplierUid; 
+        private Boolean supportTrialToPrivate; 
         private java.util.List<Tags> tags; 
         private String templateName; 
         private String updateTime; 
@@ -476,6 +488,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             this.status = model.status;
             this.statusDetail = model.statusDetail;
             this.supplierUid = model.supplierUid;
+            this.supportTrialToPrivate = model.supportTrialToPrivate;
             this.tags = model.tags;
             this.templateName = model.templateName;
             this.updateTime = model.updateTime;
@@ -760,7 +773,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the service to which the service instance belongs.</p>
+         * <p>The service details.</p>
          */
         public Builder service(Service service) {
             this.service = service;
@@ -850,6 +863,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
          */
         public Builder supplierUid(Long supplierUid) {
             this.supplierUid = supplierUid;
+            return this;
+        }
+
+        /**
+         * <p>Is it supported to convert from trial to private</p>
+         */
+        public Builder supportTrialToPrivate(Boolean supportTrialToPrivate) {
+            this.supportTrialToPrivate = supportTrialToPrivate;
             return this;
         }
 
@@ -1669,7 +1690,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>An upgradable service version.</p>
+             * <p>The service version.</p>
              * 
              * <strong>example:</strong>
              * <p>draft</p>
@@ -1680,7 +1701,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The version name of an upgradable service version.</p>
+             * <p>The version name.</p>
              * 
              * <strong>example:</strong>
              * <p>0.1.0</p>
@@ -1971,7 +1992,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * OperationMetadata.
+             * <p>Parameters related to O&amp;M operations, including configuration change, prometheus, and log configurations.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>{&quot;SupportBackup&quot;:false,&quot;PrometheusConfigMap&quot;:{},&quot;ModifyParametersConfig&quot;:[{&quot;TemplateName&quot;:&quot;Chinese mainland version&quot;,&quot;Operation&quot;:[{&quot;Name&quot;:&quot;Change Plan&quot;,&quot;Description&quot;:&quot;Change Plan&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:true,&quot;EnableLogging&quot;:false},{&quot;Name&quot;:&quot;Parameter configuration change&quot;,&quot;Description&quot;:&quot;Parameter configuration change&quot;,&quot;Type&quot;:&quot;Custom&quot;,&quot;SupportPredefinedParameters&quot;:false,&quot;EnableLogging&quot;:false,&quot;Parameters&quot;:[&quot;DataDiskSize&quot;]}]}}</p>
              */
             public Builder operationMetadata(String operationMetadata) {
                 this.operationMetadata = operationMetadata;
@@ -2090,7 +2114,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The upgradable service version.</p>
+             * <p>The service versions that can be updated.</p>
              */
             public Builder upgradableServiceInfos(java.util.List<UpgradableServiceInfos> upgradableServiceInfos) {
                 this.upgradableServiceInfos = upgradableServiceInfos;
@@ -2109,35 +2133,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
              * <p>The metadata about the upgrade.</p>
              * 
              * <strong>example:</strong>
-             * <p>{
-             *   &quot;Type&quot;: &quot;OOS&quot;,
-             *   &quot;Description&quot;: &quot;Changelog or something description&quot;,
-             *   &quot;SupportUpgradeFromVersions&quot;: [1, 2],
-             *   &quot;UpgradeSteps&quot;: {
-             *     &quot;PreUpgradeStage&quot;: {
-             *       &quot;Description&quot;: &quot;初始化数据库&quot;,
-             *       &quot;Type&quot;: &quot;RunCommand&quot;,
-             *       &quot;ResourceName&quot;: &quot;EcsRole1&quot;,
-             *       &quot;CommandType&quot;: &quot;runShellScript&quot;,
-             *       &quot;CommandContent&quot;: &quot;echo hello&quot;
-             *     },
-             *     &quot;UpgradeStage&quot;: [{
-             *       &quot;Description&quot;: &quot;更新EcsRole1实例&quot;,
-             *       &quot;Type&quot;: &quot;RunCommand&quot;,
-             *       &quot;ResourceName&quot;: &quot;EcsRole1&quot;,
-             *       &quot;ArtifactsDownloadDirectory&quot;: &quot;/home/admin&quot;,
-             *       &quot;CommandType&quot;: &quot;runShellScript&quot;,
-             *       &quot;CommandContent&quot;: &quot;echo hello&quot;
-             *     }],
-             *     &quot;PostUpgradeStage&quot;: {
-             *       &quot;Description&quot;: &quot;部署后post check&quot;,
-             *       &quot;Type&quot;: &quot;None/RunCommand&quot;,
-             *       &quot;ResourceName&quot;: &quot;EcsRole1&quot;,
-             *       &quot;CommandType&quot;: &quot;runShellScript&quot;,
-             *       &quot;CommandContent&quot;: &quot;echo hello&quot;
-             *     }
-             *   }
-             * }</p>
+             * <p>{&quot;Description&quot;:&quot;Allowed Upgrade 11&quot;,&quot;SupportRollback&quot;:true,&quot;SupportUpgradeFromVersions&quot;:[],&quot;UpgradeComponents&quot;:[&quot;Configuration&quot;,&quot;Resource&quot;]}</p>
              */
             public Builder upgradeMetadata(String upgradeMetadata) {
                 this.upgradeMetadata = upgradeMetadata;

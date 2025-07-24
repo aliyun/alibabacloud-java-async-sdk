@@ -72,6 +72,10 @@ public class CreateServiceInstanceRequest extends Request {
     private String serviceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
+    private String serviceInstanceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceVersion")
     private String serviceVersion;
 
@@ -110,6 +114,7 @@ public class CreateServiceInstanceRequest extends Request {
         this.resourceAutoPay = builder.resourceAutoPay;
         this.resourceGroupId = builder.resourceGroupId;
         this.serviceId = builder.serviceId;
+        this.serviceInstanceId = builder.serviceInstanceId;
         this.serviceVersion = builder.serviceVersion;
         this.specificationCode = builder.specificationCode;
         this.specificationName = builder.specificationName;
@@ -223,6 +228,13 @@ public class CreateServiceInstanceRequest extends Request {
     }
 
     /**
+     * @return serviceInstanceId
+     */
+    public String getServiceInstanceId() {
+        return this.serviceInstanceId;
+    }
+
+    /**
      * @return serviceVersion
      */
     public String getServiceVersion() {
@@ -278,6 +290,7 @@ public class CreateServiceInstanceRequest extends Request {
         private Boolean resourceAutoPay; 
         private String resourceGroupId; 
         private String serviceId; 
+        private String serviceInstanceId; 
         private String serviceVersion; 
         private String specificationCode; 
         private String specificationName; 
@@ -304,6 +317,7 @@ public class CreateServiceInstanceRequest extends Request {
             this.resourceAutoPay = request.resourceAutoPay;
             this.resourceGroupId = request.resourceGroupId;
             this.serviceId = request.serviceId;
+            this.serviceInstanceId = request.serviceInstanceId;
             this.serviceVersion = request.serviceVersion;
             this.specificationCode = request.specificationCode;
             this.specificationName = request.specificationName;
@@ -489,6 +503,18 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         /**
+         * <p>The trial service instance id witch you want to convert to formal</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-d32fbcef30664721b785</p>
+         */
+        public Builder serviceInstanceId(String serviceInstanceId) {
+            this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
+            this.serviceInstanceId = serviceInstanceId;
+            return this;
+        }
+
+        /**
          * <p>The service version.</p>
          * 
          * <strong>example:</strong>
@@ -590,12 +616,16 @@ public class CreateServiceInstanceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PayPeriodUnit")
         private String payPeriodUnit;
 
+        @com.aliyun.core.annotation.NameInMap("QuotationId")
+        private String quotationId;
+
         private Commodity(Builder builder) {
             this.autoPay = builder.autoPay;
             this.autoRenew = builder.autoRenew;
             this.couponId = builder.couponId;
             this.payPeriod = builder.payPeriod;
             this.payPeriodUnit = builder.payPeriodUnit;
+            this.quotationId = builder.quotationId;
         }
 
         public static Builder builder() {
@@ -641,12 +671,20 @@ public class CreateServiceInstanceRequest extends Request {
             return this.payPeriodUnit;
         }
 
+        /**
+         * @return quotationId
+         */
+        public String getQuotationId() {
+            return this.quotationId;
+        }
+
         public static final class Builder {
             private Boolean autoPay; 
             private Boolean autoRenew; 
             private String couponId; 
             private Long payPeriod; 
             private String payPeriodUnit; 
+            private String quotationId; 
 
             private Builder() {
             } 
@@ -657,6 +695,7 @@ public class CreateServiceInstanceRequest extends Request {
                 this.couponId = model.couponId;
                 this.payPeriod = model.payPeriod;
                 this.payPeriodUnit = model.payPeriodUnit;
+                this.quotationId = model.quotationId;
             } 
 
             /**
@@ -724,6 +763,14 @@ public class CreateServiceInstanceRequest extends Request {
              */
             public Builder payPeriodUnit(String payPeriodUnit) {
                 this.payPeriodUnit = payPeriodUnit;
+                return this;
+            }
+
+            /**
+             * QuotationId.
+             */
+            public Builder quotationId(String quotationId) {
+                this.quotationId = quotationId;
                 return this;
             }
 

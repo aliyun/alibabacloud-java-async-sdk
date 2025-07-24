@@ -139,7 +139,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the service instances.</p>
+         * <p>The information about service instances.</p>
          */
         public Builder serviceInstances(java.util.List<ServiceInstances> serviceInstances) {
             this.serviceInstances = serviceInstances;
@@ -364,7 +364,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
              * <p>The description of the service.</p>
              * 
              * <strong>example:</strong>
-             * <p>B是A公司自主设计并研发的开源分布式的关系型数据库</p>
+             * <p>WordPress is a free and open-source website content management system (CMS).</p>
              */
             public Builder shortDescription(String shortDescription) {
                 this.shortDescription = shortDescription;
@@ -835,6 +835,9 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StatusDetail")
         private String statusDetail;
 
+        @com.aliyun.core.annotation.NameInMap("SupportTrialToPrivate")
+        private Boolean supportTrialToPrivate;
+
         @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List<Tags> tags;
 
@@ -867,6 +870,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             this.source = builder.source;
             this.status = builder.status;
             this.statusDetail = builder.statusDetail;
+            this.supportTrialToPrivate = builder.supportTrialToPrivate;
             this.tags = builder.tags;
             this.templateName = builder.templateName;
             this.updateTime = builder.updateTime;
@@ -1035,6 +1039,13 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return supportTrialToPrivate
+         */
+        public Boolean getSupportTrialToPrivate() {
+            return this.supportTrialToPrivate;
+        }
+
+        /**
          * @return tags
          */
         public java.util.List<Tags> getTags() {
@@ -1078,6 +1089,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String source; 
             private String status; 
             private String statusDetail; 
+            private Boolean supportTrialToPrivate; 
             private java.util.List<Tags> tags; 
             private String templateName; 
             private String updateTime; 
@@ -1108,6 +1120,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
                 this.source = model.source;
                 this.status = model.status;
                 this.statusDetail = model.statusDetail;
+                this.supportTrialToPrivate = model.supportTrialToPrivate;
                 this.tags = model.tags;
                 this.templateName = model.templateName;
                 this.updateTime = model.updateTime;
@@ -1385,6 +1398,17 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
+             * <p>Is it supported to convert from trial to formal</p>
+             * 
+             * <strong>example:</strong>
+             * <p>true</p>
+             */
+            public Builder supportTrialToPrivate(Boolean supportTrialToPrivate) {
+                this.supportTrialToPrivate = supportTrialToPrivate;
+                return this;
+            }
+
+            /**
              * <p>The custom tags.</p>
              */
             public Builder tags(java.util.List<Tags> tags) {
@@ -1396,7 +1420,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
              * <p>The template name.</p>
              * 
              * <strong>example:</strong>
-             * <p>模板1</p>
+             * <p>Single ECS</p>
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;

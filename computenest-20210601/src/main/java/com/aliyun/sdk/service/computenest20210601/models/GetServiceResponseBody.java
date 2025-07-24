@@ -542,7 +542,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ComplianceMetadata.
+         * <p>Compliance check metadata.</p>
          */
         public Builder complianceMetadata(ComplianceMetadata complianceMetadata) {
             this.complianceMetadata = complianceMetadata;
@@ -1623,7 +1623,7 @@ public class GetServiceResponseBody extends TeaModel {
             } 
 
             /**
-             * CompliancePacks.
+             * <p>The compliance pack list.</p>
              */
             public Builder compliancePacks(java.util.List<String> compliancePacks) {
                 this.compliancePacks = compliancePacks;

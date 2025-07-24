@@ -358,10 +358,14 @@ public class GetServiceEstimateCostRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("PayPeriodUnit")
         private String payPeriodUnit;
 
+        @com.aliyun.core.annotation.NameInMap("QuotationId")
+        private String quotationId;
+
         private Commodity(Builder builder) {
             this.couponId = builder.couponId;
             this.payPeriod = builder.payPeriod;
             this.payPeriodUnit = builder.payPeriodUnit;
+            this.quotationId = builder.quotationId;
         }
 
         public static Builder builder() {
@@ -393,10 +397,18 @@ public class GetServiceEstimateCostRequest extends Request {
             return this.payPeriodUnit;
         }
 
+        /**
+         * @return quotationId
+         */
+        public String getQuotationId() {
+            return this.quotationId;
+        }
+
         public static final class Builder {
             private String couponId; 
             private Integer payPeriod; 
             private String payPeriodUnit; 
+            private String quotationId; 
 
             private Builder() {
             } 
@@ -405,6 +417,7 @@ public class GetServiceEstimateCostRequest extends Request {
                 this.couponId = model.couponId;
                 this.payPeriod = model.payPeriod;
                 this.payPeriodUnit = model.payPeriodUnit;
+                this.quotationId = model.quotationId;
             } 
 
             /**
@@ -442,6 +455,14 @@ public class GetServiceEstimateCostRequest extends Request {
              */
             public Builder payPeriodUnit(String payPeriodUnit) {
                 this.payPeriodUnit = payPeriodUnit;
+                return this;
+            }
+
+            /**
+             * QuotationId.
+             */
+            public Builder quotationId(String quotationId) {
+                this.quotationId = quotationId;
                 return this;
             }
 

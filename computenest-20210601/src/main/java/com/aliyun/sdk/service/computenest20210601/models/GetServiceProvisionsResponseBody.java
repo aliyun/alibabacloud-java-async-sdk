@@ -78,7 +78,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the services.</p>
+         * <p>The information about the cloud services.</p>
          */
         public Builder serviceProvisions(java.util.List<ServiceProvisions> serviceProvisions) {
             this.serviceProvisions = serviceProvisions;
@@ -157,7 +157,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             } 
 
             /**
-             * CommodityCode.
+             * <p>Commodity Code</p>
+             * 
+             * <strong>example:</strong>
+             * <p>acs_postpaid_public_cn</p>
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -165,7 +168,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * EnableURL.
+             * <p>Product activation link.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://common-buy.aliyun.com/?commodityCode=acs_postpaid_public_cn">https://common-buy.aliyun.com/?commodityCode=acs_postpaid_public_cn</a></p>
              */
             public Builder enableURL(String enableURL) {
                 this.enableURL = enableURL;
@@ -173,7 +179,10 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * <p>Cloud service activation status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Disabled</p>
              */
             public Builder status(String status) {
                 this.status = status;
@@ -664,7 +673,7 @@ public class GetServiceProvisionsResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityProvisions.
+             * <p>Product details. Some services (such as ACS) involve the activation of multiple products</p>
              */
             public Builder commodityProvisions(java.util.List<CommodityProvisions> commodityProvisions) {
                 this.commodityProvisions = commodityProvisions;

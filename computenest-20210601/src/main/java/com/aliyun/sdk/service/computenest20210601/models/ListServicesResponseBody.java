@@ -298,7 +298,10 @@ public class ListServicesResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>wordpress</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -306,7 +309,10 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * <p>The version of the software.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>6.0.1</p>
              */
             public Builder version(String version) {
                 this.version = version;
@@ -460,7 +466,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Softwares.
+             * <p>Service software information.</p>
              */
             public Builder softwares(java.util.List<Softwares> softwares) {
                 this.softwares = softwares;
@@ -981,7 +987,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The information about the service.</p>
+             * <p>The service information.</p>
              */
             public Builder serviceInfos(java.util.List<ServiceInfos> serviceInfos) {
                 this.serviceInfos = serviceInfos;
