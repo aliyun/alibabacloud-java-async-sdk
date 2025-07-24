@@ -93,7 +93,7 @@ public class RunInstancesResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>The instance IDs (<code>InstanceIdSet</code>).</p>
+         * <p>The instance IDs.</p>
          */
         public Builder instanceIdSets(InstanceIdSets instanceIdSets) {
             this.instanceIdSets = instanceIdSets;

@@ -426,7 +426,7 @@ public class ImportImageRequest extends Request {
         }
 
         /**
-         * <p>The information of disks from which the custom images are created.</p>
+         * <p>Details about the custom images.</p>
          */
         public Builder diskDeviceMapping(java.util.List<DiskDeviceMapping> diskDeviceMapping) {
             this.putQueryParameter("DiskDeviceMapping", diskDeviceMapping);
@@ -783,7 +783,7 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * <p>The size of disk N in the custom image after the image is imported.</p>
+             * <p>The size of disk N in the custom image after the source image is imported.</p>
              * <p>You can use this parameter to specify the sizes of the system disk and data disks in the custom image. When you specify the size of the system disk, make sure that the specified size is greater than or equal to the size of the imported image file. Unit: GiB. Valid values:</p>
              * <ul>
              * <li>When the N value is 1, this parameter specifies the size of the system disk in the custom image. Valid values: 1 to 2048.</li>
@@ -800,13 +800,14 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * <p>The image format. Valid values:</p>
+             * <p>The format of the source image. Valid values:</p>
              * <ul>
              * <li>RAW</li>
              * <li>VHD</li>
              * <li>QCOW2</li>
+             * <li>VMDK (invitational preview)</li>
              * </ul>
-             * <p>This parameter is empty by default, which indicates that the system checks the format of the image and uses the check result as the value of this parameter.</p>
+             * <p>This parameter is empty by default, which indicates that the system checks the image format and uses the check result as the value of this parameter.</p>
              * 
              * <strong>example:</strong>
              * <p>QCOW2</p>
@@ -817,9 +818,9 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * <p>The OSS bucket where the image file is stored.</p>
+             * <p>The Object Storage Service (OSS) bucket where the image file is stored.</p>
              * <blockquote>
-             * <p> Before you import images for the first time, you must use RAM to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the <code>NoSetRoletoECSServiceAcount</code> error code is returned when you call the ImportImage operation. For more information, see the &quot;<strong>Usage notes</strong>&quot; section in this topic.</p>
+             * <p> Before you import images for the first time, you must use RAM to authorize ECS to access your OSS buckets. If ECS is not authorized to access your OSS buckets, the <code>NoSetRoletoECSServiceAcount</code> error code is returned when you call the ImportImage operation. For more information, see <strong>Usage notes</strong>.</p>
              * </blockquote>
              * 
              * <strong>example:</strong>
@@ -831,7 +832,7 @@ public class ImportImageRequest extends Request {
             }
 
             /**
-             * <p>The name (key) of the object that the uploaded image is stored as in the OSS bucket.</p>
+             * <p>The name (key) of the object that the image file is stored as in the OSS bucket.</p>
              * 
              * <strong>example:</strong>
              * <p>CentOS_5.4_32.raw</p>

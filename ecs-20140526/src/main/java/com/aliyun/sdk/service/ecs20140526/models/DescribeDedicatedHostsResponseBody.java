@@ -119,7 +119,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
         } 
 
         /**
-         * <p>Details about the dedicated hosts.</p>
+         * <p>Details about the DDH.</p>
          */
         public Builder dedicatedHosts(DedicatedHosts dedicatedHosts) {
             this.dedicatedHosts = dedicatedHosts;
@@ -2076,7 +2076,7 @@ public class DescribeDedicatedHostsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The CPU overcommit ratio.Valid values: 1 to 5.</p>
+             * <p>The CPU overcommit ratio. Valid values: 1 to 5.</p>
              * 
              * <strong>example:</strong>
              * <p>1</p>

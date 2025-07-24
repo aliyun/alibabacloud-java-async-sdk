@@ -1132,7 +1132,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>Only custom image components can be deleted.</p>
+     * <p>  Only custom image components can be deleted.</p>
+     * <ul>
+     * <li>When you delete a component, make sure that the component is not used in the template. Otherwise, the component fails to be deleted.</li>
+     * </ul>
      * 
      * @param request the request parameters of DeleteImageComponent  DeleteImageComponentRequest
      * @return DeleteImageComponentResponse
@@ -1862,7 +1865,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      * <b>description</b> :
      * <p>  You can query system events that were completed within the last 30 days. No limits apply to the time range for querying uncompleted system events.</p>
      * <ul>
-     * <li>You can also specify InstanceEventCycleStatus to query the system events that are in the Scheduled, Executing, or Inquiring state.</li>
+     * <li>If you do not specify the EventCycleStatus or InstanceEventCycleStatus parameter, only system events in the Avoidated, Executed, Canceled, or Failed state are included in the query results by default.</li>
+     * <li>You can also specify the InstanceEventCycleStatus parameter in the request to query the system events that are in the Scheduled, Executing, or Inquiring state.</li>
      * </ul>
      * 
      * @param request the request parameters of DescribeInstanceHistoryEvents  DescribeInstanceHistoryEventsRequest
@@ -3016,20 +3020,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <h2><a href="#"></a>Usage notes</h2>
      * <blockquote>
-     * <p> This operation is not recommended. We recommend that you call the <a href="https://help.aliyun.com/document_detail/25503.html">ModifyInstanceAttribute</a> operation to add an instance to or remove an instance from a security group, and call the <a href="https://help.aliyun.com/document_detail/58513.html">ModifyNetworkInterfaceAttribute</a> operation to add an ENI to or remove an ENI from a security group.
-     * Take note of the following items:</p>
+     * <p>This operation is not recommended. We recommend that you call the <a href="https://help.aliyun.com/document_detail/25503.html">ModifyInstanceAttribute</a> operation to add an instance to or remove an instance from a security group, and call the <a href="https://help.aliyun.com/document_detail/58513.html">ModifyNetworkInterfaceAttribute</a> operation to add an ENI to or remove an ENI from a security group.</p>
      * </blockquote>
      * <ul>
-     * <li>Before you add an instance to a security group, the instance must be in the <strong>Stopped</strong> (Stopped) or <strong>Running</strong> (Running) state.</li>
-     * <li>An instance can be added to up to five security groups by default.</li>
-     * <li>You can <a href="https://workorder-intl.console.aliyun.com/#/ticket/createIndex">submit a ticket</a> to change the maximum number of security groups to which an instance can be added to 4 or 10.</li>
-     * <li>A basic security group can contain up to 2,000 instances. An advanced security group can contain up to 65,536 instances.</li>
-     * <li>The security group and the instance must reside in the same region.</li>
+     * <li>An instance and an ENI cannot be added to a security group at the same time. You cannot specify <code>InstanceId</code> and <code>NetworkInterfaceId</code> at the same time in a request.</li>
+     * <li>The security group and the ECS instance to be added to the security group must reside in the same region.</li>
      * <li>The security group and the instance must be of the same network type. If the network type is Virtual Private Cloud (VPC), the security group and the instance must reside in the same VPC.</li>
-     * <li>An instance and an ENI cannot be added to a security group at the same time. You cannot specify <code>InstanceId</code> and <code>NetworkInterfaceId</code> at the same time in a request.
-     * For more information, see <a href="https://help.aliyun.com/document_detail/25412.html">Limits</a>.</li>
+     * <li>Before you add an instance to a security group, the instance must be in the <strong>Stopped</strong> or <strong>Running</strong> state.</li>
+     * <li>An instance can be added to up to five security groups by default. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</li>
      * </ul>
      * 
      * @param request the request parameters of JoinSecurityGroup  JoinSecurityGroupRequest

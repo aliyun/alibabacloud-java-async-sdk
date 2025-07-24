@@ -168,7 +168,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * Name.
+             * <p>The name of the attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>VirtualIntelSpeedSelectTechnologySupport</p>
              */
             public Builder name(String name) {
                 this.name = name;
@@ -176,7 +179,10 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * <p>The attribute value.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1</p>
              */
             public Builder value(String value) {
                 this.value = value;
@@ -284,7 +290,14 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * PtpSupport.
+             * <p>Whether PTP is supported. Possible values:</p>
+             * <ul>
+             * <li>supported</li>
+             * <li>unsupported</li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>unsupported</p>
              */
             public Builder ptpSupport(String ptpSupport) {
                 this.ptpSupport = ptpSupport;
@@ -1380,7 +1393,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             } 
 
             /**
-             * Attributes.
+             * <p>The list of specification attributes.</p>
              */
             public Builder attributes(Attributes attributes) {
                 this.attributes = attributes;
@@ -1399,7 +1412,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Clock.
+             * <p>The clock supported by the specification.</p>
              */
             public Builder clock(Clock clock) {
                 this.clock = clock;
@@ -1808,6 +1821,9 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
              * <li>true</li>
              * <li>false</li>
              * </ul>
+             * <blockquote>
+             * <p> This parameter is in invitational preview and is not publicly available.</p>
+             * </blockquote>
              * 
              * <strong>example:</strong>
              * <p>true</p>

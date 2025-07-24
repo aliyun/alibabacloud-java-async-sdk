@@ -114,7 +114,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -125,7 +125,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The number of entries returned per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -136,7 +136,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the request.</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>04F0F334-1335-436C-A1D7-6C044FE12CBA</p>
@@ -216,7 +216,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             } 
 
             /**
-             * <p>The tag key of the launch template.</p>
+             * <p>The tag value of the launch template.</p>
              * 
              * <strong>example:</strong>
              * <p>TestKey</p>
@@ -227,7 +227,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tag value of the launch template.</p>
+             * <p>The tag key of the launch template.</p>
              * 
              * <strong>example:</strong>
              * <p>TestValue</p>
@@ -498,7 +498,7 @@ public class DescribeLaunchTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The name of the template.</p>
+             * <p>The name of the launch template.</p>
              * 
              * <strong>example:</strong>
              * <p>wd-152630748****</p>

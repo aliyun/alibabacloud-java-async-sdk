@@ -407,6 +407,9 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
      * <p>DescribeDeploymentSetsResponseBody</p>
      */
     public static class DeploymentSet extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountId")
+        private Long accountId;
+
         @com.aliyun.core.annotation.NameInMap("Capacities")
         private Capacities capacities;
 
@@ -444,6 +447,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         private String strategy;
 
         private DeploymentSet(Builder builder) {
+            this.accountId = builder.accountId;
             this.capacities = builder.capacities;
             this.creationTime = builder.creationTime;
             this.deploymentSetDescription = builder.deploymentSetDescription;
@@ -464,6 +468,13 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
 
         public static DeploymentSet create() {
             return builder().build();
+        }
+
+        /**
+         * @return accountId
+         */
+        public Long getAccountId() {
+            return this.accountId;
         }
 
         /**
@@ -551,6 +562,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long accountId; 
             private Capacities capacities; 
             private String creationTime; 
             private String deploymentSetDescription; 
@@ -568,6 +580,7 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
             } 
 
             private Builder(DeploymentSet model) {
+                this.accountId = model.accountId;
                 this.capacities = model.capacities;
                 this.creationTime = model.creationTime;
                 this.deploymentSetDescription = model.deploymentSetDescription;
@@ -581,6 +594,14 @@ public class DescribeDeploymentSetsResponseBody extends TeaModel {
                 this.instanceIds = model.instanceIds;
                 this.strategy = model.strategy;
             } 
+
+            /**
+             * AccountId.
+             */
+            public Builder accountId(Long accountId) {
+                this.accountId = accountId;
+                return this;
+            }
 
             /**
              * <p>Details of the capacities of the deployment set. This parameter is valid only when the deployment set contains ECS instances. The value contains information about the capacities of the deployment set in different zones.</p>

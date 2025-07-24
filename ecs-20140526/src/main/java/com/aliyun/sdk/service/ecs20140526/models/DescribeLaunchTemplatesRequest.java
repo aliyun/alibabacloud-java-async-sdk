@@ -273,7 +273,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The page number. Page starts from page 1.</p>
          * <p>Default value: 1.</p>
          * 
          * <strong>example:</strong>
@@ -286,7 +286,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The number of entries to return on each page.</p>
+         * <p>The number of entries per page.</p>
          * <p>Default value: 10.</p>
          * 
          * <strong>example:</strong>
@@ -299,7 +299,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         }
 
         /**
-         * <p>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
+         * <p>The region ID of the launch template. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the most recent region list.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -332,7 +332,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         /**
          * <p>The ID of the resource group to which the launch template belongs. If you specify this parameter to query resources, up to 1,000 resources that belong to the specified resource group can be returned.</p>
          * <blockquote>
-         * <p>Resources in the default resource group are displayed in the response regardless of whether you specify this parameter.</p>
+         * <p> The default resource group is not supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -347,7 +347,7 @@ public class DescribeLaunchTemplatesRequest extends Request {
         /**
          * <p>The tags of the launch template.</p>
          * <blockquote>
-         * <p> You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the Elastic Compute Service (ECS) console.</p>
+         * <p> You can only call API operations to add tags to and query the tags of a launch template. You cannot add tags to or view the tags of a launch template in the ECS console.</p>
          * </blockquote>
          */
         public Builder templateTag(java.util.List<TemplateTag> templateTag) {
