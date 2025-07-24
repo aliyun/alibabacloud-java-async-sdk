@@ -44,6 +44,10 @@ public class AutoRenewInstanceParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoRenew
      */
@@ -77,6 +81,16 @@ public class AutoRenewInstanceParam extends TeaModel {
         private String autoRenewDuration; 
         private String autoRenewDurationUnit; 
         private String instanceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AutoRenewInstanceParam model) {
+            this.autoRenew = model.autoRenew;
+            this.autoRenewDuration = model.autoRenewDuration;
+            this.autoRenewDurationUnit = model.autoRenewDurationUnit;
+            this.instanceId = model.instanceId;
+        } 
 
         /**
          * AutoRenew.

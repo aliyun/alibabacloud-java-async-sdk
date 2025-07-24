@@ -52,6 +52,10 @@ public class PromotionInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return canPromFee
      */
@@ -101,6 +105,18 @@ public class PromotionInfo extends TeaModel {
         private String promotionName; 
         private String promotionOptionCode; 
         private String promotionOptionNo; 
+
+        private Builder() {
+        } 
+
+        private Builder(PromotionInfo model) {
+            this.canPromFee = model.canPromFee;
+            this.isSelected = model.isSelected;
+            this.promotionDesc = model.promotionDesc;
+            this.promotionName = model.promotionName;
+            this.promotionOptionCode = model.promotionOptionCode;
+            this.promotionOptionNo = model.promotionOptionNo;
+        } 
 
         /**
          * CanPromFee.

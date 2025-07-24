@@ -36,6 +36,10 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterCloneMeta
      */
@@ -54,8 +58,16 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
         private ClusterCloneMeta clusterCloneMeta; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetClusterCloneMetaResponseBody model) {
+            this.clusterCloneMeta = model.clusterCloneMeta;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>The metadata of the cluster that you want to clone.</p>
+         * <p>Cluster clone metadata.</p>
          */
         public Builder clusterCloneMeta(ClusterCloneMeta clusterCloneMeta) {
             this.clusterCloneMeta = clusterCloneMeta;
@@ -134,6 +146,15 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             private Integer maxCapacity; 
             private Integer maxOnDemandCapacity; 
             private Integer minCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(Constraints model) {
+                this.maxCapacity = model.maxCapacity;
+                this.maxOnDemandCapacity = model.maxOnDemandCapacity;
+                this.minCapacity = model.minCapacity;
+            } 
 
             /**
              * <p>The maximum number of nodes in the node group. Default value: 2000.</p>
@@ -266,6 +287,18 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             private String ruleName; 
             private TimeTrigger timeTrigger; 
             private String triggerType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScalingRules model) {
+                this.activityType = model.activityType;
+                this.adjustmentValue = model.adjustmentValue;
+                this.metricsTrigger = model.metricsTrigger;
+                this.ruleName = model.ruleName;
+                this.timeTrigger = model.timeTrigger;
+                this.triggerType = model.triggerType;
+            } 
 
             /**
              * <p>The scaling type. This parameter is required. Valid values:</p>
@@ -445,6 +478,19 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             private String scalingPolicyId; 
             private String scalingPolicyType; 
             private java.util.List<ScalingRules> scalingRules; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScalingPolicies model) {
+                this.clusterId = model.clusterId;
+                this.constraints = model.constraints;
+                this.nodeGroupId = model.nodeGroupId;
+                this.nodeGroupName = model.nodeGroupName;
+                this.scalingPolicyId = model.scalingPolicyId;
+                this.scalingPolicyType = model.scalingPolicyType;
+                this.scalingRules = model.scalingRules;
+            } 
 
             /**
              * <p>The cluster ID.</p>
@@ -793,6 +839,33 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             private SubscriptionConfig subscriptionConfig; 
             private java.util.List<Tag> tags; 
 
+            private Builder() {
+            } 
+
+            private Builder(ClusterCloneMeta model) {
+                this.applicationConfigs = model.applicationConfigs;
+                this.applications = model.applications;
+                this.bootstrapScripts = model.bootstrapScripts;
+                this.clusterId = model.clusterId;
+                this.clusterName = model.clusterName;
+                this.clusterState = model.clusterState;
+                this.clusterType = model.clusterType;
+                this.deletionProtection = model.deletionProtection;
+                this.deployMode = model.deployMode;
+                this.emrDefaultRole = model.emrDefaultRole;
+                this.existCloneConfig = model.existCloneConfig;
+                this.nodeAttributes = model.nodeAttributes;
+                this.nodeGroups = model.nodeGroups;
+                this.paymentType = model.paymentType;
+                this.regionId = model.regionId;
+                this.releaseVersion = model.releaseVersion;
+                this.resourceGroupId = model.resourceGroupId;
+                this.scalingPolicies = model.scalingPolicies;
+                this.securityMode = model.securityMode;
+                this.subscriptionConfig = model.subscriptionConfig;
+                this.tags = model.tags;
+            } 
+
             /**
              * <p>The modified configuration items.</p>
              */
@@ -802,7 +875,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The services.</p>
+             * <p>The cluster applications.</p>
              */
             public Builder applications(java.util.List<Application> applications) {
                 this.applications = applications;
@@ -810,7 +883,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The bootstrap actions. Number of elements in the array: 1 to 10.</p>
+             * <p>An array of bootstrap scripts. The number of elements in the array: 1 to 10.</p>
              */
             public Builder bootstrapScripts(java.util.List<Script> bootstrapScripts) {
                 this.bootstrapScripts = bootstrapScripts;
@@ -927,6 +1000,9 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
              * <li>False</li>
              * <li>True</li>
              * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>True</p>
              */
             public Builder existCloneConfig(Boolean existCloneConfig) {
                 this.existCloneConfig = existCloneConfig;
@@ -942,7 +1018,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The node groups. Number of elements in the array: 1 to 100.</p>
+             * <p>The node groups. The number of elements in the array: 1 to 100.</p>
              */
             public Builder nodeGroups(java.util.List<NodeGroup> nodeGroups) {
                 this.nodeGroups = nodeGroups;
@@ -1029,7 +1105,7 @@ public class GetClusterCloneMetaResponseBody extends TeaModel {
             }
 
             /**
-             * <p>The tags.</p>
+             * <p>The list of cluster tags.</p>
              */
             public Builder tags(java.util.List<Tag> tags) {
                 this.tags = tags;

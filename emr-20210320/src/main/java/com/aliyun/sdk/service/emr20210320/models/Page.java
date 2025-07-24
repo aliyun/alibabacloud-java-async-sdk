@@ -44,6 +44,10 @@ public class Page extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return items
      */
@@ -77,6 +81,16 @@ public class Page extends TeaModel {
         private Long maxResults; 
         private String nextToken; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(Page model) {
+            this.items = model.items;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * Items.

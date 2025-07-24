@@ -36,6 +36,10 @@ public class Order extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return createTime
      */
@@ -53,6 +57,14 @@ public class Order extends TeaModel {
     public static final class Builder {
         private String createTime; 
         private String orderId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Order model) {
+            this.createTime = model.createTime;
+            this.orderId = model.orderId;
+        } 
 
         /**
          * CreateTime.

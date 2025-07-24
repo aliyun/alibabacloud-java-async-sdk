@@ -48,6 +48,10 @@ public class IncreaseNodeGroupParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeCount
      */
@@ -89,6 +93,17 @@ public class IncreaseNodeGroupParam extends TeaModel {
         private Integer paymentDuration; 
         private String paymentDurationUnit; 
         private String vSwitchId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IncreaseNodeGroupParam model) {
+            this.nodeCount = model.nodeCount;
+            this.nodeGroupId = model.nodeGroupId;
+            this.paymentDuration = model.paymentDuration;
+            this.paymentDurationUnit = model.paymentDurationUnit;
+            this.vSwitchId = model.vSwitchId;
+        } 
 
         /**
          * NodeCount.

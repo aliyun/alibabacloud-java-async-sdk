@@ -47,6 +47,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateScriptResponse> createScript(CreateScriptRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple users at a time.</p>
+     * 
      * @param request the request parameters of CreateUsers  CreateUsersRequest
      * @return CreateUsersResponse
      */
@@ -59,9 +62,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DecreaseNodesResponse> decreaseNodes(DecreaseNodesRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>创建集群模板</p>
-     * 
      * @param request the request parameters of DeleteApiTemplate  DeleteApiTemplateRequest
      * @return DeleteApiTemplateResponse
      */
@@ -80,6 +80,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteScriptResponse> deleteScript(DeleteScriptRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Deletes multiple users at a time.</p>
+     * 
      * @param request the request parameters of DeleteUsers  DeleteUsersRequest
      * @return DeleteUsersResponse
      */
@@ -198,15 +201,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
      * <b>description</b> :
-     * <p>get Doctor HDFS UGI</p>
-     * 
-     * @param request the request parameters of GetDoctorHDFSUGI  GetDoctorHDFSUGIRequest
-     * @return GetDoctorHDFSUGIResponse
-     */
-    CompletableFuture<GetDoctorHDFSUGIResponse> getDoctorHDFSUGI(GetDoctorHDFSUGIRequest request);
-
-    /**
-     * <b>description</b> :
      * <p>list Doctor Hive Cluster</p>
      * 
      * @param request the request parameters of GetDoctorHiveCluster  GetDoctorHiveClusterRequest
@@ -249,6 +243,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetDoctorReportComponentSummaryResponse
      */
     CompletableFuture<GetDoctorReportComponentSummaryResponse> getDoctorReportComponentSummary(GetDoctorReportComponentSummaryRequest request);
+
+    /**
+     * @param request the request parameters of GetManagedScalingPolicy  GetManagedScalingPolicyRequest
+     * @return GetManagedScalingPolicyResponse
+     */
+    CompletableFuture<GetManagedScalingPolicyResponse> getManagedScalingPolicy(GetManagedScalingPolicyRequest request);
 
     /**
      * <b>description</b> :
@@ -311,9 +311,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListClustersResponse> listClusters(ListClustersRequest request);
 
     /**
-     * <b>description</b> :
-     * <p>查询组件实例列表。</p>
-     * 
      * @param request the request parameters of ListComponentInstances  ListComponentInstancesRequest
      * @return ListComponentInstancesResponse
      */
@@ -464,6 +461,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Queries a user.</p>
+     * 
      * @param request the request parameters of ListUsers  ListUsersRequest
      * @return ListUsersResponse
      */
@@ -477,6 +477,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PutAutoScalingPolicyResponse
      */
     CompletableFuture<PutAutoScalingPolicyResponse> putAutoScalingPolicy(PutAutoScalingPolicyRequest request);
+
+    /**
+     * @param request the request parameters of PutManagedScalingPolicy  PutManagedScalingPolicyRequest
+     * @return PutManagedScalingPolicyResponse
+     */
+    CompletableFuture<PutManagedScalingPolicyResponse> putManagedScalingPolicy(PutManagedScalingPolicyRequest request);
 
     /**
      * @param request the request parameters of RemoveAutoScalingPolicy  RemoveAutoScalingPolicyRequest
@@ -545,6 +551,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateScriptResponse> updateScript(UpdateScriptRequest request);
 
     /**
+     * <b>description</b> :
+     * <p>Updates the information about a user.</p>
+     * 
      * @param request the request parameters of UpdateUserAttribute  UpdateUserAttributeRequest
      * @return UpdateUserAttributeResponse
      */

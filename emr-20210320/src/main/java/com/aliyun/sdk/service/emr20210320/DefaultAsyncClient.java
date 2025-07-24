@@ -158,6 +158,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>You can call this operation to create multiple users at a time.</p>
+     * 
      * @param request the request parameters of CreateUsers  CreateUsersRequest
      * @return CreateUsersResponse
      */
@@ -194,9 +197,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>创建集群模板</p>
-     * 
      * @param request the request parameters of DeleteApiTemplate  DeleteApiTemplateRequest
      * @return DeleteApiTemplateResponse
      */
@@ -251,6 +251,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Deletes multiple users at a time.</p>
+     * 
      * @param request the request parameters of DeleteUsers  DeleteUsersRequest
      * @return DeleteUsersResponse
      */
@@ -549,27 +552,6 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
      * <b>description</b> :
-     * <p>get Doctor HDFS UGI</p>
-     * 
-     * @param request the request parameters of GetDoctorHDFSUGI  GetDoctorHDFSUGIRequest
-     * @return GetDoctorHDFSUGIResponse
-     */
-    @Override
-    public CompletableFuture<GetDoctorHDFSUGIResponse> getDoctorHDFSUGI(GetDoctorHDFSUGIRequest request) {
-        try {
-            this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDoctorHDFSUGI").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
-            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDoctorHDFSUGIResponse.create());
-            return this.handler.execute(params);
-        } catch (Exception e) {
-            CompletableFuture<GetDoctorHDFSUGIResponse> future = new CompletableFuture<>();
-            future.completeExceptionally(e);
-            return future;
-        }
-    }
-
-    /**
-     * <b>description</b> :
      * <p>list Doctor Hive Cluster</p>
      * 
      * @param request the request parameters of GetDoctorHiveCluster  GetDoctorHiveClusterRequest
@@ -668,6 +650,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetDoctorReportComponentSummaryResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetManagedScalingPolicy  GetManagedScalingPolicyRequest
+     * @return GetManagedScalingPolicyResponse
+     */
+    @Override
+    public CompletableFuture<GetManagedScalingPolicyResponse> getManagedScalingPolicy(GetManagedScalingPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetManagedScalingPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetManagedScalingPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetManagedScalingPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -842,9 +842,6 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * <b>description</b> :
-     * <p>查询组件实例列表。</p>
-     * 
      * @param request the request parameters of ListComponentInstances  ListComponentInstancesRequest
      * @return ListComponentInstancesResponse
      */
@@ -1223,6 +1220,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries a user.</p>
+     * 
      * @param request the request parameters of ListUsers  ListUsersRequest
      * @return ListUsersResponse
      */
@@ -1256,6 +1256,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<PutAutoScalingPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of PutManagedScalingPolicy  PutManagedScalingPolicyRequest
+     * @return PutManagedScalingPolicyResponse
+     */
+    @Override
+    public CompletableFuture<PutManagedScalingPolicyResponse> putManagedScalingPolicy(PutManagedScalingPolicyRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("PutManagedScalingPolicy").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PutManagedScalingPolicyResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PutManagedScalingPolicyResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -1448,6 +1466,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Updates the information about a user.</p>
+     * 
      * @param request the request parameters of UpdateUserAttribute  UpdateUserAttributeRequest
      * @return UpdateUserAttributeResponse
      */

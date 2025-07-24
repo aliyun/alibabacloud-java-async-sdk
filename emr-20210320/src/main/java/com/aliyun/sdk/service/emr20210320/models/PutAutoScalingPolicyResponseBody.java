@@ -32,6 +32,10 @@ public class PutAutoScalingPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -42,8 +46,15 @@ public class PutAutoScalingPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(PutAutoScalingPolicyResponseBody model) {
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * <p>请求ID。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>

@@ -76,6 +76,10 @@ public class PriceInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return currency
      */
@@ -173,6 +177,24 @@ public class PriceInfo extends TeaModel {
         private String spotPrice; 
         private String taxPrice; 
         private String tradePrice; 
+
+        private Builder() {
+        } 
+
+        private Builder(PriceInfo model) {
+            this.currency = model.currency;
+            this.discountPrice = model.discountPrice;
+            this.originalPrice = model.originalPrice;
+            this.payType = model.payType;
+            this.promotionResults = model.promotionResults;
+            this.resourceType = model.resourceType;
+            this.spotInstanceTypeOriginalPrice = model.spotInstanceTypeOriginalPrice;
+            this.spotInstanceTypePrice = model.spotInstanceTypePrice;
+            this.spotOriginalPrice = model.spotOriginalPrice;
+            this.spotPrice = model.spotPrice;
+            this.taxPrice = model.taxPrice;
+            this.tradePrice = model.tradePrice;
+        } 
 
         /**
          * Currency.

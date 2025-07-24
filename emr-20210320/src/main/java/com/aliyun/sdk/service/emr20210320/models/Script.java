@@ -60,6 +60,10 @@ public class Script extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return executionFailStrategy
      */
@@ -117,6 +121,19 @@ public class Script extends TeaModel {
         private String scriptArgs; 
         private String scriptName; 
         private String scriptPath; 
+
+        private Builder() {
+        } 
+
+        private Builder(Script model) {
+            this.executionFailStrategy = model.executionFailStrategy;
+            this.executionMoment = model.executionMoment;
+            this.nodeSelector = model.nodeSelector;
+            this.priority = model.priority;
+            this.scriptArgs = model.scriptArgs;
+            this.scriptName = model.scriptName;
+            this.scriptPath = model.scriptPath;
+        } 
 
         /**
          * <p>执行失败策略。</p>

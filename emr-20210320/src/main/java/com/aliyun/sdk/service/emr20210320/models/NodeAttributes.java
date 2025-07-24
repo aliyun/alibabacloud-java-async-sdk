@@ -71,6 +71,10 @@ public class NodeAttributes extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataDiskEncrypted
      */
@@ -152,6 +156,22 @@ public class NodeAttributes extends TeaModel {
         private String systemDiskKMSKeyId; 
         private String vpcId; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeAttributes model) {
+            this.dataDiskEncrypted = model.dataDiskEncrypted;
+            this.dataDiskKMSKeyId = model.dataDiskKMSKeyId;
+            this.keyPairName = model.keyPairName;
+            this.masterRootPassword = model.masterRootPassword;
+            this.ramRole = model.ramRole;
+            this.securityGroupId = model.securityGroupId;
+            this.systemDiskEncrypted = model.systemDiskEncrypted;
+            this.systemDiskKMSKeyId = model.systemDiskKMSKeyId;
+            this.vpcId = model.vpcId;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * <p>是否启用云盘加密。取值范围：</p>

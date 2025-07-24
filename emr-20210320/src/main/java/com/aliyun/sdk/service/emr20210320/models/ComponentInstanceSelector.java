@@ -50,6 +50,10 @@ public class ComponentInstanceSelector extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actionScope
      */
@@ -91,6 +95,17 @@ public class ComponentInstanceSelector extends TeaModel {
         private java.util.List<ComponentInstances> componentInstances; 
         private java.util.List<Components> components; 
         private String runActionScope; 
+
+        private Builder() {
+        } 
+
+        private Builder(ComponentInstanceSelector model) {
+            this.actionScope = model.actionScope;
+            this.applicationName = model.applicationName;
+            this.componentInstances = model.componentInstances;
+            this.components = model.components;
+            this.runActionScope = model.runActionScope;
+        } 
 
         /**
          * ActionScope.
@@ -207,6 +222,15 @@ public class ComponentInstanceSelector extends TeaModel {
             private String componentName; 
             private String nodeId; 
 
+            private Builder() {
+            } 
+
+            private Builder(ComponentInstances model) {
+                this.applicationName = model.applicationName;
+                this.componentName = model.componentName;
+                this.nodeId = model.nodeId;
+            } 
+
             /**
              * <p>应用名称。</p>
              * 
@@ -290,6 +314,14 @@ public class ComponentInstanceSelector extends TeaModel {
         public static final class Builder {
             private String applicationName; 
             private String componentName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.applicationName = model.applicationName;
+                this.componentName = model.componentName;
+            } 
 
             /**
              * <p>应用名称。</p>

@@ -38,6 +38,10 @@ public class ApplicationConfigFile extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationName
      */
@@ -55,6 +59,14 @@ public class ApplicationConfigFile extends TeaModel {
     public static final class Builder {
         private String applicationName; 
         private String configFileName; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplicationConfigFile model) {
+            this.applicationName = model.applicationName;
+            this.configFileName = model.configFileName;
+        } 
 
         /**
          * <p>应用名称。</p>

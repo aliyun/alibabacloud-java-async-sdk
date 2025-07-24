@@ -50,6 +50,10 @@ public class SubscriptionConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoRenew
      */
@@ -91,6 +95,17 @@ public class SubscriptionConfig extends TeaModel {
         private String autoRenewDurationUnit; 
         private Integer paymentDuration; 
         private String paymentDurationUnit; 
+
+        private Builder() {
+        } 
+
+        private Builder(SubscriptionConfig model) {
+            this.autoRenew = model.autoRenew;
+            this.autoRenewDuration = model.autoRenewDuration;
+            this.autoRenewDurationUnit = model.autoRenewDurationUnit;
+            this.paymentDuration = model.paymentDuration;
+            this.paymentDurationUnit = model.paymentDurationUnit;
+        } 
 
         /**
          * <p>自动续费。取值范围：</p>

@@ -37,6 +37,10 @@ public class GetApiTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -54,6 +58,14 @@ public class GetApiTemplateResponseBody extends TeaModel {
     public static final class Builder {
         private ApiTemplate data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApiTemplateResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The content of the API operation template.</p>

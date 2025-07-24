@@ -72,7 +72,7 @@ public class ListScriptsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -245,7 +245,7 @@ public class ListScriptsRequest extends Request {
         }
 
         /**
-         * <p>The status of the script. Only common scripts are supported.</p>
+         * <p>The script status list.</p>
          */
         public Builder statuses(java.util.List<String> statuses) {
             this.putQueryParameter("Statuses", statuses);

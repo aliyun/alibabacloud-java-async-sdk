@@ -58,7 +58,7 @@ public class CreateScriptRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -162,7 +162,7 @@ public class CreateScriptRequest extends Request {
         }
 
         /**
-         * <p>The common scripts or bootstrap actions.</p>
+         * <p>The list of scripts.</p>
          * <p>This parameter is required.</p>
          */
         public Builder scripts(java.util.List<Script> scripts) {
@@ -172,7 +172,7 @@ public class CreateScriptRequest extends Request {
         }
 
         /**
-         * <p>The timeout period for manually running a common script. You cannot specify the timeout period for a bootstrap action.</p>
+         * <p>The timeout period for a manual execution script. You cannot specify a timeout period for a bootstrap action.</p>
          */
         public Builder timeoutSecs(String timeoutSecs) {
             this.putQueryParameter("TimeoutSecs", timeoutSecs);

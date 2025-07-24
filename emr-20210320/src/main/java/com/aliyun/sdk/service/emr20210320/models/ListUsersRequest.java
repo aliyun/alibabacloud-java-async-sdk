@@ -61,7 +61,7 @@ public class ListUsersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -131,7 +131,7 @@ public class ListUsersRequest extends Request {
         } 
 
         /**
-         * <p>集群ID。</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>一次获取的最大记录数。取值范围：1~100。</p>
+         * <p>The maximum number of entries to return.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -156,7 +156,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>标记当前开始读取的位置，置空表示从头开始。</p>
+         * <p>The pagination token that is used in the request to retrieve a new page of results.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
@@ -168,7 +168,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>区域ID。</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -181,7 +181,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * <p>用户名，支持模糊搜索。</p>
+         * <p>The username. Fuzzy match is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -193,7 +193,7 @@ public class ListUsersRequest extends Request {
         }
 
         /**
-         * UserNames.
+         * <p>The usernames. Number of elements in the array: 0 to 20.</p>
          */
         public Builder userNames(java.util.List<String> userNames) {
             this.putQueryParameter("UserNames", userNames);

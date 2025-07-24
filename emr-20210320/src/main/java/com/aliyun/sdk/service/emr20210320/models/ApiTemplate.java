@@ -56,6 +56,10 @@ public class ApiTemplate extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiName
      */
@@ -113,6 +117,19 @@ public class ApiTemplate extends TeaModel {
         private String status; 
         private String templateId; 
         private String templateName; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApiTemplate model) {
+            this.apiName = model.apiName;
+            this.content = model.content;
+            this.regionId = model.regionId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.status = model.status;
+            this.templateId = model.templateId;
+            this.templateName = model.templateName;
+        } 
 
         /**
          * <p>接口名。</p>

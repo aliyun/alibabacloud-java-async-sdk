@@ -52,6 +52,10 @@ public class TriggerCondition extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return comparisonOperator
      */
@@ -93,6 +97,17 @@ public class TriggerCondition extends TeaModel {
         private String statistics; 
         private java.util.List<Tag> tags; 
         private Double threshold; 
+
+        private Builder() {
+        } 
+
+        private Builder(TriggerCondition model) {
+            this.comparisonOperator = model.comparisonOperator;
+            this.metricName = model.metricName;
+            this.statistics = model.statistics;
+            this.tags = model.tags;
+            this.threshold = model.threshold;
+        } 
 
         /**
          * <p>比较符。取值范围：</p>

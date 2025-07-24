@@ -44,6 +44,10 @@ public class Toleration extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return effect
      */
@@ -77,6 +81,16 @@ public class Toleration extends TeaModel {
         private String key; 
         private String operator; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(Toleration model) {
+            this.effect = model.effect;
+            this.key = model.key;
+            this.operator = model.operator;
+            this.value = model.value;
+        } 
 
         /**
          * Effect.

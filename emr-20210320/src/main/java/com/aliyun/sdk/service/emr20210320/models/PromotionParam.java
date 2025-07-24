@@ -40,6 +40,10 @@ public class PromotionParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return productCode
      */
@@ -65,6 +69,15 @@ public class PromotionParam extends TeaModel {
         private String productCode; 
         private String promotionOptionCode; 
         private String promotionOptionNo; 
+
+        private Builder() {
+        } 
+
+        private Builder(PromotionParam model) {
+            this.productCode = model.productCode;
+            this.promotionOptionCode = model.promotionOptionCode;
+            this.promotionOptionNo = model.promotionOptionNo;
+        } 
 
         /**
          * ProductCode.

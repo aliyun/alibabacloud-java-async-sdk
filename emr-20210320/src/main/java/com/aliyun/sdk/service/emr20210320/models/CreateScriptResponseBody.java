@@ -36,6 +36,10 @@ public class CreateScriptResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class CreateScriptResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private String scriptId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateScriptResponseBody model) {
+            this.requestId = model.requestId;
+            this.scriptId = model.scriptId;
+        } 
 
         /**
          * <p>The request ID.</p>

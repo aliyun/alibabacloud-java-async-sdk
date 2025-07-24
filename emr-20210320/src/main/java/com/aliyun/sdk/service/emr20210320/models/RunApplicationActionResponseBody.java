@@ -40,6 +40,10 @@ public class RunApplicationActionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return abnInstances
      */
@@ -65,6 +69,15 @@ public class RunApplicationActionResponseBody extends TeaModel {
         private java.util.List<AbnInstances> abnInstances; 
         private String operationId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(RunApplicationActionResponseBody model) {
+            this.abnInstances = model.abnInstances;
+            this.operationId = model.operationId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The abnormal nodes.</p>
@@ -145,6 +158,14 @@ public class RunApplicationActionResponseBody extends TeaModel {
         public static final class Builder {
             private String nodeId; 
             private String nodeName; 
+
+            private Builder() {
+            } 
+
+            private Builder(AbnInstances model) {
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+            } 
 
             /**
              * <p>The ID of the abnormal node.</p>

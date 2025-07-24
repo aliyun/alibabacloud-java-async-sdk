@@ -45,6 +45,10 @@ public class NodeCountConstraint extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return max
      */
@@ -78,6 +82,16 @@ public class NodeCountConstraint extends TeaModel {
         private Integer min; 
         private String type; 
         private java.util.List<Integer> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeCountConstraint model) {
+            this.max = model.max;
+            this.min = model.min;
+            this.type = model.type;
+            this.values = model.values;
+        } 
 
         /**
          * Max.

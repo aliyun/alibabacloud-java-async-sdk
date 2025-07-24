@@ -32,6 +32,10 @@ public class ReplacementStrategy extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceCategories
      */
@@ -41,6 +45,13 @@ public class ReplacementStrategy extends TeaModel {
 
     public static final class Builder {
         private java.util.List<InstanceCategory> instanceCategories; 
+
+        private Builder() {
+        } 
+
+        private Builder(ReplacementStrategy model) {
+            this.instanceCategories = model.instanceCategories;
+        } 
 
         /**
          * InstanceCategories.

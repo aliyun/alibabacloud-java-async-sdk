@@ -40,6 +40,10 @@ public class RenewInstanceParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -65,6 +69,15 @@ public class RenewInstanceParam extends TeaModel {
         private String instanceId; 
         private Long renewDuration; 
         private String renewDurationUnit; 
+
+        private Builder() {
+        } 
+
+        private Builder(RenewInstanceParam model) {
+            this.instanceId = model.instanceId;
+            this.renewDuration = model.renewDuration;
+            this.renewDurationUnit = model.renewDurationUnit;
+        } 
 
         /**
          * InstanceId.

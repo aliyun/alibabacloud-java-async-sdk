@@ -60,6 +60,10 @@ public class InstanceType extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cpuArchitecture
      */
@@ -125,6 +129,20 @@ public class InstanceType extends TeaModel {
         private Integer localStorageAmount; 
         private Long localStorageCapacity; 
         private Boolean optimized; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstanceType model) {
+            this.cpuArchitecture = model.cpuArchitecture;
+            this.cpuCore = model.cpuCore;
+            this.instanceCategory = model.instanceCategory;
+            this.instanceType = model.instanceType;
+            this.instanceTypeFamily = model.instanceTypeFamily;
+            this.localStorageAmount = model.localStorageAmount;
+            this.localStorageCapacity = model.localStorageCapacity;
+            this.optimized = model.optimized;
+        } 
 
         /**
          * <p>cpu架构。</p>

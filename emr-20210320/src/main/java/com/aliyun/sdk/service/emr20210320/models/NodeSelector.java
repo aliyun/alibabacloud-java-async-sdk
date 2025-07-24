@@ -59,6 +59,10 @@ public class NodeSelector extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeGroupId
      */
@@ -116,6 +120,19 @@ public class NodeSelector extends TeaModel {
         private java.util.List<String> nodeGroupTypes; 
         private java.util.List<String> nodeNames; 
         private String nodeSelectType; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeSelector model) {
+            this.nodeGroupId = model.nodeGroupId;
+            this.nodeGroupIds = model.nodeGroupIds;
+            this.nodeGroupName = model.nodeGroupName;
+            this.nodeGroupNames = model.nodeGroupNames;
+            this.nodeGroupTypes = model.nodeGroupTypes;
+            this.nodeNames = model.nodeNames;
+            this.nodeSelectType = model.nodeSelectType;
+        } 
 
         /**
          * <p>节点组ID。当NodeSelectType取值NodeGroup时，该参数生效。</p>

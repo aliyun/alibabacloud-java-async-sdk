@@ -36,6 +36,10 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         private String requestId; 
         private ScalingPolicy scalingPolicy; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetAutoScalingPolicyResponseBody model) {
+            this.requestId = model.requestId;
+            this.scalingPolicy = model.scalingPolicy;
+        } 
+
         /**
          * <p>The request ID.</p>
          * 
@@ -66,7 +78,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The information about the auto scaling policy.</p>
+         * <p>The auto scaling policy.</p>
          */
         public Builder scalingPolicy(ScalingPolicy scalingPolicy) {
             this.scalingPolicy = scalingPolicy;
@@ -122,6 +134,14 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         public static final class Builder {
             private Integer maxCapacity; 
             private Integer minCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(Constraints model) {
+                this.maxCapacity = model.maxCapacity;
+                this.minCapacity = model.minCapacity;
+            } 
 
             /**
              * <p>The maximum number of nodes in the node group. Default value: 2000.</p>
@@ -255,6 +275,19 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             private String ruleName; 
             private TimeTrigger timeTrigger; 
             private String triggerType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScalingRules model) {
+                this.activityType = model.activityType;
+                this.adjustmentType = model.adjustmentType;
+                this.adjustmentValue = model.adjustmentValue;
+                this.metricsTrigger = model.metricsTrigger;
+                this.ruleName = model.ruleName;
+                this.timeTrigger = model.timeTrigger;
+                this.triggerType = model.triggerType;
+            } 
 
             /**
              * <p>The scaling type. Valid values:</p>
@@ -421,6 +454,17 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             private String nodeGroupId; 
             private String scalingPolicyId; 
             private java.util.List<ScalingRules> scalingRules; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScalingPolicy model) {
+                this.clusterId = model.clusterId;
+                this.constraints = model.constraints;
+                this.nodeGroupId = model.nodeGroupId;
+                this.scalingPolicyId = model.scalingPolicyId;
+                this.scalingRules = model.scalingRules;
+            } 
 
             /**
              * <p>The cluster ID.</p>

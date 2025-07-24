@@ -70,6 +70,10 @@ public class RunClusterRequest extends Request {
     private String paymentType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Promotions")
+    private java.util.List<Promotion> promotions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -109,6 +113,7 @@ public class RunClusterRequest extends Request {
         this.nodeAttributes = builder.nodeAttributes;
         this.nodeGroups = builder.nodeGroups;
         this.paymentType = builder.paymentType;
+        this.promotions = builder.promotions;
         this.regionId = builder.regionId;
         this.releaseVersion = builder.releaseVersion;
         this.resourceGroupId = builder.resourceGroupId;
@@ -125,7 +130,7 @@ public class RunClusterRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -215,6 +220,13 @@ public class RunClusterRequest extends Request {
     }
 
     /**
+     * @return promotions
+     */
+    public java.util.List<Promotion> getPromotions() {
+        return this.promotions;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -269,6 +281,7 @@ public class RunClusterRequest extends Request {
         private NodeAttributes nodeAttributes; 
         private java.util.List<NodeGroupConfig> nodeGroups; 
         private String paymentType; 
+        private java.util.List<Promotion> promotions; 
         private String regionId; 
         private String releaseVersion; 
         private String resourceGroupId; 
@@ -294,6 +307,7 @@ public class RunClusterRequest extends Request {
             this.nodeAttributes = request.nodeAttributes;
             this.nodeGroups = request.nodeGroups;
             this.paymentType = request.paymentType;
+            this.promotions = request.promotions;
             this.regionId = request.regionId;
             this.releaseVersion = request.releaseVersion;
             this.resourceGroupId = request.resourceGroupId;
@@ -313,7 +327,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>The services. Number of elements in the array: 1 to 100.</p>
+         * <p>The list of services. Number of elements in the array: 1 to 100.</p>
          * <p>This parameter is required.</p>
          */
         public Builder applications(java.util.List<Application> applications) {
@@ -324,7 +338,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>The bootstrap actions. Number of elements in the array: 1 to 10.</p>
+         * <p>The array of bootstrap scripts. Number of elements in the array: 1 to 10.</p>
          */
         public Builder bootstrapScripts(java.util.List<Script> bootstrapScripts) {
             String bootstrapScriptsShrink = shrink(bootstrapScripts, "BootstrapScripts", "json");
@@ -426,7 +440,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>The attributes of all ECS instances.</p>
+         * <p>The node attributes. The basic attributes of all ECS nodes in the cluster.</p>
          */
         public Builder nodeAttributes(NodeAttributes nodeAttributes) {
             String nodeAttributesShrink = shrink(nodeAttributes, "NodeAttributes", "json");
@@ -436,7 +450,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>The node groups. Number of elements in the array: 1 to 100.</p>
+         * <p>The array of configurations of the node groups. Number of elements in the array: 1 to 100.</p>
          * <p>This parameter is required.</p>
          */
         public Builder nodeGroups(java.util.List<NodeGroupConfig> nodeGroups) {
@@ -460,6 +474,16 @@ public class RunClusterRequest extends Request {
         public Builder paymentType(String paymentType) {
             this.putBodyParameter("PaymentType", paymentType);
             this.paymentType = paymentType;
+            return this;
+        }
+
+        /**
+         * Promotions.
+         */
+        public Builder promotions(java.util.List<Promotion> promotions) {
+            String promotionsShrink = shrink(promotions, "Promotions", "json");
+            this.putQueryParameter("Promotions", promotionsShrink);
+            this.promotions = promotions;
             return this;
         }
 
@@ -518,7 +542,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>The subscription configurations. This parameter takes effect only if you set the PaymentType parameter to Subscription.</p>
+         * <p>The subscription configurations. This parameter is required when the PaymentType parameter is set to Subscription.</p>
          */
         public Builder subscriptionConfig(SubscriptionConfig subscriptionConfig) {
             String subscriptionConfigShrink = shrink(subscriptionConfig, "SubscriptionConfig", "json");
@@ -528,7 +552,7 @@ public class RunClusterRequest extends Request {
         }
 
         /**
-         * <p>The tags. Number of elements in the array: 0 to 20.</p>
+         * <p>The tag. Number of elements in the array: 0 to 20.</p>
          */
         public Builder tags(java.util.List<Tag> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

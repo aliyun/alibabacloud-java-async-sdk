@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link GetDoctorHDFSUGIResponse} extends {@link TeaModel}
+ * {@link GetManagedScalingPolicyResponse} extends {@link TeaModel}
  *
- * <p>GetDoctorHDFSUGIResponse</p>
+ * <p>GetManagedScalingPolicyResponse</p>
  */
-public class GetDoctorHDFSUGIResponse extends Response {
+public class GetManagedScalingPolicyResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map<String, String> headers;
 
@@ -24,20 +24,20 @@ public class GetDoctorHDFSUGIResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetDoctorHDFSUGIResponseBody body;
+    private GetManagedScalingPolicyResponseBody body;
 
-    private GetDoctorHDFSUGIResponse(BuilderImpl builder) {
+    private GetManagedScalingPolicyResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetDoctorHDFSUGIResponse create() {
+    public static GetManagedScalingPolicyResponse create() {
         return new BuilderImpl().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new BuilderImpl(this);
     }
@@ -59,35 +59,35 @@ public class GetDoctorHDFSUGIResponse extends Response {
     /**
      * @return body
      */
-    public GetDoctorHDFSUGIResponseBody getBody() {
+    public GetManagedScalingPolicyResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetDoctorHDFSUGIResponse, Builder> {
+    public interface Builder extends Response.Builder<GetManagedScalingPolicyResponse, Builder> {
 
         Builder headers(java.util.Map<String, String> headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetDoctorHDFSUGIResponseBody body);
+        Builder body(GetManagedScalingPolicyResponseBody body);
 
         @Override
-        GetDoctorHDFSUGIResponse build();
+        GetManagedScalingPolicyResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetDoctorHDFSUGIResponse, Builder>
+            extends Response.BuilderImpl<GetManagedScalingPolicyResponse, Builder>
             implements Builder {
         private java.util.Map<String, String> headers; 
         private Integer statusCode; 
-        private GetDoctorHDFSUGIResponseBody body; 
+        private GetManagedScalingPolicyResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetDoctorHDFSUGIResponse response) {
+        private BuilderImpl(GetManagedScalingPolicyResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -116,14 +116,14 @@ public class GetDoctorHDFSUGIResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetDoctorHDFSUGIResponseBody body) {
+        public Builder body(GetManagedScalingPolicyResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetDoctorHDFSUGIResponse build() {
-            return new GetDoctorHDFSUGIResponse(this);
+        public GetManagedScalingPolicyResponse build() {
+            return new GetManagedScalingPolicyResponse(this);
         } 
 
     } 

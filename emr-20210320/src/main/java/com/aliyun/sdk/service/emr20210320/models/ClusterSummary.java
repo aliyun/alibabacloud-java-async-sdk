@@ -92,6 +92,10 @@ public class ClusterSummary extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -221,6 +225,28 @@ public class ClusterSummary extends TeaModel {
         private String resourceGroupId; 
         private ClusterStateChangeReason stateChangeReason; 
         private java.util.List<Tag> tags; 
+
+        private Builder() {
+        } 
+
+        private Builder(ClusterSummary model) {
+            this.clusterId = model.clusterId;
+            this.clusterName = model.clusterName;
+            this.clusterState = model.clusterState;
+            this.clusterType = model.clusterType;
+            this.createTime = model.createTime;
+            this.deletionProtection = model.deletionProtection;
+            this.description = model.description;
+            this.emrDefaultRole = model.emrDefaultRole;
+            this.endTime = model.endTime;
+            this.expireTime = model.expireTime;
+            this.paymentType = model.paymentType;
+            this.readyTime = model.readyTime;
+            this.releaseVersion = model.releaseVersion;
+            this.resourceGroupId = model.resourceGroupId;
+            this.stateChangeReason = model.stateChangeReason;
+            this.tags = model.tags;
+        } 
 
         /**
          * <p>集群ID。</p>

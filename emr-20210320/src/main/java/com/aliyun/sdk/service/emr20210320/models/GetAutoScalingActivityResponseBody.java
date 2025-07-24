@@ -36,6 +36,10 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private ScalingActivity scalingActivity; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetAutoScalingActivityResponseBody model) {
+            this.requestId = model.requestId;
+            this.scalingActivity = model.scalingActivity;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -279,6 +291,27 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             private String ruleName; 
             private Long startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(ScalingActivity model) {
+                this.activityId = model.activityId;
+                this.activityResults = model.activityResults;
+                this.activityState = model.activityState;
+                this.activityType = model.activityType;
+                this.clusterId = model.clusterId;
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.expectNum = model.expectNum;
+                this.nodeGroupId = model.nodeGroupId;
+                this.nodeGroupName = model.nodeGroupName;
+                this.operationId = model.operationId;
+                this.policyType = model.policyType;
+                this.ruleDetail = model.ruleDetail;
+                this.ruleName = model.ruleName;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The ID of the scaling activity.</p>
              * 
@@ -408,7 +441,10 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * <p>The policy type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>AUTO</p>
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;

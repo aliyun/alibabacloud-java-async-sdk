@@ -36,6 +36,10 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDoctorApplicationResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the job.</p>
@@ -122,6 +134,14 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
         public static final class Builder {
             private Integer score; 
             private String suggestion; 
+
+            private Builder() {
+            } 
+
+            private Builder(Analysis model) {
+                this.score = model.score;
+                this.suggestion = model.suggestion;
+            } 
 
             /**
              * <p>The score of the job.</p>
@@ -216,6 +236,16 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(MemSeconds model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -336,6 +366,16 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             private String unit; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MemUtilization model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -454,6 +494,16 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VcoreSeconds model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -574,6 +624,16 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             private String unit; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(VcoreUtilization model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -692,6 +752,16 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             private MemUtilization memUtilization; 
             private VcoreSeconds vcoreSeconds; 
             private VcoreUtilization vcoreUtilization; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.memSeconds = model.memSeconds;
+                this.memUtilization = model.memUtilization;
+                this.vcoreSeconds = model.vcoreSeconds;
+                this.vcoreUtilization = model.vcoreUtilization;
+            } 
 
             /**
              * <p>The aggregated amount of memory that is allocated to the job multiplied by the number of seconds the job has been running.</p>
@@ -871,6 +941,22 @@ public class GetDoctorApplicationResponseBody extends TeaModel {
             private Long startTime; 
             private String type; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.analysis = model.analysis;
+                this.appName = model.appName;
+                this.endTime = model.endTime;
+                this.ids = model.ids;
+                this.metrics = model.metrics;
+                this.querySql = model.querySql;
+                this.queue = model.queue;
+                this.startTime = model.startTime;
+                this.type = model.type;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The job analysis result.</p>

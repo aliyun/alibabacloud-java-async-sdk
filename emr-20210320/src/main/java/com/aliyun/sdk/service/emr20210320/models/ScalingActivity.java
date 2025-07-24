@@ -84,6 +84,10 @@ public class ScalingActivity extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cause
      */
@@ -197,6 +201,26 @@ public class ScalingActivity extends TeaModel {
         private String status; 
         private Integer totalCapacity; 
         private String transition; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScalingActivity model) {
+            this.cause = model.cause;
+            this.description = model.description;
+            this.endTime = model.endTime;
+            this.essScalingRuleId = model.essScalingRuleId;
+            this.expectNum = model.expectNum;
+            this.hostGroupName = model.hostGroupName;
+            this.id = model.id;
+            this.instanceIds = model.instanceIds;
+            this.scalingGroupId = model.scalingGroupId;
+            this.scalingRuleName = model.scalingRuleName;
+            this.startTime = model.startTime;
+            this.status = model.status;
+            this.totalCapacity = model.totalCapacity;
+            this.transition = model.transition;
+        } 
 
         /**
          * Cause.

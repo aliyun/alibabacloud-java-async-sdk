@@ -48,6 +48,10 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationConfigs
      */
@@ -89,6 +93,17 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationConfigsResponseBody model) {
+            this.applicationConfigs = model.applicationConfigs;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The application configurations.</p>
@@ -323,6 +338,25 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
             private String nodeGroupId; 
             private String nodeId; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationConfigs model) {
+                this.applicationName = model.applicationName;
+                this.configEffectState = model.configEffectState;
+                this.configFileName = model.configFileName;
+                this.configItemKey = model.configItemKey;
+                this.configItemValue = model.configItemValue;
+                this.createTime = model.createTime;
+                this.custom = model.custom;
+                this.description = model.description;
+                this.initValue = model.initValue;
+                this.modifier = model.modifier;
+                this.nodeGroupId = model.nodeGroupId;
+                this.nodeId = model.nodeId;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The name of the application.</p>

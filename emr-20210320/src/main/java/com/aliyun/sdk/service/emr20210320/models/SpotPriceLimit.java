@@ -36,6 +36,10 @@ public class SpotPriceLimit extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceType
      */
@@ -53,6 +57,14 @@ public class SpotPriceLimit extends TeaModel {
     public static final class Builder {
         private String instanceType; 
         private Double priceLimit; 
+
+        private Builder() {
+        } 
+
+        private Builder(SpotPriceLimit model) {
+            this.instanceType = model.instanceType;
+            this.priceLimit = model.priceLimit;
+        } 
 
         /**
          * InstanceType.

@@ -49,6 +49,10 @@ public class RenewInstance extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return emrRenewDuration
      */
@@ -90,6 +94,17 @@ public class RenewInstance extends TeaModel {
         private String instanceId; 
         private Integer renewDuration; 
         private String renewDurationUnit; 
+
+        private Builder() {
+        } 
+
+        private Builder(RenewInstance model) {
+            this.emrRenewDuration = model.emrRenewDuration;
+            this.emrRenewDurationUnit = model.emrRenewDurationUnit;
+            this.instanceId = model.instanceId;
+            this.renewDuration = model.renewDuration;
+            this.renewDurationUnit = model.renewDurationUnit;
+        } 
 
         /**
          * <p>emr实例续费时长。</p>

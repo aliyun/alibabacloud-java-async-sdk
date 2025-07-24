@@ -33,6 +33,10 @@ public class Application extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationName
      */
@@ -42,6 +46,13 @@ public class Application extends TeaModel {
 
     public static final class Builder {
         private String applicationName; 
+
+        private Builder() {
+        } 
+
+        private Builder(Application model) {
+            this.applicationName = model.applicationName;
+        } 
 
         /**
          * <p>应用名称。从EMR控制台集群创建页面可查看到指定发行版的应用名称列表。</p>

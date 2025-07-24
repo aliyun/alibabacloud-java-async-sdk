@@ -48,6 +48,10 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<ScalingActivities> scalingActivities; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListAutoScalingActivitiesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.scalingActivities = model.scalingActivities;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The maximum number of entries returned.</p>
@@ -335,6 +350,26 @@ public class ListAutoScalingActivitiesResponseBody extends TeaModel {
             private String policyType; 
             private String ruleName; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScalingActivities model) {
+                this.activityId = model.activityId;
+                this.activityState = model.activityState;
+                this.activityType = model.activityType;
+                this.clusterId = model.clusterId;
+                this.description = model.description;
+                this.endTime = model.endTime;
+                this.expectNum = model.expectNum;
+                this.instanceTypeToNum = model.instanceTypeToNum;
+                this.nodeGroupId = model.nodeGroupId;
+                this.nodeGroupName = model.nodeGroupName;
+                this.operationId = model.operationId;
+                this.policyType = model.policyType;
+                this.ruleName = model.ruleName;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The ID of the scaling activity.</p>

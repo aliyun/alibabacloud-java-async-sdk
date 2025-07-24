@@ -47,7 +47,7 @@ public class CreateUsersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -177,6 +177,14 @@ public class CreateUsersRequest extends Request {
         public static final class Builder {
             private String password; 
             private String userName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.password = model.password;
+                this.userName = model.userName;
+            } 
 
             /**
              * <p>用户密码。</p>

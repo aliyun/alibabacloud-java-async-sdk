@@ -37,6 +37,10 @@ public class UpdateUserAttributeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -55,8 +59,19 @@ public class UpdateUserAttributeResponseBody extends TeaModel {
         private Boolean data; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateUserAttributeResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Data.
+         * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder data(Boolean data) {
             this.data = data;
@@ -64,7 +79,7 @@ public class UpdateUserAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * <p>请求ID。</p>
+         * <p>The request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>

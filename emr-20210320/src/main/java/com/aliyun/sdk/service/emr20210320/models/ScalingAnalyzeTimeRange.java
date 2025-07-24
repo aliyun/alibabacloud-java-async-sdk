@@ -40,6 +40,10 @@ public class ScalingAnalyzeTimeRange extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -65,6 +69,15 @@ public class ScalingAnalyzeTimeRange extends TeaModel {
         private Long endTime; 
         private Long startTime; 
         private String type; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScalingAnalyzeTimeRange model) {
+            this.endTime = model.endTime;
+            this.startTime = model.startTime;
+            this.type = model.type;
+        } 
 
         /**
          * <p>结束时间。</p>

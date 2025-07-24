@@ -36,6 +36,10 @@ public class OperationData extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actualDeliveredAmounts
      */
@@ -53,6 +57,14 @@ public class OperationData extends TeaModel {
     public static final class Builder {
         private Integer actualDeliveredAmounts; 
         private Integer toBeDeliveredAmounts; 
+
+        private Builder() {
+        } 
+
+        private Builder(OperationData model) {
+            this.actualDeliveredAmounts = model.actualDeliveredAmounts;
+            this.toBeDeliveredAmounts = model.toBeDeliveredAmounts;
+        } 
 
         /**
          * actualDeliveredAmounts.

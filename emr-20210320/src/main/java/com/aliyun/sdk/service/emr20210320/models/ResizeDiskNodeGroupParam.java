@@ -40,6 +40,10 @@ public class ResizeDiskNodeGroupParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataDiskCapacity
      */
@@ -65,6 +69,15 @@ public class ResizeDiskNodeGroupParam extends TeaModel {
         private Long dataDiskCapacity; 
         private String nodeGroupId; 
         private Boolean rollingRestart; 
+
+        private Builder() {
+        } 
+
+        private Builder(ResizeDiskNodeGroupParam model) {
+            this.dataDiskCapacity = model.dataDiskCapacity;
+            this.nodeGroupId = model.nodeGroupId;
+            this.rollingRestart = model.rollingRestart;
+        } 
 
         /**
          * DataDiskCapacity.

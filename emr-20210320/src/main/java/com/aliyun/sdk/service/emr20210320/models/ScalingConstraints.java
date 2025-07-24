@@ -36,6 +36,10 @@ public class ScalingConstraints extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxCapacity
      */
@@ -53,6 +57,14 @@ public class ScalingConstraints extends TeaModel {
     public static final class Builder {
         private Integer maxCapacity; 
         private Integer minCapacity; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScalingConstraints model) {
+            this.maxCapacity = model.maxCapacity;
+            this.minCapacity = model.minCapacity;
+        } 
 
         /**
          * <p>最大值。</p>

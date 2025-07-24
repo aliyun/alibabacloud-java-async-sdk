@@ -40,6 +40,10 @@ public class OSUser extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return group
      */
@@ -65,6 +69,15 @@ public class OSUser extends TeaModel {
         private String group; 
         private String password; 
         private String user; 
+
+        private Builder() {
+        } 
+
+        private Builder(OSUser model) {
+            this.group = model.group;
+            this.password = model.password;
+            this.user = model.user;
+        } 
 
         /**
          * <p>用户组。</p>

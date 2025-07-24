@@ -124,6 +124,10 @@ public class NodeGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalSecurityGroupIds
      */
@@ -317,6 +321,36 @@ public class NodeGroup extends TeaModel {
         private java.util.List<String> vSwitchIds; 
         private Boolean withPublicIp; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeGroup model) {
+            this.additionalSecurityGroupIds = model.additionalSecurityGroupIds;
+            this.compensateWithOnDemand = model.compensateWithOnDemand;
+            this.costOptimizedConfig = model.costOptimizedConfig;
+            this.dataDisks = model.dataDisks;
+            this.deploymentSetStrategy = model.deploymentSetStrategy;
+            this.gracefulShutdown = model.gracefulShutdown;
+            this.instanceTypes = model.instanceTypes;
+            this.nodeGroupId = model.nodeGroupId;
+            this.nodeGroupName = model.nodeGroupName;
+            this.nodeGroupState = model.nodeGroupState;
+            this.nodeGroupType = model.nodeGroupType;
+            this.nodeResizeStrategy = model.nodeResizeStrategy;
+            this.paymentType = model.paymentType;
+            this.privatePoolOptions = model.privatePoolOptions;
+            this.runningNodeCount = model.runningNodeCount;
+            this.spotBidPrices = model.spotBidPrices;
+            this.spotInstanceRemedy = model.spotInstanceRemedy;
+            this.spotStrategy = model.spotStrategy;
+            this.stateChangeReason = model.stateChangeReason;
+            this.status = model.status;
+            this.systemDisk = model.systemDisk;
+            this.vSwitchIds = model.vSwitchIds;
+            this.withPublicIp = model.withPublicIp;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * <p>安全组ID。</p>

@@ -60,6 +60,10 @@ public class ScalingRule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return activityType
      */
@@ -117,6 +121,19 @@ public class ScalingRule extends TeaModel {
         private String ruleName; 
         private TimeTrigger timeTrigger; 
         private String triggerType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScalingRule model) {
+            this.activityType = model.activityType;
+            this.adjustmentValue = model.adjustmentValue;
+            this.metricsTrigger = model.metricsTrigger;
+            this.minAdjustmentValue = model.minAdjustmentValue;
+            this.ruleName = model.ruleName;
+            this.timeTrigger = model.timeTrigger;
+            this.triggerType = model.triggerType;
+        } 
 
         /**
          * <p>伸缩活动类型。取值范围：</p>

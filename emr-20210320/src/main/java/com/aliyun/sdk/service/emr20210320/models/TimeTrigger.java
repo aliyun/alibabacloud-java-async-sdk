@@ -53,6 +53,10 @@ public class TimeTrigger extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -102,6 +106,18 @@ public class TimeTrigger extends TeaModel {
         private String recurrenceType; 
         private String recurrenceValue; 
         private Long startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(TimeTrigger model) {
+            this.endTime = model.endTime;
+            this.launchExpirationTime = model.launchExpirationTime;
+            this.launchTime = model.launchTime;
+            this.recurrenceType = model.recurrenceType;
+            this.recurrenceValue = model.recurrenceValue;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>结束时间戳。单位为毫秒。</p>

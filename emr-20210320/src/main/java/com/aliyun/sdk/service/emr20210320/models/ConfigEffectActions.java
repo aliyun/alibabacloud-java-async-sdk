@@ -36,6 +36,10 @@ public class ConfigEffectActions extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configEffectAction
      */
@@ -53,6 +57,14 @@ public class ConfigEffectActions extends TeaModel {
     public static final class Builder {
         private String configEffectAction; 
         private java.util.List<String> configFiles; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConfigEffectActions model) {
+            this.configEffectAction = model.configEffectAction;
+            this.configFiles = model.configFiles;
+        } 
 
         /**
          * <p>配置生效动作。</p>

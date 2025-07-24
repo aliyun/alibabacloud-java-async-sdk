@@ -81,7 +81,7 @@ public class ListApplicationConfigsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -224,7 +224,7 @@ public class ListApplicationConfigsRequest extends Request {
         }
 
         /**
-         * <p>The name of the configuration item.</p>
+         * <p>The key of the configuration item.</p>
          * 
          * <strong>example:</strong>
          * <p>dfs.replication</p>

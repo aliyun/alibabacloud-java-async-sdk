@@ -56,6 +56,10 @@ public class HealthSummary extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return badCount
      */
@@ -113,6 +117,19 @@ public class HealthSummary extends TeaModel {
         private Long totalCount; 
         private Long unknownCount; 
         private Long warningCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(HealthSummary model) {
+            this.badCount = model.badCount;
+            this.goodCount = model.goodCount;
+            this.noneCount = model.noneCount;
+            this.stoppedCount = model.stoppedCount;
+            this.totalCount = model.totalCount;
+            this.unknownCount = model.unknownCount;
+            this.warningCount = model.warningCount;
+        } 
 
         /**
          * BadCount.

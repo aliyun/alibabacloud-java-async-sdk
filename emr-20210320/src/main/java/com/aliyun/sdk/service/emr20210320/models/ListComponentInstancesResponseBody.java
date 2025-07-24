@@ -48,6 +48,10 @@ public class ListComponentInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return componentInstances
      */
@@ -90,6 +94,17 @@ public class ListComponentInstancesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListComponentInstancesResponseBody model) {
+            this.componentInstances = model.componentInstances;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * ComponentInstances.
          */
@@ -102,7 +117,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
          * <p>本次请求所返回的最大记录条数。</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>2</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -113,7 +128,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
          * <p>返回读取到的数据位置，空代表数据已经读取完毕。</p>
          * 
          * <strong>example:</strong>
-         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
+         * <p>“”</p>
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -124,7 +139,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
          * <p>请求ID。</p>
          * 
          * <strong>example:</strong>
-         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
+         * <p>7345241A-014C-17D2-A3AC-C72771188F46</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -135,7 +150,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
          * <p>本次请求条件下的数据总量。</p>
          * 
          * <strong>example:</strong>
-         * <p>200</p>
+         * <p>2</p>
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -182,6 +197,9 @@ public class ListComponentInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        private String zoneId;
+
         private ComponentInstances(Builder builder) {
             this.applicationName = builder.applicationName;
             this.bizState = builder.bizState;
@@ -192,6 +210,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             this.desiredState = builder.desiredState;
             this.nodeId = builder.nodeId;
             this.nodeName = builder.nodeName;
+            this.zoneId = builder.zoneId;
         }
 
         public static Builder builder() {
@@ -265,6 +284,13 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             return this.nodeName;
         }
 
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
         public static final class Builder {
             private String applicationName; 
             private String bizState; 
@@ -275,12 +301,29 @@ public class ListComponentInstancesResponseBody extends TeaModel {
             private String desiredState; 
             private String nodeId; 
             private String nodeName; 
+            private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComponentInstances model) {
+                this.applicationName = model.applicationName;
+                this.bizState = model.bizState;
+                this.commissionState = model.commissionState;
+                this.componentInstanceState = model.componentInstanceState;
+                this.componentName = model.componentName;
+                this.createTime = model.createTime;
+                this.desiredState = model.desiredState;
+                this.nodeId = model.nodeId;
+                this.nodeName = model.nodeName;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>应用名称。</p>
              * 
              * <strong>example:</strong>
-             * <p>HDFS</p>
+             * <p>KNOX</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -336,6 +379,9 @@ public class ListComponentInstancesResponseBody extends TeaModel {
              * <li>STOPPED：已停止</li>
              * <li>STOP_FAILED：停止失败</li>
              * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>STARTED</p>
              */
             public Builder componentInstanceState(String componentInstanceState) {
                 this.componentInstanceState = componentInstanceState;
@@ -346,7 +392,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
              * <p>组件名称。</p>
              * 
              * <strong>example:</strong>
-             * <p>DataNode</p>
+             * <p>KNOX</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -391,7 +437,7 @@ public class ListComponentInstancesResponseBody extends TeaModel {
              * <p>节点ID。</p>
              * 
              * <strong>example:</strong>
-             * <p>i-bp1cudc25w2bfwl5****</p>
+             * <p>i-bp17yy050pxo01m2****</p>
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -402,10 +448,18 @@ public class ListComponentInstancesResponseBody extends TeaModel {
              * <p>节点名称。</p>
              * 
              * <strong>example:</strong>
-             * <p>core1-1</p>
+             * <p>emr-worker-1</p>
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;
+                return this;
+            }
+
+            /**
+             * ZoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
                 return this;
             }
 

@@ -38,6 +38,10 @@ public class UpdateSpecNodeGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return newInstanceType
      */
@@ -55,6 +59,14 @@ public class UpdateSpecNodeGroup extends TeaModel {
     public static final class Builder {
         private String newInstanceType; 
         private String nodeGroupId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateSpecNodeGroup model) {
+            this.newInstanceType = model.newInstanceType;
+            this.nodeGroupId = model.nodeGroupId;
+        } 
 
         /**
          * <p>新实例类型。</p>

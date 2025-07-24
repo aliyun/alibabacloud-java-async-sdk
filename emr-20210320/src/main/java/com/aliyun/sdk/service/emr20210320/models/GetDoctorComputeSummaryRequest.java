@@ -52,7 +52,7 @@ public class GetDoctorComputeSummaryRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -201,6 +201,14 @@ public class GetDoctorComputeSummaryRequest extends Request {
         public static final class Builder {
             private String componentName; 
             private String componentType; 
+
+            private Builder() {
+            } 
+
+            private Builder(ComponentInfo model) {
+                this.componentName = model.componentName;
+                this.componentType = model.componentType;
+            } 
 
             /**
              * <p>Set the filter condition name based on the value of ComponentType. For example, if you set ComponentType to queue, you can specify a specific queue name to obtain the resource usage of a specific queue.</p>

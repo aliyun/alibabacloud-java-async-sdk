@@ -36,6 +36,10 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDoctorHBaseClusterResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -110,6 +122,13 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer hbaseScore; 
+
+            private Builder() {
+            } 
+
+            private Builder(Analysis model) {
+                this.hbaseScore = model.hbaseScore;
+            } 
 
             /**
              * <p>The overall score of the HBase cluster.</p>
@@ -196,6 +215,16 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(AvgLoad model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -316,6 +345,16 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DailyReadRequest model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -434,6 +473,16 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DailyWriteRequest model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -554,6 +603,16 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MemHeap model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -672,6 +731,16 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(NormalAvgLoad model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -792,6 +861,16 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private String unit; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionBalance model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -910,6 +989,16 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(RegionCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -1030,6 +1119,16 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionServerCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -1148,6 +1247,16 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(StoreFileCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -1268,6 +1377,16 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TableCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -1386,6 +1505,16 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TotalDataSize model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -1506,6 +1635,16 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalReadRequest model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -1625,6 +1764,16 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalRequest model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -1743,6 +1892,16 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TotalWriteRequest model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -1983,6 +2142,26 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
             private TotalRequest totalRequest; 
             private TotalWriteRequest totalWriteRequest; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.avgLoad = model.avgLoad;
+                this.dailyReadRequest = model.dailyReadRequest;
+                this.dailyWriteRequest = model.dailyWriteRequest;
+                this.memHeap = model.memHeap;
+                this.normalAvgLoad = model.normalAvgLoad;
+                this.regionBalance = model.regionBalance;
+                this.regionCount = model.regionCount;
+                this.regionServerCount = model.regionServerCount;
+                this.storeFileCount = model.storeFileCount;
+                this.tableCount = model.tableCount;
+                this.totalDataSize = model.totalDataSize;
+                this.totalReadRequest = model.totalReadRequest;
+                this.totalRequest = model.totalRequest;
+                this.totalWriteRequest = model.totalWriteRequest;
+            } 
+
             /**
              * <p>The average load.</p>
              */
@@ -2145,6 +2324,14 @@ public class GetDoctorHBaseClusterResponseBody extends TeaModel {
         public static final class Builder {
             private Analysis analysis; 
             private Metrics metrics; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.analysis = model.analysis;
+                this.metrics = model.metrics;
+            } 
 
             /**
              * <p>The analysis result.</p>

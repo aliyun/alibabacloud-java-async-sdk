@@ -44,6 +44,10 @@ public class DeploymentSetConstraints extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultValue
      */
@@ -77,6 +81,16 @@ public class DeploymentSetConstraints extends TeaModel {
         private String enableState; 
         private ReplacementStrategy replacementStrategy; 
         private java.util.List<String> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeploymentSetConstraints model) {
+            this.defaultValue = model.defaultValue;
+            this.enableState = model.enableState;
+            this.replacementStrategy = model.replacementStrategy;
+            this.values = model.values;
+        } 
 
         /**
          * <p>默认值。</p>

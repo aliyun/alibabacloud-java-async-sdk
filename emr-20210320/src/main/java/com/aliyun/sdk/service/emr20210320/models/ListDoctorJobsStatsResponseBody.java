@@ -48,6 +48,10 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDoctorJobsStatsResponseBody model) {
+            this.data = model.data;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The summary of job information.</p>
@@ -216,6 +231,16 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AppsCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -335,6 +360,16 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MemSeconds model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -453,6 +488,16 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VcoreSeconds model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -596,6 +641,18 @@ public class ListDoctorJobsStatsResponseBody extends TeaModel {
             private String type; 
             private String user; 
             private VcoreSeconds vcoreSeconds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appsCount = model.appsCount;
+                this.memSeconds = model.memSeconds;
+                this.queue = model.queue;
+                this.type = model.type;
+                this.user = model.user;
+                this.vcoreSeconds = model.vcoreSeconds;
+            } 
 
             /**
              * <p>The total number of jobs.</p>

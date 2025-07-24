@@ -36,6 +36,10 @@ public class SpotBidPrice extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return bidPrice
      */
@@ -53,6 +57,14 @@ public class SpotBidPrice extends TeaModel {
     public static final class Builder {
         private Double bidPrice; 
         private String instanceType; 
+
+        private Builder() {
+        } 
+
+        private Builder(SpotBidPrice model) {
+            this.bidPrice = model.bidPrice;
+            this.instanceType = model.instanceType;
+        } 
 
         /**
          * <p>实例的每小时最高出价。支持最大3位小数，参数SpotStrategy=SpotWithPriceLimit时，该参数生效。</p>

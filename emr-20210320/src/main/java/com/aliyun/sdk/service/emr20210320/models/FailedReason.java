@@ -40,6 +40,10 @@ public class FailedReason extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return errorCode
      */
@@ -65,6 +69,15 @@ public class FailedReason extends TeaModel {
         private String errorCode; 
         private String errorMessage; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(FailedReason model) {
+            this.errorCode = model.errorCode;
+            this.errorMessage = model.errorMessage;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>错误码。</p>

@@ -40,6 +40,10 @@ public class MetaStoreConf extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dbPassword
      */
@@ -65,6 +69,15 @@ public class MetaStoreConf extends TeaModel {
         private String dbPassword; 
         private String dbUrl; 
         private String dbUserName; 
+
+        private Builder() {
+        } 
+
+        private Builder(MetaStoreConf model) {
+            this.dbPassword = model.dbPassword;
+            this.dbUrl = model.dbUrl;
+            this.dbUserName = model.dbUserName;
+        } 
 
         /**
          * DbPassword.

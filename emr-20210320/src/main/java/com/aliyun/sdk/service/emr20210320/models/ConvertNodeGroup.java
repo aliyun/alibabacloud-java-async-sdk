@@ -44,6 +44,10 @@ public class ConvertNodeGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeGroupId
      */
@@ -77,6 +81,16 @@ public class ConvertNodeGroup extends TeaModel {
         private Integer paymentDuration; 
         private String paymentDurationUnit; 
         private String paymentType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConvertNodeGroup model) {
+            this.nodeGroupId = model.nodeGroupId;
+            this.paymentDuration = model.paymentDuration;
+            this.paymentDurationUnit = model.paymentDurationUnit;
+            this.paymentType = model.paymentType;
+        } 
 
         /**
          * <p>节点组ID。</p>

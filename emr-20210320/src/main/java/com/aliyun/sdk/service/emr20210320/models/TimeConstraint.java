@@ -36,6 +36,10 @@ public class TimeConstraint extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -53,6 +57,14 @@ public class TimeConstraint extends TeaModel {
     public static final class Builder {
         private String endTime; 
         private String startTime; 
+
+        private Builder() {
+        } 
+
+        private Builder(TimeConstraint model) {
+            this.endTime = model.endTime;
+            this.startTime = model.startTime;
+        } 
 
         /**
          * <p>结束时间。取值范围：00:00:00至23:59:59</p>

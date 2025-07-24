@@ -48,6 +48,10 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListDoctorReportsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDoctorReportsResponseBody model) {
+            this.data = model.data;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The reports.</p>
@@ -204,6 +219,15 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             private String suggestion; 
             private String summary; 
 
+            private Builder() {
+            } 
+
+            private Builder(SummaryReport model) {
+                this.score = model.score;
+                this.suggestion = model.suggestion;
+                this.summary = model.summary;
+            } 
+
             /**
              * <p>The score.</p>
              * 
@@ -299,6 +323,15 @@ public class ListDoctorReportsResponseBody extends TeaModel {
             private java.util.List<String> componentTypes; 
             private String dateTime; 
             private SummaryReport summaryReport; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.componentTypes = model.componentTypes;
+                this.dateTime = model.dateTime;
+                this.summaryReport = model.summaryReport;
+            } 
 
             /**
              * <p>The component types.</p>

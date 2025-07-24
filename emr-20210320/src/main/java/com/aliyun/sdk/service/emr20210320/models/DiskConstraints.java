@@ -40,6 +40,10 @@ public class DiskConstraints extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return categories
      */
@@ -65,6 +69,15 @@ public class DiskConstraints extends TeaModel {
         private java.util.List<String> categories; 
         private ValueConstraints countConstraint; 
         private ValueConstraints sizeConstraint; 
+
+        private Builder() {
+        } 
+
+        private Builder(DiskConstraints model) {
+            this.categories = model.categories;
+            this.countConstraint = model.countConstraint;
+            this.sizeConstraint = model.sizeConstraint;
+        } 
 
         /**
          * <p>支持的磁盘类型。</p>

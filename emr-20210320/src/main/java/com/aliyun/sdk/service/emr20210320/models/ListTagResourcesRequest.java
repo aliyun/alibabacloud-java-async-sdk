@@ -62,7 +62,7 @@ public class ListTagResourcesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -195,7 +195,7 @@ public class ListTagResourcesRequest extends Request {
         }
 
         /**
-         * <p>The array of tags. The number of array elements N. Valid values: 1 to 20.</p>
+         * <p>An array of tags. The number of elements in the array. Valid values: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

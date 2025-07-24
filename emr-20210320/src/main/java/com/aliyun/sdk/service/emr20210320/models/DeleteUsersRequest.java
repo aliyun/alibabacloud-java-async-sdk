@@ -46,7 +46,7 @@ public class DeleteUsersRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -89,7 +89,7 @@ public class DeleteUsersRequest extends Request {
         } 
 
         /**
-         * <p>集群ID。</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +102,7 @@ public class DeleteUsersRequest extends Request {
         }
 
         /**
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,7 +115,7 @@ public class DeleteUsersRequest extends Request {
         }
 
         /**
-         * UserNames.
+         * <p>The usernames. Number of elements in the array: 0 to 10.</p>
          */
         public Builder userNames(java.util.List<String> userNames) {
             String userNamesShrink = shrink(userNames, "UserNames", "json");

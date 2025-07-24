@@ -58,6 +58,10 @@ public class ByLoadScalingRuleSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return comparisonOperator
      */
@@ -107,6 +111,18 @@ public class ByLoadScalingRuleSpec extends TeaModel {
         private String statistics; 
         private Double threshold; 
         private Integer timeWindow; 
+
+        private Builder() {
+        } 
+
+        private Builder(ByLoadScalingRuleSpec model) {
+            this.comparisonOperator = model.comparisonOperator;
+            this.evaluationCount = model.evaluationCount;
+            this.metricName = model.metricName;
+            this.statistics = model.statistics;
+            this.threshold = model.threshold;
+            this.timeWindow = model.timeWindow;
+        } 
 
         /**
          * <p>比较符。</p>

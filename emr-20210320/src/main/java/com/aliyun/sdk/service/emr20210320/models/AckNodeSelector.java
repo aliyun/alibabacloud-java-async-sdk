@@ -36,6 +36,10 @@ public class AckNodeSelector extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return labels
      */
@@ -53,6 +57,14 @@ public class AckNodeSelector extends TeaModel {
     public static final class Builder {
         private java.util.List<Labels> labels; 
         private java.util.List<Taints> taints; 
+
+        private Builder() {
+        } 
+
+        private Builder(AckNodeSelector model) {
+            this.labels = model.labels;
+            this.taints = model.taints;
+        } 
 
         /**
          * <p>污点列表。</p>
@@ -119,6 +131,14 @@ public class AckNodeSelector extends TeaModel {
         public static final class Builder {
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Labels model) {
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>标签键。</p>
@@ -204,6 +224,15 @@ public class AckNodeSelector extends TeaModel {
             private String effect; 
             private String key; 
             private String value; 
+
+            private Builder() {
+            } 
+
+            private Builder(Taints model) {
+                this.effect = model.effect;
+                this.key = model.key;
+                this.value = model.value;
+            } 
 
             /**
              * <p>污点效果。</p>

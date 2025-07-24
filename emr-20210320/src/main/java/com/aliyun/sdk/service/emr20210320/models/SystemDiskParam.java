@@ -40,6 +40,10 @@ public class SystemDiskParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return category
      */
@@ -65,6 +69,15 @@ public class SystemDiskParam extends TeaModel {
         private String category; 
         private String performanceLevel; 
         private Integer size; 
+
+        private Builder() {
+        } 
+
+        private Builder(SystemDiskParam model) {
+            this.category = model.category;
+            this.performanceLevel = model.performanceLevel;
+            this.size = model.size;
+        } 
 
         /**
          * Category.

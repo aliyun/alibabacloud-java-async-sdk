@@ -36,6 +36,10 @@ public class GetDoctorJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetDoctorJobResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDoctorJobResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the job.</p>
@@ -146,6 +158,16 @@ public class GetDoctorJobResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(MemSeconds model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -266,6 +288,16 @@ public class GetDoctorJobResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(VcoreSeconds model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -360,6 +392,14 @@ public class GetDoctorJobResponseBody extends TeaModel {
         public static final class Builder {
             private MemSeconds memSeconds; 
             private VcoreSeconds vcoreSeconds; 
+
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.memSeconds = model.memSeconds;
+                this.vcoreSeconds = model.vcoreSeconds;
+            } 
 
             /**
              * <p>The amount of memory consumed.</p>
@@ -547,6 +587,24 @@ public class GetDoctorJobResponseBody extends TeaModel {
             private String state; 
             private String type; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.appId = model.appId;
+                this.appName = model.appName;
+                this.elapsedTime = model.elapsedTime;
+                this.finalStatus = model.finalStatus;
+                this.finishTime = model.finishTime;
+                this.launchTime = model.launchTime;
+                this.metrics = model.metrics;
+                this.queue = model.queue;
+                this.startTime = model.startTime;
+                this.state = model.state;
+                this.type = model.type;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The ID of the job that was submitted to YARN.</p>

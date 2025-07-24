@@ -36,6 +36,10 @@ public class AckNode extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeId
      */
@@ -53,6 +57,14 @@ public class AckNode extends TeaModel {
     public static final class Builder {
         private String nodeId; 
         private AckNodeSelector nodeSelector; 
+
+        private Builder() {
+        } 
+
+        private Builder(AckNode model) {
+            this.nodeId = model.nodeId;
+            this.nodeSelector = model.nodeSelector;
+        } 
 
         /**
          * <p>节点ID。</p>

@@ -36,6 +36,10 @@ public class GetApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return application
      */
@@ -54,6 +58,14 @@ public class GetApplicationResponseBody extends TeaModel {
         private Application application; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationResponseBody model) {
+            this.application = model.application;
+            this.requestId = model.requestId;
+        } 
+
         /**
          * Application.
          */
@@ -66,7 +78,7 @@ public class GetApplicationResponseBody extends TeaModel {
          * <p>请求ID。</p>
          * 
          * <strong>example:</strong>
-         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
+         * <p>9E3A7161-EB7B-172B-8D18-FFB06BA3****</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -171,6 +183,18 @@ public class GetApplicationResponseBody extends TeaModel {
             private String valueType; 
             private String valueUnit; 
 
+            private Builder() {
+            } 
+
+            private Builder(ValueAttribute model) {
+                this.description = model.description;
+                this.valueIncrementStep = model.valueIncrementStep;
+                this.valueMaximum = model.valueMaximum;
+                this.valueMinimum = model.valueMinimum;
+                this.valueType = model.valueType;
+                this.valueUnit = model.valueUnit;
+            } 
+
             /**
              * <p>值表述。</p>
              * 
@@ -186,7 +210,7 @@ public class GetApplicationResponseBody extends TeaModel {
              * <p>值步长。</p>
              * 
              * <strong>example:</strong>
-             * <p>2</p>
+             * <p>1</p>
              */
             public Builder valueIncrementStep(String valueIncrementStep) {
                 this.valueIncrementStep = valueIncrementStep;
@@ -197,7 +221,7 @@ public class GetApplicationResponseBody extends TeaModel {
              * <p>最大值。</p>
              * 
              * <strong>example:</strong>
-             * <p>20</p>
+             * <p>100</p>
              */
             public Builder valueMaximum(String valueMaximum) {
                 this.valueMaximum = valueMaximum;
@@ -219,7 +243,7 @@ public class GetApplicationResponseBody extends TeaModel {
              * <p>属性值类型。</p>
              * 
              * <strong>example:</strong>
-             * <p>STRING</p>
+             * <p>int</p>
              */
             public Builder valueType(String valueType) {
                 this.valueType = valueType;
@@ -300,6 +324,15 @@ public class GetApplicationResponseBody extends TeaModel {
             private String key; 
             private ValueAttribute valueAttribute; 
 
+            private Builder() {
+            } 
+
+            private Builder(ActionParams model) {
+                this.description = model.description;
+                this.key = model.key;
+                this.valueAttribute = model.valueAttribute;
+            } 
+
             /**
              * <p>动作参数描述。</p>
              * 
@@ -313,6 +346,9 @@ public class GetApplicationResponseBody extends TeaModel {
 
             /**
              * <p>动作参数KEY。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>timeout</p>
              */
             public Builder key(String key) {
                 this.key = key;
@@ -426,11 +462,23 @@ public class GetApplicationResponseBody extends TeaModel {
             private String description; 
             private String runActionScope; 
 
+            private Builder() {
+            } 
+
+            private Builder(Actions model) {
+                this.actionName = model.actionName;
+                this.actionParams = model.actionParams;
+                this.command = model.command;
+                this.componentName = model.componentName;
+                this.description = model.description;
+                this.runActionScope = model.runActionScope;
+            } 
+
             /**
              * <p>操作名称。</p>
              * 
              * <strong>example:</strong>
-             * <p>START</p>
+             * <p>decommission</p>
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -449,7 +497,7 @@ public class GetApplicationResponseBody extends TeaModel {
              * <p>命令。</p>
              * 
              * <strong>example:</strong>
-             * <p>START</p>
+             * <p>decommission</p>
              */
             public Builder command(String command) {
                 this.command = command;
@@ -482,7 +530,7 @@ public class GetApplicationResponseBody extends TeaModel {
              * <p>执行范围。</p>
              * 
              * <strong>example:</strong>
-             * <p>CLUSTER</p>
+             * <p>COMPONENT_INSTANCE</p>
              */
             public Builder runActionScope(String runActionScope) {
                 this.runActionScope = runActionScope;
@@ -576,6 +624,17 @@ public class GetApplicationResponseBody extends TeaModel {
             private String applicationVersion; 
             private String communityVersion; 
 
+            private Builder() {
+            } 
+
+            private Builder(Application model) {
+                this.actions = model.actions;
+                this.applicationName = model.applicationName;
+                this.applicationState = model.applicationState;
+                this.applicationVersion = model.applicationVersion;
+                this.communityVersion = model.communityVersion;
+            } 
+
             /**
              * <p>操作列表。</p>
              */
@@ -597,6 +656,9 @@ public class GetApplicationResponseBody extends TeaModel {
 
             /**
              * <p>应用操作状态。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>RUNNING</p>
              */
             public Builder applicationState(String applicationState) {
                 this.applicationState = applicationState;
@@ -607,7 +669,7 @@ public class GetApplicationResponseBody extends TeaModel {
              * <p>应用版本。</p>
              * 
              * <strong>example:</strong>
-             * <p>2.8.5</p>
+             * <p>2.8.1</p>
              */
             public Builder applicationVersion(String applicationVersion) {
                 this.applicationVersion = applicationVersion;
@@ -618,7 +680,7 @@ public class GetApplicationResponseBody extends TeaModel {
              * <p>社区版本。</p>
              * 
              * <strong>example:</strong>
-             * <p>2.8.5</p>
+             * <p>2.8.1</p>
              */
             public Builder communityVersion(String communityVersion) {
                 this.communityVersion = communityVersion;

@@ -36,6 +36,10 @@ public class AckNodePool extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodePoolId
      */
@@ -53,6 +57,14 @@ public class AckNodePool extends TeaModel {
     public static final class Builder {
         private String nodePoolId; 
         private AckNodeSelector nodeSelector; 
+
+        private Builder() {
+        } 
+
+        private Builder(AckNodePool model) {
+            this.nodePoolId = model.nodePoolId;
+            this.nodeSelector = model.nodeSelector;
+        } 
 
         /**
          * <p>节点池ID。</p>

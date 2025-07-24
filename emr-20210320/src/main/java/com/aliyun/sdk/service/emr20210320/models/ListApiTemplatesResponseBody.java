@@ -49,6 +49,10 @@ public class ListApiTemplatesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiTemplates
      */
@@ -91,8 +95,19 @@ public class ListApiTemplatesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListApiTemplatesResponseBody model) {
+            this.apiTemplates = model.apiTemplates;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * <p>The API operation templates.</p>
+         * <p>The array of API templates.</p>
          */
         public Builder apiTemplates(java.util.List<ApiTemplate> apiTemplates) {
             this.apiTemplates = apiTemplates;

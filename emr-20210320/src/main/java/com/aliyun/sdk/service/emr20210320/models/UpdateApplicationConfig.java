@@ -44,6 +44,10 @@ public class UpdateApplicationConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configDescription
      */
@@ -77,6 +81,16 @@ public class UpdateApplicationConfig extends TeaModel {
         private String configFileName; 
         private String configItemKey; 
         private String configItemValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateApplicationConfig model) {
+            this.configDescription = model.configDescription;
+            this.configFileName = model.configFileName;
+            this.configItemKey = model.configItemKey;
+            this.configItemValue = model.configItemValue;
+        } 
 
         /**
          * <p>修改描述。</p>

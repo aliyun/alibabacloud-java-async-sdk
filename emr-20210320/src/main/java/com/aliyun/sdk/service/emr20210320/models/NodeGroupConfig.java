@@ -117,6 +117,10 @@ public class NodeGroupConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return additionalSecurityGroupIds
      */
@@ -294,6 +298,34 @@ public class NodeGroupConfig extends TeaModel {
         private SystemDisk systemDisk; 
         private java.util.List<String> vSwitchIds; 
         private Boolean withPublicIp; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeGroupConfig model) {
+            this.additionalSecurityGroupIds = model.additionalSecurityGroupIds;
+            this.autoScalingPolicy = model.autoScalingPolicy;
+            this.compensateWithOnDemand = model.compensateWithOnDemand;
+            this.componentTags = model.componentTags;
+            this.costOptimizedConfig = model.costOptimizedConfig;
+            this.dataDisks = model.dataDisks;
+            this.deploymentSetStrategy = model.deploymentSetStrategy;
+            this.gracefulShutdown = model.gracefulShutdown;
+            this.instanceTypes = model.instanceTypes;
+            this.nodeCount = model.nodeCount;
+            this.nodeGroupName = model.nodeGroupName;
+            this.nodeGroupType = model.nodeGroupType;
+            this.nodeResizeStrategy = model.nodeResizeStrategy;
+            this.paymentType = model.paymentType;
+            this.privatePoolOptions = model.privatePoolOptions;
+            this.spotBidPrices = model.spotBidPrices;
+            this.spotInstanceRemedy = model.spotInstanceRemedy;
+            this.spotStrategy = model.spotStrategy;
+            this.subscriptionConfig = model.subscriptionConfig;
+            this.systemDisk = model.systemDisk;
+            this.vSwitchIds = model.vSwitchIds;
+            this.withPublicIp = model.withPublicIp;
+        } 
 
         /**
          * <p>附加安全组。除集群设置的安全组外，为节点组单独设置的附加安全组。数组元数个数N的取值范围：0~2。</p>

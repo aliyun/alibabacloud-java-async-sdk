@@ -44,6 +44,10 @@ public class ScalingAnalyzeResult extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return actualUsage
      */
@@ -77,6 +81,16 @@ public class ScalingAnalyzeResult extends TeaModel {
         private Float idealUsage; 
         private Integer releaseCores; 
         private Integer reservedCores; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScalingAnalyzeResult model) {
+            this.actualUsage = model.actualUsage;
+            this.idealUsage = model.idealUsage;
+            this.releaseCores = model.releaseCores;
+            this.reservedCores = model.reservedCores;
+        } 
 
         /**
          * <p>实际资源利用率。</p>

@@ -66,7 +66,7 @@ public class ListComponentsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -148,7 +148,7 @@ public class ListComponentsRequest extends Request {
          * <p>应用名称列表。</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;HDFS&quot;]</p>
+         * <p>20</p>
          */
         public Builder applicationNames(java.util.List<String> applicationNames) {
             this.putQueryParameter("ApplicationNames", applicationNames);
@@ -161,7 +161,7 @@ public class ListComponentsRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>c-b933c5aac8fe****</p>
+         * <p>C-8CFEBCCFFEF5****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -173,7 +173,7 @@ public class ListComponentsRequest extends Request {
          * <p>组件名称列表。</p>
          * 
          * <strong>example:</strong>
-         * <p>[&quot;DataNode&quot;]</p>
+         * <p>[&quot;HDFS&quot;]</p>
          */
         public Builder componentNames(java.util.List<String> componentNames) {
             this.putQueryParameter("ComponentNames", componentNames);
@@ -194,7 +194,7 @@ public class ListComponentsRequest extends Request {
          * <p>一次获取的最大记录数。取值范围：1~100。</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>10</p>
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -206,7 +206,7 @@ public class ListComponentsRequest extends Request {
          * <p>标记当前开始读取的位置，置空表示从头开始。</p>
          * 
          * <strong>example:</strong>
-         * <p>DD6B1B2A-5837-5237-ABE4-FF0C89568980</p>
+         * <p>&quot;&quot;</p>
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

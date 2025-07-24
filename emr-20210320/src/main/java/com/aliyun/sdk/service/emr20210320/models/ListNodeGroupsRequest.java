@@ -51,6 +51,10 @@ public class ListNodeGroupsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    private String zoneId;
+
     private ListNodeGroupsRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -61,6 +65,7 @@ public class ListNodeGroupsRequest extends Request {
         this.nodeGroupStates = builder.nodeGroupStates;
         this.nodeGroupTypes = builder.nodeGroupTypes;
         this.regionId = builder.regionId;
+        this.zoneId = builder.zoneId;
     }
 
     public static Builder builder() {
@@ -71,7 +76,7 @@ public class ListNodeGroupsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -132,6 +137,13 @@ public class ListNodeGroupsRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return zoneId
+     */
+    public String getZoneId() {
+        return this.zoneId;
+    }
+
     public static final class Builder extends Request.Builder<ListNodeGroupsRequest, Builder> {
         private String clusterId; 
         private Integer maxResults; 
@@ -141,6 +153,7 @@ public class ListNodeGroupsRequest extends Request {
         private java.util.List<String> nodeGroupStates; 
         private java.util.List<String> nodeGroupTypes; 
         private String regionId; 
+        private String zoneId; 
 
         private Builder() {
             super();
@@ -156,6 +169,7 @@ public class ListNodeGroupsRequest extends Request {
             this.nodeGroupStates = request.nodeGroupStates;
             this.nodeGroupTypes = request.nodeGroupTypes;
             this.regionId = request.regionId;
+            this.zoneId = request.zoneId;
         } 
 
         /**
@@ -253,6 +267,15 @@ public class ListNodeGroupsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ZoneId.
+         */
+        public Builder zoneId(String zoneId) {
+            this.putQueryParameter("ZoneId", zoneId);
+            this.zoneId = zoneId;
             return this;
         }
 

@@ -53,6 +53,10 @@ public class AutoRenewInstance extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoRenew
      */
@@ -102,6 +106,18 @@ public class AutoRenewInstance extends TeaModel {
         private Integer emrAutoRenewDuration; 
         private String emrAutoRenewDurationUnit; 
         private String instanceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(AutoRenewInstance model) {
+            this.autoRenew = model.autoRenew;
+            this.autoRenewDuration = model.autoRenewDuration;
+            this.autoRenewDurationUnit = model.autoRenewDurationUnit;
+            this.emrAutoRenewDuration = model.emrAutoRenewDuration;
+            this.emrAutoRenewDurationUnit = model.emrAutoRenewDurationUnit;
+            this.instanceId = model.instanceId;
+        } 
 
         /**
          * <p>自动续费。</p>

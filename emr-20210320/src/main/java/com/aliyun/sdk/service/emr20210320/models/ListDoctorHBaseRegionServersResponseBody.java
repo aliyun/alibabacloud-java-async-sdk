@@ -48,6 +48,10 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDoctorHBaseRegionServersResponseBody model) {
+            this.data = model.data;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The returned data.</p>
@@ -216,6 +231,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
             private String unit; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(AvgGc model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -334,6 +359,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(CacheRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -454,6 +489,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DailyReadRequest model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -572,6 +617,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DailyReadRequestDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -692,6 +747,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DailyWriteRequest model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -810,6 +875,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DailyWriteRequestDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -930,6 +1005,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(RegionCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -1048,6 +1133,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TotalReadRequest model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -1168,6 +1263,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalRequest model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -1286,6 +1391,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TotalWriteRequest model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -1478,6 +1593,22 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
             private TotalRequest totalRequest; 
             private TotalWriteRequest totalWriteRequest; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.avgGc = model.avgGc;
+                this.cacheRatio = model.cacheRatio;
+                this.dailyReadRequest = model.dailyReadRequest;
+                this.dailyReadRequestDayGrowthRatio = model.dailyReadRequestDayGrowthRatio;
+                this.dailyWriteRequest = model.dailyWriteRequest;
+                this.dailyWriteRequestDayGrowthRatio = model.dailyWriteRequestDayGrowthRatio;
+                this.regionCount = model.regionCount;
+                this.totalReadRequest = model.totalReadRequest;
+                this.totalRequest = model.totalRequest;
+                this.totalWriteRequest = model.totalWriteRequest;
+            } 
+
             /**
              * <p>The average garbage collection (GC) duration.</p>
              */
@@ -1608,6 +1739,14 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
         public static final class Builder {
             private Metrics metrics; 
             private String regionServerHost; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.metrics = model.metrics;
+                this.regionServerHost = model.regionServerHost;
+            } 
 
             /**
              * <p>The metric information.</p>

@@ -76,7 +76,7 @@ public class ListDoctorJobsStatsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -336,6 +336,14 @@ public class ListDoctorJobsStatsRequest extends Request {
             private Long endTime; 
             private Long startTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(EndRange model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
+
             /**
              * <p>The end of the time range during which jobs ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
@@ -408,6 +416,14 @@ public class ListDoctorJobsStatsRequest extends Request {
         public static final class Builder {
             private Long endTime; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(StartRange model) {
+                this.endTime = model.endTime;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>The end of the time range during which jobs were submitted. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC. Unit: milliseconds.</p>

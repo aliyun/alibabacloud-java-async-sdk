@@ -37,6 +37,10 @@ public class UpdateApiTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -55,8 +59,16 @@ public class UpdateApiTemplateResponseBody extends TeaModel {
         private String requestId; 
         private Boolean success; 
 
+        private Builder() {
+        } 
+
+        private Builder(UpdateApiTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+        } 
+
         /**
-         * <p>请求ID。</p>
+         * <p>Request ID.</p>
          * 
          * <strong>example:</strong>
          * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
@@ -67,7 +79,10 @@ public class UpdateApiTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * <p>Template ID (to be deprecated).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder success(Boolean success) {
             this.success = success;

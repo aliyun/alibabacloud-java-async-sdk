@@ -47,6 +47,10 @@ public class ConvertNodeGroupParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeGroupId
      */
@@ -80,6 +84,16 @@ public class ConvertNodeGroupParam extends TeaModel {
         private Long paymentDuration; 
         private String paymentDurationUnit; 
         private String paymentType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ConvertNodeGroupParam model) {
+            this.nodeGroupId = model.nodeGroupId;
+            this.paymentDuration = model.paymentDuration;
+            this.paymentDurationUnit = model.paymentDurationUnit;
+            this.paymentType = model.paymentType;
+        } 
 
         /**
          * <p>This parameter is required.</p>

@@ -48,6 +48,10 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -89,6 +93,17 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListDoctorHDFSUGIResponseBody model) {
+            this.data = model.data;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The results of batch HDFS analysis.</p>
@@ -216,6 +231,16 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalDataSize model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -334,6 +359,16 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TotalDirCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -454,6 +489,16 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalFileCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -561,6 +606,15 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
             private TotalDirCount totalDirCount; 
             private TotalFileCount totalFileCount; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.totalDataSize = model.totalDataSize;
+                this.totalDirCount = model.totalDirCount;
+                this.totalFileCount = model.totalFileCount;
+            } 
+
             /**
              * <p>The total data size.</p>
              */
@@ -635,6 +689,14 @@ public class ListDoctorHDFSUGIResponseBody extends TeaModel {
         public static final class Builder {
             private Metrics metrics; 
             private String name; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.metrics = model.metrics;
+                this.name = model.name;
+            } 
 
             /**
              * <p>The metric information.</p>

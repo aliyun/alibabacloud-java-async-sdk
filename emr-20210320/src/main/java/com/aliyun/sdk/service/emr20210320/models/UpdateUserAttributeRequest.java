@@ -62,7 +62,7 @@ public class UpdateUserAttributeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -132,7 +132,7 @@ public class UpdateUserAttributeRequest extends Request {
         } 
 
         /**
-         * <p>集群ID。</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class UpdateUserAttributeRequest extends Request {
         }
 
         /**
-         * <p>用户备注。</p>
+         * <p>The remarks of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -157,7 +157,7 @@ public class UpdateUserAttributeRequest extends Request {
         }
 
         /**
-         * <p>用户密码。</p>
+         * <p>The user password.</p>
          * 
          * <strong>example:</strong>
          * <p>1234</p>
@@ -169,7 +169,7 @@ public class UpdateUserAttributeRequest extends Request {
         }
 
         /**
-         * <p>区域ID。</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class UpdateUserAttributeRequest extends Request {
         }
 
         /**
-         * <p>用户ID。</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>125046002175****</p>
@@ -194,7 +194,10 @@ public class UpdateUserAttributeRequest extends Request {
         }
 
         /**
-         * UserName.
+         * <p>The username.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>yun****</p>
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

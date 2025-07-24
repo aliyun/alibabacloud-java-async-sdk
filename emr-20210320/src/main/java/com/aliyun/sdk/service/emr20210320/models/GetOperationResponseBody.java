@@ -36,6 +36,10 @@ public class GetOperationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operation
      */
@@ -53,6 +57,14 @@ public class GetOperationResponseBody extends TeaModel {
     public static final class Builder {
         private Operation operation; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOperationResponseBody model) {
+            this.operation = model.operation;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The operation that was performed.</p>

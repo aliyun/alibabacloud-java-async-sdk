@@ -40,6 +40,10 @@ public class InstanceCategory extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultValue
      */
@@ -65,6 +69,15 @@ public class InstanceCategory extends TeaModel {
         private String defaultValue; 
         private java.util.List<String> keys; 
         private java.util.List<String> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(InstanceCategory model) {
+            this.defaultValue = model.defaultValue;
+            this.keys = model.keys;
+            this.values = model.values;
+        } 
 
         /**
          * <p>默认值。</p>

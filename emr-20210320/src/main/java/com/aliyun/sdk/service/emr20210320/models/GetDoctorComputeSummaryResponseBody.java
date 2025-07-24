@@ -36,6 +36,10 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDoctorComputeSummaryResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of resource usage.</p>
@@ -170,6 +182,18 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private Float scoreDayGrowthRatio; 
             private Long subHealthyJobCount; 
             private Long unhealthyJobCount; 
+
+            private Builder() {
+            } 
+
+            private Builder(Analysis model) {
+                this.healthyJobCount = model.healthyJobCount;
+                this.needAttentionJobCount = model.needAttentionJobCount;
+                this.score = model.score;
+                this.scoreDayGrowthRatio = model.scoreDayGrowthRatio;
+                this.subHealthyJobCount = model.subHealthyJobCount;
+                this.unhealthyJobCount = model.unhealthyJobCount;
+            } 
 
             /**
              * <p>The total number of healthy jobs.</p>
@@ -312,6 +336,16 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MemSeconds model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -430,6 +464,16 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(MemSecondsDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -550,6 +594,16 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private String unit; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MemUtilization model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -668,6 +722,16 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReadSize model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -788,6 +852,16 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(VcoreSeconds model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -906,6 +980,16 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(VcoreSecondsDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -1026,6 +1110,16 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private String unit; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(VcoreUtilization model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -1144,6 +1238,16 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(WriteSize model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -1312,6 +1416,20 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
             private VcoreUtilization vcoreUtilization; 
             private WriteSize writeSize; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.memSeconds = model.memSeconds;
+                this.memSecondsDayGrowthRatio = model.memSecondsDayGrowthRatio;
+                this.memUtilization = model.memUtilization;
+                this.readSize = model.readSize;
+                this.vcoreSeconds = model.vcoreSeconds;
+                this.vcoreSecondsDayGrowthRatio = model.vcoreSecondsDayGrowthRatio;
+                this.vcoreUtilization = model.vcoreUtilization;
+                this.writeSize = model.writeSize;
+            } 
+
             /**
              * <p>The total memory consumption over time in seconds.</p>
              */
@@ -1426,6 +1544,14 @@ public class GetDoctorComputeSummaryResponseBody extends TeaModel {
         public static final class Builder {
             private Analysis analysis; 
             private Metrics metrics; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.analysis = model.analysis;
+                this.metrics = model.metrics;
+            } 
 
             /**
              * <p>The resource analysis information.</p>

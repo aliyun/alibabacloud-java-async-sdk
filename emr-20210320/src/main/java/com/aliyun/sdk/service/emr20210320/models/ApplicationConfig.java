@@ -59,6 +59,10 @@ public class ApplicationConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationName
      */
@@ -116,6 +120,19 @@ public class ApplicationConfig extends TeaModel {
         private String configScope; 
         private String nodeGroupId; 
         private String nodeGroupName; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplicationConfig model) {
+            this.applicationName = model.applicationName;
+            this.configFileName = model.configFileName;
+            this.configItemKey = model.configItemKey;
+            this.configItemValue = model.configItemValue;
+            this.configScope = model.configScope;
+            this.nodeGroupId = model.nodeGroupId;
+            this.nodeGroupName = model.nodeGroupName;
+        } 
 
         /**
          * <p>应用名称。从EMR控制台集群创建页面可查看到指定发行版的应用名称列表。</p>

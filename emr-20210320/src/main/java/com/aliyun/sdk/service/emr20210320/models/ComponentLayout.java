@@ -40,6 +40,10 @@ public class ComponentLayout extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationName
      */
@@ -65,6 +69,15 @@ public class ComponentLayout extends TeaModel {
         private String applicationName; 
         private String componentName; 
         private NodeSelector nodeSelector; 
+
+        private Builder() {
+        } 
+
+        private Builder(ComponentLayout model) {
+            this.applicationName = model.applicationName;
+            this.componentName = model.componentName;
+            this.nodeSelector = model.nodeSelector;
+        } 
 
         /**
          * <p>应用名称。</p>
@@ -218,6 +231,20 @@ public class ComponentLayout extends TeaModel {
             private java.util.List<String> nodeNames; 
             private String nodeSelectType; 
             private Integer nodeStartIndex; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeSelector model) {
+                this.nodeEndIndex = model.nodeEndIndex;
+                this.nodeGroupId = model.nodeGroupId;
+                this.nodeGroupIndex = model.nodeGroupIndex;
+                this.nodeGroupName = model.nodeGroupName;
+                this.nodeGroupTypes = model.nodeGroupTypes;
+                this.nodeNames = model.nodeNames;
+                this.nodeSelectType = model.nodeSelectType;
+                this.nodeStartIndex = model.nodeStartIndex;
+            } 
 
             /**
              * <p>节点结束编号，包含结束编号。</p>

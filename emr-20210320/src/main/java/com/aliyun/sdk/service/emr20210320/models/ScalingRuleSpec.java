@@ -61,6 +61,10 @@ public class ScalingRuleSpec extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return adjustmentValue
      */
@@ -118,6 +122,19 @@ public class ScalingRuleSpec extends TeaModel {
         private String scalingActivityType; 
         private String scalingRuleName; 
         private String scalingRuleType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScalingRuleSpec model) {
+            this.adjustmentValue = model.adjustmentValue;
+            this.byLoadScalingRuleSpec = model.byLoadScalingRuleSpec;
+            this.byTimeScalingRuleSpec = model.byTimeScalingRuleSpec;
+            this.coolDownInterval = model.coolDownInterval;
+            this.scalingActivityType = model.scalingActivityType;
+            this.scalingRuleName = model.scalingRuleName;
+            this.scalingRuleType = model.scalingRuleType;
+        } 
 
         /**
          * <p>调整值。需要为正数，代表需要扩容或者缩容的实例数量。</p>
@@ -299,6 +316,18 @@ public class ScalingRuleSpec extends TeaModel {
             private Double threshold; 
             private Integer timeWindow; 
 
+            private Builder() {
+            } 
+
+            private Builder(ByLoadScalingRuleSpec model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.evaluationCount = model.evaluationCount;
+                this.metricName = model.metricName;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+                this.timeWindow = model.timeWindow;
+            } 
+
             /**
              * <p>比较符。</p>
              * <p>This parameter is required.</p>
@@ -446,6 +475,16 @@ public class ScalingRuleSpec extends TeaModel {
             private Long launchTime; 
             private String recurrenceType; 
             private String recurrenceValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(ByTimeScalingRuleSpec model) {
+                this.endTime = model.endTime;
+                this.launchTime = model.launchTime;
+                this.recurrenceType = model.recurrenceType;
+                this.recurrenceValue = model.recurrenceValue;
+            } 
 
             /**
              * <p>重复执行定时任务的结束时间戳。单位为毫秒。</p>

@@ -48,6 +48,10 @@ public class ListComponentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return components
      */
@@ -90,6 +94,17 @@ public class ListComponentsResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListComponentsResponseBody model) {
+            this.components = model.components;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * Components.
          */
@@ -124,7 +139,7 @@ public class ListComponentsResponseBody extends TeaModel {
          * <p>请求ID。</p>
          * 
          * <strong>example:</strong>
-         * <p>DD6B1B2A-5837-5237-ABE4-FF0C8944****</p>
+         * <p>FFAC608A-5DC3-174F-93C6-9F88CA6D5875</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -228,11 +243,22 @@ public class ListComponentsResponseBody extends TeaModel {
             private String namespace; 
             private Integer replica; 
 
+            private Builder() {
+            } 
+
+            private Builder(Components model) {
+                this.applicationName = model.applicationName;
+                this.attributes = model.attributes;
+                this.componentName = model.componentName;
+                this.namespace = model.namespace;
+                this.replica = model.replica;
+            } 
+
             /**
              * <p>应用名称。</p>
              * 
              * <strong>example:</strong>
-             * <p>HDFS</p>
+             * <p>KNOX</p>
              */
             public Builder applicationName(String applicationName) {
                 this.applicationName = applicationName;
@@ -251,7 +277,7 @@ public class ListComponentsResponseBody extends TeaModel {
              * <p>组件名称。</p>
              * 
              * <strong>example:</strong>
-             * <p>DataNode</p>
+             * <p>KNOX</p>
              */
             public Builder componentName(String componentName) {
                 this.componentName = componentName;
@@ -260,6 +286,9 @@ public class ListComponentsResponseBody extends TeaModel {
 
             /**
              * <p>命名空间。</p>
+             * 
+             * <strong>example:</strong>
+             * <p>“”</p>
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;

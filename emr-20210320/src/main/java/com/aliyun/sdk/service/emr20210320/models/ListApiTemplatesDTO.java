@@ -76,6 +76,10 @@ public class ListApiTemplatesDTO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return apiName
      */
@@ -173,6 +177,24 @@ public class ListApiTemplatesDTO extends TeaModel {
         private String templateId; 
         private String templateName; 
         private String userId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApiTemplatesDTO model) {
+            this.apiName = model.apiName;
+            this.content = model.content;
+            this.gmtCreate = model.gmtCreate;
+            this.gmtModified = model.gmtModified;
+            this.id = model.id;
+            this.operatorId = model.operatorId;
+            this.regionId = model.regionId;
+            this.resourceGroupId = model.resourceGroupId;
+            this.status = model.status;
+            this.templateId = model.templateId;
+            this.templateName = model.templateName;
+            this.userId = model.userId;
+        } 
 
         /**
          * ApiName.

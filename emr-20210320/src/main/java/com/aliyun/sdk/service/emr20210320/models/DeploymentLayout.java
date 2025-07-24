@@ -40,6 +40,10 @@ public class DeploymentLayout extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationName
      */
@@ -65,6 +69,15 @@ public class DeploymentLayout extends TeaModel {
         private String applicationName; 
         private String componentName; 
         private NodeSelector nodeSelector; 
+
+        private Builder() {
+        } 
+
+        private Builder(DeploymentLayout model) {
+            this.applicationName = model.applicationName;
+            this.componentName = model.componentName;
+            this.nodeSelector = model.nodeSelector;
+        } 
 
         /**
          * ApplicationName.

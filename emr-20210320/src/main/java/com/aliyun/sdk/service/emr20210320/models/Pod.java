@@ -44,6 +44,10 @@ public class Pod extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return message
      */
@@ -77,6 +81,16 @@ public class Pod extends TeaModel {
         private String podName; 
         private String podStatus; 
         private String reason; 
+
+        private Builder() {
+        } 
+
+        private Builder(Pod model) {
+            this.message = model.message;
+            this.podName = model.podName;
+            this.podStatus = model.podStatus;
+            this.reason = model.reason;
+        } 
 
         /**
          * Message.

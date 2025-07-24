@@ -36,6 +36,10 @@ public class PrivatePoolOptions extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return matchCriteria
      */
@@ -53,6 +57,14 @@ public class PrivatePoolOptions extends TeaModel {
     public static final class Builder {
         private String matchCriteria; 
         private java.util.List<String> privatePoolIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(PrivatePoolOptions model) {
+            this.matchCriteria = model.matchCriteria;
+            this.privatePoolIds = model.privatePoolIds;
+        } 
 
         /**
          * MatchCriteria.

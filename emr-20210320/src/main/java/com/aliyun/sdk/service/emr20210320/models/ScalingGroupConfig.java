@@ -84,6 +84,10 @@ public class ScalingGroupConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return dataDiskCategory
      */
@@ -197,6 +201,26 @@ public class ScalingGroupConfig extends TeaModel {
         private String sysDiskCategory; 
         private Long sysDiskSize; 
         private String triggerMode; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScalingGroupConfig model) {
+            this.dataDiskCategory = model.dataDiskCategory;
+            this.dataDiskCount = model.dataDiskCount;
+            this.dataDiskSize = model.dataDiskSize;
+            this.defaultCoolDownTime = model.defaultCoolDownTime;
+            this.instanceTypeList = model.instanceTypeList;
+            this.multiAvailablePolicy = model.multiAvailablePolicy;
+            this.nodeOfflinePolicy = model.nodeOfflinePolicy;
+            this.privatePoolOptions = model.privatePoolOptions;
+            this.scalingMaxSize = model.scalingMaxSize;
+            this.scalingMinSize = model.scalingMinSize;
+            this.spotStrategy = model.spotStrategy;
+            this.sysDiskCategory = model.sysDiskCategory;
+            this.sysDiskSize = model.sysDiskSize;
+            this.triggerMode = model.triggerMode;
+        } 
 
         /**
          * <p>数据盘类型。</p>
@@ -390,6 +414,14 @@ public class ScalingGroupConfig extends TeaModel {
             private String instanceType; 
             private Float spotPriceLimit; 
 
+            private Builder() {
+            } 
+
+            private Builder(InstanceTypeList model) {
+                this.instanceType = model.instanceType;
+                this.spotPriceLimit = model.spotPriceLimit;
+            } 
+
             /**
              * <p>Ecs类型。</p>
              * 
@@ -487,6 +519,16 @@ public class ScalingGroupConfig extends TeaModel {
             private Integer spotInstancePools; 
             private Boolean spotInstanceRemedy; 
 
+            private Builder() {
+            } 
+
+            private Builder(PolicyParam model) {
+                this.onDemandBaseCapacity = model.onDemandBaseCapacity;
+                this.onDemandPercentageAboveBaseCapacity = model.onDemandPercentageAboveBaseCapacity;
+                this.spotInstancePools = model.spotInstancePools;
+                this.spotInstanceRemedy = model.spotInstanceRemedy;
+            } 
+
             /**
              * <p>按需实例最小个数。</p>
              * 
@@ -582,6 +624,14 @@ public class ScalingGroupConfig extends TeaModel {
             private PolicyParam policyParam; 
             private String policyType; 
 
+            private Builder() {
+            } 
+
+            private Builder(MultiAvailablePolicy model) {
+                this.policyParam = model.policyParam;
+                this.policyType = model.policyType;
+            } 
+
             /**
              * <p>资源可用性策略(成本优化参数)。</p>
              */
@@ -651,6 +701,14 @@ public class ScalingGroupConfig extends TeaModel {
         public static final class Builder {
             private String mode; 
             private Long timeoutMs; 
+
+            private Builder() {
+            } 
+
+            private Builder(NodeOfflinePolicy model) {
+                this.mode = model.mode;
+                this.timeoutMs = model.timeoutMs;
+            } 
 
             /**
              * <p>下线模式,是否为优雅下线。</p>
@@ -724,6 +782,14 @@ public class ScalingGroupConfig extends TeaModel {
         public static final class Builder {
             private String id; 
             private String matchCriteria; 
+
+            private Builder() {
+            } 
+
+            private Builder(PrivatePoolOptions model) {
+                this.id = model.id;
+                this.matchCriteria = model.matchCriteria;
+            } 
 
             /**
              * <p>私有池id。</p>

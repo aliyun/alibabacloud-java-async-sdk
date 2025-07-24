@@ -38,6 +38,10 @@ public class DecreaseNodeGroupParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nodeGroupId
      */
@@ -55,6 +59,14 @@ public class DecreaseNodeGroupParam extends TeaModel {
     public static final class Builder {
         private String nodeGroupId; 
         private java.util.List<String> releaseInstanceIds; 
+
+        private Builder() {
+        } 
+
+        private Builder(DecreaseNodeGroupParam model) {
+            this.nodeGroupId = model.nodeGroupId;
+            this.releaseInstanceIds = model.releaseInstanceIds;
+        } 
 
         /**
          * <p>This parameter is required.</p>

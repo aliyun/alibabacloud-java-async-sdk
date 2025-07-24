@@ -36,6 +36,10 @@ public class AutoScalingPolicy extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return constraints
      */
@@ -53,6 +57,14 @@ public class AutoScalingPolicy extends TeaModel {
     public static final class Builder {
         private Constraints constraints; 
         private java.util.List<ScalingRule> scalingRules; 
+
+        private Builder() {
+        } 
+
+        private Builder(AutoScalingPolicy model) {
+            this.constraints = model.constraints;
+            this.scalingRules = model.scalingRules;
+        } 
 
         /**
          * Constraints.
@@ -119,6 +131,14 @@ public class AutoScalingPolicy extends TeaModel {
         public static final class Builder {
             private Integer maxCapacity; 
             private Integer minCapacity; 
+
+            private Builder() {
+            } 
+
+            private Builder(Constraints model) {
+                this.maxCapacity = model.maxCapacity;
+                this.minCapacity = model.minCapacity;
+            } 
 
             /**
              * MaxCapacity.

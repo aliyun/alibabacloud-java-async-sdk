@@ -36,6 +36,10 @@ public class MetricUnitValue extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return metricName
      */
@@ -53,6 +57,14 @@ public class MetricUnitValue extends TeaModel {
     public static final class Builder {
         private String metricName; 
         private String metricUnit; 
+
+        private Builder() {
+        } 
+
+        private Builder(MetricUnitValue model) {
+            this.metricName = model.metricName;
+            this.metricUnit = model.metricUnit;
+        } 
 
         /**
          * <p>指标名称。</p>

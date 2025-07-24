@@ -57,6 +57,10 @@ public class IncreaseNodesRequest extends Request {
     private String paymentDurationUnit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Promotions")
+    private java.util.List<Promotion> promotions;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -72,6 +76,7 @@ public class IncreaseNodesRequest extends Request {
         this.nodeGroupId = builder.nodeGroupId;
         this.paymentDuration = builder.paymentDuration;
         this.paymentDurationUnit = builder.paymentDurationUnit;
+        this.promotions = builder.promotions;
         this.regionId = builder.regionId;
     }
 
@@ -83,7 +88,7 @@ public class IncreaseNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -152,6 +157,13 @@ public class IncreaseNodesRequest extends Request {
     }
 
     /**
+     * @return promotions
+     */
+    public java.util.List<Promotion> getPromotions() {
+        return this.promotions;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -168,6 +180,7 @@ public class IncreaseNodesRequest extends Request {
         private String nodeGroupId; 
         private Integer paymentDuration; 
         private String paymentDurationUnit; 
+        private java.util.List<Promotion> promotions; 
         private String regionId; 
 
         private Builder() {
@@ -185,11 +198,12 @@ public class IncreaseNodesRequest extends Request {
             this.nodeGroupId = request.nodeGroupId;
             this.paymentDuration = request.paymentDuration;
             this.paymentDurationUnit = request.paymentDurationUnit;
+            this.promotions = request.promotions;
             this.regionId = request.regionId;
         } 
 
         /**
-         * <p>The application configurations. You can specify a maximum of 1,000 items.</p>
+         * <p>The application configurations. Number of elements in the array: 1 to 1,000.</p>
          * 
          * <strong>example:</strong>
          * <p>Month</p>
@@ -247,7 +261,7 @@ public class IncreaseNodesRequest extends Request {
         }
 
         /**
-         * <p>The number of nodes. The number of incremental nodes for this scale-out. Valid values: 1 to 500.</p>
+         * <p>The number of nodes to add.Valid values: 1 to 500.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -309,6 +323,15 @@ public class IncreaseNodesRequest extends Request {
         public Builder paymentDurationUnit(String paymentDurationUnit) {
             this.putQueryParameter("PaymentDurationUnit", paymentDurationUnit);
             this.paymentDurationUnit = paymentDurationUnit;
+            return this;
+        }
+
+        /**
+         * Promotions.
+         */
+        public Builder promotions(java.util.List<Promotion> promotions) {
+            this.putQueryParameter("Promotions", promotions);
+            this.promotions = promotions;
             return this;
         }
 

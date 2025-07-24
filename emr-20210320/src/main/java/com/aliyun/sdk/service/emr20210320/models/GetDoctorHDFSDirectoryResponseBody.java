@@ -36,6 +36,10 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDoctorHDFSDirectoryResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The analysis results of the HDFS directory.</p>
@@ -146,6 +158,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColdDataDayGrowthSize model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -266,6 +288,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(ColdDataSize model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -384,6 +416,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(ColdDataSizeDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -504,6 +546,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(EmptyFileCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -622,6 +674,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(EmptyFileCountDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -742,6 +804,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(EmptyFileDayGrowthCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -860,6 +932,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(FreezeDataDayGrowthSize model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -980,6 +1062,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(FreezeDataSize model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -1098,6 +1190,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(FreezeDataSizeDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -1218,6 +1320,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotDataDayGrowthSize model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -1336,6 +1448,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(HotDataSize model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -1456,6 +1578,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(HotDataSizeDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -1574,6 +1706,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(LargeFileCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -1694,6 +1836,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(LargeFileCountDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -1812,6 +1964,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(LargeFileDayGrowthCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -1932,6 +2094,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediumFileCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -2050,6 +2222,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(MediumFileCountDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -2170,6 +2352,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(MediumFileDayGrowthCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -2288,6 +2480,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SmallFileCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -2408,6 +2610,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Float value; 
 
+            private Builder() {
+            } 
+
+            private Builder(SmallFileCountDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -2526,6 +2738,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(SmallFileDayGrowthCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -2646,6 +2868,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TinyFileCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -2764,6 +2996,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TinyFileCountDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -2884,6 +3126,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TinyFileDayGrowthCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -3002,6 +3254,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TotalDataDayGrowthSize model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -3122,6 +3384,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalDataSize model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -3240,6 +3512,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TotalDataSizeDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -3360,6 +3642,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalFileCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -3478,6 +3770,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TotalFileCountDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -3598,6 +3900,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalFileDayGrowthCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -3716,6 +4028,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(WarmDataDayGrowthSize model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -3836,6 +4158,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(WarmDataSize model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>The description of the metric.</p>
              * 
@@ -3954,6 +4286,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Float value; 
+
+            private Builder() {
+            } 
+
+            private Builder(WarmDataSizeDayGrowthRatio model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>The description of the metric.</p>
@@ -4422,6 +4764,45 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private WarmDataSize warmDataSize; 
             private WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.coldDataDayGrowthSize = model.coldDataDayGrowthSize;
+                this.coldDataSize = model.coldDataSize;
+                this.coldDataSizeDayGrowthRatio = model.coldDataSizeDayGrowthRatio;
+                this.emptyFileCount = model.emptyFileCount;
+                this.emptyFileCountDayGrowthRatio = model.emptyFileCountDayGrowthRatio;
+                this.emptyFileDayGrowthCount = model.emptyFileDayGrowthCount;
+                this.freezeDataDayGrowthSize = model.freezeDataDayGrowthSize;
+                this.freezeDataSize = model.freezeDataSize;
+                this.freezeDataSizeDayGrowthRatio = model.freezeDataSizeDayGrowthRatio;
+                this.hotDataDayGrowthSize = model.hotDataDayGrowthSize;
+                this.hotDataSize = model.hotDataSize;
+                this.hotDataSizeDayGrowthRatio = model.hotDataSizeDayGrowthRatio;
+                this.largeFileCount = model.largeFileCount;
+                this.largeFileCountDayGrowthRatio = model.largeFileCountDayGrowthRatio;
+                this.largeFileDayGrowthCount = model.largeFileDayGrowthCount;
+                this.mediumFileCount = model.mediumFileCount;
+                this.mediumFileCountDayGrowthRatio = model.mediumFileCountDayGrowthRatio;
+                this.mediumFileDayGrowthCount = model.mediumFileDayGrowthCount;
+                this.smallFileCount = model.smallFileCount;
+                this.smallFileCountDayGrowthRatio = model.smallFileCountDayGrowthRatio;
+                this.smallFileDayGrowthCount = model.smallFileDayGrowthCount;
+                this.tinyFileCount = model.tinyFileCount;
+                this.tinyFileCountDayGrowthRatio = model.tinyFileCountDayGrowthRatio;
+                this.tinyFileDayGrowthCount = model.tinyFileDayGrowthCount;
+                this.totalDataDayGrowthSize = model.totalDataDayGrowthSize;
+                this.totalDataSize = model.totalDataSize;
+                this.totalDataSizeDayGrowthRatio = model.totalDataSizeDayGrowthRatio;
+                this.totalFileCount = model.totalFileCount;
+                this.totalFileCountDayGrowthRatio = model.totalFileCountDayGrowthRatio;
+                this.totalFileDayGrowthCount = model.totalFileDayGrowthCount;
+                this.warmDataDayGrowthSize = model.warmDataDayGrowthSize;
+                this.warmDataSize = model.warmDataSize;
+                this.warmDataSizeDayGrowthRatio = model.warmDataSizeDayGrowthRatio;
+            } 
+
             /**
              * <p>The daily increment of the amount of cold data. Cold data refers to data that is not accessed for more than 30 days but is accessed in previous 90 days.</p>
              */
@@ -4760,6 +5141,16 @@ public class GetDoctorHDFSDirectoryResponseBody extends TeaModel {
             private String group; 
             private Metrics metrics; 
             private String user; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.depth = model.depth;
+                this.group = model.group;
+                this.metrics = model.metrics;
+                this.user = model.user;
+            } 
 
             /**
              * <p>The directory level.</p>

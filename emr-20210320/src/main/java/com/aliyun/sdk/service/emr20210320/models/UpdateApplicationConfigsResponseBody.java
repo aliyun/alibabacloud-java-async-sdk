@@ -36,6 +36,10 @@ public class UpdateApplicationConfigsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operationId
      */
@@ -53,6 +57,14 @@ public class UpdateApplicationConfigsResponseBody extends TeaModel {
     public static final class Builder {
         private String operationId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(UpdateApplicationConfigsResponseBody model) {
+            this.operationId = model.operationId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The operation ID.</p>

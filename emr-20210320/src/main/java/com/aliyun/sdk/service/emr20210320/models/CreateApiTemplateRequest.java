@@ -58,7 +58,7 @@ public class CreateApiTemplateRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -174,7 +174,7 @@ public class CreateApiTemplateRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>DATALAKE模板</p>
+         * <p>DATALAKE template</p>
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

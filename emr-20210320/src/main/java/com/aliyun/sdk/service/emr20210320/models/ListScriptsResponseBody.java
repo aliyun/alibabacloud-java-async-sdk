@@ -48,6 +48,10 @@ public class ListScriptsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListScriptsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<Scripts> scripts; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListScriptsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.scripts = model.scripts;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The maximum number of records returned in this request.</p>
@@ -323,6 +338,25 @@ public class ListScriptsResponseBody extends TeaModel {
             private String scriptName; 
             private String scriptPath; 
             private Long startTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Scripts model) {
+                this.action = model.action;
+                this.endTime = model.endTime;
+                this.executionFailStrategy = model.executionFailStrategy;
+                this.executionMoment = model.executionMoment;
+                this.executionState = model.executionState;
+                this.lastUpdateTime = model.lastUpdateTime;
+                this.nodeSelector = model.nodeSelector;
+                this.regionId = model.regionId;
+                this.scriptArgs = model.scriptArgs;
+                this.scriptId = model.scriptId;
+                this.scriptName = model.scriptName;
+                this.scriptPath = model.scriptPath;
+                this.startTime = model.startTime;
+            } 
 
             /**
              * <p>API name.</p>

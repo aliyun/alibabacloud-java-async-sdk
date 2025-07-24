@@ -108,6 +108,10 @@ public class AckConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return ackInstanceId
      */
@@ -269,6 +273,32 @@ public class AckConfig extends TeaModel {
         private java.util.List<Toleration> tolerations; 
         private java.util.List<VolumeMounts> volumeMounts; 
         private java.util.List<Volumes> volumes; 
+
+        private Builder() {
+        } 
+
+        private Builder(AckConfig model) {
+            this.ackInstanceId = model.ackInstanceId;
+            this.customAnnotations = model.customAnnotations;
+            this.customLabels = model.customLabels;
+            this.dataDiskSize = model.dataDiskSize;
+            this.dataDiskStorageClass = model.dataDiskStorageClass;
+            this.limitCpu = model.limitCpu;
+            this.limitMemory = model.limitMemory;
+            this.mountHostCgroup = model.mountHostCgroup;
+            this.namespace = model.namespace;
+            this.nodeAffinity = model.nodeAffinity;
+            this.nodeSelectors = model.nodeSelectors;
+            this.podAffinity = model.podAffinity;
+            this.podAntiAffinity = model.podAntiAffinity;
+            this.preStartCommand = model.preStartCommand;
+            this.pvcs = model.pvcs;
+            this.requestCpu = model.requestCpu;
+            this.requestMemory = model.requestMemory;
+            this.tolerations = model.tolerations;
+            this.volumeMounts = model.volumeMounts;
+            this.volumes = model.volumes;
+        } 
 
         /**
          * <p>ack集群id</p>
@@ -504,6 +534,16 @@ public class AckConfig extends TeaModel {
             private String name; 
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(Pvcs model) {
+                this.dataDiskSize = model.dataDiskSize;
+                this.dataDiskStorageClass = model.dataDiskStorageClass;
+                this.name = model.name;
+                this.path = model.path;
+            } 
+
             /**
              * DataDiskSize.
              */
@@ -587,6 +627,14 @@ public class AckConfig extends TeaModel {
             private String name; 
             private String path; 
 
+            private Builder() {
+            } 
+
+            private Builder(VolumeMounts model) {
+                this.name = model.name;
+                this.path = model.path;
+            } 
+
             /**
              * Name.
              */
@@ -665,6 +713,15 @@ public class AckConfig extends TeaModel {
             private String name; 
             private String path; 
             private String type; 
+
+            private Builder() {
+            } 
+
+            private Builder(Volumes model) {
+                this.name = model.name;
+                this.path = model.path;
+                this.type = model.type;
+            } 
 
             /**
              * Name.

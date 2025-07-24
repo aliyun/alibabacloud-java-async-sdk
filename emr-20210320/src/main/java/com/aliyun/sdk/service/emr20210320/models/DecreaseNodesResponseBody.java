@@ -36,6 +36,10 @@ public class DecreaseNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return operationId
      */
@@ -53,6 +57,14 @@ public class DecreaseNodesResponseBody extends TeaModel {
     public static final class Builder {
         private String operationId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(DecreaseNodesResponseBody model) {
+            this.operationId = model.operationId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Operation ID.</p>

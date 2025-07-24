@@ -36,6 +36,10 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return data
      */
@@ -53,6 +57,14 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
     public static final class Builder {
         private Data data; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetDoctorHBaseRegionResponseBody model) {
+            this.data = model.data;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Returned data.</p>
@@ -146,6 +158,16 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(DailyReadRequest model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Description of the metric.</p>
@@ -266,6 +288,16 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(DailyWriteRequest model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>Description of the metric.</p>
              * 
@@ -384,6 +416,16 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(StoreFileCount model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Description of the metric.</p>
@@ -504,6 +546,16 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             private String unit; 
             private Long value; 
 
+            private Builder() {
+            } 
+
+            private Builder(TotalReadRequest model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
+
             /**
              * <p>Metric description.</p>
              * 
@@ -622,6 +674,16 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             private String name; 
             private String unit; 
             private Long value; 
+
+            private Builder() {
+            } 
+
+            private Builder(TotalWriteRequest model) {
+                this.description = model.description;
+                this.name = model.name;
+                this.unit = model.unit;
+                this.value = model.value;
+            } 
 
             /**
              * <p>Metric description.</p>
@@ -754,6 +816,17 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             private TotalReadRequest totalReadRequest; 
             private TotalWriteRequest totalWriteRequest; 
 
+            private Builder() {
+            } 
+
+            private Builder(Metrics model) {
+                this.dailyReadRequest = model.dailyReadRequest;
+                this.dailyWriteRequest = model.dailyWriteRequest;
+                this.storeFileCount = model.storeFileCount;
+                this.totalReadRequest = model.totalReadRequest;
+                this.totalWriteRequest = model.totalWriteRequest;
+            } 
+
             /**
              * <p>Number of read requests in a single day.</p>
              */
@@ -856,6 +929,15 @@ public class GetDoctorHBaseRegionResponseBody extends TeaModel {
             private Metrics metrics; 
             private String regionServerHost; 
             private String tableName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Data model) {
+                this.metrics = model.metrics;
+                this.regionServerHost = model.regionServerHost;
+                this.tableName = model.tableName;
+            } 
 
             /**
              * <p>Metrics information.</p>

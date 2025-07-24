@@ -37,6 +37,10 @@ public class Tag extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return key
      */
@@ -54,6 +58,14 @@ public class Tag extends TeaModel {
     public static final class Builder {
         private String key; 
         private String value; 
+
+        private Builder() {
+        } 
+
+        private Builder(Tag model) {
+            this.key = model.key;
+            this.value = model.value;
+        } 
 
         /**
          * <p>标签键。必填参数，不允许为空字符串。最多支持128个字符，不能以aliyun和acs:开头，不能包含http://或https://。</p>

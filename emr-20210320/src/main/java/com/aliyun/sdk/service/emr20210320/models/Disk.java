@@ -44,6 +44,10 @@ public class Disk extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return category
      */
@@ -77,6 +81,16 @@ public class Disk extends TeaModel {
         private Integer count; 
         private String performanceLevel; 
         private Integer size; 
+
+        private Builder() {
+        } 
+
+        private Builder(Disk model) {
+            this.category = model.category;
+            this.count = model.count;
+            this.performanceLevel = model.performanceLevel;
+            this.size = model.size;
+        } 
 
         /**
          * <p>磁盘类型。</p>

@@ -43,6 +43,10 @@ public class CostOptimizedConfig extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return onDemandBaseCapacity
      */
@@ -68,6 +72,15 @@ public class CostOptimizedConfig extends TeaModel {
         private Integer onDemandBaseCapacity; 
         private Integer onDemandPercentageAboveBaseCapacity; 
         private Integer spotInstancePools; 
+
+        private Builder() {
+        } 
+
+        private Builder(CostOptimizedConfig model) {
+            this.onDemandBaseCapacity = model.onDemandBaseCapacity;
+            this.onDemandPercentageAboveBaseCapacity = model.onDemandPercentageAboveBaseCapacity;
+            this.spotInstancePools = model.spotInstancePools;
+        } 
 
         /**
          * <p>按量实例个数的最小值。节点组所需要按量实例个数的最小值，取值范围：0~1000。当按量实例个数少于该值时，将优先创建按量实例。</p>

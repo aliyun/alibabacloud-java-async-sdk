@@ -67,7 +67,7 @@ public class DecreaseNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -177,7 +177,7 @@ public class DecreaseNodesRequest extends Request {
         }
 
         /**
-         * <p>The number of nodes to scale in. The number of nodes to be scaled in. The value should be less than the number of surviving nodes in the current node group.</p>
+         * <p>The number of nodes to scale out. The number of nodes to be scaled out. The value should be less than the number of surviving nodes in the current node group.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

@@ -54,6 +54,10 @@ public class MetricsTrigger extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conditionLogicOperator
      */
@@ -103,6 +107,18 @@ public class MetricsTrigger extends TeaModel {
         private Integer evaluationCount; 
         private java.util.List<TimeConstraint> timeConstraints; 
         private Integer timeWindow; 
+
+        private Builder() {
+        } 
+
+        private Builder(MetricsTrigger model) {
+            this.conditionLogicOperator = model.conditionLogicOperator;
+            this.conditions = model.conditions;
+            this.coolDownInterval = model.coolDownInterval;
+            this.evaluationCount = model.evaluationCount;
+            this.timeConstraints = model.timeConstraints;
+            this.timeWindow = model.timeWindow;
+        } 
 
         /**
          * <p>多指标逻辑关系。默认：Or。取值范围：</p>

@@ -49,6 +49,10 @@ public class ByTimeScalingRule extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return endTime
      */
@@ -90,6 +94,17 @@ public class ByTimeScalingRule extends TeaModel {
         private Long launchTime; 
         private String recurrenceType; 
         private String recurrenceValue; 
+
+        private Builder() {
+        } 
+
+        private Builder(ByTimeScalingRule model) {
+            this.endTime = model.endTime;
+            this.launchExpirationTime = model.launchExpirationTime;
+            this.launchTime = model.launchTime;
+            this.recurrenceType = model.recurrenceType;
+            this.recurrenceValue = model.recurrenceValue;
+        } 
 
         /**
          * <p>重复执行定时任务的结束时间戳。单位为毫秒。</p>

@@ -44,6 +44,10 @@ public class DiskInfo extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return category
      */
@@ -77,6 +81,16 @@ public class DiskInfo extends TeaModel {
         private Integer count; 
         private String performanceLevel; 
         private Integer size; 
+
+        private Builder() {
+        } 
+
+        private Builder(DiskInfo model) {
+            this.category = model.category;
+            this.count = model.count;
+            this.performanceLevel = model.performanceLevel;
+            this.size = model.size;
+        } 
 
         /**
          * Category.

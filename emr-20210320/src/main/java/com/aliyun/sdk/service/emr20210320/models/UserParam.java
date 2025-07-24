@@ -40,6 +40,10 @@ public class UserParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return password
      */
@@ -65,6 +69,15 @@ public class UserParam extends TeaModel {
         private String password; 
         private String userId; 
         private String userName; 
+
+        private Builder() {
+        } 
+
+        private Builder(UserParam model) {
+            this.password = model.password;
+            this.userId = model.userId;
+            this.userName = model.userName;
+        } 
 
         /**
          * Password.

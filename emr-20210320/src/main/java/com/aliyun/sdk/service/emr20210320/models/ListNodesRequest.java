@@ -86,7 +86,7 @@ public class ListNodesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -323,7 +323,7 @@ public class ListNodesRequest extends Request {
         }
 
         /**
-         * <p>The list of tags to be bound.</p>
+         * <p>The tags.</p>
          */
         public Builder tags(java.util.List<Tag> tags) {
             this.putQueryParameter("Tags", tags);

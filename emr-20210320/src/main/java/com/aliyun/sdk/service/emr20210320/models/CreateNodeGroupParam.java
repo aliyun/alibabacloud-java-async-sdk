@@ -108,6 +108,10 @@ public class CreateNodeGroupParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoRenew
      */
@@ -269,6 +273,32 @@ public class CreateNodeGroupParam extends TeaModel {
         private java.util.List<String> vSwitchIds; 
         private Boolean withPublicIp; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateNodeGroupParam model) {
+            this.autoRenew = model.autoRenew;
+            this.autoRenewDuration = model.autoRenewDuration;
+            this.autoRenewDurationUnit = model.autoRenewDurationUnit;
+            this.dataDisks = model.dataDisks;
+            this.instanceTypes = model.instanceTypes;
+            this.nodeCount = model.nodeCount;
+            this.nodeGroupName = model.nodeGroupName;
+            this.nodeGroupType = model.nodeGroupType;
+            this.nodeKeyPairName = model.nodeKeyPairName;
+            this.nodeRamRole = model.nodeRamRole;
+            this.nodeRootPassword = model.nodeRootPassword;
+            this.paymentDuration = model.paymentDuration;
+            this.paymentDurationUnit = model.paymentDurationUnit;
+            this.paymentType = model.paymentType;
+            this.securityGroupId = model.securityGroupId;
+            this.spotStrategy = model.spotStrategy;
+            this.systemDisk = model.systemDisk;
+            this.vSwitchIds = model.vSwitchIds;
+            this.withPublicIp = model.withPublicIp;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * AutoRenew.

@@ -64,6 +64,10 @@ public class Operation extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return clusterId
      */
@@ -137,6 +141,21 @@ public class Operation extends TeaModel {
         private String operationType; 
         private Long startTime; 
         private OperationStateChangeReason stateChangeReason; 
+
+        private Builder() {
+        } 
+
+        private Builder(Operation model) {
+            this.clusterId = model.clusterId;
+            this.createTime = model.createTime;
+            this.description = model.description;
+            this.endTime = model.endTime;
+            this.operationId = model.operationId;
+            this.operationState = model.operationState;
+            this.operationType = model.operationType;
+            this.startTime = model.startTime;
+            this.stateChangeReason = model.stateChangeReason;
+        } 
 
         /**
          * <p>集群ID。</p>

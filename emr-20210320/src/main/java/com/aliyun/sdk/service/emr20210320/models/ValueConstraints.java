@@ -52,6 +52,10 @@ public class ValueConstraints extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return defaultValue
      */
@@ -101,6 +105,18 @@ public class ValueConstraints extends TeaModel {
         private Integer step; 
         private String type; 
         private java.util.List<Integer> values; 
+
+        private Builder() {
+        } 
+
+        private Builder(ValueConstraints model) {
+            this.defaultValue = model.defaultValue;
+            this.end = model.end;
+            this.start = model.start;
+            this.step = model.step;
+            this.type = model.type;
+            this.values = model.values;
+        } 
 
         /**
          * <p>默认值。</p>

@@ -51,6 +51,10 @@ public class User extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return group
      */
@@ -92,6 +96,17 @@ public class User extends TeaModel {
         private String userId; 
         private String userName; 
         private String userType; 
+
+        private Builder() {
+        } 
+
+        private Builder(User model) {
+            this.group = model.group;
+            this.password = model.password;
+            this.userId = model.userId;
+            this.userName = model.userName;
+            this.userType = model.userType;
+        } 
 
         /**
          * <p>用户组。</p>

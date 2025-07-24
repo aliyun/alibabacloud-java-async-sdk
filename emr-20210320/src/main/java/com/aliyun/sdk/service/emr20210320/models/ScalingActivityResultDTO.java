@@ -32,6 +32,10 @@ public class ScalingActivityResultDTO extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceId
      */
@@ -41,6 +45,13 @@ public class ScalingActivityResultDTO extends TeaModel {
 
     public static final class Builder {
         private String instanceId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScalingActivityResultDTO model) {
+            this.instanceId = model.instanceId;
+        } 
 
         /**
          * <p>实例ID。</p>

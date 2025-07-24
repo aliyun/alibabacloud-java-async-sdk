@@ -48,6 +48,10 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -89,6 +93,17 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         private java.util.List<ReleaseVersions> releaseVersions; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListReleaseVersionsResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.releaseVersions = model.releaseVersions;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The maximum number of entries returned.</p>
@@ -203,6 +218,15 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             private String iaasType; 
             private String releaseVersion; 
             private String series; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReleaseVersions model) {
+                this.iaasType = model.iaasType;
+                this.releaseVersion = model.releaseVersion;
+                this.series = model.series;
+            } 
 
             /**
              * <p>The IaaS type.</p>

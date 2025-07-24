@@ -88,6 +88,10 @@ public class Node extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoRenew
      */
@@ -209,6 +213,27 @@ public class Node extends TeaModel {
         private String privateIp; 
         private String publicIp; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(Node model) {
+            this.autoRenew = model.autoRenew;
+            this.autoRenewDuration = model.autoRenewDuration;
+            this.autoRenewDurationUnit = model.autoRenewDurationUnit;
+            this.createTime = model.createTime;
+            this.expireTime = model.expireTime;
+            this.instanceType = model.instanceType;
+            this.maintenanceStatus = model.maintenanceStatus;
+            this.nodeGroupId = model.nodeGroupId;
+            this.nodeGroupType = model.nodeGroupType;
+            this.nodeId = model.nodeId;
+            this.nodeName = model.nodeName;
+            this.nodeState = model.nodeState;
+            this.privateIp = model.privateIp;
+            this.publicIp = model.publicIp;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * <p>节点是否自动续费。</p>

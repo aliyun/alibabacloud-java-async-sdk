@@ -48,6 +48,10 @@ public class ListInstanceTypesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instanceTypes
      */
@@ -89,6 +93,17 @@ public class ListInstanceTypesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Integer totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstanceTypesResponseBody model) {
+            this.instanceTypes = model.instanceTypes;
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The instance types.</p>

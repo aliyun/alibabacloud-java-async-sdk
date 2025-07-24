@@ -36,6 +36,10 @@ public class OnKubeClusterResource extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return cpu
      */
@@ -53,6 +57,14 @@ public class OnKubeClusterResource extends TeaModel {
     public static final class Builder {
         private String cpu; 
         private String memory; 
+
+        private Builder() {
+        } 
+
+        private Builder(OnKubeClusterResource model) {
+            this.cpu = model.cpu;
+            this.memory = model.memory;
+        } 
 
         /**
          * Cpu.

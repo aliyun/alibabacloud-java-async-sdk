@@ -48,6 +48,10 @@ public class ListNodesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return maxResults
      */
@@ -90,6 +94,17 @@ public class ListNodesResponseBody extends TeaModel {
         private String requestId; 
         private Integer totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListNodesResponseBody model) {
+            this.maxResults = model.maxResults;
+            this.nextToken = model.nextToken;
+            this.nodes = model.nodes;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
          * <p>The maximum number of entries returned.</p>
          * 
@@ -113,7 +128,7 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
-         * <p>Details about nodes.</p>
+         * <p>The node list.</p>
          */
         public Builder nodes(java.util.List<Node> nodes) {
             this.nodes = nodes;

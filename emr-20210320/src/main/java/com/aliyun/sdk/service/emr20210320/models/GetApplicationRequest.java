@@ -47,7 +47,7 @@ public class GetApplicationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -107,7 +107,7 @@ public class GetApplicationRequest extends Request {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>c-b933c5aac8fe****</p>
+         * <p>c-e6a9d46e92675****</p>
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);

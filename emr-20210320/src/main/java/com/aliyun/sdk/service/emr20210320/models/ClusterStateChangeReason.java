@@ -36,6 +36,10 @@ public class ClusterStateChangeReason extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,6 +57,14 @@ public class ClusterStateChangeReason extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
+
+        private Builder() {
+        } 
+
+        private Builder(ClusterStateChangeReason model) {
+            this.code = model.code;
+            this.message = model.message;
+        } 
 
         /**
          * <p>状态码。取值范围：</p>

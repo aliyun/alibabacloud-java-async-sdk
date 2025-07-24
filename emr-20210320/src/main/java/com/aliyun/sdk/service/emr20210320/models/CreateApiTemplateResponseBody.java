@@ -40,6 +40,10 @@ public class CreateApiTemplateResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class CreateApiTemplateResponseBody extends TeaModel {
         private String requestId; 
         private String success; 
         private String templateId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateApiTemplateResponseBody model) {
+            this.requestId = model.requestId;
+            this.success = model.success;
+            this.templateId = model.templateId;
+        } 
 
         /**
          * <p>Request ID.</p>

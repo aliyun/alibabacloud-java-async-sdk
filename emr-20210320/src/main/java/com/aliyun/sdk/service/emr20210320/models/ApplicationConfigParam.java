@@ -68,6 +68,10 @@ public class ApplicationConfigParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return configAction
      */
@@ -149,6 +153,22 @@ public class ApplicationConfigParam extends TeaModel {
         private String effectiveType; 
         private String nodeGroupId; 
         private String nodeId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ApplicationConfigParam model) {
+            this.configAction = model.configAction;
+            this.configFileName = model.configFileName;
+            this.configItemDescription = model.configItemDescription;
+            this.configItemKey = model.configItemKey;
+            this.configItemValue = model.configItemValue;
+            this.configScope = model.configScope;
+            this.effectiveActions = model.effectiveActions;
+            this.effectiveType = model.effectiveType;
+            this.nodeGroupId = model.nodeGroupId;
+            this.nodeId = model.nodeId;
+        } 
 
         /**
          * ConfigAction.

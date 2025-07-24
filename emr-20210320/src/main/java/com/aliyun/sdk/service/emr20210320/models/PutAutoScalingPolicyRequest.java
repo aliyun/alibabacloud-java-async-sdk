@@ -57,7 +57,7 @@ public class PutAutoScalingPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -118,7 +118,7 @@ public class PutAutoScalingPolicyRequest extends Request {
         } 
 
         /**
-         * <p>集群ID。</p>
+         * <p>The cluster ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class PutAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * <p>The maximum and minimum numbers of nodes in a node group.</p>
+         * <p>The constraints on the maximum and minimum numbers of nodes in a node group.</p>
          */
         public Builder constraints(ScalingConstraints constraints) {
             this.putQueryParameter("Constraints", constraints);
@@ -140,7 +140,7 @@ public class PutAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * <p>节点组ID。节点组 Id-针对 ACK 集群，此字段为空。</p>
+         * <p>The ID of the node group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -153,7 +153,7 @@ public class PutAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * <p>区域ID。</p>
+         * <p>The region ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -166,7 +166,7 @@ public class PutAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * <p>The auto scaling rules. Number of elements in the array: 0 to 100.</p>
+         * <p>The description list of auto scaling rules. Number of elements in the array: 0 to 100.</p>
          */
         public Builder scalingRules(java.util.List<ScalingRule> scalingRules) {
             this.putQueryParameter("ScalingRules", scalingRules);

@@ -56,6 +56,10 @@ public class ClusterScript extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return executionFailStrategy
      */
@@ -113,6 +117,19 @@ public class ClusterScript extends TeaModel {
         private String scriptArgs; 
         private String scriptName; 
         private String scriptPath; 
+
+        private Builder() {
+        } 
+
+        private Builder(ClusterScript model) {
+            this.executionFailStrategy = model.executionFailStrategy;
+            this.executionMoment = model.executionMoment;
+            this.nodeSelect = model.nodeSelect;
+            this.priority = model.priority;
+            this.scriptArgs = model.scriptArgs;
+            this.scriptName = model.scriptName;
+            this.scriptPath = model.scriptPath;
+        } 
 
         /**
          * ExecutionFailStrategy.

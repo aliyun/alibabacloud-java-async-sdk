@@ -96,6 +96,10 @@ public class NodeGroupParam extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoPayOrder
      */
@@ -233,6 +237,29 @@ public class NodeGroupParam extends TeaModel {
         private SystemDiskParam systemDisk; 
         private java.util.List<String> vSwitchIds; 
         private String zoneId; 
+
+        private Builder() {
+        } 
+
+        private Builder(NodeGroupParam model) {
+            this.autoPayOrder = model.autoPayOrder;
+            this.autoRenew = model.autoRenew;
+            this.autoRenewDuration = model.autoRenewDuration;
+            this.autoRenewDurationUnit = model.autoRenewDurationUnit;
+            this.dataDisks = model.dataDisks;
+            this.description = model.description;
+            this.instanceTypes = model.instanceTypes;
+            this.nodeCount = model.nodeCount;
+            this.nodeGroupIndex = model.nodeGroupIndex;
+            this.nodeGroupName = model.nodeGroupName;
+            this.nodeGroupType = model.nodeGroupType;
+            this.paymentDuration = model.paymentDuration;
+            this.paymentDurationUnit = model.paymentDurationUnit;
+            this.paymentType = model.paymentType;
+            this.systemDisk = model.systemDisk;
+            this.vSwitchIds = model.vSwitchIds;
+            this.zoneId = model.zoneId;
+        } 
 
         /**
          * AutoPayOrder.

@@ -60,6 +60,10 @@ public class AutoScalingConstraints extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return autoScalingMetricUnits
      */
@@ -125,6 +129,20 @@ public class AutoScalingConstraints extends TeaModel {
         private java.util.List<SupportMetricTags> supportMetricTags; 
         private java.util.List<String> supportMetrics; 
         private java.util.List<String> supportRuleTypes; 
+
+        private Builder() {
+        } 
+
+        private Builder(AutoScalingConstraints model) {
+            this.autoScalingMetricUnits = model.autoScalingMetricUnits;
+            this.defaultMetricTriggeredRules = model.defaultMetricTriggeredRules;
+            this.maxAdjustmentValue = model.maxAdjustmentValue;
+            this.maxByLoadRuleCount = model.maxByLoadRuleCount;
+            this.maxByTimeRuleCount = model.maxByTimeRuleCount;
+            this.supportMetricTags = model.supportMetricTags;
+            this.supportMetrics = model.supportMetrics;
+            this.supportRuleTypes = model.supportRuleTypes;
+        } 
 
         /**
          * <p>按负载伸缩指标单位描述。</p>
@@ -254,6 +272,14 @@ public class AutoScalingConstraints extends TeaModel {
         public static final class Builder {
             private String metricName; 
             private java.util.List<Tag> tags; 
+
+            private Builder() {
+            } 
+
+            private Builder(SupportMetricTags model) {
+                this.metricName = model.metricName;
+                this.tags = model.tags;
+            } 
 
             /**
              * <p>指标名称。</p>

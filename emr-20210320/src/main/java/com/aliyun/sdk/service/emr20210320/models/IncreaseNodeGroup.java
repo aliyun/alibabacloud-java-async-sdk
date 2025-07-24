@@ -54,6 +54,10 @@ public class IncreaseNodeGroup extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return description
      */
@@ -103,6 +107,18 @@ public class IncreaseNodeGroup extends TeaModel {
         private Integer paymentDuration; 
         private String paymentDurationUnit; 
         private String vSwitchId; 
+
+        private Builder() {
+        } 
+
+        private Builder(IncreaseNodeGroup model) {
+            this.description = model.description;
+            this.nodeCount = model.nodeCount;
+            this.nodeGroupId = model.nodeGroupId;
+            this.paymentDuration = model.paymentDuration;
+            this.paymentDurationUnit = model.paymentDurationUnit;
+            this.vSwitchId = model.vSwitchId;
+        } 
 
         /**
          * <p>描述。</p>

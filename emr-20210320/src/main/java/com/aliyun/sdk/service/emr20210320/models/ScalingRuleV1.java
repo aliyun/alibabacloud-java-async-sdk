@@ -56,6 +56,10 @@ public class ScalingRuleV1 extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return adjustmentType
      */
@@ -113,6 +117,19 @@ public class ScalingRuleV1 extends TeaModel {
         private RuleParam ruleParam; 
         private String ruleType; 
         private String scalingConfigBizId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ScalingRuleV1 model) {
+            this.adjustmentType = model.adjustmentType;
+            this.adjustmentValue = model.adjustmentValue;
+            this.coolDownTime = model.coolDownTime;
+            this.ruleName = model.ruleName;
+            this.ruleParam = model.ruleParam;
+            this.ruleType = model.ruleType;
+            this.scalingConfigBizId = model.scalingConfigBizId;
+        } 
 
         /**
          * <p>调整类型。</p>
@@ -345,6 +362,23 @@ public class ScalingRuleV1 extends TeaModel {
             private String recurrenceValue; 
             private String statistics; 
             private Integer threshold; 
+
+            private Builder() {
+            } 
+
+            private Builder(RuleParam model) {
+                this.comparisonOperator = model.comparisonOperator;
+                this.evaluationCount = model.evaluationCount;
+                this.launchExpirationTime = model.launchExpirationTime;
+                this.launchTime = model.launchTime;
+                this.metricName = model.metricName;
+                this.period = model.period;
+                this.recurrenceEndTime = model.recurrenceEndTime;
+                this.recurrenceType = model.recurrenceType;
+                this.recurrenceValue = model.recurrenceValue;
+                this.statistics = model.statistics;
+                this.threshold = model.threshold;
+            } 
 
             /**
              * <p>[负载触发参数] 比较符。</p>

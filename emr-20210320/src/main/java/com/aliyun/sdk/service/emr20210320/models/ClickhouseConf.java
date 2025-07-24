@@ -44,6 +44,10 @@ public class ClickhouseConf extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return initialReplica
      */
@@ -77,6 +81,16 @@ public class ClickhouseConf extends TeaModel {
         private Integer initialShard; 
         private Integer newNodeCount; 
         private String resizeType; 
+
+        private Builder() {
+        } 
+
+        private Builder(ClickhouseConf model) {
+            this.initialReplica = model.initialReplica;
+            this.initialShard = model.initialShard;
+            this.newNodeCount = model.newNodeCount;
+            this.resizeType = model.resizeType;
+        } 
 
         /**
          * InitialReplica.

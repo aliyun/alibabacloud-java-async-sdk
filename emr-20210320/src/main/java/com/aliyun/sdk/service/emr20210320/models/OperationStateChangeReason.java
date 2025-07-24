@@ -36,6 +36,10 @@ public class OperationStateChangeReason extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return code
      */
@@ -53,6 +57,14 @@ public class OperationStateChangeReason extends TeaModel {
     public static final class Builder {
         private String code; 
         private String message; 
+
+        private Builder() {
+        } 
+
+        private Builder(OperationStateChangeReason model) {
+            this.code = model.code;
+            this.message = model.message;
+        } 
 
         /**
          * <p>状态码。</p>
