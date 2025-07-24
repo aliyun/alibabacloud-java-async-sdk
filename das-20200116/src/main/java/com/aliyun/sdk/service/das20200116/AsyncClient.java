@@ -306,6 +306,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDiagnosticReportListResponse> describeDiagnosticReportList(DescribeDiagnosticReportListRequest request);
 
     /**
+     * @param request the request parameters of DescribeErrorLogRecords  DescribeErrorLogRecordsRequest
+     * @return DescribeErrorLogRecordsResponse
+     */
+    CompletableFuture<DescribeErrorLogRecordsResponse> describeErrorLogRecords(DescribeErrorLogRecordsRequest request);
+
+    /**
      * <b>description</b> :
      * <p>This operation sorts list, hash, set, and zset keys based on the number of elements contained in these keys. The top three keys that contain the most elements are considered large keys. If the number of queries per second (QPS) of a key is greater than 3,000, the key is considered a hot key.</p>
      * <ul>
