@@ -32,6 +32,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreatePrometheusInstanceResponse> createPrometheusInstance(CreatePrometheusInstanceRequest request);
 
     /**
+     * @param request the request parameters of CreateService  CreateServiceRequest
+     * @return CreateServiceResponse
+     */
+    CompletableFuture<CreateServiceResponse> createService(CreateServiceRequest request);
+
+    /**
      * @param request the request parameters of CreateUmodel  CreateUmodelRequest
      * @return CreateUmodelResponse
      */
@@ -42,6 +48,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DeleteEntityStoreResponse
      */
     CompletableFuture<DeleteEntityStoreResponse> deleteEntityStore(DeleteEntityStoreRequest request);
+
+    /**
+     * @param request the request parameters of DeleteService  DeleteServiceRequest
+     * @return DeleteServiceResponse
+     */
+    CompletableFuture<DeleteServiceResponse> deleteService(DeleteServiceRequest request);
 
     /**
      * @param request the request parameters of DeleteUmodel  DeleteUmodelRequest
@@ -74,6 +86,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEntityStoreDataResponse> getEntityStoreData(GetEntityStoreDataRequest request);
 
     /**
+     * @param request the request parameters of GetService  GetServiceRequest
+     * @return GetServiceResponse
+     */
+    CompletableFuture<GetServiceResponse> getService(GetServiceRequest request);
+
+    /**
      * @param request the request parameters of GetServiceObservability  GetServiceObservabilityRequest
      * @return GetServiceObservabilityResponse
      */
@@ -104,6 +122,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListAlertActionsResponse> listAlertActions(ListAlertActionsRequest request);
 
     /**
+     * @param request the request parameters of ListServices  ListServicesRequest
+     * @return ListServicesResponse
+     */
+    CompletableFuture<ListServicesResponse> listServices(ListServicesRequest request);
+
+    /**
      * @param request the request parameters of ListWorkspaces  ListWorkspacesRequest
      * @return ListWorkspacesResponse
      */
@@ -114,6 +138,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return PutWorkspaceResponse
      */
     CompletableFuture<PutWorkspaceResponse> putWorkspace(PutWorkspaceRequest request);
+
+    /**
+     * @param request the request parameters of UpdateService  UpdateServiceRequest
+     * @return UpdateServiceResponse
+     */
+    CompletableFuture<UpdateServiceResponse> updateService(UpdateServiceRequest request);
 
     /**
      * @param request the request parameters of UpdateUmodel  UpdateUmodelRequest
