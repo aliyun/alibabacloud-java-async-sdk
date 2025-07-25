@@ -35,11 +35,17 @@ public class QuotaConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EnableSubQuotaPreemption")
     private Boolean enableSubQuotaPreemption;
 
+    @com.aliyun.core.annotation.NameInMap("EniCacheConfig")
+    private EniCacheConfig eniCacheConfig;
+
     @com.aliyun.core.annotation.NameInMap("OversoldUsageInfo")
     private OversoldUsageConfig oversoldUsageInfo;
 
     @com.aliyun.core.annotation.NameInMap("ResourceSpecs")
     private java.util.List<WorkspaceSpecs> resourceSpecs;
+
+    @com.aliyun.core.annotation.NameInMap("SandboxCacheConfig")
+    private SandboxCacheConfig sandboxCacheConfig;
 
     @com.aliyun.core.annotation.NameInMap("SelfQuotaPreemptionConfig")
     private SelfQuotaPreemptionConfig selfQuotaPreemptionConfig;
@@ -63,8 +69,10 @@ public class QuotaConfig extends TeaModel {
         this.enableGPUShare = builder.enableGPUShare;
         this.enablePreemptSubquotaWorkloads = builder.enablePreemptSubquotaWorkloads;
         this.enableSubQuotaPreemption = builder.enableSubQuotaPreemption;
+        this.eniCacheConfig = builder.eniCacheConfig;
         this.oversoldUsageInfo = builder.oversoldUsageInfo;
         this.resourceSpecs = builder.resourceSpecs;
+        this.sandboxCacheConfig = builder.sandboxCacheConfig;
         this.selfQuotaPreemptionConfig = builder.selfQuotaPreemptionConfig;
         this.subQuotaPreemptionConfig = builder.subQuotaPreemptionConfig;
         this.supportGPUDrivers = builder.supportGPUDrivers;
@@ -127,6 +135,13 @@ public class QuotaConfig extends TeaModel {
     }
 
     /**
+     * @return eniCacheConfig
+     */
+    public EniCacheConfig getEniCacheConfig() {
+        return this.eniCacheConfig;
+    }
+
+    /**
      * @return oversoldUsageInfo
      */
     public OversoldUsageConfig getOversoldUsageInfo() {
@@ -138,6 +153,13 @@ public class QuotaConfig extends TeaModel {
      */
     public java.util.List<WorkspaceSpecs> getResourceSpecs() {
         return this.resourceSpecs;
+    }
+
+    /**
+     * @return sandboxCacheConfig
+     */
+    public SandboxCacheConfig getSandboxCacheConfig() {
+        return this.sandboxCacheConfig;
     }
 
     /**
@@ -182,8 +204,10 @@ public class QuotaConfig extends TeaModel {
         private Boolean enableGPUShare; 
         private Boolean enablePreemptSubquotaWorkloads; 
         private Boolean enableSubQuotaPreemption; 
+        private EniCacheConfig eniCacheConfig; 
         private OversoldUsageConfig oversoldUsageInfo; 
         private java.util.List<WorkspaceSpecs> resourceSpecs; 
+        private SandboxCacheConfig sandboxCacheConfig; 
         private SelfQuotaPreemptionConfig selfQuotaPreemptionConfig; 
         private SubQuotaPreemptionConfig subQuotaPreemptionConfig; 
         private java.util.List<String> supportGPUDrivers; 
@@ -200,8 +224,10 @@ public class QuotaConfig extends TeaModel {
             this.enableGPUShare = model.enableGPUShare;
             this.enablePreemptSubquotaWorkloads = model.enablePreemptSubquotaWorkloads;
             this.enableSubQuotaPreemption = model.enableSubQuotaPreemption;
+            this.eniCacheConfig = model.eniCacheConfig;
             this.oversoldUsageInfo = model.oversoldUsageInfo;
             this.resourceSpecs = model.resourceSpecs;
+            this.sandboxCacheConfig = model.sandboxCacheConfig;
             this.selfQuotaPreemptionConfig = model.selfQuotaPreemptionConfig;
             this.subQuotaPreemptionConfig = model.subQuotaPreemptionConfig;
             this.supportGPUDrivers = model.supportGPUDrivers;
@@ -258,6 +284,14 @@ public class QuotaConfig extends TeaModel {
         }
 
         /**
+         * EniCacheConfig.
+         */
+        public Builder eniCacheConfig(EniCacheConfig eniCacheConfig) {
+            this.eniCacheConfig = eniCacheConfig;
+            return this;
+        }
+
+        /**
          * OversoldUsageInfo.
          */
         public Builder oversoldUsageInfo(OversoldUsageConfig oversoldUsageInfo) {
@@ -270,6 +304,14 @@ public class QuotaConfig extends TeaModel {
          */
         public Builder resourceSpecs(java.util.List<WorkspaceSpecs> resourceSpecs) {
             this.resourceSpecs = resourceSpecs;
+            return this;
+        }
+
+        /**
+         * SandboxCacheConfig.
+         */
+        public Builder sandboxCacheConfig(SandboxCacheConfig sandboxCacheConfig) {
+            this.sandboxCacheConfig = sandboxCacheConfig;
             return this;
         }
 

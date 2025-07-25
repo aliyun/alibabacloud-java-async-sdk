@@ -17,6 +17,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MachineGroup</p>
  */
 public class MachineGroup extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Cpu")
+    private Long cpu;
+
     @com.aliyun.core.annotation.NameInMap("CreatorID")
     private String creatorID;
 
@@ -47,8 +50,20 @@ public class MachineGroup extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("GmtStartedTime")
     private String gmtStartedTime;
 
+    @com.aliyun.core.annotation.NameInMap("Gpu")
+    private Long gpu;
+
+    @com.aliyun.core.annotation.NameInMap("GpuMemory")
+    private Long gpuMemory;
+
+    @com.aliyun.core.annotation.NameInMap("GpuType")
+    private String gpuType;
+
     @com.aliyun.core.annotation.NameInMap("MachineGroupID")
     private String machineGroupID;
+
+    @com.aliyun.core.annotation.NameInMap("Memory")
+    private Long memory;
 
     @com.aliyun.core.annotation.NameInMap("OrderInstanceId")
     private String orderInstanceId;
@@ -71,6 +86,9 @@ public class MachineGroup extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupID")
     private String resourceGroupID;
 
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
+
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -78,6 +96,7 @@ public class MachineGroup extends TeaModel {
     private java.util.List<String> supportedDrivers;
 
     private MachineGroup(Builder builder) {
+        this.cpu = builder.cpu;
         this.creatorID = builder.creatorID;
         this.defaultDriver = builder.defaultDriver;
         this.diskCapacity = builder.diskCapacity;
@@ -88,7 +107,11 @@ public class MachineGroup extends TeaModel {
         this.gmtExpiredTime = builder.gmtExpiredTime;
         this.gmtModifiedTime = builder.gmtModifiedTime;
         this.gmtStartedTime = builder.gmtStartedTime;
+        this.gpu = builder.gpu;
+        this.gpuMemory = builder.gpuMemory;
+        this.gpuType = builder.gpuType;
         this.machineGroupID = builder.machineGroupID;
+        this.memory = builder.memory;
         this.orderInstanceId = builder.orderInstanceId;
         this.paymentDuration = builder.paymentDuration;
         this.paymentDurationUnit = builder.paymentDurationUnit;
@@ -96,6 +119,7 @@ public class MachineGroup extends TeaModel {
         this.reasonCode = builder.reasonCode;
         this.reasonMessage = builder.reasonMessage;
         this.resourceGroupID = builder.resourceGroupID;
+        this.resourceType = builder.resourceType;
         this.status = builder.status;
         this.supportedDrivers = builder.supportedDrivers;
     }
@@ -110,6 +134,13 @@ public class MachineGroup extends TeaModel {
 
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return cpu
+     */
+    public Long getCpu() {
+        return this.cpu;
     }
 
     /**
@@ -183,10 +214,38 @@ public class MachineGroup extends TeaModel {
     }
 
     /**
+     * @return gpu
+     */
+    public Long getGpu() {
+        return this.gpu;
+    }
+
+    /**
+     * @return gpuMemory
+     */
+    public Long getGpuMemory() {
+        return this.gpuMemory;
+    }
+
+    /**
+     * @return gpuType
+     */
+    public String getGpuType() {
+        return this.gpuType;
+    }
+
+    /**
      * @return machineGroupID
      */
     public String getMachineGroupID() {
         return this.machineGroupID;
+    }
+
+    /**
+     * @return memory
+     */
+    public Long getMemory() {
+        return this.memory;
     }
 
     /**
@@ -239,6 +298,13 @@ public class MachineGroup extends TeaModel {
     }
 
     /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -253,6 +319,7 @@ public class MachineGroup extends TeaModel {
     }
 
     public static final class Builder {
+        private Long cpu; 
         private String creatorID; 
         private String defaultDriver; 
         private Long diskCapacity; 
@@ -263,7 +330,11 @@ public class MachineGroup extends TeaModel {
         private String gmtExpiredTime; 
         private String gmtModifiedTime; 
         private String gmtStartedTime; 
+        private Long gpu; 
+        private Long gpuMemory; 
+        private String gpuType; 
         private String machineGroupID; 
+        private Long memory; 
         private String orderInstanceId; 
         private String paymentDuration; 
         private String paymentDurationUnit; 
@@ -271,6 +342,7 @@ public class MachineGroup extends TeaModel {
         private String reasonCode; 
         private String reasonMessage; 
         private String resourceGroupID; 
+        private String resourceType; 
         private String status; 
         private java.util.List<String> supportedDrivers; 
 
@@ -278,6 +350,7 @@ public class MachineGroup extends TeaModel {
         } 
 
         private Builder(MachineGroup model) {
+            this.cpu = model.cpu;
             this.creatorID = model.creatorID;
             this.defaultDriver = model.defaultDriver;
             this.diskCapacity = model.diskCapacity;
@@ -288,7 +361,11 @@ public class MachineGroup extends TeaModel {
             this.gmtExpiredTime = model.gmtExpiredTime;
             this.gmtModifiedTime = model.gmtModifiedTime;
             this.gmtStartedTime = model.gmtStartedTime;
+            this.gpu = model.gpu;
+            this.gpuMemory = model.gpuMemory;
+            this.gpuType = model.gpuType;
             this.machineGroupID = model.machineGroupID;
+            this.memory = model.memory;
             this.orderInstanceId = model.orderInstanceId;
             this.paymentDuration = model.paymentDuration;
             this.paymentDurationUnit = model.paymentDurationUnit;
@@ -296,9 +373,18 @@ public class MachineGroup extends TeaModel {
             this.reasonCode = model.reasonCode;
             this.reasonMessage = model.reasonMessage;
             this.resourceGroupID = model.resourceGroupID;
+            this.resourceType = model.resourceType;
             this.status = model.status;
             this.supportedDrivers = model.supportedDrivers;
         } 
+
+        /**
+         * Cpu.
+         */
+        public Builder cpu(Long cpu) {
+            this.cpu = cpu;
+            return this;
+        }
 
         /**
          * CreatorID.
@@ -381,10 +467,42 @@ public class MachineGroup extends TeaModel {
         }
 
         /**
+         * Gpu.
+         */
+        public Builder gpu(Long gpu) {
+            this.gpu = gpu;
+            return this;
+        }
+
+        /**
+         * GpuMemory.
+         */
+        public Builder gpuMemory(Long gpuMemory) {
+            this.gpuMemory = gpuMemory;
+            return this;
+        }
+
+        /**
+         * GpuType.
+         */
+        public Builder gpuType(String gpuType) {
+            this.gpuType = gpuType;
+            return this;
+        }
+
+        /**
          * MachineGroupID.
          */
         public Builder machineGroupID(String machineGroupID) {
             this.machineGroupID = machineGroupID;
+            return this;
+        }
+
+        /**
+         * Memory.
+         */
+        public Builder memory(Long memory) {
+            this.memory = memory;
             return this;
         }
 
@@ -441,6 +559,14 @@ public class MachineGroup extends TeaModel {
          */
         public Builder resourceGroupID(String resourceGroupID) {
             this.resourceGroupID = resourceGroupID;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.resourceType = resourceType;
             return this;
         }
 

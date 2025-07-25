@@ -22,6 +22,10 @@ public class ListResourceGroupsRequest extends Request {
     private String computingResourceProvider;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HasResource")
+    private Boolean hasResource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -36,6 +40,10 @@ public class ListResourceGroupsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIDs")
+    private String resourceGroupIDs;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceType")
@@ -56,10 +64,12 @@ public class ListResourceGroupsRequest extends Request {
     private ListResourceGroupsRequest(Builder builder) {
         super(builder);
         this.computingResourceProvider = builder.computingResourceProvider;
+        this.hasResource = builder.hasResource;
         this.name = builder.name;
         this.order = builder.order;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.resourceGroupIDs = builder.resourceGroupIDs;
         this.resourceType = builder.resourceType;
         this.showAll = builder.showAll;
         this.sortBy = builder.sortBy;
@@ -84,6 +94,13 @@ public class ListResourceGroupsRequest extends Request {
      */
     public String getComputingResourceProvider() {
         return this.computingResourceProvider;
+    }
+
+    /**
+     * @return hasResource
+     */
+    public Boolean getHasResource() {
+        return this.hasResource;
     }
 
     /**
@@ -112,6 +129,13 @@ public class ListResourceGroupsRequest extends Request {
      */
     public Long getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return resourceGroupIDs
+     */
+    public String getResourceGroupIDs() {
+        return this.resourceGroupIDs;
     }
 
     /**
@@ -144,10 +168,12 @@ public class ListResourceGroupsRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListResourceGroupsRequest, Builder> {
         private String computingResourceProvider; 
+        private Boolean hasResource; 
         private String name; 
         private String order; 
         private Long pageNumber; 
         private Long pageSize; 
+        private String resourceGroupIDs; 
         private String resourceType; 
         private Boolean showAll; 
         private String sortBy; 
@@ -160,10 +186,12 @@ public class ListResourceGroupsRequest extends Request {
         private Builder(ListResourceGroupsRequest request) {
             super(request);
             this.computingResourceProvider = request.computingResourceProvider;
+            this.hasResource = request.hasResource;
             this.name = request.name;
             this.order = request.order;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.resourceGroupIDs = request.resourceGroupIDs;
             this.resourceType = request.resourceType;
             this.showAll = request.showAll;
             this.sortBy = request.sortBy;
@@ -176,6 +204,15 @@ public class ListResourceGroupsRequest extends Request {
         public Builder computingResourceProvider(String computingResourceProvider) {
             this.putQueryParameter("ComputingResourceProvider", computingResourceProvider);
             this.computingResourceProvider = computingResourceProvider;
+            return this;
+        }
+
+        /**
+         * HasResource.
+         */
+        public Builder hasResource(Boolean hasResource) {
+            this.putQueryParameter("HasResource", hasResource);
+            this.hasResource = hasResource;
             return this;
         }
 
@@ -212,6 +249,15 @@ public class ListResourceGroupsRequest extends Request {
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * ResourceGroupIDs.
+         */
+        public Builder resourceGroupIDs(String resourceGroupIDs) {
+            this.putQueryParameter("ResourceGroupIDs", resourceGroupIDs);
+            this.resourceGroupIDs = resourceGroupIDs;
             return this;
         }
 

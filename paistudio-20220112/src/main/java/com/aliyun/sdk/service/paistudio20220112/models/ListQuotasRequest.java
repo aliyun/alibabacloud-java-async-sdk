@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListQuotasRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HasResource")
+    private String hasResource;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Labels")
     private String labels;
 
@@ -75,6 +79,7 @@ public class ListQuotasRequest extends Request {
 
     private ListQuotasRequest(Builder builder) {
         super(builder);
+        this.hasResource = builder.hasResource;
         this.labels = builder.labels;
         this.layoutMode = builder.layoutMode;
         this.order = builder.order;
@@ -102,6 +107,13 @@ public class ListQuotasRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return hasResource
+     */
+    public String getHasResource() {
+        return this.hasResource;
     }
 
     /**
@@ -203,6 +215,7 @@ public class ListQuotasRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListQuotasRequest, Builder> {
+        private String hasResource; 
         private String labels; 
         private String layoutMode; 
         private String order; 
@@ -224,6 +237,7 @@ public class ListQuotasRequest extends Request {
 
         private Builder(ListQuotasRequest request) {
             super(request);
+            this.hasResource = request.hasResource;
             this.labels = request.labels;
             this.layoutMode = request.layoutMode;
             this.order = request.order;
@@ -239,6 +253,15 @@ public class ListQuotasRequest extends Request {
             this.workspaceIds = request.workspaceIds;
             this.workspaceName = request.workspaceName;
         } 
+
+        /**
+         * HasResource.
+         */
+        public Builder hasResource(String hasResource) {
+            this.putQueryParameter("HasResource", hasResource);
+            this.hasResource = hasResource;
+            return this;
+        }
 
         /**
          * Labels.
