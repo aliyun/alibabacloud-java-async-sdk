@@ -12,11 +12,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateLoadForecastJobRequest} extends {@link RequestModel}
+ * {@link CreatePowerForecastByFileUrlJobRequest} extends {@link RequestModel}
  *
- * <p>CreateLoadForecastJobRequest</p>
+ * <p>CreatePowerForecastByFileUrlJobRequest</p>
  */
-public class CreateLoadForecastJobRequest extends Request {
+public class CreatePowerForecastByFileUrlJobRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("BusinessKey")
     private String businessKey;
@@ -34,8 +34,12 @@ public class CreateLoadForecastJobRequest extends Request {
     private String freq;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("HistoryData")
-    private java.util.List<HistoryData> historyData;
+    @com.aliyun.core.annotation.NameInMap("HistoryUrl")
+    private String historyUrl;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
+    private Location location;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ModelVersion")
@@ -50,27 +54,38 @@ public class CreateLoadForecastJobRequest extends Request {
     private String systemType;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeColumn")
+    private String timeColumn;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TimeZone")
     private String timeZone;
 
-    private CreateLoadForecastJobRequest(Builder builder) {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ValueColumn")
+    private String valueColumn;
+
+    private CreatePowerForecastByFileUrlJobRequest(Builder builder) {
         super(builder);
         this.businessKey = builder.businessKey;
         this.deviceType = builder.deviceType;
         this.duration = builder.duration;
         this.freq = builder.freq;
-        this.historyData = builder.historyData;
+        this.historyUrl = builder.historyUrl;
+        this.location = builder.location;
         this.modelVersion = builder.modelVersion;
         this.runDate = builder.runDate;
         this.systemType = builder.systemType;
+        this.timeColumn = builder.timeColumn;
         this.timeZone = builder.timeZone;
+        this.valueColumn = builder.valueColumn;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static CreateLoadForecastJobRequest create() {
+    public static CreatePowerForecastByFileUrlJobRequest create() {
         return builder().build();
     }
 
@@ -108,10 +123,17 @@ public class CreateLoadForecastJobRequest extends Request {
     }
 
     /**
-     * @return historyData
+     * @return historyUrl
      */
-    public java.util.List<HistoryData> getHistoryData() {
-        return this.historyData;
+    public String getHistoryUrl() {
+        return this.historyUrl;
+    }
+
+    /**
+     * @return location
+     */
+    public Location getLocation() {
+        return this.location;
     }
 
     /**
@@ -136,38 +158,58 @@ public class CreateLoadForecastJobRequest extends Request {
     }
 
     /**
+     * @return timeColumn
+     */
+    public String getTimeColumn() {
+        return this.timeColumn;
+    }
+
+    /**
      * @return timeZone
      */
     public String getTimeZone() {
         return this.timeZone;
     }
 
-    public static final class Builder extends Request.Builder<CreateLoadForecastJobRequest, Builder> {
+    /**
+     * @return valueColumn
+     */
+    public String getValueColumn() {
+        return this.valueColumn;
+    }
+
+    public static final class Builder extends Request.Builder<CreatePowerForecastByFileUrlJobRequest, Builder> {
         private String businessKey; 
         private String deviceType; 
         private Integer duration; 
         private String freq; 
-        private java.util.List<HistoryData> historyData; 
+        private String historyUrl; 
+        private Location location; 
         private String modelVersion; 
         private String runDate; 
         private String systemType; 
+        private String timeColumn; 
         private String timeZone; 
+        private String valueColumn; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateLoadForecastJobRequest request) {
+        private Builder(CreatePowerForecastByFileUrlJobRequest request) {
             super(request);
             this.businessKey = request.businessKey;
             this.deviceType = request.deviceType;
             this.duration = request.duration;
             this.freq = request.freq;
-            this.historyData = request.historyData;
+            this.historyUrl = request.historyUrl;
+            this.location = request.location;
             this.modelVersion = request.modelVersion;
             this.runDate = request.runDate;
             this.systemType = request.systemType;
+            this.timeColumn = request.timeColumn;
             this.timeZone = request.timeZone;
+            this.valueColumn = request.valueColumn;
         } 
 
         /**
@@ -207,12 +249,21 @@ public class CreateLoadForecastJobRequest extends Request {
         }
 
         /**
-         * HistoryData.
+         * HistoryUrl.
          */
-        public Builder historyData(java.util.List<HistoryData> historyData) {
-            String historyDataShrink = shrink(historyData, "HistoryData", "json");
-            this.putBodyParameter("HistoryData", historyDataShrink);
-            this.historyData = historyData;
+        public Builder historyUrl(String historyUrl) {
+            this.putBodyParameter("HistoryUrl", historyUrl);
+            this.historyUrl = historyUrl;
+            return this;
+        }
+
+        /**
+         * Location.
+         */
+        public Builder location(Location location) {
+            String locationShrink = shrink(location, "Location", "json");
+            this.putBodyParameter("Location", locationShrink);
+            this.location = location;
             return this;
         }
 
@@ -244,6 +295,15 @@ public class CreateLoadForecastJobRequest extends Request {
         }
 
         /**
+         * TimeColumn.
+         */
+        public Builder timeColumn(String timeColumn) {
+            this.putBodyParameter("TimeColumn", timeColumn);
+            this.timeColumn = timeColumn;
+            return this;
+        }
+
+        /**
          * TimeZone.
          */
         public Builder timeZone(String timeZone) {
@@ -252,83 +312,113 @@ public class CreateLoadForecastJobRequest extends Request {
             return this;
         }
 
+        /**
+         * ValueColumn.
+         */
+        public Builder valueColumn(String valueColumn) {
+            this.putBodyParameter("ValueColumn", valueColumn);
+            this.valueColumn = valueColumn;
+            return this;
+        }
+
         @Override
-        public CreateLoadForecastJobRequest build() {
-            return new CreateLoadForecastJobRequest(this);
+        public CreatePowerForecastByFileUrlJobRequest build() {
+            return new CreatePowerForecastByFileUrlJobRequest(this);
         } 
 
     } 
 
     /**
      * 
-     * {@link CreateLoadForecastJobRequest} extends {@link TeaModel}
+     * {@link CreatePowerForecastByFileUrlJobRequest} extends {@link TeaModel}
      *
-     * <p>CreateLoadForecastJobRequest</p>
+     * <p>CreatePowerForecastByFileUrlJobRequest</p>
      */
-    public static class HistoryData extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("RunTime")
-        private String runTime;
+    public static class Location extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Altitude")
+        private Double altitude;
 
-        @com.aliyun.core.annotation.NameInMap("Value")
-        private Double value;
+        @com.aliyun.core.annotation.NameInMap("Latitude")
+        private Double latitude;
 
-        private HistoryData(Builder builder) {
-            this.runTime = builder.runTime;
-            this.value = builder.value;
+        @com.aliyun.core.annotation.NameInMap("Longitude")
+        private Double longitude;
+
+        private Location(Builder builder) {
+            this.altitude = builder.altitude;
+            this.latitude = builder.latitude;
+            this.longitude = builder.longitude;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static HistoryData create() {
+        public static Location create() {
             return builder().build();
         }
 
         /**
-         * @return runTime
+         * @return altitude
          */
-        public String getRunTime() {
-            return this.runTime;
+        public Double getAltitude() {
+            return this.altitude;
         }
 
         /**
-         * @return value
+         * @return latitude
          */
-        public Double getValue() {
-            return this.value;
+        public Double getLatitude() {
+            return this.latitude;
+        }
+
+        /**
+         * @return longitude
+         */
+        public Double getLongitude() {
+            return this.longitude;
         }
 
         public static final class Builder {
-            private String runTime; 
-            private Double value; 
+            private Double altitude; 
+            private Double latitude; 
+            private Double longitude; 
 
             private Builder() {
             } 
 
-            private Builder(HistoryData model) {
-                this.runTime = model.runTime;
-                this.value = model.value;
+            private Builder(Location model) {
+                this.altitude = model.altitude;
+                this.latitude = model.latitude;
+                this.longitude = model.longitude;
             } 
 
             /**
-             * RunTime.
+             * Altitude.
              */
-            public Builder runTime(String runTime) {
-                this.runTime = runTime;
+            public Builder altitude(Double altitude) {
+                this.altitude = altitude;
                 return this;
             }
 
             /**
-             * Value.
+             * Latitude.
              */
-            public Builder value(Double value) {
-                this.value = value;
+            public Builder latitude(Double latitude) {
+                this.latitude = latitude;
                 return this;
             }
 
-            public HistoryData build() {
-                return new HistoryData(this);
+            /**
+             * Longitude.
+             */
+            public Builder longitude(Double longitude) {
+                this.longitude = longitude;
+                return this;
+            }
+
+            public Location build() {
+                return new Location(this);
             } 
 
         } 

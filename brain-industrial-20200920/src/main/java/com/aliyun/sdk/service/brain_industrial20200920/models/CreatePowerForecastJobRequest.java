@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreatePowerForecastJobRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BusinessKey")
+    private String businessKey;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DeviceType")
     private String deviceType;
 
@@ -55,6 +59,7 @@ public class CreatePowerForecastJobRequest extends Request {
 
     private CreatePowerForecastJobRequest(Builder builder) {
         super(builder);
+        this.businessKey = builder.businessKey;
         this.deviceType = builder.deviceType;
         this.duration = builder.duration;
         this.freq = builder.freq;
@@ -77,6 +82,13 @@ public class CreatePowerForecastJobRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return businessKey
+     */
+    public String getBusinessKey() {
+        return this.businessKey;
     }
 
     /**
@@ -143,6 +155,7 @@ public class CreatePowerForecastJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreatePowerForecastJobRequest, Builder> {
+        private String businessKey; 
         private String deviceType; 
         private Integer duration; 
         private String freq; 
@@ -159,6 +172,7 @@ public class CreatePowerForecastJobRequest extends Request {
 
         private Builder(CreatePowerForecastJobRequest request) {
             super(request);
+            this.businessKey = request.businessKey;
             this.deviceType = request.deviceType;
             this.duration = request.duration;
             this.freq = request.freq;
@@ -169,6 +183,15 @@ public class CreatePowerForecastJobRequest extends Request {
             this.systemType = request.systemType;
             this.timeZone = request.timeZone;
         } 
+
+        /**
+         * BusinessKey.
+         */
+        public Builder businessKey(String businessKey) {
+            this.putBodyParameter("BusinessKey", businessKey);
+            this.businessKey = businessKey;
+            return this;
+        }
 
         /**
          * DeviceType.

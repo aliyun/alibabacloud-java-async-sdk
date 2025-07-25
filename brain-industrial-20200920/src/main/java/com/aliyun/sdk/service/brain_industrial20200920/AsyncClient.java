@@ -38,10 +38,22 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateEssOptJobResponse> createEssOptJob(CreateEssOptJobRequest request);
 
     /**
+     * @param request the request parameters of CreateLoadForecastByFileUrlJob  CreateLoadForecastByFileUrlJobRequest
+     * @return CreateLoadForecastByFileUrlJobResponse
+     */
+    CompletableFuture<CreateLoadForecastByFileUrlJobResponse> createLoadForecastByFileUrlJob(CreateLoadForecastByFileUrlJobRequest request);
+
+    /**
      * @param request the request parameters of CreateLoadForecastJob  CreateLoadForecastJobRequest
      * @return CreateLoadForecastJobResponse
      */
     CompletableFuture<CreateLoadForecastJobResponse> createLoadForecastJob(CreateLoadForecastJobRequest request);
+
+    /**
+     * @param request the request parameters of CreatePowerForecastByFileUrlJob  CreatePowerForecastByFileUrlJobRequest
+     * @return CreatePowerForecastByFileUrlJobResponse
+     */
+    CompletableFuture<CreatePowerForecastByFileUrlJobResponse> createPowerForecastByFileUrlJob(CreatePowerForecastByFileUrlJobRequest request);
 
     /**
      * @param request the request parameters of CreatePowerForecastJob  CreatePowerForecastJobRequest

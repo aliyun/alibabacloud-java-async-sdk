@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateEssOptJobRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BusinessKey")
+    private String businessKey;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
@@ -59,6 +63,7 @@ public class CreateEssOptJobRequest extends Request {
 
     private CreateEssOptJobRequest(Builder builder) {
         super(builder);
+        this.businessKey = builder.businessKey;
         this.duration = builder.duration;
         this.elecPrice = builder.elecPrice;
         this.freq = builder.freq;
@@ -82,6 +87,13 @@ public class CreateEssOptJobRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return businessKey
+     */
+    public String getBusinessKey() {
+        return this.businessKey;
     }
 
     /**
@@ -155,6 +167,7 @@ public class CreateEssOptJobRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateEssOptJobRequest, Builder> {
+        private String businessKey; 
         private Integer duration; 
         private java.util.List<ElecPrice> elecPrice; 
         private String freq; 
@@ -172,6 +185,7 @@ public class CreateEssOptJobRequest extends Request {
 
         private Builder(CreateEssOptJobRequest request) {
             super(request);
+            this.businessKey = request.businessKey;
             this.duration = request.duration;
             this.elecPrice = request.elecPrice;
             this.freq = request.freq;
@@ -183,6 +197,15 @@ public class CreateEssOptJobRequest extends Request {
             this.timeZone = request.timeZone;
             this.topoType = request.topoType;
         } 
+
+        /**
+         * BusinessKey.
+         */
+        public Builder businessKey(String businessKey) {
+            this.putBodyParameter("BusinessKey", businessKey);
+            this.businessKey = businessKey;
+            return this;
+        }
 
         /**
          * Duration.
