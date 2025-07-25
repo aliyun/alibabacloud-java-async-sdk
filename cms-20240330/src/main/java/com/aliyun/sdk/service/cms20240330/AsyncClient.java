@@ -38,6 +38,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateServiceResponse> createService(CreateServiceRequest request);
 
     /**
+     * @param request the request parameters of CreateTicket  CreateTicketRequest
+     * @return CreateTicketResponse
+     */
+    CompletableFuture<CreateTicketResponse> createTicket(CreateTicketRequest request);
+
+    /**
      * @param request the request parameters of CreateUmodel  CreateUmodelRequest
      * @return CreateUmodelResponse
      */
