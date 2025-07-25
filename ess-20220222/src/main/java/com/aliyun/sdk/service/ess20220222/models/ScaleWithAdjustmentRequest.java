@@ -744,10 +744,14 @@ public class ScaleWithAdjustmentRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
+        @com.aliyun.core.annotation.NameInMap("UserData")
+        private String userData;
+
         private Overrides(Builder builder) {
             this.containerOverrides = builder.containerOverrides;
             this.cpu = builder.cpu;
             this.memory = builder.memory;
+            this.userData = builder.userData;
         }
 
         public static Builder builder() {
@@ -779,10 +783,18 @@ public class ScaleWithAdjustmentRequest extends Request {
             return this.memory;
         }
 
+        /**
+         * @return userData
+         */
+        public String getUserData() {
+            return this.userData;
+        }
+
         public static final class Builder {
             private java.util.List<ContainerOverrides> containerOverrides; 
             private Float cpu; 
             private Float memory; 
+            private String userData; 
 
             private Builder() {
             } 
@@ -791,6 +803,7 @@ public class ScaleWithAdjustmentRequest extends Request {
                 this.containerOverrides = model.containerOverrides;
                 this.cpu = model.cpu;
                 this.memory = model.memory;
+                this.userData = model.userData;
             } 
 
             /**
@@ -820,6 +833,14 @@ public class ScaleWithAdjustmentRequest extends Request {
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
+                return this;
+            }
+
+            /**
+             * UserData.
+             */
+            public Builder userData(String userData) {
+                this.userData = userData;
                 return this;
             }
 
