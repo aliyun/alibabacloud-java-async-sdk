@@ -34,6 +34,10 @@ public class GetAlertRulesRequest extends Request {
     private String alertType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
+    private String bizRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
@@ -66,6 +70,7 @@ public class GetAlertRulesRequest extends Request {
         this.alertNames = builder.alertNames;
         this.alertStatus = builder.alertStatus;
         this.alertType = builder.alertType;
+        this.bizRegionId = builder.bizRegionId;
         this.clusterId = builder.clusterId;
         this.page = builder.page;
         this.productCode = builder.productCode;
@@ -116,6 +121,13 @@ public class GetAlertRulesRequest extends Request {
     }
 
     /**
+     * @return bizRegionId
+     */
+    public String getBizRegionId() {
+        return this.bizRegionId;
+    }
+
+    /**
      * @return clusterId
      */
     public String getClusterId() {
@@ -162,6 +174,7 @@ public class GetAlertRulesRequest extends Request {
         private String alertNames; 
         private String alertStatus; 
         private String alertType; 
+        private String bizRegionId; 
         private String clusterId; 
         private Long page; 
         private String productCode; 
@@ -179,6 +192,7 @@ public class GetAlertRulesRequest extends Request {
             this.alertNames = request.alertNames;
             this.alertStatus = request.alertStatus;
             this.alertType = request.alertType;
+            this.bizRegionId = request.bizRegionId;
             this.clusterId = request.clusterId;
             this.page = request.page;
             this.productCode = request.productCode;
@@ -256,6 +270,15 @@ public class GetAlertRulesRequest extends Request {
         public Builder alertType(String alertType) {
             this.putQueryParameter("AlertType", alertType);
             this.alertType = alertType;
+            return this;
+        }
+
+        /**
+         * BizRegionId.
+         */
+        public Builder bizRegionId(String bizRegionId) {
+            this.putQueryParameter("BizRegionId", bizRegionId);
+            this.bizRegionId = bizRegionId;
             return this;
         }
 
