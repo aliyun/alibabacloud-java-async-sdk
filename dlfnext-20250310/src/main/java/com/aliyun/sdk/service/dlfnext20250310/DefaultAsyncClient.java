@@ -526,6 +526,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ListDatabaseDetails  ListDatabaseDetailsRequest
+     * @return ListDatabaseDetailsResponse
+     */
+    @Override
+    public CompletableFuture<ListDatabaseDetailsResponse> listDatabaseDetails(ListDatabaseDetailsRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListDatabaseDetails").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/{catalogId}/database-details").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListDatabaseDetailsResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ListDatabaseDetailsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of ListDatabases  ListDatabasesRequest
      * @return ListDatabasesResponse
      */
