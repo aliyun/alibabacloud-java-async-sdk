@@ -137,6 +137,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetTokenResponse> getToken(GetTokenRequest request);
 
     /**
+     * @param request the request parameters of GetUserCommand  GetUserCommandRequest
+     * @return GetUserCommandResponse
+     */
+    CompletableFuture<GetUserCommandResponse> getUserCommand(GetUserCommandRequest request);
+
+    /**
      * @param request the request parameters of GetUserConfig  GetUserConfigRequest
      * @return GetUserConfigResponse
      */
@@ -165,6 +171,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ListInstancesResponse
      */
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
+
+    /**
+     * @param request the request parameters of ListSystemLogs  ListSystemLogsRequest
+     * @return ListSystemLogsResponse
+     */
+    CompletableFuture<ListSystemLogsResponse> listSystemLogs(ListSystemLogsRequest request);
 
     /**
      * @param request the request parameters of StartInstance  StartInstanceRequest

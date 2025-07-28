@@ -217,11 +217,19 @@ public class GetLifecycleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
+        @com.aliyun.core.annotation.NameInMap("GmtEndTime")
+        private String gmtEndTime;
+
+        @com.aliyun.core.annotation.NameInMap("LifecycleId")
+        private String lifecycleId;
+
         private Lifecycle(Builder builder) {
             this.status = builder.status;
             this.reasonCode = builder.reasonCode;
             this.reasonMessage = builder.reasonMessage;
             this.gmtCreateTime = builder.gmtCreateTime;
+            this.gmtEndTime = builder.gmtEndTime;
+            this.lifecycleId = builder.lifecycleId;
         }
 
         public static Builder builder() {
@@ -260,11 +268,27 @@ public class GetLifecycleResponseBody extends TeaModel {
             return this.gmtCreateTime;
         }
 
+        /**
+         * @return gmtEndTime
+         */
+        public String getGmtEndTime() {
+            return this.gmtEndTime;
+        }
+
+        /**
+         * @return lifecycleId
+         */
+        public String getLifecycleId() {
+            return this.lifecycleId;
+        }
+
         public static final class Builder {
             private String status; 
             private String reasonCode; 
             private String reasonMessage; 
             private String gmtCreateTime; 
+            private String gmtEndTime; 
+            private String lifecycleId; 
 
             private Builder() {
             } 
@@ -274,6 +298,8 @@ public class GetLifecycleResponseBody extends TeaModel {
                 this.reasonCode = model.reasonCode;
                 this.reasonMessage = model.reasonMessage;
                 this.gmtCreateTime = model.gmtCreateTime;
+                this.gmtEndTime = model.gmtEndTime;
+                this.lifecycleId = model.lifecycleId;
             } 
 
             /**
@@ -335,6 +361,22 @@ public class GetLifecycleResponseBody extends TeaModel {
              */
             public Builder gmtCreateTime(String gmtCreateTime) {
                 this.gmtCreateTime = gmtCreateTime;
+                return this;
+            }
+
+            /**
+             * GmtEndTime.
+             */
+            public Builder gmtEndTime(String gmtEndTime) {
+                this.gmtEndTime = gmtEndTime;
+                return this;
+            }
+
+            /**
+             * LifecycleId.
+             */
+            public Builder lifecycleId(String lifecycleId) {
+                this.lifecycleId = lifecycleId;
                 return this;
             }
 
