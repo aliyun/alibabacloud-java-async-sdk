@@ -68,6 +68,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUrgentDemandPlanListResponse> getUrgentDemandPlanList(GetUrgentDemandPlanListRequest request);
 
     /**
+     * @param request the request parameters of PageDemandPlanWithDemandInfo  PageDemandPlanWithDemandInfoRequest
+     * @return PageDemandPlanWithDemandInfoResponse
+     */
+    CompletableFuture<PageDemandPlanWithDemandInfoResponse> pageDemandPlanWithDemandInfo(PageDemandPlanWithDemandInfoRequest request);
+
+    /**
      * @param request the request parameters of PushResourcePlan  PushResourcePlanRequest
      * @return PushResourcePlanResponse
      */

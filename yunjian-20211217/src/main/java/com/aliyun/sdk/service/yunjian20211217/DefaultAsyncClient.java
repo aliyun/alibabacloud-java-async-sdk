@@ -184,6 +184,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of PageDemandPlanWithDemandInfo  PageDemandPlanWithDemandInfoRequest
+     * @return PageDemandPlanWithDemandInfoResponse
+     */
+    @Override
+    public CompletableFuture<PageDemandPlanWithDemandInfoResponse> pageDemandPlanWithDemandInfo(PageDemandPlanWithDemandInfoRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("PageDemandPlanWithDemandInfo").setMethod(HttpMethod.POST).setPathRegex("/api/demand/getDemandPlanList").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(PageDemandPlanWithDemandInfoResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<PageDemandPlanWithDemandInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of PushResourcePlan  PushResourcePlanRequest
      * @return PushResourcePlanResponse
      */
