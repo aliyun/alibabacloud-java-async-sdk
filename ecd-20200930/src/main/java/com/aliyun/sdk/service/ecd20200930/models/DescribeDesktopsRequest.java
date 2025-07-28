@@ -82,6 +82,10 @@ public class DescribeDesktopsRequest extends Request {
     private java.util.List<String> imageId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeAutoSnapshotPolicy")
+    private Boolean includeAutoSnapshotPolicy;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ManagementFlag")
     private String managementFlag;
 
@@ -181,6 +185,7 @@ public class DescribeDesktopsRequest extends Request {
         this.gpuInstanceGroupId = builder.gpuInstanceGroupId;
         this.groupId = builder.groupId;
         this.imageId = builder.imageId;
+        this.includeAutoSnapshotPolicy = builder.includeAutoSnapshotPolicy;
         this.managementFlag = builder.managementFlag;
         this.maxResults = builder.maxResults;
         this.multiResource = builder.multiResource;
@@ -326,6 +331,13 @@ public class DescribeDesktopsRequest extends Request {
      */
     public java.util.List<String> getImageId() {
         return this.imageId;
+    }
+
+    /**
+     * @return includeAutoSnapshotPolicy
+     */
+    public Boolean getIncludeAutoSnapshotPolicy() {
+        return this.includeAutoSnapshotPolicy;
     }
 
     /**
@@ -485,6 +497,7 @@ public class DescribeDesktopsRequest extends Request {
         private String gpuInstanceGroupId; 
         private String groupId; 
         private java.util.List<String> imageId; 
+        private Boolean includeAutoSnapshotPolicy; 
         private String managementFlag; 
         private Integer maxResults; 
         private Boolean multiResource; 
@@ -528,6 +541,7 @@ public class DescribeDesktopsRequest extends Request {
             this.gpuInstanceGroupId = request.gpuInstanceGroupId;
             this.groupId = request.groupId;
             this.imageId = request.imageId;
+            this.includeAutoSnapshotPolicy = request.includeAutoSnapshotPolicy;
             this.managementFlag = request.managementFlag;
             this.maxResults = request.maxResults;
             this.multiResource = request.multiResource;
@@ -757,6 +771,15 @@ public class DescribeDesktopsRequest extends Request {
         public Builder imageId(java.util.List<String> imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * IncludeAutoSnapshotPolicy.
+         */
+        public Builder includeAutoSnapshotPolicy(Boolean includeAutoSnapshotPolicy) {
+            this.putQueryParameter("IncludeAutoSnapshotPolicy", includeAutoSnapshotPolicy);
+            this.includeAutoSnapshotPolicy = includeAutoSnapshotPolicy;
             return this;
         }
 

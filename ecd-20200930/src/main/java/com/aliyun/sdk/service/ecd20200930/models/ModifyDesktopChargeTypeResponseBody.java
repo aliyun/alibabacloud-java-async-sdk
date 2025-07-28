@@ -26,10 +26,14 @@ public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TaskId")
+    private String taskId;
+
     private ModifyDesktopChargeTypeResponseBody(Builder builder) {
         this.desktopId = builder.desktopId;
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
+        this.taskId = builder.taskId;
     }
 
     public static Builder builder() {
@@ -65,10 +69,18 @@ public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return taskId
+     */
+    public String getTaskId() {
+        return this.taskId;
+    }
+
     public static final class Builder {
         private java.util.List<String> desktopId; 
         private String orderId; 
         private String requestId; 
+        private String taskId; 
 
         private Builder() {
         } 
@@ -77,6 +89,7 @@ public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
             this.desktopId = model.desktopId;
             this.orderId = model.orderId;
             this.requestId = model.requestId;
+            this.taskId = model.taskId;
         } 
 
         /**
@@ -106,6 +119,14 @@ public class ModifyDesktopChargeTypeResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TaskId.
+         */
+        public Builder taskId(String taskId) {
+            this.taskId = taskId;
             return this;
         }
 
