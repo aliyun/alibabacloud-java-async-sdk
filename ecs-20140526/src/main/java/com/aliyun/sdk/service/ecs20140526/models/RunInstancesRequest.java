@@ -4416,6 +4416,9 @@ public class RunInstancesRequest extends Request {
      * <p>RunInstancesRequest</p>
      */
     public static class NetworkOptions extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("BandwidthWeighting")
+        private String bandwidthWeighting;
+
         @com.aliyun.core.annotation.NameInMap("EnableJumboFrame")
         private Boolean enableJumboFrame;
 
@@ -4423,6 +4426,7 @@ public class RunInstancesRequest extends Request {
         private Boolean enableNetworkEncryption;
 
         private NetworkOptions(Builder builder) {
+            this.bandwidthWeighting = builder.bandwidthWeighting;
             this.enableJumboFrame = builder.enableJumboFrame;
             this.enableNetworkEncryption = builder.enableNetworkEncryption;
         }
@@ -4433,6 +4437,13 @@ public class RunInstancesRequest extends Request {
 
         public static NetworkOptions create() {
             return builder().build();
+        }
+
+        /**
+         * @return bandwidthWeighting
+         */
+        public String getBandwidthWeighting() {
+            return this.bandwidthWeighting;
         }
 
         /**
@@ -4450,6 +4461,7 @@ public class RunInstancesRequest extends Request {
         }
 
         public static final class Builder {
+            private String bandwidthWeighting; 
             private Boolean enableJumboFrame; 
             private Boolean enableNetworkEncryption; 
 
@@ -4457,9 +4469,18 @@ public class RunInstancesRequest extends Request {
             } 
 
             private Builder(NetworkOptions model) {
+                this.bandwidthWeighting = model.bandwidthWeighting;
                 this.enableJumboFrame = model.enableJumboFrame;
                 this.enableNetworkEncryption = model.enableNetworkEncryption;
             } 
+
+            /**
+             * BandwidthWeighting.
+             */
+            public Builder bandwidthWeighting(String bandwidthWeighting) {
+                this.bandwidthWeighting = bandwidthWeighting;
+                return this;
+            }
 
             /**
              * <p>Specifies whether to enable the Jumbo Frames feature for the instance. Valid values:</p>

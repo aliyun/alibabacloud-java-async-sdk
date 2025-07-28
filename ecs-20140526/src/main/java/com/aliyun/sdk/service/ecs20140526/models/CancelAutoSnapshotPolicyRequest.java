@@ -34,6 +34,10 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("autoSnapshotPolicyId")
+    private String autoSnapshotPolicyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("diskIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private String diskIds;
@@ -49,6 +53,7 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.autoSnapshotPolicyId = builder.autoSnapshotPolicyId;
         this.diskIds = builder.diskIds;
         this.regionId = builder.regionId;
     }
@@ -95,6 +100,13 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
     }
 
     /**
+     * @return autoSnapshotPolicyId
+     */
+    public String getAutoSnapshotPolicyId() {
+        return this.autoSnapshotPolicyId;
+    }
+
+    /**
      * @return diskIds
      */
     public String getDiskIds() {
@@ -113,6 +125,7 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String autoSnapshotPolicyId; 
         private String diskIds; 
         private String regionId; 
 
@@ -126,6 +139,7 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.autoSnapshotPolicyId = request.autoSnapshotPolicyId;
             this.diskIds = request.diskIds;
             this.regionId = request.regionId;
         } 
@@ -172,6 +186,15 @@ public class CancelAutoSnapshotPolicyRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * autoSnapshotPolicyId.
+         */
+        public Builder autoSnapshotPolicyId(String autoSnapshotPolicyId) {
+            this.putQueryParameter("autoSnapshotPolicyId", autoSnapshotPolicyId);
+            this.autoSnapshotPolicyId = autoSnapshotPolicyId;
             return this;
         }
 

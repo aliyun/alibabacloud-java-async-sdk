@@ -1430,6 +1430,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAutoProvisioningGroupsResponse> describeAutoProvisioningGroups(DescribeAutoProvisioningGroupsRequest request);
 
     /**
+     * @param request the request parameters of DescribeAutoSnapshotPolicyAssociations  DescribeAutoSnapshotPolicyAssociationsRequest
+     * @return DescribeAutoSnapshotPolicyAssociationsResponse
+     */
+    CompletableFuture<DescribeAutoSnapshotPolicyAssociationsResponse> describeAutoSnapshotPolicyAssociations(DescribeAutoSnapshotPolicyAssociationsRequest request);
+
+    /**
      * @param request the request parameters of DescribeAutoSnapshotPolicyEx  DescribeAutoSnapshotPolicyExRequest
      * @return DescribeAutoSnapshotPolicyExResponse
      */
@@ -3479,6 +3485,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return ModifyInstanceMetadataOptionsResponse
      */
     CompletableFuture<ModifyInstanceMetadataOptionsResponse> modifyInstanceMetadataOptions(ModifyInstanceMetadataOptionsRequest request);
+
+    /**
+     * @param request the request parameters of ModifyInstanceNetworkOptions  ModifyInstanceNetworkOptionsRequest
+     * @return ModifyInstanceNetworkOptionsResponse
+     */
+    CompletableFuture<ModifyInstanceNetworkOptionsResponse> modifyInstanceNetworkOptions(ModifyInstanceNetworkOptionsRequest request);
 
     /**
      * <b>description</b> :
