@@ -26,6 +26,10 @@ public class DescribeInstancesRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    private String instanceType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
@@ -41,6 +45,7 @@ public class DescribeInstancesRequest extends Request {
         super(builder);
         this.enableTagAuthorization = builder.enableTagAuthorization;
         this.instanceId = builder.instanceId;
+        this.instanceType = builder.instanceType;
         this.language = builder.language;
         this.securityToken = builder.securityToken;
         this.tag = builder.tag;
@@ -74,6 +79,13 @@ public class DescribeInstancesRequest extends Request {
     }
 
     /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
      * @return language
      */
     public String getLanguage() {
@@ -97,6 +109,7 @@ public class DescribeInstancesRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeInstancesRequest, Builder> {
         private Boolean enableTagAuthorization; 
         private String instanceId; 
+        private String instanceType; 
         private String language; 
         private String securityToken; 
         private java.util.List<Tag> tag; 
@@ -109,6 +122,7 @@ public class DescribeInstancesRequest extends Request {
             super(request);
             this.enableTagAuthorization = request.enableTagAuthorization;
             this.instanceId = request.instanceId;
+            this.instanceType = request.instanceType;
             this.language = request.language;
             this.securityToken = request.securityToken;
             this.tag = request.tag;
@@ -135,6 +149,15 @@ public class DescribeInstancesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * InstanceType.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
             return this;
         }
 
