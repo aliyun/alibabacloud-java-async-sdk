@@ -32,6 +32,9 @@ public class DescAccountSummaryResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EnableTimes")
     private Integer enableTimes;
 
+    @com.aliyun.core.annotation.NameInMap("IpChannelType")
+    private String ipChannelType;
+
     @com.aliyun.core.annotation.NameInMap("MailAddresses")
     private Integer mailAddresses;
 
@@ -77,6 +80,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         this.dayuStatus = builder.dayuStatus;
         this.domains = builder.domains;
         this.enableTimes = builder.enableTimes;
+        this.ipChannelType = builder.ipChannelType;
         this.mailAddresses = builder.mailAddresses;
         this.maxQuotaLevel = builder.maxQuotaLevel;
         this.monthQuota = builder.monthQuota;
@@ -137,6 +141,13 @@ public class DescAccountSummaryResponseBody extends TeaModel {
      */
     public Integer getEnableTimes() {
         return this.enableTimes;
+    }
+
+    /**
+     * @return ipChannelType
+     */
+    public String getIpChannelType() {
+        return this.ipChannelType;
     }
 
     /**
@@ -236,6 +247,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
         private Integer dayuStatus; 
         private Integer domains; 
         private Integer enableTimes; 
+        private String ipChannelType; 
         private Integer mailAddresses; 
         private Integer maxQuotaLevel; 
         private Integer monthQuota; 
@@ -259,6 +271,7 @@ public class DescAccountSummaryResponseBody extends TeaModel {
             this.dayuStatus = model.dayuStatus;
             this.domains = model.domains;
             this.enableTimes = model.enableTimes;
+            this.ipChannelType = model.ipChannelType;
             this.mailAddresses = model.mailAddresses;
             this.maxQuotaLevel = model.maxQuotaLevel;
             this.monthQuota = model.monthQuota;
@@ -326,6 +339,14 @@ public class DescAccountSummaryResponseBody extends TeaModel {
          */
         public Builder enableTimes(Integer enableTimes) {
             this.enableTimes = enableTimes;
+            return this;
+        }
+
+        /**
+         * IpChannelType.
+         */
+        public Builder ipChannelType(String ipChannelType) {
+            this.ipChannelType = ipChannelType;
             return this;
         }
 

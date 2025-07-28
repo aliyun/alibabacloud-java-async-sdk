@@ -224,6 +224,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
 
     /**
+     * @param request the request parameters of ListBlockSending  ListBlockSendingRequest
+     * @return ListBlockSendingResponse
+     */
+    CompletableFuture<ListBlockSendingResponse> listBlockSending(ListBlockSendingRequest request);
+
+    /**
      * @param request the request parameters of ListUserSuppression  ListUserSuppressionRequest
      * @return ListUserSuppressionResponse
      */
