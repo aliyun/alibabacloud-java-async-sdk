@@ -310,6 +310,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetCatalogById  GetCatalogByIdRequest
+     * @return GetCatalogByIdResponse
+     */
+    @Override
+    public CompletableFuture<GetCatalogByIdResponse> getCatalogById(GetCatalogByIdRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetCatalogById").setMethod(HttpMethod.GET).setPathRegex("/dlf/v1/catalogs/id/{id}").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetCatalogByIdResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetCatalogByIdResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetCatalogSummary  GetCatalogSummaryRequest
      * @return GetCatalogSummaryResponse
      */

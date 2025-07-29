@@ -110,6 +110,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetCatalogResponse> getCatalog(GetCatalogRequest request);
 
     /**
+     * @param request the request parameters of GetCatalogById  GetCatalogByIdRequest
+     * @return GetCatalogByIdResponse
+     */
+    CompletableFuture<GetCatalogByIdResponse> getCatalogById(GetCatalogByIdRequest request);
+
+    /**
      * @param request the request parameters of GetCatalogSummary  GetCatalogSummaryRequest
      * @return GetCatalogSummaryResponse
      */
