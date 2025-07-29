@@ -50,6 +50,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetEnterpriseVocAnalysisTaskResponse> getEnterpriseVocAnalysisTask(GetEnterpriseVocAnalysisTaskRequest request);
 
     /**
+     * @param request the request parameters of GetEssayCorrectionTask  GetEssayCorrectionTaskRequest
+     * @return GetEssayCorrectionTaskResponse
+     */
+    CompletableFuture<GetEssayCorrectionTaskResponse> getEssayCorrectionTask(GetEssayCorrectionTaskRequest request);
+
+    /**
      * @param request the request parameters of GetTagMiningAnalysisTask  GetTagMiningAnalysisTaskRequest
      * @return GetTagMiningAnalysisTaskResponse
      */
@@ -94,6 +100,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 <ReturnT> CompletableFuture<ReturnT> runEnterpriseVocAnalysisWithAsyncResponseHandler(RunEnterpriseVocAnalysisRequest request, AsyncResponseHandler<RunEnterpriseVocAnalysisResponse, ReturnT> responseHandler);
 
     ResponseIterable<RunEnterpriseVocAnalysisResponseBody> runEnterpriseVocAnalysisWithResponseIterable(RunEnterpriseVocAnalysisRequest request);
+
+    /**
+     * @param request the request parameters of RunEssayCorrection  RunEssayCorrectionRequest
+     * @return RunEssayCorrectionResponse
+     */
+    CompletableFuture<RunEssayCorrectionResponse> runEssayCorrection(RunEssayCorrectionRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> runEssayCorrectionWithAsyncResponseHandler(RunEssayCorrectionRequest request, AsyncResponseHandler<RunEssayCorrectionResponse, ReturnT> responseHandler);
+
+    ResponseIterable<RunEssayCorrectionResponseBody> runEssayCorrectionWithResponseIterable(RunEssayCorrectionRequest request);
 
     /**
      * @param request the request parameters of RunHotTopicChat  RunHotTopicChatRequest
@@ -144,6 +160,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 <ReturnT> CompletableFuture<ReturnT> runNetworkContentAuditWithAsyncResponseHandler(RunNetworkContentAuditRequest request, AsyncResponseHandler<RunNetworkContentAuditResponse, ReturnT> responseHandler);
 
     ResponseIterable<RunNetworkContentAuditResponseBody> runNetworkContentAuditWithResponseIterable(RunNetworkContentAuditRequest request);
+
+    /**
+     * @param request the request parameters of RunOcrParse  RunOcrParseRequest
+     * @return RunOcrParseResponse
+     */
+    CompletableFuture<RunOcrParseResponse> runOcrParse(RunOcrParseRequest request);
+
+<ReturnT> CompletableFuture<ReturnT> runOcrParseWithAsyncResponseHandler(RunOcrParseRequest request, AsyncResponseHandler<RunOcrParseResponse, ReturnT> responseHandler);
+
+    ResponseIterable<RunOcrParseResponseBody> runOcrParseWithResponseIterable(RunOcrParseRequest request);
 
     /**
      * @param request the request parameters of RunScriptChat  RunScriptChatRequest
@@ -220,6 +246,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitEnterpriseVocAnalysisTaskResponse
      */
     CompletableFuture<SubmitEnterpriseVocAnalysisTaskResponse> submitEnterpriseVocAnalysisTask(SubmitEnterpriseVocAnalysisTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitEssayCorrectionTask  SubmitEssayCorrectionTaskRequest
+     * @return SubmitEssayCorrectionTaskResponse
+     */
+    CompletableFuture<SubmitEssayCorrectionTaskResponse> submitEssayCorrectionTask(SubmitEssayCorrectionTaskRequest request);
 
     /**
      * @param request the request parameters of SubmitTagMiningAnalysisTask  SubmitTagMiningAnalysisTaskRequest

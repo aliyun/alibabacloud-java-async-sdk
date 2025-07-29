@@ -131,6 +131,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetEssayCorrectionTask  GetEssayCorrectionTaskRequest
+     * @return GetEssayCorrectionTaskResponse
+     */
+    @Override
+    public CompletableFuture<GetEssayCorrectionTaskResponse> getEssayCorrectionTask(GetEssayCorrectionTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetEssayCorrectionTask").setMethod(HttpMethod.GET).setPathRegex("/{workspaceId}/quanmiao/lightapp/getEssayCorrectionTask").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetEssayCorrectionTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetEssayCorrectionTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetTagMiningAnalysisTask  GetTagMiningAnalysisTaskRequest
      * @return GetTagMiningAnalysisTaskResponse
      */
@@ -276,6 +294,49 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.validateRequestModel(request);
         TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunEnterpriseVocAnalysis").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runEnterpriseVocAnalysis").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
         RunEnterpriseVocAnalysisResponseBodyIterator iterator = RunEnterpriseVocAnalysisResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of RunEssayCorrection  RunEssayCorrectionRequest
+     * @return RunEssayCorrectionResponse
+     */
+    @Override
+    public CompletableFuture<RunEssayCorrectionResponse> runEssayCorrection(RunEssayCorrectionRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunEssayCorrection").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runEssayCorrection").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunEssayCorrectionResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunEssayCorrectionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> runEssayCorrectionWithAsyncResponseHandler(RunEssayCorrectionRequest request, AsyncResponseHandler<RunEssayCorrectionResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunEssayCorrection").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runEssayCorrection").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(RunEssayCorrectionResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((RunEssayCorrectionResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunEssayCorrectionResponseBody> runEssayCorrectionWithResponseIterable(RunEssayCorrectionRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunEssayCorrection").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runEssayCorrection").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunEssayCorrectionResponseBodyIterator iterator = RunEssayCorrectionResponseBodyIterator.create();
         ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
         this.handler.execute(params);
         return new ResponseIterable<>(iterator);
@@ -491,6 +552,49 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.validateRequestModel(request);
         TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunNetworkContentAudit").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runNetworkContentAudit").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
         RunNetworkContentAuditResponseBodyIterator iterator = RunNetworkContentAuditResponseBodyIterator.create();
+        ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
+        this.handler.execute(params);
+        return new ResponseIterable<>(iterator);
+    }
+
+    /**
+     * @param request the request parameters of RunOcrParse  RunOcrParseRequest
+     * @return RunOcrParseResponse
+     */
+    @Override
+    public CompletableFuture<RunOcrParseResponse> runOcrParse(RunOcrParseRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunOcrParse").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runOcrParse").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(RunOcrParseResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<RunOcrParseResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public <ReturnT> CompletableFuture<ReturnT> runOcrParseWithAsyncResponseHandler(RunOcrParseRequest request, AsyncResponseHandler<RunOcrParseResponse, ReturnT> responseHandler) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("RunOcrParse").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runOcrParse").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withResponseHandler(responseHandler).withOutput(RunOcrParseResponse.create());
+            return this.handler.execute(params)
+                    .thenCompose((output) -> CompletableFuture.completedFuture(responseHandler.transform((RunOcrParseResponse)output)));
+        } catch (Exception e) {
+            CompletableFuture<ReturnT> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public ResponseIterable<RunOcrParseResponseBody> runOcrParseWithResponseIterable(RunOcrParseRequest request) {
+        this.handler.validateRequestModel(request);
+        TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.SSE).setAction("RunOcrParse").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/runOcrParse").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+        RunOcrParseResponseBodyIterator iterator = RunOcrParseResponseBodyIterator.create();
         ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withHttpResponseHandler(new SSEHttpResponseHandler(iterator));
         this.handler.execute(params);
         return new ResponseIterable<>(iterator);
@@ -810,6 +914,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitEnterpriseVocAnalysisTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitEssayCorrectionTask  SubmitEssayCorrectionTaskRequest
+     * @return SubmitEssayCorrectionTaskResponse
+     */
+    @Override
+    public CompletableFuture<SubmitEssayCorrectionTaskResponse> submitEssayCorrectionTask(SubmitEssayCorrectionTaskRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("SubmitEssayCorrectionTask").setMethod(HttpMethod.POST).setPathRegex("/{workspaceId}/quanmiao/lightapp/submitEssayCorrectionTask").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitEssayCorrectionTaskResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitEssayCorrectionTaskResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
