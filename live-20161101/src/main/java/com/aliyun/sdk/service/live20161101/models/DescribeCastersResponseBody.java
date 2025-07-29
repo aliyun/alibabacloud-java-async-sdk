@@ -294,7 +294,7 @@ public class DescribeCastersResponseBody extends TeaModel {
         private String purchaseTime;
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
-        private Integer resourceGroupId;
+        private String resourceGroupId;
 
         @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
@@ -419,7 +419,7 @@ public class DescribeCastersResponseBody extends TeaModel {
         /**
          * @return resourceGroupId
          */
-        public Integer getResourceGroupId() {
+        public String getResourceGroupId() {
             return this.resourceGroupId;
         }
 
@@ -457,7 +457,7 @@ public class DescribeCastersResponseBody extends TeaModel {
             private String lastModified; 
             private Integer normType; 
             private String purchaseTime; 
-            private Integer resourceGroupId; 
+            private String resourceGroupId; 
             private String startTime; 
             private Integer status; 
             private Tags tags; 
@@ -644,7 +644,7 @@ public class DescribeCastersResponseBody extends TeaModel {
              * <strong>example:</strong>
              * <p>rg-aekzw******</p>
              */
-            public Builder resourceGroupId(Integer resourceGroupId) {
+            public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
                 return this;
             }

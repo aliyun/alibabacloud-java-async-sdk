@@ -6185,6 +6185,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of DescribeLiveUserStreamMetricData  DescribeLiveUserStreamMetricDataRequest
+     * @return DescribeLiveUserStreamMetricDataResponse
+     */
+    @Override
+    public CompletableFuture<DescribeLiveUserStreamMetricDataResponse> describeLiveUserStreamMetricData(DescribeLiveUserStreamMetricDataRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribeLiveUserStreamMetricData").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribeLiveUserStreamMetricDataResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribeLiveUserStreamMetricDataResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of DescribeLiveUserTags  DescribeLiveUserTagsRequest
      * @return DescribeLiveUserTagsResponse
      */

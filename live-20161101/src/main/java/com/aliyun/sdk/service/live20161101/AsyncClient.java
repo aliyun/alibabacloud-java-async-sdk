@@ -3143,6 +3143,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeLiveUserDomainsResponse> describeLiveUserDomains(DescribeLiveUserDomainsRequest request);
 
     /**
+     * @param request the request parameters of DescribeLiveUserStreamMetricData  DescribeLiveUserStreamMetricDataRequest
+     * @return DescribeLiveUserStreamMetricDataResponse
+     */
+    CompletableFuture<DescribeLiveUserStreamMetricDataResponse> describeLiveUserStreamMetricData(DescribeLiveUserStreamMetricDataRequest request);
+
+    /**
      * @param request the request parameters of DescribeLiveUserTags  DescribeLiveUserTagsRequest
      * @return DescribeLiveUserTagsResponse
      */
