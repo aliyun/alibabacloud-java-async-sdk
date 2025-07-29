@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyDefenseRuleStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefenseType")
+    private String defenseType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -42,11 +46,11 @@ public class ModifyDefenseRuleStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long templateId;
 
     private ModifyDefenseRuleStatusRequest(Builder builder) {
         super(builder);
+        this.defenseType = builder.defenseType;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
@@ -66,6 +70,13 @@ public class ModifyDefenseRuleStatusRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return defenseType
+     */
+    public String getDefenseType() {
+        return this.defenseType;
     }
 
     /**
@@ -111,6 +122,7 @@ public class ModifyDefenseRuleStatusRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyDefenseRuleStatusRequest, Builder> {
+        private String defenseType; 
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -124,6 +136,7 @@ public class ModifyDefenseRuleStatusRequest extends Request {
 
         private Builder(ModifyDefenseRuleStatusRequest request) {
             super(request);
+            this.defenseType = request.defenseType;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
@@ -131,6 +144,15 @@ public class ModifyDefenseRuleStatusRequest extends Request {
             this.ruleStatus = request.ruleStatus;
             this.templateId = request.templateId;
         } 
+
+        /**
+         * DefenseType.
+         */
+        public Builder defenseType(String defenseType) {
+            this.putQueryParameter("DefenseType", defenseType);
+            this.defenseType = defenseType;
+            return this;
+        }
 
         /**
          * <p>The ID of the Web Application Firewall (WAF) instance.</p>
@@ -208,7 +230,6 @@ public class ModifyDefenseRuleStatusRequest extends Request {
 
         /**
          * <p>The ID of the protection rule template to which the protection rule whose status you want to change belongs.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>7239</p>

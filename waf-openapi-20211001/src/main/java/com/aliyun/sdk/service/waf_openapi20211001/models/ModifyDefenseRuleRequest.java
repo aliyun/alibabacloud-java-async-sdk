@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifyDefenseRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DefenseScene")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String defenseScene;
 
     @com.aliyun.core.annotation.Query
@@ -161,7 +160,6 @@ public class ModifyDefenseRuleRequest extends Request {
 
         /**
          * <p>The scenario in which you want to use the protection rule. For more information, see the description of the <strong>DefenseScene</strong> parameter in the <a href="~~CreateDefenseRule~~">CreateDefenseRule</a> topic.</p>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>waf_group</p>

@@ -134,6 +134,9 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
 
+        @com.aliyun.core.annotation.NameInMap("DefenseType")
+        private String defenseType;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -172,6 +175,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             this.config = builder.config;
             this.defenseOrigin = builder.defenseOrigin;
             this.defenseScene = builder.defenseScene;
+            this.defenseType = builder.defenseType;
             this.description = builder.description;
             this.detailRuleIds = builder.detailRuleIds;
             this.externalInfo = builder.externalInfo;
@@ -219,6 +223,13 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
          */
         public String getDefenseScene() {
             return this.defenseScene;
+        }
+
+        /**
+         * @return defenseType
+         */
+        public String getDefenseType() {
+            return this.defenseType;
         }
 
         /**
@@ -303,6 +314,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
             private String config; 
             private String defenseOrigin; 
             private String defenseScene; 
+            private String defenseType; 
             private String description; 
             private String detailRuleIds; 
             private String externalInfo; 
@@ -323,6 +335,7 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
                 this.config = model.config;
                 this.defenseOrigin = model.defenseOrigin;
                 this.defenseScene = model.defenseScene;
+                this.defenseType = model.defenseType;
                 this.description = model.description;
                 this.detailRuleIds = model.detailRuleIds;
                 this.externalInfo = model.externalInfo;
@@ -393,6 +406,14 @@ public class DescribeDefenseRulesResponseBody extends TeaModel {
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
+                return this;
+            }
+
+            /**
+             * DefenseType.
+             */
+            public Builder defenseType(String defenseType) {
+                this.defenseType = defenseType;
                 return this;
             }
 

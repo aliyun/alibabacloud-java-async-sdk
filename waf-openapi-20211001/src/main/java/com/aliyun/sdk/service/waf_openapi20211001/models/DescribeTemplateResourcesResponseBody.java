@@ -29,6 +29,9 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List<String> resources;
 
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    private Long templateId;
+
     @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
@@ -37,6 +40,7 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
         this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.resources = builder.resources;
+        this.templateId = builder.templateId;
         this.totalCount = builder.totalCount;
     }
 
@@ -81,6 +85,13 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
     }
 
     /**
+     * @return templateId
+     */
+    public Long getTemplateId() {
+        return this.templateId;
+    }
+
+    /**
      * @return totalCount
      */
     public Integer getTotalCount() {
@@ -92,6 +103,7 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private java.util.List<String> resources; 
+        private Long templateId; 
         private Integer totalCount; 
 
         private Builder() {
@@ -102,6 +114,7 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
             this.nextToken = model.nextToken;
             this.requestId = model.requestId;
             this.resources = model.resources;
+            this.templateId = model.templateId;
             this.totalCount = model.totalCount;
         } 
 
@@ -137,6 +150,14 @@ public class DescribeTemplateResourcesResponseBody extends TeaModel {
          */
         public Builder resources(java.util.List<String> resources) {
             this.resources = resources;
+            return this;
+        }
+
+        /**
+         * TemplateId.
+         */
+        public Builder templateId(Long templateId) {
+            this.templateId = templateId;
             return this;
         }
 

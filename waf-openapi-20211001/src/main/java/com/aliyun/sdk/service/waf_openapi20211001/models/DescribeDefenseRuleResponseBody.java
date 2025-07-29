@@ -107,6 +107,9 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
 
+        @com.aliyun.core.annotation.NameInMap("DefenseType")
+        private String defenseType;
+
         @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
@@ -129,6 +132,7 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
             this.config = builder.config;
             this.defenseOrigin = builder.defenseOrigin;
             this.defenseScene = builder.defenseScene;
+            this.defenseType = builder.defenseType;
             this.gmtModified = builder.gmtModified;
             this.resource = builder.resource;
             this.ruleId = builder.ruleId;
@@ -164,6 +168,13 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
          */
         public String getDefenseScene() {
             return this.defenseScene;
+        }
+
+        /**
+         * @return defenseType
+         */
+        public String getDefenseType() {
+            return this.defenseType;
         }
 
         /**
@@ -212,6 +223,7 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
             private String config; 
             private String defenseOrigin; 
             private String defenseScene; 
+            private String defenseType; 
             private Long gmtModified; 
             private String resource; 
             private Long ruleId; 
@@ -226,6 +238,7 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
                 this.config = model.config;
                 this.defenseOrigin = model.defenseOrigin;
                 this.defenseScene = model.defenseScene;
+                this.defenseType = model.defenseType;
                 this.gmtModified = model.gmtModified;
                 this.resource = model.resource;
                 this.ruleId = model.ruleId;
@@ -268,6 +281,14 @@ public class DescribeDefenseRuleResponseBody extends TeaModel {
              */
             public Builder defenseScene(String defenseScene) {
                 this.defenseScene = defenseScene;
+                return this;
+            }
+
+            /**
+             * DefenseType.
+             */
+            public Builder defenseType(String defenseType) {
+                this.defenseType = defenseType;
                 return this;
             }
 

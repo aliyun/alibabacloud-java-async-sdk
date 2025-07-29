@@ -107,6 +107,9 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ObjectId")
         private String objectId;
 
+        @com.aliyun.core.annotation.NameInMap("OperationSource")
+        private String operationSource;
+
         @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
@@ -123,6 +126,7 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
             this.fromStatus = builder.fromStatus;
             this.note = builder.note;
             this.objectId = builder.objectId;
+            this.operationSource = builder.operationSource;
             this.time = builder.time;
             this.toStatus = builder.toStatus;
             this.type = builder.type;
@@ -159,6 +163,13 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return operationSource
+         */
+        public String getOperationSource() {
+            return this.operationSource;
+        }
+
+        /**
          * @return time
          */
         public Long getTime() {
@@ -190,6 +201,7 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
             private String fromStatus; 
             private String note; 
             private String objectId; 
+            private String operationSource; 
             private Long time; 
             private String toStatus; 
             private String type; 
@@ -202,6 +214,7 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
                 this.fromStatus = model.fromStatus;
                 this.note = model.note;
                 this.objectId = model.objectId;
+                this.operationSource = model.operationSource;
                 this.time = model.time;
                 this.toStatus = model.toStatus;
                 this.type = model.type;
@@ -252,6 +265,14 @@ public class DescribeApisecUserOperationsResponseBody extends TeaModel {
              */
             public Builder objectId(String objectId) {
                 this.objectId = objectId;
+                return this;
+            }
+
+            /**
+             * OperationSource.
+             */
+            public Builder operationSource(String operationSource) {
+                this.operationSource = operationSource;
                 return this;
             }
 

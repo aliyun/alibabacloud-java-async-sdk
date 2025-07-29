@@ -125,11 +125,20 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Medium")
         private Long medium;
 
+        @com.aliyun.core.annotation.NameInMap("NotFixed")
+        private Long notFixed;
+
+        @com.aliyun.core.annotation.NameInMap("SystemFixed")
+        private Long systemFixed;
+
         @com.aliyun.core.annotation.NameInMap("ToBeConfirmed")
         private Long toBeConfirmed;
 
         @com.aliyun.core.annotation.NameInMap("ToBeFixed")
         private Long toBeFixed;
+
+        @com.aliyun.core.annotation.NameInMap("ToBeVerified")
+        private Long toBeVerified;
 
         @com.aliyun.core.annotation.NameInMap("TodayHigh")
         private String todayHigh;
@@ -156,8 +165,11 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             this.ignore = builder.ignore;
             this.low = builder.low;
             this.medium = builder.medium;
+            this.notFixed = builder.notFixed;
+            this.systemFixed = builder.systemFixed;
             this.toBeConfirmed = builder.toBeConfirmed;
             this.toBeFixed = builder.toBeFixed;
+            this.toBeVerified = builder.toBeVerified;
             this.todayHigh = builder.todayHigh;
             this.todayLow = builder.todayLow;
             this.todayMedium = builder.todayMedium;
@@ -237,6 +249,20 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return notFixed
+         */
+        public Long getNotFixed() {
+            return this.notFixed;
+        }
+
+        /**
+         * @return systemFixed
+         */
+        public Long getSystemFixed() {
+            return this.systemFixed;
+        }
+
+        /**
          * @return toBeConfirmed
          */
         public Long getToBeConfirmed() {
@@ -248,6 +274,13 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
          */
         public Long getToBeFixed() {
             return this.toBeFixed;
+        }
+
+        /**
+         * @return toBeVerified
+         */
+        public Long getToBeVerified() {
+            return this.toBeVerified;
         }
 
         /**
@@ -295,8 +328,11 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             private Long ignore; 
             private Long low; 
             private Long medium; 
+            private Long notFixed; 
+            private Long systemFixed; 
             private Long toBeConfirmed; 
             private Long toBeFixed; 
+            private Long toBeVerified; 
             private String todayHigh; 
             private Long todayLow; 
             private String todayMedium; 
@@ -316,8 +352,11 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
                 this.ignore = model.ignore;
                 this.low = model.low;
                 this.medium = model.medium;
+                this.notFixed = model.notFixed;
+                this.systemFixed = model.systemFixed;
                 this.toBeConfirmed = model.toBeConfirmed;
                 this.toBeFixed = model.toBeFixed;
+                this.toBeVerified = model.toBeVerified;
                 this.todayHigh = model.todayHigh;
                 this.todayLow = model.todayLow;
                 this.todayMedium = model.todayMedium;
@@ -425,6 +464,22 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
             }
 
             /**
+             * NotFixed.
+             */
+            public Builder notFixed(Long notFixed) {
+                this.notFixed = notFixed;
+                return this;
+            }
+
+            /**
+             * SystemFixed.
+             */
+            public Builder systemFixed(Long systemFixed) {
+                this.systemFixed = systemFixed;
+                return this;
+            }
+
+            /**
              * <p>The number of events to be confirmed.</p>
              * 
              * <strong>example:</strong>
@@ -443,6 +498,14 @@ public class DescribeApisecStatisticsResponseBody extends TeaModel {
              */
             public Builder toBeFixed(Long toBeFixed) {
                 this.toBeFixed = toBeFixed;
+                return this;
+            }
+
+            /**
+             * ToBeVerified.
+             */
+            public Builder toBeVerified(Long toBeVerified) {
+                this.toBeVerified = toBeVerified;
                 return this;
             }
 

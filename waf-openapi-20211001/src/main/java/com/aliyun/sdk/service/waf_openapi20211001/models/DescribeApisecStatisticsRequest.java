@@ -22,6 +22,10 @@ public class DescribeApisecStatisticsRequest extends Request {
     private String clusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private Long endTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
@@ -35,16 +39,27 @@ public class DescribeApisecStatisticsRequest extends Request {
     private String resourceManagerResourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private Long startTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserStatusList")
+    private java.util.List<String> userStatusList;
 
     private DescribeApisecStatisticsRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
+        this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
+        this.startTime = builder.startTime;
         this.type = builder.type;
+        this.userStatusList = builder.userStatusList;
     }
 
     public static Builder builder() {
@@ -65,6 +80,13 @@ public class DescribeApisecStatisticsRequest extends Request {
      */
     public String getClusterId() {
         return this.clusterId;
+    }
+
+    /**
+     * @return endTime
+     */
+    public Long getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -89,18 +111,35 @@ public class DescribeApisecStatisticsRequest extends Request {
     }
 
     /**
+     * @return startTime
+     */
+    public Long getStartTime() {
+        return this.startTime;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
         return this.type;
     }
 
+    /**
+     * @return userStatusList
+     */
+    public java.util.List<String> getUserStatusList() {
+        return this.userStatusList;
+    }
+
     public static final class Builder extends Request.Builder<DescribeApisecStatisticsRequest, Builder> {
         private String clusterId; 
+        private Long endTime; 
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
+        private Long startTime; 
         private String type; 
+        private java.util.List<String> userStatusList; 
 
         private Builder() {
             super();
@@ -109,10 +148,13 @@ public class DescribeApisecStatisticsRequest extends Request {
         private Builder(DescribeApisecStatisticsRequest request) {
             super(request);
             this.clusterId = request.clusterId;
+            this.endTime = request.endTime;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
+            this.startTime = request.startTime;
             this.type = request.type;
+            this.userStatusList = request.userStatusList;
         } 
 
         /**
@@ -127,6 +169,15 @@ public class DescribeApisecStatisticsRequest extends Request {
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
             this.clusterId = clusterId;
+            return this;
+        }
+
+        /**
+         * EndTime.
+         */
+        public Builder endTime(Long endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
             return this;
         }
 
@@ -176,6 +227,15 @@ public class DescribeApisecStatisticsRequest extends Request {
         }
 
         /**
+         * StartTime.
+         */
+        public Builder startTime(Long startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
+            return this;
+        }
+
+        /**
          * <p>The type of the statistics. Valid values:</p>
          * <ul>
          * <li><strong>risk</strong>: risk-related statistics.</li>
@@ -188,6 +248,15 @@ public class DescribeApisecStatisticsRequest extends Request {
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * UserStatusList.
+         */
+        public Builder userStatusList(java.util.List<String> userStatusList) {
+            this.putQueryParameter("UserStatusList", userStatusList);
+            this.userStatusList = userStatusList;
             return this;
         }
 

@@ -23,6 +23,10 @@ public class DescribeApisecRulesRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
+    private String lang;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
@@ -62,6 +66,7 @@ public class DescribeApisecRulesRequest extends Request {
     private DescribeApisecRulesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.lang = builder.lang;
         this.level = builder.level;
         this.name = builder.name;
         this.origin = builder.origin;
@@ -91,6 +96,13 @@ public class DescribeApisecRulesRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return lang
+     */
+    public String getLang() {
+        return this.lang;
     }
 
     /**
@@ -158,6 +170,7 @@ public class DescribeApisecRulesRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeApisecRulesRequest, Builder> {
         private String instanceId; 
+        private String lang; 
         private String level; 
         private String name; 
         private String origin; 
@@ -175,6 +188,7 @@ public class DescribeApisecRulesRequest extends Request {
         private Builder(DescribeApisecRulesRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.lang = request.lang;
             this.level = request.level;
             this.name = request.name;
             this.origin = request.origin;
@@ -199,6 +213,15 @@ public class DescribeApisecRulesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * Lang.
+         */
+        public Builder lang(String lang) {
+            this.putQueryParameter("Lang", lang);
+            this.lang = lang;
             return this;
         }
 

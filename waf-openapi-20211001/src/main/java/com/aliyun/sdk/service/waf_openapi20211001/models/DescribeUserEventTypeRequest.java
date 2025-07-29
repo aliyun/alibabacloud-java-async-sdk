@@ -42,6 +42,10 @@ public class DescribeUserEventTypeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserStatusList")
+    private java.util.List<String> userStatusList;
+
     private DescribeUserEventTypeRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -50,6 +54,7 @@ public class DescribeUserEventTypeRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.startTime = builder.startTime;
+        this.userStatusList = builder.userStatusList;
     }
 
     public static Builder builder() {
@@ -107,6 +112,13 @@ public class DescribeUserEventTypeRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return userStatusList
+     */
+    public java.util.List<String> getUserStatusList() {
+        return this.userStatusList;
+    }
+
     public static final class Builder extends Request.Builder<DescribeUserEventTypeRequest, Builder> {
         private String clusterId; 
         private Long endTime; 
@@ -114,6 +126,7 @@ public class DescribeUserEventTypeRequest extends Request {
         private String regionId; 
         private String resourceManagerResourceGroupId; 
         private Long startTime; 
+        private java.util.List<String> userStatusList; 
 
         private Builder() {
             super();
@@ -127,6 +140,7 @@ public class DescribeUserEventTypeRequest extends Request {
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.startTime = request.startTime;
+            this.userStatusList = request.userStatusList;
         } 
 
         /**
@@ -209,6 +223,15 @@ public class DescribeUserEventTypeRequest extends Request {
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * UserStatusList.
+         */
+        public Builder userStatusList(java.util.List<String> userStatusList) {
+            this.putQueryParameter("UserStatusList", userStatusList);
+            this.userStatusList = userStatusList;
             return this;
         }
 
