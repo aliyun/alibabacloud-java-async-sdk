@@ -299,6 +299,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWorkflowInstanceResponse> listWorkflowInstance(ListWorkflowInstanceRequest request);
 
     /**
+     * @param request the request parameters of ManageSchedulerxJobSync  ManageSchedulerxJobSyncRequest
+     * @return ManageSchedulerxJobSyncResponse
+     */
+    CompletableFuture<ManageSchedulerxJobSyncResponse> manageSchedulerxJobSync(ManageSchedulerxJobSyncRequest request);
+
+    /**
      * @param request the request parameters of ReadSchedulerxDesignateDetail  ReadSchedulerxDesignateDetailRequest
      * @return ReadSchedulerxDesignateDetailResponse
      */
