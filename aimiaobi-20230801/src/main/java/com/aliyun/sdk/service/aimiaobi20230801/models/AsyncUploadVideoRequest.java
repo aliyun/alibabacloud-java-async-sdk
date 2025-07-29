@@ -26,9 +26,17 @@ public class AsyncUploadVideoRequest extends Request {
     private String anlysisPrompt;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReferenceVideo")
+    private ReferenceVideo referenceVideo;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceVideos")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List<SourceVideos> sourceVideos;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SplitInterval")
+    private Integer splitInterval;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
@@ -39,7 +47,9 @@ public class AsyncUploadVideoRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.anlysisPrompt = builder.anlysisPrompt;
+        this.referenceVideo = builder.referenceVideo;
         this.sourceVideos = builder.sourceVideos;
+        this.splitInterval = builder.splitInterval;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -71,10 +81,24 @@ public class AsyncUploadVideoRequest extends Request {
     }
 
     /**
+     * @return referenceVideo
+     */
+    public ReferenceVideo getReferenceVideo() {
+        return this.referenceVideo;
+    }
+
+    /**
      * @return sourceVideos
      */
     public java.util.List<SourceVideos> getSourceVideos() {
         return this.sourceVideos;
+    }
+
+    /**
+     * @return splitInterval
+     */
+    public Integer getSplitInterval() {
+        return this.splitInterval;
     }
 
     /**
@@ -87,7 +111,9 @@ public class AsyncUploadVideoRequest extends Request {
     public static final class Builder extends Request.Builder<AsyncUploadVideoRequest, Builder> {
         private String regionId; 
         private String anlysisPrompt; 
+        private ReferenceVideo referenceVideo; 
         private java.util.List<SourceVideos> sourceVideos; 
+        private Integer splitInterval; 
         private String workspaceId; 
 
         private Builder() {
@@ -98,7 +124,9 @@ public class AsyncUploadVideoRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.anlysisPrompt = request.anlysisPrompt;
+            this.referenceVideo = request.referenceVideo;
             this.sourceVideos = request.sourceVideos;
+            this.splitInterval = request.splitInterval;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -121,12 +149,31 @@ public class AsyncUploadVideoRequest extends Request {
         }
 
         /**
+         * ReferenceVideo.
+         */
+        public Builder referenceVideo(ReferenceVideo referenceVideo) {
+            String referenceVideoShrink = shrink(referenceVideo, "ReferenceVideo", "json");
+            this.putBodyParameter("ReferenceVideo", referenceVideoShrink);
+            this.referenceVideo = referenceVideo;
+            return this;
+        }
+
+        /**
          * <p>This parameter is required.</p>
          */
         public Builder sourceVideos(java.util.List<SourceVideos> sourceVideos) {
             String sourceVideosShrink = shrink(sourceVideos, "SourceVideos", "json");
             this.putBodyParameter("SourceVideos", sourceVideosShrink);
             this.sourceVideos = sourceVideos;
+            return this;
+        }
+
+        /**
+         * SplitInterval.
+         */
+        public Builder splitInterval(Integer splitInterval) {
+            this.putBodyParameter("SplitInterval", splitInterval);
+            this.splitInterval = splitInterval;
             return this;
         }
 
@@ -149,6 +196,102 @@ public class AsyncUploadVideoRequest extends Request {
 
     } 
 
+    /**
+     * 
+     * {@link AsyncUploadVideoRequest} extends {@link TeaModel}
+     *
+     * <p>AsyncUploadVideoRequest</p>
+     */
+    public static class ReferenceVideo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("VideoExtraInfo")
+        private String videoExtraInfo;
+
+        @com.aliyun.core.annotation.NameInMap("VideoName")
+        private String videoName;
+
+        @com.aliyun.core.annotation.NameInMap("VideoUrl")
+        private String videoUrl;
+
+        private ReferenceVideo(Builder builder) {
+            this.videoExtraInfo = builder.videoExtraInfo;
+            this.videoName = builder.videoName;
+            this.videoUrl = builder.videoUrl;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReferenceVideo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return videoExtraInfo
+         */
+        public String getVideoExtraInfo() {
+            return this.videoExtraInfo;
+        }
+
+        /**
+         * @return videoName
+         */
+        public String getVideoName() {
+            return this.videoName;
+        }
+
+        /**
+         * @return videoUrl
+         */
+        public String getVideoUrl() {
+            return this.videoUrl;
+        }
+
+        public static final class Builder {
+            private String videoExtraInfo; 
+            private String videoName; 
+            private String videoUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(ReferenceVideo model) {
+                this.videoExtraInfo = model.videoExtraInfo;
+                this.videoName = model.videoName;
+                this.videoUrl = model.videoUrl;
+            } 
+
+            /**
+             * VideoExtraInfo.
+             */
+            public Builder videoExtraInfo(String videoExtraInfo) {
+                this.videoExtraInfo = videoExtraInfo;
+                return this;
+            }
+
+            /**
+             * VideoName.
+             */
+            public Builder videoName(String videoName) {
+                this.videoName = videoName;
+                return this;
+            }
+
+            /**
+             * VideoUrl.
+             */
+            public Builder videoUrl(String videoUrl) {
+                this.videoUrl = videoUrl;
+                return this;
+            }
+
+            public ReferenceVideo build() {
+                return new ReferenceVideo(this);
+            } 
+
+        } 
+
+    }
     /**
      * 
      * {@link AsyncUploadVideoRequest} extends {@link TeaModel}

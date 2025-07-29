@@ -203,6 +203,24 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of ConfirmAndPostProcessAuditNote  ConfirmAndPostProcessAuditNoteRequest
+     * @return ConfirmAndPostProcessAuditNoteResponse
+     */
+    @Override
+    public CompletableFuture<ConfirmAndPostProcessAuditNoteResponse> confirmAndPostProcessAuditNote(ConfirmAndPostProcessAuditNoteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ConfirmAndPostProcessAuditNote").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ConfirmAndPostProcessAuditNoteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ConfirmAndPostProcessAuditNoteResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of CreateDataset  CreateDatasetRequest
      * @return CreateDatasetResponse
      */
@@ -251,6 +269,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<CreateTokenResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DeleteAuditNote  DeleteAuditNoteRequest
+     * @return DeleteAuditNoteResponse
+     */
+    @Override
+    public CompletableFuture<DeleteAuditNoteResponse> deleteAuditNote(DeleteAuditNoteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DeleteAuditNote").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DeleteAuditNoteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DeleteAuditNoteResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -467,6 +503,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<DocumentExtractionResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of DownloadAuditNote  DownloadAuditNoteRequest
+     * @return DownloadAuditNoteResponse
+     */
+    @Override
+    public CompletableFuture<DownloadAuditNoteResponse> downloadAuditNote(DownloadAuditNoteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DownloadAuditNote").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DownloadAuditNoteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DownloadAuditNoteResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -779,6 +833,42 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
+     * @param request the request parameters of GetAuditNotePostProcessingStatus  GetAuditNotePostProcessingStatusRequest
+     * @return GetAuditNotePostProcessingStatusResponse
+     */
+    @Override
+    public CompletableFuture<GetAuditNotePostProcessingStatusResponse> getAuditNotePostProcessingStatus(GetAuditNotePostProcessingStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAuditNotePostProcessingStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAuditNotePostProcessingStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAuditNotePostProcessingStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAuditNoteProcessingStatus  GetAuditNoteProcessingStatusRequest
+     * @return GetAuditNoteProcessingStatusResponse
+     */
+    @Override
+    public CompletableFuture<GetAuditNoteProcessingStatusResponse> getAuditNoteProcessingStatus(GetAuditNoteProcessingStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAuditNoteProcessingStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAuditNoteProcessingStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAuditNoteProcessingStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
      * @param request the request parameters of GetAutoClipsTaskInfo  GetAutoClipsTaskInfoRequest
      * @return GetAutoClipsTaskInfoResponse
      */
@@ -791,6 +881,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<GetAutoClipsTaskInfoResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of GetAvailableAuditNotes  GetAvailableAuditNotesRequest
+     * @return GetAvailableAuditNotesResponse
+     */
+    @Override
+    public CompletableFuture<GetAvailableAuditNotesResponse> getAvailableAuditNotes(GetAvailableAuditNotesRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAvailableAuditNotes").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAvailableAuditNotesResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<GetAvailableAuditNotesResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
@@ -2937,6 +3045,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<SubmitAsyncTaskResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of SubmitAuditNote  SubmitAuditNoteRequest
+     * @return SubmitAuditNoteResponse
+     */
+    @Override
+    public CompletableFuture<SubmitAuditNoteResponse> submitAuditNote(SubmitAuditNoteRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("SubmitAuditNote").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(true).setReqBodyType(BodyType.FORM).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(SubmitAuditNoteResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<SubmitAuditNoteResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

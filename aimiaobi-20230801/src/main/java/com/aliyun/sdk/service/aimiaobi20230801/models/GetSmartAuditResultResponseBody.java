@@ -218,6 +218,9 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubClassDesc")
         private String subClassDesc;
 
+        @com.aliyun.core.annotation.NameInMap("Url")
+        private String url;
+
         private ErrorItemDetails(Builder builder) {
             this.checkId = builder.checkId;
             this.context = builder.context;
@@ -231,6 +234,7 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
             this.rightWord = builder.rightWord;
             this.subClassCode = builder.subClassCode;
             this.subClassDesc = builder.subClassDesc;
+            this.url = builder.url;
         }
 
         public static Builder builder() {
@@ -325,6 +329,13 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
             return this.subClassDesc;
         }
 
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
         public static final class Builder {
             private String checkId; 
             private String context; 
@@ -338,6 +349,7 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
             private String rightWord; 
             private String subClassCode; 
             private String subClassDesc; 
+            private String url; 
 
             private Builder() {
             } 
@@ -355,6 +367,7 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
                 this.rightWord = model.rightWord;
                 this.subClassCode = model.subClassCode;
                 this.subClassDesc = model.subClassDesc;
+                this.url = model.url;
             } 
 
             /**
@@ -450,6 +463,14 @@ public class GetSmartAuditResultResponseBody extends TeaModel {
              */
             public Builder subClassDesc(String subClassDesc) {
                 this.subClassDesc = subClassDesc;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
                 return this;
             }
 

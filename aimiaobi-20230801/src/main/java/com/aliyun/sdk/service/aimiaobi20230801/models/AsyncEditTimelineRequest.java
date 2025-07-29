@@ -192,8 +192,14 @@ public class AsyncEditTimelineRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("In")
         private Integer in;
 
+        @com.aliyun.core.annotation.NameInMap("InEx")
+        private Float inEx;
+
         @com.aliyun.core.annotation.NameInMap("Out")
         private Integer out;
+
+        @com.aliyun.core.annotation.NameInMap("OutEx")
+        private Float outEx;
 
         @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
@@ -205,7 +211,9 @@ public class AsyncEditTimelineRequest extends Request {
             this.clipId = builder.clipId;
             this.contentInner = builder.contentInner;
             this.in = builder.in;
+            this.inEx = builder.inEx;
             this.out = builder.out;
+            this.outEx = builder.outEx;
             this.videoId = builder.videoId;
             this.videoName = builder.videoName;
         }
@@ -240,10 +248,24 @@ public class AsyncEditTimelineRequest extends Request {
         }
 
         /**
+         * @return inEx
+         */
+        public Float getInEx() {
+            return this.inEx;
+        }
+
+        /**
          * @return out
          */
         public Integer getOut() {
             return this.out;
+        }
+
+        /**
+         * @return outEx
+         */
+        public Float getOutEx() {
+            return this.outEx;
         }
 
         /**
@@ -264,7 +286,9 @@ public class AsyncEditTimelineRequest extends Request {
             private String clipId; 
             private String contentInner; 
             private Integer in; 
+            private Float inEx; 
             private Integer out; 
+            private Float outEx; 
             private String videoId; 
             private String videoName; 
 
@@ -275,7 +299,9 @@ public class AsyncEditTimelineRequest extends Request {
                 this.clipId = model.clipId;
                 this.contentInner = model.contentInner;
                 this.in = model.in;
+                this.inEx = model.inEx;
                 this.out = model.out;
+                this.outEx = model.outEx;
                 this.videoId = model.videoId;
                 this.videoName = model.videoName;
             } 
@@ -305,10 +331,26 @@ public class AsyncEditTimelineRequest extends Request {
             }
 
             /**
+             * InEx.
+             */
+            public Builder inEx(Float inEx) {
+                this.inEx = inEx;
+                return this;
+            }
+
+            /**
              * Out.
              */
             public Builder out(Integer out) {
                 this.out = out;
+                return this;
+            }
+
+            /**
+             * OutEx.
+             */
+            public Builder outEx(Float outEx) {
+                this.outEx = outEx;
                 return this;
             }
 

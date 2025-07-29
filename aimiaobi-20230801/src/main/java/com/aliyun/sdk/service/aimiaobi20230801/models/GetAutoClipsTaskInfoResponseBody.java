@@ -308,8 +308,14 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("In")
         private Integer in;
 
+        @com.aliyun.core.annotation.NameInMap("InEx")
+        private Float inEx;
+
         @com.aliyun.core.annotation.NameInMap("Out")
         private Integer out;
+
+        @com.aliyun.core.annotation.NameInMap("OutEx")
+        private Float outEx;
 
         @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
@@ -321,7 +327,9 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             this.clipId = builder.clipId;
             this.contentInner = builder.contentInner;
             this.in = builder.in;
+            this.inEx = builder.inEx;
             this.out = builder.out;
+            this.outEx = builder.outEx;
             this.videoId = builder.videoId;
             this.videoName = builder.videoName;
         }
@@ -356,10 +364,24 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return inEx
+         */
+        public Float getInEx() {
+            return this.inEx;
+        }
+
+        /**
          * @return out
          */
         public Integer getOut() {
             return this.out;
+        }
+
+        /**
+         * @return outEx
+         */
+        public Float getOutEx() {
+            return this.outEx;
         }
 
         /**
@@ -380,7 +402,9 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             private String clipId; 
             private String contentInner; 
             private Integer in; 
+            private Float inEx; 
             private Integer out; 
+            private Float outEx; 
             private String videoId; 
             private String videoName; 
 
@@ -391,7 +415,9 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
                 this.clipId = model.clipId;
                 this.contentInner = model.contentInner;
                 this.in = model.in;
+                this.inEx = model.inEx;
                 this.out = model.out;
+                this.outEx = model.outEx;
                 this.videoId = model.videoId;
                 this.videoName = model.videoName;
             } 
@@ -421,10 +447,26 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             }
 
             /**
+             * InEx.
+             */
+            public Builder inEx(Float inEx) {
+                this.inEx = inEx;
+                return this;
+            }
+
+            /**
              * Out.
              */
             public Builder out(Integer out) {
                 this.out = out;
+                return this;
+            }
+
+            /**
+             * OutEx.
+             */
+            public Builder outEx(Float outEx) {
+                this.outEx = outEx;
                 return this;
             }
 
@@ -560,6 +602,9 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
+
         @com.aliyun.core.annotation.NameInMap("MediaCloudTimeline")
         private String mediaCloudTimeline;
 
@@ -599,6 +644,7 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.colorWords = builder.colorWords;
             this.content = builder.content;
+            this.errorMessage = builder.errorMessage;
             this.mediaCloudTimeline = builder.mediaCloudTimeline;
             this.musicStyle = builder.musicStyle;
             this.musicUrl = builder.musicUrl;
@@ -633,6 +679,13 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
          */
         public String getContent() {
             return this.content;
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         /**
@@ -722,6 +775,7 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<ColorWords> colorWords; 
             private String content; 
+            private String errorMessage; 
             private String mediaCloudTimeline; 
             private String musicStyle; 
             private String musicUrl; 
@@ -741,6 +795,7 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
             private Builder(Data model) {
                 this.colorWords = model.colorWords;
                 this.content = model.content;
+                this.errorMessage = model.errorMessage;
                 this.mediaCloudTimeline = model.mediaCloudTimeline;
                 this.musicStyle = model.musicStyle;
                 this.musicUrl = model.musicUrl;
@@ -768,6 +823,14 @@ public class GetAutoClipsTaskInfoResponseBody extends TeaModel {
              */
             public Builder content(String content) {
                 this.content = content;
+                return this;
+            }
+
+            /**
+             * ErrorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
                 return this;
             }
 

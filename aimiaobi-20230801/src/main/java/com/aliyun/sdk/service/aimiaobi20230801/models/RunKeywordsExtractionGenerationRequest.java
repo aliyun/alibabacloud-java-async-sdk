@@ -22,6 +22,10 @@ public class RunKeywordsExtractionGenerationRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Prompt")
+    private String prompt;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ReferenceData")
     @com.aliyun.core.annotation.Validation(required = true)
     private ReferenceData referenceData;
@@ -38,6 +42,7 @@ public class RunKeywordsExtractionGenerationRequest extends Request {
     private RunKeywordsExtractionGenerationRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.prompt = builder.prompt;
         this.referenceData = builder.referenceData;
         this.taskId = builder.taskId;
         this.workspaceId = builder.workspaceId;
@@ -64,6 +69,13 @@ public class RunKeywordsExtractionGenerationRequest extends Request {
     }
 
     /**
+     * @return prompt
+     */
+    public String getPrompt() {
+        return this.prompt;
+    }
+
+    /**
      * @return referenceData
      */
     public ReferenceData getReferenceData() {
@@ -86,6 +98,7 @@ public class RunKeywordsExtractionGenerationRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunKeywordsExtractionGenerationRequest, Builder> {
         private String regionId; 
+        private String prompt; 
         private ReferenceData referenceData; 
         private String taskId; 
         private String workspaceId; 
@@ -97,6 +110,7 @@ public class RunKeywordsExtractionGenerationRequest extends Request {
         private Builder(RunKeywordsExtractionGenerationRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.prompt = request.prompt;
             this.referenceData = request.referenceData;
             this.taskId = request.taskId;
             this.workspaceId = request.workspaceId;
@@ -108,6 +122,15 @@ public class RunKeywordsExtractionGenerationRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Prompt.
+         */
+        public Builder prompt(String prompt) {
+            this.putBodyParameter("Prompt", prompt);
+            this.prompt = prompt;
             return this;
         }
 

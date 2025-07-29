@@ -74,6 +74,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ClearIntervenesResponse> clearIntervenes(ClearIntervenesRequest request);
 
     /**
+     * @param request the request parameters of ConfirmAndPostProcessAuditNote  ConfirmAndPostProcessAuditNoteRequest
+     * @return ConfirmAndPostProcessAuditNoteResponse
+     */
+    CompletableFuture<ConfirmAndPostProcessAuditNoteResponse> confirmAndPostProcessAuditNote(ConfirmAndPostProcessAuditNoteRequest request);
+
+    /**
      * @param request the request parameters of CreateDataset  CreateDatasetRequest
      * @return CreateDatasetResponse
      */
@@ -90,6 +96,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return CreateTokenResponse
      */
     CompletableFuture<CreateTokenResponse> createToken(CreateTokenRequest request);
+
+    /**
+     * @param request the request parameters of DeleteAuditNote  DeleteAuditNoteRequest
+     * @return DeleteAuditNoteResponse
+     */
+    CompletableFuture<DeleteAuditNoteResponse> deleteAuditNote(DeleteAuditNoteRequest request);
 
     /**
      * @param request the request parameters of DeleteAuditTerms  DeleteAuditTermsRequest
@@ -162,6 +174,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return DocumentExtractionResponse
      */
     CompletableFuture<DocumentExtractionResponse> documentExtraction(DocumentExtractionRequest request);
+
+    /**
+     * @param request the request parameters of DownloadAuditNote  DownloadAuditNoteRequest
+     * @return DownloadAuditNoteResponse
+     */
+    CompletableFuture<DownloadAuditNoteResponse> downloadAuditNote(DownloadAuditNoteRequest request);
 
     /**
      * @param request the request parameters of EditAuditTerms  EditAuditTermsRequest
@@ -266,10 +284,28 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GenerateViewPointResponse> generateViewPoint(GenerateViewPointRequest request);
 
     /**
+     * @param request the request parameters of GetAuditNotePostProcessingStatus  GetAuditNotePostProcessingStatusRequest
+     * @return GetAuditNotePostProcessingStatusResponse
+     */
+    CompletableFuture<GetAuditNotePostProcessingStatusResponse> getAuditNotePostProcessingStatus(GetAuditNotePostProcessingStatusRequest request);
+
+    /**
+     * @param request the request parameters of GetAuditNoteProcessingStatus  GetAuditNoteProcessingStatusRequest
+     * @return GetAuditNoteProcessingStatusResponse
+     */
+    CompletableFuture<GetAuditNoteProcessingStatusResponse> getAuditNoteProcessingStatus(GetAuditNoteProcessingStatusRequest request);
+
+    /**
      * @param request the request parameters of GetAutoClipsTaskInfo  GetAutoClipsTaskInfoRequest
      * @return GetAutoClipsTaskInfoResponse
      */
     CompletableFuture<GetAutoClipsTaskInfoResponse> getAutoClipsTaskInfo(GetAutoClipsTaskInfoRequest request);
+
+    /**
+     * @param request the request parameters of GetAvailableAuditNotes  GetAvailableAuditNotesRequest
+     * @return GetAvailableAuditNotesResponse
+     */
+    CompletableFuture<GetAvailableAuditNotesResponse> getAvailableAuditNotes(GetAvailableAuditNotesRequest request);
 
     /**
      * @param request the request parameters of GetCategoriesByTaskId  GetCategoriesByTaskIdRequest
@@ -944,6 +980,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return SubmitAsyncTaskResponse
      */
     CompletableFuture<SubmitAsyncTaskResponse> submitAsyncTask(SubmitAsyncTaskRequest request);
+
+    /**
+     * @param request the request parameters of SubmitAuditNote  SubmitAuditNoteRequest
+     * @return SubmitAuditNoteResponse
+     */
+    CompletableFuture<SubmitAuditNoteResponse> submitAuditNote(SubmitAuditNoteRequest request);
 
     /**
      * @param request the request parameters of SubmitAuditTask  SubmitAuditTaskRequest

@@ -27,6 +27,10 @@ public class RunExpandContentRequest extends Request {
     private String content;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Prompt")
+    private String prompt;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
@@ -35,6 +39,7 @@ public class RunExpandContentRequest extends Request {
         super(builder);
         this.regionId = builder.regionId;
         this.content = builder.content;
+        this.prompt = builder.prompt;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -66,6 +71,13 @@ public class RunExpandContentRequest extends Request {
     }
 
     /**
+     * @return prompt
+     */
+    public String getPrompt() {
+        return this.prompt;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -75,6 +87,7 @@ public class RunExpandContentRequest extends Request {
     public static final class Builder extends Request.Builder<RunExpandContentRequest, Builder> {
         private String regionId; 
         private String content; 
+        private String prompt; 
         private String workspaceId; 
 
         private Builder() {
@@ -85,6 +98,7 @@ public class RunExpandContentRequest extends Request {
             super(request);
             this.regionId = request.regionId;
             this.content = request.content;
+            this.prompt = request.prompt;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -106,6 +120,15 @@ public class RunExpandContentRequest extends Request {
         public Builder content(String content) {
             this.putBodyParameter("Content", content);
             this.content = content;
+            return this;
+        }
+
+        /**
+         * Prompt.
+         */
+        public Builder prompt(String prompt) {
+            this.putBodyParameter("Prompt", prompt);
+            this.prompt = prompt;
             return this;
         }
 

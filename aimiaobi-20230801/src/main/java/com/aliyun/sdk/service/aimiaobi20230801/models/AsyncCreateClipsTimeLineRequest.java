@@ -22,6 +22,18 @@ public class AsyncCreateClipsTimeLineRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AdditionalContent")
+    private String additionalContent;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustomContent")
+    private String customContent;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NoRefVideo")
+    private Boolean noRefVideo;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ProcessPrompt")
     private String processPrompt;
 
@@ -38,6 +50,9 @@ public class AsyncCreateClipsTimeLineRequest extends Request {
     private AsyncCreateClipsTimeLineRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.additionalContent = builder.additionalContent;
+        this.customContent = builder.customContent;
+        this.noRefVideo = builder.noRefVideo;
         this.processPrompt = builder.processPrompt;
         this.taskId = builder.taskId;
         this.workspaceId = builder.workspaceId;
@@ -64,6 +79,27 @@ public class AsyncCreateClipsTimeLineRequest extends Request {
     }
 
     /**
+     * @return additionalContent
+     */
+    public String getAdditionalContent() {
+        return this.additionalContent;
+    }
+
+    /**
+     * @return customContent
+     */
+    public String getCustomContent() {
+        return this.customContent;
+    }
+
+    /**
+     * @return noRefVideo
+     */
+    public Boolean getNoRefVideo() {
+        return this.noRefVideo;
+    }
+
+    /**
      * @return processPrompt
      */
     public String getProcessPrompt() {
@@ -86,6 +122,9 @@ public class AsyncCreateClipsTimeLineRequest extends Request {
 
     public static final class Builder extends Request.Builder<AsyncCreateClipsTimeLineRequest, Builder> {
         private String regionId; 
+        private String additionalContent; 
+        private String customContent; 
+        private Boolean noRefVideo; 
         private String processPrompt; 
         private String taskId; 
         private String workspaceId; 
@@ -97,6 +136,9 @@ public class AsyncCreateClipsTimeLineRequest extends Request {
         private Builder(AsyncCreateClipsTimeLineRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.additionalContent = request.additionalContent;
+            this.customContent = request.customContent;
+            this.noRefVideo = request.noRefVideo;
             this.processPrompt = request.processPrompt;
             this.taskId = request.taskId;
             this.workspaceId = request.workspaceId;
@@ -108,6 +150,33 @@ public class AsyncCreateClipsTimeLineRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AdditionalContent.
+         */
+        public Builder additionalContent(String additionalContent) {
+            this.putBodyParameter("AdditionalContent", additionalContent);
+            this.additionalContent = additionalContent;
+            return this;
+        }
+
+        /**
+         * CustomContent.
+         */
+        public Builder customContent(String customContent) {
+            this.putBodyParameter("CustomContent", customContent);
+            this.customContent = customContent;
+            return this;
+        }
+
+        /**
+         * NoRefVideo.
+         */
+        public Builder noRefVideo(Boolean noRefVideo) {
+            this.putBodyParameter("NoRefVideo", noRefVideo);
+            this.noRefVideo = noRefVideo;
             return this;
         }
 
