@@ -31,6 +31,10 @@ public class DescribeModificationPriceRequest extends Request {
     private String instanceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
+    private String promotionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -62,6 +66,7 @@ public class DescribeModificationPriceRequest extends Request {
         this.bandwidth = builder.bandwidth;
         this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
+        this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
         this.resellerOwnerUid = builder.resellerOwnerUid;
         this.resourceSpecs = builder.resourceSpecs;
@@ -102,6 +107,13 @@ public class DescribeModificationPriceRequest extends Request {
      */
     public String getInstanceType() {
         return this.instanceType;
+    }
+
+    /**
+     * @return promotionId
+     */
+    public String getPromotionId() {
+        return this.promotionId;
     }
 
     /**
@@ -150,6 +162,7 @@ public class DescribeModificationPriceRequest extends Request {
         private Integer bandwidth; 
         private String instanceId; 
         private String instanceType; 
+        private String promotionId; 
         private String regionId; 
         private Long resellerOwnerUid; 
         private java.util.List<ResourceSpecs> resourceSpecs; 
@@ -166,6 +179,7 @@ public class DescribeModificationPriceRequest extends Request {
             this.bandwidth = request.bandwidth;
             this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
+            this.promotionId = request.promotionId;
             this.regionId = request.regionId;
             this.resellerOwnerUid = request.resellerOwnerUid;
             this.resourceSpecs = request.resourceSpecs;
@@ -236,6 +250,15 @@ public class DescribeModificationPriceRequest extends Request {
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
             this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
+         * PromotionId.
+         */
+        public Builder promotionId(String promotionId) {
+            this.putQueryParameter("PromotionId", promotionId);
+            this.promotionId = promotionId;
             return this;
         }
 

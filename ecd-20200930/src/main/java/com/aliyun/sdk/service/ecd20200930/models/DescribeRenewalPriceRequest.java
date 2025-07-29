@@ -34,6 +34,10 @@ public class DescribeRenewalPriceRequest extends Request {
     private String periodUnit;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionId")
+    private String promotionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -52,6 +56,7 @@ public class DescribeRenewalPriceRequest extends Request {
         this.instanceIds = builder.instanceIds;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
+        this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
         this.resellerOwnerUid = builder.resellerOwnerUid;
         this.resourceType = builder.resourceType;
@@ -99,6 +104,13 @@ public class DescribeRenewalPriceRequest extends Request {
     }
 
     /**
+     * @return promotionId
+     */
+    public String getPromotionId() {
+        return this.promotionId;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -124,6 +136,7 @@ public class DescribeRenewalPriceRequest extends Request {
         private java.util.List<String> instanceIds; 
         private Integer period; 
         private String periodUnit; 
+        private String promotionId; 
         private String regionId; 
         private Long resellerOwnerUid; 
         private String resourceType; 
@@ -138,6 +151,7 @@ public class DescribeRenewalPriceRequest extends Request {
             this.instanceIds = request.instanceIds;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
+            this.promotionId = request.promotionId;
             this.regionId = request.regionId;
             this.resellerOwnerUid = request.resellerOwnerUid;
             this.resourceType = request.resourceType;
@@ -200,6 +214,15 @@ public class DescribeRenewalPriceRequest extends Request {
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);
             this.periodUnit = periodUnit;
+            return this;
+        }
+
+        /**
+         * PromotionId.
+         */
+        public Builder promotionId(String promotionId) {
+            this.putQueryParameter("PromotionId", promotionId);
+            this.promotionId = promotionId;
             return this;
         }
 
