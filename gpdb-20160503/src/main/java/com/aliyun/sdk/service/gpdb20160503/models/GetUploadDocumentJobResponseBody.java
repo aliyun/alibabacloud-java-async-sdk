@@ -195,11 +195,15 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ChunkFileUrl")
         private String chunkFileUrl;
 
+        @com.aliyun.core.annotation.NameInMap("DocumentLoaderResultFileUrl")
+        private String documentLoaderResultFileUrl;
+
         @com.aliyun.core.annotation.NameInMap("PlainChunkFileUrl")
         private String plainChunkFileUrl;
 
         private ChunkResult(Builder builder) {
             this.chunkFileUrl = builder.chunkFileUrl;
+            this.documentLoaderResultFileUrl = builder.documentLoaderResultFileUrl;
             this.plainChunkFileUrl = builder.plainChunkFileUrl;
         }
 
@@ -219,6 +223,13 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return documentLoaderResultFileUrl
+         */
+        public String getDocumentLoaderResultFileUrl() {
+            return this.documentLoaderResultFileUrl;
+        }
+
+        /**
          * @return plainChunkFileUrl
          */
         public String getPlainChunkFileUrl() {
@@ -227,6 +238,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
 
         public static final class Builder {
             private String chunkFileUrl; 
+            private String documentLoaderResultFileUrl; 
             private String plainChunkFileUrl; 
 
             private Builder() {
@@ -234,6 +246,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
 
             private Builder(ChunkResult model) {
                 this.chunkFileUrl = model.chunkFileUrl;
+                this.documentLoaderResultFileUrl = model.documentLoaderResultFileUrl;
                 this.plainChunkFileUrl = model.plainChunkFileUrl;
             } 
 
@@ -245,6 +258,14 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
              */
             public Builder chunkFileUrl(String chunkFileUrl) {
                 this.chunkFileUrl = chunkFileUrl;
+                return this;
+            }
+
+            /**
+             * DocumentLoaderResultFileUrl.
+             */
+            public Builder documentLoaderResultFileUrl(String documentLoaderResultFileUrl) {
+                this.documentLoaderResultFileUrl = documentLoaderResultFileUrl;
                 return this;
             }
 

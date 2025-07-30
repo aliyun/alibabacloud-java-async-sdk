@@ -26,6 +26,9 @@ public class DescribeDocumentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("DocumentLoader")
     private String documentLoader;
 
+    @com.aliyun.core.annotation.NameInMap("DocumentLoaderResultFileUrl")
+    private String documentLoaderResultFileUrl;
+
     @com.aliyun.core.annotation.NameInMap("FileExt")
     private String fileExt;
 
@@ -69,6 +72,7 @@ public class DescribeDocumentResponseBody extends TeaModel {
         this.chunkFileUrl = builder.chunkFileUrl;
         this.docsCount = builder.docsCount;
         this.documentLoader = builder.documentLoader;
+        this.documentLoaderResultFileUrl = builder.documentLoaderResultFileUrl;
         this.fileExt = builder.fileExt;
         this.fileMd5 = builder.fileMd5;
         this.fileMtime = builder.fileMtime;
@@ -115,6 +119,13 @@ public class DescribeDocumentResponseBody extends TeaModel {
      */
     public String getDocumentLoader() {
         return this.documentLoader;
+    }
+
+    /**
+     * @return documentLoaderResultFileUrl
+     */
+    public String getDocumentLoaderResultFileUrl() {
+        return this.documentLoaderResultFileUrl;
     }
 
     /**
@@ -212,6 +223,7 @@ public class DescribeDocumentResponseBody extends TeaModel {
         private String chunkFileUrl; 
         private Integer docsCount; 
         private String documentLoader; 
+        private String documentLoaderResultFileUrl; 
         private String fileExt; 
         private String fileMd5; 
         private String fileMtime; 
@@ -233,6 +245,7 @@ public class DescribeDocumentResponseBody extends TeaModel {
             this.chunkFileUrl = model.chunkFileUrl;
             this.docsCount = model.docsCount;
             this.documentLoader = model.documentLoader;
+            this.documentLoaderResultFileUrl = model.documentLoaderResultFileUrl;
             this.fileExt = model.fileExt;
             this.fileMd5 = model.fileMd5;
             this.fileMtime = model.fileMtime;
@@ -278,6 +291,14 @@ public class DescribeDocumentResponseBody extends TeaModel {
          */
         public Builder documentLoader(String documentLoader) {
             this.documentLoader = documentLoader;
+            return this;
+        }
+
+        /**
+         * DocumentLoaderResultFileUrl.
+         */
+        public Builder documentLoaderResultFileUrl(String documentLoaderResultFileUrl) {
+            this.documentLoaderResultFileUrl = documentLoaderResultFileUrl;
             return this;
         }
 
