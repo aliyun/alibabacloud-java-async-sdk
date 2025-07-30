@@ -1178,8 +1178,12 @@ public class DescribePriceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("DedicatedHostId")
         private String dedicatedHostId;
 
+        @com.aliyun.core.annotation.NameInMap("DeploymentSetStrategy")
+        private String deploymentSetStrategy;
+
         private SchedulerOptions(Builder builder) {
             this.dedicatedHostId = builder.dedicatedHostId;
+            this.deploymentSetStrategy = builder.deploymentSetStrategy;
         }
 
         public static Builder builder() {
@@ -1197,14 +1201,23 @@ public class DescribePriceRequest extends Request {
             return this.dedicatedHostId;
         }
 
+        /**
+         * @return deploymentSetStrategy
+         */
+        public String getDeploymentSetStrategy() {
+            return this.deploymentSetStrategy;
+        }
+
         public static final class Builder {
             private String dedicatedHostId; 
+            private String deploymentSetStrategy; 
 
             private Builder() {
             } 
 
             private Builder(SchedulerOptions model) {
                 this.dedicatedHostId = model.dedicatedHostId;
+                this.deploymentSetStrategy = model.deploymentSetStrategy;
             } 
 
             /**
@@ -1216,6 +1229,14 @@ public class DescribePriceRequest extends Request {
              */
             public Builder dedicatedHostId(String dedicatedHostId) {
                 this.dedicatedHostId = dedicatedHostId;
+                return this;
+            }
+
+            /**
+             * DeploymentSetStrategy.
+             */
+            public Builder deploymentSetStrategy(String deploymentSetStrategy) {
+                this.deploymentSetStrategy = deploymentSetStrategy;
                 return this;
             }
 
@@ -1373,7 +1394,6 @@ public class DescribePriceRequest extends Request {
      */
     public static class RecurrenceRules extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndHour")
-        @com.aliyun.core.annotation.Validation(maximum = 24)
         private Integer endHour;
 
         @com.aliyun.core.annotation.NameInMap("RecurrenceType")
@@ -1383,7 +1403,6 @@ public class DescribePriceRequest extends Request {
         private String recurrenceValue;
 
         @com.aliyun.core.annotation.NameInMap("StartHour")
-        @com.aliyun.core.annotation.Validation(maximum = 24)
         private Integer startHour;
 
         private RecurrenceRules(Builder builder) {
