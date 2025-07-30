@@ -101,11 +101,15 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
+        @com.aliyun.core.annotation.NameInMap("PricingRules")
+        private java.util.Map<String, String> pricingRules;
+
         @com.aliyun.core.annotation.NameInMap("TradeAmount")
         private String tradeAmount;
 
         private Data(Builder builder) {
             this.currency = builder.currency;
+            this.pricingRules = builder.pricingRules;
             this.tradeAmount = builder.tradeAmount;
         }
 
@@ -125,6 +129,13 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         }
 
         /**
+         * @return pricingRules
+         */
+        public java.util.Map<String, String> getPricingRules() {
+            return this.pricingRules;
+        }
+
+        /**
          * @return tradeAmount
          */
         public String getTradeAmount() {
@@ -133,6 +144,7 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String currency; 
+            private java.util.Map<String, String> pricingRules; 
             private String tradeAmount; 
 
             private Builder() {
@@ -140,6 +152,7 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.currency = model.currency;
+                this.pricingRules = model.pricingRules;
                 this.tradeAmount = model.tradeAmount;
             } 
 
@@ -151,6 +164,14 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
              */
             public Builder currency(String currency) {
                 this.currency = currency;
+                return this;
+            }
+
+            /**
+             * PricingRules.
+             */
+            public Builder pricingRules(java.util.Map<String, String> pricingRules) {
+                this.pricingRules = pricingRules;
                 return this;
             }
 

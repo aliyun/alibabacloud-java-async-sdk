@@ -28,6 +28,14 @@ public class CreateDBClusterRequest extends Request {
     private String chargeType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterNodeCount")
+    private Integer clusterNodeCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterNodeType")
+    private String clusterNodeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterClass")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterClass;
@@ -65,6 +73,14 @@ public class CreateDBClusterRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleMax")
+    private Double scaleMax;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleMin")
+    private Double scaleMin;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UsedTime")
     private String usedTime;
 
@@ -87,6 +103,8 @@ public class CreateDBClusterRequest extends Request {
         super(builder);
         this.cacheSize = builder.cacheSize;
         this.chargeType = builder.chargeType;
+        this.clusterNodeCount = builder.clusterNodeCount;
+        this.clusterNodeType = builder.clusterNodeType;
         this.DBClusterClass = builder.DBClusterClass;
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBInstanceId = builder.DBInstanceId;
@@ -95,6 +113,8 @@ public class CreateDBClusterRequest extends Request {
         this.period = builder.period;
         this.regionId = builder.regionId;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.scaleMax = builder.scaleMax;
+        this.scaleMin = builder.scaleMin;
         this.usedTime = builder.usedTime;
         this.vSwitchId = builder.vSwitchId;
         this.vpcId = builder.vpcId;
@@ -126,6 +146,20 @@ public class CreateDBClusterRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return clusterNodeCount
+     */
+    public Integer getClusterNodeCount() {
+        return this.clusterNodeCount;
+    }
+
+    /**
+     * @return clusterNodeType
+     */
+    public String getClusterNodeType() {
+        return this.clusterNodeType;
     }
 
     /**
@@ -185,6 +219,20 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return scaleMax
+     */
+    public Double getScaleMax() {
+        return this.scaleMax;
+    }
+
+    /**
+     * @return scaleMin
+     */
+    public Double getScaleMin() {
+        return this.scaleMin;
+    }
+
+    /**
      * @return usedTime
      */
     public String getUsedTime() {
@@ -215,6 +263,8 @@ public class CreateDBClusterRequest extends Request {
     public static final class Builder extends Request.Builder<CreateDBClusterRequest, Builder> {
         private String cacheSize; 
         private String chargeType; 
+        private Integer clusterNodeCount; 
+        private String clusterNodeType; 
         private String DBClusterClass; 
         private String DBClusterDescription; 
         private String DBInstanceId; 
@@ -223,6 +273,8 @@ public class CreateDBClusterRequest extends Request {
         private String period; 
         private String regionId; 
         private Long resourceOwnerId; 
+        private Double scaleMax; 
+        private Double scaleMin; 
         private String usedTime; 
         private String vSwitchId; 
         private String vpcId; 
@@ -236,6 +288,8 @@ public class CreateDBClusterRequest extends Request {
             super(request);
             this.cacheSize = request.cacheSize;
             this.chargeType = request.chargeType;
+            this.clusterNodeCount = request.clusterNodeCount;
+            this.clusterNodeType = request.clusterNodeType;
             this.DBClusterClass = request.DBClusterClass;
             this.DBClusterDescription = request.DBClusterDescription;
             this.DBInstanceId = request.DBInstanceId;
@@ -244,6 +298,8 @@ public class CreateDBClusterRequest extends Request {
             this.period = request.period;
             this.regionId = request.regionId;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.scaleMax = request.scaleMax;
+            this.scaleMin = request.scaleMin;
             this.usedTime = request.usedTime;
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
@@ -271,6 +327,24 @@ public class CreateDBClusterRequest extends Request {
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * ClusterNodeCount.
+         */
+        public Builder clusterNodeCount(Integer clusterNodeCount) {
+            this.putQueryParameter("ClusterNodeCount", clusterNodeCount);
+            this.clusterNodeCount = clusterNodeCount;
+            return this;
+        }
+
+        /**
+         * ClusterNodeType.
+         */
+        public Builder clusterNodeType(String clusterNodeType) {
+            this.putQueryParameter("ClusterNodeType", clusterNodeType);
+            this.clusterNodeType = clusterNodeType;
             return this;
         }
 
@@ -362,6 +436,24 @@ public class CreateDBClusterRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ScaleMax.
+         */
+        public Builder scaleMax(Double scaleMax) {
+            this.putQueryParameter("ScaleMax", scaleMax);
+            this.scaleMax = scaleMax;
+            return this;
+        }
+
+        /**
+         * ScaleMin.
+         */
+        public Builder scaleMin(Double scaleMin) {
+            this.putQueryParameter("ScaleMin", scaleMin);
+            this.scaleMin = scaleMin;
             return this;
         }
 

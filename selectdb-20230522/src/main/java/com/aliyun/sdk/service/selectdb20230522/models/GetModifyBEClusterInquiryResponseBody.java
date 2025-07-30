@@ -101,6 +101,9 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
+        @com.aliyun.core.annotation.NameInMap("PricingRules")
+        private java.util.Map<String, String> pricingRules;
+
         @com.aliyun.core.annotation.NameInMap("RefundAmount")
         private String refundAmount;
 
@@ -109,6 +112,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
 
         private Data(Builder builder) {
             this.currency = builder.currency;
+            this.pricingRules = builder.pricingRules;
             this.refundAmount = builder.refundAmount;
             this.tradeAmount = builder.tradeAmount;
         }
@@ -129,6 +133,13 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         }
 
         /**
+         * @return pricingRules
+         */
+        public java.util.Map<String, String> getPricingRules() {
+            return this.pricingRules;
+        }
+
+        /**
          * @return refundAmount
          */
         public String getRefundAmount() {
@@ -144,6 +155,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
 
         public static final class Builder {
             private String currency; 
+            private java.util.Map<String, String> pricingRules; 
             private String refundAmount; 
             private String tradeAmount; 
 
@@ -152,6 +164,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
 
             private Builder(Data model) {
                 this.currency = model.currency;
+                this.pricingRules = model.pricingRules;
                 this.refundAmount = model.refundAmount;
                 this.tradeAmount = model.tradeAmount;
             } 
@@ -168,7 +181,18 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
             }
 
             /**
-             * RefundAmount.
+             * PricingRules.
+             */
+            public Builder pricingRules(java.util.Map<String, String> pricingRules) {
+                this.pricingRules = pricingRules;
+                return this;
+            }
+
+            /**
+             * <p>The estimated refund amount when the subscription cluster of a subscription instance is changed to a pay-as-you-go cluster.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>-100</p>
              */
             public Builder refundAmount(String refundAmount) {
                 this.refundAmount = refundAmount;

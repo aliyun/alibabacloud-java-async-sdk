@@ -83,6 +83,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.NameInMap("Serverless")
+    private Boolean serverless;
+
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -127,6 +130,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         this.requestId = builder.requestId;
         this.resourceCpu = builder.resourceCpu;
         this.resourceGroupId = builder.resourceGroupId;
+        this.serverless = builder.serverless;
         this.status = builder.status;
         this.storageSize = builder.storageSize;
         this.subDomain = builder.subDomain;
@@ -303,6 +307,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return serverless
+     */
+    public Boolean getServerless() {
+        return this.serverless;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -374,6 +385,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         private String requestId; 
         private Long resourceCpu; 
         private String resourceGroupId; 
+        private Boolean serverless; 
         private String status; 
         private Long storageSize; 
         private String subDomain; 
@@ -408,6 +420,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.requestId = model.requestId;
             this.resourceCpu = model.resourceCpu;
             this.resourceGroupId = model.resourceGroupId;
+            this.serverless = model.serverless;
             this.status = model.status;
             this.storageSize = model.storageSize;
             this.subDomain = model.subDomain;
@@ -652,6 +665,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * Serverless.
+         */
+        public Builder serverless(Boolean serverless) {
+            this.serverless = serverless;
+            return this;
+        }
+
+        /**
          * <p>The state of the instance. Valid values:</p>
          * <ul>
          * <li><strong>CREATING</strong>: The instance is being created.</li>
@@ -755,6 +776,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ClusterBinding")
         private String clusterBinding;
 
+        @com.aliyun.core.annotation.NameInMap("ClusterNodeCount")
+        private Integer clusterNodeCount;
+
+        @com.aliyun.core.annotation.NameInMap("ClusterNodeType")
+        private String clusterNodeType;
+
         @com.aliyun.core.annotation.NameInMap("CpuCores")
         private Long cpuCores;
 
@@ -782,6 +809,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PerformanceLevel")
         private String performanceLevel;
 
+        @com.aliyun.core.annotation.NameInMap("ScaleMax")
+        private Double scaleMax;
+
+        @com.aliyun.core.annotation.NameInMap("ScaleMin")
+        private Double scaleMin;
+
         @com.aliyun.core.annotation.NameInMap("ScalingRulesEnable")
         private Boolean scalingRulesEnable;
 
@@ -805,6 +838,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.cacheStorageType = builder.cacheStorageType;
             this.chargeType = builder.chargeType;
             this.clusterBinding = builder.clusterBinding;
+            this.clusterNodeCount = builder.clusterNodeCount;
+            this.clusterNodeType = builder.clusterNodeType;
             this.cpuCores = builder.cpuCores;
             this.createdTime = builder.createdTime;
             this.dbClusterClass = builder.dbClusterClass;
@@ -814,6 +849,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.memory = builder.memory;
             this.modifiedTime = builder.modifiedTime;
             this.performanceLevel = builder.performanceLevel;
+            this.scaleMax = builder.scaleMax;
+            this.scaleMin = builder.scaleMin;
             this.scalingRulesEnable = builder.scalingRulesEnable;
             this.startTime = builder.startTime;
             this.status = builder.status;
@@ -856,6 +893,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getClusterBinding() {
             return this.clusterBinding;
+        }
+
+        /**
+         * @return clusterNodeCount
+         */
+        public Integer getClusterNodeCount() {
+            return this.clusterNodeCount;
+        }
+
+        /**
+         * @return clusterNodeType
+         */
+        public String getClusterNodeType() {
+            return this.clusterNodeType;
         }
 
         /**
@@ -922,6 +973,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return scaleMax
+         */
+        public Double getScaleMax() {
+            return this.scaleMax;
+        }
+
+        /**
+         * @return scaleMin
+         */
+        public Double getScaleMin() {
+            return this.scaleMin;
+        }
+
+        /**
          * @return scalingRulesEnable
          */
         public Boolean getScalingRulesEnable() {
@@ -968,6 +1033,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String cacheStorageType; 
             private String chargeType; 
             private String clusterBinding; 
+            private Integer clusterNodeCount; 
+            private String clusterNodeType; 
             private Long cpuCores; 
             private String createdTime; 
             private String dbClusterClass; 
@@ -977,6 +1044,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Long memory; 
             private String modifiedTime; 
             private String performanceLevel; 
+            private Double scaleMax; 
+            private Double scaleMin; 
             private Boolean scalingRulesEnable; 
             private String startTime; 
             private String status; 
@@ -992,6 +1061,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.cacheStorageType = model.cacheStorageType;
                 this.chargeType = model.chargeType;
                 this.clusterBinding = model.clusterBinding;
+                this.clusterNodeCount = model.clusterNodeCount;
+                this.clusterNodeType = model.clusterNodeType;
                 this.cpuCores = model.cpuCores;
                 this.createdTime = model.createdTime;
                 this.dbClusterClass = model.dbClusterClass;
@@ -1001,6 +1072,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.memory = model.memory;
                 this.modifiedTime = model.modifiedTime;
                 this.performanceLevel = model.performanceLevel;
+                this.scaleMax = model.scaleMax;
+                this.scaleMin = model.scaleMin;
                 this.scalingRulesEnable = model.scalingRulesEnable;
                 this.startTime = model.startTime;
                 this.status = model.status;
@@ -1051,6 +1124,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder clusterBinding(String clusterBinding) {
                 this.clusterBinding = clusterBinding;
+                return this;
+            }
+
+            /**
+             * ClusterNodeCount.
+             */
+            public Builder clusterNodeCount(Integer clusterNodeCount) {
+                this.clusterNodeCount = clusterNodeCount;
+                return this;
+            }
+
+            /**
+             * ClusterNodeType.
+             */
+            public Builder clusterNodeType(String clusterNodeType) {
+                this.clusterNodeType = clusterNodeType;
                 return this;
             }
 
@@ -1159,6 +1248,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder performanceLevel(String performanceLevel) {
                 this.performanceLevel = performanceLevel;
+                return this;
+            }
+
+            /**
+             * ScaleMax.
+             */
+            public Builder scaleMax(Double scaleMax) {
+                this.scaleMax = scaleMax;
+                return this;
+            }
+
+            /**
+             * ScaleMin.
+             */
+            public Builder scaleMin(Double scaleMin) {
+                this.scaleMin = scaleMin;
                 return this;
             }
 

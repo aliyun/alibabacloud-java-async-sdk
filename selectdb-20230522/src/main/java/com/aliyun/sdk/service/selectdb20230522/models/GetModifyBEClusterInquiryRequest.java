@@ -320,7 +320,10 @@ public class GetModifyBEClusterInquiryRequest extends Request {
         }
 
         /**
-         * ModifyClusterChargeType.
+         * <p>Specifies whether to change the billing method of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder modifyClusterChargeType(Boolean modifyClusterChargeType) {
             this.putQueryParameter("ModifyClusterChargeType", modifyClusterChargeType);

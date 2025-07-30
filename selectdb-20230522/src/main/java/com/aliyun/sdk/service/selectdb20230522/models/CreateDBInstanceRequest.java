@@ -36,6 +36,14 @@ public class CreateDBInstanceRequest extends Request {
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterNodeCount")
+    private Integer clusterNodeCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterNodeType")
+    private String clusterNodeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConnectionString")
     private String connectionString;
 
@@ -83,6 +91,14 @@ public class CreateDBInstanceRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleMax")
+    private Double scaleMax;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleMin")
+    private Double scaleMin;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityIPList")
     private String securityIPList;
 
@@ -115,6 +131,8 @@ public class CreateDBInstanceRequest extends Request {
         this.cacheSize = builder.cacheSize;
         this.chargeType = builder.chargeType;
         this.clientToken = builder.clientToken;
+        this.clusterNodeCount = builder.clusterNodeCount;
+        this.clusterNodeType = builder.clusterNodeType;
         this.connectionString = builder.connectionString;
         this.DBInstanceClass = builder.DBInstanceClass;
         this.DBInstanceDescription = builder.DBInstanceDescription;
@@ -126,6 +144,8 @@ public class CreateDBInstanceRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.scaleMax = builder.scaleMax;
+        this.scaleMin = builder.scaleMin;
         this.securityIPList = builder.securityIPList;
         this.tag = builder.tag;
         this.usedTime = builder.usedTime;
@@ -173,6 +193,20 @@ public class CreateDBInstanceRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return clusterNodeCount
+     */
+    public Integer getClusterNodeCount() {
+        return this.clusterNodeCount;
+    }
+
+    /**
+     * @return clusterNodeType
+     */
+    public String getClusterNodeType() {
+        return this.clusterNodeType;
     }
 
     /**
@@ -253,6 +287,20 @@ public class CreateDBInstanceRequest extends Request {
     }
 
     /**
+     * @return scaleMax
+     */
+    public Double getScaleMax() {
+        return this.scaleMax;
+    }
+
+    /**
+     * @return scaleMin
+     */
+    public Double getScaleMin() {
+        return this.scaleMin;
+    }
+
+    /**
      * @return securityIPList
      */
     public String getSecurityIPList() {
@@ -299,6 +347,8 @@ public class CreateDBInstanceRequest extends Request {
         private Integer cacheSize; 
         private String chargeType; 
         private String clientToken; 
+        private Integer clusterNodeCount; 
+        private String clusterNodeType; 
         private String connectionString; 
         private String DBInstanceClass; 
         private String DBInstanceDescription; 
@@ -310,6 +360,8 @@ public class CreateDBInstanceRequest extends Request {
         private String regionId; 
         private String resourceGroupId; 
         private Long resourceOwnerId; 
+        private Double scaleMax; 
+        private Double scaleMin; 
         private String securityIPList; 
         private java.util.List<Tag> tag; 
         private Integer usedTime; 
@@ -327,6 +379,8 @@ public class CreateDBInstanceRequest extends Request {
             this.cacheSize = request.cacheSize;
             this.chargeType = request.chargeType;
             this.clientToken = request.clientToken;
+            this.clusterNodeCount = request.clusterNodeCount;
+            this.clusterNodeType = request.clusterNodeType;
             this.connectionString = request.connectionString;
             this.DBInstanceClass = request.DBInstanceClass;
             this.DBInstanceDescription = request.DBInstanceDescription;
@@ -338,6 +392,8 @@ public class CreateDBInstanceRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.scaleMax = request.scaleMax;
+            this.scaleMin = request.scaleMin;
             this.securityIPList = request.securityIPList;
             this.tag = request.tag;
             this.usedTime = request.usedTime;
@@ -347,7 +403,14 @@ public class CreateDBInstanceRequest extends Request {
         } 
 
         /**
-         * AddVPCIPs.
+         * <p>Specifies whether to add the virtual private cloud (VPC) CIDR block to the IP address whitelist. Valid values:</p>
+         * <ul>
+         * <li>1: yes.</li>
+         * <li>0: no.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         public Builder addVPCIPs(String addVPCIPs) {
             this.putQueryParameter("AddVPCIPs", addVPCIPs);
@@ -398,6 +461,24 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
+         * ClusterNodeCount.
+         */
+        public Builder clusterNodeCount(Integer clusterNodeCount) {
+            this.putQueryParameter("ClusterNodeCount", clusterNodeCount);
+            this.clusterNodeCount = clusterNodeCount;
+            return this;
+        }
+
+        /**
+         * ClusterNodeType.
+         */
+        public Builder clusterNodeType(String clusterNodeType) {
+            this.putQueryParameter("ClusterNodeType", clusterNodeType);
+            this.clusterNodeType = clusterNodeType;
+            return this;
+        }
+
+        /**
          * <p>The instance endpoint.</p>
          * 
          * <strong>example:</strong>
@@ -436,11 +517,6 @@ public class CreateDBInstanceRequest extends Request {
 
         /**
          * <p>The deployment method of the instance.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>multi_az</li>
-         * <li>single_az</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>single_az</p>
@@ -541,6 +617,24 @@ public class CreateDBInstanceRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ScaleMax.
+         */
+        public Builder scaleMax(Double scaleMax) {
+            this.putQueryParameter("ScaleMax", scaleMax);
+            this.scaleMax = scaleMax;
+            return this;
+        }
+
+        /**
+         * ScaleMin.
+         */
+        public Builder scaleMin(Double scaleMin) {
+            this.putQueryParameter("ScaleMin", scaleMin);
+            this.scaleMin = scaleMin;
             return this;
         }
 

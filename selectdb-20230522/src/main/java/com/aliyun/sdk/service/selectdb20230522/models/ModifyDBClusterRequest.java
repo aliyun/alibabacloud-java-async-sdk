@@ -22,6 +22,14 @@ public class ModifyDBClusterRequest extends Request {
     private String cacheSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterNodeCount")
+    private Integer clusterNodeCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterNodeType")
+    private String clusterNodeType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterClass")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterClass;
@@ -49,15 +57,27 @@ public class ModifyDBClusterRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleMax")
+    private Double scaleMax;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScaleMin")
+    private Double scaleMin;
+
     private ModifyDBClusterRequest(Builder builder) {
         super(builder);
         this.cacheSize = builder.cacheSize;
+        this.clusterNodeCount = builder.clusterNodeCount;
+        this.clusterNodeType = builder.clusterNodeType;
         this.DBClusterClass = builder.DBClusterClass;
         this.DBClusterId = builder.DBClusterId;
         this.DBInstanceId = builder.DBInstanceId;
         this.engine = builder.engine;
         this.regionId = builder.regionId;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.scaleMax = builder.scaleMax;
+        this.scaleMin = builder.scaleMin;
     }
 
     public static Builder builder() {
@@ -78,6 +98,20 @@ public class ModifyDBClusterRequest extends Request {
      */
     public String getCacheSize() {
         return this.cacheSize;
+    }
+
+    /**
+     * @return clusterNodeCount
+     */
+    public Integer getClusterNodeCount() {
+        return this.clusterNodeCount;
+    }
+
+    /**
+     * @return clusterNodeType
+     */
+    public String getClusterNodeType() {
+        return this.clusterNodeType;
     }
 
     /**
@@ -122,14 +156,32 @@ public class ModifyDBClusterRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return scaleMax
+     */
+    public Double getScaleMax() {
+        return this.scaleMax;
+    }
+
+    /**
+     * @return scaleMin
+     */
+    public Double getScaleMin() {
+        return this.scaleMin;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBClusterRequest, Builder> {
         private String cacheSize; 
+        private Integer clusterNodeCount; 
+        private String clusterNodeType; 
         private String DBClusterClass; 
         private String DBClusterId; 
         private String DBInstanceId; 
         private String engine; 
         private String regionId; 
         private Long resourceOwnerId; 
+        private Double scaleMax; 
+        private Double scaleMin; 
 
         private Builder() {
             super();
@@ -138,12 +190,16 @@ public class ModifyDBClusterRequest extends Request {
         private Builder(ModifyDBClusterRequest request) {
             super(request);
             this.cacheSize = request.cacheSize;
+            this.clusterNodeCount = request.clusterNodeCount;
+            this.clusterNodeType = request.clusterNodeType;
             this.DBClusterClass = request.DBClusterClass;
             this.DBClusterId = request.DBClusterId;
             this.DBInstanceId = request.DBInstanceId;
             this.engine = request.engine;
             this.regionId = request.regionId;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.scaleMax = request.scaleMax;
+            this.scaleMin = request.scaleMin;
         } 
 
         /**
@@ -155,6 +211,24 @@ public class ModifyDBClusterRequest extends Request {
         public Builder cacheSize(String cacheSize) {
             this.putQueryParameter("CacheSize", cacheSize);
             this.cacheSize = cacheSize;
+            return this;
+        }
+
+        /**
+         * ClusterNodeCount.
+         */
+        public Builder clusterNodeCount(Integer clusterNodeCount) {
+            this.putQueryParameter("ClusterNodeCount", clusterNodeCount);
+            this.clusterNodeCount = clusterNodeCount;
+            return this;
+        }
+
+        /**
+         * ClusterNodeType.
+         */
+        public Builder clusterNodeType(String clusterNodeType) {
+            this.putQueryParameter("ClusterNodeType", clusterNodeType);
+            this.clusterNodeType = clusterNodeType;
             return this;
         }
 
@@ -224,6 +298,24 @@ public class ModifyDBClusterRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ScaleMax.
+         */
+        public Builder scaleMax(Double scaleMax) {
+            this.putQueryParameter("ScaleMax", scaleMax);
+            this.scaleMax = scaleMax;
+            return this;
+        }
+
+        /**
+         * ScaleMin.
+         */
+        public Builder scaleMin(Double scaleMin) {
+            this.putQueryParameter("ScaleMin", scaleMin);
+            this.scaleMin = scaleMin;
             return this;
         }
 

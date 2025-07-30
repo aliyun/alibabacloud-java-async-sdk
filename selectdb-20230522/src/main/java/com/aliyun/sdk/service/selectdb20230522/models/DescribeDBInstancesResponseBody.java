@@ -415,6 +415,9 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScaleReplica")
         private Long scaleReplica;
 
+        @com.aliyun.core.annotation.NameInMap("Serverless")
+        private Boolean serverless;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -479,6 +482,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             this.scaleMax = builder.scaleMax;
             this.scaleMin = builder.scaleMin;
             this.scaleReplica = builder.scaleReplica;
+            this.serverless = builder.serverless;
             this.status = builder.status;
             this.storageSize = builder.storageSize;
             this.storageType = builder.storageType;
@@ -711,6 +715,13 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serverless
+         */
+        public Boolean getServerless() {
+            return this.serverless;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -818,6 +829,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private Long scaleMax; 
             private Long scaleMin; 
             private Long scaleReplica; 
+            private Boolean serverless; 
             private String status; 
             private Long storageSize; 
             private String storageType; 
@@ -864,6 +876,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
                 this.scaleMax = model.scaleMax;
                 this.scaleMin = model.scaleMin;
                 this.scaleReplica = model.scaleReplica;
+                this.serverless = model.serverless;
                 this.status = model.status;
                 this.storageSize = model.storageSize;
                 this.storageType = model.storageType;
@@ -1182,6 +1195,14 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              */
             public Builder scaleReplica(Long scaleReplica) {
                 this.scaleReplica = scaleReplica;
+                return this;
+            }
+
+            /**
+             * Serverless.
+             */
+            public Builder serverless(Boolean serverless) {
+                this.serverless = serverless;
                 return this;
             }
 
