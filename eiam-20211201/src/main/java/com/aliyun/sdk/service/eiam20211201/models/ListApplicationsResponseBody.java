@@ -40,6 +40,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applications
      */
@@ -65,6 +69,15 @@ public class ListApplicationsResponseBody extends TeaModel {
         private java.util.List<Applications> applications; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationsResponseBody model) {
+            this.applications = model.applications;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The details of the applications.</p>
@@ -139,17 +152,8 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("LogoUrl")
         private String logoUrl;
 
-        @com.aliyun.core.annotation.NameInMap("M2MClientStatus")
-        private String m2MClientStatus;
-
         @com.aliyun.core.annotation.NameInMap("ManagedServiceCode")
         private String managedServiceCode;
-
-        @com.aliyun.core.annotation.NameInMap("ResourceServerIdentifier")
-        private String resourceServerIdentifier;
-
-        @com.aliyun.core.annotation.NameInMap("ResourceServerStatus")
-        private String resourceServerStatus;
 
         @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
@@ -174,10 +178,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.features = builder.features;
             this.instanceId = builder.instanceId;
             this.logoUrl = builder.logoUrl;
-            this.m2MClientStatus = builder.m2MClientStatus;
             this.managedServiceCode = builder.managedServiceCode;
-            this.resourceServerIdentifier = builder.resourceServerIdentifier;
-            this.resourceServerStatus = builder.resourceServerStatus;
             this.serviceManaged = builder.serviceManaged;
             this.ssoType = builder.ssoType;
             this.status = builder.status;
@@ -263,31 +264,10 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
-         * @return m2MClientStatus
-         */
-        public String getM2MClientStatus() {
-            return this.m2MClientStatus;
-        }
-
-        /**
          * @return managedServiceCode
          */
         public String getManagedServiceCode() {
             return this.managedServiceCode;
-        }
-
-        /**
-         * @return resourceServerIdentifier
-         */
-        public String getResourceServerIdentifier() {
-            return this.resourceServerIdentifier;
-        }
-
-        /**
-         * @return resourceServerStatus
-         */
-        public String getResourceServerStatus() {
-            return this.resourceServerStatus;
         }
 
         /**
@@ -329,14 +309,32 @@ public class ListApplicationsResponseBody extends TeaModel {
             private String features; 
             private String instanceId; 
             private String logoUrl; 
-            private String m2MClientStatus; 
             private String managedServiceCode; 
-            private String resourceServerIdentifier; 
-            private String resourceServerStatus; 
             private Boolean serviceManaged; 
             private String ssoType; 
             private String status; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.applicationId = model.applicationId;
+                this.applicationName = model.applicationName;
+                this.applicationSourceType = model.applicationSourceType;
+                this.applicationTemplateId = model.applicationTemplateId;
+                this.clientId = model.clientId;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.features = model.features;
+                this.instanceId = model.instanceId;
+                this.logoUrl = model.logoUrl;
+                this.managedServiceCode = model.managedServiceCode;
+                this.serviceManaged = model.serviceManaged;
+                this.ssoType = model.ssoType;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The ID of the application.</p>
@@ -376,7 +374,10 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>应用模板ID</p>
+             * <p>The application template ID.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>apt_xxx_xxx</p>
              */
             public Builder applicationTemplateId(String applicationTemplateId) {
                 this.applicationTemplateId = applicationTemplateId;
@@ -420,12 +421,16 @@ public class ListApplicationsResponseBody extends TeaModel {
              * <p>The features that are supported by the application. The value is a JSON array. Valid values:</p>
              * <ul>
              * <li>sso: The application supports SSO.</li>
+             * <li>slo: The application supports SLO.</li>
              * <li>provision: The application supports account synchronization.</li>
              * <li>api_invoke: The application supports custom APIs.</li>
+             * <li>m2m_client: The application supports M2M Client.</li>
+             * <li>resource_server: The application supports Resource Server.</li>
+             * <li>other: undertake.</li>
              * </ul>
              * 
              * <strong>example:</strong>
-             * <p>[&quot;sso&quot;, &quot;provision&quot;]</p>
+             * <p>[&quot;sso&quot;,&quot;slo&quot;, &quot;provision&quot;,&quot;api_invoke&quot;, &quot;m2m_client&quot;,&quot;resource_server&quot;,&quot;other&quot;]</p>
              */
             public Builder features(String features) {
                 this.features = features;
@@ -455,14 +460,6 @@ public class ListApplicationsResponseBody extends TeaModel {
             }
 
             /**
-             * M2MClientStatus.
-             */
-            public Builder m2MClientStatus(String m2MClientStatus) {
-                this.m2MClientStatus = m2MClientStatus;
-                return this;
-            }
-
-            /**
              * <p>The service code of the cloud service that manages the application template.</p>
              * 
              * <strong>example:</strong>
@@ -470,22 +467,6 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder managedServiceCode(String managedServiceCode) {
                 this.managedServiceCode = managedServiceCode;
-                return this;
-            }
-
-            /**
-             * ResourceServerIdentifier.
-             */
-            public Builder resourceServerIdentifier(String resourceServerIdentifier) {
-                this.resourceServerIdentifier = resourceServerIdentifier;
-                return this;
-            }
-
-            /**
-             * ResourceServerStatus.
-             */
-            public Builder resourceServerStatus(String resourceServerStatus) {
-                this.resourceServerStatus = resourceServerStatus;
                 return this;
             }
 
@@ -505,6 +486,7 @@ public class ListApplicationsResponseBody extends TeaModel {
              * <ul>
              * <li>saml2: the Security Assertion Markup Language (SAML) 2.0 protocol.</li>
              * <li>oidc: the OpenID Connect (OIDC) protocol.</li>
+             * <li>oauth2/m2m: the OAuth2.0  protocol M2M.</li>
              * </ul>
              * 
              * <strong>example:</strong>
@@ -518,8 +500,9 @@ public class ListApplicationsResponseBody extends TeaModel {
             /**
              * <p>The status of the application. Valid values:</p>
              * <ul>
-             * <li>Enabled: The application is enabled.</li>
-             * <li>Disabled: The application is disabled.</li>
+             * <li>enabled: The application is enabled.</li>
+             * <li>disabled: The application is disabled.</li>
+             * <li>deleted: The application is deleted.</li>
              * </ul>
              * 
              * <strong>example:</strong>

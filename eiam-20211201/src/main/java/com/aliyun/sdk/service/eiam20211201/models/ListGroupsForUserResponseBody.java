@@ -40,6 +40,10 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groups
      */
@@ -65,6 +69,15 @@ public class ListGroupsForUserResponseBody extends TeaModel {
         private java.util.List<Groups> groups; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGroupsForUserResponseBody model) {
+            this.groups = model.groups;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried account groups.</p>
@@ -157,6 +170,15 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             private String groupId; 
             private String groupMemberRelationSourceId; 
             private String groupMemberRelationSourceType; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.groupId = model.groupId;
+                this.groupMemberRelationSourceId = model.groupMemberRelationSourceId;
+                this.groupMemberRelationSourceType = model.groupMemberRelationSourceType;
+            } 
 
             /**
              * <p>The group ID.</p>

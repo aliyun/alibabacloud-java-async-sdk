@@ -44,6 +44,10 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return nextToken
      */
@@ -77,6 +81,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
         private String requestId; 
         private java.util.List<SynchronizationJobs> synchronizationJobs; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListSynchronizationJobsResponseBody model) {
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.synchronizationJobs = model.synchronizationJobs;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>本次调用返回的查询凭证（Token）值，用于下一次翻页查询。</p>
@@ -186,6 +200,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long skipped; 
             private Long success; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Binded model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
 
             /**
              * <p>失败数目</p>
@@ -306,6 +330,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Created model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
              * <p>失败数目</p>
              * 
@@ -424,6 +458,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long skipped; 
             private Long success; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Deleted model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
 
             /**
              * <p>失败数目</p>
@@ -544,6 +588,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Pushed model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
              * <p>失败数目</p>
              * 
@@ -663,6 +717,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Same model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
              * <p>失败数目</p>
              * 
@@ -781,6 +845,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long skipped; 
             private Long success; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Updated model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
 
             /**
              * <p>失败数目</p>
@@ -925,6 +999,18 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Same same; 
             private Updated updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupMemberStatistics model) {
+                this.binded = model.binded;
+                this.created = model.created;
+                this.deleted = model.deleted;
+                this.pushed = model.pushed;
+                this.same = model.same;
+                this.updated = model.updated;
+            } 
+
             /**
              * <p>绑定结果统计</p>
              */
@@ -1048,6 +1134,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupStatisticsBinded model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
              * <p>失败数目</p>
              * 
@@ -1166,6 +1262,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long skipped; 
             private Long success; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupStatisticsCreated model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
 
             /**
              * <p>失败数目</p>
@@ -1286,6 +1392,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupStatisticsDeleted model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
              * <p>失败数目</p>
              * 
@@ -1404,6 +1520,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long skipped; 
             private Long success; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupStatisticsPushed model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
 
             /**
              * <p>失败数目</p>
@@ -1524,6 +1650,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupStatisticsSame model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
              * <p>失败数目</p>
              * 
@@ -1642,6 +1778,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long skipped; 
             private Long success; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(GroupStatisticsUpdated model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
 
             /**
              * <p>失败数目</p>
@@ -1786,6 +1932,18 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private GroupStatisticsSame same; 
             private GroupStatisticsUpdated updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupStatistics model) {
+                this.binded = model.binded;
+                this.created = model.created;
+                this.deleted = model.deleted;
+                this.pushed = model.pushed;
+                this.same = model.same;
+                this.updated = model.updated;
+            } 
+
             /**
              * <p>绑定结果统计</p>
              */
@@ -1909,6 +2067,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnitStatisticsBinded model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
              * <p>失败数目</p>
              * 
@@ -2027,6 +2195,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long skipped; 
             private Long success; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnitStatisticsCreated model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
 
             /**
              * <p>失败数目</p>
@@ -2147,6 +2325,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnitStatisticsDeleted model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
              * <p>失败数目</p>
              * 
@@ -2265,6 +2453,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long skipped; 
             private Long success; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnitStatisticsPushed model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
 
             /**
              * <p>失败数目</p>
@@ -2385,6 +2583,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnitStatisticsSame model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
              * <p>失败数目</p>
              * 
@@ -2503,6 +2711,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long skipped; 
             private Long success; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnitStatisticsUpdated model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
 
             /**
              * <p>失败数目</p>
@@ -2647,6 +2865,18 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private OrganizationalUnitStatisticsSame same; 
             private OrganizationalUnitStatisticsUpdated updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnitStatistics model) {
+                this.binded = model.binded;
+                this.created = model.created;
+                this.deleted = model.deleted;
+                this.pushed = model.pushed;
+                this.same = model.same;
+                this.updated = model.updated;
+            } 
+
             /**
              * <p>绑定结果统计</p>
              */
@@ -2770,6 +3000,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStatisticsBinded model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
              * <p>失败数目</p>
              * 
@@ -2888,6 +3128,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long skipped; 
             private Long success; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserStatisticsCreated model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
 
             /**
              * <p>失败数目</p>
@@ -3008,6 +3258,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStatisticsDeleted model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
              * <p>失败数目</p>
              * 
@@ -3126,6 +3386,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long skipped; 
             private Long success; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(Exported model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
 
             /**
              * <p>失败数目</p>
@@ -3246,6 +3516,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStatisticsPushed model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
              * <p>失败数目</p>
              * 
@@ -3365,6 +3645,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStatisticsSame model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
              * <p>失败数目</p>
              * 
@@ -3483,6 +3773,16 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private Long skipped; 
             private Long success; 
             private Long total; 
+
+            private Builder() {
+            } 
+
+            private Builder(UserStatisticsUpdated model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
 
             /**
              * <p>失败数目</p>
@@ -3639,6 +3939,19 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private UserStatisticsSame same; 
             private UserStatisticsUpdated updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStatistics model) {
+                this.binded = model.binded;
+                this.created = model.created;
+                this.deleted = model.deleted;
+                this.exported = model.exported;
+                this.pushed = model.pushed;
+                this.same = model.same;
+                this.updated = model.updated;
+            } 
+
             /**
              * <p>绑定结果统计</p>
              */
@@ -3793,6 +4106,18 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private GroupStatistics groupStatistics; 
             private OrganizationalUnitStatistics organizationalUnitStatistics; 
             private UserStatistics userStatistics; 
+
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.groupMemberStatistics = model.groupMemberStatistics;
+                this.groupStatistics = model.groupStatistics;
+                this.organizationalUnitStatistics = model.organizationalUnitStatistics;
+                this.userStatistics = model.userStatistics;
+            } 
 
             /**
              * <p>同步结果错误码</p>
@@ -3992,6 +4317,22 @@ public class ListSynchronizationJobsResponseBody extends TeaModel {
             private String targetId; 
             private String targetType; 
             private String triggerType; 
+
+            private Builder() {
+            } 
+
+            private Builder(SynchronizationJobs model) {
+                this.description = model.description;
+                this.direction = model.direction;
+                this.endTime = model.endTime;
+                this.result = model.result;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.synchronizationJobId = model.synchronizationJobId;
+                this.targetId = model.targetId;
+                this.targetType = model.targetType;
+                this.triggerType = model.triggerType;
+            } 
 
             /**
              * Description.

@@ -36,6 +36,10 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkAccessPaths
      */
@@ -54,8 +58,16 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         private java.util.List<NetworkAccessPaths> networkAccessPaths; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListNetworkAccessPathsResponseBody model) {
+            this.networkAccessPaths = model.networkAccessPaths;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * NetworkAccessPaths.
+         * <p>Network access paths</p>
          */
         public Builder networkAccessPaths(java.util.List<NetworkAccessPaths> networkAccessPaths) {
             this.networkAccessPaths = networkAccessPaths;
@@ -63,7 +75,10 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -204,8 +219,23 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             private Long updateTime; 
             private String vSwitchId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkAccessPaths model) {
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.networkAccessEndpointId = model.networkAccessEndpointId;
+                this.networkAccessPathId = model.networkAccessPathId;
+                this.networkInterfaceId = model.networkInterfaceId;
+                this.privateIpAddress = model.privateIpAddress;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.vSwitchId = model.vSwitchId;
+            } 
+
             /**
-             * <p>专属网络端点访问路径创建时间，Unix时间戳格式，单位为毫秒。</p>
+             * <p>The creation time.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -216,7 +246,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例ID。</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -227,7 +257,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点ID。</p>
+             * <p>Network access endpoint ID.</p>
              * 
              * <strong>example:</strong>
              * <p>nae_examplexxx</p>
@@ -238,7 +268,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点访问路径ID。</p>
+             * <p>Network access path ID</p>
              * 
              * <strong>example:</strong>
              * <p>nap_examplexxx</p>
@@ -249,7 +279,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点访问路径使用的ENI ID。</p>
+             * <p>Network interface ID</p>
              * 
              * <strong>example:</strong>
              * <p>eni-examplexxx</p>
@@ -260,7 +290,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点访问路径使用的ENI私网地址。</p>
+             * <p>The private IP address.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>
@@ -271,7 +301,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点访问路径状态。</p>
+             * <p>Network access path status</p>
              * 
              * <strong>example:</strong>
              * <p>running</p>
@@ -282,7 +312,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点访问路径最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+             * <p>The update time.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -293,7 +323,7 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点访问路径的ENI归属的交换机ID。</p>
+             * <p>The ID of a vSwitch.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-examplexxx</p>

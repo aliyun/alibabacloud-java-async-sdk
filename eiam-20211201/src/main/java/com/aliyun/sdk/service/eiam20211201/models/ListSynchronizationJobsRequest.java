@@ -97,7 +97,7 @@ public class ListSynchronizationJobsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -430,6 +430,14 @@ public class ListSynchronizationJobsRequest extends Request {
         public static final class Builder {
             private String key; 
             private java.util.List<String> values; 
+
+            private Builder() {
+            } 
+
+            private Builder(Filters model) {
+                this.key = model.key;
+                this.values = model.values;
+            } 
 
             /**
              * Key.

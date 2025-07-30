@@ -42,6 +42,7 @@ public class ListApplicationsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("M2MClientStatus")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String m2MClientStatus;
 
     @com.aliyun.core.annotation.Query
@@ -54,10 +55,12 @@ public class ListApplicationsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceServerStatus")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String resourceServerStatus;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SsoType")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String ssoType;
 
     @com.aliyun.core.annotation.Query
@@ -88,7 +91,7 @@ public class ListApplicationsRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -265,7 +268,14 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * M2MClientStatus.
+         * <p>Used to determine whether M2M client identity is enabled.</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder m2MClientStatus(String m2MClientStatus) {
             this.putQueryParameter("M2MClientStatus", m2MClientStatus);
@@ -298,7 +308,14 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * ResourceServerStatus.
+         * <p>Used to determine whether the ResourceServer capability is enabled.</p>
+         * <ul>
+         * <li>enabled</li>
+         * <li>disabled</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>enabled</p>
          */
         public Builder resourceServerStatus(String resourceServerStatus) {
             this.putQueryParameter("ResourceServerStatus", resourceServerStatus);
@@ -307,7 +324,15 @@ public class ListApplicationsRequest extends Request {
         }
 
         /**
-         * SsoType.
+         * <p>SSO type.</p>
+         * <ul>
+         * <li>oidc</li>
+         * <li>saml2</li>
+         * <li>oauth2/m2m</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>oauth2/m2m</p>
          */
         public Builder ssoType(String ssoType) {
             this.putQueryParameter("SsoType", ssoType);

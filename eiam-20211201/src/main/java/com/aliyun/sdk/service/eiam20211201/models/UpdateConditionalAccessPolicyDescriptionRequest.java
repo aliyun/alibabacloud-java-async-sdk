@@ -22,6 +22,10 @@ public class UpdateConditionalAccessPolicyDescriptionRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConditionalAccessPolicyId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String conditionalAccessPolicyId;
@@ -39,6 +43,7 @@ public class UpdateConditionalAccessPolicyDescriptionRequest extends Request {
     private UpdateConditionalAccessPolicyDescriptionRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.clientToken = builder.clientToken;
         this.conditionalAccessPolicyId = builder.conditionalAccessPolicyId;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
@@ -52,7 +57,7 @@ public class UpdateConditionalAccessPolicyDescriptionRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -62,6 +67,13 @@ public class UpdateConditionalAccessPolicyDescriptionRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -87,6 +99,7 @@ public class UpdateConditionalAccessPolicyDescriptionRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateConditionalAccessPolicyDescriptionRequest, Builder> {
         private String regionId; 
+        private String clientToken; 
         private String conditionalAccessPolicyId; 
         private String description; 
         private String instanceId; 
@@ -98,6 +111,7 @@ public class UpdateConditionalAccessPolicyDescriptionRequest extends Request {
         private Builder(UpdateConditionalAccessPolicyDescriptionRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.clientToken = request.clientToken;
             this.conditionalAccessPolicyId = request.conditionalAccessPolicyId;
             this.description = request.description;
             this.instanceId = request.instanceId;
@@ -109,6 +123,18 @@ public class UpdateConditionalAccessPolicyDescriptionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>Idp client token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-examplexxx</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 

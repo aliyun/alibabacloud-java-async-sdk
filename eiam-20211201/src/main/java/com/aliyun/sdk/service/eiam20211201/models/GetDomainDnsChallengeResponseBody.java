@@ -36,6 +36,10 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainDnsChallenge
      */
@@ -54,8 +58,16 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
         private DomainDnsChallenge domainDnsChallenge; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetDomainDnsChallengeResponseBody model) {
+            this.domainDnsChallenge = model.domainDnsChallenge;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * DomainDnsChallenge.
+         * <p>The DNS challenge records.</p>
          */
         public Builder domainDnsChallenge(DomainDnsChallenge domainDnsChallenge) {
             this.domainDnsChallenge = domainDnsChallenge;
@@ -63,7 +75,10 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,8 +147,17 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
             private String dnsChallengeValue; 
             private String dnsType; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainDnsChallenge model) {
+                this.dnsChallengeName = model.dnsChallengeName;
+                this.dnsChallengeValue = model.dnsChallengeValue;
+                this.dnsType = model.dnsType;
+            } 
+
             /**
-             * <p>DNS challenge名称。</p>
+             * <p>The name of the DNS challenge record.</p>
              * 
              * <strong>example:</strong>
              * <p>_idaas-challenge.${domain}</p>
@@ -144,7 +168,7 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>DNS challenge值。</p>
+             * <p>The value of the DNS challenge record.</p>
              * 
              * <strong>example:</strong>
              * <p>exmple123xxx</p>
@@ -155,10 +179,10 @@ public class GetDomainDnsChallengeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>DNS记录类型。</p>
+             * <p>The type of the DNS challenge record.</p>
              * 
              * <strong>example:</strong>
-             * <p>枚举，目前只支持TXT类型</p>
+             * <p>txt</p>
              */
             public Builder dnsType(String dnsType) {
                 this.dnsType = dnsType;

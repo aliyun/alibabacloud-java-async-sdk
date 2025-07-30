@@ -67,7 +67,7 @@ public class SetApplicationProvisioningConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -306,6 +306,16 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             private Boolean encryptRequired; 
             private java.util.List<String> listenEventScopes; 
 
+            private Builder() {
+            } 
+
+            private Builder(CallbackProvisioningConfig model) {
+                this.callbackUrl = model.callbackUrl;
+                this.encryptKey = model.encryptKey;
+                this.encryptRequired = model.encryptRequired;
+                this.listenEventScopes = model.listenEventScopes;
+            } 
+
             /**
              * <p>The URL that the application uses to receive IDaaS event callbacks.</p>
              * 
@@ -438,6 +448,17 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             private String clientSecret; 
             private String tokenEndpoint; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthnParam model) {
+                this.accessToken = model.accessToken;
+                this.authnMethod = model.authnMethod;
+                this.clientId = model.clientId;
+                this.clientSecret = model.clientSecret;
+                this.tokenEndpoint = model.tokenEndpoint;
+            } 
+
             /**
              * <p>The access token. If the GrantType parameter is set to bearer_token, you can set this parameter.</p>
              * 
@@ -560,6 +581,15 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             private AuthnParam authnParam; 
             private String grantType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthnConfiguration model) {
+                this.authnMode = model.authnMode;
+                this.authnParam = model.authnParam;
+                this.grantType = model.grantType;
+            } 
+
             /**
              * <p>The authentication mode of the SCIM protocol. Valid value:</p>
              * <ul>
@@ -675,6 +705,16 @@ public class SetApplicationProvisioningConfigRequest extends Request {
             private java.util.List<String> fullPushScopes; 
             private java.util.List<String> provisioningActions; 
             private String scimBaseUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScimProvisioningConfig model) {
+                this.authnConfiguration = model.authnConfiguration;
+                this.fullPushScopes = model.fullPushScopes;
+                this.provisioningActions = model.provisioningActions;
+                this.scimBaseUrl = model.scimBaseUrl;
+            } 
 
             /**
              * <p>The configuration parameters related to SCIM-based synchronization.</p>

@@ -36,6 +36,10 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationClientSecret
      */
@@ -53,6 +57,14 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
     public static final class Builder {
         private ApplicationClientSecret applicationClientSecret; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateApplicationClientSecretResponseBody model) {
+            this.applicationClientSecret = model.applicationClientSecret;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the client key.</p>
@@ -134,6 +146,15 @@ public class CreateApplicationClientSecretResponseBody extends TeaModel {
             private String clientId; 
             private String clientSecret; 
             private String secretId; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationClientSecret model) {
+                this.clientId = model.clientId;
+                this.clientSecret = model.clientSecret;
+                this.secretId = model.secretId;
+            } 
 
             /**
              * <p>The client ID of the application.</p>

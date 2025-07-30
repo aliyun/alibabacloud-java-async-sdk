@@ -36,6 +36,10 @@ public class CreateOrganizationalUnitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return organizationalUnitId
      */
@@ -53,6 +57,14 @@ public class CreateOrganizationalUnitResponseBody extends TeaModel {
     public static final class Builder {
         private String organizationalUnitId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateOrganizationalUnitResponseBody model) {
+            this.organizationalUnitId = model.organizationalUnitId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The organization ID.</p>

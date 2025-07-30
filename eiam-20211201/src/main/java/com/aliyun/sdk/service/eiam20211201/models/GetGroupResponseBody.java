@@ -36,6 +36,10 @@ public class GetGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return group
      */
@@ -53,6 +57,14 @@ public class GetGroupResponseBody extends TeaModel {
     public static final class Builder {
         private Group group; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetGroupResponseBody model) {
+            this.group = model.group;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The information about the account group.</p>
@@ -206,6 +218,21 @@ public class GetGroupResponseBody extends TeaModel {
             private String groupSourceType; 
             private String instanceId; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Group model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.groupExternalId = model.groupExternalId;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.groupSourceId = model.groupSourceId;
+                this.groupSourceType = model.groupSourceType;
+                this.instanceId = model.instanceId;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time at which the group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>

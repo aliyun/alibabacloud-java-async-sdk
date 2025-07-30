@@ -36,6 +36,10 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return parents
      */
@@ -54,8 +58,16 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
         private java.util.List<Parents> parents; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListOrganizationalUnitParentsResponseBody model) {
+            this.parents = model.parents;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Parents.
+         * <p>The parent organizations.</p>
          */
         public Builder parents(java.util.List<Parents> parents) {
             this.parents = parents;
@@ -63,7 +75,10 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +135,19 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
             private String organizationalUnitId; 
             private String parentId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Parents model) {
+                this.organizationalUnitId = model.organizationalUnitId;
+                this.parentId = model.parentId;
+            } 
+
             /**
-             * <p>组织ID</p>
+             * <p>The organization ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>ou_4lag76zc2km5ssg5vsmm2lznvu</p>
+             * <p>ou_4lag76zc2km5ssg5vsmm2xxxx</p>
              */
             public Builder organizationalUnitId(String organizationalUnitId) {
                 this.organizationalUnitId = organizationalUnitId;
@@ -132,10 +155,10 @@ public class ListOrganizationalUnitParentsResponseBody extends TeaModel {
             }
 
             /**
-             * <p>父组织ID</p>
+             * <p>The parent organization ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>ou_x3beoyepv2ls5iwuge3xhjkwbm</p>
+             * <p>ou_x3beoyepv2ls5iwuge3xhjxxxx</p>
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;

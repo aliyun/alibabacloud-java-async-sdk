@@ -36,6 +36,10 @@ public class CreateNetworkAccessEndpointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkAccessEndpointId
      */
@@ -54,8 +58,19 @@ public class CreateNetworkAccessEndpointResponseBody extends TeaModel {
         private String networkAccessEndpointId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateNetworkAccessEndpointResponseBody model) {
+            this.networkAccessEndpointId = model.networkAccessEndpointId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * NetworkAccessEndpointId.
+         * <p>The unique identifier of the network access endpoint.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>nae_examplexxxx</p>
          */
         public Builder networkAccessEndpointId(String networkAccessEndpointId) {
             this.networkAccessEndpointId = networkAccessEndpointId;
@@ -63,7 +78,10 @@ public class CreateNetworkAccessEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

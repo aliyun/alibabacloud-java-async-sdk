@@ -36,6 +36,10 @@ public class ListConditionalAccessPoliciesForNetworkZoneResponseBody extends Tea
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conditionalAccessPolicies
      */
@@ -53,6 +57,14 @@ public class ListConditionalAccessPoliciesForNetworkZoneResponseBody extends Tea
     public static final class Builder {
         private java.util.List<ConditionalAccessPolicies> conditionalAccessPolicies; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListConditionalAccessPoliciesForNetworkZoneResponseBody model) {
+            this.conditionalAccessPolicies = model.conditionalAccessPolicies;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Collection of conditional access policies</p>
@@ -123,6 +135,14 @@ public class ListConditionalAccessPoliciesForNetworkZoneResponseBody extends Tea
             private java.util.List<String> excludeApplications; 
             private java.util.List<String> includeApplications; 
 
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.excludeApplications = model.excludeApplications;
+                this.includeApplications = model.includeApplications;
+            } 
+
             /**
              * <p>Excluded applications</p>
              */
@@ -189,6 +209,14 @@ public class ListConditionalAccessPoliciesForNetworkZoneResponseBody extends Tea
         public static final class Builder {
             private java.util.List<String> excludeNetworkZones; 
             private java.util.List<String> includeNetworkZones; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkZones model) {
+                this.excludeNetworkZones = model.excludeNetworkZones;
+                this.includeNetworkZones = model.includeNetworkZones;
+            } 
 
             /**
              * <p>Excluded network zones</p>
@@ -305,6 +333,18 @@ public class ListConditionalAccessPoliciesForNetworkZoneResponseBody extends Tea
             private java.util.List<String> includeOrganizationalUnits; 
             private java.util.List<String> includeUsers; 
 
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.excludeGroups = model.excludeGroups;
+                this.excludeOrganizationalUnits = model.excludeOrganizationalUnits;
+                this.excludeUsers = model.excludeUsers;
+                this.includeGroups = model.includeGroups;
+                this.includeOrganizationalUnits = model.includeOrganizationalUnits;
+                this.includeUsers = model.includeUsers;
+            } 
+
             /**
              * <p>Excluded user groups</p>
              */
@@ -416,6 +456,15 @@ public class ListConditionalAccessPoliciesForNetworkZoneResponseBody extends Tea
             private NetworkZones networkZones; 
             private Users users; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConditionsConfig model) {
+                this.applications = model.applications;
+                this.networkZones = model.networkZones;
+                this.users = model.users;
+            } 
+
             /**
              * <p>Target applications of the conditional access policy</p>
              */
@@ -526,6 +575,17 @@ public class ListConditionalAccessPoliciesForNetworkZoneResponseBody extends Tea
             private Long mfaAuthenticationIntervalSeconds; 
             private java.util.List<String> mfaAuthenticationMethods; 
             private String mfaType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DecisionConfig model) {
+                this.activeSessionReuseStatus = model.activeSessionReuseStatus;
+                this.effect = model.effect;
+                this.mfaAuthenticationIntervalSeconds = model.mfaAuthenticationIntervalSeconds;
+                this.mfaAuthenticationMethods = model.mfaAuthenticationMethods;
+                this.mfaType = model.mfaType;
+            } 
 
             /**
              * <p>Whether session reuse is enabled</p>
@@ -761,6 +821,25 @@ public class ListConditionalAccessPoliciesForNetworkZoneResponseBody extends Tea
             private Long lastUpdatedTime; 
             private Integer priority; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ConditionalAccessPolicies model) {
+                this.conditionalAccessPolicyId = model.conditionalAccessPolicyId;
+                this.conditionalAccessPolicyName = model.conditionalAccessPolicyName;
+                this.conditionalAccessPolicyType = model.conditionalAccessPolicyType;
+                this.conditionsConfig = model.conditionsConfig;
+                this.createTime = model.createTime;
+                this.decisionConfig = model.decisionConfig;
+                this.decisionType = model.decisionType;
+                this.description = model.description;
+                this.evaluateAt = model.evaluateAt;
+                this.instanceId = model.instanceId;
+                this.lastUpdatedTime = model.lastUpdatedTime;
+                this.priority = model.priority;
+                this.status = model.status;
+            } 
 
             /**
              * <p>Conditional access policy ID</p>

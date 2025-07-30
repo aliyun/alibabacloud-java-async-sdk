@@ -36,6 +36,10 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return organizationalUnit
      */
@@ -53,6 +57,14 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
     public static final class Builder {
         private OrganizationalUnit organizationalUnit; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetRootOrganizationalUnitResponseBody model) {
+            this.organizationalUnit = model.organizationalUnit;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data object of the organizational unit.</p>
@@ -170,6 +182,18 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
             private String organizationalUnitId; 
             private String organizationalUnitName; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnit model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.organizationalUnitId = model.organizationalUnitId;
+                this.organizationalUnitName = model.organizationalUnitName;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.</p>

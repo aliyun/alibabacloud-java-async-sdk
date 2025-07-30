@@ -36,6 +36,10 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return openForgetPasswordConfiguration
      */
@@ -53,6 +57,14 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
     public static final class Builder {
         private OpenForgetPasswordConfiguration openForgetPasswordConfiguration; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetForgetPasswordConfigurationResponseBody model) {
+            this.openForgetPasswordConfiguration = model.openForgetPasswordConfiguration;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The forgot password configurations.</p>
@@ -159,8 +171,19 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
             private Boolean enableSms; 
             private String forgetPasswordStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(OpenForgetPasswordConfiguration model) {
+                this.authenticationChannels = model.authenticationChannels;
+                this.enable = model.enable;
+                this.enableEmail = model.enableEmail;
+                this.enableSms = model.enableSms;
+                this.forgetPasswordStatus = model.forgetPasswordStatus;
+            } 
+
             /**
-             * <p>表示忘记密码认证渠道。枚举取值:email(邮件)、sms(短信)</p>
+             * <p>The authentication channels. Valid values:<br>email<br>sms<br>totp<br>web_authn</p>
              */
             public Builder authenticationChannels(java.util.List<String> authenticationChannels) {
                 this.authenticationChannels = authenticationChannels;
@@ -201,7 +224,10 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
             }
 
             /**
-             * <p>表示忘记密码配置状态。枚举取值:enabled(开启)、disabled(禁用)</p>
+             * <p>The status of the forgot password feature. Valid values: enabled and disabled.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder forgetPasswordStatus(String forgetPasswordStatus) {
                 this.forgetPasswordStatus = forgetPasswordStatus;

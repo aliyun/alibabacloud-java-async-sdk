@@ -40,6 +40,10 @@ public class ListGroupsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groups
      */
@@ -65,6 +69,15 @@ public class ListGroupsResponseBody extends TeaModel {
         private java.util.List<Groups> groups; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGroupsResponseBody model) {
+            this.groups = model.groups;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The queried account groups.</p>
@@ -229,6 +242,21 @@ public class ListGroupsResponseBody extends TeaModel {
             private String groupSourceType; 
             private String instanceId; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.groupExternalId = model.groupExternalId;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+                this.groupSourceId = model.groupSourceId;
+                this.groupSourceType = model.groupSourceType;
+                this.instanceId = model.instanceId;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time at which the group was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>

@@ -71,7 +71,7 @@ public class SetApplicationSsoConfigRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -181,7 +181,10 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * <p>Idp client token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-examplexxx</p>
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -240,7 +243,7 @@ public class SetApplicationSsoConfigRequest extends Request {
         }
 
         /**
-         * <p>The Security Assertion Markup Language (SAML)-based single sign-on (SSO) configuration attributes of the application.</p>
+         * <p>The Security Assertion Markup Language (SAML)-based SSO configuration attributes of the application.</p>
          */
         public Builder samlSsoConfig(SamlSsoConfig samlSsoConfig) {
             this.putQueryParameter("SamlSsoConfig", samlSsoConfig);
@@ -299,6 +302,14 @@ public class SetApplicationSsoConfigRequest extends Request {
             private String claimName; 
             private String claimValueExpression; 
 
+            private Builder() {
+            } 
+
+            private Builder(CustomClaims model) {
+                this.claimName = model.claimName;
+                this.claimValueExpression = model.claimValueExpression;
+            } 
+
             /**
              * <p>The claim name.</p>
              * 
@@ -311,7 +322,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The expression that is used to generate the value of the claim.</p>
+             * <p>The expression that is used to calculate the value of the claim.</p>
              * 
              * <strong>example:</strong>
              * <p>user.dict.applicationRole</p>
@@ -529,6 +540,27 @@ public class SetApplicationSsoConfigRequest extends Request {
             private java.util.List<String> responseTypes; 
             private String subjectIdExpression; 
 
+            private Builder() {
+            } 
+
+            private Builder(OidcSsoConfig model) {
+                this.accessTokenEffectiveTime = model.accessTokenEffectiveTime;
+                this.codeEffectiveTime = model.codeEffectiveTime;
+                this.customClaims = model.customClaims;
+                this.grantScopes = model.grantScopes;
+                this.grantTypes = model.grantTypes;
+                this.idTokenEffectiveTime = model.idTokenEffectiveTime;
+                this.passwordAuthenticationSourceId = model.passwordAuthenticationSourceId;
+                this.passwordTotpMfaRequired = model.passwordTotpMfaRequired;
+                this.pkceChallengeMethods = model.pkceChallengeMethods;
+                this.pkceRequired = model.pkceRequired;
+                this.postLogoutRedirectUris = model.postLogoutRedirectUris;
+                this.redirectUris = model.redirectUris;
+                this.refreshTokenEffective = model.refreshTokenEffective;
+                this.responseTypes = model.responseTypes;
+                this.subjectIdExpression = model.subjectIdExpression;
+            } 
+
             /**
              * <p>The validity period of the issued access token. Unit: seconds. Default value: 1200.</p>
              * 
@@ -571,7 +603,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The list of grant types that are supported for OIDC protocols.</p>
+             * <p>The authorization types that are supported for OIDC protocols.</p>
              * 
              * <strong>example:</strong>
              * <p>authorization_code</p>
@@ -593,7 +625,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The ID of the identity authentication source in password mode. Specify this parameter only when the value of the GrantTypes parameter includes the password mode.</p>
+             * <p>The ID of the identity authentication source in password mode. Configure this parameter only when the value of the GrantTypes parameter includes the password mode.</p>
              * 
              * <strong>example:</strong>
              * <p>ia_password</p>
@@ -604,7 +636,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether time-based one-time password (TOTP) authentication is required in password mode. Specify this parameter only when the value of the GrantTypes parameter includes the password mode.</p>
+             * <p>Specifies whether time-based one-time password (TOTP) authentication is required in password mode. Configure this parameter only when the value of the GrantTypes parameter includes the password mode.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -637,7 +669,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The list of logout redirect URIs that are supported by the application.</p>
+             * <p>The logout redirect URIs that are supported by the application.</p>
              */
             public Builder postLogoutRedirectUris(java.util.List<String> postLogoutRedirectUris) {
                 this.postLogoutRedirectUris = postLogoutRedirectUris;
@@ -645,7 +677,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The list of redirect URIs that are supported by the application.</p>
+             * <p>The redirect URIs that are supported by the application.</p>
              */
             public Builder redirectUris(java.util.List<String> redirectUris) {
                 this.redirectUris = redirectUris;
@@ -664,7 +696,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The response types that are supported by the application. Specify this parameter when the value of the GrantTypes parameter includes the implicit mode.</p>
+             * <p>The response types that are supported by the application. Configure this parameter when the value of the GrantTypes parameter includes the implicit mode.</p>
              * 
              * <strong>example:</strong>
              * <p>token id_token</p>
@@ -675,7 +707,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The custom expression that is used to generate the subject ID returned for the ID token.</p>
+             * <p>The custom expression that is used to calculate the subject ID returned for the ID token.</p>
              * 
              * <strong>example:</strong>
              * <p>user.userid</p>
@@ -736,8 +768,16 @@ public class SetApplicationSsoConfigRequest extends Request {
             private String attributeName; 
             private String attributeValueExpression; 
 
+            private Builder() {
+            } 
+
+            private Builder(AttributeStatements model) {
+                this.attributeName = model.attributeName;
+                this.attributeValueExpression = model.attributeValueExpression;
+            } 
+
             /**
-             * <p>The attribute name.</p>
+             * <p>The name of the attribute in the SAML assertion.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName">https://www.aliyun.com/SAML-Role/Attributes/RoleSessionName</a></p>
@@ -748,7 +788,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The expression that is used to generate the value of the attribute.</p>
+             * <p>The expression that is used to generate the value of the attribute in the SAML assertion.</p>
              * 
              * <strong>example:</strong>
              * <p>user.username</p>
@@ -811,8 +851,19 @@ public class SetApplicationSsoConfigRequest extends Request {
             private String displayName; 
             private String relayState; 
 
+            private Builder() {
+            } 
+
+            private Builder(OptionalRelayStates model) {
+                this.displayName = model.displayName;
+                this.relayState = model.relayState;
+            } 
+
             /**
-             * DisplayName.
+             * <p>RelayState displayName</p>
+             * 
+             * <strong>example:</strong>
+             * <p>Ram</p>
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -820,7 +871,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * RelayState.
+             * <p>RelayState value</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example">https://example</a> .aliyun.com</p>
              */
             public Builder relayState(String relayState) {
                 this.relayState = relayState;
@@ -986,8 +1040,25 @@ public class SetApplicationSsoConfigRequest extends Request {
             private String spEntityId; 
             private String spSsoAcsUrl; 
 
+            private Builder() {
+            } 
+
+            private Builder(SamlSsoConfig model) {
+                this.assertionSigned = model.assertionSigned;
+                this.attributeStatements = model.attributeStatements;
+                this.defaultRelayState = model.defaultRelayState;
+                this.idPEntityId = model.idPEntityId;
+                this.nameIdFormat = model.nameIdFormat;
+                this.nameIdValueExpression = model.nameIdValueExpression;
+                this.optionalRelayStates = model.optionalRelayStates;
+                this.responseSigned = model.responseSigned;
+                this.signatureAlgorithm = model.signatureAlgorithm;
+                this.spEntityId = model.spEntityId;
+                this.spSsoAcsUrl = model.spSsoAcsUrl;
+            } 
+
             /**
-             * <p>Specifies whether to calculate the signature for the assertion. You cannot set ResponseSigned and AssertionSigned to false at the same time.</p>
+             * <p>Specifies whether to calculate the signature for the assertion. You cannot set the ResponseSigned and AssertionSigned parameters to false at the same time. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>
@@ -1021,7 +1092,10 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * IdPEntityId.
+             * <p>IdP entityId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://example.com/">https://example.com/</a></p>
              */
             public Builder idPEntityId(String idPEntityId) {
                 this.idPEntityId = idPEntityId;
@@ -1029,9 +1103,16 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>The Format attribute of the NameID element in the SAML assertion. Valid values:</p>
+             * <p>The format of the NameID element in the SAML assertion. Valid values:</p>
              * <ul>
              * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. How to resolve the NameID element depends on the application.</li>
+             * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.</li>
+             * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.</li>
+             * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.</li>
+             * </ul>
+             * <p>Valid values:</p>
+             * <ul>
+             * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified: No format is specified. This is the default value.</li>
              * <li>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress: The NameID element must be an email address.</li>
              * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent: The NameID element must be persistent.</li>
              * <li>urn:oasis:names:tc:SAML:2.0:nameid-format:transient: The NameID element must be transient.</li>
@@ -1057,7 +1138,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * OptionalRelayStates.
+             * <p>Optional relayStates</p>
              */
             public Builder optionalRelayStates(java.util.List<OptionalRelayStates> optionalRelayStates) {
                 this.optionalRelayStates = optionalRelayStates;
@@ -1065,7 +1146,7 @@ public class SetApplicationSsoConfigRequest extends Request {
             }
 
             /**
-             * <p>Specifies whether to calculate the signature for the response. You cannot set ResponseSigned and AssertionSigned to false at the same time.</p>
+             * <p>Specifies whether to calculate the signature for the response. You cannot set the ResponseSigned and AssertionSigned parameters to false at the same time. Valid values:</p>
              * <ul>
              * <li>true</li>
              * <li>false</li>
@@ -1081,19 +1162,9 @@ public class SetApplicationSsoConfigRequest extends Request {
 
             /**
              * <p>The algorithm that is used to calculate the signature for the SAML assertion.</p>
-             * <p>Enumeration value:</p>
+             * <p>Valid value:</p>
              * <ul>
-             * <li><p>RSA-SHA256</p>
-             * <!-- -->
-             * 
-             * <p>:</p>
-             * <!-- -->
-             * 
-             * <p>the Rivest-Shamir-Adleman (RSA)-Secure Hash Algorithm 256 (SHA-256) algorithm</p>
-             * <!-- -->
-             * 
-             * <p>.</p>
-             * </li>
+             * <li>RSA-SHA256: the Rivest-Shamir-Adleman (RSA)-Secure Hash Algorithm 256 (SHA-256) algorithm.</li>
              * </ul>
              * 
              * <strong>example:</strong>

@@ -40,6 +40,10 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return organizationalUnits
      */
@@ -65,6 +69,15 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
         private java.util.List<OrganizationalUnits> organizationalUnits; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOrganizationalUnitsResponseBody model) {
+            this.organizationalUnits = model.organizationalUnits;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The list of data objects of organizational units.</p>
@@ -253,6 +266,23 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
             private String organizationalUnitSourceType; 
             private String parentId; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnits model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.leaf = model.leaf;
+                this.organizationalUnitExternalId = model.organizationalUnitExternalId;
+                this.organizationalUnitId = model.organizationalUnitId;
+                this.organizationalUnitName = model.organizationalUnitName;
+                this.organizationalUnitSourceId = model.organizationalUnitSourceId;
+                this.organizationalUnitSourceType = model.organizationalUnitSourceType;
+                this.parentId = model.parentId;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.</p>

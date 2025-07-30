@@ -36,6 +36,10 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return passwordInitializationConfiguration
      */
@@ -53,6 +57,14 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
     public static final class Builder {
         private PasswordInitializationConfiguration passwordInitializationConfiguration; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPasswordInitializationConfigurationResponseBody model) {
+            this.passwordInitializationConfiguration = model.passwordInitializationConfiguration;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The password initialization configurations.</p>
@@ -146,6 +158,16 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
             private java.util.List<String> passwordInitializationNotificationChannels; 
             private String passwordInitializationStatus; 
             private String passwordInitializationType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PasswordInitializationConfiguration model) {
+                this.passwordForcedUpdateStatus = model.passwordForcedUpdateStatus;
+                this.passwordInitializationNotificationChannels = model.passwordInitializationNotificationChannels;
+                this.passwordInitializationStatus = model.passwordInitializationStatus;
+                this.passwordInitializationType = model.passwordInitializationType;
+            } 
 
             /**
              * <p>Indicates whether forcible password change upon first logon is enabled. Valid values:</p>

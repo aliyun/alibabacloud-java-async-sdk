@@ -40,7 +40,7 @@ public class DisableInitDomainAutoRedirectRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,7 +83,7 @@ public class DisableInitDomainAutoRedirectRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

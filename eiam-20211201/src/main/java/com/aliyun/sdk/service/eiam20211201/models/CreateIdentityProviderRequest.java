@@ -38,6 +38,10 @@ public class CreateIdentityProviderRequest extends Request {
     private BindingConfig bindingConfig;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DingtalkAppConfig")
     private DingtalkAppConfig dingtalkAppConfig;
 
@@ -95,6 +99,7 @@ public class CreateIdentityProviderRequest extends Request {
         this.autoCreateUserConfig = builder.autoCreateUserConfig;
         this.autoUpdateUserConfig = builder.autoUpdateUserConfig;
         this.bindingConfig = builder.bindingConfig;
+        this.clientToken = builder.clientToken;
         this.dingtalkAppConfig = builder.dingtalkAppConfig;
         this.identityProviderName = builder.identityProviderName;
         this.identityProviderType = builder.identityProviderType;
@@ -117,7 +122,7 @@ public class CreateIdentityProviderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -155,6 +160,13 @@ public class CreateIdentityProviderRequest extends Request {
      */
     public BindingConfig getBindingConfig() {
         return this.bindingConfig;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -247,6 +259,7 @@ public class CreateIdentityProviderRequest extends Request {
         private AutoCreateUserConfig autoCreateUserConfig; 
         private AutoUpdateUserConfig autoUpdateUserConfig; 
         private BindingConfig bindingConfig; 
+        private String clientToken; 
         private DingtalkAppConfig dingtalkAppConfig; 
         private String identityProviderName; 
         private String identityProviderType; 
@@ -271,6 +284,7 @@ public class CreateIdentityProviderRequest extends Request {
             this.autoCreateUserConfig = request.autoCreateUserConfig;
             this.autoUpdateUserConfig = request.autoUpdateUserConfig;
             this.bindingConfig = request.bindingConfig;
+            this.clientToken = request.clientToken;
             this.dingtalkAppConfig = request.dingtalkAppConfig;
             this.identityProviderName = request.identityProviderName;
             this.identityProviderType = request.identityProviderType;
@@ -295,7 +309,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>认证配置</p>
+         * <p>Authentication configuration information.</p>
          */
         public Builder authnConfig(AuthnConfig authnConfig) {
             this.putQueryParameter("AuthnConfig", authnConfig);
@@ -304,7 +318,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>自动创建账户账户规则配置。</p>
+         * <p>Auto-create account rule configuration.</p>
          */
         public Builder autoCreateUserConfig(AutoCreateUserConfig autoCreateUserConfig) {
             this.putQueryParameter("AutoCreateUserConfig", autoCreateUserConfig);
@@ -313,7 +327,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>自动更新账户规则配置。</p>
+         * <p>Auto-update account rule configuration.</p>
          */
         public Builder autoUpdateUserConfig(AutoUpdateUserConfig autoUpdateUserConfig) {
             this.putQueryParameter("AutoUpdateUserConfig", autoUpdateUserConfig);
@@ -322,7 +336,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>账户绑定规则配置。</p>
+         * <p>OIDC identity provider account binding rule configuration.</p>
          */
         public Builder bindingConfig(BindingConfig bindingConfig) {
             this.putQueryParameter("BindingConfig", bindingConfig);
@@ -331,7 +345,19 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>钉钉配置</p>
+         * <p>Idp client token.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-token-example</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * <p>DingTalk configuration information.</p>
          */
         public Builder dingtalkAppConfig(DingtalkAppConfig dingtalkAppConfig) {
             this.putQueryParameter("DingtalkAppConfig", dingtalkAppConfig);
@@ -340,7 +366,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>身份提供方名称</p>
+         * <p>Identity provider name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -353,7 +379,25 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>身份提供发类型</p>
+         * <p>Identity provider synchronization type.</p>
+         * <ul>
+         * <li><p>Inbound to DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:pull</p>
+         * </li>
+         * <li><p>Outbound to DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:push</p>
+         * </li>
+         * <li><p>Inbound to WeCom: urn:alibaba:idaas:idp:tencent:wecom:pull</p>
+         * </li>
+         * <li><p>Inbound to Lark: urn:alibaba:idaas:idp:bytedance:lark:pull</p>
+         * </li>
+         * <li><p>Inbound to AD: urn:alibaba:idaas:idp:microsoft:ad:pull</p>
+         * </li>
+         * <li><p>Inbound to LDAP: urn:alibaba:idaas:idp:unknown:ldap:pull</p>
+         * </li>
+         * <li><p>Standard OIDC: urn:alibaba:idaas:idp:standard:oidc</p>
+         * </li>
+         * <li><p>SASE Custom OIDC: urn:alibaba:idaas:idp:alibaba:sase</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -366,7 +410,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>Instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -379,7 +423,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>飞书配置</p>
+         * <p>Lark (Feishu) configuration information.</p>
          */
         public Builder larkConfig(LarkConfig larkConfig) {
             this.putQueryParameter("LarkConfig", larkConfig);
@@ -388,7 +432,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>AD/LDAP配置</p>
+         * <p>AD/LDAP configuration information.</p>
          */
         public Builder ldapConfig(LdapConfig ldapConfig) {
             this.putQueryParameter("LdapConfig", ldapConfig);
@@ -397,7 +441,10 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * LogoUrl.
+         * <p>IdP logo url.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>xxxx-image://idaas_23aqr2ye554csg33dqpch5eu3q/tmp/d17d9adc-a943-45e7-ba0c-2838dddexxxxx</p>
          */
         public Builder logoUrl(String logoUrl) {
             this.putQueryParameter("LogoUrl", logoUrl);
@@ -406,7 +453,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>网络端点ID</p>
+         * <p>The unique identifier of the network access endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>nae_examplexxxx</p>
@@ -418,7 +465,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>OIDC IdP配置。</p>
+         * <p>OIDC IdP configuration.</p>
          */
         public Builder oidcConfig(OidcConfig oidcConfig) {
             this.putQueryParameter("OidcConfig", oidcConfig);
@@ -427,7 +474,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>同步入配置</p>
+         * <p>Inbound synchronization configuration information.</p>
          */
         public Builder udPullConfig(UdPullConfig udPullConfig) {
             this.putQueryParameter("UdPullConfig", udPullConfig);
@@ -436,7 +483,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>同步出配置</p>
+         * <p>Outbound synchronization configuration information.</p>
          */
         public Builder udPushConfig(UdPushConfig udPushConfig) {
             this.putQueryParameter("UdPushConfig", udPushConfig);
@@ -445,7 +492,7 @@ public class CreateIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>WeCom配置</p>
+         * <p>WeCom configuration information.</p>
          */
         public Builder weComConfig(WeComConfig weComConfig) {
             this.putQueryParameter("WeComConfig", weComConfig);
@@ -468,7 +515,7 @@ public class CreateIdentityProviderRequest extends Request {
      */
     public static class AuthnConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthnStatus")
-        @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
+        @com.aliyun.core.annotation.Validation(maxLength = 32)
         private String authnStatus;
 
         @com.aliyun.core.annotation.NameInMap("AutoUpdatePasswordStatus")
@@ -505,9 +552,22 @@ public class CreateIdentityProviderRequest extends Request {
             private String authnStatus; 
             private String autoUpdatePasswordStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthnConfig model) {
+                this.authnStatus = model.authnStatus;
+                this.autoUpdatePasswordStatus = model.autoUpdatePasswordStatus;
+            } 
+
             /**
-             * <p>对应IdP是否支持认证</p>
-             * <p>This parameter is required.</p>
+             * <p>Whether the corresponding IdP supports authentication. Value range:</p>
+             * <ul>
+             * <li><p>Disabled: disabled</p>
+             * </li>
+             * <li><p>Enabled: enabled</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -518,7 +578,13 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>是否支持自动更新密码</p>
+             * <p>Whether automatic password update is supported. Value range:</p>
+             * <ul>
+             * <li><p>Disabled: disabled</p>
+             * </li>
+             * <li><p>Enabled: enabled</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -579,8 +645,22 @@ public class CreateIdentityProviderRequest extends Request {
             private String autoCreateUserStatus; 
             private java.util.List<String> targetOrganizationalUnitIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoCreateUserConfig model) {
+                this.autoCreateUserStatus = model.autoCreateUserStatus;
+                this.targetOrganizationalUnitIds = model.targetOrganizationalUnitIds;
+            } 
+
             /**
-             * <p>自动创建账户是否开启</p>
+             * <p>Whether auto-creation of accounts is enabled. Possible values:</p>
+             * <ul>
+             * <li><p>Disabled: disabled</p>
+             * </li>
+             * <li><p>Enabled: enabled</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -591,7 +671,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * TargetOrganizationalUnitIds.
+             * <p>Target organizational unit IDs collection.</p>
              */
             public Builder targetOrganizationalUnitIds(java.util.List<String> targetOrganizationalUnitIds) {
                 this.targetOrganizationalUnitIds = targetOrganizationalUnitIds;
@@ -637,8 +717,21 @@ public class CreateIdentityProviderRequest extends Request {
         public static final class Builder {
             private String autoUpdateUserStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoUpdateUserConfig model) {
+                this.autoUpdateUserStatus = model.autoUpdateUserStatus;
+            } 
+
             /**
-             * <p>自动更新账户是否开启</p>
+             * <p>Whether auto-updating of accounts is enabled. Possible values:</p>
+             * <ul>
+             * <li><p>Disabled: disabled</p>
+             * </li>
+             * <li><p>Enabled: enabled</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -663,15 +756,12 @@ public class CreateIdentityProviderRequest extends Request {
      */
     public static class AutoMatchUserProfileExpressions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpressionMappingType")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String expressionMappingType;
 
         @com.aliyun.core.annotation.NameInMap("SourceValueExpression")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String sourceValueExpression;
 
         @com.aliyun.core.annotation.NameInMap("TargetField")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String targetField;
 
         @com.aliyun.core.annotation.NameInMap("TargetFieldDescription")
@@ -726,9 +816,24 @@ public class CreateIdentityProviderRequest extends Request {
             private String targetField; 
             private String targetFieldDescription; 
 
+            private Builder() {
+            } 
+
+            private Builder(AutoMatchUserProfileExpressions model) {
+                this.expressionMappingType = model.expressionMappingType;
+                this.sourceValueExpression = model.sourceValueExpression;
+                this.targetField = model.targetField;
+                this.targetFieldDescription = model.targetFieldDescription;
+            } 
+
             /**
-             * <p>表达式的类型</p>
-             * <p>This parameter is required.</p>
+             * <p>Type of the expression. Value range:</p>
+             * <ul>
+             * <li><p>Field: filed</p>
+             * </li>
+             * <li><p>Expression: expression</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>filed</p>
@@ -739,8 +844,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>映射属性取值表达式</p>
-             * <p>This parameter is required.</p>
+             * <p>Expression for the mapped attribute value.</p>
              * 
              * <strong>example:</strong>
              * <p>idpUser.phoneNumber</p>
@@ -751,8 +855,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>映射目标属性名称</p>
-             * <p>This parameter is required.</p>
+             * <p>Name of the target attribute.</p>
              * 
              * <strong>example:</strong>
              * <p>user.username</p>
@@ -763,7 +866,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>映射目标属性名称</p>
+             * <p>Description of the target attribute.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>user.username</p>
              */
             public Builder targetFieldDescription(String targetFieldDescription) {
                 this.targetFieldDescription = targetFieldDescription;
@@ -833,8 +939,17 @@ public class CreateIdentityProviderRequest extends Request {
             private String autoMatchUserStatus; 
             private String mappingBindingStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(BindingConfig model) {
+                this.autoMatchUserProfileExpressions = model.autoMatchUserProfileExpressions;
+                this.autoMatchUserStatus = model.autoMatchUserStatus;
+                this.mappingBindingStatus = model.mappingBindingStatus;
+            } 
+
             /**
-             * <p>自动匹配账户的规则</p>
+             * <p>List of rules for automatically matching accounts.</p>
              */
             public Builder autoMatchUserProfileExpressions(java.util.List<AutoMatchUserProfileExpressions> autoMatchUserProfileExpressions) {
                 this.autoMatchUserProfileExpressions = autoMatchUserProfileExpressions;
@@ -842,7 +957,13 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>自动匹配账户是否开启</p>
+             * <p>Whether automatic account matching is enabled. Value range:</p>
+             * <ul>
+             * <li><p>Disabled: disabled</p>
+             * </li>
+             * <li><p>Enabled: enabled</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -853,7 +974,13 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>用户手动绑定账户功能是否开启</p>
+             * <p>Whether the user manual account binding function is enabled. Value range:</p>
+             * <ul>
+             * <li><p>Disabled: disabled</p>
+             * </li>
+             * <li><p>Enabled: enabled</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -890,11 +1017,19 @@ public class CreateIdentityProviderRequest extends Request {
         @com.aliyun.core.annotation.Validation(maxLength = 32)
         private String dingtalkVersion;
 
+        @com.aliyun.core.annotation.NameInMap("EncryptKey")
+        private String encryptKey;
+
+        @com.aliyun.core.annotation.NameInMap("VerificationToken")
+        private String verificationToken;
+
         private DingtalkAppConfig(Builder builder) {
             this.appKey = builder.appKey;
             this.appSecret = builder.appSecret;
             this.corpId = builder.corpId;
             this.dingtalkVersion = builder.dingtalkVersion;
+            this.encryptKey = builder.encryptKey;
+            this.verificationToken = builder.verificationToken;
         }
 
         public static Builder builder() {
@@ -933,14 +1068,42 @@ public class CreateIdentityProviderRequest extends Request {
             return this.dingtalkVersion;
         }
 
+        /**
+         * @return encryptKey
+         */
+        public String getEncryptKey() {
+            return this.encryptKey;
+        }
+
+        /**
+         * @return verificationToken
+         */
+        public String getVerificationToken() {
+            return this.verificationToken;
+        }
+
         public static final class Builder {
             private String appKey; 
             private String appSecret; 
             private String corpId; 
             private String dingtalkVersion; 
+            private String encryptKey; 
+            private String verificationToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(DingtalkAppConfig model) {
+                this.appKey = model.appKey;
+                this.appSecret = model.appSecret;
+                this.corpId = model.corpId;
+                this.dingtalkVersion = model.dingtalkVersion;
+                this.encryptKey = model.encryptKey;
+                this.verificationToken = model.verificationToken;
+            } 
 
             /**
-             * <p>钉钉一方应用的AppKey</p>
+             * <p>AppKey of the DingTalk application.</p>
              * 
              * <strong>example:</strong>
              * <p>Xczngvfemo4e</p>
@@ -951,7 +1114,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>钉钉一方应用的AppSecret</p>
+             * <p>AppSecret of the DingTalk application.</p>
              * 
              * <strong>example:</strong>
              * <p>5d405a12a6f84ad4ab05ee09axxxx</p>
@@ -962,7 +1125,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>钉钉一方应用的corpId</p>
+             * <p>CorpId of the DingTalk application.</p>
              * 
              * <strong>example:</strong>
              * <p>3075680424786133505</p>
@@ -973,13 +1136,37 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>钉钉版本</p>
+             * <p>DingTalk edition. Valid values:</p>
+             * <p>public_dingtalk – Standard DingTalk.</p>
+             * <p>private_dingtalk – Dedicated DingTalk.</p>
              * 
              * <strong>example:</strong>
              * <p>public_dingtalk</p>
              */
             public Builder dingtalkVersion(String dingtalkVersion) {
                 this.dingtalkVersion = dingtalkVersion;
+                return this;
+            }
+
+            /**
+             * <p>DingTalk encrypt key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29003eb11d0a28b4802a6f02fb8aa25dff730e2ac26ffd200dxxxx</p>
+             */
+            public Builder encryptKey(String encryptKey) {
+                this.encryptKey = encryptKey;
+                return this;
+            }
+
+            /**
+             * <p>DingTalk verification token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5ba9c127a7abe029003eb11d0a28b4802a6f02fb8aa25dff730e2ac26ffd200dxxxx</p>
+             */
+            public Builder verificationToken(String verificationToken) {
+                this.verificationToken = verificationToken;
                 return this;
             }
 
@@ -1071,8 +1258,22 @@ public class CreateIdentityProviderRequest extends Request {
             private String enterpriseNumber; 
             private String verificationToken; 
 
+            private Builder() {
+            } 
+
+            private Builder(LarkConfig model) {
+                this.appId = model.appId;
+                this.appSecret = model.appSecret;
+                this.encryptKey = model.encryptKey;
+                this.enterpriseNumber = model.enterpriseNumber;
+                this.verificationToken = model.verificationToken;
+            } 
+
             /**
-             * AppId.
+             * <p>Lark (Feishu) app appId.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cli_xxxx</p>
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -1080,10 +1281,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>钉钉一方应用的AppSecret</p>
+             * <p>Lark (Feishu) app secret.</p>
              * 
              * <strong>example:</strong>
-             * <p>5d405a12a6f84ad4ab05ee09axxxx</p>
+             * <p>KiiLzh5Dueh4wbLxxxx</p>
              */
             public Builder appSecret(String appSecret) {
                 this.appSecret = appSecret;
@@ -1091,7 +1292,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * EncryptKey.
+             * <p>Lark (Feishu) encrypt key.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>29003eb11d0a28b4802a6f02fb8aa25dff730e2ac26ffd200dxxxx</p>
              */
             public Builder encryptKey(String encryptKey) {
                 this.encryptKey = encryptKey;
@@ -1099,7 +1303,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * EnterpriseNumber.
+             * <p>Lark (Feishu) enterprise number.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>FSX123111xxx</p>
              */
             public Builder enterpriseNumber(String enterpriseNumber) {
                 this.enterpriseNumber = enterpriseNumber;
@@ -1107,7 +1314,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * VerificationToken.
+             * <p>Lark (Feishu)  verification token.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>5ba9c127a7abe029003eb11d0a28b4802a6f02fb8aa25dff730e2ac26ffd200dxxxx</p>
              */
             public Builder verificationToken(String verificationToken) {
                 this.verificationToken = verificationToken;
@@ -1321,8 +1531,29 @@ public class CreateIdentityProviderRequest extends Request {
             private String userObjectClass; 
             private String userObjectClassCustomFilter; 
 
+            private Builder() {
+            } 
+
+            private Builder(LdapConfig model) {
+                this.administratorPassword = model.administratorPassword;
+                this.administratorUsername = model.administratorUsername;
+                this.certificateFingerprintStatus = model.certificateFingerprintStatus;
+                this.certificateFingerprints = model.certificateFingerprints;
+                this.groupMemberAttributeName = model.groupMemberAttributeName;
+                this.groupObjectClass = model.groupObjectClass;
+                this.groupObjectClassCustomFilter = model.groupObjectClassCustomFilter;
+                this.ldapProtocol = model.ldapProtocol;
+                this.ldapServerHost = model.ldapServerHost;
+                this.ldapServerPort = model.ldapServerPort;
+                this.organizationUnitObjectClass = model.organizationUnitObjectClass;
+                this.startTlsStatus = model.startTlsStatus;
+                this.userLoginIdentifier = model.userLoginIdentifier;
+                this.userObjectClass = model.userObjectClass;
+                this.userObjectClassCustomFilter = model.userObjectClassCustomFilter;
+            } 
+
             /**
-             * <p>管理员密码</p>
+             * <p>Administrator password.</p>
              * 
              * <strong>example:</strong>
              * <p>xxxx</p>
@@ -1333,7 +1564,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>管理员账号</p>
+             * <p>Administrator username.</p>
              * 
              * <strong>example:</strong>
              * <p>DC=example,DC=com</p>
@@ -1344,7 +1575,13 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>是否验证指纹证书</p>
+             * <p>Whether to verify the certificate fingerprint. Value range:</p>
+             * <ul>
+             * <li><p>Disabled: disabled</p>
+             * </li>
+             * <li><p>Enabled: enabled</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -1355,7 +1592,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>证书指纹列表</p>
+             * <p>List of certificate fingerprints.</p>
              */
             public Builder certificateFingerprints(java.util.List<String> certificateFingerprints) {
                 this.certificateFingerprints = certificateFingerprints;
@@ -1363,7 +1600,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>组成员标识</p>
+             * <p>Group member attribute name.</p>
              * 
              * <strong>example:</strong>
              * <p>member</p>
@@ -1374,7 +1611,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>组objectClass</p>
+             * <p>Group ObjectClass.</p>
              * 
              * <strong>example:</strong>
              * <p>group</p>
@@ -1385,7 +1622,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>组自定义Filter</p>
+             * <p>Custom filter for Group ObjectClass.</p>
              * 
              * <strong>example:</strong>
              * <p>(|(cn=test)(group=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -1396,7 +1633,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>通信协议</p>
+             * <p>Communication protocol.</p>
              * 
              * <strong>example:</strong>
              * <p>ldap</p>
@@ -1407,7 +1644,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>ad/ldap 服务器地址</p>
+             * <p>AD/LDAP server address.</p>
              * 
              * <strong>example:</strong>
              * <p>123.xx.xx.89</p>
@@ -1418,7 +1655,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>端口号</p>
+             * <p>AD/LDAP port number.</p>
              * 
              * <strong>example:</strong>
              * <p>636</p>
@@ -1429,7 +1666,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>组织objectClass</p>
+             * <p>Organization Unit ObjectClass.</p>
              * 
              * <strong>example:</strong>
              * <p>organizationUnit,top</p>
@@ -1440,7 +1677,13 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>startTls是否开启</p>
+             * <p>Whether startTLS is enabled. Value range:</p>
+             * <ul>
+             * <li><p>Disabled: disabled</p>
+             * </li>
+             * <li><p>Enabled: enabled</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -1451,7 +1694,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>用户登录标识</p>
+             * <p>User login identifier.</p>
              * 
              * <strong>example:</strong>
              * <p>userPrincipalName, mail</p>
@@ -1462,7 +1705,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>用户objectClass</p>
+             * <p>User ObjectClass.</p>
              * 
              * <strong>example:</strong>
              * <p>person,user</p>
@@ -1473,7 +1716,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>用户自定义Filter</p>
+             * <p>Custom filter for User ObjectClass.</p>
              * 
              * <strong>example:</strong>
              * <p>(|(cn=test)(mail=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -1546,8 +1789,23 @@ public class CreateIdentityProviderRequest extends Request {
             private String clientId; 
             private String clientSecret; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthnParam model) {
+                this.authnMethod = model.authnMethod;
+                this.clientId = model.clientId;
+                this.clientSecret = model.clientSecret;
+            } 
+
             /**
-             * <p>OIDC/oAuth2 认证方法。</p>
+             * <p>OIDC authentication method. Value range:</p>
+             * <ul>
+             * <li><p>client_secret_basic</p>
+             * </li>
+             * <li><p>client_secret_post</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>client_secret_post</p>
@@ -1558,7 +1816,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC/oAuth2 客户端ID。</p>
+             * <p>The ID of the client.</p>
              * 
              * <strong>example:</strong>
              * <p>mkv7rgt4d7i4u7zqtzev2mxxxx</p>
@@ -1569,7 +1827,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC/oAuth2 客户端密钥。</p>
+             * <p>The  secret of the client.</p>
              * 
              * <strong>example:</strong>
              * <p>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</p>
@@ -1666,8 +1924,19 @@ public class CreateIdentityProviderRequest extends Request {
             private String tokenEndpoint; 
             private String userinfoEndpoint; 
 
+            private Builder() {
+            } 
+
+            private Builder(EndpointConfig model) {
+                this.authorizationEndpoint = model.authorizationEndpoint;
+                this.issuer = model.issuer;
+                this.jwksUri = model.jwksUri;
+                this.tokenEndpoint = model.tokenEndpoint;
+                this.userinfoEndpoint = model.userinfoEndpoint;
+            } 
+
             /**
-             * <p>oAuth2 授权端点。</p>
+             * <p>OIDC authorization endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/auth/authorize">https://example.com/auth/authorize</a></p>
@@ -1678,7 +1947,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC issuer信息。</p>
+             * <p>OIDC issuer information.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/auth">https://example.com/auth</a></p>
@@ -1689,7 +1958,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC jwks地址。</p>
+             * <p>OIDC jwks uri.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/auth/jwks">https://example.com/auth/jwks</a></p>
@@ -1700,7 +1969,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>oAuth2 Token端点。</p>
+             * <p>OIDC token endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/auth/token">https://example.com/auth/token</a></p>
@@ -1711,7 +1980,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC 用户信息端点。</p>
+             * <p>OIDC user info endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://example.com/auth/userinfo">https://example.com/auth/userinfo</a></p>
@@ -1820,8 +2089,20 @@ public class CreateIdentityProviderRequest extends Request {
             private String pkceChallengeMethod; 
             private Boolean pkceRequired; 
 
+            private Builder() {
+            } 
+
+            private Builder(OidcConfig model) {
+                this.authnParam = model.authnParam;
+                this.endpointConfig = model.endpointConfig;
+                this.grantScopes = model.grantScopes;
+                this.grantType = model.grantType;
+                this.pkceChallengeMethod = model.pkceChallengeMethod;
+                this.pkceRequired = model.pkceRequired;
+            } 
+
             /**
-             * <p>OIDC客户端认证配置。</p>
+             * <p>OIDC client authentication configuration.</p>
              */
             public Builder authnParam(AuthnParam authnParam) {
                 this.authnParam = authnParam;
@@ -1829,7 +2110,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC 端点配置。</p>
+             * <p>OIDC endpoint configuration.</p>
              */
             public Builder endpointConfig(EndpointConfig endpointConfig) {
                 this.endpointConfig = endpointConfig;
@@ -1837,7 +2118,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC标准参数，如profile、email等</p>
+             * <p>OIDC grant scopes collection.</p>
              * 
              * <strong>example:</strong>
              * <p>openid</p>
@@ -1848,7 +2129,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>OIDC授权类型。</p>
+             * <p>OIDC grant type.</p>
              * 
              * <strong>example:</strong>
              * <p>authorization_code</p>
@@ -1859,7 +2140,13 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>支持的PKCE算法类型。</p>
+             * <p>PKCE algorithm. Possible values:</p>
+             * <ul>
+             * <li><p>SHA256: S256</p>
+             * </li>
+             * <li><p>Plain text: plain</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>S256</p>
@@ -1870,7 +2157,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>AuthorizationCode授权模式下是否使用PKCE。</p>
+             * <p>Whether to use PKCE in the AuthorizationCode grant mode.</p>
              * 
              * <strong>example:</strong>
              * <p>true</p>
@@ -1943,8 +2230,20 @@ public class CreateIdentityProviderRequest extends Request {
             private java.util.List<Integer> periodicSyncTimes; 
             private String periodicSyncType; 
 
+            private Builder() {
+            } 
+
+            private Builder(PeriodicSyncConfig model) {
+                this.periodicSyncCron = model.periodicSyncCron;
+                this.periodicSyncTimes = model.periodicSyncTimes;
+                this.periodicSyncType = model.periodicSyncType;
+            } 
+
             /**
-             * PeriodicSyncCron.
+             * <p>cron expression.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 45 1 * * ?</p>
              */
             public Builder periodicSyncCron(String periodicSyncCron) {
                 this.periodicSyncCron = periodicSyncCron;
@@ -1952,7 +2251,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * PeriodicSyncTimes.
+             * <p>Collection of time points.</p>
              */
             public Builder periodicSyncTimes(java.util.List<Integer> periodicSyncTimes) {
                 this.periodicSyncTimes = periodicSyncTimes;
@@ -1960,7 +2259,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * PeriodicSyncType.
+             * <p>type.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cron</p>
              */
             public Builder periodicSyncType(String periodicSyncType) {
                 this.periodicSyncType = periodicSyncType;
@@ -2018,8 +2320,16 @@ public class CreateIdentityProviderRequest extends Request {
             private java.util.List<String> sourceScopes; 
             private String targetScope; 
 
+            private Builder() {
+            } 
+
+            private Builder(UdSyncScopeConfig model) {
+                this.sourceScopes = model.sourceScopes;
+                this.targetScope = model.targetScope;
+            } 
+
             /**
-             * <p>同步来源节点</p>
+             * <p>List of source nodes for synchronization.</p>
              */
             public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
@@ -2027,7 +2337,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>同步目标节点</p>
+             * <p>Synchronize target node, and fill in the IDaaS organization ID.</p>
              * 
              * <strong>example:</strong>
              * <p>ou_lyhyy6p7yf7mdrdiq5xxxx</p>
@@ -2067,7 +2377,6 @@ public class CreateIdentityProviderRequest extends Request {
         private String periodicSyncStatus;
 
         @com.aliyun.core.annotation.NameInMap("UdSyncScopeConfig")
-        @com.aliyun.core.annotation.Validation(required = true)
         private UdSyncScopeConfig udSyncScopeConfig;
 
         private UdPullConfig(Builder builder) {
@@ -2128,8 +2437,25 @@ public class CreateIdentityProviderRequest extends Request {
             private String periodicSyncStatus; 
             private UdSyncScopeConfig udSyncScopeConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(UdPullConfig model) {
+                this.groupSyncStatus = model.groupSyncStatus;
+                this.incrementalCallbackStatus = model.incrementalCallbackStatus;
+                this.periodicSyncConfig = model.periodicSyncConfig;
+                this.periodicSyncStatus = model.periodicSyncStatus;
+                this.udSyncScopeConfig = model.udSyncScopeConfig;
+            } 
+
             /**
-             * <p>是否支持组同步，默认为disabled</p>
+             * <p>Whether group synchronization is supported. The default value is disabled. Possible values:</p>
+             * <ul>
+             * <li><p>Disabled: disabled</p>
+             * </li>
+             * <li><p>Enabled: enabled</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -2140,7 +2466,13 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>增量回调状态，是否处理来自IdP的增量回调数据</p>
+             * <p>Incremental callback status, indicating whether to process incremental callback data from the IdP. Possible values:</p>
+             * <ul>
+             * <li><p>Disabled: disabled</p>
+             * </li>
+             * <li><p>Enabled: enabled</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -2151,7 +2483,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * PeriodicSyncConfig.
+             * <p>Scheduled configuration verification.</p>
              */
             public Builder periodicSyncConfig(PeriodicSyncConfig periodicSyncConfig) {
                 this.periodicSyncConfig = periodicSyncConfig;
@@ -2159,7 +2491,16 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * PeriodicSyncStatus.
+             * <p>Periodic check status, indicating whether to periodically check the data differences between EIAM and the identity provider. Possible values:</p>
+             * <ul>
+             * <li><p>Disabled: disabled</p>
+             * </li>
+             * <li><p>Enabled: enabled</p>
+             * </li>
+             * </ul>
+             * 
+             * <strong>example:</strong>
+             * <p>disabled</p>
              */
             public Builder periodicSyncStatus(String periodicSyncStatus) {
                 this.periodicSyncStatus = periodicSyncStatus;
@@ -2167,8 +2508,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>同步入配置信息</p>
-             * <p>This parameter is required.</p>
+             * <p>Synchronization scope configuration information.</p>
              */
             public Builder udSyncScopeConfig(UdSyncScopeConfig udSyncScopeConfig) {
                 this.udSyncScopeConfig = udSyncScopeConfig;
@@ -2226,8 +2566,16 @@ public class CreateIdentityProviderRequest extends Request {
             private java.util.List<String> sourceScopes; 
             private String targetScope; 
 
+            private Builder() {
+            } 
+
+            private Builder(UdSyncScopeConfigs model) {
+                this.sourceScopes = model.sourceScopes;
+                this.targetScope = model.targetScope;
+            } 
+
             /**
-             * <p>同步来源节点</p>
+             * <p>List of source nodes for synchronization.</p>
              */
             public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
@@ -2235,7 +2583,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>同步目标节点</p>
+             * <p>Target node for synchronization.</p>
              * 
              * <strong>example:</strong>
              * <p>ou_lyhyy6p7yf7mdrdiq5xxxx</p>
@@ -2310,8 +2658,17 @@ public class CreateIdentityProviderRequest extends Request {
             private String periodicSyncStatus; 
             private java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs; 
 
+            private Builder() {
+            } 
+
+            private Builder(UdPushConfig model) {
+                this.incrementalCallbackStatus = model.incrementalCallbackStatus;
+                this.periodicSyncStatus = model.periodicSyncStatus;
+                this.udSyncScopeConfigs = model.udSyncScopeConfigs;
+            } 
+
             /**
-             * <p>增量回调状态，是否处理来自IdP的增量回调数据</p>
+             * <p>Incremental callback status. This field is reserved and currently not in use; please ignore it.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -2322,7 +2679,10 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * PeriodicSyncStatus.
+             * <p>Periodic check status. This field is currently not in use, please ignore it.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disabled</p>
              */
             public Builder periodicSyncStatus(String periodicSyncStatus) {
                 this.periodicSyncStatus = periodicSyncStatus;
@@ -2330,7 +2690,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>同步出配置信息</p>
+             * <p>Outbound synchronization configuration information.</p>
              */
             public Builder udSyncScopeConfigs(java.util.List<UdSyncScopeConfigs> udSyncScopeConfigs) {
                 this.udSyncScopeConfigs = udSyncScopeConfigs;
@@ -2424,8 +2784,19 @@ public class CreateIdentityProviderRequest extends Request {
             private String corpSecret; 
             private String trustableDomain; 
 
+            private Builder() {
+            } 
+
+            private Builder(WeComConfig model) {
+                this.agentId = model.agentId;
+                this.authorizeCallbackDomain = model.authorizeCallbackDomain;
+                this.corpId = model.corpId;
+                this.corpSecret = model.corpSecret;
+                this.trustableDomain = model.trustableDomain;
+            } 
+
             /**
-             * <p>企业微信自建应用的Id</p>
+             * <p>Agent ID of the self-built WeCom application.</p>
              * 
              * <strong>example:</strong>
              * <p>278231941749863339</p>
@@ -2436,7 +2807,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>授权回调域</p>
+             * <p>Authorization callback domain.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxx.aliyunidaas.com/xxxx">https://xxx.aliyunidaas.com/xxxx</a></p>
@@ -2447,7 +2818,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>企业微信自建应用的corpId</p>
+             * <p>Corp ID of the self-built WeCom application.</p>
              * 
              * <strong>example:</strong>
              * <p>3756043633237690761</p>
@@ -2458,7 +2829,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>企业微信自建应用的corpSecret</p>
+             * <p>Corp Secret of the self-built WeCom application.</p>
              * 
              * <strong>example:</strong>
              * <p>CSEHDddddddxxxxuxkJEHPveWRXBGqVqRsxxxx</p>
@@ -2469,7 +2840,7 @@ public class CreateIdentityProviderRequest extends Request {
             }
 
             /**
-             * <p>可信域名</p>
+             * <p>Trusted domain.</p>
              * 
              * <strong>example:</strong>
              * <p><a href="https://xxx.aliyunidaas.com/">https://xxx.aliyunidaas.com/</a></p>

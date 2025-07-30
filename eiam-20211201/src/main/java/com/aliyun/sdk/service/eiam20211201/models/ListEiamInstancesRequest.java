@@ -45,7 +45,7 @@ public class ListEiamInstancesRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -97,7 +97,7 @@ public class ListEiamInstancesRequest extends Request {
         }
 
         /**
-         * <p>实例ID列表，支持0到100个</p>
+         * <p>The instance ID list.</p>
          */
         public Builder instanceIds(java.util.List<String> instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -106,7 +106,7 @@ public class ListEiamInstancesRequest extends Request {
         }
 
         /**
-         * <p>实例所属Region</p>
+         * <p>The region in which the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -22,6 +22,10 @@ public class UpdateIdentityProviderRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DingtalkAppConfig")
     private DingtalkAppConfig dingtalkAppConfig;
 
@@ -66,6 +70,7 @@ public class UpdateIdentityProviderRequest extends Request {
     private UpdateIdentityProviderRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.clientToken = builder.clientToken;
         this.dingtalkAppConfig = builder.dingtalkAppConfig;
         this.identityProviderId = builder.identityProviderId;
         this.identityProviderName = builder.identityProviderName;
@@ -86,7 +91,7 @@ public class UpdateIdentityProviderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -96,6 +101,13 @@ public class UpdateIdentityProviderRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -170,6 +182,7 @@ public class UpdateIdentityProviderRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateIdentityProviderRequest, Builder> {
         private String regionId; 
+        private String clientToken; 
         private DingtalkAppConfig dingtalkAppConfig; 
         private String identityProviderId; 
         private String identityProviderName; 
@@ -188,6 +201,7 @@ public class UpdateIdentityProviderRequest extends Request {
         private Builder(UpdateIdentityProviderRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.clientToken = request.clientToken;
             this.dingtalkAppConfig = request.dingtalkAppConfig;
             this.identityProviderId = request.identityProviderId;
             this.identityProviderName = request.identityProviderName;
@@ -206,6 +220,15 @@ public class UpdateIdentityProviderRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ClientToken.
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -328,16 +351,22 @@ public class UpdateIdentityProviderRequest extends Request {
      */
     public static class DingtalkAppConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppKey")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String appKey;
 
         @com.aliyun.core.annotation.NameInMap("AppSecret")
-        @com.aliyun.core.annotation.Validation(required = true)
         private String appSecret;
+
+        @com.aliyun.core.annotation.NameInMap("EncryptKey")
+        private String encryptKey;
+
+        @com.aliyun.core.annotation.NameInMap("VerificationToken")
+        private String verificationToken;
 
         private DingtalkAppConfig(Builder builder) {
             this.appKey = builder.appKey;
             this.appSecret = builder.appSecret;
+            this.encryptKey = builder.encryptKey;
+            this.verificationToken = builder.verificationToken;
         }
 
         public static Builder builder() {
@@ -362,13 +391,38 @@ public class UpdateIdentityProviderRequest extends Request {
             return this.appSecret;
         }
 
+        /**
+         * @return encryptKey
+         */
+        public String getEncryptKey() {
+            return this.encryptKey;
+        }
+
+        /**
+         * @return verificationToken
+         */
+        public String getVerificationToken() {
+            return this.verificationToken;
+        }
+
         public static final class Builder {
             private String appKey; 
             private String appSecret; 
+            private String encryptKey; 
+            private String verificationToken; 
+
+            private Builder() {
+            } 
+
+            private Builder(DingtalkAppConfig model) {
+                this.appKey = model.appKey;
+                this.appSecret = model.appSecret;
+                this.encryptKey = model.encryptKey;
+                this.verificationToken = model.verificationToken;
+            } 
 
             /**
              * <p>钉钉一方应用的AppKey</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>49nyeaqumk7f</p>
@@ -380,13 +434,28 @@ public class UpdateIdentityProviderRequest extends Request {
 
             /**
              * <p>钉钉一方应用的AppSecret</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>86nozWFL2CxgwnhKiXaG8dN4keLPkUNc5xxxx</p>
              */
             public Builder appSecret(String appSecret) {
                 this.appSecret = appSecret;
+                return this;
+            }
+
+            /**
+             * EncryptKey.
+             */
+            public Builder encryptKey(String encryptKey) {
+                this.encryptKey = encryptKey;
+                return this;
+            }
+
+            /**
+             * VerificationToken.
+             */
+            public Builder verificationToken(String verificationToken) {
+                this.verificationToken = verificationToken;
                 return this;
             }
 
@@ -465,6 +534,16 @@ public class UpdateIdentityProviderRequest extends Request {
             private String encryptKey; 
             private String verificationToken; 
 
+            private Builder() {
+            } 
+
+            private Builder(LarkConfig model) {
+                this.appId = model.appId;
+                this.appSecret = model.appSecret;
+                this.encryptKey = model.encryptKey;
+                this.verificationToken = model.verificationToken;
+            } 
+
             /**
              * AppId.
              */
@@ -475,7 +554,6 @@ public class UpdateIdentityProviderRequest extends Request {
 
             /**
              * <p>钉钉一方应用的AppSecret</p>
-             * <p>This parameter is required.</p>
              * 
              * <strong>example:</strong>
              * <p>86nozWFL2CxgwnhKiXaG8dN4keLPkUNc5xxxx</p>
@@ -624,6 +702,20 @@ public class UpdateIdentityProviderRequest extends Request {
             private Integer ldapServerPort; 
             private String startTlsStatus; 
 
+            private Builder() {
+            } 
+
+            private Builder(LdapConfig model) {
+                this.administratorPassword = model.administratorPassword;
+                this.administratorUsername = model.administratorUsername;
+                this.certificateFingerprintStatus = model.certificateFingerprintStatus;
+                this.certificateFingerprints = model.certificateFingerprints;
+                this.ldapProtocol = model.ldapProtocol;
+                this.ldapServerHost = model.ldapServerHost;
+                this.ldapServerPort = model.ldapServerPort;
+                this.startTlsStatus = model.startTlsStatus;
+            } 
+
             /**
              * <p>管理员密码</p>
              * 
@@ -760,6 +852,14 @@ public class UpdateIdentityProviderRequest extends Request {
             private String authnMethod; 
             private String clientSecret; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthnParam model) {
+                this.authnMethod = model.authnMethod;
+                this.clientSecret = model.clientSecret;
+            } 
+
             /**
              * <p>OIDC/oAuth2 认证方法。</p>
              * 
@@ -868,6 +968,17 @@ public class UpdateIdentityProviderRequest extends Request {
             private String jwksUri; 
             private String tokenEndpoint; 
             private String userinfoEndpoint; 
+
+            private Builder() {
+            } 
+
+            private Builder(EndpointConfig model) {
+                this.authorizationEndpoint = model.authorizationEndpoint;
+                this.issuer = model.issuer;
+                this.jwksUri = model.jwksUri;
+                this.tokenEndpoint = model.tokenEndpoint;
+                this.userinfoEndpoint = model.userinfoEndpoint;
+            } 
 
             /**
              * <p>oAuth2 授权端点。</p>
@@ -1023,6 +1134,18 @@ public class UpdateIdentityProviderRequest extends Request {
             private String pkceChallengeMethod; 
             private Boolean pkceRequired; 
 
+            private Builder() {
+            } 
+
+            private Builder(OidcConfig model) {
+                this.authnParam = model.authnParam;
+                this.endpointConfig = model.endpointConfig;
+                this.grantScopes = model.grantScopes;
+                this.grantType = model.grantType;
+                this.pkceChallengeMethod = model.pkceChallengeMethod;
+                this.pkceRequired = model.pkceRequired;
+            } 
+
             /**
              * <p>OIDC客户端认证配置。</p>
              */
@@ -1157,6 +1280,16 @@ public class UpdateIdentityProviderRequest extends Request {
             private String authorizeCallbackDomain; 
             private String corpSecret; 
             private String trustableDomain; 
+
+            private Builder() {
+            } 
+
+            private Builder(WeComConfig model) {
+                this.agentId = model.agentId;
+                this.authorizeCallbackDomain = model.authorizeCallbackDomain;
+                this.corpSecret = model.corpSecret;
+                this.trustableDomain = model.trustableDomain;
+            } 
 
             /**
              * <p>企业微信自建应用的Id</p>

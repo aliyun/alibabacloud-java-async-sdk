@@ -36,6 +36,10 @@ public class CreateUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,6 +58,14 @@ public class CreateUserResponseBody extends TeaModel {
         private String requestId; 
         private String userId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateUserResponseBody model) {
+            this.requestId = model.requestId;
+            this.userId = model.userId;
+        } 
+
         /**
          * <p>The ID of the request.</p>
          * 
@@ -66,7 +78,7 @@ public class CreateUserResponseBody extends TeaModel {
         }
 
         /**
-         * <p>The ID of the account.</p>
+         * <p>The ID of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>user_d6sbsuumeta4h66ec3il7yxxxx</p>

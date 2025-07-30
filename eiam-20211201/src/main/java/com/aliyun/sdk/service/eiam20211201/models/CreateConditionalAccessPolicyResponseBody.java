@@ -36,6 +36,10 @@ public class CreateConditionalAccessPolicyResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return conditionalAccessPolicyId
      */
@@ -53,6 +57,14 @@ public class CreateConditionalAccessPolicyResponseBody extends TeaModel {
     public static final class Builder {
         private String conditionalAccessPolicyId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateConditionalAccessPolicyResponseBody model) {
+            this.conditionalAccessPolicyId = model.conditionalAccessPolicyId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Conditional Access Policy ID</p>

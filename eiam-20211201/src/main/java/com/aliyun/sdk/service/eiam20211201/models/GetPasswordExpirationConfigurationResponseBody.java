@@ -36,6 +36,10 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return passwordExpirationConfiguration
      */
@@ -53,6 +57,14 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
     public static final class Builder {
         private PasswordExpirationConfiguration passwordExpirationConfiguration; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPasswordExpirationConfigurationResponseBody model) {
+            this.passwordExpirationConfiguration = model.passwordExpirationConfiguration;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The password expiration configurations.</p>
@@ -194,6 +206,20 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
             private String passwordExpirationStatus; 
             private Integer passwordForcedUpdateDuration; 
             private Integer passwordValidMaxDay; 
+
+            private Builder() {
+            } 
+
+            private Builder(PasswordExpirationConfiguration model) {
+                this.effectiveAuthenticationSourceIds = model.effectiveAuthenticationSourceIds;
+                this.passwordExpirationAction = model.passwordExpirationAction;
+                this.passwordExpirationNotificationChannels = model.passwordExpirationNotificationChannels;
+                this.passwordExpirationNotificationDuration = model.passwordExpirationNotificationDuration;
+                this.passwordExpirationNotificationStatus = model.passwordExpirationNotificationStatus;
+                this.passwordExpirationStatus = model.passwordExpirationStatus;
+                this.passwordForcedUpdateDuration = model.passwordForcedUpdateDuration;
+                this.passwordValidMaxDay = model.passwordValidMaxDay;
+            } 
 
             /**
              * <p>The list of valid authentication IDs. The default is all [&quot;ia_all&quot;]</p>

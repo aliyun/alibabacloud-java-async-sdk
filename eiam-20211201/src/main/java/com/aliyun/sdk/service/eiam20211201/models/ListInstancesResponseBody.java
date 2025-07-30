@@ -40,6 +40,10 @@ public class ListInstancesResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instances
      */
@@ -65,6 +69,15 @@ public class ListInstancesResponseBody extends TeaModel {
         private java.util.List<Instances> instances; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListInstancesResponseBody model) {
+            this.instances = model.instances;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information of instances.</p>
@@ -145,6 +158,14 @@ public class ListInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String endpoint; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefaultEndpoint model) {
+                this.endpoint = model.endpoint;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The endpoint of the instance.</p>
@@ -258,6 +279,17 @@ public class ListInstancesResponseBody extends TeaModel {
             private String description; 
             private String instanceId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instances model) {
+                this.createTime = model.createTime;
+                this.defaultEndpoint = model.defaultEndpoint;
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>

@@ -36,6 +36,10 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return organizationalUnit
      */
@@ -53,6 +57,14 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
     public static final class Builder {
         private OrganizationalUnit organizationalUnit; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetOrganizationalUnitResponseBody model) {
+            this.organizationalUnit = model.organizationalUnit;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The data object of the organizational unit.</p>
@@ -231,6 +243,23 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
             private String parentId; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnit model) {
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.instanceId = model.instanceId;
+                this.leaf = model.leaf;
+                this.organizationalUnitExternalId = model.organizationalUnitExternalId;
+                this.organizationalUnitId = model.organizationalUnitId;
+                this.organizationalUnitName = model.organizationalUnitName;
+                this.organizationalUnitSourceId = model.organizationalUnitSourceId;
+                this.organizationalUnitSourceType = model.organizationalUnitSourceType;
+                this.parentId = model.parentId;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
              * <p>The time when the organizational unit was created. This value is a UNIX timestamp. Unit: milliseconds.</p>
              * 
@@ -299,7 +328,7 @@ public class GetOrganizationalUnitResponseBody extends TeaModel {
             }
 
             /**
-             * <p>组织名称。</p>
+             * <p>The Name of the organizational unit.</p>
              * 
              * <strong>example:</strong>
              * <p>test_organizationalUnit_name</p>

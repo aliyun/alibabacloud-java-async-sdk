@@ -90,7 +90,7 @@ public class CreateConditionalAccessPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -390,6 +390,14 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             private java.util.List<String> excludeApplications; 
             private java.util.List<String> includeApplications; 
 
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.excludeApplications = model.excludeApplications;
+                this.includeApplications = model.includeApplications;
+            } 
+
             /**
              * <p>Excluded applications</p>
              */
@@ -456,6 +464,14 @@ public class CreateConditionalAccessPolicyRequest extends Request {
         public static final class Builder {
             private java.util.List<String> excludeNetworkZones; 
             private java.util.List<String> includeNetworkZones; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkZones model) {
+                this.excludeNetworkZones = model.excludeNetworkZones;
+                this.includeNetworkZones = model.includeNetworkZones;
+            } 
 
             /**
              * <p>Excluded network zones</p>
@@ -572,6 +588,18 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             private java.util.List<String> includeOrganizationalUnits; 
             private java.util.List<String> includeUsers; 
 
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.excludeGroups = model.excludeGroups;
+                this.excludeOrganizationalUnits = model.excludeOrganizationalUnits;
+                this.excludeUsers = model.excludeUsers;
+                this.includeGroups = model.includeGroups;
+                this.includeOrganizationalUnits = model.includeOrganizationalUnits;
+                this.includeUsers = model.includeUsers;
+            } 
+
             /**
              * <p>Excluded user groups</p>
              */
@@ -683,6 +711,15 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             private NetworkZones networkZones; 
             private Users users; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConditionsConfig model) {
+                this.applications = model.applications;
+                this.networkZones = model.networkZones;
+                this.users = model.users;
+            } 
+
             /**
              * <p>Target applications for the conditional access policy</p>
              */
@@ -793,6 +830,17 @@ public class CreateConditionalAccessPolicyRequest extends Request {
             private Long mfaAuthenticationIntervalSeconds; 
             private java.util.List<String> mfaAuthenticationMethods; 
             private String mfaType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DecisionConfig model) {
+                this.activeSessionReuseStatus = model.activeSessionReuseStatus;
+                this.effect = model.effect;
+                this.mfaAuthenticationIntervalSeconds = model.mfaAuthenticationIntervalSeconds;
+                this.mfaAuthenticationMethods = model.mfaAuthenticationMethods;
+                this.mfaType = model.mfaType;
+            } 
 
             /**
              * <p>Whether to enable session reuse</p>

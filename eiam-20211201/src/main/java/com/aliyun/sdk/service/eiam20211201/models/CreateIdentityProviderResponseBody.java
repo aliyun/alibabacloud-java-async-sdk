@@ -36,6 +36,10 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return identityProviderId
      */
@@ -54,8 +58,19 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         private String identityProviderId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateIdentityProviderResponseBody model) {
+            this.identityProviderId = model.identityProviderId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * IdentityProviderId.
+         * <p>Identity provider ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>idp_mwpcwnhrimlr2horxXXXX</p>
          */
         public Builder identityProviderId(String identityProviderId) {
             this.identityProviderId = identityProviderId;
@@ -63,7 +78,10 @@ public class CreateIdentityProviderResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

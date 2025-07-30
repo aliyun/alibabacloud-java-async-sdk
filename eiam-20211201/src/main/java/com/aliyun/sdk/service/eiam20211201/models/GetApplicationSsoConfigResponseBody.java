@@ -36,6 +36,10 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationSsoConfig
      */
@@ -53,6 +57,14 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
     public static final class Builder {
         private ApplicationSsoConfig applicationSsoConfig; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationSsoConfigResponseBody model) {
+            this.applicationSsoConfig = model.applicationSsoConfig;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The single sign-on (SSO) configuration information of the application.</p>
@@ -122,6 +134,14 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String claimName; 
             private String claimValueExpression; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomClaims model) {
+                this.claimName = model.claimName;
+                this.claimValueExpression = model.claimValueExpression;
+            } 
 
             /**
              * <p>The claim name.</p>
@@ -351,6 +371,27 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             private Long refreshTokenEffective; 
             private java.util.List<String> responseTypes; 
             private String subjectIdExpression; 
+
+            private Builder() {
+            } 
+
+            private Builder(OidcSsoConfig model) {
+                this.accessTokenEffectiveTime = model.accessTokenEffectiveTime;
+                this.codeEffectiveTime = model.codeEffectiveTime;
+                this.customClaims = model.customClaims;
+                this.grantScopes = model.grantScopes;
+                this.grantTypes = model.grantTypes;
+                this.idTokenEffectiveTime = model.idTokenEffectiveTime;
+                this.passwordAuthenticationSourceId = model.passwordAuthenticationSourceId;
+                this.passwordTotpMfaRequired = model.passwordTotpMfaRequired;
+                this.pkceChallengeMethods = model.pkceChallengeMethods;
+                this.pkceRequired = model.pkceRequired;
+                this.postLogoutRedirectUris = model.postLogoutRedirectUris;
+                this.redirectUris = model.redirectUris;
+                this.refreshTokenEffective = model.refreshTokenEffective;
+                this.responseTypes = model.responseTypes;
+                this.subjectIdExpression = model.subjectIdExpression;
+            } 
 
             /**
              * <p>The validity period of the issued access token. Unit: seconds. Default value: 1200.</p>
@@ -655,6 +696,22 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             private String samlMetaEndpoint; 
             private String samlSsoEndpoint; 
 
+            private Builder() {
+            } 
+
+            private Builder(ProtocolEndpointDomain model) {
+                this.oauth2AuthorizationEndpoint = model.oauth2AuthorizationEndpoint;
+                this.oauth2DeviceAuthorizationEndpoint = model.oauth2DeviceAuthorizationEndpoint;
+                this.oauth2RevokeEndpoint = model.oauth2RevokeEndpoint;
+                this.oauth2TokenEndpoint = model.oauth2TokenEndpoint;
+                this.oauth2UserinfoEndpoint = model.oauth2UserinfoEndpoint;
+                this.oidcIssuer = model.oidcIssuer;
+                this.oidcJwksEndpoint = model.oidcJwksEndpoint;
+                this.oidcLogoutEndpoint = model.oidcLogoutEndpoint;
+                this.samlMetaEndpoint = model.samlMetaEndpoint;
+                this.samlSsoEndpoint = model.samlSsoEndpoint;
+            } 
+
             /**
              * <p>The OAuth2.0 authorization endpoint. This parameter is returned only when the SSO protocol of the application is an OIDC protocol.</p>
              * 
@@ -816,6 +873,14 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             private String attributeName; 
             private String attributeValueExpression; 
 
+            private Builder() {
+            } 
+
+            private Builder(AttributeStatements model) {
+                this.attributeName = model.attributeName;
+                this.attributeValueExpression = model.attributeValueExpression;
+            } 
+
             /**
              * <p>The attribute name.</p>
              * 
@@ -888,6 +953,14 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
         public static final class Builder {
             private String displayName; 
             private String relayState; 
+
+            private Builder() {
+            } 
+
+            private Builder(OptionalRelayStates model) {
+                this.displayName = model.displayName;
+                this.relayState = model.relayState;
+            } 
 
             /**
              * <p>The display name of the RelayState</p>
@@ -1069,6 +1142,23 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             private String signatureAlgorithm; 
             private String spEntityId; 
             private String spSsoAcsUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(SamlSsoConfig model) {
+                this.assertionSigned = model.assertionSigned;
+                this.attributeStatements = model.attributeStatements;
+                this.defaultRelayState = model.defaultRelayState;
+                this.idPEntityId = model.idPEntityId;
+                this.nameIdFormat = model.nameIdFormat;
+                this.nameIdValueExpression = model.nameIdValueExpression;
+                this.optionalRelayStates = model.optionalRelayStates;
+                this.responseSigned = model.responseSigned;
+                this.signatureAlgorithm = model.signatureAlgorithm;
+                this.spEntityId = model.spEntityId;
+                this.spSsoAcsUrl = model.spSsoAcsUrl;
+            } 
 
             /**
              * <p>Whether the Assertion needs a signature. ResponseSigned and AssertionSigned cannot be false at the same time.</p>
@@ -1293,6 +1383,18 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
             private ProtocolEndpointDomain protocolEndpointDomain; 
             private SamlSsoConfig samlSsoConfig; 
             private String ssoStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationSsoConfig model) {
+                this.initLoginType = model.initLoginType;
+                this.initLoginUrl = model.initLoginUrl;
+                this.oidcSsoConfig = model.oidcSsoConfig;
+                this.protocolEndpointDomain = model.protocolEndpointDomain;
+                this.samlSsoConfig = model.samlSsoConfig;
+                this.ssoStatus = model.ssoStatus;
+            } 
 
             /**
              * <p>The initial SSO method. Valid values:</p>

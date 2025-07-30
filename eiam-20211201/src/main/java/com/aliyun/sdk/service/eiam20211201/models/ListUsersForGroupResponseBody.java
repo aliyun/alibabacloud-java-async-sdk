@@ -40,6 +40,10 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private java.util.List<Users> users; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUsersForGroupResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.users = model.users;
+        } 
 
         /**
          * <p>The request ID.</p>
@@ -157,6 +170,15 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             private String groupMemberRelationSourceId; 
             private String groupMemberRelationSourceType; 
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.groupMemberRelationSourceId = model.groupMemberRelationSourceId;
+                this.groupMemberRelationSourceType = model.groupMemberRelationSourceType;
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>Account membership source id</p>

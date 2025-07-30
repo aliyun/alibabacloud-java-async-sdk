@@ -36,6 +36,10 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationProvisioningScope
      */
@@ -53,6 +57,14 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
     public static final class Builder {
         private ApplicationProvisioningScope applicationProvisioningScope; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationProvisioningScopeResponseBody model) {
+            this.applicationProvisioningScope = model.applicationProvisioningScope;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The scope of account synchronization.</p>
@@ -147,8 +159,18 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
             private java.util.List<String> organizationalUnitIds; 
             private Integer usedQuota; 
 
+            private Builder() {
+            } 
+
+            private Builder(ApplicationProvisioningScope model) {
+                this.groupIds = model.groupIds;
+                this.maxQuota = model.maxQuota;
+                this.organizationalUnitIds = model.organizationalUnitIds;
+                this.usedQuota = model.usedQuota;
+            } 
+
             /**
-             * <p>Synchronize the list of authorized groups</p>
+             * <p>Synchronize the list of authorized groups.</p>
              */
             public Builder groupIds(java.util.List<String> groupIds) {
                 this.groupIds = groupIds;
@@ -156,7 +178,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Instance Indicates the maximum quota number of authorized agents</p>
+             * <p>Instance Indicates the maximum quota number of authorized agents.</p>
              * 
              * <strong>example:</strong>
              * <p>20</p>
@@ -175,7 +197,7 @@ public class GetApplicationProvisioningScopeResponseBody extends TeaModel {
             }
 
             /**
-             * <p>Indicates the quota number of used authorized agents</p>
+             * <p>Indicates the quota number of used authorized agents.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>

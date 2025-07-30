@@ -36,6 +36,10 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return passwordComplexityConfiguration
      */
@@ -53,6 +57,14 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
     public static final class Builder {
         private PasswordComplexityConfiguration passwordComplexityConfiguration; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPasswordComplexityConfigurationResponseBody model) {
+            this.passwordComplexityConfiguration = model.passwordComplexityConfiguration;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The password complexity configurations.</p>
@@ -110,6 +122,13 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String passwordCheckType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PasswordComplexityRules model) {
+                this.passwordCheckType = model.passwordCheckType;
+            } 
 
             /**
              * <p>The type of the password check. Valid values:</p>
@@ -182,6 +201,14 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List<PasswordComplexityRules> passwordComplexityRules; 
             private Integer passwordMinLength; 
+
+            private Builder() {
+            } 
+
+            private Builder(PasswordComplexityConfiguration model) {
+                this.passwordComplexityRules = model.passwordComplexityRules;
+                this.passwordMinLength = model.passwordMinLength;
+            } 
 
             /**
              * <p>The password complexity rules.</p>

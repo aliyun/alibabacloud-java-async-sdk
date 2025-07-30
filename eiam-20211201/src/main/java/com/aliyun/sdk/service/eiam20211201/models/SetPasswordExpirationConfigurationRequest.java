@@ -87,7 +87,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -202,7 +202,7 @@ public class SetPasswordExpirationConfigurationRequest extends Request {
         }
 
         /**
-         * EffectiveAuthenticationSourceIds.
+         * <p>Effective authentication sourceIds</p>
          */
         public Builder effectiveAuthenticationSourceIds(java.util.List<String> effectiveAuthenticationSourceIds) {
             this.putQueryParameter("EffectiveAuthenticationSourceIds", effectiveAuthenticationSourceIds);

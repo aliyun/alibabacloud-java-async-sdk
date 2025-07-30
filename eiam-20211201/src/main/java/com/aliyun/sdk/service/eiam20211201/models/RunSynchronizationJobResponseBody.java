@@ -36,6 +36,10 @@ public class RunSynchronizationJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,19 @@ public class RunSynchronizationJobResponseBody extends TeaModel {
         private String requestId; 
         private String synchronizationJobId; 
 
+        private Builder() {
+        } 
+
+        private Builder(RunSynchronizationJobResponseBody model) {
+            this.requestId = model.requestId;
+            this.synchronizationJobId = model.synchronizationJobId;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +78,10 @@ public class RunSynchronizationJobResponseBody extends TeaModel {
         }
 
         /**
-         * SynchronizationJobId.
+         * <p>The ID of the synchronization job.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sync_0000347vjovtcf41li0fgsd98gn24q9nj9xxxxx</p>
          */
         public Builder synchronizationJobId(String synchronizationJobId) {
             this.synchronizationJobId = synchronizationJobId;

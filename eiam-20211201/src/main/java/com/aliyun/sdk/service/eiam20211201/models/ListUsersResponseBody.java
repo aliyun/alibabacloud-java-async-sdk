@@ -40,6 +40,10 @@ public class ListUsersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListUsersResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private java.util.List<Users> users; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUsersResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.users = model.users;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -373,6 +386,33 @@ public class ListUsersResponseBody extends TeaModel {
             private String userSourceId; 
             private String userSourceType; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.accountExpireTime = model.accountExpireTime;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.emailVerified = model.emailVerified;
+                this.instanceId = model.instanceId;
+                this.lockExpireTime = model.lockExpireTime;
+                this.passwordExpireTime = model.passwordExpireTime;
+                this.passwordSet = model.passwordSet;
+                this.phoneNumber = model.phoneNumber;
+                this.phoneNumberVerified = model.phoneNumberVerified;
+                this.phoneRegion = model.phoneRegion;
+                this.registerTime = model.registerTime;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.userExternalId = model.userExternalId;
+                this.userId = model.userId;
+                this.userSourceId = model.userSourceId;
+                this.userSourceType = model.userSourceType;
+                this.username = model.username;
+            } 
 
             /**
              * <p>The time when the account expires. This value is a UNIX timestamp. Unit: milliseconds.</p>

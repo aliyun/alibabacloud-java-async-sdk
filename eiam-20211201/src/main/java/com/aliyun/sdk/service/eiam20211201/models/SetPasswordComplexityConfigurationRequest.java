@@ -51,7 +51,7 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -185,6 +185,13 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
 
         public static final class Builder {
             private String passwordCheckType; 
+
+            private Builder() {
+            } 
+
+            private Builder(PasswordComplexityRules model) {
+                this.passwordCheckType = model.passwordCheckType;
+            } 
 
             /**
              * <p>The type of the password check. Valid values:</p>

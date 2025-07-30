@@ -36,6 +36,10 @@ public class CreateGroupResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groupId
      */
@@ -53,6 +57,14 @@ public class CreateGroupResponseBody extends TeaModel {
     public static final class Builder {
         private String groupId; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(CreateGroupResponseBody model) {
+            this.groupId = model.groupId;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The group ID.</p>

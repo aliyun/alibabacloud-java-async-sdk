@@ -46,7 +46,7 @@ public class EnableApplicationSsoRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +98,7 @@ public class EnableApplicationSsoRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的应用主键id</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class EnableApplicationSsoRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM的实例id</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

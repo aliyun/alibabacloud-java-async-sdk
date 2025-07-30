@@ -40,6 +40,10 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return groups
      */
@@ -65,6 +69,15 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
         private java.util.List<Groups> groups; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListGroupsForApplicationResponseBody model) {
+            this.groups = model.groups;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The group IDs.</p>
@@ -133,6 +146,13 @@ public class ListGroupsForApplicationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String groupId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.groupId = model.groupId;
+            } 
 
             /**
              * <p>The group ID.</p>

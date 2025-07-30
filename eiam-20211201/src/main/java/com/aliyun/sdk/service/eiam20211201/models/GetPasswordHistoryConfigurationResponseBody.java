@@ -36,6 +36,10 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return passwordHistoryConfiguration
      */
@@ -53,6 +57,14 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
     public static final class Builder {
         private PasswordHistoryConfiguration passwordHistoryConfiguration; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetPasswordHistoryConfigurationResponseBody model) {
+            this.passwordHistoryConfiguration = model.passwordHistoryConfiguration;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The password history configurations.</p>
@@ -122,6 +134,14 @@ public class GetPasswordHistoryConfigurationResponseBody extends TeaModel {
         public static final class Builder {
             private Integer passwordHistoryMaxRetention; 
             private String passwordHistoryStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(PasswordHistoryConfiguration model) {
+                this.passwordHistoryMaxRetention = model.passwordHistoryMaxRetention;
+                this.passwordHistoryStatus = model.passwordHistoryStatus;
+            } 
 
             /**
              * <p>The maximum number of recent passwords that are retained.</p>

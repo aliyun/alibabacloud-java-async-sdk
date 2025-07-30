@@ -36,6 +36,10 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainProxyToken
      */
@@ -54,8 +58,16 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
         private DomainProxyToken domainProxyToken; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ObtainDomainProxyTokenResponseBody model) {
+            this.domainProxyToken = model.domainProxyToken;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * DomainProxyToken.
+         * <p>The information about the proxy token.</p>
          */
         public Builder domainProxyToken(DomainProxyToken domainProxyToken) {
             this.domainProxyToken = domainProxyToken;
@@ -63,7 +75,10 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -192,8 +207,22 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             private String status; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(DomainProxyToken model) {
+                this.createTime = model.createTime;
+                this.domainId = model.domainId;
+                this.domainProxyToken = model.domainProxyToken;
+                this.domainProxyTokenId = model.domainProxyTokenId;
+                this.instanceId = model.instanceId;
+                this.lastUsedTime = model.lastUsedTime;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * <p>域名代理Token创建时间，Unix时间戳格式，单位为毫秒。</p>
+             * <p>The time when the proxy token of the domain name was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -204,7 +233,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>域名ID。</p>
+             * <p>The ID of the domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>dm_examplexxxx</p>
@@ -215,7 +244,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>域名代理Token。</p>
+             * <p>The proxy token of the domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>PTxxxxxxxx</p>
@@ -226,7 +255,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>域名代理Token ID。</p>
+             * <p>The ID of the proxy token of the domain name.</p>
              * 
              * <strong>example:</strong>
              * <p>pt_examplexxxx</p>
@@ -237,7 +266,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例ID。</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -248,7 +277,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>域名代理Token最近使用时间，Unix时间戳格式，单位为毫秒。</p>
+             * <p>The time when the proxy token of the domain name was last used. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -259,7 +288,11 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>token状态，枚举类型：(enabled）启用,（disabled）禁用。</p>
+             * <p>The state of the proxy token. Valid values:</p>
+             * <ul>
+             * <li>enabled</li>
+             * <li>disabled</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -270,7 +303,7 @@ public class ObtainDomainProxyTokenResponseBody extends TeaModel {
             }
 
             /**
-             * <p>域名代理Token最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+             * <p>The time when the proxy token of the domain name was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>

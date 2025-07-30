@@ -93,7 +93,7 @@ public class UpdateUserRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -400,6 +400,15 @@ public class UpdateUserRequest extends Request {
             private String fieldName; 
             private String fieldValue; 
             private String operation; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomFields model) {
+                this.fieldName = model.fieldName;
+                this.fieldValue = model.fieldValue;
+                this.operation = model.operation;
+            } 
 
             /**
              * <p>The name of the extended field. You must create an extended field before you specify this parameter. To create an extended field, go to the Extended Fields page of the specified EIAM instance in the IDaaS console.</p>

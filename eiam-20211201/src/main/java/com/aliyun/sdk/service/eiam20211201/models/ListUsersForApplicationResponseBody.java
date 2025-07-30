@@ -40,6 +40,10 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -65,6 +69,15 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
         private java.util.List<Users> users; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListUsersForApplicationResponseBody model) {
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+            this.users = model.users;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -133,6 +146,13 @@ public class ListUsersForApplicationResponseBody extends TeaModel {
 
         public static final class Builder {
             private String userId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.userId = model.userId;
+            } 
 
             /**
              * <p>The ID of the account.</p>

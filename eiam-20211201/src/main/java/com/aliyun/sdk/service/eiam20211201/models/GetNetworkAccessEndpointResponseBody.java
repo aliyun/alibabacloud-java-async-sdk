@@ -36,6 +36,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkAccessEndpoint
      */
@@ -54,8 +58,16 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         private NetworkAccessEndpoint networkAccessEndpoint; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetNetworkAccessEndpointResponseBody model) {
+            this.networkAccessEndpoint = model.networkAccessEndpoint;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * NetworkAccessEndpoint.
+         * <p>Network endpoint information.</p>
          */
         public Builder networkAccessEndpoint(NetworkAccessEndpoint networkAccessEndpoint) {
             this.networkAccessEndpoint = networkAccessEndpoint;
@@ -63,7 +75,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The ID of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -252,8 +267,27 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             private String vpcId; 
             private String vpcRegionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(NetworkAccessEndpoint model) {
+                this.createTime = model.createTime;
+                this.egressPrivateIpAddresses = model.egressPrivateIpAddresses;
+                this.egressPublicIpAddresses = model.egressPublicIpAddresses;
+                this.instanceId = model.instanceId;
+                this.networkAccessEndpointId = model.networkAccessEndpointId;
+                this.networkAccessEndpointName = model.networkAccessEndpointName;
+                this.networkAccessEndpointType = model.networkAccessEndpointType;
+                this.securityGroupId = model.securityGroupId;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+                this.vpcRegionId = model.vpcRegionId;
+            } 
+
             /**
-             * <p>专属网络端点创建时间，Unix时间戳格式，单位为毫秒。</p>
+             * <p>The time when the baseline was created.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -264,7 +298,8 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>网络访问端私网出口IP地址列表。</p>
+             * <p>Public egress ip address range of the dedicated network endpoint
+             * This field is returned only when NetworkEndpointType is set to private.</p>
              * 
              * <strong>example:</strong>
              * <p>172.168.x.x</p>
@@ -275,7 +310,8 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>网络访问端点公网出口IP地址段</p>
+             * <p>Public egress ip address range of the shared network endpoint
+             * This field is returned only when networkEndpointType is set to shared.</p>
              * 
              * <strong>example:</strong>
              * <p>8.xx.xx.xxx/27</p>
@@ -286,7 +322,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>实例ID。</p>
+             * <p>Instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -297,7 +333,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点ID。</p>
+             * <p>The unique identifier of the network access endpoint.</p>
              * 
              * <strong>example:</strong>
              * <p>nae_examplexxx</p>
@@ -308,10 +344,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点名称。</p>
+             * <p>Private network endpoint name.</p>
              * 
              * <strong>example:</strong>
-             * <p>xx业务VPC访问端点</p>
+             * <p>xx business VPC access endpoint</p>
              */
             public Builder networkAccessEndpointName(String networkAccessEndpointName) {
                 this.networkAccessEndpointName = networkAccessEndpointName;
@@ -319,7 +355,10 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点连接的类型。</p>
+             * <p>Type of the Network Endpoint
+             * Possible values:</p>
+             * <p>shared: Shared network endpoint</p>
+             * <p>private: Dedicated network endpoint</p>
              * 
              * <strong>example:</strong>
              * <p>private</p>
@@ -330,7 +369,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点使用的安全组ID。</p>
+             * <p>The ID of the destination security group.</p>
              * 
              * <strong>example:</strong>
              * <p>sg-examplexxx</p>
@@ -341,7 +380,12 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点状态。</p>
+             * <p>Status of the Network Endpoint
+             * Possible values:</p>
+             * <p>pending: Pending initialization</p>
+             * <p>creating: Being created</p>
+             * <p>running: Running</p>
+             * <p>deleting: Being deleted</p>
              * 
              * <strong>example:</strong>
              * <p>running</p>
@@ -352,7 +396,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点最近更新时间，Unix时间戳格式，单位为毫秒。</p>
+             * <p>The time when the endpoint was updated.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -363,7 +407,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点连接的指定vSwitch列表。</p>
+             * <p>List of specified vSwitches associated with the dedicated network endpoint connection.</p>
              * 
              * <strong>example:</strong>
              * <p>vsw-examplexxx</p>
@@ -374,7 +418,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点连接的VpcID。</p>
+             * <p>The ID of the virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>vpc-examplexxx</p>
@@ -385,7 +429,7 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
             }
 
             /**
-             * <p>专属网络端点连接的Vpc所属地域。</p>
+             * <p>The region ID of the outbound virtual private cloud (VPC).</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>

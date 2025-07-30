@@ -46,7 +46,7 @@ public class GetDomainDnsChallengeRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +98,7 @@ public class GetDomainDnsChallengeRequest extends Request {
         }
 
         /**
-         * <p>域名。</p>
+         * <p>The domain name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class GetDomainDnsChallengeRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -36,6 +36,10 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationProvisioningConfig
      */
@@ -53,6 +57,14 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
     public static final class Builder {
         private ApplicationProvisioningConfig applicationProvisioningConfig; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationProvisioningConfigResponseBody model) {
+            this.applicationProvisioningConfig = model.applicationProvisioningConfig;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The configuration of the account synchronization feature for the application.</p>
@@ -146,6 +158,16 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private String encryptKey; 
             private Boolean encryptRequired; 
             private java.util.List<String> listenEventScopes; 
+
+            private Builder() {
+            } 
+
+            private Builder(CallbackProvisioningConfig model) {
+                this.callbackUrl = model.callbackUrl;
+                this.encryptKey = model.encryptKey;
+                this.encryptRequired = model.encryptRequired;
+                this.listenEventScopes = model.listenEventScopes;
+            } 
 
             /**
              * <p>The URL that the application uses to receive IDaaS event callbacks.</p>
@@ -279,6 +301,17 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private String clientSecret; 
             private String tokenEndpoint; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthnParam model) {
+                this.accessToken = model.accessToken;
+                this.authnMethod = model.authnMethod;
+                this.clientId = model.clientId;
+                this.clientSecret = model.clientSecret;
+                this.tokenEndpoint = model.tokenEndpoint;
+            } 
+
             /**
              * <p>The access token. This parameter is returned when the GrantType parameter is set to bearer_token.</p>
              * 
@@ -401,6 +434,15 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private AuthnParam authnParam; 
             private String grantType; 
 
+            private Builder() {
+            } 
+
+            private Builder(AuthnConfiguration model) {
+                this.authnMode = model.authnMode;
+                this.authnParam = model.authnParam;
+                this.grantType = model.grantType;
+            } 
+
             /**
              * <p>The authentication mode of the SCIM protocol. Valid value:</p>
              * <ul>
@@ -516,6 +558,16 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private java.util.List<String> fullPushScopes; 
             private java.util.List<String> provisioningActions; 
             private String scimBaseUrl; 
+
+            private Builder() {
+            } 
+
+            private Builder(ScimProvisioningConfig model) {
+                this.authnConfiguration = model.authnConfiguration;
+                this.fullPushScopes = model.fullPushScopes;
+                this.provisioningActions = model.provisioningActions;
+                this.scimBaseUrl = model.scimBaseUrl;
+            } 
 
             /**
              * <p>The configuration parameters related to SCIM-based synchronization.</p>
@@ -694,6 +746,21 @@ public class GetApplicationProvisioningConfigResponseBody extends TeaModel {
             private String provisionProtocolType; 
             private ScimProvisioningConfig scimProvisioningConfig; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationProvisioningConfig model) {
+                this.applicationId = model.applicationId;
+                this.callbackProvisioningConfig = model.callbackProvisioningConfig;
+                this.configOperateMode = model.configOperateMode;
+                this.instanceId = model.instanceId;
+                this.provisionJwksEndpoint = model.provisionJwksEndpoint;
+                this.provisionPassword = model.provisionPassword;
+                this.provisionProtocolType = model.provisionProtocolType;
+                this.scimProvisioningConfig = model.scimProvisioningConfig;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the application.</p>

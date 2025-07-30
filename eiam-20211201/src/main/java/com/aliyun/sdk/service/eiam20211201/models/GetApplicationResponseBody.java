@@ -36,6 +36,10 @@ public class GetApplicationResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return application
      */
@@ -53,6 +57,14 @@ public class GetApplicationResponseBody extends TeaModel {
     public static final class Builder {
         private Application application; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationResponseBody model) {
+            this.application = model.application;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the application.</p>
@@ -113,6 +125,9 @@ public class GetApplicationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
+        @com.aliyun.core.annotation.NameInMap("CustomSubjectStatus")
+        private String customSubjectStatus;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -159,6 +174,7 @@ public class GetApplicationResponseBody extends TeaModel {
             this.authorizationType = builder.authorizationType;
             this.clientId = builder.clientId;
             this.createTime = builder.createTime;
+            this.customSubjectStatus = builder.customSubjectStatus;
             this.description = builder.description;
             this.features = builder.features;
             this.instanceId = builder.instanceId;
@@ -242,6 +258,13 @@ public class GetApplicationResponseBody extends TeaModel {
          */
         public Long getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return customSubjectStatus
+         */
+        public String getCustomSubjectStatus() {
+            return this.customSubjectStatus;
         }
 
         /**
@@ -338,6 +361,7 @@ public class GetApplicationResponseBody extends TeaModel {
             private String authorizationType; 
             private String clientId; 
             private Long createTime; 
+            private String customSubjectStatus; 
             private String description; 
             private String features; 
             private String instanceId; 
@@ -350,6 +374,34 @@ public class GetApplicationResponseBody extends TeaModel {
             private String ssoType; 
             private String status; 
             private Long updateTime; 
+
+            private Builder() {
+            } 
+
+            private Builder(Application model) {
+                this.apiInvokeStatus = model.apiInvokeStatus;
+                this.applicationId = model.applicationId;
+                this.applicationName = model.applicationName;
+                this.applicationSourceType = model.applicationSourceType;
+                this.applicationTemplateId = model.applicationTemplateId;
+                this.applicationVisibility = model.applicationVisibility;
+                this.authorizationType = model.authorizationType;
+                this.clientId = model.clientId;
+                this.createTime = model.createTime;
+                this.customSubjectStatus = model.customSubjectStatus;
+                this.description = model.description;
+                this.features = model.features;
+                this.instanceId = model.instanceId;
+                this.logoUrl = model.logoUrl;
+                this.m2MClientStatus = model.m2MClientStatus;
+                this.managedServiceCode = model.managedServiceCode;
+                this.resourceServerIdentifier = model.resourceServerIdentifier;
+                this.resourceServerStatus = model.resourceServerStatus;
+                this.serviceManaged = model.serviceManaged;
+                this.ssoType = model.ssoType;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+            } 
 
             /**
              * <p>The status of the Developer API feature. Valid values:</p>
@@ -415,7 +467,7 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ApplicationVisibility.
+             * <p>Application visibility</p>
              */
             public Builder applicationVisibility(java.util.List<String> applicationVisibility) {
                 this.applicationVisibility = applicationVisibility;
@@ -456,6 +508,14 @@ public class GetApplicationResponseBody extends TeaModel {
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * CustomSubjectStatus.
+             */
+            public Builder customSubjectStatus(String customSubjectStatus) {
+                this.customSubjectStatus = customSubjectStatus;
                 return this;
             }
 
@@ -509,7 +569,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * M2MClientStatus.
+             * <p>M2M client status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder m2MClientStatus(String m2MClientStatus) {
                 this.m2MClientStatus = m2MClientStatus;
@@ -528,7 +591,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceServerIdentifier.
+             * <p>Unique identifier of the resource server</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://www.example.com">https://www.example.com</a></p>
              */
             public Builder resourceServerIdentifier(String resourceServerIdentifier) {
                 this.resourceServerIdentifier = resourceServerIdentifier;
@@ -536,7 +602,10 @@ public class GetApplicationResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceServerStatus.
+             * <p>Resource server status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disabled	enabled</p>
              */
             public Builder resourceServerStatus(String resourceServerStatus) {
                 this.resourceServerStatus = resourceServerStatus;

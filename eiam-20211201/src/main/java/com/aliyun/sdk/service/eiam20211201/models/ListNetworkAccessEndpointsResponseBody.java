@@ -44,6 +44,10 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return networkAccessEndpoints
      */
@@ -77,6 +81,16 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
         private String nextToken; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNetworkAccessEndpointsResponseBody model) {
+            this.networkAccessEndpoints = model.networkAccessEndpoints;
+            this.nextToken = model.nextToken;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * NetworkAccessEndpoints.
@@ -270,6 +284,23 @@ public class ListNetworkAccessEndpointsResponseBody extends TeaModel {
             private java.util.List<String> vSwitchIds; 
             private String vpcId; 
             private String vpcRegionId; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkAccessEndpoints model) {
+                this.createTime = model.createTime;
+                this.instanceId = model.instanceId;
+                this.networkAccessEndpointId = model.networkAccessEndpointId;
+                this.networkAccessEndpointName = model.networkAccessEndpointName;
+                this.networkAccessEndpointType = model.networkAccessEndpointType;
+                this.securityGroupId = model.securityGroupId;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.vSwitchIds = model.vSwitchIds;
+                this.vpcId = model.vpcId;
+                this.vpcRegionId = model.vpcRegionId;
+            } 
 
             /**
              * <p>专属网络端点创建时间，Unix时间戳格式，单位为毫秒。</p>

@@ -36,6 +36,10 @@ public class GetInstanceResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return instance
      */
@@ -53,6 +57,14 @@ public class GetInstanceResponseBody extends TeaModel {
     public static final class Builder {
         private Instance instance; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceResponseBody model) {
+            this.instance = model.instance;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The details of the instance.</p>
@@ -122,6 +134,14 @@ public class GetInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String endpoint; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(DefaultEndpoint model) {
+                this.endpoint = model.endpoint;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The endpoint of the instance.</p>
@@ -211,6 +231,15 @@ public class GetInstanceResponseBody extends TeaModel {
             private String defaultDomain; 
             private String initDomain; 
             private String initDomainAutoRedirectStatus; 
+
+            private Builder() {
+            } 
+
+            private Builder(DomainConfig model) {
+                this.defaultDomain = model.defaultDomain;
+                this.initDomain = model.initDomain;
+                this.initDomainAutoRedirectStatus = model.initDomainAutoRedirectStatus;
+            } 
 
             /**
              * <p>The default domain of the instance.</p>
@@ -359,6 +388,19 @@ public class GetInstanceResponseBody extends TeaModel {
             private java.util.List<String> egressAddresses; 
             private String instanceId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(Instance model) {
+                this.createTime = model.createTime;
+                this.defaultEndpoint = model.defaultEndpoint;
+                this.description = model.description;
+                this.domainConfig = model.domainConfig;
+                this.egressAddresses = model.egressAddresses;
+                this.instanceId = model.instanceId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The time when the instance was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>

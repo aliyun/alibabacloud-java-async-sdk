@@ -40,6 +40,10 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return organizationalUnits
      */
@@ -65,6 +69,15 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
         private java.util.List<OrganizationalUnits> organizationalUnits; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListOrganizationalUnitsForApplicationResponseBody model) {
+            this.organizationalUnits = model.organizationalUnits;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The IDs of the organizations that are allowed to access the application.</p>
@@ -133,6 +146,13 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
 
         public static final class Builder {
             private String organizationalUnitId; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnits model) {
+                this.organizationalUnitId = model.organizationalUnitId;
+            } 
 
             /**
              * <p>The ID of the organization that is allowed to access the application.</p>

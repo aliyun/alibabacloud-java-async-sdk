@@ -36,6 +36,10 @@ public class GetApplicationGrantScopeResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationGrantScope
      */
@@ -53,6 +57,14 @@ public class GetApplicationGrantScopeResponseBody extends TeaModel {
     public static final class Builder {
         private ApplicationGrantScope applicationGrantScope; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetApplicationGrantScopeResponseBody model) {
+            this.applicationGrantScope = model.applicationGrantScope;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>The permissions of the Developer API feature.</p>
@@ -110,6 +122,13 @@ public class GetApplicationGrantScopeResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List<String> grantScopes; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationGrantScope model) {
+                this.grantScopes = model.grantScopes;
+            } 
 
             /**
              * <p>The permissions of the Developer API feature.</p>

@@ -40,6 +40,10 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applications
      */
@@ -65,6 +69,15 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
         private java.util.List<Applications> applications; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationsForOrganizationalUnitResponseBody model) {
+            this.applications = model.applications;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The applications that the EIAM organization can access.</p>
@@ -133,6 +146,13 @@ public class ListApplicationsForOrganizationalUnitResponseBody extends TeaModel 
 
         public static final class Builder {
             private String applicationId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.applicationId = model.applicationId;
+            } 
 
             /**
              * <p>The ID of the application that the EIAM organization can access.</p>

@@ -40,6 +40,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return identityProviders
      */
@@ -66,8 +70,17 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         private String requestId; 
         private Long totalCount; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListIdentityProvidersResponseBody model) {
+            this.identityProviders = model.identityProviders;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
+
         /**
-         * IdentityProviders.
+         * <p>Identity provider information array.</p>
          */
         public Builder identityProviders(java.util.List<IdentityProviders> identityProviders) {
             this.identityProviders = identityProviders;
@@ -75,7 +88,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -83,7 +99,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * <p>The total number of entries returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -356,8 +375,34 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             private String udPushStatus; 
             private Long updateTime; 
 
+            private Builder() {
+            } 
+
+            private Builder(IdentityProviders model) {
+                this.advancedStatus = model.advancedStatus;
+                this.authnSourceSupplier = model.authnSourceSupplier;
+                this.authnSourceType = model.authnSourceType;
+                this.authnStatus = model.authnStatus;
+                this.createTime = model.createTime;
+                this.description = model.description;
+                this.identityProviderExternalId = model.identityProviderExternalId;
+                this.identityProviderId = model.identityProviderId;
+                this.identityProviderName = model.identityProviderName;
+                this.identityProviderType = model.identityProviderType;
+                this.incrementalCallbackStatus = model.incrementalCallbackStatus;
+                this.instanceId = model.instanceId;
+                this.lastStatusCheckJobResult = model.lastStatusCheckJobResult;
+                this.lockReason = model.lockReason;
+                this.logoUrl = model.logoUrl;
+                this.periodicSyncStatus = model.periodicSyncStatus;
+                this.udPullStatus = model.udPullStatus;
+                this.udPullTargetScope = model.udPullTargetScope;
+                this.udPushStatus = model.udPushStatus;
+                this.updateTime = model.updateTime;
+            } 
+
             /**
-             * <p>高阶配置能力</p>
+             * <p>Advanced configuration capabilities</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -368,7 +413,18 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 对应的认证来源产品，okta or google or azure ad</p>
+             * <p>Authentication source product.</p>
+             * <ul>
+             * <li>urn:alibaba:idaas:idp:okta:okta</li>
+             * <li>urn:alibaba:idaas:idp:google:account</li>
+             * <li>urn:alibaba:idaas:idp:microsoft:aad</li>
+             * <li>urn:alibaba:idaas:idp:microsoft:ad</li>
+             * <li>urn:alibaba:idaas:idp:bytedance:lark</li>
+             * <li>urn:alibaba:idaas:idp:unknown:ldap</li>
+             * <li>urn:alibaba:idaas:idp:alibaba:idaas</li>
+             * <li>urn:alibaba:idaas:idp:tencent:wecom</li>
+             * <li>urn:alibaba:idaas:idp:alibaba:aliyunram</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:idaas:idp:bytedance:lark</p>
@@ -379,7 +435,11 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 认证方式类型 oidc or saml</p>
+             * <p>Authentication method type.</p>
+             * <ul>
+             * <li>urn:alibaba:idaas:authntype:oidc</li>
+             * <li>urn:alibaba:idaas:authntype:saml2</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:idaas:authntype:oidc</p>
@@ -390,7 +450,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 对应IdP是否支持认证</p>
+             * <p>Does the corresponding IdP support authentication.</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -401,7 +461,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * <p>The time when the instance was created.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1712561597000</p>
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -409,7 +472,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 身份提供方描述</p>
+             * <p>The description of the Identity provider.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>test</p>
              */
             public Builder description(String description) {
                 this.description = description;
@@ -417,10 +483,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 身份提供方外部ID</p>
+             * <p>Identity provider external ID.</p>
              * 
              * <strong>example:</strong>
-             * <p>test_123</p>
+             * <p>test_123xxx</p>
              */
             public Builder identityProviderExternalId(String identityProviderExternalId) {
                 this.identityProviderExternalId = identityProviderExternalId;
@@ -428,7 +494,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 身份提供方ID</p>
+             * <p>Identity provider ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idp_m5b5wd5s2hpq4t6iaehhXXX</p>
@@ -439,7 +505,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 身份提供方名称</p>
+             * <p>Identity provider name.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>ceshi</p>
              */
             public Builder identityProviderName(String identityProviderName) {
                 this.identityProviderName = identityProviderName;
@@ -447,7 +516,25 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>身份提供方同步类型</p>
+             * <p>Identity provider synchronization type.</p>
+             * <ul>
+             * <li><p>Inbound to DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:pull</p>
+             * </li>
+             * <li><p>Outbound to DingTalk: urn:alibaba:idaas:idp:alibaba:dingtalk:push</p>
+             * </li>
+             * <li><p>Inbound to WeCom: urn:alibaba:idaas:idp:tencent:wecom:pull</p>
+             * </li>
+             * <li><p>Inbound to Lark: urn:alibaba:idaas:idp:bytedance:lark:pull</p>
+             * </li>
+             * <li><p>Inbound to AD: urn:alibaba:idaas:idp:microsoft:ad:pull</p>
+             * </li>
+             * <li><p>Inbound to LDAP: urn:alibaba:idaas:idp:unknown:ldap:pull</p>
+             * </li>
+             * <li><p>Standard OIDC: urn:alibaba:idaas:idp:standard:oidc</p>
+             * </li>
+             * <li><p>SASE Custom OIDC: urn:alibaba:idaas:idp:alibaba:sase</p>
+             * </li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>urn:alibaba:idaas:idp:bytedance:lark:pull</p>
@@ -458,7 +545,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>增量回调状态，是否处理来自IdP的增量回调数据</p>
+             * <p>Incremental callback status, whether to process the incremental callback data from IdP.</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -469,7 +556,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>The instance ID.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_pbf4dth34l2qb7mydpntXXX</p>
@@ -480,7 +567,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * LastStatusCheckJobResult.
+             * <p>Last status check result.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>success</p>
              */
             public Builder lastStatusCheckJobResult(String lastStatusCheckJobResult) {
                 this.lastStatusCheckJobResult = lastStatusCheckJobResult;
@@ -488,10 +578,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>锁定原因</p>
+             * <p>The reason why write operations are locked.</p>
              * 
              * <strong>example:</strong>
-             * <p>financial</p>
+             * <p>ConfigNotReady.UuidIsNul</p>
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -499,7 +589,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * LogoUrl.
+             * <p>IdP logo url.</p>
+             * 
+             * <strong>example:</strong>
+             * <p><a href="https://cdn-cn-hangzhou.aliyunidaas.com/xx/logos/xx">https://cdn-cn-hangzhou.aliyunidaas.com/xx/logos/xx</a></p>
              */
             public Builder logoUrl(String logoUrl) {
                 this.logoUrl = logoUrl;
@@ -507,7 +600,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * PeriodicSyncStatus.
+             * <p>Regular verification status.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>disabled</p>
              */
             public Builder periodicSyncStatus(String periodicSyncStatus) {
                 this.periodicSyncStatus = periodicSyncStatus;
@@ -515,7 +611,11 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>IDaaS EIAM 是否支持UD同步</p>
+             * <p>Whether support UD synchronization.Values:</p>
+             * <ul>
+             * <li>enabled</li>
+             * <li>disabled</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -526,7 +626,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>当支持ud_pullIDaaS侧UD中的范围</p>
+             * <p>When supporting the range in the UD of ud_pullIDaaS side.</p>
              * 
              * <strong>example:</strong>
              * <p>ou_2buqmxsa3ltyqkjgpwfijurXXX</p>
@@ -537,7 +637,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * <p>同步出能力</p>
+             * <p>Synchronize capabilities</p>
              * 
              * <strong>example:</strong>
              * <p>disabled</p>
@@ -548,7 +648,10 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * <p>The time when the service was updated.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>1712561597000</p>
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

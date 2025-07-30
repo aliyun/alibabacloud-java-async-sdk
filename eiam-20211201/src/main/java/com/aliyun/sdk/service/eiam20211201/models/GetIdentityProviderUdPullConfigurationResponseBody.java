@@ -36,6 +36,10 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,19 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         private String requestId; 
         private UdPullConfiguration udPullConfiguration; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetIdentityProviderUdPullConfigurationResponseBody model) {
+            this.requestId = model.requestId;
+            this.udPullConfiguration = model.udPullConfiguration;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +78,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
         }
 
         /**
-         * UdPullConfiguration.
+         * <p>Inbound Synchronization Configuration Information</p>
          */
         public Builder udPullConfiguration(UdPullConfiguration udPullConfiguration) {
             this.udPullConfiguration = udPullConfiguration;
@@ -168,8 +183,20 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             private String userObjectClass; 
             private String userObjectClassCustomFilter; 
 
+            private Builder() {
+            } 
+
+            private Builder(LdapUdPullConfig model) {
+                this.groupMemberAttributeName = model.groupMemberAttributeName;
+                this.groupObjectClass = model.groupObjectClass;
+                this.groupObjectClassCustomFilter = model.groupObjectClassCustomFilter;
+                this.organizationUnitObjectClass = model.organizationUnitObjectClass;
+                this.userObjectClass = model.userObjectClass;
+                this.userObjectClassCustomFilter = model.userObjectClassCustomFilter;
+            } 
+
             /**
-             * <p>组成员标识</p>
+             * <p>Group Member Identifier</p>
              * 
              * <strong>example:</strong>
              * <p>group</p>
@@ -180,7 +207,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>组objectClass</p>
+             * <p>Group ObjectClass</p>
              * 
              * <strong>example:</strong>
              * <p>member</p>
@@ -191,7 +218,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>组自定义Filter</p>
+             * <p>Group Custom Filter</p>
              * 
              * <strong>example:</strong>
              * <p>(|(cn=test)(group=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -202,7 +229,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>组织objectClass</p>
+             * <p>Organization ObjectClass</p>
              * 
              * <strong>example:</strong>
              * <p>ou,top</p>
@@ -213,7 +240,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>用户objectClass</p>
+             * <p>User ObjectClass</p>
              * 
              * <strong>example:</strong>
              * <p>ou,top</p>
@@ -224,7 +251,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>用户自定义Filter</p>
+             * <p>User ObjectClass Custom Filter</p>
              * 
              * <strong>example:</strong>
              * <p>(|(cn=test)(mail=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -297,8 +324,20 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             private Integer periodicSyncTimes; 
             private String periodicSyncType; 
 
+            private Builder() {
+            } 
+
+            private Builder(PeriodicSyncConfig model) {
+                this.periodicSyncCron = model.periodicSyncCron;
+                this.periodicSyncTimes = model.periodicSyncTimes;
+                this.periodicSyncType = model.periodicSyncType;
+            } 
+
             /**
-             * PeriodicSyncCron.
+             * <p>Cron expression</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 45 1 * * ?</p>
              */
             public Builder periodicSyncCron(String periodicSyncCron) {
                 this.periodicSyncCron = periodicSyncCron;
@@ -306,7 +345,10 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * PeriodicSyncTimes.
+             * <p>Execution time slots, for example 3,5, meaning the task runs once between 03:00–04:00 and once between 05:00–06:00.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>[3,5]</p>
              */
             public Builder periodicSyncTimes(Integer periodicSyncTimes) {
                 this.periodicSyncTimes = periodicSyncTimes;
@@ -314,7 +356,10 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * PeriodicSyncType.
+             * <p>type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cron</p>
              */
             public Builder periodicSyncType(String periodicSyncType) {
                 this.periodicSyncType = periodicSyncType;
@@ -384,8 +429,17 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             private Integer organizationalUnitDeletedThreshold; 
             private Integer userDeletedThreshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(PullProtectedRule model) {
+                this.groupDeletedThreshold = model.groupDeletedThreshold;
+                this.organizationalUnitDeletedThreshold = model.organizationalUnitDeletedThreshold;
+                this.userDeletedThreshold = model.userDeletedThreshold;
+            } 
+
             /**
-             * <p>同步保护规则-删除组数量</p>
+             * <p>Group Deletion Threshold: If the number of deleted groups exceeds this value, the synchronization task will be terminated.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -396,7 +450,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>IDaaS EIAM 钉钉一方应用同步保护规则-删除组织数量</p>
+             * <p>Organization Deletion Threshold: If the number of deleted organizations exceeds this value, the synchronization task will be terminated.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -407,7 +461,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>IDaaS EIAM 钉钉一方应用同步保护规则-删除账户数量</p>
+             * <p>Account Deletion Threshold: If the number of deleted users exceeds this value, the synchronization task will be terminated.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -468,8 +522,16 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             private java.util.List<String> sourceScopes; 
             private String targetScope; 
 
+            private Builder() {
+            } 
+
+            private Builder(UdSyncScopeConfig model) {
+                this.sourceScopes = model.sourceScopes;
+                this.targetScope = model.targetScope;
+            } 
+
             /**
-             * <p>同步来源节点</p>
+             * <p>Synchronization Source Node</p>
              */
             public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
@@ -477,7 +539,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>同步目标节点</p>
+             * <p>Synchronization Target Node</p>
              * 
              * <strong>example:</strong>
              * <p>ou_asjdfhaskfhw213mnsj33sXXX</p>
@@ -622,8 +684,26 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             private PullProtectedRule pullProtectedRule; 
             private UdSyncScopeConfig udSyncScopeConfig; 
 
+            private Builder() {
+            } 
+
+            private Builder(UdPullConfiguration model) {
+                this.groupSyncStatus = model.groupSyncStatus;
+                this.identityProviderId = model.identityProviderId;
+                this.incrementalCallbackStatus = model.incrementalCallbackStatus;
+                this.instanceId = model.instanceId;
+                this.ldapUdPullConfig = model.ldapUdPullConfig;
+                this.periodicSyncConfig = model.periodicSyncConfig;
+                this.periodicSyncStatus = model.periodicSyncStatus;
+                this.pullProtectedRule = model.pullProtectedRule;
+                this.udSyncScopeConfig = model.udSyncScopeConfig;
+            } 
+
             /**
-             * <p>组同步状态</p>
+             * <p>Group Synchronization Status
+             * Possible values:</p>
+             * <p>Disabled: disabled</p>
+             * <p>Enabled: enabled</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -634,7 +714,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>IDaaS EIAM 身份提供方ID</p>
+             * <p>Identity provider ID</p>
              * 
              * <strong>example:</strong>
              * <p>idp_my664lwkhpicbyzirog3xxxxx</p>
@@ -645,7 +725,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>增量回调状态，是否处理来自IdP的增量回调数据</p>
+             * <p>Incremental Callback Status: Whether to process incremental callback data from the IdP</p>
              * 
              * <strong>example:</strong>
              * <p>enabled</p>
@@ -656,7 +736,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>IDaaS EIAM 实例Id</p>
+             * <p>The ID of the instance.</p>
              * 
              * <strong>example:</strong>
              * <p>idaas_ue2jvisn35ea5lmthk267xxxxx</p>
@@ -667,7 +747,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>ldap同步侧相关配置信息</p>
+             * <p>LDAP Synchronization Side Related Configuration Information</p>
              */
             public Builder ldapUdPullConfig(LdapUdPullConfig ldapUdPullConfig) {
                 this.ldapUdPullConfig = ldapUdPullConfig;
@@ -675,7 +755,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * PeriodicSyncConfig.
+             * <p>Scheduled sync configuration</p>
              */
             public Builder periodicSyncConfig(PeriodicSyncConfig periodicSyncConfig) {
                 this.periodicSyncConfig = periodicSyncConfig;
@@ -683,7 +763,12 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * PeriodicSyncStatus.
+             * <p>Scheduled Validation Status: Whether to periodically validate data discrepancies between IDaaS and the Identity Provider. Possible values:</p>
+             * <p>Disabled: disabled</p>
+             * <p>Enabled: enabled</p>
+             * 
+             * <strong>example:</strong>
+             * <p>enabled</p>
              */
             public Builder periodicSyncStatus(String periodicSyncStatus) {
                 this.periodicSyncStatus = periodicSyncStatus;
@@ -691,7 +776,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>同步入用户映射字段配置列表</p>
+             * <p>Inbound Synchronization Protection Rule Configuration</p>
              */
             public Builder pullProtectedRule(PullProtectedRule pullProtectedRule) {
                 this.pullProtectedRule = pullProtectedRule;
@@ -699,7 +784,7 @@ public class GetIdentityProviderUdPullConfigurationResponseBody extends TeaModel
             }
 
             /**
-             * <p>同步入配置信息</p>
+             * <p>Synchronization Scope Configuration Information</p>
              */
             public Builder udSyncScopeConfig(UdSyncScopeConfig udSyncScopeConfig) {
                 this.udSyncScopeConfig = udSyncScopeConfig;

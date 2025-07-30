@@ -73,7 +73,7 @@ public class RunSynchronizationJobRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -170,7 +170,10 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * Description.
+         * <p>Synchronization task description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>描述</p>
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -179,7 +182,7 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -192,7 +195,10 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * PasswordInitialization.
+         * <p>Whether initialize password</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
          */
         public Builder passwordInitialization(Boolean passwordInitialization) {
             this.putQueryParameter("PasswordInitialization", passwordInitialization);
@@ -201,7 +207,7 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * SynchronizationScopeConfig.
+         * <p>Synchronization scope</p>
          */
         public Builder synchronizationScopeConfig(SynchronizationScopeConfig synchronizationScopeConfig) {
             this.putQueryParameter("SynchronizationScopeConfig", synchronizationScopeConfig);
@@ -210,7 +216,7 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>同步目标ID</p>
+         * <p>The ID of the synchronization destination.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -223,7 +229,11 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * <p>同步目标类型</p>
+         * <p>The type of the synchronization destination. Valid values:</p>
+         * <ul>
+         * <li>identity_provider</li>
+         * <li>application</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -236,7 +246,7 @@ public class RunSynchronizationJobRequest extends Request {
         }
 
         /**
-         * UserIdentityTypes.
+         * <p>User identity types</p>
          */
         public Builder userIdentityTypes(java.util.List<String> userIdentityTypes) {
             this.putQueryParameter("UserIdentityTypes", userIdentityTypes);
@@ -307,8 +317,17 @@ public class RunSynchronizationJobRequest extends Request {
             private java.util.List<String> organizationalUnitIds; 
             private java.util.List<String> userIds; 
 
+            private Builder() {
+            } 
+
+            private Builder(SynchronizationScopeConfig model) {
+                this.groupIds = model.groupIds;
+                this.organizationalUnitIds = model.organizationalUnitIds;
+                this.userIds = model.userIds;
+            } 
+
             /**
-             * GroupIds.
+             * <p>The group IDs.</p>
              */
             public Builder groupIds(java.util.List<String> groupIds) {
                 this.groupIds = groupIds;
@@ -316,7 +335,7 @@ public class RunSynchronizationJobRequest extends Request {
             }
 
             /**
-             * OrganizationalUnitIds.
+             * <p>The IDs of organizational units.</p>
              */
             public Builder organizationalUnitIds(java.util.List<String> organizationalUnitIds) {
                 this.organizationalUnitIds = organizationalUnitIds;
@@ -324,7 +343,7 @@ public class RunSynchronizationJobRequest extends Request {
             }
 
             /**
-             * UserIds.
+             * <p>UserIds</p>
              */
             public Builder userIds(java.util.List<String> userIds) {
                 this.userIds = userIds;

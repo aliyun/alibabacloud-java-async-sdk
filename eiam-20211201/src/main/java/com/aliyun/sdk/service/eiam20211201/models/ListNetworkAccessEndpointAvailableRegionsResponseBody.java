@@ -36,6 +36,10 @@ public class ListNetworkAccessEndpointAvailableRegionsResponseBody extends TeaMo
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return regions
      */
@@ -54,8 +58,16 @@ public class ListNetworkAccessEndpointAvailableRegionsResponseBody extends TeaMo
         private java.util.List<Regions> regions; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(ListNetworkAccessEndpointAvailableRegionsResponseBody model) {
+            this.regions = model.regions;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * Regions.
+         * <p>The information of region.</p>
          */
         public Builder regions(java.util.List<Regions> regions) {
             this.regions = regions;
@@ -63,7 +75,10 @@ public class ListNetworkAccessEndpointAvailableRegionsResponseBody extends TeaMo
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -120,11 +135,19 @@ public class ListNetworkAccessEndpointAvailableRegionsResponseBody extends TeaMo
             private String localName; 
             private String regionId; 
 
+            private Builder() {
+            } 
+
+            private Builder(Regions model) {
+                this.localName = model.localName;
+                this.regionId = model.regionId;
+            } 
+
             /**
-             * <p>地域名称。</p>
+             * <p>The name of the region.</p>
              * 
              * <strong>example:</strong>
-             * <p>华东1（杭州）</p>
+             * <p>China (Hangzhou)</p>
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -132,7 +155,7 @@ public class ListNetworkAccessEndpointAvailableRegionsResponseBody extends TeaMo
             }
 
             /**
-             * <p>地域ID。</p>
+             * <p>The region ID.</p>
              * 
              * <strong>example:</strong>
              * <p>cn-hangzhou</p>

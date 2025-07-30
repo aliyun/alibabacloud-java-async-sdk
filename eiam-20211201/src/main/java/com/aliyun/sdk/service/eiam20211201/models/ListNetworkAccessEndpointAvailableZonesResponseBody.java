@@ -36,6 +36,10 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
     public static final class Builder {
         private String requestId; 
         private java.util.List<Zones> zones; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListNetworkAccessEndpointAvailableZonesResponseBody model) {
+            this.requestId = model.requestId;
+            this.zones = model.zones;
+        } 
 
         /**
          * RequestId.
@@ -119,6 +131,14 @@ public class ListNetworkAccessEndpointAvailableZonesResponseBody extends TeaMode
         public static final class Builder {
             private String localName; 
             private String zoneId; 
+
+            private Builder() {
+            } 
+
+            private Builder(Zones model) {
+                this.localName = model.localName;
+                this.zoneId = model.zoneId;
+            } 
 
             /**
              * <p>可用区名称。</p>

@@ -40,6 +40,10 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applicationClientSecrets
      */
@@ -65,6 +69,15 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
         private java.util.List<ApplicationClientSecrets> applicationClientSecrets; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationClientSecretsResponseBody model) {
+            this.applicationClientSecrets = model.applicationClientSecrets;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The information about the client keys.</p>
@@ -205,6 +218,19 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
             private Long lastUsedTime; 
             private String secretId; 
             private String status; 
+
+            private Builder() {
+            } 
+
+            private Builder(ApplicationClientSecrets model) {
+                this.applicationId = model.applicationId;
+                this.clientId = model.clientId;
+                this.clientSecret = model.clientSecret;
+                this.instanceId = model.instanceId;
+                this.lastUsedTime = model.lastUsedTime;
+                this.secretId = model.secretId;
+                this.status = model.status;
+            } 
 
             /**
              * <p>The ID of the application that you want to query.</p>

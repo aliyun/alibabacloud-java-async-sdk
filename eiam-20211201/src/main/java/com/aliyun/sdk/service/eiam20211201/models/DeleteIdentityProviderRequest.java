@@ -46,7 +46,7 @@ public class DeleteIdentityProviderRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -98,7 +98,7 @@ public class DeleteIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的身份提供方主键id</p>
+         * <p>Identity provider ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class DeleteIdentityProviderRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM的实例id</p>
+         * <p>The ID of the instance.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

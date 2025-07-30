@@ -84,7 +84,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -199,7 +199,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>组同步状态</p>
+         * <p>Group synchronization status.</p>
          * 
          * <strong>example:</strong>
          * <p>disabled</p>
@@ -211,7 +211,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>IDaaS的身份提供方主键id</p>
+         * <p>Identity provider ID</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -224,7 +224,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>增量回调状态，是否处理来自IdP的增量回调数据</p>
+         * <p>Incremental callback status, whether to process incremental callback data from IdP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -237,7 +237,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>IDaaS EIAM实例的ID。</p>
+         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -250,7 +250,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>ldap同步侧相关配置信息</p>
+         * <p>Ldap ud pull config</p>
          */
         public Builder ldapUdPullConfig(LdapUdPullConfig ldapUdPullConfig) {
             this.putQueryParameter("LdapUdPullConfig", ldapUdPullConfig);
@@ -259,7 +259,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * PeriodicSyncConfig.
+         * <p>Periodic synchronize config</p>
          */
         public Builder periodicSyncConfig(PeriodicSyncConfig periodicSyncConfig) {
             this.putQueryParameter("PeriodicSyncConfig", periodicSyncConfig);
@@ -268,7 +268,10 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * PeriodicSyncStatus.
+         * <p>Periodic synchronize status</p>
+         * 
+         * <strong>example:</strong>
+         * <p>disabled</p>
          */
         public Builder periodicSyncStatus(String periodicSyncStatus) {
             this.putQueryParameter("PeriodicSyncStatus", periodicSyncStatus);
@@ -277,7 +280,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>同步入保护规则,根据IdP的type做解析</p>
+         * <p>Synchronize protected rule</p>
          */
         public Builder pullProtectedRule(PullProtectedRule pullProtectedRule) {
             this.putQueryParameter("PullProtectedRule", pullProtectedRule);
@@ -286,7 +289,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
         }
 
         /**
-         * <p>同步入配置信息</p>
+         * <p>Synchronize configuration information.</p>
          */
         public Builder udSyncScopeConfig(UdSyncScopeConfig udSyncScopeConfig) {
             this.putQueryParameter("UdSyncScopeConfig", udSyncScopeConfig);
@@ -393,11 +396,23 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             private String userObjectClass; 
             private String userObjectClassCustomFilter; 
 
+            private Builder() {
+            } 
+
+            private Builder(LdapUdPullConfig model) {
+                this.groupMemberAttributeName = model.groupMemberAttributeName;
+                this.groupObjectClass = model.groupObjectClass;
+                this.groupObjectClassCustomFilter = model.groupObjectClassCustomFilter;
+                this.organizationUnitObjectClass = model.organizationUnitObjectClass;
+                this.userObjectClass = model.userObjectClass;
+                this.userObjectClassCustomFilter = model.userObjectClassCustomFilter;
+            } 
+
             /**
-             * <p>组成员标识</p>
+             * <p>Group member attribute name</p>
              * 
              * <strong>example:</strong>
-             * <p>member</p>
+             * <p>memberxxx</p>
              */
             public Builder groupMemberAttributeName(String groupMemberAttributeName) {
                 this.groupMemberAttributeName = groupMemberAttributeName;
@@ -405,10 +420,10 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>组objectClass</p>
+             * <p>GroupObjectClass</p>
              * 
              * <strong>example:</strong>
-             * <p>group</p>
+             * <p>groupxxx</p>
              */
             public Builder groupObjectClass(String groupObjectClass) {
                 this.groupObjectClass = groupObjectClass;
@@ -416,7 +431,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>组自定义Filter</p>
+             * <p>GroupObjectClass custom filter</p>
              * 
              * <strong>example:</strong>
              * <p>(|(cn=test)(group=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -427,10 +442,10 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>组织ObjectClass</p>
+             * <p>OrganizationUnitObjectClass</p>
              * 
              * <strong>example:</strong>
-             * <p>organizationUnit,top</p>
+             * <p>organizationUnitxxx,top</p>
              */
             public Builder organizationUnitObjectClass(String organizationUnitObjectClass) {
                 this.organizationUnitObjectClass = organizationUnitObjectClass;
@@ -438,10 +453,10 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>用户ObjectClass</p>
+             * <p>UserObjectClass</p>
              * 
              * <strong>example:</strong>
-             * <p>userPrincipalName, mail</p>
+             * <p>userPrincipalNamexxx, mail</p>
              */
             public Builder userObjectClass(String userObjectClass) {
                 this.userObjectClass = userObjectClass;
@@ -449,7 +464,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>用户自定义Filter</p>
+             * <p>UserObjectClass custom filter</p>
              * 
              * <strong>example:</strong>
              * <p>(|(cn=test)(mail=<a href="mailto:test@test.com">test@test.com</a>))</p>
@@ -522,8 +537,20 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             private java.util.List<Integer> periodicSyncTimes; 
             private String periodicSyncType; 
 
+            private Builder() {
+            } 
+
+            private Builder(PeriodicSyncConfig model) {
+                this.periodicSyncCron = model.periodicSyncCron;
+                this.periodicSyncTimes = model.periodicSyncTimes;
+                this.periodicSyncType = model.periodicSyncType;
+            } 
+
             /**
-             * PeriodicSyncCron.
+             * <p>Periodic synchronize cron</p>
+             * 
+             * <strong>example:</strong>
+             * <p>0 45 1 * * ?</p>
              */
             public Builder periodicSyncCron(String periodicSyncCron) {
                 this.periodicSyncCron = periodicSyncCron;
@@ -531,7 +558,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * PeriodicSyncTimes.
+             * <p>Periodic synchronize times</p>
              */
             public Builder periodicSyncTimes(java.util.List<Integer> periodicSyncTimes) {
                 this.periodicSyncTimes = periodicSyncTimes;
@@ -539,7 +566,10 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * PeriodicSyncType.
+             * <p>Periodic synchronize type</p>
+             * 
+             * <strong>example:</strong>
+             * <p>cron</p>
              */
             public Builder periodicSyncType(String periodicSyncType) {
                 this.periodicSyncType = periodicSyncType;
@@ -609,8 +639,17 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             private Integer organizationalUnitDeletedThreshold; 
             private Integer userDeletedThreshold; 
 
+            private Builder() {
+            } 
+
+            private Builder(PullProtectedRule model) {
+                this.groupDeletedThreshold = model.groupDeletedThreshold;
+                this.organizationalUnitDeletedThreshold = model.organizationalUnitDeletedThreshold;
+                this.userDeletedThreshold = model.userDeletedThreshold;
+            } 
+
             /**
-             * <p>同步保护规则-删除组数量</p>
+             * <p>Group deleted threshold</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -621,7 +660,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>钉钉一方应用同步保护规则-删除组织数量</p>
+             * <p>OrganizationalUnit deleted threshold</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -632,7 +671,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>钉钉一方应用同步保护规则-删除账户数量</p>
+             * <p>User deleted threshold</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -693,8 +732,16 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             private java.util.List<String> sourceScopes; 
             private String targetScope; 
 
+            private Builder() {
+            } 
+
+            private Builder(UdSyncScopeConfig model) {
+                this.sourceScopes = model.sourceScopes;
+                this.targetScope = model.targetScope;
+            } 
+
             /**
-             * <p>同步来源节点</p>
+             * <p>Synchronize source scopes</p>
              */
             public Builder sourceScopes(java.util.List<String> sourceScopes) {
                 this.sourceScopes = sourceScopes;
@@ -702,7 +749,7 @@ public class SetIdentityProviderUdPullConfigurationRequest extends Request {
             }
 
             /**
-             * <p>同步目标节点</p>
+             * <p>Synchronize target scope</p>
              * 
              * <strong>example:</strong>
              * <p>ou_asdaq1addsxzdq1XXX</p>

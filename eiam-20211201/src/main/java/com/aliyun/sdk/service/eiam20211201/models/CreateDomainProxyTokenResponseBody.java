@@ -36,6 +36,10 @@ public class CreateDomainProxyTokenResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return domainProxyTokenId
      */
@@ -54,8 +58,19 @@ public class CreateDomainProxyTokenResponseBody extends TeaModel {
         private String domainProxyTokenId; 
         private String requestId; 
 
+        private Builder() {
+        } 
+
+        private Builder(CreateDomainProxyTokenResponseBody model) {
+            this.domainProxyTokenId = model.domainProxyTokenId;
+            this.requestId = model.requestId;
+        } 
+
         /**
-         * DomainProxyTokenId.
+         * <p>The ID of the proxy token of the domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pt_mtohn73423stghoivjmi4jwxxx</p>
          */
         public Builder domainProxyTokenId(String domainProxyTokenId) {
             this.domainProxyTokenId = domainProxyTokenId;
@@ -63,7 +78,10 @@ public class CreateDomainProxyTokenResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

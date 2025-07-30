@@ -40,6 +40,10 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return applications
      */
@@ -65,6 +69,15 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
         private java.util.List<Applications> applications; 
         private String requestId; 
         private Long totalCount; 
+
+        private Builder() {
+        } 
+
+        private Builder(ListApplicationsForUserResponseBody model) {
+            this.applications = model.applications;
+            this.requestId = model.requestId;
+            this.totalCount = model.totalCount;
+        } 
 
         /**
          * <p>The applications that the EIAM account can access.</p>
@@ -157,6 +170,15 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
             private String applicationId; 
             private Boolean hasDirectAuthorization; 
             private Boolean hasInheritAuthorization; 
+
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.applicationId = model.applicationId;
+                this.hasDirectAuthorization = model.hasDirectAuthorization;
+                this.hasInheritAuthorization = model.hasInheritAuthorization;
+            } 
 
             /**
              * <p>The ID of the application that the EIAM account can access.</p>

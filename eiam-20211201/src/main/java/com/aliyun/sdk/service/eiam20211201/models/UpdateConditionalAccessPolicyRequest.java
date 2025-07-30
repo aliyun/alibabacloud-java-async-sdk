@@ -22,6 +22,10 @@ public class UpdateConditionalAccessPolicyRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConditionalAccessPolicyId")
     @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String conditionalAccessPolicyId;
@@ -56,6 +60,7 @@ public class UpdateConditionalAccessPolicyRequest extends Request {
     private UpdateConditionalAccessPolicyRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.clientToken = builder.clientToken;
         this.conditionalAccessPolicyId = builder.conditionalAccessPolicyId;
         this.conditionalAccessPolicyName = builder.conditionalAccessPolicyName;
         this.conditionsConfig = builder.conditionsConfig;
@@ -73,7 +78,7 @@ public class UpdateConditionalAccessPolicyRequest extends Request {
         return builder().build();
     }
 
-    @Override
+@Override
     public Builder toBuilder() {
         return new Builder(this);
     }
@@ -83,6 +88,13 @@ public class UpdateConditionalAccessPolicyRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return clientToken
+     */
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -136,6 +148,7 @@ public class UpdateConditionalAccessPolicyRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateConditionalAccessPolicyRequest, Builder> {
         private String regionId; 
+        private String clientToken; 
         private String conditionalAccessPolicyId; 
         private String conditionalAccessPolicyName; 
         private ConditionsConfig conditionsConfig; 
@@ -151,6 +164,7 @@ public class UpdateConditionalAccessPolicyRequest extends Request {
         private Builder(UpdateConditionalAccessPolicyRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.clientToken = request.clientToken;
             this.conditionalAccessPolicyId = request.conditionalAccessPolicyId;
             this.conditionalAccessPolicyName = request.conditionalAccessPolicyName;
             this.conditionsConfig = request.conditionsConfig;
@@ -166,6 +180,18 @@ public class UpdateConditionalAccessPolicyRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * <p>The client token that is used to ensure the idempotence of the request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>client-examplexxx</p>
+         */
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -302,6 +328,14 @@ public class UpdateConditionalAccessPolicyRequest extends Request {
             private java.util.List<String> excludeApplications; 
             private java.util.List<String> includeApplications; 
 
+            private Builder() {
+            } 
+
+            private Builder(Applications model) {
+                this.excludeApplications = model.excludeApplications;
+                this.includeApplications = model.includeApplications;
+            } 
+
             /**
              * <p>Excluded Applications</p>
              */
@@ -368,6 +402,14 @@ public class UpdateConditionalAccessPolicyRequest extends Request {
         public static final class Builder {
             private java.util.List<String> excludeNetworkZones; 
             private java.util.List<String> includeNetworkZones; 
+
+            private Builder() {
+            } 
+
+            private Builder(NetworkZones model) {
+                this.excludeNetworkZones = model.excludeNetworkZones;
+                this.includeNetworkZones = model.includeNetworkZones;
+            } 
 
             /**
              * <p>Excluded network zones</p>
@@ -484,6 +526,18 @@ public class UpdateConditionalAccessPolicyRequest extends Request {
             private java.util.List<String> includeOrganizationalUnits; 
             private java.util.List<String> includeUsers; 
 
+            private Builder() {
+            } 
+
+            private Builder(Users model) {
+                this.excludeGroups = model.excludeGroups;
+                this.excludeOrganizationalUnits = model.excludeOrganizationalUnits;
+                this.excludeUsers = model.excludeUsers;
+                this.includeGroups = model.includeGroups;
+                this.includeOrganizationalUnits = model.includeOrganizationalUnits;
+                this.includeUsers = model.includeUsers;
+            } 
+
             /**
              * <p>Excluded user groups</p>
              */
@@ -595,6 +649,15 @@ public class UpdateConditionalAccessPolicyRequest extends Request {
             private NetworkZones networkZones; 
             private Users users; 
 
+            private Builder() {
+            } 
+
+            private Builder(ConditionsConfig model) {
+                this.applications = model.applications;
+                this.networkZones = model.networkZones;
+                this.users = model.users;
+            } 
+
             /**
              * <p>Target Applications for the Conditional Access Policy</p>
              */
@@ -705,6 +768,17 @@ public class UpdateConditionalAccessPolicyRequest extends Request {
             private Long mfaAuthenticationIntervalSeconds; 
             private java.util.List<String> mfaAuthenticationMethods; 
             private String mfaType; 
+
+            private Builder() {
+            } 
+
+            private Builder(DecisionConfig model) {
+                this.activeSessionReuseStatus = model.activeSessionReuseStatus;
+                this.effect = model.effect;
+                this.mfaAuthenticationIntervalSeconds = model.mfaAuthenticationIntervalSeconds;
+                this.mfaAuthenticationMethods = model.mfaAuthenticationMethods;
+                this.mfaType = model.mfaType;
+            } 
 
             /**
              * <p>Whether to enable session reuse</p>

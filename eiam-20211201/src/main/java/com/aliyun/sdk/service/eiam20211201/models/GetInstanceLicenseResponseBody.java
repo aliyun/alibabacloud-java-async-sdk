@@ -36,6 +36,10 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return license
      */
@@ -53,6 +57,14 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
     public static final class Builder {
         private License license; 
         private String requestId; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetInstanceLicenseResponseBody model) {
+            this.license = model.license;
+            this.requestId = model.requestId;
+        } 
 
         /**
          * <p>Returned result.</p>
@@ -230,6 +242,23 @@ public class GetInstanceLicenseResponseBody extends TeaModel {
             private String purchaseInstanceId; 
             private Long startTime; 
             private Long userQuota; 
+
+            private Builder() {
+            } 
+
+            private Builder(License model) {
+                this.edition = model.edition;
+                this.endTime = model.endTime;
+                this.licenseChargeType = model.licenseChargeType;
+                this.licenseConfigJson = model.licenseConfigJson;
+                this.licenseCreateTime = model.licenseCreateTime;
+                this.licenseId = model.licenseId;
+                this.licenseStatus = model.licenseStatus;
+                this.purchaseChannel = model.purchaseChannel;
+                this.purchaseInstanceId = model.purchaseInstanceId;
+                this.startTime = model.startTime;
+                this.userQuota = model.userQuota;
+            } 
 
             /**
              * <p>Edition of the License</p>

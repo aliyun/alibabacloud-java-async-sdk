@@ -36,6 +36,10 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -54,8 +58,19 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
         private String requestId; 
         private SynchronizationJob synchronizationJob; 
 
+        private Builder() {
+        } 
+
+        private Builder(GetSynchronizationJobResponseBody model) {
+            this.requestId = model.requestId;
+            this.synchronizationJob = model.synchronizationJob;
+        } 
+
         /**
-         * RequestId.
+         * <p>The request ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0441BD79-92F3-53AA-8657-F8CE4A2B912A</p>
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -63,7 +78,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
         }
 
         /**
-         * SynchronizationJob.
+         * <p>The information about the synchronization job.</p>
          */
         public Builder synchronizationJob(SynchronizationJob synchronizationJob) {
             this.synchronizationJob = synchronizationJob;
@@ -144,8 +159,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Binded model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -156,7 +181,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -167,7 +192,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -178,7 +203,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -263,8 +288,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Created model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -275,7 +310,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -286,7 +321,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -297,7 +332,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -382,8 +417,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Deleted model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -394,7 +439,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -405,7 +450,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -416,7 +461,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -501,8 +546,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Pushed model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -513,7 +568,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -524,7 +579,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -535,7 +590,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -620,8 +675,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Same model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -632,7 +697,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -643,7 +708,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -654,7 +719,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -739,8 +804,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(Updated model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -751,7 +826,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -762,7 +837,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -773,7 +848,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -882,8 +957,20 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Same same; 
             private Updated updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupMemberStatistics model) {
+                this.binded = model.binded;
+                this.created = model.created;
+                this.deleted = model.deleted;
+                this.pushed = model.pushed;
+                this.same = model.same;
+                this.updated = model.updated;
+            } 
+
             /**
-             * <p>绑定结果统计</p>
+             * <p>The binding result statistics.</p>
              */
             public Builder binded(Binded binded) {
                 this.binded = binded;
@@ -891,7 +978,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建结果统计</p>
+             * <p>The creation result statistics.</p>
              */
             public Builder created(Created created) {
                 this.created = created;
@@ -899,7 +986,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>删除结果统计</p>
+             * <p>The deletion result statistics.</p>
              */
             public Builder deleted(Deleted deleted) {
                 this.deleted = deleted;
@@ -907,7 +994,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>推送结果统计</p>
+             * <p>The notification result statistics.</p>
              */
             public Builder pushed(Pushed pushed) {
                 this.pushed = pushed;
@@ -915,7 +1002,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>相同结果统计</p>
+             * <p>The result statistics about identical group members.</p>
              */
             public Builder same(Same same) {
                 this.same = same;
@@ -923,7 +1010,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>更新结果统计</p>
+             * <p>The update result statistics.</p>
              */
             public Builder updated(Updated updated) {
                 this.updated = updated;
@@ -1005,8 +1092,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupStatisticsBinded model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1017,7 +1114,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1028,7 +1125,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1039,7 +1136,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1124,8 +1221,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupStatisticsCreated model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1136,7 +1243,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1147,7 +1254,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1158,7 +1265,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1243,8 +1350,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupStatisticsDeleted model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1255,7 +1372,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1266,7 +1383,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1277,7 +1394,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1362,8 +1479,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupStatisticsPushed model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1374,7 +1501,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1385,7 +1512,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1396,7 +1523,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1481,8 +1608,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupStatisticsSame model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1493,7 +1630,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1504,7 +1641,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1515,7 +1652,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1600,8 +1737,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupStatisticsUpdated model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1612,7 +1759,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1623,7 +1770,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1634,7 +1781,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1743,8 +1890,20 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private GroupStatisticsSame same; 
             private GroupStatisticsUpdated updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(GroupStatistics model) {
+                this.binded = model.binded;
+                this.created = model.created;
+                this.deleted = model.deleted;
+                this.pushed = model.pushed;
+                this.same = model.same;
+                this.updated = model.updated;
+            } 
+
             /**
-             * <p>绑定结果统计</p>
+             * <p>The binding result statistics.</p>
              */
             public Builder binded(GroupStatisticsBinded binded) {
                 this.binded = binded;
@@ -1752,7 +1911,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建结果统计</p>
+             * <p>The creation result statistics.</p>
              */
             public Builder created(GroupStatisticsCreated created) {
                 this.created = created;
@@ -1760,7 +1919,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>删除结果统计</p>
+             * <p>The deletion result statistics.</p>
              */
             public Builder deleted(GroupStatisticsDeleted deleted) {
                 this.deleted = deleted;
@@ -1768,7 +1927,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>推送结果统计</p>
+             * <p>The notification result statistics.</p>
              */
             public Builder pushed(GroupStatisticsPushed pushed) {
                 this.pushed = pushed;
@@ -1776,7 +1935,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>相同结果统计</p>
+             * <p>The result statistics about identical groups.</p>
              */
             public Builder same(GroupStatisticsSame same) {
                 this.same = same;
@@ -1784,7 +1943,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>更新结果统计</p>
+             * <p>The update result statistics.</p>
              */
             public Builder updated(GroupStatisticsUpdated updated) {
                 this.updated = updated;
@@ -1866,8 +2025,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnitStatisticsBinded model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1878,7 +2047,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1889,7 +2058,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1900,7 +2069,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -1985,8 +2154,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnitStatisticsCreated model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -1997,7 +2176,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2008,7 +2187,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2019,7 +2198,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -2104,8 +2283,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnitStatisticsDeleted model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2116,7 +2305,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2127,7 +2316,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2138,7 +2327,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -2223,8 +2412,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnitStatisticsPushed model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2235,7 +2434,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2246,7 +2445,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2257,7 +2456,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -2342,8 +2541,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnitStatisticsSame model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2354,7 +2563,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2365,7 +2574,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2376,7 +2585,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -2461,8 +2670,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnitStatisticsUpdated model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2473,7 +2692,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2484,7 +2703,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2495,7 +2714,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>30</p>
@@ -2604,8 +2823,20 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private OrganizationalUnitStatisticsSame same; 
             private OrganizationalUnitStatisticsUpdated updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnitStatistics model) {
+                this.binded = model.binded;
+                this.created = model.created;
+                this.deleted = model.deleted;
+                this.pushed = model.pushed;
+                this.same = model.same;
+                this.updated = model.updated;
+            } 
+
             /**
-             * <p>绑定结果统计</p>
+             * <p>The binding result statistics.</p>
              */
             public Builder binded(OrganizationalUnitStatisticsBinded binded) {
                 this.binded = binded;
@@ -2613,7 +2844,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建结果统计</p>
+             * <p>The creation result statistics.</p>
              */
             public Builder created(OrganizationalUnitStatisticsCreated created) {
                 this.created = created;
@@ -2621,7 +2852,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>删除结果统计</p>
+             * <p>The deletion result statistics.</p>
              */
             public Builder deleted(OrganizationalUnitStatisticsDeleted deleted) {
                 this.deleted = deleted;
@@ -2629,7 +2860,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>推送结果统计</p>
+             * <p>The notification result statistics.</p>
              */
             public Builder pushed(OrganizationalUnitStatisticsPushed pushed) {
                 this.pushed = pushed;
@@ -2637,7 +2868,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>相同结果统计</p>
+             * <p>The result statistics about identical organizations.</p>
              */
             public Builder same(OrganizationalUnitStatisticsSame same) {
                 this.same = same;
@@ -2645,7 +2876,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>更新结果统计</p>
+             * <p>The update result statistics.</p>
              */
             public Builder updated(OrganizationalUnitStatisticsUpdated updated) {
                 this.updated = updated;
@@ -2727,8 +2958,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStatisticsBinded model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2739,7 +2980,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2750,7 +2991,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2761,7 +3002,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2846,8 +3087,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStatisticsCreated model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2858,7 +3109,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2869,7 +3120,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2880,7 +3131,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2965,8 +3216,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStatisticsDeleted model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2977,7 +3238,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2988,7 +3249,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -2999,7 +3260,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3084,8 +3345,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStatisticsPushed model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3096,7 +3367,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3107,7 +3378,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3118,7 +3389,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3203,8 +3474,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStatisticsSame model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3215,7 +3496,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3226,7 +3507,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3237,7 +3518,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3322,8 +3603,18 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private Long success; 
             private Long total; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStatisticsUpdated model) {
+                this.failed = model.failed;
+                this.skipped = model.skipped;
+                this.success = model.success;
+                this.total = model.total;
+            } 
+
             /**
-             * <p>失败数目</p>
+             * <p>The number of failed items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3334,7 +3625,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>跳过数目</p>
+             * <p>The number of skipped items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3345,7 +3636,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>成功数目</p>
+             * <p>The number of successful items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3356,7 +3647,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>总共数目</p>
+             * <p>The total number of items.</p>
              * 
              * <strong>example:</strong>
              * <p>10</p>
@@ -3465,8 +3756,20 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private UserStatisticsSame same; 
             private UserStatisticsUpdated updated; 
 
+            private Builder() {
+            } 
+
+            private Builder(UserStatistics model) {
+                this.binded = model.binded;
+                this.created = model.created;
+                this.deleted = model.deleted;
+                this.pushed = model.pushed;
+                this.same = model.same;
+                this.updated = model.updated;
+            } 
+
             /**
-             * <p>绑定结果统计</p>
+             * <p>The binding result statistics.</p>
              */
             public Builder binded(UserStatisticsBinded binded) {
                 this.binded = binded;
@@ -3474,7 +3777,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>创建结果统计</p>
+             * <p>The creation result statistics.</p>
              */
             public Builder created(UserStatisticsCreated created) {
                 this.created = created;
@@ -3482,7 +3785,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>删除结果统计</p>
+             * <p>The deletion result statistics.</p>
              */
             public Builder deleted(UserStatisticsDeleted deleted) {
                 this.deleted = deleted;
@@ -3490,7 +3793,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>推送结果统计</p>
+             * <p>The notification result statistics.</p>
              */
             public Builder pushed(UserStatisticsPushed pushed) {
                 this.pushed = pushed;
@@ -3498,7 +3801,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>相同结果统计</p>
+             * <p>The result statistics about identical users.</p>
              */
             public Builder same(UserStatisticsSame same) {
                 this.same = same;
@@ -3506,7 +3809,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>更新结果统计</p>
+             * <p>The update result statistics.</p>
              */
             public Builder updated(UserStatisticsUpdated updated) {
                 this.updated = updated;
@@ -3612,11 +3915,23 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private OrganizationalUnitStatistics organizationalUnitStatistics; 
             private UserStatistics userStatistics; 
 
+            private Builder() {
+            } 
+
+            private Builder(Result model) {
+                this.errorCode = model.errorCode;
+                this.errorMessage = model.errorMessage;
+                this.groupMemberStatistics = model.groupMemberStatistics;
+                this.groupStatistics = model.groupStatistics;
+                this.organizationalUnitStatistics = model.organizationalUnitStatistics;
+                this.userStatistics = model.userStatistics;
+            } 
+
             /**
-             * <p>同步结果错误码</p>
+             * <p>The error code corresponding to the error message.</p>
              * 
              * <strong>example:</strong>
-             * <p>ErrorCodeNotFound</p>
+             * <p>ResourceNotFound. SynchronizationJob</p>
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -3624,7 +3939,10 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>同步结果错误信息描述</p>
+             * <p>The error message returned in the case of an error.</p>
+             * 
+             * <strong>example:</strong>
+             * <p>The specified SynchronizationJob resource: %s not found.</p>
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -3632,7 +3950,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>组成员同步结果统计</p>
+             * <p>The group member synchronization result statistics.</p>
              */
             public Builder groupMemberStatistics(GroupMemberStatistics groupMemberStatistics) {
                 this.groupMemberStatistics = groupMemberStatistics;
@@ -3640,7 +3958,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>组同步结果统计</p>
+             * <p>The group synchronization result statistics.</p>
              */
             public Builder groupStatistics(GroupStatistics groupStatistics) {
                 this.groupStatistics = groupStatistics;
@@ -3648,7 +3966,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>组织同步结果统计</p>
+             * <p>The organization synchronization result statistics.</p>
              */
             public Builder organizationalUnitStatistics(OrganizationalUnitStatistics organizationalUnitStatistics) {
                 this.organizationalUnitStatistics = organizationalUnitStatistics;
@@ -3656,7 +3974,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>用户同步结果统计</p>
+             * <p>The user synchronization result statistics.</p>
              */
             public Builder userStatistics(UserStatistics userStatistics) {
                 this.userStatistics = userStatistics;
@@ -3798,8 +4116,27 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             private String targetType; 
             private String triggerType; 
 
+            private Builder() {
+            } 
+
+            private Builder(SynchronizationJob model) {
+                this.direction = model.direction;
+                this.endTime = model.endTime;
+                this.result = model.result;
+                this.startTime = model.startTime;
+                this.status = model.status;
+                this.synchronizationJobId = model.synchronizationJobId;
+                this.targetId = model.targetId;
+                this.targetType = model.targetType;
+                this.triggerType = model.triggerType;
+            } 
+
             /**
-             * <p>同步任务方向</p>
+             * <p>The direction of the synchronization job. Valid values:</p>
+             * <ul>
+             * <li>ingress</li>
+             * <li>egress</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>ingress</p>
@@ -3810,7 +4147,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>同步结束时间</p>
+             * <p>The end time of the synchronization. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -3821,7 +4158,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>同步任务结果</p>
+             * <p>The result of the synchronization job.</p>
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -3829,7 +4166,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>同步开始时间</p>
+             * <p>The start time of the synchronization. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
              * 
              * <strong>example:</strong>
              * <p>1649830226000</p>
@@ -3840,7 +4177,14 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>同步任务状态</p>
+             * <p>The status of the synchronization job. Valid values:</p>
+             * <ul>
+             * <li>pending</li>
+             * <li>running</li>
+             * <li>failed</li>
+             * <li>partial_success</li>
+             * <li>success</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>running</p>
@@ -3851,7 +4195,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>同步任务ID</p>
+             * <p>The ID of the synchronization job.</p>
              * 
              * <strong>example:</strong>
              * <p>sync_0000347vjovtcf41li0fgsd98gn24q9nj9xxxxx</p>
@@ -3862,7 +4206,7 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>同步目标ID</p>
+             * <p>The ID of the synchronization destination.</p>
              * 
              * <strong>example:</strong>
              * <p>idp_my664lwkhpicbyzirog3nxxxxx</p>
@@ -3873,7 +4217,11 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>同步目标类型</p>
+             * <p>The type of the synchronization destination. Valid values:</p>
+             * <ul>
+             * <li>identity_provider</li>
+             * <li>application</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>identity_provider</p>
@@ -3884,7 +4232,11 @@ public class GetSynchronizationJobResponseBody extends TeaModel {
             }
 
             /**
-             * <p>同步触发类型</p>
+             * <p>The trigger type of the synchronization. Valid values:</p>
+             * <ul>
+             * <li>auto</li>
+             * <li>manual</li>
+             * </ul>
              * 
              * <strong>example:</strong>
              * <p>auto</p>

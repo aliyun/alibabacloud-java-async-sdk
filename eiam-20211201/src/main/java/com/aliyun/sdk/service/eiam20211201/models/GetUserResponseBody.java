@@ -36,6 +36,10 @@ public class GetUserResponseBody extends TeaModel {
         return builder().build();
     }
 
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
     /**
      * @return requestId
      */
@@ -53,6 +57,14 @@ public class GetUserResponseBody extends TeaModel {
     public static final class Builder {
         private String requestId; 
         private User user; 
+
+        private Builder() {
+        } 
+
+        private Builder(GetUserResponseBody model) {
+            this.requestId = model.requestId;
+            this.user = model.user;
+        } 
 
         /**
          * <p>The ID of the request.</p>
@@ -122,6 +134,14 @@ public class GetUserResponseBody extends TeaModel {
         public static final class Builder {
             private String fieldName; 
             private String fieldValue; 
+
+            private Builder() {
+            } 
+
+            private Builder(CustomFields model) {
+                this.fieldName = model.fieldName;
+                this.fieldValue = model.fieldValue;
+            } 
 
             /**
              * <p>The identifier of the custom field.</p>
@@ -207,6 +227,15 @@ public class GetUserResponseBody extends TeaModel {
             private String description; 
             private String groupId; 
             private String groupName; 
+
+            private Builder() {
+            } 
+
+            private Builder(Groups model) {
+                this.description = model.description;
+                this.groupId = model.groupId;
+                this.groupName = model.groupName;
+            } 
 
             /**
              * <p>The description of the organizational unit.</p>
@@ -303,6 +332,15 @@ public class GetUserResponseBody extends TeaModel {
             private String organizationalUnitId; 
             private String organizationalUnitName; 
             private Boolean primary; 
+
+            private Builder() {
+            } 
+
+            private Builder(OrganizationalUnits model) {
+                this.organizationalUnitId = model.organizationalUnitId;
+                this.organizationalUnitName = model.organizationalUnitName;
+                this.primary = model.primary;
+            } 
 
             /**
              * <p>The ID of the organizational unit.</p>
@@ -675,6 +713,38 @@ public class GetUserResponseBody extends TeaModel {
             private String userSourceId; 
             private String userSourceType; 
             private String username; 
+
+            private Builder() {
+            } 
+
+            private Builder(User model) {
+                this.accountExpireTime = model.accountExpireTime;
+                this.createTime = model.createTime;
+                this.customFields = model.customFields;
+                this.description = model.description;
+                this.displayName = model.displayName;
+                this.email = model.email;
+                this.emailVerified = model.emailVerified;
+                this.groups = model.groups;
+                this.instanceId = model.instanceId;
+                this.lockExpireTime = model.lockExpireTime;
+                this.organizationalUnits = model.organizationalUnits;
+                this.passwordExpireTime = model.passwordExpireTime;
+                this.passwordSet = model.passwordSet;
+                this.phoneNumber = model.phoneNumber;
+                this.phoneNumberVerified = model.phoneNumberVerified;
+                this.phoneRegion = model.phoneRegion;
+                this.preferredLanguage = model.preferredLanguage;
+                this.primaryOrganizationalUnitId = model.primaryOrganizationalUnitId;
+                this.registerTime = model.registerTime;
+                this.status = model.status;
+                this.updateTime = model.updateTime;
+                this.userExternalId = model.userExternalId;
+                this.userId = model.userId;
+                this.userSourceId = model.userSourceId;
+                this.userSourceType = model.userSourceType;
+                this.username = model.username;
+            } 
 
             /**
              * <p>The time when the account expires. This value is a UNIX timestamp. Unit: milliseconds.</p>
