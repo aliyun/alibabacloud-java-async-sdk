@@ -75,6 +75,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateCheckTypeToSchemeResponse> createCheckTypeToScheme(CreateCheckTypeToSchemeRequest request);
 
     /**
+     * @param request the request parameters of CreateMiningTask  CreateMiningTaskRequest
+     * @return CreateMiningTaskResponse
+     */
+    CompletableFuture<CreateMiningTaskResponse> createMiningTask(CreateMiningTaskRequest request);
+
+    /**
      * @param request the request parameters of CreateQualityCheckScheme  CreateQualityCheckSchemeRequest
      * @return CreateQualityCheckSchemeResponse
      */
@@ -221,6 +227,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      * @return GetCustomizationConfigListResponse
      */
     CompletableFuture<GetCustomizationConfigListResponse> getCustomizationConfigList(GetCustomizationConfigListRequest request);
+
+    /**
+     * @param request the request parameters of GetMiningTaskResult  GetMiningTaskResultRequest
+     * @return GetMiningTaskResultResponse
+     */
+    CompletableFuture<GetMiningTaskResultResponse> getMiningTaskResult(GetMiningTaskResultRequest request);
 
     /**
      * @param request the request parameters of GetNextResultToVerify  GetNextResultToVerifyRequest
