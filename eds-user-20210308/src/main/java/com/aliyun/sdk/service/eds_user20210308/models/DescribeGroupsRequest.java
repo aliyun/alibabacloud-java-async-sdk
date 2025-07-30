@@ -30,15 +30,31 @@ public class DescribeGroupsRequest extends Request {
     private String groupName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 1)
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SolutionId")
     private String solutionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransferFileNeedApproval")
+    private Boolean transferFileNeedApproval;
 
     private DescribeGroupsRequest(Builder builder) {
         super(builder);
         this.bizType = builder.bizType;
         this.groupId = builder.groupId;
         this.groupName = builder.groupName;
+        this.pageNumber = builder.pageNumber;
+        this.pageSize = builder.pageSize;
         this.solutionId = builder.solutionId;
+        this.transferFileNeedApproval = builder.transferFileNeedApproval;
     }
 
     public static Builder builder() {
@@ -76,17 +92,41 @@ public class DescribeGroupsRequest extends Request {
     }
 
     /**
+     * @return pageNumber
+     */
+    public Integer getPageNumber() {
+        return this.pageNumber;
+    }
+
+    /**
+     * @return pageSize
+     */
+    public Integer getPageSize() {
+        return this.pageSize;
+    }
+
+    /**
      * @return solutionId
      */
     public String getSolutionId() {
         return this.solutionId;
     }
 
+    /**
+     * @return transferFileNeedApproval
+     */
+    public Boolean getTransferFileNeedApproval() {
+        return this.transferFileNeedApproval;
+    }
+
     public static final class Builder extends Request.Builder<DescribeGroupsRequest, Builder> {
         private String bizType; 
         private String groupId; 
         private String groupName; 
+        private Integer pageNumber; 
+        private Integer pageSize; 
         private String solutionId; 
+        private Boolean transferFileNeedApproval; 
 
         private Builder() {
             super();
@@ -97,7 +137,10 @@ public class DescribeGroupsRequest extends Request {
             this.bizType = request.bizType;
             this.groupId = request.groupId;
             this.groupName = request.groupName;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
             this.solutionId = request.solutionId;
+            this.transferFileNeedApproval = request.transferFileNeedApproval;
         } 
 
         /**
@@ -128,11 +171,38 @@ public class DescribeGroupsRequest extends Request {
         }
 
         /**
+         * PageNumber.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * PageSize.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
          * SolutionId.
          */
         public Builder solutionId(String solutionId) {
             this.putQueryParameter("SolutionId", solutionId);
             this.solutionId = solutionId;
+            return this;
+        }
+
+        /**
+         * TransferFileNeedApproval.
+         */
+        public Builder transferFileNeedApproval(Boolean transferFileNeedApproval) {
+            this.putQueryParameter("TransferFileNeedApproval", transferFileNeedApproval);
+            this.transferFileNeedApproval = transferFileNeedApproval;
             return this;
         }
 

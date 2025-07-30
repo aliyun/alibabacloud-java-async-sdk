@@ -443,6 +443,9 @@ public class DescribeUsersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
+        @com.aliyun.core.annotation.NameInMap("EnableAdminAccess")
+        private Boolean enableAdminAccess;
+
         @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
@@ -498,6 +501,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             this.address = builder.address;
             this.avatar = builder.avatar;
             this.email = builder.email;
+            this.enableAdminAccess = builder.enableAdminAccess;
             this.endUserId = builder.endUserId;
             this.externalName = builder.externalName;
             this.extras = builder.extras;
@@ -544,6 +548,13 @@ public class DescribeUsersResponseBody extends TeaModel {
          */
         public String getEmail() {
             return this.email;
+        }
+
+        /**
+         * @return enableAdminAccess
+         */
+        public Boolean getEnableAdminAccess() {
+            return this.enableAdminAccess;
         }
 
         /**
@@ -669,6 +680,7 @@ public class DescribeUsersResponseBody extends TeaModel {
             private String address; 
             private String avatar; 
             private String email; 
+            private Boolean enableAdminAccess; 
             private String endUserId; 
             private String externalName; 
             private Extras extras; 
@@ -694,6 +706,7 @@ public class DescribeUsersResponseBody extends TeaModel {
                 this.address = model.address;
                 this.avatar = model.avatar;
                 this.email = model.email;
+                this.enableAdminAccess = model.enableAdminAccess;
                 this.endUserId = model.endUserId;
                 this.externalName = model.externalName;
                 this.extras = model.extras;
@@ -743,6 +756,14 @@ public class DescribeUsersResponseBody extends TeaModel {
              */
             public Builder email(String email) {
                 this.email = email;
+                return this;
+            }
+
+            /**
+             * EnableAdminAccess.
+             */
+            public Builder enableAdminAccess(Boolean enableAdminAccess) {
+                this.enableAdminAccess = enableAdminAccess;
                 return this;
             }
 

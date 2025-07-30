@@ -29,11 +29,15 @@ public class DescribeUsersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ExcludeEndUserIds")
     private java.util.List<String> excludeEndUserIds;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeGroupId")
+    private String excludeGroupId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Filter")
     private String filter;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FilterWithAssignedResource")
     private java.util.Map<String, String> filterWithAssignedResource;
 
@@ -70,7 +74,7 @@ public class DescribeUsersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SolutionId")
     private String solutionId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
@@ -79,6 +83,7 @@ public class DescribeUsersRequest extends Request {
         this.bizType = builder.bizType;
         this.endUserIds = builder.endUserIds;
         this.excludeEndUserIds = builder.excludeEndUserIds;
+        this.excludeGroupId = builder.excludeGroupId;
         this.filter = builder.filter;
         this.filterWithAssignedResource = builder.filterWithAssignedResource;
         this.filterWithAssignedResources = builder.filterWithAssignedResources;
@@ -124,6 +129,13 @@ public class DescribeUsersRequest extends Request {
      */
     public java.util.List<String> getExcludeEndUserIds() {
         return this.excludeEndUserIds;
+    }
+
+    /**
+     * @return excludeGroupId
+     */
+    public String getExcludeGroupId() {
+        return this.excludeGroupId;
     }
 
     /**
@@ -207,6 +219,7 @@ public class DescribeUsersRequest extends Request {
         private String bizType; 
         private java.util.List<String> endUserIds; 
         private java.util.List<String> excludeEndUserIds; 
+        private String excludeGroupId; 
         private String filter; 
         private java.util.Map<String, String> filterWithAssignedResource; 
         private java.util.Map<String, Boolean> filterWithAssignedResources; 
@@ -228,6 +241,7 @@ public class DescribeUsersRequest extends Request {
             this.bizType = request.bizType;
             this.endUserIds = request.endUserIds;
             this.excludeEndUserIds = request.excludeEndUserIds;
+            this.excludeGroupId = request.excludeGroupId;
             this.filter = request.filter;
             this.filterWithAssignedResource = request.filterWithAssignedResource;
             this.filterWithAssignedResources = request.filterWithAssignedResources;
@@ -269,6 +283,15 @@ public class DescribeUsersRequest extends Request {
         }
 
         /**
+         * ExcludeGroupId.
+         */
+        public Builder excludeGroupId(String excludeGroupId) {
+            this.putBodyParameter("ExcludeGroupId", excludeGroupId);
+            this.excludeGroupId = excludeGroupId;
+            return this;
+        }
+
+        /**
          * <p>The string that is used for fuzzy search. You perform fuzzy search by username (EndUserId) and email address (Email). Wildcard characters (*) are supported. For example, if you set this parameter to <code>a*m</code>, usernames or email addresses that start with <code>a</code> and end with <code>m</code> are returned.</p>
          * 
          * <strong>example:</strong>
@@ -285,7 +308,7 @@ public class DescribeUsersRequest extends Request {
          */
         public Builder filterWithAssignedResource(java.util.Map<String, String> filterWithAssignedResource) {
             String filterWithAssignedResourceShrink = shrink(filterWithAssignedResource, "FilterWithAssignedResource", "json");
-            this.putQueryParameter("FilterWithAssignedResource", filterWithAssignedResourceShrink);
+            this.putBodyParameter("FilterWithAssignedResource", filterWithAssignedResourceShrink);
             this.filterWithAssignedResource = filterWithAssignedResource;
             return this;
         }
@@ -384,7 +407,7 @@ public class DescribeUsersRequest extends Request {
          * Status.
          */
         public Builder status(Integer status) {
-            this.putQueryParameter("Status", status);
+            this.putBodyParameter("Status", status);
             this.status = status;
             return this;
         }

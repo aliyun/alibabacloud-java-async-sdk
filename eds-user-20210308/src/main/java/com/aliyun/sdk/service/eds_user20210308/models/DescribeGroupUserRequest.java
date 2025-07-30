@@ -22,8 +22,20 @@ public class DescribeGroupUserRequest extends Request {
     private String bizType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filter")
+    private String filter;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    private Integer maxResults;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SolutionId")
@@ -32,7 +44,10 @@ public class DescribeGroupUserRequest extends Request {
     private DescribeGroupUserRequest(Builder builder) {
         super(builder);
         this.bizType = builder.bizType;
+        this.filter = builder.filter;
         this.groupId = builder.groupId;
+        this.maxResults = builder.maxResults;
+        this.nextToken = builder.nextToken;
         this.solutionId = builder.solutionId;
     }
 
@@ -57,10 +72,31 @@ public class DescribeGroupUserRequest extends Request {
     }
 
     /**
+     * @return filter
+     */
+    public String getFilter() {
+        return this.filter;
+    }
+
+    /**
      * @return groupId
      */
     public String getGroupId() {
         return this.groupId;
+    }
+
+    /**
+     * @return maxResults
+     */
+    public Integer getMaxResults() {
+        return this.maxResults;
+    }
+
+    /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
     }
 
     /**
@@ -72,7 +108,10 @@ public class DescribeGroupUserRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeGroupUserRequest, Builder> {
         private String bizType; 
+        private String filter; 
         private String groupId; 
+        private Integer maxResults; 
+        private String nextToken; 
         private String solutionId; 
 
         private Builder() {
@@ -82,7 +121,10 @@ public class DescribeGroupUserRequest extends Request {
         private Builder(DescribeGroupUserRequest request) {
             super(request);
             this.bizType = request.bizType;
+            this.filter = request.filter;
             this.groupId = request.groupId;
+            this.maxResults = request.maxResults;
+            this.nextToken = request.nextToken;
             this.solutionId = request.solutionId;
         } 
 
@@ -96,11 +138,38 @@ public class DescribeGroupUserRequest extends Request {
         }
 
         /**
+         * Filter.
+         */
+        public Builder filter(String filter) {
+            this.putQueryParameter("Filter", filter);
+            this.filter = filter;
+            return this;
+        }
+
+        /**
          * GroupId.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * MaxResults.
+         */
+        public Builder maxResults(Integer maxResults) {
+            this.putQueryParameter("MaxResults", maxResults);
+            this.maxResults = maxResults;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.putQueryParameter("NextToken", nextToken);
+            this.nextToken = nextToken;
             return this;
         }
 

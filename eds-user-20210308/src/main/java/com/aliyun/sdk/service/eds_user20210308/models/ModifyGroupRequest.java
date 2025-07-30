@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ModifyGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
@@ -29,6 +33,7 @@ public class ModifyGroupRequest extends Request {
 
     private ModifyGroupRequest(Builder builder) {
         super(builder);
+        this.description = builder.description;
         this.groupId = builder.groupId;
         this.newGroupName = builder.newGroupName;
     }
@@ -47,6 +52,13 @@ public class ModifyGroupRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return groupId
      */
     public String getGroupId() {
@@ -61,6 +73,7 @@ public class ModifyGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ModifyGroupRequest, Builder> {
+        private String description; 
         private String groupId; 
         private String newGroupName; 
 
@@ -70,9 +83,19 @@ public class ModifyGroupRequest extends Request {
 
         private Builder(ModifyGroupRequest request) {
             super(request);
+            this.description = request.description;
             this.groupId = request.groupId;
             this.newGroupName = request.newGroupName;
         } 
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
 
         /**
          * <p>This parameter is required.</p>

@@ -21,9 +21,14 @@ public class RemoveGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupIds")
+    private java.util.List<String> groupIds;
+
     private RemoveGroupRequest(Builder builder) {
         super(builder);
         this.groupId = builder.groupId;
+        this.groupIds = builder.groupIds;
     }
 
     public static Builder builder() {
@@ -46,8 +51,16 @@ public class RemoveGroupRequest extends Request {
         return this.groupId;
     }
 
+    /**
+     * @return groupIds
+     */
+    public java.util.List<String> getGroupIds() {
+        return this.groupIds;
+    }
+
     public static final class Builder extends Request.Builder<RemoveGroupRequest, Builder> {
         private String groupId; 
+        private java.util.List<String> groupIds; 
 
         private Builder() {
             super();
@@ -56,6 +69,7 @@ public class RemoveGroupRequest extends Request {
         private Builder(RemoveGroupRequest request) {
             super(request);
             this.groupId = request.groupId;
+            this.groupIds = request.groupIds;
         } 
 
         /**
@@ -64,6 +78,15 @@ public class RemoveGroupRequest extends Request {
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
             this.groupId = groupId;
+            return this;
+        }
+
+        /**
+         * GroupIds.
+         */
+        public Builder groupIds(java.util.List<String> groupIds) {
+            this.putQueryParameter("GroupIds", groupIds);
+            this.groupIds = groupIds;
             return this;
         }
 

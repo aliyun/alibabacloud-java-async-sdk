@@ -20,6 +20,9 @@ public class DescribeGroupUserResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Groups")
     private java.util.List<Groups> groups;
 
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    private String nextToken;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -28,6 +31,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
 
     private DescribeGroupUserResponseBody(Builder builder) {
         this.groups = builder.groups;
+        this.nextToken = builder.nextToken;
         this.requestId = builder.requestId;
         this.users = builder.users;
     }
@@ -52,6 +56,13 @@ public class DescribeGroupUserResponseBody extends TeaModel {
     }
 
     /**
+     * @return nextToken
+     */
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -67,6 +78,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
 
     public static final class Builder {
         private java.util.List<Groups> groups; 
+        private String nextToken; 
         private String requestId; 
         private java.util.List<Users> users; 
 
@@ -75,6 +87,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
 
         private Builder(DescribeGroupUserResponseBody model) {
             this.groups = model.groups;
+            this.nextToken = model.nextToken;
             this.requestId = model.requestId;
             this.users = model.users;
         } 
@@ -84,6 +97,14 @@ public class DescribeGroupUserResponseBody extends TeaModel {
          */
         public Builder groups(java.util.List<Groups> groups) {
             this.groups = groups;
+            return this;
+        }
+
+        /**
+         * NextToken.
+         */
+        public Builder nextToken(String nextToken) {
+            this.nextToken = nextToken;
             return this;
         }
 
@@ -239,6 +260,9 @@ public class DescribeGroupUserResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
+        @com.aliyun.core.annotation.NameInMap("Remark")
+        private String remark;
+
         private Users(Builder builder) {
             this.address = builder.address;
             this.avatar = builder.avatar;
@@ -249,6 +273,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
             this.jobNumber = builder.jobNumber;
             this.nickName = builder.nickName;
             this.phone = builder.phone;
+            this.remark = builder.remark;
         }
 
         public static Builder builder() {
@@ -322,6 +347,13 @@ public class DescribeGroupUserResponseBody extends TeaModel {
             return this.phone;
         }
 
+        /**
+         * @return remark
+         */
+        public String getRemark() {
+            return this.remark;
+        }
+
         public static final class Builder {
             private String address; 
             private String avatar; 
@@ -332,6 +364,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
             private String jobNumber; 
             private String nickName; 
             private String phone; 
+            private String remark; 
 
             private Builder() {
             } 
@@ -346,6 +379,7 @@ public class DescribeGroupUserResponseBody extends TeaModel {
                 this.jobNumber = model.jobNumber;
                 this.nickName = model.nickName;
                 this.phone = model.phone;
+                this.remark = model.remark;
             } 
 
             /**
@@ -417,6 +451,14 @@ public class DescribeGroupUserResponseBody extends TeaModel {
              */
             public Builder phone(String phone) {
                 this.phone = phone;
+                return this;
+            }
+
+            /**
+             * Remark.
+             */
+            public Builder remark(String remark) {
+                this.remark = remark;
                 return this;
             }
 

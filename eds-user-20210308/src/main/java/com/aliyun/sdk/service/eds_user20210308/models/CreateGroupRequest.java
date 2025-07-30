@@ -22,6 +22,10 @@ public class CreateGroupRequest extends Request {
     private String bizType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
@@ -36,6 +40,7 @@ public class CreateGroupRequest extends Request {
     private CreateGroupRequest(Builder builder) {
         super(builder);
         this.bizType = builder.bizType;
+        this.description = builder.description;
         this.groupName = builder.groupName;
         this.parentGroupId = builder.parentGroupId;
         this.solutionId = builder.solutionId;
@@ -62,6 +67,13 @@ public class CreateGroupRequest extends Request {
     }
 
     /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
      * @return groupName
      */
     public String getGroupName() {
@@ -84,6 +96,7 @@ public class CreateGroupRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateGroupRequest, Builder> {
         private String bizType; 
+        private String description; 
         private String groupName; 
         private String parentGroupId; 
         private String solutionId; 
@@ -95,6 +108,7 @@ public class CreateGroupRequest extends Request {
         private Builder(CreateGroupRequest request) {
             super(request);
             this.bizType = request.bizType;
+            this.description = request.description;
             this.groupName = request.groupName;
             this.parentGroupId = request.parentGroupId;
             this.solutionId = request.solutionId;
@@ -106,6 +120,15 @@ public class CreateGroupRequest extends Request {
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
             this.bizType = bizType;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
             return this;
         }
 
