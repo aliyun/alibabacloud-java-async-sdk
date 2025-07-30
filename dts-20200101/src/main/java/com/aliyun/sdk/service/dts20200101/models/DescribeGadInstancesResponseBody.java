@@ -317,6 +317,9 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MasterDbInstanceZoneId")
         private String masterDbInstanceZoneId;
 
+        @com.aliyun.core.annotation.NameInMap("MasterEngineArchType")
+        private Integer masterEngineArchType;
+
         @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
@@ -335,6 +338,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             this.masterDbInstanceName = builder.masterDbInstanceName;
             this.masterDbInstanceRegion = builder.masterDbInstanceRegion;
             this.masterDbInstanceZoneId = builder.masterDbInstanceZoneId;
+            this.masterEngineArchType = builder.masterEngineArchType;
             this.resourceGroupId = builder.resourceGroupId;
             this.status = builder.status;
         }
@@ -425,6 +429,13 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return masterEngineArchType
+         */
+        public Integer getMasterEngineArchType() {
+            return this.masterEngineArchType;
+        }
+
+        /**
          * @return resourceGroupId
          */
         public String getResourceGroupId() {
@@ -450,6 +461,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
             private String masterDbInstanceName; 
             private String masterDbInstanceRegion; 
             private String masterDbInstanceZoneId; 
+            private Integer masterEngineArchType; 
             private String resourceGroupId; 
             private String status; 
 
@@ -468,6 +480,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
                 this.masterDbInstanceName = model.masterDbInstanceName;
                 this.masterDbInstanceRegion = model.masterDbInstanceRegion;
                 this.masterDbInstanceZoneId = model.masterDbInstanceZoneId;
+                this.masterEngineArchType = model.masterEngineArchType;
                 this.resourceGroupId = model.resourceGroupId;
                 this.status = model.status;
             } 
@@ -557,6 +570,14 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
              */
             public Builder masterDbInstanceZoneId(String masterDbInstanceZoneId) {
                 this.masterDbInstanceZoneId = masterDbInstanceZoneId;
+                return this;
+            }
+
+            /**
+             * MasterEngineArchType.
+             */
+            public Builder masterEngineArchType(Integer masterEngineArchType) {
+                this.masterEngineArchType = masterEngineArchType;
                 return this;
             }
 

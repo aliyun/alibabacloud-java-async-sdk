@@ -18,6 +18,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeGadInstancesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbEngineTypes")
+    private String dbEngineTypes;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
@@ -51,6 +55,7 @@ public class DescribeGadInstancesRequest extends Request {
 
     private DescribeGadInstancesRequest(Builder builder) {
         super(builder);
+        this.dbEngineTypes = builder.dbEngineTypes;
         this.instanceName = builder.instanceName;
         this.masterDbInstanceId = builder.masterDbInstanceId;
         this.ownerId = builder.ownerId;
@@ -72,6 +77,13 @@ public class DescribeGadInstancesRequest extends Request {
 @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return dbEngineTypes
+     */
+    public String getDbEngineTypes() {
+        return this.dbEngineTypes;
     }
 
     /**
@@ -131,6 +143,7 @@ public class DescribeGadInstancesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeGadInstancesRequest, Builder> {
+        private String dbEngineTypes; 
         private String instanceName; 
         private String masterDbInstanceId; 
         private String ownerId; 
@@ -146,6 +159,7 @@ public class DescribeGadInstancesRequest extends Request {
 
         private Builder(DescribeGadInstancesRequest request) {
             super(request);
+            this.dbEngineTypes = request.dbEngineTypes;
             this.instanceName = request.instanceName;
             this.masterDbInstanceId = request.masterDbInstanceId;
             this.ownerId = request.ownerId;
@@ -155,6 +169,15 @@ public class DescribeGadInstancesRequest extends Request {
             this.resourceGroupId = request.resourceGroupId;
             this.slaveDbInstanceId = request.slaveDbInstanceId;
         } 
+
+        /**
+         * DbEngineTypes.
+         */
+        public Builder dbEngineTypes(String dbEngineTypes) {
+            this.putQueryParameter("DbEngineTypes", dbEngineTypes);
+            this.dbEngineTypes = dbEngineTypes;
+            return this;
+        }
 
         /**
          * InstanceName.

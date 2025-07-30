@@ -291,6 +291,18 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDedicatedClusterMonitorRuleResponse> describeDedicatedClusterMonitorRule(DescribeDedicatedClusterMonitorRuleRequest request);
 
     /**
+     * @param request the request parameters of DescribeDocParserJobResult  DescribeDocParserJobResultRequest
+     * @return DescribeDocParserJobResultResponse
+     */
+    CompletableFuture<DescribeDocParserJobResultResponse> describeDocParserJobResult(DescribeDocParserJobResultRequest request);
+
+    /**
+     * @param request the request parameters of DescribeDocParserJobStatus  DescribeDocParserJobStatusRequest
+     * @return DescribeDocParserJobStatusResponse
+     */
+    CompletableFuture<DescribeDocParserJobStatusResponse> describeDocParserJobStatus(DescribeDocParserJobStatusRequest request);
+
+    /**
      * @param request the request parameters of DescribeDtsEtlJobVersionInfo  DescribeDtsEtlJobVersionInfoRequest
      * @return DescribeDtsEtlJobVersionInfoResponse
      */

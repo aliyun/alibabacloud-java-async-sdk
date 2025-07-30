@@ -22,6 +22,22 @@ public class PreCheckCreateGadOrderRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MasterDatabaseName")
+    private String masterDatabaseName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MasterEngineArchType")
+    private String masterEngineArchType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MasterShardAccountName")
+    private String masterShardAccountName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MasterShardAccountPassword")
+    private String masterShardAccountPassword;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
@@ -34,6 +50,10 @@ public class PreCheckCreateGadOrderRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlaveDatabaseName")
+    private String slaveDatabaseName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SlaveDbInstanceId")
     private String slaveDbInstanceId;
 
@@ -41,14 +61,24 @@ public class PreCheckCreateGadOrderRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SlaveDbInstanceRegion")
     private String slaveDbInstanceRegion;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlaveEngineArchType")
+    private String slaveEngineArchType;
+
     private PreCheckCreateGadOrderRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.masterDatabaseName = builder.masterDatabaseName;
+        this.masterEngineArchType = builder.masterEngineArchType;
+        this.masterShardAccountName = builder.masterShardAccountName;
+        this.masterShardAccountPassword = builder.masterShardAccountPassword;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.slaveDatabaseName = builder.slaveDatabaseName;
         this.slaveDbInstanceId = builder.slaveDbInstanceId;
         this.slaveDbInstanceRegion = builder.slaveDbInstanceRegion;
+        this.slaveEngineArchType = builder.slaveEngineArchType;
     }
 
     public static Builder builder() {
@@ -69,6 +99,34 @@ public class PreCheckCreateGadOrderRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return masterDatabaseName
+     */
+    public String getMasterDatabaseName() {
+        return this.masterDatabaseName;
+    }
+
+    /**
+     * @return masterEngineArchType
+     */
+    public String getMasterEngineArchType() {
+        return this.masterEngineArchType;
+    }
+
+    /**
+     * @return masterShardAccountName
+     */
+    public String getMasterShardAccountName() {
+        return this.masterShardAccountName;
+    }
+
+    /**
+     * @return masterShardAccountPassword
+     */
+    public String getMasterShardAccountPassword() {
+        return this.masterShardAccountPassword;
     }
 
     /**
@@ -93,6 +151,13 @@ public class PreCheckCreateGadOrderRequest extends Request {
     }
 
     /**
+     * @return slaveDatabaseName
+     */
+    public String getSlaveDatabaseName() {
+        return this.slaveDatabaseName;
+    }
+
+    /**
      * @return slaveDbInstanceId
      */
     public String getSlaveDbInstanceId() {
@@ -106,13 +171,26 @@ public class PreCheckCreateGadOrderRequest extends Request {
         return this.slaveDbInstanceRegion;
     }
 
+    /**
+     * @return slaveEngineArchType
+     */
+    public String getSlaveEngineArchType() {
+        return this.slaveEngineArchType;
+    }
+
     public static final class Builder extends Request.Builder<PreCheckCreateGadOrderRequest, Builder> {
         private String instanceId; 
+        private String masterDatabaseName; 
+        private String masterEngineArchType; 
+        private String masterShardAccountName; 
+        private String masterShardAccountPassword; 
         private String ownerId; 
         private String regionId; 
         private String resourceGroupId; 
+        private String slaveDatabaseName; 
         private String slaveDbInstanceId; 
         private String slaveDbInstanceRegion; 
+        private String slaveEngineArchType; 
 
         private Builder() {
             super();
@@ -121,11 +199,17 @@ public class PreCheckCreateGadOrderRequest extends Request {
         private Builder(PreCheckCreateGadOrderRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.masterDatabaseName = request.masterDatabaseName;
+            this.masterEngineArchType = request.masterEngineArchType;
+            this.masterShardAccountName = request.masterShardAccountName;
+            this.masterShardAccountPassword = request.masterShardAccountPassword;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.slaveDatabaseName = request.slaveDatabaseName;
             this.slaveDbInstanceId = request.slaveDbInstanceId;
             this.slaveDbInstanceRegion = request.slaveDbInstanceRegion;
+            this.slaveEngineArchType = request.slaveEngineArchType;
         } 
 
         /**
@@ -134,6 +218,42 @@ public class PreCheckCreateGadOrderRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MasterDatabaseName.
+         */
+        public Builder masterDatabaseName(String masterDatabaseName) {
+            this.putQueryParameter("MasterDatabaseName", masterDatabaseName);
+            this.masterDatabaseName = masterDatabaseName;
+            return this;
+        }
+
+        /**
+         * MasterEngineArchType.
+         */
+        public Builder masterEngineArchType(String masterEngineArchType) {
+            this.putQueryParameter("MasterEngineArchType", masterEngineArchType);
+            this.masterEngineArchType = masterEngineArchType;
+            return this;
+        }
+
+        /**
+         * MasterShardAccountName.
+         */
+        public Builder masterShardAccountName(String masterShardAccountName) {
+            this.putQueryParameter("MasterShardAccountName", masterShardAccountName);
+            this.masterShardAccountName = masterShardAccountName;
+            return this;
+        }
+
+        /**
+         * MasterShardAccountPassword.
+         */
+        public Builder masterShardAccountPassword(String masterShardAccountPassword) {
+            this.putQueryParameter("MasterShardAccountPassword", masterShardAccountPassword);
+            this.masterShardAccountPassword = masterShardAccountPassword;
             return this;
         }
 
@@ -165,6 +285,15 @@ public class PreCheckCreateGadOrderRequest extends Request {
         }
 
         /**
+         * SlaveDatabaseName.
+         */
+        public Builder slaveDatabaseName(String slaveDatabaseName) {
+            this.putQueryParameter("SlaveDatabaseName", slaveDatabaseName);
+            this.slaveDatabaseName = slaveDatabaseName;
+            return this;
+        }
+
+        /**
          * SlaveDbInstanceId.
          */
         public Builder slaveDbInstanceId(String slaveDbInstanceId) {
@@ -179,6 +308,15 @@ public class PreCheckCreateGadOrderRequest extends Request {
         public Builder slaveDbInstanceRegion(String slaveDbInstanceRegion) {
             this.putQueryParameter("SlaveDbInstanceRegion", slaveDbInstanceRegion);
             this.slaveDbInstanceRegion = slaveDbInstanceRegion;
+            return this;
+        }
+
+        /**
+         * SlaveEngineArchType.
+         */
+        public Builder slaveEngineArchType(String slaveEngineArchType) {
+            this.putQueryParameter("SlaveEngineArchType", slaveEngineArchType);
+            this.slaveEngineArchType = slaveEngineArchType;
             return this;
         }
 

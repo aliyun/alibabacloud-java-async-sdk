@@ -19,7 +19,6 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class ModifySubscriptionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DbList")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String dbList;
 
     @com.aliyun.core.annotation.Query
@@ -31,8 +30,16 @@ public class ModifySubscriptionRequest extends Request {
     private String dtsJobId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModifyType")
+    private String modifyType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reserved")
+    private String reserved;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
@@ -40,12 +47,10 @@ public class ModifySubscriptionRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubscriptionDataTypeDDL")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean subscriptionDataTypeDDL;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubscriptionDataTypeDML")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean subscriptionDataTypeDML;
 
     private ModifySubscriptionRequest(Builder builder) {
@@ -53,7 +58,9 @@ public class ModifySubscriptionRequest extends Request {
         this.dbList = builder.dbList;
         this.dtsInstanceId = builder.dtsInstanceId;
         this.dtsJobId = builder.dtsJobId;
+        this.modifyType = builder.modifyType;
         this.regionId = builder.regionId;
+        this.reserved = builder.reserved;
         this.resourceGroupId = builder.resourceGroupId;
         this.subscriptionDataTypeDDL = builder.subscriptionDataTypeDDL;
         this.subscriptionDataTypeDML = builder.subscriptionDataTypeDML;
@@ -94,10 +101,24 @@ public class ModifySubscriptionRequest extends Request {
     }
 
     /**
+     * @return modifyType
+     */
+    public String getModifyType() {
+        return this.modifyType;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return reserved
+     */
+    public String getReserved() {
+        return this.reserved;
     }
 
     /**
@@ -125,7 +146,9 @@ public class ModifySubscriptionRequest extends Request {
         private String dbList; 
         private String dtsInstanceId; 
         private String dtsJobId; 
+        private String modifyType; 
         private String regionId; 
+        private String reserved; 
         private String resourceGroupId; 
         private Boolean subscriptionDataTypeDDL; 
         private Boolean subscriptionDataTypeDML; 
@@ -139,7 +162,9 @@ public class ModifySubscriptionRequest extends Request {
             this.dbList = request.dbList;
             this.dtsInstanceId = request.dtsInstanceId;
             this.dtsJobId = request.dtsJobId;
+            this.modifyType = request.modifyType;
             this.regionId = request.regionId;
+            this.reserved = request.reserved;
             this.resourceGroupId = request.resourceGroupId;
             this.subscriptionDataTypeDDL = request.subscriptionDataTypeDDL;
             this.subscriptionDataTypeDML = request.subscriptionDataTypeDML;
@@ -150,7 +175,6 @@ public class ModifySubscriptionRequest extends Request {
          * <blockquote>
          * <p> You can call the <a href="https://help.aliyun.com/document_detail/208925.html">DescribeDtsJobDetail</a> operation to query the original objects of the task.</p>
          * </blockquote>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;dtstest&quot;:{&quot;name&quot;:&quot;dtstest&quot;,&quot;all&quot;:true}}</p>
@@ -186,6 +210,15 @@ public class ModifySubscriptionRequest extends Request {
         }
 
         /**
+         * ModifyType.
+         */
+        public Builder modifyType(String modifyType) {
+            this.putQueryParameter("ModifyType", modifyType);
+            this.modifyType = modifyType;
+            return this;
+        }
+
+        /**
          * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
          * 
          * <strong>example:</strong>
@@ -194,6 +227,15 @@ public class ModifySubscriptionRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Reserved.
+         */
+        public Builder reserved(String reserved) {
+            this.putQueryParameter("Reserved", reserved);
+            this.reserved = reserved;
             return this;
         }
 
@@ -215,7 +257,6 @@ public class ModifySubscriptionRequest extends Request {
          * <li><strong>true</strong>: yes</li>
          * <li><strong>false</strong>: no</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -232,7 +273,6 @@ public class ModifySubscriptionRequest extends Request {
          * <li><strong>true</strong>: yes</li>
          * <li><strong>false</strong>: no</li>
          * </ul>
-         * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
