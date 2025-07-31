@@ -17,7 +17,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendChatappMessageRequest</p>
  */
 public class SendChatappMessageRequest extends Request {
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ChannelType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String channelType;
@@ -26,107 +26,117 @@ public class SendChatappMessageRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ContextMessageId")
     private String contextMessageId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CustWabaId")
-    @Deprecated
     private String custWabaId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FallBackContent")
     private String fallBackContent;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FallBackDuration")
-    @com.aliyun.core.annotation.Validation(maximum = 43200, minimum = 10)
     private Integer fallBackDuration;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FallBackId")
     private String fallBackId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FallBackRule")
     private String fallBackRule;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FlowAction")
     private FlowAction flowAction;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("From")
     @com.aliyun.core.annotation.Validation(required = true)
     private String from;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsvCode")
     private String isvCode;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Label")
     private String label;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MessageType")
     private String messageType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Payload")
     private java.util.List<String> payload;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ProductAction")
     private ProductAction productAction;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RecipientType")
     private String recipientType;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateCode")
     private String templateCode;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateParams")
     private java.util.Map<String, String> templateParams;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("To")
     @com.aliyun.core.annotation.Validation(required = true)
     private String to;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TrackingData")
     private String trackingData;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ttl")
     private Integer ttl;
 
-    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Type")
     @com.aliyun.core.annotation.Validation(required = true)
     private String type;
@@ -148,9 +158,12 @@ public class SendChatappMessageRequest extends Request {
         this.label = builder.label;
         this.language = builder.language;
         this.messageType = builder.messageType;
+        this.ownerId = builder.ownerId;
         this.payload = builder.payload;
         this.productAction = builder.productAction;
         this.recipientType = builder.recipientType;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.tag = builder.tag;
         this.taskId = builder.taskId;
         this.templateCode = builder.templateCode;
@@ -281,6 +294,13 @@ public class SendChatappMessageRequest extends Request {
     }
 
     /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
+    }
+
+    /**
      * @return payload
      */
     public java.util.List<String> getPayload() {
@@ -299,6 +319,20 @@ public class SendChatappMessageRequest extends Request {
      */
     public String getRecipientType() {
         return this.recipientType;
+    }
+
+    /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
     }
 
     /**
@@ -380,9 +414,12 @@ public class SendChatappMessageRequest extends Request {
         private String label; 
         private String language; 
         private String messageType; 
+        private Long ownerId; 
         private java.util.List<String> payload; 
         private ProductAction productAction; 
         private String recipientType; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String tag; 
         private String taskId; 
         private String templateCode; 
@@ -414,9 +451,12 @@ public class SendChatappMessageRequest extends Request {
             this.label = request.label;
             this.language = request.language;
             this.messageType = request.messageType;
+            this.ownerId = request.ownerId;
             this.payload = request.payload;
             this.productAction = request.productAction;
             this.recipientType = request.recipientType;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.tag = request.tag;
             this.taskId = request.taskId;
             this.templateCode = request.templateCode;
@@ -429,19 +469,13 @@ public class SendChatappMessageRequest extends Request {
         } 
 
         /**
-         * <p>The channel type. Valid values:</p>
-         * <ul>
-         * <li><strong>whatsapp</strong></li>
-         * <li><strong>viber</strong></li>
-         * <li><strong>line</strong> (under development)</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>whatsapp</p>
+         * <p>示例值示例值</p>
          */
         public Builder channelType(String channelType) {
-            this.putBodyParameter("ChannelType", channelType);
+            this.putQueryParameter("ChannelType", channelType);
             this.channelType = channelType;
             return this;
         }
@@ -483,199 +517,132 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * <p>The ID of the reply message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>61851ccb2f1365b16aee****</p>
+         * ContextMessageId.
          */
         public Builder contextMessageId(String contextMessageId) {
-            this.putBodyParameter("ContextMessageId", contextMessageId);
+            this.putQueryParameter("ContextMessageId", contextMessageId);
             this.contextMessageId = contextMessageId;
             return this;
         }
 
         /**
-         * <p>The space ID of the user.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>28251486512358****</p>
+         * CustSpaceId.
          */
         public Builder custSpaceId(String custSpaceId) {
-            this.putBodyParameter("CustSpaceId", custSpaceId);
+            this.putQueryParameter("CustSpaceId", custSpaceId);
             this.custSpaceId = custSpaceId;
             return this;
         }
 
         /**
-         * <p>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</p>
-         * <blockquote>
-         * <p> CustWabaId is an obsolete parameter. Use CustSpaceId instead.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>65921621816****</p>
+         * CustWabaId.
          */
         public Builder custWabaId(String custWabaId) {
-            this.putBodyParameter("CustWabaId", custWabaId);
+            this.putQueryParameter("CustWabaId", custWabaId);
             this.custWabaId = custWabaId;
             return this;
         }
 
         /**
-         * <p>The content of the fallback message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>This is a fallback message.</p>
+         * FallBackContent.
          */
         public Builder fallBackContent(String fallBackContent) {
-            this.putBodyParameter("FallBackContent", fallBackContent);
+            this.putQueryParameter("FallBackContent", fallBackContent);
             this.fallBackContent = fallBackContent;
             return this;
         }
 
         /**
-         * <p>Specifies the period of time after which the fallback message is sent if the message receipt that indicates the message is delivered to clients is not received. If this parameter is left empty, the fallback message is sent only when the <strong>message fails to be sent</strong> or <strong>the message receipt that indicates the message is not delivered to clients</strong> is received. Unit: seconds. Valid values: 60 to 43200.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>120</p>
+         * FallBackDuration.
          */
         public Builder fallBackDuration(Integer fallBackDuration) {
-            this.putBodyParameter("FallBackDuration", fallBackDuration);
+            this.putQueryParameter("FallBackDuration", fallBackDuration);
             this.fallBackDuration = fallBackDuration;
             return this;
         }
 
         /**
-         * <p>The ID of the fallback policy. You can create a fallback policy and view the information in the Chat App Message Service console.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>S_000001</p>
+         * FallBackId.
          */
         public Builder fallBackId(String fallBackId) {
-            this.putBodyParameter("FallBackId", fallBackId);
+            this.putQueryParameter("FallBackId", fallBackId);
             this.fallBackId = fallBackId;
             return this;
         }
 
         /**
-         * <p>The fallback rule. Valid values:</p>
-         * <ul>
-         * <li><strong>undelivered</strong>: A fallback is triggered if the message is not delivered to clients. When the message is being sent, the template parameters are verified. If the parameters fail to pass the verification, the message fails to be sent. Whether the template and phone number are prohibited is not verified. By default, this value is used when FallBackRule is left empty.</li>
-         * <li><strong>sentFailed</strong>: A fallback is triggered even if the template parameters including variables fail to pass the verification. If the channelType, type, messageType, to, and from parameters fail to pass the verification, a fallback is not triggered.</li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>undelivered</p>
+         * FallBackRule.
          */
         public Builder fallBackRule(String fallBackRule) {
-            this.putBodyParameter("FallBackRule", fallBackRule);
+            this.putQueryParameter("FallBackRule", fallBackRule);
             this.fallBackRule = fallBackRule;
             return this;
         }
 
         /**
-         * <p>The Flow action.</p>
+         * FlowAction.
          */
         public Builder flowAction(FlowAction flowAction) {
             String flowActionShrink = shrink(flowAction, "FlowAction", "json");
-            this.putBodyParameter("FlowAction", flowActionShrink);
+            this.putQueryParameter("FlowAction", flowActionShrink);
             this.flowAction = flowAction;
             return this;
         }
 
         /**
-         * <p>The mobile phone number of the message sender.</p>
-         * <blockquote>
-         * <p> You can specify a mobile phone number that is registered for a WhatsApp account and is approved in the Chat App Message Service console.</p>
-         * </blockquote>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1360000****</p>
+         * <p>示例值示例值</p>
          */
         public Builder from(String from) {
-            this.putBodyParameter("From", from);
+            this.putQueryParameter("From", from);
             this.from = from;
             return this;
         }
 
         /**
-         * <p>The ISV verification code. This parameter is used to verify whether the RAM user is authorized by the ISV account.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>skdi3kksloslikdkkdk</p>
+         * IsvCode.
          */
         public Builder isvCode(String isvCode) {
-            this.putBodyParameter("IsvCode", isvCode);
+            this.putQueryParameter("IsvCode", isvCode);
             this.isvCode = isvCode;
             return this;
         }
 
         /**
-         * <p>The type of the Viber message. This parameter is required if ChannelType is set to viber. Valid values:</p>
-         * <ul>
-         * <li><strong>promotion</strong></li>
-         * <li><strong>transaction</strong></li>
-         * </ul>
-         * 
-         * <strong>example:</strong>
-         * <p>promotion</p>
+         * Label.
          */
         public Builder label(String label) {
-            this.putBodyParameter("Label", label);
+            this.putQueryParameter("Label", label);
             this.label = label;
             return this;
         }
 
         /**
-         * <p>The language that is used in the message template. This parameter is required only if you set the Type parameter to <strong>template</strong>. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>en</p>
+         * Language.
          */
         public Builder language(String language) {
-            this.putBodyParameter("Language", language);
+            this.putQueryParameter("Language", language);
             this.language = language;
             return this;
         }
 
         /**
-         * <p>The specific type of the message. This parameter is required only if you set the Type parameter to <strong>message</strong>.</p>
-         * <p><strong>Valid values of MessageType when you set the ChannelType parameter to whatsapp:</strong></p>
-         * <ul>
-         * <li><strong>text</strong>: a text message.</li>
-         * <li><strong>image</strong>: an image message.</li>
-         * <li><strong>video</strong>: a video message.</li>
-         * <li><strong>audio</strong>: an audio message.</li>
-         * <li><strong>document</strong>: a document message.</li>
-         * <li><strong>interactive</strong>: an interactive message.</li>
-         * <li><strong>contacts</strong>: a contact message.</li>
-         * <li><strong>location</strong>: a location message.</li>
-         * <li><strong>sticker</strong>: a sticker message.</li>
-         * <li><strong>reaction</strong>: a reaction message.</li>
-         * </ul>
-         * <p><strong>Valid values of MessageType when you set the ChannelType parameter to viber:</strong></p>
-         * <ul>
-         * <li><strong>text</strong>: a text message.</li>
-         * <li><strong>image</strong>: an image message.</li>
-         * <li><strong>video</strong>: a video message.</li>
-         * <li><strong>document</strong>: a document message.</li>
-         * <li><strong>text_button</strong>: a message that contains the text and button media objects.</li>
-         * <li><strong>text_image_button</strong>: a message that contains multiple media objects, including the text, image, and button.</li>
-         * <li><strong>text_video</strong>: a message that contains the text and video media objects.</li>
-         * <li><strong>text_video_button</strong>: a message that contains multiple media objects, including text, video, and button.</li>
-         * <li><strong>text_image</strong>: a message that contains the text and image media objects.</li>
-         * </ul>
-         * <blockquote>
-         * <p>For more information, see <a href="https://help.aliyun.com/document_detail/454530.html">Parameters of a message template</a>.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>text</p>
+         * MessageType.
          */
         public Builder messageType(String messageType) {
-            this.putBodyParameter("MessageType", messageType);
+            this.putQueryParameter("MessageType", messageType);
             this.messageType = messageType;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
             return this;
         }
 
@@ -693,11 +660,11 @@ public class SendChatappMessageRequest extends Request {
         }
 
         /**
-         * <p>The information about the products included in the WhatsApp catalog message or multi-product message (MPM).</p>
+         * ProductAction.
          */
         public Builder productAction(ProductAction productAction) {
             String productActionShrink = shrink(productAction, "ProductAction", "json");
-            this.putBodyParameter("ProductAction", productActionShrink);
+            this.putQueryParameter("ProductAction", productActionShrink);
             this.productAction = productAction;
             return this;
         }
@@ -706,119 +673,113 @@ public class SendChatappMessageRequest extends Request {
          * RecipientType.
          */
         public Builder recipientType(String recipientType) {
-            this.putBodyParameter("RecipientType", recipientType);
+            this.putQueryParameter("RecipientType", recipientType);
             this.recipientType = recipientType;
             return this;
         }
 
         /**
-         * <p>The tag information of the Viber message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tag</p>
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * Tag.
          */
         public Builder tag(String tag) {
-            this.putBodyParameter("Tag", tag);
+            this.putQueryParameter("Tag", tag);
             this.tag = tag;
             return this;
         }
 
         /**
-         * <p>The task ID.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>100000001</p>
+         * TaskId.
          */
         public Builder taskId(String taskId) {
-            this.putBodyParameter("TaskId", taskId);
+            this.putQueryParameter("TaskId", taskId);
             this.taskId = taskId;
             return this;
         }
 
         /**
-         * <p>The code of the message template. This parameter is required only if you set the Type parameter to <strong>template</strong>.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>744c4b5c79c9432497a075bdfca3****</p>
+         * TemplateCode.
          */
         public Builder templateCode(String templateCode) {
-            this.putBodyParameter("TemplateCode", templateCode);
+            this.putQueryParameter("TemplateCode", templateCode);
             this.templateCode = templateCode;
             return this;
         }
 
         /**
-         * <p>The name of the message template.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>test_name</p>
+         * TemplateName.
          */
         public Builder templateName(String templateName) {
-            this.putBodyParameter("TemplateName", templateName);
+            this.putQueryParameter("TemplateName", templateName);
             this.templateName = templateName;
             return this;
         }
 
         /**
-         * <p>The variables of the message template.</p>
+         * TemplateParams.
          */
         public Builder templateParams(java.util.Map<String, String> templateParams) {
             String templateParamsShrink = shrink(templateParams, "TemplateParams", "json");
-            this.putBodyParameter("TemplateParams", templateParamsShrink);
+            this.putQueryParameter("TemplateParams", templateParamsShrink);
             this.templateParams = templateParams;
             return this;
         }
 
         /**
-         * <p>The mobile phone number of the message receiver.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>1390000****</p>
+         * <p>示例值示例值示例值</p>
          */
         public Builder to(String to) {
-            this.putBodyParameter("To", to);
+            this.putQueryParameter("To", to);
             this.to = to;
             return this;
         }
 
         /**
-         * <p>The tracking data of the Viber message.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tracking_id:123456</p>
+         * TrackingData.
          */
         public Builder trackingData(String trackingData) {
-            this.putBodyParameter("TrackingData", trackingData);
+            this.putQueryParameter("TrackingData", trackingData);
             this.trackingData = trackingData;
             return this;
         }
 
         /**
-         * <p>The timeout period for sending the Viber message. Valid values: 30 to 1209600. Unit: seconds.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>50</p>
+         * Ttl.
          */
         public Builder ttl(Integer ttl) {
-            this.putBodyParameter("Ttl", ttl);
+            this.putQueryParameter("Ttl", ttl);
             this.ttl = ttl;
             return this;
         }
 
         /**
-         * <p>The message type. Valid values:</p>
-         * <ul>
-         * <li><strong>template</strong>: the template message. A template message is sent based on a template that is created and approved in the Chat App Message Service console. You can send template messages based on your business requirements.</li>
-         * <li><strong>message</strong>: the custom message. You can send a custom WhatsApp message to a user only within 24 hours after you receive the last message from the user. This limit does not apply to custom Viber messages.</li>
-         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>template</p>
+         * <p>示例值</p>
          */
         public Builder type(String type) {
-            this.putBodyParameter("Type", type);
+            this.putQueryParameter("Type", type);
             this.type = type;
             return this;
         }
@@ -883,7 +844,7 @@ public class SendChatappMessageRequest extends Request {
             } 
 
             /**
-             * <p>The default parameter of the Flow.</p>
+             * FlowActionData.
              */
             public Builder flowActionData(java.util.Map<String, ?> flowActionData) {
                 this.flowActionData = flowActionData;
@@ -891,10 +852,7 @@ public class SendChatappMessageRequest extends Request {
             }
 
             /**
-             * <p>The Flow token.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>1122***</p>
+             * FlowToken.
              */
             public Builder flowToken(String flowToken) {
                 this.flowToken = flowToken;
@@ -948,10 +906,7 @@ public class SendChatappMessageRequest extends Request {
             } 
 
             /**
-             * <p>The retailer ID of the product.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>9I39E9E</p>
+             * ProductRetailerId.
              */
             public Builder productRetailerId(String productRetailerId) {
                 this.productRetailerId = productRetailerId;
@@ -1018,7 +973,7 @@ public class SendChatappMessageRequest extends Request {
             } 
 
             /**
-             * <p>The products.</p>
+             * ProductItems.
              */
             public Builder productItems(java.util.List<ProductItems> productItems) {
                 this.productItems = productItems;
@@ -1026,10 +981,7 @@ public class SendChatappMessageRequest extends Request {
             }
 
             /**
-             * <p>The name of the category.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>Test</p>
+             * Title.
              */
             public Builder title(String title) {
                 this.title = title;
@@ -1096,7 +1048,7 @@ public class SendChatappMessageRequest extends Request {
             } 
 
             /**
-             * <p>The products. Up to 30 products and 10 categories can be added.</p>
+             * Sections.
              */
             public Builder sections(java.util.List<Sections> sections) {
                 this.sections = sections;
@@ -1104,10 +1056,7 @@ public class SendChatappMessageRequest extends Request {
             }
 
             /**
-             * <p>The retailer ID of the product.</p>
-             * 
-             * <strong>example:</strong>
-             * <p>S238SK</p>
+             * ThumbnailProductRetailerId.
              */
             public Builder thumbnailProductRetailerId(String thumbnailProductRetailerId) {
                 this.thumbnailProductRetailerId = thumbnailProductRetailerId;
