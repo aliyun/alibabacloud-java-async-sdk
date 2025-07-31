@@ -47,6 +47,10 @@ public class ModifyDBInstanceSSLRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String SSLAction;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchMode")
+    private String switchMode;
+
     private ModifyDBInstanceSSLRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -56,6 +60,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.SSLAction = builder.SSLAction;
+        this.switchMode = builder.switchMode;
     }
 
     public static Builder builder() {
@@ -120,6 +125,13 @@ public class ModifyDBInstanceSSLRequest extends Request {
         return this.SSLAction;
     }
 
+    /**
+     * @return switchMode
+     */
+    public String getSwitchMode() {
+        return this.switchMode;
+    }
+
     public static final class Builder extends Request.Builder<ModifyDBInstanceSSLRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
@@ -128,6 +140,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String SSLAction; 
+        private String switchMode; 
 
         private Builder() {
             super();
@@ -142,6 +155,7 @@ public class ModifyDBInstanceSSLRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.SSLAction = request.SSLAction;
+            this.switchMode = request.switchMode;
         } 
 
         /**
@@ -217,6 +231,15 @@ public class ModifyDBInstanceSSLRequest extends Request {
         public Builder SSLAction(String SSLAction) {
             this.putQueryParameter("SSLAction", SSLAction);
             this.SSLAction = SSLAction;
+            return this;
+        }
+
+        /**
+         * SwitchMode.
+         */
+        public Builder switchMode(String switchMode) {
+            this.putQueryParameter("SwitchMode", switchMode);
+            this.switchMode = switchMode;
             return this;
         }
 

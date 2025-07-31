@@ -55,6 +55,10 @@ public class ModifyDBInstanceTDERequest extends Request {
     private String roleARN;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchMode")
+    private String switchMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TDEStatus")
     @com.aliyun.core.annotation.Validation(required = true)
     private String TDEStatus;
@@ -70,6 +74,7 @@ public class ModifyDBInstanceTDERequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.roleARN = builder.roleARN;
+        this.switchMode = builder.switchMode;
         this.TDEStatus = builder.TDEStatus;
     }
 
@@ -150,6 +155,13 @@ public class ModifyDBInstanceTDERequest extends Request {
     }
 
     /**
+     * @return switchMode
+     */
+    public String getSwitchMode() {
+        return this.switchMode;
+    }
+
+    /**
      * @return TDEStatus
      */
     public String getTDEStatus() {
@@ -166,6 +178,7 @@ public class ModifyDBInstanceTDERequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String roleARN; 
+        private String switchMode; 
         private String TDEStatus; 
 
         private Builder() {
@@ -183,6 +196,7 @@ public class ModifyDBInstanceTDERequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.roleARN = request.roleARN;
+            this.switchMode = request.switchMode;
             this.TDEStatus = request.TDEStatus;
         } 
 
@@ -290,6 +304,15 @@ public class ModifyDBInstanceTDERequest extends Request {
         public Builder roleARN(String roleARN) {
             this.putQueryParameter("RoleARN", roleARN);
             this.roleARN = roleARN;
+            return this;
+        }
+
+        /**
+         * SwitchMode.
+         */
+        public Builder switchMode(String switchMode) {
+            this.putQueryParameter("SwitchMode", switchMode);
+            this.switchMode = switchMode;
             return this;
         }
 

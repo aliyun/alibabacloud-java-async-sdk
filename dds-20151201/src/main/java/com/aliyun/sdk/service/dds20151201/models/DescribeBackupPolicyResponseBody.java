@@ -65,6 +65,9 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("PreferredNextBackupTime")
     private String preferredNextBackupTime;
 
+    @com.aliyun.core.annotation.NameInMap("PreserveOneEachHour")
+    private Boolean preserveOneEachHour;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
@@ -91,6 +94,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         this.preferredBackupPeriod = builder.preferredBackupPeriod;
         this.preferredBackupTime = builder.preferredBackupTime;
         this.preferredNextBackupTime = builder.preferredNextBackupTime;
+        this.preserveOneEachHour = builder.preserveOneEachHour;
         this.requestId = builder.requestId;
         this.snapshotBackupType = builder.snapshotBackupType;
         this.srcRegion = builder.srcRegion;
@@ -221,6 +225,13 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
     }
 
     /**
+     * @return preserveOneEachHour
+     */
+    public Boolean getPreserveOneEachHour() {
+        return this.preserveOneEachHour;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -258,6 +269,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
         private String preferredBackupPeriod; 
         private String preferredBackupTime; 
         private String preferredNextBackupTime; 
+        private Boolean preserveOneEachHour; 
         private String requestId; 
         private String snapshotBackupType; 
         private String srcRegion; 
@@ -282,6 +294,7 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
             this.preferredBackupPeriod = model.preferredBackupPeriod;
             this.preferredBackupTime = model.preferredBackupTime;
             this.preferredNextBackupTime = model.preferredNextBackupTime;
+            this.preserveOneEachHour = model.preserveOneEachHour;
             this.requestId = model.requestId;
             this.snapshotBackupType = model.snapshotBackupType;
             this.srcRegion = model.srcRegion;
@@ -513,6 +526,14 @@ public class DescribeBackupPolicyResponseBody extends TeaModel {
          */
         public Builder preferredNextBackupTime(String preferredNextBackupTime) {
             this.preferredNextBackupTime = preferredNextBackupTime;
+            return this;
+        }
+
+        /**
+         * PreserveOneEachHour.
+         */
+        public Builder preserveOneEachHour(Boolean preserveOneEachHour) {
+            this.preserveOneEachHour = preserveOneEachHour;
             return this;
         }
 

@@ -12,27 +12,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
  * 
- * {@link CreateBackupRequest} extends {@link RequestModel}
+ * {@link ModifyDBInstanceAttributeRequest} extends {@link RequestModel}
  *
- * <p>CreateBackupRequest</p>
+ * <p>ModifyDBInstanceAttributeRequest</p>
  */
-public class CreateBackupRequest extends Request {
+public class ModifyDBInstanceAttributeRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("BackupMethod")
-    private String backupMethod;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
-    private Long backupRetentionPeriod;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceReleaseProtection")
+    private Boolean DBInstanceReleaseProtection;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -50,12 +46,11 @@ public class CreateBackupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private CreateBackupRequest(Builder builder) {
+    private ModifyDBInstanceAttributeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.backupMethod = builder.backupMethod;
-        this.backupRetentionPeriod = builder.backupRetentionPeriod;
         this.DBInstanceId = builder.DBInstanceId;
+        this.DBInstanceReleaseProtection = builder.DBInstanceReleaseProtection;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -66,7 +61,7 @@ public class CreateBackupRequest extends Request {
         return new Builder();
     }
 
-    public static CreateBackupRequest create() {
+    public static ModifyDBInstanceAttributeRequest create() {
         return builder().build();
     }
 
@@ -83,24 +78,17 @@ public class CreateBackupRequest extends Request {
     }
 
     /**
-     * @return backupMethod
-     */
-    public String getBackupMethod() {
-        return this.backupMethod;
-    }
-
-    /**
-     * @return backupRetentionPeriod
-     */
-    public Long getBackupRetentionPeriod() {
-        return this.backupRetentionPeriod;
-    }
-
-    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return DBInstanceReleaseProtection
+     */
+    public Boolean getDBInstanceReleaseProtection() {
+        return this.DBInstanceReleaseProtection;
     }
 
     /**
@@ -131,11 +119,10 @@ public class CreateBackupRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<CreateBackupRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModifyDBInstanceAttributeRequest, Builder> {
         private String regionId; 
-        private String backupMethod; 
-        private Long backupRetentionPeriod; 
         private String DBInstanceId; 
+        private Boolean DBInstanceReleaseProtection; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -145,12 +132,11 @@ public class CreateBackupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateBackupRequest request) {
+        private Builder(ModifyDBInstanceAttributeRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.backupMethod = request.backupMethod;
-            this.backupRetentionPeriod = request.backupRetentionPeriod;
             this.DBInstanceId = request.DBInstanceId;
+            this.DBInstanceReleaseProtection = request.DBInstanceReleaseProtection;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -167,43 +153,23 @@ public class CreateBackupRequest extends Request {
         }
 
         /**
-         * <p>The backup method of the instance. Valid values:</p>
-         * <ul>
-         * <li><strong>Logical</strong></li>
-         * <li><strong>Physical</strong> (default)</li>
-         * </ul>
-         * <blockquote>
-         * <p>Only replica set instances and sharded cluster instances support this parameter. You do not need to specify this parameter for standalone instances. All standalone instances use snapshot backup.</p>
-         * </blockquote>
-         * 
-         * <strong>example:</strong>
-         * <p>Logical</p>
-         */
-        public Builder backupMethod(String backupMethod) {
-            this.putQueryParameter("BackupMethod", backupMethod);
-            this.backupMethod = backupMethod;
-            return this;
-        }
-
-        /**
-         * BackupRetentionPeriod.
-         */
-        public Builder backupRetentionPeriod(Long backupRetentionPeriod) {
-            this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
-            this.backupRetentionPeriod = backupRetentionPeriod;
-            return this;
-        }
-
-        /**
-         * <p>The instance ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>d-bp2235****</p>
+         * <p>dds-7xv0912d85924194</p>
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * DBInstanceReleaseProtection.
+         */
+        public Builder DBInstanceReleaseProtection(Boolean DBInstanceReleaseProtection) {
+            this.putQueryParameter("DBInstanceReleaseProtection", DBInstanceReleaseProtection);
+            this.DBInstanceReleaseProtection = DBInstanceReleaseProtection;
             return this;
         }
 
@@ -244,8 +210,8 @@ public class CreateBackupRequest extends Request {
         }
 
         @Override
-        public CreateBackupRequest build() {
-            return new CreateBackupRequest(this);
+        public ModifyDBInstanceAttributeRequest build() {
+            return new ModifyDBInstanceAttributeRequest(this);
         } 
 
     } 

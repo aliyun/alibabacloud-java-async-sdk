@@ -661,6 +661,9 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AttachLogStatus")
         private String attachLogStatus;
 
+        @com.aliyun.core.annotation.NameInMap("BackupExpireTime")
+        private String backupExpireTime;
+
         @com.aliyun.core.annotation.NameInMap("Backups")
         private java.util.List<Backups> backups;
 
@@ -696,6 +699,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
 
         private ClusterBackups(Builder builder) {
             this.attachLogStatus = builder.attachLogStatus;
+            this.backupExpireTime = builder.backupExpireTime;
             this.backups = builder.backups;
             this.clusterBackupEndTime = builder.clusterBackupEndTime;
             this.clusterBackupId = builder.clusterBackupId;
@@ -722,6 +726,13 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
          */
         public String getAttachLogStatus() {
             return this.attachLogStatus;
+        }
+
+        /**
+         * @return backupExpireTime
+         */
+        public String getBackupExpireTime() {
+            return this.backupExpireTime;
         }
 
         /**
@@ -803,6 +814,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String attachLogStatus; 
+            private String backupExpireTime; 
             private java.util.List<Backups> backups; 
             private String clusterBackupEndTime; 
             private String clusterBackupId; 
@@ -820,6 +832,7 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
 
             private Builder(ClusterBackups model) {
                 this.attachLogStatus = model.attachLogStatus;
+                this.backupExpireTime = model.backupExpireTime;
                 this.backups = model.backups;
                 this.clusterBackupEndTime = model.clusterBackupEndTime;
                 this.clusterBackupId = model.clusterBackupId;
@@ -851,6 +864,14 @@ public class DescribeClusterBackupsResponseBody extends TeaModel {
              */
             public Builder attachLogStatus(String attachLogStatus) {
                 this.attachLogStatus = attachLogStatus;
+                return this;
+            }
+
+            /**
+             * BackupExpireTime.
+             */
+            public Builder backupExpireTime(String backupExpireTime) {
+                this.backupExpireTime = backupExpireTime;
                 return this;
             }
 

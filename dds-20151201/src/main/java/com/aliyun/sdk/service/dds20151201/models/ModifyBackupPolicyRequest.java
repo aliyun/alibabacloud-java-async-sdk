@@ -103,6 +103,10 @@ public class ModifyBackupPolicyRequest extends Request {
     private String preferredBackupTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreserveOneEachHour")
+    private Boolean preserveOneEachHour;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
@@ -141,6 +145,7 @@ public class ModifyBackupPolicyRequest extends Request {
         this.ownerId = builder.ownerId;
         this.preferredBackupPeriod = builder.preferredBackupPeriod;
         this.preferredBackupTime = builder.preferredBackupTime;
+        this.preserveOneEachHour = builder.preserveOneEachHour;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.snapshotBackupType = builder.snapshotBackupType;
@@ -308,6 +313,13 @@ public class ModifyBackupPolicyRequest extends Request {
     }
 
     /**
+     * @return preserveOneEachHour
+     */
+    public Boolean getPreserveOneEachHour() {
+        return this.preserveOneEachHour;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -357,6 +369,7 @@ public class ModifyBackupPolicyRequest extends Request {
         private Long ownerId; 
         private String preferredBackupPeriod; 
         private String preferredBackupTime; 
+        private Boolean preserveOneEachHour; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String snapshotBackupType; 
@@ -389,6 +402,7 @@ public class ModifyBackupPolicyRequest extends Request {
             this.ownerId = request.ownerId;
             this.preferredBackupPeriod = request.preferredBackupPeriod;
             this.preferredBackupTime = request.preferredBackupTime;
+            this.preserveOneEachHour = request.preserveOneEachHour;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.snapshotBackupType = request.snapshotBackupType;
@@ -765,6 +779,15 @@ public class ModifyBackupPolicyRequest extends Request {
         public Builder preferredBackupTime(String preferredBackupTime) {
             this.putQueryParameter("PreferredBackupTime", preferredBackupTime);
             this.preferredBackupTime = preferredBackupTime;
+            return this;
+        }
+
+        /**
+         * PreserveOneEachHour.
+         */
+        public Builder preserveOneEachHour(Boolean preserveOneEachHour) {
+            this.putQueryParameter("PreserveOneEachHour", preserveOneEachHour);
+            this.preserveOneEachHour = preserveOneEachHour;
             return this;
         }
 

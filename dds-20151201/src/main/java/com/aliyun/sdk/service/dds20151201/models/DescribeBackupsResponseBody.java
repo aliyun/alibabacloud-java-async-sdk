@@ -184,6 +184,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BackupEndTime")
         private String backupEndTime;
 
+        @com.aliyun.core.annotation.NameInMap("BackupExpireTime")
+        private String backupExpireTime;
+
         @com.aliyun.core.annotation.NameInMap("BackupId")
         private String backupId;
 
@@ -227,6 +230,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             this.backupDBNames = builder.backupDBNames;
             this.backupDownloadURL = builder.backupDownloadURL;
             this.backupEndTime = builder.backupEndTime;
+            this.backupExpireTime = builder.backupExpireTime;
             this.backupId = builder.backupId;
             this.backupIntranetDownloadURL = builder.backupIntranetDownloadURL;
             this.backupJobId = builder.backupJobId;
@@ -269,6 +273,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
          */
         public String getBackupEndTime() {
             return this.backupEndTime;
+        }
+
+        /**
+         * @return backupExpireTime
+         */
+        public String getBackupExpireTime() {
+            return this.backupExpireTime;
         }
 
         /**
@@ -366,6 +377,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupDBNames; 
             private String backupDownloadURL; 
             private String backupEndTime; 
+            private String backupExpireTime; 
             private String backupId; 
             private String backupIntranetDownloadURL; 
             private String backupJobId; 
@@ -387,6 +399,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
                 this.backupDBNames = model.backupDBNames;
                 this.backupDownloadURL = model.backupDownloadURL;
                 this.backupEndTime = model.backupEndTime;
+                this.backupExpireTime = model.backupExpireTime;
                 this.backupId = model.backupId;
                 this.backupIntranetDownloadURL = model.backupIntranetDownloadURL;
                 this.backupJobId = model.backupJobId;
@@ -429,6 +442,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
              */
             public Builder backupEndTime(String backupEndTime) {
                 this.backupEndTime = backupEndTime;
+                return this;
+            }
+
+            /**
+             * BackupExpireTime.
+             */
+            public Builder backupExpireTime(String backupExpireTime) {
+                this.backupExpireTime = backupExpireTime;
                 return this;
             }
 

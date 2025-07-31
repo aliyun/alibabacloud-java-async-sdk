@@ -55,6 +55,10 @@ public class ModifyParametersRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchMode")
+    private String switchMode;
+
     private ModifyParametersRequest(Builder builder) {
         super(builder);
         this.characterType = builder.characterType;
@@ -66,6 +70,7 @@ public class ModifyParametersRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.switchMode = builder.switchMode;
     }
 
     public static Builder builder() {
@@ -144,6 +149,13 @@ public class ModifyParametersRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return switchMode
+     */
+    public String getSwitchMode() {
+        return this.switchMode;
+    }
+
     public static final class Builder extends Request.Builder<ModifyParametersRequest, Builder> {
         private String characterType; 
         private String DBInstanceId; 
@@ -154,6 +166,7 @@ public class ModifyParametersRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String switchMode; 
 
         private Builder() {
             super();
@@ -170,6 +183,7 @@ public class ModifyParametersRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.switchMode = request.switchMode;
         } 
 
         /**
@@ -281,6 +295,15 @@ public class ModifyParametersRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * SwitchMode.
+         */
+        public Builder switchMode(String switchMode) {
+            this.putQueryParameter("SwitchMode", switchMode);
+            this.switchMode = switchMode;
             return this;
         }
 

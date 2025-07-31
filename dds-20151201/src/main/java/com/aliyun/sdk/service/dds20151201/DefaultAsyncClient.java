@@ -40,7 +40,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-shanghai", "mongodb.aliyuncs.com"),
             new TeaPair("cn-shenzhen", "mongodb.aliyuncs.com"),
             new TeaPair("cn-heyuan", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-guangzhou", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-guangzhou", "mongodb.cn-guangzhou.aliyuncs.com"),
             new TeaPair("cn-chengdu", "mongodb.cn-chengdu.aliyuncs.com"),
             new TeaPair("cn-hongkong", "mongodb.cn-hongkong.aliyuncs.com"),
             new TeaPair("ap-northeast-1", "mongodb.ap-northeast-1.aliyuncs.com"),
@@ -56,7 +56,7 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("me-east-1", "mongodb.me-east-1.aliyuncs.com"),
             new TeaPair("cn-hangzhou-finance", "mongodb.aliyuncs.com"),
             new TeaPair("cn-shanghai-finance-1", "mongodb.aliyuncs.com"),
-            new TeaPair("cn-shenzhen-finance-1", "mongodb.aliyuncs.com"),
+            new TeaPair("cn-shenzhen-finance-1", "mongodb.cn-shenzhen-finance-1.aliyuncs.com"),
             new TeaPair("cn-north-2-gov-1", "mongodb.cn-north-2-gov-1.aliyuncs.com"),
             new TeaPair("ap-northeast-2-pop", "mongodb.aliyuncs.com"),
             new TeaPair("cn-beijing-finance-1", "mongodb.aliyuncs.com"),
@@ -89,7 +89,8 @@ public final class DefaultAsyncClient implements AsyncClient {
             new TeaPair("cn-zhangjiakou-na62-a01", "mongodb.aliyuncs.com"),
             new TeaPair("cn-zhengzhou-nebula-1", "mongodb.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "mongodb.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "mongodb.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "mongodb.aliyuncs.com"),
+            new TeaPair("na-south-1", "mongodb.na-south-1.aliyuncs.com")
         );
         this.REQUEST = TeaRequest.create().setProduct(product).setEndpointRule(endpointRule).setEndpointMap(endpointMap).setVersion(version);
     }
@@ -1808,6 +1809,24 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyBackupPolicyResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    /**
+     * @param request the request parameters of ModifyDBInstanceAttribute  ModifyDBInstanceAttributeRequest
+     * @return ModifyDBInstanceAttributeResponse
+     */
+    @Override
+    public CompletableFuture<ModifyDBInstanceAttributeResponse> modifyDBInstanceAttribute(ModifyDBInstanceAttributeRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyDBInstanceAttribute").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyDBInstanceAttributeResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyDBInstanceAttributeResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

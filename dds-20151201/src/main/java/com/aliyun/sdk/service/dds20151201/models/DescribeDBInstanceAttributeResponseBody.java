@@ -1200,6 +1200,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadonlyReplicas")
         private Integer readonlyReplicas;
 
+        @com.aliyun.core.annotation.NameInMap("ReplicaSetName")
+        private String replicaSetName;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -1216,6 +1219,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.nodeStorage = builder.nodeStorage;
             this.port = builder.port;
             this.readonlyReplicas = builder.readonlyReplicas;
+            this.replicaSetName = builder.replicaSetName;
             this.status = builder.status;
         }
 
@@ -1312,6 +1316,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return replicaSetName
+         */
+        public String getReplicaSetName() {
+            return this.replicaSetName;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -1331,6 +1342,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Integer nodeStorage; 
             private Integer port; 
             private Integer readonlyReplicas; 
+            private String replicaSetName; 
             private String status; 
 
             private Builder() {
@@ -1349,6 +1361,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.nodeStorage = model.nodeStorage;
                 this.port = model.port;
                 this.readonlyReplicas = model.readonlyReplicas;
+                this.replicaSetName = model.replicaSetName;
                 this.status = model.status;
             } 
 
@@ -1488,6 +1501,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder readonlyReplicas(Integer readonlyReplicas) {
                 this.readonlyReplicas = readonlyReplicas;
+                return this;
+            }
+
+            /**
+             * ReplicaSetName.
+             */
+            public Builder replicaSetName(String replicaSetName) {
+                this.replicaSetName = replicaSetName;
                 return this;
             }
 
@@ -1750,6 +1771,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DestroyTime")
         private String destroyTime;
 
+        @com.aliyun.core.annotation.NameInMap("DisasterRecoveryInfo")
+        private String disasterRecoveryInfo;
+
         @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
 
@@ -1877,6 +1901,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.DBInstanceStorage = builder.DBInstanceStorage;
             this.DBInstanceType = builder.DBInstanceType;
             this.destroyTime = builder.destroyTime;
+            this.disasterRecoveryInfo = builder.disasterRecoveryInfo;
             this.encrypted = builder.encrypted;
             this.encryptionKey = builder.encryptionKey;
             this.engine = builder.engine;
@@ -2027,6 +2052,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getDestroyTime() {
             return this.destroyTime;
+        }
+
+        /**
+         * @return disasterRecoveryInfo
+         */
+        public String getDisasterRecoveryInfo() {
+            return this.disasterRecoveryInfo;
         }
 
         /**
@@ -2304,6 +2336,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private Integer DBInstanceStorage; 
             private String DBInstanceType; 
             private String destroyTime; 
+            private String disasterRecoveryInfo; 
             private Boolean encrypted; 
             private String encryptionKey; 
             private String engine; 
@@ -2361,6 +2394,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
                 this.DBInstanceStorage = model.DBInstanceStorage;
                 this.DBInstanceType = model.DBInstanceType;
                 this.destroyTime = model.destroyTime;
+                this.disasterRecoveryInfo = model.disasterRecoveryInfo;
                 this.encrypted = model.encrypted;
                 this.encryptionKey = model.encryptionKey;
                 this.engine = model.engine;
@@ -2586,6 +2620,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder destroyTime(String destroyTime) {
                 this.destroyTime = destroyTime;
+                return this;
+            }
+
+            /**
+             * DisasterRecoveryInfo.
+             */
+            public Builder disasterRecoveryInfo(String disasterRecoveryInfo) {
+                this.disasterRecoveryInfo = disasterRecoveryInfo;
                 return this;
             }
 

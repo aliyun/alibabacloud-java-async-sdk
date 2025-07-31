@@ -51,6 +51,10 @@ public class RestartNodeRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String roleId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchMode")
+    private String switchMode;
+
     private RestartNodeRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -61,6 +65,7 @@ public class RestartNodeRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.roleId = builder.roleId;
+        this.switchMode = builder.switchMode;
     }
 
     public static Builder builder() {
@@ -132,6 +137,13 @@ public class RestartNodeRequest extends Request {
         return this.roleId;
     }
 
+    /**
+     * @return switchMode
+     */
+    public String getSwitchMode() {
+        return this.switchMode;
+    }
+
     public static final class Builder extends Request.Builder<RestartNodeRequest, Builder> {
         private String regionId; 
         private String DBInstanceId; 
@@ -141,6 +153,7 @@ public class RestartNodeRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String roleId; 
+        private String switchMode; 
 
         private Builder() {
             super();
@@ -156,6 +169,7 @@ public class RestartNodeRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.roleId = request.roleId;
+            this.switchMode = request.switchMode;
         } 
 
         /**
@@ -248,6 +262,15 @@ public class RestartNodeRequest extends Request {
         public Builder roleId(String roleId) {
             this.putQueryParameter("RoleId", roleId);
             this.roleId = roleId;
+            return this;
+        }
+
+        /**
+         * SwitchMode.
+         */
+        public Builder switchMode(String switchMode) {
+            this.putQueryParameter("SwitchMode", switchMode);
+            this.switchMode = switchMode;
             return this;
         }
 

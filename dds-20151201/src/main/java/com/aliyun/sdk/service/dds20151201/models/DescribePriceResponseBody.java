@@ -1150,6 +1150,9 @@ public class DescribePriceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StandPrice")
         private Double standPrice;
 
+        @com.aliyun.core.annotation.NameInMap("TotalCostAmount")
+        private Double totalCostAmount;
+
         @com.aliyun.core.annotation.NameInMap("TradeAmount")
         private String tradeAmount;
 
@@ -1169,6 +1172,7 @@ public class DescribePriceResponseBody extends TeaModel {
             this.showDiscountInfo = builder.showDiscountInfo;
             this.standDiscountPrice = builder.standDiscountPrice;
             this.standPrice = builder.standPrice;
+            this.totalCostAmount = builder.totalCostAmount;
             this.tradeAmount = builder.tradeAmount;
         }
 
@@ -1286,6 +1290,13 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
+         * @return totalCostAmount
+         */
+        public Double getTotalCostAmount() {
+            return this.totalCostAmount;
+        }
+
+        /**
          * @return tradeAmount
          */
         public String getTradeAmount() {
@@ -1308,6 +1319,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private Boolean showDiscountInfo; 
             private Double standDiscountPrice; 
             private Double standPrice; 
+            private Double totalCostAmount; 
             private String tradeAmount; 
 
             private Builder() {
@@ -1329,6 +1341,7 @@ public class DescribePriceResponseBody extends TeaModel {
                 this.showDiscountInfo = model.showDiscountInfo;
                 this.standDiscountPrice = model.standDiscountPrice;
                 this.standPrice = model.standPrice;
+                this.totalCostAmount = model.totalCostAmount;
                 this.tradeAmount = model.tradeAmount;
             } 
 
@@ -1485,6 +1498,14 @@ public class DescribePriceResponseBody extends TeaModel {
              */
             public Builder standPrice(Double standPrice) {
                 this.standPrice = standPrice;
+                return this;
+            }
+
+            /**
+             * TotalCostAmount.
+             */
+            public Builder totalCostAmount(Double totalCostAmount) {
+                this.totalCostAmount = totalCostAmount;
                 return this;
             }
 
