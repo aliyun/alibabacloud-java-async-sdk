@@ -272,6 +272,15 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Launcher")
         private String launcher;
 
+        @com.aliyun.core.annotation.NameInMap("OssOutputDelivery")
+        private String ossOutputDelivery;
+
+        @com.aliyun.core.annotation.NameInMap("OssOutputStatus")
+        private String ossOutputStatus;
+
+        @com.aliyun.core.annotation.NameInMap("OssOutputUri")
+        private String ossOutputUri;
+
         @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
@@ -307,6 +316,9 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             this.invokeId = builder.invokeId;
             this.invokeRecordStatus = builder.invokeRecordStatus;
             this.launcher = builder.launcher;
+            this.ossOutputDelivery = builder.ossOutputDelivery;
+            this.ossOutputStatus = builder.ossOutputStatus;
+            this.ossOutputUri = builder.ossOutputUri;
             this.output = builder.output;
             this.repeats = builder.repeats;
             this.startTime = builder.startTime;
@@ -416,6 +428,27 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ossOutputDelivery
+         */
+        public String getOssOutputDelivery() {
+            return this.ossOutputDelivery;
+        }
+
+        /**
+         * @return ossOutputStatus
+         */
+        public String getOssOutputStatus() {
+            return this.ossOutputStatus;
+        }
+
+        /**
+         * @return ossOutputUri
+         */
+        public String getOssOutputUri() {
+            return this.ossOutputUri;
+        }
+
+        /**
          * @return output
          */
         public String getOutput() {
@@ -478,6 +511,9 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
             private String invokeId; 
             private String invokeRecordStatus; 
             private String launcher; 
+            private String ossOutputDelivery; 
+            private String ossOutputStatus; 
+            private String ossOutputUri; 
             private String output; 
             private Integer repeats; 
             private String startTime; 
@@ -503,6 +539,9 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
                 this.invokeId = model.invokeId;
                 this.invokeRecordStatus = model.invokeRecordStatus;
                 this.launcher = model.launcher;
+                this.ossOutputDelivery = model.ossOutputDelivery;
+                this.ossOutputStatus = model.ossOutputStatus;
+                this.ossOutputUri = model.ossOutputUri;
                 this.output = model.output;
                 this.repeats = model.repeats;
                 this.startTime = model.startTime;
@@ -764,6 +803,30 @@ public class DescribeInvocationResultsResponseBody extends TeaModel {
              */
             public Builder launcher(String launcher) {
                 this.launcher = launcher;
+                return this;
+            }
+
+            /**
+             * OssOutputDelivery.
+             */
+            public Builder ossOutputDelivery(String ossOutputDelivery) {
+                this.ossOutputDelivery = ossOutputDelivery;
+                return this;
+            }
+
+            /**
+             * OssOutputStatus.
+             */
+            public Builder ossOutputStatus(String ossOutputStatus) {
+                this.ossOutputStatus = ossOutputStatus;
+                return this;
+            }
+
+            /**
+             * OssOutputUri.
+             */
+            public Builder ossOutputUri(String ossOutputUri) {
+                this.ossOutputUri = ossOutputUri;
                 return this;
             }
 

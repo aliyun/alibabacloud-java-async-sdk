@@ -221,6 +221,12 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InvocationStatus")
         private String invocationStatus;
 
+        @com.aliyun.core.annotation.NameInMap("OssOutputStatus")
+        private String ossOutputStatus;
+
+        @com.aliyun.core.annotation.NameInMap("OssOutputUri")
+        private String ossOutputUri;
+
         @com.aliyun.core.annotation.NameInMap("Output")
         private String output;
 
@@ -249,6 +255,8 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             this.instanceId = builder.instanceId;
             this.instanceInvokeStatus = builder.instanceInvokeStatus;
             this.invocationStatus = builder.invocationStatus;
+            this.ossOutputStatus = builder.ossOutputStatus;
+            this.ossOutputUri = builder.ossOutputUri;
             this.output = builder.output;
             this.repeats = builder.repeats;
             this.startTime = builder.startTime;
@@ -329,6 +337,20 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ossOutputStatus
+         */
+        public String getOssOutputStatus() {
+            return this.ossOutputStatus;
+        }
+
+        /**
+         * @return ossOutputUri
+         */
+        public String getOssOutputUri() {
+            return this.ossOutputUri;
+        }
+
+        /**
          * @return output
          */
         public String getOutput() {
@@ -380,6 +402,8 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private String instanceId; 
             private String instanceInvokeStatus; 
             private String invocationStatus; 
+            private String ossOutputStatus; 
+            private String ossOutputUri; 
             private String output; 
             private Integer repeats; 
             private String startTime; 
@@ -400,6 +424,8 @@ public class DescribeInvocationsResponseBody extends TeaModel {
                 this.instanceId = model.instanceId;
                 this.instanceInvokeStatus = model.instanceInvokeStatus;
                 this.invocationStatus = model.invocationStatus;
+                this.ossOutputStatus = model.ossOutputStatus;
+                this.ossOutputUri = model.ossOutputUri;
                 this.output = model.output;
                 this.repeats = model.repeats;
                 this.startTime = model.startTime;
@@ -589,6 +615,22 @@ public class DescribeInvocationsResponseBody extends TeaModel {
              */
             public Builder invocationStatus(String invocationStatus) {
                 this.invocationStatus = invocationStatus;
+                return this;
+            }
+
+            /**
+             * OssOutputStatus.
+             */
+            public Builder ossOutputStatus(String ossOutputStatus) {
+                this.ossOutputStatus = ossOutputStatus;
+                return this;
+            }
+
+            /**
+             * OssOutputUri.
+             */
+            public Builder ossOutputUri(String ossOutputUri) {
+                this.ossOutputUri = ossOutputUri;
                 return this;
             }
 
@@ -911,6 +953,9 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Launcher")
         private String launcher;
 
+        @com.aliyun.core.annotation.NameInMap("OssOutputDelivery")
+        private String ossOutputDelivery;
+
         @com.aliyun.core.annotation.NameInMap("Parameters")
         private String parameters;
 
@@ -950,6 +995,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             this.invokeInstances = builder.invokeInstances;
             this.invokeStatus = builder.invokeStatus;
             this.launcher = builder.launcher;
+            this.ossOutputDelivery = builder.ossOutputDelivery;
             this.parameters = builder.parameters;
             this.repeatMode = builder.repeatMode;
             this.tags = builder.tags;
@@ -1067,6 +1113,13 @@ public class DescribeInvocationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ossOutputDelivery
+         */
+        public String getOssOutputDelivery() {
+            return this.ossOutputDelivery;
+        }
+
+        /**
          * @return parameters
          */
         public String getParameters() {
@@ -1137,6 +1190,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
             private InvokeInstances invokeInstances; 
             private String invokeStatus; 
             private String launcher; 
+            private String ossOutputDelivery; 
             private String parameters; 
             private String repeatMode; 
             private Tags tags; 
@@ -1164,6 +1218,7 @@ public class DescribeInvocationsResponseBody extends TeaModel {
                 this.invokeInstances = model.invokeInstances;
                 this.invokeStatus = model.invokeStatus;
                 this.launcher = model.launcher;
+                this.ossOutputDelivery = model.ossOutputDelivery;
                 this.parameters = model.parameters;
                 this.repeatMode = model.repeatMode;
                 this.tags = model.tags;
@@ -1362,6 +1417,14 @@ public class DescribeInvocationsResponseBody extends TeaModel {
              */
             public Builder launcher(String launcher) {
                 this.launcher = launcher;
+                return this;
+            }
+
+            /**
+             * OssOutputDelivery.
+             */
+            public Builder ossOutputDelivery(String ossOutputDelivery) {
+                this.ossOutputDelivery = ossOutputDelivery;
                 return this;
             }
 

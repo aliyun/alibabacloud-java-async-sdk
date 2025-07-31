@@ -71,6 +71,10 @@ public class RunCommandRequest extends Request {
     private String name;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssOutputDelivery")
+    private String ossOutputDelivery;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -155,6 +159,7 @@ public class RunCommandRequest extends Request {
         this.keepCommand = builder.keepCommand;
         this.launcher = builder.launcher;
         this.name = builder.name;
+        this.ossOutputDelivery = builder.ossOutputDelivery;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.parameters = builder.parameters;
@@ -276,6 +281,13 @@ public class RunCommandRequest extends Request {
      */
     public String getName() {
         return this.name;
+    }
+
+    /**
+     * @return ossOutputDelivery
+     */
+    public String getOssOutputDelivery() {
+        return this.ossOutputDelivery;
     }
 
     /**
@@ -411,6 +423,7 @@ public class RunCommandRequest extends Request {
         private Boolean keepCommand; 
         private String launcher; 
         private String name; 
+        private String ossOutputDelivery; 
         private String ownerAccount; 
         private Long ownerId; 
         private java.util.Map<String, ?> parameters; 
@@ -448,6 +461,7 @@ public class RunCommandRequest extends Request {
             this.keepCommand = request.keepCommand;
             this.launcher = request.launcher;
             this.name = request.name;
+            this.ossOutputDelivery = request.ossOutputDelivery;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.parameters = request.parameters;
@@ -718,6 +732,15 @@ public class RunCommandRequest extends Request {
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
             this.name = name;
+            return this;
+        }
+
+        /**
+         * OssOutputDelivery.
+         */
+        public Builder ossOutputDelivery(String ossOutputDelivery) {
+            this.putQueryParameter("OssOutputDelivery", ossOutputDelivery);
+            this.ossOutputDelivery = ossOutputDelivery;
             return this;
         }
 

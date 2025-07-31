@@ -94,7 +94,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ActivateRouterInterface is deprecated  * @param request  the request parameters of ActivateRouterInterface  ActivateRouterInterfaceRequest
+     * @deprecated OpenAPI ActivateRouterInterface is deprecated, please use Vpc::2016-04-28::ActivateRouterInterface instead.  * @param request  the request parameters of ActivateRouterInterface  ActivateRouterInterfaceRequest
      * @return ActivateRouterInterfaceResponse
      */
     @Deprecated
@@ -113,7 +113,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI AddBandwidthPackageIps is deprecated  * @param request  the request parameters of AddBandwidthPackageIps  AddBandwidthPackageIpsRequest
+     * @deprecated OpenAPI AddBandwidthPackageIps is deprecated, please use Vpc::2016-04-28::AddBandwidthPackageIps instead.  * @param request  the request parameters of AddBandwidthPackageIps  AddBandwidthPackageIpsRequest
      * @return AddBandwidthPackageIpsResponse
      */
     @Deprecated
@@ -341,7 +341,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI AssociateHaVip is deprecated  * @param request  the request parameters of AssociateHaVip  AssociateHaVipRequest
+     * @deprecated OpenAPI AssociateHaVip is deprecated, please use Vpc::2016-04-28::AssociateHaVip instead.  * @param request  the request parameters of AssociateHaVip  AssociateHaVipRequest
      * @return AssociateHaVipResponse
      */
     @Deprecated
@@ -718,7 +718,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI CancelPhysicalConnection is deprecated  * @param request  the request parameters of CancelPhysicalConnection  CancelPhysicalConnectionRequest
+     * @deprecated OpenAPI CancelPhysicalConnection is deprecated, please use Vpc::2016-04-28::CancelPhysicalConnection instead.  * @param request  the request parameters of CancelPhysicalConnection  CancelPhysicalConnectionRequest
      * @return CancelPhysicalConnectionResponse
      */
     @Deprecated
@@ -773,7 +773,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ConnectRouterInterface is deprecated  * @param request  the request parameters of ConnectRouterInterface  ConnectRouterInterfaceRequest
+     * @deprecated OpenAPI ConnectRouterInterface is deprecated, please use Vpc::2016-04-28::ConnectRouterInterface instead.  * @param request  the request parameters of ConnectRouterInterface  ConnectRouterInterfaceRequest
      * @return ConnectRouterInterfaceResponse
      */
     @Deprecated
@@ -1175,7 +1175,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI CreateForwardEntry is deprecated  * @param request  the request parameters of CreateForwardEntry  CreateForwardEntryRequest
+     * @deprecated OpenAPI CreateForwardEntry is deprecated, please use Vpc::2016-04-28::CreateForwardEntry instead.  * @param request  the request parameters of CreateForwardEntry  CreateForwardEntryRequest
      * @return CreateForwardEntryResponse
      */
     @Deprecated
@@ -1194,7 +1194,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI CreateHaVip is deprecated  * @param request  the request parameters of CreateHaVip  CreateHaVipRequest
+     * @deprecated OpenAPI CreateHaVip is deprecated, please use Vpc::2016-04-28::CreateHaVip instead.  * @param request  the request parameters of CreateHaVip  CreateHaVipRequest
      * @return CreateHaVipResponse
      */
     @Deprecated
@@ -1454,7 +1454,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI CreateNatGateway is deprecated  * @param request  the request parameters of CreateNatGateway  CreateNatGatewayRequest
+     * @deprecated OpenAPI CreateNatGateway is deprecated, please use Vpc::2016-04-28::CreateNatGateway instead.  * @param request  the request parameters of CreateNatGateway  CreateNatGatewayRequest
      * @return CreateNatGatewayResponse
      */
     @Deprecated
@@ -1529,7 +1529,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI CreatePhysicalConnection is deprecated  * @param request  the request parameters of CreatePhysicalConnection  CreatePhysicalConnectionRequest
+     * @deprecated OpenAPI CreatePhysicalConnection is deprecated, please use Vpc::2016-04-28::CreatePhysicalConnection instead.  * @param request  the request parameters of CreatePhysicalConnection  CreatePhysicalConnectionRequest
      * @return CreatePhysicalConnectionResponse
      */
     @Deprecated
@@ -1598,7 +1598,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI CreateRouteEntry is deprecated  * @param request  the request parameters of CreateRouteEntry  CreateRouteEntryRequest
+     * @deprecated OpenAPI CreateRouteEntry is deprecated, please use Vpc::2016-04-28::CreateRouteEntry instead.  * @param request  the request parameters of CreateRouteEntry  CreateRouteEntryRequest
      * @return CreateRouteEntryResponse
      */
     @Deprecated
@@ -1617,7 +1617,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI CreateRouterInterface is deprecated  * @param request  the request parameters of CreateRouterInterface  CreateRouterInterfaceRequest
+     * @deprecated OpenAPI CreateRouterInterface is deprecated, please use Vpc::2016-04-28::CreateRouterInterface instead.  * @param request  the request parameters of CreateRouterInterface  CreateRouterInterfaceRequest
      * @return CreateRouterInterfaceResponse
      */
     @Deprecated
@@ -1837,7 +1837,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI CreateVirtualBorderRouter is deprecated  * @param request  the request parameters of CreateVirtualBorderRouter  CreateVirtualBorderRouterRequest
+     * @deprecated OpenAPI CreateVirtualBorderRouter is deprecated, please use Vpc::2016-04-28::CreateVirtualBorderRouter instead.  * @param request  the request parameters of CreateVirtualBorderRouter  CreateVirtualBorderRouterRequest
      * @return CreateVirtualBorderRouterResponse
      */
     @Deprecated
@@ -1875,7 +1875,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DeactivateRouterInterface is deprecated  * @param request  the request parameters of DeactivateRouterInterface  DeactivateRouterInterfaceRequest
+     * @deprecated OpenAPI DeactivateRouterInterface is deprecated, please use Vpc::2016-04-28::DeactivateRouterInterface instead.  * @param request  the request parameters of DeactivateRouterInterface  DeactivateRouterInterfaceRequest
      * @return DeactivateRouterInterfaceResponse
      */
     @Deprecated
@@ -1952,7 +1952,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DeleteBandwidthPackage is deprecated  * @param request  the request parameters of DeleteBandwidthPackage  DeleteBandwidthPackageRequest
+     * @deprecated OpenAPI DeleteBandwidthPackage is deprecated, please use Vpc::2016-04-28::DeleteBandwidthPackage instead.  * @param request  the request parameters of DeleteBandwidthPackage  DeleteBandwidthPackageRequest
      * @return DeleteBandwidthPackageResponse
      */
     @Deprecated
@@ -2094,7 +2094,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DeleteForwardEntry is deprecated  * @param request  the request parameters of DeleteForwardEntry  DeleteForwardEntryRequest
+     * @deprecated OpenAPI DeleteForwardEntry is deprecated, please use Vpc::2016-04-28::DeleteForwardEntry instead.  * @param request  the request parameters of DeleteForwardEntry  DeleteForwardEntryRequest
      * @return DeleteForwardEntryResponse
      */
     @Deprecated
@@ -2113,7 +2113,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DeleteHaVip is deprecated  * @param request  the request parameters of DeleteHaVip  DeleteHaVipRequest
+     * @deprecated OpenAPI DeleteHaVip is deprecated, please use Vpc::2016-04-28::DeleteHaVip instead.  * @param request  the request parameters of DeleteHaVip  DeleteHaVipRequest
      * @return DeleteHaVipResponse
      */
     @Deprecated
@@ -2359,7 +2359,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DeleteNatGateway is deprecated  * @param request  the request parameters of DeleteNatGateway  DeleteNatGatewayRequest
+     * @deprecated OpenAPI DeleteNatGateway is deprecated, please use Vpc::2016-04-28::DeleteNatGateway instead.  * @param request  the request parameters of DeleteNatGateway  DeleteNatGatewayRequest
      * @return DeleteNatGatewayResponse
      */
     @Deprecated
@@ -2435,7 +2435,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DeletePhysicalConnection is deprecated  * @param request  the request parameters of DeletePhysicalConnection  DeletePhysicalConnectionRequest
+     * @deprecated OpenAPI DeletePhysicalConnection is deprecated, please use Vpc::2016-04-28::DeletePhysicalConnection instead.  * @param request  the request parameters of DeletePhysicalConnection  DeletePhysicalConnectionRequest
      * @return DeletePhysicalConnectionResponse
      */
     @Deprecated
@@ -2493,7 +2493,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DeleteRouteEntry is deprecated  * @param request  the request parameters of DeleteRouteEntry  DeleteRouteEntryRequest
+     * @deprecated OpenAPI DeleteRouteEntry is deprecated, please use Vpc::2016-04-28::DeleteRouteEntry instead.  * @param request  the request parameters of DeleteRouteEntry  DeleteRouteEntryRequest
      * @return DeleteRouteEntryResponse
      */
     @Deprecated
@@ -2512,7 +2512,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DeleteRouterInterface is deprecated  * @param request  the request parameters of DeleteRouterInterface  DeleteRouterInterfaceRequest
+     * @deprecated OpenAPI DeleteRouterInterface is deprecated, please use Vpc::2016-04-28::DeleteRouterInterface instead.  * @param request  the request parameters of DeleteRouterInterface  DeleteRouterInterfaceRequest
      * @return DeleteRouterInterfaceResponse
      */
     @Deprecated
@@ -2641,7 +2641,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DeleteVirtualBorderRouter is deprecated  * @param request  the request parameters of DeleteVirtualBorderRouter  DeleteVirtualBorderRouterRequest
+     * @deprecated OpenAPI DeleteVirtualBorderRouter is deprecated, please use Vpc::2016-04-28::DeleteVirtualBorderRouter instead.  * @param request  the request parameters of DeleteVirtualBorderRouter  DeleteVirtualBorderRouterRequest
      * @return DeleteVirtualBorderRouterResponse
      */
     @Deprecated
@@ -2697,7 +2697,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeAccessPoints is deprecated  * @param request  the request parameters of DescribeAccessPoints  DescribeAccessPointsRequest
+     * @deprecated OpenAPI DescribeAccessPoints is deprecated, please use Vpc::2016-04-28::DescribeAccessPoints instead.  * @param request  the request parameters of DescribeAccessPoints  DescribeAccessPointsRequest
      * @return DescribeAccessPointsResponse
      */
     @Deprecated
@@ -2927,7 +2927,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeBandwidthPackages is deprecated  * @param request  the request parameters of DescribeBandwidthPackages  DescribeBandwidthPackagesRequest
+     * @deprecated OpenAPI DescribeBandwidthPackages is deprecated, please use Vpc::2016-04-28::DescribeBandwidthPackages instead.  * @param request  the request parameters of DescribeBandwidthPackages  DescribeBandwidthPackagesRequest
      * @return DescribeBandwidthPackagesResponse
      */
     @Deprecated
@@ -3432,7 +3432,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeEipMonitorData is deprecated  * @param request  the request parameters of DescribeEipMonitorData  DescribeEipMonitorDataRequest
+     * @deprecated OpenAPI DescribeEipMonitorData is deprecated, please use Vpc::2016-04-28::DescribeEipMonitorData instead.  * @param request  the request parameters of DescribeEipMonitorData  DescribeEipMonitorDataRequest
      * @return DescribeEipMonitorDataResponse
      */
     @Deprecated
@@ -3534,7 +3534,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeForwardTableEntries is deprecated  * @param request  the request parameters of DescribeForwardTableEntries  DescribeForwardTableEntriesRequest
+     * @deprecated OpenAPI DescribeForwardTableEntries is deprecated, please use Vpc::2016-04-28::DescribeForwardTableEntries instead.  * @param request  the request parameters of DescribeForwardTableEntries  DescribeForwardTableEntriesRequest
      * @return DescribeForwardTableEntriesResponse
      */
     @Deprecated
@@ -3553,7 +3553,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeHaVips is deprecated  * @param request  the request parameters of DescribeHaVips  DescribeHaVipsRequest
+     * @deprecated OpenAPI DescribeHaVips is deprecated, please use Vpc::2016-04-28::DescribeHaVips instead.  * @param request  the request parameters of DescribeHaVips  DescribeHaVipsRequest
      * @return DescribeHaVipsResponse
      */
     @Deprecated
@@ -4292,7 +4292,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeNatGateways is deprecated  * @param request  the request parameters of DescribeNatGateways  DescribeNatGatewaysRequest
+     * @deprecated OpenAPI DescribeNatGateways is deprecated, please use Vpc::2016-04-28::DescribeNatGateways instead.  * @param request  the request parameters of DescribeNatGateways  DescribeNatGatewaysRequest
      * @return DescribeNatGatewaysResponse
      */
     @Deprecated
@@ -4377,7 +4377,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeNewProjectEipMonitorData is deprecated  * @param request  the request parameters of DescribeNewProjectEipMonitorData  DescribeNewProjectEipMonitorDataRequest
+     * @deprecated OpenAPI DescribeNewProjectEipMonitorData is deprecated, please use Vpc::2016-04-28::DescribeEipMonitorData instead.  * @param request  the request parameters of DescribeNewProjectEipMonitorData  DescribeNewProjectEipMonitorDataRequest
      * @return DescribeNewProjectEipMonitorDataResponse
      */
     @Deprecated
@@ -4396,7 +4396,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribePhysicalConnections is deprecated  * @param request  the request parameters of DescribePhysicalConnections  DescribePhysicalConnectionsRequest
+     * @deprecated OpenAPI DescribePhysicalConnections is deprecated, please use Vpc::2016-04-28::DescribePhysicalConnections instead.  * @param request  the request parameters of DescribePhysicalConnections  DescribePhysicalConnectionsRequest
      * @return DescribePhysicalConnectionsResponse
      */
     @Deprecated
@@ -4762,7 +4762,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeRouterInterfaces is deprecated  * @param request  the request parameters of DescribeRouterInterfaces  DescribeRouterInterfacesRequest
+     * @deprecated OpenAPI DescribeRouterInterfaces is deprecated, please use Vpc::2016-04-28::DescribeRouterInterfaces instead.  * @param request  the request parameters of DescribeRouterInterfaces  DescribeRouterInterfacesRequest
      * @return DescribeRouterInterfacesResponse
      */
     @Deprecated
@@ -5302,7 +5302,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeVSwitches is deprecated  * @param request  the request parameters of DescribeVSwitches  DescribeVSwitchesRequest
+     * @deprecated OpenAPI DescribeVSwitches is deprecated, please use Vpc::2016-04-28::DescribeVSwitches instead.  * @param request  the request parameters of DescribeVSwitches  DescribeVSwitchesRequest
      * @return DescribeVSwitchesResponse
      */
     @Deprecated
@@ -5321,7 +5321,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeVirtualBorderRouters is deprecated  * @param request  the request parameters of DescribeVirtualBorderRouters  DescribeVirtualBorderRoutersRequest
+     * @deprecated OpenAPI DescribeVirtualBorderRouters is deprecated, please use Vpc::2016-04-28::DescribeVirtualBorderRouters instead.  * @param request  the request parameters of DescribeVirtualBorderRouters  DescribeVirtualBorderRoutersRequest
      * @return DescribeVirtualBorderRoutersResponse
      */
     @Deprecated
@@ -5340,7 +5340,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI DescribeVirtualBorderRoutersForPhysicalConnection is deprecated  * @param request  the request parameters of DescribeVirtualBorderRoutersForPhysicalConnection  DescribeVirtualBorderRoutersForPhysicalConnectionRequest
+     * @deprecated OpenAPI DescribeVirtualBorderRoutersForPhysicalConnection is deprecated, please use Vpc::2016-04-28::DescribeVirtualBorderRoutersForPhysicalConnection instead.  * @param request  the request parameters of DescribeVirtualBorderRoutersForPhysicalConnection  DescribeVirtualBorderRoutersForPhysicalConnectionRequest
      * @return DescribeVirtualBorderRoutersForPhysicalConnectionResponse
      */
     @Deprecated
@@ -5613,7 +5613,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI EnablePhysicalConnection is deprecated  * @param request  the request parameters of EnablePhysicalConnection  EnablePhysicalConnectionRequest
+     * @deprecated OpenAPI EnablePhysicalConnection is deprecated, please use Vpc::2016-04-28::EnablePhysicalConnection instead.  * @param request  the request parameters of EnablePhysicalConnection  EnablePhysicalConnectionRequest
      * @return EnablePhysicalConnectionResponse
      */
     @Deprecated
@@ -6200,7 +6200,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifyBandwidthPackageSpec is deprecated  * @param request  the request parameters of ModifyBandwidthPackageSpec  ModifyBandwidthPackageSpecRequest
+     * @deprecated OpenAPI ModifyBandwidthPackageSpec is deprecated, please use Vpc::2016-04-28::ModifyBandwidthPackageSpec instead.  * @param request  the request parameters of ModifyBandwidthPackageSpec  ModifyBandwidthPackageSpecRequest
      * @return ModifyBandwidthPackageSpecResponse
      */
     @Deprecated
@@ -6571,7 +6571,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifyEipAddressAttribute is deprecated  * @param request  the request parameters of ModifyEipAddressAttribute  ModifyEipAddressAttributeRequest
+     * @deprecated OpenAPI ModifyEipAddressAttribute is deprecated, please use Vpc::2016-04-28::ModifyEipAddressAttribute instead.  * @param request  the request parameters of ModifyEipAddressAttribute  ModifyEipAddressAttributeRequest
      * @return ModifyEipAddressAttributeResponse
      */
     @Deprecated
@@ -6626,7 +6626,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifyForwardEntry is deprecated  * @param request  the request parameters of ModifyForwardEntry  ModifyForwardEntryRequest
+     * @deprecated OpenAPI ModifyForwardEntry is deprecated, please use Vpc::2016-04-28::ModifyForwardEntry instead.  * @param request  the request parameters of ModifyForwardEntry  ModifyForwardEntryRequest
      * @return ModifyForwardEntryResponse
      */
     @Deprecated
@@ -6645,7 +6645,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifyHaVipAttribute is deprecated  * @param request  the request parameters of ModifyHaVipAttribute  ModifyHaVipAttributeRequest
+     * @deprecated OpenAPI ModifyHaVipAttribute is deprecated, please use Vpc::2016-04-28::ModifyHaVipAttribute instead.  * @param request  the request parameters of ModifyHaVipAttribute  ModifyHaVipAttributeRequest
      * @return ModifyHaVipAttributeResponse
      */
     @Deprecated
@@ -7229,7 +7229,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifyPhysicalConnectionAttribute is deprecated  * @param request  the request parameters of ModifyPhysicalConnectionAttribute  ModifyPhysicalConnectionAttributeRequest
+     * @deprecated OpenAPI ModifyPhysicalConnectionAttribute is deprecated, please use Vpc::2016-04-28::ModifyPhysicalConnectionAttribute instead.  * @param request  the request parameters of ModifyPhysicalConnectionAttribute  ModifyPhysicalConnectionAttributeRequest
      * @return ModifyPhysicalConnectionAttributeResponse
      */
     @Deprecated
@@ -7440,7 +7440,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifyRouterInterfaceAttribute is deprecated  * @param request  the request parameters of ModifyRouterInterfaceAttribute  ModifyRouterInterfaceAttributeRequest
+     * @deprecated OpenAPI ModifyRouterInterfaceAttribute is deprecated, please use Vpc::2016-04-28::ModifyRouterInterfaceAttribute instead.  * @param request  the request parameters of ModifyRouterInterfaceAttribute  ModifyRouterInterfaceAttributeRequest
      * @return ModifyRouterInterfaceAttributeResponse
      */
     @Deprecated
@@ -7459,7 +7459,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifyRouterInterfaceSpec is deprecated  * @param request  the request parameters of ModifyRouterInterfaceSpec  ModifyRouterInterfaceSpecRequest
+     * @deprecated OpenAPI ModifyRouterInterfaceSpec is deprecated, please use Vpc::2016-04-28::ModifyRouterInterfaceSpec instead.  * @param request  the request parameters of ModifyRouterInterfaceSpec  ModifyRouterInterfaceSpecRequest
      * @return ModifyRouterInterfaceSpecResponse
      */
     @Deprecated
@@ -7690,7 +7690,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifyVRouterAttribute is deprecated  * @param request  the request parameters of ModifyVRouterAttribute  ModifyVRouterAttributeRequest
+     * @deprecated OpenAPI ModifyVRouterAttribute is deprecated, please use Vpc::2016-04-28::ModifyVRouterAttribute instead.  * @param request  the request parameters of ModifyVRouterAttribute  ModifyVRouterAttributeRequest
      * @return ModifyVRouterAttributeResponse
      */
     @Deprecated
@@ -7709,7 +7709,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifyVSwitchAttribute is deprecated  * @param request  the request parameters of ModifyVSwitchAttribute  ModifyVSwitchAttributeRequest
+     * @deprecated OpenAPI ModifyVSwitchAttribute is deprecated, please use Vpc::2016-04-28::ModifyVSwitchAttribute instead.  * @param request  the request parameters of ModifyVSwitchAttribute  ModifyVSwitchAttributeRequest
      * @return ModifyVSwitchAttributeResponse
      */
     @Deprecated
@@ -7728,7 +7728,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifyVirtualBorderRouterAttribute is deprecated  * @param request  the request parameters of ModifyVirtualBorderRouterAttribute  ModifyVirtualBorderRouterAttributeRequest
+     * @deprecated OpenAPI ModifyVirtualBorderRouterAttribute is deprecated, please use Vpc::2016-04-28::ModifyVirtualBorderRouterAttribute instead.  * @param request  the request parameters of ModifyVirtualBorderRouterAttribute  ModifyVirtualBorderRouterAttributeRequest
      * @return ModifyVirtualBorderRouterAttributeResponse
      */
     @Deprecated
@@ -7747,7 +7747,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ModifyVpcAttribute is deprecated  * @param request  the request parameters of ModifyVpcAttribute  ModifyVpcAttributeRequest
+     * @deprecated OpenAPI ModifyVpcAttribute is deprecated, please use Vpc::2016-04-28::ModifyVpcAttribute instead.  * @param request  the request parameters of ModifyVpcAttribute  ModifyVpcAttributeRequest
      * @return ModifyVpcAttributeResponse
      */
     @Deprecated
@@ -7950,7 +7950,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI RecoverVirtualBorderRouter is deprecated  * @param request  the request parameters of RecoverVirtualBorderRouter  RecoverVirtualBorderRouterRequest
+     * @deprecated OpenAPI RecoverVirtualBorderRouter is deprecated, please use Vpc::2016-04-28::RecoverVirtualBorderRouter instead.  * @param request  the request parameters of RecoverVirtualBorderRouter  RecoverVirtualBorderRouterRequest
      * @return RecoverVirtualBorderRouterResponse
      */
     @Deprecated
@@ -8112,7 +8112,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI ReleaseEipAddress is deprecated  * @param request  the request parameters of ReleaseEipAddress  ReleaseEipAddressRequest
+     * @deprecated OpenAPI ReleaseEipAddress is deprecated, please use Vpc::2016-04-28::ReleaseEipAddress instead.  * @param request  the request parameters of ReleaseEipAddress  ReleaseEipAddressRequest
      * @return ReleaseEipAddressResponse
      */
     @Deprecated
@@ -8150,7 +8150,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI RemoveBandwidthPackageIps is deprecated  * @param request  the request parameters of RemoveBandwidthPackageIps  RemoveBandwidthPackageIpsRequest
+     * @deprecated OpenAPI RemoveBandwidthPackageIps is deprecated, please use Vpc::2016-04-28::RemoveBandwidthPackageIps instead.  * @param request  the request parameters of RemoveBandwidthPackageIps  RemoveBandwidthPackageIpsRequest
      * @return RemoveBandwidthPackageIpsResponse
      */
     @Deprecated
@@ -9010,7 +9010,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI TerminatePhysicalConnection is deprecated  * @param request  the request parameters of TerminatePhysicalConnection  TerminatePhysicalConnectionRequest
+     * @deprecated OpenAPI TerminatePhysicalConnection is deprecated, please use Vpc::2016-04-28::TerminatePhysicalConnection instead.  * @param request  the request parameters of TerminatePhysicalConnection  TerminatePhysicalConnectionRequest
      * @return TerminatePhysicalConnectionResponse
      */
     @Deprecated
@@ -9029,7 +9029,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI TerminateVirtualBorderRouter is deprecated  * @param request  the request parameters of TerminateVirtualBorderRouter  TerminateVirtualBorderRouterRequest
+     * @deprecated OpenAPI TerminateVirtualBorderRouter is deprecated, please use Vpc::2016-04-28::TerminateVirtualBorderRouter instead.  * @param request  the request parameters of TerminateVirtualBorderRouter  TerminateVirtualBorderRouterRequest
      * @return TerminateVirtualBorderRouterResponse
      */
     @Deprecated
@@ -9099,7 +9099,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI UnassociateEipAddress is deprecated  * @param request  the request parameters of UnassociateEipAddress  UnassociateEipAddressRequest
+     * @deprecated OpenAPI UnassociateEipAddress is deprecated, please use Vpc::2016-04-28::UnassociateEipAddress instead.  * @param request  the request parameters of UnassociateEipAddress  UnassociateEipAddressRequest
      * @return UnassociateEipAddressResponse
      */
     @Deprecated
@@ -9118,7 +9118,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-     * @deprecated OpenAPI UnassociateHaVip is deprecated  * @param request  the request parameters of UnassociateHaVip  UnassociateHaVipRequest
+     * @deprecated OpenAPI UnassociateHaVip is deprecated, please use Vpc::2016-04-28::UnassociateHaVip instead.  * @param request  the request parameters of UnassociateHaVip  UnassociateHaVipRequest
      * @return UnassociateHaVipResponse
      */
     @Deprecated

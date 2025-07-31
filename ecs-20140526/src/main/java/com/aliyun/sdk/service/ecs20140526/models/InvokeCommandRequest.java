@@ -51,6 +51,10 @@ public class InvokeCommandRequest extends Request {
     private String launcher;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssOutputDelivery")
+    private String ossOutputDelivery;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -125,6 +129,7 @@ public class InvokeCommandRequest extends Request {
         this.frequency = builder.frequency;
         this.instanceId = builder.instanceId;
         this.launcher = builder.launcher;
+        this.ossOutputDelivery = builder.ossOutputDelivery;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.parameters = builder.parameters;
@@ -210,6 +215,13 @@ public class InvokeCommandRequest extends Request {
      */
     public String getLauncher() {
         return this.launcher;
+    }
+
+    /**
+     * @return ossOutputDelivery
+     */
+    public String getOssOutputDelivery() {
+        return this.ossOutputDelivery;
     }
 
     /**
@@ -333,6 +345,7 @@ public class InvokeCommandRequest extends Request {
         private String frequency; 
         private java.util.List<String> instanceId; 
         private String launcher; 
+        private String ossOutputDelivery; 
         private String ownerAccount; 
         private Long ownerId; 
         private java.util.Map<String, ?> parameters; 
@@ -364,6 +377,7 @@ public class InvokeCommandRequest extends Request {
             this.frequency = request.frequency;
             this.instanceId = request.instanceId;
             this.launcher = request.launcher;
+            this.ossOutputDelivery = request.ossOutputDelivery;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.parameters = request.parameters;
@@ -530,6 +544,15 @@ public class InvokeCommandRequest extends Request {
         public Builder launcher(String launcher) {
             this.putQueryParameter("Launcher", launcher);
             this.launcher = launcher;
+            return this;
+        }
+
+        /**
+         * OssOutputDelivery.
+         */
+        public Builder ossOutputDelivery(String ossOutputDelivery) {
+            this.putQueryParameter("OssOutputDelivery", ossOutputDelivery);
+            this.ossOutputDelivery = ossOutputDelivery;
             return this;
         }
 
