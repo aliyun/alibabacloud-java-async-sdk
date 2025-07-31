@@ -55,6 +55,10 @@ public class DescribeSensitiveApiStatisticRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    private String type;
+
     private DescribeSensitiveApiStatisticRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
@@ -66,6 +70,7 @@ public class DescribeSensitiveApiStatisticRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.startTime = builder.startTime;
+        this.type = builder.type;
     }
 
     public static Builder builder() {
@@ -144,6 +149,13 @@ public class DescribeSensitiveApiStatisticRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return type
+     */
+    public String getType() {
+        return this.type;
+    }
+
     public static final class Builder extends Request.Builder<DescribeSensitiveApiStatisticRequest, Builder> {
         private String clusterId; 
         private Long endTime; 
@@ -154,6 +166,7 @@ public class DescribeSensitiveApiStatisticRequest extends Request {
         private String regionId; 
         private String resourceManagerResourceGroupId; 
         private Long startTime; 
+        private String type; 
 
         private Builder() {
             super();
@@ -170,6 +183,7 @@ public class DescribeSensitiveApiStatisticRequest extends Request {
             this.regionId = request.regionId;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.startTime = request.startTime;
+            this.type = request.type;
         } 
 
         /**
@@ -294,6 +308,15 @@ public class DescribeSensitiveApiStatisticRequest extends Request {
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * Type.
+         */
+        public Builder type(String type) {
+            this.putQueryParameter("Type", type);
+            this.type = type;
             return this;
         }
 
